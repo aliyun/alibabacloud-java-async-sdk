@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableResourceCenterResponse} extends {@link TeaModel}
+ * {@link GetSavedQueryResponse} extends {@link TeaModel}
  *
- * <p>DisableResourceCenterResponse</p>
+ * <p>GetSavedQueryResponse</p>
  */
-public class DisableResourceCenterResponse extends Response {
+public class GetSavedQueryResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DisableResourceCenterResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DisableResourceCenterResponseBody body;
+    private GetSavedQueryResponseBody body;
 
-    private DisableResourceCenterResponse(BuilderImpl builder) {
+    private GetSavedQueryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DisableResourceCenterResponse create() {
+    public static GetSavedQueryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DisableResourceCenterResponse extends Response {
     /**
      * @return body
      */
-    public DisableResourceCenterResponseBody getBody() {
+    public GetSavedQueryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DisableResourceCenterResponse, Builder> {
+    public interface Builder extends Response.Builder<GetSavedQueryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DisableResourceCenterResponseBody body);
+        Builder body(GetSavedQueryResponseBody body);
 
         @Override
-        DisableResourceCenterResponse build();
+        GetSavedQueryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DisableResourceCenterResponse, Builder>
+            extends Response.BuilderImpl<GetSavedQueryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DisableResourceCenterResponseBody body; 
+        private GetSavedQueryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DisableResourceCenterResponse response) {
+        private BuilderImpl(GetSavedQueryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DisableResourceCenterResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DisableResourceCenterResponseBody body) {
+        public Builder body(GetSavedQueryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DisableResourceCenterResponse build() {
-            return new DisableResourceCenterResponse(this);
+        public GetSavedQueryResponse build() {
+            return new GetSavedQueryResponse(this);
         } 
 
     } 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableResourceCenterResponse} extends {@link TeaModel}
+ * {@link ExecuteMultiAccountSQLQueryResponse} extends {@link TeaModel}
  *
- * <p>DisableResourceCenterResponse</p>
+ * <p>ExecuteMultiAccountSQLQueryResponse</p>
  */
-public class DisableResourceCenterResponse extends Response {
+public class ExecuteMultiAccountSQLQueryResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DisableResourceCenterResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DisableResourceCenterResponseBody body;
+    private ExecuteMultiAccountSQLQueryResponseBody body;
 
-    private DisableResourceCenterResponse(BuilderImpl builder) {
+    private ExecuteMultiAccountSQLQueryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DisableResourceCenterResponse create() {
+    public static ExecuteMultiAccountSQLQueryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DisableResourceCenterResponse extends Response {
     /**
      * @return body
      */
-    public DisableResourceCenterResponseBody getBody() {
+    public ExecuteMultiAccountSQLQueryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DisableResourceCenterResponse, Builder> {
+    public interface Builder extends Response.Builder<ExecuteMultiAccountSQLQueryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DisableResourceCenterResponseBody body);
+        Builder body(ExecuteMultiAccountSQLQueryResponseBody body);
 
         @Override
-        DisableResourceCenterResponse build();
+        ExecuteMultiAccountSQLQueryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DisableResourceCenterResponse, Builder>
+            extends Response.BuilderImpl<ExecuteMultiAccountSQLQueryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DisableResourceCenterResponseBody body; 
+        private ExecuteMultiAccountSQLQueryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DisableResourceCenterResponse response) {
+        private BuilderImpl(ExecuteMultiAccountSQLQueryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DisableResourceCenterResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DisableResourceCenterResponseBody body) {
+        public Builder body(ExecuteMultiAccountSQLQueryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DisableResourceCenterResponse build() {
-            return new DisableResourceCenterResponse(this);
+        public ExecuteMultiAccountSQLQueryResponse build() {
+            return new ExecuteMultiAccountSQLQueryResponse(this);
         } 
 
     } 

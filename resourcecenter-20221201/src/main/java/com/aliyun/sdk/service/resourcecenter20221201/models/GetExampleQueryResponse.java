@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableResourceCenterResponse} extends {@link TeaModel}
+ * {@link GetExampleQueryResponse} extends {@link TeaModel}
  *
- * <p>DisableResourceCenterResponse</p>
+ * <p>GetExampleQueryResponse</p>
  */
-public class DisableResourceCenterResponse extends Response {
+public class GetExampleQueryResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DisableResourceCenterResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DisableResourceCenterResponseBody body;
+    private GetExampleQueryResponseBody body;
 
-    private DisableResourceCenterResponse(BuilderImpl builder) {
+    private GetExampleQueryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DisableResourceCenterResponse create() {
+    public static GetExampleQueryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DisableResourceCenterResponse extends Response {
     /**
      * @return body
      */
-    public DisableResourceCenterResponseBody getBody() {
+    public GetExampleQueryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DisableResourceCenterResponse, Builder> {
+    public interface Builder extends Response.Builder<GetExampleQueryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DisableResourceCenterResponseBody body);
+        Builder body(GetExampleQueryResponseBody body);
 
         @Override
-        DisableResourceCenterResponse build();
+        GetExampleQueryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DisableResourceCenterResponse, Builder>
+            extends Response.BuilderImpl<GetExampleQueryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DisableResourceCenterResponseBody body; 
+        private GetExampleQueryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DisableResourceCenterResponse response) {
+        private BuilderImpl(GetExampleQueryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DisableResourceCenterResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DisableResourceCenterResponseBody body) {
+        public Builder body(GetExampleQueryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DisableResourceCenterResponse build() {
-            return new DisableResourceCenterResponse(this);
+        public GetExampleQueryResponse build() {
+            return new GetExampleQueryResponse(this);
         } 
 
     } 

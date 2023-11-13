@@ -18,7 +18,7 @@ public class SearchResourcesRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
     @Query
@@ -120,7 +120,7 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * The maximum number of entries per page.
          * <p>
          * 
          * Valid values: 1 to 100.

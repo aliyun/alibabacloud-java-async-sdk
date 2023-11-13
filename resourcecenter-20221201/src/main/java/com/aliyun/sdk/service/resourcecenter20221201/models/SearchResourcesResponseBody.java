@@ -212,6 +212,87 @@ public class SearchResourcesResponseBody extends TeaModel {
         } 
 
     }
+    public static class IpAddressAttributes extends TeaModel {
+        @NameInMap("IpAddress")
+        private java.util.List < String > ipAddress;
+
+        @NameInMap("NetworkType")
+        private String networkType;
+
+        @NameInMap("Version")
+        private String version;
+
+        private IpAddressAttributes(Builder builder) {
+            this.ipAddress = builder.ipAddress;
+            this.networkType = builder.networkType;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpAddressAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipAddress
+         */
+        public java.util.List < String > getIpAddress() {
+            return this.ipAddress;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > ipAddress; 
+            private String networkType; 
+            private String version; 
+
+            /**
+             * IpAddress.
+             */
+            public Builder ipAddress(java.util.List < String > ipAddress) {
+                this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public IpAddressAttributes build() {
+                return new IpAddressAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -280,6 +361,12 @@ public class SearchResourcesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("ExpireTime")
+        private String expireTime;
+
+        @NameInMap("IpAddressAttributes")
+        private java.util.List < IpAddressAttributes> ipAddressAttributes;
+
         @NameInMap("IpAddresses")
         private java.util.List < String > ipAddresses;
 
@@ -307,6 +394,8 @@ public class SearchResourcesResponseBody extends TeaModel {
         private Resources(Builder builder) {
             this.accountId = builder.accountId;
             this.createTime = builder.createTime;
+            this.expireTime = builder.expireTime;
+            this.ipAddressAttributes = builder.ipAddressAttributes;
             this.ipAddresses = builder.ipAddresses;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -337,6 +426,20 @@ public class SearchResourcesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
+         * @return ipAddressAttributes
+         */
+        public java.util.List < IpAddressAttributes> getIpAddressAttributes() {
+            return this.ipAddressAttributes;
         }
 
         /**
@@ -398,6 +501,8 @@ public class SearchResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String createTime; 
+            private String expireTime; 
+            private java.util.List < IpAddressAttributes> ipAddressAttributes; 
             private java.util.List < String > ipAddresses; 
             private String regionId; 
             private String resourceGroupId; 
@@ -423,6 +528,22 @@ public class SearchResourcesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * IpAddressAttributes.
+             */
+            public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
+                this.ipAddressAttributes = ipAddressAttributes;
                 return this;
             }
 
