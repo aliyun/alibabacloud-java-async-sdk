@@ -50,7 +50,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of the job.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Score.
+             * The score of the job.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -118,7 +118,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * The suggestion for running the job.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -195,7 +195,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -203,7 +203,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -211,7 +211,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -219,7 +219,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -296,7 +296,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -304,7 +304,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -320,7 +320,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -397,7 +397,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -405,7 +405,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,7 +413,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -421,7 +421,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -498,7 +498,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -506,7 +506,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -514,7 +514,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -522,7 +522,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -599,7 +599,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private VcoreUtilization vcoreUtilization; 
 
             /**
-             * MemSeconds.
+             * The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -607,7 +607,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MemUtilization.
+             * The memory usage.
              */
             public Builder memUtilization(MemUtilization memUtilization) {
                 this.memUtilization = memUtilization;
@@ -615,7 +615,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSeconds.
+             * The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -623,7 +623,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreUtilization.
+             * The CPU utilization. The meaning is the same as that of the %CPU command in the output of the Linux top command.
              */
             public Builder vcoreUtilization(VcoreUtilization vcoreUtilization) {
                 this.vcoreUtilization = vcoreUtilization;
@@ -772,7 +772,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Analysis.
+             * The job analysis result.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -780,7 +780,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the job.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -788,7 +788,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -796,7 +796,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Ids.
+             * The job IDs. Multiple job IDs are separated with commas (,).
              */
             public Builder ids(java.util.List < String > ids) {
                 this.ids = ids;
@@ -804,7 +804,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -812,7 +812,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * QuerySql.
+             * The SQL statement of the job. This parameter is left empty for non-SQL jobs.
              */
             public Builder querySql(String querySql) {
                 this.querySql = querySql;
@@ -820,7 +820,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The YARN queue to which the job was submitted.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -828,7 +828,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -836,7 +836,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the compute engine.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -844,7 +844,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username that is used to submit the job.
              */
             public Builder user(String user) {
                 this.user = user;

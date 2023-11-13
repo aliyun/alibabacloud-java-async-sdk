@@ -182,7 +182,7 @@ public class ListApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * 应用名称。
+         * The name of the application.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -191,7 +191,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -200,7 +200,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 配置文件名称。
+         * The name of the configuration file.
          */
         public Builder configFileName(String configFileName) {
             this.putQueryParameter("ConfigFileName", configFileName);
@@ -209,7 +209,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 配置键值，支持模糊查询。
+         * The name of the configuration item.
          */
         public Builder configItemKey(String configItemKey) {
             this.putQueryParameter("ConfigItemKey", configItemKey);
@@ -218,7 +218,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 配置项值。
+         * The value of the configuration item.
          */
         public Builder configItemValue(String configItemValue) {
             this.putQueryParameter("ConfigItemValue", configItemValue);
@@ -227,7 +227,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +236,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The page number of the next page returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,7 +245,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 节点组ID。
+         * The ID of the node group.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -254,7 +254,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 节点ID。
+         * The node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -263,7 +263,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

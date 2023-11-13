@@ -100,7 +100,7 @@ public class GetDoctorHiveDatabaseRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +109,7 @@ public class GetDoctorHiveDatabaseRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The database name.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -118,7 +118,7 @@ public class GetDoctorHiveDatabaseRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The query date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -127,7 +127,7 @@ public class GetDoctorHiveDatabaseRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

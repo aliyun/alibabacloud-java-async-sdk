@@ -50,7 +50,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodeGroupId.
+         * The ID of the machine group.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -58,7 +58,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

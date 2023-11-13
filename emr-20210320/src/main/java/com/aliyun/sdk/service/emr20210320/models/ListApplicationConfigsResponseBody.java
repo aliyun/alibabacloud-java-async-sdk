@@ -86,7 +86,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApplicationConfigs.
+         * The application configurations.
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
             this.applicationConfigs = applicationConfigs;
@@ -94,7 +94,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * The page number of the next page returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of pages.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 应用名称。
+             * The name of the application.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -310,7 +310,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置值生效状态。
+             * The status of the configuration value.
              */
             public Builder configEffectState(String configEffectState) {
                 this.configEffectState = configEffectState;
@@ -318,7 +318,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置文件名称。
+             * The name of the configuration file.
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -326,7 +326,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置项键。
+             * The name of the configuration item.
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -334,7 +334,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置项值。
+             * The value of the configuration item.
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -342,7 +342,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间。
+             * The time when the application was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -350,7 +350,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是自定义配置。
+             * Indicates whether the configurations are custom.
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -358,7 +358,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述。
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +366,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 初始值。
+             * The initial value.
              */
             public Builder initValue(String initValue) {
                 this.initValue = initValue;
@@ -374,7 +374,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人。
+             * The person who modified the configurations.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -382,7 +382,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组ID。
+             * The ID of the node group.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -390,7 +390,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点ID。
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -398,7 +398,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间。
+             * The time when the application was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

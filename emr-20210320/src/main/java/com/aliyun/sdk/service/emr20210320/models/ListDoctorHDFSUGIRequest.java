@@ -156,7 +156,7 @@ public class ListDoctorHDFSUGIRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -165,7 +165,7 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -174,7 +174,7 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -183,7 +183,7 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -192,7 +192,12 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The basis on which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   totalFileCount: the total number of files
+         * *   totalDataSize: the total data size
+         * *   totalDirCount: the total number of directories
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -201,7 +206,11 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -210,7 +219,7 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +228,11 @@ public class ListDoctorHDFSUGIRequest extends Request {
         }
 
         /**
-         * Type.
+         * The filter condition. Valid values:
+         * <p>
+         * 
+         * *   user
+         * *   group
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -100,7 +100,7 @@ public class GetDoctorHiveTableRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +109,7 @@ public class GetDoctorHiveTableRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -118,7 +118,7 @@ public class GetDoctorHiveTableRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +127,7 @@ public class GetDoctorHiveTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The table name. The table name must follow the rule in Hive. A name in the {database name.table identifier} format uniquely identifies a table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

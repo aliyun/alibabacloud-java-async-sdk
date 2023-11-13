@@ -112,7 +112,7 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * 应用名称列表。
+         * The application names.
          */
         public Builder applicationNames(java.util.List < String > applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
@@ -121,7 +121,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -130,7 +130,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The total number of pages.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -139,7 +139,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The page number of the next page returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -148,7 +148,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

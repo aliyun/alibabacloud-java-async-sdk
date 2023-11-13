@@ -50,7 +50,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The results of HDFS analysis.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +142,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -158,7 +158,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -235,7 +235,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +243,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +251,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -259,7 +259,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -336,7 +336,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,7 +344,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -352,7 +352,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -360,7 +360,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -425,7 +425,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             private TotalFileCount totalFileCount; 
 
             /**
-             * TotalDataSize.
+             * The total data size.
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -433,7 +433,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDirCount.
+             * The total number of directories.
              */
             public Builder totalDirCount(TotalDirCount totalDirCount) {
                 this.totalDirCount = totalDirCount;
@@ -441,7 +441,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileCount.
+             * The total number of files.
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -482,7 +482,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

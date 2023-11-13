@@ -170,13 +170,14 @@ public class RunApplicationActionRequest extends Request {
         } 
 
         /**
-         * 操作名称。取值范围：
+         * The name of the action. Valid values:
          * <p>
-         * - start：启动。
-         * - stop：停止。
-         * - config: 下发配置。
-         * - refresh_queues: 刷新yarn队列。
-         * 等
+         * 
+         * *   start
+         * *   stop
+         * *   config
+         * *   restart
+         * *   refresh_queues
          */
         public Builder actionName(String actionName) {
             this.putQueryParameter("ActionName", actionName);
@@ -185,7 +186,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 每批数量。
+         * The number of applications in each batch.
          */
         public Builder batchSize(Integer batchSize) {
             this.putQueryParameter("BatchSize", batchSize);
@@ -194,7 +195,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -203,7 +204,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 组件实例选择器。
+         * The name of the operation.
          */
         public Builder componentInstanceSelector(ComponentInstanceSelector componentInstanceSelector) {
             this.putQueryParameter("ComponentInstanceSelector", componentInstanceSelector);
@@ -212,7 +213,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 描述。
+         * The description of the execution.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,7 +222,11 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 运行策略。
+         * The execution policy. Valid values:
+         * <p>
+         * 
+         * *   FAILED_BLOCK: The system stops the execution if the execution fails.
+         * *   FAILED_CONTINUE: The system continues the execution if the execution fails.
          */
         public Builder executeStrategy(String executeStrategy) {
             this.putQueryParameter("ExecuteStrategy", executeStrategy);
@@ -230,7 +235,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 间隔时间。
+         * The interval for rolling execution. Unit: seconds.
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -239,7 +244,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +253,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * 是否滚动执行。
+         * Specifies whether to enable rolling execution.
          */
         public Builder rollingExecute(Boolean rollingExecute) {
             this.putQueryParameter("RollingExecute", rollingExecute);

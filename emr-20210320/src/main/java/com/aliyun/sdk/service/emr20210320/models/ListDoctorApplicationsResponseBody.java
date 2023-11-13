@@ -86,7 +86,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The details of jobs.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private String suggestion; 
 
             /**
-             * Score.
+             * The score of the job.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -178,7 +178,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * The suggestion on executing the job.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -255,7 +255,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -263,7 +263,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -271,7 +271,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -279,7 +279,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -356,7 +356,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -364,7 +364,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -372,7 +372,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -380,7 +380,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -457,7 +457,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -465,7 +465,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +473,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -481,7 +481,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -558,7 +558,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -566,7 +566,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -574,7 +574,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -582,7 +582,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -659,7 +659,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private VcoreUtilization vcoreUtilization; 
 
             /**
-             * MemSeconds.
+             * The amount of memory consumed.
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -667,7 +667,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * MemUtilization.
+             * The memory usage
              */
             public Builder memUtilization(MemUtilization memUtilization) {
                 this.memUtilization = memUtilization;
@@ -675,7 +675,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSeconds.
+             * The CPU usage.
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -683,7 +683,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreUtilization.
+             * The CPU utilization. This parameter has the same meaning as %CPU in the Linux top command.
              */
             public Builder vcoreUtilization(VcoreUtilization vcoreUtilization) {
                 this.vcoreUtilization = vcoreUtilization;
@@ -844,7 +844,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Analysis.
+             * The analysis results of the jobs.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -852,7 +852,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The job ID in YARN. The value of QueryID or SessionID is returned for a Hive job.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -860,7 +860,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the job.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -868,7 +868,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the job ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -876,7 +876,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Ids.
+             * The job IDs. Multiple job IDs are separated with commas (,).
              */
             public Builder ids(java.util.List < String > ids) {
                 this.ids = ids;
@@ -884,7 +884,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The data about metrics.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -892,7 +892,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * QuerySql.
+             * The query statement. This parameter is left empty for non-SQL jobs.
              */
             public Builder querySql(String querySql) {
                 this.querySql = querySql;
@@ -900,7 +900,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The YARN queue to which the job was submitted.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -908,7 +908,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -916,7 +916,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the compute engine.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -924,7 +924,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username that was used to submit the job.
              */
             public Builder user(String user) {
                 this.user = user;

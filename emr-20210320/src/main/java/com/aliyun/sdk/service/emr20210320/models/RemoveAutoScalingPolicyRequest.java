@@ -85,7 +85,7 @@ public class RemoveAutoScalingPolicyRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class RemoveAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+         * The ID of the node group.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -103,7 +103,7 @@ public class RemoveAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

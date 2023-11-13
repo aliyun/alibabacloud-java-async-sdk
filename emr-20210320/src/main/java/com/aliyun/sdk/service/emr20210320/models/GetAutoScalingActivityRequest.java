@@ -85,7 +85,7 @@ public class GetAutoScalingActivityRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class GetAutoScalingActivityRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class GetAutoScalingActivityRequest extends Request {
         }
 
         /**
-         * 伸缩活动ID。
+         * The ID of the scaling activity.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.putQueryParameter("ScalingActivityId", scalingActivityId);

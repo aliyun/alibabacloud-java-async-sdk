@@ -85,7 +85,7 @@ public class GetDoctorJobRequest extends Request {
         } 
 
         /**
-         * app id
+         * The ID of the job that is submitted to YARN.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -94,7 +94,7 @@ public class GetDoctorJobRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +103,7 @@ public class GetDoctorJobRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

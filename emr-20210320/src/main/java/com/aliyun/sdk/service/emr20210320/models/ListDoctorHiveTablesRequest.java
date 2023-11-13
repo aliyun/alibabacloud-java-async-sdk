@@ -155,7 +155,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -173,7 +173,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -182,7 +182,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +191,52 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The basis on which you want to sort the query results. Valid value:
+         * <p>
+         * 
+         * *   partitionNum: the number of partitions.
+         * *   totalFileCount: the total number of files.
+         * *   largeFileCount: the number of large files. Large files are those with a size greater than 1 GB.
+         * *   mediumFileCount: the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+         * *   smallFileCount: the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+         * *   tinyFileCount: the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+         * *   emptyFileCount: the number of empty files. Empty files are those with a size of 0 MB.
+         * *   largeFileRatio: the proportion of large files. Large files are those with a size greater than 1 GB.
+         * *   mediumFileRatio: the proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+         * *   smallFileRatio: the proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+         * *   tinyFileRatio: the proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+         * *   emptyFileRatio: the proportion of empty files. Empty files are those with a size of 0 MB.
+         * *   hotDataSize: the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+         * *   warmDataSize: the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+         * *   coldDataSize: the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+         * *   freezeDataSize: the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+         * *   totalDataSize: the total amount of data.
+         * *   hotDataRatio: the proportion of hot data. Hot data refers to data that is accessed in recent seven days.
+         * *   awmDataRatio: the proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+         * *   coldDataRatio: the proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+         * *   freezeDataRatio: the proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+         * *   totalFileDayGrowthCount: the daily increment of the total number of files.
+         * *   largeFileDayGrowthCount: the daily increment of the number of large files. Large files are those with a size greater than 1 GB.
+         * *   mediumFileDayGrowthCount: the daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+         * *   smallFileDayGrowthCount: the daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+         * *   tinyFileDayGrowthCount: the daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+         * *   emptyFileDayGrowthCount: the daily increment of the number of empty files. Empty files are those with a size of 0 MB.
+         * *   hotDataDayGrowthSize: The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+         * *   warmDataDayGrowthSize: the daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+         * *   coldDataDayGrowthSize: The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+         * *   freezeDataDayGrowthSize: The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+         * *   totalDataDayGrowthSize: the daily incremental of the total data volume.
+         * *   totalFileCountDayGrowthRatio: the day-to-day growth rate of the total number of files.
+         * *   largeFileCountDayGrowthRatio: the day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.
+         * *   mediumFileCountDayGrowthRatio: the day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
+         * *   smallFileCountDayGrowthRatio: the day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
+         * *   tinyFileCountDayGrowthRatio: the day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
+         * *   emptyFileCountDayGrowthRatio: the day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.
+         * *   hotDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+         * *   warmDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+         * *   coldDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+         * *   freezeDataSizeDayGrowthRatio: the day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
+         * *   totalDataSizeDayGrowthRatio: the day-to-day growth rate of the total data volume.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -200,7 +245,11 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid value:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -209,7 +258,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +267,7 @@ public class ListDoctorHiveTablesRequest extends Request {
         }
 
         /**
-         * TableNames.
+         * The table names, which are used to filter the query results.
          */
         public Builder tableNames(java.util.List < String > tableNames) {
             this.putQueryParameter("TableNames", tableNames);

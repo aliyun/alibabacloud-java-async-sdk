@@ -197,7 +197,7 @@ public class ListDoctorApplicationsRequest extends Request {
         } 
 
         /**
-         * AppIds.
+         * The IDs of jobs that are submitted to YARN.
          */
         public Builder appIds(java.util.List < String > appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -206,7 +206,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -215,7 +215,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -224,7 +224,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -233,7 +233,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -242,7 +242,16 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field that you use to sort the query results. Valid values:
+         * <p>
+         * 
+         * 1.  startTime: the time when the job starts
+         * 2.  endTime: the time when the job ends
+         * 3.  vcoreUtilization: the vCPU utilization of the job
+         * 4.  memUtilization: the memory usage of the job
+         * 5.  vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running
+         * 6.  memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running
+         * 7.  score: the score of the job
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -251,7 +260,11 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: the ascending order
+         * *   DESC: the descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -260,7 +273,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * Queues.
+         * The YARN queues to which the jobs are submitted.
          */
         public Builder queues(java.util.List < String > queues) {
             this.putQueryParameter("Queues", queues);
@@ -269,7 +282,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +291,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * Types.
+         * The YARN engines to which the jobs are submitted.
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -287,7 +300,7 @@ public class ListDoctorApplicationsRequest extends Request {
         }
 
         /**
-         * Users.
+         * The users who submit the jobs.
          */
         public Builder users(java.util.List < String > users) {
             this.putQueryParameter("Users", users);

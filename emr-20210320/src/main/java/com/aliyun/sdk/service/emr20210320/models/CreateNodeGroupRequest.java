@@ -85,7 +85,7 @@ public class CreateNodeGroupRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * 节点组信息。
+         * The information about a machine group.
          */
         public Builder nodeGroup(NodeGroupConfig nodeGroup) {
             this.putQueryParameter("NodeGroup", nodeGroup);
@@ -103,7 +103,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

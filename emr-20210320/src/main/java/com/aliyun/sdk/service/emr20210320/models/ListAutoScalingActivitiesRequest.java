@@ -182,7 +182,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -191,7 +191,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 查询伸缩活动创建时间的结束时间戳。单位为毫秒。
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -200,7 +200,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -209,7 +209,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -218,7 +218,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 节点组ID。节点组 Id-针对 ACK 集群，此字段为空。
+         * The ID of the node group.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -227,7 +227,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,12 +236,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 伸缩活动状态。数组元数个数N的取值范围：1~20。默认取值：
-         * <p>
-         * - REJECTED：拒绝。
-         * - SUCCESSFUL：成功。
-         * - FAILED：失败。
-         * - IN_PROGRESS：进行中。
+         * The status of the scaling activity. Number of elements in the array: 1-20.
          */
         public Builder scalingActivityStates(java.util.List < String > scalingActivityStates) {
             this.putQueryParameter("ScalingActivityStates", scalingActivityStates);
@@ -250,10 +245,11 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 伸缩活动类型。数组元数个数N的取值范围：1~20。取值范围：
+         * The type of the scaling activity. Valid values:
          * <p>
-         * - SCALE_OUT：扩容。
-         * - SCALE_IN：缩容。
+         * 
+         * *   SCALE_OUT
+         * *   SCALE_IN
          */
         public Builder scalingActivityType(String scalingActivityType) {
             this.putQueryParameter("ScalingActivityType", scalingActivityType);
@@ -262,7 +258,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 伸缩规则名称。
+         * The name of the scaling rule.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -271,7 +267,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         }
 
         /**
-         * 查询伸缩活动创建时间的时间戳。单位为毫秒。
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

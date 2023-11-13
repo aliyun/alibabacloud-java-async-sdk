@@ -50,7 +50,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         private ScalingPolicy scalingPolicy; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingPolicy.
+         * The information about the auto scaling policy.
          */
         public Builder scalingPolicy(ScalingPolicy scalingPolicy) {
             this.scalingPolicy = scalingPolicy;
@@ -110,7 +110,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private Integer minCapacity; 
 
             /**
-             * 最大值
+             * The maximum number of nodes in the node group. Default value: 2000.
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -118,7 +118,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 最小值
+             * The minimum number of nodes in the node group. Default value: 0.
              */
             public Builder minCapacity(Integer minCapacity) {
                 this.minCapacity = minCapacity;
@@ -231,10 +231,11 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String triggerType; 
 
             /**
-             * 伸缩类型。取值范围：
+             * The type of the scaling activity. Valid values:
              * <p>
-             * - SCALE_OUT：扩容
-             * - SCALE_IN：缩容
+             * 
+             * *   SCALE_OUT: scale-out rules
+             * *   SCALE_IN: scale-in rules
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -242,7 +243,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 调整类型。CHANGE_IN_CAPACITY/EXACT_CAPACITY。
+             * The adjustment type.
              */
             public Builder adjustmentType(String adjustmentType) {
                 this.adjustmentType = adjustmentType;
@@ -250,7 +251,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 调整值。需要为正数，代表需要扩容或者缩容的实例数量。
+             * The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
@@ -258,7 +259,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 按照负载伸缩描述。
+             * The description of scaling by load.
              */
             public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
                 this.metricsTrigger = metricsTrigger;
@@ -266,7 +267,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 弹性伸缩规则名称。
+             * The name of the auto scaling rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -274,7 +275,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 按照时间伸缩描述。
+             * The description of scaling by time.
              */
             public Builder timeTrigger(TimeTrigger timeTrigger) {
                 this.timeTrigger = timeTrigger;
@@ -282,10 +283,11 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩规则类型。取值范围：
+             * The type of the scaling rule. Valid values:
              * <p>
-             * - TIME_TRIGGER: 按时间伸缩。
-             * - METRICS_TRIGGER: 按负载伸缩。
+             * 
+             * *   TIME_TRIGGER: scaling by time.
+             * *   METRICS_TRIGGER: scaling by load.
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -374,7 +376,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private java.util.List < ScalingRules> scalingRules; 
 
             /**
-             * 集群ID。
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -382,7 +384,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 最大最小值约束
+             * The maximum and minimum numbers of node groups.
              */
             public Builder constraints(Constraints constraints) {
                 this.constraints = constraints;
@@ -390,7 +392,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组ID。
+             * The ID of the node group.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -398,7 +400,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩策略ID。
+             * The ID of the scaling policy.
              */
             public Builder scalingPolicyId(String scalingPolicyId) {
                 this.scalingPolicyId = scalingPolicyId;
@@ -406,7 +408,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩规则列表
+             * The scaling rules.
              */
             public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;

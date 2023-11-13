@@ -50,7 +50,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The HDFS analysis results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Integer hdfsScore; 
 
             /**
-             * HdfsScore.
+             * The overall score of HDFS storage resources.
              */
             public Builder hdfsScore(Integer hdfsScore) {
                 this.hdfsScore = hdfsScore;
@@ -175,7 +175,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -183,7 +183,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +191,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -199,7 +199,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -276,7 +276,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +284,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +292,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -300,7 +300,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -377,7 +377,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,7 +385,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +393,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -401,7 +401,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -478,7 +478,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -486,7 +486,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +494,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -502,7 +502,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -579,7 +579,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -587,7 +587,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,7 +595,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -603,7 +603,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -680,7 +680,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -688,7 +688,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -696,7 +696,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -704,7 +704,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -781,7 +781,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -789,7 +789,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -797,7 +797,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -805,7 +805,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -882,7 +882,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -890,7 +890,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -898,7 +898,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -906,7 +906,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -983,7 +983,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -991,7 +991,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -999,7 +999,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1007,7 +1007,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1084,7 +1084,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1092,7 +1092,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1100,7 +1100,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1108,7 +1108,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1185,7 +1185,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1193,7 +1193,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1201,7 +1201,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1209,7 +1209,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1286,7 +1286,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1294,7 +1294,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1302,7 +1302,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1310,7 +1310,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1387,7 +1387,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1395,7 +1395,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1403,7 +1403,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1411,7 +1411,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1488,7 +1488,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1496,7 +1496,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1504,7 +1504,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1512,7 +1512,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1589,7 +1589,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1597,7 +1597,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1605,7 +1605,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1613,7 +1613,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1690,7 +1690,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1698,7 +1698,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1706,7 +1706,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1714,7 +1714,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1791,7 +1791,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1799,7 +1799,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1807,7 +1807,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1815,7 +1815,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1892,7 +1892,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1900,7 +1900,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1908,7 +1908,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1916,7 +1916,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1993,7 +1993,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2001,7 +2001,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2009,7 +2009,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2017,7 +2017,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2094,7 +2094,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2102,7 +2102,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2110,7 +2110,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2118,7 +2118,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2195,7 +2195,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2203,7 +2203,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2211,7 +2211,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2219,7 +2219,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2296,7 +2296,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2304,7 +2304,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2312,7 +2312,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2320,7 +2320,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2397,7 +2397,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2405,7 +2405,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2413,7 +2413,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2421,7 +2421,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2498,7 +2498,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2506,7 +2506,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2514,7 +2514,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2522,7 +2522,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2599,7 +2599,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2607,7 +2607,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2615,7 +2615,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2623,7 +2623,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2700,7 +2700,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2708,7 +2708,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2716,7 +2716,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2724,7 +2724,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2801,7 +2801,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2809,7 +2809,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2817,7 +2817,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2825,7 +2825,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2902,7 +2902,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2910,7 +2910,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2918,7 +2918,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2926,7 +2926,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3003,7 +3003,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3011,7 +3011,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3019,7 +3019,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3027,7 +3027,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3104,7 +3104,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3112,7 +3112,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3120,7 +3120,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3128,7 +3128,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3205,7 +3205,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3213,7 +3213,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3221,7 +3221,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3229,7 +3229,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3306,7 +3306,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3314,7 +3314,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3322,7 +3322,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3330,7 +3330,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3407,7 +3407,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3415,7 +3415,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3423,7 +3423,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3431,7 +3431,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3508,7 +3508,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3516,7 +3516,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3524,7 +3524,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3532,7 +3532,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3609,7 +3609,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3617,7 +3617,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3625,7 +3625,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3633,7 +3633,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3710,7 +3710,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3718,7 +3718,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3726,7 +3726,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3734,7 +3734,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3811,7 +3811,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3819,7 +3819,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3827,7 +3827,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3835,7 +3835,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3912,7 +3912,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3920,7 +3920,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3928,7 +3928,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3936,7 +3936,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4013,7 +4013,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4021,7 +4021,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4029,7 +4029,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4037,7 +4037,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4114,7 +4114,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4122,7 +4122,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4130,7 +4130,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4138,7 +4138,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4215,7 +4215,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4223,7 +4223,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4231,7 +4231,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4239,7 +4239,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4316,7 +4316,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4324,7 +4324,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4332,7 +4332,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4340,7 +4340,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4873,7 +4873,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * ColdDataDayGrowthSize.
+             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -4881,7 +4881,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataRatio.
+             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataRatio(ColdDataRatio coldDataRatio) {
                 this.coldDataRatio = coldDataRatio;
@@ -4889,7 +4889,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSize.
+             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -4897,7 +4897,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -4905,7 +4905,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileCount.
+             * The number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileCount(EmptyFileCount emptyFileCount) {
                 this.emptyFileCount = emptyFileCount;
@@ -4913,7 +4913,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileCountDayGrowthRatio(EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio) {
                 this.emptyFileCountDayGrowthRatio = emptyFileCountDayGrowthRatio;
@@ -4921,7 +4921,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileDayGrowthCount.
+             * The daily increment of the number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileDayGrowthCount(EmptyFileDayGrowthCount emptyFileDayGrowthCount) {
                 this.emptyFileDayGrowthCount = emptyFileDayGrowthCount;
@@ -4929,7 +4929,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileRatio.
+             * The proportion of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileRatio(EmptyFileRatio emptyFileRatio) {
                 this.emptyFileRatio = emptyFileRatio;
@@ -4937,7 +4937,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataDayGrowthSize.
+             * The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataDayGrowthSize(FreezeDataDayGrowthSize freezeDataDayGrowthSize) {
                 this.freezeDataDayGrowthSize = freezeDataDayGrowthSize;
@@ -4945,7 +4945,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataRatio.
+             * The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataRatio(FreezeDataRatio freezeDataRatio) {
                 this.freezeDataRatio = freezeDataRatio;
@@ -4953,7 +4953,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSize.
+             * The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -4961,7 +4961,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataSizeDayGrowthRatio(FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio) {
                 this.freezeDataSizeDayGrowthRatio = freezeDataSizeDayGrowthRatio;
@@ -4969,7 +4969,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataDayGrowthSize.
+             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -4977,7 +4977,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataRatio.
+             * The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataRatio(HotDataRatio hotDataRatio) {
                 this.hotDataRatio = hotDataRatio;
@@ -4985,7 +4985,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSize.
+             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -4993,7 +4993,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -5001,7 +5001,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileCount.
+             * The number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileCount(LargeFileCount largeFileCount) {
                 this.largeFileCount = largeFileCount;
@@ -5009,7 +5009,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileCountDayGrowthRatio(LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio) {
                 this.largeFileCountDayGrowthRatio = largeFileCountDayGrowthRatio;
@@ -5017,7 +5017,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileDayGrowthCount.
+             * The daily increment of the number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileDayGrowthCount(LargeFileDayGrowthCount largeFileDayGrowthCount) {
                 this.largeFileDayGrowthCount = largeFileDayGrowthCount;
@@ -5025,7 +5025,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileRatio.
+             * The proportion of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileRatio(LargeFileRatio largeFileRatio) {
                 this.largeFileRatio = largeFileRatio;
@@ -5033,7 +5033,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileCount.
+             * The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileCount(MediumFileCount mediumFileCount) {
                 this.mediumFileCount = mediumFileCount;
@@ -5041,7 +5041,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileCountDayGrowthRatio(MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio) {
                 this.mediumFileCountDayGrowthRatio = mediumFileCountDayGrowthRatio;
@@ -5049,7 +5049,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileDayGrowthCount.
+             * The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileDayGrowthCount(MediumFileDayGrowthCount mediumFileDayGrowthCount) {
                 this.mediumFileDayGrowthCount = mediumFileDayGrowthCount;
@@ -5057,7 +5057,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileRatio.
+             * The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileRatio(MediumFileRatio mediumFileRatio) {
                 this.mediumFileRatio = mediumFileRatio;
@@ -5065,7 +5065,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileCount.
+             * The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileCount(SmallFileCount smallFileCount) {
                 this.smallFileCount = smallFileCount;
@@ -5073,7 +5073,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileCountDayGrowthRatio(SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio) {
                 this.smallFileCountDayGrowthRatio = smallFileCountDayGrowthRatio;
@@ -5081,7 +5081,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileDayGrowthCount.
+             * The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileDayGrowthCount(SmallFileDayGrowthCount smallFileDayGrowthCount) {
                 this.smallFileDayGrowthCount = smallFileDayGrowthCount;
@@ -5089,7 +5089,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileRatio.
+             * The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileRatio(SmallFileRatio smallFileRatio) {
                 this.smallFileRatio = smallFileRatio;
@@ -5097,7 +5097,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileCount.
+             * The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileCount(TinyFileCount tinyFileCount) {
                 this.tinyFileCount = tinyFileCount;
@@ -5105,7 +5105,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileCountDayGrowthRatio(TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio) {
                 this.tinyFileCountDayGrowthRatio = tinyFileCountDayGrowthRatio;
@@ -5113,7 +5113,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileDayGrowthCount.
+             * The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileDayGrowthCount(TinyFileDayGrowthCount tinyFileDayGrowthCount) {
                 this.tinyFileDayGrowthCount = tinyFileDayGrowthCount;
@@ -5121,7 +5121,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileRatio.
+             * The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileRatio(TinyFileRatio tinyFileRatio) {
                 this.tinyFileRatio = tinyFileRatio;
@@ -5129,7 +5129,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataDayGrowthSize.
+             * The daily incremental of the total data volume.
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -5137,7 +5137,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSize.
+             * The total amount of data.
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -5145,7 +5145,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the total data volume.
              */
             public Builder totalDataSizeDayGrowthRatio(TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio) {
                 this.totalDataSizeDayGrowthRatio = totalDataSizeDayGrowthRatio;
@@ -5153,7 +5153,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileCount.
+             * The total number of files.
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -5161,7 +5161,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the total number of files.
              */
             public Builder totalFileCountDayGrowthRatio(TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio) {
                 this.totalFileCountDayGrowthRatio = totalFileCountDayGrowthRatio;
@@ -5169,7 +5169,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileDayGrowthCount.
+             * The daily increment of the total number of files.
              */
             public Builder totalFileDayGrowthCount(TotalFileDayGrowthCount totalFileDayGrowthCount) {
                 this.totalFileDayGrowthCount = totalFileDayGrowthCount;
@@ -5177,7 +5177,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataDayGrowthSize.
+             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -5185,7 +5185,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataRatio.
+             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataRatio(WarmDataRatio warmDataRatio) {
                 this.warmDataRatio = warmDataRatio;
@@ -5193,7 +5193,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSize.
+             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -5201,7 +5201,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;
@@ -5254,7 +5254,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The analysis results.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -5262,7 +5262,7 @@ public class GetDoctorHDFSClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

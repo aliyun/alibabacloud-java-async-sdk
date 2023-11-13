@@ -100,7 +100,7 @@ public class GetDoctorApplicationRequest extends Request {
         } 
 
         /**
-         * app id
+         * The ID of the job that is submitted to YARN.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -109,7 +109,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -118,7 +118,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -127,7 +127,7 @@ public class GetDoctorApplicationRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

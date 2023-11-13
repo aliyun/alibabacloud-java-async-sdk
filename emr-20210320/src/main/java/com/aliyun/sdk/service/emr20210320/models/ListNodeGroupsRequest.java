@@ -154,7 +154,7 @@ public class ListNodeGroupsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +163,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The number of maximum number of records to obtain at a time. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -172,7 +172,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * Marks the current position where reading starts. If you set this value to null, you can start from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -181,7 +181,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 节点组ID列表。
+         * The IDs of node groups. Valid values of the number of array elements N: 1 to 100.
          */
         public Builder nodeGroupIds(java.util.List < String > nodeGroupIds) {
             this.putQueryParameter("NodeGroupIds", nodeGroupIds);
@@ -190,7 +190,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 节点组名称列表。
+         * The list of node group names. Valid values of the number of array elements N: 1 to 100.
          */
         public Builder nodeGroupNames(java.util.List < String > nodeGroupNames) {
             this.putQueryParameter("NodeGroupNames", nodeGroupNames);
@@ -199,7 +199,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 节点组状态。
+         * The status of the node group. Valid values of the number of array elements N: 1 to 100.
          */
         public Builder nodeGroupStates(java.util.List < String > nodeGroupStates) {
             this.putQueryParameter("NodeGroupStates", nodeGroupStates);
@@ -208,7 +208,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 节点组类型列表。
+         * The list of node group types. Valid values of the number of array elements N: 1 to 100.
          */
         public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
             this.putQueryParameter("NodeGroupTypes", nodeGroupTypes);
@@ -217,7 +217,7 @@ public class ListNodeGroupsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The ID of the region in which you want to create the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

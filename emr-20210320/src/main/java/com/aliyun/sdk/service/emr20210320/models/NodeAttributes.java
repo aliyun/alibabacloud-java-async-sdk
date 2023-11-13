@@ -15,6 +15,9 @@ public class NodeAttributes extends TeaModel {
     @NameInMap("KeyPairName")
     private String keyPairName;
 
+    @NameInMap("MasterRootPassword")
+    private String masterRootPassword;
+
     @NameInMap("RamRole")
     private String ramRole;
 
@@ -32,6 +35,7 @@ public class NodeAttributes extends TeaModel {
 
     private NodeAttributes(Builder builder) {
         this.keyPairName = builder.keyPairName;
+        this.masterRootPassword = builder.masterRootPassword;
         this.ramRole = builder.ramRole;
         this.securityGroupId = builder.securityGroupId;
         this.vpcId = builder.vpcId;
@@ -51,6 +55,13 @@ public class NodeAttributes extends TeaModel {
      */
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    /**
+     * @return masterRootPassword
+     */
+    public String getMasterRootPassword() {
+        return this.masterRootPassword;
     }
 
     /**
@@ -83,6 +94,7 @@ public class NodeAttributes extends TeaModel {
 
     public static final class Builder {
         private String keyPairName; 
+        private String masterRootPassword; 
         private String ramRole; 
         private String securityGroupId; 
         private String vpcId; 
@@ -93,6 +105,14 @@ public class NodeAttributes extends TeaModel {
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * MASTER节点root密码。
+         */
+        public Builder masterRootPassword(String masterRootPassword) {
+            this.masterRootPassword = masterRootPassword;
             return this;
         }
 

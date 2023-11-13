@@ -50,7 +50,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 操作ID。
+         * The operation ID.
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -58,7 +58,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

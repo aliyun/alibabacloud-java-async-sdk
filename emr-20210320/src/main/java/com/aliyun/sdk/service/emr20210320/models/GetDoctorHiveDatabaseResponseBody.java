@@ -50,7 +50,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The analysis results of the Hive database.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Integer hiveScore; 
 
             /**
-             * HiveDistributionScore.
+             * The score for the distribution of files of different sizes stored in the Hive database.
              */
             public Builder hiveDistributionScore(Integer hiveDistributionScore) {
                 this.hiveDistributionScore = hiveDistributionScore;
@@ -142,7 +142,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HiveFormatScore.
+             * The score for the distribution of files stored in different formats in the Hive database.
              */
             public Builder hiveFormatScore(Integer hiveFormatScore) {
                 this.hiveFormatScore = hiveFormatScore;
@@ -150,7 +150,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HiveFrequencyScore.
+             * The score for the access frequency of the Hive database.
              */
             public Builder hiveFrequencyScore(Integer hiveFrequencyScore) {
                 this.hiveFrequencyScore = hiveFrequencyScore;
@@ -158,7 +158,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HiveScore.
+             * The overall score of the Hive database.
              */
             public Builder hiveScore(Integer hiveScore) {
                 this.hiveScore = hiveScore;
@@ -259,7 +259,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private String formatSizeUnit; 
 
             /**
-             * FormatDayGrowthSize.
+             * The daily increment of storage format-specific data.
              */
             public Builder formatDayGrowthSize(Long formatDayGrowthSize) {
                 this.formatDayGrowthSize = formatDayGrowthSize;
@@ -267,7 +267,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * The name of the storage format.
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -275,7 +275,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FormatRatio.
+             * The proportion of data in a specific storage format.
              */
             public Builder formatRatio(Float formatRatio) {
                 this.formatRatio = formatRatio;
@@ -283,7 +283,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FormatSize.
+             * The amount of storage format-specific data.
              */
             public Builder formatSize(Long formatSize) {
                 this.formatSize = formatSize;
@@ -291,7 +291,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FormatSizeDayGrowthRatio.
+             * The day-to-day growth rate of storage format-specific data.
              */
             public Builder formatSizeDayGrowthRatio(Float formatSizeDayGrowthRatio) {
                 this.formatSizeDayGrowthRatio = formatSizeDayGrowthRatio;
@@ -299,7 +299,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FormatSizeUnit.
+             * The unit of the amount of storage format-specific data.
              */
             public Builder formatSizeUnit(String formatSizeUnit) {
                 this.formatSizeUnit = formatSizeUnit;
@@ -376,7 +376,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +384,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +392,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -400,7 +400,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -477,7 +477,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +485,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -493,7 +493,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -501,7 +501,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -578,7 +578,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -586,7 +586,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -594,7 +594,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -602,7 +602,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -679,7 +679,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -687,7 +687,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -695,7 +695,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -703,7 +703,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -780,7 +780,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -788,7 +788,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -796,7 +796,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -804,7 +804,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -881,7 +881,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -889,7 +889,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -897,7 +897,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -905,7 +905,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -982,7 +982,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +990,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -998,7 +998,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1006,7 +1006,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1083,7 +1083,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1091,7 +1091,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1099,7 +1099,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1107,7 +1107,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1184,7 +1184,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1192,7 +1192,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1200,7 +1200,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1208,7 +1208,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1285,7 +1285,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1293,7 +1293,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1301,7 +1301,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1309,7 +1309,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1386,7 +1386,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1394,7 +1394,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1402,7 +1402,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1410,7 +1410,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1487,7 +1487,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1495,7 +1495,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1503,7 +1503,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1511,7 +1511,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1588,7 +1588,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1596,7 +1596,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1604,7 +1604,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1612,7 +1612,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1689,7 +1689,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1697,7 +1697,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1705,7 +1705,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1713,7 +1713,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1790,7 +1790,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1798,7 +1798,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1806,7 +1806,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1814,7 +1814,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1891,7 +1891,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1899,7 +1899,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1907,7 +1907,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1915,7 +1915,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1992,7 +1992,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2000,7 +2000,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2008,7 +2008,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2016,7 +2016,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2093,7 +2093,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2101,7 +2101,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2109,7 +2109,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2117,7 +2117,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2194,7 +2194,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2202,7 +2202,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2210,7 +2210,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2218,7 +2218,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2295,7 +2295,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2303,7 +2303,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2311,7 +2311,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2319,7 +2319,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2396,7 +2396,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2404,7 +2404,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2412,7 +2412,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2420,7 +2420,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2497,7 +2497,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2505,7 +2505,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2513,7 +2513,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2521,7 +2521,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2598,7 +2598,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2606,7 +2606,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2614,7 +2614,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2622,7 +2622,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2699,7 +2699,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2707,7 +2707,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2715,7 +2715,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2723,7 +2723,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -2800,7 +2800,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2808,7 +2808,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2816,7 +2816,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2824,7 +2824,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -2901,7 +2901,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2909,7 +2909,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2917,7 +2917,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -2925,7 +2925,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3002,7 +3002,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3010,7 +3010,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3018,7 +3018,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3026,7 +3026,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3103,7 +3103,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3111,7 +3111,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3119,7 +3119,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3127,7 +3127,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3204,7 +3204,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3212,7 +3212,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3220,7 +3220,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3228,7 +3228,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3305,7 +3305,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3313,7 +3313,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3321,7 +3321,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3329,7 +3329,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3406,7 +3406,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3414,7 +3414,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3422,7 +3422,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3430,7 +3430,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3507,7 +3507,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3515,7 +3515,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3523,7 +3523,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3531,7 +3531,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3608,7 +3608,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3616,7 +3616,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3624,7 +3624,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3632,7 +3632,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3709,7 +3709,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3717,7 +3717,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3725,7 +3725,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3733,7 +3733,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -3810,7 +3810,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3818,7 +3818,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3826,7 +3826,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3834,7 +3834,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -3911,7 +3911,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3919,7 +3919,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3927,7 +3927,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -3935,7 +3935,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4012,7 +4012,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4020,7 +4020,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4028,7 +4028,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4036,7 +4036,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4113,7 +4113,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4121,7 +4121,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4129,7 +4129,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4137,7 +4137,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4214,7 +4214,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4222,7 +4222,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4230,7 +4230,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4238,7 +4238,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4315,7 +4315,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4323,7 +4323,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4331,7 +4331,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4339,7 +4339,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4416,7 +4416,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4424,7 +4424,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4432,7 +4432,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4440,7 +4440,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4517,7 +4517,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4525,7 +4525,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4533,7 +4533,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4541,7 +4541,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -4618,7 +4618,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4626,7 +4626,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4634,7 +4634,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4642,7 +4642,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -4719,7 +4719,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -4727,7 +4727,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4735,7 +4735,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -4743,7 +4743,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -5300,7 +5300,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * ColdDataDayGrowthSize.
+             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -5308,7 +5308,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataRatio.
+             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataRatio(ColdDataRatio coldDataRatio) {
                 this.coldDataRatio = coldDataRatio;
@@ -5316,7 +5316,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSize.
+             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -5324,7 +5324,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -5332,7 +5332,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileCount.
+             * The number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileCount(EmptyFileCount emptyFileCount) {
                 this.emptyFileCount = emptyFileCount;
@@ -5340,7 +5340,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileCountDayGrowthRatio(EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio) {
                 this.emptyFileCountDayGrowthRatio = emptyFileCountDayGrowthRatio;
@@ -5348,7 +5348,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileDayGrowthCount.
+             * The daily increment of the number of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileDayGrowthCount(EmptyFileDayGrowthCount emptyFileDayGrowthCount) {
                 this.emptyFileDayGrowthCount = emptyFileDayGrowthCount;
@@ -5356,7 +5356,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * EmptyFileRatio.
+             * The proportion of empty files. Empty files are those with a size of 0 MB.
              */
             public Builder emptyFileRatio(EmptyFileRatio emptyFileRatio) {
                 this.emptyFileRatio = emptyFileRatio;
@@ -5364,7 +5364,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataDayGrowthSize.
+             * The daily increment of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataDayGrowthSize(FreezeDataDayGrowthSize freezeDataDayGrowthSize) {
                 this.freezeDataDayGrowthSize = freezeDataDayGrowthSize;
@@ -5372,7 +5372,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataRatio.
+             * The proportion of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataRatio(FreezeDataRatio freezeDataRatio) {
                 this.freezeDataRatio = freezeDataRatio;
@@ -5380,7 +5380,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSize.
+             * The amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataSize(FreezeDataSize freezeDataSize) {
                 this.freezeDataSize = freezeDataSize;
@@ -5388,7 +5388,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of very cold data. Very cold data refers to data that is not accessed for more than 90 days.
              */
             public Builder freezeDataSizeDayGrowthRatio(FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio) {
                 this.freezeDataSizeDayGrowthRatio = freezeDataSizeDayGrowthRatio;
@@ -5396,7 +5396,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataDayGrowthSize.
+             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -5404,7 +5404,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataRatio.
+             * The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataRatio(HotDataRatio hotDataRatio) {
                 this.hotDataRatio = hotDataRatio;
@@ -5412,7 +5412,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSize.
+             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -5420,7 +5420,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * HotDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -5428,7 +5428,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileCount.
+             * The number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileCount(LargeFileCount largeFileCount) {
                 this.largeFileCount = largeFileCount;
@@ -5436,7 +5436,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileCountDayGrowthRatio(LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio) {
                 this.largeFileCountDayGrowthRatio = largeFileCountDayGrowthRatio;
@@ -5444,7 +5444,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileDayGrowthCount.
+             * The daily increment of the number of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileDayGrowthCount(LargeFileDayGrowthCount largeFileDayGrowthCount) {
                 this.largeFileDayGrowthCount = largeFileDayGrowthCount;
@@ -5452,7 +5452,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * LargeFileRatio.
+             * The proportion of large files. Large files are those with a size greater than 1 GB.
              */
             public Builder largeFileRatio(LargeFileRatio largeFileRatio) {
                 this.largeFileRatio = largeFileRatio;
@@ -5460,7 +5460,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileCount.
+             * The number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileCount(MediumFileCount mediumFileCount) {
                 this.mediumFileCount = mediumFileCount;
@@ -5468,7 +5468,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileCountDayGrowthRatio(MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio) {
                 this.mediumFileCountDayGrowthRatio = mediumFileCountDayGrowthRatio;
@@ -5476,7 +5476,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileDayGrowthCount.
+             * The daily increment of the number of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileDayGrowthCount(MediumFileDayGrowthCount mediumFileDayGrowthCount) {
                 this.mediumFileDayGrowthCount = mediumFileDayGrowthCount;
@@ -5484,7 +5484,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * MediumFileRatio.
+             * The proportion of medium files. Medium files are those with a size greater than or equal to 128 MB and less than or equal to 1 GB.
              */
             public Builder mediumFileRatio(MediumFileRatio mediumFileRatio) {
                 this.mediumFileRatio = mediumFileRatio;
@@ -5492,7 +5492,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionNum.
+             * The number of partitions.
              */
             public Builder partitionNum(PartitionNum partitionNum) {
                 this.partitionNum = partitionNum;
@@ -5500,7 +5500,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileCount.
+             * The number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileCount(SmallFileCount smallFileCount) {
                 this.smallFileCount = smallFileCount;
@@ -5508,7 +5508,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileCountDayGrowthRatio(SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio) {
                 this.smallFileCountDayGrowthRatio = smallFileCountDayGrowthRatio;
@@ -5516,7 +5516,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileDayGrowthCount.
+             * The daily increment of the number of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileDayGrowthCount(SmallFileDayGrowthCount smallFileDayGrowthCount) {
                 this.smallFileDayGrowthCount = smallFileDayGrowthCount;
@@ -5524,7 +5524,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * SmallFileRatio.
+             * The proportion of small files. Small files are those with a size greater than or equal to 10 MB and less than 128 MB.
              */
             public Builder smallFileRatio(SmallFileRatio smallFileRatio) {
                 this.smallFileRatio = smallFileRatio;
@@ -5532,7 +5532,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The number of tables.
              */
             public Builder tableCount(TableCount tableCount) {
                 this.tableCount = tableCount;
@@ -5540,7 +5540,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileCount.
+             * The number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileCount(TinyFileCount tinyFileCount) {
                 this.tinyFileCount = tinyFileCount;
@@ -5548,7 +5548,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileCountDayGrowthRatio(TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio) {
                 this.tinyFileCountDayGrowthRatio = tinyFileCountDayGrowthRatio;
@@ -5556,7 +5556,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileDayGrowthCount.
+             * The daily increment of the number of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileDayGrowthCount(TinyFileDayGrowthCount tinyFileDayGrowthCount) {
                 this.tinyFileDayGrowthCount = tinyFileDayGrowthCount;
@@ -5564,7 +5564,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TinyFileRatio.
+             * The proportion of very small files. Very small files are those with a size greater than 0 MB and less than 10 MB.
              */
             public Builder tinyFileRatio(TinyFileRatio tinyFileRatio) {
                 this.tinyFileRatio = tinyFileRatio;
@@ -5572,7 +5572,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataDayGrowthSize.
+             * The daily incremental of the total data volume.
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -5580,7 +5580,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSize.
+             * The total amount of data.
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -5588,7 +5588,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the total data volume.
              */
             public Builder totalDataSizeDayGrowthRatio(TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio) {
                 this.totalDataSizeDayGrowthRatio = totalDataSizeDayGrowthRatio;
@@ -5596,7 +5596,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileCount.
+             * The total number of files.
              */
             public Builder totalFileCount(TotalFileCount totalFileCount) {
                 this.totalFileCount = totalFileCount;
@@ -5604,7 +5604,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileCountDayGrowthRatio.
+             * The day-to-day growth rate of the total number of files.
              */
             public Builder totalFileCountDayGrowthRatio(TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio) {
                 this.totalFileCountDayGrowthRatio = totalFileCountDayGrowthRatio;
@@ -5612,7 +5612,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFileDayGrowthCount.
+             * The daily increment of the total number of files.
              */
             public Builder totalFileDayGrowthCount(TotalFileDayGrowthCount totalFileDayGrowthCount) {
                 this.totalFileDayGrowthCount = totalFileDayGrowthCount;
@@ -5620,7 +5620,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataDayGrowthSize.
+             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -5628,7 +5628,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataRatio.
+             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataRatio(WarmDataRatio warmDataRatio) {
                 this.warmDataRatio = warmDataRatio;
@@ -5636,7 +5636,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSize.
+             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -5644,7 +5644,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * WarmDataSizeDayGrowthRatio.
+             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;
@@ -5709,7 +5709,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The analysis results.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -5717,7 +5717,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Formats.
+             * The information from the perspective of storage formats.
              */
             public Builder formats(java.util.List < Formats> formats) {
                 this.formats = formats;
@@ -5725,7 +5725,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

@@ -155,7 +155,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * DatabaseNames.
+         * The database names.
          */
         public Builder databaseNames(java.util.List < String > databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
@@ -173,7 +173,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The query date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -182,7 +182,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -191,7 +191,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -200,7 +200,10 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The basis on which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   tableCount: the number of tables
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -209,7 +212,11 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -218,7 +225,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

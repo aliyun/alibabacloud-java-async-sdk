@@ -86,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Applications.
+         * The information about applications.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -94,7 +94,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * The page number of the next page returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of pages.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -195,7 +195,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String communityVersion; 
 
             /**
-             * 应用名称。
+             * The application name.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -203,7 +203,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 应用操作状态
+             * The status of the application operation.
              */
             public Builder applicationState(String applicationState) {
                 this.applicationState = applicationState;
@@ -211,7 +211,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 应用版本。
+             * The version of the application.
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -219,7 +219,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * 社区版本。
+             * The community edition.
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;

@@ -86,7 +86,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivities.
+         * The scaling activities.
          */
         public Builder scalingActivities(java.util.List < ScalingActivities> scalingActivities) {
             this.scalingActivities = scalingActivities;
@@ -118,7 +118,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * 伸缩活动ID。
+             * The ID of the scaling activity.
              */
             public Builder activityId(String activityId) {
                 this.activityId = activityId;
@@ -298,12 +298,13 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩活动状态。取值范围：
+             * The status of the scaling activity. Valid values:
              * <p>
-             * - REJECTED：拒绝
-             * - SUCCESSFUL：成功
-             * - FAILED：失败
-             * - IN_PROGRESS：进行中
+             * 
+             * *   REJECTED
+             * *   SUCCESSFUL
+             * *   FAILED
+             * *   IN_PROGRESS
              */
             public Builder activityState(String activityState) {
                 this.activityState = activityState;
@@ -311,10 +312,11 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩活动类型。取值范围：
+             * The type of the scaling activity. Valid values:
              * <p>
-             * - SCALE_IN：缩容
-             * - SCALE_OUT：扩容
+             * 
+             * *   SCALE_OUT
+             * *   SCALE_IN
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -322,7 +324,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 集群ID。
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -330,7 +332,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩活动描述。
+             * The description of the scaling activity.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +340,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩结束时间。
+             * The end time of the scaling. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -346,7 +348,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 本次扩缩数量。
+             * The number of added or removed instances.
              */
             public Builder expectNum(Integer expectNum) {
                 this.expectNum = expectNum;
@@ -354,7 +356,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组ID。
+             * The ID of the node group.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -362,7 +364,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点组名称。
+             * The name of the node group.
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -370,7 +372,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 操作ID。
+             * The operation ID.
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -378,7 +380,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩规则名称。
+             * The name of the scaling rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -386,7 +388,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩启动时间。
+             * The start time of the scaling. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

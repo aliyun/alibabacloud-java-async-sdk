@@ -86,7 +86,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * Returns the location of the data that was read. Empty indicates that the data has been read.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroups.
+         * The array of node groups.
          */
         public Builder nodeGroups(java.util.List < NodeGroup > nodeGroups) {
             this.nodeGroups = nodeGroups;
@@ -110,7 +110,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

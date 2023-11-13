@@ -170,7 +170,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * 应用配置列表。
+         * The list of application configurations.
          */
         public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -179,7 +179,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 应用名称。
+         * The application name.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -188,7 +188,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -197,11 +197,12 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 配置项操作。取值范围：
+         * The operation performed on configuration items. Valid values:
          * <p>
-         * - ADD：添加。
-         * - DELETE：删除。
-         * - UPDATE：更新。
+         * 
+         * *   ADD
+         * *   UPDATE
+         * *   DELETE
          */
         public Builder configAction(String configAction) {
             this.putQueryParameter("ConfigAction", configAction);
@@ -210,10 +211,11 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 配置操作范围。取值范围：
+         * The operation scope. Valid values:
          * <p>
-         * - CLUSTER：集群范围。
-         * - NODE_GROUP：节点组范围。
+         * 
+         * *   CLUSTER
+         * *   NODE_GROUP
          */
         public Builder configScope(String configScope) {
             this.putQueryParameter("ConfigScope", configScope);
@@ -222,7 +224,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 本次更新操作描述。
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -231,7 +233,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 节点组ID。
+         * The ID of the node group.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -240,7 +242,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 节点ID。
+         * The node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -249,7 +251,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
