@@ -74,7 +74,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code or error code.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +98,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * Tag的键。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +158,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * Tag的值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -451,7 +451,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Resource instance ID bound to the environment, including container instance ID or VpcId.
+             * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -459,7 +459,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Profile of bound resources.
+             * The profile of the resource.
              */
             public Builder bindResourceProfile(String bindResourceProfile) {
                 this.bindResourceProfile = bindResourceProfile;
@@ -467,7 +467,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the bound resource.
+             * The status of the resource.
              */
             public Builder bindResourceStatus(String bindResourceStatus) {
                 this.bindResourceStatus = bindResourceStatus;
@@ -475,7 +475,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The storage duration of bound resources (days).
+             * The retention period of the resource. Unit: days.
              */
             public Builder bindResourceStoreDuration(String bindResourceStoreDuration) {
                 this.bindResourceStoreDuration = bindResourceStoreDuration;
@@ -483,7 +483,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The bound resource type.
+             * The resource type.
              */
             public Builder bindResourceType(String bindResourceType) {
                 this.bindResourceType = bindResourceType;
@@ -491,7 +491,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Bind the network segment of the vpc.
+             * The VPC CIDR block.
              */
             public Builder bindVpcCidr(String bindVpcCidr) {
                 this.bindVpcCidr = bindVpcCidr;
@@ -499,7 +499,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -507,7 +507,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Environment name.
+             * The environment name.
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
@@ -515,7 +515,11 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentSubType.
+             * Environment subtypes:
+             * <p>
+             * - CS: Currently supports ACK.
+             * - ECS: ECS is currently supported.
+             * - Cloud: Currently supports Cloud.
              */
             public Builder environmentSubType(String environmentSubType) {
                 this.environmentSubType = environmentSubType;
@@ -523,11 +527,12 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Environment type:
+             * The type of the environment. Valid values:
              * <p>
-             * - CS: Container Service.
-             * - ECS.
-             * - Cloud: cloud service.
+             * 
+             * *   CS: Container Service for Kubernetes (ACK)
+             * *   ECS: Elastic Compute Service
+             * *   Cloud: cloud service
              */
             public Builder environmentType(String environmentType) {
                 this.environmentType = environmentType;
@@ -535,7 +540,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana data source name.
+             * The name of the Grafana data source.
              */
             public Builder grafaDataSourceName(String grafaDataSourceName) {
                 this.grafaDataSourceName = grafaDataSourceName;
@@ -543,7 +548,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana data source unique ID.
+             * The unique ID of the Grafana data source.
              */
             public Builder grafanaDatasourceUid(String grafanaDatasourceUid) {
                 this.grafanaDatasourceUid = grafanaDatasourceUid;
@@ -551,7 +556,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana directory name.
+             * The name of the Grafana directory.
              */
             public Builder grafanaFolderTitle(String grafanaFolderTitle) {
                 this.grafanaFolderTitle = grafanaFolderTitle;
@@ -559,7 +564,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana directory unique ID.
+             * The unique ID of the Grafana directory.
              */
             public Builder grafanaFolderUid(String grafanaFolderUid) {
                 this.grafanaFolderUid = grafanaFolderUid;
@@ -567,7 +572,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana directory URL.
+             * The URL of the Grafana directory.
              */
             public Builder grafanaFolderUrl(String grafanaFolderUrl) {
                 this.grafanaFolderUrl = grafanaFolderUrl;
@@ -575,7 +580,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The bound prometheus instance ID.
+             * The ID of the Prometheus instance.
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -583,7 +588,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bound prometheus instance.
+             * The name of the Prometheus instance.
              */
             public Builder prometheusInstanceName(String prometheusInstanceName) {
                 this.prometheusInstanceName = prometheusInstanceName;
@@ -615,7 +620,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -623,7 +628,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

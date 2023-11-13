@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteEnvironmentRequest extends Request {
     @Query
+    @NameInMap("DeletePromInstance")
+    private Boolean deletePromInstance;
+
+    @Query
     @NameInMap("EnvironmentId")
     @Validation(required = true)
     private String environmentId;
@@ -24,6 +28,7 @@ public class DeleteEnvironmentRequest extends Request {
 
     private DeleteEnvironmentRequest(Builder builder) {
         super(builder);
+        this.deletePromInstance = builder.deletePromInstance;
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
     }
@@ -42,6 +47,13 @@ public class DeleteEnvironmentRequest extends Request {
     }
 
     /**
+     * @return deletePromInstance
+     */
+    public Boolean getDeletePromInstance() {
+        return this.deletePromInstance;
+    }
+
+    /**
      * @return environmentId
      */
     public String getEnvironmentId() {
@@ -56,6 +68,7 @@ public class DeleteEnvironmentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEnvironmentRequest, Builder> {
+        private Boolean deletePromInstance; 
         private String environmentId; 
         private String regionId; 
 
@@ -65,9 +78,19 @@ public class DeleteEnvironmentRequest extends Request {
 
         private Builder(DeleteEnvironmentRequest request) {
             super(request);
+            this.deletePromInstance = request.deletePromInstance;
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * DeletePromInstance.
+         */
+        public Builder deletePromInstance(Boolean deletePromInstance) {
+            this.putQueryParameter("DeletePromInstance", deletePromInstance);
+            this.deletePromInstance = deletePromInstance;
+            return this;
+        }
 
         /**
          * Environment instance ID.

@@ -82,7 +82,7 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,7 +91,7 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +100,7 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the synthetic monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

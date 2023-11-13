@@ -1882,6 +1882,167 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    public static class Stream extends TeaModel {
+        @NameInMap("CustomHeaderContent")
+        private java.util.Map < String, String > customHeaderContent;
+
+        @NameInMap("PlayerType")
+        private Integer playerType;
+
+        @NameInMap("StreamAddressType")
+        private Integer streamAddressType;
+
+        @NameInMap("StreamMonitorTimeout")
+        private Integer streamMonitorTimeout;
+
+        @NameInMap("StreamType")
+        private Integer streamType;
+
+        @NameInMap("TargetUrl")
+        private String targetUrl;
+
+        @NameInMap("WhiteList")
+        private String whiteList;
+
+        private Stream(Builder builder) {
+            this.customHeaderContent = builder.customHeaderContent;
+            this.playerType = builder.playerType;
+            this.streamAddressType = builder.streamAddressType;
+            this.streamMonitorTimeout = builder.streamMonitorTimeout;
+            this.streamType = builder.streamType;
+            this.targetUrl = builder.targetUrl;
+            this.whiteList = builder.whiteList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Stream create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customHeaderContent
+         */
+        public java.util.Map < String, String > getCustomHeaderContent() {
+            return this.customHeaderContent;
+        }
+
+        /**
+         * @return playerType
+         */
+        public Integer getPlayerType() {
+            return this.playerType;
+        }
+
+        /**
+         * @return streamAddressType
+         */
+        public Integer getStreamAddressType() {
+            return this.streamAddressType;
+        }
+
+        /**
+         * @return streamMonitorTimeout
+         */
+        public Integer getStreamMonitorTimeout() {
+            return this.streamMonitorTimeout;
+        }
+
+        /**
+         * @return streamType
+         */
+        public Integer getStreamType() {
+            return this.streamType;
+        }
+
+        /**
+         * @return targetUrl
+         */
+        public String getTargetUrl() {
+            return this.targetUrl;
+        }
+
+        /**
+         * @return whiteList
+         */
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > customHeaderContent; 
+            private Integer playerType; 
+            private Integer streamAddressType; 
+            private Integer streamMonitorTimeout; 
+            private Integer streamType; 
+            private String targetUrl; 
+            private String whiteList; 
+
+            /**
+             * CustomHeaderContent.
+             */
+            public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
+                this.customHeaderContent = customHeaderContent;
+                return this;
+            }
+
+            /**
+             * PlayerType.
+             */
+            public Builder playerType(Integer playerType) {
+                this.playerType = playerType;
+                return this;
+            }
+
+            /**
+             * StreamAddressType.
+             */
+            public Builder streamAddressType(Integer streamAddressType) {
+                this.streamAddressType = streamAddressType;
+                return this;
+            }
+
+            /**
+             * StreamMonitorTimeout.
+             */
+            public Builder streamMonitorTimeout(Integer streamMonitorTimeout) {
+                this.streamMonitorTimeout = streamMonitorTimeout;
+                return this;
+            }
+
+            /**
+             * StreamType.
+             */
+            public Builder streamType(Integer streamType) {
+                this.streamType = streamType;
+                return this;
+            }
+
+            /**
+             * TargetUrl.
+             */
+            public Builder targetUrl(String targetUrl) {
+                this.targetUrl = targetUrl;
+                return this;
+            }
+
+            /**
+             * WhiteList.
+             */
+            public Builder whiteList(String whiteList) {
+                this.whiteList = whiteList;
+                return this;
+            }
+
+            public Stream build() {
+                return new Stream(this);
+            } 
+
+        } 
+
+    }
     public static class Website extends TeaModel {
         @NameInMap("AutomaticScrolling")
         private Integer automaticScrolling;
@@ -2299,6 +2460,9 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("NetTCP")
         private NetTCP netTCP;
 
+        @NameInMap("Stream")
+        private Stream stream;
+
         @NameInMap("Website")
         private Website website;
 
@@ -2308,6 +2472,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.netDNS = builder.netDNS;
             this.netICMP = builder.netICMP;
             this.netTCP = builder.netTCP;
+            this.stream = builder.stream;
             this.website = builder.website;
         }
 
@@ -2355,6 +2520,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return stream
+         */
+        public Stream getStream() {
+            return this.stream;
+        }
+
+        /**
          * @return website
          */
         public Website getWebsite() {
@@ -2367,6 +2539,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private NetDNS netDNS; 
             private NetICMP netICMP; 
             private NetTCP netTCP; 
+            private Stream stream; 
             private Website website; 
 
             /**
@@ -2406,6 +2579,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder netTCP(NetTCP netTCP) {
                 this.netTCP = netTCP;
+                return this;
+            }
+
+            /**
+             * Stream.
+             */
+            public Builder stream(Stream stream) {
+                this.stream = stream;
                 return this;
             }
 

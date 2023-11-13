@@ -7,24 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeEnvironmentRequest} extends {@link RequestModel}
+ * {@link GetCommercialStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeEnvironmentRequest</p>
+ * <p>GetCommercialStatusRequest</p>
  */
-public class DescribeEnvironmentRequest extends Request {
+public class GetCommercialStatusRequest extends Request {
     @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
-    private String environmentId;
+    @NameInMap("CommodityCode")
+    private String commodityCode;
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private DescribeEnvironmentRequest(Builder builder) {
+    private GetCommercialStatusRequest(Builder builder) {
         super(builder);
-        this.environmentId = builder.environmentId;
+        this.commodityCode = builder.commodityCode;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +30,7 @@ public class DescribeEnvironmentRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeEnvironmentRequest create() {
+    public static GetCommercialStatusRequest create() {
         return builder().build();
     }
 
@@ -42,10 +40,10 @@ public class DescribeEnvironmentRequest extends Request {
     }
 
     /**
-     * @return environmentId
+     * @return commodityCode
      */
-    public String getEnvironmentId() {
-        return this.environmentId;
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -55,31 +53,31 @@ public class DescribeEnvironmentRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeEnvironmentRequest, Builder> {
-        private String environmentId; 
+    public static final class Builder extends Request.Builder<GetCommercialStatusRequest, Builder> {
+        private String commodityCode; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEnvironmentRequest request) {
+        private Builder(GetCommercialStatusRequest request) {
             super(request);
-            this.environmentId = request.environmentId;
+            this.commodityCode = request.commodityCode;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the environment instance.
+         * CommodityCode.
          */
-        public Builder environmentId(String environmentId) {
-            this.putQueryParameter("EnvironmentId", environmentId);
-            this.environmentId = environmentId;
+        public Builder commodityCode(String commodityCode) {
+            this.putQueryParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
             return this;
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -88,8 +86,8 @@ public class DescribeEnvironmentRequest extends Request {
         }
 
         @Override
-        public DescribeEnvironmentRequest build() {
-            return new DescribeEnvironmentRequest(this);
+        public GetCommercialStatusRequest build() {
+            return new GetCommercialStatusRequest(this);
         } 
 
     } 

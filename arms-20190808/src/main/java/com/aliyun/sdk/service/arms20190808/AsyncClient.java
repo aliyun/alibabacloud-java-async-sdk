@@ -224,6 +224,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterAllUrlResponse> getClusterAllUrl(GetClusterAllUrlRequest request);
 
+    CompletableFuture<GetCommercialStatusResponse> getCommercialStatus(GetCommercialStatusRequest request);
+
     CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request);
 
     CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request);

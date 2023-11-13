@@ -74,7 +74,7 @@ public class DeleteTimingSyntheticTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the synthetic monitoring task was deleted. true: The synthetic monitoring task was deleted. false: The synthetic monitoring task failed to be deleted.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class DeleteTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class DeleteTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
