@@ -140,6 +140,9 @@ public class ApplyInvoiceTaskRequest extends Request {
         @NameInMap("international_flight_invoice_fee")
         private String internationalFlightInvoiceFee;
 
+        @NameInMap("international_hotel_invoice_fee")
+        private String internationalHotelInvoiceFee;
+
         @NameInMap("invoice_third_part_id")
         @Validation(required = true)
         private String invoiceThirdPartId;
@@ -182,6 +185,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             this.hotelNormalInvoiceFee = builder.hotelNormalInvoiceFee;
             this.hotelSpecialInvoiceFee = builder.hotelSpecialInvoiceFee;
             this.internationalFlightInvoiceFee = builder.internationalFlightInvoiceFee;
+            this.internationalHotelInvoiceFee = builder.internationalHotelInvoiceFee;
             this.invoiceThirdPartId = builder.invoiceThirdPartId;
             this.mailAddress = builder.mailAddress;
             this.mailCity = builder.mailCity;
@@ -250,6 +254,13 @@ public class ApplyInvoiceTaskRequest extends Request {
          */
         public String getInternationalFlightInvoiceFee() {
             return this.internationalFlightInvoiceFee;
+        }
+
+        /**
+         * @return internationalHotelInvoiceFee
+         */
+        public String getInternationalHotelInvoiceFee() {
+            return this.internationalHotelInvoiceFee;
         }
 
         /**
@@ -337,6 +348,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             private String hotelNormalInvoiceFee; 
             private String hotelSpecialInvoiceFee; 
             private String internationalFlightInvoiceFee; 
+            private String internationalHotelInvoiceFee; 
             private String invoiceThirdPartId; 
             private String mailAddress; 
             private String mailCity; 
@@ -402,6 +414,14 @@ public class ApplyInvoiceTaskRequest extends Request {
              */
             public Builder internationalFlightInvoiceFee(String internationalFlightInvoiceFee) {
                 this.internationalFlightInvoiceFee = internationalFlightInvoiceFee;
+                return this;
+            }
+
+            /**
+             * international_hotel_invoice_fee.
+             */
+            public Builder internationalHotelInvoiceFee(String internationalHotelInvoiceFee) {
+                this.internationalHotelInvoiceFee = internationalHotelInvoiceFee;
                 return this;
             }
 
