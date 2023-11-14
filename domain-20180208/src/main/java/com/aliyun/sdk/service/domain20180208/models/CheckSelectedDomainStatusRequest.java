@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckSelectedDomainStatusRequest extends Request {
     @Query
     @NameInMap("Domain")
+    @Validation(required = true)
     private String domain;
 
     private CheckSelectedDomainStatusRequest(Builder builder) {

@@ -18,14 +18,17 @@ public class CreateFixedPriceSelectedOrderRequest extends Request {
 
     @Query
     @NameInMap("ContactId")
+    @Validation(required = true)
     private String contactId;
 
     @Query
     @NameInMap("DomainName")
+    @Validation(required = true)
     private String domainName;
 
     @Query
     @NameInMap("ExpectedPrice")
+    @Validation(required = true)
     private Double expectedPrice;
 
     @Query

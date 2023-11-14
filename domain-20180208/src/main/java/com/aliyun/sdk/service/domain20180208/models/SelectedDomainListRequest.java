@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SelectedDomainListRequest extends Request {
     @Query
     @NameInMap("ListDate")
+    @Validation(required = true)
     private String listDate;
 
     private SelectedDomainListRequest(Builder builder) {
