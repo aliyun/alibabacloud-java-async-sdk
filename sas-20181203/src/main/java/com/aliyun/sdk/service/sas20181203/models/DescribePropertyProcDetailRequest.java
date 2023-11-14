@@ -45,6 +45,10 @@ public class DescribePropertyProcDetailRequest extends Request {
     private String remark;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("User")
     private String user;
 
@@ -62,6 +66,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         this.procTimeEnd = builder.procTimeEnd;
         this.procTimeStart = builder.procTimeStart;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.user = builder.user;
         this.uuid = builder.uuid;
     }
@@ -136,6 +141,13 @@ public class DescribePropertyProcDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return user
      */
     public String getUser() {
@@ -158,6 +170,7 @@ public class DescribePropertyProcDetailRequest extends Request {
         private Long procTimeEnd; 
         private Long procTimeStart; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String user; 
         private String uuid; 
 
@@ -175,6 +188,7 @@ public class DescribePropertyProcDetailRequest extends Request {
             this.procTimeEnd = request.procTimeEnd;
             this.procTimeStart = request.procTimeStart;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.user = request.user;
             this.uuid = request.uuid;
         } 
@@ -248,6 +262,15 @@ public class DescribePropertyProcDetailRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

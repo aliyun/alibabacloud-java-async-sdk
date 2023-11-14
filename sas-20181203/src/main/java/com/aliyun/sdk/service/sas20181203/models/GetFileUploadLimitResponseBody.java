@@ -50,7 +50,7 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned if the request is successful.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetFileUploadLimitResponseBody extends TeaModel {
             private String limit; 
 
             /**
-             * Limit.
+             * The QPS limit on the files uploaded from the client.
              */
             public Builder limit(String limit) {
                 this.limit = limit;

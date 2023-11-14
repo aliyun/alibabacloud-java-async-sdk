@@ -1,0 +1,211 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ModifyContainerPluginRuleRequest} extends {@link RequestModel}
+ *
+ * <p>ModifyContainerPluginRuleRequest</p>
+ */
+public class ModifyContainerPluginRuleRequest extends Request {
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
+    @NameInMap("Mode")
+    private Integer mode;
+
+    @Query
+    @NameInMap("RuleId")
+    @Validation(required = true)
+    private Integer ruleId;
+
+    @Query
+    @NameInMap("RuleName")
+    private String ruleName;
+
+    @Query
+    @NameInMap("RuleType")
+    private Integer ruleType;
+
+    @Query
+    @NameInMap("SelectedPolicy")
+    private java.util.List < String > selectedPolicy;
+
+    @Query
+    @NameInMap("WhiteImages")
+    private java.util.List < String > whiteImages;
+
+    private ModifyContainerPluginRuleRequest(Builder builder) {
+        super(builder);
+        this.lang = builder.lang;
+        this.mode = builder.mode;
+        this.ruleId = builder.ruleId;
+        this.ruleName = builder.ruleName;
+        this.ruleType = builder.ruleType;
+        this.selectedPolicy = builder.selectedPolicy;
+        this.whiteImages = builder.whiteImages;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ModifyContainerPluginRuleRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
+     * @return mode
+     */
+    public Integer getMode() {
+        return this.mode;
+    }
+
+    /**
+     * @return ruleId
+     */
+    public Integer getRuleId() {
+        return this.ruleId;
+    }
+
+    /**
+     * @return ruleName
+     */
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
+    /**
+     * @return ruleType
+     */
+    public Integer getRuleType() {
+        return this.ruleType;
+    }
+
+    /**
+     * @return selectedPolicy
+     */
+    public java.util.List < String > getSelectedPolicy() {
+        return this.selectedPolicy;
+    }
+
+    /**
+     * @return whiteImages
+     */
+    public java.util.List < String > getWhiteImages() {
+        return this.whiteImages;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyContainerPluginRuleRequest, Builder> {
+        private String lang; 
+        private Integer mode; 
+        private Integer ruleId; 
+        private String ruleName; 
+        private Integer ruleType; 
+        private java.util.List < String > selectedPolicy; 
+        private java.util.List < String > whiteImages; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ModifyContainerPluginRuleRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.mode = request.mode;
+            this.ruleId = request.ruleId;
+            this.ruleName = request.ruleName;
+            this.ruleType = request.ruleType;
+            this.selectedPolicy = request.selectedPolicy;
+            this.whiteImages = request.whiteImages;
+        } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(Integer mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
+         * RuleId.
+         */
+        public Builder ruleId(Integer ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
+            return this;
+        }
+
+        /**
+         * RuleName.
+         */
+        public Builder ruleName(String ruleName) {
+            this.putQueryParameter("RuleName", ruleName);
+            this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * RuleType.
+         */
+        public Builder ruleType(Integer ruleType) {
+            this.putQueryParameter("RuleType", ruleType);
+            this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * SelectedPolicy.
+         */
+        public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
+            this.putQueryParameter("SelectedPolicy", selectedPolicy);
+            this.selectedPolicy = selectedPolicy;
+            return this;
+        }
+
+        /**
+         * WhiteImages.
+         */
+        public Builder whiteImages(java.util.List < String > whiteImages) {
+            this.putQueryParameter("WhiteImages", whiteImages);
+            this.whiteImages = whiteImages;
+            return this;
+        }
+
+        @Override
+        public ModifyContainerPluginRuleRequest build() {
+            return new ModifyContainerPluginRuleRequest(this);
+        } 
+
+    } 
+
+}

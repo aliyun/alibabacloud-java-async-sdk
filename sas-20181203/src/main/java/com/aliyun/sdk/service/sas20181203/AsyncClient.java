@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddContainerDefenseRuleResponse> addContainerDefenseRule(AddContainerDefenseRuleRequest request);
 
+    CompletableFuture<AddContainerPluginRuleResponse> addContainerPluginRule(AddContainerPluginRuleRequest request);
+
     CompletableFuture<AddImageEventOperationResponse> addImageEventOperation(AddImageEventOperationRequest request);
 
     CompletableFuture<AddImageVulWhiteListResponse> addImageVulWhiteList(AddImageVulWhiteListRequest request);
@@ -178,6 +180,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteContainerDefenseRuleResponse> deleteContainerDefenseRule(DeleteContainerDefenseRuleRequest request);
 
+    CompletableFuture<DeleteContainerPluginRuleResponse> deleteContainerPluginRule(DeleteContainerPluginRuleRequest request);
+
     CompletableFuture<DeleteCustomBlockRecordResponse> deleteCustomBlockRecord(DeleteCustomBlockRecordRequest request);
 
     CompletableFuture<DeleteCycleTaskResponse> deleteCycleTask(DeleteCycleTaskRequest request);
@@ -210,11 +214,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteInterceptionTargetResponse> deleteInterceptionTarget(DeleteInterceptionTargetRequest request);
 
+    CompletableFuture<DeleteK8sAccessInfoResponse> deleteK8sAccessInfo(DeleteK8sAccessInfoRequest request);
+
     CompletableFuture<DeleteLoginBaseConfigResponse> deleteLoginBaseConfig(DeleteLoginBaseConfigRequest request);
 
     CompletableFuture<DeleteMaliciousNoteResponse> deleteMaliciousNote(DeleteMaliciousNoteRequest request);
 
     CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request);
+
+    CompletableFuture<DeleteSasContainerWebDefenseRuleResponse> deleteSasContainerWebDefenseRule(DeleteSasContainerWebDefenseRuleRequest request);
 
     CompletableFuture<DeleteSecurityEventMarkMissListResponse> deleteSecurityEventMarkMissList(DeleteSecurityEventMarkMissListRequest request);
 
@@ -366,9 +374,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCriteriaResponse> describeCriteria(DescribeCriteriaRequest request);
 
+    CompletableFuture<DescribeCustomBlockInstancesResponse> describeCustomBlockInstances(DescribeCustomBlockInstancesRequest request);
+
     CompletableFuture<DescribeCustomBlockRecordsResponse> describeCustomBlockRecords(DescribeCustomBlockRecordsRequest request);
 
     CompletableFuture<DescribeCycleTaskListResponse> describeCycleTaskList(DescribeCycleTaskListRequest request);
+
+    CompletableFuture<DescribeDefaultProxyInstallVersionResponse> describeDefaultProxyInstallVersion(DescribeDefaultProxyInstallVersionRequest request);
 
     CompletableFuture<DescribeDingTalkResponse> describeDingTalk(DescribeDingTalkRequest request);
 
@@ -780,6 +792,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableCustomBlockRecordResponse> enableCustomBlockRecord(EnableCustomBlockRecordRequest request);
 
+    CompletableFuture<EnableCustomInstanceBlockRecordResponse> enableCustomInstanceBlockRecord(EnableCustomInstanceBlockRecordRequest request);
+
     CompletableFuture<ExecStrategyResponse> execStrategy(ExecStrategyRequest request);
 
     /**
@@ -889,6 +903,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFileUploadLimitResponse> getFileUploadLimit(GetFileUploadLimitRequest request);
 
+    CompletableFuture<GetHoneyPotUploadPolicyInfoResponse> getHoneyPotUploadPolicyInfo(GetHoneyPotUploadPolicyInfoRequest request);
+
     CompletableFuture<GetHoneypotAttackStatisticsResponse> getHoneypotAttackStatistics(GetHoneypotAttackStatisticsRequest request);
 
     CompletableFuture<GetHoneypotEventTrendResponse> getHoneypotEventTrend(GetHoneypotEventTrendRequest request);
@@ -985,6 +1001,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request);
 
+    CompletableFuture<InstallHybridProxyResponse> installHybridProxy(InstallHybridProxyRequest request);
+
     CompletableFuture<InstallPmAgentResponse> installPmAgent(InstallPmAgentRequest request);
 
     CompletableFuture<InstallRaspAttachResponse> installRaspAttach(InstallRaspAttachRequest request);
@@ -1041,6 +1059,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListContainerDefenseRuleResponse> listContainerDefenseRule(ListContainerDefenseRuleRequest request);
 
+    CompletableFuture<ListContainerDefenseRuleClustersResponse> listContainerDefenseRuleClusters(ListContainerDefenseRuleClustersRequest request);
+
     CompletableFuture<ListCriteriaStrategyResponse> listCriteriaStrategy(ListCriteriaStrategyRequest request);
 
     CompletableFuture<ListFileProtectEventResponse> listFileProtectEvent(ListFileProtectEventRequest request);
@@ -1058,6 +1078,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHoneypotAttackerPortraitResponse> listHoneypotAttackerPortrait(ListHoneypotAttackerPortraitRequest request);
 
     CompletableFuture<ListHoneypotAttackerSourceResponse> listHoneypotAttackerSource(ListHoneypotAttackerSourceRequest request);
+
+    CompletableFuture<ListHoneypotEventFlowsResponse> listHoneypotEventFlows(ListHoneypotEventFlowsRequest request);
 
     CompletableFuture<ListHoneypotEventsResponse> listHoneypotEvents(ListHoneypotEventsRequest request);
 
@@ -1127,6 +1149,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListVulGlobalConfigResponse> listVulGlobalConfig(ListVulGlobalConfigRequest request);
 
+    CompletableFuture<MarkMonitorAccountsResponse> markMonitorAccounts(MarkMonitorAccountsRequest request);
+
     CompletableFuture<ModifyAccessKeyLeakDealResponse> modifyAccessKeyLeakDeal(ModifyAccessKeyLeakDealRequest request);
 
     CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request);
@@ -1163,6 +1187,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyConcernNecessityResponse> modifyConcernNecessity(ModifyConcernNecessityRequest request);
 
+    CompletableFuture<ModifyContainerPluginRuleResponse> modifyContainerPluginRule(ModifyContainerPluginRuleRequest request);
+
     CompletableFuture<ModifyContainerScanConfigResponse> modifyContainerScanConfig(ModifyContainerScanConfigRequest request);
 
     CompletableFuture<ModifyCreateVulWhitelistResponse> modifyCreateVulWhitelist(ModifyCreateVulWhitelistRequest request);
@@ -1176,6 +1202,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyGroupPropertyResponse> modifyGroupProperty(ModifyGroupPropertyRequest request);
 
     CompletableFuture<ModifyImageFixCycleConfigResponse> modifyImageFixCycleConfig(ModifyImageFixCycleConfigRequest request);
+
+    CompletableFuture<ModifyImageRegistryResponse> modifyImageRegistry(ModifyImageRegistryRequest request);
 
     CompletableFuture<ModifyInstanceAntiBruteForceRuleResponse> modifyInstanceAntiBruteForceRule(ModifyInstanceAntiBruteForceRuleRequest request);
 
@@ -1294,6 +1322,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OperateSuspiciousTargetConfigResponse> operateSuspiciousTargetConfig(OperateSuspiciousTargetConfigRequest request);
 
+    CompletableFuture<OperateSwitchStatusResponse> operateSwitchStatus(OperateSwitchStatusRequest request);
+
     CompletableFuture<OperateVirusEventsResponse> operateVirusEvents(OperateVirusEventsRequest request);
 
     CompletableFuture<OperateVulsResponse> operateVuls(OperateVulsRequest request);
@@ -1384,6 +1414,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitCheckResponse> submitCheck(SubmitCheckRequest request);
 
+    CompletableFuture<UnMarkMonitorAccountsResponse> unMarkMonitorAccounts(UnMarkMonitorAccountsRequest request);
+
     /**
       * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
       * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
@@ -1437,6 +1469,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSelectionKeyByTypeResponse> updateSelectionKeyByType(UpdateSelectionKeyByTypeRequest request);
 
     CompletableFuture<UpgradeBackupPolicyVersionResponse> upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request);
+
+    CompletableFuture<UploadedHoneyPotFileResponse> uploadedHoneyPotFile(UploadedHoneyPotFileRequest request);
 
     CompletableFuture<ValidateHcWarningsResponse> validateHcWarnings(ValidateHcWarningsRequest request);
 

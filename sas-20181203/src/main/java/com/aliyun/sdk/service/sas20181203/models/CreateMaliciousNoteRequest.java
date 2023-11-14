@@ -70,7 +70,10 @@ public class CreateMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * EventId.
+         * The ID of the alert event to which you want to add remarks.
+         * <p>
+         * 
+         * >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID of the alert event from the NoteId parameter.
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -79,7 +82,7 @@ public class CreateMaliciousNoteRequest extends Request {
         }
 
         /**
-         * Note.
+         * The remarks that you want to add.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);

@@ -98,7 +98,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the details about the check item.
+         * The information about the check item.
          */
         public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
@@ -302,7 +302,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message in check result.
+             * The error message in the check result.
              */
             public Builder execErrorMessage(String execErrorMessage) {
                 this.execErrorMessage = execErrorMessage;
@@ -310,11 +310,11 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The fixing status of the check item. Valid values:
+             * Indicates whether the fix is supported. Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: The fix is not supported.
+             * *   **1**: The fix is supported.
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -330,7 +330,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the risk item. Valid values:
+             * The severity level of a risk item. Valid values:
              * <p>
              * 
              * *   **high**
@@ -343,7 +343,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * The remarks.
              */
             public Builder reason(String reason) {
                 this.reason = reason;

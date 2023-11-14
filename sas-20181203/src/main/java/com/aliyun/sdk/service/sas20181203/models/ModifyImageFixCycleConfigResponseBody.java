@@ -50,7 +50,11 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the configurations of the scheduled image fix are modified.
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class ModifyImageFixCycleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

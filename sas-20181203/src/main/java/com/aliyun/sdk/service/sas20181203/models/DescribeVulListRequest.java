@@ -370,7 +370,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -397,7 +397,10 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -406,7 +409,22 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of the vulnerability. Separate multiple statuses with commas (,). Valid values:
+         * <p>
+         * 
+         * - 1: unfixed
+         * - 2: fix failed
+         * - 3: rollback failed
+         * - 4: being fixed
+         * - 5: being rolled back
+         * - 6: being verified
+         * - 7: fixed
+         * - 8: fixed and to be restarted
+         * - 9: rolled back
+         * - 10: ignored
+         * - 11: rolled back and to be restarted
+         * - 12: not found
+         * - 20: expired
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -432,7 +450,11 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * UseNextToken.
+         * Specifies whether to use NextToken to query the data of vulnerabilities. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

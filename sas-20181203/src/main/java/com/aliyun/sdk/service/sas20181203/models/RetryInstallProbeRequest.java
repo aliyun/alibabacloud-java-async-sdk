@@ -54,7 +54,10 @@ public class RetryInstallProbeRequest extends Request {
         } 
 
         /**
-         * ProbeId.
+         * The probe ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

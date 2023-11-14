@@ -275,7 +275,20 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * MaliciousType.
+         * The alert type.
+         * <p>
+         * 
+         * Valid values when Lang is set to zh:
+         * 
+         * *   WebShell
+         * *   Malicious Software
+         * *   Malicious Script
+         * 
+         * Valid values when Lang is set to en:
+         * 
+         * *   WebShell
+         * *   Malicious Software
+         * *   Malicious Script
          */
         public Builder maliciousType(String maliciousType) {
             this.putQueryParameter("MaliciousType", maliciousType);

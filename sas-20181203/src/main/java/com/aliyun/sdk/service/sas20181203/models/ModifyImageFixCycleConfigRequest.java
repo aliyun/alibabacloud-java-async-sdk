@@ -96,7 +96,7 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         } 
 
         /**
-         * ImageFixCycle.
+         * The cycle of the scheduled fix. Unit: day.
          */
         public Builder imageFixCycle(Integer imageFixCycle) {
             this.putBodyParameter("ImageFixCycle", imageFixCycle);
@@ -105,7 +105,11 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * ImageFixSwitch.
+         * Specifies whether to enable the schedule image fix.
+         * <p>
+         * 
+         * *   **on**: enable
+         * *   **off**: disable
          */
         public Builder imageFixSwitch(String imageFixSwitch) {
             this.putBodyParameter("ImageFixSwitch", imageFixSwitch);
@@ -114,7 +118,11 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * ImageFixTarget.
+         * The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **type**: The type of the image. The value is fixed to repo.
+         * *   **target**: The content of the image. The value is in the format of Namespace/Image repository.
          */
         public Builder imageFixTarget(String imageFixTarget) {
             this.putBodyParameter("ImageFixTarget", imageFixTarget);
@@ -123,7 +131,7 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * ImageTimeRange.
+         * The time range during which the image was modified. Unit: day.
          */
         public Builder imageTimeRange(Integer imageTimeRange) {
             this.putBodyParameter("ImageTimeRange", imageTimeRange);

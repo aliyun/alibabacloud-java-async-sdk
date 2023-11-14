@@ -37,6 +37,10 @@ public class DescribeCheckWarningsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("RiskId")
     private Long riskId;
 
@@ -61,6 +65,7 @@ public class DescribeCheckWarningsRequest extends Request {
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskId = builder.riskId;
         this.riskStatus = builder.riskStatus;
         this.sourceIp = builder.sourceIp;
@@ -123,6 +128,13 @@ public class DescribeCheckWarningsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskId
      */
     public Long getRiskId() {
@@ -157,6 +169,7 @@ public class DescribeCheckWarningsRequest extends Request {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private Long riskId; 
         private Integer riskStatus; 
         private String sourceIp; 
@@ -174,6 +187,7 @@ public class DescribeCheckWarningsRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskId = request.riskId;
             this.riskStatus = request.riskStatus;
             this.sourceIp = request.sourceIp;
@@ -249,10 +263,19 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the baseline risk item.
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * The ID of the risk item.
          * <p>
          * 
-         * > To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+         * >  To query the information about the risk items and check items of a server, you must provide the IDs of risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

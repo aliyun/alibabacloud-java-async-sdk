@@ -391,7 +391,7 @@ public class DescribeCanFixVulListRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -400,7 +400,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -409,7 +412,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -418,7 +421,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * ContainerId.
+         * The container ID.
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -427,7 +430,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -436,7 +439,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * Specifies whether the vulnerability is handled. Valid values:
+         * <p>
+         * 
+         * **y**: The vulnerability is handled. **n**: The vulnerability is not handled.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -445,7 +451,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Digest.
+         * The unique identifier of the image.
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -454,7 +460,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Image.
+         * The name of the image.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -463,7 +469,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -472,7 +481,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the vulnerability.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -481,7 +490,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the cluster.
+         * <p>
+         * 
+         * >  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -490,7 +502,12 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Necessity.
+         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **asap**: high
+         * *   **later**: medium
+         * *   **nntf**: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("Necessity", necessity);
@@ -499,7 +516,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -508,7 +525,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Pod.
+         * The name of the container group.
          */
         public Builder pod(String pod) {
             this.putQueryParameter("Pod", pod);
@@ -517,7 +534,22 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * *   **ap-southeast-5**: Indonesia (Jakarta)
+         * *   **us-east-1**: US (Virginia)
+         * *   **us-west-1**: US (Silicon Valley)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **eu-west-1**: UK (London)
+         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -526,7 +558,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The ID of the image repository.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~145293~~) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -535,7 +570,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RepoInstanceId.
+         * The ID of the container image.
+         * <p>
+         * 
+         * >  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -544,7 +582,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the image repository.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -553,7 +594,10 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RepoNamespace.
+         * The namespace to which the image repository belongs.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -562,7 +606,22 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * RepoRegionId.
+         * The region ID of the image repository. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * *   **ap-southeast-5**: Indonesia (Jakarta)
+         * *   **us-east-1**: US (Virginia)
+         * *   **us-west-1**: US (Silicon Valley)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **eu-west-1**: UK (London)
+         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -571,7 +630,11 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * The type of the asset that you want to scan. Valid values:
+         * <p>
+         * 
+         * *   **image**
+         * *   **container**
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -580,7 +643,12 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The status of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **1**: The vulnerability is unfixed.
+         * *   **4**: The vulnerability is being fixed.
+         * *   **7**:The vulnerability is fixed.
          */
         public Builder statusList(String statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -589,7 +657,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag to add to the image.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);
@@ -598,7 +666,11 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: system vulnerability
+         * *   **sca**: application vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -607,7 +679,7 @@ public class DescribeCanFixVulListRequest extends Request {
         }
 
         /**
-         * Uuids.
+         * The UUID of the image. Separate multiple UUIDs with commas (,).
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

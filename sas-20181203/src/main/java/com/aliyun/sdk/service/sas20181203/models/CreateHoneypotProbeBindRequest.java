@@ -110,7 +110,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * BindPortList.
+         * The ports that are bound to the probe.
          */
         public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
@@ -119,7 +119,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * HoneypotId.
+         * The honeypot ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -128,7 +131,11 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -137,7 +144,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * ProbeId.
+         * The probe ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -146,7 +156,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * ServiceIpList.
+         * The IP addresses that are monitored.
          */
         public Builder serviceIpList(java.util.List < String > serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
@@ -248,7 +258,11 @@ public class CreateHoneypotProbeBindRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * BindPort.
+             * Specifies whether to bind the port. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -256,7 +270,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * EndPort.
+             * The end port on which the probe monitors.
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -264,7 +278,11 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Fixed.
+             * Specifies whether the port is a fixed port. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -272,7 +290,11 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Proto.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -280,7 +302,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * StartPort.
+             * The start port on which the probe monitors.
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -288,7 +310,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * TargetPort.
+             * The destination port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;

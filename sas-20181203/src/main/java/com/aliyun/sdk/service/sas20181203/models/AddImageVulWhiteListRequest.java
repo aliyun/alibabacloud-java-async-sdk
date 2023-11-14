@@ -124,7 +124,11 @@ public class AddImageVulWhiteListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: zh. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,7 +137,7 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason why you add the vulnerability to the whitelist.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -142,7 +146,10 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the whitelist. Valid values:
+         * <p>
+         * - **image**
+         * - **agentless**
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -151,7 +158,11 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Target.
+         * The object on which you want to perform the operation. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **type**: the object type. The value is fixed to repo.
+         * *   **target**: the object content. The value is in the Namespace/Image repository format.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -160,7 +171,11 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: system vulnerability
+         * *   **sca**: application vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -169,7 +184,12 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * The whitelist. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **Type**: the vulnerability type. Valid values: cve and sca.
+         * *   **Name**: the name of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).
+         * *   **AliasName**: the alias of the vulnerability that is specified in CVE.
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

@@ -251,7 +251,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * BaselineItem.
+             * The baseline check policy for agentless detection.
              */
             public Builder baselineItem(String baselineItem) {
                 this.baselineItem = baselineItem;

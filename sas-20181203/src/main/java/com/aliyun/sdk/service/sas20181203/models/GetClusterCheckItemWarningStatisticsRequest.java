@@ -80,7 +80,7 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

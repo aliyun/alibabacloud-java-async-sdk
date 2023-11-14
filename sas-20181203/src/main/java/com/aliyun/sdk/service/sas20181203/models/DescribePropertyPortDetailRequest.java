@@ -41,6 +41,10 @@ public class DescribePropertyPortDetailRequest extends Request {
     private String remark;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("Uuid")
     private String uuid;
 
@@ -53,6 +57,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         this.port = builder.port;
         this.procName = builder.procName;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuid = builder.uuid;
     }
 
@@ -119,6 +124,13 @@ public class DescribePropertyPortDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -133,6 +145,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         private String port; 
         private String procName; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String uuid; 
 
         private Builder() {
@@ -148,6 +161,7 @@ public class DescribePropertyPortDetailRequest extends Request {
             this.port = request.port;
             this.procName = request.procName;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuid = request.uuid;
         } 
 
@@ -211,6 +225,15 @@ public class DescribePropertyPortDetailRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

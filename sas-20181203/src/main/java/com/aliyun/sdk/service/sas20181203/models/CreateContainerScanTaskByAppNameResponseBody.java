@@ -62,7 +62,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned if the request was successful.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +78,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,11 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CanCreate.
+             * Indicates whether you can create more scan tasks. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder canCreate(Boolean canCreate) {
                 this.canCreate = canCreate;
@@ -222,7 +226,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * CollectTime.
+             * The timestamp generated when the image information was collected. Unit: milliseconds.
              */
             public Builder collectTime(Long collectTime) {
                 this.collectTime = collectTime;
@@ -230,7 +234,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * ExecTime.
+             * The timestamp generated when the scan task started. Unit: milliseconds.
              */
             public Builder execTime(Long execTime) {
                 this.execTime = execTime;
@@ -238,7 +242,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * The number of container applications that are scanned.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -246,7 +250,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the scan task in percentage.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -254,7 +258,13 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The result of the scan task. Valid values:
+             * <p>
+             * 
+             * *   **SUCCESS**: The task is successful.
+             * *   **TASK_NOT_SUPPORT_REGION**: The task is not supported in the region where the image is deployed.
+             * 
+             * >
              */
             public Builder result(String result) {
                 this.result = result;
@@ -262,7 +272,13 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the scan task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is being initialized.
+             * *   **PRE_ANALYZER**: The task is being pre-processed.
+             * *   **SUCCESS**: The task succeeds.
+             * *   **FAIL**: The task fails.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +286,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the scan task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -278,7 +294,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of container applications that you want to scan.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

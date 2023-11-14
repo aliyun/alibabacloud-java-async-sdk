@@ -62,7 +62,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the servers on which the alerts are generated.
+         * The servers on which the alerts are generated.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -130,7 +130,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -191,7 +191,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -459,7 +459,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
              * The edition of Security Center that is authorized to protect the asset. Valid values:
              * <p>
              * 
-             * *   **1**: Basic edition (Unauthorized)
+             * *   **1**: Basic edition
              * *   **6**: Anti-virus edition
              * *   **5**: Advanced edition
              * *   **3**: Enterprise edition
@@ -472,11 +472,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to scan the asset. Valid values:
+             * Indicates whether Security Center is authorized to protect the asset. Valid values:
              * <p>
              * 
-             * *   **true**: Security Center is authorized to scan the asset.
-             * *   **false**: Security Center is not authorized to scan the asset.
+             * *   **true**
+             * *   **false**
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -484,7 +484,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * The container ID.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -500,7 +500,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the details about the baselines for which the risk item can be fixed.
+             * The details of the baselines for which the risk item can be fixed.
              */
             public Builder fixList(java.util.List < FixList> fixList) {
                 this.fixList = fixList;
@@ -508,7 +508,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -540,7 +540,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * LastScanTime.
+             * The timestamp generated when the last scan was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -551,8 +551,8 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
              * Indicates whether a port on the server is accessible over the Internet. Valid values:
              * <p>
              * 
-             * *   **true**: A port on the server is accessible over the Internet.
-             * *   **false**: No ports on the server are accessible over the Internet.
+             * *   **true**
+             * *   **false**
              */
             public Builder portOpen(Boolean portOpen) {
                 this.portOpen = portOpen;
@@ -580,13 +580,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
              * <p>
              * 
              * *   1: failed
-             * 
              * *   2: verifying
-             * 
              * *   3: passed
-             * 
              * *   6: ignored
-             * 
              * *   7: fixing
              */
             public Builder status(Integer status) {
@@ -595,7 +591,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset that is scanned.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -603,7 +599,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset that is scanned.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -611,7 +607,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **ECS_SNAPSHOT**
+             * *   **ECS_IMAGE**
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -627,7 +627,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the details about the baselines based on which the risk item is detected.
+             * The information about the baselines on which the risk item is detected.
              */
             public Builder warningRiskList(java.util.List < WarningRiskList> warningRiskList) {
                 this.warningRiskList = warningRiskList;

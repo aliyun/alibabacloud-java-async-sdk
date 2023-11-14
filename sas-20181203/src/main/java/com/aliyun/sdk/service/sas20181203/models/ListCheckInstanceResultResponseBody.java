@@ -265,7 +265,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The information about the exceptions of check items.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -346,7 +346,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check results for the instances. Valid values:
+             * The format of the check results for the instance. Valid values:
              * <p>
              * 
              * *   **text**
@@ -451,7 +451,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The metadata information about the details of the instances.
+             * The metadata information about the details of the instance.
              */
             public Builder grids(java.util.List < Grids> grids) {
                 this.grids = grids;
@@ -467,7 +467,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the search condition is used. Valid values:
+             * Indicates whether the search condition is supported. Valid values:
              * <p>
              * 
              * *   **true**
@@ -495,7 +495,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check result for the instance. Valid values:
+             * The format of the check result for the instance. Valid values:
              * <p>
              * 
              * *   **text**

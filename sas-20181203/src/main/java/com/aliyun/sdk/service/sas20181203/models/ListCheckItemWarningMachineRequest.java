@@ -287,7 +287,11 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. Default value: default. Valid values:
+         * <p>
+         * 
+         * *   **default**: The check items of baselines for hosts.
+         * *   **agentless**: The check items of baselines for agentless detection.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

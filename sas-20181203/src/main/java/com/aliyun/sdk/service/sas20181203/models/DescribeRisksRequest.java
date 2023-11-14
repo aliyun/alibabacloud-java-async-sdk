@@ -21,6 +21,10 @@ public class DescribeRisksRequest extends Request {
     private Integer limit;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("RiskId")
     private Long riskId;
 
@@ -32,6 +36,7 @@ public class DescribeRisksRequest extends Request {
         super(builder);
         this.lang = builder.lang;
         this.limit = builder.limit;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskId = builder.riskId;
         this.riskName = builder.riskName;
     }
@@ -64,6 +69,13 @@ public class DescribeRisksRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskId
      */
     public Long getRiskId() {
@@ -80,6 +92,7 @@ public class DescribeRisksRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRisksRequest, Builder> {
         private String lang; 
         private Integer limit; 
+        private Long resourceDirectoryAccountId; 
         private Long riskId; 
         private String riskName; 
 
@@ -91,6 +104,7 @@ public class DescribeRisksRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.limit = request.limit;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskId = request.riskId;
             this.riskName = request.riskName;
         } 
@@ -114,6 +128,15 @@ public class DescribeRisksRequest extends Request {
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

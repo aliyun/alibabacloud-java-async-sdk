@@ -50,7 +50,7 @@ public class GetLogMetaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LogMeta.
+         * The data of a data shipping task.
          */
         public Builder logMeta(LogMeta logMeta) {
             this.logMeta = logMeta;
@@ -58,7 +58,7 @@ public class GetLogMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetLogMetaResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * LogStore.
+             * The name of the dedicated Logstore in which logs are stored.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -130,7 +130,7 @@ public class GetLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The Simple Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -138,7 +138,11 @@ public class GetLogMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of a data shipping task of a log. Valid values:
+             * <p>
+             * 
+             * *   **enabled**
+             * *   **disabled**
              */
             public Builder status(String status) {
                 this.status = status;

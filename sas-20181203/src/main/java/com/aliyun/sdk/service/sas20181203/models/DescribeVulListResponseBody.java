@@ -106,7 +106,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The value of NextToken that is returned when the NextToken method is used.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +138,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the vulnerability.
+         * The information about the vulnerability.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -253,9 +253,9 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The asset importance score. Valid values:
              * <p>
              * 
-             * *   **2**: an important asset
-             * *   **1**: a common asset
-             * *   **0**: a test asset
+             * *   **2**: important asset
+             * *   **1**: common asset
+             * *   **0**: test asset
              */
             public Builder assetsFactor(String assetsFactor) {
                 this.assetsFactor = assetsFactor;
@@ -282,8 +282,8 @@ public class DescribeVulListResponseBody extends TeaModel {
              * Indicates whether the score of urgency to fix a vulnerability is calculated. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: The score is not calculated.
+             * *   **1**: The score is calculated.
              */
             public Builder isCalc(String isCalc) {
                 this.isCalc = isCalc;
@@ -295,7 +295,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * <p>
              * 
              * *   **none**: No score is generated.
-             * *   **pending**: The score is pending calculation.
+             * *   **pending**: The score is to be calculated.
              * *   **normal**: The calculation is normal.
              */
             public Builder status(String status) {
@@ -315,11 +315,11 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The score of urgency to fix a vulnerability.
              * <p>
              * 
-             * The following list describes scores and related fixing suggestions:
+             * The fixing suggestions vary based on the score of urgency of a vulnerability.
              * 
-             * *   If the score is from **13.5 to 15**, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
-             * *   If the score is **greater than or equal to 7 but less than 13.5**, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
-             * *   If the score is **less than 7**, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
+             * *   **\[13.5,15]**: The vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.
+             * *   **\[7,13.5)**: The vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.
+             * *   **\[0,7)**: The vulnerability is a low-risk vulnerability. You can ignore the vulnerability.
              */
             public Builder totalScore(String totalScore) {
                 this.totalScore = totalScore;
@@ -468,7 +468,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the init container.
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -757,7 +757,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the vulnerability.
+             * The name of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -789,7 +789,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
+             * The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.
              */
             public Builder lastTs(Long lastTs) {
                 this.lastTs = lastTs;
@@ -805,7 +805,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system for your asset.
+             * The name of the operating system.
              */
             public Builder os(String os) {
                 this.os = os;
@@ -813,7 +813,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The release of the operating system.
+             * The information about the operating system version.
              */
             public Builder osRelease(String osRelease) {
                 this.osRelease = osRelease;
@@ -821,7 +821,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vulnerability.
+             * The vulnerability ID.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -829,7 +829,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The RPM Package Manager (RPM) packages.
+             * The information about RPM Package Manager (RPM) packages.
              */
             public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
@@ -840,19 +840,19 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The status of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **1**: unfixed
-             * *   **2**: fix failed
-             * *   3: rollback failed
-             * *   **4**: fixing
-             * *   **5**: being rolled back
-             * *   **6**: being verified
-             * *   **7**: fixed
-             * *   **8**: fixed and to be restarted
-             * *   **9**: rolled back
-             * *   **10**: ignored
-             * *   **11**: rolled back and to be restarted
-             * *   **12**: not found
-             * *   **20**: expired
+             * *   **1**: The vulnerability is unfixed.
+             * *   **2**: The vulnerability failed to be fixed.
+             * *   3: The system failed to be rolled back.
+             * *   **4**: The vulnerability is being fixed.
+             * *   **5**: The system is being rolled back.
+             * *   **6**: The vulnerability is being verified.
+             * *   **7**: The vulnerability is fixed.
+             * *   **8**: The vulnerability is fixed and the system is to be restarted.
+             * *   **9**: The system is rolled back.
+             * *   **10**: The vulnerability is ignored.
+             * *   **11**: The system is rolled back and is to be restarted.
+             * *   **12**: The vulnerability is not found.
+             * *   **20**: The vulnerability expires.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -860,7 +860,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the vulnerability.
+             * The tag of the vulnerability.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -876,7 +876,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The CVE list.
+             * The CVE.
              */
             public Builder cveList(java.util.List < String > cveList) {
                 this.cveList = cveList;
@@ -1253,7 +1253,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The alias of the vulnerability.
+             * The name of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -1297,7 +1297,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was first detected. Unit: milliseconds.
+             * The timestamp that was generated when the vulnerability was first detected. Unit: milliseconds.
              */
             public Builder firstTs(Long firstTs) {
                 this.firstTs = firstTs;
@@ -1345,7 +1345,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
+             * The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.
              */
             public Builder lastTs(Long lastTs) {
                 this.lastTs = lastTs;
@@ -1353,7 +1353,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability status was modified. Unit: milliseconds.
+             * The timestamp that was generated when the vulnerability status was modified. Unit: milliseconds.
              */
             public Builder modifyTs(Long modifyTs) {
                 this.modifyTs = modifyTs;
@@ -1376,7 +1376,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **later**: medium
              * *   **nntf**: low
              * 
-             * > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * >  We recommend that you fix **high-level** vulnerabilities as soon as possible.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -1384,7 +1384,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Security Center agent on the asset is online. Valid values:
+             * Indicates whether the Security Center agent of the asset is online. Valid values:
              * <p>
              * 
              * *   **true**
@@ -1396,7 +1396,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system for your asset.
+             * The name of the operating system of your asset.
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -1404,7 +1404,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system for your asset.
+             * The name of the operating system of your asset.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -1412,7 +1412,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vulnerability.
+             * The vulnerability ID.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
@@ -1420,13 +1420,13 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application protection feature is supported.
+             * Indicates whether the runtime application self-protection (RASP) feature is supported. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: TheRASP feature is not supported.
+             * *   **1**: The RASP feature is supported
              * 
-             * > If this parameter is not returned, the application protection feature is not supported.
+             * >  If this parameter is not returned, the RASP is not supported.
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -1434,13 +1434,13 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The protection mode of the application protection feature. Valid values:
+             * The protection mode of the RASP feature. Valid values:
              * <p>
              * 
-             * *   **0**: unprotected
-             * *   **1**: the Monitor mode
-             * *   **2**: the Block mode
-             * *   **3**: disabled
+             * *   **0**: The RASP feature is not supported.
+             * *   **1**: The RASP feature is in Monitor mode.
+             * *   **2**: The RASP feature is in Block mode.
+             * *   **3**: The RASP feature is disabled.
              */
             public Builder raspStatus(Integer raspStatus) {
                 this.raspStatus = raspStatus;
@@ -1448,7 +1448,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1464,7 +1464,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was fixed. Unit: milliseconds.
+             * The timestamp that was generated when the vulnerability was fixed. Unit: milliseconds.
              */
             public Builder repairTs(Long repairTs) {
                 this.repairTs = repairTs;
@@ -1472,7 +1472,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The code that indicates the vulnerability fixing result.
+             * The code that indicates the fixing result of the vulnerability.
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -1480,7 +1480,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The message that indicates the vulnerability fixing result.
+             * The message that indicates the fixing result of the vulnerability.
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;
@@ -1491,19 +1491,19 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The status of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **1**: unfixed
-             * *   **2**: fix failed
-             * *   **3**: rollback failed
-             * *   **4**: fixing
-             * *   **5**: being rolled back
-             * *   **6**: being verified
-             * *   **7**: fixed
-             * *   **8**: fixed and to be restarted
-             * *   **9**: rolled back
-             * *   **10**: ignored
-             * *   **11**: rolled back and to be restarted
-             * *   **12**: not found
-             * *   **20**: expired
+             * *   **1**: The vulnerability is unfixed.
+             * *   **2**: The vulnerability failed to be fixed.
+             * *   **3**: The system failed to be rolled back.
+             * *   **4**: The vulnerability is being fixed.
+             * *   **5**: The system is being rolled back.
+             * *   **6**: The vulnerability is being verified.
+             * *   **7**: The vulnerability is fixed.
+             * *   **8**: The vulnerability is fixed and the system is to be restarted.
+             * *   **9**: The system is rolled back.
+             * *   **10**: The vulnerability is ignored.
+             * *   **11**: The system is rolled back and is to be restarted.
+             * *   **12**: The vulnerability is not found.
+             * *   **20**: The vulnerability expires.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1511,7 +1511,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the vulnerability.
+             * The tag of the vulnerability.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1527,7 +1527,7 @@ public class DescribeVulListResponseBody extends TeaModel {
              * *   **cms**: Web-CMS vulnerability
              * *   **emg**: urgent vulnerability
              * *   **app**: application vulnerability
-             * *   **sca**: application vulnerability that is detected by using software component analysis
+             * *   **sca**: application vulnerability that is detected by using Software Component Analysis (SCA).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1535,7 +1535,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * The instance UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

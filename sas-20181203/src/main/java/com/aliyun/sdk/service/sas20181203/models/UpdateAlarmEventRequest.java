@@ -82,7 +82,7 @@ public class UpdateAlarmEventRequest extends Request {
         } 
 
         /**
-         * AlarmEventIdList.
+         * The IDs of the alert events.
          */
         public Builder alarmEventIdList(java.util.List < Long > alarmEventIdList) {
             this.putBodyParameter("AlarmEventIdList", alarmEventIdList);
@@ -91,7 +91,11 @@ public class UpdateAlarmEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -100,7 +104,12 @@ public class UpdateAlarmEventRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation that you want to perform on the alert events. Valid values:
+         * <p>
+         * 
+         * *   **manual_handled**: handle the alert events.
+         * *   **ignore**: igore the alert events.
+         * *   **cancel_ignore**: remove the alert events from the whitelist.
          */
         public Builder operationCode(String operationCode) {
             this.putBodyParameter("OperationCode", operationCode);

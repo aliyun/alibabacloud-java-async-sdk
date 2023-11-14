@@ -154,7 +154,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the exception.
+             * The name of the detailed item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name key of the exception.
+             * The name key of the detailed item.
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -170,7 +170,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the exception.
+             * The type of the detailed item.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +178,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the exception.
+             * The value of the detailed item.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -552,7 +552,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The details of the exception.
+             * The details of the alert event.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -661,7 +661,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousType.
+             * The type of the virus.
              */
             public Builder maliciousType(String maliciousType) {
                 this.maliciousType = maliciousType;
@@ -677,7 +677,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The handling result of the exception.
+             * The handling result of the alert.
              */
             public Builder operateResult(String operateResult) {
                 this.operateResult = operateResult;
@@ -685,7 +685,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the exception is handled. Unit: milliseconds.
+             * The timestamp generated when the alert is handled. Unit: milliseconds.
              */
             public Builder operateTimestamp(String operateTimestamp) {
                 this.operateTimestamp = operateTimestamp;

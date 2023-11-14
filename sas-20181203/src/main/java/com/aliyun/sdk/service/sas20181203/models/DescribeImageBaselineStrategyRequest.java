@@ -95,7 +95,11 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. Default value: default. Valid values:
+         * <p>
+         * 
+         * *   **default**: queries the information about a baseline check policy for images.
+         * *   **agentless**: queries the information about a baseline check policy for agentless detection.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

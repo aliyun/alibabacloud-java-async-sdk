@@ -98,7 +98,7 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. A value of **200** indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,11 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the image vulnerability is added to the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **true**: The image vulnerability is added to the whitelist.
+         * *   **false**: The image vulnerability is not added to the whitelist.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -114,7 +118,7 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +126,7 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class AddImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

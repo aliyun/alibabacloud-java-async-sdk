@@ -82,7 +82,7 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * BindId.
+         * The unique ID of the bound service.
          */
         public Builder bindId(String bindId) {
             this.putQueryParameter("BindId", bindId);
@@ -91,7 +91,11 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +104,10 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * ProbeId.
+         * The probe ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

@@ -54,7 +54,10 @@ public class ListVulGlobalConfigRequest extends Request {
         } 
 
         /**
-         * ConfigKey.
+         * The key of the configuration item. Valid values:
+         * <p>
+         * 
+         * *   **vul_scan_ip_list**: The IP addresses that are detected.
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);

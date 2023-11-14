@@ -68,7 +68,7 @@ public class DeleteImageVulWhitelistRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The ID of the whitelist. Separate multiple IDs with commas (,).
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -77,7 +77,11 @@ public class DeleteImageVulWhitelistRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

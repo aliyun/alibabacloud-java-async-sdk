@@ -50,7 +50,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk information about the asset.
+         * An array that consists of the risk information about assets.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -326,7 +326,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer weakPWNum; 
 
             /**
-             * The number of unusual logons to the asset.
+             * The number of unusual logons by using the account of the asset.
              */
             public Builder account(Integer account) {
                 this.account = account;
@@ -438,7 +438,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts generated for the asset.
+             * The number of alerts generated on the asset.
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;
@@ -462,7 +462,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * The instance UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

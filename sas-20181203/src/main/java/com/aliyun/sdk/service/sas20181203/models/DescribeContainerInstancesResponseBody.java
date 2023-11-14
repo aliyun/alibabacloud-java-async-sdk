@@ -538,7 +538,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Exposed.
+             * The container is exposed.
              */
             public Builder exposed(Integer exposed) {
                 this.exposed = exposed;
@@ -546,7 +546,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExposedDetail.
+             * The container exposed details .
              */
             public Builder exposedDetail(String exposedDetail) {
                 this.exposedDetail = exposedDetail;

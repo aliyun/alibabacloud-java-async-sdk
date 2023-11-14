@@ -50,7 +50,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             private Integer imageTimeRange; 
 
             /**
-             * ImageFixCycle.
+             * The cycle of the scheduled fix. Unit: day.
              */
             public Builder imageFixCycle(Integer imageFixCycle) {
                 this.imageFixCycle = imageFixCycle;
@@ -142,7 +142,11 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFixSwitch.
+             * Indicates whether the scheduled fix of image risks is enabled.
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
              */
             public Builder imageFixSwitch(String imageFixSwitch) {
                 this.imageFixSwitch = imageFixSwitch;
@@ -150,7 +154,11 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFixTarget.
+             * The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:
+             * <p>
+             * 
+             * *   **type**: The type of the image risk. The value is fixed to repo.
+             * *   **target**: The content of the image risk. The value is in the format of Namespace/Image repository.
              */
             public Builder imageFixTarget(String imageFixTarget) {
                 this.imageFixTarget = imageFixTarget;
@@ -158,7 +166,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTimeRange.
+             * The time range during which the image was modified. Unit: day.
              */
             public Builder imageTimeRange(Integer imageTimeRange) {
                 this.imageTimeRange = imageTimeRange;

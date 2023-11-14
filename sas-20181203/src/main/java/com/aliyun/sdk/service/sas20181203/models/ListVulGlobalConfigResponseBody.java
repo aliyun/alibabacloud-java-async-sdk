@@ -50,7 +50,7 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         private java.util.List < VulGlobalConfigList> vulGlobalConfigList; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * VulGlobalConfigList.
+         * The configurations.
          */
         public Builder vulGlobalConfigList(java.util.List < VulGlobalConfigList> vulGlobalConfigList) {
             this.vulGlobalConfigList = vulGlobalConfigList;
@@ -110,7 +110,7 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             private String configValue; 
 
             /**
-             * ConfigKey.
+             * The key of the configuration item.
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -118,7 +118,7 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigValue.
+             * The value of the configuration item.
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;

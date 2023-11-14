@@ -110,7 +110,7 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The whitelist ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -119,7 +119,11 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +132,7 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason why you add the vulnerability to the whitelist.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -137,7 +141,11 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **image**
+         * *   **agentless**
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -146,7 +154,11 @@ public class UpdateImageVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * Target.
+         * The vulnerability that you want to add to the whitelist. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **type**: The type of the vulnerability. The value is fixed to repo.
+         * *   **target**: The content of the vulnerability. The value is in the format of Namespace/Image repository.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

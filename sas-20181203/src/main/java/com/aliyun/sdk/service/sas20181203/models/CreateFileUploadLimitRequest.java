@@ -55,7 +55,7 @@ public class CreateFileUploadLimitRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);

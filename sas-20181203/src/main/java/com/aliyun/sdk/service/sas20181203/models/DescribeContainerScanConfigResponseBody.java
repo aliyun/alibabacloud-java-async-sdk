@@ -62,7 +62,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -78,7 +78,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             private String clusterName; 
 
             /**
-             * AllCount.
+             * The total number of container applications in the cluster.
              */
             public Builder allCount(Integer allCount) {
                 this.allCount = allCount;
@@ -174,7 +174,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AppNames.
+             * The names of the container applications.
              */
             public Builder appNames(String appNames) {
                 this.appNames = appNames;
@@ -182,7 +182,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ChooseCount.
+             * The number of selected container applications.
              */
             public Builder chooseCount(Integer chooseCount) {
                 this.chooseCount = chooseCount;
@@ -190,7 +190,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -198,7 +198,7 @@ public class DescribeContainerScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;

@@ -55,7 +55,10 @@ public class GetLogMetaRequest extends Request {
         } 
 
         /**
-         * LogStore.
+         * The name of the dedicated Logstore in which logs are stored.
+         * <p>
+         * 
+         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the name of the Logstore.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
