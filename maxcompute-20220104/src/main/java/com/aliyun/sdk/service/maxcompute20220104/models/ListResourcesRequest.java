@@ -29,12 +29,17 @@ public class ListResourcesRequest extends Request {
     @NameInMap("name")
     private String name;
 
+    @Query
+    @NameInMap("schemaName")
+    private String schemaName;
+
     private ListResourcesRequest(Builder builder) {
         super(builder);
         this.projectName = builder.projectName;
         this.marker = builder.marker;
         this.maxItem = builder.maxItem;
         this.name = builder.name;
+        this.schemaName = builder.schemaName;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class ListResourcesRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return schemaName
+     */
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
         private String projectName; 
         private String marker; 
         private Integer maxItem; 
         private String name; 
+        private String schemaName; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class ListResourcesRequest extends Request {
             this.marker = request.marker;
             this.maxItem = request.maxItem;
             this.name = request.name;
+            this.schemaName = request.schemaName;
         } 
 
         /**
@@ -129,6 +143,15 @@ public class ListResourcesRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * schemaName.
+         */
+        public Builder schemaName(String schemaName) {
+            this.putQueryParameter("schemaName", schemaName);
+            this.schemaName = schemaName;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class ListUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * accountId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -154,7 +154,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * accountName.
+             * The username of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -162,7 +162,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * accountType.
+             * The type of the account.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -170,7 +170,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * The display name.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -178,7 +178,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -255,7 +255,7 @@ public class ListUsersResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * pageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -263,7 +263,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -271,7 +271,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -279,7 +279,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * users.
+             * The users.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

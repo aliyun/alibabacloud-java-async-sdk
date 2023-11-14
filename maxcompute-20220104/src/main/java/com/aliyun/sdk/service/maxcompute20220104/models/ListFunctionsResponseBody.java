@@ -78,6 +78,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("creationTime")
         private Long creationTime;
 
+        @NameInMap("displayName")
+        private String displayName;
+
         @NameInMap("name")
         private String name;
 
@@ -93,6 +96,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private Functions(Builder builder) {
             this._class = builder._class;
             this.creationTime = builder.creationTime;
+            this.displayName = builder.displayName;
             this.name = builder.name;
             this.owner = builder.owner;
             this.resources = builder.resources;
@@ -119,6 +123,13 @@ public class ListFunctionsResponseBody extends TeaModel {
          */
         public Long getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         /**
@@ -152,6 +163,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         public static final class Builder {
             private String _class; 
             private Long creationTime; 
+            private String displayName; 
             private String name; 
             private String owner; 
             private String resources; 
@@ -170,6 +182,14 @@ public class ListFunctionsResponseBody extends TeaModel {
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * displayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
                 return this;
             }
 

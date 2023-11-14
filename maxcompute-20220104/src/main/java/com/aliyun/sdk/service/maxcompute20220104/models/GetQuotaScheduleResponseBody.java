@@ -94,7 +94,9 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * *   If the value of success was false, an error code was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +104,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +112,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -311,7 +313,7 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * The time zone.
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;

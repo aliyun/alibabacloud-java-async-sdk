@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListProjectsRequest extends Request {
     @Query
+    @NameInMap("listSystemCatalog")
+    private Boolean listSystemCatalog;
+
+    @Query
     @NameInMap("marker")
     private String marker;
 
@@ -50,6 +54,7 @@ public class ListProjectsRequest extends Request {
 
     private ListProjectsRequest(Builder builder) {
         super(builder);
+        this.listSystemCatalog = builder.listSystemCatalog;
         this.marker = builder.marker;
         this.maxItem = builder.maxItem;
         this.prefix = builder.prefix;
@@ -72,6 +77,13 @@ public class ListProjectsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return listSystemCatalog
+     */
+    public Boolean getListSystemCatalog() {
+        return this.listSystemCatalog;
     }
 
     /**
@@ -138,6 +150,7 @@ public class ListProjectsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListProjectsRequest, Builder> {
+        private Boolean listSystemCatalog; 
         private String marker; 
         private Integer maxItem; 
         private String prefix; 
@@ -154,6 +167,7 @@ public class ListProjectsRequest extends Request {
 
         private Builder(ListProjectsRequest request) {
             super(request);
+            this.listSystemCatalog = request.listSystemCatalog;
             this.marker = request.marker;
             this.maxItem = request.maxItem;
             this.prefix = request.prefix;
@@ -166,7 +180,16 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * marker.
+         * listSystemCatalog.
+         */
+        public Builder listSystemCatalog(Boolean listSystemCatalog) {
+            this.putQueryParameter("listSystemCatalog", listSystemCatalog);
+            this.listSystemCatalog = listSystemCatalog;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries to return on each page.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -175,7 +198,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * maxItem.
+         * The maximum number of entries returned per page.
          */
         public Builder maxItem(Integer maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -184,7 +207,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * prefix.
+         * Specifies the marker after which the returned list begins.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -193,7 +216,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * quotaName.
+         * The name of the quota. The value of this parameter is the identifier of the quota in MaxCompute, which differs from the quotaNickname parameter. You can configure the quotaNickname parameter. The system automatically generates a value for the quotaName parameter. This parameter is only used to describe the tunnel quota.
          */
         public Builder quotaName(String quotaName) {
             this.putQueryParameter("quotaName", quotaName);
@@ -202,7 +225,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * quotaNickName.
+         * The name of the quota.
          */
         public Builder quotaNickName(String quotaNickName) {
             this.putQueryParameter("quotaNickName", quotaNickName);
@@ -211,7 +234,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -220,7 +243,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * saleTags.
+         * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
          */
         public Builder saleTags(String saleTags) {
             this.putQueryParameter("saleTags", saleTags);
@@ -229,7 +252,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
@@ -238,7 +261,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * type.
+         * The project type. Valid values: external and managed. The value external indicates an external project, which is used in the data lakehouse solution. The value managed indicates an internal project.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

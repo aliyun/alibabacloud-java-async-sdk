@@ -50,7 +50,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -171,7 +171,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String vpcIpList; 
 
             /**
-             * ipList.
+             * The list of IP addresses.
              */
             public Builder ipList(String ipList) {
                 this.ipList = ipList;
@@ -179,7 +179,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * vpcIpList.
+             * The list of virtual private cloud (VPC) IP addresses.
              */
             public Builder vpcIpList(String vpcIpList) {
                 this.vpcIpList = vpcIpList;
@@ -244,7 +244,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * algorithm.
+             * The name of the encryption algorithm.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -252,7 +252,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * Indicates whether data encryption is enabled. Valid values: true and false.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -260,7 +260,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * The key of the encryption algorithm.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -313,7 +313,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * type.
+             * The type of the lifecycle. Valid values: -mandatory: The lifecycle clause is required. You must configure a lifecycle for a table. -optional: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire. -inherit: If you do not configure a lifecycle for a table when you create the table, the value of odps.table.lifecycle.value is used by default.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -321,7 +321,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The retention period of a table. Unit: days.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -470,7 +470,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String typeSystem; 
 
             /**
-             * allowFullScan.
+             * Indicates whether a full table scan on the project is enabled.
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
@@ -478,7 +478,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * enableDecimal2.
+             * Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
@@ -486,7 +486,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * enableTunnelQuotaRoute.
+             * Indicates whether tunnel quota routing is enabled.
              */
             public Builder enableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
                 this.enableTunnelQuotaRoute = enableTunnelQuotaRoute;
@@ -494,7 +494,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * encryption.
+             * The encryption information.
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -502,7 +502,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * retentionDays.
+             * The number of days for which backup data can be retained.
              */
             public Builder retentionDays(Long retentionDays) {
                 this.retentionDays = retentionDays;
@@ -510,7 +510,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * sqlMeteringMax.
+             * The upper limit for the resources that are consumed by an SQL statement.
              */
             public Builder sqlMeteringMax(String sqlMeteringMax) {
                 this.sqlMeteringMax = sqlMeteringMax;
@@ -518,7 +518,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * tableLifecycle.
+             * The lifecycle of tables in the project.
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -526,7 +526,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * The time zone of the project.
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -534,7 +534,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * tunnelQuota.
+             * The name of the tunnel quota.
              */
             public Builder tunnelQuota(String tunnelQuota) {
                 this.tunnelQuota = tunnelQuota;
@@ -542,7 +542,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * typeSystem.
+             * The data type edition. Valid values: -1: MaxCompute V1.0 data type edition. -2: MaxCompute V2.0 data type edition. -hive: Hive-compatible data type edition.
              */
             public Builder typeSystem(String typeSystem) {
                 this.typeSystem = typeSystem;
@@ -595,7 +595,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * resourceId.
+             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -603,7 +603,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * The type of the object. Valid values: quota and project.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -656,7 +656,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean _protected; 
 
             /**
-             * exceptionPolicy.
+             * The exception policy. If cross-project data access operations are required, the project owner must configure an exception policy in advance to allow the specified user to transfer data of a specified object from the current project to a specified project. After the exception policy is configured, data of the object can be transferred to the specified project even if the project data protection feature is enabled.
              */
             public Builder exceptionPolicy(String exceptionPolicy) {
                 this.exceptionPolicy = exceptionPolicy;
@@ -664,7 +664,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * protected.
+             * Indicates whether project data protection is enabled.
              */
             public Builder _protected(Boolean _protected) {
                 this._protected = _protected;
@@ -777,7 +777,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean usingPolicy; 
 
             /**
-             * enableDownloadPrivilege.
+             * Indicates whether Download control is enabled.
              */
             public Builder enableDownloadPrivilege(Boolean enableDownloadPrivilege) {
                 this.enableDownloadPrivilege = enableDownloadPrivilege;
@@ -785,7 +785,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * labelSecurity.
+             * Indicates whether label-based access control is enabled.
              */
             public Builder labelSecurity(Boolean labelSecurity) {
                 this.labelSecurity = labelSecurity;
@@ -793,7 +793,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * objectCreatorHasAccessPermission.
+             * Indicates whether the object creator is allowed to perform operations on objects.
              */
             public Builder objectCreatorHasAccessPermission(Boolean objectCreatorHasAccessPermission) {
                 this.objectCreatorHasAccessPermission = objectCreatorHasAccessPermission;
@@ -801,7 +801,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * objectCreatorHasGrantPermission.
+             * Indicates whether the object creator is allowed to authorize other users to perform operations on objects.
              */
             public Builder objectCreatorHasGrantPermission(Boolean objectCreatorHasGrantPermission) {
                 this.objectCreatorHasGrantPermission = objectCreatorHasGrantPermission;
@@ -809,7 +809,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * projectProtection.
+             * Indicates whether project data protection is enabled.
              */
             public Builder projectProtection(ProjectProtection projectProtection) {
                 this.projectProtection = projectProtection;
@@ -817,7 +817,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * usingAcl.
+             * Indicates whether ACL-based access control is enabled.
              */
             public Builder usingAcl(Boolean usingAcl) {
                 this.usingAcl = usingAcl;
@@ -825,7 +825,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * usingPolicy.
+             * Indicates whether policy-based access control is enabled.
              */
             public Builder usingPolicy(Boolean usingPolicy) {
                 this.usingPolicy = usingPolicy;
@@ -873,6 +873,9 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("status")
         private String status;
 
+        @NameInMap("threeTierModel")
+        private Boolean threeTierModel;
+
         @NameInMap("type")
         private String type;
 
@@ -888,6 +891,7 @@ public class ListProjectsResponseBody extends TeaModel {
             this.saleTag = builder.saleTag;
             this.securityProperties = builder.securityProperties;
             this.status = builder.status;
+            this.threeTierModel = builder.threeTierModel;
             this.type = builder.type;
         }
 
@@ -977,6 +981,13 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return threeTierModel
+         */
+        public Boolean getThreeTierModel() {
+            return this.threeTierModel;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -995,10 +1006,11 @@ public class ListProjectsResponseBody extends TeaModel {
             private SaleTag saleTag; 
             private SecurityProperties securityProperties; 
             private String status; 
+            private Boolean threeTierModel; 
             private String type; 
 
             /**
-             * Tags.
+             * The tag.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1006,7 +1018,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * comment.
+             * The remarks.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1014,7 +1026,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * costStorage.
+             * The storage usage.
              */
             public Builder costStorage(String costStorage) {
                 this.costStorage = costStorage;
@@ -1022,7 +1034,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * defaultQuota.
+             * The default computing quota.
              */
             public Builder defaultQuota(String defaultQuota) {
                 this.defaultQuota = defaultQuota;
@@ -1030,7 +1042,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ipWhiteList.
+             * The IP address whitelist.
              */
             public Builder ipWhiteList(IpWhiteList ipWhiteList) {
                 this.ipWhiteList = ipWhiteList;
@@ -1038,7 +1050,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the MaxCompute project.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1046,7 +1058,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * The owner of the project.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1054,7 +1066,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * The properties of the project.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -1062,7 +1074,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * saleTag.
+             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1070,7 +1082,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * securityProperties.
+             * The permission properties.
              */
             public Builder securityProperties(SecurityProperties securityProperties) {
                 this.securityProperties = securityProperties;
@@ -1078,7 +1090,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1086,7 +1098,15 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * threeTierModel.
+             */
+            public Builder threeTierModel(Boolean threeTierModel) {
+                this.threeTierModel = threeTierModel;
+                return this;
+            }
+
+            /**
+             * The project type. Valid values: -managed: The project is an internal project. -external: The project is an external project.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1163,7 +1183,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private java.util.List < Projects> projects; 
 
             /**
-             * NextToken.
+             * A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1171,7 +1191,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * marker.
+             * Indicates the marker after which the returned list begins.
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -1179,7 +1199,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * maxItem.
+             * The maximum number of entries returned per page.
              */
             public Builder maxItem(Integer maxItem) {
                 this.maxItem = maxItem;
@@ -1187,7 +1207,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * projects.
+             * The description of the project.
              */
             public Builder projects(java.util.List < Projects> projects) {
                 this.projects = projects;

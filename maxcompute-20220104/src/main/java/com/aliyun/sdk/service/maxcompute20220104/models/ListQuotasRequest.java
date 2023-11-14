@@ -138,7 +138,7 @@ public class ListQuotasRequest extends Request {
         } 
 
         /**
-         * billingType.
+         * The billing method of the quota.
          */
         public Builder billingType(String billingType) {
             this.putQueryParameter("billingType", billingType);
@@ -147,7 +147,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * marker.
+         * Specifies the marker after which the returned list begins.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -156,7 +156,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * maxItem.
+         * The maximum number of entries to return on each page.
          */
         public Builder maxItem(Long maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -165,7 +165,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * productId.
+         * The service ID.
          */
         public Builder productId(String productId) {
             this.putQueryParameter("productId", productId);
@@ -174,7 +174,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -183,7 +183,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * saleTags.
+         * The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.
          */
         public Builder saleTags(String saleTags) {
             this.putQueryParameter("saleTags", saleTags);
@@ -192,7 +192,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

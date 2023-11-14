@@ -106,7 +106,7 @@ public class GetQuotaScheduleRequest extends Request {
         }
 
         /**
-         * displayTimezone.
+         * The time zone.
          */
         public Builder displayTimezone(String displayTimezone) {
             this.putQueryParameter("displayTimezone", displayTimezone);

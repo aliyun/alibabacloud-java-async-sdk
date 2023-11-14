@@ -72,8 +72,23 @@ public class ListResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
+        @NameInMap("comment")
+        private String comment;
+
+        @NameInMap("contentMD5")
+        private String contentMD5;
+
         @NameInMap("creationTime")
         private Long creationTime;
+
+        @NameInMap("displayName")
+        private String displayName;
+
+        @NameInMap("lastModifiedTime")
+        private Long lastModifiedTime;
+
+        @NameInMap("lastUpdator")
+        private String lastUpdator;
 
         @NameInMap("name")
         private String name;
@@ -84,14 +99,23 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("schema")
         private String schema;
 
+        @NameInMap("size")
+        private Long size;
+
         @NameInMap("type")
         private String type;
 
         private Resources(Builder builder) {
+            this.comment = builder.comment;
+            this.contentMD5 = builder.contentMD5;
             this.creationTime = builder.creationTime;
+            this.displayName = builder.displayName;
+            this.lastModifiedTime = builder.lastModifiedTime;
+            this.lastUpdator = builder.lastUpdator;
             this.name = builder.name;
             this.owner = builder.owner;
             this.schema = builder.schema;
+            this.size = builder.size;
             this.type = builder.type;
         }
 
@@ -104,10 +128,45 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        /**
+         * @return contentMD5
+         */
+        public String getContentMD5() {
+            return this.contentMD5;
+        }
+
+        /**
          * @return creationTime
          */
         public Long getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return lastModifiedTime
+         */
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
+        }
+
+        /**
+         * @return lastUpdator
+         */
+        public String getLastUpdator() {
+            return this.lastUpdator;
         }
 
         /**
@@ -132,6 +191,13 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -139,17 +205,63 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comment; 
+            private String contentMD5; 
             private Long creationTime; 
+            private String displayName; 
+            private Long lastModifiedTime; 
+            private String lastUpdator; 
             private String name; 
             private String owner; 
             private String schema; 
+            private Long size; 
             private String type; 
+
+            /**
+             * comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * contentMD5.
+             */
+            public Builder contentMD5(String contentMD5) {
+                this.contentMD5 = contentMD5;
+                return this;
+            }
 
             /**
              * The time when the resource was created.
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * displayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * lastModifiedTime.
+             */
+            public Builder lastModifiedTime(Long lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
+                return this;
+            }
+
+            /**
+             * lastUpdator.
+             */
+            public Builder lastUpdator(String lastUpdator) {
+                this.lastUpdator = lastUpdator;
                 return this;
             }
 
@@ -174,6 +286,14 @@ public class ListResourcesResponseBody extends TeaModel {
              */
             public Builder schema(String schema) {
                 this.schema = schema;
+                return this;
+            }
+
+            /**
+             * size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
                 return this;
             }
 

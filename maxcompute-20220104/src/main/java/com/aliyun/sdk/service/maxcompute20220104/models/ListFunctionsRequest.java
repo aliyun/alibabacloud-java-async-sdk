@@ -29,12 +29,17 @@ public class ListFunctionsRequest extends Request {
     @NameInMap("prefix")
     private String prefix;
 
+    @Query
+    @NameInMap("schemaName")
+    private String schemaName;
+
     private ListFunctionsRequest(Builder builder) {
         super(builder);
         this.projectName = builder.projectName;
         this.marker = builder.marker;
         this.maxItem = builder.maxItem;
         this.prefix = builder.prefix;
+        this.schemaName = builder.schemaName;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class ListFunctionsRequest extends Request {
         return this.prefix;
     }
 
+    /**
+     * @return schemaName
+     */
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
     public static final class Builder extends Request.Builder<ListFunctionsRequest, Builder> {
         private String projectName; 
         private String marker; 
         private Integer maxItem; 
         private String prefix; 
+        private String schemaName; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class ListFunctionsRequest extends Request {
             this.marker = request.marker;
             this.maxItem = request.maxItem;
             this.prefix = request.prefix;
+            this.schemaName = request.schemaName;
         } 
 
         /**
@@ -129,6 +143,15 @@ public class ListFunctionsRequest extends Request {
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
             this.prefix = prefix;
+            return this;
+        }
+
+        /**
+         * schemaName.
+         */
+        public Builder schemaName(String schemaName) {
+            this.putQueryParameter("schemaName", schemaName);
+            this.schemaName = schemaName;
             return this;
         }
 

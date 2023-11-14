@@ -68,7 +68,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * pageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -77,7 +77,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
