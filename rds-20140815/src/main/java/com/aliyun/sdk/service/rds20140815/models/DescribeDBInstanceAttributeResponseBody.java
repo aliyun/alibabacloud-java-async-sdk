@@ -814,6 +814,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
+        @NameInMap("DBInstanceDiskUsed")
+        private String DBInstanceDiskUsed;
+
         @NameInMap("DBInstanceId")
         private String DBInstanceId;
 
@@ -987,6 +990,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceClass = builder.DBInstanceClass;
             this.DBInstanceClassType = builder.DBInstanceClassType;
             this.DBInstanceDescription = builder.DBInstanceDescription;
+            this.DBInstanceDiskUsed = builder.DBInstanceDiskUsed;
             this.DBInstanceId = builder.DBInstanceId;
             this.DBInstanceMemory = builder.DBInstanceMemory;
             this.DBInstanceNetType = builder.DBInstanceNetType;
@@ -1179,6 +1183,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getDBInstanceDescription() {
             return this.DBInstanceDescription;
+        }
+
+        /**
+         * @return DBInstanceDiskUsed
+         */
+        public String getDBInstanceDiskUsed() {
+            return this.DBInstanceDiskUsed;
         }
 
         /**
@@ -1558,6 +1569,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceClass; 
             private String DBInstanceClassType; 
             private String DBInstanceDescription; 
+            private String DBInstanceDiskUsed; 
             private String DBInstanceId; 
             private Long DBInstanceMemory; 
             private String DBInstanceNetType; 
@@ -1794,6 +1806,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
+                return this;
+            }
+
+            /**
+             * DBInstanceDiskUsed.
+             */
+            public Builder DBInstanceDiskUsed(String DBInstanceDiskUsed) {
+                this.DBInstanceDiskUsed = DBInstanceDiskUsed;
                 return this;
             }
 
