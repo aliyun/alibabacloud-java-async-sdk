@@ -21,9 +21,21 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     @NameInMap("AppInstanceGroupName")
     private String appInstanceGroupName;
 
+    @Body
+    @NameInMap("Network")
+    private Network network;
+
     @Query
     @NameInMap("NodePool")
     private NodePool nodePool;
+
+    @Body
+    @NameInMap("PreOpenAppId")
+    private String preOpenAppId;
+
+    @Body
+    @NameInMap("PreOpenMode")
+    private String preOpenMode;
 
     @Query
     @NameInMap("ProductType")
@@ -47,7 +59,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceGroupName = builder.appInstanceGroupName;
+        this.network = builder.network;
         this.nodePool = builder.nodePool;
+        this.preOpenAppId = builder.preOpenAppId;
+        this.preOpenMode = builder.preOpenMode;
         this.productType = builder.productType;
         this.securityPolicy = builder.securityPolicy;
         this.sessionTimeout = builder.sessionTimeout;
@@ -82,10 +97,31 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return network
+     */
+    public Network getNetwork() {
+        return this.network;
+    }
+
+    /**
      * @return nodePool
      */
     public NodePool getNodePool() {
         return this.nodePool;
+    }
+
+    /**
+     * @return preOpenAppId
+     */
+    public String getPreOpenAppId() {
+        return this.preOpenAppId;
+    }
+
+    /**
+     * @return preOpenMode
+     */
+    public String getPreOpenMode() {
+        return this.preOpenMode;
     }
 
     /**
@@ -119,7 +155,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAppInstanceGroupAttributeRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceGroupName; 
+        private Network network; 
         private NodePool nodePool; 
+        private String preOpenAppId; 
+        private String preOpenMode; 
         private String productType; 
         private SecurityPolicy securityPolicy; 
         private Integer sessionTimeout; 
@@ -133,7 +172,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceGroupName = request.appInstanceGroupName;
+            this.network = request.network;
             this.nodePool = request.nodePool;
+            this.preOpenAppId = request.preOpenAppId;
+            this.preOpenMode = request.preOpenMode;
             this.productType = request.productType;
             this.securityPolicy = request.securityPolicy;
             this.sessionTimeout = request.sessionTimeout;
@@ -159,12 +201,40 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
+         * Network.
+         */
+        public Builder network(Network network) {
+            String networkShrink = shrink(network, "Network", "json");
+            this.putBodyParameter("Network", networkShrink);
+            this.network = network;
+            return this;
+        }
+
+        /**
          * NodePool.
          */
         public Builder nodePool(NodePool nodePool) {
             String nodePoolShrink = shrink(nodePool, "NodePool", "json");
             this.putQueryParameter("NodePool", nodePoolShrink);
             this.nodePool = nodePool;
+            return this;
+        }
+
+        /**
+         * PreOpenAppId.
+         */
+        public Builder preOpenAppId(String preOpenAppId) {
+            this.putBodyParameter("PreOpenAppId", preOpenAppId);
+            this.preOpenAppId = preOpenAppId;
+            return this;
+        }
+
+        /**
+         * PreOpenMode.
+         */
+        public Builder preOpenMode(String preOpenMode) {
+            this.putBodyParameter("PreOpenMode", preOpenMode);
+            this.preOpenMode = preOpenMode;
             return this;
         }
 
@@ -213,6 +283,108 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     } 
 
+    public static class DomainRules extends TeaModel {
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("Policy")
+        private String policy;
+
+        private DomainRules(Builder builder) {
+            this.domain = builder.domain;
+            this.policy = builder.policy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private String policy; 
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            public DomainRules build() {
+                return new DomainRules(this);
+            } 
+
+        } 
+
+    }
+    public static class Network extends TeaModel {
+        @NameInMap("DomainRules")
+        private java.util.List < DomainRules> domainRules;
+
+        private Network(Builder builder) {
+            this.domainRules = builder.domainRules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Network create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainRules
+         */
+        public java.util.List < DomainRules> getDomainRules() {
+            return this.domainRules;
+        }
+
+        public static final class Builder {
+            private java.util.List < DomainRules> domainRules; 
+
+            /**
+             * DomainRules.
+             */
+            public Builder domainRules(java.util.List < DomainRules> domainRules) {
+                this.domainRules = domainRules;
+                return this;
+            }
+
+            public Network build() {
+                return new Network(this);
+            } 
+
+        } 
+
+    }
     public static class NodePool extends TeaModel {
         @NameInMap("NodeCapacity")
         private Integer nodeCapacity;

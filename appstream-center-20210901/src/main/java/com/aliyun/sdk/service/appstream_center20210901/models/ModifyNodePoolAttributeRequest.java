@@ -119,7 +119,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         /**
-         * 按资源售卖的，单个节点允许运行的应用实例数
+         * NodeCapacity.
          */
         public Builder nodeCapacity(Integer nodeCapacity) {
             this.putBodyParameter("NodeCapacity", nodeCapacity);
@@ -128,7 +128,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         /**
-         * 节点池策略
+         * NodePoolStrategy.
          */
         public Builder nodePoolStrategy(NodePoolStrategy nodePoolStrategy) {
             String nodePoolStrategyShrink = shrink(nodePoolStrategy, "NodePoolStrategy", "json");
@@ -138,7 +138,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         /**
-         * 资源组id
+         * PoolId.
          */
         public Builder poolId(String poolId) {
             this.putBodyParameter("PoolId", poolId);
@@ -466,7 +466,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private Boolean warmUp; 
 
             /**
-             * 最大弹性数量
+             * MaxScalingAmount.
              */
             public Builder maxScalingAmount(Integer maxScalingAmount) {
                 this.maxScalingAmount = maxScalingAmount;
@@ -495,7 +495,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 资源回收时间
+             * ScalingDownAfterIdleMinutes.
              */
             public Builder scalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
                 this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
@@ -503,7 +503,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 弹性扩容步长
+             * ScalingStep.
              */
             public Builder scalingStep(Integer scalingStep) {
                 this.scalingStep = scalingStep;
@@ -511,7 +511,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 触发弹性扩容的会话百分比
+             * ScalingUsageThreshold.
              */
             public Builder scalingUsageThreshold(String scalingUsageThreshold) {
                 this.scalingUsageThreshold = scalingUsageThreshold;
@@ -535,7 +535,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 策略类型，默认为NODE_FIXED
+             * StrategyType.
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;

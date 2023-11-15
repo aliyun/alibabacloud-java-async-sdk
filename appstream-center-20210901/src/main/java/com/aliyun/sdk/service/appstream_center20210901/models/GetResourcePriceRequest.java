@@ -18,6 +18,10 @@ public class GetResourcePriceRequest extends Request {
     private Long amount;
 
     @Query
+    @NameInMap("AppInstanceType")
+    private String appInstanceType;
+
+    @Query
     @NameInMap("BizRegionId")
     @Validation(required = true)
     private String bizRegionId;
@@ -29,7 +33,6 @@ public class GetResourcePriceRequest extends Request {
 
     @Query
     @NameInMap("NodeInstanceType")
-    @Validation(required = true)
     private String nodeInstanceType;
 
     @Query
@@ -50,6 +53,7 @@ public class GetResourcePriceRequest extends Request {
     private GetResourcePriceRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.appInstanceType = builder.appInstanceType;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.nodeInstanceType = builder.nodeInstanceType;
@@ -76,6 +80,13 @@ public class GetResourcePriceRequest extends Request {
      */
     public Long getAmount() {
         return this.amount;
+    }
+
+    /**
+     * @return appInstanceType
+     */
+    public String getAppInstanceType() {
+        return this.appInstanceType;
     }
 
     /**
@@ -122,6 +133,7 @@ public class GetResourcePriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetResourcePriceRequest, Builder> {
         private Long amount; 
+        private String appInstanceType; 
         private String bizRegionId; 
         private String chargeType; 
         private String nodeInstanceType; 
@@ -136,6 +148,7 @@ public class GetResourcePriceRequest extends Request {
         private Builder(GetResourcePriceRequest request) {
             super(request);
             this.amount = request.amount;
+            this.appInstanceType = request.appInstanceType;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.nodeInstanceType = request.nodeInstanceType;
@@ -150,6 +163,15 @@ public class GetResourcePriceRequest extends Request {
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
             this.amount = amount;
+            return this;
+        }
+
+        /**
+         * AppInstanceType.
+         */
+        public Builder appInstanceType(String appInstanceType) {
+            this.putQueryParameter("AppInstanceType", appInstanceType);
+            this.appInstanceType = appInstanceType;
             return this;
         }
 

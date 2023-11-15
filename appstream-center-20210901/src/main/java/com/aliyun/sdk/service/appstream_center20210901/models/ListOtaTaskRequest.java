@@ -100,7 +100,7 @@ public class ListOtaTaskRequest extends Request {
         } 
 
         /**
-         * 实例组id
+         * AppInstanceGroupId.
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -109,11 +109,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * ota类型,取值：
-         * <p>
-         * Fota ： agent组件更新
-         * ImageUpdate ： 镜像更新
-         * AppUpdate ： 应用更新
+         * OtaType.
          */
         public Builder otaType(String otaType) {
             this.putBodyParameter("OtaType", otaType);
@@ -122,7 +118,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * 页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -131,7 +127,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * 每页数量
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

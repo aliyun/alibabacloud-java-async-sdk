@@ -25,6 +25,10 @@ public class ListAppInstanceGroupRequest extends Request {
     private String appInstanceGroupName;
 
     @Query
+    @NameInMap("BizRegionId")
+    private String bizRegionId;
+
+    @Query
     @NameInMap("NodeInstanceType")
     private String nodeInstanceType;
 
@@ -42,10 +46,6 @@ public class ListAppInstanceGroupRequest extends Request {
     @Validation(required = true)
     private String productType;
 
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Body
     @NameInMap("Status")
     private java.util.List < String > status;
@@ -55,11 +55,11 @@ public class ListAppInstanceGroupRequest extends Request {
         this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceGroupName = builder.appInstanceGroupName;
+        this.bizRegionId = builder.bizRegionId;
         this.nodeInstanceType = builder.nodeInstanceType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productType = builder.productType;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -98,6 +98,13 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
+    }
+
+    /**
      * @return nodeInstanceType
      */
     public String getNodeInstanceType() {
@@ -126,13 +133,6 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public java.util.List < String > getStatus() {
@@ -143,11 +143,11 @@ public class ListAppInstanceGroupRequest extends Request {
         private String appCenterImageId; 
         private String appInstanceGroupId; 
         private String appInstanceGroupName; 
+        private String bizRegionId; 
         private String nodeInstanceType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productType; 
-        private String regionId; 
         private java.util.List < String > status; 
 
         private Builder() {
@@ -159,16 +159,16 @@ public class ListAppInstanceGroupRequest extends Request {
             this.appCenterImageId = request.appCenterImageId;
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceGroupName = request.appInstanceGroupName;
+            this.bizRegionId = request.bizRegionId;
             this.nodeInstanceType = request.nodeInstanceType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productType = request.productType;
-            this.regionId = request.regionId;
             this.status = request.status;
         } 
 
         /**
-         * 应用中心镜像ID
+         * AppCenterImageId.
          */
         public Builder appCenterImageId(String appCenterImageId) {
             this.putQueryParameter("AppCenterImageId", appCenterImageId);
@@ -191,6 +191,15 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
             this.appInstanceGroupName = appInstanceGroupName;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 
@@ -227,15 +236,6 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
             this.productType = productType;
-            return this;
-        }
-
-        /**
-         * 地域ID
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

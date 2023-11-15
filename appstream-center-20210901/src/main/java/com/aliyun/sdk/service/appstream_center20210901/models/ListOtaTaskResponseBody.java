@@ -86,7 +86,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 每页数量
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceGroupModels
+         * TaskList.
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.taskList = taskList;
@@ -194,7 +194,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             private String taskStartTime; 
 
             /**
-             * ota版本，格式举例：0.0.1-R-20220708.110604
+             * OtaVersion.
              */
             public Builder otaVersion(String otaVersion) {
                 this.otaVersion = otaVersion;
@@ -202,7 +202,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务展示状态
+             * TaskDisplayStatus.
              */
             public Builder taskDisplayStatus(String taskDisplayStatus) {
                 this.taskDisplayStatus = taskDisplayStatus;
@@ -210,7 +210,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -218,7 +218,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 任务开始时间，ISO-8601格式
+             * TaskStartTime.
              */
             public Builder taskStartTime(String taskStartTime) {
                 this.taskStartTime = taskStartTime;

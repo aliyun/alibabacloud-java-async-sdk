@@ -55,7 +55,7 @@ public class GetOtaTaskByTaskIdRequest extends Request {
         } 
 
         /**
-         * ota任务id
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

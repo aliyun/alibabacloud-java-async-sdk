@@ -521,6 +521,67 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     } 
 
+    public static class DomainRules extends TeaModel {
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("Policy")
+        private String policy;
+
+        private DomainRules(Builder builder) {
+            this.domain = builder.domain;
+            this.policy = builder.policy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private String policy; 
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            public DomainRules build() {
+                return new DomainRules(this);
+            } 
+
+        } 
+
+    }
     public static class Routes extends TeaModel {
         @NameInMap("Destination")
         private String destination;
@@ -583,6 +644,9 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class Network extends TeaModel {
+        @NameInMap("DomainRules")
+        private java.util.List < DomainRules> domainRules;
+
         @NameInMap("IpExpireMinutes")
         private Integer ipExpireMinutes;
 
@@ -593,6 +657,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String strategyType;
 
         private Network(Builder builder) {
+            this.domainRules = builder.domainRules;
             this.ipExpireMinutes = builder.ipExpireMinutes;
             this.routes = builder.routes;
             this.strategyType = builder.strategyType;
@@ -604,6 +669,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         public static Network create() {
             return builder().build();
+        }
+
+        /**
+         * @return domainRules
+         */
+        public java.util.List < DomainRules> getDomainRules() {
+            return this.domainRules;
         }
 
         /**
@@ -628,9 +700,18 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < DomainRules> domainRules; 
             private Integer ipExpireMinutes; 
             private java.util.List < Routes> routes; 
             private String strategyType; 
+
+            /**
+             * DomainRules.
+             */
+            public Builder domainRules(java.util.List < DomainRules> domainRules) {
+                this.domainRules = domainRules;
+                return this;
+            }
 
             /**
              * IpExpireMinutes.

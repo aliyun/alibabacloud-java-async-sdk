@@ -70,7 +70,7 @@ public class CancelOtaTaskRequest extends Request {
         } 
 
         /**
-         * 实例组id
+         * AppInstanceGroupId.
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -79,7 +79,7 @@ public class CancelOtaTaskRequest extends Request {
         }
 
         /**
-         * 任务id
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

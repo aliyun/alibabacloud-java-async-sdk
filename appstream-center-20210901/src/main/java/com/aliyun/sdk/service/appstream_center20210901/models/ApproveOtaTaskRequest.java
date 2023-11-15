@@ -115,7 +115,7 @@ public class ApproveOtaTaskRequest extends Request {
         } 
 
         /**
-         * 实例组id
+         * AppInstanceGroupId.
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -124,7 +124,7 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * 请求发起者所在地域
+         * BizRegionId.
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -133,11 +133,7 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * ota类型,取值：
-         * <p>
-         * Fota ： agent组件更新
-         * ImageUpdate ： 镜像更新
-         * AppUpdate ： 应用更新
+         * OtaType.
          */
         public Builder otaType(String otaType) {
             this.putBodyParameter("OtaType", otaType);
@@ -146,7 +142,7 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * 开始时间，iso8601格式
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -155,7 +151,7 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * ota任务id
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

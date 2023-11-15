@@ -33,6 +33,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("TaskStatus")
     private String taskStatus;
 
+    @NameInMap("TenantId")
+    private Long tenantId;
+
     @NameInMap("Ticket")
     private String ticket;
 
@@ -44,6 +47,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
         this.taskStatus = builder.taskStatus;
+        this.tenantId = builder.tenantId;
         this.ticket = builder.ticket;
     }
 
@@ -105,6 +109,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     /**
+     * @return tenantId
+     */
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return ticket
      */
     public String getTicket() {
@@ -119,6 +130,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String requestId; 
         private String taskId; 
         private String taskStatus; 
+        private Long tenantId; 
         private String ticket; 
 
         /**
@@ -154,7 +166,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,6 +186,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(Long tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
 

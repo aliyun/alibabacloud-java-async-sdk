@@ -70,7 +70,7 @@ public class LogOffAllSessionsInAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * 实例组id
+         * AppInstanceGroupId.
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -79,7 +79,7 @@ public class LogOffAllSessionsInAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * 产品类型
+         * ProductType.
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

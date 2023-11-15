@@ -98,7 +98,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         private String taskStartTime; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * 提示
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * 版本号
+         * OtaVersion.
          */
         public Builder otaVersion(String otaVersion) {
             this.otaVersion = otaVersion;
@@ -122,7 +122,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * 版本说明
+         * ReleaseNote.
          */
         public Builder releaseNote(String releaseNote) {
             this.releaseNote = releaseNote;
@@ -130,7 +130,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行时间，ISO-8601格式
+         * TaskStartTime.
          */
         public Builder taskStartTime(String taskStartTime) {
             this.taskStartTime = taskStartTime;

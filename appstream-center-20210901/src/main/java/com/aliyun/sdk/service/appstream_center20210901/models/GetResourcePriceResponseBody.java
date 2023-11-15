@@ -18,6 +18,9 @@ public class GetResourcePriceResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("PriceList")
+    private java.util.List < PriceList> priceList;
+
     @NameInMap("PriceModel")
     private PriceModel priceModel;
 
@@ -27,6 +30,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
     private GetResourcePriceResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
+        this.priceList = builder.priceList;
         this.priceModel = builder.priceModel;
         this.requestId = builder.requestId;
     }
@@ -54,6 +58,13 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     /**
+     * @return priceList
+     */
+    public java.util.List < PriceList> getPriceList() {
+        return this.priceList;
+    }
+
+    /**
      * @return priceModel
      */
     public PriceModel getPriceModel() {
@@ -70,6 +81,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
+        private java.util.List < PriceList> priceList; 
         private PriceModel priceModel; 
         private String requestId; 
 
@@ -90,6 +102,14 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
+         * PriceList.
+         */
+        public Builder priceList(java.util.List < PriceList> priceList) {
+            this.priceList = priceList;
+            return this;
+        }
+
+        /**
          * PriceModel.
          */
         public Builder priceModel(PriceModel priceModel) {
@@ -98,7 +118,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -414,12 +434,396 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
-    public static class PriceModel extends TeaModel {
+    public static class PriceList extends TeaModel {
         @NameInMap("Price")
         private Price price;
 
+        @NameInMap("PriceType")
+        private String priceType;
+
         @NameInMap("Rules")
         private java.util.List < Rules> rules;
+
+        private PriceList(Builder builder) {
+            this.price = builder.price;
+            this.priceType = builder.priceType;
+            this.rules = builder.rules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return price
+         */
+        public Price getPrice() {
+            return this.price;
+        }
+
+        /**
+         * @return priceType
+         */
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+        /**
+         * @return rules
+         */
+        public java.util.List < Rules> getRules() {
+            return this.rules;
+        }
+
+        public static final class Builder {
+            private Price price; 
+            private String priceType; 
+            private java.util.List < Rules> rules; 
+
+            /**
+             * Price.
+             */
+            public Builder price(Price price) {
+                this.price = price;
+                return this;
+            }
+
+            /**
+             * PriceType.
+             */
+            public Builder priceType(String priceType) {
+                this.priceType = priceType;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List < Rules> rules) {
+                this.rules = rules;
+                return this;
+            }
+
+            public PriceList build() {
+                return new PriceList(this);
+            } 
+
+        } 
+
+    }
+    public static class PricePromotions extends TeaModel {
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("PromotionDesc")
+        private String promotionDesc;
+
+        @NameInMap("PromotionId")
+        private String promotionId;
+
+        @NameInMap("PromotionName")
+        private String promotionName;
+
+        @NameInMap("Selected")
+        private Boolean selected;
+
+        private PricePromotions(Builder builder) {
+            this.optionCode = builder.optionCode;
+            this.promotionDesc = builder.promotionDesc;
+            this.promotionId = builder.promotionId;
+            this.promotionName = builder.promotionName;
+            this.selected = builder.selected;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PricePromotions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return promotionDesc
+         */
+        public String getPromotionDesc() {
+            return this.promotionDesc;
+        }
+
+        /**
+         * @return promotionId
+         */
+        public String getPromotionId() {
+            return this.promotionId;
+        }
+
+        /**
+         * @return promotionName
+         */
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        /**
+         * @return selected
+         */
+        public Boolean getSelected() {
+            return this.selected;
+        }
+
+        public static final class Builder {
+            private String optionCode; 
+            private String promotionDesc; 
+            private String promotionId; 
+            private String promotionName; 
+            private Boolean selected; 
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PromotionDesc.
+             */
+            public Builder promotionDesc(String promotionDesc) {
+                this.promotionDesc = promotionDesc;
+                return this;
+            }
+
+            /**
+             * PromotionId.
+             */
+            public Builder promotionId(String promotionId) {
+                this.promotionId = promotionId;
+                return this;
+            }
+
+            /**
+             * PromotionName.
+             */
+            public Builder promotionName(String promotionName) {
+                this.promotionName = promotionName;
+                return this;
+            }
+
+            /**
+             * Selected.
+             */
+            public Builder selected(Boolean selected) {
+                this.selected = selected;
+                return this;
+            }
+
+            public PricePromotions build() {
+                return new PricePromotions(this);
+            } 
+
+        } 
+
+    }
+    public static class PriceModelPrice extends TeaModel {
+        @NameInMap("Currency")
+        private String currency;
+
+        @NameInMap("DiscountPrice")
+        private String discountPrice;
+
+        @NameInMap("OriginalPrice")
+        private String originalPrice;
+
+        @NameInMap("Promotions")
+        private java.util.List < PricePromotions> promotions;
+
+        @NameInMap("TradePrice")
+        private String tradePrice;
+
+        private PriceModelPrice(Builder builder) {
+            this.currency = builder.currency;
+            this.discountPrice = builder.discountPrice;
+            this.originalPrice = builder.originalPrice;
+            this.promotions = builder.promotions;
+            this.tradePrice = builder.tradePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriceModelPrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public String getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        /**
+         * @return originalPrice
+         */
+        public String getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        /**
+         * @return promotions
+         */
+        public java.util.List < PricePromotions> getPromotions() {
+            return this.promotions;
+        }
+
+        /**
+         * @return tradePrice
+         */
+        public String getTradePrice() {
+            return this.tradePrice;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private String discountPrice; 
+            private String originalPrice; 
+            private java.util.List < PricePromotions> promotions; 
+            private String tradePrice; 
+
+            /**
+             * Currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * DiscountPrice.
+             */
+            public Builder discountPrice(String discountPrice) {
+                this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * OriginalPrice.
+             */
+            public Builder originalPrice(String originalPrice) {
+                this.originalPrice = originalPrice;
+                return this;
+            }
+
+            /**
+             * Promotions.
+             */
+            public Builder promotions(java.util.List < PricePromotions> promotions) {
+                this.promotions = promotions;
+                return this;
+            }
+
+            /**
+             * TradePrice.
+             */
+            public Builder tradePrice(String tradePrice) {
+                this.tradePrice = tradePrice;
+                return this;
+            }
+
+            public PriceModelPrice build() {
+                return new PriceModelPrice(this);
+            } 
+
+        } 
+
+    }
+    public static class PriceModelRules extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("RuleId")
+        private Long ruleId;
+
+        private PriceModelRules(Builder builder) {
+            this.description = builder.description;
+            this.ruleId = builder.ruleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriceModelRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private Long ruleId; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * RuleId.
+             */
+            public Builder ruleId(Long ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            public PriceModelRules build() {
+                return new PriceModelRules(this);
+            } 
+
+        } 
+
+    }
+    public static class PriceModel extends TeaModel {
+        @NameInMap("Price")
+        private PriceModelPrice price;
+
+        @NameInMap("Rules")
+        private java.util.List < PriceModelRules> rules;
 
         private PriceModel(Builder builder) {
             this.price = builder.price;
@@ -437,25 +841,25 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * @return price
          */
-        public Price getPrice() {
+        public PriceModelPrice getPrice() {
             return this.price;
         }
 
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List < PriceModelRules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
-            private Price price; 
-            private java.util.List < Rules> rules; 
+            private PriceModelPrice price; 
+            private java.util.List < PriceModelRules> rules; 
 
             /**
              * Price.
              */
-            public Builder price(Price price) {
+            public Builder price(PriceModelPrice price) {
                 this.price = price;
                 return this;
             }
@@ -463,7 +867,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List < PriceModelRules> rules) {
                 this.rules = rules;
                 return this;
             }

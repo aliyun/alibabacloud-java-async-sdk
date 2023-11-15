@@ -58,7 +58,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -726,7 +726,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * 新ota版本,为空表示没有新版本
+             * NewOtaVersion.
              */
             public Builder newOtaVersion(String newOtaVersion) {
                 this.newOtaVersion = newOtaVersion;
@@ -734,7 +734,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 当前ota版本
+             * OtaVersion.
              */
             public Builder otaVersion(String otaVersion) {
                 this.otaVersion = otaVersion;
@@ -742,7 +742,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -775,11 +775,17 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         private String appInstanceType;
 
+        @NameInMap("AppInstanceTypeName")
+        private String appInstanceTypeName;
+
         @NameInMap("AppPolicyId")
         private String appPolicyId;
 
         @NameInMap("Apps")
         private java.util.List < Apps> apps;
+
+        @NameInMap("ChargeResourceMode")
+        private String chargeResourceMode;
 
         @NameInMap("ChargeType")
         private String chargeType;
@@ -789,6 +795,12 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         @NameInMap("GmtCreate")
         private String gmtCreate;
+
+        @NameInMap("MaxAmount")
+        private Integer maxAmount;
+
+        @NameInMap("MinAmount")
+        private Integer minAmount;
 
         @NameInMap("NodePool")
         private java.util.List < NodePool> nodePool;
@@ -805,8 +817,26 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ReserveAmountRatio")
+        private String reserveAmountRatio;
+
+        @NameInMap("ReserveMaxAmount")
+        private Integer reserveMaxAmount;
+
+        @NameInMap("ReserveMinAmount")
+        private Integer reserveMinAmount;
+
         @NameInMap("ResourceStatus")
         private String resourceStatus;
+
+        @NameInMap("ScalingDownAfterIdleMinutes")
+        private Integer scalingDownAfterIdleMinutes;
+
+        @NameInMap("ScalingStep")
+        private Integer scalingStep;
+
+        @NameInMap("ScalingUsageThreshold")
+        private String scalingUsageThreshold;
 
         @NameInMap("SessionTimeout")
         private String sessionTimeout;
@@ -827,17 +857,27 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceGroupName = builder.appInstanceGroupName;
             this.appInstanceType = builder.appInstanceType;
+            this.appInstanceTypeName = builder.appInstanceTypeName;
             this.appPolicyId = builder.appPolicyId;
             this.apps = builder.apps;
+            this.chargeResourceMode = builder.chargeResourceMode;
             this.chargeType = builder.chargeType;
             this.expiredTime = builder.expiredTime;
             this.gmtCreate = builder.gmtCreate;
+            this.maxAmount = builder.maxAmount;
+            this.minAmount = builder.minAmount;
             this.nodePool = builder.nodePool;
             this.osType = builder.osType;
             this.otaInfo = builder.otaInfo;
             this.productType = builder.productType;
             this.regionId = builder.regionId;
+            this.reserveAmountRatio = builder.reserveAmountRatio;
+            this.reserveMaxAmount = builder.reserveMaxAmount;
+            this.reserveMinAmount = builder.reserveMinAmount;
             this.resourceStatus = builder.resourceStatus;
+            this.scalingDownAfterIdleMinutes = builder.scalingDownAfterIdleMinutes;
+            this.scalingStep = builder.scalingStep;
+            this.scalingUsageThreshold = builder.scalingUsageThreshold;
             this.sessionTimeout = builder.sessionTimeout;
             this.skipUserAuthCheck = builder.skipUserAuthCheck;
             this.specId = builder.specId;
@@ -895,6 +935,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return appInstanceTypeName
+         */
+        public String getAppInstanceTypeName() {
+            return this.appInstanceTypeName;
+        }
+
+        /**
          * @return appPolicyId
          */
         public String getAppPolicyId() {
@@ -906,6 +953,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         public java.util.List < Apps> getApps() {
             return this.apps;
+        }
+
+        /**
+         * @return chargeResourceMode
+         */
+        public String getChargeResourceMode() {
+            return this.chargeResourceMode;
         }
 
         /**
@@ -927,6 +981,20 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        /**
+         * @return maxAmount
+         */
+        public Integer getMaxAmount() {
+            return this.maxAmount;
+        }
+
+        /**
+         * @return minAmount
+         */
+        public Integer getMinAmount() {
+            return this.minAmount;
         }
 
         /**
@@ -965,10 +1033,52 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return reserveAmountRatio
+         */
+        public String getReserveAmountRatio() {
+            return this.reserveAmountRatio;
+        }
+
+        /**
+         * @return reserveMaxAmount
+         */
+        public Integer getReserveMaxAmount() {
+            return this.reserveMaxAmount;
+        }
+
+        /**
+         * @return reserveMinAmount
+         */
+        public Integer getReserveMinAmount() {
+            return this.reserveMinAmount;
+        }
+
+        /**
          * @return resourceStatus
          */
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        /**
+         * @return scalingDownAfterIdleMinutes
+         */
+        public Integer getScalingDownAfterIdleMinutes() {
+            return this.scalingDownAfterIdleMinutes;
+        }
+
+        /**
+         * @return scalingStep
+         */
+        public Integer getScalingStep() {
+            return this.scalingStep;
+        }
+
+        /**
+         * @return scalingUsageThreshold
+         */
+        public String getScalingUsageThreshold() {
+            return this.scalingUsageThreshold;
         }
 
         /**
@@ -1006,17 +1116,27 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String appInstanceGroupName; 
             private String appInstanceType; 
+            private String appInstanceTypeName; 
             private String appPolicyId; 
             private java.util.List < Apps> apps; 
+            private String chargeResourceMode; 
             private String chargeType; 
             private String expiredTime; 
             private String gmtCreate; 
+            private Integer maxAmount; 
+            private Integer minAmount; 
             private java.util.List < NodePool> nodePool; 
             private String osType; 
             private OtaInfo otaInfo; 
             private String productType; 
             private String regionId; 
+            private String reserveAmountRatio; 
+            private Integer reserveMaxAmount; 
+            private Integer reserveMinAmount; 
             private String resourceStatus; 
+            private Integer scalingDownAfterIdleMinutes; 
+            private Integer scalingStep; 
+            private String scalingUsageThreshold; 
             private String sessionTimeout; 
             private Boolean skipUserAuthCheck; 
             private String specId; 
@@ -1071,6 +1191,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * AppInstanceTypeName.
+             */
+            public Builder appInstanceTypeName(String appInstanceTypeName) {
+                this.appInstanceTypeName = appInstanceTypeName;
+                return this;
+            }
+
+            /**
              * AppPolicyId.
              */
             public Builder appPolicyId(String appPolicyId) {
@@ -1083,6 +1211,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder apps(java.util.List < Apps> apps) {
                 this.apps = apps;
+                return this;
+            }
+
+            /**
+             * ChargeResourceMode.
+             */
+            public Builder chargeResourceMode(String chargeResourceMode) {
+                this.chargeResourceMode = chargeResourceMode;
                 return this;
             }
 
@@ -1111,6 +1247,22 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * MaxAmount.
+             */
+            public Builder maxAmount(Integer maxAmount) {
+                this.maxAmount = maxAmount;
+                return this;
+            }
+
+            /**
+             * MinAmount.
+             */
+            public Builder minAmount(Integer minAmount) {
+                this.minAmount = minAmount;
+                return this;
+            }
+
+            /**
              * NodePool.
              */
             public Builder nodePool(java.util.List < NodePool> nodePool) {
@@ -1119,7 +1271,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 系统类型
+             * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1151,10 +1303,58 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * ReserveAmountRatio.
+             */
+            public Builder reserveAmountRatio(String reserveAmountRatio) {
+                this.reserveAmountRatio = reserveAmountRatio;
+                return this;
+            }
+
+            /**
+             * ReserveMaxAmount.
+             */
+            public Builder reserveMaxAmount(Integer reserveMaxAmount) {
+                this.reserveMaxAmount = reserveMaxAmount;
+                return this;
+            }
+
+            /**
+             * ReserveMinAmount.
+             */
+            public Builder reserveMinAmount(Integer reserveMinAmount) {
+                this.reserveMinAmount = reserveMinAmount;
+                return this;
+            }
+
+            /**
              * ResourceStatus.
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
+                return this;
+            }
+
+            /**
+             * ScalingDownAfterIdleMinutes.
+             */
+            public Builder scalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
+                this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
+                return this;
+            }
+
+            /**
+             * ScalingStep.
+             */
+            public Builder scalingStep(Integer scalingStep) {
+                this.scalingStep = scalingStep;
+                return this;
+            }
+
+            /**
+             * ScalingUsageThreshold.
+             */
+            public Builder scalingUsageThreshold(String scalingUsageThreshold) {
+                this.scalingUsageThreshold = scalingUsageThreshold;
                 return this;
             }
 
