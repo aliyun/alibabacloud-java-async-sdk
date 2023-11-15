@@ -98,6 +98,10 @@ public class UpdateQualityRuleRequest extends Request {
     private Integer ruleType;
 
     @Body
+    @NameInMap("TaskSetting")
+    private String taskSetting;
+
+    @Body
     @NameInMap("TemplateId")
     private Integer templateId;
 
@@ -133,6 +137,7 @@ public class UpdateQualityRuleRequest extends Request {
         this.propertyType = builder.propertyType;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
+        this.taskSetting = builder.taskSetting;
         this.templateId = builder.templateId;
         this.trend = builder.trend;
         this.warningThreshold = builder.warningThreshold;
@@ -279,6 +284,13 @@ public class UpdateQualityRuleRequest extends Request {
     }
 
     /**
+     * @return taskSetting
+     */
+    public String getTaskSetting() {
+        return this.taskSetting;
+    }
+
+    /**
      * @return templateId
      */
     public Integer getTemplateId() {
@@ -325,6 +337,7 @@ public class UpdateQualityRuleRequest extends Request {
         private String propertyType; 
         private String ruleName; 
         private Integer ruleType; 
+        private String taskSetting; 
         private Integer templateId; 
         private String trend; 
         private String warningThreshold; 
@@ -354,6 +367,7 @@ public class UpdateQualityRuleRequest extends Request {
             this.propertyType = request.propertyType;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
+            this.taskSetting = request.taskSetting;
             this.templateId = request.templateId;
             this.trend = request.trend;
             this.warningThreshold = request.warningThreshold;
@@ -539,6 +553,15 @@ public class UpdateQualityRuleRequest extends Request {
         public Builder ruleType(Integer ruleType) {
             this.putBodyParameter("RuleType", ruleType);
             this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * TaskSetting.
+         */
+        public Builder taskSetting(String taskSetting) {
+            this.putBodyParameter("TaskSetting", taskSetting);
+            this.taskSetting = taskSetting;
             return this;
         }
 

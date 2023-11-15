@@ -33,7 +33,7 @@ public class GetDataSourceMetaRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @Validation(maximum = 10000, minimum = 1)
     private Long pageSize;
 
     @Query
