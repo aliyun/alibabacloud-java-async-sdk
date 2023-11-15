@@ -42,7 +42,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAlertTypeResponse> describeAlertType(DescribeAlertTypeRequest request);
 
+    CompletableFuture<DescribeAlertsResponse> describeAlerts(DescribeAlertsRequest request);
+
     CompletableFuture<DescribeAlertsCountResponse> describeAlertsCount(DescribeAlertsCountRequest request);
+
+    CompletableFuture<DescribeAlertsWithEntityResponse> describeAlertsWithEntity(DescribeAlertsWithEntityRequest request);
+
+    CompletableFuture<DescribeAlertsWithEventResponse> describeAlertsWithEvent(DescribeAlertsWithEventRequest request);
 
     CompletableFuture<DescribeAttackTimeLineResponse> describeAttackTimeLine(DescribeAttackTimeLineRequest request);
 
