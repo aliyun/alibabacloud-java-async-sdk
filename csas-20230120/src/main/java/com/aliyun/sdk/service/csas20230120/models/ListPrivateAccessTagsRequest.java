@@ -35,6 +35,10 @@ public class ListPrivateAccessTagsRequest extends Request {
     private String policyId;
 
     @Query
+    @NameInMap("SimpleMode")
+    private Boolean simpleMode;
+
+    @Query
     @NameInMap("TagIds")
     private java.util.List < String > tagIds;
 
@@ -45,6 +49,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.policyId = builder.policyId;
+        this.simpleMode = builder.simpleMode;
         this.tagIds = builder.tagIds;
     }
 
@@ -97,6 +102,13 @@ public class ListPrivateAccessTagsRequest extends Request {
     }
 
     /**
+     * @return simpleMode
+     */
+    public Boolean getSimpleMode() {
+        return this.simpleMode;
+    }
+
+    /**
      * @return tagIds
      */
     public java.util.List < String > getTagIds() {
@@ -109,6 +121,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         private String name; 
         private Integer pageSize; 
         private String policyId; 
+        private Boolean simpleMode; 
         private java.util.List < String > tagIds; 
 
         private Builder() {
@@ -122,6 +135,7 @@ public class ListPrivateAccessTagsRequest extends Request {
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.policyId = request.policyId;
+            this.simpleMode = request.simpleMode;
             this.tagIds = request.tagIds;
         } 
 
@@ -167,6 +181,15 @@ public class ListPrivateAccessTagsRequest extends Request {
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * SimpleMode.
+         */
+        public Builder simpleMode(Boolean simpleMode) {
+            this.putQueryParameter("SimpleMode", simpleMode);
+            this.simpleMode = simpleMode;
             return this;
         }
 
