@@ -122,7 +122,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring object. Valid values: ask and ecs.
+         * The type of the monitoring object. Valid values: ask , acs , one and ecs.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

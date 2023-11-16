@@ -150,7 +150,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Tag的键。
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +158,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * Tag的值
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -628,7 +628,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID。
+             * VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -334,7 +334,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Status of Feature.
+             * Installation status of Feature.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -526,8 +526,8 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             /**
              * Running status.
              * <p>
-             * - Success: Normal operation
-             * - Failed: running exception
+             * - Success: Running normal
+             * - Failed: Running exception
              * - Not Found: Not installed
              */
             public Builder status(String status) {

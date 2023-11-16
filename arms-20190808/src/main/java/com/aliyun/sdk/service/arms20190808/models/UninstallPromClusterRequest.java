@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UninstallPromClusterRequest extends Request {
     @Query
+    @NameInMap("AliyunLang")
+    private String aliyunLang;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -24,6 +28,7 @@ public class UninstallPromClusterRequest extends Request {
 
     private UninstallPromClusterRequest(Builder builder) {
         super(builder);
+        this.aliyunLang = builder.aliyunLang;
         this.clusterId = builder.clusterId;
         this.regionId = builder.regionId;
     }
@@ -42,6 +47,13 @@ public class UninstallPromClusterRequest extends Request {
     }
 
     /**
+     * @return aliyunLang
+     */
+    public String getAliyunLang() {
+        return this.aliyunLang;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -56,6 +68,7 @@ public class UninstallPromClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UninstallPromClusterRequest, Builder> {
+        private String aliyunLang; 
         private String clusterId; 
         private String regionId; 
 
@@ -65,9 +78,19 @@ public class UninstallPromClusterRequest extends Request {
 
         private Builder(UninstallPromClusterRequest request) {
             super(request);
+            this.aliyunLang = request.aliyunLang;
             this.clusterId = request.clusterId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AliyunLang.
+         */
+        public Builder aliyunLang(String aliyunLang) {
+            this.putQueryParameter("AliyunLang", aliyunLang);
+            this.aliyunLang = aliyunLang;
+            return this;
+        }
 
         /**
          * The cluster ID.
