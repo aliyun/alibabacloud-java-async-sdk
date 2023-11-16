@@ -125,6 +125,10 @@ public class CreateDBClusterRequest extends Request {
     private String period;
 
     @Query
+    @NameInMap("ProvisionedIops")
+    private Long provisionedIops;
+
+    @Query
     @NameInMap("ProxyClass")
     private String proxyClass;
 
@@ -260,6 +264,7 @@ public class CreateDBClusterRequest extends Request {
         this.parameterGroupId = builder.parameterGroupId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.provisionedIops = builder.provisionedIops;
         this.proxyClass = builder.proxyClass;
         this.proxyType = builder.proxyType;
         this.regionId = builder.regionId;
@@ -491,6 +496,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return provisionedIops
+     */
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    /**
      * @return proxyClass
      */
     public String getProxyClass() {
@@ -700,6 +712,7 @@ public class CreateDBClusterRequest extends Request {
         private String parameterGroupId; 
         private String payType; 
         private String period; 
+        private Long provisionedIops; 
         private String proxyClass; 
         private String proxyType; 
         private String regionId; 
@@ -760,6 +773,7 @@ public class CreateDBClusterRequest extends Request {
             this.parameterGroupId = request.parameterGroupId;
             this.payType = request.payType;
             this.period = request.period;
+            this.provisionedIops = request.provisionedIops;
             this.proxyClass = request.proxyClass;
             this.proxyType = request.proxyType;
             this.regionId = request.regionId;
@@ -1176,6 +1190,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
             return this;
         }
 
