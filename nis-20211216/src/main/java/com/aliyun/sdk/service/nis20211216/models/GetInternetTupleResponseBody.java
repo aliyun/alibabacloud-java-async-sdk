@@ -162,8 +162,8 @@ public class GetInternetTupleResponseBody extends TeaModel {
         @NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RetranCount")
-        private Double retranCount;
+        @NameInMap("RetransmitRate")
+        private Double retransmitRate;
 
         @NameInMap("Rtt")
         private Double rtt;
@@ -199,7 +199,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             this.outRetranCount = builder.outRetranCount;
             this.packetCount = builder.packetCount;
             this.protocol = builder.protocol;
-            this.retranCount = builder.retranCount;
+            this.retransmitRate = builder.retransmitRate;
             this.rtt = builder.rtt;
         }
 
@@ -422,10 +422,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
         }
 
         /**
-         * @return retranCount
+         * @return retransmitRate
          */
-        public Double getRetranCount() {
-            return this.retranCount;
+        public Double getRetransmitRate() {
+            return this.retransmitRate;
         }
 
         /**
@@ -466,7 +466,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
             private Double outRetranCount; 
             private Double packetCount; 
             private String protocol; 
-            private Double retranCount; 
+            private Double retransmitRate; 
             private Double rtt; 
 
             /**
@@ -717,10 +717,10 @@ public class GetInternetTupleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of repeated packets.
+             * RetransmitRate.
              */
-            public Builder retranCount(Double retranCount) {
-                this.retranCount = retranCount;
+            public Builder retransmitRate(Double retransmitRate) {
+                this.retransmitRate = retransmitRate;
                 return this;
             }
 
