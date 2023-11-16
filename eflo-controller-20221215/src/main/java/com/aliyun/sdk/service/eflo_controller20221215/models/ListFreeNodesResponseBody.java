@@ -107,6 +107,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         private String nodeId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Sn")
         private String sn;
 
@@ -119,6 +122,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             this.hpnZone = builder.hpnZone;
             this.machineType = builder.machineType;
             this.nodeId = builder.nodeId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sn = builder.sn;
             this.zoneId = builder.zoneId;
         }
@@ -167,6 +171,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sn
          */
         public String getSn() {
@@ -186,6 +197,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             private String hpnZone; 
             private String machineType; 
             private String nodeId; 
+            private String resourceGroupId; 
             private String sn; 
             private String zoneId; 
 
@@ -226,6 +238,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -32,6 +32,10 @@ public class ListFreeNodesRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Body
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ListFreeNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -39,6 +43,7 @@ public class ListFreeNodesRequest extends Request {
         this.machineType = builder.machineType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -89,12 +94,20 @@ public class ListFreeNodesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListFreeNodesRequest, Builder> {
         private String regionId; 
         private String hpnZone; 
         private String machineType; 
         private Long maxResults; 
         private String nextToken; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -107,6 +120,7 @@ public class ListFreeNodesRequest extends Request {
             this.machineType = request.machineType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -151,6 +165,15 @@ public class ListFreeNodesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

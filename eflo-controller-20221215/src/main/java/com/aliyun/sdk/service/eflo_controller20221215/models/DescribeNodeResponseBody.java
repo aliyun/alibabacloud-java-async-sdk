@@ -57,6 +57,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Sn")
     private String sn;
 
@@ -79,6 +82,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         this.nodeId = builder.nodeId;
         this.operatingState = builder.operatingState;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sn = builder.sn;
         this.zoneId = builder.zoneId;
     }
@@ -197,6 +201,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sn
      */
     public String getSn() {
@@ -226,6 +237,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String nodeId; 
         private String operatingState; 
         private String requestId; 
+        private String resourceGroupId; 
         private String sn; 
         private String zoneId; 
 
@@ -346,6 +358,14 @@ public class DescribeNodeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
