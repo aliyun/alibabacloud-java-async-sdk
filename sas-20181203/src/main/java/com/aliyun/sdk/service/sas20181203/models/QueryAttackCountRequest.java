@@ -24,11 +24,16 @@ public class QueryAttackCountRequest extends Request {
     @NameInMap("SourceIp")
     private String sourceIp;
 
+    @Query
+    @NameInMap("Uuids")
+    private String uuids;
+
     private QueryAttackCountRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
         this.lang = builder.lang;
         this.sourceIp = builder.sourceIp;
+        this.uuids = builder.uuids;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class QueryAttackCountRequest extends Request {
         return this.sourceIp;
     }
 
+    /**
+     * @return uuids
+     */
+    public String getUuids() {
+        return this.uuids;
+    }
+
     public static final class Builder extends Request.Builder<QueryAttackCountRequest, Builder> {
         private String from; 
         private String lang; 
         private String sourceIp; 
+        private String uuids; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class QueryAttackCountRequest extends Request {
             this.from = request.from;
             this.lang = request.lang;
             this.sourceIp = request.sourceIp;
+            this.uuids = request.uuids;
         } 
 
         /**
@@ -109,6 +123,18 @@ public class QueryAttackCountRequest extends Request {
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
             this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * The UUID of the asset.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         */
+        public Builder uuids(String uuids) {
+            this.putQueryParameter("Uuids", uuids);
+            this.uuids = uuids;
             return this;
         }
 
