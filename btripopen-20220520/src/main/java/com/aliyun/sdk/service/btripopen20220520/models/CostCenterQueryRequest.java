@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CostCenterQueryRequest extends Request {
     @Query
+    @NameInMap("disable")
+    private Long disable;
+
+    @Query
     @NameInMap("need_org_entity")
     private Boolean needOrgEntity;
 
@@ -34,6 +38,7 @@ public class CostCenterQueryRequest extends Request {
 
     private CostCenterQueryRequest(Builder builder) {
         super(builder);
+        this.disable = builder.disable;
         this.needOrgEntity = builder.needOrgEntity;
         this.thirdpartId = builder.thirdpartId;
         this.title = builder.title;
@@ -52,6 +57,13 @@ public class CostCenterQueryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return disable
+     */
+    public Long getDisable() {
+        return this.disable;
     }
 
     /**
@@ -90,6 +102,7 @@ public class CostCenterQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CostCenterQueryRequest, Builder> {
+        private Long disable; 
         private Boolean needOrgEntity; 
         private String thirdpartId; 
         private String title; 
@@ -102,12 +115,22 @@ public class CostCenterQueryRequest extends Request {
 
         private Builder(CostCenterQueryRequest request) {
             super(request);
+            this.disable = request.disable;
             this.needOrgEntity = request.needOrgEntity;
             this.thirdpartId = request.thirdpartId;
             this.title = request.title;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
+
+        /**
+         * disable.
+         */
+        public Builder disable(Long disable) {
+            this.putQueryParameter("disable", disable);
+            this.disable = disable;
+            return this;
+        }
 
         /**
          * need_org_entity.

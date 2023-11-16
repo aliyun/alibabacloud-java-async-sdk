@@ -299,6 +299,9 @@ public class CostCenterQueryResponseBody extends TeaModel {
         @NameInMap("corp_id")
         private String corpId;
 
+        @NameInMap("disable")
+        private Long disable;
+
         @NameInMap("entity_d_o_s")
         private java.util.List < EntityDOS> entityDOS;
 
@@ -323,6 +326,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.alipayNo = builder.alipayNo;
             this.corpId = builder.corpId;
+            this.disable = builder.disable;
             this.entityDOS = builder.entityDOS;
             this.id = builder.id;
             this.number = builder.number;
@@ -352,6 +356,13 @@ public class CostCenterQueryResponseBody extends TeaModel {
          */
         public String getCorpId() {
             return this.corpId;
+        }
+
+        /**
+         * @return disable
+         */
+        public Long getDisable() {
+            return this.disable;
         }
 
         /**
@@ -406,6 +417,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String alipayNo; 
             private String corpId; 
+            private Long disable; 
             private java.util.List < EntityDOS> entityDOS; 
             private Long id; 
             private String number; 
@@ -427,6 +439,14 @@ public class CostCenterQueryResponseBody extends TeaModel {
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
+                return this;
+            }
+
+            /**
+             * disable.
+             */
+            public Builder disable(Long disable) {
+                this.disable = disable;
                 return this;
             }
 

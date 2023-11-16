@@ -17,6 +17,10 @@ public class CostCenterSaveRequest extends Request {
     private String alipayNo;
 
     @Body
+    @NameInMap("disable")
+    private Long disable;
+
+    @Body
     @NameInMap("number")
     private String number;
 
@@ -42,6 +46,7 @@ public class CostCenterSaveRequest extends Request {
     private CostCenterSaveRequest(Builder builder) {
         super(builder);
         this.alipayNo = builder.alipayNo;
+        this.disable = builder.disable;
         this.number = builder.number;
         this.scope = builder.scope;
         this.thirdpartId = builder.thirdpartId;
@@ -67,6 +72,13 @@ public class CostCenterSaveRequest extends Request {
      */
     public String getAlipayNo() {
         return this.alipayNo;
+    }
+
+    /**
+     * @return disable
+     */
+    public Long getDisable() {
+        return this.disable;
     }
 
     /**
@@ -106,6 +118,7 @@ public class CostCenterSaveRequest extends Request {
 
     public static final class Builder extends Request.Builder<CostCenterSaveRequest, Builder> {
         private String alipayNo; 
+        private Long disable; 
         private String number; 
         private Long scope; 
         private String thirdpartId; 
@@ -119,6 +132,7 @@ public class CostCenterSaveRequest extends Request {
         private Builder(CostCenterSaveRequest request) {
             super(request);
             this.alipayNo = request.alipayNo;
+            this.disable = request.disable;
             this.number = request.number;
             this.scope = request.scope;
             this.thirdpartId = request.thirdpartId;
@@ -132,6 +146,15 @@ public class CostCenterSaveRequest extends Request {
         public Builder alipayNo(String alipayNo) {
             this.putBodyParameter("alipay_no", alipayNo);
             this.alipayNo = alipayNo;
+            return this;
+        }
+
+        /**
+         * disable.
+         */
+        public Builder disable(Long disable) {
+            this.putBodyParameter("disable", disable);
+            this.disable = disable;
             return this;
         }
 
