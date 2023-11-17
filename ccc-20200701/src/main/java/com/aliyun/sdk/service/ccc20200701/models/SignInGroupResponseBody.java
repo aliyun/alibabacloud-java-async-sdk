@@ -155,6 +155,9 @@ public class SignInGroupResponseBody extends TeaModel {
         @NameInMap("BreakCode")
         private String breakCode;
 
+        @NameInMap("ChatDeviceId")
+        private String chatDeviceId;
+
         @NameInMap("DeviceId")
         private String deviceId;
 
@@ -184,6 +187,7 @@ public class SignInGroupResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.breakCode = builder.breakCode;
+            this.chatDeviceId = builder.chatDeviceId;
             this.deviceId = builder.deviceId;
             this.extension = builder.extension;
             this.instanceId = builder.instanceId;
@@ -208,6 +212,13 @@ public class SignInGroupResponseBody extends TeaModel {
          */
         public String getBreakCode() {
             return this.breakCode;
+        }
+
+        /**
+         * @return chatDeviceId
+         */
+        public String getChatDeviceId() {
+            return this.chatDeviceId;
         }
 
         /**
@@ -275,6 +286,7 @@ public class SignInGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String breakCode; 
+            private String chatDeviceId; 
             private String deviceId; 
             private String extension; 
             private String instanceId; 
@@ -290,6 +302,14 @@ public class SignInGroupResponseBody extends TeaModel {
              */
             public Builder breakCode(String breakCode) {
                 this.breakCode = breakCode;
+                return this;
+            }
+
+            /**
+             * ChatDeviceId.
+             */
+            public Builder chatDeviceId(String chatDeviceId) {
+                this.chatDeviceId = chatDeviceId;
                 return this;
             }
 

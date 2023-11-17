@@ -17,8 +17,11 @@ public class BlindTransferRequest extends Request {
     private Integer callPriority;
 
     @Query
+    @NameInMap("ContactFlowVariables")
+    private String contactFlowVariables;
+
+    @Query
     @NameInMap("DeviceId")
-    @Validation(required = true)
     private String deviceId;
 
     @Query
@@ -50,6 +53,10 @@ public class BlindTransferRequest extends Request {
     private String transferee;
 
     @Query
+    @NameInMap("TransfereeType")
+    private String transfereeType;
+
+    @Query
     @NameInMap("Transferor")
     private String transferor;
 
@@ -60,6 +67,7 @@ public class BlindTransferRequest extends Request {
     private BlindTransferRequest(Builder builder) {
         super(builder);
         this.callPriority = builder.callPriority;
+        this.contactFlowVariables = builder.contactFlowVariables;
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.jobId = builder.jobId;
@@ -67,6 +75,7 @@ public class BlindTransferRequest extends Request {
         this.strategyParams = builder.strategyParams;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.transferee = builder.transferee;
+        this.transfereeType = builder.transfereeType;
         this.transferor = builder.transferor;
         this.userId = builder.userId;
     }
@@ -89,6 +98,13 @@ public class BlindTransferRequest extends Request {
      */
     public Integer getCallPriority() {
         return this.callPriority;
+    }
+
+    /**
+     * @return contactFlowVariables
+     */
+    public String getContactFlowVariables() {
+        return this.contactFlowVariables;
     }
 
     /**
@@ -141,6 +157,13 @@ public class BlindTransferRequest extends Request {
     }
 
     /**
+     * @return transfereeType
+     */
+    public String getTransfereeType() {
+        return this.transfereeType;
+    }
+
+    /**
      * @return transferor
      */
     public String getTransferor() {
@@ -156,6 +179,7 @@ public class BlindTransferRequest extends Request {
 
     public static final class Builder extends Request.Builder<BlindTransferRequest, Builder> {
         private Integer callPriority; 
+        private String contactFlowVariables; 
         private String deviceId; 
         private String instanceId; 
         private String jobId; 
@@ -163,6 +187,7 @@ public class BlindTransferRequest extends Request {
         private String strategyParams; 
         private Integer timeoutSeconds; 
         private String transferee; 
+        private String transfereeType; 
         private String transferor; 
         private String userId; 
 
@@ -173,6 +198,7 @@ public class BlindTransferRequest extends Request {
         private Builder(BlindTransferRequest request) {
             super(request);
             this.callPriority = request.callPriority;
+            this.contactFlowVariables = request.contactFlowVariables;
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.jobId = request.jobId;
@@ -180,6 +206,7 @@ public class BlindTransferRequest extends Request {
             this.strategyParams = request.strategyParams;
             this.timeoutSeconds = request.timeoutSeconds;
             this.transferee = request.transferee;
+            this.transfereeType = request.transfereeType;
             this.transferor = request.transferor;
             this.userId = request.userId;
         } 
@@ -190,6 +217,15 @@ public class BlindTransferRequest extends Request {
         public Builder callPriority(Integer callPriority) {
             this.putQueryParameter("CallPriority", callPriority);
             this.callPriority = callPriority;
+            return this;
+        }
+
+        /**
+         * ContactFlowVariables.
+         */
+        public Builder contactFlowVariables(String contactFlowVariables) {
+            this.putQueryParameter("ContactFlowVariables", contactFlowVariables);
+            this.contactFlowVariables = contactFlowVariables;
             return this;
         }
 
@@ -253,6 +289,15 @@ public class BlindTransferRequest extends Request {
         public Builder transferee(String transferee) {
             this.putQueryParameter("Transferee", transferee);
             this.transferee = transferee;
+            return this;
+        }
+
+        /**
+         * TransfereeType.
+         */
+        public Builder transfereeType(String transfereeType) {
+            this.putQueryParameter("TransfereeType", transfereeType);
+            this.transfereeType = transfereeType;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class ModifyAudioFileRequest extends Request {
     @Validation(required = true)
     private String ossFileKey;
 
+    @Query
+    @NameInMap("Usage")
+    private String usage;
+
     private ModifyAudioFileRequest(Builder builder) {
         super(builder);
         this.audioFileName = builder.audioFileName;
@@ -44,6 +48,7 @@ public class ModifyAudioFileRequest extends Request {
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.ossFileKey = builder.ossFileKey;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ModifyAudioFileRequest extends Request {
         return this.ossFileKey;
     }
 
+    /**
+     * @return usage
+     */
+    public String getUsage() {
+        return this.usage;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAudioFileRequest, Builder> {
         private String audioFileName; 
         private String audioResourceId; 
         private String instanceId; 
         private String name; 
         private String ossFileKey; 
+        private String usage; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ModifyAudioFileRequest extends Request {
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.ossFileKey = request.ossFileKey;
+            this.usage = request.usage;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class ModifyAudioFileRequest extends Request {
         public Builder ossFileKey(String ossFileKey) {
             this.putQueryParameter("OssFileKey", ossFileKey);
             this.ossFileKey = ossFileKey;
+            return this;
+        }
+
+        /**
+         * Usage.
+         */
+        public Builder usage(String usage) {
+            this.putQueryParameter("Usage", usage);
+            this.usage = usage;
             return this;
         }
 

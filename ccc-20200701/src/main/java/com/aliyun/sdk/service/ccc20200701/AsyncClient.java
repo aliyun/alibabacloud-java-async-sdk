@@ -38,6 +38,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AppendCasesResponse> appendCases(AppendCasesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<AssignUsersResponse> assignUsers(AssignUsersRequest request);
 
     CompletableFuture<BargeInCallResponse> bargeInCall(BargeInCallRequest request);
@@ -86,6 +90,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EndConferenceResponse> endConference(EndConferenceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ExportCustomCallTaggingResponse> exportCustomCallTagging(ExportCustomCallTaggingRequest request);
 
     CompletableFuture<ExportDoNotCallNumbersResponse> exportDoNotCallNumbers(ExportDoNotCallNumbersRequest request);
@@ -154,6 +162,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ImportAdminsResponse> importAdmins(ImportAdminsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ImportCustomCallTaggingResponse> importCustomCallTagging(ImportCustomCallTaggingRequest request);
 
     CompletableFuture<ImportDoNotCallNumbersResponse> importDoNotCallNumbers(ImportDoNotCallNumbersRequest request);
@@ -192,6 +204,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListContactFlowsResponse> listContactFlows(ListContactFlowsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListCustomCallTaggingResponse> listCustomCallTagging(ListCustomCallTaggingRequest request);
 
     CompletableFuture<ListDevicesResponse> listDevices(ListDevicesRequest request);

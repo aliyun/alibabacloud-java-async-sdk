@@ -138,6 +138,9 @@ public class ListAudioFilesResponseBody extends TeaModel {
         @NameInMap("AudioResourceId")
         private String audioResourceId;
 
+        @NameInMap("AuditResult")
+        private String auditResult;
+
         @NameInMap("CreatedTime")
         private String createdTime;
 
@@ -150,17 +153,26 @@ public class ListAudioFilesResponseBody extends TeaModel {
         @NameInMap("OssFileKey")
         private String ossFileKey;
 
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("UpdatedTime")
         private String updatedTime;
+
+        @NameInMap("Usage")
+        private String usage;
 
         private List(Builder builder) {
             this.audioFileName = builder.audioFileName;
             this.audioResourceId = builder.audioResourceId;
+            this.auditResult = builder.auditResult;
             this.createdTime = builder.createdTime;
             this.instanceId = builder.instanceId;
             this.name = builder.name;
             this.ossFileKey = builder.ossFileKey;
+            this.status = builder.status;
             this.updatedTime = builder.updatedTime;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -183,6 +195,13 @@ public class ListAudioFilesResponseBody extends TeaModel {
          */
         public String getAudioResourceId() {
             return this.audioResourceId;
+        }
+
+        /**
+         * @return auditResult
+         */
+        public String getAuditResult() {
+            return this.auditResult;
         }
 
         /**
@@ -214,20 +233,37 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return updatedTime
          */
         public String getUpdatedTime() {
             return this.updatedTime;
         }
 
+        /**
+         * @return usage
+         */
+        public String getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private String audioFileName; 
             private String audioResourceId; 
+            private String auditResult; 
             private String createdTime; 
             private String instanceId; 
             private String name; 
             private String ossFileKey; 
+            private String status; 
             private String updatedTime; 
+            private String usage; 
 
             /**
              * AudioFileName.
@@ -242,6 +278,14 @@ public class ListAudioFilesResponseBody extends TeaModel {
              */
             public Builder audioResourceId(String audioResourceId) {
                 this.audioResourceId = audioResourceId;
+                return this;
+            }
+
+            /**
+             * AuditResult.
+             */
+            public Builder auditResult(String auditResult) {
+                this.auditResult = auditResult;
                 return this;
             }
 
@@ -278,10 +322,26 @@ public class ListAudioFilesResponseBody extends TeaModel {
             }
 
             /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
              * UpdatedTime.
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(String usage) {
+                this.usage = usage;
                 return this;
             }
 

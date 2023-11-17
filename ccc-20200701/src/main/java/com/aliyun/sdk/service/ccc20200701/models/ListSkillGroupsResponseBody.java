@@ -141,6 +141,9 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("MediaType")
+        private String mediaType;
+
         @NameInMap("PhoneNumberCount")
         private Integer phoneNumberCount;
 
@@ -157,6 +160,7 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.instanceId = builder.instanceId;
+            this.mediaType = builder.mediaType;
             this.phoneNumberCount = builder.phoneNumberCount;
             this.skillGroupId = builder.skillGroupId;
             this.skillGroupName = builder.skillGroupName;
@@ -193,6 +197,13 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
+        }
+
+        /**
          * @return phoneNumberCount
          */
         public Integer getPhoneNumberCount() {
@@ -224,6 +235,7 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String instanceId; 
+            private String mediaType; 
             private Integer phoneNumberCount; 
             private String skillGroupId; 
             private String skillGroupName; 
@@ -250,6 +262,14 @@ public class ListSkillGroupsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
                 return this;
             }
 

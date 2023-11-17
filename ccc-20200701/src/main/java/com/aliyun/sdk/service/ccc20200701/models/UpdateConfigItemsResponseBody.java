@@ -21,6 +21,9 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("Params")
+    private java.util.List < String > params;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -28,6 +31,7 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -61,6 +65,13 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List < String > getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -71,6 +82,7 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List < String > params; 
         private String requestId; 
 
         /**
@@ -94,6 +106,14 @@ public class UpdateConfigItemsResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * Params.
+         */
+        public Builder params(java.util.List < String > params) {
+            this.params = params;
             return this;
         }
 

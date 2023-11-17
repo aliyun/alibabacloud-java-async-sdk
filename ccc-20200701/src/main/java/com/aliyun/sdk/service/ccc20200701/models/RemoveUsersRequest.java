@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveUsersRequest extends Request {
     @Query
+    @NameInMap("FilePath")
+    private String filePath;
+
+    @Query
     @NameInMap("Force")
     private Boolean force;
 
@@ -22,14 +26,19 @@ public class RemoveUsersRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("NotificationEmail")
+    private String notificationEmail;
+
+    @Query
     @NameInMap("UserIdList")
-    @Validation(required = true)
     private String userIdList;
 
     private RemoveUsersRequest(Builder builder) {
         super(builder);
+        this.filePath = builder.filePath;
         this.force = builder.force;
         this.instanceId = builder.instanceId;
+        this.notificationEmail = builder.notificationEmail;
         this.userIdList = builder.userIdList;
     }
 
@@ -47,6 +56,13 @@ public class RemoveUsersRequest extends Request {
     }
 
     /**
+     * @return filePath
+     */
+    public String getFilePath() {
+        return this.filePath;
+    }
+
+    /**
      * @return force
      */
     public Boolean getForce() {
@@ -61,6 +77,13 @@ public class RemoveUsersRequest extends Request {
     }
 
     /**
+     * @return notificationEmail
+     */
+    public String getNotificationEmail() {
+        return this.notificationEmail;
+    }
+
+    /**
      * @return userIdList
      */
     public String getUserIdList() {
@@ -68,8 +91,10 @@ public class RemoveUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveUsersRequest, Builder> {
+        private String filePath; 
         private Boolean force; 
         private String instanceId; 
+        private String notificationEmail; 
         private String userIdList; 
 
         private Builder() {
@@ -78,10 +103,21 @@ public class RemoveUsersRequest extends Request {
 
         private Builder(RemoveUsersRequest request) {
             super(request);
+            this.filePath = request.filePath;
             this.force = request.force;
             this.instanceId = request.instanceId;
+            this.notificationEmail = request.notificationEmail;
             this.userIdList = request.userIdList;
         } 
+
+        /**
+         * FilePath.
+         */
+        public Builder filePath(String filePath) {
+            this.putQueryParameter("FilePath", filePath);
+            this.filePath = filePath;
+            return this;
+        }
 
         /**
          * Force.
@@ -98,6 +134,15 @@ public class RemoveUsersRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NotificationEmail.
+         */
+        public Builder notificationEmail(String notificationEmail) {
+            this.putQueryParameter("NotificationEmail", notificationEmail);
+            this.notificationEmail = notificationEmail;
             return this;
         }
 

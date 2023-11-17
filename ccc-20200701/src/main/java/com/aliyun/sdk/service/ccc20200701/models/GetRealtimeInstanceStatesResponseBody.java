@@ -131,7 +131,71 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
 
     } 
 
+    public static class BreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        private String breakCode;
+
+        @NameInMap("Count")
+        private Long count;
+
+        private BreakCodeDetailList(Builder builder) {
+            this.breakCode = builder.breakCode;
+            this.count = builder.count;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BreakCodeDetailList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return breakCode
+         */
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        public static final class Builder {
+            private String breakCode; 
+            private Long count; 
+
+            /**
+             * BreakCode.
+             */
+            public Builder breakCode(String breakCode) {
+                this.breakCode = breakCode;
+                return this;
+            }
+
+            /**
+             * Count.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            public BreakCodeDetailList build() {
+                return new BreakCodeDetailList(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
+        @NameInMap("BreakCodeDetailList")
+        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+
         @NameInMap("BreakingAgents")
         private Long breakingAgents;
 
@@ -163,6 +227,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         private Long workingAgents;
 
         private Data(Builder builder) {
+            this.breakCodeDetailList = builder.breakCodeDetailList;
             this.breakingAgents = builder.breakingAgents;
             this.instanceId = builder.instanceId;
             this.interactiveCalls = builder.interactiveCalls;
@@ -181,6 +246,13 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return breakCodeDetailList
+         */
+        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         /**
@@ -254,6 +326,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
             private Long breakingAgents; 
             private String instanceId; 
             private Long interactiveCalls; 
@@ -264,6 +337,14 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             private Long totalAgents; 
             private Long waitingCalls; 
             private Long workingAgents; 
+
+            /**
+             * BreakCodeDetailList.
+             */
+            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+                this.breakCodeDetailList = breakCodeDetailList;
+                return this;
+            }
 
             /**
              * BreakingAgents.

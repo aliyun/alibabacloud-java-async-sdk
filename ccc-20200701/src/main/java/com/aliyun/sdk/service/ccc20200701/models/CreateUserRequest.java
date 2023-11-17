@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateUserRequest extends Request {
     @Query
+    @NameInMap("AvatarUrl")
+    private String avatarUrl;
+
+    @Query
     @NameInMap("DisplayId")
     private String displayId;
 
@@ -41,6 +45,10 @@ public class CreateUserRequest extends Request {
     private String mobile;
 
     @Query
+    @NameInMap("Nickname")
+    private String nickname;
+
+    @Query
     @NameInMap("ResetPassword")
     private Boolean resetPassword;
 
@@ -60,12 +68,14 @@ public class CreateUserRequest extends Request {
 
     private CreateUserRequest(Builder builder) {
         super(builder);
+        this.avatarUrl = builder.avatarUrl;
         this.displayId = builder.displayId;
         this.displayName = builder.displayName;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
         this.loginName = builder.loginName;
         this.mobile = builder.mobile;
+        this.nickname = builder.nickname;
         this.resetPassword = builder.resetPassword;
         this.roleId = builder.roleId;
         this.skillLevelList = builder.skillLevelList;
@@ -83,6 +93,13 @@ public class CreateUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return avatarUrl
+     */
+    public String getAvatarUrl() {
+        return this.avatarUrl;
     }
 
     /**
@@ -128,6 +145,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return nickname
+     */
+    public String getNickname() {
+        return this.nickname;
+    }
+
+    /**
      * @return resetPassword
      */
     public Boolean getResetPassword() {
@@ -156,12 +180,14 @@ public class CreateUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
+        private String avatarUrl; 
         private String displayId; 
         private String displayName; 
         private String email; 
         private String instanceId; 
         private String loginName; 
         private String mobile; 
+        private String nickname; 
         private Boolean resetPassword; 
         private String roleId; 
         private String skillLevelList; 
@@ -173,17 +199,28 @@ public class CreateUserRequest extends Request {
 
         private Builder(CreateUserRequest request) {
             super(request);
+            this.avatarUrl = request.avatarUrl;
             this.displayId = request.displayId;
             this.displayName = request.displayName;
             this.email = request.email;
             this.instanceId = request.instanceId;
             this.loginName = request.loginName;
             this.mobile = request.mobile;
+            this.nickname = request.nickname;
             this.resetPassword = request.resetPassword;
             this.roleId = request.roleId;
             this.skillLevelList = request.skillLevelList;
             this.workMode = request.workMode;
         } 
+
+        /**
+         * AvatarUrl.
+         */
+        public Builder avatarUrl(String avatarUrl) {
+            this.putQueryParameter("AvatarUrl", avatarUrl);
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
 
         /**
          * DisplayId.
@@ -236,6 +273,15 @@ public class CreateUserRequest extends Request {
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
             this.mobile = mobile;
+            return this;
+        }
+
+        /**
+         * Nickname.
+         */
+        public Builder nickname(String nickname) {
+            this.putQueryParameter("Nickname", nickname);
+            this.nickname = nickname;
             return this;
         }
 

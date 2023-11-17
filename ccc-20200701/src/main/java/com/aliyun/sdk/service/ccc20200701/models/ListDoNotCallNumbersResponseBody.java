@@ -24,6 +24,9 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("Params")
+    private java.util.List < String > params;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -32,6 +35,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -72,6 +76,13 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List < String > getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -83,6 +94,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List < String > params; 
         private String requestId; 
 
         /**
@@ -118,6 +130,14 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
 
         /**
+         * Params.
+         */
+        public Builder params(java.util.List < String > params) {
+            this.params = params;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -135,6 +155,9 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private Long createTime;
 
+        @NameInMap("CreatedTime")
+        private Long createdTime;
+
         @NameInMap("Creator")
         private String creator;
 
@@ -149,6 +172,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.createTime = builder.createTime;
+            this.createdTime = builder.createdTime;
             this.creator = builder.creator;
             this.number = builder.number;
             this.remark = builder.remark;
@@ -168,6 +192,13 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return createdTime
+         */
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         /**
@@ -200,6 +231,7 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private Long createdTime; 
             private String creator; 
             private String number; 
             private String remark; 
@@ -210,6 +242,14 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreatedTime.
+             */
+            public Builder createdTime(Long createdTime) {
+                this.createdTime = createdTime;
                 return this;
             }
 

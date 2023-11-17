@@ -141,6 +141,18 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         @NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
+        @NameInMap("OutboundScenarioBreakingAgents")
+        private Long outboundScenarioBreakingAgents;
+
+        @NameInMap("OutboundScenarioReadyAgents")
+        private Long outboundScenarioReadyAgents;
+
+        @NameInMap("OutboundScenarioTalkingAgents")
+        private Long outboundScenarioTalkingAgents;
+
+        @NameInMap("OutboundScenarioWorkingAgents")
+        private Long outboundScenarioWorkingAgents;
+
         @NameInMap("ReadyAgents")
         private Long readyAgents;
 
@@ -157,6 +169,10 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
             this.breakingAgents = builder.breakingAgents;
             this.caps = builder.caps;
             this.loggedInAgents = builder.loggedInAgents;
+            this.outboundScenarioBreakingAgents = builder.outboundScenarioBreakingAgents;
+            this.outboundScenarioReadyAgents = builder.outboundScenarioReadyAgents;
+            this.outboundScenarioTalkingAgents = builder.outboundScenarioTalkingAgents;
+            this.outboundScenarioWorkingAgents = builder.outboundScenarioWorkingAgents;
             this.readyAgents = builder.readyAgents;
             this.talkingAgents = builder.talkingAgents;
             this.totalAgents = builder.totalAgents;
@@ -193,6 +209,34 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         }
 
         /**
+         * @return outboundScenarioBreakingAgents
+         */
+        public Long getOutboundScenarioBreakingAgents() {
+            return this.outboundScenarioBreakingAgents;
+        }
+
+        /**
+         * @return outboundScenarioReadyAgents
+         */
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
+        }
+
+        /**
+         * @return outboundScenarioTalkingAgents
+         */
+        public Long getOutboundScenarioTalkingAgents() {
+            return this.outboundScenarioTalkingAgents;
+        }
+
+        /**
+         * @return outboundScenarioWorkingAgents
+         */
+        public Long getOutboundScenarioWorkingAgents() {
+            return this.outboundScenarioWorkingAgents;
+        }
+
+        /**
          * @return readyAgents
          */
         public Long getReadyAgents() {
@@ -224,6 +268,10 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
             private Long breakingAgents; 
             private Long caps; 
             private Long loggedInAgents; 
+            private Long outboundScenarioBreakingAgents; 
+            private Long outboundScenarioReadyAgents; 
+            private Long outboundScenarioTalkingAgents; 
+            private Long outboundScenarioWorkingAgents; 
             private Long readyAgents; 
             private Long talkingAgents; 
             private Long totalAgents; 
@@ -250,6 +298,38 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
              */
             public Builder loggedInAgents(Long loggedInAgents) {
                 this.loggedInAgents = loggedInAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioBreakingAgents.
+             */
+            public Builder outboundScenarioBreakingAgents(Long outboundScenarioBreakingAgents) {
+                this.outboundScenarioBreakingAgents = outboundScenarioBreakingAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioReadyAgents.
+             */
+            public Builder outboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+                this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioTalkingAgents.
+             */
+            public Builder outboundScenarioTalkingAgents(Long outboundScenarioTalkingAgents) {
+                this.outboundScenarioTalkingAgents = outboundScenarioTalkingAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioWorkingAgents.
+             */
+            public Builder outboundScenarioWorkingAgents(Long outboundScenarioWorkingAgents) {
+                this.outboundScenarioWorkingAgents = outboundScenarioWorkingAgents;
                 return this;
             }
 

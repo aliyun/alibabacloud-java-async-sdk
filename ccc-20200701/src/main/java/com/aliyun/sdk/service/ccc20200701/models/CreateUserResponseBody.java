@@ -24,6 +24,9 @@ public class CreateUserResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("Params")
+    private java.util.List < String > params;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -32,6 +35,7 @@ public class CreateUserResponseBody extends TeaModel {
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -72,6 +76,13 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List < String > getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -83,6 +94,7 @@ public class CreateUserResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List < String > params; 
         private String requestId; 
 
         /**
@@ -118,6 +130,14 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
+         * Params.
+         */
+        public Builder params(java.util.List < String > params) {
+            this.params = params;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -132,6 +152,9 @@ public class CreateUserResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AvatarUrl")
+        private String avatarUrl;
+
         @NameInMap("DisplayName")
         private String displayName;
 
@@ -147,6 +170,9 @@ public class CreateUserResponseBody extends TeaModel {
         @NameInMap("Mobile")
         private String mobile;
 
+        @NameInMap("Nickname")
+        private String nickname;
+
         @NameInMap("UserId")
         private String userId;
 
@@ -154,11 +180,13 @@ public class CreateUserResponseBody extends TeaModel {
         private String workMode;
 
         private Data(Builder builder) {
+            this.avatarUrl = builder.avatarUrl;
             this.displayName = builder.displayName;
             this.email = builder.email;
             this.extension = builder.extension;
             this.loginName = builder.loginName;
             this.mobile = builder.mobile;
+            this.nickname = builder.nickname;
             this.userId = builder.userId;
             this.workMode = builder.workMode;
         }
@@ -169,6 +197,13 @@ public class CreateUserResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return avatarUrl
+         */
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         /**
@@ -207,6 +242,13 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return nickname
+         */
+        public String getNickname() {
+            return this.nickname;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -221,13 +263,23 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String avatarUrl; 
             private String displayName; 
             private String email; 
             private String extension; 
             private String loginName; 
             private String mobile; 
+            private String nickname; 
             private String userId; 
             private String workMode; 
+
+            /**
+             * AvatarUrl.
+             */
+            public Builder avatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
+                return this;
+            }
 
             /**
              * DisplayName.
@@ -266,6 +318,14 @@ public class CreateUserResponseBody extends TeaModel {
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
+                return this;
+            }
+
+            /**
+             * Nickname.
+             */
+            public Builder nickname(String nickname) {
+                this.nickname = nickname;
                 return this;
             }
 

@@ -27,11 +27,21 @@ public class ListAudioFilesRequest extends Request {
     @Validation(required = true)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
+    @NameInMap("Usage")
+    private String usage;
+
     private ListAudioFilesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
+        this.usage = builder.usage;
     }
 
     public static Builder builder() {
@@ -68,10 +78,26 @@ public class ListAudioFilesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return usage
+     */
+    public String getUsage() {
+        return this.usage;
+    }
+
     public static final class Builder extends Request.Builder<ListAudioFilesRequest, Builder> {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String status; 
+        private String usage; 
 
         private Builder() {
             super();
@@ -82,6 +108,8 @@ public class ListAudioFilesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.usage = request.usage;
         } 
 
         /**
@@ -108,6 +136,24 @@ public class ListAudioFilesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * Usage.
+         */
+        public Builder usage(String usage) {
+            this.putQueryParameter("Usage", usage);
+            this.usage = usage;
             return this;
         }
 

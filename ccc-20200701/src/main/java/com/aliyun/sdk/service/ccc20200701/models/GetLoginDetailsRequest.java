@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetLoginDetailsRequest extends Request {
     @Query
+    @NameInMap("ChatDeviceId")
+    private String chatDeviceId;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -23,6 +27,7 @@ public class GetLoginDetailsRequest extends Request {
 
     private GetLoginDetailsRequest(Builder builder) {
         super(builder);
+        this.chatDeviceId = builder.chatDeviceId;
         this.instanceId = builder.instanceId;
         this.userId = builder.userId;
     }
@@ -41,6 +46,13 @@ public class GetLoginDetailsRequest extends Request {
     }
 
     /**
+     * @return chatDeviceId
+     */
+    public String getChatDeviceId() {
+        return this.chatDeviceId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -55,6 +67,7 @@ public class GetLoginDetailsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetLoginDetailsRequest, Builder> {
+        private String chatDeviceId; 
         private String instanceId; 
         private String userId; 
 
@@ -64,9 +77,19 @@ public class GetLoginDetailsRequest extends Request {
 
         private Builder(GetLoginDetailsRequest request) {
             super(request);
+            this.chatDeviceId = request.chatDeviceId;
             this.instanceId = request.instanceId;
             this.userId = request.userId;
         } 
+
+        /**
+         * ChatDeviceId.
+         */
+        public Builder chatDeviceId(String chatDeviceId) {
+            this.putQueryParameter("ChatDeviceId", chatDeviceId);
+            this.chatDeviceId = chatDeviceId;
+            return this;
+        }
 
         /**
          * InstanceId.

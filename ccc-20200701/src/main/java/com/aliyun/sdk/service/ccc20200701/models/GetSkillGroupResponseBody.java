@@ -141,6 +141,9 @@ public class GetSkillGroupResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("MediaType")
+        private String mediaType;
+
         @NameInMap("Name")
         private String name;
 
@@ -151,6 +154,7 @@ public class GetSkillGroupResponseBody extends TeaModel {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.instanceId = builder.instanceId;
+            this.mediaType = builder.mediaType;
             this.name = builder.name;
             this.skillGroupId = builder.skillGroupId;
         }
@@ -185,6 +189,13 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -202,6 +213,7 @@ public class GetSkillGroupResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String instanceId; 
+            private String mediaType; 
             private String name; 
             private String skillGroupId; 
 
@@ -226,6 +238,14 @@ public class GetSkillGroupResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
                 return this;
             }
 

@@ -170,6 +170,9 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
+        @NameInMap("CompletionRate")
+        private Float completionRate;
+
         @NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
@@ -213,6 +216,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             this.casesAborted = builder.casesAborted;
             this.casesConnected = builder.casesConnected;
             this.casesUncompleted = builder.casesUncompleted;
+            this.completionRate = builder.completionRate;
             this.maxAttemptCount = builder.maxAttemptCount;
             this.minAttemptInterval = builder.minAttemptInterval;
             this.name = builder.name;
@@ -275,6 +279,13 @@ public class ListCampaignsResponseBody extends TeaModel {
          */
         public Long getCasesUncompleted() {
             return this.casesUncompleted;
+        }
+
+        /**
+         * @return completionRate
+         */
+        public Float getCompletionRate() {
+            return this.completionRate;
         }
 
         /**
@@ -368,6 +379,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             private Long casesAborted; 
             private Long casesConnected; 
             private Long casesUncompleted; 
+            private Float completionRate; 
             private Long maxAttemptCount; 
             private Long minAttemptInterval; 
             private String name; 
@@ -426,6 +438,14 @@ public class ListCampaignsResponseBody extends TeaModel {
              */
             public Builder casesUncompleted(Long casesUncompleted) {
                 this.casesUncompleted = casesUncompleted;
+                return this;
+            }
+
+            /**
+             * CompletionRate.
+             */
+            public Builder completionRate(Float completionRate) {
+                this.completionRate = completionRate;
                 return this;
             }
 

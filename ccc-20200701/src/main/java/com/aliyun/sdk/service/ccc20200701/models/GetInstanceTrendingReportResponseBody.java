@@ -373,6 +373,67 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         } 
 
     }
+    public static class Overall extends TeaModel {
+        @NameInMap("MaxLoggedInAgents")
+        private Long maxLoggedInAgents;
+
+        @NameInMap("StatsTime")
+        private Long statsTime;
+
+        private Overall(Builder builder) {
+            this.maxLoggedInAgents = builder.maxLoggedInAgents;
+            this.statsTime = builder.statsTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Overall create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxLoggedInAgents
+         */
+        public Long getMaxLoggedInAgents() {
+            return this.maxLoggedInAgents;
+        }
+
+        /**
+         * @return statsTime
+         */
+        public Long getStatsTime() {
+            return this.statsTime;
+        }
+
+        public static final class Builder {
+            private Long maxLoggedInAgents; 
+            private Long statsTime; 
+
+            /**
+             * MaxLoggedInAgents.
+             */
+            public Builder maxLoggedInAgents(Long maxLoggedInAgents) {
+                this.maxLoggedInAgents = maxLoggedInAgents;
+                return this;
+            }
+
+            /**
+             * StatsTime.
+             */
+            public Builder statsTime(Long statsTime) {
+                this.statsTime = statsTime;
+                return this;
+            }
+
+            public Overall build() {
+                return new Overall(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("Inbound")
         private java.util.List < Inbound> inbound;
@@ -380,9 +441,13 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         @NameInMap("Outbound")
         private java.util.List < Outbound> outbound;
 
+        @NameInMap("Overall")
+        private java.util.List < Overall> overall;
+
         private Data(Builder builder) {
             this.inbound = builder.inbound;
             this.outbound = builder.outbound;
+            this.overall = builder.overall;
         }
 
         public static Builder builder() {
@@ -407,9 +472,17 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             return this.outbound;
         }
 
+        /**
+         * @return overall
+         */
+        public java.util.List < Overall> getOverall() {
+            return this.overall;
+        }
+
         public static final class Builder {
             private java.util.List < Inbound> inbound; 
             private java.util.List < Outbound> outbound; 
+            private java.util.List < Overall> overall; 
 
             /**
              * Inbound.
@@ -424,6 +497,14 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
              */
             public Builder outbound(java.util.List < Outbound> outbound) {
                 this.outbound = outbound;
+                return this;
+            }
+
+            /**
+             * Overall.
+             */
+            public Builder overall(java.util.List < Overall> overall) {
+                this.overall = overall;
                 return this;
             }
 

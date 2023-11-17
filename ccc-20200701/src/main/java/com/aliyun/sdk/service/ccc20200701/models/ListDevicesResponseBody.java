@@ -161,6 +161,9 @@ public class ListDevicesResponseBody extends TeaModel {
         @NameInMap("DeviceId")
         private String deviceId;
 
+        @NameInMap("DeviceType")
+        private String deviceType;
+
         @NameInMap("Expires")
         private Long expires;
 
@@ -177,6 +180,7 @@ public class ListDevicesResponseBody extends TeaModel {
             this.callId = builder.callId;
             this.contact = builder.contact;
             this.deviceId = builder.deviceId;
+            this.deviceType = builder.deviceType;
             this.expires = builder.expires;
             this.extension = builder.extension;
             this.instanceId = builder.instanceId;
@@ -213,6 +217,13 @@ public class ListDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return deviceType
+         */
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        /**
          * @return expires
          */
         public Long getExpires() {
@@ -244,6 +255,7 @@ public class ListDevicesResponseBody extends TeaModel {
             private String callId; 
             private String contact; 
             private String deviceId; 
+            private String deviceType; 
             private Long expires; 
             private String extension; 
             private String instanceId; 
@@ -270,6 +282,14 @@ public class ListDevicesResponseBody extends TeaModel {
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
+                return this;
+            }
+
+            /**
+             * DeviceType.
+             */
+            public Builder deviceType(String deviceType) {
+                this.deviceType = deviceType;
                 return this;
             }
 

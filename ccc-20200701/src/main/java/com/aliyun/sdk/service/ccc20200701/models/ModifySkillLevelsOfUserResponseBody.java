@@ -15,6 +15,9 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("Data")
+    private String data;
+
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -26,6 +29,7 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
 
     private ModifySkillLevelsOfUserResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -44,6 +48,13 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -69,6 +80,7 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private String data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -78,6 +90,14 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(String data) {
+            this.data = data;
             return this;
         }
 

@@ -593,6 +593,369 @@ public class PollUserStatusResponseBody extends TeaModel {
         } 
 
     }
+    public static class Members extends TeaModel {
+        @NameInMap("Index")
+        private Integer index;
+
+        @NameInMap("ReleaseInitiator")
+        private String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        private String releaseReason;
+
+        @NameInMap("SkillGroupId")
+        private String skillGroupId;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("UserId")
+        private String userId;
+
+        @NameInMap("UserType")
+        private String userType;
+
+        private Members(Builder builder) {
+            this.index = builder.index;
+            this.releaseInitiator = builder.releaseInitiator;
+            this.releaseReason = builder.releaseReason;
+            this.skillGroupId = builder.skillGroupId;
+            this.status = builder.status;
+            this.userId = builder.userId;
+            this.userType = builder.userType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Members create() {
+            return builder().build();
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return releaseInitiator
+         */
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        /**
+         * @return releaseReason
+         */
+        public String getReleaseReason() {
+            return this.releaseReason;
+        }
+
+        /**
+         * @return skillGroupId
+         */
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return userType
+         */
+        public String getUserType() {
+            return this.userType;
+        }
+
+        public static final class Builder {
+            private Integer index; 
+            private String releaseInitiator; 
+            private String releaseReason; 
+            private String skillGroupId; 
+            private String status; 
+            private String userId; 
+            private String userType; 
+
+            /**
+             * Index.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * ReleaseInitiator.
+             */
+            public Builder releaseInitiator(String releaseInitiator) {
+                this.releaseInitiator = releaseInitiator;
+                return this;
+            }
+
+            /**
+             * ReleaseReason.
+             */
+            public Builder releaseReason(String releaseReason) {
+                this.releaseReason = releaseReason;
+                return this;
+            }
+
+            /**
+             * SkillGroupId.
+             */
+            public Builder skillGroupId(String skillGroupId) {
+                this.skillGroupId = skillGroupId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserType.
+             */
+            public Builder userType(String userType) {
+                this.userType = userType;
+                return this;
+            }
+
+            public Members build() {
+                return new Members(this);
+            } 
+
+        } 
+
+    }
+    public static class ChatContexts extends TeaModel {
+        @NameInMap("CallVariables")
+        private String callVariables;
+
+        @NameInMap("ChatType")
+        private String chatType;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("JobId")
+        private String jobId;
+
+        @NameInMap("Members")
+        private java.util.List < Members> members;
+
+        private ChatContexts(Builder builder) {
+            this.callVariables = builder.callVariables;
+            this.chatType = builder.chatType;
+            this.instanceId = builder.instanceId;
+            this.jobId = builder.jobId;
+            this.members = builder.members;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChatContexts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callVariables
+         */
+        public String getCallVariables() {
+            return this.callVariables;
+        }
+
+        /**
+         * @return chatType
+         */
+        public String getChatType() {
+            return this.chatType;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return members
+         */
+        public java.util.List < Members> getMembers() {
+            return this.members;
+        }
+
+        public static final class Builder {
+            private String callVariables; 
+            private String chatType; 
+            private String instanceId; 
+            private String jobId; 
+            private java.util.List < Members> members; 
+
+            /**
+             * CallVariables.
+             */
+            public Builder callVariables(String callVariables) {
+                this.callVariables = callVariables;
+                return this;
+            }
+
+            /**
+             * ChatType.
+             */
+            public Builder chatType(String chatType) {
+                this.chatType = chatType;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * Members.
+             */
+            public Builder members(java.util.List < Members> members) {
+                this.members = members;
+                return this;
+            }
+
+            public ChatContexts build() {
+                return new ChatContexts(this);
+            } 
+
+        } 
+
+    }
+    public static class ParallelJobList extends TeaModel {
+        @NameInMap("JobId")
+        private String jobId;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Timestamp")
+        private Long timestamp;
+
+        private ParallelJobList(Builder builder) {
+            this.jobId = builder.jobId;
+            this.status = builder.status;
+            this.timestamp = builder.timestamp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ParallelJobList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        public static final class Builder {
+            private String jobId; 
+            private String status; 
+            private Long timestamp; 
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            public ParallelJobList build() {
+                return new ParallelJobList(this);
+            } 
+
+        } 
+
+    }
     public static class UserContext extends TeaModel {
         @NameInMap("BreakCode")
         private String breakCode;
@@ -618,6 +981,9 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
+        @NameInMap("ParallelJobList")
+        private java.util.List < ParallelJobList> parallelJobList;
+
         @NameInMap("Reserved")
         private Long reserved;
 
@@ -642,6 +1008,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             this.jobId = builder.jobId;
             this.mobile = builder.mobile;
             this.outboundScenario = builder.outboundScenario;
+            this.parallelJobList = builder.parallelJobList;
             this.reserved = builder.reserved;
             this.signedSkillGroupIdList = builder.signedSkillGroupIdList;
             this.userId = builder.userId;
@@ -714,6 +1081,13 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return parallelJobList
+         */
+        public java.util.List < ParallelJobList> getParallelJobList() {
+            return this.parallelJobList;
+        }
+
+        /**
          * @return reserved
          */
         public Long getReserved() {
@@ -757,6 +1131,7 @@ public class PollUserStatusResponseBody extends TeaModel {
             private String jobId; 
             private String mobile; 
             private Boolean outboundScenario; 
+            private java.util.List < ParallelJobList> parallelJobList; 
             private Long reserved; 
             private java.util.List < String > signedSkillGroupIdList; 
             private String userId; 
@@ -828,6 +1203,14 @@ public class PollUserStatusResponseBody extends TeaModel {
             }
 
             /**
+             * ParallelJobList.
+             */
+            public Builder parallelJobList(java.util.List < ParallelJobList> parallelJobList) {
+                this.parallelJobList = parallelJobList;
+                return this;
+            }
+
+            /**
              * Reserved.
              */
             public Builder reserved(Long reserved) {
@@ -878,6 +1261,9 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("CallContext")
         private CallContext callContext;
 
+        @NameInMap("ChatContexts")
+        private java.util.List < ChatContexts> chatContexts;
+
         @NameInMap("ContextId")
         private Long contextId;
 
@@ -886,6 +1272,7 @@ public class PollUserStatusResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.callContext = builder.callContext;
+            this.chatContexts = builder.chatContexts;
             this.contextId = builder.contextId;
             this.userContext = builder.userContext;
         }
@@ -906,6 +1293,13 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return chatContexts
+         */
+        public java.util.List < ChatContexts> getChatContexts() {
+            return this.chatContexts;
+        }
+
+        /**
          * @return contextId
          */
         public Long getContextId() {
@@ -921,6 +1315,7 @@ public class PollUserStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private CallContext callContext; 
+            private java.util.List < ChatContexts> chatContexts; 
             private Long contextId; 
             private UserContext userContext; 
 
@@ -929,6 +1324,14 @@ public class PollUserStatusResponseBody extends TeaModel {
              */
             public Builder callContext(CallContext callContext) {
                 this.callContext = callContext;
+                return this;
+            }
+
+            /**
+             * ChatContexts.
+             */
+            public Builder chatContexts(java.util.List < ChatContexts> chatContexts) {
+                this.chatContexts = chatContexts;
                 return this;
             }
 

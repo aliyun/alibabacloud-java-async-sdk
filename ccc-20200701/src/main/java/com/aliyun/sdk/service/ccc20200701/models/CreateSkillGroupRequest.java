@@ -27,6 +27,10 @@ public class CreateSkillGroupRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -36,6 +40,7 @@ public class CreateSkillGroupRequest extends Request {
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.name = builder.name;
     }
 
@@ -74,6 +79,13 @@ public class CreateSkillGroupRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -84,6 +96,7 @@ public class CreateSkillGroupRequest extends Request {
         private String description; 
         private String displayName; 
         private String instanceId; 
+        private String mediaType; 
         private String name; 
 
         private Builder() {
@@ -95,6 +108,7 @@ public class CreateSkillGroupRequest extends Request {
             this.description = request.description;
             this.displayName = request.displayName;
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.name = request.name;
         } 
 
@@ -122,6 +136,15 @@ public class CreateSkillGroupRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

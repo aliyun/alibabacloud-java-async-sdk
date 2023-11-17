@@ -17,9 +17,14 @@ public class GetRealtimeInstanceStatesRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
+    @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
     private GetRealtimeInstanceStatesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class GetRealtimeInstanceStatesRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
     public static final class Builder extends Request.Builder<GetRealtimeInstanceStatesRequest, Builder> {
         private String instanceId; 
+        private String mediaType; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class GetRealtimeInstanceStatesRequest extends Request {
         private Builder(GetRealtimeInstanceStatesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class GetRealtimeInstanceStatesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

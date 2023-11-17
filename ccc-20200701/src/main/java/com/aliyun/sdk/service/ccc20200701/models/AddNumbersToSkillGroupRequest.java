@@ -13,13 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddNumbersToSkillGroupRequest extends Request {
     @Query
+    @NameInMap("InstNumberGroupIdList")
+    private String instNumberGroupIdList;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("NumberList")
-    @Validation(required = true)
     private String numberList;
 
     @Query
@@ -29,6 +32,7 @@ public class AddNumbersToSkillGroupRequest extends Request {
 
     private AddNumbersToSkillGroupRequest(Builder builder) {
         super(builder);
+        this.instNumberGroupIdList = builder.instNumberGroupIdList;
         this.instanceId = builder.instanceId;
         this.numberList = builder.numberList;
         this.skillGroupId = builder.skillGroupId;
@@ -45,6 +49,13 @@ public class AddNumbersToSkillGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instNumberGroupIdList
+     */
+    public String getInstNumberGroupIdList() {
+        return this.instNumberGroupIdList;
     }
 
     /**
@@ -69,6 +80,7 @@ public class AddNumbersToSkillGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddNumbersToSkillGroupRequest, Builder> {
+        private String instNumberGroupIdList; 
         private String instanceId; 
         private String numberList; 
         private String skillGroupId; 
@@ -79,10 +91,20 @@ public class AddNumbersToSkillGroupRequest extends Request {
 
         private Builder(AddNumbersToSkillGroupRequest request) {
             super(request);
+            this.instNumberGroupIdList = request.instNumberGroupIdList;
             this.instanceId = request.instanceId;
             this.numberList = request.numberList;
             this.skillGroupId = request.skillGroupId;
         } 
+
+        /**
+         * InstNumberGroupIdList.
+         */
+        public Builder instNumberGroupIdList(String instNumberGroupIdList) {
+            this.putQueryParameter("InstNumberGroupIdList", instNumberGroupIdList);
+            this.instNumberGroupIdList = instNumberGroupIdList;
+            return this;
+        }
 
         /**
          * InstanceId.

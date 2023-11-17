@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SignInGroupRequest extends Request {
     @Query
+    @NameInMap("Additivity")
+    private Boolean additivity;
+
+    @Query
+    @NameInMap("ChatDeviceId")
+    private String chatDeviceId;
+
+    @Query
     @NameInMap("DeviceId")
     @Validation(required = true)
     private String deviceId;
@@ -33,6 +41,8 @@ public class SignInGroupRequest extends Request {
 
     private SignInGroupRequest(Builder builder) {
         super(builder);
+        this.additivity = builder.additivity;
+        this.chatDeviceId = builder.chatDeviceId;
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.signedSkillGroupIdList = builder.signedSkillGroupIdList;
@@ -50,6 +60,20 @@ public class SignInGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return additivity
+     */
+    public Boolean getAdditivity() {
+        return this.additivity;
+    }
+
+    /**
+     * @return chatDeviceId
+     */
+    public String getChatDeviceId() {
+        return this.chatDeviceId;
     }
 
     /**
@@ -81,6 +105,8 @@ public class SignInGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SignInGroupRequest, Builder> {
+        private Boolean additivity; 
+        private String chatDeviceId; 
         private String deviceId; 
         private String instanceId; 
         private String signedSkillGroupIdList; 
@@ -92,11 +118,31 @@ public class SignInGroupRequest extends Request {
 
         private Builder(SignInGroupRequest request) {
             super(request);
+            this.additivity = request.additivity;
+            this.chatDeviceId = request.chatDeviceId;
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.signedSkillGroupIdList = request.signedSkillGroupIdList;
             this.userId = request.userId;
         } 
+
+        /**
+         * Additivity.
+         */
+        public Builder additivity(Boolean additivity) {
+            this.putQueryParameter("Additivity", additivity);
+            this.additivity = additivity;
+            return this;
+        }
+
+        /**
+         * ChatDeviceId.
+         */
+        public Builder chatDeviceId(String chatDeviceId) {
+            this.putQueryParameter("ChatDeviceId", chatDeviceId);
+            this.chatDeviceId = chatDeviceId;
+            return this;
+        }
 
         /**
          * DeviceId.

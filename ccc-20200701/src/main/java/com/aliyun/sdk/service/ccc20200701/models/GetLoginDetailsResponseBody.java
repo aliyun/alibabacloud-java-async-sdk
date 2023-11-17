@@ -155,6 +155,27 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("AgentServerUrl")
         private String agentServerUrl;
 
+        @NameInMap("AvatarUrl")
+        private String avatarUrl;
+
+        @NameInMap("ChatAppId")
+        private String chatAppId;
+
+        @NameInMap("ChatAppKey")
+        private String chatAppKey;
+
+        @NameInMap("ChatDeviceId")
+        private String chatDeviceId;
+
+        @NameInMap("ChatLoginToken")
+        private String chatLoginToken;
+
+        @NameInMap("ChatServerUrl")
+        private String chatServerUrl;
+
+        @NameInMap("ChatUserId")
+        private String chatUserId;
+
         @NameInMap("DeviceExt")
         private String deviceExt;
 
@@ -169,6 +190,9 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
         @NameInMap("Extension")
         private String extension;
+
+        @NameInMap("Nickname")
+        private String nickname;
 
         @NameInMap("Signature")
         private String signature;
@@ -193,11 +217,19 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.agentServerUrl = builder.agentServerUrl;
+            this.avatarUrl = builder.avatarUrl;
+            this.chatAppId = builder.chatAppId;
+            this.chatAppKey = builder.chatAppKey;
+            this.chatDeviceId = builder.chatDeviceId;
+            this.chatLoginToken = builder.chatLoginToken;
+            this.chatServerUrl = builder.chatServerUrl;
+            this.chatUserId = builder.chatUserId;
             this.deviceExt = builder.deviceExt;
             this.deviceId = builder.deviceId;
             this.deviceState = builder.deviceState;
             this.displayName = builder.displayName;
             this.extension = builder.extension;
+            this.nickname = builder.nickname;
             this.signature = builder.signature;
             this.signature2 = builder.signature2;
             this.sipServerUrl = builder.sipServerUrl;
@@ -220,6 +252,55 @@ public class GetLoginDetailsResponseBody extends TeaModel {
          */
         public String getAgentServerUrl() {
             return this.agentServerUrl;
+        }
+
+        /**
+         * @return avatarUrl
+         */
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        /**
+         * @return chatAppId
+         */
+        public String getChatAppId() {
+            return this.chatAppId;
+        }
+
+        /**
+         * @return chatAppKey
+         */
+        public String getChatAppKey() {
+            return this.chatAppKey;
+        }
+
+        /**
+         * @return chatDeviceId
+         */
+        public String getChatDeviceId() {
+            return this.chatDeviceId;
+        }
+
+        /**
+         * @return chatLoginToken
+         */
+        public String getChatLoginToken() {
+            return this.chatLoginToken;
+        }
+
+        /**
+         * @return chatServerUrl
+         */
+        public String getChatServerUrl() {
+            return this.chatServerUrl;
+        }
+
+        /**
+         * @return chatUserId
+         */
+        public String getChatUserId() {
+            return this.chatUserId;
         }
 
         /**
@@ -255,6 +336,13 @@ public class GetLoginDetailsResponseBody extends TeaModel {
          */
         public String getExtension() {
             return this.extension;
+        }
+
+        /**
+         * @return nickname
+         */
+        public String getNickname() {
+            return this.nickname;
         }
 
         /**
@@ -308,11 +396,19 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentServerUrl; 
+            private String avatarUrl; 
+            private String chatAppId; 
+            private String chatAppKey; 
+            private String chatDeviceId; 
+            private String chatLoginToken; 
+            private String chatServerUrl; 
+            private String chatUserId; 
             private String deviceExt; 
             private String deviceId; 
             private String deviceState; 
             private String displayName; 
             private String extension; 
+            private String nickname; 
             private String signature; 
             private String signature2; 
             private String sipServerUrl; 
@@ -326,6 +422,62 @@ public class GetLoginDetailsResponseBody extends TeaModel {
              */
             public Builder agentServerUrl(String agentServerUrl) {
                 this.agentServerUrl = agentServerUrl;
+                return this;
+            }
+
+            /**
+             * AvatarUrl.
+             */
+            public Builder avatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
+                return this;
+            }
+
+            /**
+             * ChatAppId.
+             */
+            public Builder chatAppId(String chatAppId) {
+                this.chatAppId = chatAppId;
+                return this;
+            }
+
+            /**
+             * ChatAppKey.
+             */
+            public Builder chatAppKey(String chatAppKey) {
+                this.chatAppKey = chatAppKey;
+                return this;
+            }
+
+            /**
+             * ChatDeviceId.
+             */
+            public Builder chatDeviceId(String chatDeviceId) {
+                this.chatDeviceId = chatDeviceId;
+                return this;
+            }
+
+            /**
+             * ChatLoginToken.
+             */
+            public Builder chatLoginToken(String chatLoginToken) {
+                this.chatLoginToken = chatLoginToken;
+                return this;
+            }
+
+            /**
+             * ChatServerUrl.
+             */
+            public Builder chatServerUrl(String chatServerUrl) {
+                this.chatServerUrl = chatServerUrl;
+                return this;
+            }
+
+            /**
+             * ChatUserId.
+             */
+            public Builder chatUserId(String chatUserId) {
+                this.chatUserId = chatUserId;
                 return this;
             }
 
@@ -366,6 +518,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
              */
             public Builder extension(String extension) {
                 this.extension = extension;
+                return this;
+            }
+
+            /**
+             * Nickname.
+             */
+            public Builder nickname(String nickname) {
+                this.nickname = nickname;
                 return this;
             }
 

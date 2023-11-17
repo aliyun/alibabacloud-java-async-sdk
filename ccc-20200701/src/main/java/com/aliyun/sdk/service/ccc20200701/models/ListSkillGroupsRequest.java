@@ -18,6 +18,10 @@ public class ListSkillGroupsRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -34,6 +38,7 @@ public class ListSkillGroupsRequest extends Request {
     private ListSkillGroupsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchPattern = builder.searchPattern;
@@ -60,6 +65,13 @@ public class ListSkillGroupsRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -82,6 +94,7 @@ public class ListSkillGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSkillGroupsRequest, Builder> {
         private String instanceId; 
+        private String mediaType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchPattern; 
@@ -93,6 +106,7 @@ public class ListSkillGroupsRequest extends Request {
         private Builder(ListSkillGroupsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchPattern = request.searchPattern;
@@ -104,6 +118,15 @@ public class ListSkillGroupsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

@@ -132,6 +132,9 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
+        @NameInMap("MediaType")
+        private String mediaType;
+
         @NameInMap("SkillGroupId")
         private String skillGroupId;
 
@@ -142,6 +145,7 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         private String skillLevel;
 
         private List(Builder builder) {
+            this.mediaType = builder.mediaType;
             this.skillGroupId = builder.skillGroupId;
             this.skillGroupName = builder.skillGroupName;
             this.skillLevel = builder.skillLevel;
@@ -153,6 +157,13 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         /**
@@ -177,9 +188,18 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String mediaType; 
             private String skillGroupId; 
             private String skillGroupName; 
             private String skillLevel; 
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
+                return this;
+            }
 
             /**
              * SkillGroupId.

@@ -18,6 +18,10 @@ public class ListContactFlowsRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("OrderByField")
+    private String orderByField;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -28,14 +32,20 @@ public class ListContactFlowsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("SortOrder")
+    private String sortOrder;
+
+    @Query
     @NameInMap("Type")
     private String type;
 
     private ListContactFlowsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.orderByField = builder.orderByField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sortOrder = builder.sortOrder;
         this.type = builder.type;
     }
 
@@ -60,6 +70,13 @@ public class ListContactFlowsRequest extends Request {
     }
 
     /**
+     * @return orderByField
+     */
+    public String getOrderByField() {
+        return this.orderByField;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -74,6 +91,13 @@ public class ListContactFlowsRequest extends Request {
     }
 
     /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -82,8 +106,10 @@ public class ListContactFlowsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListContactFlowsRequest, Builder> {
         private String instanceId; 
+        private String orderByField; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sortOrder; 
         private String type; 
 
         private Builder() {
@@ -93,8 +119,10 @@ public class ListContactFlowsRequest extends Request {
         private Builder(ListContactFlowsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.orderByField = request.orderByField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sortOrder = request.sortOrder;
             this.type = request.type;
         } 
 
@@ -104,6 +132,15 @@ public class ListContactFlowsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OrderByField.
+         */
+        public Builder orderByField(String orderByField) {
+            this.putQueryParameter("OrderByField", orderByField);
+            this.orderByField = orderByField;
             return this;
         }
 
@@ -122,6 +159,15 @@ public class ListContactFlowsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SortOrder.
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
             return this;
         }
 
