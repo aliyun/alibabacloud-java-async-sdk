@@ -1,0 +1,96 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sophonsoar20220728.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteComponentAssetRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteComponentAssetRequest</p>
+ */
+public class DeleteComponentAssetRequest extends Request {
+    @Query
+    @NameInMap("AssetId")
+    @Validation(required = true)
+    private Long assetId;
+
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    private DeleteComponentAssetRequest(Builder builder) {
+        super(builder);
+        this.assetId = builder.assetId;
+        this.lang = builder.lang;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteComponentAssetRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return assetId
+     */
+    public Long getAssetId() {
+        return this.assetId;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteComponentAssetRequest, Builder> {
+        private Long assetId; 
+        private String lang; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteComponentAssetRequest request) {
+            super(request);
+            this.assetId = request.assetId;
+            this.lang = request.lang;
+        } 
+
+        /**
+         * AssetId.
+         */
+        public Builder assetId(Long assetId) {
+            this.putQueryParameter("AssetId", assetId);
+            this.assetId = assetId;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        @Override
+        public DeleteComponentAssetRequest build() {
+            return new DeleteComponentAssetRequest(this);
+        } 
+
+    } 
+
+}
