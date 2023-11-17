@@ -136,6 +136,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOpaClusterPluginResponse> createOpaClusterPlugin(CreateOpaClusterPluginRequest request);
 
+    CompletableFuture<CreateOpaStrategyNewResponse> createOpaStrategyNew(CreateOpaStrategyNewRequest request);
+
     /**
       * A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.
       *
@@ -221,6 +223,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLoginBaseConfigResponse> deleteLoginBaseConfig(DeleteLoginBaseConfigRequest request);
 
     CompletableFuture<DeleteMaliciousNoteResponse> deleteMaliciousNote(DeleteMaliciousNoteRequest request);
+
+    CompletableFuture<DeleteOpaStrategyNewResponse> deleteOpaStrategyNew(DeleteOpaStrategyNewRequest request);
 
     CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request);
 
@@ -881,6 +885,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterRuleSummaryResponse> getClusterRuleSummary(GetClusterRuleSummaryRequest request);
 
+    CompletableFuture<GetClusterStrategyCountResponse> getClusterStrategyCount(GetClusterStrategyCountRequest request);
+
     CompletableFuture<GetClusterSuspEventStatisticsResponse> getClusterSuspEventStatistics(GetClusterSuspEventStatisticsRequest request);
 
     CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request);
@@ -954,6 +960,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOpaClusterNamespaceListResponse> getOpaClusterNamespaceList(GetOpaClusterNamespaceListRequest request);
 
     CompletableFuture<GetOpaPluginStatusResponse> getOpaPluginStatus(GetOpaPluginStatusRequest request);
+
+    CompletableFuture<GetOpaStrategyDetailNewResponse> getOpaStrategyDetailNew(GetOpaStrategyDetailNewRequest request);
 
     CompletableFuture<GetOpaStrategyTemplateSummaryResponse> getOpaStrategyTemplateSummary(GetOpaStrategyTemplateSummaryRequest request);
 
@@ -1205,6 +1213,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyConcernNecessityResponse> modifyConcernNecessity(ModifyConcernNecessityRequest request);
 
+    CompletableFuture<ModifyContainerDefenseRuleResponse> modifyContainerDefenseRule(ModifyContainerDefenseRuleRequest request);
+
     CompletableFuture<ModifyContainerDefenseRuleSwitchResponse> modifyContainerDefenseRuleSwitch(ModifyContainerDefenseRuleSwitchRequest request);
 
     CompletableFuture<ModifyContainerPluginRuleResponse> modifyContainerPluginRule(ModifyContainerPluginRuleRequest request);
@@ -1324,6 +1334,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyWebPathResponse> modifyWebPath(ModifyWebPathRequest request);
 
+    CompletableFuture<OpenPartialBuyResponse> openPartialBuy(OpenPartialBuyRequest request);
+
     CompletableFuture<OpenSensitiveFileScanResponse> openSensitiveFileScan(OpenSensitiveFileScanRequest request);
 
     CompletableFuture<OperateAgentClientInstallResponse> operateAgentClientInstall(OperateAgentClientInstallRequest request);
@@ -1407,6 +1419,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshContainerAssetsResponse> refreshContainerAssets(RefreshContainerAssetsRequest request);
 
     CompletableFuture<RefreshOssBucketScanInfoResponse> refreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request);
+
+    CompletableFuture<ReleaseSasInstanceResponse> releaseSasInstance(ReleaseSasInstanceRequest request);
 
     CompletableFuture<RemoveCheckInstanceResultWhiteListResponse> removeCheckInstanceResultWhiteList(RemoveCheckInstanceResultWhiteListRequest request);
 

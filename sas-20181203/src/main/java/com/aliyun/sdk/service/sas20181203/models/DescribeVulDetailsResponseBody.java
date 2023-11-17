@@ -532,7 +532,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CveLink.
+             * The link of the CVE content.
              */
             public Builder cveLink(String cveLink) {
                 this.cveLink = cveLink;
