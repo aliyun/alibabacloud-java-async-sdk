@@ -200,24 +200,24 @@ public class CreateAdamBenchTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAdamBenchTaskRequest response) {
-            super(response);
-            this.description = response.description;
-            this.dstInstanceId = response.dstInstanceId;
-            this.dstSuperAccount = response.dstSuperAccount;
-            this.dstSuperPassword = response.dstSuperPassword;
-            this.rate = response.rate;
-            this.requestDuration = response.requestDuration;
-            this.requestStartTime = response.requestStartTime;
-            this.srcEngine = response.srcEngine;
-            this.srcEngineVersion = response.srcEngineVersion;
-            this.srcMaxQps = response.srcMaxQps;
-            this.srcMeanQps = response.srcMeanQps;
-            this.srcSqlOssAddr = response.srcSqlOssAddr;
+        private Builder(CreateAdamBenchTaskRequest request) {
+            super(request);
+            this.description = request.description;
+            this.dstInstanceId = request.dstInstanceId;
+            this.dstSuperAccount = request.dstSuperAccount;
+            this.dstSuperPassword = request.dstSuperPassword;
+            this.rate = request.rate;
+            this.requestDuration = request.requestDuration;
+            this.requestStartTime = request.requestStartTime;
+            this.srcEngine = request.srcEngine;
+            this.srcEngineVersion = request.srcEngineVersion;
+            this.srcMaxQps = request.srcMaxQps;
+            this.srcMeanQps = request.srcMeanQps;
+            this.srcSqlOssAddr = request.srcSqlOssAddr;
         } 
 
         /**
-         * Description.
+         * The description of the stress testing task.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -226,7 +226,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * DstInstanceId.
+         * The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.
          */
         public Builder dstInstanceId(String dstInstanceId) {
             this.putQueryParameter("DstInstanceId", dstInstanceId);
@@ -235,7 +235,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * DstSuperAccount.
+         * The name of the privileged account for the destination instance.
          */
         public Builder dstSuperAccount(String dstSuperAccount) {
             this.putQueryParameter("DstSuperAccount", dstSuperAccount);
@@ -244,7 +244,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * DstSuperPassword.
+         * The password of the privileged account for the destination instance.
          */
         public Builder dstSuperPassword(String dstSuperPassword) {
             this.putQueryParameter("DstSuperPassword", dstSuperPassword);
@@ -253,7 +253,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * Rate.
+         * The rate at which the traffic captured from the source database instance is replayed on the destination database instance. Valid values: 1 to 30. Default value: 1.
          */
         public Builder rate(Integer rate) {
             this.putQueryParameter("Rate", rate);
@@ -262,7 +262,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * RequestDuration.
+         * The duration of the stress testing task for which the traffic is captured from the source instance. Unit: milliseconds.
          */
         public Builder requestDuration(Long requestDuration) {
             this.putQueryParameter("RequestDuration", requestDuration);
@@ -271,7 +271,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * RequestStartTime.
+         * The start time of the stress testing task. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder requestStartTime(Long requestStartTime) {
             this.putQueryParameter("RequestStartTime", requestStartTime);
@@ -280,7 +280,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * SrcEngine.
+         * The database engine that the source database instance runs.
          */
         public Builder srcEngine(String srcEngine) {
             this.putQueryParameter("SrcEngine", srcEngine);
@@ -289,7 +289,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * SrcEngineVersion.
+         * The version of the database engine that the source database instance runs.
          */
         public Builder srcEngineVersion(String srcEngineVersion) {
             this.putQueryParameter("SrcEngineVersion", srcEngineVersion);
@@ -298,7 +298,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * SrcMaxQps.
+         * The maximum number of queries per second (QPS) within the time period during which traffic on the source database instance is captured. The value must be accurate to two decimal places.
          */
         public Builder srcMaxQps(Double srcMaxQps) {
             this.putQueryParameter("SrcMaxQps", srcMaxQps);
@@ -307,7 +307,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * SrcMeanQps.
+         * The average QPS within the time period in which traffic on the source database instance is captured. The value must be accurate to two decimal places.
          */
         public Builder srcMeanQps(Double srcMeanQps) {
             this.putQueryParameter("SrcMeanQps", srcMeanQps);
@@ -316,7 +316,7 @@ public class CreateAdamBenchTaskRequest extends Request {
         }
 
         /**
-         * SrcSqlOssAddr.
+         * The URL of the Object Storage Service (OSS) folder in which the archived objects for SQL statements that run on the source database instance are stored. You can obtain the URL after you upload the archived files to OSS.
          */
         public Builder srcSqlOssAddr(String srcSqlOssAddr) {
             this.putQueryParameter("SrcSqlOssAddr", srcSqlOssAddr);

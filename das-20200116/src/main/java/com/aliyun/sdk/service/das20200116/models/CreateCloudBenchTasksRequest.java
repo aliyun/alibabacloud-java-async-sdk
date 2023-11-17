@@ -390,39 +390,39 @@ public class CreateCloudBenchTasksRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCloudBenchTasksRequest response) {
-            super(response);
-            this.amount = response.amount;
-            this.backupId = response.backupId;
-            this.backupTime = response.backupTime;
-            this.clientType = response.clientType;
-            this.description = response.description;
-            this.dstConnectionString = response.dstConnectionString;
-            this.dstInstanceId = response.dstInstanceId;
-            this.dstPort = response.dstPort;
-            this.dstSuperAccount = response.dstSuperAccount;
-            this.dstSuperPassword = response.dstSuperPassword;
-            this.dstType = response.dstType;
-            this.dtsJobClass = response.dtsJobClass;
-            this.dtsJobId = response.dtsJobId;
-            this.endState = response.endState;
-            this.gatewayVpcId = response.gatewayVpcId;
-            this.gatewayVpcIp = response.gatewayVpcIp;
-            this.rate = response.rate;
-            this.requestDuration = response.requestDuration;
-            this.requestEndTime = response.requestEndTime;
-            this.requestStartTime = response.requestStartTime;
-            this.smartPressureTime = response.smartPressureTime;
-            this.srcInstanceId = response.srcInstanceId;
-            this.srcPublicIp = response.srcPublicIp;
-            this.srcSuperAccount = response.srcSuperAccount;
-            this.srcSuperPassword = response.srcSuperPassword;
-            this.taskType = response.taskType;
-            this.workDir = response.workDir;
+        private Builder(CreateCloudBenchTasksRequest request) {
+            super(request);
+            this.amount = request.amount;
+            this.backupId = request.backupId;
+            this.backupTime = request.backupTime;
+            this.clientType = request.clientType;
+            this.description = request.description;
+            this.dstConnectionString = request.dstConnectionString;
+            this.dstInstanceId = request.dstInstanceId;
+            this.dstPort = request.dstPort;
+            this.dstSuperAccount = request.dstSuperAccount;
+            this.dstSuperPassword = request.dstSuperPassword;
+            this.dstType = request.dstType;
+            this.dtsJobClass = request.dtsJobClass;
+            this.dtsJobId = request.dtsJobId;
+            this.endState = request.endState;
+            this.gatewayVpcId = request.gatewayVpcId;
+            this.gatewayVpcIp = request.gatewayVpcIp;
+            this.rate = request.rate;
+            this.requestDuration = request.requestDuration;
+            this.requestEndTime = request.requestEndTime;
+            this.requestStartTime = request.requestStartTime;
+            this.smartPressureTime = request.smartPressureTime;
+            this.srcInstanceId = request.srcInstanceId;
+            this.srcPublicIp = request.srcPublicIp;
+            this.srcSuperAccount = request.srcSuperAccount;
+            this.srcSuperPassword = request.srcSuperPassword;
+            this.taskType = request.taskType;
+            this.workDir = request.workDir;
         } 
 
         /**
-         * Amount.
+         * The total number of stress testing tasks that you want to create. Valid values: **0** to **30**. Default value: **1**.
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -431,7 +431,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -440,7 +440,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * BackupTime.
+         * The time when the backup starts. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder backupTime(String backupTime) {
             this.putQueryParameter("BackupTime", backupTime);
@@ -449,7 +449,11 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * The type of the stress testing client. Valid values:
+         * <p>
+         * 
+         * *   **ECS**: indicates that you must create the [DBGateway](~~64905~~).
+         * *   **DAS_ECS**: indicates that DAS automatically purchases and deploys an Elastic Compute Service (ECS) instance for stress testing.
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -458,7 +462,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the stress testing task.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -467,7 +471,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstConnectionString.
+         * The endpoint of the destination instance. The specified endpoint must be the endpoint of an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.
+         * <p>
+         * 
+         * >  This parameter takes effect only if you set **DstType** to **ConnectionString**.
          */
         public Builder dstConnectionString(String dstConnectionString) {
             this.putQueryParameter("DstConnectionString", dstConnectionString);
@@ -476,7 +483,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstInstanceId.
+         * The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **DstType** to **Instance**.
          */
         public Builder dstInstanceId(String dstInstanceId) {
             this.putQueryParameter("DstInstanceId", dstInstanceId);
@@ -485,7 +495,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstPort.
+         * The port number of the instance that you want to access.
+         * <p>
+         * 
+         * >  This parameter takes effect only if you set **DstType** to **ConnectionString**.
          */
         public Builder dstPort(String dstPort) {
             this.putQueryParameter("DstPort", dstPort);
@@ -494,7 +507,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstSuperAccount.
+         * The name of the privileged account for the destination instance.
          */
         public Builder dstSuperAccount(String dstSuperAccount) {
             this.putQueryParameter("DstSuperAccount", dstSuperAccount);
@@ -503,7 +516,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstSuperPassword.
+         * The password of the privileged account for the destination instance.
          */
         public Builder dstSuperPassword(String dstSuperPassword) {
             this.putQueryParameter("DstSuperPassword", dstSuperPassword);
@@ -512,7 +525,11 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DstType.
+         * The type of the identifier that is used to indicate the destination instance. Valid values:
+         * <p>
+         * 
+         * *   **Instance**: the instance ID. This is the default value.
+         * *   **ConnectionString**: the endpoint of the instance.
          */
         public Builder dstType(String dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -521,7 +538,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DtsJobClass.
+         * The specification of the Data Transmission Service (DTS) migration task. You can call the [DescribeCloudbenchTask](~~230669~~) operation to query the specification.
+         * <p>
+         * 
+         * >  You must migrate the basic data in the source instance to the destination instance before you start a stress testing task. When you create a DTS migration task, you must specify this parameter.
          */
         public Builder dtsJobClass(String dtsJobClass) {
             this.putQueryParameter("DtsJobClass", dtsJobClass);
@@ -530,7 +550,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the DTS migration task. You can call the [ConfigureDtsJob](~~208399~~) operation to query the ID.
+         * <p>
+         * 
+         * >  After a DTS migration task is created in the DTS console, you must specify this parameter.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -539,7 +562,15 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * EndState.
+         * The state that specifies the last operation that is performed for the stress testing task. Valid values:
+         * <p>
+         * 
+         * *   **WAIT_TARGET**: prepares the destination instance
+         * *   **WAIT_DBGATEWAY**: prepares the DBGateway
+         * *   **WAIT_SQL**: prepares the full SQL statistics
+         * *   **WAIT_LOGIC**: prepares to replay the traffic
+         * 
+         * >  When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task becomes completed.
          */
         public Builder endState(String endState) {
             this.putQueryParameter("EndState", endState);
@@ -548,7 +579,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * GatewayVpcId.
+         * The ID of the virtual private cloud (VPC) in which the database gateway (DBGateway) is deployed.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **ClientType** to **ECS**.
          */
         public Builder gatewayVpcId(String gatewayVpcId) {
             this.putQueryParameter("GatewayVpcId", gatewayVpcId);
@@ -557,7 +591,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * GatewayVpcIp.
+         * The IP address or domain name of the DBGateway.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **ClientType** to **ECS**.
          */
         public Builder gatewayVpcIp(String gatewayVpcIp) {
             this.putQueryParameter("GatewayVpcIp", gatewayVpcIp);
@@ -566,7 +603,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * Rate.
+         * The rate at which the traffic captured from the source instance is replayed on the destination instance. The value must be a positive integer. Valid values: **1** to **30**. Default value: **1**.
          */
         public Builder rate(String rate) {
             this.putQueryParameter("Rate", rate);
@@ -575,7 +612,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * RequestDuration.
+         * The duration of the stress testing task for which the traffic is captured from the source instance. Unit: milliseconds.
          */
         public Builder requestDuration(String requestDuration) {
             this.putQueryParameter("RequestDuration", requestDuration);
@@ -584,7 +621,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * RequestEndTime.
+         * The time when the stress testing task ends. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder requestEndTime(String requestEndTime) {
             this.putQueryParameter("RequestEndTime", requestEndTime);
@@ -593,7 +630,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * RequestStartTime.
+         * The time when the stress testing task starts. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder requestStartTime(String requestStartTime) {
             this.putQueryParameter("RequestStartTime", requestStartTime);
@@ -602,7 +639,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * SmartPressureTime.
+         * The duration within which the traffic generation stressing test takes effect. Unit: milliseconds.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **TaskType** to **smart pressure test**.
          */
         public Builder smartPressureTime(String smartPressureTime) {
             this.putQueryParameter("SmartPressureTime", smartPressureTime);
@@ -611,7 +651,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * SrcInstanceId.
+         * The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the [GetInstanceInspections](~~202857~~) operation to query the ID.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **DstType** to **Instance**.
          */
         public Builder srcInstanceId(String srcInstanceId) {
             this.putQueryParameter("SrcInstanceId", srcInstanceId);
@@ -620,7 +663,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * SrcPublicIp.
+         * The reserved parameter.
          */
         public Builder srcPublicIp(String srcPublicIp) {
             this.putQueryParameter("SrcPublicIp", srcPublicIp);
@@ -629,7 +672,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * SrcSuperAccount.
+         * The name of the privileged account for the source instance. Set the value to **admin**.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **DstType** to **Instance**.
          */
         public Builder srcSuperAccount(String srcSuperAccount) {
             this.putQueryParameter("SrcSuperAccount", srcSuperAccount);
@@ -638,7 +684,10 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * SrcSuperPassword.
+         * The password of the privileged account for the source instance.
+         * <p>
+         * 
+         * >  This parameter must be specified if you set **DstType** to **Instance**.
          */
         public Builder srcSuperPassword(String srcSuperPassword) {
             this.putQueryParameter("SrcSuperPassword", srcSuperPassword);
@@ -647,7 +696,11 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the stress testing task. Valid values:
+         * <p>
+         * 
+         * *   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
+         * *   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -656,7 +709,7 @@ public class CreateCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * WorkDir.
+         * The temporary directory generated for stress testing.
          */
         public Builder workDir(String workDir) {
             this.putQueryParameter("WorkDir", workDir);

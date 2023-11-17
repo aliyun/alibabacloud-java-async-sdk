@@ -38,6 +38,10 @@ public class GetInstanceInspectionsRequest extends Request {
     private String pageSize;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SearchMap")
     private String searchMap;
 
@@ -53,6 +57,7 @@ public class GetInstanceInspectionsRequest extends Request {
         this.instanceArea = builder.instanceArea;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.searchMap = builder.searchMap;
         this.startTime = builder.startTime;
     }
@@ -106,6 +111,13 @@ public class GetInstanceInspectionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return searchMap
      */
     public String getSearchMap() {
@@ -125,6 +137,7 @@ public class GetInstanceInspectionsRequest extends Request {
         private String instanceArea; 
         private String pageNo; 
         private String pageSize; 
+        private String resourceGroupId; 
         private String searchMap; 
         private String startTime; 
 
@@ -132,19 +145,23 @@ public class GetInstanceInspectionsRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceInspectionsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.engine = response.engine;
-            this.instanceArea = response.instanceArea;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.searchMap = response.searchMap;
-            this.startTime = response.startTime;
+        private Builder(GetInstanceInspectionsRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.engine = request.engine;
+            this.instanceArea = request.instanceArea;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.searchMap = request.searchMap;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +170,12 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **Redis**
+         * *   **PolarDBMySQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -162,7 +184,14 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * InstanceArea.
+         * The type of the instance on which the database is deployed. Valid values:
+         * <p>
+         * 
+         * *   **RDS**: an Alibaba Cloud database instance.
+         * *   **ECS**: an ECS instance on which a self-managed database is deployed.
+         * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
+         * 
+         * >  The value IDC specifies that the instance is deployed in a data center.
          */
         public Builder instanceArea(String instanceArea) {
             this.putQueryParameter("InstanceArea", instanceArea);
@@ -171,7 +200,7 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -180,7 +209,7 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +218,21 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * SearchMap.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The filter condition, which can be specified in one of the following formats:
+         * <p>
+         * 
+         * *   Specify the ID of a single instance in the {"InstanceId":"Instance ID"} format.
+         * *   Specify the IDs of multiple instances in the {"InstanceIds":\["Instance ID1","Instance ID2"]} format. Separate the instance IDs with commas (,).
+         * *   Specify the region in which the instance resides in the {"region":"Region of the instance"} format.
          */
         public Builder searchMap(String searchMap) {
             this.putQueryParameter("SearchMap", searchMap);
@@ -198,7 +241,7 @@ public class GetInstanceInspectionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

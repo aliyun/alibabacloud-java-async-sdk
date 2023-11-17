@@ -49,13 +49,13 @@ public class StopCloudBenchTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StopCloudBenchTaskRequest response) {
-            super(response);
-            this.taskId = response.taskId;
+        private Builder(StopCloudBenchTaskRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**
-         * TaskId.
+         * The stress testing task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

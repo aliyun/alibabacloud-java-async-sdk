@@ -86,7 +86,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of cache analysis tasks.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -242,7 +249,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bytes.
+             * The number of bytes that are occupied by the key.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -250,7 +257,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of elements in the key.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -258,7 +265,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Db.
+             * The name of the database.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -266,7 +273,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The data type of the key.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -274,7 +281,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTimeMillis.
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -282,7 +289,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +297,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -298,7 +305,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +447,10 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             private String taskState; 
 
             /**
-             * BigKeys.
+             * The details about the large keys.
+             * <p>
+             * 
+             * > The sub-parameters of this parameter and the content of the sub-parameters are not returned. To query the detailed information about the cache analysis tasks, call the [DescribeCacheAnalysisJob](~~443012~~) operation.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -448,7 +458,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -456,7 +466,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the cache analysis task.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -464,7 +474,10 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
+             * <p>
+             * 
+             * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -472,7 +485,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -480,7 +493,13 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * The state of the cache analysis task. Valid values:
+             * <p>
+             * 
+             * * **BACKUP**: The data is being backed up.
+             * * **ANALYZING**: The data is being analyzed.
+             * * **FINISHED**: The data is analyzed.
+             * * **FAILED**: An error occurred.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -610,7 +629,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -618,7 +637,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The ID of the data node on the instance.
              */
             public Builder list(List list) {
                 this.list = list;
@@ -626,7 +645,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The page number. The value must be an integer that is greater than 0. Default value: 1.
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -634,7 +653,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. Default value: 10.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -642,7 +661,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

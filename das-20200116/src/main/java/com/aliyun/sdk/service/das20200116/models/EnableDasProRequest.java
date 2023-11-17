@@ -75,15 +75,15 @@ public class EnableDasProRequest extends Request {
             super();
         } 
 
-        private Builder(EnableDasProRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.sqlRetention = response.sqlRetention;
-            this.userId = response.userId;
+        private Builder(EnableDasProRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.sqlRetention = request.sqlRetention;
+            this.userId = request.userId;
         } 
 
         /**
-         * InstanceId.
+         * The database instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,14 @@ public class EnableDasProRequest extends Request {
         }
 
         /**
-         * SqlRetention.
+         * The storage duration of SQL Explorer data. Unit: day. Default value: **30**. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **180**
+         * *   **365**
+         * *   **1095**
+         * *   **1825**
          */
         public Builder sqlRetention(Integer sqlRetention) {
             this.putQueryParameter("SqlRetention", sqlRetention);
@@ -101,7 +108,10 @@ public class EnableDasProRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account that is used to create the database instance.
+         * <p>
+         * 
+         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

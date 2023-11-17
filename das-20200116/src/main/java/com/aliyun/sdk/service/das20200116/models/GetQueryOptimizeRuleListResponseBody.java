@@ -86,7 +86,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +194,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * A reserved parameter.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -198,7 +202,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the tag. **Predefined** is returned, which indicates that the tag is added by the system.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -287,7 +291,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * A reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -295,7 +299,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The information about tags.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -303,7 +307,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * A reserved parameter.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -311,7 +315,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * A reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +323,7 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

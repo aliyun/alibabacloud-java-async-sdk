@@ -98,7 +98,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         private String synchro; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +133,11 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,7 +145,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * The reserved parameter.
          */
         public Builder synchro(String synchro) {
             this.synchro = synchro;
@@ -310,7 +317,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * CallerUid.
+             * The user ID of the caller.
              */
             public Builder callerUid(String callerUid) {
                 this.callerUid = callerUid;
@@ -318,7 +325,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The HTTP status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -326,7 +333,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message returned if the request failed.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -334,7 +341,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +349,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The endpoint of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -350,7 +357,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the instance owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -358,7 +365,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the instance that you want to access.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -366,7 +373,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the current API caller.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -374,7 +381,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -382,7 +389,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * The client token that is used to ensure the idempotence of the request.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -390,7 +397,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The unique identifier of the instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -398,7 +405,7 @@ public class AddHDMInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

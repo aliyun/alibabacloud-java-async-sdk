@@ -77,15 +77,15 @@ public class CreateDiagnosticReportRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDiagnosticReportRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(CreateDiagnosticReportRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -94,7 +94,10 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to create the diagnostic report. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The start time must be later than the end time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -103,7 +106,7 @@ public class CreateDiagnosticReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to create the diagnostic report. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

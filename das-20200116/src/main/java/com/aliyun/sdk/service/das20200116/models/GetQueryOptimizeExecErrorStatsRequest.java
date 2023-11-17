@@ -52,6 +52,10 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
     private String pageSize;
 
     @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("Time")
     @Validation(required = true)
     private String time;
@@ -67,6 +71,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         this.orderBy = builder.orderBy;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.region = builder.region;
         this.time = builder.time;
     }
 
@@ -147,6 +152,13 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return time
      */
     public String getTime() {
@@ -163,28 +175,34 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         private String orderBy; 
         private String pageNo; 
         private String pageSize; 
+        private String region; 
         private String time; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetQueryOptimizeExecErrorStatsRequest response) {
-            super(response);
-            this.asc = response.asc;
-            this.dbNames = response.dbNames;
-            this.engine = response.engine;
-            this.instanceIds = response.instanceIds;
-            this.keywords = response.keywords;
-            this.logicalOperator = response.logicalOperator;
-            this.orderBy = response.orderBy;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.time = response.time;
+        private Builder(GetQueryOptimizeExecErrorStatsRequest request) {
+            super(request);
+            this.asc = request.asc;
+            this.dbNames = request.dbNames;
+            this.engine = request.engine;
+            this.instanceIds = request.instanceIds;
+            this.keywords = request.keywords;
+            this.logicalOperator = request.logicalOperator;
+            this.orderBy = request.orderBy;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.region = request.region;
+            this.time = request.time;
         } 
 
         /**
-         * Asc.
+         * Specifies whether to sort the returned entries in ascending order. Default value: **true**. Valid values:
+         * <p>
+         * 
+         * *   **true**: sorts the returned entries in ascending order.
+         * *   **false**: does not sort the returned entries in ascending order.
          */
         public Builder asc(String asc) {
             this.putQueryParameter("Asc", asc);
@@ -193,7 +211,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * DbNames.
+         * The name of the database to be queried.
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -202,7 +220,12 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -211,7 +234,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -220,7 +243,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * Keywords.
+         * The keywords of the SQL template. Separate multiple keywords with spaces.
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -229,7 +252,11 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * LogicalOperator.
+         * The logical relationship between multiple keywords. Valid values:
+         * <p>
+         * 
+         * *   **or**
+         * *   **and**
          */
         public Builder logicalOperator(String logicalOperator) {
             this.putQueryParameter("LogicalOperator", logicalOperator);
@@ -238,7 +265,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field by which to sort the returned entries. Only error_count is supported, which specifies that the entries are sorted based on the number of failed executions.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -247,7 +274,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -256,7 +283,7 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +292,25 @@ public class GetQueryOptimizeExecErrorStatsRequest extends Request {
         }
 
         /**
-         * Time.
+         * The region in which the instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-china**: Chinese mainland
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * 
+         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
+         * 
+         * >  Set this parameter to **cn-china** for the instances that are created in the regions in the Chinese mainland.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * The time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

@@ -86,7 +86,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The rule name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +182,11 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * * **Predefined**
+             * * **UserDefined**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -247,6 +255,9 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         @NameInMap("SqlType")
         private String sqlType;
 
+        @NameInMap("User")
+        private String user;
+
         private List(Builder builder) {
             this.avgLockTime = builder.avgLockTime;
             this.avgQueryTime = builder.avgQueryTime;
@@ -266,6 +277,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             this.sqlId = builder.sqlId;
             this.sqlSample = builder.sqlSample;
             this.sqlType = builder.sqlType;
+            this.user = builder.user;
         }
 
         public static Builder builder() {
@@ -402,6 +414,13 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             return this.sqlType;
         }
 
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
         public static final class Builder {
             private Double avgLockTime; 
             private Double avgQueryTime; 
@@ -421,9 +440,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private String sqlId; 
             private String sqlSample; 
             private String sqlType; 
+            private String user; 
 
             /**
-             * AvgLockTime.
+             * The average lock wait time. Unit: seconds.
              */
             public Builder avgLockTime(Double avgLockTime) {
                 this.avgLockTime = avgLockTime;
@@ -431,7 +451,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgQueryTime.
+             * The average query execution time. Unit: seconds.
              */
             public Builder avgQueryTime(Double avgQueryTime) {
                 this.avgQueryTime = avgQueryTime;
@@ -439,7 +459,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsAffected.
+             * The average number of rows affected by the SQL statement.
+             * <p>
+             * 
+             * > A value of -1 indicates that this parameter is not collected.
              */
             public Builder avgRowsAffected(Double avgRowsAffected) {
                 this.avgRowsAffected = avgRowsAffected;
@@ -447,7 +470,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsExamined.
+             * The average number of scanned rows.
              */
             public Builder avgRowsExamined(Double avgRowsExamined) {
                 this.avgRowsExamined = avgRowsExamined;
@@ -455,7 +478,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsSent.
+             * The average number of returned rows.
              */
             public Builder avgRowsSent(Double avgRowsSent) {
                 this.avgRowsSent = avgRowsSent;
@@ -463,7 +486,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of times that the SQL template is executed.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -471,7 +494,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Dbname.
+             * The name of the database to which the SQL template belongs.
              */
             public Builder dbname(String dbname) {
                 this.dbname = dbname;
@@ -479,7 +502,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -487,7 +510,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTime.
+             * The longest lock wait time. Unit: seconds.
              */
             public Builder maxLockTime(Double maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -495,7 +518,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueryTime.
+             * The longest query execution time. Unit: seconds.
              */
             public Builder maxQueryTime(Double maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -503,7 +526,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsAffected.
+             * The largest number of rows affected by the SQL template.
+             * <p>
+             * 
+             * > A value of -1 indicates that this parameter is not collected.
              */
             public Builder maxRowsAffected(Long maxRowsAffected) {
                 this.maxRowsAffected = maxRowsAffected;
@@ -511,7 +537,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsExamined.
+             * The largest number of scanned rows.
              */
             public Builder maxRowsExamined(Long maxRowsExamined) {
                 this.maxRowsExamined = maxRowsExamined;
@@ -519,7 +545,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsSent.
+             * The largest number of returned rows.
              */
             public Builder maxRowsSent(Long maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
@@ -527,7 +553,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Psql.
+             * The SQL template.
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -535,7 +561,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * The information about the rules.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -543,7 +569,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * The SQL template ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -551,7 +577,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlSample.
+             * The sample query that took the longest time to execute.
              */
             public Builder sqlSample(String sqlSample) {
                 this.sqlSample = sqlSample;
@@ -559,10 +585,18 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
+                return this;
+            }
+
+            /**
+             * The account of the database.
+             */
+            public Builder user(String user) {
+                this.user = user;
                 return this;
             }
 
@@ -648,7 +682,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -656,7 +690,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The information about the SQL templates.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -664,7 +698,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The reserved parameter.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -672,7 +706,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -680,7 +714,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

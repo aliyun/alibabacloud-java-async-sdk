@@ -86,7 +86,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -266,7 +273,10 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ConcurrencyControlTime.
+             * The duration within which the SQL throttling rule takes effect. Unit: seconds.
+             * <p>
+             * 
+             * >  The throttling rule takes effect only within this duration.
              */
             public Builder concurrencyControlTime(Long concurrencyControlTime) {
                 this.concurrencyControlTime = concurrencyControlTime;
@@ -274,7 +284,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -282,7 +292,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * The ID of the throttling rule that is applied to the instance.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -290,7 +300,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordsHash.
+             * The hash value of the SQL keywords. The SQL keywords are contained in the SQL statements to which the throttling rule is applied.
              */
             public Builder keywordsHash(String keywordsHash) {
                 this.keywordsHash = keywordsHash;
@@ -298,7 +308,10 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConcurrency.
+             * The maximum number of concurrent SQL statements. Set this parameter to a positive integer.
+             * <p>
+             * 
+             * >  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
              */
             public Builder maxConcurrency(Long maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -306,7 +319,10 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SqlKeywords.
+             * The keywords that are used to identify the SQL statements that need to be throttled.
+             * <p>
+             * 
+             * > SQL keywords are separated with tildes (~). When the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
              */
             public Builder sqlKeywords(String sqlKeywords) {
                 this.sqlKeywords = sqlKeywords;
@@ -314,7 +330,12 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statements. Valid values:
+             * <p>
+             * 
+             * * **SELECT**
+             * * **UPDATE**
+             * * **DELETE**
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -322,7 +343,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -330,7 +351,11 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the throttling rule. Valid values:
+             * <p>
+             * 
+             * * **Open**: The throttling rule is in effect.
+             * * **Closed**: The throttling rule was in effect.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +363,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -432,7 +457,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * List.
+             * The list of the queried throttling rules.
              */
             public Builder list(List list) {
                 this.list = list;
@@ -440,7 +465,7 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

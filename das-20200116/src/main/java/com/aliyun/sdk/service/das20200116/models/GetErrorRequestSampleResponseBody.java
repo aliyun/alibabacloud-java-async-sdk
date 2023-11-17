@@ -13,10 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetErrorRequestSampleResponseBody extends TeaModel {
     @NameInMap("Code")
-    private String code;
+    private Long code;
 
     @NameInMap("Data")
-    private String data;
+    private java.util.List < Data> data;
 
     @NameInMap("Message")
     private String message;
@@ -25,7 +25,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("Success")
-    private String success;
+    private Boolean success;
 
     private GetErrorRequestSampleResponseBody(Builder builder) {
         this.code = builder.code;
@@ -46,14 +46,14 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Long getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -74,35 +74,38 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
     public static final class Builder {
-        private String code; 
-        private String data; 
+        private Long code; 
+        private java.util.List < Data> data; 
         private String message; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
-        public Builder code(String code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * Data.
+         * The returned data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,9 +121,13 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
@@ -131,4 +138,205 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
 
     } 
 
+    public static class Data extends TeaModel {
+        @NameInMap("database")
+        private String database;
+
+        @NameInMap("errorCode")
+        private String errorCode;
+
+        @NameInMap("instanceId")
+        private String instanceId;
+
+        @NameInMap("originHost")
+        private String originHost;
+
+        @NameInMap("sql")
+        private String sql;
+
+        @NameInMap("sqlId")
+        private String sqlId;
+
+        @NameInMap("tables")
+        private java.util.List < String > tables;
+
+        @NameInMap("timestamp")
+        private Long timestamp;
+
+        @NameInMap("user")
+        private String user;
+
+        private Data(Builder builder) {
+            this.database = builder.database;
+            this.errorCode = builder.errorCode;
+            this.instanceId = builder.instanceId;
+            this.originHost = builder.originHost;
+            this.sql = builder.sql;
+            this.sqlId = builder.sqlId;
+            this.tables = builder.tables;
+            this.timestamp = builder.timestamp;
+            this.user = builder.user;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return originHost
+         */
+        public String getOriginHost() {
+            return this.originHost;
+        }
+
+        /**
+         * @return sql
+         */
+        public String getSql() {
+            return this.sql;
+        }
+
+        /**
+         * @return sqlId
+         */
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        /**
+         * @return tables
+         */
+        public java.util.List < String > getTables() {
+            return this.tables;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        public static final class Builder {
+            private String database; 
+            private String errorCode; 
+            private String instanceId; 
+            private String originHost; 
+            private String sql; 
+            private String sqlId; 
+            private java.util.List < String > tables; 
+            private Long timestamp; 
+            private String user; 
+
+            /**
+             * The name of the database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * The error code.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * The ID of the instance.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The IP address of the client that executes the SQL statement.
+             */
+            public Builder originHost(String originHost) {
+                this.originHost = originHost;
+                return this;
+            }
+
+            /**
+             * The SQL statement.
+             */
+            public Builder sql(String sql) {
+                this.sql = sql;
+                return this;
+            }
+
+            /**
+             * The ID of the SQL query.
+             */
+            public Builder sqlId(String sqlId) {
+                this.sqlId = sqlId;
+                return this;
+            }
+
+            /**
+             * The table information.
+             */
+            public Builder tables(java.util.List < String > tables) {
+                this.tables = tables;
+                return this;
+            }
+
+            /**
+             * The time when the SQL query was executed. The value of this parameter is a UNIX timestamp. Unit: ms.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * The username of the account that is used to log on to the database.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

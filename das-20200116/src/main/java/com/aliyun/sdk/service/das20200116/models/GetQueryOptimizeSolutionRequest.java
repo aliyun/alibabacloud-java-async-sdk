@@ -18,6 +18,10 @@ public class GetQueryOptimizeSolutionRequest extends Request {
     private String engine;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
     @NameInMap("RuleIds")
     @Validation(required = true)
     private String ruleIds;
@@ -30,6 +34,7 @@ public class GetQueryOptimizeSolutionRequest extends Request {
     private GetQueryOptimizeSolutionRequest(Builder builder) {
         super(builder);
         this.engine = builder.engine;
+        this.instanceId = builder.instanceId;
         this.ruleIds = builder.ruleIds;
         this.sqlId = builder.sqlId;
     }
@@ -55,6 +60,13 @@ public class GetQueryOptimizeSolutionRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return ruleIds
      */
     public String getRuleIds() {
@@ -70,6 +82,7 @@ public class GetQueryOptimizeSolutionRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetQueryOptimizeSolutionRequest, Builder> {
         private String engine; 
+        private String instanceId; 
         private String ruleIds; 
         private String sqlId; 
 
@@ -77,15 +90,21 @@ public class GetQueryOptimizeSolutionRequest extends Request {
             super();
         } 
 
-        private Builder(GetQueryOptimizeSolutionRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.ruleIds = response.ruleIds;
-            this.sqlId = response.sqlId;
+        private Builder(GetQueryOptimizeSolutionRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.instanceId = request.instanceId;
+            this.ruleIds = request.ruleIds;
+            this.sqlId = request.sqlId;
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -94,7 +113,16 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         }
 
         /**
-         * RuleIds.
+         * The instance ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the instance ID.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The tag ID. For more information, see [Query governance](~~290038~~).
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -103,7 +131,7 @@ public class GetQueryOptimizeSolutionRequest extends Request {
         }
 
         /**
-         * SqlId.
+         * The SQL template ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the SQL template ID.
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);

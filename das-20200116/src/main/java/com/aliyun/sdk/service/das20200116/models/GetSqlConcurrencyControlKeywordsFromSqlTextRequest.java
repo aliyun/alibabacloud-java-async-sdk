@@ -76,15 +76,15 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
             super();
         } 
 
-        private Builder(GetSqlConcurrencyControlKeywordsFromSqlTextRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.sqlText = response.sqlText;
+        private Builder(GetSqlConcurrencyControlKeywordsFromSqlTextRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.sqlText = request.sqlText;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -93,7 +93,7 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
         }
 
         /**
-         * SqlText.
+         * The SQL statement based on which a throttling keyword string is to be generated.
          */
         public Builder sqlText(String sqlText) {
             this.putQueryParameter("SqlText", sqlText);

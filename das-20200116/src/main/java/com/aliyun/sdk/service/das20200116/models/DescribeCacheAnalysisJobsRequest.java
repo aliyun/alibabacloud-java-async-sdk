@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeCacheAnalysisJobsRequest extends Request {
     @Query
     @NameInMap("EndTime")
+    @Validation(required = true)
     private String endTime;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -30,6 +32,7 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
+    @Validation(required = true)
     private String startTime;
 
     private DescribeCacheAnalysisJobsRequest(Builder builder) {
@@ -100,17 +103,20 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCacheAnalysisJobsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeCacheAnalysisJobsRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -119,7 +125,7 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +134,7 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be an integer that is greater than 0. Default value: 1.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -137,7 +143,7 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +152,7 @@ public class DescribeCacheAnalysisJobsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

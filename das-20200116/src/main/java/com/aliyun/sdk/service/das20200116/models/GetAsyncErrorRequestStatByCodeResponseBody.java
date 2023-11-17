@@ -13,10 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     @NameInMap("Code")
-    private String code;
+    private Long code;
 
     @NameInMap("Data")
-    private String data;
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -25,7 +25,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("Success")
-    private String success;
+    private Boolean success;
 
     private GetAsyncErrorRequestStatByCodeResponseBody(Builder builder) {
         this.code = builder.code;
@@ -46,14 +46,14 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Long getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -74,35 +74,38 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
     public static final class Builder {
-        private String code; 
-        private String data; 
+        private Long code; 
+        private Data data; 
         private String message; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
-        public Builder code(String code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * Data.
+         * The data returned.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,9 +121,13 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
@@ -131,4 +138,263 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
 
     } 
 
+    public static class Result extends TeaModel {
+        @NameInMap("count")
+        private Integer count;
+
+        @NameInMap("errorCode")
+        private String errorCode;
+
+        @NameInMap("instanceId")
+        private String instanceId;
+
+        private Result(Builder builder) {
+            this.count = builder.count;
+            this.errorCode = builder.errorCode;
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private Integer count; 
+            private String errorCode; 
+            private String instanceId; 
+
+            /**
+             * The number of SQL queries corresponding to the error code.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * The error code returned if the request failed.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * The instance ID.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @NameInMap("complete")
+        private Boolean complete;
+
+        @NameInMap("fail")
+        private Boolean fail;
+
+        @NameInMap("isFinish")
+        private Boolean isFinish;
+
+        @NameInMap("result")
+        private java.util.List < Result> result;
+
+        @NameInMap("resultId")
+        private String resultId;
+
+        @NameInMap("state")
+        private String state;
+
+        @NameInMap("timestamp")
+        private Long timestamp;
+
+        private Data(Builder builder) {
+            this.complete = builder.complete;
+            this.fail = builder.fail;
+            this.isFinish = builder.isFinish;
+            this.result = builder.result;
+            this.resultId = builder.resultId;
+            this.state = builder.state;
+            this.timestamp = builder.timestamp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return complete
+         */
+        public Boolean getComplete() {
+            return this.complete;
+        }
+
+        /**
+         * @return fail
+         */
+        public Boolean getFail() {
+            return this.fail;
+        }
+
+        /**
+         * @return isFinish
+         */
+        public Boolean getIsFinish() {
+            return this.isFinish;
+        }
+
+        /**
+         * @return result
+         */
+        public java.util.List < Result> getResult() {
+            return this.result;
+        }
+
+        /**
+         * @return resultId
+         */
+        public String getResultId() {
+            return this.resultId;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        public static final class Builder {
+            private Boolean complete; 
+            private Boolean fail; 
+            private Boolean isFinish; 
+            private java.util.List < Result> result; 
+            private String resultId; 
+            private String state; 
+            private Long timestamp; 
+
+            /**
+             * Indicates whether the asynchronous request was complete.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder complete(Boolean complete) {
+                this.complete = complete;
+                return this;
+            }
+
+            /**
+             * Indicates whether the asynchronous request failed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder fail(Boolean fail) {
+                this.fail = fail;
+                return this;
+            }
+
+            /**
+             * Indicates whether the asynchronous request was complete. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder isFinish(Boolean isFinish) {
+                this.isFinish = isFinish;
+                return this;
+            }
+
+            /**
+             * The number of SQL queries corresponding to the error code.
+             */
+            public Builder result(java.util.List < Result> result) {
+                this.result = result;
+                return this;
+            }
+
+            /**
+             * The ID of the asynchronous request.
+             */
+            public Builder resultId(String resultId) {
+                this.resultId = resultId;
+                return this;
+            }
+
+            /**
+             * The state of the asynchronous request. Valid values:
+             * <p>
+             * 
+             * *   **RUNNING**
+             * *   **SUCCESS**
+             * *   **FAIL**
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

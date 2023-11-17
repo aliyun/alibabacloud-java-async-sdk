@@ -103,17 +103,17 @@ public class DescribeDiagnosticReportListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDiagnosticReportListRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeDiagnosticReportListRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,7 +122,10 @@ public class DescribeDiagnosticReportListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -131,7 +134,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -140,7 +143,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +152,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

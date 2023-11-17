@@ -98,7 +98,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         private String synchro; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,14 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information of the diagnostics reports. Valid values:
+         * <p>
+         * 
+         * *   **total**: the number of diagnostics reports.
+         * *   **score**: the health score.
+         * *   **diagnosticTime**: the time when the diagnostics report was generated. The time is displayed in UTC.
+         * *   **startTime**: the start time of the query. The time is displayed in UTC.
+         * *   **endTime**: the end time of the query. The time is displayed in UTC.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +121,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +132,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +140,11 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,7 +152,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * The reserved parameter.
          */
         public Builder synchro(String synchro) {
             this.synchro = synchro;

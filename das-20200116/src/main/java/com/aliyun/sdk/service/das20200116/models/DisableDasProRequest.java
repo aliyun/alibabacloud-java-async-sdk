@@ -62,14 +62,14 @@ public class DisableDasProRequest extends Request {
             super();
         } 
 
-        private Builder(DisableDasProRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.userId = response.userId;
+        private Builder(DisableDasProRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.userId = request.userId;
         } 
 
         /**
-         * InstanceId.
+         * The database instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,10 @@ public class DisableDasProRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account that is used to create the database instance.
+         * <p>
+         * 
+         * >  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId that you set when you call this operation.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

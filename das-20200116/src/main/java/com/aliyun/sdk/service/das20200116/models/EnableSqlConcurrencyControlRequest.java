@@ -118,18 +118,21 @@ public class EnableSqlConcurrencyControlRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSqlConcurrencyControlRequest response) {
-            super(response);
-            this.concurrencyControlTime = response.concurrencyControlTime;
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.maxConcurrency = response.maxConcurrency;
-            this.sqlKeywords = response.sqlKeywords;
-            this.sqlType = response.sqlType;
+        private Builder(EnableSqlConcurrencyControlRequest request) {
+            super(request);
+            this.concurrencyControlTime = request.concurrencyControlTime;
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.maxConcurrency = request.maxConcurrency;
+            this.sqlKeywords = request.sqlKeywords;
+            this.sqlType = request.sqlType;
         } 
 
         /**
-         * ConcurrencyControlTime.
+         * The duration within which the SQL throttling rule takes effect. Unit: seconds.
+         * <p>
+         * 
+         * >  The throttling rule takes effect only within this duration.
          */
         public Builder concurrencyControlTime(Long concurrencyControlTime) {
             this.putQueryParameter("ConcurrencyControlTime", concurrencyControlTime);
@@ -138,7 +141,7 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -147,7 +150,10 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +162,10 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * MaxConcurrency.
+         * The maximum number of concurrent SQL statements. Set this parameter to a positive integer.
+         * <p>
+         * 
+         * >  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.
          */
         public Builder maxConcurrency(Long maxConcurrency) {
             this.putQueryParameter("MaxConcurrency", maxConcurrency);
@@ -165,7 +174,10 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * SqlKeywords.
+         * The keywords that are used to identify the SQL statements that need to be throttled.
+         * <p>
+         * 
+         * >  If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.
          */
         public Builder sqlKeywords(String sqlKeywords) {
             this.putQueryParameter("SqlKeywords", sqlKeywords);
@@ -174,7 +186,12 @@ public class EnableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * The type of the SQL statements. Valid values:
+         * <p>
+         * 
+         * *   **SELECT**
+         * *   **UPDATE**
+         * *   **DELETE**
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);

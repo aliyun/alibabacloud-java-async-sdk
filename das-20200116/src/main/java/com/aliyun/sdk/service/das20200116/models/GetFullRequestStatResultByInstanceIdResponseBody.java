@@ -86,7 +86,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -530,7 +537,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AvgExaminedRows.
+             * The average number of scanned rows.
+             * <p>
+             * 
+             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
              */
             public Builder avgExaminedRows(Double avgExaminedRows) {
                 this.avgExaminedRows = avgExaminedRows;
@@ -538,7 +548,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgFetchRows.
+             * The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.
              */
             public Builder avgFetchRows(Long avgFetchRows) {
                 this.avgFetchRows = avgFetchRows;
@@ -546,7 +556,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLockWaitTime.
+             * The average lock wait latency. Unit: seconds.
              */
             public Builder avgLockWaitTime(Double avgLockWaitTime) {
                 this.avgLockWaitTime = avgLockWaitTime;
@@ -554,7 +564,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLogicalRead.
+             * The average number of logical reads.
              */
             public Builder avgLogicalRead(Double avgLogicalRead) {
                 this.avgLogicalRead = avgLogicalRead;
@@ -562,7 +572,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPhysicalAsyncRead.
+             * The average number of physical asynchronous reads.
              */
             public Builder avgPhysicalAsyncRead(Long avgPhysicalAsyncRead) {
                 this.avgPhysicalAsyncRead = avgPhysicalAsyncRead;
@@ -570,7 +580,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPhysicalSyncRead.
+             * The average number of physical synchronous reads.
              */
             public Builder avgPhysicalSyncRead(Long avgPhysicalSyncRead) {
                 this.avgPhysicalSyncRead = avgPhysicalSyncRead;
@@ -578,7 +588,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgReturnedRows.
+             * The average number of returned rows.
              */
             public Builder avgReturnedRows(Double avgReturnedRows) {
                 this.avgReturnedRows = avgReturnedRows;
@@ -586,7 +596,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRt.
+             * The average execution duration.
              */
             public Builder avgRt(Double avgRt) {
                 this.avgRt = avgRt;
@@ -594,7 +604,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgSqlCount.
+             * The average number of SQL statements.
              */
             public Builder avgSqlCount(Long avgSqlCount) {
                 this.avgSqlCount = avgSqlCount;
@@ -602,7 +612,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * AvgUpdatedRows.
+             * The average number of updated rows.
+             * <p>
+             * 
+             *  > This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.
              */
             public Builder avgUpdatedRows(Long avgUpdatedRows) {
                 this.avgUpdatedRows = avgUpdatedRows;
@@ -610,7 +623,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The total number of executions.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -618,7 +631,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * CountRate.
+             * The percentage of the total number of executions.
              */
             public Builder countRate(Double countRate) {
                 this.countRate = countRate;
@@ -626,7 +639,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -634,7 +647,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * The number of failed executions.
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -642,7 +655,10 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * ExaminedRows.
+             * The total number of scanned rows.
+             * <p>
+             * 
+             * > This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.
              */
             public Builder examinedRows(Long examinedRows) {
                 this.examinedRows = examinedRows;
@@ -650,7 +666,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * FetchRows.
+             * The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.
              */
             public Builder fetchRows(Long fetchRows) {
                 this.fetchRows = fetchRows;
@@ -658,7 +674,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the database instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -666,7 +682,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * LockWaitTime.
+             * The lock wait latency. Unit: seconds.
              */
             public Builder lockWaitTime(Double lockWaitTime) {
                 this.lockWaitTime = lockWaitTime;
@@ -674,7 +690,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalRead.
+             * The number of logical reads.
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -682,7 +698,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalAsyncRead.
+             * The number of physical asynchronous reads.
              */
             public Builder physicalAsyncRead(Long physicalAsyncRead) {
                 this.physicalAsyncRead = physicalAsyncRead;
@@ -690,7 +706,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalSyncRead.
+             * The number of physical synchronous reads.
              */
             public Builder physicalSyncRead(Long physicalSyncRead) {
                 this.physicalSyncRead = physicalSyncRead;
@@ -698,7 +714,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the database instance.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -706,7 +722,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Psql.
+             * The SQL template.
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -714,7 +730,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -722,7 +738,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * RtGreaterThanOneSecondCount.
+             * The number of SQL statements that take longer than 1 second to execute.
              */
             public Builder rtGreaterThanOneSecondCount(Long rtGreaterThanOneSecondCount) {
                 this.rtGreaterThanOneSecondCount = rtGreaterThanOneSecondCount;
@@ -730,7 +746,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * RtRate.
+             * The execution duration percentage.
              */
             public Builder rtRate(Double rtRate) {
                 this.rtRate = rtRate;
@@ -738,7 +754,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * SqlCount.
+             * The number of SQL statements.
              */
             public Builder sqlCount(Long sqlCount) {
                 this.sqlCount = sqlCount;
@@ -746,7 +762,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * The SQL ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -754,7 +770,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * SumUpdatedRows.
+             * The total number of updated rows.
              */
             public Builder sumUpdatedRows(Long sumUpdatedRows) {
                 this.sumUpdatedRows = sumUpdatedRows;
@@ -762,7 +778,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * The names of tables in the database.
              */
             public Builder tables(java.util.List < String > tables) {
                 this.tables = tables;
@@ -770,7 +786,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number.
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -778,7 +794,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -831,7 +847,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * List.
+             * The full request data.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -839,7 +855,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -940,7 +956,11 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * Fail.
+             * Indicates whether the asynchronous request failed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder fail(Boolean fail) {
                 this.fail = fail;
@@ -948,7 +968,11 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * IsFinish.
+             * Indicates whether the asynchronous request was complete. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -956,7 +980,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned full request data.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -964,7 +988,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResultId.
+             * The request ID.
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -972,7 +996,12 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the asynchronous request. Valid values:
+             * <p>
+             * 
+             * *   **RUNNING**
+             * *   **SUCCESS**
+             * *   **FAIL**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -980,7 +1009,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

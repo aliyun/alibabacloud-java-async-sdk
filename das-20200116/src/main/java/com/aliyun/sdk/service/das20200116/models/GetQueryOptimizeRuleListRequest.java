@@ -22,6 +22,10 @@ public class GetQueryOptimizeRuleListRequest extends Request {
     private String instanceIds;
 
     @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("TagNames")
     private String tagNames;
 
@@ -29,6 +33,7 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         super(builder);
         this.engine = builder.engine;
         this.instanceIds = builder.instanceIds;
+        this.region = builder.region;
         this.tagNames = builder.tagNames;
     }
 
@@ -60,6 +65,13 @@ public class GetQueryOptimizeRuleListRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return tagNames
      */
     public String getTagNames() {
@@ -69,21 +81,28 @@ public class GetQueryOptimizeRuleListRequest extends Request {
     public static final class Builder extends Request.Builder<GetQueryOptimizeRuleListRequest, Builder> {
         private String engine; 
         private String instanceIds; 
+        private String region; 
         private String tagNames; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetQueryOptimizeRuleListRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.instanceIds = response.instanceIds;
-            this.tagNames = response.tagNames;
+        private Builder(GetQueryOptimizeRuleListRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.instanceIds = request.instanceIds;
+            this.region = request.region;
+            this.tagNames = request.tagNames;
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -92,7 +111,7 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -101,7 +120,25 @@ public class GetQueryOptimizeRuleListRequest extends Request {
         }
 
         /**
-         * TagNames.
+         * The region in which the instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-china**: Chinese mainland
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * 
+         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
+         * 
+         * >  If your instances reside in the regions in the Chinese mainland, set this parameter to **cn-china**.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * A reserved parameter.
          */
         public Builder tagNames(String tagNames) {
             this.putQueryParameter("TagNames", tagNames);

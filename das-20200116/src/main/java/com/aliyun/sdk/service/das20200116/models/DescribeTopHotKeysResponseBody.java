@@ -86,7 +86,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information about the hot keys.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -218,7 +222,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * Db.
+             * The database in which the key is stored.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -226,7 +230,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Hot.
+             * The frequency at which the key is accessed, which indicates the QPS of the key.
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -234,7 +238,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -242,7 +246,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * The type of the key.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -250,7 +254,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Lfu.
+             * The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.
              */
             public Builder lfu(Integer lfu) {
                 this.lfu = lfu;
@@ -258,7 +262,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data shard on the ApsaraDB for Redis instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

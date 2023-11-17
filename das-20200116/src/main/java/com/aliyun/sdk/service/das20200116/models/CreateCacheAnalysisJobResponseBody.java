@@ -86,7 +86,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -242,7 +249,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bytes.
+             * The number of bytes that are occupied by the key.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -250,7 +257,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of elements in the key.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -258,7 +265,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Db.
+             * The name of the database.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -266,7 +273,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The data type of the key.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -274,7 +281,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTimeMillis.
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -282,7 +289,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +297,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -298,7 +305,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the ApsaraDB for Redis instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +447,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             private String taskState; 
 
             /**
-             * BigKeys.
+             * The number of elements in the key.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -448,7 +455,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -456,7 +463,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the cache analysis task.
+             * <p>
+             * 
+             * >  This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the [DescribeCacheAnalysisJob](~~180983~~) operation to query the analysis results of the specified cache analysis task.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -464,7 +474,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
+             * <p>
+             * 
+             * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -472,7 +485,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -480,7 +493,13 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * The state of the cache analysis task. Valid values:
+             * <p>
+             * 
+             * *   **BACKUP**: The data is being backed up.
+             * *   **ANALYZING**: The data is being analyzed.
+             * *   **FINISHED**: The data is analyzed.
+             * *   **FAILED**: An error occurred.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;

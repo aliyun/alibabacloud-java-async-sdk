@@ -63,14 +63,14 @@ public class DescribeCacheAnalysisJobRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCacheAnalysisJobRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.jobId = response.jobId;
+        private Builder(DescribeCacheAnalysisJobRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.jobId = request.jobId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class DescribeCacheAnalysisJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the cache analysis task. You can obtain the task ID from the response parameters of the [CreateCacheAnalysisJob](~~180982~~) operation.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

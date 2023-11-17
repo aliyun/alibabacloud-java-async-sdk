@@ -86,7 +86,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -247,7 +254,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -255,7 +262,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The detailed information, including the error codes and the number of entries that are returned.
              */
             public Builder list(List list) {
                 this.list = list;
@@ -263,7 +270,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The page number.
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -271,7 +278,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -279,7 +286,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

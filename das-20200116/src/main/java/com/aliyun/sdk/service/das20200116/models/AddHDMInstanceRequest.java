@@ -26,6 +26,7 @@ public class AddHDMInstanceRequest extends Request {
 
     @Query
     @NameInMap("InstanceArea")
+    @Validation(required = true)
     private String instanceArea;
 
     @Query
@@ -204,25 +205,36 @@ public class AddHDMInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(AddHDMInstanceRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.flushAccount = response.flushAccount;
-            this.instanceAlias = response.instanceAlias;
-            this.instanceArea = response.instanceArea;
-            this.instanceId = response.instanceId;
-            this.ip = response.ip;
-            this.networkType = response.networkType;
-            this.password = response.password;
-            this.port = response.port;
-            this.region = response.region;
-            this.username = response.username;
-            this.vpcId = response.vpcId;
-            this.context = response.context;
+        private Builder(AddHDMInstanceRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.flushAccount = request.flushAccount;
+            this.instanceAlias = request.instanceAlias;
+            this.instanceArea = request.instanceArea;
+            this.instanceId = request.instanceId;
+            this.ip = request.ip;
+            this.networkType = request.networkType;
+            this.password = request.password;
+            this.port = request.port;
+            this.region = request.region;
+            this.username = request.username;
+            this.vpcId = request.vpcId;
+            this.context = request.context;
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PostgreSQL**
+         * *   **SQLServer**
+         * *   **PolarDBMySQL**
+         * *   **PolarDBPostgreSQL**
+         * *   **Redis**
+         * *   **MongoDB**
+         * *   **PolarDBOracle**
+         * *   **PolarDBX**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -231,7 +243,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * FlushAccount.
+         * The reserved parameter.
          */
         public Builder flushAccount(String flushAccount) {
             this.putQueryParameter("FlushAccount", flushAccount);
@@ -240,7 +252,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * InstanceAlias.
+         * The name of the instance.
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -249,7 +261,14 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * InstanceArea.
+         * The type of the instance on which the database is deployed. Valid values:
+         * <p>
+         * 
+         * *   **RDS**: an Alibaba Cloud database instance.
+         * *   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.
+         * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
+         * 
+         * >  IDC refers to your data center.
          */
         public Builder instanceArea(String instanceArea) {
             this.putQueryParameter("InstanceArea", instanceArea);
@@ -258,7 +277,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,7 +286,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The endpoint that is used to access the instance over internal networks.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -276,7 +295,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the instance.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -285,7 +304,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password for the username.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -294,7 +313,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is used to access the instance over internal networks.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -303,7 +322,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region in which the instance resides.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -312,7 +331,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username that is used to log on to the database.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -321,7 +340,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The virtual private cloud (VPC) ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -330,7 +349,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * __context.
+         * The reserved parameter.
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

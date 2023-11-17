@@ -88,16 +88,16 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
             super();
         } 
 
-        private Builder(GetRunningSqlConcurrencyControlRulesRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(GetRunningSqlConcurrencyControlRulesRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -106,7 +106,10 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +118,7 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -124,7 +127,7 @@ public class GetRunningSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The value must be a positive integer. Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

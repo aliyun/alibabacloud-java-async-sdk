@@ -86,7 +86,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned for the request.
+         * <p>
+         * 
+         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -242,7 +249,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bytes.
+             * The number of bytes that are occupied by the key.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -250,7 +257,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of elements in the key.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -258,7 +265,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Db.
+             * The name of the database.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -266,7 +273,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The data type of the key.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -274,7 +281,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTimeMillis.
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -282,7 +289,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +297,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -298,7 +305,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -348,6 +355,228 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
             public BigKeys build() {
                 return new BigKeys(this);
+            } 
+
+        } 
+
+    }
+    public static class BigKeysOfNumKeyInfo extends TeaModel {
+        @NameInMap("Bytes")
+        private Long bytes;
+
+        @NameInMap("Count")
+        private Long count;
+
+        @NameInMap("Db")
+        private Integer db;
+
+        @NameInMap("Encoding")
+        private String encoding;
+
+        @NameInMap("ExpirationTimeMillis")
+        private Long expirationTimeMillis;
+
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("Type")
+        private String type;
+
+        private BigKeysOfNumKeyInfo(Builder builder) {
+            this.bytes = builder.bytes;
+            this.count = builder.count;
+            this.db = builder.db;
+            this.encoding = builder.encoding;
+            this.expirationTimeMillis = builder.expirationTimeMillis;
+            this.key = builder.key;
+            this.nodeId = builder.nodeId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BigKeysOfNumKeyInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bytes
+         */
+        public Long getBytes() {
+            return this.bytes;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return db
+         */
+        public Integer getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return encoding
+         */
+        public String getEncoding() {
+            return this.encoding;
+        }
+
+        /**
+         * @return expirationTimeMillis
+         */
+        public Long getExpirationTimeMillis() {
+            return this.expirationTimeMillis;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long bytes; 
+            private Long count; 
+            private Integer db; 
+            private String encoding; 
+            private Long expirationTimeMillis; 
+            private String key; 
+            private String nodeId; 
+            private String type; 
+
+            /**
+             * The number of bytes that are occupied by the key.
+             */
+            public Builder bytes(Long bytes) {
+                this.bytes = bytes;
+                return this;
+            }
+
+            /**
+             * The number of elements in the key.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * The name of the database.
+             */
+            public Builder db(Integer db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * The data type of the key.
+             */
+            public Builder encoding(String encoding) {
+                this.encoding = encoding;
+                return this;
+            }
+
+            /**
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             */
+            public Builder expirationTimeMillis(Long expirationTimeMillis) {
+                this.expirationTimeMillis = expirationTimeMillis;
+                return this;
+            }
+
+            /**
+             * The name of the key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The ID of the data node on the instance.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The data type of the instance.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public BigKeysOfNumKeyInfo build() {
+                return new BigKeysOfNumKeyInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class BigKeysOfNum extends TeaModel {
+        @NameInMap("KeyInfo")
+        private java.util.List < BigKeysOfNumKeyInfo> keyInfo;
+
+        private BigKeysOfNum(Builder builder) {
+            this.keyInfo = builder.keyInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BigKeysOfNum create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyInfo
+         */
+        public java.util.List < BigKeysOfNumKeyInfo> getKeyInfo() {
+            return this.keyInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < BigKeysOfNumKeyInfo> keyInfo; 
+
+            /**
+             * KeyInfo.
+             */
+            public Builder keyInfo(java.util.List < BigKeysOfNumKeyInfo> keyInfo) {
+                this.keyInfo = keyInfo;
+                return this;
+            }
+
+            public BigKeysOfNum build() {
+                return new BigKeysOfNum(this);
             } 
 
         } 
@@ -428,7 +657,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bytes.
+             * The number of bytes that are occupied by the key.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -436,7 +665,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of elements in the key.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -444,7 +673,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * KeyNum.
+             * The number of keys that contain the prefix.
              */
             public Builder keyNum(Long keyNum) {
                 this.keyNum = keyNum;
@@ -452,7 +681,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Prefix.
+             * The prefix of the key.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -460,7 +689,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -501,7 +730,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private java.util.List < Prefix> prefix; 
 
             /**
-             * Prefix.
+             * The prefix of the key.
              */
             public Builder prefix(java.util.List < Prefix> prefix) {
                 this.prefix = prefix;
@@ -515,9 +744,456 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    public static class UnexBigKeysOfBytesKeyInfo extends TeaModel {
+        @NameInMap("Bytes")
+        private Long bytes;
+
+        @NameInMap("Count")
+        private Long count;
+
+        @NameInMap("Db")
+        private Integer db;
+
+        @NameInMap("Encoding")
+        private String encoding;
+
+        @NameInMap("ExpirationTimeMillis")
+        private Long expirationTimeMillis;
+
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("Type")
+        private String type;
+
+        private UnexBigKeysOfBytesKeyInfo(Builder builder) {
+            this.bytes = builder.bytes;
+            this.count = builder.count;
+            this.db = builder.db;
+            this.encoding = builder.encoding;
+            this.expirationTimeMillis = builder.expirationTimeMillis;
+            this.key = builder.key;
+            this.nodeId = builder.nodeId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnexBigKeysOfBytesKeyInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bytes
+         */
+        public Long getBytes() {
+            return this.bytes;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return db
+         */
+        public Integer getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return encoding
+         */
+        public String getEncoding() {
+            return this.encoding;
+        }
+
+        /**
+         * @return expirationTimeMillis
+         */
+        public Long getExpirationTimeMillis() {
+            return this.expirationTimeMillis;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long bytes; 
+            private Long count; 
+            private Integer db; 
+            private String encoding; 
+            private Long expirationTimeMillis; 
+            private String key; 
+            private String nodeId; 
+            private String type; 
+
+            /**
+             * The number of bytes that are occupied by the key.
+             */
+            public Builder bytes(Long bytes) {
+                this.bytes = bytes;
+                return this;
+            }
+
+            /**
+             * The number of elements in the key.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * The name of the database.
+             */
+            public Builder db(Integer db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * The data type of the key.
+             */
+            public Builder encoding(String encoding) {
+                this.encoding = encoding;
+                return this;
+            }
+
+            /**
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             */
+            public Builder expirationTimeMillis(Long expirationTimeMillis) {
+                this.expirationTimeMillis = expirationTimeMillis;
+                return this;
+            }
+
+            /**
+             * The name of the key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The ID of the data node on the instance.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The data type of the instance.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public UnexBigKeysOfBytesKeyInfo build() {
+                return new UnexBigKeysOfBytesKeyInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class UnexBigKeysOfBytes extends TeaModel {
+        @NameInMap("KeyInfo")
+        private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo;
+
+        private UnexBigKeysOfBytes(Builder builder) {
+            this.keyInfo = builder.keyInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnexBigKeysOfBytes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyInfo
+         */
+        public java.util.List < UnexBigKeysOfBytesKeyInfo> getKeyInfo() {
+            return this.keyInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo; 
+
+            /**
+             * KeyInfo.
+             */
+            public Builder keyInfo(java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo) {
+                this.keyInfo = keyInfo;
+                return this;
+            }
+
+            public UnexBigKeysOfBytes build() {
+                return new UnexBigKeysOfBytes(this);
+            } 
+
+        } 
+
+    }
+    public static class UnexBigKeysOfNumKeyInfo extends TeaModel {
+        @NameInMap("Bytes")
+        private Long bytes;
+
+        @NameInMap("Count")
+        private Long count;
+
+        @NameInMap("Db")
+        private Integer db;
+
+        @NameInMap("Encoding")
+        private String encoding;
+
+        @NameInMap("ExpirationTimeMillis")
+        private Long expirationTimeMillis;
+
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("Type")
+        private String type;
+
+        private UnexBigKeysOfNumKeyInfo(Builder builder) {
+            this.bytes = builder.bytes;
+            this.count = builder.count;
+            this.db = builder.db;
+            this.encoding = builder.encoding;
+            this.expirationTimeMillis = builder.expirationTimeMillis;
+            this.key = builder.key;
+            this.nodeId = builder.nodeId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnexBigKeysOfNumKeyInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bytes
+         */
+        public Long getBytes() {
+            return this.bytes;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return db
+         */
+        public Integer getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return encoding
+         */
+        public String getEncoding() {
+            return this.encoding;
+        }
+
+        /**
+         * @return expirationTimeMillis
+         */
+        public Long getExpirationTimeMillis() {
+            return this.expirationTimeMillis;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long bytes; 
+            private Long count; 
+            private Integer db; 
+            private String encoding; 
+            private Long expirationTimeMillis; 
+            private String key; 
+            private String nodeId; 
+            private String type; 
+
+            /**
+             * The number of bytes that are occupied by the key.
+             */
+            public Builder bytes(Long bytes) {
+                this.bytes = bytes;
+                return this;
+            }
+
+            /**
+             * The number of elements in the key.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * The name of the database.
+             */
+            public Builder db(Integer db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * The data type of the key.
+             */
+            public Builder encoding(String encoding) {
+                this.encoding = encoding;
+                return this;
+            }
+
+            /**
+             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             */
+            public Builder expirationTimeMillis(Long expirationTimeMillis) {
+                this.expirationTimeMillis = expirationTimeMillis;
+                return this;
+            }
+
+            /**
+             * The name of the key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The ID of the data node on the instance.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The data type of the instance.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public UnexBigKeysOfNumKeyInfo build() {
+                return new UnexBigKeysOfNumKeyInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class UnexBigKeysOfNum extends TeaModel {
+        @NameInMap("KeyInfo")
+        private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo;
+
+        private UnexBigKeysOfNum(Builder builder) {
+            this.keyInfo = builder.keyInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnexBigKeysOfNum create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyInfo
+         */
+        public java.util.List < UnexBigKeysOfNumKeyInfo> getKeyInfo() {
+            return this.keyInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo; 
+
+            /**
+             * KeyInfo.
+             */
+            public Builder keyInfo(java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo) {
+                this.keyInfo = keyInfo;
+                return this;
+            }
+
+            public UnexBigKeysOfNum build() {
+                return new UnexBigKeysOfNum(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("BigKeys")
         private BigKeys bigKeys;
+
+        @NameInMap("BigKeysOfNum")
+        private BigKeysOfNum bigKeysOfNum;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -537,14 +1213,23 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         @NameInMap("TaskState")
         private String taskState;
 
+        @NameInMap("UnexBigKeysOfBytes")
+        private UnexBigKeysOfBytes unexBigKeysOfBytes;
+
+        @NameInMap("UnexBigKeysOfNum")
+        private UnexBigKeysOfNum unexBigKeysOfNum;
+
         private Data(Builder builder) {
             this.bigKeys = builder.bigKeys;
+            this.bigKeysOfNum = builder.bigKeysOfNum;
             this.instanceId = builder.instanceId;
             this.jobId = builder.jobId;
             this.keyPrefixes = builder.keyPrefixes;
             this.message = builder.message;
             this.nodeId = builder.nodeId;
             this.taskState = builder.taskState;
+            this.unexBigKeysOfBytes = builder.unexBigKeysOfBytes;
+            this.unexBigKeysOfNum = builder.unexBigKeysOfNum;
         }
 
         public static Builder builder() {
@@ -560,6 +1245,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
          */
         public BigKeys getBigKeys() {
             return this.bigKeys;
+        }
+
+        /**
+         * @return bigKeysOfNum
+         */
+        public BigKeysOfNum getBigKeysOfNum() {
+            return this.bigKeysOfNum;
         }
 
         /**
@@ -604,17 +1296,34 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             return this.taskState;
         }
 
+        /**
+         * @return unexBigKeysOfBytes
+         */
+        public UnexBigKeysOfBytes getUnexBigKeysOfBytes() {
+            return this.unexBigKeysOfBytes;
+        }
+
+        /**
+         * @return unexBigKeysOfNum
+         */
+        public UnexBigKeysOfNum getUnexBigKeysOfNum() {
+            return this.unexBigKeysOfNum;
+        }
+
         public static final class Builder {
             private BigKeys bigKeys; 
+            private BigKeysOfNum bigKeysOfNum; 
             private String instanceId; 
             private String jobId; 
             private KeyPrefixes keyPrefixes; 
             private String message; 
             private String nodeId; 
             private String taskState; 
+            private UnexBigKeysOfBytes unexBigKeysOfBytes; 
+            private UnexBigKeysOfNum unexBigKeysOfNum; 
 
             /**
-             * BigKeys.
+             * The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -622,7 +1331,15 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The details of the large keys. The returned large keys are sorted in descending order based on the number of keys.
+             */
+            public Builder bigKeysOfNum(BigKeysOfNum bigKeysOfNum) {
+                this.bigKeysOfNum = bigKeysOfNum;
+                return this;
+            }
+
+            /**
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -630,7 +1347,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the cache analysis task.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -638,7 +1355,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefixes.
+             * The prefixes of the keys.
              */
             public Builder keyPrefixes(KeyPrefixes keyPrefixes) {
                 this.keyPrefixes = keyPrefixes;
@@ -646,7 +1363,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message that is returned for the request.
+             * <p>
+             * 
+             * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -654,7 +1374,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the data node on the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -662,10 +1382,32 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * The state of the cache analysis task. Valid values:
+             * <p>
+             * 
+             * *   **BACKUP**: The data is being backed up.
+             * *   **ANALYZING**: The data is being analyzed.
+             * *   **FINISHED**: The data is analyzed.
+             * *   **FAILED**: An error occurred.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
+                return this;
+            }
+
+            /**
+             * The details of permanent keys. The returned keys are sorted in descending order based on the number of bytes occupied by the keys.
+             */
+            public Builder unexBigKeysOfBytes(UnexBigKeysOfBytes unexBigKeysOfBytes) {
+                this.unexBigKeysOfBytes = unexBigKeysOfBytes;
+                return this;
+            }
+
+            /**
+             * The details of permanent keys. The returned keys are sorted in descending order based on the number of keys.
+             */
+            public Builder unexBigKeysOfNum(UnexBigKeysOfNum unexBigKeysOfNum) {
+                this.unexBigKeysOfNum = unexBigKeysOfNum;
                 return this;
             }
 

@@ -86,7 +86,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -350,7 +357,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             private String workDir; 
 
             /**
-             * ArchiveFolder.
+             * The path in which the files are archived.
              */
             public Builder archiveFolder(String archiveFolder) {
                 this.archiveFolder = archiveFolder;
@@ -358,7 +365,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BenchCmd.
+             * The command that was run to start the stress testing task.
              */
             public Builder benchCmd(String benchCmd) {
                 this.benchCmd = benchCmd;
@@ -366,7 +373,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClientJarPath.
+             * The path to the JAR file that is used for stress testing.
              */
             public Builder clientJarPath(String clientJarPath) {
                 this.clientJarPath = clientJarPath;
@@ -374,7 +381,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * JarOnOss.
+             * The path to the JAR file that is stored in OSS. The JAR file is used for stress testing.
              */
             public Builder jarOnOss(String jarOnOss) {
                 this.jarOnOss = jarOnOss;
@@ -382,7 +389,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LoadCmd.
+             * The command that was run to preload the file that stores the analysis result of full SQL statistics.
              */
             public Builder loadCmd(String loadCmd) {
                 this.loadCmd = loadCmd;
@@ -390,7 +397,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MetaFileName.
+             * The name of the metadata file.
              */
             public Builder metaFileName(String metaFileName) {
                 this.metaFileName = metaFileName;
@@ -398,7 +405,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MetaFileOnOss.
+             * The name of the metadata file stored in Object Storage Service (OSS).
              */
             public Builder metaFileOnOss(String metaFileOnOss) {
                 this.metaFileOnOss = metaFileOnOss;
@@ -406,7 +413,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MetaFilePath.
+             * The path to the metadata file.
              */
             public Builder metaFilePath(String metaFilePath) {
                 this.metaFilePath = metaFilePath;
@@ -414,7 +421,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ParseCmd.
+             * The command that was run to parse the file that stores the analysis result of full SQL statistics.
              */
             public Builder parseCmd(String parseCmd) {
                 this.parseCmd = parseCmd;
@@ -422,7 +429,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ParseFilePath.
+             * The path to the file that is parsed. The file stores the analysis result of full SQL statistics.
              */
             public Builder parseFilePath(String parseFilePath) {
                 this.parseFilePath = parseFilePath;
@@ -430,7 +437,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RocksDbPath.
+             * The location where the RocksDB storage system is deployed in the stress testing client.
              */
             public Builder rocksDbPath(String rocksDbPath) {
                 this.rocksDbPath = rocksDbPath;
@@ -438,7 +445,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SqlFileName.
+             * The name of the file that stores the analysis result of full SQL statistics.
              */
             public Builder sqlFileName(String sqlFileName) {
                 this.sqlFileName = sqlFileName;
@@ -446,7 +453,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SqlFileOnOss.
+             * The name of the file that stores the analysis result of full SQL statistics and that is stored in OSS.
              */
             public Builder sqlFileOnOss(String sqlFileOnOss) {
                 this.sqlFileOnOss = sqlFileOnOss;
@@ -454,7 +461,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SqlFilePath.
+             * The path to the file that stores the analysis result of full SQL statistics.
              */
             public Builder sqlFilePath(String sqlFilePath) {
                 this.sqlFilePath = sqlFilePath;
@@ -462,7 +469,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -470,7 +477,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The Alibaba Cloud account ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -478,7 +485,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * WorkDir.
+             * The path of the temporary directory that is generated for stress testing.
              */
             public Builder workDir(String workDir) {
                 this.workDir = workDir;

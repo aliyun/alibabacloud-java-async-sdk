@@ -1,0 +1,145 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.das20200116.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetMongoDBCurrentOpRequest} extends {@link RequestModel}
+ *
+ * <p>GetMongoDBCurrentOpRequest</p>
+ */
+public class GetMongoDBCurrentOpRequest extends Request {
+    @Query
+    @NameInMap("FilterDoc")
+    private String filterDoc;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
+    @NameInMap("NodeId")
+    private String nodeId;
+
+    @Query
+    @NameInMap("Role")
+    private String role;
+
+    private GetMongoDBCurrentOpRequest(Builder builder) {
+        super(builder);
+        this.filterDoc = builder.filterDoc;
+        this.instanceId = builder.instanceId;
+        this.nodeId = builder.nodeId;
+        this.role = builder.role;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetMongoDBCurrentOpRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return filterDoc
+     */
+    public String getFilterDoc() {
+        return this.filterDoc;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
+    public static final class Builder extends Request.Builder<GetMongoDBCurrentOpRequest, Builder> {
+        private String filterDoc; 
+        private String instanceId; 
+        private String nodeId; 
+        private String role; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetMongoDBCurrentOpRequest request) {
+            super(request);
+            this.filterDoc = request.filterDoc;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.role = request.role;
+        } 
+
+        /**
+         * The condition used to filter sessions during the query. For more information, see the currentOp command of MongoDB.
+         */
+        public Builder filterDoc(String filterDoc) {
+            this.putQueryParameter("FilterDoc", filterDoc);
+            this.filterDoc = filterDoc;
+            return this;
+        }
+
+        /**
+         * The instance ID.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The node ID.
+         * <p>
+         * 
+         * >  If you do not specify a node ID, the sessions of the primary node are queried by default.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * A reserved parameter. You do not need to specify the parameter.
+         */
+        public Builder role(String role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
+            return this;
+        }
+
+        @Override
+        public GetMongoDBCurrentOpRequest build() {
+            return new GetMongoDBCurrentOpRequest(this);
+        } 
+
+    } 
+
+}

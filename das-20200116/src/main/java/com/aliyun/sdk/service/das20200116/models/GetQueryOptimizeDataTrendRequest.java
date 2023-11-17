@@ -27,6 +27,10 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
     private String instanceIds;
 
     @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("Start")
     @Validation(required = true)
     private String start;
@@ -40,6 +44,7 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         this.end = builder.end;
         this.engine = builder.engine;
         this.instanceIds = builder.instanceIds;
+        this.region = builder.region;
         this.start = builder.start;
         this.tagNames = builder.tagNames;
     }
@@ -79,6 +84,13 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return start
      */
     public String getStart() {
@@ -96,6 +108,7 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         private String end; 
         private String engine; 
         private String instanceIds; 
+        private String region; 
         private String start; 
         private String tagNames; 
 
@@ -103,17 +116,21 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
             super();
         } 
 
-        private Builder(GetQueryOptimizeDataTrendRequest response) {
-            super(response);
-            this.end = response.end;
-            this.engine = response.engine;
-            this.instanceIds = response.instanceIds;
-            this.start = response.start;
-            this.tagNames = response.tagNames;
+        private Builder(GetQueryOptimizeDataTrendRequest request) {
+            super(request);
+            this.end = request.end;
+            this.engine = request.engine;
+            this.instanceIds = request.instanceIds;
+            this.region = request.region;
+            this.start = request.start;
+            this.tagNames = request.tagNames;
         } 
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time, but not later than 00:00:00 (UTC+8) on the current day.
          */
         public Builder end(String end) {
             this.putQueryParameter("End", end);
@@ -122,7 +139,12 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -131,7 +153,7 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -140,7 +162,28 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         }
 
         /**
-         * Start.
+         * The region in which the instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-china**: Chinese mainland.
+         * *   **cn-hongkong**: China (Hong Kong).
+         * *   **ap-southeast-1**: Singapore.
+         * 
+         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region specified by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
+         * 
+         * >  If your instances reside in the regions inside the Chinese mainland, set this parameter to **cn-china**.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  You can specify a start time up to two months earlier than the current time.
          */
         public Builder start(String start) {
             this.putQueryParameter("Start", start);
@@ -149,7 +192,7 @@ public class GetQueryOptimizeDataTrendRequest extends Request {
         }
 
         /**
-         * TagNames.
+         * The reserved parameter.
          */
         public Builder tagNames(String tagNames) {
             this.putQueryParameter("TagNames", tagNames);

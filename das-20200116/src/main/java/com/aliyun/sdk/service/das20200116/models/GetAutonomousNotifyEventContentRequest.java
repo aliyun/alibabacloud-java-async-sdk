@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetAutonomousNotifyEventContentRequest extends Request {
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
     @NameInMap("SpanId")
+    @Validation(required = true)
     private String spanId;
 
     @Query
@@ -74,15 +76,15 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
             super();
         } 
 
-        private Builder(GetAutonomousNotifyEventContentRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.spanId = response.spanId;
-            this.context = response.context;
+        private Builder(GetAutonomousNotifyEventContentRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.spanId = request.spanId;
+            this.context = request.context;
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +93,7 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
         }
 
         /**
-         * SpanId.
+         * The unique identifier of the event. You can call the [GetAutonomousNotifyEventsInRange](~~288371~~) operation to query the unique identifier returned by the SpanId response parameter.
          */
         public Builder spanId(String spanId) {
             this.putQueryParameter("SpanId", spanId);
@@ -100,7 +102,7 @@ public class GetAutonomousNotifyEventContentRequest extends Request {
         }
 
         /**
-         * __context.
+         * The reserved parameter.
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

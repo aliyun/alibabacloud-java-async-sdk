@@ -91,16 +91,21 @@ public class GetQueryOptimizeExecErrorSampleRequest extends Request {
             super();
         } 
 
-        private Builder(GetQueryOptimizeExecErrorSampleRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.instanceId = response.instanceId;
-            this.sqlId = response.sqlId;
-            this.time = response.time;
+        private Builder(GetQueryOptimizeExecErrorSampleRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.instanceId = request.instanceId;
+            this.sqlId = request.sqlId;
+            this.time = request.time;
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -109,7 +114,7 @@ public class GetQueryOptimizeExecErrorSampleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -118,7 +123,7 @@ public class GetQueryOptimizeExecErrorSampleRequest extends Request {
         }
 
         /**
-         * SqlId.
+         * The SQL template ID. You can call the [GetQueryOptimizeExecErrorStats](~~405235~~) operation to obtain the SQL template ID.
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);
@@ -127,7 +132,7 @@ public class GetQueryOptimizeExecErrorSampleRequest extends Request {
         }
 
         /**
-         * Time.
+         * The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

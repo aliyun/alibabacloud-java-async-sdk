@@ -101,17 +101,20 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
             super();
         } 
 
-        private Builder(GetAsyncErrorRequestListByCodeRequest response) {
-            super(response);
-            this.end = response.end;
-            this.errorCode = response.errorCode;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.start = response.start;
+        private Builder(GetAsyncErrorRequestListByCodeRequest request) {
+            super(request);
+            this.end = request.end;
+            this.errorCode = request.errorCode;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.start = request.start;
         } 
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -120,7 +123,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * ErrorCode.
+         * The error code. You can call the [GetAsyncErrorRequestStatByCode](~~409804~~) operation to query the MySQL error codes that may be generated in the SQL Explorer results of an instance.
          */
         public Builder errorCode(String errorCode) {
             this.putQueryParameter("ErrorCode", errorCode);
@@ -129,7 +132,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -138,7 +141,10 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  This parameter must be specified if the database instance is a PolarDB for MySQL cluster.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -147,7 +153,10 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         }
 
         /**
-         * Start.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

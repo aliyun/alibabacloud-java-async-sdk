@@ -75,15 +75,15 @@ public class DescribeHotBigKeysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHotBigKeysRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
+        private Builder(DescribeHotBigKeysRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -92,7 +92,7 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

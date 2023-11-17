@@ -165,18 +165,18 @@ public class SyncHDMAliyunResourceRequest extends Request {
             super();
         } 
 
-        private Builder(SyncHDMAliyunResourceRequest response) {
-            super(response);
-            this.async = response.async;
-            this.resourceTypes = response.resourceTypes;
-            this.uid = response.uid;
-            this.userId = response.userId;
-            this.waitForModifySecurityIps = response.waitForModifySecurityIps;
-            this.context = response.context;
-            this.accessKey = response.accessKey;
-            this.signature = response.signature;
-            this.skipAuth = response.skipAuth;
-            this.timestamp = response.timestamp;
+        private Builder(SyncHDMAliyunResourceRequest request) {
+            super(request);
+            this.async = request.async;
+            this.resourceTypes = request.resourceTypes;
+            this.uid = request.uid;
+            this.userId = request.userId;
+            this.waitForModifySecurityIps = request.waitForModifySecurityIps;
+            this.context = request.context;
+            this.accessKey = request.accessKey;
+            this.signature = request.signature;
+            this.skipAuth = request.skipAuth;
+            this.timestamp = request.timestamp;
         } 
 
         /**

@@ -86,7 +86,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -194,7 +198,11 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             private String solutionExt; 
 
             /**
-             * Level.
+             * The severity level. Valid values:
+             * <p>
+             * 
+             * * **INFO**
+             * * **WARN**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -202,7 +210,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The tag ID.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -210,7 +218,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * The suggestion.
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -218,7 +226,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * SolutionExt.
+             * The reserved parameter.
              */
             public Builder solutionExt(String solutionExt) {
                 this.solutionExt = solutionExt;
@@ -307,7 +315,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -315,7 +323,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The optimization suggestions.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -323,7 +331,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The reserved parameter.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -331,7 +339,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +347,7 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

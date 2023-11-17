@@ -49,13 +49,13 @@ public class DescribeInstanceDasProRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInstanceDasProRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(DescribeInstanceDasProRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * InstanceId.
+         * The database instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

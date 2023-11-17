@@ -76,15 +76,15 @@ public class DisableSqlConcurrencyControlRequest extends Request {
             super();
         } 
 
-        private Builder(DisableSqlConcurrencyControlRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.itemId = response.itemId;
+        private Builder(DisableSqlConcurrencyControlRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.itemId = request.itemId;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -93,7 +93,10 @@ public class DisableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +105,7 @@ public class DisableSqlConcurrencyControlRequest extends Request {
         }
 
         /**
-         * ItemId.
+         * The ID of the throttling rule that is applied to the instance. You can call the [GetRunningSqlConcurrencyControlRules](~~223538~~) operation to query the ID.
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("ItemId", itemId);

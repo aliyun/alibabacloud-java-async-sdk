@@ -103,17 +103,17 @@ public class DescribeTopBigKeysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTopBigKeysRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.startTime = response.startTime;
+        private Builder(DescribeTopBigKeysRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -122,7 +122,16 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The end time must be later than the start time.
+         * 
+         * *   Only data within the last four days can be queried.
+         * 
+         * *   The maximum interval between the **start time** and the** end time** is 3 hours.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -131,7 +140,7 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +149,7 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -149,7 +158,7 @@ public class DescribeTopBigKeysRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -114,18 +114,18 @@ public class GetErrorRequestSampleRequest extends Request {
             super();
         } 
 
-        private Builder(GetErrorRequestSampleRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.end = response.end;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.sqlId = response.sqlId;
-            this.start = response.start;
+        private Builder(GetErrorRequestSampleRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.end = request.end;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.sqlId = request.sqlId;
+            this.start = request.start;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -134,7 +134,10 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval cannot exceed 24 hours.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -143,7 +146,7 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +155,10 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -161,7 +167,7 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * SqlId.
+         * The SQL query ID. You can call the [GetAsyncErrorRequestListByCode](~~410746~~) operation to query the ID of the SQL query for which MySQL error code is returned.
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);
@@ -170,7 +176,10 @@ public class GetErrorRequestSampleRequest extends Request {
         }
 
         /**
-         * Start.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

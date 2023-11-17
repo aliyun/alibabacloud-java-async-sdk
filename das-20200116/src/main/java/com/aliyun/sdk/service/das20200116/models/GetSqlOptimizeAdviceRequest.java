@@ -29,6 +29,10 @@ public class GetSqlOptimizeAdviceRequest extends Request {
     private String instanceIds;
 
     @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("StartDt")
     private String startDt;
 
@@ -38,6 +42,7 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         this.endDt = builder.endDt;
         this.engine = builder.engine;
         this.instanceIds = builder.instanceIds;
+        this.region = builder.region;
         this.startDt = builder.startDt;
     }
 
@@ -83,6 +88,13 @@ public class GetSqlOptimizeAdviceRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return startDt
      */
     public String getStartDt() {
@@ -94,23 +106,25 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         private String endDt; 
         private String engine; 
         private String instanceIds; 
+        private String region; 
         private String startDt; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetSqlOptimizeAdviceRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.endDt = response.endDt;
-            this.engine = response.engine;
-            this.instanceIds = response.instanceIds;
-            this.startDt = response.startDt;
+        private Builder(GetSqlOptimizeAdviceRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.endDt = request.endDt;
+            this.engine = request.engine;
+            this.instanceIds = request.instanceIds;
+            this.region = request.region;
+            this.startDt = request.startDt;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -119,7 +133,11 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * EndDt.
+         * The end date of the time range to query. Specify the date in the *yyyyMMdd* format. The time must be in UTC.
+         * <p>
+         * 
+         * *   The default value of this parameter is one day before the current day.
+         * *   The value must be earlier than the current day. The interval between the start date and the end date cannot exceed 30 days.
          */
         public Builder endDt(String endDt) {
             this.putQueryParameter("EndDt", endDt);
@@ -128,7 +146,11 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**: ApsaraDB RDS for MySQL.
+         * *   **PolarDBMySQL**: PolarDB for MySQL.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -137,7 +159,10 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -146,7 +171,29 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * StartDt.
+         * The region in which the instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-china**: Chinese mainland.
+         * *   **cn-hongkong**: China (Hong Kong).
+         * *   **ap-southeast-1**: Singapore.
+         * 
+         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region specified by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect, and the system obtains data from the region in which the first specified instance resides.****
+         * 
+         * >  If your instances reside in the regions inside the Chinese mainland, set this parameter to **cn-china**.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * The start date of the time range to query. Specify the date in the *yyyyMMdd* format. The time must be in UTC.
+         * <p>
+         * 
+         * *   The default value of this parameter is one day before the current day.
+         * *   The value must be earlier than the current day.
          */
         public Builder startDt(String startDt) {
             this.putQueryParameter("StartDt", startDt);

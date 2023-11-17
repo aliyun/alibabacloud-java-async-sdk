@@ -86,7 +86,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -182,7 +186,17 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * Kpi.
+             * The name of the metric. Valid values:
+             * <p>
+             * 
+             * * **sqlExecuteCount**: the number of executions of slow SQL queries.
+             * * **sqlExecuteCountDiff**: the difference in the number of executions of slow SQL queries compared to the previous day.
+             * * **sqlCount**: the number of slow SQL templates.
+             * * **sqlCountDiff**: the difference in the number of slow SQL templates compared to the previous day.
+             * * **optimizedSqlExecuteCount**: the number of optimizable executions of slow SQL queries.
+             * * **optimizedSqlExecuteCountDiff**: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.
+             * * **optimizedSqlCount**: the number of optimizable slow SQL templates.
+             * * **optimizedSqlCountDiff**: the difference in the number of optimizable slow SQL templates compared to the previous day.
              */
             public Builder kpi(String kpi) {
                 this.kpi = kpi;
@@ -190,7 +204,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -198,7 +212,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -287,7 +301,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -295,7 +309,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The details of the trend data.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -303,7 +317,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The reserved parameter.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -311,7 +325,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +333,7 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -62,14 +62,14 @@ public class DescribeHotKeysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHotKeysRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
+        private Builder(DescribeHotKeysRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeHotKeysRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the data shard ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateRequestDiagnosisRequest extends Request {
     @Query
     @NameInMap("Database")
+    @Validation(required = true)
     private String database;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -26,6 +28,7 @@ public class CreateRequestDiagnosisRequest extends Request {
 
     @Query
     @NameInMap("Sql")
+    @Validation(required = true)
     private String sql;
 
     private CreateRequestDiagnosisRequest(Builder builder) {
@@ -87,16 +90,16 @@ public class CreateRequestDiagnosisRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRequestDiagnosisRequest response) {
-            super(response);
-            this.database = response.database;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.sql = response.sql;
+        private Builder(CreateRequestDiagnosisRequest request) {
+            super(request);
+            this.database = request.database;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.sql = request.sql;
         } 
 
         /**
-         * Database.
+         * The name of the database.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -105,7 +108,7 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -114,7 +117,10 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -123,7 +129,7 @@ public class CreateRequestDiagnosisRequest extends Request {
         }
 
         /**
-         * Sql.
+         * The SQL statement that you want to diagnose.
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

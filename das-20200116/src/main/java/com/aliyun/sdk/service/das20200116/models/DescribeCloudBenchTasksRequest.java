@@ -113,18 +113,21 @@ public class DescribeCloudBenchTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudBenchTasksRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.taskType = response.taskType;
+        private Builder(DescribeCloudBenchTasksRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -133,7 +136,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -142,7 +145,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The value must be a positive integer. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +154,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -160,7 +163,13 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the stress testing task. Valid values:
+         * <p>
+         * 
+         * *   **SUCCESS**: The task is successful.
+         * *   **IGNORED**: The task is ignored.
+         * *   **RUNNING**: The task is running.
+         * *   **EXCEPTION**: The task is abnormal.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -169,7 +178,11 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the stress testing task. Valid values:
+         * <p>
+         * 
+         * *   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.
+         * *   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

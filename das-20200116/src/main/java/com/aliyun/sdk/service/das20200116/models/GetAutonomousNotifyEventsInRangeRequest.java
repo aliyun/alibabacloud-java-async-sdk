@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetAutonomousNotifyEventsInRangeRequest extends Request {
     @Query
     @NameInMap("EndTime")
+    @Validation(required = true)
     private String endTime;
 
     @Query
@@ -46,6 +47,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
+    @Validation(required = true)
     private String startTime;
 
     @Query
@@ -165,22 +167,25 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
             super();
         } 
 
-        private Builder(GetAutonomousNotifyEventsInRangeRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.eventContext = response.eventContext;
-            this.instanceId = response.instanceId;
-            this.level = response.level;
-            this.minLevel = response.minLevel;
-            this.nodeId = response.nodeId;
-            this.pageOffset = response.pageOffset;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.context = response.context;
+        private Builder(GetAutonomousNotifyEventsInRangeRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.eventContext = request.eventContext;
+            this.instanceId = request.instanceId;
+            this.level = request.level;
+            this.minLevel = request.minLevel;
+            this.nodeId = request.nodeId;
+            this.pageOffset = request.pageOffset;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.context = request.context;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -189,7 +194,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * EventContext.
+         * The reserved parameter.
          */
         public Builder eventContext(String eventContext) {
             this.putQueryParameter("EventContext", eventContext);
@@ -198,7 +203,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +212,13 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * Level.
+         * The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:
+         * <p>
+         * 
+         * *   **Notice**: events for which the system sends notifications.
+         * *   **Optimization**: events that need to be optimized.
+         * *   **Warn**: events for which the system sends warnings.
+         * *   **Critical**: critical events.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -216,7 +227,13 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * MinLevel.
+         * The minimum urgency level of the events. Valid values:
+         * <p>
+         * 
+         * *   **Notice**: events for which the system sends notifications.
+         * *   **Optimization**: events that need to be optimized.
+         * *   **Warn**: events for which the system sends warnings.
+         * *   **Critical**: critical events.
          */
         public Builder minLevel(String minLevel) {
             this.putQueryParameter("MinLevel", minLevel);
@@ -225,7 +242,10 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node in a PolarDB for MySQL cluster. You can call the [DescribeDBClusters](~~98094~~) operation to query the node ID returned by the DBNodeId response parameter.
+         * <p>
+         * 
+         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -234,7 +254,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * PageOffset.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
         public Builder pageOffset(String pageOffset) {
             this.putQueryParameter("PageOffset", pageOffset);
@@ -243,7 +263,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,7 +272,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -261,7 +281,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         }
 
         /**
-         * __context.
+         * The reserved parameter.
          */
         public Builder context(String context) {
             this.putQueryParameter("__context", context);

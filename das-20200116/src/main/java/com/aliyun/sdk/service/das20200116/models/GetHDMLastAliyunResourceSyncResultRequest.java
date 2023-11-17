@@ -126,15 +126,15 @@ public class GetHDMLastAliyunResourceSyncResultRequest extends Request {
             super();
         } 
 
-        private Builder(GetHDMLastAliyunResourceSyncResultRequest response) {
-            super(response);
-            this.uid = response.uid;
-            this.userId = response.userId;
-            this.context = response.context;
-            this.accessKey = response.accessKey;
-            this.signature = response.signature;
-            this.skipAuth = response.skipAuth;
-            this.timestamp = response.timestamp;
+        private Builder(GetHDMLastAliyunResourceSyncResultRequest request) {
+            super(request);
+            this.uid = request.uid;
+            this.userId = request.userId;
+            this.context = request.context;
+            this.accessKey = request.accessKey;
+            this.signature = request.signature;
+            this.skipAuth = request.skipAuth;
+            this.timestamp = request.timestamp;
         } 
 
         /**

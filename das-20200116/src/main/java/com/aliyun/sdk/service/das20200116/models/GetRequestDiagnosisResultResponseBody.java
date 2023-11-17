@@ -86,7 +86,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -278,7 +285,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * accountId.
+             * The user ID.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -286,7 +293,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * dbSchema.
+             * The name of the database.
              */
             public Builder dbSchema(String dbSchema) {
                 this.dbSchema = dbSchema;
@@ -294,7 +301,15 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * engine.
+             * The database engine. Valid values:
+             * <p>
+             * 
+             * *   **MySQL**
+             * *   **PostgreSQL**
+             * *   **SQLServer**
+             * *   **PolarDBMySQL**
+             * *   **PolarDBOracle**
+             * *   **MongoDB**
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -302,7 +317,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * The time when the SQL diagnostics task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -310,7 +325,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -318,7 +333,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * messageId.
+             * The unique ID of the diagnostics task.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -326,7 +341,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * param.
+             * The additional information.
              */
             public Builder param(String param) {
                 this.param = param;
@@ -334,7 +349,53 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * The result of the SQL diagnostics task. The result includes the following information:
+             * <p>
+             * 
+             * *   **endTime**: the end time of the SQL diagnostics task.
+             * 
+             * *   **errorCode**: the error code.
+             * 
+             *     *   **0001**: The SQL diagnostics task is complete.
+             *     *   **0003**: The SQL diagnostics task failed.
+             * 
+             * *   **errorMessage**: the error message.
+             * 
+             * *   **estimateCost**: the estimated cost.
+             * 
+             *     *   **cpu**: the estimated CPU utilization of the index.
+             *     *   **io**: the estimated I/O usage of the index.
+             *     *   **rows**: the estimated values of the rows returned for the index.
+             * 
+             * *   **improvement**: the performance improvement ratio.
+             * 
+             * *   **indexAdvices**: the index recommendations, which include the following information:
+             * 
+             *     *   **columns**: the index columns.
+             *     *   **ddlAddIndex**: the DDL statement for the index.
+             *     *   **indexName**: the name of the index.
+             *     *   **schemaName**: the name of the database.
+             *     *   **tableName**: the name of the table.
+             *     *   **unique**: indicates whether the index is unique.
+             * 
+             * *   **ip**: the IP address of the instance.
+             * 
+             * *   **messageId**: the ID of the diagnostics task.
+             * 
+             * *   **port**: the port used to connect to the instance.
+             * 
+             * *   **sqlTag**: the SQL tag.
+             * 
+             * *   **startTime**: the start time of the SQL diagnostics task.
+             * 
+             * *   **success**: indicates whether the request was successful.
+             * 
+             * *   **support**: indicates whether the SQL statement can be diagnosed. Valid values:
+             * 
+             *     *   **true**
+             *     *   **false**
+             * 
+             * *   **tuningAdvices** : the SQL rewrite suggestions.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -342,7 +403,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * sqlId.
+             * The SQL template ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -350,7 +411,14 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The state of the diagnostics task. Valid values:
+             * <p>
+             * 
+             * *   **0**: The diagnostics task is in progress.
+             * *   **1**: A diagnostics error occurred.
+             * *   **2**: The diagnostics task is complete.
+             * *   **3**: An SQL error occurred.
+             * *   **4**: An engine error occurred.
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -358,7 +426,7 @@ public class GetRequestDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * uuid.
+             * The unique ID of the diagnostics instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

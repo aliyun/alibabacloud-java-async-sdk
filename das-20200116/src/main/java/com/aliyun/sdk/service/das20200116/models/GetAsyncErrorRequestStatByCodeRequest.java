@@ -13,19 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAsyncErrorRequestStatByCodeRequest extends Request {
     @Query
-    @NameInMap("ConsoleContext")
-    private String consoleContext;
-
-    @Query
     @NameInMap("DbName")
     private String dbName;
 
     @Query
     @NameInMap("End")
-    private String end;
+    private Long end;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -33,21 +30,15 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
     private String nodeId;
 
     @Query
-    @NameInMap("Role")
-    private String role;
-
-    @Query
     @NameInMap("Start")
-    private String start;
+    private Long start;
 
     private GetAsyncErrorRequestStatByCodeRequest(Builder builder) {
         super(builder);
-        this.consoleContext = builder.consoleContext;
         this.dbName = builder.dbName;
         this.end = builder.end;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
-        this.role = builder.role;
         this.start = builder.start;
     }
 
@@ -65,13 +56,6 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
     }
 
     /**
-     * @return consoleContext
-     */
-    public String getConsoleContext() {
-        return this.consoleContext;
-    }
-
-    /**
      * @return dbName
      */
     public String getDbName() {
@@ -81,7 +65,7 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
     /**
      * @return end
      */
-    public String getEnd() {
+    public Long getEnd() {
         return this.end;
     }
 
@@ -100,54 +84,34 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
     }
 
     /**
-     * @return role
-     */
-    public String getRole() {
-        return this.role;
-    }
-
-    /**
      * @return start
      */
-    public String getStart() {
+    public Long getStart() {
         return this.start;
     }
 
     public static final class Builder extends Request.Builder<GetAsyncErrorRequestStatByCodeRequest, Builder> {
-        private String consoleContext; 
         private String dbName; 
-        private String end; 
+        private Long end; 
         private String instanceId; 
         private String nodeId; 
-        private String role; 
-        private String start; 
+        private Long start; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAsyncErrorRequestStatByCodeRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.dbName = response.dbName;
-            this.end = response.end;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.role = response.role;
-            this.start = response.start;
+        private Builder(GetAsyncErrorRequestStatByCodeRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.end = request.end;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.start = request.start;
         } 
 
         /**
-         * ConsoleContext.
-         */
-        public Builder consoleContext(String consoleContext) {
-            this.putQueryParameter("ConsoleContext", consoleContext);
-            this.consoleContext = consoleContext;
-            return this;
-        }
-
-        /**
-         * DbName.
+         * The name of a database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -156,16 +120,19 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
          */
-        public Builder end(String end) {
+        public Builder end(Long end) {
             this.putQueryParameter("End", end);
             this.end = end;
             return this;
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +141,10 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  This parameter must be specified for PolarDB for MySQL clusters.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -183,18 +153,12 @@ public class GetAsyncErrorRequestStatByCodeRequest extends Request {
         }
 
         /**
-         * Role.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The start time must be within the storage duration of the SQL Explorer feature of the database instance and can be up to 90 days earlier than the current time.
          */
-        public Builder role(String role) {
-            this.putQueryParameter("Role", role);
-            this.role = role;
-            return this;
-        }
-
-        /**
-         * Start.
-         */
-        public Builder start(String start) {
+        public Builder start(Long start) {
             this.putQueryParameter("Start", start);
             this.start = start;
             return this;

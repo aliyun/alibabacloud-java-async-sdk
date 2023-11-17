@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetRequestDiagnosisPageRequest extends Request {
     @Query
     @NameInMap("EndTime")
-    private String endTime;
+    @Validation(required = true)
+    private Long endTime;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -26,15 +28,18 @@ public class GetRequestDiagnosisPageRequest extends Request {
 
     @Query
     @NameInMap("PageNo")
-    private String pageNo;
+    @Validation(required = true)
+    private Integer pageNo;
 
     @Query
     @NameInMap("PageSize")
-    private String pageSize;
+    @Validation(required = true)
+    private Integer pageSize;
 
     @Query
     @NameInMap("StartTime")
-    private String startTime;
+    @Validation(required = true)
+    private Long startTime;
 
     private GetRequestDiagnosisPageRequest(Builder builder) {
         super(builder);
@@ -62,7 +67,7 @@ public class GetRequestDiagnosisPageRequest extends Request {
     /**
      * @return endTime
      */
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
     }
 
@@ -83,57 +88,57 @@ public class GetRequestDiagnosisPageRequest extends Request {
     /**
      * @return pageNo
      */
-    public String getPageNo() {
+    public Integer getPageNo() {
         return this.pageNo;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
     /**
      * @return startTime
      */
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
     public static final class Builder extends Request.Builder<GetRequestDiagnosisPageRequest, Builder> {
-        private String endTime; 
+        private Long endTime; 
         private String instanceId; 
         private String nodeId; 
-        private String pageNo; 
-        private String pageSize; 
-        private String startTime; 
+        private Integer pageNo; 
+        private Integer pageSize; 
+        private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetRequestDiagnosisPageRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.nodeId = response.nodeId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(GetRequestDiagnosisPageRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.nodeId = request.nodeId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
-        public Builder endTime(String endTime) {
+        public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
             return this;
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -142,7 +147,10 @@ public class GetRequestDiagnosisPageRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -151,27 +159,27 @@ public class GetRequestDiagnosisPageRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be a positive integer. Default value: 1.
          */
-        public Builder pageNo(String pageNo) {
+        public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
             this.pageNo = pageNo;
             return this;
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The value must be a positive integer. Default value: 10.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
-        public Builder startTime(String startTime) {
+        public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
             return this;

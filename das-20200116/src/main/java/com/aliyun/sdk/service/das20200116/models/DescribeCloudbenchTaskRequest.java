@@ -49,13 +49,13 @@ public class DescribeCloudbenchTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCloudbenchTaskRequest response) {
-            super(response);
-            this.taskId = response.taskId;
+        private Builder(DescribeCloudbenchTaskRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**
-         * TaskId.
+         * The ID of the stress testing task. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

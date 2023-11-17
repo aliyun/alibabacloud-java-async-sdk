@@ -86,7 +86,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the hot keys.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -206,7 +213,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Db.
+             * The database in which the key is stored.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -214,7 +221,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Hot.
+             * The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -222,7 +229,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +237,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * The type of the key.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -238,7 +245,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of elements in the key.
              */
             public Builder size(Long size) {
                 this.size = size;

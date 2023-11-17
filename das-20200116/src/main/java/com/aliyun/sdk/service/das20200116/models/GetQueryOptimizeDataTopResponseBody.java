@@ -86,7 +86,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -190,7 +194,11 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The metric name. Valid values:
+             * <p>
+             * 
+             * * **sqlExecuteCount**: the number of slow SQL executions.
+             * * **optimizedSqlExecuteCount**: the number of slow SQL executions that need to be optimized.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -198,7 +206,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value.
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -287,7 +295,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -295,7 +303,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The information about the instances.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -303,7 +311,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The reserved parameter.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -311,7 +319,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -319,7 +327,7 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

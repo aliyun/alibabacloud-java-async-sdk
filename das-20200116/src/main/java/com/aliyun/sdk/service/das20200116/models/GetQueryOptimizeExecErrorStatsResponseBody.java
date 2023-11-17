@@ -86,7 +86,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             private String sqlText; 
 
             /**
-             * Dbname.
+             * The name of the database.
              */
             public Builder dbname(String dbname) {
                 this.dbname = dbname;
@@ -238,7 +242,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code returned if the request failed.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,7 +250,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * The number of errors.
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -254,7 +258,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -262,7 +266,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The alias of the database instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -270,7 +274,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * The SQL template ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -278,7 +282,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlText.
+             * The content of the SQL template.
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -367,7 +371,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Extra.
+             * The reserved parameter.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -375,7 +379,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The information about the SQL templates that failed to execute.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -383,7 +387,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNo.
+             * The page number.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -391,7 +395,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +403,7 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

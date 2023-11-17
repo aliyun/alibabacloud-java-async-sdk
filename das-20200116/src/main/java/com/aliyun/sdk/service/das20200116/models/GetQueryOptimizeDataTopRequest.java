@@ -22,6 +22,10 @@ public class GetQueryOptimizeDataTopRequest extends Request {
     private String instanceIds;
 
     @Query
+    @NameInMap("Region")
+    private String region;
+
+    @Query
     @NameInMap("TagNames")
     private String tagNames;
 
@@ -39,6 +43,7 @@ public class GetQueryOptimizeDataTopRequest extends Request {
         super(builder);
         this.engine = builder.engine;
         this.instanceIds = builder.instanceIds;
+        this.region = builder.region;
         this.tagNames = builder.tagNames;
         this.time = builder.time;
         this.type = builder.type;
@@ -72,6 +77,13 @@ public class GetQueryOptimizeDataTopRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return tagNames
      */
     public String getTagNames() {
@@ -95,6 +107,7 @@ public class GetQueryOptimizeDataTopRequest extends Request {
     public static final class Builder extends Request.Builder<GetQueryOptimizeDataTopRequest, Builder> {
         private String engine; 
         private String instanceIds; 
+        private String region; 
         private String tagNames; 
         private String time; 
         private String type; 
@@ -103,17 +116,23 @@ public class GetQueryOptimizeDataTopRequest extends Request {
             super();
         } 
 
-        private Builder(GetQueryOptimizeDataTopRequest response) {
-            super(response);
-            this.engine = response.engine;
-            this.instanceIds = response.instanceIds;
-            this.tagNames = response.tagNames;
-            this.time = response.time;
-            this.type = response.type;
+        private Builder(GetQueryOptimizeDataTopRequest request) {
+            super(request);
+            this.engine = request.engine;
+            this.instanceIds = request.instanceIds;
+            this.region = request.region;
+            this.tagNames = request.tagNames;
+            this.time = request.time;
+            this.type = request.type;
         } 
 
         /**
-         * Engine.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **PolarDBMySQL**
+         * *   **PostgreSQL**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -122,7 +141,7 @@ public class GetQueryOptimizeDataTopRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs. Separate multiple IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -131,7 +150,25 @@ public class GetQueryOptimizeDataTopRequest extends Request {
         }
 
         /**
-         * TagNames.
+         * The region in which the instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-china**: Chinese mainland
+         * *   **cn-hongkong**: China (Hong Kong)
+         * *   **ap-southeast-1**: Singapore
+         * 
+         * This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****
+         * 
+         * >  Set this parameter to **cn-china** for all your instances that reside in the regions in the Chinese mainland.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * The reserved parameter.
          */
         public Builder tagNames(String tagNames) {
             this.putQueryParameter("TagNames", tagNames);
@@ -140,7 +177,7 @@ public class GetQueryOptimizeDataTopRequest extends Request {
         }
 
         /**
-         * Time.
+         * The time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);
@@ -149,7 +186,11 @@ public class GetQueryOptimizeDataTopRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of instances that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **RED**: the best-performing instances
+         * *   **BLACK**: the worst-performing instances
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

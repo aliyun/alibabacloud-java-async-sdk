@@ -22,6 +22,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
 
     @Query
     @NameInMap("End")
+    @Validation(required = true)
     private Long end;
 
     @Query
@@ -47,10 +48,12 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
 
     @Query
     @NameInMap("PageNo")
+    @Validation(required = true)
     private Integer pageNo;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(required = true)
     private Integer pageSize;
 
     @Query
@@ -67,6 +70,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
 
     @Query
     @NameInMap("Start")
+    @Validation(required = true)
     private Long start;
 
     @Query
@@ -231,27 +235,27 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
             super();
         } 
 
-        private Builder(GetFullRequestStatResultByInstanceIdRequest response) {
-            super(response);
-            this.asc = response.asc;
-            this.dbName = response.dbName;
-            this.end = response.end;
-            this.instanceId = response.instanceId;
-            this.keyword = response.keyword;
-            this.nodeId = response.nodeId;
-            this.orderBy = response.orderBy;
-            this.originHost = response.originHost;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.role = response.role;
-            this.sqlId = response.sqlId;
-            this.sqlType = response.sqlType;
-            this.start = response.start;
-            this.userId = response.userId;
+        private Builder(GetFullRequestStatResultByInstanceIdRequest request) {
+            super(request);
+            this.asc = request.asc;
+            this.dbName = request.dbName;
+            this.end = request.end;
+            this.instanceId = request.instanceId;
+            this.keyword = request.keyword;
+            this.nodeId = request.nodeId;
+            this.orderBy = request.orderBy;
+            this.originHost = request.originHost;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.role = request.role;
+            this.sqlId = request.sqlId;
+            this.sqlType = request.sqlType;
+            this.start = request.start;
+            this.userId = request.userId;
         } 
 
         /**
-         * Asc.
+         * Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.
          */
         public Builder asc(Boolean asc) {
             this.putQueryParameter("Asc", asc);
@@ -260,7 +264,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -269,7 +273,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * End.
+         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval cannot exceed one day.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -278,7 +285,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -287,7 +294,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keywords that are used for query.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -296,7 +303,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -305,7 +315,15 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field by which to sort the returned entries. Default value: **count**. Valid values:
+         * <p>
+         * 
+         * *   **count**: the number of executions.
+         * *   **avgRt**: the average execution duration.
+         * *   **rtRate**: the execution duration percentage.
+         * *   **rowsExamined**: the total number of scanned rows.
+         * *   **avgRowsExamined**: the average number of scanned rows.
+         * *   **avgRowsReturned**: the average number of returned rows.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -314,7 +332,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * OriginHost.
+         * The IP address of the client that executes the SQL statement.
+         * <p>
+         * 
+         * >  This parameter is optional. If this parameter is specified, the full request statistics of the specified IP address are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.
          */
         public Builder originHost(String originHost) {
             this.putQueryParameter("OriginHost", originHost);
@@ -323,7 +344,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -332,7 +353,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -341,7 +362,11 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role of the PolarDB-X 2.0 node. Valid values:
+         * <p>
+         * 
+         * *   **polarx_cn**: compute node
+         * *   **polarx_en**: data node
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -350,7 +375,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * SqlId.
+         * The SQL ID.
+         * <p>
+         * 
+         * >  If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);
@@ -359,7 +387,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * The type of the SQL statement. Valid values: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **LOGIN**, **LOGOUT**, **MERGE**, **ALTER**, **CREATEINDEX**, **DROPINDEX**, **CREATE**, **DROP**, **SET**, **DESC**, **REPLACE**, **CALL**, **BEGIN**, **DESCRIBE**, **ROLLBACK**, **FLUSH**, **USE**, **SHOW**, **START**, **COMMIT**, and **RENAME**.
+         * <p>
+         * 
+         * >  If your database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -368,7 +399,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * Start.
+         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  The start time can be up to 90 days earlier than the current time.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);
@@ -377,7 +411,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account that was used to create the database instance.
+         * <p>
+         * 
+         * >  This parameter is optional. The system can automatically obtain the Alibaba Cloud account ID based on the value of InstanceId when you call the GetFullRequestOriginStatByInstanceId operation.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

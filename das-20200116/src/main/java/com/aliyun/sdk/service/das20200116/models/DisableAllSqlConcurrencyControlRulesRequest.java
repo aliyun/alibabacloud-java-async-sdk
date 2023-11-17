@@ -62,14 +62,14 @@ public class DisableAllSqlConcurrencyControlRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DisableAllSqlConcurrencyControlRulesRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
+        private Builder(DisableAllSqlConcurrencyControlRulesRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -78,7 +78,10 @@ public class DisableAllSqlConcurrencyControlRulesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

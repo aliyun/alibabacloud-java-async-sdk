@@ -86,7 +86,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed information, including the error codes and the number of entries that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -218,7 +225,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreateTime.
+             * The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +233,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download the file.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -234,7 +241,10 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>
+             * 
+             * >  The file expires three days after the task is created.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -242,7 +252,13 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is being initialized.
+             * *   **RUNNING**: The task is running.
+             * *   **FINISH**: The task is complete.
+             * *   **FAILED**: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +266,12 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * The status code of the task. Valid values:
+             * <p>
+             * 
+             * *   **NO_DATA**: No data is returned.
+             * *   **INTERNAL_ERROR**: An internal error occurred.
+             * *   **SUCCESS**: The task is successful.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -258,7 +279,7 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

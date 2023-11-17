@@ -49,13 +49,13 @@ public class RunCloudBenchTaskRequest extends Request {
             super();
         } 
 
-        private Builder(RunCloudBenchTaskRequest response) {
-            super(response);
-            this.taskId = response.taskId;
+        private Builder(RunCloudBenchTaskRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**
-         * TaskId.
+         * The stress testing task ID. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

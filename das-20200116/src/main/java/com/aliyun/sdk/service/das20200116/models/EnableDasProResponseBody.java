@@ -98,7 +98,7 @@ public class EnableDasProResponseBody extends TeaModel {
         private String synchro; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The reserved parameter.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +133,11 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -138,7 +145,7 @@ public class EnableDasProResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * The reserved parameter.
          */
         public Builder synchro(String synchro) {
             this.synchro = synchro;

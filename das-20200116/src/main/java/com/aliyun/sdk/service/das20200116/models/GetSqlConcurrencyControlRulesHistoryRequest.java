@@ -88,16 +88,16 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(GetSqlConcurrencyControlRulesHistoryRequest response) {
-            super(response);
-            this.consoleContext = response.consoleContext;
-            this.instanceId = response.instanceId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(GetSqlConcurrencyControlRulesHistoryRequest request) {
+            super(request);
+            this.consoleContext = request.consoleContext;
+            this.instanceId = request.instanceId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * ConsoleContext.
+         * The reserved parameter.
          */
         public Builder consoleContext(String consoleContext) {
             this.putQueryParameter("ConsoleContext", consoleContext);
@@ -106,7 +106,10 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +118,7 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. The value must be an integer that is greater than 0. Default value: 1.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -124,7 +127,7 @@ public class GetSqlConcurrencyControlRulesHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
