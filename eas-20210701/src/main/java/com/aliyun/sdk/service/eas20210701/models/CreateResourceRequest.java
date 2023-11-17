@@ -29,24 +29,12 @@ public class CreateResourceRequest extends Request {
     private String ecsInstanceType;
 
     @Body
-    @NameInMap("ExternalClusterId")
-    private String externalClusterId;
-
-    @Body
-    @NameInMap("NodeMatchLabels")
-    private java.util.Map < String, String > nodeMatchLabels;
-
-    @Body
-    @NameInMap("NodeTolerations")
-    private java.util.List < NodeTolerations> nodeTolerations;
-
-    @Body
     @NameInMap("ResourceType")
     private String resourceType;
 
     @Body
-    @NameInMap("RoleName")
-    private String roleName;
+    @NameInMap("SelfManagedResourceOptions")
+    private SelfManagedResourceOptions selfManagedResourceOptions;
 
     @Body
     @NameInMap("SystemDiskSize")
@@ -63,11 +51,8 @@ public class CreateResourceRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
-        this.externalClusterId = builder.externalClusterId;
-        this.nodeMatchLabels = builder.nodeMatchLabels;
-        this.nodeTolerations = builder.nodeTolerations;
         this.resourceType = builder.resourceType;
-        this.roleName = builder.roleName;
+        this.selfManagedResourceOptions = builder.selfManagedResourceOptions;
         this.systemDiskSize = builder.systemDiskSize;
         this.zone = builder.zone;
     }
@@ -114,27 +99,6 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
-     * @return externalClusterId
-     */
-    public String getExternalClusterId() {
-        return this.externalClusterId;
-    }
-
-    /**
-     * @return nodeMatchLabels
-     */
-    public java.util.Map < String, String > getNodeMatchLabels() {
-        return this.nodeMatchLabels;
-    }
-
-    /**
-     * @return nodeTolerations
-     */
-    public java.util.List < NodeTolerations> getNodeTolerations() {
-        return this.nodeTolerations;
-    }
-
-    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -142,10 +106,10 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
-     * @return roleName
+     * @return selfManagedResourceOptions
      */
-    public String getRoleName() {
-        return this.roleName;
+    public SelfManagedResourceOptions getSelfManagedResourceOptions() {
+        return this.selfManagedResourceOptions;
     }
 
     /**
@@ -167,11 +131,8 @@ public class CreateResourceRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
-        private String externalClusterId; 
-        private java.util.Map < String, String > nodeMatchLabels; 
-        private java.util.List < NodeTolerations> nodeTolerations; 
         private String resourceType; 
-        private String roleName; 
+        private SelfManagedResourceOptions selfManagedResourceOptions; 
         private Integer systemDiskSize; 
         private String zone; 
 
@@ -185,11 +146,8 @@ public class CreateResourceRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
-            this.externalClusterId = request.externalClusterId;
-            this.nodeMatchLabels = request.nodeMatchLabels;
-            this.nodeTolerations = request.nodeTolerations;
             this.resourceType = request.resourceType;
-            this.roleName = request.roleName;
+            this.selfManagedResourceOptions = request.selfManagedResourceOptions;
             this.systemDiskSize = request.systemDiskSize;
             this.zone = request.zone;
         } 
@@ -231,33 +189,6 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ExternalClusterId.
-         */
-        public Builder externalClusterId(String externalClusterId) {
-            this.putBodyParameter("ExternalClusterId", externalClusterId);
-            this.externalClusterId = externalClusterId;
-            return this;
-        }
-
-        /**
-         * NodeMatchLabels.
-         */
-        public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
-            this.putBodyParameter("NodeMatchLabels", nodeMatchLabels);
-            this.nodeMatchLabels = nodeMatchLabels;
-            return this;
-        }
-
-        /**
-         * NodeTolerations.
-         */
-        public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
-            this.putBodyParameter("NodeTolerations", nodeTolerations);
-            this.nodeTolerations = nodeTolerations;
-            return this;
-        }
-
-        /**
          * ResourceType.
          */
         public Builder resourceType(String resourceType) {
@@ -267,11 +198,11 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * SelfManagedResourceOptions.
          */
-        public Builder roleName(String roleName) {
-            this.putBodyParameter("RoleName", roleName);
-            this.roleName = roleName;
+        public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
+            this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
+            this.selfManagedResourceOptions = selfManagedResourceOptions;
             return this;
         }
 
@@ -396,6 +327,107 @@ public class CreateResourceRequest extends Request {
 
             public NodeTolerations build() {
                 return new NodeTolerations(this);
+            } 
+
+        } 
+
+    }
+    public static class SelfManagedResourceOptions extends TeaModel {
+        @NameInMap("ExternalClusterId")
+        private String externalClusterId;
+
+        @NameInMap("NodeMatchLabels")
+        private java.util.Map < String, String > nodeMatchLabels;
+
+        @NameInMap("NodeTolerations")
+        private java.util.List < NodeTolerations> nodeTolerations;
+
+        @NameInMap("RoleName")
+        private String roleName;
+
+        private SelfManagedResourceOptions(Builder builder) {
+            this.externalClusterId = builder.externalClusterId;
+            this.nodeMatchLabels = builder.nodeMatchLabels;
+            this.nodeTolerations = builder.nodeTolerations;
+            this.roleName = builder.roleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SelfManagedResourceOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return externalClusterId
+         */
+        public String getExternalClusterId() {
+            return this.externalClusterId;
+        }
+
+        /**
+         * @return nodeMatchLabels
+         */
+        public java.util.Map < String, String > getNodeMatchLabels() {
+            return this.nodeMatchLabels;
+        }
+
+        /**
+         * @return nodeTolerations
+         */
+        public java.util.List < NodeTolerations> getNodeTolerations() {
+            return this.nodeTolerations;
+        }
+
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public static final class Builder {
+            private String externalClusterId; 
+            private java.util.Map < String, String > nodeMatchLabels; 
+            private java.util.List < NodeTolerations> nodeTolerations; 
+            private String roleName; 
+
+            /**
+             * ExternalClusterId.
+             */
+            public Builder externalClusterId(String externalClusterId) {
+                this.externalClusterId = externalClusterId;
+                return this;
+            }
+
+            /**
+             * NodeMatchLabels.
+             */
+            public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
+                this.nodeMatchLabels = nodeMatchLabels;
+                return this;
+            }
+
+            /**
+             * NodeTolerations.
+             */
+            public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
+                this.nodeTolerations = nodeTolerations;
+                return this;
+            }
+
+            /**
+             * RoleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            public SelfManagedResourceOptions build() {
+                return new SelfManagedResourceOptions(this);
             } 
 
         } 

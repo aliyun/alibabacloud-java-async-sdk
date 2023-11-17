@@ -33,6 +33,9 @@ public class Instance extends TeaModel {
     @NameInMap("IsSpot")
     private Boolean isSpot;
 
+    @NameInMap("Isolated")
+    private Boolean isolated;
+
     @NameInMap("LastState")
     private java.util.List < java.util.Map<String, ?>> lastState;
 
@@ -80,6 +83,7 @@ public class Instance extends TeaModel {
         this.instanceName = builder.instanceName;
         this.instancePort = builder.instancePort;
         this.isSpot = builder.isSpot;
+        this.isolated = builder.isolated;
         this.lastState = builder.lastState;
         this.namespace = builder.namespace;
         this.originalAmount = builder.originalAmount;
@@ -150,6 +154,13 @@ public class Instance extends TeaModel {
      */
     public Boolean getIsSpot() {
         return this.isSpot;
+    }
+
+    /**
+     * @return isolated
+     */
+    public Boolean getIsolated() {
+        return this.isolated;
     }
 
     /**
@@ -251,6 +262,7 @@ public class Instance extends TeaModel {
         private String instanceName; 
         private Integer instancePort; 
         private Boolean isSpot; 
+        private Boolean isolated; 
         private java.util.List < java.util.Map<String, ?>> lastState; 
         private String namespace; 
         private Float originalAmount; 
@@ -318,6 +330,14 @@ public class Instance extends TeaModel {
          */
         public Builder isSpot(Boolean isSpot) {
             this.isSpot = isSpot;
+            return this;
+        }
+
+        /**
+         * Isolated.
+         */
+        public Builder isolated(Boolean isolated) {
+            this.isolated = isolated;
             return this;
         }
 

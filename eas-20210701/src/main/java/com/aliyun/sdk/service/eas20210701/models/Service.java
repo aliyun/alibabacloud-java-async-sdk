@@ -15,6 +15,18 @@ public class Service extends TeaModel {
     @NameInMap("AccessToken")
     private String accessToken;
 
+    @NameInMap("AppConfig")
+    private String appConfig;
+
+    @NameInMap("AppSpecName")
+    private String appSpecName;
+
+    @NameInMap("AppType")
+    private String appType;
+
+    @NameInMap("AppVersion")
+    private String appVersion;
+
     @NameInMap("CallerUid")
     private String callerUid;
 
@@ -126,8 +138,15 @@ public class Service extends TeaModel {
     @NameInMap("Weight")
     private Integer weight;
 
+    @NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private Service(Builder builder) {
         this.accessToken = builder.accessToken;
+        this.appConfig = builder.appConfig;
+        this.appSpecName = builder.appSpecName;
+        this.appType = builder.appType;
+        this.appVersion = builder.appVersion;
         this.callerUid = builder.callerUid;
         this.cpu = builder.cpu;
         this.createTime = builder.createTime;
@@ -165,6 +184,7 @@ public class Service extends TeaModel {
         this.totalInstance = builder.totalInstance;
         this.updateTime = builder.updateTime;
         this.weight = builder.weight;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -180,6 +200,34 @@ public class Service extends TeaModel {
      */
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    /**
+     * @return appConfig
+     */
+    public String getAppConfig() {
+        return this.appConfig;
+    }
+
+    /**
+     * @return appSpecName
+     */
+    public String getAppSpecName() {
+        return this.appSpecName;
+    }
+
+    /**
+     * @return appType
+     */
+    public String getAppType() {
+        return this.appType;
+    }
+
+    /**
+     * @return appVersion
+     */
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     /**
@@ -441,8 +489,19 @@ public class Service extends TeaModel {
         return this.weight;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String accessToken; 
+        private String appConfig; 
+        private String appSpecName; 
+        private String appType; 
+        private String appVersion; 
         private String callerUid; 
         private Integer cpu; 
         private String createTime; 
@@ -480,12 +539,45 @@ public class Service extends TeaModel {
         private Integer totalInstance; 
         private String updateTime; 
         private Integer weight; 
+        private String workspaceId; 
 
         /**
          * AccessToken.
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
+            return this;
+        }
+
+        /**
+         * AppConfig.
+         */
+        public Builder appConfig(String appConfig) {
+            this.appConfig = appConfig;
+            return this;
+        }
+
+        /**
+         * AppSpecName.
+         */
+        public Builder appSpecName(String appSpecName) {
+            this.appSpecName = appSpecName;
+            return this;
+        }
+
+        /**
+         * AppType.
+         */
+        public Builder appType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+
+        /**
+         * AppVersion.
+         */
+        public Builder appVersion(String appVersion) {
+            this.appVersion = appVersion;
             return this;
         }
 
@@ -782,6 +874,14 @@ public class Service extends TeaModel {
          */
         public Builder weight(Integer weight) {
             this.weight = weight;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

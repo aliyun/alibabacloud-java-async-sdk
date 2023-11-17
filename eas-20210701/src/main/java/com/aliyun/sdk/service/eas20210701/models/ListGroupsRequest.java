@@ -24,11 +24,16 @@ public class ListGroupsRequest extends Request {
     @NameInMap("PageSize")
     private String pageSize;
 
+    @Query
+    @NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListGroupsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class ListGroupsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
         private String filter; 
         private String pageNumber; 
         private String pageSize; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class ListGroupsRequest extends Request {
             this.filter = request.filter;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class ListGroupsRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -64,6 +64,10 @@ public class ListServicesRequest extends Request {
     @NameInMap("Sort")
     private String sort;
 
+    @Query
+    @NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListServicesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
@@ -79,6 +83,7 @@ public class ListServicesRequest extends Request {
         this.serviceType = builder.serviceType;
         this.serviceUid = builder.serviceUid;
         this.sort = builder.sort;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -185,6 +190,13 @@ public class ListServicesRequest extends Request {
         return this.sort;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private String filter; 
         private String groupName; 
@@ -199,6 +211,7 @@ public class ListServicesRequest extends Request {
         private String serviceType; 
         private String serviceUid; 
         private String sort; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -219,6 +232,7 @@ public class ListServicesRequest extends Request {
             this.serviceType = request.serviceType;
             this.serviceUid = request.serviceUid;
             this.sort = request.sort;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -391,6 +405,15 @@ public class ListServicesRequest extends Request {
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
             this.sort = sort;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

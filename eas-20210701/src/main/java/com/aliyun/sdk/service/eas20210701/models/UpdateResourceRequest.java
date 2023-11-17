@@ -23,24 +23,19 @@ public class UpdateResourceRequest extends Request {
     private String resourceId;
 
     @Body
-    @NameInMap("NodeMatchLabels")
-    private java.util.Map < String, String > nodeMatchLabels;
-
-    @Body
-    @NameInMap("NodeTolerations")
-    private java.util.List < NodeTolerations> nodeTolerations;
-
-    @Body
     @NameInMap("ResourceName")
     private String resourceName;
+
+    @Body
+    @NameInMap("SelfManagedResourceOptions")
+    private SelfManagedResourceOptions selfManagedResourceOptions;
 
     private UpdateResourceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.resourceId = builder.resourceId;
-        this.nodeMatchLabels = builder.nodeMatchLabels;
-        this.nodeTolerations = builder.nodeTolerations;
         this.resourceName = builder.resourceName;
+        this.selfManagedResourceOptions = builder.selfManagedResourceOptions;
     }
 
     public static Builder builder() {
@@ -71,32 +66,24 @@ public class UpdateResourceRequest extends Request {
     }
 
     /**
-     * @return nodeMatchLabels
-     */
-    public java.util.Map < String, String > getNodeMatchLabels() {
-        return this.nodeMatchLabels;
-    }
-
-    /**
-     * @return nodeTolerations
-     */
-    public java.util.List < NodeTolerations> getNodeTolerations() {
-        return this.nodeTolerations;
-    }
-
-    /**
      * @return resourceName
      */
     public String getResourceName() {
         return this.resourceName;
     }
 
+    /**
+     * @return selfManagedResourceOptions
+     */
+    public SelfManagedResourceOptions getSelfManagedResourceOptions() {
+        return this.selfManagedResourceOptions;
+    }
+
     public static final class Builder extends Request.Builder<UpdateResourceRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
-        private java.util.Map < String, String > nodeMatchLabels; 
-        private java.util.List < NodeTolerations> nodeTolerations; 
         private String resourceName; 
+        private SelfManagedResourceOptions selfManagedResourceOptions; 
 
         private Builder() {
             super();
@@ -106,9 +93,8 @@ public class UpdateResourceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.resourceId = request.resourceId;
-            this.nodeMatchLabels = request.nodeMatchLabels;
-            this.nodeTolerations = request.nodeTolerations;
             this.resourceName = request.resourceName;
+            this.selfManagedResourceOptions = request.selfManagedResourceOptions;
         } 
 
         /**
@@ -130,29 +116,20 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * NodeMatchLabels.
-         */
-        public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
-            this.putBodyParameter("NodeMatchLabels", nodeMatchLabels);
-            this.nodeMatchLabels = nodeMatchLabels;
-            return this;
-        }
-
-        /**
-         * NodeTolerations.
-         */
-        public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
-            this.putBodyParameter("NodeTolerations", nodeTolerations);
-            this.nodeTolerations = nodeTolerations;
-            return this;
-        }
-
-        /**
          * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * SelfManagedResourceOptions.
+         */
+        public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
+            this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
+            this.selfManagedResourceOptions = selfManagedResourceOptions;
             return this;
         }
 
@@ -259,6 +236,67 @@ public class UpdateResourceRequest extends Request {
 
             public NodeTolerations build() {
                 return new NodeTolerations(this);
+            } 
+
+        } 
+
+    }
+    public static class SelfManagedResourceOptions extends TeaModel {
+        @NameInMap("NodeMatchLabels")
+        private java.util.Map < String, String > nodeMatchLabels;
+
+        @NameInMap("NodeTolerations")
+        private java.util.List < NodeTolerations> nodeTolerations;
+
+        private SelfManagedResourceOptions(Builder builder) {
+            this.nodeMatchLabels = builder.nodeMatchLabels;
+            this.nodeTolerations = builder.nodeTolerations;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SelfManagedResourceOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nodeMatchLabels
+         */
+        public java.util.Map < String, String > getNodeMatchLabels() {
+            return this.nodeMatchLabels;
+        }
+
+        /**
+         * @return nodeTolerations
+         */
+        public java.util.List < NodeTolerations> getNodeTolerations() {
+            return this.nodeTolerations;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > nodeMatchLabels; 
+            private java.util.List < NodeTolerations> nodeTolerations; 
+
+            /**
+             * NodeMatchLabels.
+             */
+            public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
+                this.nodeMatchLabels = nodeMatchLabels;
+                return this;
+            }
+
+            /**
+             * NodeTolerations.
+             */
+            public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
+                this.nodeTolerations = nodeTolerations;
+                return this;
+            }
+
+            public SelfManagedResourceOptions build() {
+                return new SelfManagedResourceOptions(this);
             } 
 
         } 

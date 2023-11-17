@@ -20,7 +20,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CommitServiceResponse> commitService(CommitServiceRequest request);
 
+    CompletableFuture<CreateAppServiceResponse> createAppService(CreateAppServiceRequest request);
+
     CompletableFuture<CreateBenchmarkTaskResponse> createBenchmarkTask(CreateBenchmarkTaskRequest request);
+
+    CompletableFuture<CreateGatewayResponse> createGateway(CreateGatewayRequest request);
+
+    CompletableFuture<CreateGatewayIntranetLinkedVpcResponse> createGatewayIntranetLinkedVpc(CreateGatewayIntranetLinkedVpcRequest request);
 
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
@@ -37,6 +43,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceMirrorResponse> createServiceMirror(CreateServiceMirrorRequest request);
 
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
+
+    CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    CompletableFuture<DeleteGatewayIntranetLinkedVpcResponse> deleteGatewayIntranetLinkedVpc(DeleteGatewayIntranetLinkedVpcRequest request);
 
     CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
 
@@ -61,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBenchmarkTaskResponse> describeBenchmarkTask(DescribeBenchmarkTaskRequest request);
 
     CompletableFuture<DescribeBenchmarkTaskReportResponse> describeBenchmarkTaskReport(DescribeBenchmarkTaskReportRequest request);
+
+    CompletableFuture<DescribeGatewayResponse> describeGateway(DescribeGatewayRequest request);
 
     CompletableFuture<DescribeGroupResponse> describeGroup(DescribeGroupRequest request);
 
@@ -89,6 +101,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DevelopServiceResponse> developService(DevelopServiceRequest request);
 
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
+
+    CompletableFuture<ListGatewayIntranetLinkedVpcResponse> listGatewayIntranetLinkedVpc(ListGatewayIntranetLinkedVpcRequest request);
 
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
@@ -120,7 +134,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopServiceResponse> stopService(StopServiceRequest request);
 
+    CompletableFuture<UpdateAppServiceResponse> updateAppService(UpdateAppServiceRequest request);
+
     CompletableFuture<UpdateBenchmarkTaskResponse> updateBenchmarkTask(UpdateBenchmarkTaskRequest request);
+
+    CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
 
     CompletableFuture<UpdateResourceResponse> updateResource(UpdateResourceRequest request);
 
@@ -133,6 +151,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceAutoScalerResponse> updateServiceAutoScaler(UpdateServiceAutoScalerRequest request);
 
     CompletableFuture<UpdateServiceCronScalerResponse> updateServiceCronScaler(UpdateServiceCronScalerRequest request);
+
+    CompletableFuture<UpdateServiceInstanceResponse> updateServiceInstance(UpdateServiceInstanceRequest request);
 
     CompletableFuture<UpdateServiceLabelResponse> updateServiceLabel(UpdateServiceLabelRequest request);
 
