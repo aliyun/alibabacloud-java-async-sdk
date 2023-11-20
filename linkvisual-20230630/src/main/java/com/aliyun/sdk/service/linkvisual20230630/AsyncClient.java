@@ -58,6 +58,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryBatchStatusResponse> queryBatchStatus(QueryBatchStatusRequest request);
 
+    CompletableFuture<QueryDeviceDetailResponse> queryDeviceDetail(QueryDeviceDetailRequest request);
+
     CompletableFuture<QueryDevicesDownloadUrlResponse> queryDevicesDownloadUrl(QueryDevicesDownloadUrlRequest request);
 
     CompletableFuture<QueryFreeStorageResponse> queryFreeStorage(QueryFreeStorageRequest request);
