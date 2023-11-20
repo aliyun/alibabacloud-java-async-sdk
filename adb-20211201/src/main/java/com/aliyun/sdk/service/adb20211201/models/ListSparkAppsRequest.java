@@ -99,7 +99,7 @@ public class ListSparkAppsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -108,7 +108,7 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -117,7 +117,12 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Valid values:
+         * <p>
+         * 
+         * - **10**
+         * - **50**
+         * - **100**
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,7 +131,7 @@ public class ListSparkAppsRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * The name of the job resource group.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

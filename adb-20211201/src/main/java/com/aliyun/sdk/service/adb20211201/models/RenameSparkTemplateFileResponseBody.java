@@ -50,7 +50,7 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class RenameSparkTemplateFileResponseBody extends TeaModel {
             private Boolean succeeded; 
 
             /**
-             * Succeeded.
+             * Indicates whether the request was successful. Valid values:
+             * <p>
+             * 
+             * *   True
+             * *   False
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

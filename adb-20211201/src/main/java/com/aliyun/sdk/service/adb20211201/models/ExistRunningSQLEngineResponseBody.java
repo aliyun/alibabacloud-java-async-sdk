@@ -50,7 +50,13 @@ public class ExistRunningSQLEngineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether a running SQL engine exists in the resource group.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **True**
+         * *   **False**
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +64,7 @@ public class ExistRunningSQLEngineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -155,10 +155,10 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+         * The amount of reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
          * <p>
          * 
-         * >  You must specify a value with the unit for this parameter.
+         * >  This parameter must be specified with a unit.
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -168,6 +168,9 @@ public class ModifyDBClusterRequest extends Request {
 
         /**
          * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,7 +179,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * EnableDefaultResourcePool.
+         * Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
+         * <p>
+         * 
+         * *   true (default)
+         * *   false
          */
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
@@ -224,10 +231,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * The reserved storage resources. Unit: AnalyticDB Compute Units (ACUs). Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
+         * The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
          * <p>
          * 
-         * >  You must specify a value with the unit for this parameter.
+         * >  This parameter must be specified with a unit.
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);

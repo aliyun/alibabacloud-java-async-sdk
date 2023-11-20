@@ -70,7 +70,10 @@ public class ExistRunningSQLEngineRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -79,7 +82,10 @@ public class ExistRunningSQLEngineRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * The name of the resource group.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of the resource group for a cluster.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putBodyParameter("ResourceGroupName", resourceGroupName);
