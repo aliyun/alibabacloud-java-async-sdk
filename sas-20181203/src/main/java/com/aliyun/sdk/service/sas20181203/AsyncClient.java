@@ -1059,6 +1059,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCheckStandardResponse> listCheckStandard(ListCheckStandardRequest request);
 
+    CompletableFuture<ListCheckTypesResponse> listCheckTypes(ListCheckTypesRequest request);
+
     CompletableFuture<ListClientAlertModeResponse> listClientAlertMode(ListClientAlertModeRequest request);
 
     CompletableFuture<ListClientUserDefineRuleTypesResponse> listClientUserDefineRuleTypes(ListClientUserDefineRuleTypesRequest request);
@@ -1511,6 +1513,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateJenkinsImageRegistryNameResponse> updateJenkinsImageRegistryName(UpdateJenkinsImageRegistryNameRequest request);
 
     CompletableFuture<UpdateJenkinsImageRegistryPersistenceDayResponse> updateJenkinsImageRegistryPersistenceDay(UpdateJenkinsImageRegistryPersistenceDayRequest request);
+
+    CompletableFuture<UpdateOpaStrategyNewResponse> updateOpaStrategyNew(UpdateOpaStrategyNewRequest request);
 
     CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request);
 
