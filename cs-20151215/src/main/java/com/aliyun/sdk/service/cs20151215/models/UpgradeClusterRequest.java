@@ -131,11 +131,11 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to upgrade only master nodes. Valid values:
+         * Specifies whether to update only master nodes. Valid values:
          * <p>
          * 
-         * *   true: upgrade only master nodes.
-         * *   false: upgrade master and worker nodes.
+         * *   true: update only master nodes.
+         * *   false: update master and worker nodes.
          */
         public Builder masterOnly(Boolean masterOnly) {
             this.putBodyParameter("master_only", masterOnly);
@@ -144,7 +144,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version to which the cluster can be upgraded.
+         * The Kubernetes version to which the cluster can be updated.
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);

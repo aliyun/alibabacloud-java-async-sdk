@@ -177,7 +177,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private String instanceId; 
 
             /**
-             * 依赖资源的集群ID。
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -185,7 +185,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 依赖资源类型。
+             * resource_type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -193,7 +193,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 依赖资源实例ID。
+             * instance_id.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -230,7 +230,7 @@ public class DescribeClusterResourcesResponse extends Response {
         private Long autoCreate;
 
         @NameInMap("dependencies")
-        private Dependencies dependencies;
+        private java.util.List < Dependencies> dependencies;
 
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -303,7 +303,7 @@ public class DescribeClusterResourcesResponse extends Response {
         /**
          * @return dependencies
          */
-        public Dependencies getDependencies() {
+        public java.util.List < Dependencies> getDependencies() {
             return this.dependencies;
         }
 
@@ -315,7 +315,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceType; 
             private String state; 
             private Long autoCreate; 
-            private Dependencies dependencies; 
+            private java.util.List < Dependencies> dependencies; 
 
             /**
              * The ID of the cluster.
@@ -390,7 +390,7 @@ public class DescribeClusterResourcesResponse extends Response {
             /**
              * dependencies.
              */
-            public Builder dependencies(Dependencies dependencies) {
+            public Builder dependencies(java.util.List < Dependencies> dependencies) {
                 this.dependencies = dependencies;
                 return this;
             }

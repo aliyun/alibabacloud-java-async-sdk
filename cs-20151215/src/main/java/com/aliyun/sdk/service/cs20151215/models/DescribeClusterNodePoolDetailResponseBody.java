@@ -777,7 +777,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Boolean restartNode; 
 
             /**
-             * restart_node.
+             * 是否允许重启节点。
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -818,7 +818,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Boolean autoUpgradeKubelet; 
 
             /**
-             * auto_upgrade_kubelet.
+             * 是否允许自动升级kubelet。
              */
             public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
                 this.autoUpgradeKubelet = autoUpgradeKubelet;
@@ -871,7 +871,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String vulLevel; 
 
             /**
-             * restart_node.
+             * 是否允许重启节点。
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -879,7 +879,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * vul_level.
+             * 允许自动修复的漏洞级别，以逗号分隔。
              */
             public Builder vulLevel(String vulLevel) {
                 this.vulLevel = vulLevel;
@@ -1124,7 +1124,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * auto_repair_policy.
+             * 自动修复节点策略。
              */
             public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
                 this.autoRepairPolicy = autoRepairPolicy;
@@ -1132,11 +1132,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether auto update is enabled. Valid values:
-             * <p>
-             * 
-             * *   `true`: Auto update is enabled.
-             * *   `false`: Auto update is disabled.
+             * 是否自动升级。
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -1144,7 +1140,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * auto_upgrade_policy.
+             * 自动升级策略。
              */
             public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
                 this.autoUpgradePolicy = autoUpgradePolicy;
@@ -1152,7 +1148,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * auto_vul_fix.
+             * 是否自动修复CVE。
              */
             public Builder autoVulFix(Boolean autoVulFix) {
                 this.autoVulFix = autoVulFix;
@@ -1160,7 +1156,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * auto_vul_fix_policy.
+             * 自动修复CVE策略。
              */
             public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
                 this.autoVulFixPolicy = autoVulFixPolicy;

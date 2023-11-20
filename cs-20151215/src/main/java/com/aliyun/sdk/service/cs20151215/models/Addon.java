@@ -21,10 +21,14 @@ public class Addon extends TeaModel {
     @NameInMap("name")
     private String name;
 
+    @NameInMap("version")
+    private String version;
+
     private Addon(Builder builder) {
         this.config = builder.config;
         this.disabled = builder.disabled;
         this.name = builder.name;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -56,10 +60,18 @@ public class Addon extends TeaModel {
         return this.name;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder {
         private String config; 
         private Boolean disabled; 
         private String name; 
+        private String version; 
 
         /**
          * config.
@@ -82,6 +94,14 @@ public class Addon extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * version.
+         */
+        public Builder version(String version) {
+            this.version = version;
             return this;
         }
 

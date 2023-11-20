@@ -182,7 +182,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request);
 
+    /**
+      * 1.  The Common Vulnerabilities and Exposures (CVE) patching feature is developed based on Security Center. To use this feature, you must purchase the Security Center Ultimate Edition that supports Container Service for Kubernetes (ACK).
+      * 2.  ACK may need to restart nodes to patch certain vulnerabilities. ACK drains a node before the node restarts. Make sure that the ACK cluster has sufficient idle nodes to host the pods evicted from the trained nodes. For example, you can scale out a node pool before you patch vulnerabilities for the nodes in the node pool.
+      * 3.  Security Center ensures the compatibility of CVE patches. We recommend that you check the compatibility of a CVE patch with your application before you install the patch. You can pause or cancel a CVE patching task anytime.
+      * 4.  CVE patching is a progressive task that consists of multiple batches. After you pause or cancel a CVE patching task, ACK continues to process the dispatched batches. Only the batches that have not been dispatched are paused or canceled.
+      *
+     */
     CompletableFuture<FixNodePoolVulsResponse> fixNodePoolVuls(FixNodePoolVulsRequest request);
+
+    CompletableFuture<GetClusterCheckResponse> getClusterCheck(GetClusterCheckRequest request);
 
     CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request);
 
@@ -198,6 +207,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
 
     CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request);
+
+    CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
@@ -269,6 +280,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request);
 
     CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request);
+
+    CompletableFuture<RunClusterCheckResponse> runClusterCheck(RunClusterCheckRequest request);
 
     /**
       * @deprecated

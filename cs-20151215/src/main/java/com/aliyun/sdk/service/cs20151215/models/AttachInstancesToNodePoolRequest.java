@@ -126,7 +126,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -135,7 +135,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * NodepoolId.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -144,7 +144,20 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * format_disk.
+         * Specifies whether to store container data and images on data disks. Valid values:
+         * <p>
+         * 
+         * *   `true`: stores container data and images on data disks.
+         * *   `false`: does not store container data or images on data disks.
+         * 
+         * Default value: `false`.
+         * 
+         * How to mount a data disk:
+         * 
+         * *   If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.
+         * *   If no data disk is attached to the ECS instances, the system does not purchase a new data disk.
+         * 
+         * > If you choose to store container data and images on a data disk and the data disk is already mounted to the ECS instance, the existing data on the data disk will be cleared. You can back up the disk to avoid data loss.
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -153,7 +166,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * instances.
+         * The IDs of the instances to be added.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -162,7 +175,13 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * keep_instance_name.
+         * Specifies whether to retain the instance name. Valid values:
+         * <p>
+         * 
+         * *   `true`: retains the instance name.
+         * *   `false`: does not retain the instance name.
+         * 
+         * Default value: `true`.
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -171,7 +190,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         }
 
         /**
-         * password.
+         * The SSH password that is used to log on to the instance.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);

@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EdgeClusterAddEdgeMachineResponseBody} extends {@link TeaModel}
+ * {@link RunClusterCheckResponseBody} extends {@link TeaModel}
  *
- * <p>EdgeClusterAddEdgeMachineResponseBody</p>
+ * <p>RunClusterCheckResponseBody</p>
  */
-public class EdgeClusterAddEdgeMachineResponseBody extends TeaModel {
-    @NameInMap("edge_machine_id")
-    private String edgeMachineId;
+public class RunClusterCheckResponseBody extends TeaModel {
+    @NameInMap("check_id")
+    private String checkId;
 
     @NameInMap("request_id")
     private String requestId;
 
-    private EdgeClusterAddEdgeMachineResponseBody(Builder builder) {
-        this.edgeMachineId = builder.edgeMachineId;
+    private RunClusterCheckResponseBody(Builder builder) {
+        this.checkId = builder.checkId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class EdgeClusterAddEdgeMachineResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EdgeClusterAddEdgeMachineResponseBody create() {
+    public static RunClusterCheckResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return edgeMachineId
+     * @return checkId
      */
-    public String getEdgeMachineId() {
-        return this.edgeMachineId;
+    public String getCheckId() {
+        return this.checkId;
     }
 
     /**
@@ -46,27 +46,27 @@ public class EdgeClusterAddEdgeMachineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String edgeMachineId; 
+        private String checkId; 
         private String requestId; 
 
         /**
-         * The ID of the cloud-native box.
+         * check_id.
          */
-        public Builder edgeMachineId(String edgeMachineId) {
-            this.edgeMachineId = edgeMachineId;
+        public Builder checkId(String checkId) {
+            this.checkId = checkId;
             return this;
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public EdgeClusterAddEdgeMachineResponseBody build() {
-            return new EdgeClusterAddEdgeMachineResponseBody(this);
+        public RunClusterCheckResponseBody build() {
+            return new RunClusterCheckResponseBody(this);
         } 
 
     } 

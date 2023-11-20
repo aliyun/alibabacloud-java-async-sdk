@@ -111,7 +111,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -120,7 +120,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * aliuid.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliuid(String aliuid) {
             this.putBodyParameter("aliuid", aliuid);
@@ -129,7 +129,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * components.
+         * The control plane components for which you want to enable log collection.
          */
         public Builder components(java.util.List < String > components) {
             this.putBodyParameter("components", components);
@@ -138,7 +138,10 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * log_project.
+         * The name of the Simple Log Service project that you want to use to store the logs of control plane components.
+         * <p>
+         * 
+         * Default value: k8s-log-$Cluster ID.
          */
         public Builder logProject(String logProject) {
             this.putBodyParameter("log_project", logProject);
@@ -147,7 +150,10 @@ public class UpdateControlPlaneLogRequest extends Request {
         }
 
         /**
-         * log_ttl.
+         * The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.
+         * <p>
+         * 
+         * Default value: 30.
          */
         public Builder logTtl(String logTtl) {
             this.putBodyParameter("log_ttl", logTtl);

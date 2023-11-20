@@ -113,7 +113,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         } 
 
         /**
-         * clusterid.
+         * The cluster ID.
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -122,7 +122,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * edge_machineid.
+         * The ID of the cloud-native box.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -131,7 +131,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * expired.
+         * The timeout period of sessions. Unit: seconds.
          */
         public Builder expired(Long expired) {
             this.putBodyParameter("expired", expired);
@@ -140,7 +140,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -149,7 +149,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * options.
+         * The options that you want to configure.
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);

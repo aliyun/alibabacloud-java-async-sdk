@@ -23,6 +23,10 @@ public class RepairClusterNodePoolRequest extends Request {
     private String nodepoolId;
 
     @Body
+    @NameInMap("auto_restart")
+    private Boolean autoRestart;
+
+    @Body
     @NameInMap("nodes")
     private java.util.List < String > nodes;
 
@@ -30,6 +34,7 @@ public class RepairClusterNodePoolRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.autoRestart = builder.autoRestart;
         this.nodes = builder.nodes;
     }
 
@@ -61,6 +66,13 @@ public class RepairClusterNodePoolRequest extends Request {
     }
 
     /**
+     * @return autoRestart
+     */
+    public Boolean getAutoRestart() {
+        return this.autoRestart;
+    }
+
+    /**
      * @return nodes
      */
     public java.util.List < String > getNodes() {
@@ -70,6 +82,7 @@ public class RepairClusterNodePoolRequest extends Request {
     public static final class Builder extends Request.Builder<RepairClusterNodePoolRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean autoRestart; 
         private java.util.List < String > nodes; 
 
         private Builder() {
@@ -80,6 +93,7 @@ public class RepairClusterNodePoolRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.autoRestart = request.autoRestart;
             this.nodes = request.nodes;
         } 
 
@@ -98,6 +112,15 @@ public class RepairClusterNodePoolRequest extends Request {
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * auto_restart.
+         */
+        public Builder autoRestart(Boolean autoRestart) {
+            this.putBodyParameter("auto_restart", autoRestart);
+            this.autoRestart = autoRestart;
             return this;
         }
 

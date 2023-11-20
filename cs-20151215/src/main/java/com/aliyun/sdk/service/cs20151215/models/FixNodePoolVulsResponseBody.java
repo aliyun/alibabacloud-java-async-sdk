@@ -38,7 +38,7 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * task_id.
+         * The ID of the CVE patching task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

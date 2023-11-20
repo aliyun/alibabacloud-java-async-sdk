@@ -55,7 +55,7 @@ public class CancelTaskRequest extends Request {
         } 
 
         /**
-         * task_id.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("task_id", taskId);

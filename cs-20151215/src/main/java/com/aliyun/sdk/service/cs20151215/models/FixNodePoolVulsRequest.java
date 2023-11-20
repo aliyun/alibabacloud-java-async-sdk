@@ -23,6 +23,10 @@ public class FixNodePoolVulsRequest extends Request {
     private String nodepoolId;
 
     @Body
+    @NameInMap("auto_restart")
+    private Boolean autoRestart;
+
+    @Body
     @NameInMap("nodes")
     private java.util.List < String > nodes;
 
@@ -38,6 +42,7 @@ public class FixNodePoolVulsRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.autoRestart = builder.autoRestart;
         this.nodes = builder.nodes;
         this.rolloutPolicy = builder.rolloutPolicy;
         this.vuls = builder.vuls;
@@ -71,6 +76,13 @@ public class FixNodePoolVulsRequest extends Request {
     }
 
     /**
+     * @return autoRestart
+     */
+    public Boolean getAutoRestart() {
+        return this.autoRestart;
+    }
+
+    /**
      * @return nodes
      */
     public java.util.List < String > getNodes() {
@@ -94,6 +106,7 @@ public class FixNodePoolVulsRequest extends Request {
     public static final class Builder extends Request.Builder<FixNodePoolVulsRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean autoRestart; 
         private java.util.List < String > nodes; 
         private RolloutPolicy rolloutPolicy; 
         private java.util.List < String > vuls; 
@@ -106,13 +119,14 @@ public class FixNodePoolVulsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.autoRestart = request.autoRestart;
             this.nodes = request.nodes;
             this.rolloutPolicy = request.rolloutPolicy;
             this.vuls = request.vuls;
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -121,7 +135,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * nodepool_id.
+         * The node pool ID.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -130,7 +144,16 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * nodes.
+         * auto_restart.
+         */
+        public Builder autoRestart(Boolean autoRestart) {
+            this.putBodyParameter("auto_restart", autoRestart);
+            this.autoRestart = autoRestart;
+            return this;
+        }
+
+        /**
+         * The names of the nodes to be patched.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -139,7 +162,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * rollout_policy.
+         * The batch patching policy.
          */
         public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
             this.putBodyParameter("rollout_policy", rolloutPolicy);
@@ -148,7 +171,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * vuls.
+         * The list of vulnerabilities.
          */
         public Builder vuls(java.util.List < String > vuls) {
             this.putBodyParameter("vuls", vuls);
@@ -190,7 +213,7 @@ public class FixNodePoolVulsRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * max_parallelism.
+             * The maximum number of nodes that can be patched in parallel. The minimum value is 1. The maximum value equals the number of nodes in the node pool.
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
