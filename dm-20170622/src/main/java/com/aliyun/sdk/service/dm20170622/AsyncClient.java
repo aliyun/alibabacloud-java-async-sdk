@@ -94,4 +94,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SingleSendMailResponse> singleSendMail(SingleSendMailRequest request);
 
+    CompletableFuture<SingleSendMailV2Response> singleSendMailV2(SingleSendMailV2Request request);
+
 }
