@@ -14,12 +14,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class InvoiceRuleSaveRequest extends Request {
     @Body
     @NameInMap("all_employe")
-    @Validation(required = true)
     private Boolean allEmploye;
 
     @Body
     @NameInMap("entities")
     private java.util.List < Entities> entities;
+
+    @Body
+    @NameInMap("scope")
+    private Integer scope;
 
     @Body
     @NameInMap("third_part_id")
@@ -34,6 +37,7 @@ public class InvoiceRuleSaveRequest extends Request {
         super(builder);
         this.allEmploye = builder.allEmploye;
         this.entities = builder.entities;
+        this.scope = builder.scope;
         this.thirdPartId = builder.thirdPartId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -66,6 +70,13 @@ public class InvoiceRuleSaveRequest extends Request {
     }
 
     /**
+     * @return scope
+     */
+    public Integer getScope() {
+        return this.scope;
+    }
+
+    /**
      * @return thirdPartId
      */
     public String getThirdPartId() {
@@ -82,6 +93,7 @@ public class InvoiceRuleSaveRequest extends Request {
     public static final class Builder extends Request.Builder<InvoiceRuleSaveRequest, Builder> {
         private Boolean allEmploye; 
         private java.util.List < Entities> entities; 
+        private Integer scope; 
         private String thirdPartId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -93,6 +105,7 @@ public class InvoiceRuleSaveRequest extends Request {
             super(request);
             this.allEmploye = request.allEmploye;
             this.entities = request.entities;
+            this.scope = request.scope;
             this.thirdPartId = request.thirdPartId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
@@ -113,6 +126,15 @@ public class InvoiceRuleSaveRequest extends Request {
             String entitiesShrink = shrink(entities, "entities", "json");
             this.putBodyParameter("entities", entitiesShrink);
             this.entities = entities;
+            return this;
+        }
+
+        /**
+         * scope.
+         */
+        public Builder scope(Integer scope) {
+            this.putBodyParameter("scope", scope);
+            this.scope = scope;
             return this;
         }
 
