@@ -1087,7 +1087,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetClusterCheckResponse> getClusterCheck(GetClusterCheckRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetClusterCheck").setMethod(HttpMethod.GET).setPathRegex("/clusters/[cluster_id]/checks/[check_id]").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetClusterCheck").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/checks/{check_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetClusterCheckResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1164,7 +1164,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterChecks").setMethod(HttpMethod.GET).setPathRegex("/clusters/[cluster_id]/checks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterChecks").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/checks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterChecksResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1489,7 +1489,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RunClusterCheckResponse> runClusterCheck(RunClusterCheckRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunClusterCheck").setMethod(HttpMethod.POST).setPathRegex("/clusters/[cluster_id]/checks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunClusterCheck").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/checks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunClusterCheckResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
