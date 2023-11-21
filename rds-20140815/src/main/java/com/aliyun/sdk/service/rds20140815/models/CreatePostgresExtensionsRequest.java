@@ -215,7 +215,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -224,7 +224,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [DescribeDatabases](~~610471~~) to obtain the name of the database.
+         * The database name. You can call the DescribeDatabases operation to query the database name.
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);

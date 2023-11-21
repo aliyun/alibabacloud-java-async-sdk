@@ -434,7 +434,7 @@ public class DescribePriceRequest extends Request {
          * The information about the node.
          * <p>
          * 
-         * > This parameter is suitable for RDS instances that run MySQL on RDS Cluster Edition.
+         * >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -543,7 +543,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -611,10 +611,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+         * The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.
          * <p>
          * 
-         * > If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.
+         * >  If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -668,7 +668,7 @@ public class DescribePriceRequest extends Request {
             private String zoneId; 
 
             /**
-             * The specification of the node.
+             * The instance type of the node.
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;

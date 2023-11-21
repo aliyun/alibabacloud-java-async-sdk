@@ -58,7 +58,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information returned.
+         * The data returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -138,7 +138,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskID(String taskID) {
                 this.taskID = taskID;

@@ -110,6 +110,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckAccountNameAvailableResponse> checkAccountNameAvailable(CheckAccountNameAvailableRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+     */
     CompletableFuture<CheckCloudResourceAuthorizedResponse> checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request);
 
     /**
@@ -134,6 +142,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckInstanceExistResponse> checkInstanceExist(CheckInstanceExistRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      *
+     */
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
@@ -361,12 +374,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request);
 
     /**
-      * ### Prerequisites
-      * *   Your Alibaba Cloud account is used.
-      * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
-      * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
-      * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
-      * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+      * ### [](#)Supported database engine
+      * *   MySQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Create and release an ApsaraDB RDS global active database cluster](~~328592~~)
       *
      */
     CompletableFuture<CreateGADInstanceResponse> createGADInstance(CreateGADInstanceRequest request);
@@ -462,6 +474,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateReadOnlyDBInstanceResponse> createReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      *
+     */
     CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
 
     /**
@@ -668,9 +685,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
-      * ### [](#)References
-      * [Migrate data between ApsaraDB RDS for MySQL instances](~~96154~~)
+      * *   MySQL
       *
      */
     CompletableFuture<DescibeImportsFromDatabaseResponse> descibeImportsFromDatabase(DescibeImportsFromDatabaseRequest request);
@@ -721,6 +736,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeAllWhitelistTemplateResponse> describeAllWhitelistTemplate(DescribeAllWhitelistTemplateRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * MySQL
+      * ### [](#)References
+      * [Create and view an analytic instance](~~155180~~)
+      *
+     */
     CompletableFuture<DescribeAnalyticdbByPrimaryDBInstanceResponse> describeAnalyticdbByPrimaryDBInstance(DescribeAnalyticdbByPrimaryDBInstanceRequest request);
 
     /**
@@ -1016,6 +1038,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDBInstanceNetInfoResponse> describeDBInstanceNetInfo(DescribeDBInstanceNetInfoRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+     */
     CompletableFuture<DescribeDBInstanceNetInfoForChannelResponse> describeDBInstanceNetInfoForChannel(DescribeDBInstanceNetInfoForChannelRequest request);
 
     /**
@@ -1187,14 +1217,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDiagnosticReportListResponse> describeDiagnosticReportList(DescribeDiagnosticReportListRequest request);
 
     /**
-      * Error logs contain the time when they were generated and the error messages.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
      */
     CompletableFuture<DescribeErrorLogsResponse> describeErrorLogs(DescribeErrorLogsRequest request);
 
     /**
-      * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
-      * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Historical events of an ApsaraDB RDS for MySQL instance](~~129759~~)
+      * *   [Historical events of an ApsaraDB RDS for PostgreSQL instance](~~131008~~)
+      * *   [Historical events of an ApsaraDB RDS for SQL Server instance](~~131013~~)
+      * *   [Historical events of an ApsaraDB RDS for MariaDB instance](~~131010~~)
       *
      */
     CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
@@ -1207,14 +1250,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGadInstancesResponse> describeGadInstances(DescribeGadInstancesRequest request);
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * [What is availability detection?](~~207467~~)
       *
      */
     CompletableFuture<DescribeHADiagnoseConfigResponse> describeHADiagnoseConfig(DescribeHADiagnoseConfigRequest request);
 
     /**
-      * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
-      * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
      */
     CompletableFuture<DescribeHASwitchConfigResponse> describeHASwitchConfig(DescribeHASwitchConfigRequest request);
@@ -1249,6 +1301,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeHostWebShellResponse> describeHostWebShell(DescribeHostWebShellRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+     */
     CompletableFuture<DescribeInstanceAutoRenewalAttributeResponse> describeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request);
 
     /**
@@ -1257,7 +1317,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
-      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
@@ -1475,10 +1536,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeResourceUsageResponse> describeResourceUsage(DescribeResourceUsageRequest request);
 
     /**
-      * This operation is applicable to the following database engine versions:
+      * ### [](#)Supported database engines
       * *   MySQL
-      * *   SQL Server 2008 R2
       * *   PostgreSQL
+      * *   SQL Server
       *
      */
     CompletableFuture<DescribeSQLCollectorPolicyResponse> describeSQLCollectorPolicy(DescribeSQLCollectorPolicyRequest request);
@@ -1531,7 +1592,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityGroupConfigurationResponse> describeSecurityGroupConfiguration(DescribeSecurityGroupConfigurationRequest request);
 
     /**
-      * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
       *
      */
     CompletableFuture<DescribeSlotsResponse> describeSlots(DescribeSlotsRequest request);
@@ -1596,6 +1658,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeUpgradeMajorVersionPrecheckTaskResponse> describeUpgradeMajorVersionPrecheckTask(DescribeUpgradeMajorVersionPrecheckTaskRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * PostgreSQL
+      *
+     */
     CompletableFuture<DescribeUpgradeMajorVersionTasksResponse> describeUpgradeMajorVersionTasks(DescribeUpgradeMajorVersionTasksRequest request);
 
     /**
@@ -1743,7 +1810,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
-      * > 
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)Feature description
       * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
       * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
       * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
@@ -1878,18 +1947,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBDescriptionResponse> modifyDBDescription(ModifyDBDescriptionRequest request);
 
     /**
-      * This operation is supported only for instances that run MySQL.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Modify automatic update settings for an ApsaraDB RDS for MySQL instance](~~96059~~)
+      * *   [Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance](~~146895~~)
       *
      */
     CompletableFuture<ModifyDBInstanceAutoUpgradeMinorVersionResponse> modifyDBInstanceAutoUpgradeMinorVersion(ModifyDBInstanceAutoUpgradeMinorVersionRequest request);
 
     /**
-      * ### Supported database engines
-      * *   RDS MySQL
-      * *   RDS PostgreSQL
-      * *   RDS SQL Server
-      * *   RDS MariaDB
-      * > : The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      * >  The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
       *
      */
     CompletableFuture<ModifyDBInstanceConfigResponse> modifyDBInstanceConfig(ModifyDBInstanceConfigRequest request);
@@ -1916,10 +1988,28 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance](~~96056~~)
+      *
+     */
     CompletableFuture<ModifyDBInstanceDelayedReplicationTimeResponse> modifyDBInstanceDelayedReplicationTime(ModifyDBInstanceDelayedReplicationTimeRequest request);
 
     /**
-      * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance](~~414512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance](~~471512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance](~~416209~~)
+      * *   [Enable and disable release protection for an ApsaraDB RDS for MariaDB instance](~~414512~~)
       *
      */
     CompletableFuture<ModifyDBInstanceDeletionProtectionResponse> modifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest request);
@@ -1946,7 +2036,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceHAConfigResponse> modifyDBInstanceHAConfig(ModifyDBInstanceHAConfigRequest request);
 
     /**
-      * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](~~96052~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](~~96799~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Sever instance](~~95657~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](~~97473~~)
       *
      */
     CompletableFuture<ModifyDBInstanceMaintainTimeResponse> modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request);
@@ -1976,7 +2076,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceMonitorResponse> modifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request);
 
     /**
-      * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance](~~96110~~)
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance](~~95708~~)
       *
      */
     CompletableFuture<ModifyDBInstanceNetworkExpireTimeResponse> modifyDBInstanceNetworkExpireTime(ModifyDBInstanceNetworkExpireTimeRequest request);
@@ -1996,14 +2101,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceNetworkTypeResponse> modifyDBInstanceNetworkType(ModifyDBInstanceNetworkTypeRequest request);
 
     /**
-      * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
-      * The following requirements must be met:
-      * *   The instance belongs to the current account.
-      * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
-      *     **
-      *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
-      * *   The instance uses the pay-as-you-go billing method and is in the Running state.
-      * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](~~96048~~)
+      * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](~~96743~~)
+      * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](~~95631~~)
+      * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](~~97120~~)
       *
      */
     CompletableFuture<ModifyDBInstancePayTypeResponse> modifyDBInstancePayType(ModifyDBInstancePayTypeRequest request);
@@ -2150,7 +2258,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDbProxyInstanceSslResponse> modifyDbProxyInstanceSsl(ModifyDbProxyInstanceSslRequest request);
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [What is availability check?](~~207467~~)
       *
      */
     CompletableFuture<ModifyHADiagnoseConfigResponse> modifyHADiagnoseConfig(ModifyHADiagnoseConfigRequest request);
@@ -2183,6 +2298,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
       * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
@@ -2424,12 +2540,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveTagsFromResourceResponse> removeTagsFromResource(RemoveTagsFromResourceRequest request);
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a subscription instance.
-      * *   Your account supports credit card payments or balance payments.
-      *     **
-      *     **Note**By default, coupons available for your account are preferentially used for payment.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)
+      * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)
+      * *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)
+      * *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)
       *
      */
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);

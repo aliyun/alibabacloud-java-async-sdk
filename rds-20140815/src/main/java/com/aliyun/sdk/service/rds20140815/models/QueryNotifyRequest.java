@@ -166,7 +166,7 @@ public class QueryNotifyRequest extends Request {
          * *   **true**
          * *   **false**
          * 
-         * > You can call the [ConfirmNotify](~~610444~~) operation to confirm notifications of an instance.
+         * >  A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.
          */
         public Builder withConfirmed(Boolean withConfirmed) {
             this.putBodyParameter("WithConfirmed", withConfirmed);

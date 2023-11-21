@@ -118,7 +118,9 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * China site: 26842 International site: 26888
+         * *   China site: 26842
+         * <p>
+         * *   International site: 26888
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -126,7 +128,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -155,7 +157,7 @@ public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The activity information about the instance. For more information, see [Instance activities](~~26312~~).
+         * The activity information about the instance. For more information, see [Instance activities](~~2391834~~).
          */
         public Builder isActivity(String isActivity) {
             this.isActivity = isActivity;

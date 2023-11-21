@@ -113,7 +113,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,11 +122,7 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   Postpaid: pay-as-you-go
-         * *   Prepaid: subscription
+         * The billing method of the instance. The value is fixed as **Prepaid**, which indicates the subscription billing method.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -135,11 +131,11 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The subscription method of the instance. This parameter must be specified when PayType is set to Prepaid.
+         * The renewal cycle of the instance.
          * <p>
          * 
-         * *   Year
-         * *   Month
+         * *   **Year**
+         * *   **Month**
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -157,7 +153,11 @@ public class ModifyDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * Valid values when Period is set to Year: 1 to 9. Valid values when Period is set to Month: 1, 2, and 3.
+         * The subscription duration of the instance. Valid values:
+         * <p>
+         * 
+         * *   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from 1 to 5.
+         * *   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from 1 to 11.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

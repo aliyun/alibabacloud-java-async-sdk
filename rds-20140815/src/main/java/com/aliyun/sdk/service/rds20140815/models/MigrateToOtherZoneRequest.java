@@ -294,7 +294,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -315,12 +315,12 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The effective time. Valid values:
+         * The time when you want the change to take effect. Valid values:
          * <p>
          * 
-         * *   **Immediate**: The instance is immediately migrated. This is the default value.
-         * *   **MaintainTime**: The instance is migrated during the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
-         * *   **ScheduleTime**: The instance is migrated at the point in time that you specify.
+         * *   **Immediately** (default): The change immediately takes effect.
+         * *   **MaintainTime**: The change takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
+         * *   **ScheduleTime**: The change takes effect at the point in time that you specify.
          * 
          * >  If you set this parameter to **ScheduleTime**, you must specify the **SwitchTime** parameter.
          */
@@ -410,7 +410,7 @@ public class MigrateToOtherZoneRequest extends Request {
          * The vSwitch ID.
          * <p>
          * 
-         * *   This parameter must be specified when the instance resides in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query the vSwitch ID.
+         * *   This parameter must be specified when the instance resides in a VPC. You can call the DescribeVSwitches operation to query existing vSwitches.
          * *   If the instance runs PostgreSQL or SQL Server and a secondary zone is specified for the instance, you can specify multiple vSwitch IDs, each of which corresponds to a zone. Separate the vSwitch IDs with commas (,).
          */
         public Builder vSwitchId(String vSwitchId) {
@@ -420,7 +420,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The ID of the destination zone. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

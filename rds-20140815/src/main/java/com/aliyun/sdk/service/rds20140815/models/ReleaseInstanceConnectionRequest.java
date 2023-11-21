@@ -150,7 +150,7 @@ public class ReleaseInstanceConnectionRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -162,8 +162,8 @@ public class ReleaseInstanceConnectionRequest extends Request {
          * The network type of the instance. Valid values:
          * <p>
          * 
-         * *   **VPC**
-         * *   **Classic**
+         * *   **0**: virtual private cloud (VPC)
+         * *   **1**: classic network
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);

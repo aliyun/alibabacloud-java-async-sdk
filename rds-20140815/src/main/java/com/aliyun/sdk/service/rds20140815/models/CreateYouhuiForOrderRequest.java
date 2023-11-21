@@ -145,7 +145,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The promotion ID. You can call the [GetResourcePrice](~~428503~~) operation to query the promotion ID.
+         * The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.
          */
         public Builder promotionId(Long promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -154,7 +154,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

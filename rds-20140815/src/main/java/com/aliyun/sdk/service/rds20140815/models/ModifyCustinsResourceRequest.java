@@ -158,7 +158,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The increase rate.
+         * The increase rate in percentage.
          */
         public Builder increaseRatio(String increaseRatio) {
             this.putQueryParameter("IncreaseRatio", increaseRatio);
@@ -185,7 +185,7 @@ public class ModifyCustinsResourceRequest extends Request {
         }
 
         /**
-         * The original value. This parameter must be specified when **ResourceType** is set to **instance**.
+         * The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.
          */
         public Builder restoreOriginalSpecification(String restoreOriginalSpecification) {
             this.putQueryParameter("RestoreOriginalSpecification", restoreOriginalSpecification);

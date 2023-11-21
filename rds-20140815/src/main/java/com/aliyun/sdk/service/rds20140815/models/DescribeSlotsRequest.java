@@ -178,7 +178,7 @@ public class DescribeSlotsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can leave this parameter empty.
+         * The resource group ID. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

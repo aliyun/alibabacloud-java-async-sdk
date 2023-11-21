@@ -58,7 +58,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the replication slot.
+         * The information about the replication slot.
          */
         public Builder slots(java.util.List < Slots> slots) {
             this.slots = slots;
@@ -191,33 +191,6 @@ public class DescribeSlotsResponseBody extends TeaModel {
 
             /**
              * The extension used by the replication slot.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   test_decoding
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   pgoutput
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   wal2json
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;
@@ -225,7 +198,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the replication slot.
+             * The replication slot name.
              */
             public Builder slotName(String slotName) {
                 this.slotName = slotName;
@@ -233,26 +206,11 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the replication slot.
+             * The replication slot status. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
              * *   ACTIVE
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   INACTIVE
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder slotStatus(String slotStatus) {
                 this.slotStatus = slotStatus;
@@ -260,26 +218,11 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the replication slot.
+             * The replication slot type. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
              * *   physical
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   logical
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder slotType(String slotType) {
                 this.slotType = slotType;
@@ -295,26 +238,11 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the replication slot is a temporary replication slot.
+             * Indicates whether the replication slot is a temporary replication slot. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
              * *   true
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder temporary(String temporary) {
                 this.temporary = temporary;

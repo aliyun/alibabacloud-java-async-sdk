@@ -74,7 +74,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,9 +83,6 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
 
         /**
          * The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](~~93689~~).
-         * <p>
-         * 
-         * >  This parameter is available only when the instance runs MySQL.
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;

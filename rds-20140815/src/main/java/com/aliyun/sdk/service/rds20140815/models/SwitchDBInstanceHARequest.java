@@ -154,7 +154,7 @@ public class SwitchDBInstanceHARequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,7 +193,7 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the secondary instance. You can call the [DescribeDBInstanceHAConfig](~~610434~~) operation to query the GUID of the secondary instance.
+         * The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

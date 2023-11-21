@@ -62,7 +62,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network information about the instance.
+         * The information about the instance connection.
          */
         public Builder DBInstanceNetInfos(DBInstanceNetInfos DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
@@ -170,7 +170,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -178,7 +178,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
+             * The instance type. Valid values:
              * <p>
              * 
              * *   **Master**: primary instance
@@ -292,7 +292,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses contained in the IP address whitelist.
+             * The IP addresses that is contained in the IP address whitelist.
              */
             public Builder securityIPs(String securityIPs) {
                 this.securityIPs = securityIPs;
@@ -562,7 +562,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the information about read weights to implement read/write splitting after the shared proxy feature is enabled.
+             * The information about read weights to implement read/write splitting after the shared proxy feature is enabled.
              */
             public Builder DBInstanceWeights(DBInstanceWeights DBInstanceWeights) {
                 this.DBInstanceWeights = DBInstanceWeights;
@@ -574,7 +574,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.
-             * *   **Custom**: You must manually assign read weights to the instance and its read-only instances.
+             * *   **Custom**: You must manually allocate read weights to the instance and its read-only instances.
              */
             public Builder distributionType(String distributionType) {
                 this.distributionType = distributionType;
@@ -582,7 +582,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address.
+             * The IP address of the instance.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -595,7 +595,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
              * 
              * *   **Public**: the Internet
              * *   **Inner**: the classic network
-             * *   **Private**: a VPC
+             * *   **Private**: a virtual private cloud (VPC)
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -603,10 +603,10 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds
+             * The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds.
              * <p>
              * 
-             * > This parameter is returned only when the **ConnectionStringType** parameter is set to **ReadWriteSplitting**.
+             * >  This parameter is returned only when **ConnectionStringType** is set to **ReadWriteSplitting**.
              */
             public Builder maxDelayTime(String maxDelayTime) {
                 this.maxDelayTime = maxDelayTime;
@@ -614,7 +614,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The service port number.
+             * The port number of the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -622,7 +622,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details about the IP address whitelist.
+             * The details of the IP address whitelist.
              */
             public Builder securityIPGroups(SecurityIPGroups securityIPGroups) {
                 this.securityIPGroups = securityIPGroups;
@@ -630,7 +630,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. This operation does not return a value for this parameter.
+             * An internal parameter. You do not need to specify this parameter.
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -638,7 +638,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC in which the instance is deployed.
+             * The VPC ID of the instance.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -646,7 +646,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the instance belongs.
+             * The vSwitch ID of the instance.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

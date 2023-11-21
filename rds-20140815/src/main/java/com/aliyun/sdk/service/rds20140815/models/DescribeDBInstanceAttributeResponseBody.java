@@ -1810,7 +1810,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDiskUsed.
+             * The disk usage of the instance.
              */
             public Builder DBInstanceDiskUsed(String DBInstanceDiskUsed) {
                 this.DBInstanceDiskUsed = DBInstanceDiskUsed;

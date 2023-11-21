@@ -82,7 +82,7 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the credential for the created Data API account.
+         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.
          */
         public Builder secretArn(String secretArn) {
             this.secretArn = secretArn;

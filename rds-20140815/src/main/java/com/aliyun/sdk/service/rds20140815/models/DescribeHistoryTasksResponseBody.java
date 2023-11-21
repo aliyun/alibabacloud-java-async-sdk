@@ -178,7 +178,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private String startTime;
 
         @NameInMap("Status")
-        private Integer status;
+        private String status;
 
         @NameInMap("TaskDetail")
         private String taskDetail;
@@ -331,7 +331,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * @return status
          */
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 
@@ -379,7 +379,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String regionId; 
             private Integer remainTime; 
             private String startTime; 
-            private Integer status; 
+            private String status; 
             private String taskDetail; 
             private String taskId; 
             private String taskType; 
@@ -541,7 +541,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
              * *   Canceled
              * *   Waiting
              */
-            public Builder status(Integer status) {
+            public Builder status(String status) {
                 this.status = status;
                 return this;
             }

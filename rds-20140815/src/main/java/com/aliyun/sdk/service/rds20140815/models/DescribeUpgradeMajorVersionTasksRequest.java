@@ -169,7 +169,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the original instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -196,10 +196,10 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
-         * Valid values: any non-zero positive integer.
+         * Pages start from 1.
          * 
          * Default value: **1**.
          */
@@ -210,7 +210,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values: **30** to **100**.
@@ -249,6 +249,8 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
          * *   **11.0**
          * *   **12.0**
          * *   **13.0**
+         * *   **14.0**
+         * *   **15.0**
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
@@ -257,7 +259,7 @@ public class DescribeUpgradeMajorVersionTasksRequest extends Request {
         }
 
         /**
-         * This parameter is reserved. You do not need to specify this parameter.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

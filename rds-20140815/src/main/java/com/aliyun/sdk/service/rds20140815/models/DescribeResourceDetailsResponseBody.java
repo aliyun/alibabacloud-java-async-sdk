@@ -304,7 +304,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * VPC ID。
+         * VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

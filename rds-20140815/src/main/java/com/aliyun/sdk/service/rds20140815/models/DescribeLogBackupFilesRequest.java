@@ -171,7 +171,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +207,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.
@@ -219,7 +219,7 @@ public class DescribeLogBackupFilesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **30** to **1000**. Default value: **30**.
+         * The number of entries to return on each page. Valid values: **30** to **1000**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

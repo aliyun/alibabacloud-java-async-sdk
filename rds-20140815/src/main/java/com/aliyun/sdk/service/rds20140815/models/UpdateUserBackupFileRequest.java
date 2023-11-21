@@ -155,7 +155,7 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * The ID of the backup file. You can call the [ListUserBackupFiles](~~610600~~) operation to query the ID of the file.
+         * The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -182,7 +182,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +191,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the resource group ID.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

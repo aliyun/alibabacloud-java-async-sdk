@@ -86,7 +86,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the events.
+         * The events.
          */
         public Builder eventItems(EventItems eventItems) {
             this.eventItems = eventItems;
@@ -94,7 +94,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +298,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The event ID.
              */
             public Builder eventId(Integer eventId) {
                 this.eventId = eventId;
@@ -306,7 +306,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+             * The event name.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -322,7 +322,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+             * The source of the event.
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -346,7 +346,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
+             * The event type.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -362,7 +362,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -419,7 +419,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private java.util.List < EventItemsEventItems> eventItems; 
 
             /**
-             * The details of the events.
+             * The events.
              */
             public Builder eventItems(java.util.List < EventItemsEventItems> eventItems) {
                 this.eventItems = eventItems;

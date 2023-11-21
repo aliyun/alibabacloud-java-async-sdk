@@ -74,7 +74,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -90,7 +90,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyDBInstanceDelayedReplicationTimeResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

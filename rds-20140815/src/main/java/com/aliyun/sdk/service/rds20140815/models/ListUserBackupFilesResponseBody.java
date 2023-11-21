@@ -50,7 +50,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the full backup files that are returned.
+         * The information about the full backup files.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -354,7 +354,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

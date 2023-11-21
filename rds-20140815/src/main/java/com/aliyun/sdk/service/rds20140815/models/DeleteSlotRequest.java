@@ -181,7 +181,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+         * The ID of the instance. You can call the DescribeDBInstances operation to query the IDs of instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -235,7 +235,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The name of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the name of the replication slot.
+         * The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.
          */
         public Builder slotName(String slotName) {
             this.putQueryParameter("SlotName", slotName);
@@ -244,7 +244,7 @@ public class DeleteSlotRequest extends Request {
         }
 
         /**
-         * The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot. Valid values:
+         * The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:
          * <p>
          * 
          * *   ACTIVE

@@ -192,7 +192,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -240,7 +240,7 @@ public class DescribeDBInstanceByTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

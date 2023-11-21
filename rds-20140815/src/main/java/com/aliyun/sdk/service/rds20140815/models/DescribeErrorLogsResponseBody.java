@@ -86,7 +86,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The list of items in an error log.
+         * Details about the log entries returned.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of error logs.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -170,7 +170,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             private String errorInfo; 
 
             /**
-             * The time when the error log was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the error log entry was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

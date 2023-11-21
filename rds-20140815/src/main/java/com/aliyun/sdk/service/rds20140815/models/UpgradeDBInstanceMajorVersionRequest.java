@@ -490,13 +490,13 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The cutover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.
+         * The switchover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.
          * <p>
          * 
          * Valid values:
          * 
          * *   Immediate: The settings immediately take effect.
-         * *   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~610402~~) operation to change the maintenance window of an instance.
+         * *   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window of an instance.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);
@@ -508,7 +508,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
          * The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.
          * <p>
          * 
-         * > You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~610417~~) operation to perform an upgrade check.
+         * >  You can call the UpgradeDBInstanceMajorVersionPrecheck operation to perform an upgrade check.
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
@@ -526,7 +526,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The VPC ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the original instance.
+         * The VPC ID. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -537,9 +537,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         /**
          * *   If the original instance runs RDS Basic Edition, you must enter the vSwitch ID of the new instance.
          * <p>
-         * *   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Make sure that you separate the vSwitch IDs with commas (,).
+         * *   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Separate the vSwitch IDs with commas (,).
          * 
-         * >  The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.
+         * >  The vSwitches that you specify must reside in the same zone as the original instance. You can call the DescribeVSwitches operation to query the vSwitch IDs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -548,10 +548,10 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.
+         * The zone ID of the new instance. You can call the DescribeRegions operation to query the zone ID.
          * <p>
          * 
-         * You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.
+         * You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -563,9 +563,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
          * The zone ID of the secondary instance for the new instance. You can specify this parameter only when the original instance runs RDS High-availability Edition.
          * <p>
          * 
-         * You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.
+         * You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.
          * 
-         * You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.
+         * You can call the DescribeRegions operation to query the zone ID.
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);

@@ -229,7 +229,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -262,7 +262,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the source instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

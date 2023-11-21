@@ -135,10 +135,10 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID.
          * <p>
          * 
-         * >  The configuration of the RegionId parameter does not affect your query results. You can configure any region for this parameter. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * >  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,7 +174,7 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * The name of the SLR.
+         * The SLR name.
          * <p>
          * 
          * >  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](~~342840~~).

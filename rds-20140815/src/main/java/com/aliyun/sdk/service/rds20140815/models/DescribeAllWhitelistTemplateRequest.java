@@ -198,7 +198,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the [DescribeWhitelistTemplate](~~2412074~~) operation.
+         * The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

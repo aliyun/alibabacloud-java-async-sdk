@@ -86,7 +86,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the information about the tasks that are returned.
+         * The tasks for major engine version upgrades.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -290,13 +290,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             private String upgradeMode; 
 
             /**
-             * The time at which ApsaraDB RDS collects the statistics of the new RDS instance.
+             * The time when the system collects the statistics.
              * <p>
              * 
              * Valid values:
              * 
-             * *   **After**: ApsaraDB RDS collects the statistics of the new instance after a switchover.
-             * *   **Before**: ApsaraDB RDS collects the statistics of the new instance before a switchover.
+             * *   **After**: The system collects the statistics after a switchover.
+             * *   **Before**: The system collects the statistics before a switchover.
              */
             public Builder collectStatMode(String collectStatMode) {
                 this.collectStatMode = collectStatMode;
@@ -312,10 +312,10 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the task ended.
+             * The end time of the task.
              * <p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -352,10 +352,10 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the task started.
+             * The start time of the task.
              * <p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -366,7 +366,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
              * The time at which your workloads are switched over from the original instance to the new instance.
              * <p>
              * 
-             * The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -389,6 +389,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
              * *   **11.0**
              * *   **12.0**
              * *   **13.0**
+             * *   **14.0**
+             * *   **15.0**
              */
             public Builder targetMajorVersion(String targetMajorVersion) {
                 this.targetMajorVersion = targetMajorVersion;
@@ -396,7 +398,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -404,13 +406,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.
+             * The upgrade mode.
              * <p>
              * 
              * Valid values:
              * 
-             * *   **clone**: ApsaraDB RDS does not migrate data to the new instance and does not switch your workloads over to the new instance.
-             * *   **switch**: ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.
+             * *   **clone**: The system does not migrate data to the new instance and does not switch your workloads over to the new instance.
+             * *   **switch**: The system migrates data to the new instance and switches your workloads over to the new instance.
              */
             public Builder upgradeMode(String upgradeMode) {
                 this.upgradeMode = upgradeMode;

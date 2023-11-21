@@ -183,7 +183,7 @@ public class DescribeDatabasesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -233,7 +233,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.
@@ -245,7 +245,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**

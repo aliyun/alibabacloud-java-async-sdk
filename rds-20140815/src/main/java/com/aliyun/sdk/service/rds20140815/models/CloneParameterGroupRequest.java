@@ -188,7 +188,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the most recent parameter templates in a region.
+         * The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -206,7 +206,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the source region to which the parameter template belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The ID of the source region to which the parameter template belongs. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +242,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the destination region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The ID of the destination region. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putQueryParameter("TargetRegionId", targetRegionId);
