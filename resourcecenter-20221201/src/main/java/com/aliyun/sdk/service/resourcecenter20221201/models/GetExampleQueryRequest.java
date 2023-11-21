@@ -55,7 +55,10 @@ public class GetExampleQueryRequest extends Request {
         } 
 
         /**
-         * QueryId.
+         * The ID of the template.
+         * <p>
+         * 
+         * >  You can call the [ListExampleQueries](~~ListExampleQueries~~) operation to obtain the template ID.
          */
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);

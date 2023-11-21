@@ -62,7 +62,7 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         private java.util.List < ? > rows; 
 
         /**
-         * Columns.
+         * The columns.
          */
         public Builder columns(java.util.List < Columns> columns) {
             this.columns = columns;
@@ -70,7 +70,7 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Rows.
+         * An array of search results.
          */
         public Builder rows(java.util.List < ? > rows) {
             this.rows = rows;
@@ -130,7 +130,7 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the column.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +138,7 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the column.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -74,7 +74,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         private java.util.List < SavedQueries> savedQueries; 
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * SavedQueries.
+         * The information about the custom query templates.
          */
         public Builder savedQueries(java.util.List < SavedQueries> savedQueries) {
             this.savedQueries = savedQueries;
@@ -186,7 +186,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -194,7 +194,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +202,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +210,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * The ID of the template.
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -218,7 +218,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the template was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

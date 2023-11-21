@@ -69,7 +69,12 @@ public class ExecuteSQLQueryRequest extends Request {
         } 
 
         /**
-         * Expression.
+         * The SQL statement to be executed.
+         * <p>
+         * 
+         * The number of characters in the SQL statement must be less than 2,000.
+         * 
+         * For more information about the SQL syntax, see [Basic SQL syntax](~~2539395~~).
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -78,7 +83,12 @@ public class ExecuteSQLQueryRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The search scope.
+         * <p>
+         * 
+         * Set this parameter to the ID of a resource group.
+         * 
+         * For information about how to obtain the ID of a resource group, see [ListResourceGroups](~~158855~~).
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

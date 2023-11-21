@@ -50,7 +50,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
         private SavedQuery savedQuery; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
         }
 
         /**
-         * SavedQuery.
+         * The information about the custom query template.
          */
         public Builder savedQuery(SavedQuery savedQuery) {
             this.savedQuery = savedQuery;
@@ -158,7 +158,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The query statement in the template.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -182,7 +182,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +190,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * The ID of the template.
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -198,7 +198,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the template was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

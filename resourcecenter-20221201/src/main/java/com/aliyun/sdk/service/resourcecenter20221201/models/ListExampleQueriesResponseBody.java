@@ -74,7 +74,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExampleQueries.
+         * The information about the sample query templates.
          */
         public Builder exampleQueries(java.util.List < ExampleQueries> exampleQueries) {
             this.exampleQueries = exampleQueries;
@@ -82,7 +82,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             private String queryId; 
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * The ID of the template.
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;

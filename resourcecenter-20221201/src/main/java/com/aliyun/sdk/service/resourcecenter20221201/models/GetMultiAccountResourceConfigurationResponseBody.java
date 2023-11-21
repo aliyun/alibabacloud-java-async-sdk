@@ -21,6 +21,12 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     private String createTime;
 
+    @NameInMap("ExpireTime")
+    private String expireTime;
+
+    @NameInMap("IpAddressAttributes")
+    private java.util.List < IpAddressAttributes> ipAddressAttributes;
+
     @NameInMap("IpAddresses")
     private java.util.List < String > ipAddresses;
 
@@ -52,6 +58,8 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
         this.accountId = builder.accountId;
         this.configuration = builder.configuration;
         this.createTime = builder.createTime;
+        this.expireTime = builder.expireTime;
+        this.ipAddressAttributes = builder.ipAddressAttributes;
         this.ipAddresses = builder.ipAddresses;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -90,6 +98,20 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
+     * @return ipAddressAttributes
+     */
+    public java.util.List < IpAddressAttributes> getIpAddressAttributes() {
+        return this.ipAddressAttributes;
     }
 
     /**
@@ -159,6 +181,8 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
         private String accountId; 
         private java.util.Map < String, ? > configuration; 
         private String createTime; 
+        private String expireTime; 
+        private java.util.List < IpAddressAttributes> ipAddressAttributes; 
         private java.util.List < String > ipAddresses; 
         private String regionId; 
         private String requestId; 
@@ -190,6 +214,22 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * ExpireTime.
+         */
+        public Builder expireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * IpAddressAttributes.
+         */
+        public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
+            this.ipAddressAttributes = ipAddressAttributes;
             return this;
         }
 
@@ -274,6 +314,87 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     } 
 
+    public static class IpAddressAttributes extends TeaModel {
+        @NameInMap("IpAddress")
+        private String ipAddress;
+
+        @NameInMap("NetworkType")
+        private String networkType;
+
+        @NameInMap("Version")
+        private String version;
+
+        private IpAddressAttributes(Builder builder) {
+            this.ipAddress = builder.ipAddress;
+            this.networkType = builder.networkType;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpAddressAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipAddress
+         */
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String ipAddress; 
+            private String networkType; 
+            private String version; 
+
+            /**
+             * IpAddress.
+             */
+            public Builder ipAddress(String ipAddress) {
+                this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public IpAddressAttributes build() {
+                return new IpAddressAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;

@@ -84,7 +84,10 @@ public class CreateSavedQueryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the template.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,7 +96,7 @@ public class CreateSavedQueryRequest extends Request {
         }
 
         /**
-         * Expression.
+         * The query statement in the template.
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -102,7 +105,12 @@ public class CreateSavedQueryRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the template.
+         * <p>
+         * 
+         * *   The name must be 1 to 64 characters in length.
+         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must be unique.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

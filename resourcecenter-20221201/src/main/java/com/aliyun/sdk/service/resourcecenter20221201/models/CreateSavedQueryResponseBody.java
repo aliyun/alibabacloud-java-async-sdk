@@ -50,7 +50,7 @@ public class CreateSavedQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * QueryId.
+         * The query ID.
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -58,7 +58,7 @@ public class CreateSavedQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

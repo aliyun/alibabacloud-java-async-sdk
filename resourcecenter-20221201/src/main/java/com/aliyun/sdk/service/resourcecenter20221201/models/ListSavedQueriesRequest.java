@@ -68,7 +68,12 @@ public class ListSavedQueriesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -77,7 +82,7 @@ public class ListSavedQueriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

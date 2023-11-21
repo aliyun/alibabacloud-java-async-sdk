@@ -214,7 +214,7 @@ public class SearchResourcesResponseBody extends TeaModel {
     }
     public static class IpAddressAttributes extends TeaModel {
         @NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private String ipAddress;
 
         @NameInMap("NetworkType")
         private String networkType;
@@ -239,7 +239,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public String getIpAddress() {
             return this.ipAddress;
         }
 
@@ -258,20 +258,24 @@ public class SearchResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private String ipAddress; 
             private String networkType; 
             private String version; 
 
             /**
-             * IpAddress.
+             * The IP address.
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
 
             /**
-             * NetworkType.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **Public**: the Internet
+             * *   **Private**: internal network
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -279,7 +283,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -332,7 +336,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -340,7 +344,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -513,7 +517,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -524,7 +528,7 @@ public class SearchResourcesResponseBody extends TeaModel {
              * The time when the resource was created.
              * <p>
              * 
-             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -532,7 +536,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the resource expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -540,7 +544,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddressAttributes.
+             * The attributes of the IP address.
              */
             public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
                 this.ipAddressAttributes = ipAddressAttributes;
@@ -551,7 +555,7 @@ public class SearchResourcesResponseBody extends TeaModel {
              * The IP addresses.
              * <p>
              * 
-             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder ipAddresses(java.util.List < String > ipAddresses) {
                 this.ipAddresses = ipAddresses;
@@ -559,7 +563,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the resource.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -567,7 +571,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the resource belongs.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -575,7 +579,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -583,7 +587,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -591,7 +595,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -599,7 +603,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -607,10 +611,10 @@ public class SearchResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the resource.
+             * The zone ID.
              * <p>
              * 
-             * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

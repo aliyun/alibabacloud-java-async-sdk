@@ -50,7 +50,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExampleQuery.
+         * The information about the sample query template.
          */
         public Builder exampleQuery(ExampleQuery exampleQuery) {
             this.exampleQuery = exampleQuery;
@@ -58,7 +58,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
             private String queryId; 
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +142,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The query statement in the template.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -150,7 +150,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * The ID of the template.
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
