@@ -35,6 +35,10 @@ public class DescribeSplitItemBillRequest extends Request {
     private String instanceID;
 
     @Query
+    @NameInMap("IsHideZeroCharge")
+    private Boolean isHideZeroCharge;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -73,6 +77,7 @@ public class DescribeSplitItemBillRequest extends Request {
         this.billingDate = builder.billingDate;
         this.granularity = builder.granularity;
         this.instanceID = builder.instanceID;
+        this.isHideZeroCharge = builder.isHideZeroCharge;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerId = builder.ownerId;
@@ -129,6 +134,13 @@ public class DescribeSplitItemBillRequest extends Request {
      */
     public String getInstanceID() {
         return this.instanceID;
+    }
+
+    /**
+     * @return isHideZeroCharge
+     */
+    public Boolean getIsHideZeroCharge() {
+        return this.isHideZeroCharge;
     }
 
     /**
@@ -193,6 +205,7 @@ public class DescribeSplitItemBillRequest extends Request {
         private String billingDate; 
         private String granularity; 
         private String instanceID; 
+        private Boolean isHideZeroCharge; 
         private Integer maxResults; 
         private String nextToken; 
         private Long ownerId; 
@@ -213,6 +226,7 @@ public class DescribeSplitItemBillRequest extends Request {
             this.billingDate = request.billingDate;
             this.granularity = request.granularity;
             this.instanceID = request.instanceID;
+            this.isHideZeroCharge = request.isHideZeroCharge;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerId = request.ownerId;
@@ -271,6 +285,15 @@ public class DescribeSplitItemBillRequest extends Request {
         public Builder instanceID(String instanceID) {
             this.putQueryParameter("InstanceID", instanceID);
             this.instanceID = instanceID;
+            return this;
+        }
+
+        /**
+         * IsHideZeroCharge.
+         */
+        public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
+            this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
+            this.isHideZeroCharge = isHideZeroCharge;
             return this;
         }
 

@@ -470,7 +470,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String usageStartTime; 
 
             /**
-             * The aftertaxt amount of the order.
+             * The after-tax amount of the order.
              */
             public Builder afterTaxAmount(String afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
