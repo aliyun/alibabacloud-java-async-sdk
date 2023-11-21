@@ -382,7 +382,10 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * VPN网关实例所属的资源组ID。
+         * <p>
+         * 
+         * 您可以调用[ListResourceGroups](~~158855~~)接口查询资源组信息。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

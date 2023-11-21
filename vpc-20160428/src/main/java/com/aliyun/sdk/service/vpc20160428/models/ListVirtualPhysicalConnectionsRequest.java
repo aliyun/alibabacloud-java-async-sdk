@@ -212,8 +212,8 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * Specifies whether the hosted connection is accepted by the tenant. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder isConfirmed(Boolean isConfirmed) {
             this.putQueryParameter("IsConfirmed", isConfirmed);
@@ -222,7 +222,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -231,11 +231,11 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -244,7 +244,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit over which the hosted connection is created.
+         * The ID of the Express Connect circuit over which the hosted connections are created.
          * <p>
          * 
          * Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.
@@ -268,7 +268,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the hosted connection belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -277,7 +277,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -286,7 +286,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * VirtualPhysicalConnectionAliUids.
+         * The information about the Alibaba Cloud account that owns the hosted connection.
          */
         public Builder virtualPhysicalConnectionAliUids(java.util.List < String > virtualPhysicalConnectionAliUids) {
             this.putQueryParameter("VirtualPhysicalConnectionAliUids", virtualPhysicalConnectionAliUids);
@@ -298,9 +298,9 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
          * The business status of the hosted connection. Valid values:
          * <p>
          * 
-         * *   **Normal**: normal
-         * *   **FinancialLocked**: locked due to overdue payments
-         * *   **SecurityLocked**: locked for security reasons
+         * *   **Normal**
+         * *   **FinancialLocked**
+         * *   **SecurityLocked**
          */
         public Builder virtualPhysicalConnectionBusinessStatus(String virtualPhysicalConnectionBusinessStatus) {
             this.putQueryParameter("VirtualPhysicalConnectionBusinessStatus", virtualPhysicalConnectionBusinessStatus);
@@ -309,7 +309,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * VirtualPhysicalConnectionIds.
+         * The information about the hosted connection.
          */
         public Builder virtualPhysicalConnectionIds(java.util.List < String > virtualPhysicalConnectionIds) {
             this.putQueryParameter("VirtualPhysicalConnectionIds", virtualPhysicalConnectionIds);
@@ -318,7 +318,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * VirtualPhysicalConnectionStatuses.
+         * The business status of the hosted connection.
          */
         public Builder virtualPhysicalConnectionStatuses(java.util.List < String > virtualPhysicalConnectionStatuses) {
             this.putQueryParameter("VirtualPhysicalConnectionStatuses", virtualPhysicalConnectionStatuses);
@@ -327,7 +327,7 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * VlanIds.
+         * The VLAN ID of the hosted connection.
          */
         public Builder vlanIds(java.util.List < String > vlanIds) {
             this.putQueryParameter("VlanIds", vlanIds);
@@ -381,10 +381,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,10 +392,10 @@ public class ListVirtualPhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

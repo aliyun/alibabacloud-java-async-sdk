@@ -157,9 +157,9 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
              * The identity document type of the construction worker. Valid values:
              * <p>
              * 
-             * *   **IDCard**: identity card
-             * *   **Passport**: passport
-             * *   **Other**: other identity documents
+             * *   **IDCard**
+             * *   **Passport**
+             * *   **Other**
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;
@@ -178,8 +178,8 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
              * The gender of the construction worker. Valid values:
              * <p>
              * 
-             * *   **Male**: male
-             * *   **Female**: female
+             * *   **Male**
+             * *   **Female**
              */
             public Builder PMGender(String PMGender) {
                 this.PMGender = PMGender;
@@ -461,7 +461,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LineSPContactInfo.
+             * The contact information about line O\&M.
              */
             public Builder lineSPContactInfo(String lineSPContactInfo) {
                 this.lineSPContactInfo = lineSPContactInfo;
@@ -469,7 +469,13 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             }
 
             /**
-             * LineServiceProvider.
+             * The ISP. Valid values:
+             * <p>
+             * 
+             * *   **China Telecom**
+             * *   **China Unicom**
+             * *   **China Mobile**
+             * *   **Other ISPs in China**
              */
             public Builder lineServiceProvider(String lineServiceProvider) {
                 this.lineServiceProvider = lineServiceProvider;

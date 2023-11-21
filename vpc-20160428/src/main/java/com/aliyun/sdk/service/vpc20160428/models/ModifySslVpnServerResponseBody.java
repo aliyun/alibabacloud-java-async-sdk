@@ -366,7 +366,12 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the SSL server belongs.
+         * <p>
+         * 
+         * The SSL server has the same resource group as its associated VPN gateway instance.
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

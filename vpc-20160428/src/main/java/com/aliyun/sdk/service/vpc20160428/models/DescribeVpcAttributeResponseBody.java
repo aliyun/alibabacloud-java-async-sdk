@@ -348,8 +348,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          * Indicates whether the ClassicLink feature is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder classicLinkEnabled(Boolean classicLinkEnabled) {
             this.classicLinkEnabled = classicLinkEnabled;
@@ -392,10 +392,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          * The status of the DHCP options set. Valid values:
          * <p>
          * 
-         * *   **Available**: available
-         * *   **InUse**: in use
-         * *   **Deleted**: deleted
-         * *   **Pending**: being configured
+         * *   **Available**
+         * *   **InUse**
+         * *   **Deleted**
+         * *   **Pending**
          */
         public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
             this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
@@ -419,7 +419,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the IPv6 CIDR blocks of the VPC.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -430,8 +430,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          * Indicates whether the VPC is the default VPC. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -447,7 +447,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the VPC.
+         * The ID of the region to which the VPC belongs.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -455,7 +455,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -482,8 +482,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          * The status of the VPC. Valid values:
          * <p>
          * 
-         * *   **Available**: available
-         * *   **Pending**: being configured
+         * *   **Available**
+         * *   **Pending**
          */
         public Builder status(String status) {
             this.status = status;
@@ -491,11 +491,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the VPC supports IPv4 gateways. 
+         * Indicates whether the VPC supports IPv4 gateways.
          * <p>
          * 
-         * - **true**: yes
-         * - **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder supportIpv4Gateway(Boolean supportIpv4Gateway) {
             this.supportIpv4Gateway = supportIpv4Gateway;
@@ -503,7 +503,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The information about the tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -731,9 +731,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
              * The type of resources deployed in the VPC. Valid values:
              * <p>
              * 
-             * - **VSwitch**: vSwitches
-             * - **VRouter**: vRouters
-             * - **RouteTable**: route tables
+             * *   **VSwitch**
+             * *   **VRouter**
+             * *   **RouteTable**
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -838,12 +838,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
              * The type of the IPv6 CIDR block. Valid values:
              * <p>
              * 
-             * - **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
-             * - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
-             * - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
-             * - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+             * *   **BGP** (default)
+             * *   **ChinaMobile**
+             * *   **ChinaUnicom**
+             * *   **ChinaTelecom**
              * 
-             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -978,7 +978,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -986,7 +986,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -143,7 +143,7 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the route table is created.
+         * The region ID of the route table.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -173,7 +173,7 @@ public class CreateRouteEntriesRequest extends Request {
         }
 
         /**
-         * RouteEntries.
+         * The route entries.
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.putQueryParameter("RouteEntries", routeEntries);
@@ -291,7 +291,10 @@ public class CreateRouteEntriesRequest extends Request {
             private String routeTableId; 
 
             /**
-             * Description.
+             * The description of the custom route entry. You can specify up to 50 descriptions.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,11 +314,11 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The version of the IP protocol. You can specify up to 50 IP protocol versions. Valid values:
+             * The IP version. You can specify up to 50 IP versions. Valid values:
              * <p>
              * 
-             * *   **IPv4**
-             * *   **IPv6**
+             * *   **4**: IPv4
+             * *   **6**: IPv6
              */
             public Builder ipVersion(Integer ipVersion) {
                 this.ipVersion = ipVersion;
@@ -326,7 +329,7 @@ public class CreateRouteEntriesRequest extends Request {
              * The name of the custom route entry that you want to add. You can specify up to 50 names.
              * <p>
              * 
-             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+             * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +337,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the next hop of the custom route entry. You can specify up to 50 next hop IDs.
+             * The next hop ID of the custom route entry. You can specify up to 50 next hop IDs.
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -345,15 +348,15 @@ public class CreateRouteEntriesRequest extends Request {
              * The type of next hop. You can specify up to 50 next hop types. Valid values:
              * <p>
              * 
-             * *   **Instance**: Elastic Compute Service (ECS) instance. This is the default value.
-             * *   **HaVip**: high-availability virtual IP address (HAVIP).
-             * *   **RouterInterface**: router interface.
-             * *   **NetworkInterface**: elastic network interface (ENI).
-             * *   **VpnGateway**: VPN gateway.
-             * *   **IPv6Gateway**: IPv6 gateway.
-             * *   **NatGateway**: NAT gateway.
-             * *   **Attachment**: transit router.
-             * *   **VpcPeer**: VPC peering connection.
+             * *   **Instance** (default): an Elastic Compute Service (ECS) instance
+             * *   **HaVip**: a high-availability virtual IP address (HAVIP).
+             * *   **RouterInterface**: a router interface.
+             * *   **NetworkInterface**: an elastic network interface (ENI).
+             * *   **VpnGateway**: a VPN gateway.
+             * *   **IPv6Gateway**: an IPv6 gateway.
+             * *   **NatGateway**: a NAT gateway.
+             * *   **Attachment**: a transit router.
+             * *   **VpcPeer**: a VPC peering connection.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -361,7 +364,7 @@ public class CreateRouteEntriesRequest extends Request {
             }
 
             /**
-             * The ID of the route table to which you want to add the custom route entry. You can specify up to 50 route table IDs.
+             * The ID of the route table to which you want to add a custom route entry. You can specify up to 50 route table IDs.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

@@ -112,11 +112,11 @@ public class CreateVpconnFromVbrRequest extends Request {
         } 
 
         /**
-         * Specifies whether to only precheck the request. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: checks the API request. If the request passes the precheck, the operation is not performed. Check items include the request format, instance status, and whether the required parameters are specified. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the ID of the request.
-         * *   **false** (default): sends the API request. If the request passes the precheck, the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -125,11 +125,11 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * Specifies the party that must pay for the shared Express Connect circuit. Valid values:
+         * The payer for the shared Express Connect circuit. Valid values:
          * <p>
          * 
-         * *   **PayByPhysicalConnectionOwner**: If you set the value to PayByPhysicalConnectionOwner, the Express Connect partner must pay for the shared Express Connect circuit.
-         * *   **PayByVirtualPhysicalConnectionOwner**: If you set the value to PayByVirtualPhysicalConnectionOwner, the tenant must pay for the shared Express Connect circuit.
+         * *   **PayByPhysicalConnectionOwner**: the owner of the shared Express Connect circuit
+         * *   **PayByVirtualPhysicalConnectionOwner**: the owner of the hosted connection
          */
         public Builder orderMode(String orderMode) {
             this.putQueryParameter("OrderMode", orderMode);
@@ -138,7 +138,7 @@ public class CreateVpconnFromVbrRequest extends Request {
         }
 
         /**
-         * The region ID of the shared Express Connect circuit.
+         * The region ID of the hosted connection.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

@@ -62,11 +62,11 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         private TagKeys tagKeys; 
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +74,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tag keys.
+         * The tag keys.
          */
         public Builder tagKeys(TagKeys tagKeys) {
             this.tagKeys = tagKeys;
@@ -134,7 +134,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -183,7 +183,7 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
             private java.util.List < TagKey> tagKey; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder tagKey(java.util.List < TagKey> tagKey) {
                 this.tagKey = tagKey;

@@ -242,9 +242,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -333,12 +333,12 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * The new next hop type of the route entry. Valid values:
+         * The new next hop type of the route. Valid values:
          * <p>
          * 
-         * *   **EcsInstance**: an Elastic Compute Service (ECS) instance.
-         * *   **NetworkInterface**: an elastic network interface (ENI).
-         * *   **Local**: a local next hop.
+         * *   **Instance**: Elastic Compute Service (ECS) instance
+         * *   **NetworkInterface**: elastic network interface (ENI)
+         * *   **Local**: local next hop
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);

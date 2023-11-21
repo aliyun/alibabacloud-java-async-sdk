@@ -94,11 +94,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If **NextToken** was not returned, it indicates that no additional results exist.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +106,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +185,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -615,12 +621,12 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the Express Connect circuit. Valid values:
+             * The status of the Express Connect circuit. Valid values:
              * <p>
              * 
-             * *   **Normal**: enabled
-             * *   **FinancialLocked**: locked due to overdue payments
-             * *   **SecurityLocked**: locked for security reasons
+             * *   **Normal**
+             * *   **FinancialLocked**
+             * *   **SecurityLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -631,7 +637,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              * The billing method of the Express Connect circuit.
              * <p>
              * 
-             * The value is set to **Prepaid**, which indicates the subscription billing method.
+             * If **Prepaid** is returned, it indicates that the Express Connect circuit is billed on a subscription basis.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -663,7 +669,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Express Connect circuit was enabled.
+             * The time when the Express Connect circuit is enabled.
              */
             public Builder enabledTime(String enabledTime) {
                 this.enabledTime = enabledTime;
@@ -682,7 +688,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated bandwidth value of the hosted connection. The estimated bandwidth takes effect after you complete the payment.
+             * The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.
              * <p>
              * 
              * **M** indicates Mbit/s and **G** indicates Gbit/s.
@@ -696,12 +702,12 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              * The connectivity provider of the Express Connect circuit. Valid values:
              * <p>
              * 
-             * *   **CT**: China Telecom
-             * *   **CU**: China Unicom
-             * *   **CM**: China Mobile
-             * *   **CO**: other connectivity providers in the Chinese mainland
-             * *   **Equinix**: Equinix
-             * *   **Other**: other connectivity providers outside the Chinese mainland
+             * *   **CT**: China Telecom.
+             * *   **CU**: China Unicom.
+             * *   **CM**: China Mobile.
+             * *   **CO**: other connectivity providers in the Chinese mainland.
+             * *   **Equinix**: Equinix.
+             * *   **Other**: other connectivity providers outside the Chinese mainland.
              */
             public Builder lineOperator(String lineOperator) {
                 this.lineOperator = lineOperator;
@@ -709,16 +715,16 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the LOA. Valid values:
+             * The status of the letter of authorization (LOA). Valid values:
              * <p>
              * 
-             * *   **Applying**: The LOA is pending approval.
-             * *   **Accept**: The LOA is approved.
-             * *   **Available**: The LOA is available.
-             * *   **Rejected**: The LOA is rejected.
-             * *   **Completing**: The Express Connect circuit is under construction.
-             * *   **Complete**: The Express Connect circuit is installed.
-             * *   **Deleted**: The LOA is deleted.
+             * *   **Applying**
+             * *   **Accept**
+             * *   **Available**
+             * *   **Rejected**
+             * *   **Completing**
+             * *   **Complete**
+             * *   **Deleted**
              */
             public Builder loaStatus(String loaStatus) {
                 this.loaStatus = loaStatus;
@@ -734,7 +740,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The payer of the hosted connection. Valid values:
+             * The payer for the shared Express Connect circuit. Valid values:
              * <p>
              * 
              * *   **PayByPhysicalConnectionOwner**: the owner of the shared Express Connect circuit
@@ -778,7 +784,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the access device.
+             * The ID of the port on the access device.
              */
             public Builder portNumber(String portNumber) {
                 this.portNumber = portNumber;
@@ -791,9 +797,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              * 
              * *   **100Base-T**: 100 Mbit/s copper Ethernet port
              * *   **1000Base-T**: 1,000 Mbit/s copper Ethernet port
-             * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 kilometers)
+             * *   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)
              * *   **10GBase-T**: 10,000 Mbit/s copper Ethernet port
-             * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)
+             * *   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)
              * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
              * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
              */
@@ -803,11 +809,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of connection over the Express Connect circuit. Valid values:
+             * The type of the Express Connect circuit. Valid values:
              * <p>
              * 
-             * *   **VirtualPhysicalConnection**: a hosted connection
-             * *   **PhysicalConnection**: a dedicated connection
+             * *   **VirtualPhysicalConnection**: shared Express Connect circuit
+             * *   **PhysicalConnection**: dedicated Express Connect circuit
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -823,7 +829,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the hosted connection belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -849,7 +855,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
              * *   **Approved**: The application is approved.
              * *   **Allocating**: The system is allocating resources.
              * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is pending user confirmation.
+             * *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
              * *   **Enabled**: The Express Connect circuit is enabled.
              * *   **Rejected**: The application is rejected.
              * *   **Canceled**: The application is canceled.
@@ -862,7 +868,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag list.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -878,12 +884,12 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the hosted connection. Valid values:
+             * The status of the hosted connection. Valid values:
              * <p>
              * 
-             * *   **Confirmed**: accepted
-             * *   **UnConfirmed**: pending acceptance
-             * *   **Deleted**: deleted
+             * *   **Confirmed**
+             * *   **UnConfirmed**
+             * *   **Deleted**
              */
             public Builder virtualPhysicalConnectionStatus(String virtualPhysicalConnectionStatus) {
                 this.virtualPhysicalConnectionStatus = virtualPhysicalConnectionStatus;

@@ -86,7 +86,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         private VirtualBorderRouterSet virtualBorderRouterSet; 
 
         /**
-         * The number of the returned page. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the queried VBRs.
+         * The information about the queried VBR.
          */
         public Builder virtualBorderRouterSet(VirtualBorderRouterSet virtualBorderRouterSet) {
             this.virtualBorderRouterSet = virtualBorderRouterSet;
@@ -190,7 +190,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.
+             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -198,14 +198,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance. Valid values: 
+             * The status of the CEN instance. Valid values:
              * <p>
              * 
-             * - **Attached**: The VBR is attached to the CEN instance.
-             * - **Attaching**: The VBR is being attached to the CEN instance.
-             * - **Detached**: The VBR is detached from the CEN instance.
-             * - **Detaching**: The VBR is being detached from the CEN instance.
-             * - If no value is returned, the VBR is not attached to a CEN instance.
+             * *   **Attached**: The VBR is attached to the CEN instance.
+             * *   **Attaching**: The VBR is being attached to the CEN instance.
+             * *   **Detached**: The VBR is detached from the CEN instance.
+             * *   **Detaching**: The VBR is being detached from the CEN instance.
+             * *   If no value is returned, the VBR is not attached to a CEN instance.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -455,7 +455,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String vlanInterfaceId; 
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.
+             * The circuit code of the Express Connect circuit. The circuit code is provided by the ISP.
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -466,8 +466,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * Indicates whether IPv6 is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: enabled.
-             * *   **false**: disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -491,7 +491,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the VBR on the user side.
+             * The IPv4 address of the gateway device on the user side.
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -499,7 +499,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the gateway device in the data center.
+             * The IPv6 address of the gateway device on the user side.
              */
             public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
                 this.peerIpv6GatewayIp = peerIpv6GatewayIp;
@@ -532,8 +532,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The business status of the Express Connect circuit.
              * <p>
              * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **Normal:** The Express Connect circuit is running as normal.
+             * *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
              */
             public Builder physicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
                 this.physicalConnectionBusinessStatus = physicalConnectionBusinessStatus;
@@ -549,7 +549,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+             * The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
              */
             public Builder physicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
                 this.physicalConnectionOwnerUid = physicalConnectionOwnerUid;
@@ -560,16 +560,16 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The status of the Express Connect circuit.
              * <p>
              * 
-             * *   **Initial**: The application is under review.
+             * *   **Initial:** The application is under review.
              * *   **Approved**: The application is approved.
              * *   **Allocating**: The system is allocating resources.
              * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
+             * *   **Confirmed**: The Express Connect circuit is to be confirmed.
              * *   **Enabled**: The Express Connect circuit is enabled.
              * *   **Rejected**: The application is rejected.
              * *   **Canceled**: The application is canceled.
-             * *   **Allocation Failed**: The system failed to allocate resources.
-             * *   **Terminated**: The Express Connect circuit is disabled.
+             * *   **Allocation Failed:** The system failed to allocate resources.
+             * *   **Terminated:** The Express Connect circuit is disabled.
              */
             public Builder physicalConnectionStatus(String physicalConnectionStatus) {
                 this.physicalConnectionStatus = physicalConnectionStatus;
@@ -580,12 +580,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The status of the VBR. Valid values:
              * <p>
              * 
-             * *   **unconfirmed**: pending confirmation from other users
-             * *   **active**: normal
-             * *   **terminating**: being disabled
-             * *   **terminated**: disabled
-             * *   **recovering**: being enabled
-             * *   **deleting:** The endpoint is being deleted.
+             * *   **unconfirmed**
+             * *   **active**
+             * *   **terminating**
+             * *   **terminated**
+             * *   **recovering**
+             * *   **deleting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -695,7 +695,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -703,7 +703,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1225,7 +1225,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The first time when the VBR was activated.
+             * The time when the VBR was first activated.
              */
             public Builder activationTime(String activationTime) {
                 this.activationTime = activationTime;
@@ -1257,7 +1257,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.
+             * The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -1313,8 +1313,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * Indicates whether IPv6 is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -1338,7 +1338,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval to receive Bidirectional Forwarding Detection (BFD) packets. Valid values: **200 to 1000**. Unit: milliseconds.
+             * The time interval to receive BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.
              */
             public Builder minRxInterval(Long minRxInterval) {
                 this.minRxInterval = minRxInterval;
@@ -1362,10 +1362,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the VBR.
+             * The billing method of the VBR. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
+             * *   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
              * *   **PostPaid**: pay-as-you-go
              */
             public Builder pConnVbrChargeType(String pConnVbrChargeType) {
@@ -1382,7 +1382,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 address of the VBR on the user side.
+             * The IPv4 address of the gateway device on the user side.
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -1417,8 +1417,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The business status of the Express Connect circuit.
              * <p>
              * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **Normal:** The Express Connect circuit is running asnormal.
+             * *   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.
              */
             public Builder physicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
                 this.physicalConnectionBusinessStatus = physicalConnectionBusinessStatus;
@@ -1434,7 +1434,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the Alibaba Cloud account to which the Express Connect circuit belongs.
+             * The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.
              */
             public Builder physicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
                 this.physicalConnectionOwnerUid = physicalConnectionOwnerUid;
@@ -1445,16 +1445,16 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The status of the Express Connect circuit.
              * <p>
              * 
-             * *   **Initial**: The application is under review.
+             * *   **Initial:** The application is under review.
              * *   **Approved**: The application is approved.
              * *   **Allocating**: The system is allocating resources.
              * *   **Allocated**: The Express Connect circuit is under construction.
-             * *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
+             * *   **Confirmed**: The Express Connect circuit is to be confirmed.
              * *   **Enabled**: The Express Connect circuit is enabled.
              * *   **Rejected**: The application is rejected.
              * *   **Canceled**: The application is canceled.
-             * *   **Allocation Failed**: The system failed to allocate resources.
-             * *   **Terminated**: The Express Connect circuit is disabled.
+             * *   **Allocation Failed:** The system failed to allocate resources.
+             * *   **Terminated:** The Express Connect circuit is disabled.
              */
             public Builder physicalConnectionStatus(String physicalConnectionStatus) {
                 this.physicalConnectionStatus = physicalConnectionStatus;
@@ -1462,7 +1462,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the status of the VBR changed from **terminated** to **active**.
+             * The time when the status of the VBR last changed from **terminated** to **active**.
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -1470,7 +1470,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1489,12 +1489,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              * The status of the VBR. Valid values:
              * <p>
              * 
-             * *   **unconfirmed**: pending confirmation from other users
-             * *   **active**: normal
-             * *   **terminating**: being disabled
-             * *   **terminated**: disabled
-             * *   **recovering**: being enabled
-             * *   **deleting:**: being deleted
+             * *   **unconfirmed**
+             * *   **active**
+             * *   **terminating**
+             * *   **terminated**
+             * *   **recovering**
+             * *   **deleting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1502,7 +1502,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(VirtualBorderRouterTypeTags tags) {
                 this.tags = tags;
@@ -1510,7 +1510,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the VBR was disabled.
+             * The time when the VBR was last disabled.
              */
             public Builder terminationTime(String terminationTime) {
                 this.terminationTime = terminationTime;
@@ -1526,7 +1526,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * The VBR ID.
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;

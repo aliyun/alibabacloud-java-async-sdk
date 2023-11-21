@@ -285,7 +285,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
          * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter.
+         * >  Only the Express Connect circuit owner can specify this parameter.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -297,9 +297,9 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -311,8 +311,8 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
          * Specifies whether to enable IPv6. Valid values:
          * <p>
          * 
-         * *   **true**: enables IPv6
-         * *   **false** (default): disables IPv6
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enableIpv6(String enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -321,7 +321,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IP address of the VBR.
+         * The IP address of the gateway device on the Alibaba Cloud side.
          */
         public Builder localGatewayIp(String localGatewayIp) {
             this.putQueryParameter("LocalGatewayIp", localGatewayIp);
@@ -330,7 +330,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IPv6 address of the VBR.
+         * The IPv6 address of the gateway device on the Alibaba Cloud side.
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -357,7 +357,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The IP address of the gateway device in the data center.
+         * The IP address of the gateway device on the user side.
          * <p>
          * 
          * *   Only the owner of the VBR can set or modify this parameter.
@@ -373,7 +373,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
          * The IPv6 address of the gateway device in the data center.
          * <p>
          * 
-         * *   Only the owner of the VBR can set or modify this parameter.
+         * *   Only the owner of the VBR can specify or modify this parameter.
          * *   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
@@ -383,7 +383,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.
+         * The subnet mask of the IPv6 addresses of the gateway devices on the user side and Alibaba Cloud side.
          * <p>
          * 
          * The two IPv6 addresses must fall within the same subnet.
@@ -416,7 +416,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
         }
 
         /**
-         * The ID of the region where the Express Connect circuit is deployed.
+         * The region ID of the Express Connect circuit.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -458,7 +458,7 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Req
          * The VLAN ID of the VBR. Valid values: **0 to 2999**.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
+         * >  Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

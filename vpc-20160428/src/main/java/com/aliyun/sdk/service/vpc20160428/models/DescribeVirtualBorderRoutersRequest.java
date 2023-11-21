@@ -182,7 +182,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The information about the filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -194,8 +194,8 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
          * Specifies whether cross-account VBRs are included.
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no. This is the default value.
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder includeCrossAccountVbr(Boolean includeCrossAccountVbr) {
             this.putQueryParameter("IncludeCrossAccountVbr", includeCrossAccountVbr);
@@ -213,7 +213,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +222,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +231,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBRs are deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +240,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
+         * <p>
+         * 
+         * For more information about resource groups, see [What is a resource group?](~~94475~~)
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -267,7 +270,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -321,7 +324,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
+             * The filter conditions. You can specify up to five filter conditions. Valid values:
              * <p>
              * 
              * *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
@@ -329,7 +332,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
              * *   **Status**: Filter by VBR status.
              * *   **Name**: Filter by VBR name.
              * *   **AccessPointId**: Filter by access point ID.
-             * *   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.
+             * *   **eccId:** Filter by Express Cloud Connect (ECC) instance ID.
              * *   **type**: Filter by Express Connect circuit type.
              */
             public Builder key(String key) {
@@ -338,7 +341,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -391,16 +394,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             private String value; 
 
             /**
-             * The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
-             * *   **VbrId**: Filter by VBR ID.
-             * *   **Status**: Filter by VBR status.
-             * *   **Name**: Filter by VBR name.
-             * *   **AccessPointId**: Filter by access point ID.
-             * *   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.
-             * *   **type**: Filter by Express Connect circuit type.
+             * The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +405,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

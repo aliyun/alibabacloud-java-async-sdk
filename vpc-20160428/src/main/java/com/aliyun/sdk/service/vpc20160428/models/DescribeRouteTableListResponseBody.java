@@ -86,7 +86,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag that is added to the route table.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +219,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the route table.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -581,8 +581,8 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
              * The type of the route table. Valid values:
              * <p>
              * 
-             * *   **Custom**: a custom route table
-             * *   **System**: a system route table
+             * *   **Custom**
+             * *   **System**
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -601,8 +601,8 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
              * The type of the router to which the route table belongs. Valid values:
              * <p>
              * 
-             * *   **VRouter**: a vRouter
-             * *   **VBR**: a VBR
+             * *   **VRouter**
+             * *   **VBR**
              */
             public Builder routerType(String routerType) {
                 this.routerType = routerType;
@@ -613,9 +613,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
              * The status of the route table. Valid values:
              * <p>
              * 
-             * *   **Pending**: being created
-             * *   **Available**: available
-             * *   **Deleting**: being deleted
+             * *   **Pending**
+             * *   **Available**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -631,7 +631,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The information about the vSwitches.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

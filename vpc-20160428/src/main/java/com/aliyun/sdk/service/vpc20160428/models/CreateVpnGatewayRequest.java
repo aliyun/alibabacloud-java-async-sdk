@@ -408,9 +408,6 @@ public class CreateVpnGatewayRequest extends Request {
 
         /**
          * The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.
-         * <p>
-         * 
-         * > This parameter is required when you create a VPN gateway.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -480,7 +477,14 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the VPN gateway belongs.
+         * <p>
+         * 
+         * - You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
+         * - If you do not specify a resource group, the VPN gateway will belong to the default resource group after being created.
+         * - After the VPN gateway is created, if you create an SSL server, SSL client certificate, IPsec server, or IPsec-VPN connection under the VPN gateway (when the IPsec-VPN connection is bound to the VPN gateway), these resources directly belong to the resource group to which the VPN gateway belongs and cannot be modified.
+         * 
+         *     If you change the resource group to which the VPN gateway belongs, the resource group to which the resource belongs will also be changed.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -94,7 +94,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -364,8 +364,8 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
              * Indicates whether the ASN is fake. Valid values:
              * <p>
              * 
-             * *   **false**: no
-             * *   **true**: yes
+             * *   **false**
+             * *   **true**
              */
             public Builder isFake(String isFake) {
                 this.isFake = isFake;
@@ -381,7 +381,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ASN of the VBR.
+             * The ASN of the device on the Alibaba Cloud side.
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -397,7 +397,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The autonomous system number (ASN) of the gateway device in the data center.
+             * The autonomous system number (ASN) of the on-premises device in the data center.
              */
             public Builder peerAsn(String peerAsn) {
                 this.peerAsn = peerAsn;

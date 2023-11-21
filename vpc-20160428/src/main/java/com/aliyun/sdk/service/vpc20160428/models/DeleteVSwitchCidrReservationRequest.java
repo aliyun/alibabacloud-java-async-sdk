@@ -144,7 +144,10 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the vSwitch is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class DeleteVSwitchCidrReservationRequest extends Request {
         }
 
         /**
-         * VSwitchCidrReservationId.
+         * The ID of the reserved CIDR block.
          */
         public Builder vSwitchCidrReservationId(String vSwitchCidrReservationId) {
             this.putQueryParameter("VSwitchCidrReservationId", vSwitchCidrReservationId);

@@ -369,8 +369,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
          * 
          * *   **CircuitCode**: the circuit code provided by the connectivity provider for the Express Connect circuit.
          * *   **LocalGatewayIp**: the IP address of the gateway device on the Alibaba Cloud side.
-         * *   **PeerGatewayIp**: the IP address of the gateway device on the user side.
-         * *   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the user side.
+         * *   **PeerGatewayIp**: the IP address of the gateway device on the customer side.
+         * *   **PeeringSubnetMask**: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the customer side.
          * *   **PhysicalConnectionId**: the ID of the Express Connect circuit.
          */
         public Builder associatedPhysicalConnections(String associatedPhysicalConnections) {
@@ -392,7 +392,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
          * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter.
+         * >  Only the owner of the Express Connect circuit can set this property.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
@@ -406,7 +406,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -442,8 +442,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
          * Specifies whether to enable IPv6. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -452,7 +452,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IP address of the gateway device on the Alibaba Cloud side.
+         * The IP address of the VBR.
          * <p>
          * 
          * Only the owner of the VBR can set or modify this parameter.
@@ -464,7 +464,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IPv6 address of the gateway device on the Alibaba Cloud side.
+         * The IPv6 address of the VBR.
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -521,7 +521,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The IP address of the gateway device on the user side.
+         * The IP address of the gateway device in the data center.
          * <p>
          * 
          * Only the owner of the VBR can set or modify this parameter.
@@ -558,7 +558,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the user side. Only the owner of the VBR can set or modify this parameter.
+         * The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the customer side. Only the owner of the VBR can set or modify this parameter.
          * <p>
          * 
          * The two IP addresses must fall within the same subnet.
@@ -600,7 +600,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * The VBR ID.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);
@@ -612,7 +612,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
          * The VLAN ID of the VBR. Valid values: **0 to 2999**.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
+         * >  This parameter is available only to Express Connect owners. The VLAN IDs of VBRs on the same Express Connect circuit must be unique.
          */
         public Builder vlanId(Integer vlanId) {
             this.putQueryParameter("VlanId", vlanId);

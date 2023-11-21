@@ -173,7 +173,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +182,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +200,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         }
 
         /**
-         * The region where the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,16 +272,16 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
             private java.util.List < String > value; 
 
             /**
-             * The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
+             * The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
              * <p>
              * 
-             * *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
-             * *   **VbrId**: Filter by VBR ID.
-             * *   **Status**: Filter by VBR status.
-             * *   **Name**: Filter by VBR name.
-             * *   **AccessPointId**: Filter by access point ID.
-             * *   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.
-             * *   **type**: Filter by VBR type.
+             * *   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.
+             * *   **VbrId**: filter VBRs by ID.
+             * *   **Status**: filter VBRs by status.
+             * *   **Name**: filter VBRs by name.
+             * *   **AccessPointId**: filter VBRs by access point ID.
+             * *   **eccId**: filter VBRs by ID of Express Cloud Connect (ECC) instance.
+             * *   **type**: filter VBRs by type.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +289,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
             }
 
             /**
-             * Value.
+             * The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

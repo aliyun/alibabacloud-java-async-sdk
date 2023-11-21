@@ -50,7 +50,7 @@ public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -61,8 +61,8 @@ public class UpdateVirtualPhysicalConnectionResponseBody extends TeaModel {
          * Indicates whether the VLAN ID of the hosted connection is changed. Valid values:
          * <p>
          * 
-         * *   **true**: The VLAN ID of the hosted connection is changed.
-         * *   **false**: The VLAN ID of the hosted connection is not changed.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;

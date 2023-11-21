@@ -158,9 +158,9 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -242,7 +242,7 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
          * *   **Large.5**: 5,000 Mbit/s
          * *   **Xlarge.1**: 10,000 Mbit/s
          * 
-         * >  When **Role** is set to **AcceptingSide** (acceptor), **Spec** is set to **Negative**.
+         * >  When **Role** is set to **AcceptingSide**, set **Spec** to **Negative**.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

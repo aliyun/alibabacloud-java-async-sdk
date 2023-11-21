@@ -50,7 +50,7 @@ public class CreateVpconnFromVbrResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVpconnFromVbrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the shared Express Connect circuit.
+         * The ID of the hosted connection.
          */
         public Builder virtualPhysicalConnection(String virtualPhysicalConnection) {
             this.virtualPhysicalConnection = virtualPhysicalConnection;

@@ -455,9 +455,9 @@ public class CreateRouterInterfaceRequest extends Request {
          * The ID of the access point to which the VBR belongs.
          * <p>
          * 
-         * You can call the [DescribeAccessPoints](~~36062~~) operation to query the most recent access point list.
+         * You can call the [DescribeAccessPoints](~~36062~~) operation to obtain the IDs of access points.
          * 
-         * >  This parameter is required if an Express Connect circuit is used.
+         * >  This parameter is required if the VBR is connected to an Express Connect circuit.
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -469,8 +469,8 @@ public class CreateRouterInterfaceRequest extends Request {
          * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
-         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
-         * *   **true**: enables automatic payment. Payments are automatically completed.
+         * *   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
+         * *   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.
          * 
          * >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
          */
@@ -481,7 +481,11 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -493,9 +497,9 @@ public class CreateRouterInterfaceRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -507,7 +511,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * The description of the router interface.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -516,15 +520,17 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
+         * Specifies whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          * 
          * > 
+         * 
          * *   This parameter takes effect only if **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.
-         * *   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
+         * 
+         * *   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. In this case, **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.
          */
         public Builder fastLinkMode(Boolean fastLinkMode) {
             this.putQueryParameter("FastLinkMode", fastLinkMode);
@@ -536,7 +542,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).
          * <p>
          * 
-         * >  You can set this parameter if an Express Connect circuit is used.
+         * >  You can set this parameter when an Express Connect circuit is used.
          */
         public Builder healthCheckSourceIp(String healthCheckSourceIp) {
             this.putQueryParameter("HealthCheckSourceIp", healthCheckSourceIp);
@@ -548,7 +554,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * The destination IP address that is used to perform health checks.
          * <p>
          * 
-         * >  This parameter is required if the **HealthCheckSourceIp** parameter is set.
+         * >  This parameter is required if you specify **HealthCheckSourceIp**
          */
         public Builder healthCheckTargetIp(String healthCheckTargetIp) {
             this.putQueryParameter("HealthCheckTargetIp", healthCheckTargetIp);
@@ -573,7 +579,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * The name of the router interface.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -612,7 +618,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the acceptor is deployed.
+         * The ID of the region in which the acceptor is deployed.
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.putQueryParameter("OppositeRegionId", oppositeRegionId);
@@ -664,8 +670,8 @@ public class CreateRouterInterfaceRequest extends Request {
          * The subscription duration. Valid values:
          * <p>
          * 
-         * *   Valid values if the PricingCycle parameter is set to Month: **1 to 9**.
-         * *   Valid values if the PricingCycle parameter is set to Year: **1 to 3**.
+         * *   Valid values when PricingCycle is set to Month: **1 to 9**.
+         * *   Valid values when PricingCycle is set to Year: **1 to 3**.
          * 
          * >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
          */
@@ -679,8 +685,8 @@ public class CreateRouterInterfaceRequest extends Request {
          * The billing cycle of the subscription. Valid values:
          * <p>
          * 
-         * *   **Month** (default): monthly subscription
-         * *   **Year**: annual subscription
+         * *   **Month** (default)
+         * *   **Year**
          * 
          * >  This parameter is required if **InstanceChargeType** is set to **PrePaid**.
          */
@@ -694,7 +700,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * The ID of the region to which the router interface belongs.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -703,7 +709,10 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * For more information about resource group, see [What is Resource Management?](~~94475~~)
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -752,7 +761,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The type of router associated with the router interface. Valid values:
+         * The type of router that is associated with the router interface. Valid values:
          * <p>
          * 
          * *   **VRouter**
@@ -765,7 +774,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * The specification of the router interface. Valid specifications and bandwidth values:
+         * The specification of the router interface and the corresponding bandwidth. Valid values:
          * <p>
          * 
          * *   **Mini.2**: 2 Mbit/s
@@ -781,7 +790,7 @@ public class CreateRouterInterfaceRequest extends Request {
          * *   **Large.5**: 5,000 Mbit/s
          * *   **Xlarge.1**: 10,000 Mbit/s
          * 
-         * >  If **Role** is set to **AcceptingSide** (acceptor), set **Spec** to **Negative**. You do not need to specify specifications when you create an acceptor router interface.
+         * >  If **Role** is set to **AcceptingSide**, set **Spec** to **Negative**. This indicates that you do not need to specify the specification when you create an acceptor router interface.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -790,7 +799,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag to add to the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -844,7 +853,10 @@ public class CreateRouterInterfaceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key to add to the resource. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -852,7 +864,10 @@ public class CreateRouterInterfaceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

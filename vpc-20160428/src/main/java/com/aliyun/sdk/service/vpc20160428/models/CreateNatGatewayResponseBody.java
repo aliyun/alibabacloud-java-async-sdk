@@ -86,7 +86,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         private SnatTableIds snatTableIds; 
 
         /**
-         * The list of DNAT entries.
+         * A list of DNAT entries.
          */
         public Builder forwardTableIds(ForwardTableIds forwardTableIds) {
             this.forwardTableIds = forwardTableIds;
@@ -94,7 +94,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The list of FULLNAT entries.
+         * A list of FULLNAT entries.
          */
         public Builder fullNatTableIds(FullNatTableIds fullNatTableIds) {
             this.fullNatTableIds = fullNatTableIds;
@@ -110,7 +110,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The list of SNAT entries.
+         * A list of SNAT entries.
          */
         public Builder snatTableIds(SnatTableIds snatTableIds) {
             this.snatTableIds = snatTableIds;

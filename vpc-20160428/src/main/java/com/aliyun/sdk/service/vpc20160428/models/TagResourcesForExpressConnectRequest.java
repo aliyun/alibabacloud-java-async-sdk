@@ -174,10 +174,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The region ID of the resource to which you want to create and add tags.
+         * The ID of the region in which the resource is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -186,7 +186,7 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs. You can specify up to 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -213,7 +213,12 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **PHYSICALCONNECTION**: Express Connect circuit.
+         * *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
+         * *   **ROUTERINTERFACE**: router interface.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -222,7 +227,7 @@ public class TagResourcesForExpressConnectRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -276,10 +281,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -287,10 +292,10 @@ public class TagResourcesForExpressConnectRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

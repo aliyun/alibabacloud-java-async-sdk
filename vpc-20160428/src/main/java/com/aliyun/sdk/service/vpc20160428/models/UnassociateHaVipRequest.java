@@ -183,7 +183,7 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,8 +195,8 @@ public class UnassociateHaVipRequest extends Request {
          * Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:
          * <p>
          * 
-         * *   **True**: yes
-         * *   **False** (default): no
+         * *   **True**
+         * *   **False** (default)
          * 
          * >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
          */
@@ -258,7 +258,7 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the HAVIP belongs.
+         * The region ID of the HAVIP.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

@@ -281,7 +281,7 @@ public class DescribeRouteEntryListRequest extends Request {
         } 
 
         /**
-         * DestCidrBlockList.
+         * The destination CIDR blocks of the routes.
          */
         public Builder destCidrBlockList(java.util.List < String > destCidrBlockList) {
             this.putQueryParameter("DestCidrBlockList", destCidrBlockList);
@@ -312,7 +312,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -334,7 +334,7 @@ public class DescribeRouteEntryListRequest extends Request {
          * <p>
          * 
          * *   **Instance** (default): an Elastic Compute Service (ECS) instance
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
          * *   **VpnGateway**: a VPN gateway
          * *   **NatGateway**: a NAT gateway
          * *   **NetworkInterface**: a secondary elastic network interface (ENI)
@@ -349,11 +349,11 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -419,10 +419,10 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * The name of the route.
+         * The name of the route entry.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -431,13 +431,13 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * The type of the route. Valid values:
+         * The route type. Valid values:
          * <p>
          * 
-         * *   **Custom**: a custom route
-         * *   **System**: a system route
-         * *   **BGP**: a BGP route
-         * *   **CEN**: a Cloud Enterprise Network (CEN) route
+         * *   **Custom**
+         * *   **System**
+         * *   **BGP**
+         * *   **CEN**
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -446,7 +446,7 @@ public class DescribeRouteEntryListRequest extends Request {
         }
 
         /**
-         * The ID of the route table.
+         * The ID of the route table that you want to query.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -458,7 +458,7 @@ public class DescribeRouteEntryListRequest extends Request {
          * Specifies whether to host the route. If the parameter is empty, the route is not hosted.
          * <p>
          * 
-         * If you set the value to **TR**, the route is hosted by a transit router.
+         * Set the value to **TR**, which specifies that the route is hosted by a transit router.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

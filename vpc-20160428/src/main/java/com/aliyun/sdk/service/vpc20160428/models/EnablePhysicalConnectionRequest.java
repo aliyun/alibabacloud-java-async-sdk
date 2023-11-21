@@ -154,7 +154,13 @@ public class EnablePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * ByPassSp.
+         * Specifies whether to skip the order lifecycle. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * >  To use this feature, you must contact your account manager.
          */
         public Builder byPassSp(Boolean byPassSp) {
             this.putQueryParameter("ByPassSp", byPassSp);
@@ -202,10 +208,10 @@ public class EnablePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
+         * The region where the Express Connect circuit is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

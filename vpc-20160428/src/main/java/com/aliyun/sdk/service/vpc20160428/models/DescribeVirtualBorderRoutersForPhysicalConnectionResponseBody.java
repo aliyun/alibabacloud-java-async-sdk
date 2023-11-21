@@ -86,7 +86,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         private VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet; 
 
         /**
-         * The page number of the returned page. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -422,7 +422,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private Integer vlanId; 
 
             /**
-             * The first time when the VBR was activated.
+             * The time when the VBR was first activated.
              */
             public Builder activationTime(String activationTime) {
                 this.activationTime = activationTime;
@@ -430,7 +430,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The bandwidth of the VBR associated with the Express Connect circuit. Unit: Mbit/s.
+             * The bandwidth of the VBR that is associated with the Express Connect circuit. Unit: Mbit/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -441,8 +441,8 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
              * The status of the bandwidth. Valid values:
              * <p>
              * 
-             * *   **Active**: normal
-             * *   **Inactive**: abnormal
+             * *   **Active**
+             * *   **Inactive**
              */
             public Builder bandwidthStatus(String bandwidthStatus) {
                 this.bandwidthStatus = bandwidthStatus;
@@ -450,7 +450,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.
+             * The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).
              */
             public Builder circuitCode(String circuitCode) {
                 this.circuitCode = circuitCode;
@@ -477,8 +477,8 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
              * Indicates whether IPv6 is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -486,7 +486,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv4 address of the VBR.
+             * The IPv4 address of the gateway device on the Alibaba Cloud side.
              */
             public Builder localGatewayIp(String localGatewayIp) {
                 this.localGatewayIp = localGatewayIp;
@@ -494,7 +494,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv6 address of the VBR.
+             * The IPv6 address of the gateway device on the Alibaba Cloud side.
              */
             public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
                 this.localIpv6GatewayIp = localIpv6GatewayIp;
@@ -502,11 +502,11 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The status of the VBR associated with the Express Connect circuit. Valid values:
+             * The status of the VBR that is associated with the Express Connect circuit. Valid values:
              * <p>
              * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **Normal**: The VBR is running as expected.
+             * *   **FinancialLocked**: The VBR is locked due to overdue payments.
              */
             public Builder pConnVbrBussinessStatus(String pConnVbrBussinessStatus) {
                 this.pConnVbrBussinessStatus = pConnVbrBussinessStatus;
@@ -517,8 +517,8 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
              * The billing method of the VBR that is associated with the Express Connect circuit. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
-             * *   **PostPaid**: pay-as-you-go
+             * *   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
+             * *   **PostPaid**: pay-as-you-go.
              */
             public Builder pConnVbrChargeType(String pConnVbrChargeType) {
                 this.pConnVbrChargeType = pConnVbrChargeType;
@@ -526,7 +526,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The time when the VBR associated with the Express Connect circuit expires.
+             * The time when the VBR that is associated with the Express Connect circuit expires.
              */
             public Builder pConnVbrExpireTime(String pConnVbrExpireTime) {
                 this.pConnVbrExpireTime = pConnVbrExpireTime;
@@ -534,7 +534,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv4 address of the gateway device in the data center.
+             * The IPv4 address of the gateway device on the user side.
              */
             public Builder peerGatewayIp(String peerGatewayIp) {
                 this.peerGatewayIp = peerGatewayIp;
@@ -542,10 +542,10 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The IPv6 address of the gateway device in the data center.
+             * The IPv6 address of the gateway device on the user side.
              * <p>
              * 
-             * This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.
+             * This parameter is required if you create a VBR for the owner of the Express Connect circuit. You can leave this parameter empty if you create a VBR for other Alibaba Cloud accounts.
              */
             public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
                 this.peerIpv6GatewayIp = peerIpv6GatewayIp;
@@ -553,7 +553,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The subnet mask for the IPv6 addresses of the gateway devices in the data center and the VBRs.
+             * The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
              * <p>
              * 
              * The two IPv6 addresses must fall within the same subnet.
@@ -564,7 +564,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The subnet mask for the IPv4 addresses of the gateway device in the data center and the VBR.
+             * The subnet mask for the IPv4 addresses of the gateway devices on the Alibaba Cloud side and on the user side.
              * <p>
              * 
              * The two IPv4 addresses must fall within the same subnet.
@@ -575,7 +575,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The last time when the status of the VBR changed from Terminated to Active.
+             * The time when the status of the VBR last changed from Terminated to Active.
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -583,15 +583,15 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The status of the VBR. Valid values: Valid values:
+             * The status of the VBR. Valid values:
              * <p>
              * 
-             * *   **Unconfirmed**: pending confirmation from other users
-             * *   **Active**: normal
-             * *   **Terminating**: being disabled
-             * *   **Terminated**: disabled
-             * *   **Recovering**: being enabled
-             * *   **Deleting**: being deleted
+             * *   **Unconfirmed**: The VBR is pending confirmation from other users.
+             * *   **Active**: The VBR is normal.
+             * *   **Terminating**: The VBR is being disabled.
+             * *   **Terminated**: The VBR is disabled.
+             * *   **Recovering**: The VBR is being recovered.
+             * *   **Deleting**: The VBR is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -599,7 +599,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The last time when the VBR was disabled.
+             * The time when the VBR was last disabled.
              */
             public Builder terminationTime(String terminationTime) {
                 this.terminationTime = terminationTime;
@@ -615,7 +615,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The ID of the VBR.
+             * The VBR ID.
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
@@ -626,7 +626,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
              * The ID of the Alibaba Cloud account to which the VBR belongs.
              * <p>
              * 
-             * If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.
+             * If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is left empty.
              */
             public Builder vbrOwnerUid(Long vbrOwnerUid) {
                 this.vbrOwnerUid = vbrOwnerUid;
@@ -634,7 +634,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             }
 
             /**
-             * The VLAN ID of the VBR.
+             * The virtual local area network (VLAN) ID of the VBR.
              */
             public Builder vlanId(Integer vlanId) {
                 this.vlanId = vlanId;

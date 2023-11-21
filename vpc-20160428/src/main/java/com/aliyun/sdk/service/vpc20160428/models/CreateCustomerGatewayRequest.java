@@ -327,7 +327,12 @@ public class CreateCustomerGatewayRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the customer gateway belongs.
+         * <p>
+         * 
+         * - You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
+         * 
+         * - If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

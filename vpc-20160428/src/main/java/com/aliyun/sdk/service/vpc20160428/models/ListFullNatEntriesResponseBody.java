@@ -154,7 +154,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -392,7 +392,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
              * The name of the FULLNAT entry.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder fullNatEntryName(String fullNatEntryName) {
                 this.fullNatEntryName = fullNatEntryName;
@@ -403,10 +403,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
              * The status of the FULLNAT entry. Valid values:
              * <p>
              * 
-             * *   **Pending**: The FULLNAT entry is being configured.
-             * *   **Available**: The FULLNAT entry is available.
-             * *   **Deleting**: The FULLNAT entry is being deleted.
-             * *   **Deleted**: The FULLNAT entry is deleted.
+             * *   **Pending**
+             * *   **Available**
+             * *   **Deleting**
+             * *   **Deleted**
              */
             public Builder fullNatEntryStatus(String fullNatEntryStatus) {
                 this.fullNatEntryStatus = fullNatEntryStatus;
@@ -450,7 +450,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * The ID of the elastic network interface (ENI).
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;

@@ -82,11 +82,11 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -202,7 +202,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Instance** (default): an ECS instance
-             * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+             * *   **HaVip**: a high-availability virtual IP address (HAVIP).
              * *   **VpnGateway**: a VPN gateway
              * *   **NatGateway**: a NAT gateway
              * *   **NetworkInterface**: a secondary ENI
@@ -329,7 +329,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the route.
+             * The name of the route entry.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -345,10 +345,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * The name of the route entry.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+             * The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -367,9 +367,9 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
              * The type of the next hop. Valid values:
              * <p>
              * 
-             * *   **EcsInstance**: an Elastic Compute Service (ECS) instance
-             * *   **NetworkInterface**: an elastic network interface (ENI)
-             * *   **Local**: a local next hop
+             * *   **EcsInstance**: Elastic Compute Service (ECS) instance
+             * *   **NetworkInterface**: elastic network interfaces (ENIs).
+             * *   **Local**: local next hop
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -385,7 +385,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values:
+             * The status of the route entry. Valid values:
              * <p>
              * 
              * *   **Pending**

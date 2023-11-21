@@ -257,9 +257,9 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -277,7 +277,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder constructionTime(String constructionTime) {
             this.putQueryParameter("ConstructionTime", constructionTime);
@@ -295,7 +295,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The type of Express Connect circuit. Valid values:
+         * The type of the Express Connect circuit. Valid values:
          * <p>
          * 
          * *   **MSTP**: MSTP line
@@ -328,7 +328,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * PMInfo.
+         * The information about the construction engineer.
          */
         public Builder PMInfo(java.util.List < PMInfo> PMInfo) {
             this.putQueryParameter("PMInfo", PMInfo);
@@ -337,7 +337,7 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * The geographical location where the Express Connect circuit is deployed.
+         * The geographic location where the Express Connect circuit is deployed.
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -480,8 +480,8 @@ public class ApplyPhysicalConnectionLOARequest extends Request {
              * The type of the identity document of the construction engineer. Valid values:
              * <p>
              * 
-             * *   **IDCard**: identity card
-             * *   **Passport**: international passport
+             * *   **IDCard**
+             * *   **Passport**
              */
             public Builder PMCertificateType(String PMCertificateType) {
                 this.PMCertificateType = PMCertificateType;

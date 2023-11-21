@@ -62,11 +62,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         private RouteEntrys routeEntrys; 
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +74,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the routes.
+         * The information about the route.
          */
         public Builder routeEntrys(RouteEntrys routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -157,7 +157,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The type of the instance associated with the next hop. Valid values:
              * <p>
              * 
-             * *   **VPC**: a virtual private cloud (VPC)
+             * *   **VPC**: a VPC
              * *   **VBR**: a VBR
              * *   **PCONN**: an Express Connect circuit
              */
@@ -540,7 +540,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR blocks of the route.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -548,7 +548,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route was modified. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+             * The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -568,7 +568,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hops.
+             * The information about the next hop.
              */
             public Builder nextHops(NextHops nextHops) {
                 this.nextHops = nextHops;
@@ -584,7 +584,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * The route name.
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -600,10 +600,10 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. 
+             * Indicates whether the route is hosted. If the parameter is empty, the route is not hosted.
              * <p>
              * 
-             * If the value is set to **TR**, the route is hosted by a transit router.
+             * If **TR** is returned, the route is hosted by a transit router.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -614,9 +614,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The status of the route. Valid values:
              * <p>
              * 
-             * *   **Pending**: The route is being configured.
-             * *   **Available**: The route is available.
-             * *   **Modifying**: The route is being modified.
+             * *   **Pending**
+             * *   **Available**
+             * *   **Modifying**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -624,13 +624,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route. Valid values:
+             * The route type. Valid values:
              * <p>
              * 
-             * *   **Custom**: a custom route
-             * *   **System**: a system route
-             * *   **BGP**: a BGP route
-             * *   **CEN**: a CEN route
+             * *   **Custom**
+             * *   **System**
+             * *   **BGP**
+             * *   **CEN**
              */
             public Builder type(String type) {
                 this.type = type;

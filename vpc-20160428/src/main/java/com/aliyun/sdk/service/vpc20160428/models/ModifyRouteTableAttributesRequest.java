@@ -184,7 +184,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual private cloud (VPC) to which the route table belongs.
+         * The region ID of the virtual private cloud (VPC) to which the custom route table belongs.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -226,7 +226,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
          * The name of the route table.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);

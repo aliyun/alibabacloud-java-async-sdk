@@ -286,7 +286,11 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * EnabledIpv6.
+         * Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure the IPv6 CIDR block of the vSwitch. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder enabledIpv6(Boolean enabledIpv6) {
             this.enabledIpv6 = enabledIpv6;
@@ -305,8 +309,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
          * Indicates whether the vSwitch is the default vSwitch. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -322,7 +326,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the vSwitch belongs.
+         * The ID of the Alibaba Cloud account to which the resource belongs.
          */
         public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
@@ -330,7 +334,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -338,7 +342,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group to which the ACL belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -354,7 +358,12 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * ShareType.
+         * Indicates whether the vSwitch is shared.
+         * <p>
+         * 
+         * *   If no value is returned, the vSwitch is a regular vSwitch.
+         * *   If **Shared** is returned, the vSwitch is shared.
+         * *   If **Sharing** is returned, the vSwitch is being shared.
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
@@ -374,7 +383,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The tag list.
+         * The information about the tags.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -382,7 +391,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -390,7 +399,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the vSwitch.
+         * The vSwitch name.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.vSwitchName = vSwitchName;
@@ -469,8 +478,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
              * The type of the route table. Valid values:
              * <p>
              * 
-             * *   **System**: system route table
-             * *   **Custom**: custom route table
+             * *   **System**
+             * *   **Custom**
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -523,7 +532,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -531,7 +540,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

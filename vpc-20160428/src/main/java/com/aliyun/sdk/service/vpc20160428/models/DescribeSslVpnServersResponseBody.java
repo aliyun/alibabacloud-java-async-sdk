@@ -86,7 +86,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -381,8 +381,8 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
              * Indicates whether data compression is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder compress(Boolean compress) {
                 this.compress = compress;
@@ -406,11 +406,11 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-factor authentication is enabled. Valid values:
+             * Indicates whether two-factor authentication is enabled.
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
                 this.enableMultiFactorAuth = enableMultiFactorAuth;
@@ -418,7 +418,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Identity as a Service (IDaaS) instance.
+             * The ID of the IDaaS instance.
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -490,7 +490,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the SSL server belongs.
+             * <p>
+             * 
+             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

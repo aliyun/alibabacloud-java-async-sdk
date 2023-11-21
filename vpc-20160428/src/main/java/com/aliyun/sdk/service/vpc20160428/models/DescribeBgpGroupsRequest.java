@@ -194,8 +194,8 @@ public class DescribeBgpGroupsRequest extends Request {
          * Specifies whether the BGP group is the default one. Valid values:
          * <p>
          * 
-         * *   **false**: yes
-         * *   **true**: no
+         * *   **false**
+         * *   **true**
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -222,7 +222,7 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +231,7 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. The maximum value is **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,10 +240,10 @@ public class DescribeBgpGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the VBR.
+         * The ID of the region in which the VBR is deployed.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

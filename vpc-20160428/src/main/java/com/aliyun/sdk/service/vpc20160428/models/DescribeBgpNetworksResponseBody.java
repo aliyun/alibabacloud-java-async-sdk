@@ -86,7 +86,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * BGP networks.
+         * The BGP network.
          */
         public Builder bgpNetworks(BgpNetworks bgpNetworks) {
             this.bgpNetworks = bgpNetworks;
@@ -94,7 +94,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The ID of the virtual private cloud (VPC) in which the master instance resides.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

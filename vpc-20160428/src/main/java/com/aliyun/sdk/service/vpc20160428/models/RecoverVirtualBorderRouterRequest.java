@@ -143,7 +143,7 @@ public class RecoverVirtualBorderRouterRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -170,7 +170,7 @@ public class RecoverVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The region ID of the VBR.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

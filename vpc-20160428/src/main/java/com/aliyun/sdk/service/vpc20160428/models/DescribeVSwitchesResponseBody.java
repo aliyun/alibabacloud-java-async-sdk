@@ -86,7 +86,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private VSwitches vSwitches; 
 
         /**
-         * The page number of the returned page.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,11 +178,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route table that is associated with the vSwitch. Valid values:
+             * The type of the route table. Valid values:
              * <p>
              * 
-             * - **System**: system route table
-             * - **Custom**: custom route table
+             * *   **System**
+             * *   **Custom**
              */
             public Builder routeTableType(String routeTableType) {
                 this.routeTableType = routeTableType;
@@ -235,7 +235,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag that is added to the vSwitch.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -243,7 +243,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the vSwitch.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -553,7 +553,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the vSwitches.
+             * The description of the vSwitch.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -561,7 +561,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledIpv6.
+             * Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure an IPv6 CIDR block for the vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enabledIpv6(Boolean enabledIpv6) {
                 this.enabledIpv6 = enabledIpv6;
@@ -580,8 +584,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
              * Indicates whether the vSwitch is the default vSwitch. Valid values:
              * <p>
              * 
-             * *   **true**: The vSwitch is the default vSwitch.
-             * *   **false**: The vSwitch is not the default vSwitch.
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -621,7 +625,12 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * Indicates whether the vSwitch is shared.
+             * <p>
+             * 
+             * *   If no value is returned, the vSwitch is a regular vSwitch.
+             * *   If **Shared** is returned, the vSwitch is shared.
+             * *   If **Sharing** is returned, the vSwitch is being shared.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -632,8 +641,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
              * The status of the vSwitch. Valid values:
              * <p>
              * 
-             * *   **Pending**: The vSwitch is being configured.
-             * *   **Available**: The vSwitch is available.
+             * *   **Pending**
+             * *   **Available**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -641,7 +650,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag information about the vSwitch.
+             * The tags of the vSwitch.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -649,7 +658,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -657,7 +666,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * The vSwitch name.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

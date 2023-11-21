@@ -224,7 +224,11 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * FinishWork.
+         * Specifies whether the construction is completed. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder finishWork(Boolean finishWork) {
             this.putQueryParameter("FinishWork", finishWork);
@@ -260,7 +264,7 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * LineSPContactInfo.
+         * The contact information about line O\&M.
          */
         public Builder lineSPContactInfo(String lineSPContactInfo) {
             this.putQueryParameter("LineSPContactInfo", lineSPContactInfo);
@@ -269,7 +273,13 @@ public class CompletePhysicalConnectionLOARequest extends Request {
         }
 
         /**
-         * LineServiceProvider.
+         * The ISP. Valid values:
+         * <p>
+         * 
+         * *   **China Telecom**
+         * *   **China Unicom**
+         * *   **China Mobile**
+         * *   **Other ISPs in China**
          */
         public Builder lineServiceProvider(String lineServiceProvider) {
             this.putQueryParameter("LineServiceProvider", lineServiceProvider);

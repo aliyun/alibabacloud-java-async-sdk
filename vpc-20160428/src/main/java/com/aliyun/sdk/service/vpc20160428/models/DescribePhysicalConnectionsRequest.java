@@ -213,7 +213,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -222,7 +222,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter keys.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -234,8 +234,8 @@ public class DescribePhysicalConnectionsRequest extends Request {
          * Specifies whether to return the data about pending orders. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -262,7 +262,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -271,7 +271,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +292,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the Express Connect circuit belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,7 +319,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -380,7 +380,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
              * 
              * *   **AccessPointId**: the ID of the access point.
              * 
-             * *   **Type**: the type of the Express Connect circuit. You can set Type only to **VPC**.
+             * *   **Type**: the type of resource to which the Express Connect circuit is connected. You can set Type only to **VPC**.
              * 
              * *   **LineOperator**: the connectivity provider of the Express Connect circuit. Valid values:
              * 
@@ -394,14 +394,11 @@ public class DescribePhysicalConnectionsRequest extends Request {
              * *   **Spec**: the specification of the Express Connect circuit. Valid values:
              * 
              *     *   **1G and below**
-             * 
              *     *   **10G**
-             * 
              *     *   **40G**
-             * 
              *     *   **100G**
              * 
-             * > By default, you cannot set Spec to **40G** or **100G**. To query 40 Gbit/s or 100 Gbit/s Express Connect circuits, you must first submit an application to acquire the permissions.
+             * >  By default, you cannot set the value to **40G** or **100G**. To use these values, you must first contact your account manager.
              * 
              * *   **Status**: the status of the Express Connect circuit. Valid values:
              * 
@@ -409,7 +406,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
              *     *   **Approved**: The application is approved.
              *     *   **Allocating**: The system is allocating resources.
              *     *   **Allocated**: The Express Connect circuit is under construction.
-             *     *   **Confirmed**: The Express Connect circuit is pending user confirmation.
+             *     *   **Confirmed**: The Express Connect circuit is pending for user confirmation.
              *     *   **Enabled**: The Express Connect circuit is enabled.
              *     *   **Rejected**: The application is rejected.
              *     *   **Canceled**: The application is canceled.
@@ -419,7 +416,12 @@ public class DescribePhysicalConnectionsRequest extends Request {
              * 
              * *   **Name**: the name of the Express Connect circuit.
              * 
-             * You can specify at most five filter conditions in each call. The logical relation among the filter conditions is **AND**. Therefore, an Express Connect circuit is returned only when all specified filter conditions are matched.
+             * *   **ProductType**: the type of the Express Connect circuit. Valid values:
+             * 
+             *     *   **VirtualPhysicalConnection**: shared Express Connect circuit
+             *     *   **PhysicalConnection**: dedicated Express Connect circuit.
+             * 
+             * You can specify at most five filter conditions in each request. The logical relation among the filter conditions is **AND**. Therefore, an Express Connect circuit is returned only when all specified filter conditions are matched.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -427,7 +429,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The filter values.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -480,10 +482,10 @@ public class DescribePhysicalConnectionsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag value cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -491,10 +493,10 @@ public class DescribePhysicalConnectionsRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+             * It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

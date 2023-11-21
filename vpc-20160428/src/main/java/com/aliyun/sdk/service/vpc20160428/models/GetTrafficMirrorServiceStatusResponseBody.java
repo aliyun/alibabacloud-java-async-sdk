@@ -53,8 +53,8 @@ public class GetTrafficMirrorServiceStatusResponseBody extends TeaModel {
          * Indicates whether the traffic mirroring feature is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: enabled
-         * *   **false**: disabled
+         * *   **true**
+         * *   **false**
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -62,7 +62,7 @@ public class GetTrafficMirrorServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

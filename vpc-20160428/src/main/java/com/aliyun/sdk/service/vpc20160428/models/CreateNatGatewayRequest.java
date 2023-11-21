@@ -364,7 +364,7 @@ public class CreateNatGatewayRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
          * 
-         * >  If you do not specify this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. **RequestId** might be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -399,9 +399,11 @@ public class CreateNatGatewayRequest extends Request {
          * 
          * *   **MULTI_BINDED** (default): Multi-EIP-to-ENI mode.
          * 
-         * *   **NAT**: NAT mode. IPv4 gateways are supported.
+         * *   **NAT**: NAT mode. IPv4 gateways are supported in this mode.
          * 
-         * > If you use the NAT mode, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, you can associate a NAT gateway with at most 50 EIPs.
+         *     **
+         * 
+         *     **Note** If a NAT gateway is associated with an EIP in NAT mode, the EIP occupies one private IP address in the vSwitch. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.
          */
         public Builder eipBindMode(String eipBindMode) {
             this.putQueryParameter("EipBindMode", eipBindMode);
@@ -410,11 +412,11 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the ICMP non-retrieval feature. Valid values:
+         * Specifies whether to enable ICMP retrieval. Valid values:
          * <p>
          * 
-         * *   **false** (default): no
-         * *   **true**: yes
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
             this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
@@ -449,7 +451,7 @@ public class CreateNatGatewayRequest extends Request {
          * The name of the NAT gateway.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          * 
          * If this parameter is not set, the system assigns a default name to the NAT gateway.
          */
@@ -460,7 +462,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The type of NAT gateway. Set the value to **Enhanced** (enhanced NAT gateway).
+         * The type of NAT gateway. Set the value to **Enhanced**, which specifies enhanced NAT gateway.
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -472,8 +474,8 @@ public class CreateNatGatewayRequest extends Request {
          * The network type of the NAT gateway. Valid values:
          * <p>
          * 
-         * *   **internet**: an Internet NAT gateway
-         * *   **intranet**: a VPC NAT gateway
+         * *   **internet**: Internet
+         * *   **intranet**: VPC
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -509,10 +511,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the NAT gateway.
+         * The region ID of the NAT gateway.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -542,8 +544,8 @@ public class CreateNatGatewayRequest extends Request {
          * Specifies whether to enable the firewall feature. Valid values:
          * <p>
          * 
-         * *   **false** (default): no
-         * *   **true**: yes
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -561,7 +563,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * The list of Tag entries.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -578,7 +580,7 @@ public class CreateNatGatewayRequest extends Request {
          * *   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.
          * *   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.
          * 
-         * >  You can query the zones that support NAT gateways by calling the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation. You can query the number of available IP addresses in a vSwitch by calling the [DescribeVSwitches](~~35748~~) operation.
+         * >  You can call the [ListEnhanhcedNatGatewayAvailableZones](~~182292~~) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](~~35748~~) operation to query idle IP addresses in a vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -641,7 +643,7 @@ public class CreateNatGatewayRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -649,7 +651,7 @@ public class CreateNatGatewayRequest extends Request {
             }
 
             /**
-             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

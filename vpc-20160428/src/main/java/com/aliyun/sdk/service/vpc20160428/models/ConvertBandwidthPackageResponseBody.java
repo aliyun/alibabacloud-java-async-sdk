@@ -50,7 +50,7 @@ public class ConvertBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Internet Shared Bandwidth instance after the conversion.
+         * The ID of the Internet Shared Bandwidth instance.
          */
         public Builder convertInstanceId(String convertInstanceId) {
             this.convertInstanceId = convertInstanceId;
@@ -58,7 +58,7 @@ public class ConvertBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

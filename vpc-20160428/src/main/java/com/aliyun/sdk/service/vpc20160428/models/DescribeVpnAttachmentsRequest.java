@@ -197,7 +197,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +206,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +215,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the IPsec-VPN connection belongs.
+         * The ID of the region where the IPsec-VPN connection is established.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -248,7 +248,7 @@ public class DescribeVpnAttachmentsRequest extends Request {
          * The ID of the IPsec-VPN connection.
          * <p>
          * 
-         * >  If you do not specify an ID, the system queries all IPsec-VPN connections associated with the transit router in the region.
+         * >  If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);

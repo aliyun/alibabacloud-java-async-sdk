@@ -195,7 +195,7 @@ public class DescribeSslVpnServersRequest extends Request {
         } 
 
         /**
-         * The name of the SSL-VPN server.
+         * The SSL server name.
          * <p>
          * 
          * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
@@ -225,7 +225,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The number of the returned page. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +234,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +243,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the SSL servers are created.
+         * The region ID of the SSL server.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -255,7 +255,12 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the SSL server belongs.
+         * <p>
+         * 
+         * The SSL server has the same resource group as its associated VPN gateway instance.
+         * 
+         * You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -282,7 +287,7 @@ public class DescribeSslVpnServersRequest extends Request {
         }
 
         /**
-         * The ID of the SSL-VPN server.
+         * The ID of the SSL server.
          */
         public Builder sslVpnServerId(String sslVpnServerId) {
             this.putQueryParameter("SslVpnServerId", sslVpnServerId);

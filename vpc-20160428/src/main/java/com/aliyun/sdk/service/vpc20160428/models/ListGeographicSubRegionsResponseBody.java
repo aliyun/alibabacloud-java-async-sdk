@@ -62,7 +62,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries returned.
+         * The number of entries.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of regions available for Express Connect circuits.
+         * The region list.
          */
         public Builder geographicSubRegions(java.util.List < String > geographicSubRegions) {
             this.geographicSubRegions = geographicSubRegions;
@@ -78,7 +78,7 @@ public class ListGeographicSubRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

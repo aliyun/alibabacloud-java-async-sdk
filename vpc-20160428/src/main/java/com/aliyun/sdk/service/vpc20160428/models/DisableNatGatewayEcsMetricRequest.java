@@ -84,12 +84,12 @@ public class DisableNatGatewayEcsMetricRequest extends Request {
         } 
 
         /**
-         * Specifies whether to precheck this request only. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * **true**: The validity of the request is checked but ECS traffic monitoring is not disabled. Check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are authorized, and whether the required parameters are set. If the request fails the precheck, the corresponding error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * 
-         * **false** (default): The validity of the request is checked. If the request passes the precheck, a 2XX HTTP status code is returned and ECS traffic monitoring is disabled.
+         * **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -98,7 +98,7 @@ public class DisableNatGatewayEcsMetricRequest extends Request {
         }
 
         /**
-         * The ID of the NAT gateway for which you want to disable Elastic Compute Service (ECS) traffic monitoring.
+         * The ID of the NAT gateway for which you want to disable ECS traffic monitoring.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -107,7 +107,7 @@ public class DisableNatGatewayEcsMetricRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NAT gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query region IDs.
+         * The region ID of the NAT gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

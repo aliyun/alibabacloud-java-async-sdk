@@ -62,11 +62,11 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          * <p>
          * 
-         * *   If the return value of **NextToken** is empty, no next query is to be sent.
-         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +74,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the tag.
+         * The tags that are added to the resource.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -158,7 +158,7 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -166,7 +166,12 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   **PHYSICALCONNECTION**: Express Connect circuit.
+             * *   **VIRTUALBORDERROUTER**: VBR.
+             * *   **ROUTERINTERFACE**: router interface.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

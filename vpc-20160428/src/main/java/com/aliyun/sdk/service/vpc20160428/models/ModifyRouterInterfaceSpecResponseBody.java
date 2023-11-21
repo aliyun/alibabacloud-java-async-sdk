@@ -50,7 +50,7 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
         private String spec; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

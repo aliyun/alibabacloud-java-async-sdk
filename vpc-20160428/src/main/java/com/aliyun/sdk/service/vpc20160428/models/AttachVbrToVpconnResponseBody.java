@@ -50,7 +50,7 @@ public class AttachVbrToVpconnResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

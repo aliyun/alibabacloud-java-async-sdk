@@ -158,7 +158,10 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the customer gateway belongs.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

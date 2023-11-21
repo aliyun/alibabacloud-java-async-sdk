@@ -255,7 +255,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,7 +264,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -342,8 +342,8 @@ public class DescribeRouteTableListRequest extends Request {
          * The type of the router to which the route table belongs. Valid values:
          * <p>
          * 
-         * *   **VRouter** (default): a vRouter
-         * *   **VBR**: a virtual border router (VBR)
+         * *   **VRouter** (default)
+         * *   **VBR**
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -352,7 +352,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -364,7 +364,7 @@ public class DescribeRouteTableListRequest extends Request {
          * The ID of the virtual private cloud (VPC) to which the route table belongs.
          * <p>
          * 
-         * After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.
+         * After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -418,7 +418,10 @@ public class DescribeRouteTableListRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -426,7 +429,10 @@ public class DescribeRouteTableListRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

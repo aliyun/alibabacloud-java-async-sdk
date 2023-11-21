@@ -94,7 +94,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -388,7 +388,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The colocation provider of the access point.
+             * The Internet service provider (ISP) of the access point. Valid values:
              */
             public Builder hostOperator(String hostOperator) {
                 this.hostOperator = hostOperator;
@@ -415,7 +415,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
              * The status of the access point. Valid values:
              * <p>
              * 
-             * *   **Recommended**: The access point is ready for use.
+             * *   **recommended**: The access point is ready for use.
              * *   **hot**: A large number of Express Connect circuits are connected to the access point.
              * *   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.
              * *   **disabled**: The access point is unavailable.

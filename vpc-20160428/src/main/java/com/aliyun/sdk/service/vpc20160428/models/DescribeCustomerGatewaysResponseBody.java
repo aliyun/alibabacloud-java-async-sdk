@@ -86,7 +86,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The tag value.
+         * The information about customer gateways.
          */
         public Builder customerGateways(CustomerGateways customerGateways) {
             this.customerGateways = customerGateways;
@@ -170,7 +170,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -364,7 +364,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication key of the BGP routing protocol for the gateway device in the data center.
+             * The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -372,7 +372,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the customer gateway was created. Unit: milliseconds.
+             * The timestamp generated when the customer gateway was created. Unit: millisecond.
              * <p>
              * 
              * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
@@ -415,7 +415,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the customer gateway belongs.
+             * <p>
+             * 
+             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

@@ -307,9 +307,9 @@ public class ModifySslVpnServerRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -331,11 +331,14 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable two-factor authentication.
+         * Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:
          * <p>
          * 
          * *   **true**
-         * *   **false** (default)
+         * *   **false**
+         * 
+         * > *   Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.
+         * > *   For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.
          */
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.putQueryParameter("EnableMultiFactorAuth", enableMultiFactorAuth);
@@ -401,10 +404,10 @@ public class ModifySslVpnServerRequest extends Request {
         }
 
         /**
-         * The port used by the SSL server. Default value: **1194**. The following ports are not supported:
+         * The port that is used by the SSL server. Valid values of port numbers: **1** to **65535**. Default value: **1194**.
          * <p>
          * 
-         * **22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, and 4500**.
+         * The following ports are not supported: **22**, **2222**, **22222**, **9000**, **9001**, **9002**, **7505**, **80**, **443**, **53**, **68**, **123**, **4510**, **4560**, **500**, and **4500**.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -416,8 +419,8 @@ public class ModifySslVpnServerRequest extends Request {
          * The protocol that is used by the SSL server. Valid values:
          * <p>
          * 
-         * *   **TCP**
-         * *   **UDP** (default)
+         * *   **TCP** (default)
+         * *   **UDP**
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);

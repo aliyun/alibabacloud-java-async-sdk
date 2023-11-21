@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
          * The ID of the new resource group.
          * <p>
          * 
-         * >  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).
+         * >  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -112,10 +112,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the resource group.
+         * The ID of the region to which the new resource group belongs.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query available regions.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Express Connect circuit.
+         * The ID of the Express Connect circuit whose resource group you want to modify.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -133,7 +133,12 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   **PHYSICALCONNECTION**: Express Connect circuit.
+         * *   **VIRTUALBORDERROUTER**: virtual border router (VBR).
+         * *   **ROUTERINTERFACE**: router interface.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

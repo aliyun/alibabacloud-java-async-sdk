@@ -200,9 +200,9 @@ public class CreateNatIpCidrRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,11 +211,11 @@ public class CreateNatIpCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: prechecks the request but does not create the NAT CIDR block. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the NAT CIDR block is created.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -236,7 +236,7 @@ public class CreateNatIpCidrRequest extends Request {
          * The NAT CIDR block that you want to associate with the NAT gateway.
          * <p>
          * 
-         * The NAT CIDR block must meet the following conditions:
+         * The new CIDR block must meet the following conditions:
          * 
          * *   The NAT CIDR block must fall within 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or their subnets.
          * *   The subnet mask must be 16 to 32 bits in length.
@@ -253,7 +253,7 @@ public class CreateNatIpCidrRequest extends Request {
          * The description of the NAT CIDR block.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
          */
         public Builder natIpCidrDescription(String natIpCidrDescription) {
             this.putQueryParameter("NatIpCidrDescription", natIpCidrDescription);
@@ -265,7 +265,7 @@ public class CreateNatIpCidrRequest extends Request {
          * The name of the CIDR block.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder natIpCidrName(String natIpCidrName) {
             this.putQueryParameter("NatIpCidrName", natIpCidrName);

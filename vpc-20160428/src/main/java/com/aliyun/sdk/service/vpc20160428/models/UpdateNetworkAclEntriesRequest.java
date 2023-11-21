@@ -185,9 +185,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,7 +196,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * EgressAclEntries.
+         * The information about the outbound rules.
          */
         public Builder egressAclEntries(java.util.List < EgressAclEntries> egressAclEntries) {
             this.putQueryParameter("EgressAclEntries", egressAclEntries);
@@ -205,7 +205,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * IngressAclEntries.
+         * The information about the inbound rule.
          */
         public Builder ingressAclEntries(java.util.List < IngressAclEntries> ingressAclEntries) {
             this.putQueryParameter("IngressAclEntries", ingressAclEntries);
@@ -265,8 +265,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
          * Specifies whether to update outbound rules. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * >  This parameter cannot be used to add outbound rules to ACLs. If you want to add more outbound rules to ACLs, specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.
          */
         public Builder updateEgressAclEntries(Boolean updateEgressAclEntries) {
             this.putQueryParameter("UpdateEgressAclEntries", updateEgressAclEntries);
@@ -278,8 +280,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
          * Specifies whether to update inbound rules. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * >  This parameter cannot be used to add inbound rules to ACLs. If you want to add more inbound rules to ACLs, you must specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.
          */
         public Builder updateIngressAclEntries(Boolean updateIngressAclEntries) {
             this.putQueryParameter("UpdateIngressAclEntries", updateIngressAclEntries);
@@ -435,7 +439,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The ID of the outbound rule.
              * <p>
              * 
-             * Valid values of **N**: **0** to **29**. You can update at most 30 outbound rules.
+             * Valid values of **N**: **0** to **99**. You can specify at most 100 outbound rules.
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -446,7 +450,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The name of the outbound rule.
              * <p>
              * 
-             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+             * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -454,11 +458,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The action to be performed on network traffic that matches the rule. Valid values:
+             * The rule action that determines whether to allow outbound traffic. Valid values:
              * <p>
              * 
-             * *   **accept**: allows the network traffic.
-             * *   **drop**: blocks the network traffic.
+             * *   **accept**
+             * *   **drop**
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -466,11 +470,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The destination port range of the outbound rule.
+             * The destination port range of the outbound traffic.
              * <p>
              * 
-             * *   If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
-             * *   If **Protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
+             * *   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.
+             * *   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -481,11 +485,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The protocol type. Valid values:
              * <p>
              * 
-             * *   **icmp**: ICMP
-             * *   **gre**: GRE
-             * *   **tcp**: TCP
-             * *   **udp**: UDP
-             * *   **all**: all protocols
+             * *   **icmp**
+             * *   **gre**
+             * *   **tcp**
+             * *   **udp**
+             * *   **all**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -632,7 +636,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The ID of the inbound rule.
              * <p>
              * 
-             * Valid values of **N**: **0** to **29**. You can update at most 30 inbound rules.
+             * Valid values of **N**: **0** to **99**. You can specify at most 100 inbound rules.
              */
             public Builder networkAclEntryId(String networkAclEntryId) {
                 this.networkAclEntryId = networkAclEntryId;
@@ -643,7 +647,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The name of the inbound rule.
              * <p>
              * 
-             * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+             * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder networkAclEntryName(String networkAclEntryName) {
                 this.networkAclEntryName = networkAclEntryName;
@@ -651,11 +655,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The action to be performed on network traffic that matches the rule. Valid values:
+             * The rule action that determines whether to allow inbound requests. Valid values:
              * <p>
              * 
-             * *   **accept**: allows the network traffic.
-             * *   **drop**: blocks the network traffic.
+             * *   **accept**
+             * *   **drop**
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -666,8 +670,8 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The source port range of the inbound rule.
              * <p>
              * 
-             * *   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.
-             * *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.
+             * *   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.
+             * *   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -678,11 +682,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              * The protocol type. Valid values:
              * <p>
              * 
-             * *   **icmp**: Internet Control Message Protocol (ICMP)
-             * *   **gre**: Generic Routing Encapsulation (GRE)
-             * *   **tcp**: TCP
-             * *   **udp**: UDP
-             * *   **all**: all protocols
+             * *   **icmp**
+             * *   **gre**
+             * *   **tcp**
+             * *   **udp**
+             * *   **all**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

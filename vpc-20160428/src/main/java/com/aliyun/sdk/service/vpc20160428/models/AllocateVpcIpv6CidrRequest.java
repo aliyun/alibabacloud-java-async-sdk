@@ -179,10 +179,10 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * <p>
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,17 +200,18 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * The type of the IPv6 CIDR block. Valid values:
+         * The type of IPv6 CIDR block. Valid values:
          * <p>
          * 
-         * *   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.
-         * *   **ChinaMobile**: China Mobile (single ISP).
-         * *   **ChinaUnicom**: China Unicom (single ISP).
-         * *   **ChinaTelecom**: China Telecom (single ISP).
+         * *   **BGP** (default)
+         * *   **ChinaMobile**
+         * *   **ChinaUnicom**
+         * *   **ChinaTelecom**
          * 
          * > 
          * 
          * *   If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+         * 
          * *   You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.
          */
         public Builder ipv6Isp(String ipv6Isp) {
@@ -238,7 +239,7 @@ public class AllocateVpcIpv6CidrRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the VPC belongs.
+         * The region ID of the VPC.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

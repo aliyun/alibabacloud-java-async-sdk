@@ -154,7 +154,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The authentication key of the BGP routing protocol for the gateway device in the data center.
+         * The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
          */
         public Builder authKey(String authKey) {
             this.authKey = authKey;
@@ -205,7 +205,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -213,7 +213,10 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the customer gateway belongs.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

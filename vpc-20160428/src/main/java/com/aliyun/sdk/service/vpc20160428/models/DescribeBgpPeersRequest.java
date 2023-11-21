@@ -214,11 +214,11 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * Specifies whether the BGP group is the default BGP group. Valid values:
+         * Specifies whether the BGP group is the default group. Valid values:
          * <p>
          * 
-         * *   **true**: The BGP group is the default BGP group.
-         * *   **false**: The BGP group is not the default BGP group.
+         * *   **true**
+         * *   **false**
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -245,7 +245,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,7 +254,7 @@ public class DescribeBgpPeersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +266,7 @@ public class DescribeBgpPeersRequest extends Request {
          * The region ID of the BGP group to which the BGP peer that you want to query belongs.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

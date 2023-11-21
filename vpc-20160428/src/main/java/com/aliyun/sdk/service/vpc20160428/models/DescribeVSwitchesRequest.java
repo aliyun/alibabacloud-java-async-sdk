@@ -279,11 +279,11 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -292,13 +292,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default vSwitch in the specified region. Valid values:
+         * Specifies whether to query the default vSwitches in the specified region. Valid values:
          * <p>
          * 
-         * *   **true**: queries the default vSwitch in the specified region.
-         * *   **false**: does not query the default vSwitch in the specified region.
+         * *   **true**
+         * *   **false**
          * 
-         * If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
+         * If you do not set this parameter, the system queries all vSwitches in the specified region by default.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -346,7 +346,7 @@ public class DescribeVSwitchesRequest extends Request {
          * The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          * <p>
          * 
-         * >  You must set at least one of the **RegionId** and **VpcId** parameters.
+         * >  You must set at least one of **RegionId** and **VpcId**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -391,7 +391,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -409,7 +409,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The name of the vSwitch.
+         * The vSwitch name.
          * <p>
          * 
          * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
@@ -421,7 +421,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * The ID of the Alibaba Cloud account to which the vSwitch belongs.
          */
         public Builder vSwitchOwnerId(Long vSwitchOwnerId) {
             this.putQueryParameter("VSwitchOwnerId", vSwitchOwnerId);
@@ -430,10 +430,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the vSwitches belong.
+         * The ID of the virtual private cloud (VPC) to which the vSwitches belong.
          * <p>
          * 
-         * >  You must set at least one of the **RegionId** and **VpcId** parameters.
+         * >  You must set at least one of **RegionId** and **VpcId**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -442,7 +442,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+         * The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -496,7 +496,10 @@ public class DescribeVSwitchesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -504,7 +507,10 @@ public class DescribeVSwitchesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

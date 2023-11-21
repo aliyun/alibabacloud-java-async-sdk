@@ -410,12 +410,12 @@ public class AllocateEipAddressProRequest extends Request {
          * The metering method of the EIP. Valid values:
          * <p>
          * 
-         * *   **PayByBandwidth** (default)
-         * *   **PayByTraffic**
+         * *   **PayByBandwidth** (default): pay-by-bandwidth.
+         * *   **PayByTraffic**: pay-by-data-transfer.
          * 
-         * Set the value of **InternetChargeType** to **PayByBandwidth** if **InstanceChargeType** is set to **PrePaid**.
+         * When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.
          * 
-         * Valid values when **InstanceChargeType** is set to **PostPaid**: **PayByBandwidth** or **PayByTraffic**.
+         * When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);

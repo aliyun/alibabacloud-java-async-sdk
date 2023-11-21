@@ -143,9 +143,9 @@ public class UnassociateNetworkAclRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          * 
-         * >  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -172,7 +172,10 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region ID of the network ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +184,7 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The information about the associated resource.
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);

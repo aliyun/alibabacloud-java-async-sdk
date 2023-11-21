@@ -62,7 +62,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The information returned after traffic mirroring is enabled.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

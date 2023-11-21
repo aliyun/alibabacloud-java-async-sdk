@@ -212,7 +212,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among different requests.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,7 +221,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
         }
 
         /**
-         * The billing method of the Express Connect circuit. Set the value to
+         * The billing method. Set the value to
          * <p>
          * 
          * **PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.
@@ -276,8 +276,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends Request {
          * The billing cycle of the subscription. Valid values:
          * <p>
          * 
-         * *   **Month**: Bills are paid on a monthly basis. This is the default value.
-         * *   **Year**: Bills are paid on an annual basis.
+         * *   **Month** (default)
+         * *   **Year**
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

@@ -86,7 +86,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         private java.util.List < VpnAttachments> vpnAttachments; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -241,8 +241,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
              * Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder crossAccountAuthorized(Boolean crossAccountAuthorized) {
                 this.crossAccountAuthorized = crossAccountAuthorized;

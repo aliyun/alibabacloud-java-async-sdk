@@ -169,8 +169,8 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
          * Indicates whether the IPv4 gateway is activated. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -210,7 +210,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.
+         * The ID of the VPC with which the IPv4 gateway is associated.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -302,7 +302,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,7 +310,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

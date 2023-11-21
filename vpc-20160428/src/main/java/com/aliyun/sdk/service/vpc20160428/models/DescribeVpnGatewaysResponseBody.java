@@ -264,7 +264,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              * The type of the order that has not taken effect. Valid values:
              * <p>
              * 
-             * *   **RENEWCHANGE**: renewal with a specification change
+             * *   **RENEWCHANGE**: renewal with upgrade or downgrade
              * *   **TEMP_UPGRADE**: temporary upgrade
              * *   **RENEW**: renewal
              */
@@ -351,7 +351,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -359,7 +359,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -776,10 +776,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the VPN gateway was created. Unit: milliseconds.
+             * The timestamp when the VPN gateway was created. Unit: millisecond.
              * <p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -817,7 +817,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether BGP is enabled for the VPN gateway.
+             * The BGP status of the VPN gateway.
              * <p>
              * 
              * *   **true**
@@ -829,7 +829,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the VPN gateway expires. Unit: milliseconds.
+             * The timestamp when the VPN gateway expires. Unit: millisecond.
              * <p>
              * 
              * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
@@ -896,7 +896,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the VPN gateway belongs.
+             * <p>
+             * 
+             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -981,9 +984,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              *     *   **true**
              *     *   **false**
              * 
-             * *   **description**
+             * *   **description**: the description of the VPN gateway. This parameter is for internal system use only.
              * 
-             * *   **VpnVersion**
+             * *   **VpnVersion**: the version of the VPN gateway.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

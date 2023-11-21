@@ -214,7 +214,7 @@ public class ModifyVpcAttributeRequest extends Request {
          * 
          * You can specify a larger or smaller IPv4 CIDR block than the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 28 bits in length. If you specify a smaller IPv4 CIDR block and existing IP addresses do not fall within the CIDR block, the modification fails.
          * 
-         * >  Your services are not affected when you modify the VPC CIDR block.
+         * >  If you modify the CIDR block of a VPC, your existing services are not affected.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -238,8 +238,8 @@ public class ModifyVpcAttributeRequest extends Request {
          * Specifies whether to enable IPv6 CIDR blocks. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder enableIPv6(Boolean enableIPv6) {
             this.putQueryParameter("EnableIPv6", enableIPv6);
@@ -260,12 +260,12 @@ public class ModifyVpcAttributeRequest extends Request {
          * The type of IPv6 CIDR block. Valid values:
          * <p>
          * 
-         * *   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6
-         * *   **ChinaMobile**: China Mobile (single ISP)
-         * *   **ChinaUnicom**: China Unicom (single ISP)
-         * *   **ChinaTelecom**: China Telecom (single ISP)
+         * *   **BGP** (default)
+         * *   **ChinaMobile**
+         * *   **ChinaUnicom**
+         * *   **ChinaTelecom**
          * 
-         * >  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+         * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
          */
         public Builder ipv6Isp(String ipv6Isp) {
             this.putQueryParameter("Ipv6Isp", ipv6Isp);
@@ -334,7 +334,7 @@ public class ModifyVpcAttributeRequest extends Request {
          * The new name of the VPC.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

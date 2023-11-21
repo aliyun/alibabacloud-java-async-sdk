@@ -194,7 +194,7 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * NewNextHopId.
+         * The ID of the new next hop instance.
          */
         public Builder newNextHopId(String newNextHopId) {
             this.putQueryParameter("NewNextHopId", newNextHopId);
@@ -203,7 +203,7 @@ public class ModifyRouteEntryRequest extends Request {
         }
 
         /**
-         * NewNextHopType.
+         * The new next hop type of the route.
          */
         public Builder newNextHopType(String newNextHopType) {
             this.putQueryParameter("NewNextHopType", newNextHopType);

@@ -170,7 +170,7 @@ public class DeleteVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region ID of the VBR. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
