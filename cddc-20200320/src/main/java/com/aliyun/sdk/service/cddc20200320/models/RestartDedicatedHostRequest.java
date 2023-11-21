@@ -140,7 +140,7 @@ public class RestartDedicatedHostRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -149,7 +149,11 @@ public class RestartDedicatedHostRequest extends Request {
         }
 
         /**
-         * FailoverMode.
+         * The switchover method of the primary instance. Valid values:
+         * <p>
+         * 
+         * *   **MaintainTime** (default): The system performs a switchover within a maintenance window. The system switches workloads from the primary instance on the host to the secondary instance on another host, and then restarts the current host. This prevents service interruptions.
+         * *   **Immediate**: The system immediately restarts the host.
          */
         public Builder failoverMode(String failoverMode) {
             this.putQueryParameter("FailoverMode", failoverMode);
@@ -158,7 +162,13 @@ public class RestartDedicatedHostRequest extends Request {
         }
 
         /**
-         * ForceStop.
+         * Specifies whether to forcefully restart the host. Valid values:
+         * <p>
+         * 
+         * *   true: The system forcefully restarts the host. If this value is used, the system powers off the host. This results in the loss of cached data that is not written to storage. Exercise caution when you select this value.
+         * *   false (default): The system restarts the host normally.
+         * 
+         * >  This parameter takes effect only for hosts that are created in ApsaraDB MyBase for Redis dedicated clusters of the Enhanced Edition (Tair). Hosts that are created in ApsaraDB MyBase dedicated clusters that run other database engines can be restarted normally.
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -176,7 +186,7 @@ public class RestartDedicatedHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * [The region ID](~~198326~~) of the host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

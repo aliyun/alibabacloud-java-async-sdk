@@ -127,7 +127,7 @@ public class DescribeHostWebShellRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -136,7 +136,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * The ID of the Alibaba Cloud account to which the VPC belongs.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -145,7 +145,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * ResourceOwnerAccount
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -163,7 +163,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The ID of the asset owner.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -172,7 +172,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

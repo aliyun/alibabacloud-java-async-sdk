@@ -149,7 +149,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -158,7 +158,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of host N. You can specify multiple host IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -185,7 +185,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to DEDICATEDHOST.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -194,7 +194,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -248,7 +248,15 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
+             * <p>
+             * 
+             * *   **N** specifies the serial number of the tag. Examples:
+             * 
+             *     *   **Tag.1.Key** specifies the key of the first tag.
+             *     *   **Tag.2.Key** specifies the key of the second tag.
+             * 
+             * *   You must specify one of this parameter and **ResourceId.N**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -256,7 +264,15 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * *   **N** specifies the serial number of the tag. Examples:
+             * 
+             *     *   **Tag.1.Value** specifies the value of the first tag.
+             *     *   **Tag.2.Value** specifies the value of the second tag.
+             * 
+             * *   If no tag value exists, a value is automatically created.
              */
             public Builder value(String value) {
                 this.value = value;

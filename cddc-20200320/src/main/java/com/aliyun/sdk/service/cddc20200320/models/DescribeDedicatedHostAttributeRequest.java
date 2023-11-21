@@ -126,7 +126,7 @@ public class DescribeDedicatedHostAttributeRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster in which the host is created. You can log on to the ApsaraDB for MyBase console and go to the **Dedicated Clusters** page to view the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -135,7 +135,7 @@ public class DescribeDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -153,7 +153,7 @@ public class DescribeDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * [The region ID](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

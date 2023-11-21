@@ -62,7 +62,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostId.
+         * The host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
@@ -70,7 +70,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
         }
 
         /**
-         * Disks.
+         * The queried disks.
          */
         public Builder disks(java.util.List < Disks> disks) {
             this.disks = disks;
@@ -78,7 +78,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,11 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Category.
+             * The storage type of the host. Valid values:
+             * <p>
+             * 
+             * *   **cloud_ssd**: local SSD.
+             * *   **cloud_essd**: ESSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -258,7 +262,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance that uses the disk.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -266,7 +270,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * The device name of the instance to which the ESSD or local SSD is attached.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -274,7 +278,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the ESSD or local SSD.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -282,7 +286,11 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * HasDBInstance.
+             * Indicates whether the disk is attached to instances. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasDBInstance(Boolean hasDBInstance) {
                 this.hasDBInstance = hasDBInstance;
@@ -290,7 +298,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOPS.
+             * The maximum IOPS of the disk, which is displayed after being divided by 10,000.
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -298,7 +306,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxThroughput.
+             * The maximum throughput of the disk. Unit: MB/s.
              */
             public Builder maxThroughput(Integer maxThroughput) {
                 this.maxThroughput = maxThroughput;
@@ -306,7 +314,10 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceLevel.
+             * The performance level of the ESSD.
+             * <p>
+             * 
+             * >  ApsaraDB for MyBase provides the following types of ESSDs: **ESSD**, **PL2 ESSD**, and **PL3 ESSD**. The higher performance level delivers better ESSD performance.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -314,7 +325,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the ESSD or local SSD. Unit: GB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -322,7 +333,15 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the ESSD. Valid values:
+             * <p>
+             * 
+             * *   **In_use**
+             * *   **Available**
+             * *   **Attaching**
+             * *   **Detaching**
+             * *   **Creating**
+             * *   **ReIniting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +349,11 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The disk type of the enhanced SSD (ESSD) or local SSD. Valid values:
+             * <p>
+             * 
+             * *   **system**: system disk.
+             * *   **data**: data disk.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +361,7 @@ public class DescribeDedicatedHostDisksResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the ESSD or local SSD.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

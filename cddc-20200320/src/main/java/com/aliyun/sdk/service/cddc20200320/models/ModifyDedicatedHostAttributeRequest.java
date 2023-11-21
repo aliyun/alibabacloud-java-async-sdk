@@ -139,7 +139,11 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         } 
 
         /**
-         * AllocationStatus.
+         * Indicates whether instances can be deployed on the host. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes.
+         * *   **0**: no.
          */
         public Builder allocationStatus(String allocationStatus) {
             this.putQueryParameter("AllocationStatus", allocationStatus);
@@ -148,7 +152,7 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -157,7 +161,7 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The name of the host.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -175,7 +179,7 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The [region ID](~~198326~~) of the host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -111,7 +111,7 @@ public class DescribeDedicatedHostDisksRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -129,7 +129,7 @@ public class DescribeDedicatedHostDisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can log on to the ApsaraDB for MyBase console to view the [region ID](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

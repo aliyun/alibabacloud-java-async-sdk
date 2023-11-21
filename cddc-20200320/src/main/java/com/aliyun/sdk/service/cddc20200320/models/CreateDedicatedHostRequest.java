@@ -285,7 +285,13 @@ public class CreateDedicatedHostRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable the auto-renewal feature. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  If you do not specify this parameter, the default value **false** is used.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -294,7 +300,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -303,7 +309,10 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID. You can log on to the ApsaraDB for MyBase console and go to the **Dedicated Clusters** page to view the dedicated cluster ID.
+         * <p>
+         * 
+         * >  The database engine of the host is the same as the database engine of the cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -312,7 +321,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * HostClass.
+         * The instance type of the host. For information about the host instance types supported by different database engines, see [Instance types of hosts](~~206343~~).
          */
         public Builder hostClass(String hostClass) {
             this.putQueryParameter("HostClass", hostClass);
@@ -321,7 +330,17 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * HostStorage.
+         * The disk storage of the host. This parameter takes effect only for dedicated clusters that run Tair. Unit: GB. Valid values:
+         * <p>
+         * 
+         * *   512
+         * *   1024
+         * *   1536
+         * *   2048
+         * *   2560
+         * *   3072
+         * *   3584
+         * *   4096
          */
         public Builder hostStorage(String hostStorage) {
             this.putQueryParameter("HostStorage", hostStorage);
@@ -330,7 +349,11 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * HostStorageType.
+         * The disk type of the host. This parameter takes effect only for dedicated clusters that run Tair. Valid values:
+         * <p>
+         * 
+         * *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+         * *   **cloud_essd0**: PL0 ESSD.
          */
         public Builder hostStorageType(String hostStorageType) {
             this.putQueryParameter("HostStorageType", hostStorageType);
@@ -339,7 +362,16 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * The image of the host. Valid values:
+         * <p>
+         * 
+         * *   **WindowsWithMssqlEntAlwaysonLicense**: SQL Server Cluster Edition.
+         * *   **WindowsWithMssqlStdLicense**: SQL Server Standard Edition.
+         * *   **WindowsWithMssqlEntLicense**: SQL Server Enterprise Edition.
+         * *   **WindowsWithMssqlWebLicense**: SQL Server Web Edition.
+         * *   **AliLinux**: other images.
+         * 
+         * >  When you create a host that runs SQL Server, you must specify a host image.
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -348,7 +380,12 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * OsPassword.
+         * The password of the host. You can specify a password only when you create a host in a **Proprietary MyBase** dedicated cluster.
+         * <p>
+         * 
+         * *   The password must be 8 to 30 characters in length.
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   The password can contain the following special characters: () \ \` ~ ! @ # $ % ^ & \* - \_ + = | { } \[ ] : ; \" < > , . ? /
          */
         public Builder osPassword(String osPassword) {
             this.putQueryParameter("OsPassword", osPassword);
@@ -366,7 +403,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the host. Set the value to **prepaid**.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -375,7 +412,11 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * Period.
+         * The unit of the subscription duration. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -384,7 +425,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The [region ID](~~198326~~) of the dedicated cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -411,7 +452,11 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the host.
+         * <p>
+         * 
+         * *   Valid values when **Period** is set to **Year**: **1** to **5**.****
+         * *   Valid values when **Period** is set to **Month**: **1** to **9**.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -420,7 +465,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID. You can log on to the Virtual Private Cloud (VPC) console to view the vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -429,7 +474,7 @@ public class CreateDedicatedHostRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID. You can call the [DescribeRegions](~~214103~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

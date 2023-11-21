@@ -50,7 +50,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostEcsLevelInfos.
+         * The queried host.
          */
         public Builder hostEcsLevelInfos(java.util.List < HostEcsLevelInfos> hostEcsLevelInfos) {
             this.hostEcsLevelInfos = hostEcsLevelInfos;
@@ -58,7 +58,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +254,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             private Integer storageIops; 
 
             /**
-             * CloudStorageBandwidth.
+             * The disk bandwidth. Unit: Gbit/s.
              */
             public Builder cloudStorageBandwidth(Float cloudStorageBandwidth) {
                 this.cloudStorageBandwidth = cloudStorageBandwidth;
@@ -262,7 +262,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of CPU cores of the host.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -270,7 +270,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuFrequency.
+             * The processor frequency. Unit: GHz.
              */
             public Builder cpuFrequency(String cpuFrequency) {
                 this.cpuFrequency = cpuFrequency;
@@ -278,7 +278,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuVersion.
+             * The CPU model of the host.
              */
             public Builder cpuVersion(String cpuVersion) {
                 this.cpuVersion = cpuVersion;
@@ -286,7 +286,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The name of the host.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +294,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EcsClass.
+             * The instance family of the host.
              */
             public Builder ecsClass(String ecsClass) {
                 this.ecsClass = ecsClass;
@@ -302,7 +302,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EcsClassCode.
+             * The instance type of the host.
              */
             public Builder ecsClassCode(String ecsClassCode) {
                 this.ecsClassCode = ecsClassCode;
@@ -310,7 +310,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsCloudDisk.
+             * Indicates whether the host uses cloud disks.
              */
             public Builder isCloudDisk(Integer isCloudDisk) {
                 this.isCloudDisk = isCloudDisk;
@@ -318,7 +318,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorage.
+             * The local storage.
              */
             public Builder localStorage(String localStorage) {
                 this.localStorage = localStorage;
@@ -326,7 +326,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the host. Unit: GB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -334,7 +334,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NetBandWidth.
+             * The internal bandwidth of the host. Unit: Gbit/s.
              */
             public Builder netBandWidth(Float netBandWidth) {
                 this.netBandWidth = netBandWidth;
@@ -342,7 +342,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NetPackage.
+             * The packet forwarding rate over the internal network, which is displayed after being divided by 10,000. Unit: packets per second (PPS).
              */
             public Builder netPackage(Integer netPackage) {
                 this.netPackage = netPackage;
@@ -350,7 +350,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RdsClassCode.
+             * The instance type of the instance.
              */
             public Builder rdsClassCode(String rdsClassCode) {
                 this.rdsClassCode = rdsClassCode;
@@ -358,7 +358,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageIops.
+             * The storage IOPS of the host, which is displayed after being divided by 10,000.
              */
             public Builder storageIops(Integer storageIops) {
                 this.storageIops = storageIops;
@@ -411,7 +411,13 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             private java.util.List < Items> items; 
 
             /**
-             * CddcHostType.
+             * The category of the host. Valid values:
+             * <p>
+             * 
+             * *   **general**: general-purpose.
+             * *   **compute**: compute-optimized.
+             * *   **ram**: memory-optimized.
+             * *   **dragon**: ECS Bare Metal Instance.
              */
             public Builder cddcHostType(String cddcHostType) {
                 this.cddcHostType = cddcHostType;
@@ -419,7 +425,7 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The queried host specifications.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;

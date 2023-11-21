@@ -139,7 +139,11 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID. You can log on to the ApsaraDB for MyBase console and go to the Dedicated Clusters page to view the dedicated cluster ID.
+         * <p>
+         * 
+         * *   If you leave this parameter empty, the information about all hosts within the region is returned.
+         * *   If you specify a dedicated cluster ID, the information about all hosts in the dedicated cluster within the region is returned.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -148,7 +152,14 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine used to filter hosts. Valid values:
+         * <p>
+         * 
+         * *   MySQL
+         * *   SQL Server
+         * *   PosgreSQL
+         * 
+         * *   Redis
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -157,7 +168,26 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * The image of the host. Valid values:
+         * <p>
+         * 
+         * *   **WindowsWithMssqlEntAlwaysonLicense**: SQL
+         * 
+         * Server Cluster Edition.
+         * 
+         * *   **WindowsWithMssqlStdLicense**: SQL
+         * 
+         * Server Standard Edition.
+         * 
+         * *   **WindowsWithMssqlEntLicense**: SQL
+         * 
+         * Server Enterprise Edition.
+         * 
+         * *   **WindowsWithMssqlWebLicense**: SQL
+         * 
+         * Server Web Edition.
+         * 
+         * *   **AliLinux**: other images.
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -175,7 +205,7 @@ public class DescribeDedicatedHostGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. For more information, see [Region IDs](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -126,7 +126,7 @@ public class ModifyDedicatedHostPasswordRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -135,7 +135,14 @@ public class ModifyDedicatedHostPasswordRequest extends Request {
         }
 
         /**
-         * NewPassword.
+         * The new password.
+         * <p>
+         * 
+         * *   The password must be 8 to 32 characters in length.
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   The password can contain the following special characters: `! @ # $ % ^ & * ( ) _ + - =`
+         * 
+         * >  If your dedicated cluster runs SQL Server, the password cannot contain the account name (case-insensitive).
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -153,7 +160,7 @@ public class ModifyDedicatedHostPasswordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

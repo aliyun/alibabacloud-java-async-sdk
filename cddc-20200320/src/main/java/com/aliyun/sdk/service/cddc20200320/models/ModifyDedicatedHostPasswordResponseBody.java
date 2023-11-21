@@ -50,7 +50,7 @@ public class ModifyDedicatedHostPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicatedHostName.
+         * The name of the host.
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.dedicatedHostName = dedicatedHostName;
@@ -58,7 +58,7 @@ public class ModifyDedicatedHostPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

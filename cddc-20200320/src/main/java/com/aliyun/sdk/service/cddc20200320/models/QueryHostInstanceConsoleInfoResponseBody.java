@@ -50,7 +50,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostInstanceConsoleInfos.
+         * The queried instances.
          */
         public Builder hostInstanceConsoleInfos(java.util.List < HostInstanceConsoleInfos> hostInstanceConsoleInfos) {
             this.hostInstanceConsoleInfos = hostInstanceConsoleInfos;
@@ -58,7 +58,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             private Float perfIdbPio; 
 
             /**
-             * CpuRatio.
+             * The number of CPU cores of the host.
              */
             public Builder cpuRatio(Float cpuRatio) {
                 this.cpuRatio = cpuRatio;
@@ -142,7 +142,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskCurr.
+             * The disk storage of the host. Unit: GB.
              */
             public Builder diskCurr(Float diskCurr) {
                 this.diskCurr = diskCurr;
@@ -150,7 +150,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemRatio.
+             * The memory size of the host. Unit: GB.
              */
             public Builder memRatio(Float memRatio) {
                 this.memRatio = memRatio;
@@ -158,7 +158,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PerfIdbPio.
+             * The number of physical I/O operations performed on the host.
              */
             public Builder perfIdbPio(Float perfIdbPio) {
                 this.perfIdbPio = perfIdbPio;
@@ -379,7 +379,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CpuCores.
+             * The number of CPU cores of the instance.
              */
             public Builder cpuCores(Integer cpuCores) {
                 this.cpuCores = cpuCores;
@@ -387,7 +387,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuIncreaseRatioValue.
+             * The maximum number of CPU cores of the instance.
              */
             public Builder cpuIncreaseRatioValue(Integer cpuIncreaseRatioValue) {
                 this.cpuIncreaseRatioValue = cpuIncreaseRatioValue;
@@ -395,7 +395,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceDescription.
+             * The description of the instance.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -403,7 +403,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -411,7 +411,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The storage capacity of the instance. Unit: GB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -419,7 +419,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -427,7 +427,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -435,7 +435,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the host on which the instance is deployed.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -443,7 +443,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * The instance type of the instance.
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;
@@ -451,7 +451,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxConnIncreaseRatioValue.
+             * The maximum number of connections to the instance.
              */
             public Builder maxConnIncreaseRatioValue(Integer maxConnIncreaseRatioValue) {
                 this.maxConnIncreaseRatioValue = maxConnIncreaseRatioValue;
@@ -459,7 +459,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemSize.
+             * The memory size of the instance. Unit: GB.
              */
             public Builder memSize(Integer memSize) {
                 this.memSize = memSize;
@@ -467,7 +467,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryIncreaseRatioValue.
+             * The maximum memory size of the instance.
              */
             public Builder memoryIncreaseRatioValue(Integer memoryIncreaseRatioValue) {
                 this.memoryIncreaseRatioValue = memoryIncreaseRatioValue;
@@ -475,7 +475,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PerfInfo.
+             * The performance information of the host on which the instance is deployed.
              */
             public Builder perfInfo(PerfInfo perfInfo) {
                 this.perfInfo = perfInfo;
@@ -483,7 +483,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the host.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -491,7 +491,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the instance.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -499,7 +499,7 @@ public class QueryHostInstanceConsoleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the instance.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -126,7 +126,7 @@ public class ReplaceDedicatedHostRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -135,7 +135,11 @@ public class ReplaceDedicatedHostRequest extends Request {
         }
 
         /**
-         * FailoverMode.
+         * The switchover method of the primary instance. Valid values:
+         * <p>
+         * 
+         * *   **MaintainTime** (default): The system performs a switchover within a maintenance window. The system switches workloads from the primary instance on the host to the secondary instance on another host, and then restarts the current host. This prevents service interruptions.
+         * *   **Immediate**: The system immediately restarts the host.
          */
         public Builder failoverMode(String failoverMode) {
             this.putQueryParameter("FailoverMode", failoverMode);
@@ -153,7 +157,7 @@ public class ReplaceDedicatedHostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class ReplaceDedicatedHostResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * DedicatedHostId.
+         * The ID of the host in the dedicated cluster.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
@@ -70,7 +70,7 @@ public class ReplaceDedicatedHostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ReplaceDedicatedHostResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

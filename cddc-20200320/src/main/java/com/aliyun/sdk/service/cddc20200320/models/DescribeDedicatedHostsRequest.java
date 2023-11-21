@@ -237,7 +237,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         } 
 
         /**
-         * AllocationStatus.
+         * Specifies whether instances can be deployed on the host. Valid values:
+         * <p>
+         * 
+         * *   **Allocatable**: Instances can be deployed on the host.
+         * *   **Suspended**: Instances cannot be deployed on the host.
          */
         public Builder allocationStatus(String allocationStatus) {
             this.putQueryParameter("AllocationStatus", allocationStatus);
@@ -246,7 +250,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID. You can log on to the ApsaraDB for MyBase console and go to the **Dedicated Clusters** page to view the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -255,7 +259,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The ID of the host in the dedicated cluster. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -264,7 +268,19 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * HostStatus.
+         * The state of the host. Valid values:
+         * <p>
+         * 
+         * *   **0**: The host is being created.
+         * *   **1**: The host is running.
+         * *   **2**: The host is faulty.
+         * *   **3**: The host is ready for disabling.
+         * *   **4**: The host is being maintained.
+         * *   **5**: The host is disabled.
+         * *   **6**: The host is restarting.
+         * *   **7**: The host is locked.
+         * 
+         * >  When a host fails, the host is disabled. Before the host is disabled, the data of the instances that run on the host is migrated to another host.
          */
         public Builder hostStatus(String hostStatus) {
             this.putQueryParameter("HostStatus", hostStatus);
@@ -273,7 +289,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * HostType.
+         * The storage type of the host. Valid values:
+         * <p>
+         * 
+         * *   **dhg_local_ssd**: local SSD.
+         * *   **dhg_cloud_ssd** or **dhg_cloud_essd**: enhanced SSD (ESSD).
          */
         public Builder hostType(String hostType) {
             this.putQueryParameter("HostType", hostType);
@@ -282,7 +302,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The order ID. You can log on to the Billing Management console and go to the **Orders** page to view the order ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -300,7 +320,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * PageNumbers.
+         * The page number.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -309,7 +329,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -318,7 +338,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * [The region ID](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -345,7 +365,10 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that are added to the host. Each tag is a key-value pair that consists of TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: {"key1":"value1","key2":"value2"...}.
+         * <p>
+         * 
+         * >  If you want to filter hosts based on tags, do not specify the **DedicatedHostId** parameter. Otherwise, the **DedicatedHostId** parameter is used to filter hosts.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -354,7 +377,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID. You can call the [DescribeRegions](~~214103~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

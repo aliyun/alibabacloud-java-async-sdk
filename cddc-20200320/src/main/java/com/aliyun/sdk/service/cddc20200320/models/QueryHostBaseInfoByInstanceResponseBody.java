@@ -50,7 +50,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HostInstanceConsoleInfos.
+         * The queried host and instance information.
          */
         public Builder hostInstanceConsoleInfos(java.util.List < HostInstanceConsoleInfos> hostInstanceConsoleInfos) {
             this.hostInstanceConsoleInfos = hostInstanceConsoleInfos;
@@ -58,7 +58,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterName.
+             * The instance type of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -214,7 +214,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -222,7 +222,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -230,7 +230,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The expiration time of the instance.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -238,7 +238,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The name of the host on which the instance is deployed.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -246,7 +246,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the host on which the instance is deployed.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -254,7 +254,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the host on which the instance is deployed.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -262,7 +262,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the instance.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -270,7 +270,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +278,7 @@ public class QueryHostBaseInfoByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID of the host on which the instance is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

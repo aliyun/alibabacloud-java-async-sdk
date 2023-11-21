@@ -126,7 +126,12 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the host account.
+         * <p>
+         * 
+         * *   The name can contain lowercase letters, digits, and underscores (\_).
+         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
+         * *   The name must be 2 to 16 characters in length.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +140,7 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -144,7 +149,7 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * The ID of the account to which the AccessKey pair belongs.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -153,7 +158,7 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +167,7 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * ResourceOwnerAccount
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -171,7 +176,7 @@ public class DeleteDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The ID of the asset owner.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

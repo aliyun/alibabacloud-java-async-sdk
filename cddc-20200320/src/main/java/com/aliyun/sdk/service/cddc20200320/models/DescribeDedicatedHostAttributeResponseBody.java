@@ -458,7 +458,12 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * AccountName.
+         * The account name of the host.
+         * <p>
+         * 
+         * *   The name can contain lowercase letters, digits, and underscores (\_).
+         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
+         * *   The name must be 2 to 16 characters in length.
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -466,7 +471,11 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AccountType.
+         * The account type of the host. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: standard account.
+         * *   **Admin**: administrator account.
          */
         public Builder accountType(String accountType) {
             this.accountType = accountType;
@@ -474,7 +483,11 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AllocationStatus.
+         * Indicates whether instances can be deployed on the host. Valid values:
+         * <p>
+         * 
+         * *   **Allocatable**: yes.
+         * *   **Suspended**: no.
          */
         public Builder allocationStatus(String allocationStatus) {
             this.allocationStatus = allocationStatus;
@@ -482,7 +495,11 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AutoRenew.
+         * Indicates whether auto-renewal is enabled on the host. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder autoRenew(String autoRenew) {
             this.autoRenew = autoRenew;
@@ -490,7 +507,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CPUAllocationRatio.
+         * The CPU overcommit ratio of the dedicated cluster. Unit: %. The value is accurate to the tens digit.
          */
         public Builder CPUAllocationRatio(String CPUAllocationRatio) {
             this.CPUAllocationRatio = CPUAllocationRatio;
@@ -498,7 +515,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CpuUsed.
+         * The number of CPU cores used by the host.
          */
         public Builder cpuUsed(String cpuUsed) {
             this.cpuUsed = cpuUsed;
@@ -506,7 +523,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The time when the host was created. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -514,7 +531,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The ID of the dedicated cluster in which the host is created.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -522,7 +539,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DedicatedHostId.
+         * The host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
@@ -530,7 +547,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DiskAllocationRatio.
+         * The storage overcommit ratio of the dedicated cluster.
          */
         public Builder diskAllocationRatio(String diskAllocationRatio) {
             this.diskAllocationRatio = diskAllocationRatio;
@@ -538,7 +555,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DistributionTag.
+         * The distribution tag of the host.
          */
         public Builder distributionTag(String distributionTag) {
             this.distributionTag = distributionTag;
@@ -546,7 +563,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EcsClassCode.
+         * The instance type of the Elastic Compute Service (ECS) instance.
          */
         public Builder ecsClassCode(String ecsClassCode) {
             this.ecsClassCode = ecsClassCode;
@@ -554,7 +571,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The expiration time of the host. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -562,7 +579,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostCPU.
+         * The number of CPU cores of the host.
          */
         public Builder hostCPU(Integer hostCPU) {
             this.hostCPU = hostCPU;
@@ -570,7 +587,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostClass.
+         * The instance type of the host.
          */
         public Builder hostClass(String hostClass) {
             this.hostClass = hostClass;
@@ -578,7 +595,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostMem.
+         * The memory size of the host. Unit: MB.
          */
         public Builder hostMem(Integer hostMem) {
             this.hostMem = hostMem;
@@ -586,7 +603,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostName.
+         * The name of the host.
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -594,7 +611,19 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostStatus.
+         * The state of the host. Valid values:
+         * <p>
+         * 
+         * *   **0**: The host is being created.
+         * *   **1**: The host is running.
+         * *   **2**: The host is faulty.
+         * *   **3**: The host is ready for disabling.
+         * *   **4**: The host is being maintained.
+         * *   **5**: The host is disabled.
+         * *   **6**: The host is restarting.
+         * *   **7**: The host is locked.
+         * 
+         * >  When a host fails, the host is disabled. Before the host is disabled, the data of the instances that run on the host is migrated to another host. This ensures data integrity.
          */
         public Builder hostStatus(String hostStatus) {
             this.hostStatus = hostStatus;
@@ -602,7 +631,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostStorage.
+         * The total storage of the host. Unit: GB.
          */
         public Builder hostStorage(Integer hostStorage) {
             this.hostStorage = hostStorage;
@@ -610,7 +639,11 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HostType.
+         * The storage type of the host. Valid values:
+         * <p>
+         * 
+         * *   **dhg_cloud_ssd** or **dhg_cloud_essd**: enhanced SSD (ESSD).
+         * *   **dhg_local_ssd**: local SSD.
          */
         public Builder hostType(String hostType) {
             this.hostType = hostType;
@@ -618,7 +651,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IPAddress.
+         * The IP address of the host.
          */
         public Builder IPAddress(String IPAddress) {
             this.IPAddress = IPAddress;
@@ -626,7 +659,13 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ImageCategory.
+         * The image of the host. This parameter is returned only when the database engine is **SQL Server**. Valid values:
+         * <p>
+         * 
+         * *   **WindowsWithMssqlEntAlwaysonLicense**: SQL Server Cluster Edition (AlwaysOn).
+         * *   **WindowsWithMssqlStdLicense**: SQL Server Standard Edition.
+         * *   **WindowsWithMssqlEntLicense**: SQL Server Enterprise Edition.
+         * *   **WindowsWithMssqlWebLicense**: SQL Server Web Edition.
          */
         public Builder imageCategory(String imageCategory) {
             this.imageCategory = imageCategory;
@@ -634,7 +673,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNumber.
+         * The number of instances deployed on the host.
          */
         public Builder instanceNumber(Integer instanceNumber) {
             this.instanceNumber = instanceNumber;
@@ -642,7 +681,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNumberMaster.
+         * The number of primary instances deployed on the host.
          */
         public Builder instanceNumberMaster(Integer instanceNumberMaster) {
             this.instanceNumberMaster = instanceNumberMaster;
@@ -650,7 +689,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNumberROMaster.
+         * The number of primary instances of the read-only instance deployed on the host.
          */
         public Builder instanceNumberROMaster(Integer instanceNumberROMaster) {
             this.instanceNumberROMaster = instanceNumberROMaster;
@@ -658,7 +697,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNumberROSlave.
+         * The number of secondary instances of the read-only instance deployed on the host.
          */
         public Builder instanceNumberROSlave(Integer instanceNumberROSlave) {
             this.instanceNumberROSlave = instanceNumberROSlave;
@@ -666,7 +705,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNumberSlave.
+         * The number of secondary instances deployed on the host.
          */
         public Builder instanceNumberSlave(Integer instanceNumberSlave) {
             this.instanceNumberSlave = instanceNumberSlave;
@@ -674,7 +713,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MemAllocationRatio.
+         * The memory usage of the host. Unit: %.
          */
         public Builder memAllocationRatio(String memAllocationRatio) {
             this.memAllocationRatio = memAllocationRatio;
@@ -682,7 +721,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MemoryUsed.
+         * The amount of memory used by the host. Unit: GB.
          */
         public Builder memoryUsed(String memoryUsed) {
             this.memoryUsed = memoryUsed;
@@ -690,7 +729,11 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * OpenPermission.
+         * Indicates whether the host OS permissions are grated. Valid values:
+         * <p>
+         * 
+         * *   **0**: no.
+         * *   **1**: yes.
          */
         public Builder openPermission(String openPermission) {
             this.openPermission = openPermission;
@@ -698,7 +741,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * [The region ID](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -706,7 +749,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -714,7 +757,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StorageUsed.
+         * The storage usage of the host. Unit: GB.
          */
         public Builder storageUsed(String storageUsed) {
             this.storageUsed = storageUsed;
@@ -722,7 +765,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VPCId.
+         * The virtual private cloud (VPC) ID.
          */
         public Builder VPCId(String VPCId) {
             this.VPCId = VPCId;
@@ -730,7 +773,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitch ID。
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -738,7 +781,7 @@ public class DescribeDedicatedHostAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

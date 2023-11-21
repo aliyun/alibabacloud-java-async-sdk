@@ -156,7 +156,13 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         } 
 
         /**
-         * DbType.
+         * The database engine. Valid values:
+         * <p>
+         * 
+         * *   **mysql**
+         * *   **mssql**
+         * *   **pgsql**
+         * *   **redis**
          */
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
@@ -165,7 +171,14 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         }
 
         /**
-         * ImageCategory.
+         * The image of the host. Valid values:
+         * <p>
+         * 
+         * *   **WindowsWithMssqlEntAlwaysonLicense**: SQL Server Cluster Edition.
+         * *   **WindowsWithMssqlStdLicense**: SQL Server Standard Edition.
+         * *   **WindowsWithMssqlEntLicense**: SQL Server Enterprise Edition.
+         * *   **WindowsWithMssqlWebLicense**: SQL Server Web Edition.
+         * *   **AliLinux**: other images.
          */
         public Builder imageCategory(String imageCategory) {
             this.putQueryParameter("ImageCategory", imageCategory);
@@ -183,7 +196,7 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. For more information, see [Region IDs](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +223,13 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: standard SSD.
+         * *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+         * *   **cloud_essd2**: PL2 ESSD.
+         * *   **cloud_essd3**: PL3 ESSD.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -219,7 +238,7 @@ public class DescribeHostEcsLevelInfoRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -62,7 +62,7 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DedicateHostList.
+         * The created hosts.
          */
         public Builder dedicateHostList(DedicateHostList dedicateHostList) {
             this.dedicateHostList = dedicateHostList;
@@ -70,7 +70,7 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
             private String dedicatedHostId; 
 
             /**
-             * DedicatedHostId.
+             * The host ID.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -159,7 +159,7 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
             private java.util.List < DedicateHostListDedicateHostList> dedicateHostList; 
 
             /**
-             * DedicateHostList.
+             * The created hosts.
              */
             public Builder dedicateHostList(java.util.List < DedicateHostListDedicateHostList> dedicateHostList) {
                 this.dedicateHostList = dedicateHostList;

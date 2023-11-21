@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateMyBaseRequest extends Request {
     @Query
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @Query
     @NameInMap("AutoRenew")
     private String autoRenew;
 
@@ -59,6 +63,14 @@ public class CreateMyBaseRequest extends Request {
     private String imageId;
 
     @Query
+    @NameInMap("InternetChargeType")
+    private String internetChargeType;
+
+    @Query
+    @NameInMap("InternetMaxBandwidthOut")
+    private Integer internetMaxBandwidthOut;
+
+    @Query
     @NameInMap("KeyPairName")
     private String keyPairName;
 
@@ -93,6 +105,10 @@ public class CreateMyBaseRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -104,6 +120,18 @@ public class CreateMyBaseRequest extends Request {
     @NameInMap("SecurityGroupId")
     @Validation(required = true)
     private String securityGroupId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
+    @NameInMap("UserData")
+    private String userData;
+
+    @Query
+    @NameInMap("UserDataInBase64")
+    private Boolean userDataInBase64;
 
     @Query
     @NameInMap("VSwitchId")
@@ -122,6 +150,7 @@ public class CreateMyBaseRequest extends Request {
 
     private CreateMyBaseRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
         this.dedicatedHostGroupDescription = builder.dedicatedHostGroupDescription;
@@ -133,6 +162,8 @@ public class CreateMyBaseRequest extends Request {
         this.ecsUniqueSuffix = builder.ecsUniqueSuffix;
         this.engine = builder.engine;
         this.imageId = builder.imageId;
+        this.internetChargeType = builder.internetChargeType;
+        this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.keyPairName = builder.keyPairName;
         this.osPassword = builder.osPassword;
         this.ownerId = builder.ownerId;
@@ -141,9 +172,13 @@ public class CreateMyBaseRequest extends Request {
         this.period = builder.period;
         this.periodType = builder.periodType;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
+        this.tags = builder.tags;
+        this.userData = builder.userData;
+        this.userDataInBase64 = builder.userDataInBase64;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -160,6 +195,13 @@ public class CreateMyBaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -240,6 +282,20 @@ public class CreateMyBaseRequest extends Request {
     }
 
     /**
+     * @return internetChargeType
+     */
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    /**
+     * @return internetMaxBandwidthOut
+     */
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
+    }
+
+    /**
      * @return keyPairName
      */
     public String getKeyPairName() {
@@ -296,6 +352,13 @@ public class CreateMyBaseRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -314,6 +377,27 @@ public class CreateMyBaseRequest extends Request {
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
+     * @return userDataInBase64
+     */
+    public Boolean getUserDataInBase64() {
+        return this.userDataInBase64;
     }
 
     /**
@@ -338,6 +422,7 @@ public class CreateMyBaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateMyBaseRequest, Builder> {
+        private Boolean autoPay; 
         private String autoRenew; 
         private String clientToken; 
         private String dedicatedHostGroupDescription; 
@@ -349,6 +434,8 @@ public class CreateMyBaseRequest extends Request {
         private String ecsUniqueSuffix; 
         private String engine; 
         private String imageId; 
+        private String internetChargeType; 
+        private Integer internetMaxBandwidthOut; 
         private String keyPairName; 
         private String osPassword; 
         private Long ownerId; 
@@ -357,9 +444,13 @@ public class CreateMyBaseRequest extends Request {
         private String period; 
         private String periodType; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
+        private java.util.List < Tags> tags; 
+        private String userData; 
+        private Boolean userDataInBase64; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -370,6 +461,7 @@ public class CreateMyBaseRequest extends Request {
 
         private Builder(CreateMyBaseRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
             this.dedicatedHostGroupDescription = request.dedicatedHostGroupDescription;
@@ -381,6 +473,8 @@ public class CreateMyBaseRequest extends Request {
             this.ecsUniqueSuffix = request.ecsUniqueSuffix;
             this.engine = request.engine;
             this.imageId = request.imageId;
+            this.internetChargeType = request.internetChargeType;
+            this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.keyPairName = request.keyPairName;
             this.osPassword = request.osPassword;
             this.ownerId = request.ownerId;
@@ -389,13 +483,26 @@ public class CreateMyBaseRequest extends Request {
             this.period = request.period;
             this.periodType = request.periodType;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
+            this.tags = request.tags;
+            this.userData = request.userData;
+            this.userDataInBase64 = request.userDataInBase64;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -498,6 +605,24 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
+         * InternetChargeType.
+         */
+        public Builder internetChargeType(String internetChargeType) {
+            this.putQueryParameter("InternetChargeType", internetChargeType);
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * InternetMaxBandwidthOut.
+         */
+        public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+
+        /**
          * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
@@ -570,6 +695,15 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -593,6 +727,34 @@ public class CreateMyBaseRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
+            return this;
+        }
+
+        /**
+         * UserDataInBase64.
+         */
+        public Builder userDataInBase64(Boolean userDataInBase64) {
+            this.putQueryParameter("UserDataInBase64", userDataInBase64);
+            this.userDataInBase64 = userDataInBase64;
             return this;
         }
 
@@ -631,6 +793,15 @@ public class CreateMyBaseRequest extends Request {
     } 
 
     public static class ECSClassList extends TeaModel {
+        @NameInMap("dataDiskAutoSnapshotPolicyId")
+        private String dataDiskAutoSnapshotPolicyId;
+
+        @NameInMap("dataDiskEncrypted")
+        private Boolean dataDiskEncrypted;
+
+        @NameInMap("dataDiskKMSKeyId")
+        private String dataDiskKMSKeyId;
+
         @NameInMap("dataDiskPerformanceLevel")
         private String dataDiskPerformanceLevel;
 
@@ -651,9 +822,18 @@ public class CreateMyBaseRequest extends Request {
         @Validation(required = true)
         private Integer nodeCount;
 
+        @NameInMap("sysDiskAutoSnapshotPolicyId")
+        private String sysDiskAutoSnapshotPolicyId;
+
         @NameInMap("sysDiskCapacity")
         @Validation(required = true, minimum = 40)
         private Integer sysDiskCapacity;
+
+        @NameInMap("sysDiskEncrypted")
+        private Boolean sysDiskEncrypted;
+
+        @NameInMap("sysDiskKMSKeyId")
+        private String sysDiskKMSKeyId;
 
         @NameInMap("sysDiskType")
         @Validation(required = true)
@@ -663,13 +843,19 @@ public class CreateMyBaseRequest extends Request {
         private String systemDiskPerformanceLevel;
 
         private ECSClassList(Builder builder) {
+            this.dataDiskAutoSnapshotPolicyId = builder.dataDiskAutoSnapshotPolicyId;
+            this.dataDiskEncrypted = builder.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
             this.dataDiskPerformanceLevel = builder.dataDiskPerformanceLevel;
             this.diskCapacity = builder.diskCapacity;
             this.diskCount = builder.diskCount;
             this.diskType = builder.diskType;
             this.instanceType = builder.instanceType;
             this.nodeCount = builder.nodeCount;
+            this.sysDiskAutoSnapshotPolicyId = builder.sysDiskAutoSnapshotPolicyId;
             this.sysDiskCapacity = builder.sysDiskCapacity;
+            this.sysDiskEncrypted = builder.sysDiskEncrypted;
+            this.sysDiskKMSKeyId = builder.sysDiskKMSKeyId;
             this.sysDiskType = builder.sysDiskType;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
         }
@@ -680,6 +866,27 @@ public class CreateMyBaseRequest extends Request {
 
         public static ECSClassList create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataDiskAutoSnapshotPolicyId
+         */
+        public String getDataDiskAutoSnapshotPolicyId() {
+            return this.dataDiskAutoSnapshotPolicyId;
+        }
+
+        /**
+         * @return dataDiskEncrypted
+         */
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        /**
+         * @return dataDiskKMSKeyId
+         */
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
         }
 
         /**
@@ -725,10 +932,31 @@ public class CreateMyBaseRequest extends Request {
         }
 
         /**
+         * @return sysDiskAutoSnapshotPolicyId
+         */
+        public String getSysDiskAutoSnapshotPolicyId() {
+            return this.sysDiskAutoSnapshotPolicyId;
+        }
+
+        /**
          * @return sysDiskCapacity
          */
         public Integer getSysDiskCapacity() {
             return this.sysDiskCapacity;
+        }
+
+        /**
+         * @return sysDiskEncrypted
+         */
+        public Boolean getSysDiskEncrypted() {
+            return this.sysDiskEncrypted;
+        }
+
+        /**
+         * @return sysDiskKMSKeyId
+         */
+        public String getSysDiskKMSKeyId() {
+            return this.sysDiskKMSKeyId;
         }
 
         /**
@@ -746,15 +974,45 @@ public class CreateMyBaseRequest extends Request {
         }
 
         public static final class Builder {
+            private String dataDiskAutoSnapshotPolicyId; 
+            private Boolean dataDiskEncrypted; 
+            private String dataDiskKMSKeyId; 
             private String dataDiskPerformanceLevel; 
             private Integer diskCapacity; 
             private Integer diskCount; 
             private String diskType; 
             private String instanceType; 
             private Integer nodeCount; 
+            private String sysDiskAutoSnapshotPolicyId; 
             private Integer sysDiskCapacity; 
+            private Boolean sysDiskEncrypted; 
+            private String sysDiskKMSKeyId; 
             private String sysDiskType; 
             private String systemDiskPerformanceLevel; 
+
+            /**
+             * dataDiskAutoSnapshotPolicyId.
+             */
+            public Builder dataDiskAutoSnapshotPolicyId(String dataDiskAutoSnapshotPolicyId) {
+                this.dataDiskAutoSnapshotPolicyId = dataDiskAutoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * dataDiskEncrypted.
+             */
+            public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+                this.dataDiskEncrypted = dataDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * dataDiskKMSKeyId.
+             */
+            public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+                this.dataDiskKMSKeyId = dataDiskKMSKeyId;
+                return this;
+            }
 
             /**
              * dataDiskPerformanceLevel.
@@ -805,10 +1063,34 @@ public class CreateMyBaseRequest extends Request {
             }
 
             /**
+             * sysDiskAutoSnapshotPolicyId.
+             */
+            public Builder sysDiskAutoSnapshotPolicyId(String sysDiskAutoSnapshotPolicyId) {
+                this.sysDiskAutoSnapshotPolicyId = sysDiskAutoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
              * sysDiskCapacity.
              */
             public Builder sysDiskCapacity(Integer sysDiskCapacity) {
                 this.sysDiskCapacity = sysDiskCapacity;
+                return this;
+            }
+
+            /**
+             * sysDiskEncrypted.
+             */
+            public Builder sysDiskEncrypted(Boolean sysDiskEncrypted) {
+                this.sysDiskEncrypted = sysDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * sysDiskKMSKeyId.
+             */
+            public Builder sysDiskKMSKeyId(String sysDiskKMSKeyId) {
+                this.sysDiskKMSKeyId = sysDiskKMSKeyId;
                 return this;
             }
 
@@ -830,6 +1112,67 @@ public class CreateMyBaseRequest extends Request {
 
             public ECSClassList build() {
                 return new ECSClassList(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

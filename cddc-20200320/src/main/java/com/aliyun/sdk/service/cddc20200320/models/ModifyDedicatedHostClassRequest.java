@@ -155,7 +155,7 @@ public class ModifyDedicatedHostClassRequest extends Request {
         } 
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can log on to the ApsaraDB for MyBase console and go to the **Hosts** page to view the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -173,7 +173,7 @@ public class ModifyDedicatedHostClassRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The [region ID](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +200,10 @@ public class ModifyDedicatedHostClassRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The time when you want to upgrade the specifications of the host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  This parameter must be specified only when SwitchTimeMode is set to 2.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -209,7 +212,13 @@ public class ModifyDedicatedHostClassRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * The execution mode that is used to upgrade host specifications. Valid values:
+         * <p>
+         * 
+         * *   **0** (default): immediately upgrades host specifications.
+         * *   **2**: upgrades host specifications at a specified point in time.
+         * 
+         * >  If you set this parameter to **2**, you must specify **SwitchTime**.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);
@@ -218,7 +227,7 @@ public class ModifyDedicatedHostClassRequest extends Request {
         }
 
         /**
-         * TargetClassCode.
+         * The instance type to which you want the host to be upgraded. For more information, see [Host specification details](~~206343~~).
          */
         public Builder targetClassCode(String targetClassCode) {
             this.putQueryParameter("TargetClassCode", targetClassCode);

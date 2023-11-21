@@ -113,7 +113,7 @@ public class QueryHostBaseInfoByInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -131,7 +131,7 @@ public class QueryHostBaseInfoByInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. For more information, see [Region IDs](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

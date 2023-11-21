@@ -111,7 +111,7 @@ public class DeleteDedicatedHostGroupRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID. You can log on to the ApsaraDB for MyBase console and go to the Dedicated Clusters page to view the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -120,7 +120,7 @@ public class DeleteDedicatedHostGroupRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * 账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -129,7 +129,7 @@ public class DeleteDedicatedHostGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated cluster. For more information, see [Region IDs](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class DeleteDedicatedHostGroupRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -147,7 +147,7 @@ public class DeleteDedicatedHostGroupRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The ID of the asset owner.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);

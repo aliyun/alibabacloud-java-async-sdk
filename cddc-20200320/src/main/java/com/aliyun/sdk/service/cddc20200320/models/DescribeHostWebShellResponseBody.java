@@ -50,7 +50,7 @@ public class DescribeHostWebShellResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LoginUrl.
+         * The URL of the webshell.
          */
         public Builder loginUrl(String loginUrl) {
             this.loginUrl = loginUrl;
@@ -58,7 +58,7 @@ public class DescribeHostWebShellResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

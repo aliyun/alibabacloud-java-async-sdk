@@ -209,7 +209,11 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         } 
 
         /**
-         * AllocationPolicy.
+         * The policy that is used to allocate resources in the dedicated cluster. Valid values:
+         * <p>
+         * 
+         * *   **Evenly**: The system preferentially deploys database instances on the hosts where no resources or fewer resources are allocated. This maximizes system stability.
+         * *   **Intensively**: The system preferentially deploys database instances on the hosts that are created earlier and have more allocated resources. This maximizes resource utilization.
          */
         public Builder allocationPolicy(String allocationPolicy) {
             this.putQueryParameter("AllocationPolicy", allocationPolicy);
@@ -218,7 +222,10 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * CpuAllocationRatio.
+         * The CPU overcommit ratio of the dedicated cluster. Valid values: **100** to **300**.
+         * <p>
+         * 
+         * >  If you change the CPU overcommit ratio to **300%**, the total CPU resources of all instances are three times the actual CPU resources. This maximizes the use of CPU resources.
          */
         public Builder cpuAllocationRatio(Integer cpuAllocationRatio) {
             this.putQueryParameter("CpuAllocationRatio", cpuAllocationRatio);
@@ -227,7 +234,7 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupDesc.
+         * The name of the dedicated cluster.
          */
         public Builder dedicatedHostGroupDesc(String dedicatedHostGroupDesc) {
             this.putQueryParameter("DedicatedHostGroupDesc", dedicatedHostGroupDesc);
@@ -236,7 +243,10 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID.
+         * <p>
+         * 
+         * >  You can log on to the ApsaraDB for MyBase console and go to the Dedicated Clusters page to view the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -245,7 +255,7 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * DiskAllocationRatio.
+         * The storage overcommit ratio of the dedicated cluster. Valid values: **100** to **200**.
          */
         public Builder diskAllocationRatio(Integer diskAllocationRatio) {
             this.putQueryParameter("DiskAllocationRatio", diskAllocationRatio);
@@ -254,7 +264,13 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * HostReplacePolicy.
+         * The policy that is used to handle host failures. Valid values:
+         * <p>
+         * 
+         * *   **Auto**: The system automatically replaces faulty hosts.
+         * *   **Manual**: You must manually replace faulty hosts.
+         * 
+         * >  You can select a policy based on your business requirements only for dedicated clusters that run **MySQL**. For dedicated clusters that run other database engines, the default value Auto is used.
          */
         public Builder hostReplacePolicy(String hostReplacePolicy) {
             this.putQueryParameter("HostReplacePolicy", hostReplacePolicy);
@@ -263,7 +279,7 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * MemAllocationRatio.
+         * The maximum memory usage of each host in the dedicated cluster. Valid values: **0** to **100**.
          */
         public Builder memAllocationRatio(Integer memAllocationRatio) {
             this.putQueryParameter("MemAllocationRatio", memAllocationRatio);
@@ -272,7 +288,13 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * OpenPermission.
+         * Specifies whether to grant the host OS permissions. Valid values:
+         * <p>
+         * 
+         * *   **0**: no.
+         * *   **1**: yes.
+         * 
+         * >  You can grant the host OS permissions based on your business requirements only when you create dedicated clusters that run **MySQL, SQL Server, or PostgreSQL**. For dedicated clusters that run other database engines, the default value 0 is used.
          */
         public Builder openPermission(String openPermission) {
             this.putQueryParameter("OpenPermission", openPermission);
@@ -290,7 +312,7 @@ public class ModifyDedicatedHostGroupAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the dedicated cluster. For more information, see [Region IDs](~~198326~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

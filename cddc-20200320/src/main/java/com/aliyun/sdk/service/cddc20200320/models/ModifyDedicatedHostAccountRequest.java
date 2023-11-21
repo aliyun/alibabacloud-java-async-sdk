@@ -141,7 +141,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The account name of the host.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +150,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The new account password of the host.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -159,7 +159,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * DedicatedHostId.
+         * The host ID. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -168,7 +168,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * 账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -177,7 +177,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the host. You can call the [DescribeDedicatedHostAttribute](~~213010~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -186,7 +186,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -195,7 +195,7 @@ public class ModifyDedicatedHostAccountRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * ResourceOwnerId
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
