@@ -34,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAggregateFunctionResponse> describeAggregateFunction(DescribeAggregateFunctionRequest request);
 
+    CompletableFuture<DescribeAlertSceneResponse> describeAlertScene(DescribeAlertSceneRequest request);
+
     CompletableFuture<DescribeAlertSceneByEventResponse> describeAlertSceneByEvent(DescribeAlertSceneByEventRequest request);
 
     CompletableFuture<DescribeAlertSourceResponse> describeAlertSource(DescribeAlertSourceRequest request);
@@ -101,6 +103,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStorageResponse> describeStorage(DescribeStorageRequest request);
 
     CompletableFuture<DescribeWafScopeResponse> describeWafScope(DescribeWafScopeRequest request);
+
+    CompletableFuture<DescribeWhiteRuleListResponse> describeWhiteRuleList(DescribeWhiteRuleListRequest request);
 
     CompletableFuture<DoQuickFieldResponse> doQuickField(DoQuickFieldRequest request);
 
