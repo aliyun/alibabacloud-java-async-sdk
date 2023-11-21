@@ -84,7 +84,7 @@ public class UninstallPromClusterRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * 语言环境, 默认为中文 zh | en
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);

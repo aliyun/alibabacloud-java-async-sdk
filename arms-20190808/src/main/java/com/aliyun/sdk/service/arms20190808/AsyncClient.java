@@ -48,6 +48,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request);
+
     CompletableFuture<CheckServiceStatusResponse> checkServiceStatus(CheckServiceStatusRequest request);
 
     CompletableFuture<ClaimAlarmResponse> claimAlarm(ClaimAlarmRequest request);
