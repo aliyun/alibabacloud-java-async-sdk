@@ -21,6 +21,14 @@ public class TransformInstanceChargeTypeRequest extends Request {
     private Boolean autoPay;
 
     @Query
+    @NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @Query
+    @NameInMap("AutoRenewPeriod")
+    private Long autoRenewPeriod;
+
+    @Query
     @NameInMap("ChargeType")
     @Validation(required = true)
     private String chargeType;
@@ -58,6 +66,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -93,6 +103,20 @@ public class TransformInstanceChargeTypeRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -154,6 +178,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
     public static final class Builder extends Request.Builder<TransformInstanceChargeTypeRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
+        private String autoRenew; 
+        private Long autoRenewPeriod; 
         private String chargeType; 
         private String instanceId; 
         private String ownerAccount; 
@@ -171,6 +197,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -196,6 +224,24 @@ public class TransformInstanceChargeTypeRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Long autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
             return this;
         }
 

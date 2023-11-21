@@ -224,10 +224,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
          * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
          * *   You can query the monitoring data of the last month. The maximum time range that you can specify for a query is seven days.
-         * 
          * *   If the number of data nodes in the instance is greater than 32, the time range to query for the Data Node Aggregation and Proxy Node Aggregation metrics cannot exceed 1 hour.
          */
         public Builder endTime(String endTime) {
@@ -258,10 +255,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
          * The monitoring metrics. Separate multiple metrics with commas (,).
          * <p>
          * 
-         * > 
-         * 
-         * *   This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned. For more information about supported monitoring metrics and their descriptions, see [MonitorKeys](~~189831~~).
-         * 
+         * *   This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned. For more information about supported monitoring metrics and their descriptions, see [MonitorKeys](~~122091~~).
          * *   To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.
          */
         public Builder monitorKeys(String monitorKeys) {
@@ -273,8 +267,6 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         /**
          * The ID of the node in the instance. You can set this parameter to query the data of a specified node.
          * <p>
-         * 
-         * > 
          * 
          * *   This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.
          * 

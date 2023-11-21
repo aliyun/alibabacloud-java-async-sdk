@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-r_kvstore20150101</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   <name>alibabacloud-r_kvstore20150101</name>
   <description>Alibaba Cloud R-kvstore (20150101) Async SDK for Java

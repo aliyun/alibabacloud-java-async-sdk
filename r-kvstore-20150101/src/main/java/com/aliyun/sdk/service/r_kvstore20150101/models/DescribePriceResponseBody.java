@@ -86,7 +86,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private SubOrders subOrders; 
 
         /**
-         * The order information.
+         * The information about the order.
          */
         public Builder order(Order order) {
             this.order = order;
@@ -194,7 +194,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The coupon number.
+             * The coupon ID.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -218,7 +218,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the coupon.
+             * The coupon name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -546,7 +546,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The name of the rule.
+             * The name of the promotion rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -741,7 +741,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -749,7 +749,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the order.
+             * The list price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -757,7 +757,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about promotion rule IDs.
+             * The ID of the promotion rule.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -765,7 +765,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price of the order.
+             * The final price of the order.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;

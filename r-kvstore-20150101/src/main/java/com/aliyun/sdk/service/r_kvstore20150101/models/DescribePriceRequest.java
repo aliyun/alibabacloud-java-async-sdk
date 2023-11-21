@@ -330,7 +330,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: MB. You must specify one of the **InstanceClass** and **Capacity** parameters to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
+         * The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the **InstanceClass** parameter to specify an exact instance type.
+         * <p>
+         * 
+         * >  If you specify the **InstanceClass** parameter, you do not need to specify the Capacity parameter.
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -342,10 +345,8 @@ public class DescribePriceRequest extends Request {
          * The billing method of the instance. Valid values:
          * <p>
          * 
-         * *   **PostPaid**: pay-as-you-go
-         * *   **PrePaid**: subscription.
-         * 
-         * > The default value is **PostPaid**.
+         * *   **PostPaid** (default): pay-as-you-go
+         * *   **PrePaid**: subscription
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -367,9 +368,7 @@ public class DescribePriceRequest extends Request {
          * <p>
          * 
          * *   **false**: forcefully changes the configurations.
-         * *   **true**: does not forcefully change the configurations.
-         * 
-         * > The default value is **true**.
+         * *   **true** (default): does not forcefully change the configurations.
          */
         public Builder forceUpgrade(Boolean forceUpgrade) {
             this.putQueryParameter("ForceUpgrade", forceUpgrade);
@@ -378,13 +377,19 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. You must specify one of the InstanceClass and Capacity parameters to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
+         * The instance type.****
          * <p>
          * 
-         * To query the instance type, perform the following steps:
+         * **To view the instance type, perform the following steps:**
          * 
          * 1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
          * 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
+         * 
+         * When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.
+         * 
+         * *   ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce
+         * *   Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common
+         * *   Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -393,7 +398,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
+         * <p>
+         * 
+         * >  This parameter is required when the **OrderType** parameter is set to **UPGRADE** or **RENEW**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -402,7 +410,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
+         * A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the "Additional description of the Instances parameter" section of this topic.
          */
         public Builder instances(String instances) {
             this.putQueryParameter("Instances", instances);
@@ -411,7 +419,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
+         * The node type. Valid values:
+         * <p>
+         * 
+         * *   **STAND_ALONE**: standalone
+         * *   **MASTER_SLAVE** (default): high availability (master-replica)
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -423,10 +435,8 @@ public class DescribePriceRequest extends Request {
          * Specifies whether to return parameters related to the order. Valid values:
          * <p>
          * 
-         * *   **false**: does not return parameters related to the order.
-         * *   **true**: returns parameters related to the order.
-         * 
-         * > The default value is **false**.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder orderParamOut(String orderParamOut) {
             this.putQueryParameter("OrderParamOut", orderParamOut);
@@ -477,10 +487,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The number of instances that you want to purchase. Valid values: **1** to **30**.
-         * <p>
-         * 
-         * > The default value is **1**.
+         * The number of instances that you want to purchase. Valid values: **1** to **30**. Default value: **1**.
          */
         public Builder quantity(Long quantity) {
             this.putQueryParameter("Quantity", quantity);

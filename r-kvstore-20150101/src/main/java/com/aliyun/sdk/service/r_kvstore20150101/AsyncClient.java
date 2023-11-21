@@ -89,9 +89,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
 
     /**
-      * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
-      * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the [CreateTairInstance](~~208271~~) operation.
+      * **
+      * **Description** For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
       *
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
@@ -119,6 +120,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
 
     /**
       * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
@@ -237,6 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalDistributeCacheResponse> describeGlobalDistributeCache(DescribeGlobalDistributeCacheRequest request);
 
     CompletableFuture<DescribeGlobalSecurityIPGroupResponse> describeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request);
+
+    CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     /**
       * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
@@ -435,6 +440,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupResponse> modifyGlobalSecurityIPGroup(ModifyGlobalSecurityIPGroupRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupNameResponse> modifyGlobalSecurityIPGroupName(ModifyGlobalSecurityIPGroupNameRequest request);
+
+    CompletableFuture<ModifyGlobalSecurityIPGroupRelationResponse> modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request);
 
     /**
       * You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see [Change or reset the password](~~43874~~).

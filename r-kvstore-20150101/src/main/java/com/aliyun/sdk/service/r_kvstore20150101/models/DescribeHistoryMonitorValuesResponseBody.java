@@ -50,10 +50,8 @@ public class DescribeHistoryMonitorValuesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data returned in the JSON format. For more information, see [Metrics](~~189831~~).
+         * The monitoring data returned in the JSON format. For more information, see [Metrics](~~122091~~).
          * <p>
-         * 
-         * > 
          * 
          * *   Only metrics whose values are not 0 are returned. This improves data transmission efficiency. Metrics that are not displayed are represented by the default value of **0**.
          * 

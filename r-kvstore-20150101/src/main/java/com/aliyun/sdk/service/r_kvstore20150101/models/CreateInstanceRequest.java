@@ -646,11 +646,15 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * 指定新创建实例的 aof 参数配置。
+         * Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:
          * <p>
          * 
-         * > 
-         * > 改参数适用于创建本地盘实例，云盘实例暂不支持指定 aof 参数。
+         * *   **yes** (default): enables AOF persistence.
+         * *   **no**: disables AOF persistence.
+         * 
+         * **
+         * 
+         * **Description** This parameter is applicable to classic instances, and is unavailable for cloud-native instances.
          */
         public Builder appendonly(String appendonly) {
             this.putQueryParameter("Appendonly", appendonly);
@@ -743,7 +747,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ConnectionStringPrefix.
+         * The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -800,9 +804,6 @@ public class CreateInstanceRequest extends Request {
          * 
          * *   **true**: uses the new instance as the first child instance.
          * *   **false**: does not use the new instance as the first child instance.
-         * 
-         * > 
-         * 
          * *   If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to **true**.
          * 
          * *   This parameter is available only on the China site (aliyun.com).
@@ -832,10 +833,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. Example: redis.master.small.default. A redis.master.small.default instance is a 1 GB standard master-replica instance of the Community Edition that uses local disks. For more information, see [Overview](~~26350~~).
+         * The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](~~26350~~).
          * <p>
          * 
-         * > You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call this operation.
+         * **
+         * 
+         * **Description** You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call the CreateInstance operation.
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -878,7 +881,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * The node type. Valid values:
+         * <p>
+         * 
+         * *   **STAND_ALONE**: standalone
+         * *   **MASTER_SLAVE** (default): high availability (master-replica)
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -1013,7 +1020,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The secondary zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
+         * The secondary zone ID of the instance. You can call the [DescribeZones](~~472448~~) operation to query the most recent zone list.
          * <p>
          * 
          * > If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.
@@ -1034,7 +1041,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks. You can use this parameter to specify a custom number of data shards.
+         * The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);

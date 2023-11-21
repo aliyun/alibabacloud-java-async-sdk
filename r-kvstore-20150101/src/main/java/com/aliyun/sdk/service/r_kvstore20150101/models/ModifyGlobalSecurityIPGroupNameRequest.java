@@ -7,15 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RemoveSubInstanceRequest} extends {@link RequestModel}
+ * {@link ModifyGlobalSecurityIPGroupNameRequest} extends {@link RequestModel}
  *
- * <p>RemoveSubInstanceRequest</p>
+ * <p>ModifyGlobalSecurityIPGroupNameRequest</p>
  */
-public class RemoveSubInstanceRequest extends Request {
+public class ModifyGlobalSecurityIPGroupNameRequest extends Request {
     @Query
-    @NameInMap("InstanceId")
+    @NameInMap("GlobalIgName")
+    @Validation(required = true, maxLength = 120, minLength = 2)
+    private String globalIgName;
+
+    @Query
+    @NameInMap("GlobalSecurityGroupId")
     @Validation(required = true)
-    private String instanceId;
+    private String globalSecurityGroupId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -24,6 +29,15 @@ public class RemoveSubInstanceRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -37,11 +51,14 @@ public class RemoveSubInstanceRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private RemoveSubInstanceRequest(Builder builder) {
+    private ModifyGlobalSecurityIPGroupNameRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
+        this.globalIgName = builder.globalIgName;
+        this.globalSecurityGroupId = builder.globalSecurityGroupId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -51,7 +68,7 @@ public class RemoveSubInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static RemoveSubInstanceRequest create() {
+    public static ModifyGlobalSecurityIPGroupNameRequest create() {
         return builder().build();
     }
 
@@ -61,10 +78,17 @@ public class RemoveSubInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return globalIgName
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getGlobalIgName() {
+        return this.globalIgName;
+    }
+
+    /**
+     * @return globalSecurityGroupId
+     */
+    public String getGlobalSecurityGroupId() {
+        return this.globalSecurityGroupId;
     }
 
     /**
@@ -79,6 +103,20 @@ public class RemoveSubInstanceRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -102,10 +140,13 @@ public class RemoveSubInstanceRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<RemoveSubInstanceRequest, Builder> {
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<ModifyGlobalSecurityIPGroupNameRequest, Builder> {
+        private String globalIgName; 
+        private String globalSecurityGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -114,22 +155,34 @@ public class RemoveSubInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveSubInstanceRequest request) {
+        private Builder(ModifyGlobalSecurityIPGroupNameRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
+            this.globalIgName = request.globalIgName;
+            this.globalSecurityGroupId = request.globalSecurityGroupId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * Instance ID.
+         * GlobalIgName.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder globalIgName(String globalIgName) {
+            this.putQueryParameter("GlobalIgName", globalIgName);
+            this.globalIgName = globalIgName;
+            return this;
+        }
+
+        /**
+         * GlobalSecurityGroupId.
+         */
+        public Builder globalSecurityGroupId(String globalSecurityGroupId) {
+            this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
+            this.globalSecurityGroupId = globalSecurityGroupId;
             return this;
         }
 
@@ -148,6 +201,24 @@ public class RemoveSubInstanceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -179,8 +250,8 @@ public class RemoveSubInstanceRequest extends Request {
         }
 
         @Override
-        public RemoveSubInstanceRequest build() {
-            return new RemoveSubInstanceRequest(this);
+        public ModifyGlobalSecurityIPGroupNameRequest build() {
+            return new ModifyGlobalSecurityIPGroupNameRequest(this);
         } 
 
     } 
