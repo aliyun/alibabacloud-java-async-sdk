@@ -21,6 +21,9 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("ConfigId")
+    private String configId;
+
     @NameInMap("Message")
     private String message;
 
@@ -31,6 +34,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.appId = builder.appId;
         this.code = builder.code;
+        this.configId = builder.configId;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -65,6 +69,13 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     }
 
     /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -82,6 +93,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String appId; 
         private String code; 
+        private String configId; 
         private String message; 
         private String requestId; 
 
@@ -110,6 +122,14 @@ public class IsvGetAppIdResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * ConfigId.
+         */
+        public Builder configId(String configId) {
+            this.configId = configId;
             return this;
         }
 

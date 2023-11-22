@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class IsvGetAppIdRequest extends Request {
     @Body
+    @NameInMap("Permissions")
+    private String permissions;
+
+    @Body
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
 
     private IsvGetAppIdRequest(Builder builder) {
         super(builder);
+        this.permissions = builder.permissions;
         this.type = builder.type;
     }
 
@@ -36,6 +41,13 @@ public class IsvGetAppIdRequest extends Request {
     }
 
     /**
+     * @return permissions
+     */
+    public String getPermissions() {
+        return this.permissions;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -43,6 +55,7 @@ public class IsvGetAppIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IsvGetAppIdRequest, Builder> {
+        private String permissions; 
         private String type; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class IsvGetAppIdRequest extends Request {
 
         private Builder(IsvGetAppIdRequest request) {
             super(request);
+            this.permissions = request.permissions;
             this.type = request.type;
         } 
+
+        /**
+         * Permissions.
+         */
+        public Builder permissions(String permissions) {
+            this.putBodyParameter("Permissions", permissions);
+            this.permissions = permissions;
+            return this;
+        }
 
         /**
          * The type of the application. Set the value to WHATSAPP.

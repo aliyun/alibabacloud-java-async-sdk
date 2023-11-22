@@ -52,6 +52,10 @@ public class SendChatappMessageRequest extends Request {
     private String fallBackRule;
 
     @Body
+    @NameInMap("FlowAction")
+    private FlowAction flowAction;
+
+    @Body
     @NameInMap("From")
     @Validation(required = true)
     private String from;
@@ -125,6 +129,7 @@ public class SendChatappMessageRequest extends Request {
         this.fallBackDuration = builder.fallBackDuration;
         this.fallBackId = builder.fallBackId;
         this.fallBackRule = builder.fallBackRule;
+        this.flowAction = builder.flowAction;
         this.from = builder.from;
         this.isvCode = builder.isvCode;
         this.label = builder.label;
@@ -216,6 +221,13 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getFallBackRule() {
         return this.fallBackRule;
+    }
+
+    /**
+     * @return flowAction
+     */
+    public FlowAction getFlowAction() {
+        return this.flowAction;
     }
 
     /**
@@ -333,6 +345,7 @@ public class SendChatappMessageRequest extends Request {
         private Integer fallBackDuration; 
         private String fallBackId; 
         private String fallBackRule; 
+        private FlowAction flowAction; 
         private String from; 
         private String isvCode; 
         private String label; 
@@ -364,6 +377,7 @@ public class SendChatappMessageRequest extends Request {
             this.fallBackDuration = request.fallBackDuration;
             this.fallBackId = request.fallBackId;
             this.fallBackRule = request.fallBackRule;
+            this.flowAction = request.flowAction;
             this.from = request.from;
             this.isvCode = request.isvCode;
             this.label = request.label;
@@ -489,6 +503,16 @@ public class SendChatappMessageRequest extends Request {
         public Builder fallBackRule(String fallBackRule) {
             this.putBodyParameter("FallBackRule", fallBackRule);
             this.fallBackRule = fallBackRule;
+            return this;
+        }
+
+        /**
+         * FlowAction.
+         */
+        public Builder flowAction(FlowAction flowAction) {
+            String flowActionShrink = shrink(flowAction, "FlowAction", "json");
+            this.putBodyParameter("FlowAction", flowActionShrink);
+            this.flowAction = flowAction;
             return this;
         }
 
@@ -672,6 +696,67 @@ public class SendChatappMessageRequest extends Request {
 
     } 
 
+    public static class FlowAction extends TeaModel {
+        @NameInMap("FlowActionData")
+        private java.util.Map < String, String > flowActionData;
+
+        @NameInMap("FlowToken")
+        private String flowToken;
+
+        private FlowAction(Builder builder) {
+            this.flowActionData = builder.flowActionData;
+            this.flowToken = builder.flowToken;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlowAction create() {
+            return builder().build();
+        }
+
+        /**
+         * @return flowActionData
+         */
+        public java.util.Map < String, String > getFlowActionData() {
+            return this.flowActionData;
+        }
+
+        /**
+         * @return flowToken
+         */
+        public String getFlowToken() {
+            return this.flowToken;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > flowActionData; 
+            private String flowToken; 
+
+            /**
+             * FlowActionData.
+             */
+            public Builder flowActionData(java.util.Map < String, String > flowActionData) {
+                this.flowActionData = flowActionData;
+                return this;
+            }
+
+            /**
+             * FlowToken.
+             */
+            public Builder flowToken(String flowToken) {
+                this.flowToken = flowToken;
+                return this;
+            }
+
+            public FlowAction build() {
+                return new FlowAction(this);
+            } 
+
+        } 
+
+    }
     public static class ProductItems extends TeaModel {
         @NameInMap("ProductRetailerId")
         private String productRetailerId;

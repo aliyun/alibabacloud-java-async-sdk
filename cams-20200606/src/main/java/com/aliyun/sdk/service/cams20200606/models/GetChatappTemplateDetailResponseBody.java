@@ -266,8 +266,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("ExtendAttrs")
         private ExtendAttrs extendAttrs;
 
+        @NameInMap("FlowAction")
+        private String flowAction;
+
+        @NameInMap("FlowId")
+        private String flowId;
+
         @NameInMap("IsOptOut")
         private Boolean isOptOut;
+
+        @NameInMap("NavigateScreen")
+        private String navigateScreen;
 
         @NameInMap("PackageName")
         private String packageName;
@@ -294,7 +303,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.autofillText = builder.autofillText;
             this.couponCode = builder.couponCode;
             this.extendAttrs = builder.extendAttrs;
+            this.flowAction = builder.flowAction;
+            this.flowId = builder.flowId;
             this.isOptOut = builder.isOptOut;
+            this.navigateScreen = builder.navigateScreen;
             this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
             this.signatureHash = builder.signatureHash;
@@ -334,10 +346,31 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowAction
+         */
+        public String getFlowAction() {
+            return this.flowAction;
+        }
+
+        /**
+         * @return flowId
+         */
+        public String getFlowId() {
+            return this.flowId;
+        }
+
+        /**
          * @return isOptOut
          */
         public Boolean getIsOptOut() {
             return this.isOptOut;
+        }
+
+        /**
+         * @return navigateScreen
+         */
+        public String getNavigateScreen() {
+            return this.navigateScreen;
         }
 
         /**
@@ -393,7 +426,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String autofillText; 
             private String couponCode; 
             private ExtendAttrs extendAttrs; 
+            private String flowAction; 
+            private String flowId; 
             private Boolean isOptOut; 
+            private String navigateScreen; 
             private String packageName; 
             private String phoneNumber; 
             private String signatureHash; 
@@ -427,10 +463,34 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
+             * FlowAction.
+             */
+            public Builder flowAction(String flowAction) {
+                this.flowAction = flowAction;
+                return this;
+            }
+
+            /**
+             * FlowId.
+             */
+            public Builder flowId(String flowId) {
+                this.flowId = flowId;
+                return this;
+            }
+
+            /**
              * Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
              */
             public Builder isOptOut(Boolean isOptOut) {
                 this.isOptOut = isOptOut;
+                return this;
+            }
+
+            /**
+             * NavigateScreen.
+             */
+            public Builder navigateScreen(String navigateScreen) {
+                this.navigateScreen = navigateScreen;
                 return this;
             }
 

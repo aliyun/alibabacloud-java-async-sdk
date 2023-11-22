@@ -346,8 +346,17 @@ public class CreateChatappTemplateRequest extends Request {
         @NameInMap("CouponCode")
         private String couponCode;
 
+        @NameInMap("FlowAction")
+        private String flowAction;
+
+        @NameInMap("FlowId")
+        private String flowId;
+
         @NameInMap("IsOptOut")
         private Boolean isOptOut;
+
+        @NameInMap("NavigateScreen")
+        private String navigateScreen;
 
         @NameInMap("PackageName")
         private String packageName;
@@ -374,7 +383,10 @@ public class CreateChatappTemplateRequest extends Request {
         private Buttons(Builder builder) {
             this.autofillText = builder.autofillText;
             this.couponCode = builder.couponCode;
+            this.flowAction = builder.flowAction;
+            this.flowId = builder.flowId;
             this.isOptOut = builder.isOptOut;
+            this.navigateScreen = builder.navigateScreen;
             this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
             this.signatureHash = builder.signatureHash;
@@ -407,10 +419,31 @@ public class CreateChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return flowAction
+         */
+        public String getFlowAction() {
+            return this.flowAction;
+        }
+
+        /**
+         * @return flowId
+         */
+        public String getFlowId() {
+            return this.flowId;
+        }
+
+        /**
          * @return isOptOut
          */
         public Boolean getIsOptOut() {
             return this.isOptOut;
+        }
+
+        /**
+         * @return navigateScreen
+         */
+        public String getNavigateScreen() {
+            return this.navigateScreen;
         }
 
         /**
@@ -465,7 +498,10 @@ public class CreateChatappTemplateRequest extends Request {
         public static final class Builder {
             private String autofillText; 
             private String couponCode; 
+            private String flowAction; 
+            private String flowId; 
             private Boolean isOptOut; 
+            private String navigateScreen; 
             private String packageName; 
             private String phoneNumber; 
             private String signatureHash; 
@@ -491,10 +527,34 @@ public class CreateChatappTemplateRequest extends Request {
             }
 
             /**
+             * FlowAction.
+             */
+            public Builder flowAction(String flowAction) {
+                this.flowAction = flowAction;
+                return this;
+            }
+
+            /**
+             * FlowId.
+             */
+            public Builder flowId(String flowId) {
+                this.flowId = flowId;
+                return this;
+            }
+
+            /**
              * The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.
              */
             public Builder isOptOut(Boolean isOptOut) {
                 this.isOptOut = isOptOut;
+                return this;
+            }
+
+            /**
+             * NavigateScreen.
+             */
+            public Builder navigateScreen(String navigateScreen) {
+                this.navigateScreen = navigateScreen;
                 return this;
             }
 

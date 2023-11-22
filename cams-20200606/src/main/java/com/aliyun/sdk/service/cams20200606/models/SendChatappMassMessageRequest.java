@@ -422,6 +422,67 @@ public class SendChatappMassMessageRequest extends Request {
 
     } 
 
+    public static class FlowAction extends TeaModel {
+        @NameInMap("FlowActionData")
+        private java.util.Map < String, String > flowActionData;
+
+        @NameInMap("FlowToken")
+        private String flowToken;
+
+        private FlowAction(Builder builder) {
+            this.flowActionData = builder.flowActionData;
+            this.flowToken = builder.flowToken;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlowAction create() {
+            return builder().build();
+        }
+
+        /**
+         * @return flowActionData
+         */
+        public java.util.Map < String, String > getFlowActionData() {
+            return this.flowActionData;
+        }
+
+        /**
+         * @return flowToken
+         */
+        public String getFlowToken() {
+            return this.flowToken;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > flowActionData; 
+            private String flowToken; 
+
+            /**
+             * FlowActionData.
+             */
+            public Builder flowActionData(java.util.Map < String, String > flowActionData) {
+                this.flowActionData = flowActionData;
+                return this;
+            }
+
+            /**
+             * FlowToken.
+             */
+            public Builder flowToken(String flowToken) {
+                this.flowToken = flowToken;
+                return this;
+            }
+
+            public FlowAction build() {
+                return new FlowAction(this);
+            } 
+
+        } 
+
+    }
     public static class ProductItems extends TeaModel {
         @NameInMap("ProductRetailerId")
         private String productRetailerId;
@@ -586,6 +647,9 @@ public class SendChatappMassMessageRequest extends Request {
 
     }
     public static class SenderList extends TeaModel {
+        @NameInMap("FlowAction")
+        private FlowAction flowAction;
+
         @NameInMap("Payload")
         private java.util.List < String > payload;
 
@@ -600,6 +664,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String to;
 
         private SenderList(Builder builder) {
+            this.flowAction = builder.flowAction;
             this.payload = builder.payload;
             this.productAction = builder.productAction;
             this.templateParams = builder.templateParams;
@@ -612,6 +677,13 @@ public class SendChatappMassMessageRequest extends Request {
 
         public static SenderList create() {
             return builder().build();
+        }
+
+        /**
+         * @return flowAction
+         */
+        public FlowAction getFlowAction() {
+            return this.flowAction;
         }
 
         /**
@@ -643,10 +715,19 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         public static final class Builder {
+            private FlowAction flowAction; 
             private java.util.List < String > payload; 
             private ProductAction productAction; 
             private java.util.Map < String, String > templateParams; 
             private String to; 
+
+            /**
+             * FlowAction.
+             */
+            public Builder flowAction(FlowAction flowAction) {
+                this.flowAction = flowAction;
+                return this;
+            }
 
             /**
              * payload

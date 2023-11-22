@@ -88,12 +88,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateChatappTemplateResponse> createChatappTemplate(CreateChatappTemplateRequest request);
 
+    CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
+
+    CompletableFuture<CreatePhoneMessageQrdlResponse> createPhoneMessageQrdl(CreatePhoneMessageQrdlRequest request);
+
     /**
       * ### QPS limit
       * You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request);
+
+    CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
+
+    CompletableFuture<DeletePhoneMessageQrdlResponse> deletePhoneMessageQrdl(DeletePhoneMessageQrdlRequest request);
+
+    CompletableFuture<DeprecateFlowResponse> deprecateFlow(DeprecateFlowRequest request);
 
     CompletableFuture<EnableWhatsappROIMetricResponse> enableWhatsappROIMetric(EnableWhatsappROIMetricRequest request);
 
@@ -122,11 +132,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCommerceSettingResponse> getCommerceSetting(GetCommerceSettingRequest request);
 
+    CompletableFuture<GetFlowResponse> getFlow(GetFlowRequest request);
+
+    CompletableFuture<GetFlowJSONAssestResponse> getFlowJSONAssest(GetFlowJSONAssestRequest request);
+
+    CompletableFuture<GetFlowPreviewUrlResponse> getFlowPreviewUrl(GetFlowPreviewUrlRequest request);
+
     /**
       * The ID of the phone number.
       *
      */
     CompletableFuture<GetMigrationVerifyCodeResponse> getMigrationVerifyCode(GetMigrationVerifyCodeRequest request);
+
+    CompletableFuture<GetPermissionByCodeResponse> getPermissionByCode(GetPermissionByCodeRequest request);
+
+    CompletableFuture<GetPhoneEncryptionPublicKeyResponse> getPhoneEncryptionPublicKey(GetPhoneEncryptionPublicKeyRequest request);
 
     /**
       * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
@@ -155,6 +175,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request);
 
+    CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
+
+    CompletableFuture<ListPhoneMessageQrdlResponse> listPhoneMessageQrdl(ListPhoneMessageQrdlRequest request);
+
     /**
       * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -173,11 +197,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyChatappTemplateResponse> modifyChatappTemplate(ModifyChatappTemplateRequest request);
 
+    CompletableFuture<ModifyFlowResponse> modifyFlow(ModifyFlowRequest request);
+
     /**
       * ModifyPhoneBusinessProfile
       *
      */
     CompletableFuture<ModifyPhoneBusinessProfileResponse> modifyPhoneBusinessProfile(ModifyPhoneBusinessProfileRequest request);
+
+    CompletableFuture<PublishFlowResponse> publishFlow(PublishFlowRequest request);
 
     /**
       * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
@@ -229,6 +257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAccountWebhookResponse> updateAccountWebhook(UpdateAccountWebhookRequest request);
 
     CompletableFuture<UpdateCommerceSettingResponse> updateCommerceSetting(UpdateCommerceSettingRequest request);
+
+    CompletableFuture<UpdateFlowJSONAssetResponse> updateFlowJSONAsset(UpdateFlowJSONAssetRequest request);
+
+    CompletableFuture<UpdatePhoneEncryptionPublicKeyResponse> updatePhoneEncryptionPublicKey(UpdatePhoneEncryptionPublicKeyRequest request);
+
+    CompletableFuture<UpdatePhoneMessageQrdlResponse> updatePhoneMessageQrdl(UpdatePhoneMessageQrdlRequest request);
 
     /**
       * The error message returned.
