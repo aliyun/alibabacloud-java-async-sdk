@@ -110,7 +110,7 @@ public class DescribePlayListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

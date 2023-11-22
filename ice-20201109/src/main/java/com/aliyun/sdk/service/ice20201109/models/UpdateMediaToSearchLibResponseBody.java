@@ -7,43 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubmitAudioProduceJobResponseBody} extends {@link TeaModel}
+ * {@link UpdateMediaToSearchLibResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitAudioProduceJobResponseBody</p>
+ * <p>UpdateMediaToSearchLibResponseBody</p>
  */
-public class SubmitAudioProduceJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
-    private String jobId;
-
+public class UpdateMediaToSearchLibResponseBody extends TeaModel {
     @NameInMap("MediaId")
     private String mediaId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
-    private String state;
-
-    private SubmitAudioProduceJobResponseBody(Builder builder) {
-        this.jobId = builder.jobId;
+    private UpdateMediaToSearchLibResponseBody(Builder builder) {
         this.mediaId = builder.mediaId;
         this.requestId = builder.requestId;
-        this.state = builder.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SubmitAudioProduceJobResponseBody create() {
+    public static UpdateMediaToSearchLibResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return jobId
-     */
-    public String getJobId() {
-        return this.jobId;
     }
 
     /**
@@ -60,26 +45,9 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return state
-     */
-    public String getState() {
-        return this.state;
-    }
-
     public static final class Builder {
-        private String jobId; 
         private String mediaId; 
         private String requestId; 
-        private String state; 
-
-        /**
-         * JobId.
-         */
-        public Builder jobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
 
         /**
          * MediaId.
@@ -97,16 +65,8 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * State.
-         */
-        public Builder state(String state) {
-            this.state = state;
-            return this;
-        }
-
-        public SubmitAudioProduceJobResponseBody build() {
-            return new SubmitAudioProduceJobResponseBody(this);
+        public UpdateMediaToSearchLibResponseBody build() {
+            return new UpdateMediaToSearchLibResponseBody(this);
         } 
 
     } 

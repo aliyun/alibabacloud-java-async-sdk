@@ -7,49 +7,42 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SearchMediaClipByFaceRequest} extends {@link RequestModel}
+ * {@link InsertMediaToSearchLibRequest} extends {@link RequestModel}
  *
- * <p>SearchMediaClipByFaceRequest</p>
+ * <p>InsertMediaToSearchLibRequest</p>
  */
-public class SearchMediaClipByFaceRequest extends Request {
+public class InsertMediaToSearchLibRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("EntityId")
-    private String entityId;
-
-    @Query
-    @NameInMap("FaceSearchToken")
-    @Validation(required = true)
-    private String faceSearchToken;
+    @NameInMap("Input")
+    private String input;
 
     @Query
     @NameInMap("MediaId")
-    @Validation(required = true)
     private String mediaId;
 
     @Query
-    @NameInMap("PageNo")
-    private Integer pageNo;
+    @NameInMap("MediaType")
+    private String mediaType;
 
     @Query
-    @NameInMap("PageSize")
-    private Integer pageSize;
+    @NameInMap("MsgBody")
+    private String msgBody;
 
     @Query
     @NameInMap("SearchLibName")
     private String searchLibName;
 
-    private SearchMediaClipByFaceRequest(Builder builder) {
+    private InsertMediaToSearchLibRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.entityId = builder.entityId;
-        this.faceSearchToken = builder.faceSearchToken;
+        this.input = builder.input;
         this.mediaId = builder.mediaId;
-        this.pageNo = builder.pageNo;
-        this.pageSize = builder.pageSize;
+        this.mediaType = builder.mediaType;
+        this.msgBody = builder.msgBody;
         this.searchLibName = builder.searchLibName;
     }
 
@@ -57,7 +50,7 @@ public class SearchMediaClipByFaceRequest extends Request {
         return new Builder();
     }
 
-    public static SearchMediaClipByFaceRequest create() {
+    public static InsertMediaToSearchLibRequest create() {
         return builder().build();
     }
 
@@ -74,17 +67,10 @@ public class SearchMediaClipByFaceRequest extends Request {
     }
 
     /**
-     * @return entityId
+     * @return input
      */
-    public String getEntityId() {
-        return this.entityId;
-    }
-
-    /**
-     * @return faceSearchToken
-     */
-    public String getFaceSearchToken() {
-        return this.faceSearchToken;
+    public String getInput() {
+        return this.input;
     }
 
     /**
@@ -95,17 +81,17 @@ public class SearchMediaClipByFaceRequest extends Request {
     }
 
     /**
-     * @return pageNo
+     * @return mediaType
      */
-    public Integer getPageNo() {
-        return this.pageNo;
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     /**
-     * @return pageSize
+     * @return msgBody
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getMsgBody() {
+        return this.msgBody;
     }
 
     /**
@@ -115,27 +101,25 @@ public class SearchMediaClipByFaceRequest extends Request {
         return this.searchLibName;
     }
 
-    public static final class Builder extends Request.Builder<SearchMediaClipByFaceRequest, Builder> {
+    public static final class Builder extends Request.Builder<InsertMediaToSearchLibRequest, Builder> {
         private String regionId; 
-        private String entityId; 
-        private String faceSearchToken; 
+        private String input; 
         private String mediaId; 
-        private Integer pageNo; 
-        private Integer pageSize; 
+        private String mediaType; 
+        private String msgBody; 
         private String searchLibName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SearchMediaClipByFaceRequest request) {
+        private Builder(InsertMediaToSearchLibRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.entityId = request.entityId;
-            this.faceSearchToken = request.faceSearchToken;
+            this.input = request.input;
             this.mediaId = request.mediaId;
-            this.pageNo = request.pageNo;
-            this.pageSize = request.pageSize;
+            this.mediaType = request.mediaType;
+            this.msgBody = request.msgBody;
             this.searchLibName = request.searchLibName;
         } 
 
@@ -149,20 +133,11 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * Input.
          */
-        public Builder entityId(String entityId) {
-            this.putQueryParameter("EntityId", entityId);
-            this.entityId = entityId;
-            return this;
-        }
-
-        /**
-         * FaceSearchToken.
-         */
-        public Builder faceSearchToken(String faceSearchToken) {
-            this.putQueryParameter("FaceSearchToken", faceSearchToken);
-            this.faceSearchToken = faceSearchToken;
+        public Builder input(String input) {
+            this.putQueryParameter("Input", input);
+            this.input = input;
             return this;
         }
 
@@ -176,20 +151,20 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * MediaType.
          */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 
         /**
-         * PageSize.
+         * MsgBody.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder msgBody(String msgBody) {
+            this.putQueryParameter("MsgBody", msgBody);
+            this.msgBody = msgBody;
             return this;
         }
 
@@ -203,8 +178,8 @@ public class SearchMediaClipByFaceRequest extends Request {
         }
 
         @Override
-        public SearchMediaClipByFaceRequest build() {
-            return new SearchMediaClipByFaceRequest(this);
+        public InsertMediaToSearchLibRequest build() {
+            return new InsertMediaToSearchLibRequest(this);
         } 
 
     } 

@@ -5954,9 +5954,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         private OverwriteParamsMuxConfig muxConfig;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
-
         @NameInMap("TransConfig")
         private OverwriteParamsTransConfig transConfig;
 
@@ -5967,7 +5964,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
             this.audio = builder.audio;
             this.container = builder.container;
             this.muxConfig = builder.muxConfig;
-            this.tags = builder.tags;
             this.transConfig = builder.transConfig;
             this.video = builder.video;
         }
@@ -6002,13 +5998,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return tags
-         */
-        public java.util.Map < String, ? > getTags() {
-            return this.tags;
-        }
-
-        /**
          * @return transConfig
          */
         public OverwriteParamsTransConfig getTransConfig() {
@@ -6026,7 +6015,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
             private OverwriteParamsAudio audio; 
             private OverwriteParamsContainer container; 
             private OverwriteParamsMuxConfig muxConfig; 
-            private java.util.Map < String, ? > tags; 
             private OverwriteParamsTransConfig transConfig; 
             private OverwriteParamsVideo video; 
 
@@ -6051,14 +6039,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
              */
             public Builder muxConfig(OverwriteParamsMuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
-                return this;
-            }
-
-            /**
-             * Tags.
-             */
-            public Builder tags(java.util.Map < String, ? > tags) {
-                this.tags = tags;
                 return this;
             }
 
@@ -6156,9 +6136,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("ImageWatermarks")
         private java.util.List < ProcessConfigImageWatermarks> imageWatermarks;
 
-        @NameInMap("IsInheritTags")
-        private String isInheritTags;
-
         @NameInMap("Subtitles")
         private java.util.List < ProcessConfigSubtitles> subtitles;
 
@@ -6172,7 +6149,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
             this.combineConfigs = builder.combineConfigs;
             this.encryption = builder.encryption;
             this.imageWatermarks = builder.imageWatermarks;
-            this.isInheritTags = builder.isInheritTags;
             this.subtitles = builder.subtitles;
             this.textWatermarks = builder.textWatermarks;
             this.transcode = builder.transcode;
@@ -6208,13 +6184,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return isInheritTags
-         */
-        public String getIsInheritTags() {
-            return this.isInheritTags;
-        }
-
-        /**
          * @return subtitles
          */
         public java.util.List < ProcessConfigSubtitles> getSubtitles() {
@@ -6239,7 +6208,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
             private java.util.List < ProcessConfigCombineConfigs> combineConfigs; 
             private ProcessConfigEncryption encryption; 
             private java.util.List < ProcessConfigImageWatermarks> imageWatermarks; 
-            private String isInheritTags; 
             private java.util.List < ProcessConfigSubtitles> subtitles; 
             private java.util.List < ProcessConfigTextWatermarks> textWatermarks; 
             private ProcessConfigTranscode transcode; 
@@ -6265,14 +6233,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
              */
             public Builder imageWatermarks(java.util.List < ProcessConfigImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
-                return this;
-            }
-
-            /**
-             * IsInheritTags.
-             */
-            public Builder isInheritTags(String isInheritTags) {
-                this.isInheritTags = isInheritTags;
                 return this;
             }
 

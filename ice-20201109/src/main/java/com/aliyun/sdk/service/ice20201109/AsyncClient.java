@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddTemplateResponse> addTemplate(AddTemplateRequest request);
 
+    CompletableFuture<AlterSearchIndexResponse> alterSearchIndex(AlterSearchIndexRequest request);
+
     CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request);
 
     CompletableFuture<CancelDNAJobResponse> cancelDNAJob(CancelDNAJobRequest request);
@@ -53,6 +55,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request);
 
     CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
+    CompletableFuture<CreateSearchIndexResponse> createSearchIndex(CreateSearchIndexRequest request);
+
+    CompletableFuture<CreateSearchLibResponse> createSearchLib(CreateSearchLibRequest request);
 
     CompletableFuture<CreateUploadMediaResponse> createUploadMedia(CreateUploadMediaRequest request);
 
@@ -88,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLiveTranscodeTemplateResponse> deleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest request);
 
+    CompletableFuture<DeleteMediaFromSearchLibResponse> deleteMediaFromSearchLib(DeleteMediaFromSearchLibRequest request);
+
     CompletableFuture<DeleteMediaInfosResponse> deleteMediaInfos(DeleteMediaInfosRequest request);
 
     CompletableFuture<DeleteMediaMarksResponse> deleteMediaMarks(DeleteMediaMarksRequest request);
@@ -100,27 +108,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
-    CompletableFuture<DescribeFilterConfigsResponse> describeFilterConfigs(DescribeFilterConfigsRequest request);
-
-    CompletableFuture<DescribeMeterIceEditUsageResponse> describeMeterIceEditUsage(DescribeMeterIceEditUsageRequest request);
-
-    CompletableFuture<DescribeMeterIceLiveMediaConvertUsageResponse> describeMeterIceLiveMediaConvertUsage(DescribeMeterIceLiveMediaConvertUsageRequest request);
-
-    CompletableFuture<DescribeMeterIceMediaConvertUHDUsageResponse> describeMeterIceMediaConvertUHDUsage(DescribeMeterIceMediaConvertUHDUsageRequest request);
-
-    CompletableFuture<DescribeMeterIceMediaConvertUsageResponse> describeMeterIceMediaConvertUsage(DescribeMeterIceMediaConvertUsageRequest request);
-
-    CompletableFuture<DescribeMeterIceMpsAiUsageResponse> describeMeterIceMpsAiUsage(DescribeMeterIceMpsAiUsageRequest request);
-
     CompletableFuture<DescribeMeterImsEditUsageResponse> describeMeterImsEditUsage(DescribeMeterImsEditUsageRequest request);
-
-    CompletableFuture<DescribeMeterImsLiveEditUsageResponse> describeMeterImsLiveEditUsage(DescribeMeterImsLiveEditUsageRequest request);
-
-    CompletableFuture<DescribeMeterImsLiveMediaConvertUsageResponse> describeMeterImsLiveMediaConvertUsage(DescribeMeterImsLiveMediaConvertUsageRequest request);
-
-    CompletableFuture<DescribeMeterImsLiveRecordUsageResponse> describeMeterImsLiveRecordUsage(DescribeMeterImsLiveRecordUsageRequest request);
-
-    CompletableFuture<DescribeMeterImsLiveSnapshotUsageResponse> describeMeterImsLiveSnapshotUsage(DescribeMeterImsLiveSnapshotUsageRequest request);
 
     CompletableFuture<DescribeMeterImsMediaConvertUHDUsageResponse> describeMeterImsMediaConvertUHDUsage(DescribeMeterImsMediaConvertUHDUsageRequest request);
 
@@ -130,23 +118,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMeterImsSummaryResponse> describeMeterImsSummary(DescribeMeterImsSummaryRequest request);
 
-    CompletableFuture<DescribePlayDetailResponse> describePlayDetail(DescribePlayDetailRequest request);
-
-    CompletableFuture<DescribePlayEventListResponse> describePlayEventList(DescribePlayEventListRequest request);
-
-    CompletableFuture<DescribePlayFirstFrameDurationMetricDataResponse> describePlayFirstFrameDurationMetricData(DescribePlayFirstFrameDurationMetricDataRequest request);
-
     CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request);
 
-    CompletableFuture<DescribePlayMetricDataResponse> describePlayMetricData(DescribePlayMetricDataRequest request);
-
-    CompletableFuture<DescribePlayQoeListResponse> describePlayQoeList(DescribePlayQoeListRequest request);
-
-    CompletableFuture<DescribePlayQosListResponse> describePlayQosList(DescribePlayQosListRequest request);
-
-    CompletableFuture<DescribeQueryConfigsResponse> describeQueryConfigs(DescribeQueryConfigsRequest request);
-
     CompletableFuture<DetectAudioForCustomizedVoiceJobResponse> detectAudioForCustomizedVoiceJob(DetectAudioForCustomizedVoiceJobRequest request);
+
+    CompletableFuture<DropSearchIndexResponse> dropSearchIndex(DropSearchIndexRequest request);
+
+    CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request);
 
     CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
 
@@ -226,7 +204,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUrlUploadInfosResponse> getUrlUploadInfos(GetUrlUploadInfosRequest request);
 
+    CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request);
+
     CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request);
+
+    CompletableFuture<InsertMediaToSearchLibResponse> insertMediaToSearchLib(InsertMediaToSearchLibRequest request);
 
     CompletableFuture<ListAllPublicMediaTagsResponse> listAllPublicMediaTags(ListAllPublicMediaTagsRequest request);
 
@@ -278,6 +260,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSmartSysAvatarModelsResponse> listSmartSysAvatarModels(ListSmartSysAvatarModelsRequest request);
 
+    CompletableFuture<ListSmartVoiceGroupsResponse> listSmartVoiceGroups(ListSmartVoiceGroupsRequest request);
+
     CompletableFuture<ListSnapshotJobsResponse> listSnapshotJobs(ListSnapshotJobsRequest request);
 
     CompletableFuture<ListSystemTemplatesResponse> listSystemTemplates(ListSystemTemplatesRequest request);
@@ -294,6 +278,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryMediaCensorJobListResponse> queryMediaCensorJobList(QueryMediaCensorJobListRequest request);
 
+    CompletableFuture<QuerySearchIndexResponse> querySearchIndex(QuerySearchIndexRequest request);
+
+    CompletableFuture<QuerySearchLibResponse> querySearchLib(QuerySearchLibRequest request);
+
     CompletableFuture<QuerySmarttagJobResponse> querySmarttagJob(QuerySmarttagJobRequest request);
 
     CompletableFuture<RefreshUploadMediaResponse> refreshUploadMedia(RefreshUploadMediaRequest request);
@@ -306,7 +294,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
+    CompletableFuture<SearchMediaByAILabelResponse> searchMediaByAILabel(SearchMediaByAILabelRequest request);
+
     CompletableFuture<SearchMediaByFaceResponse> searchMediaByFace(SearchMediaByFaceRequest request);
+
+    CompletableFuture<SearchMediaByMultimodalResponse> searchMediaByMultimodal(SearchMediaByMultimodalRequest request);
 
     CompletableFuture<SearchMediaClipByFaceResponse> searchMediaClipByFace(SearchMediaClipByFaceRequest request);
 
@@ -395,6 +387,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMediaInfoResponse> updateMediaInfo(UpdateMediaInfoRequest request);
 
     CompletableFuture<UpdateMediaMarksResponse> updateMediaMarks(UpdateMediaMarksRequest request);
+
+    CompletableFuture<UpdateMediaToSearchLibResponse> updateMediaToSearchLib(UpdateMediaToSearchLibRequest request);
 
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 

@@ -2368,9 +2368,6 @@ public class SubmitTranscodeJobRequest extends Request {
         @NameInMap("MuxConfig")
         private MuxConfig muxConfig;
 
-        @NameInMap("Tags")
-        private java.util.Map < String, String > tags;
-
         @NameInMap("TransConfig")
         private TransConfig transConfig;
 
@@ -2381,7 +2378,6 @@ public class SubmitTranscodeJobRequest extends Request {
             this.audio = builder.audio;
             this.container = builder.container;
             this.muxConfig = builder.muxConfig;
-            this.tags = builder.tags;
             this.transConfig = builder.transConfig;
             this.video = builder.video;
         }
@@ -2416,13 +2412,6 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * @return tags
-         */
-        public java.util.Map < String, String > getTags() {
-            return this.tags;
-        }
-
-        /**
          * @return transConfig
          */
         public TransConfig getTransConfig() {
@@ -2440,7 +2429,6 @@ public class SubmitTranscodeJobRequest extends Request {
             private Audio audio; 
             private Container container; 
             private MuxConfig muxConfig; 
-            private java.util.Map < String, String > tags; 
             private TransConfig transConfig; 
             private Video video; 
 
@@ -2465,14 +2453,6 @@ public class SubmitTranscodeJobRequest extends Request {
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
-                return this;
-            }
-
-            /**
-             * Tags.
-             */
-            public Builder tags(java.util.Map < String, String > tags) {
-                this.tags = tags;
                 return this;
             }
 
@@ -2571,9 +2551,6 @@ public class SubmitTranscodeJobRequest extends Request {
         @NameInMap("ImageWatermarks")
         private java.util.List < ImageWatermarks> imageWatermarks;
 
-        @NameInMap("IsInheritTags")
-        private Boolean isInheritTags;
-
         @NameInMap("Subtitles")
         private java.util.List < Subtitles> subtitles;
 
@@ -2588,7 +2565,6 @@ public class SubmitTranscodeJobRequest extends Request {
             this.combineConfigs = builder.combineConfigs;
             this.encryption = builder.encryption;
             this.imageWatermarks = builder.imageWatermarks;
-            this.isInheritTags = builder.isInheritTags;
             this.subtitles = builder.subtitles;
             this.textWatermarks = builder.textWatermarks;
             this.transcode = builder.transcode;
@@ -2624,13 +2600,6 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         /**
-         * @return isInheritTags
-         */
-        public Boolean getIsInheritTags() {
-            return this.isInheritTags;
-        }
-
-        /**
          * @return subtitles
          */
         public java.util.List < Subtitles> getSubtitles() {
@@ -2655,7 +2624,6 @@ public class SubmitTranscodeJobRequest extends Request {
             private java.util.List < CombineConfigs> combineConfigs; 
             private Encryption encryption; 
             private java.util.List < ImageWatermarks> imageWatermarks; 
-            private Boolean isInheritTags; 
             private java.util.List < Subtitles> subtitles; 
             private java.util.List < TextWatermarks> textWatermarks; 
             private Transcode transcode; 
@@ -2681,14 +2649,6 @@ public class SubmitTranscodeJobRequest extends Request {
              */
             public Builder imageWatermarks(java.util.List < ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
-                return this;
-            }
-
-            /**
-             * IsInheritTags.
-             */
-            public Builder isInheritTags(Boolean isInheritTags) {
-                this.isInheritTags = isInheritTags;
                 return this;
             }
 

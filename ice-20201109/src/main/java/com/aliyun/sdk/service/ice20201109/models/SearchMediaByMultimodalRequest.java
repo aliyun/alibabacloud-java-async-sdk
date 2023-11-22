@@ -7,23 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SearchMediaByFaceRequest} extends {@link RequestModel}
+ * {@link SearchMediaByMultimodalRequest} extends {@link RequestModel}
  *
- * <p>SearchMediaByFaceRequest</p>
+ * <p>SearchMediaByMultimodalRequest</p>
  */
-public class SearchMediaByFaceRequest extends Request {
+public class SearchMediaByMultimodalRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
-
-    @Query
-    @NameInMap("EntityId")
-    private String entityId;
-
-    @Query
-    @NameInMap("FaceSearchToken")
-    @Validation(required = true)
-    private String faceSearchToken;
 
     @Query
     @NameInMap("MediaType")
@@ -38,31 +29,28 @@ public class SearchMediaByFaceRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("PersonImageUrl")
-    @Validation(required = true)
-    private String personImageUrl;
-
-    @Query
     @NameInMap("SearchLibName")
     private String searchLibName;
 
-    private SearchMediaByFaceRequest(Builder builder) {
+    @Query
+    @NameInMap("Text")
+    private String text;
+
+    private SearchMediaByMultimodalRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.entityId = builder.entityId;
-        this.faceSearchToken = builder.faceSearchToken;
         this.mediaType = builder.mediaType;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.personImageUrl = builder.personImageUrl;
         this.searchLibName = builder.searchLibName;
+        this.text = builder.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SearchMediaByFaceRequest create() {
+    public static SearchMediaByMultimodalRequest create() {
         return builder().build();
     }
 
@@ -76,20 +64,6 @@ public class SearchMediaByFaceRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return entityId
-     */
-    public String getEntityId() {
-        return this.entityId;
-    }
-
-    /**
-     * @return faceSearchToken
-     */
-    public String getFaceSearchToken() {
-        return this.faceSearchToken;
     }
 
     /**
@@ -114,43 +88,39 @@ public class SearchMediaByFaceRequest extends Request {
     }
 
     /**
-     * @return personImageUrl
-     */
-    public String getPersonImageUrl() {
-        return this.personImageUrl;
-    }
-
-    /**
      * @return searchLibName
      */
     public String getSearchLibName() {
         return this.searchLibName;
     }
 
-    public static final class Builder extends Request.Builder<SearchMediaByFaceRequest, Builder> {
+    /**
+     * @return text
+     */
+    public String getText() {
+        return this.text;
+    }
+
+    public static final class Builder extends Request.Builder<SearchMediaByMultimodalRequest, Builder> {
         private String regionId; 
-        private String entityId; 
-        private String faceSearchToken; 
         private String mediaType; 
         private Integer pageNo; 
         private Integer pageSize; 
-        private String personImageUrl; 
         private String searchLibName; 
+        private String text; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SearchMediaByFaceRequest request) {
+        private Builder(SearchMediaByMultimodalRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.entityId = request.entityId;
-            this.faceSearchToken = request.faceSearchToken;
             this.mediaType = request.mediaType;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.personImageUrl = request.personImageUrl;
             this.searchLibName = request.searchLibName;
+            this.text = request.text;
         } 
 
         /**
@@ -159,24 +129,6 @@ public class SearchMediaByFaceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * EntityId.
-         */
-        public Builder entityId(String entityId) {
-            this.putQueryParameter("EntityId", entityId);
-            this.entityId = entityId;
-            return this;
-        }
-
-        /**
-         * FaceSearchToken.
-         */
-        public Builder faceSearchToken(String faceSearchToken) {
-            this.putQueryParameter("FaceSearchToken", faceSearchToken);
-            this.faceSearchToken = faceSearchToken;
             return this;
         }
 
@@ -208,15 +160,6 @@ public class SearchMediaByFaceRequest extends Request {
         }
 
         /**
-         * PersonImageUrl.
-         */
-        public Builder personImageUrl(String personImageUrl) {
-            this.putQueryParameter("PersonImageUrl", personImageUrl);
-            this.personImageUrl = personImageUrl;
-            return this;
-        }
-
-        /**
          * SearchLibName.
          */
         public Builder searchLibName(String searchLibName) {
@@ -225,9 +168,18 @@ public class SearchMediaByFaceRequest extends Request {
             return this;
         }
 
+        /**
+         * Text.
+         */
+        public Builder text(String text) {
+            this.putQueryParameter("Text", text);
+            this.text = text;
+            return this;
+        }
+
         @Override
-        public SearchMediaByFaceRequest build() {
-            return new SearchMediaByFaceRequest(this);
+        public SearchMediaByMultimodalRequest build() {
+            return new SearchMediaByMultimodalRequest(this);
         } 
 
     } 
