@@ -921,6 +921,21 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
+        @NameInMap("K8sClusterId")
+        private String k8sClusterId;
+
+        @NameInMap("K8sNamespace")
+        private String k8sNamespace;
+
+        @NameInMap("K8sNodeId")
+        private String k8sNodeId;
+
+        @NameInMap("K8sNodeName")
+        private String k8sNodeName;
+
+        @NameInMap("K8sPodName")
+        private String k8sPodName;
+
         @NameInMap("LastTs")
         private Long lastTs;
 
@@ -989,6 +1004,11 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.k8sClusterId = builder.k8sClusterId;
+            this.k8sNamespace = builder.k8sNamespace;
+            this.k8sNodeId = builder.k8sNodeId;
+            this.k8sNodeName = builder.k8sNodeName;
+            this.k8sPodName = builder.k8sPodName;
             this.lastTs = builder.lastTs;
             this.modifyTs = builder.modifyTs;
             this.name = builder.name;
@@ -1086,6 +1106,41 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        /**
+         * @return k8sClusterId
+         */
+        public String getK8sClusterId() {
+            return this.k8sClusterId;
+        }
+
+        /**
+         * @return k8sNamespace
+         */
+        public String getK8sNamespace() {
+            return this.k8sNamespace;
+        }
+
+        /**
+         * @return k8sNodeId
+         */
+        public String getK8sNodeId() {
+            return this.k8sNodeId;
+        }
+
+        /**
+         * @return k8sNodeName
+         */
+        public String getK8sNodeName() {
+            return this.k8sNodeName;
+        }
+
+        /**
+         * @return k8sPodName
+         */
+        public String getK8sPodName() {
+            return this.k8sPodName;
         }
 
         /**
@@ -1232,6 +1287,11 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private String k8sClusterId; 
+            private String k8sNamespace; 
+            private String k8sNodeId; 
+            private String k8sNodeName; 
+            private String k8sPodName; 
             private Long lastTs; 
             private Long modifyTs; 
             private String name; 
@@ -1341,6 +1401,46 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * K8sClusterId.
+             */
+            public Builder k8sClusterId(String k8sClusterId) {
+                this.k8sClusterId = k8sClusterId;
+                return this;
+            }
+
+            /**
+             * K8sNamespace.
+             */
+            public Builder k8sNamespace(String k8sNamespace) {
+                this.k8sNamespace = k8sNamespace;
+                return this;
+            }
+
+            /**
+             * K8sNodeId.
+             */
+            public Builder k8sNodeId(String k8sNodeId) {
+                this.k8sNodeId = k8sNodeId;
+                return this;
+            }
+
+            /**
+             * K8sNodeName.
+             */
+            public Builder k8sNodeName(String k8sNodeName) {
+                this.k8sNodeName = k8sNodeName;
+                return this;
+            }
+
+            /**
+             * K8sPodName.
+             */
+            public Builder k8sPodName(String k8sPodName) {
+                this.k8sPodName = k8sPodName;
                 return this;
             }
 

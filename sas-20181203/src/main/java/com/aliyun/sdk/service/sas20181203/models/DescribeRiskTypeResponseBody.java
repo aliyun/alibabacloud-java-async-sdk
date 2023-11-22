@@ -446,15 +446,23 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("Alias")
         private String alias;
 
+        @NameInMap("AuthFlag")
+        private Boolean authFlag;
+
         @NameInMap("CheckDetails")
         private java.util.List < CheckDetails> checkDetails;
+
+        @NameInMap("SupportedOs")
+        private String supportedOs;
 
         @NameInMap("TypeName")
         private String typeName;
 
         private SubTypes(Builder builder) {
             this.alias = builder.alias;
+            this.authFlag = builder.authFlag;
             this.checkDetails = builder.checkDetails;
+            this.supportedOs = builder.supportedOs;
             this.typeName = builder.typeName;
         }
 
@@ -474,10 +482,24 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         }
 
         /**
+         * @return authFlag
+         */
+        public Boolean getAuthFlag() {
+            return this.authFlag;
+        }
+
+        /**
          * @return checkDetails
          */
         public java.util.List < CheckDetails> getCheckDetails() {
             return this.checkDetails;
+        }
+
+        /**
+         * @return supportedOs
+         */
+        public String getSupportedOs() {
+            return this.supportedOs;
         }
 
         /**
@@ -489,7 +511,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
+            private Boolean authFlag; 
             private java.util.List < CheckDetails> checkDetails; 
+            private String supportedOs; 
             private String typeName; 
 
             /**
@@ -501,10 +525,26 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
+             * AuthFlag.
+             */
+            public Builder authFlag(Boolean authFlag) {
+                this.authFlag = authFlag;
+                return this;
+            }
+
+            /**
              * An array that consists of the check details about the baseline subtype.
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
+                return this;
+            }
+
+            /**
+             * SupportedOs.
+             */
+            public Builder supportedOs(String supportedOs) {
+                this.supportedOs = supportedOs;
                 return this;
             }
 
@@ -527,6 +567,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("Alias")
         private String alias;
 
+        @NameInMap("AuthFlag")
+        private Boolean authFlag;
+
         @NameInMap("SubTypes")
         private java.util.List < SubTypes> subTypes;
 
@@ -535,6 +578,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         private RiskTypes(Builder builder) {
             this.alias = builder.alias;
+            this.authFlag = builder.authFlag;
             this.subTypes = builder.subTypes;
             this.typeName = builder.typeName;
         }
@@ -555,6 +599,13 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         }
 
         /**
+         * @return authFlag
+         */
+        public Boolean getAuthFlag() {
+            return this.authFlag;
+        }
+
+        /**
          * @return subTypes
          */
         public java.util.List < SubTypes> getSubTypes() {
@@ -570,6 +621,7 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
+            private Boolean authFlag; 
             private java.util.List < SubTypes> subTypes; 
             private String typeName; 
 
@@ -578,6 +630,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
              */
             public Builder alias(String alias) {
                 this.alias = alias;
+                return this;
+            }
+
+            /**
+             * AuthFlag.
+             */
+            public Builder authFlag(Boolean authFlag) {
+                this.authFlag = authFlag;
                 return this;
             }
 

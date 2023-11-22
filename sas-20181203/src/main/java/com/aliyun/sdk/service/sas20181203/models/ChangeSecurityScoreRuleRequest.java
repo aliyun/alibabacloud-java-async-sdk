@@ -81,7 +81,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
         }
 
         /**
-         * The list of deducted modules that are supported by the security score feature.
+         * The list of deduction modules that are supported by the security score feature.
          */
         public Builder securityScoreRuleList(java.util.List < SecurityScoreRuleList> securityScoreRuleList) {
             this.putQueryParameter("SecurityScoreRuleList", securityScoreRuleList);
@@ -273,7 +273,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             private java.util.List < SecurityScoreItemList> securityScoreItemList; 
 
             /**
-             * The deducted module that is supported by the security score feature. Valid values:
+             * The deduction module that is supported by the security score feature. Valid values:
              * <p>
              * 
              * *   SS_REINFORCE: issue in key feature configuration

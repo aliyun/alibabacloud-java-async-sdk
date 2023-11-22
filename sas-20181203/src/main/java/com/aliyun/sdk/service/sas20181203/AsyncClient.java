@@ -58,6 +58,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindAuthToMachineResponse> bindAuthToMachine(BindAuthToMachineRequest request);
 
+    CompletableFuture<BindHybridProxyResponse> bindHybridProxy(BindHybridProxyRequest request);
+
     CompletableFuture<CancelOnceTaskResponse> cancelOnceTask(CancelOnceTaskRequest request);
 
     CompletableFuture<ChangeAssetRefreshTaskConfigResponse> changeAssetRefreshTaskConfig(ChangeAssetRefreshTaskConfigRequest request);
