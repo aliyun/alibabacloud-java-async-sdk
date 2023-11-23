@@ -1347,8 +1347,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### [](#)Supported database engines
-      * RDS SQL Server
-      * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+      * SQL Server
+      * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
       *
      */
     CompletableFuture<DescribeLogBackupFilesResponse> describeLogBackupFiles(DescribeLogBackupFilesRequest request);

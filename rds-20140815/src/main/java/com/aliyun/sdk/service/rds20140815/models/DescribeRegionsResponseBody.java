@@ -149,7 +149,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * The name of the region. The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:
              * <p>
              * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value 华东1（杭州） is returned for the LocalName parameter.
+             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value China (Hangzhou)  is returned for the LocalName parameter.
              * *   If the value of the **AcceptLanguage** parameter is **en-US**, the value China (Hangzhou) is returned for the LocalName parameter.
              */
             public Builder localName(String localName) {
@@ -185,7 +185,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * The name of the zone. The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou-h, the following values are returned for the LocalName parameter:
              * <p>
              * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value 杭州 可用区H is returned for the LocalName parameter.
+             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value Hangzhou Zone H is returned for the LocalName parameter.
              * *   If the value of the **AcceptLanguage** parameter is **en-US**, the value Hangzhou Zone H is returned for the LocalName parameter.
              */
             public Builder zoneName(String zoneName) {

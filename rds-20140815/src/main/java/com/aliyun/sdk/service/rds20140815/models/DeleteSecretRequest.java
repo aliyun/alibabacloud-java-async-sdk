@@ -191,7 +191,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The ID of the instance. You can call the **DescribeDBInstances** operation to query the ID of the instance.
          * <p>
          * 
          * > If you specify this parameter, you must also specify **SecretName**.
@@ -224,7 +224,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~446624~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the **DescribeRegions** operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -233,7 +233,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+         * The ID of the resource group. You can call the **DescribeDBInstanceAttribute** operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,7 +260,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the [CreateSecret](~~446607~~) operation to obtain the value of this parameter.
+         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the **CreateSecret** operation to obtain the value of this parameter.
          * <p>
          * 
          * > You must specify one of **SecretName** and SecretArn.
@@ -275,11 +275,8 @@ public class DeleteSecretRequest extends Request {
          * The name of the credential.
          * <p>
          * 
-         * > 
-         * 
-         * *   You must specify one of **SecretArn** and SecretName.
-         * 
-         * *   If you specify this parameter, you must also specify **DbInstanceId**.
+         * > *   You must specify one of **SecretArn** and SecretName.
+         * > *   If you specify this parameter, you must also specify **DbInstanceId**.
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

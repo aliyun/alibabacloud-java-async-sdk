@@ -42,6 +42,10 @@ public class ModifyDBNodeRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("EffectiveTime")
+    private String effectiveTime;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -70,6 +74,7 @@ public class ModifyDBNodeRequest extends Request {
         this.DBInstanceStorageType = builder.DBInstanceStorageType;
         this.DBNode = builder.DBNode;
         this.dryRun = builder.dryRun;
+        this.effectiveTime = builder.effectiveTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.produceAsync = builder.produceAsync;
@@ -140,6 +145,13 @@ public class ModifyDBNodeRequest extends Request {
     }
 
     /**
+     * @return effectiveTime
+     */
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -182,6 +194,7 @@ public class ModifyDBNodeRequest extends Request {
         private String DBInstanceStorageType; 
         private java.util.List < DBNode> DBNode; 
         private Boolean dryRun; 
+        private String effectiveTime; 
         private String ownerAccount; 
         private Long ownerId; 
         private Boolean produceAsync; 
@@ -201,6 +214,7 @@ public class ModifyDBNodeRequest extends Request {
             this.DBInstanceStorageType = request.DBInstanceStorageType;
             this.DBNode = request.DBNode;
             this.dryRun = request.dryRun;
+            this.effectiveTime = request.effectiveTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.produceAsync = request.produceAsync;
@@ -287,6 +301,15 @@ public class ModifyDBNodeRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * EffectiveTime.
+         */
+        public Builder effectiveTime(String effectiveTime) {
+            this.putQueryParameter("EffectiveTime", effectiveTime);
+            this.effectiveTime = effectiveTime;
             return this;
         }
 
