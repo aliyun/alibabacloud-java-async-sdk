@@ -18,6 +18,7 @@ public class DropSearchLibRequest extends Request {
 
     @Query
     @NameInMap("SearchLibName")
+    @Validation(required = true)
     private String searchLibName;
 
     private DropSearchLibRequest(Builder builder) {

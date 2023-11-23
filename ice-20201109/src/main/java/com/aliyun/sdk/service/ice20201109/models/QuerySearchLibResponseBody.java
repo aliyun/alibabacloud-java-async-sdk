@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySearchLibResponseBody</p>
  */
 public class QuerySearchLibResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -21,10 +24,15 @@ public class QuerySearchLibResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("Success")
+    private String success;
+
     private QuerySearchLibResponseBody(Builder builder) {
+        this.code = builder.code;
         this.requestId = builder.requestId;
         this.searchLibName = builder.searchLibName;
         this.status = builder.status;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -33,6 +41,13 @@ public class QuerySearchLibResponseBody extends TeaModel {
 
     public static QuerySearchLibResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
     }
 
     /**
@@ -56,10 +71,27 @@ public class QuerySearchLibResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private String code; 
         private String requestId; 
         private String searchLibName; 
         private String status; 
+        private String success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Id of the request
@@ -82,6 +114,14 @@ public class QuerySearchLibResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
+            this.success = success;
             return this;
         }
 

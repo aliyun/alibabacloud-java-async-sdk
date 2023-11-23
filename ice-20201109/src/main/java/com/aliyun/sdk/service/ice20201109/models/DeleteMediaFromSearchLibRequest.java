@@ -18,11 +18,8 @@ public class DeleteMediaFromSearchLibRequest extends Request {
 
     @Query
     @NameInMap("MediaId")
+    @Validation(required = true)
     private String mediaId;
-
-    @Query
-    @NameInMap("MsgBody")
-    private String msgBody;
 
     @Query
     @NameInMap("SearchLibName")
@@ -32,7 +29,6 @@ public class DeleteMediaFromSearchLibRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.mediaId = builder.mediaId;
-        this.msgBody = builder.msgBody;
         this.searchLibName = builder.searchLibName;
     }
 
@@ -64,13 +60,6 @@ public class DeleteMediaFromSearchLibRequest extends Request {
     }
 
     /**
-     * @return msgBody
-     */
-    public String getMsgBody() {
-        return this.msgBody;
-    }
-
-    /**
      * @return searchLibName
      */
     public String getSearchLibName() {
@@ -80,7 +69,6 @@ public class DeleteMediaFromSearchLibRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteMediaFromSearchLibRequest, Builder> {
         private String regionId; 
         private String mediaId; 
-        private String msgBody; 
         private String searchLibName; 
 
         private Builder() {
@@ -91,7 +79,6 @@ public class DeleteMediaFromSearchLibRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.mediaId = request.mediaId;
-            this.msgBody = request.msgBody;
             this.searchLibName = request.searchLibName;
         } 
 
@@ -110,15 +97,6 @@ public class DeleteMediaFromSearchLibRequest extends Request {
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
             this.mediaId = mediaId;
-            return this;
-        }
-
-        /**
-         * MsgBody.
-         */
-        public Builder msgBody(String msgBody) {
-            this.putQueryParameter("MsgBody", msgBody);
-            this.msgBody = msgBody;
             return this;
         }
 

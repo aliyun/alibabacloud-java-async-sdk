@@ -12,15 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertMediaToSearchLibResponseBody</p>
  */
 public class InsertMediaToSearchLibResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("MediaId")
     private String mediaId;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private String success;
+
     private InsertMediaToSearchLibResponseBody(Builder builder) {
+        this.code = builder.code;
         this.mediaId = builder.mediaId;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -29,6 +37,13 @@ public class InsertMediaToSearchLibResponseBody extends TeaModel {
 
     public static InsertMediaToSearchLibResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
     }
 
     /**
@@ -45,9 +60,26 @@ public class InsertMediaToSearchLibResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private String code; 
         private String mediaId; 
         private String requestId; 
+        private String success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * MediaId.
@@ -62,6 +94,14 @@ public class InsertMediaToSearchLibResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
+            this.success = success;
             return this;
         }
 

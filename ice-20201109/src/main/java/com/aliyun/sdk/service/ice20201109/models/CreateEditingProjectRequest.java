@@ -44,7 +44,7 @@ public class CreateEditingProjectRequest extends Request {
     @NameInMap("TemplateType")
     private String templateType;
 
-    @Query
+    @Body
     @NameInMap("Timeline")
     private String timeline;
 
@@ -256,7 +256,7 @@ public class CreateEditingProjectRequest extends Request {
          * Timeline.
          */
         public Builder timeline(String timeline) {
-            this.putQueryParameter("Timeline", timeline);
+            this.putBodyParameter("Timeline", timeline);
             this.timeline = timeline;
             return this;
         }

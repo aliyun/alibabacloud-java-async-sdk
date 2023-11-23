@@ -278,6 +278,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryMediaCensorJobListResponse> queryMediaCensorJobList(QueryMediaCensorJobListRequest request);
 
+    CompletableFuture<QueryMediaIndexJobResponse> queryMediaIndexJob(QueryMediaIndexJobRequest request);
+
     CompletableFuture<QuerySearchIndexResponse> querySearchIndex(QuerySearchIndexRequest request);
 
     CompletableFuture<QuerySearchLibResponse> querySearchLib(QuerySearchLibRequest request);
@@ -355,6 +357,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSmarttagJobResponse> submitSmarttagJob(SubmitSmarttagJobRequest request);
 
     CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request);
+
+    CompletableFuture<SubmitStandardCustomizedVoiceJobResponse> submitStandardCustomizedVoiceJob(SubmitStandardCustomizedVoiceJobRequest request);
 
     /**
       * @deprecated

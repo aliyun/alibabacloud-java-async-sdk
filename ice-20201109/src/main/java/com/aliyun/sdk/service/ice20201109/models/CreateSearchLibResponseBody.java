@@ -12,15 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSearchLibResponseBody</p>
  */
 public class CreateSearchLibResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("SearchLibName")
     private String searchLibName;
 
+    @NameInMap("Success")
+    private String success;
+
     private CreateSearchLibResponseBody(Builder builder) {
+        this.code = builder.code;
         this.requestId = builder.requestId;
         this.searchLibName = builder.searchLibName;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -29,6 +37,13 @@ public class CreateSearchLibResponseBody extends TeaModel {
 
     public static CreateSearchLibResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
     }
 
     /**
@@ -45,9 +60,26 @@ public class CreateSearchLibResponseBody extends TeaModel {
         return this.searchLibName;
     }
 
+    /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private String code; 
         private String requestId; 
         private String searchLibName; 
+        private String success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Id of the request
@@ -62,6 +94,14 @@ public class CreateSearchLibResponseBody extends TeaModel {
          */
         public Builder searchLibName(String searchLibName) {
             this.searchLibName = searchLibName;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
+            this.success = success;
             return this;
         }
 

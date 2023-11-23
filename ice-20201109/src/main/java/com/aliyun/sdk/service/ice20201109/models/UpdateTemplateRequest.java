@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTemplateRequest</p>
  */
 public class UpdateTemplateRequest extends Request {
-    @Query
+    @Body
     @NameInMap("Config")
     private String config;
 
@@ -155,7 +155,7 @@ public class UpdateTemplateRequest extends Request {
          * Config.
          */
         public Builder config(String config) {
-            this.putQueryParameter("Config", config);
+            this.putBodyParameter("Config", config);
             this.config = config;
             return this;
         }

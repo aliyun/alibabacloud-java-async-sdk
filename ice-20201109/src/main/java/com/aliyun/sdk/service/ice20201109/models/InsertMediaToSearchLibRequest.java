@@ -18,6 +18,7 @@ public class InsertMediaToSearchLibRequest extends Request {
 
     @Query
     @NameInMap("Input")
+    @Validation(required = true)
     private String input;
 
     @Query

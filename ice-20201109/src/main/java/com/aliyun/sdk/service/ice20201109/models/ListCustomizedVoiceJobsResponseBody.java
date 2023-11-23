@@ -92,6 +92,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
     } 
 
     public static class CustomizedVoiceJobList extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("Gender")
         private String gender;
 
@@ -110,6 +113,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Type")
+        private String type;
+
         @NameInMap("VoiceDesc")
         private String voiceDesc;
 
@@ -120,12 +126,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         private String voiceName;
 
         private CustomizedVoiceJobList(Builder builder) {
+            this.createTime = builder.createTime;
             this.gender = builder.gender;
             this.gmtCreate = builder.gmtCreate;
             this.jobId = builder.jobId;
             this.message = builder.message;
             this.scenario = builder.scenario;
             this.status = builder.status;
+            this.type = builder.type;
             this.voiceDesc = builder.voiceDesc;
             this.voiceId = builder.voiceId;
             this.voiceName = builder.voiceName;
@@ -137,6 +145,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
 
         public static CustomizedVoiceJobList create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -182,6 +197,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return voiceDesc
          */
         public String getVoiceDesc() {
@@ -203,15 +225,25 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createTime; 
             private String gender; 
             private String gmtCreate; 
             private String jobId; 
             private String message; 
             private String scenario; 
             private String status; 
+            private String type; 
             private String voiceDesc; 
             private String voiceId; 
             private String voiceName; 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * Gender.
@@ -258,6 +290,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

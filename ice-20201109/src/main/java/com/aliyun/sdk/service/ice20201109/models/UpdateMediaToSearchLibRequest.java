@@ -18,10 +18,12 @@ public class UpdateMediaToSearchLibRequest extends Request {
 
     @Query
     @NameInMap("MediaId")
+    @Validation(required = true)
     private String mediaId;
 
     @Query
     @NameInMap("MsgBody")
+    @Validation(required = true)
     private String msgBody;
 
     @Query

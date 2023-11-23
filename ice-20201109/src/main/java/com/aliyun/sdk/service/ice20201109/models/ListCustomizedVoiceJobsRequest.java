@@ -20,10 +20,15 @@ public class ListCustomizedVoiceJobsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private ListCustomizedVoiceJobsRequest(Builder builder) {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ListCustomizedVoiceJobsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<ListCustomizedVoiceJobsRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
+        private String type; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ListCustomizedVoiceJobsRequest extends Request {
             super(request);
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.type = request.type;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class ListCustomizedVoiceJobsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

@@ -57,7 +57,7 @@ public class SubmitMediaProducingJobRequest extends Request {
     @NameInMap("TemplateId")
     private String templateId;
 
-    @Query
+    @Body
     @NameInMap("Timeline")
     private String timeline;
 
@@ -325,7 +325,7 @@ public class SubmitMediaProducingJobRequest extends Request {
          * Timeline.
          */
         public Builder timeline(String timeline) {
-            this.putQueryParameter("Timeline", timeline);
+            this.putBodyParameter("Timeline", timeline);
             this.timeline = timeline;
             return this;
         }

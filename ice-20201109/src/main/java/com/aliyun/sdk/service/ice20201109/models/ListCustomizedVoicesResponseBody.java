@@ -101,6 +101,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         @NameInMap("Scenario")
         private String scenario;
 
+        @NameInMap("Type")
+        private String type;
+
         @NameInMap("VoiceDesc")
         private String voiceDesc;
 
@@ -114,6 +117,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             this.demoAudioMediaId = builder.demoAudioMediaId;
             this.gender = builder.gender;
             this.scenario = builder.scenario;
+            this.type = builder.type;
             this.voiceDesc = builder.voiceDesc;
             this.voiceId = builder.voiceId;
             this.voiceName = builder.voiceName;
@@ -149,6 +153,13 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return voiceDesc
          */
         public String getVoiceDesc() {
@@ -173,6 +184,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
             private String demoAudioMediaId; 
             private String gender; 
             private String scenario; 
+            private String type; 
             private String voiceDesc; 
             private String voiceId; 
             private String voiceName; 
@@ -198,6 +210,14 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

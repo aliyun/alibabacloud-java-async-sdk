@@ -92,23 +92,47 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     } 
 
     public static class CustomizedVoiceJob extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
+        @NameInMap("Gender")
+        private String gender;
+
         @NameInMap("JobId")
         private String jobId;
 
         @NameInMap("Message")
         private String message;
 
+        @NameInMap("Scenario")
+        private String scenario;
+
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("VoiceDesc")
+        private String voiceDesc;
 
         @NameInMap("VoiceId")
         private String voiceId;
 
+        @NameInMap("VoiceName")
+        private String voiceName;
+
         private CustomizedVoiceJob(Builder builder) {
+            this.createTime = builder.createTime;
+            this.gender = builder.gender;
             this.jobId = builder.jobId;
             this.message = builder.message;
+            this.scenario = builder.scenario;
             this.status = builder.status;
+            this.type = builder.type;
+            this.voiceDesc = builder.voiceDesc;
             this.voiceId = builder.voiceId;
+            this.voiceName = builder.voiceName;
         }
 
         public static Builder builder() {
@@ -117,6 +141,20 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
 
         public static CustomizedVoiceJob create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return gender
+         */
+        public String getGender() {
+            return this.gender;
         }
 
         /**
@@ -134,10 +172,31 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return scenario
+         */
+        public String getScenario() {
+            return this.scenario;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return voiceDesc
+         */
+        public String getVoiceDesc() {
+            return this.voiceDesc;
         }
 
         /**
@@ -147,11 +206,40 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             return this.voiceId;
         }
 
+        /**
+         * @return voiceName
+         */
+        public String getVoiceName() {
+            return this.voiceName;
+        }
+
         public static final class Builder {
+            private String createTime; 
+            private String gender; 
             private String jobId; 
             private String message; 
+            private String scenario; 
             private String status; 
+            private String type; 
+            private String voiceDesc; 
             private String voiceId; 
+            private String voiceName; 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Gender.
+             */
+            public Builder gender(String gender) {
+                this.gender = gender;
+                return this;
+            }
 
             /**
              * JobId.
@@ -170,6 +258,14 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
+             * Scenario.
+             */
+            public Builder scenario(String scenario) {
+                this.scenario = scenario;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -178,10 +274,34 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             }
 
             /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * VoiceDesc.
+             */
+            public Builder voiceDesc(String voiceDesc) {
+                this.voiceDesc = voiceDesc;
+                return this;
+            }
+
+            /**
              * VoiceId.
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
+                return this;
+            }
+
+            /**
+             * VoiceName.
+             */
+            public Builder voiceName(String voiceName) {
+                this.voiceName = voiceName;
                 return this;
             }
 

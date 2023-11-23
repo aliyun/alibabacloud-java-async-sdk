@@ -7,33 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateSearchIndexRequest} extends {@link RequestModel}
+ * {@link QueryMediaIndexJobRequest} extends {@link RequestModel}
  *
- * <p>CreateSearchIndexRequest</p>
+ * <p>QueryMediaIndexJobRequest</p>
  */
-public class CreateSearchIndexRequest extends Request {
+public class QueryMediaIndexJobRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("IndexStatus")
-    private String indexStatus;
-
-    @Query
-    @NameInMap("IndexType")
+    @NameInMap("MediaId")
     @Validation(required = true)
-    private String indexType;
+    private String mediaId;
 
     @Query
     @NameInMap("SearchLibName")
     private String searchLibName;
 
-    private CreateSearchIndexRequest(Builder builder) {
+    private QueryMediaIndexJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.indexStatus = builder.indexStatus;
-        this.indexType = builder.indexType;
+        this.mediaId = builder.mediaId;
         this.searchLibName = builder.searchLibName;
     }
 
@@ -41,7 +36,7 @@ public class CreateSearchIndexRequest extends Request {
         return new Builder();
     }
 
-    public static CreateSearchIndexRequest create() {
+    public static QueryMediaIndexJobRequest create() {
         return builder().build();
     }
 
@@ -58,17 +53,10 @@ public class CreateSearchIndexRequest extends Request {
     }
 
     /**
-     * @return indexStatus
+     * @return mediaId
      */
-    public String getIndexStatus() {
-        return this.indexStatus;
-    }
-
-    /**
-     * @return indexType
-     */
-    public String getIndexType() {
-        return this.indexType;
+    public String getMediaId() {
+        return this.mediaId;
     }
 
     /**
@@ -78,21 +66,19 @@ public class CreateSearchIndexRequest extends Request {
         return this.searchLibName;
     }
 
-    public static final class Builder extends Request.Builder<CreateSearchIndexRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryMediaIndexJobRequest, Builder> {
         private String regionId; 
-        private String indexStatus; 
-        private String indexType; 
+        private String mediaId; 
         private String searchLibName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateSearchIndexRequest request) {
+        private Builder(QueryMediaIndexJobRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.indexStatus = request.indexStatus;
-            this.indexType = request.indexType;
+            this.mediaId = request.mediaId;
             this.searchLibName = request.searchLibName;
         } 
 
@@ -106,20 +92,11 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         /**
-         * IndexStatus.
+         * MediaId.
          */
-        public Builder indexStatus(String indexStatus) {
-            this.putQueryParameter("IndexStatus", indexStatus);
-            this.indexStatus = indexStatus;
-            return this;
-        }
-
-        /**
-         * IndexType.
-         */
-        public Builder indexType(String indexType) {
-            this.putQueryParameter("IndexType", indexType);
-            this.indexType = indexType;
+        public Builder mediaId(String mediaId) {
+            this.putQueryParameter("MediaId", mediaId);
+            this.mediaId = mediaId;
             return this;
         }
 
@@ -133,8 +110,8 @@ public class CreateSearchIndexRequest extends Request {
         }
 
         @Override
-        public CreateSearchIndexRequest build() {
-            return new CreateSearchIndexRequest(this);
+        public QueryMediaIndexJobRequest build() {
+            return new QueryMediaIndexJobRequest(this);
         } 
 
     } 

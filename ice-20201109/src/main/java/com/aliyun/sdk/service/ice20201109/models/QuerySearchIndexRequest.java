@@ -18,6 +18,7 @@ public class QuerySearchIndexRequest extends Request {
 
     @Query
     @NameInMap("IndexType")
+    @Validation(required = true)
     private String indexType;
 
     @Query

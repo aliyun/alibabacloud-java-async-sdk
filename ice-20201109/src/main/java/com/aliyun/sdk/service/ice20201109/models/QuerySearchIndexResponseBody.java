@@ -12,11 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySearchIndexResponseBody</p>
  */
 public class QuerySearchIndexResponseBody extends TeaModel {
-    @NameInMap("IndexConfig")
-    private String indexConfig;
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("IndexStatus")
+    private String indexStatus;
 
     @NameInMap("IndexType")
     private String indexType;
+
+    @NameInMap("MediaTotal")
+    private String mediaTotal;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -24,11 +30,17 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     @NameInMap("SearchLibName")
     private String searchLibName;
 
+    @NameInMap("Success")
+    private String success;
+
     private QuerySearchIndexResponseBody(Builder builder) {
-        this.indexConfig = builder.indexConfig;
+        this.code = builder.code;
+        this.indexStatus = builder.indexStatus;
         this.indexType = builder.indexType;
+        this.mediaTotal = builder.mediaTotal;
         this.requestId = builder.requestId;
         this.searchLibName = builder.searchLibName;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -40,10 +52,17 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     }
 
     /**
-     * @return indexConfig
+     * @return code
      */
-    public String getIndexConfig() {
-        return this.indexConfig;
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return indexStatus
+     */
+    public String getIndexStatus() {
+        return this.indexStatus;
     }
 
     /**
@@ -51,6 +70,13 @@ public class QuerySearchIndexResponseBody extends TeaModel {
      */
     public String getIndexType() {
         return this.indexType;
+    }
+
+    /**
+     * @return mediaTotal
+     */
+    public String getMediaTotal() {
+        return this.mediaTotal;
     }
 
     /**
@@ -67,17 +93,35 @@ public class QuerySearchIndexResponseBody extends TeaModel {
         return this.searchLibName;
     }
 
+    /**
+     * @return success
+     */
+    public String getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
-        private String indexConfig; 
+        private String code; 
+        private String indexStatus; 
         private String indexType; 
+        private String mediaTotal; 
         private String requestId; 
         private String searchLibName; 
+        private String success; 
 
         /**
-         * IndexConfig.
+         * Code.
          */
-        public Builder indexConfig(String indexConfig) {
-            this.indexConfig = indexConfig;
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * IndexStatus.
+         */
+        public Builder indexStatus(String indexStatus) {
+            this.indexStatus = indexStatus;
             return this;
         }
 
@@ -86,6 +130,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
+            return this;
+        }
+
+        /**
+         * MediaTotal.
+         */
+        public Builder mediaTotal(String mediaTotal) {
+            this.mediaTotal = mediaTotal;
             return this;
         }
 
@@ -102,6 +154,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
          */
         public Builder searchLibName(String searchLibName) {
             this.searchLibName = searchLibName;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
+            this.success = success;
             return this;
         }
 

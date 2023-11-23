@@ -18,6 +18,7 @@ public class QuerySearchLibRequest extends Request {
 
     @Query
     @NameInMap("SearchLibName")
+    @Validation(required = true)
     private String searchLibName;
 
     private QuerySearchLibRequest(Builder builder) {
