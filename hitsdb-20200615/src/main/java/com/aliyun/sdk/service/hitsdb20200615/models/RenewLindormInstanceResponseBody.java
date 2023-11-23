@@ -62,7 +62,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

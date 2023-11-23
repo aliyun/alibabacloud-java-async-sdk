@@ -7,23 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceIpWhiteListRequest} extends {@link RequestModel}
+ * {@link CreateLdpsNamespaceRequest} extends {@link RequestModel}
  *
- * <p>UpdateInstanceIpWhiteListRequest</p>
+ * <p>CreateLdpsNamespaceRequest</p>
  */
-public class UpdateInstanceIpWhiteListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Delete")
-    private Boolean delete;
-
+public class CreateLdpsNamespaceRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("Namespace")
+    private String namespace;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -35,6 +31,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -44,24 +44,18 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityIpList")
-    @Validation(required = true)
-    private String securityIpList;
-
-    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private UpdateInstanceIpWhiteListRequest(Builder builder) {
+    private CreateLdpsNamespaceRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.delete = builder.delete;
         this.instanceId = builder.instanceId;
+        this.namespace = builder.namespace;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityIpList = builder.securityIpList;
         this.securityToken = builder.securityToken;
     }
 
@@ -69,7 +63,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateInstanceIpWhiteListRequest create() {
+    public static CreateLdpsNamespaceRequest create() {
         return builder().build();
     }
 
@@ -79,24 +73,17 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return delete
-     */
-    public Boolean getDelete() {
-        return this.delete;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
     }
 
     /**
@@ -114,6 +101,13 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -128,71 +122,53 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return securityIpList
-     */
-    public String getSecurityIpList() {
-        return this.securityIpList;
-    }
-
-    /**
      * @return securityToken
      */
     public String getSecurityToken() {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<UpdateInstanceIpWhiteListRequest, Builder> {
-        private String regionId; 
-        private Boolean delete; 
+    public static final class Builder extends Request.Builder<CreateLdpsNamespaceRequest, Builder> {
         private String instanceId; 
+        private String namespace; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityIpList; 
         private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceIpWhiteListRequest request) {
+        private Builder(CreateLdpsNamespaceRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.delete = request.delete;
             this.instanceId = request.instanceId;
+            this.namespace = request.namespace;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityIpList = request.securityIpList;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Delete.
-         */
-        public Builder delete(Boolean delete) {
-            this.putQueryParameter("Delete", delete);
-            this.delete = delete;
-            return this;
-        }
-
-        /**
-         * The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 
@@ -215,6 +191,15 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -233,18 +218,6 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The IP addresses that you want to add to the whitelist. For example, if you add 192.168.0.0/24 to the whitelist, you can use all IP addresses within this CIDR block to access the Lindorm instance.
-         * <p>
-         * 
-         * > If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).
-         */
-        public Builder securityIpList(String securityIpList) {
-            this.putQueryParameter("SecurityIpList", securityIpList);
-            this.securityIpList = securityIpList;
-            return this;
-        }
-
-        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
@@ -254,8 +227,8 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         @Override
-        public UpdateInstanceIpWhiteListRequest build() {
-            return new UpdateInstanceIpWhiteListRequest(this);
+        public CreateLdpsNamespaceRequest build() {
+            return new CreateLdpsNamespaceRequest(this);
         } 
 
     } 

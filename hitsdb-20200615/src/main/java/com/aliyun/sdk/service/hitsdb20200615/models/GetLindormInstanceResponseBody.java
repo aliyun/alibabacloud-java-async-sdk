@@ -75,6 +75,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("EnableLTS")
     private Boolean enableLTS;
 
+    @NameInMap("EnableLsqlVersionV3")
+    private Boolean enableLsqlVersionV3;
+
     @NameInMap("EnableMLCtrl")
     private Boolean enableMLCtrl;
 
@@ -193,6 +196,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.enableCompute = builder.enableCompute;
         this.enableKms = builder.enableKms;
         this.enableLTS = builder.enableLTS;
+        this.enableLsqlVersionV3 = builder.enableLsqlVersionV3;
         this.enableMLCtrl = builder.enableMLCtrl;
         this.enableSSL = builder.enableSSL;
         this.enableShs = builder.enableShs;
@@ -380,6 +384,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public Boolean getEnableLTS() {
         return this.enableLTS;
+    }
+
+    /**
+     * @return enableLsqlVersionV3
+     */
+    public Boolean getEnableLsqlVersionV3() {
+        return this.enableLsqlVersionV3;
     }
 
     /**
@@ -628,6 +639,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private Boolean enableCompute; 
         private Boolean enableKms; 
         private Boolean enableLTS; 
+        private Boolean enableLsqlVersionV3; 
         private Boolean enableMLCtrl; 
         private Boolean enableSSL; 
         private Boolean enableShs; 
@@ -826,6 +838,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder enableLTS(Boolean enableLTS) {
             this.enableLTS = enableLTS;
+            return this;
+        }
+
+        /**
+         * EnableLsqlVersionV3.
+         */
+        public Builder enableLsqlVersionV3(Boolean enableLsqlVersionV3) {
+            this.enableLsqlVersionV3 = enableLsqlVersionV3;
             return this;
         }
 

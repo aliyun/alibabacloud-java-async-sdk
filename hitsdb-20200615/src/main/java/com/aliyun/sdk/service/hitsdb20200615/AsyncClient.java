@@ -18,11 +18,19 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateLdpsNamespaceResponse> createLdpsNamespace(CreateLdpsNamespaceRequest request);
+
+    /**
+      * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+      *
+     */
     CompletableFuture<CreateLindormInstanceResponse> createLindormInstance(CreateLindormInstanceRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<GetInstanceIpWhiteListResponse> getInstanceIpWhiteList(GetInstanceIpWhiteListRequest request);
+
+    CompletableFuture<GetLdpsNamespacedQuotaResponse> getLdpsNamespacedQuota(GetLdpsNamespacedQuotaRequest request);
 
     CompletableFuture<GetLdpsResourceCostResponse> getLdpsResourceCost(GetLdpsResourceCostRequest request);
 
@@ -44,7 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseLindormInstanceResponse> releaseLindormInstance(ReleaseLindormInstanceRequest request);
 
     /**
-      * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+      * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
       *
      */
     CompletableFuture<RenewLindormInstanceResponse> renewLindormInstance(RenewLindormInstanceRequest request);
@@ -53,14 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
-    /**
-      * ***
-      *
-     */
     CompletableFuture<UpdateInstanceIpWhiteListResponse> updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request);
 
     /**
-      * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+      * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
       *
      */
     CompletableFuture<UpgradeLindormInstanceResponse> upgradeLindormInstance(UpgradeLindormInstanceRequest request);

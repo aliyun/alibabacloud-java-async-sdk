@@ -172,7 +172,11 @@ public class RenewLindormInstanceRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.
+         * <p>
+         * 
+         * *   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.
+         * *   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -181,7 +185,7 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to renew. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,7 +212,11 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The period based on which you are charged for the instance. Valid values:
+         * <p>
+         * 
+         * *   **Month**: You are charged for the instance based on months.
+         * *   **Year**: You are charged for the instance based on years.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -217,7 +225,7 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance that you want to renew is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

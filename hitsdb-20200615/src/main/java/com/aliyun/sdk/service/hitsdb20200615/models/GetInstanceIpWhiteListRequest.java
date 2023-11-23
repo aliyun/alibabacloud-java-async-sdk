@@ -17,10 +17,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("GroupName")
-    private String groupName;
-
-    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -50,7 +46,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
     private GetInstanceIpWhiteListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -77,13 +72,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
     }
 
     /**
@@ -130,7 +118,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetInstanceIpWhiteListRequest, Builder> {
         private String regionId; 
-        private String groupName; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -145,7 +132,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
         private Builder(GetInstanceIpWhiteListRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.groupName = request.groupName;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -160,15 +146,6 @@ public class GetInstanceIpWhiteListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
-         */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
             return this;
         }
 

@@ -75,14 +75,6 @@ public class UpgradeLindormInstanceRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("PhoenixCoreNum")
-    private Integer phoenixCoreNum;
-
-    @Query
-    @NameInMap("PhoenixCoreSpec")
-    private String phoenixCoreSpec;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -151,8 +143,6 @@ public class UpgradeLindormInstanceRequest extends Request {
         this.ltsCoreSpec = builder.ltsCoreSpec;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.phoenixCoreNum = builder.phoenixCoreNum;
-        this.phoenixCoreSpec = builder.phoenixCoreSpec;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -286,20 +276,6 @@ public class UpgradeLindormInstanceRequest extends Request {
     }
 
     /**
-     * @return phoenixCoreNum
-     */
-    public Integer getPhoenixCoreNum() {
-        return this.phoenixCoreNum;
-    }
-
-    /**
-     * @return phoenixCoreSpec
-     */
-    public String getPhoenixCoreSpec() {
-        return this.phoenixCoreSpec;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -399,8 +375,6 @@ public class UpgradeLindormInstanceRequest extends Request {
         private String ltsCoreSpec; 
         private String ownerAccount; 
         private Long ownerId; 
-        private Integer phoenixCoreNum; 
-        private String phoenixCoreSpec; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -435,8 +409,6 @@ public class UpgradeLindormInstanceRequest extends Request {
             this.ltsCoreSpec = request.ltsCoreSpec;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.phoenixCoreNum = request.phoenixCoreNum;
-            this.phoenixCoreSpec = request.phoenixCoreSpec;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -452,7 +424,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterStorage.
+         * The storage capacity of the instance after it is upgraded. Unit: GB. Valid values: **480** to **1017600**.
          */
         public Builder clusterStorage(Integer clusterStorage) {
             this.putQueryParameter("ClusterStorage", clusterStorage);
@@ -461,7 +433,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * ColdStorage.
+         * The cold storage capacity of the instance after it is upgraded. Unit: GB. Valid values: **800** to **1000000**.
          */
         public Builder coldStorage(Integer coldStorage) {
             this.putQueryParameter("ColdStorage", coldStorage);
@@ -470,7 +442,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * CoreSingleStorage.
+         * The storage capacity of a single core node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Unit: GB. Valid values: 400 to 64000. **This parameter is optional**.
          */
         public Builder coreSingleStorage(Integer coreSingleStorage) {
             this.putQueryParameter("CoreSingleStorage", coreSingleStorage);
@@ -479,7 +451,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * FilestoreNum.
+         * The number of LindormDFS nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.
          */
         public Builder filestoreNum(Integer filestoreNum) {
             this.putQueryParameter("FilestoreNum", filestoreNum);
@@ -488,7 +460,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * FilestoreSpec.
+         * The specification of LindormDFS nodes in the instance after the instance is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder filestoreSpec(String filestoreSpec) {
             this.putQueryParameter("FilestoreSpec", filestoreSpec);
@@ -497,7 +475,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to upgrade, scale up, or enable cold storage. You can call the [GetLindormInstanceList](~~426069~~) operation to query the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -506,7 +484,10 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LindormNum.
+         * The number of LindormTable nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **90**.
+         * <p>
+         * 
+         * > This parameter must be specified together with the LindormSpec parameter.
          */
         public Builder lindormNum(Integer lindormNum) {
             this.putQueryParameter("LindormNum", lindormNum);
@@ -515,7 +496,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LindormSpec.
+         * The specification of LindormTable nodes in the instance after the instance is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.c.xlarge**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.
+         * *   **lindorm.c.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.c.4xlarge**: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.c.8xlarge**: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.
          */
         public Builder lindormSpec(String lindormSpec) {
             this.putQueryParameter("LindormSpec", lindormSpec);
@@ -524,7 +511,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogNum.
+         * The number of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. **This parameter is optional**.
          */
         public Builder logNum(Integer logNum) {
             this.putQueryParameter("LogNum", logNum);
@@ -533,7 +520,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogSingleStorage.
+         * The storage capacity of a single log node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. **This parameter is optional**.
          */
         public Builder logSingleStorage(Integer logSingleStorage) {
             this.putQueryParameter("LogSingleStorage", logSingleStorage);
@@ -542,7 +529,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogSpec.
+         * The specification of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.sn1.large**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.
+         * *   **lindorm.sn1.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.
+         * 
+         * **This parameter is optional**.
          */
         public Builder logSpec(String logSpec) {
             this.putQueryParameter("LogSpec", logSpec);
@@ -551,7 +544,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LtsCoreNum.
+         * The number of LTS nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **50**.
          */
         public Builder ltsCoreNum(Integer ltsCoreNum) {
             this.putQueryParameter("LtsCoreNum", ltsCoreNum);
@@ -560,7 +553,11 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * LtsCoreSpec.
+         * The specification of Lindorm Tunnel Service (LTS) nodes in the instance after the instance is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
          */
         public Builder ltsCoreSpec(String ltsCoreSpec) {
             this.putQueryParameter("LtsCoreSpec", ltsCoreSpec);
@@ -587,25 +584,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * PhoenixCoreNum.
-         */
-        public Builder phoenixCoreNum(Integer phoenixCoreNum) {
-            this.putQueryParameter("PhoenixCoreNum", phoenixCoreNum);
-            this.phoenixCoreNum = phoenixCoreNum;
-            return this;
-        }
-
-        /**
-         * PhoenixCoreSpec.
-         */
-        public Builder phoenixCoreSpec(String phoenixCoreSpec) {
-            this.putQueryParameter("PhoenixCoreSpec", phoenixCoreSpec);
-            this.phoenixCoreSpec = phoenixCoreSpec;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -641,7 +620,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * SolrNum.
+         * The number of LindormSearch nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.
          */
         public Builder solrNum(Integer solrNum) {
             this.putQueryParameter("SolrNum", solrNum);
@@ -650,7 +629,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * SolrSpec.
+         * The specification of LindormSearch nodes in the instance after the instance is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder solrSpec(String solrSpec) {
             this.putQueryParameter("SolrSpec", solrSpec);
@@ -659,7 +644,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * 变配后实例的流引擎节点数量，取值：**0**~**90**。
+         * The number of LindormStream nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.
          */
         public Builder streamNum(Integer streamNum) {
             this.putQueryParameter("StreamNum", streamNum);
@@ -668,12 +653,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * 变配后实例的流引擎节点规格，取值：
+         * The specification of LindormStream nodes in the instance after the instance is upgraded. Valid values:
          * <p>
          * 
-         * - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
-         * - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
-         * - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder streamSpec(String streamSpec) {
             this.putQueryParameter("StreamSpec", streamSpec);
@@ -682,7 +668,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * TsdbNum.
+         * The number of LindormTSDB nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **24**.
          */
         public Builder tsdbNum(Integer tsdbNum) {
             this.putQueryParameter("TsdbNum", tsdbNum);
@@ -691,7 +677,13 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * TsdbSpec.
+         * The specification of LindormTSDB nodes in the instance after the instance is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder tsdbSpec(String tsdbSpec) {
             this.putQueryParameter("TsdbSpec", tsdbSpec);
@@ -700,7 +692,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * UpgradeType.
+         * The upgrade type of the operation. For more information about upgrade types, see the UpgradeType parameters section.
          */
         public Builder upgradeType(String upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);
@@ -709,7 +701,7 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the [GetLindormInstance](~~426067~~) operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

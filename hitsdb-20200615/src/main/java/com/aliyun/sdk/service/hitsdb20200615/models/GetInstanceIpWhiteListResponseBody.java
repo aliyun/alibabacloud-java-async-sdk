@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceIpWhiteListResponseBody</p>
  */
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
+    @NameInMap("GroupList")
+    private java.util.List < GroupList> groupList;
+
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -22,6 +25,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     private String requestId;
 
     private GetInstanceIpWhiteListResponseBody(Builder builder) {
+        this.groupList = builder.groupList;
         this.instanceId = builder.instanceId;
         this.ipList = builder.ipList;
         this.requestId = builder.requestId;
@@ -33,6 +37,13 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
 
     public static GetInstanceIpWhiteListResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return groupList
+     */
+    public java.util.List < GroupList> getGroupList() {
+        return this.groupList;
     }
 
     /**
@@ -57,9 +68,18 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < GroupList> groupList; 
         private String instanceId; 
         private java.util.List < String > ipList; 
         private String requestId; 
+
+        /**
+         * GroupList.
+         */
+        public Builder groupList(java.util.List < GroupList> groupList) {
+            this.groupList = groupList;
+            return this;
+        }
 
         /**
          * The ID of the Lindorm instance.
@@ -91,4 +111,65 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
 
     } 
 
+    public static class GroupList extends TeaModel {
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("SecurityIpList")
+        private String securityIpList;
+
+        private GroupList(Builder builder) {
+            this.groupName = builder.groupName;
+            this.securityIpList = builder.securityIpList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GroupList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return securityIpList
+         */
+        public String getSecurityIpList() {
+            return this.securityIpList;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String securityIpList; 
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * SecurityIpList.
+             */
+            public Builder securityIpList(String securityIpList) {
+                this.securityIpList = securityIpList;
+                return this;
+            }
+
+            public GroupList build() {
+                return new GroupList(this);
+            } 
+
+        } 
+
+    }
 }

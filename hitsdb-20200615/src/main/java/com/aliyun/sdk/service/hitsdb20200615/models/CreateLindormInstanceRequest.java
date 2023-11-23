@@ -622,7 +622,7 @@ public class CreateLindormInstanceRequest extends Request {
         } 
 
         /**
-         * ArbiterVSwitchId.
+         * The ID of the vSwitch that is specified for the zone for the coordinate node of the instance. The vSwitch must be deployed in the zone specified by the ArbiterZoneId parameter. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder arbiterVSwitchId(String arbiterVSwitchId) {
             this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
@@ -631,7 +631,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * ArbiterZoneId.
+         * The ID of the zone for the coordinate node of the instance. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder arbiterZoneId(String arbiterZoneId) {
             this.putQueryParameter("ArbiterZoneId", arbiterZoneId);
@@ -640,7 +640,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * ArchVersion.
+         * The architecture of the instance. Valid values:
+         * <p>
+         * 
+         * *   **1.0**: The instance that you want to create is a single-zone instance.
+         * *   **2.0**: The instance that you want to create is a multi-zone instance.
+         * 
+         * By default, the value of this parameter is 1.0. To create a multi-zone instance, set this parameter to 2.0. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder archVersion(String archVersion) {
             this.putQueryParameter("ArchVersion", archVersion);
@@ -649,7 +655,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * ColdStorage.
+         * The cold storage capacity of the instance. By default, if you leave this parameter unspecified, cold storage is not enabled for the instance. Unit: GB. Valid values: **800** to **1000000**.
          */
         public Builder coldStorage(Integer coldStorage) {
             this.putQueryParameter("ColdStorage", coldStorage);
@@ -658,7 +664,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * CoreSingleStorage.
+         * The storage capacity of the disk of a single core node. Valid values: 400 to 64000. Unit: GB. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder coreSingleStorage(Integer coreSingleStorage) {
             this.putQueryParameter("CoreSingleStorage", coreSingleStorage);
@@ -667,7 +673,21 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * CoreSpec.
+         * The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.
+         * <p>
+         * 
+         * When DiskCategory is set to local_ssd_pro, you can set this parameter to the following values:
+         * 
+         * *   **lindorm.i2.xlarge**: Each node has 4 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.i2.2xlarge**: Each node has 8 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.i2.4xlarge**: Each node has 16 dedicated CPU cores and 128 GB of dedicated memory.
+         * *   **lindorm.i2.8xlarge**: Each node has 32 dedicated CPU cores and 256 GB of dedicated memory.
+         * 
+         * When DiskCategory is set to local_hdd_pro, you can set this parameter to the following values:
+         * 
+         * *   **lindorm.d1.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.d1.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.d1.6xlarge**: Each node has 24 dedicated CPU cores and 96 GB of dedicated memory.
          */
         public Builder coreSpec(String coreSpec) {
             this.putQueryParameter("CoreSpec", coreSpec);
@@ -676,7 +696,14 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * DiskCategory.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cloud_efficiency**: This instance uses the Standard type of storage.
+         * *   **cloud_ssd**: This instance uses the Performance type of storage.
+         * *   **capacity_cloud_storage**: This instance uses the Capacity type of storage.
+         * *   **local_ssd_pro**: This instance uses local SSDs.
+         * *   **local_hdd_pro**: This instance uses local HDDs.
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -685,7 +712,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription period of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.
+         * <p>
+         * 
+         * *   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.
+         * *   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.
+         * 
+         * > This parameter is available and required when the PayType parameter is set to **PREPAY**.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -694,7 +727,11 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * FilestoreNum.
+         * The number of LindormDFS nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.
+         * <p>
+         * 
+         * *   If the PayType parameter is set to **PREPAY**, set this parameter to an integer that ranges from **0** to **60**.
+         * *   If the PayType parameter is set to **POSTPAY**, set this parameter to an integer that ranges from **0** to **8**.
          */
         public Builder filestoreNum(Integer filestoreNum) {
             this.putQueryParameter("FilestoreNum", filestoreNum);
@@ -703,7 +740,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * FilestoreSpec.
+         * The specification of LindormDFS nodes in the instance. Set the value of this parameter to **lindorm.c.xlarge**, which indicates that each node has 4 dedicated CPU cores and 8 GB of dedicated memory.
          */
         public Builder filestoreSpec(String filestoreSpec) {
             this.putQueryParameter("FilestoreSpec", filestoreSpec);
@@ -712,7 +749,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * InstanceAlias.
+         * The name of the instance that you want to create.
          */
         public Builder instanceAlias(String instanceAlias) {
             this.putQueryParameter("InstanceAlias", instanceAlias);
@@ -721,7 +758,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * InstanceStorage.
+         * The storage capacity of the instance you want to create. Unit: GB.
          */
         public Builder instanceStorage(String instanceStorage) {
             this.putQueryParameter("InstanceStorage", instanceStorage);
@@ -730,7 +767,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LindormNum.
+         * The number of LindormTable nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.
+         * <p>
+         * 
+         * *   If the PayType parameter is set to **PREPAY**, set this parameter to an integer that ranges from **0** to **90**.
+         * *   If the PayType parameter is set to **POSTPAY**, set this parameter to an integer that ranges from **0** to **400**.
+         * 
+         * **This parameter is required if you want to create a multi-zone instance**.  The valid values of this parameter range from 4 to 400 if you want to create a multi-zone instance.
          */
         public Builder lindormNum(Integer lindormNum) {
             this.putQueryParameter("LindormNum", lindormNum);
@@ -739,7 +782,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LindormSpec.
+         * The specification of LindormTable nodes in the instance. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.c.xlarge**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.
+         * *   **lindorm.c.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.c.4xlarge**: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.c.8xlarge**: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.
          */
         public Builder lindormSpec(String lindormSpec) {
             this.putQueryParameter("LindormSpec", lindormSpec);
@@ -748,7 +797,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogDiskCategory.
+         * The disk type of the log nodes. Valid values:
+         * <p>
+         * 
+         * *   **cloud_efficiency**: This instance uses the Standard type of storage.
+         * *   **cloud_ssd**: This instance uses the Performance type of storage.
+         * 
+         * **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder logDiskCategory(String logDiskCategory) {
             this.putQueryParameter("LogDiskCategory", logDiskCategory);
@@ -757,7 +812,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogNum.
+         * The number of the log nodes. Valid values: 4 to 400. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder logNum(Integer logNum) {
             this.putQueryParameter("LogNum", logNum);
@@ -766,7 +821,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogSingleStorage.
+         * The storage capacity of the disk of a single log node. Valid values: 400 to 64000. Unit: GB. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder logSingleStorage(Integer logSingleStorage) {
             this.putQueryParameter("LogSingleStorage", logSingleStorage);
@@ -775,7 +830,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * LogSpec.
+         * The type of the log nodes. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.sn1.xlarge**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.
+         * *   **lindorm.sn1.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.
+         * 
+         * **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder logSpec(String logSpec) {
             this.putQueryParameter("LogSpec", logSpec);
@@ -784,7 +845,22 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * MultiZoneCombination.
+         * The combinations of zones that are available for the multi-zone instance. You can go to the purchase page of Lindorm to view the supported zone combinations.
+         * <p>
+         * 
+         * *   **ap-southeast-5abc-aliyun**: Zone A+B+C in the Indonesia (Jakarta) region.
+         * *   **cn-hangzhou-ehi-aliyun**: Zone E+H+I in the China (Hangzhou) region.
+         * *   **cn-beijing-acd-aliyun**: Zone A+C+D in the China (Beijing) region.
+         * *   **ap-southeast-1-abc-aliyun**: Zone A+B+C in the Singapore region.
+         * *   **cn-zhangjiakou-abc-aliyun**: Zone A+B+C in the China (Zhangjiakou) region.
+         * *   **cn-shanghai-efg-aliyun**: Zone E+F+G in the China (Shanghai) region.
+         * *   **cn-shanghai-abd-aliyun**: Zone A+B+D in the China (Shanghai) region.
+         * *   **cn-hangzhou-bef-aliyun**: Zone B+E+F in the China (Hangzhou) region.
+         * *   **cn-hangzhou-bce-aliyun**: Zone B+C+E in the China (Hangzhou) region.
+         * *   **cn-beijing-fgh-aliyun**: Zone F+G+H in the China (Beijing) region.
+         * *   **cn-shenzhen-abc-aliyun**: Zone A+B+C in the China (Shenzhen) region.
+         * 
+         * **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder multiZoneCombination(String multiZoneCombination) {
             this.putQueryParameter("MultiZoneCombination", multiZoneCombination);
@@ -811,7 +887,11 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance you want to create. Valid values:
+         * <p>
+         * 
+         * *   **PREPAY**: subscription.
+         * *   **POSTPAY**: pay-as-you-go.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -820,7 +900,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The period based on which you are charged for the instance. Valid values:
+         * <p>
+         * 
+         * *   **Month**: You are charged for the instance on a monthly basis.
+         * *   **Year**: You are charged for the instance on a yearly basis.
+         * 
+         * > This parameter is available and required when the PayType parameter is set to **PREPAY**.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -829,7 +915,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -838,7 +924,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryZoneId.
+         * 多可用区实例，主可用区的可用区ID。**如果需要创建多可用区实例，该参数必填。**
          */
         public Builder primaryZoneId(String primaryZoneId) {
             this.putQueryParameter("PrimaryZoneId", primaryZoneId);
@@ -847,7 +933,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to create the instance. You can call the [DescribeRegions](~~426062~~) operation to query the region in which you can create the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -856,7 +942,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the Lindorm instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -892,7 +978,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * SolrNum.
+         * The number of LindormSearch nodes in the instance. Valid values: integers from **0** to **60**.
          */
         public Builder solrNum(Integer solrNum) {
             this.putQueryParameter("SolrNum", solrNum);
@@ -901,7 +987,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * SolrSpec.
+         * The specification of the LindormSearch nodes in the instance. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder solrSpec(String solrSpec) {
             this.putQueryParameter("SolrSpec", solrSpec);
@@ -910,7 +1002,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
@@ -919,7 +1011,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * StandbyZoneId.
+         * The ID of the secondary zone of the instance. **This parameter is required if you want to create a multi-zone instance**.
          */
         public Builder standbyZoneId(String standbyZoneId) {
             this.putQueryParameter("StandbyZoneId", standbyZoneId);
@@ -928,7 +1020,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * 实例的流引擎节点数量，取值：**0**~**60**。
+         * The number of LindormStream nodes in the instance. Valid values: integers from **0** to **60**.
          */
         public Builder streamNum(Integer streamNum) {
             this.putQueryParameter("StreamNum", streamNum);
@@ -937,16 +1029,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * 实例的流引擎节点规格，取值：
+         * The specification of the LindormStream nodes in the instance. Valid values:
          * <p>
          * 
-         * - **lindorm.g.xlarge**：表示4核16GB（独享规格）。
-         * - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
-         * - **lindorm.g.2xlarge**：表示8核32GB（独享规格）。
-         * - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
-         * - **lindorm.g.4xlarge**：表示16核64GB（独享规格）。
-         * - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
-         * - **lindorm.g.8xlarge**：表示32核128GB（独享规格）。
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder streamSpec(String streamSpec) {
             this.putQueryParameter("StreamSpec", streamSpec);
@@ -955,7 +1044,11 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * TsdbNum.
+         * The number of the LindormTSDB nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.
+         * <p>
+         * 
+         * *   If the PayType parameter is set to **PREPAY**, set this parameter to an integer that ranges from **0** to **24**.
+         * *   If the PayType parameter is set to **POSTPAY**, set this parameter to an integer that ranges from **0** to **32**.
          */
         public Builder tsdbNum(Integer tsdbNum) {
             this.putQueryParameter("TsdbNum", tsdbNum);
@@ -964,7 +1057,13 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * TsdbSpec.
+         * The specification of the LindormTSDB nodes in the instance. Valid values:
+         * <p>
+         * 
+         * *   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.
+         * *   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.
+         * *   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.
+         * *   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.
          */
         public Builder tsdbSpec(String tsdbSpec) {
             this.putQueryParameter("TsdbSpec", tsdbSpec);
@@ -973,7 +1072,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The ID of the VPC in which you want to create the instance.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -982,7 +1081,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which you want the instance to connect.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -991,7 +1090,7 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone in which you want to create the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

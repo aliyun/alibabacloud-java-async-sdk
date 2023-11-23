@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLindormInstanceEngineListResponse} extends {@link TeaModel}
+ * {@link CreateLdpsNamespaceResponse} extends {@link TeaModel}
  *
- * <p>GetLindormInstanceEngineListResponse</p>
+ * <p>CreateLdpsNamespaceResponse</p>
  */
-public class GetLindormInstanceEngineListResponse extends Response {
+public class CreateLdpsNamespaceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetLindormInstanceEngineListResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetLindormInstanceEngineListResponseBody body;
+    private CreateLdpsNamespaceResponseBody body;
 
-    private GetLindormInstanceEngineListResponse(BuilderImpl builder) {
+    private CreateLdpsNamespaceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetLindormInstanceEngineListResponse create() {
+    public static CreateLdpsNamespaceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetLindormInstanceEngineListResponse extends Response {
     /**
      * @return body
      */
-    public GetLindormInstanceEngineListResponseBody getBody() {
+    public CreateLdpsNamespaceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetLindormInstanceEngineListResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateLdpsNamespaceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetLindormInstanceEngineListResponseBody body);
+        Builder body(CreateLdpsNamespaceResponseBody body);
 
         @Override
-        GetLindormInstanceEngineListResponse build();
+        CreateLdpsNamespaceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetLindormInstanceEngineListResponse, Builder>
+            extends Response.BuilderImpl<CreateLdpsNamespaceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetLindormInstanceEngineListResponseBody body; 
+        private CreateLdpsNamespaceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetLindormInstanceEngineListResponse response) {
+        private BuilderImpl(CreateLdpsNamespaceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetLindormInstanceEngineListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetLindormInstanceEngineListResponseBody body) {
+        public Builder body(CreateLdpsNamespaceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetLindormInstanceEngineListResponse build() {
-            return new GetLindormInstanceEngineListResponse(this);
+        public CreateLdpsNamespaceResponse build() {
+            return new CreateLdpsNamespaceResponse(this);
         } 
 
     } 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetLindormInstanceEngineListResponse} extends {@link TeaModel}
+ * {@link GetLdpsNamespacedQuotaResponse} extends {@link TeaModel}
  *
- * <p>GetLindormInstanceEngineListResponse</p>
+ * <p>GetLdpsNamespacedQuotaResponse</p>
  */
-public class GetLindormInstanceEngineListResponse extends Response {
+public class GetLdpsNamespacedQuotaResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetLindormInstanceEngineListResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetLindormInstanceEngineListResponseBody body;
+    private GetLdpsNamespacedQuotaResponseBody body;
 
-    private GetLindormInstanceEngineListResponse(BuilderImpl builder) {
+    private GetLdpsNamespacedQuotaResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetLindormInstanceEngineListResponse create() {
+    public static GetLdpsNamespacedQuotaResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetLindormInstanceEngineListResponse extends Response {
     /**
      * @return body
      */
-    public GetLindormInstanceEngineListResponseBody getBody() {
+    public GetLdpsNamespacedQuotaResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetLindormInstanceEngineListResponse, Builder> {
+    public interface Builder extends Response.Builder<GetLdpsNamespacedQuotaResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetLindormInstanceEngineListResponseBody body);
+        Builder body(GetLdpsNamespacedQuotaResponseBody body);
 
         @Override
-        GetLindormInstanceEngineListResponse build();
+        GetLdpsNamespacedQuotaResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetLindormInstanceEngineListResponse, Builder>
+            extends Response.BuilderImpl<GetLdpsNamespacedQuotaResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetLindormInstanceEngineListResponseBody body; 
+        private GetLdpsNamespacedQuotaResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetLindormInstanceEngineListResponse response) {
+        private BuilderImpl(GetLdpsNamespacedQuotaResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetLindormInstanceEngineListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetLindormInstanceEngineListResponseBody body) {
+        public Builder body(GetLdpsNamespacedQuotaResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetLindormInstanceEngineListResponse build() {
-            return new GetLindormInstanceEngineListResponse(this);
+        public GetLdpsNamespacedQuotaResponse build() {
+            return new GetLdpsNamespacedQuotaResponse(this);
         } 
 
     } 

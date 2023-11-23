@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateLdpsNamespaceResponse> createLdpsNamespace(CreateLdpsNamespaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLdpsNamespace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLdpsNamespaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLdpsNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine types](~~181971~~) and [Select storage types](~~174643~~).
+      *
+     */
+    @Override
     public CompletableFuture<CreateLindormInstanceResponse> createLindormInstance(CreateLindormInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -76,6 +94,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceIpWhiteListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetLdpsNamespacedQuotaResponse> getLdpsNamespacedQuota(GetLdpsNamespacedQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLdpsNamespacedQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLdpsNamespacedQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLdpsNamespacedQuotaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -185,7 +217,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+      * You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.
       *
      */
     @Override
@@ -230,10 +263,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ***
-      *
-     */
     @Override
     public CompletableFuture<UpdateInstanceIpWhiteListResponse> updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request) {
         try {
@@ -249,7 +278,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+      * For more information about how to select the storage type and engine type when you create a Lindorm instance, see [Select engine typpes](~~181971~~) and [Select storage types](~~174643~~).
       *
      */
     @Override
