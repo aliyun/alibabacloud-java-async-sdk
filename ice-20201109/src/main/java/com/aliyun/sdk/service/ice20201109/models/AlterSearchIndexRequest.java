@@ -17,6 +17,10 @@ public class AlterSearchIndexRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("IndexConfig")
+    private String indexConfig;
+
+    @Query
     @NameInMap("IndexStatus")
     private String indexStatus;
 
@@ -32,6 +36,7 @@ public class AlterSearchIndexRequest extends Request {
     private AlterSearchIndexRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.indexConfig = builder.indexConfig;
         this.indexStatus = builder.indexStatus;
         this.indexType = builder.indexType;
         this.searchLibName = builder.searchLibName;
@@ -58,6 +63,13 @@ public class AlterSearchIndexRequest extends Request {
     }
 
     /**
+     * @return indexConfig
+     */
+    public String getIndexConfig() {
+        return this.indexConfig;
+    }
+
+    /**
      * @return indexStatus
      */
     public String getIndexStatus() {
@@ -80,6 +92,7 @@ public class AlterSearchIndexRequest extends Request {
 
     public static final class Builder extends Request.Builder<AlterSearchIndexRequest, Builder> {
         private String regionId; 
+        private String indexConfig; 
         private String indexStatus; 
         private String indexType; 
         private String searchLibName; 
@@ -91,6 +104,7 @@ public class AlterSearchIndexRequest extends Request {
         private Builder(AlterSearchIndexRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.indexConfig = request.indexConfig;
             this.indexStatus = request.indexStatus;
             this.indexType = request.indexType;
             this.searchLibName = request.searchLibName;
@@ -102,6 +116,15 @@ public class AlterSearchIndexRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * IndexConfig.
+         */
+        public Builder indexConfig(String indexConfig) {
+            this.putQueryParameter("IndexConfig", indexConfig);
+            this.indexConfig = indexConfig;
             return this;
         }
 
