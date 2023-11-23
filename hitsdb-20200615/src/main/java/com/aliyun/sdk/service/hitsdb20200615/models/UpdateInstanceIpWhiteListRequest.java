@@ -21,6 +21,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     private Boolean delete;
 
     @Query
+    @NameInMap("GroupName")
+    private String groupName;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -56,6 +60,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.delete = builder.delete;
+        this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -90,6 +95,13 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
      */
     public Boolean getDelete() {
         return this.delete;
+    }
+
+    /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -144,6 +156,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceIpWhiteListRequest, Builder> {
         private String regionId; 
         private Boolean delete; 
+        private String groupName; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -160,6 +173,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.delete = request.delete;
+            this.groupName = request.groupName;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -184,6 +198,15 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         public Builder delete(Boolean delete) {
             this.putQueryParameter("Delete", delete);
             this.delete = delete;
+            return this;
+        }
+
+        /**
+         * The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
             return this;
         }
 
