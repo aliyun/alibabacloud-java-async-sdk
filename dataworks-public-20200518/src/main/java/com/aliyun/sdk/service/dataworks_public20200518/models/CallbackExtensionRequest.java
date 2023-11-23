@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CallbackExtensionRequest</p>
  */
 public class CallbackExtensionRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("CheckMessage")
     private String checkMessage;
@@ -33,6 +37,7 @@ public class CallbackExtensionRequest extends Request {
 
     private CallbackExtensionRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.checkMessage = builder.checkMessage;
         this.checkResult = builder.checkResult;
         this.extensionCode = builder.extensionCode;
@@ -50,6 +55,13 @@ public class CallbackExtensionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,6 +93,7 @@ public class CallbackExtensionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CallbackExtensionRequest, Builder> {
+        private String regionId; 
         private String checkMessage; 
         private String checkResult; 
         private String extensionCode; 
@@ -92,11 +105,21 @@ public class CallbackExtensionRequest extends Request {
 
         private Builder(CallbackExtensionRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.checkMessage = request.checkMessage;
             this.checkResult = request.checkResult;
             this.extensionCode = request.extensionCode;
             this.messageId = request.messageId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * CheckMessage.
