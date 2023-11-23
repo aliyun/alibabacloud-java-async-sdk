@@ -40,6 +40,7 @@ public class ListRepositoryRequest extends Request {
 
     @Query
     @NameInMap("RepoStatus")
+    @Validation(required = true)
     private String repoStatus;
 
     private ListRepositoryRequest(Builder builder) {
