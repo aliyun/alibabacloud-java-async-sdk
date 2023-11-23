@@ -173,7 +173,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +182,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Creates tags and adds them to a resource.
+         * The IDs of the resources. You can enter most at 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,7 +209,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * $.parameters[2].schema.example
+         * The type of the resource. Set the value to **cen**, which specifies a CEN instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -218,7 +218,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 79517
+         * The list of tags that you want to associate with the resources.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -272,7 +272,12 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * You can enter multiple tag keys. Valid values of **N**: **1** to **20**.
+             * 
+             * The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +285,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.
+             * 
+             * The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

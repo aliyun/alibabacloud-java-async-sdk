@@ -38,7 +38,7 @@ public class DetachCenChildInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The AccessKeyId is unauthorized.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

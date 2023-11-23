@@ -153,7 +153,12 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         } 
 
         /**
-         * The ID of the request.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +167,11 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RemoveTraficMatchRuleFromTrafficMarkingPolicy**.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -207,7 +216,10 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * TrafficMarkRuleIds.
+         * The ID of the traffic classification rule.
+         * <p>
+         * 
+         * You can specify at most 20 traffic classification rules.
          */
         public Builder trafficMarkRuleIds(java.util.List < String > trafficMarkRuleIds) {
             this.putQueryParameter("TrafficMarkRuleIds", trafficMarkRuleIds);
@@ -216,7 +228,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         }
 
         /**
-         * Deletes specified traffic classification rules from a traffic marking policy.
+         * The ID of the traffic marking policy.
          */
         public Builder trafficMarkingPolicyId(String trafficMarkingPolicyId) {
             this.putQueryParameter("TrafficMarkingPolicyId", trafficMarkingPolicyId);

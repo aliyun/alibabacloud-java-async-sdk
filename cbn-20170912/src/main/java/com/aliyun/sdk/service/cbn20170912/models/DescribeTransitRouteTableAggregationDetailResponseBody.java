@@ -74,7 +74,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         private Integer total; 
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          */
         public Builder count(Integer count) {
             this.count = count;

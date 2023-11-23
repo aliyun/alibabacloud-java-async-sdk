@@ -171,7 +171,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         } 
 
         /**
-         * Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
+         * The ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -189,7 +189,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * The network instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,12 +198,12 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
+         * The type of the network instance. Default values:
          * <p>
          * 
          * *   **VPC**: VPC
          * *   **ExpressConnect**: VBR
-         * *   **VPN**: IPsec-VPN connection
+         * *   **VPN**: IPsec connection
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -230,7 +230,7 @@ public class RevokeInstanceFromTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
+         * The region ID of the network instance.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.

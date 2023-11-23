@@ -170,7 +170,9 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeGrantRulesToResource**.
+         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
+         * <p>
+         * *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -179,11 +181,11 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that was returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -210,7 +212,12 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **ExpressConnect**: virtual border router (VBR)
+         * *   **VPN**: IPsec-VPN connection
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -219,7 +226,10 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The ID of the network instance.
+         * The region ID of the network instance.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,12 +238,7 @@ public class DescribeGrantRulesToResourceRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
-         * <p>
-         * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **ExpressConnect**: virtual border router (VBR)
-         * *   **VPN**: IPsec-VPN connection
+         * The network instance ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

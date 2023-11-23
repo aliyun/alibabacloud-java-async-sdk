@@ -168,7 +168,10 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         } 
 
         /**
-         * The ID of the request.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +180,11 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -186,11 +193,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * Specifies whether only to check the request. Valid values:
-         * <p>
-         * 
-         * *   **true**: only prechecks the API request. The multicast source is not deleted. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. After the request passes the precheck, the multicast source is deleted.
+         * The IP address of the multicast group to which the multicast source belongs.
          */
         public Builder groupIpAddress(String groupIpAddress) {
             this.putQueryParameter("GroupIpAddress", groupIpAddress);
@@ -199,7 +202,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * Deletes a multicast source.
+         * The IDs of the multicast sources that you want to delete.
          */
         public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
@@ -244,7 +247,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends Request
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DeregisterTransitRouterMulticastGroupSources**.
+         * The ID of the multicast domain to which the multicast source belongs.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);

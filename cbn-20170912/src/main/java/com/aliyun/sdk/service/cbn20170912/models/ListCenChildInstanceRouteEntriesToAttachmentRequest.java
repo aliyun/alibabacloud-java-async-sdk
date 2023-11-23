@@ -214,7 +214,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The number of entries returned per page. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

@@ -181,7 +181,12 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,7 +195,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Default values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and sends the request.
+         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -235,7 +244,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * RouteTableOptions.
+         * The features of the route table.
          */
         public Builder routeTableOptions(RouteTableOptions routeTableOptions) {
             this.putQueryParameter("RouteTableOptions", routeTableOptions);
@@ -244,7 +253,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableDescription.
+         * The description of the route table.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -253,7 +265,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableId.
+         * The ID of the route table of the Enterprise Edition transit router.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -262,7 +274,10 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
         }
 
         /**
-         * TransitRouterRouteTableName.
+         * The name of the route table.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);
@@ -304,7 +319,11 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
             private String multiRegionECMP; 
 
             /**
-             * MultiRegionECMP.
+             * Indicates whether multi-region ECMP routing is enabled. Valid values:
+             * <p>
+             * 
+             * - **disable**: If multi-region ECMP routing is disabled, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetic order. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
+             * - **enable**: If multi-region ECMP routing is enabled, routes that are learned from different regions but have the same prefix and attributes form an ECMP route. The network latency and bandwidth consumption also vary based on the region. Proceed with caution.
              */
             public Builder multiRegionECMP(String multiRegionECMP) {
                 this.multiRegionECMP = multiRegionECMP;

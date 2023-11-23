@@ -185,10 +185,7 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -197,7 +194,7 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * CenOwnerId.
+         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -206,7 +203,7 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the network instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -215,7 +212,12 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GrantInstanceToTransitRouter**.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: VPC
+         * *   **ExpressConnect**: VBR
+         * *   **VPN**: IPsec connection
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -224,7 +226,11 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The entity that pays the fees of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+         * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -251,7 +257,10 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

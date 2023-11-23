@@ -207,7 +207,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * 要查询的网络实例ID。
+         * The ID of the network instance that you want to query.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -216,7 +216,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * 网络实例所属阿里云账号（主账号）ID。
+         * The ID of the Alibaba Cloud account to which the network instance belongs.
          */
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
@@ -225,11 +225,9 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**.
+         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries returned.
          * <p>
-         * 
-         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries.
-         * *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+         * *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

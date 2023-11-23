@@ -431,7 +431,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

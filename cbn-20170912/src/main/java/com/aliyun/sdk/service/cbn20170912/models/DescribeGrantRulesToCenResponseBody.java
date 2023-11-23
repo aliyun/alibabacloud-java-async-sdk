@@ -94,7 +94,9 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * *   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.
+         * <p>
+         * *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -291,8 +293,8 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
              * The entity that pays the fees of the network instance. Valid values:
              * <p>
              * 
-             * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
-             * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
+             * *   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.
+             * *   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

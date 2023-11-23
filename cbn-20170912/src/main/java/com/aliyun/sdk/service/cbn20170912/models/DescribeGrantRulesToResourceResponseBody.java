@@ -86,7 +86,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The permissions that are granted to the CEN instance.
          */
         public Builder grantRules(java.util.List < GrantRules> grantRules) {
             this.grantRules = grantRules;
@@ -94,11 +94,9 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The entity that pays the fees of the network instance. Valid values:
+         * *   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.
          * <p>
-         * 
-         * *   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.
-         * *   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.
+         * *   If a value is specified for **MaxResults**, query results are returned in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -106,7 +104,11 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If the **NextToken** parameter is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,10 +116,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the network instance is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,9 +124,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
-         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
-         * <p>
-         * *   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -191,7 +188,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             private String orderType; 
 
             /**
-             * CenId.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -199,7 +196,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CenOwnerId.
+             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -207,7 +204,11 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The entity that pays the fees of the network instance. Valid values: Valid values:
+             * <p>
+             * 
+             * *   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.
+             * *   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;

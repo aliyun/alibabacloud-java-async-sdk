@@ -22,6 +22,7 @@ public class ListTransitRouterAvailableResourceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
