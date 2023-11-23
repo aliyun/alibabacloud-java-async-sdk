@@ -86,7 +86,11 @@ public class CreateEventSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
+         * The returned response code. Valid values:
+         * <p>
+         * 
+         * *   Success: The request is successful.
+         * *   Other codes: The request failed. For more information about error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class CreateEventSourceResponseBody extends TeaModel {
             private String eventSourceARN; 
 
             /**
-             * The ARN of the event source.
+             * The Alibaba Cloud Resource Name (ARN) of the resource.
              */
             public Builder eventSourceARN(String eventSourceARN) {
                 this.eventSourceARN = eventSourceARN;

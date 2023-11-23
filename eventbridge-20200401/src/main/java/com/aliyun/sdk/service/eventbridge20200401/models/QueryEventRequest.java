@@ -22,10 +22,15 @@ public class QueryEventRequest extends Request {
     @Validation(required = true)
     private String eventId;
 
+    @Query
+    @NameInMap("EventSource")
+    private String eventSource;
+
     private QueryEventRequest(Builder builder) {
         super(builder);
         this.eventBusName = builder.eventBusName;
         this.eventId = builder.eventId;
+        this.eventSource = builder.eventSource;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class QueryEventRequest extends Request {
         return this.eventId;
     }
 
+    /**
+     * @return eventSource
+     */
+    public String getEventSource() {
+        return this.eventSource;
+    }
+
     public static final class Builder extends Request.Builder<QueryEventRequest, Builder> {
         private String eventBusName; 
         private String eventId; 
+        private String eventSource; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class QueryEventRequest extends Request {
             super(request);
             this.eventBusName = request.eventBusName;
             this.eventId = request.eventId;
+            this.eventSource = request.eventSource;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class QueryEventRequest extends Request {
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
+            return this;
+        }
+
+        /**
+         * EventSource.
+         */
+        public Builder eventSource(String eventSource) {
+            this.putQueryParameter("EventSource", eventSource);
+            this.eventSource = eventSource;
             return this;
         }
 

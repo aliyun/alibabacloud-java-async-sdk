@@ -200,7 +200,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * Then name of the event source.
+         * The name of the event source.
          */
         public Builder eventSourceName(String eventSourceName) {
             this.putBodyParameter("EventSourceName", eventSourceName);
@@ -229,7 +229,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is Message Service (MNS).
+         * The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.
          */
         public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
             String sourceMNSParametersShrink = shrink(sourceMNSParameters, "SourceMNSParameters", "json");
@@ -360,7 +360,7 @@ public class CreateEventSourceRequest extends Request {
             private String type; 
 
             /**
-             * The CIDR blocks that are used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter CIDR blocks or IP addresses.
+             * The CIDR block that is used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter a CIDR block or an IP address.
              */
             public Builder ip(java.util.List < String > ip) {
                 this.ip = ip;
@@ -368,7 +368,18 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The HTTP request method that is supported by the generated webhook URL. You can select multiple values. Valid values: GET GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS, TRACE, and CONNECT.
+             * The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:
+             * <p>
+             * 
+             * *   GET
+             * *   POST
+             * *   PUT
+             * *   PATCH
+             * *   DELETE
+             * *   HEAD
+             * *   OPTIONS
+             * *   TRACE
+             * *   CONNECT
              */
             public Builder method(java.util.List < String > method) {
                 this.method = method;
@@ -376,7 +387,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The security domain names. This parameter is required only if you set SecurityConfig to referer. You can enter domain names.
+             * The security domain name. This parameter is required only if you set SecurityConfig to referer. You can enter a domain name.
              */
             public Builder referer(java.util.List < String > referer) {
                 this.referer = referer;
@@ -384,7 +395,12 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The security settings. Valid values: none: No configuration is required. ip: CIDR blocks. referer: security domain names.
+             * The type of security settings. Valid values:
+             * <p>
+             * 
+             * *   none: No configuration is required.
+             * *   ip: CIDR block.
+             * *   referer: security domain name.
              */
             public Builder securityConfig(String securityConfig) {
                 this.securityConfig = securityConfig;
@@ -392,7 +408,12 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The protocol type that is supported by the generated webhook URL. Valid values: HTTP, HTTPS, and HTTP\&HTTPS.
+             * The protocol type that is supported by the generated webhook URL. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
+             * *   HTTP\&HTTPS
              */
             public Builder type(String type) {
                 this.type = type;
@@ -565,7 +586,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The network. Valid values: Default and PublicNetwork.
+             * The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
              */
             public Builder network(String network) {
                 this.network = network;
@@ -589,7 +610,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required if you set Network to PublicNetwork.
+             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -597,7 +618,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for Apache Kafka instance.
+             * The name of the topic on the Message Queue for Apache Kafka instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -605,7 +626,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required if you set Network to PublicNetwork.
+             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -613,7 +634,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required if you set Network to PublicNetwork.
+             * The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -678,7 +699,7 @@ public class CreateEventSourceRequest extends Request {
             private String regionId; 
 
             /**
-             * Specifies whether to enable Base64 decoding. Default value: true.
+             * Specifies whether to enable Base64 decoding. Valid values: true and false.
              */
             public Builder isBase64Decode(Boolean isBase64Decode) {
                 this.isBase64Decode = isBase64Decode;
@@ -694,7 +715,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The region where the MNS queue resides.
+             * The region where the MNS queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -779,7 +800,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the queue in the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -795,7 +816,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The vhost name of the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -1016,7 +1037,7 @@ public class CreateEventSourceRequest extends Request {
             private String topic; 
 
             /**
-             * AuthType.
+             * The authentication type. You can set this parameter to ACL or leave this parameter empty.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -1024,7 +1045,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
+             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
              */
             public Builder groupID(String groupID) {
                 this.groupID = groupID;
@@ -1032,7 +1053,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * InstanceEndpoint.
+             * The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -1040,7 +1061,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see Limits.
+             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1056,7 +1077,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * InstancePassword.
+             * The password that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -1075,10 +1096,8 @@ public class CreateEventSourceRequest extends Request {
              * The type of the Message Queue for Apache RocketMQ instance. Valid values:
              * <p>
              * 
-             * 
-             * - Cloud\_4: Message Queue for Apache RocketMQ 4.0 instances.
-             * 
-             *  - Cloud\_5: Message Queue for Apache RocketMQ 5.0 instances.
+             * *   Cloud\_4: Message Queue for Apache RocketMQ 4.0 instance.
+             * *   Cloud\_5: Message Queue for Apache RocketMQ 5.0 instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1086,7 +1105,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * InstanceUsername.
+             * The username that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -1110,7 +1129,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The offset from which messages are consumed. Valid values: CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset. CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset. CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
+             * The offset from which message consumption starts. Valid values: CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -1118,7 +1137,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The region in which the Message Queue for Apache RocketMQ instance resides.
+             * The region where the Message Queue for Apache RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1126,7 +1145,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The tags that are used to filter messages.
+             * The tag that is used to filter messages.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1142,7 +1161,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for Apache RocketMQ instance. For more information, see Limits.
+             * The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1265,7 +1284,7 @@ public class CreateEventSourceRequest extends Request {
         private String timeZone;
 
         @NameInMap("UserData")
-        private java.util.Map < String, ? > userData;
+        private String userData;
 
         private SourceScheduledEventParameters(Builder builder) {
             this.schedule = builder.schedule;
@@ -1298,17 +1317,17 @@ public class CreateEventSourceRequest extends Request {
         /**
          * @return userData
          */
-        public java.util.Map < String, ? > getUserData() {
+        public String getUserData() {
             return this.userData;
         }
 
         public static final class Builder {
             private String schedule; 
             private String timeZone; 
-            private java.util.Map < String, ? > userData; 
+            private String userData; 
 
             /**
-             * The Cron expression.
+             * The cron expression.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -1316,7 +1335,7 @@ public class CreateEventSourceRequest extends Request {
             }
 
             /**
-             * The time zone in which the Cron expression is executed.
+             * The time zone in which the cron expression is executed.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -1326,7 +1345,7 @@ public class CreateEventSourceRequest extends Request {
             /**
              * UserData.
              */
-            public Builder userData(java.util.Map < String, ? > userData) {
+            public Builder userData(String userData) {
                 this.userData = userData;
                 return this;
             }

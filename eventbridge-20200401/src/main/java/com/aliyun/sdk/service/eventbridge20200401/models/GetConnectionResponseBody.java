@@ -102,7 +102,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -170,7 +170,7 @@ public class GetConnectionResponseBody extends TeaModel {
             private String apiKeyValue; 
 
             /**
-             * The API key.
+             * The key of the API key.
              */
             public Builder apiKeyName(String apiKeyName) {
                 this.apiKeyName = apiKeyName;
@@ -231,7 +231,7 @@ public class GetConnectionResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The password for basic authentication.
+             * The password of basic authentication.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -239,7 +239,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The username for basic authentication.
+             * The username of basic authentication.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -608,7 +608,7 @@ public class GetConnectionResponseBody extends TeaModel {
             private java.util.List < QueryStringParameters> queryStringParameters; 
 
             /**
-             * The parameters that are returned for the request body.
+             * The information about the request body.
              */
             public Builder bodyParameters(java.util.List < BodyParameters> bodyParameters) {
                 this.bodyParameters = bodyParameters;
@@ -616,7 +616,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for the request header.
+             * The information about the request header.
              */
             public Builder headerParameters(java.util.List < HeaderParameters> headerParameters) {
                 this.headerParameters = headerParameters;
@@ -624,7 +624,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for the request path.
+             * The information about the request path.
              */
             public Builder queryStringParameters(java.util.List < QueryStringParameters> queryStringParameters) {
                 this.queryStringParameters = queryStringParameters;
@@ -709,7 +709,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for the client.
+             * The information about the client.
              */
             public Builder clientParameters(ClientParameters clientParameters) {
                 this.clientParameters = clientParameters;
@@ -720,9 +720,9 @@ public class GetConnectionResponseBody extends TeaModel {
              * The HTTP request method. Valid values:
              * <p>
              * 
-             * * **GET**
-             * * **POST**
-             * * **HEAD**
+             * *   GET
+             * *   POST
+             * *   HEAD
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -730,7 +730,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The request parameters that are returned for OAuth authentication.
+             * The request parameters of OAuth authentication.
              */
             public Builder oAuthHttpParameters(OAuthHttpParameters oAuthHttpParameters) {
                 this.oAuthHttpParameters = oAuthHttpParameters;
@@ -807,7 +807,7 @@ public class GetConnectionResponseBody extends TeaModel {
             private OAuthParameters oAuthParameters; 
 
             /**
-             * The parameters that are returned for API key authentication.
+             * The information about API key authentication.
              */
             public Builder apiKeyAuthParameters(ApiKeyAuthParameters apiKeyAuthParameters) {
                 this.apiKeyAuthParameters = apiKeyAuthParameters;
@@ -815,14 +815,12 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication type. Valid values:
+             * The authentication method. Valid values:
              * <p>
              * 
-             * * **BASIC_AUTH**: basic authentication.
-             * 
-             * * **API_KEY_AUTH**: API key authentication.
-             * 
-             * * **OAUTH_AUTH**: OAuth authentication.
+             * *   BASIC_AUTH: basic authentication.
+             * *   API_KEY_AUTH: API key authentication.
+             * *   OAUTH_AUTH: OAuth authentication.
              */
             public Builder authorizationType(String authorizationType) {
                 this.authorizationType = authorizationType;
@@ -830,7 +828,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for basic authentication.
+             * The information about basic authentication.
              */
             public Builder basicAuthParameters(BasicAuthParameters basicAuthParameters) {
                 this.basicAuthParameters = basicAuthParameters;
@@ -838,7 +836,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for OAuth authentication.
+             * The information about OAuth authentication.
              */
             public Builder oAuthParameters(OAuthParameters oAuthParameters) {
                 this.oAuthParameters = oAuthParameters;
@@ -915,10 +913,9 @@ public class GetConnectionResponseBody extends TeaModel {
             private String vswitcheId; 
 
             /**
-             * * **PublicNetwork**: the Internet.
+             * *   PublicNetwork: the Internet.
              * <p>
-             * 
-             * * **PrivateNetwork**: virtual private cloud (VPC).
+             * *   PrivateNetwork: virtual private cloud (VPC).
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1043,7 +1040,7 @@ public class GetConnectionResponseBody extends TeaModel {
             private NetworkParameters networkParameters; 
 
             /**
-             * The parameters that are returned for authentication.
+             * The authentication methods.
              */
             public Builder authParameters(AuthParameters authParameters) {
                 this.authParameters = authParameters;
@@ -1051,7 +1048,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queried connection.
+             * The connection name.
              */
             public Builder connectionName(String connectionName) {
                 this.connectionName = connectionName;
@@ -1083,7 +1080,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned for the network.
+             * The information about the network.
              */
             public Builder networkParameters(NetworkParameters networkParameters) {
                 this.networkParameters = networkParameters;

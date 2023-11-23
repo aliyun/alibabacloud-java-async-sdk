@@ -86,7 +86,11 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The code 200 indicates that the request is successful. Other codes indicate that the call failed. For more information about error codes, see Error codes.
+         * The returned response code. Valid values:
+         * <p>
+         * 
+         * *   Success: The request is successful.
+         * *   Other codes: The request failed. For more information about error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class UpdateEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

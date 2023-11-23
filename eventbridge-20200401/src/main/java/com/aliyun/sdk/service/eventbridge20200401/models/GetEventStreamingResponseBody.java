@@ -86,7 +86,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code. The value Success indicates that the request is successful.
+         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,7 +118,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Integer timeBasedWindow; 
 
             /**
-             * The maximum number of events that are allowed in the batch window. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+             * The maximum number of events that are allowed in the batch window. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder countBasedWindow(Integer countBasedWindow) {
                 this.countBasedWindow = countBasedWindow;
@@ -178,7 +178,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum period of time during which events are allowed in the batch window. Unit: seconds. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+             * The maximum period of time during which events are allowed in the batch window. Unit: seconds. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder timeBasedWindow(Integer timeBasedWindow) {
                 this.timeBasedWindow = timeBasedWindow;
@@ -389,7 +389,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private RetryStrategy retryStrategy; 
 
             /**
-             * The information about the batch window.
+             * The batch window.
              */
             public Builder batchWindow(BatchWindow batchWindow) {
                 this.batchWindow = batchWindow;
@@ -397,7 +397,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.
+             * Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -575,7 +575,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -656,7 +656,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -737,7 +737,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -818,7 +818,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -899,7 +899,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1024,7 +1024,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Function Compute function.
+             * The function name.
              */
             public Builder functionName(FunctionName functionName) {
                 this.functionName = functionName;
@@ -1032,7 +1032,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The invocation type. Valid values: Sync Async
+             * The invocation type. Valid values: Sync: synchronous Async: asynchronous
              */
             public Builder invocationType(InvocationType invocationType) {
                 this.invocationType = invocationType;
@@ -1048,7 +1048,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The service name.
              */
             public Builder serviceName(ServiceName serviceName) {
                 this.serviceName = serviceName;
@@ -1113,7 +1113,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method that is used to transform the event. Default value: CONSTANT.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1121,7 +1121,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1129,7 +1129,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The execution name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1194,7 +1194,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method that is used to transform the event. Default value: CONSTANT.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1202,7 +1202,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1210,7 +1210,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The flow name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1275,7 +1275,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method that is used to transform the event. Default value: CONSTANT.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1283,7 +1283,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1291,7 +1291,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The execution input information.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1356,7 +1356,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The method that is used to transform the event. Default value: CONSTANT.
+             * The method that is used to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1364,7 +1364,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1372,7 +1372,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * The role configuration.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1449,7 +1449,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private RoleName roleName; 
 
             /**
-             * ExecutionName.
+             * The execution name.
              */
             public Builder executionName(ExecutionName executionName) {
                 this.executionName = executionName;
@@ -1457,7 +1457,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * The flow name.
              */
             public Builder flowName(FlowName flowName) {
                 this.flowName = flowName;
@@ -1465,7 +1465,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The execution input information.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1473,7 +1473,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The role name.
              */
             public Builder roleName(RoleName roleName) {
                 this.roleName = roleName;
@@ -1546,7 +1546,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1627,7 +1627,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1708,7 +1708,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1789,7 +1789,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1975,7 +1975,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Message Queue for Apache Kafka instance.
+             * The target service type is Message Queue for Apache Kafka.
              */
             public Builder instanceId(InstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -2153,7 +2153,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2234,7 +2234,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2315,7 +2315,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable Base64 encoding.
+             * Indicates whether Base64 encoding is enabled.
              */
             public Builder isBase64Encode(IsBase64Encode isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -2323,7 +2323,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the MNS queue.
+             * The target service type is MNS.
              */
             public Builder queueName(QueueName queueName) {
                 this.queueName = queueName;
@@ -2477,7 +2477,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2558,7 +2558,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2801,7 +2801,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2882,7 +2882,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2963,7 +2963,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3044,7 +3044,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3197,7 +3197,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The exchange mode. This parameter is available only if you set TargetType to Exchange.
+             * The exchange mode. This parameter is available only if TargetType is set to Exchange.
              */
             public Builder exchange(Exchange exchange) {
                 this.exchange = exchange;
@@ -3205,7 +3205,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Message Queue for RabbitMQ instance.
+             * The target service type is Message Queue for RabbitMQ instance.
              */
             public Builder instanceId(SinkRabbitMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -3229,7 +3229,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The queue mode. This parameter is available only if you set TargetType to Queue.
+             * The queue mode. This parameter is available only if TargetType is set to Queue.
              */
             public Builder queueName(SinkRabbitMQParametersQueueName queueName) {
                 this.queueName = queueName;
@@ -3237,7 +3237,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The routing rule for the message. This parameter is available only if you set TargetType to Exchange.
+             * The routing rule for the message. This parameter is available only if TargetType is set to Exchange.
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -3245,7 +3245,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource to which the event is delivered.
+             * The target type.
              */
             public Builder targetType(TargetType targetType) {
                 this.targetType = targetType;
@@ -3253,7 +3253,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The vhost name of the Message Queue for RabbitMQ instance.
+             * The name of the vhost of the Message Queue for RabbitMQ instance.
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -3407,7 +3407,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3731,7 +3731,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3848,7 +3848,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for Apache RocketMQ.
+             * The target service type is Message Queue for Apache RocketMQ.
              */
             public Builder instanceId(SinkRocketMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -4034,7 +4034,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4115,7 +4115,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4196,7 +4196,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4277,7 +4277,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The template style.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4382,7 +4382,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service Logstore.
+             * The Simple Log Service Logstore.
              */
             public Builder logStore(LogStore logStore) {
                 this.logStore = logStore;
@@ -4390,7 +4390,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service project.
+             * The Simple Log Service project.
              */
             public Builder project(Project project) {
                 this.project = project;
@@ -4398,7 +4398,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -4406,7 +4406,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
+             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Simple Log Service.
              */
             public Builder topic(SinkSLSParametersTopic topic) {
                 this.topic = topic;
@@ -4519,7 +4519,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SinkSLSParameters sinkSLSParameters; 
 
             /**
-             * The parameters that are configured if the event target is Function Compute.
+             * The parameters that are returned if the event target is Function Compute.
              */
             public Builder sinkFcParameters(SinkFcParameters sinkFcParameters) {
                 this.sinkFcParameters = sinkFcParameters;
@@ -4527,7 +4527,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * SinkFnfParameters.
+             * The Sink Fnf parameters.
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
@@ -4535,7 +4535,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for Apache Kafka.
+             * The parameters that are returned if the event target is Message Queue for Apache Kafka.
              */
             public Builder sinkKafkaParameters(SinkKafkaParameters sinkKafkaParameters) {
                 this.sinkKafkaParameters = sinkKafkaParameters;
@@ -4543,7 +4543,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event target is MNS.
+             * The parameters that are returned if the event target is Message Service (MNS).
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -4551,7 +4551,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for RabbitMQ.
+             * The parameters that are returned if the event target is Message Queue for RabbitMQ.
              */
             public Builder sinkRabbitMQParameters(SinkRabbitMQParameters sinkRabbitMQParameters) {
                 this.sinkRabbitMQParameters = sinkRabbitMQParameters;
@@ -4929,7 +4929,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -5207,11 +5207,38 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
+        @NameInMap("AuthType")
+        private String authType;
+
         @NameInMap("GroupID")
         private String groupID;
 
+        @NameInMap("InstanceEndpoint")
+        private String instanceEndpoint;
+
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("InstanceNetwork")
+        private String instanceNetwork;
+
+        @NameInMap("InstancePassword")
+        private String instancePassword;
+
+        @NameInMap("InstanceSecurityGroupId")
+        private String instanceSecurityGroupId;
+
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("InstanceUsername")
+        private String instanceUsername;
+
+        @NameInMap("InstanceVSwitchIds")
+        private String instanceVSwitchIds;
+
+        @NameInMap("InstanceVpcId")
+        private String instanceVpcId;
 
         @NameInMap("Offset")
         private String offset;
@@ -5229,8 +5256,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
+            this.authType = builder.authType;
             this.groupID = builder.groupID;
+            this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
+            this.instanceNetwork = builder.instanceNetwork;
+            this.instancePassword = builder.instancePassword;
+            this.instanceSecurityGroupId = builder.instanceSecurityGroupId;
+            this.instanceType = builder.instanceType;
+            this.instanceUsername = builder.instanceUsername;
+            this.instanceVSwitchIds = builder.instanceVSwitchIds;
+            this.instanceVpcId = builder.instanceVpcId;
             this.offset = builder.offset;
             this.regionId = builder.regionId;
             this.tag = builder.tag;
@@ -5247,6 +5283,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        /**
          * @return groupID
          */
         public String getGroupID() {
@@ -5254,10 +5297,66 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceEndpoint
+         */
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceNetwork
+         */
+        public String getInstanceNetwork() {
+            return this.instanceNetwork;
+        }
+
+        /**
+         * @return instancePassword
+         */
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        /**
+         * @return instanceSecurityGroupId
+         */
+        public String getInstanceSecurityGroupId() {
+            return this.instanceSecurityGroupId;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceUsername
+         */
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        /**
+         * @return instanceVSwitchIds
+         */
+        public String getInstanceVSwitchIds() {
+            return this.instanceVSwitchIds;
+        }
+
+        /**
+         * @return instanceVpcId
+         */
+        public String getInstanceVpcId() {
+            return this.instanceVpcId;
         }
 
         /**
@@ -5296,13 +5395,30 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authType; 
             private String groupID; 
+            private String instanceEndpoint; 
             private String instanceId; 
+            private String instanceNetwork; 
+            private String instancePassword; 
+            private String instanceSecurityGroupId; 
+            private String instanceType; 
+            private String instanceUsername; 
+            private String instanceVSwitchIds; 
+            private String instanceVpcId; 
             private String offset; 
             private String regionId; 
             private String tag; 
             private Long timestamp; 
             private String topic; 
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
 
             /**
              * The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
@@ -5313,10 +5429,74 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceEndpoint.
+             */
+            public Builder instanceEndpoint(String instanceEndpoint) {
+                this.instanceEndpoint = instanceEndpoint;
+                return this;
+            }
+
+            /**
              * The ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceNetwork.
+             */
+            public Builder instanceNetwork(String instanceNetwork) {
+                this.instanceNetwork = instanceNetwork;
+                return this;
+            }
+
+            /**
+             * InstancePassword.
+             */
+            public Builder instancePassword(String instancePassword) {
+                this.instancePassword = instancePassword;
+                return this;
+            }
+
+            /**
+             * InstanceSecurityGroupId.
+             */
+            public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
+                this.instanceSecurityGroupId = instanceSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceUsername.
+             */
+            public Builder instanceUsername(String instanceUsername) {
+                this.instanceUsername = instanceUsername;
+                return this;
+            }
+
+            /**
+             * InstanceVSwitchIds.
+             */
+            public Builder instanceVSwitchIds(String instanceVSwitchIds) {
+                this.instanceVSwitchIds = instanceVSwitchIds;
+                return this;
+            }
+
+            /**
+             * InstanceVpcId.
+             */
+            public Builder instanceVpcId(String instanceVpcId) {
+                this.instanceVpcId = instanceVpcId;
                 return this;
             }
 
@@ -5450,7 +5630,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * The consumer group.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -5587,7 +5767,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceSLSParameters sourceSLSParameters; 
 
             /**
-             * The parameters that are configured if the event source is Data Transmission Service (DTS).
+             * The parameters that are returned if the event source is Data Transmission Service (DTS).
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -5611,7 +5791,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Queue for MQTT.
+             * The parameters that are returned if the event source is Message Queue for MQTT.
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -5635,7 +5815,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event source is Log Service.
+             * The parameters that are returned if the event provider is Simple Log Service.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -5644,6 +5824,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
             public Source build() {
                 return new Source(this);
+            } 
+
+        } 
+
+    }
+    public static class Transforms extends TeaModel {
+        @NameInMap("Arn")
+        private String arn;
+
+        private Transforms(Builder builder) {
+            this.arn = builder.arn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transforms create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arn
+         */
+        public String getArn() {
+            return this.arn;
+        }
+
+        public static final class Builder {
+            private String arn; 
+
+            /**
+             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.
+             */
+            public Builder arn(String arn) {
+                this.arn = arn;
+                return this;
+            }
+
+            public Transforms build() {
+                return new Transforms(this);
             } 
 
         } 
@@ -5671,6 +5892,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Transforms")
+        private java.util.List < Transforms> transforms;
+
         private Data(Builder builder) {
             this.description = builder.description;
             this.eventStreamingName = builder.eventStreamingName;
@@ -5679,6 +5903,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.sink = builder.sink;
             this.source = builder.source;
             this.status = builder.status;
+            this.transforms = builder.transforms;
         }
 
         public static Builder builder() {
@@ -5738,6 +5963,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return transforms
+         */
+        public java.util.List < Transforms> getTransforms() {
+            return this.transforms;
+        }
+
         public static final class Builder {
             private String description; 
             private String eventStreamingName; 
@@ -5746,6 +5978,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private Sink sink; 
             private Source source; 
             private String status; 
+            private java.util.List < Transforms> transforms; 
 
             /**
              * The description of the event stream that is returned.
@@ -5800,6 +6033,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Transforms.
+             */
+            public Builder transforms(java.util.List < Transforms> transforms) {
+                this.transforms = transforms;
                 return this;
             }
 

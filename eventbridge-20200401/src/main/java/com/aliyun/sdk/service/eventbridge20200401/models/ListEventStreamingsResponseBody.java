@@ -5212,11 +5212,38 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
+        @NameInMap("AuthType")
+        private String authType;
+
         @NameInMap("GroupID")
         private String groupID;
 
+        @NameInMap("InstanceEndpoint")
+        private String instanceEndpoint;
+
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("InstanceNetwork")
+        private String instanceNetwork;
+
+        @NameInMap("InstancePassword")
+        private String instancePassword;
+
+        @NameInMap("InstanceSecurityGroupId")
+        private String instanceSecurityGroupId;
+
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("InstanceUsername")
+        private String instanceUsername;
+
+        @NameInMap("InstanceVSwitchIds")
+        private String instanceVSwitchIds;
+
+        @NameInMap("InstanceVpcId")
+        private String instanceVpcId;
 
         @NameInMap("Offset")
         private String offset;
@@ -5234,8 +5261,17 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
+            this.authType = builder.authType;
             this.groupID = builder.groupID;
+            this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
+            this.instanceNetwork = builder.instanceNetwork;
+            this.instancePassword = builder.instancePassword;
+            this.instanceSecurityGroupId = builder.instanceSecurityGroupId;
+            this.instanceType = builder.instanceType;
+            this.instanceUsername = builder.instanceUsername;
+            this.instanceVSwitchIds = builder.instanceVSwitchIds;
+            this.instanceVpcId = builder.instanceVpcId;
             this.offset = builder.offset;
             this.regionId = builder.regionId;
             this.tag = builder.tag;
@@ -5252,6 +5288,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return authType
+         */
+        public String getAuthType() {
+            return this.authType;
+        }
+
+        /**
          * @return groupID
          */
         public String getGroupID() {
@@ -5259,10 +5302,66 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceEndpoint
+         */
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceNetwork
+         */
+        public String getInstanceNetwork() {
+            return this.instanceNetwork;
+        }
+
+        /**
+         * @return instancePassword
+         */
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        /**
+         * @return instanceSecurityGroupId
+         */
+        public String getInstanceSecurityGroupId() {
+            return this.instanceSecurityGroupId;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceUsername
+         */
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        /**
+         * @return instanceVSwitchIds
+         */
+        public String getInstanceVSwitchIds() {
+            return this.instanceVSwitchIds;
+        }
+
+        /**
+         * @return instanceVpcId
+         */
+        public String getInstanceVpcId() {
+            return this.instanceVpcId;
         }
 
         /**
@@ -5301,13 +5400,30 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authType; 
             private String groupID; 
+            private String instanceEndpoint; 
             private String instanceId; 
+            private String instanceNetwork; 
+            private String instancePassword; 
+            private String instanceSecurityGroupId; 
+            private String instanceType; 
+            private String instanceUsername; 
+            private String instanceVSwitchIds; 
+            private String instanceVpcId; 
             private String offset; 
             private String regionId; 
             private String tag; 
             private Long timestamp; 
             private String topic; 
+
+            /**
+             * AuthType.
+             */
+            public Builder authType(String authType) {
+                this.authType = authType;
+                return this;
+            }
 
             /**
              * GroupID.
@@ -5318,10 +5434,74 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceEndpoint.
+             */
+            public Builder instanceEndpoint(String instanceEndpoint) {
+                this.instanceEndpoint = instanceEndpoint;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceNetwork.
+             */
+            public Builder instanceNetwork(String instanceNetwork) {
+                this.instanceNetwork = instanceNetwork;
+                return this;
+            }
+
+            /**
+             * InstancePassword.
+             */
+            public Builder instancePassword(String instancePassword) {
+                this.instancePassword = instancePassword;
+                return this;
+            }
+
+            /**
+             * InstanceSecurityGroupId.
+             */
+            public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
+                this.instanceSecurityGroupId = instanceSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceUsername.
+             */
+            public Builder instanceUsername(String instanceUsername) {
+                this.instanceUsername = instanceUsername;
+                return this;
+            }
+
+            /**
+             * InstanceVSwitchIds.
+             */
+            public Builder instanceVSwitchIds(String instanceVSwitchIds) {
+                this.instanceVSwitchIds = instanceVSwitchIds;
+                return this;
+            }
+
+            /**
+             * InstanceVpcId.
+             */
+            public Builder instanceVpcId(String instanceVpcId) {
+                this.instanceVpcId = instanceVpcId;
                 return this;
             }
 
@@ -5654,6 +5834,47 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Transforms extends TeaModel {
+        @NameInMap("Arn")
+        private String arn;
+
+        private Transforms(Builder builder) {
+            this.arn = builder.arn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Transforms create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arn
+         */
+        public String getArn() {
+            return this.arn;
+        }
+
+        public static final class Builder {
+            private String arn; 
+
+            /**
+             * Arn.
+             */
+            public Builder arn(String arn) {
+                this.arn = arn;
+                return this;
+            }
+
+            public Transforms build() {
+                return new Transforms(this);
+            } 
+
+        } 
+
+    }
     public static class EventStreamings extends TeaModel {
         @NameInMap("Description")
         private String description;
@@ -5676,6 +5897,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Transforms")
+        private java.util.List < Transforms> transforms;
+
         private EventStreamings(Builder builder) {
             this.description = builder.description;
             this.eventStreamingName = builder.eventStreamingName;
@@ -5684,6 +5908,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.sink = builder.sink;
             this.source = builder.source;
             this.status = builder.status;
+            this.transforms = builder.transforms;
         }
 
         public static Builder builder() {
@@ -5743,6 +5968,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return transforms
+         */
+        public java.util.List < Transforms> getTransforms() {
+            return this.transforms;
+        }
+
         public static final class Builder {
             private String description; 
             private String eventStreamingName; 
@@ -5751,6 +5983,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private Sink sink; 
             private Source source; 
             private String status; 
+            private java.util.List < Transforms> transforms; 
 
             /**
              * Description.
@@ -5805,6 +6038,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Transforms.
+             */
+            public Builder transforms(java.util.List < Transforms> transforms) {
+                this.transforms = transforms;
                 return this;
             }
 

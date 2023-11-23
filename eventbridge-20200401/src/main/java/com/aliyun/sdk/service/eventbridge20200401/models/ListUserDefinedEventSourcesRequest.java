@@ -96,7 +96,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         } 
 
         /**
-         * EventBusName.
+         * The name of the event bus.
          */
         public Builder eventBusName(String eventBusName) {
             this.putQueryParameter("EventBusName", eventBusName);
@@ -105,7 +105,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -114,7 +114,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * NamePrefix.
+         * The name of the event source.
          */
         public Builder namePrefix(String namePrefix) {
             this.putQueryParameter("NamePrefix", namePrefix);
@@ -123,7 +123,7 @@ public class ListUserDefinedEventSourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * If you configure Limit and excess return values exist, this parameter is returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

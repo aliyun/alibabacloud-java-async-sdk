@@ -86,7 +86,11 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * The returned response code. Valid values:
+         * <p>
+         * 
+         * *   Success: The request is successful.
+         * *   Other codes: The request failed. For more information about error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private java.util.List < String > vpcWebHookUrl; 
 
             /**
-             * The CIDR blocks that are used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter CIDR blocks or IP addresses.
+             * The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.
              */
             public Builder ip(java.util.List < String > ip) {
                 this.ip = ip;
@@ -238,7 +242,18 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values: GET POST PUT PATCH DELETE HEAD OPTIONS TRACE GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS, TRACE, and CONNECT.
+             * The HTTP request method that is supported by the generated webhook URL. You can select multiple values. Valid values:
+             * <p>
+             * 
+             * *   GET
+             * *   POST
+             * *   PUT
+             * *   PATCH
+             * *   DELETE
+             * *   HEAD
+             * *   OPTIONS
+             * *   TRACE
+             * *   CONNECT
              */
             public Builder method(java.util.List < String > method) {
                 this.method = method;
@@ -246,7 +261,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicWebHookUrl.
+             * The Internet request URL.
              */
             public Builder publicWebHookUrl(java.util.List < String > publicWebHookUrl) {
                 this.publicWebHookUrl = publicWebHookUrl;
@@ -254,7 +269,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.
+             * The security domain name. This parameter is required only if SecurityConfig is set to referer. You can enter a domain name.
              */
             public Builder referer(java.util.List < String > referer) {
                 this.referer = referer;
@@ -262,7 +277,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of security settings. Valid values: none: No configuration is required. ip: CIDR blocks. referer: security domain names.
+             * The type of security settings. Valid values:
+             * <p>
+             * 
+             * *   none: No configuration is required.
+             * *   ip: CIDR block.
+             * *   referer: security domain name.
              */
             public Builder securityConfig(String securityConfig) {
                 this.securityConfig = securityConfig;
@@ -270,7 +290,12 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type that is supported by the generated webhook URL. Valid values: HTTP HTTPS HTTP, HTTPS, and HTTP&HTTPS.
+             * The protocol type that is supported by the generated webhook URL. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
+             * *   HTTP\&HTTPS
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +303,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcWebHookUrl.
+             * The internal request URL.
              */
             public Builder vpcWebHookUrl(java.util.List < String > vpcWebHookUrl) {
                 this.vpcWebHookUrl = vpcWebHookUrl;
@@ -427,7 +452,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ConsumerGroup.
+             * The ID of the consumer group that subscribes to the topic.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -435,7 +460,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Message Queue for Apache Kafka instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -443,7 +468,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumTasks.
+             * The maximum number of consumers.
              */
             public Builder maximumTasks(Integer maximumTasks) {
                 this.maximumTasks = maximumTasks;
@@ -451,7 +476,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
              */
             public Builder network(String network) {
                 this.network = network;
@@ -459,7 +484,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetReset.
+             * The consumer offset.
              */
             public Builder offsetReset(String offsetReset) {
                 this.offsetReset = offsetReset;
@@ -467,7 +492,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -475,7 +500,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -483,7 +508,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -491,7 +516,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * The vSwitch ID.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -499,7 +524,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -572,7 +597,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The name of the MNS queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -657,7 +682,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String virtualHostName; 
 
             /**
-             * The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -665,7 +690,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue in the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -681,7 +706,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The vhost name of the Message Queue for RabbitMQ instance. For more information, see Limits.
+             * The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -902,7 +927,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * AuthType.
+             * The authentication type. This parameter can be set to ACL or left empty.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -910,7 +935,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
+             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -918,7 +943,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceEndpoint.
+             * The instance endpoint.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -926,7 +951,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see Limits.
+             * The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -934,7 +959,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNetwork.
+             * The network that is used by the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -942,7 +967,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstancePassword.
+             * The instance password.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -950,7 +975,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSecurityGroupId.
+             * The security group ID.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -958,7 +983,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type. Valid values: CLOUD\_4, CLOUD\_5, and SELF_BUILT. The value CLOUD\_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD\_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -966,7 +991,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceUsername.
+             * The instance username.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -974,7 +999,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceVSwitchIds.
+             * The vSwitch ID.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -982,7 +1007,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceVpcId.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -993,11 +1018,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
              * The offset from which messages are consumed. Valid values:
              * <p>
              * 
-             * - CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset. 
-             * 
-             * - CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset. 
-             * 
-             * - CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time. 
+             * *   CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.
+             * *   CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.
+             * *   CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.
              * 
              * Default value: CONSUME_FROM_LAST_OFFSET.
              */
@@ -1031,7 +1054,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the topic in Message Queue for Apache RocketMQ instance. For more information, see Limits.
+             * The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -1108,7 +1131,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.
+             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -1116,7 +1139,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service Logstore.
+             * The Simple Log Service Logstore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -1124,7 +1147,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The Log Service project.
+             * The Simple Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -1132,7 +1155,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -1153,9 +1176,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("TimeZone")
         private String timeZone;
 
+        @NameInMap("UserData")
+        private String userData;
+
         private SourceScheduledEventParameters(Builder builder) {
             this.schedule = builder.schedule;
             this.timeZone = builder.timeZone;
+            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -1180,12 +1207,20 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             return this.timeZone;
         }
 
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
         public static final class Builder {
             private String schedule; 
             private String timeZone; 
+            private String userData; 
 
             /**
-             * Schedule.
+             * The cron expression.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -1193,10 +1228,18 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeZone.
+             * The time zone in which the cron expression is executed.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 
@@ -1414,7 +1457,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event resource.
+             * The type of the event source.
              */
             public Builder externalSourceType(String externalSourceType) {
                 this.externalSourceType = externalSourceType;
@@ -1430,7 +1473,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if the event source is HTTP events.
+             * The parameters that are returned if HTTP events are specified as the event source.
              */
             public Builder sourceHttpEventParameters(SourceHttpEventParameters sourceHttpEventParameters) {
                 this.sourceHttpEventParameters = sourceHttpEventParameters;
@@ -1438,7 +1481,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceKafkaParameters.
+             * The parameters that are returned if Message Queue for Apache Kafka is specified as the event source.
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -1446,7 +1489,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if the event source is Message Service (MNS).
+             * The parameters that are returned if Message Service (MNS) is specified as the event source.
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -1454,7 +1497,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if the event source is Message Queue for RabbitMQ.
+             * The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -1462,7 +1505,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are returned if the event source is Message Queue for Apache RocketMQ.
+             * The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event source.
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -1470,7 +1513,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured if the event source is Log Service.
+             * The parameters that are returned if Simple Log Service is specified as the event source.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -1478,7 +1521,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceScheduledEventParameters.
+             * The parameters that are returned if scheduled events are specified as the event source.
              */
             public Builder sourceScheduledEventParameters(SourceScheduledEventParameters sourceScheduledEventParameters) {
                 this.sourceScheduledEventParameters = sourceScheduledEventParameters;
@@ -1486,7 +1529,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queried event source. Valid value: Activated.
+             * The status of the queried event source. The returned value Activated indicates that the event source is activated.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1494,7 +1537,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the queried event source. Valid value: UserDefined: custom event source.
+             * The type of the queried event source. The returned value UserDefined indicates that the event source is a custom event source.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1535,7 +1578,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private java.util.List < EventSourceList> eventSourceList; 
 
             /**
-             * The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.
+             * The event sources.
              */
             public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;
