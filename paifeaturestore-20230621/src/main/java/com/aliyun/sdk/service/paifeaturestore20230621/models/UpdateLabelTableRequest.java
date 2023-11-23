@@ -28,7 +28,6 @@ public class UpdateLabelTableRequest extends Request {
 
     @Body
     @NameInMap("DatasourceId")
-    @Validation(required = true)
     private String datasourceId;
 
     @Body
@@ -38,7 +37,6 @@ public class UpdateLabelTableRequest extends Request {
 
     @Body
     @NameInMap("Name")
-    @Validation(required = true)
     private String name;
 
     private UpdateLabelTableRequest(Builder builder) {

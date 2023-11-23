@@ -39,6 +39,9 @@ public class GetLabelTableResponseBody extends TeaModel {
     @NameInMap("ProjectName")
     private String projectName;
 
+    @NameInMap("RelatedModelFeatures")
+    private java.util.List < String > relatedModelFeatures;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -52,6 +55,7 @@ public class GetLabelTableResponseBody extends TeaModel {
         this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
+        this.relatedModelFeatures = builder.relatedModelFeatures;
         this.requestId = builder.requestId;
     }
 
@@ -127,6 +131,13 @@ public class GetLabelTableResponseBody extends TeaModel {
     }
 
     /**
+     * @return relatedModelFeatures
+     */
+    public java.util.List < String > getRelatedModelFeatures() {
+        return this.relatedModelFeatures;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -143,6 +154,7 @@ public class GetLabelTableResponseBody extends TeaModel {
         private String owner; 
         private String projectId; 
         private String projectName; 
+        private java.util.List < String > relatedModelFeatures; 
         private String requestId; 
 
         /**
@@ -214,6 +226,14 @@ public class GetLabelTableResponseBody extends TeaModel {
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * RelatedModelFeatures.
+         */
+        public Builder relatedModelFeatures(java.util.List < String > relatedModelFeatures) {
+            this.relatedModelFeatures = relatedModelFeatures;
             return this;
         }
 
