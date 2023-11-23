@@ -16,6 +16,10 @@ public class CreateAlgorithmVersionResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateAlgorithmVersionResponseBody body;
@@ -23,6 +27,7 @@ public class CreateAlgorithmVersionResponse extends Response {
     private CreateAlgorithmVersionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateAlgorithmVersionResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateAlgorithmVersionResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateAlgorithmVersionResponse extends Response {
     public interface Builder extends Response.Builder<CreateAlgorithmVersionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateAlgorithmVersionResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateAlgorithmVersionResponse extends Response {
             extends Response.BuilderImpl<CreateAlgorithmVersionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateAlgorithmVersionResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateAlgorithmVersionResponse extends Response {
         private BuilderImpl(CreateAlgorithmVersionResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateAlgorithmVersionResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

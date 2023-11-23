@@ -1,0 +1,314 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.paistudio20220112.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ResourceOperation} extends {@link TeaModel}
+ *
+ * <p>ResourceOperation</p>
+ */
+public class ResourceOperation extends TeaModel {
+    @NameInMap("CreatorId")
+    private String creatorId;
+
+    @NameInMap("GmtCreatedTime")
+    private String gmtCreatedTime;
+
+    @NameInMap("GmtEndTime")
+    private String gmtEndTime;
+
+    @NameInMap("GmtModifiedTime")
+    private String gmtModifiedTime;
+
+    @NameInMap("GmtStartTime")
+    private String gmtStartTime;
+
+    @NameInMap("ObjectId")
+    private String objectId;
+
+    @NameInMap("ObjectType")
+    private String objectType;
+
+    @NameInMap("OperationDescription")
+    private String operationDescription;
+
+    @NameInMap("OperationId")
+    private String operationId;
+
+    @NameInMap("OperationSpecJson")
+    private String operationSpecJson;
+
+    @NameInMap("OperationType")
+    private String operationType;
+
+    @NameInMap("ReasonCode")
+    private String reasonCode;
+
+    @NameInMap("ReasonMessage")
+    private String reasonMessage;
+
+    @NameInMap("Status")
+    private String status;
+
+    private ResourceOperation(Builder builder) {
+        this.creatorId = builder.creatorId;
+        this.gmtCreatedTime = builder.gmtCreatedTime;
+        this.gmtEndTime = builder.gmtEndTime;
+        this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.gmtStartTime = builder.gmtStartTime;
+        this.objectId = builder.objectId;
+        this.objectType = builder.objectType;
+        this.operationDescription = builder.operationDescription;
+        this.operationId = builder.operationId;
+        this.operationSpecJson = builder.operationSpecJson;
+        this.operationType = builder.operationType;
+        this.reasonCode = builder.reasonCode;
+        this.reasonMessage = builder.reasonMessage;
+        this.status = builder.status;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ResourceOperation create() {
+        return builder().build();
+    }
+
+    /**
+     * @return creatorId
+     */
+    public String getCreatorId() {
+        return this.creatorId;
+    }
+
+    /**
+     * @return gmtCreatedTime
+     */
+    public String getGmtCreatedTime() {
+        return this.gmtCreatedTime;
+    }
+
+    /**
+     * @return gmtEndTime
+     */
+    public String getGmtEndTime() {
+        return this.gmtEndTime;
+    }
+
+    /**
+     * @return gmtModifiedTime
+     */
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return gmtStartTime
+     */
+    public String getGmtStartTime() {
+        return this.gmtStartTime;
+    }
+
+    /**
+     * @return objectId
+     */
+    public String getObjectId() {
+        return this.objectId;
+    }
+
+    /**
+     * @return objectType
+     */
+    public String getObjectType() {
+        return this.objectType;
+    }
+
+    /**
+     * @return operationDescription
+     */
+    public String getOperationDescription() {
+        return this.operationDescription;
+    }
+
+    /**
+     * @return operationId
+     */
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
+     * @return operationSpecJson
+     */
+    public String getOperationSpecJson() {
+        return this.operationSpecJson;
+    }
+
+    /**
+     * @return operationType
+     */
+    public String getOperationType() {
+        return this.operationType;
+    }
+
+    /**
+     * @return reasonCode
+     */
+    public String getReasonCode() {
+        return this.reasonCode;
+    }
+
+    /**
+     * @return reasonMessage
+     */
+    public String getReasonMessage() {
+        return this.reasonMessage;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder {
+        private String creatorId; 
+        private String gmtCreatedTime; 
+        private String gmtEndTime; 
+        private String gmtModifiedTime; 
+        private String gmtStartTime; 
+        private String objectId; 
+        private String objectType; 
+        private String operationDescription; 
+        private String operationId; 
+        private String operationSpecJson; 
+        private String operationType; 
+        private String reasonCode; 
+        private String reasonMessage; 
+        private String status; 
+
+        /**
+         * CreatorId.
+         */
+        public Builder creatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+
+        /**
+         * GmtCreatedTime.
+         */
+        public Builder gmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+
+        /**
+         * GmtEndTime.
+         */
+        public Builder gmtEndTime(String gmtEndTime) {
+            this.gmtEndTime = gmtEndTime;
+            return this;
+        }
+
+        /**
+         * GmtModifiedTime.
+         */
+        public Builder gmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * GmtStartTime.
+         */
+        public Builder gmtStartTime(String gmtStartTime) {
+            this.gmtStartTime = gmtStartTime;
+            return this;
+        }
+
+        /**
+         * ObjectId.
+         */
+        public Builder objectId(String objectId) {
+            this.objectId = objectId;
+            return this;
+        }
+
+        /**
+         * ObjectType.
+         */
+        public Builder objectType(String objectType) {
+            this.objectType = objectType;
+            return this;
+        }
+
+        /**
+         * OperationDescription.
+         */
+        public Builder operationDescription(String operationDescription) {
+            this.operationDescription = operationDescription;
+            return this;
+        }
+
+        /**
+         * OperationId.
+         */
+        public Builder operationId(String operationId) {
+            this.operationId = operationId;
+            return this;
+        }
+
+        /**
+         * OperationSpecJson.
+         */
+        public Builder operationSpecJson(String operationSpecJson) {
+            this.operationSpecJson = operationSpecJson;
+            return this;
+        }
+
+        /**
+         * OperationType.
+         */
+        public Builder operationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+
+        /**
+         * ReasonCode.
+         */
+        public Builder reasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+
+        /**
+         * ReasonMessage.
+         */
+        public Builder reasonMessage(String reasonMessage) {
+            this.reasonMessage = reasonMessage;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public ResourceOperation build() {
+            return new ResourceOperation(this);
+        } 
+
+    } 
+
+}

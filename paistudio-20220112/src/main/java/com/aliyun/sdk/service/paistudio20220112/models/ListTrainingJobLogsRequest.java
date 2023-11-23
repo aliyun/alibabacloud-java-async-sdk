@@ -22,6 +22,10 @@ public class ListTrainingJobLogsRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -42,6 +46,7 @@ public class ListTrainingJobLogsRequest extends Request {
         super(builder);
         this.trainingJobId = builder.trainingJobId;
         this.endTime = builder.endTime;
+        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -76,6 +81,13 @@ public class ListTrainingJobLogsRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -106,6 +118,7 @@ public class ListTrainingJobLogsRequest extends Request {
     public static final class Builder extends Request.Builder<ListTrainingJobLogsRequest, Builder> {
         private String trainingJobId; 
         private String endTime; 
+        private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String startTime; 
@@ -119,6 +132,7 @@ public class ListTrainingJobLogsRequest extends Request {
             super(request);
             this.trainingJobId = request.trainingJobId;
             this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
@@ -140,6 +154,15 @@ public class ListTrainingJobLogsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

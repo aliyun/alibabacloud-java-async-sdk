@@ -550,15 +550,15 @@ public class CreateTrainingJobRequest extends Request {
         @NameInMap("InstanceSpec")
         private InstanceSpec instanceSpec;
 
-        @NameInMap("ResourceGroupId")
-        private String resourceGroupId;
+        @NameInMap("ResourceId")
+        private String resourceId;
 
         private ComputeResource(Builder builder) {
             this.ecsCount = builder.ecsCount;
             this.ecsSpec = builder.ecsSpec;
             this.instanceCount = builder.instanceCount;
             this.instanceSpec = builder.instanceSpec;
-            this.resourceGroupId = builder.resourceGroupId;
+            this.resourceId = builder.resourceId;
         }
 
         public static Builder builder() {
@@ -598,10 +598,10 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
-         * @return resourceGroupId
+         * @return resourceId
          */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public static final class Builder {
@@ -609,7 +609,7 @@ public class CreateTrainingJobRequest extends Request {
             private String ecsSpec; 
             private Long instanceCount; 
             private InstanceSpec instanceSpec; 
-            private String resourceGroupId; 
+            private String resourceId; 
 
             /**
              * EcsCount.
@@ -644,10 +644,10 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * ResourceId.
              */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
                 return this;
             }
 

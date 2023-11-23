@@ -22,11 +22,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAlgorithmVersionResponse> createAlgorithmVersion(CreateAlgorithmVersionRequest request);
 
+    CompletableFuture<CreateQuotaResponse> createQuota(CreateQuotaRequest request);
+
     CompletableFuture<CreateResourceGroupResponse> createResourceGroup(CreateResourceGroupRequest request);
 
     CompletableFuture<CreateTrainingJobResponse> createTrainingJob(CreateTrainingJobRequest request);
 
     CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
+
+    CompletableFuture<DeleteQuotaResponse> deleteQuota(DeleteQuotaRequest request);
 
     CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request);
 
@@ -39,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
 
     CompletableFuture<GetNodeMetricsResponse> getNodeMetrics(GetNodeMetricsRequest request);
+
+    CompletableFuture<GetQuotaResponse> getQuota(GetQuotaRequest request);
 
     CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request);
 
@@ -56,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request);
 
+    CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request);
+
     CompletableFuture<ListResourceGroupMachineGroupsResponse> listResourceGroupMachineGroups(ListResourceGroupMachineGroupsRequest request);
 
     CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request);
@@ -66,11 +74,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request);
 
+    CompletableFuture<ScaleQuotaResponse> scaleQuota(ScaleQuotaRequest request);
+
     CompletableFuture<StopTrainingJobResponse> stopTrainingJob(StopTrainingJobRequest request);
 
     CompletableFuture<UpdateAlgorithmResponse> updateAlgorithm(UpdateAlgorithmRequest request);
 
     CompletableFuture<UpdateAlgorithmVersionResponse> updateAlgorithmVersion(UpdateAlgorithmVersionRequest request);
+
+    CompletableFuture<UpdateQuotaResponse> updateQuota(UpdateQuotaRequest request);
 
     CompletableFuture<UpdateResourceGroupResponse> updateResourceGroup(UpdateResourceGroupRequest request);
 
