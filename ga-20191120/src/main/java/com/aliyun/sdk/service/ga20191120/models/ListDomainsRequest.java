@@ -161,7 +161,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -27,7 +27,6 @@ public class CreateEndpointGroupRequest extends Request {
 
     @Query
     @NameInMap("EndpointConfigurations")
-    @Validation(required = true)
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
     @Query
@@ -346,7 +345,7 @@ public class CreateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The configurations of endpoints in the endpoint group.
+         * The configurations of the endpoints in the endpoint group.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
@@ -617,7 +616,7 @@ public class CreateEndpointGroupRequest extends Request {
             private Integer weight; 
 
             /**
-             * Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
+             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
              * <p>
              * 
              * *   **true**
@@ -641,7 +640,7 @@ public class CreateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
+             * The IP address, domain name, or instance ID based on the value of Type.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -662,21 +661,23 @@ public class CreateEndpointGroupRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **SLB:** Server Load Balancer (SLB) instance.
-             * *   **ALB:** Application Load Balancer (ALB) instance.
-             * *   **OSS:** Object Storage Service (OSS) bucket.
-             * *   **ENI:** Elastic Network interface (ENI).
-             * *   **NLB:** Network Load Balancer (NLB) instance.
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              * 
-             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * > 
              * 
-             * For more information, see [Service linked roles](~~178360~~).
+             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
+             * 
+             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * 
+             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * 
+             * For more information, see [Service-linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;

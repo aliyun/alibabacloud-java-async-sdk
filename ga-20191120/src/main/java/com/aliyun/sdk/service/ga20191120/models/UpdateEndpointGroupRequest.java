@@ -22,7 +22,6 @@ public class UpdateEndpointGroupRequest extends Request {
 
     @Query
     @NameInMap("EndpointConfigurations")
-    @Validation(required = true)
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
     @Query

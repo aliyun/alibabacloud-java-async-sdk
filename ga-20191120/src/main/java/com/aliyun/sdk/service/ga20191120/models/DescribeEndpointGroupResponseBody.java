@@ -431,8 +431,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
          * Indicates whether the access log feature is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: enabled
-         * *   **false**: disabled
+         * *   **true**
+         * *   **false**
          */
         public Builder enableAccessLog(Boolean enableAccessLog) {
             this.enableAccessLog = enableAccessLog;
@@ -440,7 +440,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of endpoints in the endpoint group.
+         * The configurations of the endpoints in the endpoint group.
          */
         public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
             this.endpointConfigurations = endpointConfigurations;
@@ -593,10 +593,10 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID to which the managed instance belongs.
+         * The ID of the service that manages the GA instance.
          * <p>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -604,11 +604,11 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Is it a managed instance. Value:
+         * Indicates whether the GA instance is managed. Valid values:
          * <p>
          * 
-         * - true
-         * - false
+         * *   **true**
+         * *   **false**
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -616,11 +616,12 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * The actions that users can perform on the managed instance.
          * <p>
          * 
-         * > Valid only when the ServiceManaged parameter is True.
-         * >* When an instance is hosted, user operations on the instance are restricted and some operations are prohibited.
+         * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+         * 
+         * *   Users can perform only specific actions on a managed instance.
          */
         public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
@@ -809,8 +810,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
              * Indicates whether the client IP address preservation feature is enabled. Valid values:
              * <p>
              * 
-             * *   **true:** The client IP address preservation feature is enabled.
-             * *   **false:** The client IP address preservation feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -845,8 +846,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
              * The protocol that is used to monitor latency. Valid values:
              * <p>
              * 
-             * *   **tcp:** TCP.
-             * *   **icmp:** ICMP.
+             * *   **tcp**
+             * *   **icmp**
              */
             public Builder probeProtocol(String probeProtocol) {
                 this.probeProtocol = probeProtocol;
@@ -865,15 +866,13 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **SLB:** Server Load Balancer (SLB) instance.
-             * *   **ALB:** Application Load Balancer (ALB) instance.
-             * *   **OSS:** Object Storage Service (OSS) bucket.
-             * *   **ENI:** Elastic Network interface (ENI).
-             * *   **NLB:** Network Load Balancer (NLB) instance.
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              */
             public Builder type(String type) {
                 this.type = type;
@@ -942,7 +941,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port.
+             * The listener port.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -1007,15 +1006,15 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * The name of the action on the managed instance. Valid values:
              * <p>
              * 
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1023,18 +1022,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
+             * *   **Listener**: listener
+             * *   **IpSet**: acceleration region
+             * *   **EndpointGroup**: endpoint group
+             * *   **ForwardingRule**: forwarding rule
+             * *   **Endpoint**: endpoint
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
              * 
-             * >Only valid when the Action parameter is CreateChild.
+             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -1042,12 +1041,11 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed. Valid values:
              * <p>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -1100,7 +1098,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N that is added to the endpoint group.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1108,7 +1106,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N that is added to the endpoint group.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

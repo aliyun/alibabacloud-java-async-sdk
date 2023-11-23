@@ -140,7 +140,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The configurations of the endpoint group.
+         * The configuration of the endpoint group.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
@@ -239,7 +239,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * The IP address or domain name of the endpoint.
+             * The IP address, domain name, or instance ID based on the value of Type.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -250,7 +250,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The private IP address of the ENI.
              * <p>
              * 
-             * > - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+             * > When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -261,22 +261,17 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **SLB:** Server Load Balancer (SLB) instance.
-             * *   **ALB:** Application Load Balancer (ALB) instance.
-             * *   **OSS:** Object Storage Service (OSS) bucket.
-             * *   **ENI:** Elastic Network interface (ENI).
-             * *   **NLB:** Network Load Balancer (NLB) instance.
+             * *   **Domain**: a custom domain name
+             * *   **Ip**: a custom IP address
+             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
+             * *   **ECS**: an Elastic Compute Service (ECS) instance
+             * *   **SLB**: a Server Load Balancer (SLB) instance
+             * *   **ALB**: an Application Load Balancer (ALB) instance
+             * *   **OSS**: an Object Storage Service (OSS) bucket
              * 
-             * > 
-             * 
-             * *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * 
-             * *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.
-             * *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.
+             * >- If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role. 
+             * >- If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
+             * >- If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
              * 
              * For more information, see [Service-linked roles](~~178360~~).
              */
@@ -291,7 +286,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * > If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.
+             * >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -355,16 +350,13 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The listener port of the instance.
+             * The listener port.
              * <p>
              * 
              * Valid values: **1** to **65499**.
              * 
-             * > 
-             * 
-             * *   Only HTTP and HTTPS listeners support port mappings.
-             * 
-             * *   The listener port in a port mapping must be the one used by the current listener.
+             * > * Only HTTP and HTTPS listeners support port mappings.
+             * > * The listener port in a port mapping must be the one used by the current listener.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -386,7 +378,6 @@ public class UpdateEndpointGroupsRequest extends Request {
         private Boolean enableClientIPPreservationToa;
 
         @NameInMap("EndpointConfigurations")
-        @Validation(required = true)
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
         @NameInMap("EndpointGroupDescription")
@@ -599,7 +590,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The configurations of endpoints in the endpoint group.
+             * The configurations of the endpoints in the endpoint group.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -643,11 +634,8 @@ public class UpdateEndpointGroupsRequest extends Request {
              * *   **HTTP**
              * *   **HTTPS**
              * 
-             * > 
-             * 
-             * *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
-             * 
-             * *   For an HTTP listener, the backend service protocol must be HTTP.
+             * > * You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
+             * > * For an HTTP listener, the backend service protocol must be HTTP.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -697,9 +685,9 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The protocol over which health check requests are sent. Valid values:
              * <p>
              * 
-             * *   **tcp:** TCP
-             * *   **http:** HTTP
-             * *   **https:** HTTPS
+             * *   **tcp**
+             * *   **http**
+             * *   **https**
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -726,7 +714,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.
+             * The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.
              * <p>
              * 
              * Valid values: **1** to **100**.
