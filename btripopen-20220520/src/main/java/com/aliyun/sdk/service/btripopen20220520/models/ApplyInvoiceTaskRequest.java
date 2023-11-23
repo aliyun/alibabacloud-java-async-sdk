@@ -147,6 +147,9 @@ public class ApplyInvoiceTaskRequest extends Request {
         @Validation(required = true)
         private String invoiceThirdPartId;
 
+        @NameInMap("invoice_type")
+        private Integer invoiceType;
+
         @NameInMap("mail_address")
         private String mailAddress;
 
@@ -187,6 +190,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             this.internationalFlightInvoiceFee = builder.internationalFlightInvoiceFee;
             this.internationalHotelInvoiceFee = builder.internationalHotelInvoiceFee;
             this.invoiceThirdPartId = builder.invoiceThirdPartId;
+            this.invoiceType = builder.invoiceType;
             this.mailAddress = builder.mailAddress;
             this.mailCity = builder.mailCity;
             this.mailFullAddress = builder.mailFullAddress;
@@ -271,6 +275,13 @@ public class ApplyInvoiceTaskRequest extends Request {
         }
 
         /**
+         * @return invoiceType
+         */
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
+        /**
          * @return mailAddress
          */
         public String getMailAddress() {
@@ -350,6 +361,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             private String internationalFlightInvoiceFee; 
             private String internationalHotelInvoiceFee; 
             private String invoiceThirdPartId; 
+            private Integer invoiceType; 
             private String mailAddress; 
             private String mailCity; 
             private String mailFullAddress; 
@@ -430,6 +442,14 @@ public class ApplyInvoiceTaskRequest extends Request {
              */
             public Builder invoiceThirdPartId(String invoiceThirdPartId) {
                 this.invoiceThirdPartId = invoiceThirdPartId;
+                return this;
+            }
+
+            /**
+             * invoice_type.
+             */
+            public Builder invoiceType(Integer invoiceType) {
+                this.invoiceType = invoiceType;
                 return this;
             }
 
