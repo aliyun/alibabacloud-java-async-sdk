@@ -110,7 +110,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the configurations of an application were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The configurations were obtained.
+         * *   **false**: The configurations failed to be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -234,7 +248,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String mountPath; 
 
             /**
-             * ConfigMapId.
+             * The ID of the ConfigMap.
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -242,7 +256,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMapName.
+             * The name of the ConfigMap.
              */
             public Builder configMapName(String configMapName) {
                 this.configMapName = configMapName;
@@ -250,7 +264,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The key-value pair that is stored in the ConfigMap.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +272,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MountPath.
+             * The path on which the ConfigMap is mounted.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -311,7 +325,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String nasPath; 
 
             /**
-             * MountPath.
+             * The path on which the NAS file system is mounted.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -319,7 +333,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NasPath.
+             * The directory in the NAS file system.
              */
             public Builder nasPath(String nasPath) {
                 this.nasPath = nasPath;
@@ -396,7 +410,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * Bucket名称
+             * The name of the bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -404,7 +418,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket中Oss Key名称
+             * The directory or object that you created in the OSS bucket. If the specified object or directory is invalid, an exception occurs.
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -412,7 +426,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 挂载到容器的路径
+             * The directory of your container in SAE. The parameter value that you specified overwrites the original value. If the specified directory does not exist, SAE automatically creates the directory.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -420,7 +434,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 是否只读
+             * Indicates whether the application can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:
+             * <p>
+             * 
+             * *   **true**: The application has read-only permissions.
+             * *   **false**: The application has read and write permissions.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -473,7 +491,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -481,7 +499,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -544,6 +562,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Envs")
         private String envs;
 
+        @NameInMap("ImagePullSecrets")
+        private String imagePullSecrets;
+
         @NameInMap("ImageUrl")
         private String imageUrl;
 
@@ -565,6 +586,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Memory")
         private Integer memory;
 
+        @NameInMap("MicroRegistration")
+        private String microRegistration;
+
         @NameInMap("MinReadyInstanceRatio")
         private Integer minReadyInstanceRatio;
 
@@ -580,11 +604,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MseApplicationId")
         private String mseApplicationId;
 
-        @NameInMap("MseFeatureConfig")
-        private String mseFeatureConfig;
+        @NameInMap("MseApplicationName")
+        private String mseApplicationName;
 
         @NameInMap("NamespaceId")
         private String namespaceId;
+
+        @NameInMap("NasConfigs")
+        private String nasConfigs;
 
         @NameInMap("NasId")
         private String nasId;
@@ -607,6 +634,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         private String packageVersion;
 
+        @NameInMap("Php")
+        private String php;
+
         @NameInMap("PhpArmsConfigLocation")
         private String phpArmsConfigLocation;
 
@@ -625,6 +655,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
 
+        @NameInMap("PvtzDiscovery")
+        private String pvtzDiscovery;
+
+        @NameInMap("Python")
+        private String python;
+
+        @NameInMap("PythonModules")
+        private String pythonModules;
+
         @NameInMap("Readiness")
         private String readiness;
 
@@ -633,6 +672,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("Replicas")
         private Integer replicas;
+
+        @NameInMap("SaeVersion")
+        private String saeVersion;
 
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -684,6 +726,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.enableAhas = builder.enableAhas;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.envs = builder.envs;
+            this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
             this.jarStartArgs = builder.jarStartArgs;
             this.jarStartOptions = builder.jarStartOptions;
@@ -691,13 +734,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.kafkaConfigs = builder.kafkaConfigs;
             this.liveness = builder.liveness;
             this.memory = builder.memory;
+            this.microRegistration = builder.microRegistration;
             this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
             this.minReadyInstances = builder.minReadyInstances;
             this.mountDesc = builder.mountDesc;
             this.mountHost = builder.mountHost;
             this.mseApplicationId = builder.mseApplicationId;
-            this.mseFeatureConfig = builder.mseFeatureConfig;
+            this.mseApplicationName = builder.mseApplicationName;
             this.namespaceId = builder.namespaceId;
+            this.nasConfigs = builder.nasConfigs;
             this.nasId = builder.nasId;
             this.ossAkId = builder.ossAkId;
             this.ossAkSecret = builder.ossAkSecret;
@@ -705,15 +750,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.packageType = builder.packageType;
             this.packageUrl = builder.packageUrl;
             this.packageVersion = builder.packageVersion;
+            this.php = builder.php;
             this.phpArmsConfigLocation = builder.phpArmsConfigLocation;
             this.phpConfig = builder.phpConfig;
             this.phpConfigLocation = builder.phpConfigLocation;
             this.postStart = builder.postStart;
             this.preStop = builder.preStop;
             this.programmingLanguage = builder.programmingLanguage;
+            this.pvtzDiscovery = builder.pvtzDiscovery;
+            this.python = builder.python;
+            this.pythonModules = builder.pythonModules;
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
+            this.saeVersion = builder.saeVersion;
             this.securityGroupId = builder.securityGroupId;
             this.slsConfigs = builder.slsConfigs;
             this.tags = builder.tags;
@@ -848,6 +898,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return imagePullSecrets
+         */
+        public String getImagePullSecrets() {
+            return this.imagePullSecrets;
+        }
+
+        /**
          * @return imageUrl
          */
         public String getImageUrl() {
@@ -897,6 +954,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return microRegistration
+         */
+        public String getMicroRegistration() {
+            return this.microRegistration;
+        }
+
+        /**
          * @return minReadyInstanceRatio
          */
         public Integer getMinReadyInstanceRatio() {
@@ -932,10 +996,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * @return mseFeatureConfig
+         * @return mseApplicationName
          */
-        public String getMseFeatureConfig() {
-            return this.mseFeatureConfig;
+        public String getMseApplicationName() {
+            return this.mseApplicationName;
         }
 
         /**
@@ -943,6 +1007,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        /**
+         * @return nasConfigs
+         */
+        public String getNasConfigs() {
+            return this.nasConfigs;
         }
 
         /**
@@ -995,6 +1066,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return php
+         */
+        public String getPhp() {
+            return this.php;
+        }
+
+        /**
          * @return phpArmsConfigLocation
          */
         public String getPhpArmsConfigLocation() {
@@ -1037,6 +1115,27 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return pvtzDiscovery
+         */
+        public String getPvtzDiscovery() {
+            return this.pvtzDiscovery;
+        }
+
+        /**
+         * @return python
+         */
+        public String getPython() {
+            return this.python;
+        }
+
+        /**
+         * @return pythonModules
+         */
+        public String getPythonModules() {
+            return this.pythonModules;
+        }
+
+        /**
          * @return readiness
          */
         public String getReadiness() {
@@ -1055,6 +1154,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public Integer getReplicas() {
             return this.replicas;
+        }
+
+        /**
+         * @return saeVersion
+         */
+        public String getSaeVersion() {
+            return this.saeVersion;
         }
 
         /**
@@ -1151,6 +1257,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String enableAhas; 
             private Boolean enableGreyTagRoute; 
             private String envs; 
+            private String imagePullSecrets; 
             private String imageUrl; 
             private String jarStartArgs; 
             private String jarStartOptions; 
@@ -1158,13 +1265,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String kafkaConfigs; 
             private String liveness; 
             private Integer memory; 
+            private String microRegistration; 
             private Integer minReadyInstanceRatio; 
             private Integer minReadyInstances; 
             private java.util.List < MountDesc> mountDesc; 
             private String mountHost; 
             private String mseApplicationId; 
-            private String mseFeatureConfig; 
+            private String mseApplicationName; 
             private String namespaceId; 
+            private String nasConfigs; 
             private String nasId; 
             private String ossAkId; 
             private String ossAkSecret; 
@@ -1172,15 +1281,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
+            private String php; 
             private String phpArmsConfigLocation; 
             private String phpConfig; 
             private String phpConfigLocation; 
             private String postStart; 
             private String preStop; 
             private String programmingLanguage; 
+            private String pvtzDiscovery; 
+            private String python; 
+            private String pythonModules; 
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
+            private String saeVersion; 
             private String securityGroupId; 
             private String slsConfigs; 
             private java.util.List < Tags> tags; 
@@ -1194,7 +1308,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String webContainer; 
 
             /**
-             * AcrAssumeRoleArn.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to pull images across accounts. For more information, see [Pull images across Alibaba Cloud accounts](~~190675~~) and [Grant permissions across Alibaba Cloud accounts by using a RAM role](~~223585~~).
              */
             public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
                 this.acrAssumeRoleArn = acrAssumeRoleArn;
@@ -1202,7 +1316,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ACR 企业版实例 ID
+             * The ID of the Container Registry Enterprise Edition instance.
              */
             public Builder acrInstanceId(String acrInstanceId) {
                 this.acrInstanceId = acrInstanceId;
@@ -1210,7 +1324,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AppDescription.
+             * The description of the application.
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -1218,7 +1332,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1226,7 +1340,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1234,7 +1348,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 是否绑定EIP
+             * Indicates whether an elastic IP address (EIP) is associated with the application instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: The EIP is associated with the application instance.
+             * *   **false**: The EIP is not associated with the application instance.
              */
             public Builder associateEip(Boolean associateEip) {
                 this.associateEip = associateEip;
@@ -1242,7 +1360,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BatchWaitTime.
+             * The interval between batches in a phased release. Unit: seconds.
              */
             public Builder batchWaitTime(Integer batchWaitTime) {
                 this.batchWaitTime = batchWaitTime;
@@ -1250,7 +1368,19 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * The command that is used to start the image. The command must be an existing executable object in the container. Example:
+             * <p>
+             * 
+             * ```
+             * 
+             * command:
+             *       - echo
+             *       - abc
+             *       - >
+             *       - file0
+             * ```
+             * 
+             * In this example, the Command parameter is set to `Command="echo", CommandArgs=["abc", ">", "file0"]`.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -1258,7 +1388,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CommandArgs.
+             * The parameters of the image startup command. The CommandArgs parameter contains the parameters that are required for the **Command** parameter. Format:
+             * <p>
+             * 
+             * `["a","b"]`
+             * 
+             * In the preceding **Command** example, the CommandArgs parameter is set to `CommandArgs=["abc", ">", "file0"]`. The data type of `["abc", ">", "file0"]` must be an array of strings in the JSON format. You do not need to configure this parameter if it does not exist in the Command parameter.
              */
             public Builder commandArgs(String commandArgs) {
                 this.commandArgs = commandArgs;
@@ -1266,7 +1401,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMapMountDesc.
+             * The details of the ConfigMap.
              */
             public Builder configMapMountDesc(java.util.List < ConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
@@ -1274,7 +1409,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The CPU specifications that are required for each instance. Unit: millicores. You cannot set this parameter to 0. Valid values:
+             * <p>
+             * 
+             * *   **500**
+             * *   **1000**
+             * *   **2000**
+             * *   **4000**
+             * *   **8000**
+             * *   **16000**
+             * *   **32000**
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1282,7 +1426,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CustomHostAlias.
+             * The custom mappings between hostnames and IP addresses in the container. Valid values:
+             * <p>
+             * 
+             * *   **hostName**: the domain name or hostname.
+             * *   **ip**: the IP address.
              */
             public Builder customHostAlias(String customHostAlias) {
                 this.customHostAlias = customHostAlias;
@@ -1290,7 +1438,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EdasContainerVersion.
+             * The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;
@@ -1298,7 +1446,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAhas.
+             * Indicates whether access to Application High Availability Service (AHAS) is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: Access to AHAS is enabled.
+             * *   **false**: Access to AHAS is disabled.
              */
             public Builder enableAhas(String enableAhas) {
                 this.enableAhas = enableAhas;
@@ -1306,7 +1458,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 开启流量灰度
+             * Indicates whether canary release rules are enabled. Canary release rules apply only to applications in Spring Cloud and Dubbo frameworks. Valid values:
+             * <p>
+             * 
+             * *   **true**: The canary release rules are enabled.
+             * *   **false**: The canary release rules are disabled.
              */
             public Builder enableGreyTagRoute(Boolean enableGreyTagRoute) {
                 this.enableGreyTagRoute = enableGreyTagRoute;
@@ -1314,7 +1470,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Envs.
+             * The environment variables. Variable description:
+             * <p>
+             * 
+             * *   **name**: the name of the environment variable.
+             * *   **value**: the value or reference of the environment variable.
              */
             public Builder envs(String envs) {
                 this.envs = envs;
@@ -1322,7 +1482,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * ImagePullSecrets.
+             */
+            public Builder imagePullSecrets(String imagePullSecrets) {
+                this.imagePullSecrets = imagePullSecrets;
+                return this;
+            }
+
+            /**
+             * The URL of the image. This parameter is returned only if the **PackageType** parameter is set to **Image**.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -1330,7 +1498,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * JarStartArgs.
+             * The arguments in the JAR package. The arguments are used to start the application container. The default startup command is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
              */
             public Builder jarStartArgs(String jarStartArgs) {
                 this.jarStartArgs = jarStartArgs;
@@ -1338,7 +1506,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * JarStartOptions.
+             * The option settings in the JAR package. The settings are used to start the application container. The default startup command is `$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS "$package_path" $JarStartArgs`.
              */
             public Builder jarStartOptions(String jarStartOptions) {
                 this.jarStartOptions = jarStartOptions;
@@ -1346,7 +1514,17 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Jdk.
+             * The version of the Java development kit (JDK) on which the deployment package of the application depends. The following versions are supported:
+             * <p>
+             * 
+             * *   **Open JDK 8**
+             * *   **Open JDK 7**
+             * *   **Dragonwell 11**
+             * *   **Dragonwell 8**
+             * *   **openjdk-8u191-jdk-alpine3.9**
+             * *   **openjdk-7u201-jdk-alpine3.9**
+             * 
+             * This parameter is not returned if the **PackageType** parameter is set to **Image**.
              */
             public Builder jdk(String jdk) {
                 this.jdk = jdk;
@@ -1354,7 +1532,27 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaConfigs.
+             * The logging configurations of Message Queue for Apache Kafka. The following parameters are involved:
+             * <p>
+             * 
+             * *   **KafkaConfigs**: the configurations of Message Queue for Apache Kafka.
+             * 
+             * *   **createTime**: the time when the Message Queue for Apache Kafka instance was created.
+             * 
+             * *   **kafkaTopic**: the message topic that is used to classify messages.
+             * 
+             * *   **logDir**: the path in which logs are stored.
+             * 
+             * *   **logType**: the type of collected logs. Valid values:
+             * 
+             *     *   **file_log**: the file log that is stored in the container. The path of the file logs in the container is returned.
+             *     *   **stdout**: the standard output log of the container. You can specify only one stdout value.
+             * 
+             * *   **kafkaEndpoint**: the endpoint of the Message Queue for Apache Kafka service.
+             * 
+             * *   **kafkaInstanceId**: the ID of the Message Queue for Apache Kafka instance.
+             * 
+             * *   **region**: the region where the Message Queue for Apache Kafka instance resides.
              */
             public Builder kafkaConfigs(String kafkaConfigs) {
                 this.kafkaConfigs = kafkaConfigs;
@@ -1362,7 +1560,26 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Liveness.
+             * The details of the availability check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. You can use one of the following methods to perform the health check:
+             * <p>
+             * 
+             * *   Sample code of the **exec** method: `{"exec":{"command":["sh","-c","cat/home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}`
+             * *   Sample code of the **httpGet** method: `{"httpGet":{"path":"/","port":18091,"scheme":"HTTP","isContainKeyWord":true,"keyWord":"SAE"},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`
+             * *   Sample code of the **tcpSocket** method: `{"tcpSocket":{"port":18091},"initialDelaySeconds":11,"periodSeconds":10,"timeoutSeconds":1}`
+             * 
+             * >  You can use only one method to perform the health check.
+             * 
+             * The following parameters are involved:
+             * 
+             * *   **exec.command**: the health check command.
+             * *   **httpGet.path**: the request path.
+             * *   **httpGet.scheme**: the protocol that is used to perform the health check. Valid values: **HTTP** and **HTTPS**.
+             * *   **httpGet.isContainKeyWord**: indicates whether the response contains keywords. Valid values: **true** and **false**. If this field is not returned, the advanced settings are not used.
+             * *   **httpGet.keyWord**: the custom keyword. This parameter is available only if the **isContainKeyWord** field is returned.
+             * *   **tcpSocket.port**: the port that is used to check the status of TCP connections.
+             * *   **initialDelaySeconds**: the delay of the health check. Default value: 10. Unit: seconds.
+             * *   **periodSeconds**: the interval at which health checks are performed. Default value: 30. Unit: seconds.
+             * *   **timeoutSeconds**: the timeout period of the health check. Default value: 1. Unit: seconds. If you set this parameter to 0 or leave this parameter empty, the timeout period is automatically set to 1 second.
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
@@ -1370,7 +1587,19 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The size of memory required by each instance. Unit: MB. You cannot set this parameter to 0. The values of this parameter correspond to the values of the Cpu parameter:
+             * <p>
+             * 
+             * *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
+             * *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 1000.
+             * *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
+             * *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
+             * *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
+             * *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
+             * *   This parameter is set to **24567** if the Cpu parameter is set to 12000.
+             * *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
+             * *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
+             * *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1378,7 +1607,21 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MinReadyInstanceRatio.
+             * MicroRegistration.
+             */
+            public Builder microRegistration(String microRegistration) {
+                this.microRegistration = microRegistration;
+                return this;
+            }
+
+            /**
+             * The percentage of the minimum number of available instances. Valid values:
+             * <p>
+             * 
+             * *   **-1**: the default value. This value indicates that the minimum number of available instances is not measured by percentage. If you do not configure this parameter, the default value **-1** is used.
+             * *   **0 to 100**: indicates that the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). If the calculated result is not an integer, the result is rounded up to the nearest integer. For example, if the percentage is set to **50**% and five instances are available, the minimum number of available instances is 3.
+             * 
+             * >  If the **MinReadyInstance** and **MinReadyInstanceRatio** parameters are returned and the value of the **MinReadyInstanceRatio** parameter is not **-1**, the value of the **MinReadyInstanceRatio** parameter takes effect. If the **MinReadyInstances** parameter is set to **5** and the **MinReadyInstanceRatio** parameter is set to **50**, the value of the **MinReadyInstanceRatio** parameter determines the minimum number of available instances.
              */
             public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
                 this.minReadyInstanceRatio = minReadyInstanceRatio;
@@ -1386,7 +1629,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MinReadyInstances.
+             * The minimum number of available instances. Valid values:
+             * <p>
+             * 
+             * *   If you set the value to **0**, business interruptions occur when the application is updated.
+             * *   If you set the value to **-1**, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.
+             * 
+             * >  Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.
              */
             public Builder minReadyInstances(Integer minReadyInstances) {
                 this.minReadyInstances = minReadyInstances;
@@ -1394,7 +1643,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MountDesc.
+             * The details of the mounted NAS file system.
              */
             public Builder mountDesc(java.util.List < MountDesc> mountDesc) {
                 this.mountDesc = mountDesc;
@@ -1402,7 +1651,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MountHost.
+             * The mount target of the NAS file system in the VPC where the application is deployed. If you do not need to modify this configuration during the deployment, configure the **MountHost** parameter only in the first request. You do not need to include this parameter in subsequent requests. If you need to remove this configuration, leave the **MountHost** parameter empty in the request.
              */
             public Builder mountHost(String mountHost) {
                 this.mountHost = mountHost;
@@ -1410,7 +1659,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 对应MSE产品侧应用ID
+             * The ID of the microservice application.
              */
             public Builder mseApplicationId(String mseApplicationId) {
                 this.mseApplicationId = mseApplicationId;
@@ -1418,15 +1667,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MseFeatureConfig.
+             * MseApplicationName.
              */
-            public Builder mseFeatureConfig(String mseFeatureConfig) {
-                this.mseFeatureConfig = mseFeatureConfig;
+            public Builder mseApplicationName(String mseApplicationName) {
+                this.mseApplicationName = mseApplicationName;
                 return this;
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -1434,7 +1683,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NasId.
+             * NasConfigs.
+             */
+            public Builder nasConfigs(String nasConfigs) {
+                this.nasConfigs = nasConfigs;
+                return this;
+            }
+
+            /**
+             * The ID of the NAS file system.
              */
             public Builder nasId(String nasId) {
                 this.nasId = nasId;
@@ -1442,7 +1699,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OSS读写的AK
+             * The AccessKey ID that is used to read data from and write data to Object Storage Service (OSS) buckets.
              */
             public Builder ossAkId(String ossAkId) {
                 this.ossAkId = ossAkId;
@@ -1450,7 +1707,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OSS读写的secret
+             * The AccessKey secret that is used to read data from and write data to OSS buckets.
              */
             public Builder ossAkSecret(String ossAkSecret) {
                 this.ossAkSecret = ossAkSecret;
@@ -1458,7 +1715,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OSS挂载描述信息
+             * The description of the mounted OSS bucket.
              */
             public Builder ossMountDescs(java.util.List < OssMountDescs> ossMountDescs) {
                 this.ossMountDescs = ossMountDescs;
@@ -1466,7 +1723,28 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * The type of the deployment package. Valid values:
+             * <p>
+             * 
+             * *   If you deploy the application by using a Java Archive (JAR) package, you can set this parameter to **FatJar**, **War**, or **Image**.
+             * 
+             * *   If you deploy the application by using a PHP package, you can set this parameter to one of the following values:
+             * 
+             *     *   **PhpZip**
+             *     *   **IMAGE_PHP\_5\_4**
+             *     *   **IMAGE_PHP\_5\_4\_ALPINE**
+             *     *   **IMAGE_PHP\_5\_5**
+             *     *   **IMAGE_PHP\_5\_5\_ALPINE**
+             *     *   **IMAGE_PHP\_5\_6**
+             *     *   **IMAGE_PHP\_5\_6\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_0**
+             *     *   **IMAGE_PHP\_7\_0\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_1**
+             *     *   **IMAGE_PHP\_7\_1\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_2**
+             *     *   **IMAGE_PHP\_7\_2\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_3**
+             *     *   **IMAGE_PHP\_7\_3\_ALPINE**
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -1474,7 +1752,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PackageUrl.
+             * The URL of the deployment package. This parameter is returned only if the **PackageType** parameter is set to **FatJar** or **War**.
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -1482,7 +1760,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PackageVersion.
+             * The version of the deployment package. This parameter is returned only if the **PackageType** parameter is set to **FatJar** or **War**.
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -1490,7 +1768,18 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PhpArmsConfigLocation.
+             * Php.
+             */
+            public Builder php(String php) {
+                this.php = php;
+                return this;
+            }
+
+            /**
+             * The path on which the PHP configuration file for application monitoring is mounted. Make sure that the PHP server loads the configuration file.
+             * <p>
+             * 
+             * SAE automatically generates the corresponding configuration file. No manual operations are required.
              */
             public Builder phpArmsConfigLocation(String phpArmsConfigLocation) {
                 this.phpArmsConfigLocation = phpArmsConfigLocation;
@@ -1498,7 +1787,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PhpConfig.
+             * The details of the PHP configuration file.
              */
             public Builder phpConfig(String phpConfig) {
                 this.phpConfig = phpConfig;
@@ -1506,7 +1795,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PhpConfigLocation.
+             * The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.
              */
             public Builder phpConfigLocation(String phpConfigLocation) {
                 this.phpConfigLocation = phpConfigLocation;
@@ -1514,7 +1803,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PostStart.
+             * The script that is run immediately after the container is started. Example: `{"exec":{"command":["cat","/etc/group"]}}`
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -1522,7 +1811,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PreStop.
+             * The script that is run before the container is stopped. Example: `{"exec":{"command":["cat","/etc/group"]}}`
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -1530,7 +1819,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ProgrammingLanguage.
+             * The programming language that is used to create the application. Valid values:
+             * <p>
+             * 
+             * *   **java**: Java
+             * *   **php**: PHP
+             * *   **other**: Other programming languages, such as Python, C++, Go, .NET, and Node.js.
              */
             public Builder programmingLanguage(String programmingLanguage) {
                 this.programmingLanguage = programmingLanguage;
@@ -1538,7 +1832,34 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Readiness.
+             * PvtzDiscovery.
+             */
+            public Builder pvtzDiscovery(String pvtzDiscovery) {
+                this.pvtzDiscovery = pvtzDiscovery;
+                return this;
+            }
+
+            /**
+             * Python.
+             */
+            public Builder python(String python) {
+                this.python = python;
+                return this;
+            }
+
+            /**
+             * PythonModules.
+             */
+            public Builder pythonModules(String pythonModules) {
+                this.pythonModules = pythonModules;
+                return this;
+            }
+
+            /**
+             * The details of the health check that was performed on the container. If the container fails this health check multiple times, the system disables and restarts the container. Containers that fail health checks cannot receive traffic from Server Load Balancer (SLB) instances. You can use the **exec**, **httpGet**, or **tcpSocket** method to perform health checks. For more information, see the description of the **Liveness** parameter.
+             * <p>
+             * 
+             * >  You can use only one method to perform the health check.
              */
             public Builder readiness(String readiness) {
                 this.readiness = readiness;
@@ -1546,7 +1867,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1554,7 +1875,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Replicas.
+             * The number of application instances.
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
@@ -1562,7 +1883,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * SaeVersion.
+             */
+            public Builder saeVersion(String saeVersion) {
+                this.saeVersion = saeVersion;
+                return this;
+            }
+
+            /**
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1570,7 +1899,21 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SlsConfigs.
+             * The logging configurations of Log Service.
+             * <p>
+             * 
+             * *   To use Log Service resources that are automatically created by SAE, set this parameter to `[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]`.
+             * *   To use custom Log Service resources, set this parameter to `[{"projectName":"test-sls","logType":"stdout","logDir":"","logstoreName":"sae","logtailName":""},{"projectName":"test","logDir":"/tmp/a.log","logstoreName":"sae","logtailName":""}]`.
+             * 
+             * The following parameters are involved:
+             * 
+             * *   **projectName**: the name of the Log Service project.
+             * *   **logDir**: the path in which logs are stored.
+             * *   **logType**: the log type. **stdout**: the standard output log of the container. You can specify only one stdout value for this parameter. If you leave this parameter empty, file logs are collected.
+             * *   **logstoreName**: the name of the Logstore in Log Service.
+             * *   **logtailName**: the name of the Logtail configuration in Log Service. If you do not configure this parameter, a new Logtail configuration is created.
+             * 
+             * If you do not need to modify the logging configurations when you deploy the application, configure the **SlsConfigs** parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use Log Service, leave the **SlsConfigs** parameter empty in the request.
              */
             public Builder slsConfigs(String slsConfigs) {
                 this.slsConfigs = slsConfigs;
@@ -1578,7 +1921,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The details of the tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1586,7 +1929,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TerminationGracePeriodSeconds.
+             * The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.
              */
             public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
                 this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
@@ -1594,7 +1937,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * The time zone. Default value: **Asia/Shanghai**.
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1602,7 +1945,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TomcatConfig.
+             * The Tomcat configuration. If you want to delete the configuration, set this parameter to {} or leave this parameter empty. The following parameters are involved:
+             * <p>
+             * 
+             * *   **port**: the port number. Valid values: 1024 to 65535. The root permissions are required to perform operations on ports whose number is smaller than 1024. Enter a value that ranges from 1025 to 65535 because the container has only the admin permissions. If you do not configure this parameter, the default port number 8080 is used.
+             * *   **contextPath**: the path. Default value: /. This value indicates the root directory.
+             * *   **maxThreads**: the maximum number of connections in the connection pool. Default value: 400.
+             * *   **uriEncoding**: the URI encoding scheme in the Tomcat container. Valid values: **UTF-8**, **ISO-8859-1**, **GBK**, and **GB2312**. If you do not configure this parameter, the default value **ISO-8859-1** is used.
+             * *   **useBodyEncoding**: indicates whether to use the encoding scheme that is specified by **BodyEncoding for URL**. Default value: **true**.
              */
             public Builder tomcatConfig(String tomcatConfig) {
                 this.tomcatConfig = tomcatConfig;
@@ -1610,7 +1960,24 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStrategy.
+             * The deployment policy. If the minimum number of available instances is 1, the value of the **UpdateStrategy** parameter is an empty string (""). If the minimum number of available instances is greater than 1, the following strategies can be configured:
+             * <p>
+             * 
+             * *   The application is deployed on an instance. The remaining instances are automatically classified into two release batches whose interval is set to 1. In this case, the parameter is set to `{"type":"GrayBatchUpdate","batchUpdate":{"batch":2,"releaseType":"auto","batchWaitTime":1},"grayUpdate":{"gray":1}}`.
+             * *   The application is deployed on an instance. The remaining instances are manually classified into two release batches. In this case, the parameter is set to `{"type":"GrayBatchUpdate","batchUpdate":{"batch":2,"releaseType":"manual"},"grayUpdate":{"gray":1}}`.
+             * *   All instances are automatically classified into two release batches. The application is deployed on the instances of the two batches in parallel. In this case, the parameter is set to `{"type":"BatchUpdate","batchUpdate":{"batch":2,"releaseType":"auto","batchWaitTime":0}}`
+             * 
+             * The following parameters are involved:
+             * 
+             * *   **type**: the type of the release policy. Valid values: **GrayBatchUpdate** and **BatchUpdate**.
+             * 
+             * *   **batchUpdate**: the phased release policy.
+             * 
+             *     *   **batch**: the number of release batches.
+             *     *   **releaseType**: the processing method for the batches. Valid values: **auto** and **manual**.
+             *     *   **batchWaitTime**: the interval between release batches. Unit: seconds.
+             * 
+             * *   **grayUpdate**: the number of release batches in the phased release after a canary release. This parameter is returned only if the **type** parameter is set to **GrayBatchUpdate**.
              */
             public Builder updateStrategy(String updateStrategy) {
                 this.updateStrategy = updateStrategy;
@@ -1618,7 +1985,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1626,7 +1993,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1634,7 +2001,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * WarStartOptions.
+             * The option settings in the WAR package. The settings are used to start the application container. The default startup command is `java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap "$@" start`.
              */
             public Builder warStartOptions(String warStartOptions) {
                 this.warStartOptions = warStartOptions;
@@ -1642,7 +2009,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * WebContainer.
+             * The version of the Tomcat container on which the deployment package depends. Valid values:
+             * <p>
+             * 
+             * *   **apache-tomcat-7.0.91**
+             * *   **apache-tomcat-8.5.42**
+             * 
+             * This parameter is not returned if the **PackageType** parameter is set to **Image**.
              */
             public Builder webContainer(String webContainer) {
                 this.webContainer = webContainer;

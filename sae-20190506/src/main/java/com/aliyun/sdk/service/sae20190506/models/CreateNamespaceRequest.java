@@ -13,12 +13,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNamespaceRequest extends Request {
     @Query
+    @NameInMap("EnableMicroRegistration")
+    private Boolean enableMicroRegistration;
+
+    @Query
+    @NameInMap("NameSpaceShortId")
+    private String nameSpaceShortId;
+
+    @Query
     @NameInMap("NamespaceDescription")
     private String namespaceDescription;
 
     @Query
     @NameInMap("NamespaceId")
-    @Validation(required = true)
     private String namespaceId;
 
     @Query
@@ -28,6 +35,8 @@ public class CreateNamespaceRequest extends Request {
 
     private CreateNamespaceRequest(Builder builder) {
         super(builder);
+        this.enableMicroRegistration = builder.enableMicroRegistration;
+        this.nameSpaceShortId = builder.nameSpaceShortId;
         this.namespaceDescription = builder.namespaceDescription;
         this.namespaceId = builder.namespaceId;
         this.namespaceName = builder.namespaceName;
@@ -44,6 +53,20 @@ public class CreateNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableMicroRegistration
+     */
+    public Boolean getEnableMicroRegistration() {
+        return this.enableMicroRegistration;
+    }
+
+    /**
+     * @return nameSpaceShortId
+     */
+    public String getNameSpaceShortId() {
+        return this.nameSpaceShortId;
     }
 
     /**
@@ -68,6 +91,8 @@ public class CreateNamespaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNamespaceRequest, Builder> {
+        private Boolean enableMicroRegistration; 
+        private String nameSpaceShortId; 
         private String namespaceDescription; 
         private String namespaceId; 
         private String namespaceName; 
@@ -78,13 +103,33 @@ public class CreateNamespaceRequest extends Request {
 
         private Builder(CreateNamespaceRequest request) {
             super(request);
+            this.enableMicroRegistration = request.enableMicroRegistration;
+            this.nameSpaceShortId = request.nameSpaceShortId;
             this.namespaceDescription = request.namespaceDescription;
             this.namespaceId = request.namespaceId;
             this.namespaceName = request.namespaceName;
         } 
 
         /**
-         * NamespaceDescription.
+         * EnableMicroRegistration.
+         */
+        public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
+            this.putQueryParameter("EnableMicroRegistration", enableMicroRegistration);
+            this.enableMicroRegistration = enableMicroRegistration;
+            return this;
+        }
+
+        /**
+         * The returned message.
+         */
+        public Builder nameSpaceShortId(String nameSpaceShortId) {
+            this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+
+        /**
+         * The name of the namespace.
          */
         public Builder namespaceDescription(String namespaceDescription) {
             this.putQueryParameter("NamespaceDescription", namespaceDescription);
@@ -93,7 +138,13 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -102,7 +153,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * cn-beijing:test
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

@@ -110,7 +110,11 @@ public class DeleteApplicationResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the application is deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the change order that is used to query the task execution status.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The request is successful.
+         * *   **3xx**: A redirection message is returned.
+         * *   **4xx**: The request is invalid.
+         * *   **5xx**: A server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The trace ID that is used to query details of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request is successful, **success** is returned.
+         * *   If an error occurred, the error code is returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The returned results.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +212,11 @@ public class DeleteApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The error code that is returned if the request fails.
+             * <p>
+             * 
+             * *   If the request is successful, this parameter is not returned.****
+             * *   This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the "**Error codes**" section of this topic.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

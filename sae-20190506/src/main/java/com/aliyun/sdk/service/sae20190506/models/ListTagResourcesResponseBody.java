@@ -110,7 +110,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code. 
+         * <p>
+         * 
+         * - The **ErrorCode** parameter is not returned when the request succeeds.
+         * - The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether mapping relationships between applications and tags were queried successfully. Valid values:
+         * <p>
+         * 
+         * *   **true**: The query was successful.
+         * *   **false**: The query failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -234,7 +248,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the application.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -242,7 +256,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. Set the value to `application`.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -250,7 +264,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -258,7 +272,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -311,7 +325,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private java.util.List < TagResources> tagResources; 
 
             /**
-             * NextToken.
+             * A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -319,7 +333,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * The mapping relationships between applications and tags.
              */
             public Builder tagResources(java.util.List < TagResources> tagResources) {
                 this.tagResources = tagResources;

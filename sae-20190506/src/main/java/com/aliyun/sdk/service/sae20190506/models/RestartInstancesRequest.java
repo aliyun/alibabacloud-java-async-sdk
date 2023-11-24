@@ -70,7 +70,7 @@ public class RestartInstancesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class RestartInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the instance to be restarted. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

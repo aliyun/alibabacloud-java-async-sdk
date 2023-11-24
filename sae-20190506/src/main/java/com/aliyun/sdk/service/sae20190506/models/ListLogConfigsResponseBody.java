@@ -110,7 +110,11 @@ public class ListLogConfigsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the logging configurations of an application were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the configurations were obtained.
+         * *   **false**: indicates that the configurations could not be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of logging configurations.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The logging configurations.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -282,7 +296,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private String storeType; 
 
             /**
-             * ConfigName.
+             * The path of logs.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -290,7 +304,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The storage type of logs.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +312,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * LogDir.
+             * The name of the Logstore in Log Service.
              */
             public Builder logDir(String logDir) {
                 this.logDir = logDir;
@@ -306,7 +320,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * LogType.
+             * The ID of the region.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -314,7 +328,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The number of the returned page.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +336,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsLogStore.
+             * The time when the configuration was created.
              */
             public Builder slsLogStore(String slsLogStore) {
                 this.slsLogStore = slsLogStore;
@@ -330,7 +344,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProject.
+             * The type of the log. Set this value to **file_log**.
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -338,7 +352,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * StoreType.
+             * The ID of the Log Service project.
              */
             public Builder storeType(String storeType) {
                 this.storeType = storeType;
@@ -415,7 +429,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * CurrentPage.
+             * The total number of returned entries.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -423,7 +437,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * LogConfigs.
+             * The name of the Log Service configuration.
              */
             public Builder logConfigs(java.util.List < LogConfigs> logConfigs) {
                 this.logConfigs = logConfigs;
@@ -431,7 +445,11 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +457,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The number of entries returned on each page.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

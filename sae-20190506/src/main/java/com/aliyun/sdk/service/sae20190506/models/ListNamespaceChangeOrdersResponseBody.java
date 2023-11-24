@@ -110,7 +110,13 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the list of change orders was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the list was obtained.
+         * *   **false**: indicates that the list could not be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -366,7 +380,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * BatchCount.
+             * The number of release batches.
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -374,7 +388,11 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * BatchType.
+             * The mode in which the release batches are determined. Valid values:
+             * <p>
+             * 
+             * *   **auto**: SAE automatically determines the release batches.
+             * *   **manual**: You must manually determine the release batches.
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -382,7 +400,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeOrderId.
+             * The ID of the change order.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -390,7 +408,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CoType.
+             * The type of the change order, which corresponds the **CoTypeCode** parameter.
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -398,7 +416,11 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CoTypeCode.
+             * The code of the change order type. Valid values:
+             * <p>
+             * 
+             * *   **CoBatchStartApplication**: starts multiple applications concurrently.
+             * *   **CoBatchStopApplication**: stops multiple applications concurrently.
              */
             public Builder coTypeCode(String coTypeCode) {
                 this.coTypeCode = coTypeCode;
@@ -406,7 +428,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the change order was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -414,7 +436,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * The ID of the user who created the change order.
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -422,7 +444,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the change order.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -430,7 +452,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the change order was completed.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -438,7 +460,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -446,7 +468,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -454,7 +476,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Pipelines.
+             * The information about release batches.
              */
             public Builder pipelines(String pipelines) {
                 this.pipelines = pipelines;
@@ -462,7 +484,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the change order.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -470,7 +492,15 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the change order. Valid values:
+             * <p>
+             * 
+             * *   **0**: The change order is being prepared.
+             * *   **1**: The change order is being executed.
+             * *   **2**: The change order was executed.
+             * *   **3**: The change order could not be executed.
+             * *   **6**: The change order was terminated.
+             * *   **10**: The change order could not be executed due to a system exception.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -478,7 +508,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -555,7 +585,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * ChangeOrderList.
+             * The list of change orders.
              */
             public Builder changeOrderList(java.util.List < ChangeOrderList> changeOrderList) {
                 this.changeOrderList = changeOrderList;
@@ -563,7 +593,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -571,7 +601,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -579,7 +609,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of change orders.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

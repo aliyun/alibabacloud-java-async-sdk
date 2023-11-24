@@ -42,6 +42,14 @@ public class ExecJobRequest extends Request {
     private String jarStartOptions;
 
     @Query
+    @NameInMap("Replicas")
+    private String replicas;
+
+    @Query
+    @NameInMap("Time")
+    private String time;
+
+    @Query
     @NameInMap("WarStartOptions")
     private String warStartOptions;
 
@@ -54,6 +62,8 @@ public class ExecJobRequest extends Request {
         this.eventId = builder.eventId;
         this.jarStartArgs = builder.jarStartArgs;
         this.jarStartOptions = builder.jarStartOptions;
+        this.replicas = builder.replicas;
+        this.time = builder.time;
         this.warStartOptions = builder.warStartOptions;
     }
 
@@ -120,6 +130,20 @@ public class ExecJobRequest extends Request {
     }
 
     /**
+     * @return replicas
+     */
+    public String getReplicas() {
+        return this.replicas;
+    }
+
+    /**
+     * @return time
+     */
+    public String getTime() {
+        return this.time;
+    }
+
+    /**
      * @return warStartOptions
      */
     public String getWarStartOptions() {
@@ -134,6 +158,8 @@ public class ExecJobRequest extends Request {
         private String eventId; 
         private String jarStartArgs; 
         private String jarStartOptions; 
+        private String replicas; 
+        private String time; 
         private String warStartOptions; 
 
         private Builder() {
@@ -149,6 +175,8 @@ public class ExecJobRequest extends Request {
             this.eventId = request.eventId;
             this.jarStartArgs = request.jarStartArgs;
             this.jarStartOptions = request.jarStartOptions;
+            this.replicas = request.replicas;
+            this.time = request.time;
             this.warStartOptions = request.warStartOptions;
         } 
 
@@ -212,6 +240,24 @@ public class ExecJobRequest extends Request {
         public Builder jarStartOptions(String jarStartOptions) {
             this.putQueryParameter("JarStartOptions", jarStartOptions);
             this.jarStartOptions = jarStartOptions;
+            return this;
+        }
+
+        /**
+         * Replicas.
+         */
+        public Builder replicas(String replicas) {
+            this.putQueryParameter("Replicas", replicas);
+            this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * Time.
+         */
+        public Builder time(String time) {
+            this.putQueryParameter("Time", time);
+            this.time = time;
             return this;
         }
 

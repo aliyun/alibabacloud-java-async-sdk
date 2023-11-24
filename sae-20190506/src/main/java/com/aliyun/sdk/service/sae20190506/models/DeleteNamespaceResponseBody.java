@@ -98,7 +98,13 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +112,11 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +124,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +132,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +140,11 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the namespace was deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the namespace was deleted.
+         * *   **false**: indicates that the namespace could not be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +152,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

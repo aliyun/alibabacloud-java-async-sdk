@@ -70,7 +70,7 @@ public class DescribeApplicationImageRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class DescribeApplicationImageRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * registry-vpc.cn-hangzhou.aliyuncs.com/demo/demo:latest
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);

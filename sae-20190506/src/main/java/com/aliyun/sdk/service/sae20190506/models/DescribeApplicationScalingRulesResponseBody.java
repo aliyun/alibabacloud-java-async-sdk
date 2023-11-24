@@ -12,18 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationScalingRulesResponseBody</p>
  */
 public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("Data")
     private Data data;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
 
     @NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationScalingRulesResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
         this.traceId = builder.traceId;
     }
 
@@ -36,10 +52,31 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -50,6 +87,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
      * @return traceId
      */
     public String getTraceId() {
@@ -57,12 +101,24 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
         private Data data; 
+        private String errorCode; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
         private String traceId; 
 
         /**
-         * Data.
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +126,23 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +150,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -98,9 +178,25 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("MetricType")
         private String metricType;
 
+        @NameInMap("SlbId")
+        private String slbId;
+
+        @NameInMap("SlbLogstore")
+        private String slbLogstore;
+
+        @NameInMap("SlbProject")
+        private String slbProject;
+
+        @NameInMap("Vport")
+        private String vport;
+
         private Metrics(Builder builder) {
             this.metricTargetAverageUtilization = builder.metricTargetAverageUtilization;
             this.metricType = builder.metricType;
+            this.slbId = builder.slbId;
+            this.slbLogstore = builder.slbLogstore;
+            this.slbProject = builder.slbProject;
+            this.vport = builder.vport;
         }
 
         public static Builder builder() {
@@ -125,12 +221,51 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             return this.metricType;
         }
 
+        /**
+         * @return slbId
+         */
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        /**
+         * @return slbLogstore
+         */
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        /**
+         * @return slbProject
+         */
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        /**
+         * @return vport
+         */
+        public String getVport() {
+            return this.vport;
+        }
+
         public static final class Builder {
             private Integer metricTargetAverageUtilization; 
             private String metricType; 
+            private String slbId; 
+            private String slbLogstore; 
+            private String slbProject; 
+            private String vport; 
 
             /**
-             * MetricTargetAverageUtilization.
+             * The limit on the metric.
+             * <p>
+             * 
+             * *   The limit on the CPU utilization. Unit: percentage.
+             * *   The limit on the memory usage. Unit: percentage.
+             * *   The limit on the average number of active TCP connections per second.
+             * *   The limit on the queries per second (QPS) of the Internet-facing Server Load Balancer (SLB) instance.
+             * *   The limit on the response time of the Internet-facing SLB instance. Unit: milliseconds.
              */
             public Builder metricTargetAverageUtilization(Integer metricTargetAverageUtilization) {
                 this.metricTargetAverageUtilization = metricTargetAverageUtilization;
@@ -138,10 +273,49 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * The metric that is used to trigger the auto scaling policy. Valid values:
+             * <p>
+             * 
+             * *   **CPU**: the CPU utilization.
+             * *   **MEMORY**: the memory usage.
+             * *   **tcpActiveConn**: the average number of active TCP connections per second of an application instance in 30 seconds.
+             * *   **SLB_QPS**: the average QPS of the Internet-facing SLB instance associated with an application instance in 15 seconds.
+             * *   **SLB_RT**: the average response time of the Internet-facing SLB instance in 15 seconds.
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
+                return this;
+            }
+
+            /**
+             * SlbId.
+             */
+            public Builder slbId(String slbId) {
+                this.slbId = slbId;
+                return this;
+            }
+
+            /**
+             * SlbLogstore.
+             */
+            public Builder slbLogstore(String slbLogstore) {
+                this.slbLogstore = slbLogstore;
+                return this;
+            }
+
+            /**
+             * SlbProject.
+             */
+            public Builder slbProject(String slbProject) {
+                this.slbProject = slbProject;
+                return this;
+            }
+
+            /**
+             * Vport.
+             */
+            public Builder vport(String vport) {
+                this.vport = vport;
                 return this;
             }
 
@@ -203,7 +377,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CurrentValue.
+             * The current value of the metric.
              */
             public Builder currentValue(Long currentValue) {
                 this.currentValue = currentValue;
@@ -211,7 +385,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
+             * <p>
+             * 
+             * *   **cpu**: the CPU utilization.
+             * *   **memory**: the memory usage.
+             * *   **tcpActiveConn**: the number of active TCP connections.
+             * *   **slb_incall_qps**: the QPS of the Internet-facing SLB instance.
+             * *   **slb_incall_rt**: the response time of the Internet-facing SLB instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +400,12 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the data. This parameter corresponds to the metric.
+             * <p>
+             * 
+             * *   **Resource**: used when the metric is the **CPU utilization** or **memory usage**.
+             * *   **Pods**: used when the metric is the **number of active TCP connections**.
+             * *   **External**: used when the metric is about the **SLB** instance or from **Application Real-Time Monitoring Service (ARMS)**.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -284,7 +470,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Integer nextScaleOutAverageUtilization; 
 
             /**
-             * Name.
+             * The name of the metric.
+             * <p>
+             * 
+             * *   **cpu**: the CPU utilization.
+             * *   **memory**: the memory usage.
+             * *   **tcpActiveConn**: the number of active TCP connections.
+             * *   **slb_incall_qps**: the QPS of the Internet-facing SLB instance.
+             * *   **slb_incall_rt**: the response time of the Internet-facing SLB instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +485,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextScaleInAverageUtilization.
+             * The metric value as a percentage that triggers the application scale-in next time.
              */
             public Builder nextScaleInAverageUtilization(Integer nextScaleInAverageUtilization) {
                 this.nextScaleInAverageUtilization = nextScaleInAverageUtilization;
@@ -300,7 +493,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextScaleOutAverageUtilization.
+             * The metric value as a percentage that triggers the application scale-out next time.
              */
             public Builder nextScaleOutAverageUtilization(Integer nextScaleOutAverageUtilization) {
                 this.nextScaleOutAverageUtilization = nextScaleOutAverageUtilization;
@@ -425,7 +618,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Integer nextScaleTimePeriod; 
 
             /**
-             * CurrentMetrics.
+             * The metrics that are used to trigger the auto scaling policy this time.
              */
             public Builder currentMetrics(java.util.List < CurrentMetrics> currentMetrics) {
                 this.currentMetrics = currentMetrics;
@@ -433,7 +626,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentReplicas.
+             * The current number of instances.
              */
             public Builder currentReplicas(Long currentReplicas) {
                 this.currentReplicas = currentReplicas;
@@ -441,7 +634,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DesiredReplicas.
+             * The expected number of instances.
              */
             public Builder desiredReplicas(Long desiredReplicas) {
                 this.desiredReplicas = desiredReplicas;
@@ -449,7 +642,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LastScaleTime.
+             * The time when the auto scaling policy was last triggered.
              */
             public Builder lastScaleTime(String lastScaleTime) {
                 this.lastScaleTime = lastScaleTime;
@@ -457,7 +650,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReplicas.
+             * The maximum number of instances.
              */
             public Builder maxReplicas(Long maxReplicas) {
                 this.maxReplicas = maxReplicas;
@@ -465,7 +658,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MinReplicas.
+             * The minimum number of instances.
              */
             public Builder minReplicas(Long minReplicas) {
                 this.minReplicas = minReplicas;
@@ -473,7 +666,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextScaleMetrics.
+             * The metrics that are used to trigger the auto scaling policy next time.
              */
             public Builder nextScaleMetrics(java.util.List < NextScaleMetrics> nextScaleMetrics) {
                 this.nextScaleMetrics = nextScaleMetrics;
@@ -481,7 +674,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NextScaleTimePeriod.
+             * The duration for which the metric-based auto scaling policy takes effect next time.
              */
             public Builder nextScaleTimePeriod(Integer nextScaleTimePeriod) {
                 this.nextScaleTimePeriod = nextScaleTimePeriod;
@@ -546,7 +739,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long step; 
 
             /**
-             * Disabled.
+             * Indicates whether the application scale-in was disabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: The application scale-in was disabled.
+             * *   **false**: The application scale-in was enabled.
+             * 
+             * >  When this parameter is set to true, the application instances will never be reduced. This prevents risks to your business in peak hours. By default, this parameter is set to false.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -554,7 +753,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StabilizationWindowSeconds.
+             * The cooldown time of the scale-in. Valid values: 0 to 3600. Unit: seconds. The default value is 0.
              */
             public Builder stabilizationWindowSeconds(Long stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -562,7 +761,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size for the scale-in. The maximum number of instances that can be reduced in a unit of time.
              */
             public Builder step(Long step) {
                 this.step = step;
@@ -627,7 +826,13 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long step; 
 
             /**
-             * Disabled.
+             * Indicates whether the application scale-in was disabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: The application scale-in was disabled.
+             * *   **false**: The application scale-in was enabled.
+             * 
+             * >  When this parameter is set to true, the application instances will never be reduced. This prevents risks to your business in peak hours. By default, this parameter is set to false.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -635,7 +840,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StabilizationWindowSeconds.
+             * The cooldown time of the scale-out. Valid values: 0 to 3600. Unit: seconds. The default value is 0.
              */
             public Builder stabilizationWindowSeconds(Long stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -643,7 +848,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size for the scale-out. The maximum number of instances that can be added in a unit of time.
              */
             public Builder step(Long step) {
                 this.step = step;
@@ -744,7 +949,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private ScaleUpRules scaleUpRules; 
 
             /**
-             * MaxReplicas.
+             * The maximum number of instances.
              */
             public Builder maxReplicas(Integer maxReplicas) {
                 this.maxReplicas = maxReplicas;
@@ -752,7 +957,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The list of metrics that are used to trigger the auto scaling policy.
              */
             public Builder metrics(java.util.List < Metrics> metrics) {
                 this.metrics = metrics;
@@ -760,7 +965,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricsStatus.
+             * The execution status of the metric-based auto scaling policy.
              */
             public Builder metricsStatus(MetricsStatus metricsStatus) {
                 this.metricsStatus = metricsStatus;
@@ -768,7 +973,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MinReplicas.
+             * The minimum number of instances.
              */
             public Builder minReplicas(Integer minReplicas) {
                 this.minReplicas = minReplicas;
@@ -776,7 +981,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleDownRules.
+             * Rules that determine the application scale-in.
              */
             public Builder scaleDownRules(ScaleDownRules scaleDownRules) {
                 this.scaleDownRules = scaleDownRules;
@@ -784,7 +989,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleUpRules.
+             * Rules that determine the application scale-out.
              */
             public Builder scaleUpRules(ScaleUpRules scaleUpRules) {
                 this.scaleUpRules = scaleUpRules;
@@ -861,7 +1066,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Integer targetReplicas; 
 
             /**
-             * AtTime.
+             * The point in time. Format: **Hour:Minute**.
              */
             public Builder atTime(String atTime) {
                 this.atTime = atTime;
@@ -869,7 +1074,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReplicas.
+             * The maximum number of instances.
              */
             public Builder maxReplicas(Long maxReplicas) {
                 this.maxReplicas = maxReplicas;
@@ -877,7 +1082,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MinReplicas.
+             * The minimum number of instances.
              */
             public Builder minReplicas(Long minReplicas) {
                 this.minReplicas = minReplicas;
@@ -885,7 +1090,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetReplicas.
+             * The expected number of instances.
              */
             public Builder targetReplicas(Integer targetReplicas) {
                 this.targetReplicas = targetReplicas;
@@ -962,7 +1167,11 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private java.util.List < Schedules> schedules; 
 
             /**
-             * BeginDate.
+             * The start date of the validity period of the scheduled auto scaling policy. Valid values:
+             * <p>
+             * 
+             * *   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.
+             * *   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.
              */
             public Builder beginDate(String beginDate) {
                 this.beginDate = beginDate;
@@ -970,7 +1179,11 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * The end date of the validity period of the scheduled auto scaling policy. Valid values:
+             * <p>
+             * 
+             * *   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.
+             * *   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -978,7 +1191,22 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The days on which the scheduled auto scaling policy takes effect. Valid values:
+             * <p>
+             * 
+             * *   **\* \* \***: The scheduled auto scaling policy takes effect at a specified time every day.
+             * 
+             * *   **\* \* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:
+             * 
+             *     *   **Sun**: Sunday
+             *     *   **Mon**: Monday
+             *     *   **Tue**: Tuesday
+             *     *   **Wed**: Wednesday
+             *     *   **Thu**: Thursday
+             *     *   **Fri**: Friday
+             *     *   **Sat**: Saturday
+             * 
+             * *   **1,2,3,28,31 \* \***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -986,7 +1214,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Schedules.
+             * The points in time when the auto scaling policy is triggered within one day.
              */
             public Builder schedules(java.util.List < Schedules> schedules) {
                 this.schedules = schedules;
@@ -1013,6 +1241,12 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("Metric")
         private Metric metric;
 
+        @NameInMap("MinReadyInstanceRatio")
+        private Integer minReadyInstanceRatio;
+
+        @NameInMap("MinReadyInstances")
+        private Integer minReadyInstances;
+
         @NameInMap("ScaleRuleEnabled")
         private Boolean scaleRuleEnabled;
 
@@ -1033,6 +1267,8 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.lastDisableTime = builder.lastDisableTime;
             this.metric = builder.metric;
+            this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
+            this.minReadyInstances = builder.minReadyInstances;
             this.scaleRuleEnabled = builder.scaleRuleEnabled;
             this.scaleRuleName = builder.scaleRuleName;
             this.scaleRuleType = builder.scaleRuleType;
@@ -1077,6 +1313,20 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return minReadyInstanceRatio
+         */
+        public Integer getMinReadyInstanceRatio() {
+            return this.minReadyInstanceRatio;
+        }
+
+        /**
+         * @return minReadyInstances
+         */
+        public Integer getMinReadyInstances() {
+            return this.minReadyInstances;
+        }
+
+        /**
          * @return scaleRuleEnabled
          */
         public Boolean getScaleRuleEnabled() {
@@ -1116,6 +1366,8 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long createTime; 
             private Long lastDisableTime; 
             private Metric metric; 
+            private Integer minReadyInstanceRatio; 
+            private Integer minReadyInstances; 
             private Boolean scaleRuleEnabled; 
             private String scaleRuleName; 
             private String scaleRuleType; 
@@ -1123,7 +1375,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1131,7 +1383,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the auto scaling policy was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1139,7 +1391,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LastDisableTime.
+             * The time when the auto scaling policy was last disabled.
              */
             public Builder lastDisableTime(Long lastDisableTime) {
                 this.lastDisableTime = lastDisableTime;
@@ -1147,7 +1399,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Metric.
+             * The details of the metric-based auto scaling policy.
              */
             public Builder metric(Metric metric) {
                 this.metric = metric;
@@ -1155,7 +1407,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRuleEnabled.
+             * MinReadyInstanceRatio.
+             */
+            public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
+                this.minReadyInstanceRatio = minReadyInstanceRatio;
+                return this;
+            }
+
+            /**
+             * MinReadyInstances.
+             */
+            public Builder minReadyInstances(Integer minReadyInstances) {
+                this.minReadyInstances = minReadyInstances;
+                return this;
+            }
+
+            /**
+             * Indicates whether the auto scaling policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder scaleRuleEnabled(Boolean scaleRuleEnabled) {
                 this.scaleRuleEnabled = scaleRuleEnabled;
@@ -1163,7 +1435,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRuleName.
+             * The name of the auto scaling policy.
              */
             public Builder scaleRuleName(String scaleRuleName) {
                 this.scaleRuleName = scaleRuleName;
@@ -1171,7 +1443,12 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRuleType.
+             * The type of the auto scaling policy. Valid values:
+             * <p>
+             * 
+             * *   **timing**: the scheduled auto scaling policy.
+             * *   **metric**: the metric-based auto scaling policy.
+             * *   **mix**: the hybrid auto scaling policy.
              */
             public Builder scaleRuleType(String scaleRuleType) {
                 this.scaleRuleType = scaleRuleType;
@@ -1179,7 +1456,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Timer.
+             * The details of the scheduled auto scaling policy.
              */
             public Builder timer(Timer timer) {
                 this.timer = timer;
@@ -1187,7 +1464,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the auto scaling policy was updated. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1264,7 +1541,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * ApplicationScalingRules.
+             * The auto scaling policies of the application.
              */
             public Builder applicationScalingRules(java.util.List < ApplicationScalingRules> applicationScalingRules) {
                 this.applicationScalingRules = applicationScalingRules;
@@ -1272,7 +1549,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1280,7 +1557,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1288,7 +1565,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of auto scaling policies.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

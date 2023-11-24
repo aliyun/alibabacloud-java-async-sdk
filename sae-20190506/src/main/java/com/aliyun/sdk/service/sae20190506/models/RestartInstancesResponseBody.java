@@ -110,7 +110,13 @@ public class RestartInstancesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Take note of the following rules:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information that is returned. Take note of the following rules:
+         * <p>
+         * 
+         * *   success: If the call is successful, **success** is returned.
+         * *   An error code: If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Specifies whether the instances are successfully restarted. Take note of the following rules:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class RestartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +216,7 @@ public class RestartInstancesResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The ID of the change order.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

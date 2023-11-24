@@ -110,7 +110,13 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the change order.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information of a change order was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The information was obtained.
+         * *   **false**: The information could not be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -270,7 +284,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * BatchType.
+             * The batch type.
              */
             public Builder batchType(Integer batchType) {
                 this.batchType = batchType;
@@ -278,7 +292,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ParallelCount.
+             * The number of parallel tasks in a batch.
              */
             public Builder parallelCount(Integer parallelCount) {
                 this.parallelCount = parallelCount;
@@ -286,7 +300,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the batch.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -294,7 +308,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineName.
+             * The name of the batch.
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -302,7 +316,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the batch processing starts.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -310,7 +324,19 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the batch. Valid values:
+             * <p>
+             * 
+             * *   **0**: The batch is being prepared.
+             * *   **1**: The batch is being processed.
+             * *   **2**: The batch was processed.
+             * *   **3**: The batch could not be processed.
+             * *   **6**: The batch processing was terminated.
+             * *   **8**: The execution process is pending. You must manually determine the release batch.
+             * *   **9**: The execution process is pending. SAE will automatically determine the release batch.
+             * *   **10**: The batch could not be processed due to a system exception.
+             * *   **11**: The change order is pending approval.
+             * *   **12**: The change order is approved and is pending execution.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -318,7 +344,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the batch information is last modified.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -563,7 +589,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private Boolean supportRollback; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -571,7 +597,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -579,7 +605,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalId.
+             * The approval ID of the change order.
              */
             public Builder approvalId(String approvalId) {
                 this.approvalId = approvalId;
@@ -587,7 +613,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Auto.
+             * Indicates whether SAE automatically determines the release batches. Valid values:
+             * <p>
+             * 
+             * *   **true**: SAE automatically determines the release batches.
+             * *   **false**: SAE does not automatically determine the release batches.
              */
             public Builder auto(Boolean auto) {
                 this.auto = auto;
@@ -595,7 +625,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * BatchCount.
+             * The number of release batches.
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -603,7 +633,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * BatchType.
+             * The mode in which the release batches are determined. Valid values:
+             * <p>
+             * 
+             * *   **auto**: SAE automatically determines the release batches.
+             * *   **Manual**: You must manually determine the release batches.
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -611,7 +645,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * BatchWaitTime.
+             * The interval between batches when SAE automatically determines the release batches in a phased release. Unit: minutes.
              */
             public Builder batchWaitTime(Integer batchWaitTime) {
                 this.batchWaitTime = batchWaitTime;
@@ -619,7 +653,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeOrderId.
+             * The ID of the change order.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -627,7 +661,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CoType.
+             * The description about the change type, which corresponds to the **CoTypeCode** parameter.
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -635,7 +669,29 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CoTypeCode.
+             * The code of the change type. Valid values:
+             * <p>
+             * 
+             * *   **CoBindSlb**: associates the Server Load Balancer (SLB) instance with the application.
+             * *   **CoUnbindSlb**: disassociates the SLB instance from the application.
+             * *   **CoCreateApp**: creates the application.
+             * *   **CoDeleteApp**: deletes the application.
+             * *   **CoDeploy**: deploys the application.
+             * *   **CoRestartApplication**: restarts the application.
+             * *   **CoRollback**: rolls back the application.
+             * *   **CoScaleIn**: scales in the application.
+             * *   **CoScaleOut**: scales out the application.
+             * *   **CoStart**: starts the application.
+             * *   **CoStop**: stops the application.
+             * *   **CoRescaleApplicationVertically**: modifies the instance specifications.
+             * *   **CoDeployHistroy**: rolls back the application to a historical version.
+             * *   **CoBindNas**: associates a network-attached storage (NAS) file system with the application.
+             * *   **CoUnbindNas**: disassociates the NAS file system from the application.
+             * *   **CoBatchStartApplication**: starts multiple applications concurrently.
+             * *   **CoBatchStopApplication**: stops multiple applications concurrently.
+             * *   **CoRestartInstances**: restarts the instances.
+             * *   **CoDeleteInstances**: deletes the instances.
+             * *   **CoScaleInAppWithInstances**: reduces the number of specified application instances.
              */
             public Builder coTypeCode(String coTypeCode) {
                 this.coTypeCode = coTypeCode;
@@ -643,7 +699,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the change order was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -651,7 +707,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPipelineId.
+             * The ID of the current batch.
              */
             public Builder currentPipelineId(String currentPipelineId) {
                 this.currentPipelineId = currentPipelineId;
@@ -659,7 +715,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the change order.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -667,7 +723,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -675,7 +731,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Pipelines.
+             * The batch information.
              */
             public Builder pipelines(java.util.List < Pipelines> pipelines) {
                 this.pipelines = pipelines;
@@ -683,7 +739,19 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the change order. Valid values:
+             * <p>
+             * 
+             * *   **0**: The change order is being prepared.
+             * *   **1**: The change order is being executed.
+             * *   **2**: The change order was executed.
+             * *   **3**: The change order could not be executed.
+             * *   **6**: The change order was terminated.
+             * *   **8**: The execution process is pending. You must manually determine the release batch.
+             * *   **9**: The execution process is pending. SAE will automatically determine the release batches.
+             * *   **10**: The execution failed due to a system exception.
+             * *   **11**: The change order is pending approval.
+             * *   **12**: The change order is approved and is pending execution.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -691,7 +759,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:
+             * <p>
+             * 
+             * *   **0**: No exception occurred.
+             * *   **1**: An exception occurred. For example, when an error occurred during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as "1", which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.
              */
             public Builder subStatus(Integer subStatus) {
                 this.subStatus = subStatus;
@@ -699,7 +771,11 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             }
 
             /**
-             * SupportRollback.
+             * Indicates whether the application can be rolled back. Valid values:
+             * <p>
+             * 
+             * *   **true**: The application can be rolled back.
+             * *   **false**: The application cannot be rolled back.
              */
             public Builder supportRollback(Boolean supportRollback) {
                 this.supportRollback = supportRollback;

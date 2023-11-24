@@ -12,18 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationScalingRuleResponseBody</p>
  */
 public class CreateApplicationScalingRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("Data")
     private Data data;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("Success")
+    private Boolean success;
 
     @NameInMap("TraceId")
     private String traceId;
 
     private CreateApplicationScalingRuleResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
         this.traceId = builder.traceId;
     }
 
@@ -36,10 +52,31 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -50,6 +87,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
      * @return traceId
      */
     public String getTraceId() {
@@ -57,9 +101,21 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
         private Data data; 
+        private String errorCode; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
         private String traceId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Data.
@@ -70,10 +126,34 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
@@ -98,9 +178,25 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("MetricType")
         private String metricType;
 
+        @NameInMap("SlbId")
+        private String slbId;
+
+        @NameInMap("SlbLogstore")
+        private String slbLogstore;
+
+        @NameInMap("SlbProject")
+        private String slbProject;
+
+        @NameInMap("Vport")
+        private String vport;
+
         private Metrics(Builder builder) {
             this.metricTargetAverageUtilization = builder.metricTargetAverageUtilization;
             this.metricType = builder.metricType;
+            this.slbId = builder.slbId;
+            this.slbLogstore = builder.slbLogstore;
+            this.slbProject = builder.slbProject;
+            this.vport = builder.vport;
         }
 
         public static Builder builder() {
@@ -125,9 +221,41 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             return this.metricType;
         }
 
+        /**
+         * @return slbId
+         */
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        /**
+         * @return slbLogstore
+         */
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        /**
+         * @return slbProject
+         */
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        /**
+         * @return vport
+         */
+        public String getVport() {
+            return this.vport;
+        }
+
         public static final class Builder {
             private Integer metricTargetAverageUtilization; 
             private String metricType; 
+            private String slbId; 
+            private String slbLogstore; 
+            private String slbProject; 
+            private String vport; 
 
             /**
              * MetricTargetAverageUtilization.
@@ -142,6 +270,38 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
+                return this;
+            }
+
+            /**
+             * SlbId.
+             */
+            public Builder slbId(String slbId) {
+                this.slbId = slbId;
+                return this;
+            }
+
+            /**
+             * SlbLogstore.
+             */
+            public Builder slbLogstore(String slbLogstore) {
+                this.slbLogstore = slbLogstore;
+                return this;
+            }
+
+            /**
+             * SlbProject.
+             */
+            public Builder slbProject(String slbProject) {
+                this.slbProject = slbProject;
+                return this;
+            }
+
+            /**
+             * Vport.
+             */
+            public Builder vport(String vport) {
+                this.vport = vport;
                 return this;
             }
 
@@ -237,11 +397,19 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("AtTime")
         private String atTime;
 
+        @NameInMap("MaxReplicas")
+        private Integer maxReplicas;
+
+        @NameInMap("MinReplicas")
+        private Integer minReplicas;
+
         @NameInMap("TargetReplicas")
         private Integer targetReplicas;
 
         private Schedules(Builder builder) {
             this.atTime = builder.atTime;
+            this.maxReplicas = builder.maxReplicas;
+            this.minReplicas = builder.minReplicas;
             this.targetReplicas = builder.targetReplicas;
         }
 
@@ -261,6 +429,20 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxReplicas
+         */
+        public Integer getMaxReplicas() {
+            return this.maxReplicas;
+        }
+
+        /**
+         * @return minReplicas
+         */
+        public Integer getMinReplicas() {
+            return this.minReplicas;
+        }
+
+        /**
          * @return targetReplicas
          */
         public Integer getTargetReplicas() {
@@ -269,6 +451,8 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String atTime; 
+            private Integer maxReplicas; 
+            private Integer minReplicas; 
             private Integer targetReplicas; 
 
             /**
@@ -276,6 +460,22 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
              */
             public Builder atTime(String atTime) {
                 this.atTime = atTime;
+                return this;
+            }
+
+            /**
+             * MaxReplicas.
+             */
+            public Builder maxReplicas(Integer maxReplicas) {
+                this.maxReplicas = maxReplicas;
+                return this;
+            }
+
+            /**
+             * MinReplicas.
+             */
+            public Builder minReplicas(Integer minReplicas) {
+                this.minReplicas = minReplicas;
                 return this;
             }
 

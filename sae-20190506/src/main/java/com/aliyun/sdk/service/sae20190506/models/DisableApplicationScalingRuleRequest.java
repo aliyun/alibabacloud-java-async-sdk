@@ -70,7 +70,7 @@ public class DisableApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * timer-0800-2100
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class DisableApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * The ID of the request.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);

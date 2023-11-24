@@ -110,7 +110,13 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of namespaces.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   success: If the call is successful, **success** is returned.
+         * *   An error code: If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the namespaces were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The namespaces were obtained.
+         * *   **false**: The namespaces failed to be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +202,9 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         @NameInMap("HybridCloudEnable")
         private Boolean hybridCloudEnable;
 
+        @NameInMap("NameSpaceShortId")
+        private String nameSpaceShortId;
+
         @NameInMap("NamespaceId")
         private String namespaceId;
 
@@ -207,6 +228,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             this.current = builder.current;
             this.custom = builder.custom;
             this.hybridCloudEnable = builder.hybridCloudEnable;
+            this.nameSpaceShortId = builder.nameSpaceShortId;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
             this.regionId = builder.regionId;
@@ -249,6 +271,13 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
          */
         public Boolean getHybridCloudEnable() {
             return this.hybridCloudEnable;
+        }
+
+        /**
+         * @return nameSpaceShortId
+         */
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         /**
@@ -298,6 +327,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             private Boolean current; 
             private Boolean custom; 
             private Boolean hybridCloudEnable; 
+            private String nameSpaceShortId; 
             private String namespaceId; 
             private String namespaceName; 
             private String regionId; 
@@ -306,7 +336,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AgentInstall.
+             * The command that was run to install the agent.
              */
             public Builder agentInstall(String agentInstall) {
                 this.agentInstall = agentInstall;
@@ -314,7 +344,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Current.
+             * This parameter is no longer valid.
              */
             public Builder current(Boolean current) {
                 this.current = current;
@@ -322,7 +352,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Custom.
+             * Indicates whether custom namespaces are returned. Valid values:
+             * <p>
+             * 
+             * *   **true**: Custom namespaces are returned.
+             * *   **false**: Custom namespaces are not returned.
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -330,7 +364,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * HybridCloudEnable.
+             * Specifies whether hybrid cloud namespaces are excluded. Valid values:
+             * <p>
+             * 
+             * *   **true**: Hybrid cloud namespaces are excluded.
+             * *   **false**: Hybrid cloud namespaces are included.
              */
             public Builder hybridCloudEnable(Boolean hybridCloudEnable) {
                 this.hybridCloudEnable = hybridCloudEnable;
@@ -338,7 +376,15 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * NameSpaceShortId.
+             */
+            public Builder nameSpaceShortId(String nameSpaceShortId) {
+                this.nameSpaceShortId = nameSpaceShortId;
+                return this;
+            }
+
+            /**
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -346,7 +392,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * The name of the namespace.
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -354,7 +400,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region to which the namespace belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +408,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -370,7 +416,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -378,7 +424,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

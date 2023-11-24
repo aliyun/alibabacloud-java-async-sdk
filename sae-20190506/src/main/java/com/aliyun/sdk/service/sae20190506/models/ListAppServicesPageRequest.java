@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAppServicesPageRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
@@ -26,6 +27,7 @@ public class ListAppServicesPageRequest extends Request {
 
     @Query
     @NameInMap("ServiceType")
+    @Validation(required = true)
     private String serviceType;
 
     private ListAppServicesPageRequest(Builder builder) {
@@ -96,7 +98,7 @@ public class ListAppServicesPageRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 1
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -105,7 +107,7 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The ID of the request.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +116,7 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The returned information.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +125,7 @@ public class ListAppServicesPageRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * 9999
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

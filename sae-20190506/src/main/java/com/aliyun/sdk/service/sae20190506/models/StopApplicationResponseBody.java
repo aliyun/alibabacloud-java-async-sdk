@@ -118,7 +118,11 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The error code.
+         * <p>
+         * 
+         * *   If the request is successful, this parameter is not returned.****
+         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,11 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * Indicates whether the specified application is stopped. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +142,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned data.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +150,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +166,7 @@ public class StopApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the change order.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +206,13 @@ public class StopApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The HTTP status code. Valid values:
+             * <p>
+             * 
+             * *   **2xx**: indicates that the request was successful.
+             * *   **3xx**: indicates that the request was redirected.
+             * *   **4xx**: indicates that the request was invalid.
+             * *   **5xx**: indicates that a server error occurred.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

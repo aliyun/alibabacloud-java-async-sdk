@@ -125,7 +125,7 @@ public class ListChangeOrdersRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 1
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -134,7 +134,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoStatus.
+         * The ID of the request.
          */
         public Builder coStatus(String coStatus) {
             this.putQueryParameter("CoStatus", coStatus);
@@ -143,7 +143,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoType.
+         * 2
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -152,7 +152,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * 20
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -161,7 +161,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * Key.
+         * CoCreateApp
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -170,7 +170,7 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * test
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

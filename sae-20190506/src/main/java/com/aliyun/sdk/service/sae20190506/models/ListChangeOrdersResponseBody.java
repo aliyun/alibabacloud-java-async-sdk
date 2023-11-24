@@ -110,7 +110,11 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the list of change orders was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the list was obtained.
+         * *   **false**: indicates that the list could not be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The number of the returned page.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +168,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The information about change orders.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -354,7 +364,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AppId.
+             * The number of entries returned on each page.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -362,7 +372,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * BatchCount.
+             * The ID of the user who created the change order.
              */
             public Builder batchCount(Integer batchCount) {
                 this.batchCount = batchCount;
@@ -370,7 +380,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * BatchType.
+             * The ID of the group.
              */
             public Builder batchType(String batchType) {
                 this.batchType = batchType;
@@ -378,7 +388,11 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeOrderId.
+             * The mode in which the release batches are determined. Valid values:
+             * <p>
+             * 
+             * *   **auto**: SAE automatically determines the release batches.
+             * *   **manual**: You must manually determine the release batches.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -386,7 +400,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CoType.
+             * The ID of the application.
              */
             public Builder coType(String coType) {
                 this.coType = coType;
@@ -394,7 +408,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CoTypeCode.
+             * The ID of the change order.
              */
             public Builder coTypeCode(String coTypeCode) {
                 this.coTypeCode = coTypeCode;
@@ -402,7 +416,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The ID of the user.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -410,7 +424,29 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserId.
+             * The code of the change type. Valid values:
+             * <p>
+             * 
+             * *   **CoBindSlb**: associates an SLB instance with the application.
+             * *   **CoUnbindSlb**: disassociates the SLB instance from the application.
+             * *   **CoCreateApp**: creates the application.
+             * *   **CoDeleteApp**: deletes the application.
+             * *   **CoDeploy**: deploys the application.
+             * *   **CoRestartApplication**: restarts the application.
+             * *   **CoRollback**: rolls back the application.
+             * *   **CoScaleIn**: scales in the application.
+             * *   **CoScaleOut**: scales out the application.
+             * *   **CoStart**: starts the application.
+             * *   **CoStop**: stops the application.
+             * *   **CoRescaleApplicationVertically**: modifies the instance specifications.
+             * *   **CoDeployHistroy**: rolls back the application to a historical version.
+             * *   **CoBindNas**: associates a NAS file system with the application.
+             * *   **CoUnbindNas**: disassociates the NAS file system from the application.
+             * *   **CoBatchStartApplication**: starts multiple applications concurrently.
+             * *   **CoBatchStopApplication**: stops multiple applications concurrently.
+             * *   **CoRestartInstances**: restarts the instances.
+             * *   **CoDeleteInstances**: deletes the instances.
+             * *   **CoScaleInAppWithInstances**: reduces the number of the specified application instances.
              */
             public Builder createUserId(String createUserId) {
                 this.createUserId = createUserId;
@@ -418,7 +454,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The change type, which corresponds to the **CoTypeCode** parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -426,7 +462,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the change order was created.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -434,7 +470,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The description about the application.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -442,7 +478,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The number of release batches.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -450,7 +486,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The time when the change order was completed.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -458,7 +494,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The source of the change order.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -535,7 +571,19 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * ChangeOrderList.
+             * The status of the change order. Valid values:
+             * <p>
+             * 
+             * *   **0**: The change order is being prepared.
+             * *   **1**: The change order is being executed.
+             * *   **2**: The change order was executed.
+             * *   **3**: The change order could not be executed.
+             * *   **6**: The change order was terminated.
+             * *   **8**: The execution process is pending. You must manually determine the release batch.
+             * *   **9**: The execution process is pending. SAE will automatically determine the release batch.
+             * *   **10**: The change order could not be executed due to a system exception.
+             * *   **11**: The change order is pending approval.
+             * *   **12**: The change order is approved and is pending execution.
              */
             public Builder changeOrderList(java.util.List < ChangeOrderList> changeOrderList) {
                 this.changeOrderList = changeOrderList;
@@ -543,7 +591,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The total number of change orders.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -551,7 +599,11 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -559,7 +611,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The list of change orders.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

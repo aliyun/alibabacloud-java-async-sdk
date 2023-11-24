@@ -110,7 +110,13 @@ public class BindSlbResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the SLB instance was successfully associated with the application. Valid values:
+         * <p>
+         * 
+         * *   **true**: The SLB instance was successfully associated with the application.
+         * *   **false**: The SLB instance could not be associated with the application.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +212,7 @@ public class BindSlbResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The ID of the change order. It can be used to query the task status.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

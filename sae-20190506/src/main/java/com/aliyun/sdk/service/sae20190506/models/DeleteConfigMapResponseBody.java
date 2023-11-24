@@ -110,7 +110,13 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the call was successful.
+         * *   **3xx**: indicates that the call was redirected.
+         * *   **4xx**: indicates that the call failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, **success** is returned.
+         * *   If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the ConfigMap instance was deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instance was deleted.
+         * *   **false**: The instance failed to be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +216,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
             private Long configMapId; 
 
             /**
-             * ConfigMapId.
+             * The ID of the deleted ConfigMap instance.
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;

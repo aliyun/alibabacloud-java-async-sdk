@@ -110,7 +110,13 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * - **2xx**: The call was successful.
+         * - **3xx**: The call was redirected.
+         * - **4xx**: The call failed.
+         * - **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the canary release rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * - If the call is successful, the **ErrorCode** parameter is not returned.
+         * - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   success: If the call is successful, **success** is returned.
+         * *   An error code: If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information of the change order was queried. Valid values:
+         * <p>
+         * 
+         * - **true**: The information was queried.
+         * - **false**: The information failed to be queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -294,7 +312,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * abandon
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +328,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * abandon
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -332,6 +350,282 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         } 
 
     }
+    public static class AlbRules extends TeaModel {
+        @NameInMap("condition")
+        private String condition;
+
+        @NameInMap("ingressId")
+        private String ingressId;
+
+        @NameInMap("items")
+        private java.util.List < Items> items;
+
+        @NameInMap("serviceName")
+        private String serviceName;
+
+        private AlbRules(Builder builder) {
+            this.condition = builder.condition;
+            this.ingressId = builder.ingressId;
+            this.items = builder.items;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlbRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return ingressId
+         */
+        public String getIngressId() {
+            return this.ingressId;
+        }
+
+        /**
+         * @return items
+         */
+        public java.util.List < Items> getItems() {
+            return this.items;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private String condition; 
+            private String ingressId; 
+            private java.util.List < Items> items; 
+            private String serviceName; 
+
+            /**
+             * condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * ingressId.
+             */
+            public Builder ingressId(String ingressId) {
+                this.ingressId = ingressId;
+                return this;
+            }
+
+            /**
+             * items.
+             */
+            public Builder items(java.util.List < Items> items) {
+                this.items = items;
+                return this;
+            }
+
+            /**
+             * serviceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public AlbRules build() {
+                return new AlbRules(this);
+            } 
+
+        } 
+
+    }
+    public static class DubboRulesItems extends TeaModel {
+        @NameInMap("cond")
+        private String cond;
+
+        @NameInMap("expr")
+        private String expr;
+
+        @NameInMap("index")
+        private Integer index;
+
+        @NameInMap("name")
+        private String name;
+
+        @NameInMap("operator")
+        private String operator;
+
+        @NameInMap("type")
+        private String type;
+
+        @NameInMap("value")
+        private String value;
+
+        private DubboRulesItems(Builder builder) {
+            this.cond = builder.cond;
+            this.expr = builder.expr;
+            this.index = builder.index;
+            this.name = builder.name;
+            this.operator = builder.operator;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DubboRulesItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cond
+         */
+        public String getCond() {
+            return this.cond;
+        }
+
+        /**
+         * @return expr
+         */
+        public String getExpr() {
+            return this.expr;
+        }
+
+        /**
+         * @return index
+         */
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String cond; 
+            private String expr; 
+            private Integer index; 
+            private String name; 
+            private String operator; 
+            private String type; 
+            private String value; 
+
+            /**
+             * The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.
+             */
+            public Builder cond(String cond) {
+                this.cond = cond;
+                return this;
+            }
+
+            /**
+             * The expression that is used to obtain the value of the parameter. The syntax of the expression must follow the standard of the SpEL. Valid values:
+             * <p>
+             * 
+             * - **Empty**: obtains the value of the parameter.
+             * - **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().
+             * - **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().
+             * - **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).
+             * - **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).
+             * - **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").  >  For more information about the expressions that are used to obtain parameter values, see  [Spring Expression Language (SpEL)](https://docs.spring.io/spring-integration/docs/current/reference/html/spel.html).
+             */
+            public Builder expr(String expr) {
+                this.expr = expr;
+                return this;
+            }
+
+            /**
+             * The index of the parameter. The value 0 indicates the first parameter.
+             */
+            public Builder index(Integer index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * This parameter is not returned for Dubbo services.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The operator. Valid values:
+             * <p>
+             * 
+             * - **rawvalue**: direct comparison.
+             * - **list**: whitelist.
+             * - **mod**: mods 100.
+             * - **deterministic_proportional_steaming_division**: percentage.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * This parameter is not returned for Dubbo services.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * The value of the parameter. This value is compared with the value that is obtained based on the **expr** and **index** parameters.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DubboRulesItems build() {
+                return new DubboRulesItems(this);
+            } 
+
+        } 
+
+    }
     public static class DubboRules extends TeaModel {
         @NameInMap("condition")
         private String condition;
@@ -340,7 +634,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         private String group;
 
         @NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List < DubboRulesItems> items;
 
         @NameInMap("methodName")
         private String methodName;
@@ -385,7 +679,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List < DubboRulesItems> getItems() {
             return this.items;
         }
 
@@ -413,13 +707,17 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String condition; 
             private String group; 
-            private java.util.List < Items> items; 
+            private java.util.List < DubboRulesItems> items; 
             private String methodName; 
             private String serviceName; 
             private String version; 
 
             /**
-             * condition.
+             * The relationship between the conditions in the canary release rule. Valid values:
+             * <p>
+             * 
+             * - **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
+             * - **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -427,7 +725,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * The group of the Dubbo service that corresponds to the canary release rule.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -435,15 +733,15 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * The conditions.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List < DubboRulesItems> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * methodName.
+             * The method name of the Dubbo service.
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -451,7 +749,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * The name of the Dubbo service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -459,7 +757,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version of the Dubbo service.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -572,7 +870,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * cond.
+             * The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -580,7 +878,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * expr.
+             * This parameter is not returned for Spring Cloud applications.
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -588,7 +886,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * abandon
+             * This parameter is not returned for Spring Cloud applications.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -596,7 +894,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * abandon
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -604,7 +902,13 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * The operator. Valid values:
+             * <p>
+             * 
+             * *   **rawvalue**: direct comparison.
+             * *   **list**: whitelist.
+             * *   **mod**: mods 100.
+             * *   **deterministic_proportional_steaming_division**: percentage.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -612,7 +916,12 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * abandon
+             * The type of the comparison. Valid values:
+             * <p>
+             * 
+             * *   **param**: parameter
+             * *   **cookie**: cookie
+             * *   **header**: header
              */
             public Builder type(String type) {
                 this.type = type;
@@ -620,7 +929,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The value of the parameter. This value is compared with the value that is obtained based on the **type** and **name** parameters.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -685,7 +994,11 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * condition.
+             * The relationship between the conditions in the canary release rule. Valid values:
+             * <p>
+             * 
+             * *   **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
+             * *   **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -693,7 +1006,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * The conditions.
              */
             public Builder items(java.util.List < ScRulesItems> items) {
                 this.items = items;
@@ -701,7 +1014,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * The path of the canary release rule of the Spring Cloud application.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -716,6 +1029,9 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @NameInMap("AlbRules")
+        private java.util.List < AlbRules> albRules;
+
         @NameInMap("CreateTime")
         private Long createTime;
 
@@ -738,6 +1054,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         private Long updateTime;
 
         private Result(Builder builder) {
+            this.albRules = builder.albRules;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.dubboRules = builder.dubboRules;
@@ -753,6 +1070,13 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return albRules
+         */
+        public java.util.List < AlbRules> getAlbRules() {
+            return this.albRules;
         }
 
         /**
@@ -805,6 +1129,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < AlbRules> albRules; 
             private Long createTime; 
             private String description; 
             private java.util.List < DubboRules> dubboRules; 
@@ -814,7 +1139,15 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * CreateTime.
+             * AlbRules.
+             */
+            public Builder albRules(java.util.List < AlbRules> albRules) {
+                this.albRules = albRules;
+                return this;
+            }
+
+            /**
+             * The timestamp when the canary release rule was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -822,7 +1155,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the canary release rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -830,7 +1163,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * DubboRules.
+             * The canary release rule of the Dubbo service.
              */
             public Builder dubboRules(java.util.List < DubboRules> dubboRules) {
                 this.dubboRules = dubboRules;
@@ -838,7 +1171,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * GreyTagRouteId.
+             * The ID of the canary release rule.
              */
             public Builder greyTagRouteId(Long greyTagRouteId) {
                 this.greyTagRouteId = greyTagRouteId;
@@ -846,7 +1179,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the canary release rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -854,7 +1187,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ScRules.
+             * The canary release rule of the Spring Cloud application.
              */
             public Builder scRules(java.util.List < ScRules> scRules) {
                 this.scRules = scRules;
@@ -862,7 +1195,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp when the canary release rule was updated. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -939,7 +1272,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -947,7 +1280,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page. Valid value: **1**.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -955,7 +1288,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned result.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -963,7 +1296,7 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of canary release rules. Valid value: **1**.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

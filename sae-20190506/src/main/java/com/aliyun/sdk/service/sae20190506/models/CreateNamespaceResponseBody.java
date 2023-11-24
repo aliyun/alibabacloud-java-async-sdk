@@ -110,7 +110,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The region where the namespace resides.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The ID of the request.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * name
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The description of the namespace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The information of the namespace.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -172,6 +172,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("EnableMicroRegistration")
+        private Boolean enableMicroRegistration;
+
+        @NameInMap("NameSpaceShortId")
+        private String nameSpaceShortId;
+
         @NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
@@ -185,6 +191,8 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private String regionId;
 
         private Data(Builder builder) {
+            this.enableMicroRegistration = builder.enableMicroRegistration;
+            this.nameSpaceShortId = builder.nameSpaceShortId;
             this.namespaceDescription = builder.namespaceDescription;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
@@ -197,6 +205,20 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableMicroRegistration
+         */
+        public Boolean getEnableMicroRegistration() {
+            return this.enableMicroRegistration;
+        }
+
+        /**
+         * @return nameSpaceShortId
+         */
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         /**
@@ -228,13 +250,31 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableMicroRegistration; 
+            private String nameSpaceShortId; 
             private String namespaceDescription; 
             private String namespaceId; 
             private String namespaceName; 
             private String regionId; 
 
             /**
-             * NamespaceDescription.
+             * EnableMicroRegistration.
+             */
+            public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
+                this.enableMicroRegistration = enableMicroRegistration;
+                return this;
+            }
+
+            /**
+             * desc
+             */
+            public Builder nameSpaceShortId(String nameSpaceShortId) {
+                this.nameSpaceShortId = nameSpaceShortId;
+                return this;
+            }
+
+            /**
+             * The information of the namespace.
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -242,7 +282,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the request.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -250,7 +290,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * cn-beijing:test
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -258,7 +298,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * name
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

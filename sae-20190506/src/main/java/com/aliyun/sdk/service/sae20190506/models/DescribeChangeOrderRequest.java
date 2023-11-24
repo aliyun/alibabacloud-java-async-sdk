@@ -55,7 +55,7 @@ public class DescribeChangeOrderRequest extends Request {
         } 
 
         /**
-         * ChangeOrderId.
+         * 76fa5c0-9ebb-4bb4-b383-1f885447\*\*\*\*
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

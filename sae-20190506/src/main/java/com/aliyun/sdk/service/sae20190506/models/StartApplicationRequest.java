@@ -55,7 +55,7 @@ public class StartApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

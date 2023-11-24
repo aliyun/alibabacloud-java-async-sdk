@@ -13,12 +13,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateNamespaceRequest extends Request {
     @Query
+    @NameInMap("EnableMicroRegistration")
+    private Boolean enableMicroRegistration;
+
+    @Query
+    @NameInMap("NameSpaceShortId")
+    private String nameSpaceShortId;
+
+    @Query
     @NameInMap("NamespaceDescription")
     private String namespaceDescription;
 
     @Query
     @NameInMap("NamespaceId")
-    @Validation(required = true)
     private String namespaceId;
 
     @Query
@@ -28,6 +35,8 @@ public class UpdateNamespaceRequest extends Request {
 
     private UpdateNamespaceRequest(Builder builder) {
         super(builder);
+        this.enableMicroRegistration = builder.enableMicroRegistration;
+        this.nameSpaceShortId = builder.nameSpaceShortId;
         this.namespaceDescription = builder.namespaceDescription;
         this.namespaceId = builder.namespaceId;
         this.namespaceName = builder.namespaceName;
@@ -44,6 +53,20 @@ public class UpdateNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableMicroRegistration
+     */
+    public Boolean getEnableMicroRegistration() {
+        return this.enableMicroRegistration;
+    }
+
+    /**
+     * @return nameSpaceShortId
+     */
+    public String getNameSpaceShortId() {
+        return this.nameSpaceShortId;
     }
 
     /**
@@ -68,6 +91,8 @@ public class UpdateNamespaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNamespaceRequest, Builder> {
+        private Boolean enableMicroRegistration; 
+        private String nameSpaceShortId; 
         private String namespaceDescription; 
         private String namespaceId; 
         private String namespaceName; 
@@ -78,13 +103,33 @@ public class UpdateNamespaceRequest extends Request {
 
         private Builder(UpdateNamespaceRequest request) {
             super(request);
+            this.enableMicroRegistration = request.enableMicroRegistration;
+            this.nameSpaceShortId = request.nameSpaceShortId;
             this.namespaceDescription = request.namespaceDescription;
             this.namespaceId = request.namespaceId;
             this.namespaceName = request.namespaceName;
         } 
 
         /**
-         * NamespaceDescription.
+         * EnableMicroRegistration.
+         */
+        public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
+            this.putQueryParameter("EnableMicroRegistration", enableMicroRegistration);
+            this.enableMicroRegistration = enableMicroRegistration;
+            return this;
+        }
+
+        /**
+         * The short ID of the namespace. You do not need to specify a region ID. We recommend that you configure this parameter. The value of this parameter can be up to 20 characters in length and can contain only lowercase letters and digits.
+         */
+        public Builder nameSpaceShortId(String nameSpaceShortId) {
+            this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+
+        /**
+         * The description of the namespace. The description cannot exceed 100 characters in length.
          */
         public Builder namespaceDescription(String namespaceDescription) {
             this.putQueryParameter("NamespaceDescription", namespaceDescription);
@@ -93,7 +138,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the `<RegionId>:<NamespaceId>` format. The `NamespaceId` variable can contain only lowercase letters and digits. Example: `cn-beijing:test`. The value of the NamespaceId variable cannot exceed 32 characters in length. For more information about **RegionId**, you can call the [DescribeRegions](~~126213~~) operation to obtain the IDs of regions supported by SAE.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -102,7 +147,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * The name of the namespace. The name cannot exceed 64 characters in length.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

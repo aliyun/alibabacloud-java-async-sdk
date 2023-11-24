@@ -55,7 +55,7 @@ public class QueryResourceStaticsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNamespaceResourcesRequest extends Request {
     @Query
+    @NameInMap("NameSpaceShortId")
+    private String nameSpaceShortId;
+
+    @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
 
     private DescribeNamespaceResourcesRequest(Builder builder) {
         super(builder);
+        this.nameSpaceShortId = builder.nameSpaceShortId;
         this.namespaceId = builder.namespaceId;
     }
 
@@ -35,6 +40,13 @@ public class DescribeNamespaceResourcesRequest extends Request {
     }
 
     /**
+     * @return nameSpaceShortId
+     */
+    public String getNameSpaceShortId() {
+        return this.nameSpaceShortId;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -42,6 +54,7 @@ public class DescribeNamespaceResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNamespaceResourcesRequest, Builder> {
+        private String nameSpaceShortId; 
         private String namespaceId; 
 
         private Builder() {
@@ -50,11 +63,21 @@ public class DescribeNamespaceResourcesRequest extends Request {
 
         private Builder(DescribeNamespaceResourcesRequest request) {
             super(request);
+            this.nameSpaceShortId = request.nameSpaceShortId;
             this.namespaceId = request.namespaceId;
         } 
 
         /**
-         * NamespaceId.
+         * NameSpaceShortId.
+         */
+        public Builder nameSpaceShortId(String nameSpaceShortId) {
+            this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+
+        /**
+         * cn-shanghai:test
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

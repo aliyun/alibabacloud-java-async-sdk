@@ -110,7 +110,11 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the microservice list was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The list was obtained.
+         * *   **false**: The list failed to be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The type of the published service.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the call was successful.
+         * *   **3xx**: indicates that the call was redirected.
+         * *   **4xx**: indicates that the call failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, **success** is returned.
+         * *   If the call fails, an error code is returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The details of the microservices.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -270,7 +284,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AppId.
+             * A reserved parameter.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -278,7 +292,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Group2Ip.
+             * The subscription address of the service.
              */
             public Builder group2Ip(String group2Ip) {
                 this.group2Ip = group2Ip;
@@ -286,7 +300,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Groups.
+             * The version of the published service
              */
             public Builder groups(java.util.List < String > groups) {
                 this.groups = groups;
@@ -294,7 +308,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * The name of the published service.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -302,7 +316,11 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The returned error code. Valid values:
+             * <p>
+             * 
+             * *   If the call is successful, the **ErrorCode** parameter is not returned.
+             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +328,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The service group that corresponds to the published service.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -318,7 +336,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The ID of the application.
              */
             public Builder version(String version) {
                 this.version = version;

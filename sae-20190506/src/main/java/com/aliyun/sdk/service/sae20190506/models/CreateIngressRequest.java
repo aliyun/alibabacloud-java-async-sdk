@@ -17,6 +17,10 @@ public class CreateIngressRequest extends Request {
     private String certId;
 
     @Query
+    @NameInMap("CertIds")
+    private String certIds;
+
+    @Query
     @NameInMap("DefaultRule")
     @Validation(required = true)
     private String defaultRule;
@@ -56,6 +60,7 @@ public class CreateIngressRequest extends Request {
     private CreateIngressRequest(Builder builder) {
         super(builder);
         this.certId = builder.certId;
+        this.certIds = builder.certIds;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.listenerPort = builder.listenerPort;
@@ -84,6 +89,13 @@ public class CreateIngressRequest extends Request {
      */
     public String getCertId() {
         return this.certId;
+    }
+
+    /**
+     * @return certIds
+     */
+    public String getCertIds() {
+        return this.certIds;
     }
 
     /**
@@ -144,6 +156,7 @@ public class CreateIngressRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateIngressRequest, Builder> {
         private String certId; 
+        private String certIds; 
         private String defaultRule; 
         private String description; 
         private Integer listenerPort; 
@@ -160,6 +173,7 @@ public class CreateIngressRequest extends Request {
         private Builder(CreateIngressRequest request) {
             super(request);
             this.certId = request.certId;
+            this.certIds = request.certIds;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
             this.listenerPort = request.listenerPort;
@@ -176,6 +190,15 @@ public class CreateIngressRequest extends Request {
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);
             this.certId = certId;
+            return this;
+        }
+
+        /**
+         * CertIds.
+         */
+        public Builder certIds(String certIds) {
+            this.putQueryParameter("CertIds", certIds);
+            this.certIds = certIds;
             return this;
         }
 

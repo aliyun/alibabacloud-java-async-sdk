@@ -55,7 +55,7 @@ public class ListConsumedServicesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the request.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

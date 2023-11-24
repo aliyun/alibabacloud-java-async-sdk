@@ -69,7 +69,11 @@ public class BatchStartApplicationsRequest extends Request {
         } 
 
         /**
-         * AppIds.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -78,7 +82,7 @@ public class BatchStartApplicationsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the request.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

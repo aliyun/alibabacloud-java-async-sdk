@@ -110,7 +110,11 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the ConfigMap instance was updated. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instance was updated.
+         * *   **false**: The instance failed to be updated.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the ConfigMap instance.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx:**: indicates that the call was successful.
+         * *   **3xx**: indicates that the call was redirected.
+         * *   **4xx**: indicates that the call failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +168,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The returned result.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +208,11 @@ public class UpdateConfigMapResponseBody extends TeaModel {
             private String configMapId; 
 
             /**
-             * ConfigMapId.
+             * The returned error code. Valid values:
+             * <p>
+             * 
+             * *   If the call is successful, the **ErrorCode** parameter is not returned.
+             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
              */
             public Builder configMapId(String configMapId) {
                 this.configMapId = configMapId;

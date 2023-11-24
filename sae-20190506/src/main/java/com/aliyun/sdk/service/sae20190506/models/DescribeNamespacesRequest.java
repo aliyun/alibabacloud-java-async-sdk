@@ -70,7 +70,7 @@ public class DescribeNamespacesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * 1
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -79,7 +79,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

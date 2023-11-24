@@ -55,7 +55,7 @@ public class ListNamespacedConfigMapsRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * cn-hangzhou
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

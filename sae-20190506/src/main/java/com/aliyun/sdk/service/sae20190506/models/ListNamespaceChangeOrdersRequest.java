@@ -125,7 +125,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         } 
 
         /**
-         * CoStatus.
+         * 2
          */
         public Builder coStatus(String coStatus) {
             this.putQueryParameter("CoStatus", coStatus);
@@ -134,7 +134,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoType.
+         * CoBatchStartApplication
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -143,7 +143,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * 1
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +152,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * Key.
+         * test
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -161,7 +161,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * cn-shanghai:test
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -170,7 +170,7 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 20
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

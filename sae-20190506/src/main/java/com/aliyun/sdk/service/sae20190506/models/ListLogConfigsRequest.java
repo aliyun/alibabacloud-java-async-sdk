@@ -85,7 +85,7 @@ public class ListLogConfigsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 10
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -94,7 +94,7 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The ID of the request.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -103,7 +103,7 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 1
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

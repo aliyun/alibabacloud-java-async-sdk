@@ -66,8 +66,16 @@ public class CreateApplicationRequest extends Request {
     private String edasContainerVersion;
 
     @Query
+    @NameInMap("EnableEbpf")
+    private String enableEbpf;
+
+    @Query
     @NameInMap("Envs")
     private String envs;
+
+    @Query
+    @NameInMap("ImagePullSecrets")
+    private String imagePullSecrets;
 
     @Query
     @NameInMap("ImageUrl")
@@ -98,6 +106,10 @@ public class CreateApplicationRequest extends Request {
     private Integer memory;
 
     @Query
+    @NameInMap("MicroRegistration")
+    private String microRegistration;
+
+    @Query
     @NameInMap("MountDesc")
     private String mountDesc;
 
@@ -108,6 +120,10 @@ public class CreateApplicationRequest extends Request {
     @Query
     @NameInMap("NamespaceId")
     private String namespaceId;
+
+    @Query
+    @NameInMap("NasConfigs")
+    private String nasConfigs;
 
     @Query
     @NameInMap("NasId")
@@ -138,6 +154,10 @@ public class CreateApplicationRequest extends Request {
     @NameInMap("PackageVersion")
     private String packageVersion;
 
+    @Body
+    @NameInMap("Php")
+    private String php;
+
     @Query
     @NameInMap("PhpArmsConfigLocation")
     private String phpArmsConfigLocation;
@@ -163,6 +183,18 @@ public class CreateApplicationRequest extends Request {
     private String programmingLanguage;
 
     @Query
+    @NameInMap("PvtzDiscoverySvc")
+    private String pvtzDiscoverySvc;
+
+    @Query
+    @NameInMap("Python")
+    private String python;
+
+    @Query
+    @NameInMap("PythonModules")
+    private String pythonModules;
+
+    @Query
     @NameInMap("Readiness")
     private String readiness;
 
@@ -170,6 +202,10 @@ public class CreateApplicationRequest extends Request {
     @NameInMap("Replicas")
     @Validation(required = true)
     private Integer replicas;
+
+    @Query
+    @NameInMap("SaeVersion")
+    private String saeVersion;
 
     @Query
     @NameInMap("SecurityGroupId")
@@ -223,7 +259,9 @@ public class CreateApplicationRequest extends Request {
         this.customHostAlias = builder.customHostAlias;
         this.deploy = builder.deploy;
         this.edasContainerVersion = builder.edasContainerVersion;
+        this.enableEbpf = builder.enableEbpf;
         this.envs = builder.envs;
+        this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
         this.jarStartArgs = builder.jarStartArgs;
         this.jarStartOptions = builder.jarStartOptions;
@@ -231,9 +269,11 @@ public class CreateApplicationRequest extends Request {
         this.kafkaConfigs = builder.kafkaConfigs;
         this.liveness = builder.liveness;
         this.memory = builder.memory;
+        this.microRegistration = builder.microRegistration;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
+        this.nasConfigs = builder.nasConfigs;
         this.nasId = builder.nasId;
         this.ossAkId = builder.ossAkId;
         this.ossAkSecret = builder.ossAkSecret;
@@ -241,14 +281,19 @@ public class CreateApplicationRequest extends Request {
         this.packageType = builder.packageType;
         this.packageUrl = builder.packageUrl;
         this.packageVersion = builder.packageVersion;
+        this.php = builder.php;
         this.phpArmsConfigLocation = builder.phpArmsConfigLocation;
         this.phpConfig = builder.phpConfig;
         this.phpConfigLocation = builder.phpConfigLocation;
         this.postStart = builder.postStart;
         this.preStop = builder.preStop;
         this.programmingLanguage = builder.programmingLanguage;
+        this.pvtzDiscoverySvc = builder.pvtzDiscoverySvc;
+        this.python = builder.python;
+        this.pythonModules = builder.pythonModules;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
+        this.saeVersion = builder.saeVersion;
         this.securityGroupId = builder.securityGroupId;
         this.slsConfigs = builder.slsConfigs;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
@@ -365,10 +410,24 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return enableEbpf
+     */
+    public String getEnableEbpf() {
+        return this.enableEbpf;
+    }
+
+    /**
      * @return envs
      */
     public String getEnvs() {
         return this.envs;
+    }
+
+    /**
+     * @return imagePullSecrets
+     */
+    public String getImagePullSecrets() {
+        return this.imagePullSecrets;
     }
 
     /**
@@ -421,6 +480,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return microRegistration
+     */
+    public String getMicroRegistration() {
+        return this.microRegistration;
+    }
+
+    /**
      * @return mountDesc
      */
     public String getMountDesc() {
@@ -439,6 +505,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    /**
+     * @return nasConfigs
+     */
+    public String getNasConfigs() {
+        return this.nasConfigs;
     }
 
     /**
@@ -491,6 +564,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return php
+     */
+    public String getPhp() {
+        return this.php;
+    }
+
+    /**
      * @return phpArmsConfigLocation
      */
     public String getPhpArmsConfigLocation() {
@@ -533,6 +613,27 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return pvtzDiscoverySvc
+     */
+    public String getPvtzDiscoverySvc() {
+        return this.pvtzDiscoverySvc;
+    }
+
+    /**
+     * @return python
+     */
+    public String getPython() {
+        return this.python;
+    }
+
+    /**
+     * @return pythonModules
+     */
+    public String getPythonModules() {
+        return this.pythonModules;
+    }
+
+    /**
      * @return readiness
      */
     public String getReadiness() {
@@ -544,6 +645,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    /**
+     * @return saeVersion
+     */
+    public String getSaeVersion() {
+        return this.saeVersion;
     }
 
     /**
@@ -623,7 +731,9 @@ public class CreateApplicationRequest extends Request {
         private String customHostAlias; 
         private Boolean deploy; 
         private String edasContainerVersion; 
+        private String enableEbpf; 
         private String envs; 
+        private String imagePullSecrets; 
         private String imageUrl; 
         private String jarStartArgs; 
         private String jarStartOptions; 
@@ -631,9 +741,11 @@ public class CreateApplicationRequest extends Request {
         private String kafkaConfigs; 
         private String liveness; 
         private Integer memory; 
+        private String microRegistration; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
+        private String nasConfigs; 
         private String nasId; 
         private String ossAkId; 
         private String ossAkSecret; 
@@ -641,14 +753,19 @@ public class CreateApplicationRequest extends Request {
         private String packageType; 
         private String packageUrl; 
         private String packageVersion; 
+        private String php; 
         private String phpArmsConfigLocation; 
         private String phpConfig; 
         private String phpConfigLocation; 
         private String postStart; 
         private String preStop; 
         private String programmingLanguage; 
+        private String pvtzDiscoverySvc; 
+        private String python; 
+        private String pythonModules; 
         private String readiness; 
         private Integer replicas; 
+        private String saeVersion; 
         private String securityGroupId; 
         private String slsConfigs; 
         private Integer terminationGracePeriodSeconds; 
@@ -678,7 +795,9 @@ public class CreateApplicationRequest extends Request {
             this.customHostAlias = request.customHostAlias;
             this.deploy = request.deploy;
             this.edasContainerVersion = request.edasContainerVersion;
+            this.enableEbpf = request.enableEbpf;
             this.envs = request.envs;
+            this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
             this.jarStartArgs = request.jarStartArgs;
             this.jarStartOptions = request.jarStartOptions;
@@ -686,9 +805,11 @@ public class CreateApplicationRequest extends Request {
             this.kafkaConfigs = request.kafkaConfigs;
             this.liveness = request.liveness;
             this.memory = request.memory;
+            this.microRegistration = request.microRegistration;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
             this.namespaceId = request.namespaceId;
+            this.nasConfigs = request.nasConfigs;
             this.nasId = request.nasId;
             this.ossAkId = request.ossAkId;
             this.ossAkSecret = request.ossAkSecret;
@@ -696,14 +817,19 @@ public class CreateApplicationRequest extends Request {
             this.packageType = request.packageType;
             this.packageUrl = request.packageUrl;
             this.packageVersion = request.packageVersion;
+            this.php = request.php;
             this.phpArmsConfigLocation = request.phpArmsConfigLocation;
             this.phpConfig = request.phpConfig;
             this.phpConfigLocation = request.phpConfigLocation;
             this.postStart = request.postStart;
             this.preStop = request.preStop;
             this.programmingLanguage = request.programmingLanguage;
+            this.pvtzDiscoverySvc = request.pvtzDiscoverySvc;
+            this.python = request.python;
+            this.pythonModules = request.pythonModules;
             this.readiness = request.readiness;
             this.replicas = request.replicas;
+            this.saeVersion = request.saeVersion;
             this.securityGroupId = request.securityGroupId;
             this.slsConfigs = request.slsConfigs;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
@@ -716,7 +842,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * AcrAssumeRoleArn.
+         * acs:ram::123456789012\*\*\*\*:role/adminrole
          */
         public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
             this.putQueryParameter("AcrAssumeRoleArn", acrAssumeRoleArn);
@@ -725,7 +851,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ACR 企业版实例 ID
+         * cri-xxxxxx
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.putBodyParameter("AcrInstanceId", acrInstanceId);
@@ -734,7 +860,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AppDescription.
+         * This is a test description.
          */
         public Builder appDescription(String appDescription) {
             this.putQueryParameter("AppDescription", appDescription);
@@ -743,7 +869,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * test
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -752,7 +878,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 是否绑定EIP
+         * true
          */
         public Builder associateEip(Boolean associateEip) {
             this.putBodyParameter("AssociateEip", associateEip);
@@ -761,7 +887,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AutoConfig.
+         * true
          */
         public Builder autoConfig(Boolean autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
@@ -770,7 +896,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Command.
+         * sleep
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -779,7 +905,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * CommandArgs.
+         * 1d
          */
         public Builder commandArgs(String commandArgs) {
             this.putQueryParameter("CommandArgs", commandArgs);
@@ -788,7 +914,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ConfigMapMountDesc.
+         * \[{"configMapId":16,"key":"test","mountPath":"/tmp"}]
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.putBodyParameter("ConfigMapMountDesc", configMapMountDesc);
@@ -797,7 +923,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * 1000
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -806,7 +932,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * CustomHostAlias.
+         * \[{"hostName":"samplehost","ip":"127.0.0.1"}]
          */
         public Builder customHostAlias(String customHostAlias) {
             this.putQueryParameter("CustomHostAlias", customHostAlias);
@@ -815,7 +941,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Deploy.
+         * true
          */
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
@@ -824,7 +950,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * EdasContainerVersion.
+         * 3.5.3
          */
         public Builder edasContainerVersion(String edasContainerVersion) {
             this.putQueryParameter("EdasContainerVersion", edasContainerVersion);
@@ -833,7 +959,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Envs.
+         * EnableEbpf.
+         */
+        public Builder enableEbpf(String enableEbpf) {
+            this.putQueryParameter("EnableEbpf", enableEbpf);
+            this.enableEbpf = enableEbpf;
+            return this;
+        }
+
+        /**
+         * \[{"name":"envtmp","value":"0"}]
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -842,7 +977,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * ImagePullSecrets.
+         */
+        public Builder imagePullSecrets(String imagePullSecrets) {
+            this.putQueryParameter("ImagePullSecrets", imagePullSecrets);
+            this.imagePullSecrets = imagePullSecrets;
+            return this;
+        }
+
+        /**
+         * registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -851,7 +995,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * JarStartArgs.
+         * custom-args
          */
         public Builder jarStartArgs(String jarStartArgs) {
             this.putQueryParameter("JarStartArgs", jarStartArgs);
@@ -860,7 +1004,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * JarStartOptions.
+         * \-Xms4G -Xmx4G
          */
         public Builder jarStartOptions(String jarStartOptions) {
             this.putQueryParameter("JarStartOptions", jarStartOptions);
@@ -869,7 +1013,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Jdk.
+         * Open JDK 8
          */
         public Builder jdk(String jdk) {
             this.putQueryParameter("Jdk", jdk);
@@ -887,7 +1031,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Liveness.
+         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
          */
         public Builder liveness(String liveness) {
             this.putQueryParameter("Liveness", liveness);
@@ -896,7 +1040,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Memory.
+         * 1024
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -905,7 +1049,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * MountDesc.
+         * MicroRegistration.
+         */
+        public Builder microRegistration(String microRegistration) {
+            this.putQueryParameter("MicroRegistration", microRegistration);
+            this.microRegistration = microRegistration;
+            return this;
+        }
+
+        /**
+         * \[{mountPath: "/tmp", nasPath: "/"}]
          */
         public Builder mountDesc(String mountDesc) {
             this.putQueryParameter("MountDesc", mountDesc);
@@ -914,7 +1067,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * MountHost.
+         * example.com
          */
         public Builder mountHost(String mountHost) {
             this.putQueryParameter("MountHost", mountHost);
@@ -923,7 +1076,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * cn-beijing:test
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -932,7 +1085,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * NasId.
+         * NasConfigs.
+         */
+        public Builder nasConfigs(String nasConfigs) {
+            this.putQueryParameter("NasConfigs", nasConfigs);
+            this.nasConfigs = nasConfigs;
+            return this;
+        }
+
+        /**
+         * KSAK\*\*\*\*
          */
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
@@ -941,7 +1103,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * OSS使用的AKID
+         * xxxxxx
          */
         public Builder ossAkId(String ossAkId) {
             this.putBodyParameter("OssAkId", ossAkId);
@@ -950,7 +1112,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * OSS AKID对应的secret
+         * xxxxxx
          */
         public Builder ossAkSecret(String ossAkSecret) {
             this.putBodyParameter("OssAkSecret", ossAkSecret);
@@ -959,7 +1121,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * OSS挂载描述信息
+         * \[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
          */
         public Builder ossMountDescs(String ossMountDescs) {
             this.putBodyParameter("OssMountDescs", ossMountDescs);
@@ -968,7 +1130,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * FatJar
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -977,7 +1139,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PackageUrl.
+         * http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar
          */
         public Builder packageUrl(String packageUrl) {
             this.putQueryParameter("PackageUrl", packageUrl);
@@ -986,7 +1148,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PackageVersion.
+         * 1.0.0
          */
         public Builder packageVersion(String packageVersion) {
             this.putQueryParameter("PackageVersion", packageVersion);
@@ -995,7 +1157,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PhpArmsConfigLocation.
+         * Php.
+         */
+        public Builder php(String php) {
+            this.putBodyParameter("Php", php);
+            this.php = php;
+            return this;
+        }
+
+        /**
+         * /usr/local/etc/php/conf.d/arms.ini
          */
         public Builder phpArmsConfigLocation(String phpArmsConfigLocation) {
             this.putQueryParameter("PhpArmsConfigLocation", phpArmsConfigLocation);
@@ -1004,7 +1175,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PhpConfig.
+         * k1=v1
          */
         public Builder phpConfig(String phpConfig) {
             this.putBodyParameter("PhpConfig", phpConfig);
@@ -1013,7 +1184,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PhpConfigLocation.
+         * /usr/local/etc/php/php.ini
          */
         public Builder phpConfigLocation(String phpConfigLocation) {
             this.putQueryParameter("PhpConfigLocation", phpConfigLocation);
@@ -1022,7 +1193,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PostStart.
+         * {"exec":{"command":\["cat","/etc/group"]}}
          */
         public Builder postStart(String postStart) {
             this.putQueryParameter("PostStart", postStart);
@@ -1031,7 +1202,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PreStop.
+         * {"exec":{"command":\["cat","/etc/group"]}}
          */
         public Builder preStop(String preStop) {
             this.putQueryParameter("PreStop", preStop);
@@ -1049,7 +1220,34 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Readiness.
+         * PvtzDiscoverySvc.
+         */
+        public Builder pvtzDiscoverySvc(String pvtzDiscoverySvc) {
+            this.putQueryParameter("PvtzDiscoverySvc", pvtzDiscoverySvc);
+            this.pvtzDiscoverySvc = pvtzDiscoverySvc;
+            return this;
+        }
+
+        /**
+         * Python.
+         */
+        public Builder python(String python) {
+            this.putQueryParameter("Python", python);
+            this.python = python;
+            return this;
+        }
+
+        /**
+         * PythonModules.
+         */
+        public Builder pythonModules(String pythonModules) {
+            this.putQueryParameter("PythonModules", pythonModules);
+            this.pythonModules = pythonModules;
+            return this;
+        }
+
+        /**
+         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
          */
         public Builder readiness(String readiness) {
             this.putQueryParameter("Readiness", readiness);
@@ -1058,7 +1256,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * 1
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -1067,7 +1265,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * SaeVersion.
+         */
+        public Builder saeVersion(String saeVersion) {
+            this.putQueryParameter("SaeVersion", saeVersion);
+            this.saeVersion = saeVersion;
+            return this;
+        }
+
+        /**
+         * sg-wz969ngg2e49q5i4\*\*\*\*
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1076,7 +1283,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SlsConfigs.
+         * \[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
          */
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
@@ -1085,7 +1292,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * TerminationGracePeriodSeconds.
+         * 30
          */
         public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1094,7 +1301,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Timezone.
+         * Asia/Shanghai
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);
@@ -1103,7 +1310,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * TomcatConfig.
+         * {"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}
          */
         public Builder tomcatConfig(String tomcatConfig) {
             this.putQueryParameter("TomcatConfig", tomcatConfig);
@@ -1112,7 +1319,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * vsw-bp12mw1f8k3jgygk9\*\*\*\*
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1121,7 +1328,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * vpc-bp1aevy8sofi8mh1q\*\*\*\*
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1130,7 +1337,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * WarStartOptions.
+         * CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -1139,7 +1346,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * WebContainer.
+         * apache-tomcat-7.0.91
          */
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);

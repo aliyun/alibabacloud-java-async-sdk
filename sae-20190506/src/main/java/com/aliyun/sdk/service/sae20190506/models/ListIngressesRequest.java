@@ -69,7 +69,7 @@ public class ListIngressesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The list of routing rules.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The returned data.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

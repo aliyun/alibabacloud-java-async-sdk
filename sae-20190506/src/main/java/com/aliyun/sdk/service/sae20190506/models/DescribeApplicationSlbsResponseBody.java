@@ -110,7 +110,11 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the information was obtained successfully.
+         * *   **false**: indicates that the information failed to be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Configurations of internal-facing SLB instances.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The returned data.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -234,7 +248,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * HttpsCertId.
+             * The supported protocol.
              */
             public Builder httpsCertId(String httpsCertId) {
                 this.httpsCertId = httpsCertId;
@@ -242,7 +256,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the internal-facing SLB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -250,7 +264,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The container port.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -258,7 +272,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * The port specified for the SLB listener.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -335,7 +349,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * HttpsCertId.
+             * The supported protocol.
              */
             public Builder httpsCertId(String httpsCertId) {
                 this.httpsCertId = httpsCertId;
@@ -343,7 +357,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The IP address of the Internet-facing SLB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -351,7 +365,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The container port.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -359,7 +373,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * The port specified for the SLB listener.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -380,6 +394,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         private String internetIp;
 
+        @NameInMap("InternetSlbExpired")
+        private Boolean internetSlbExpired;
+
         @NameInMap("InternetSlbId")
         private String internetSlbId;
 
@@ -389,15 +406,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
+        @NameInMap("IntranetSlbExpired")
+        private Boolean intranetSlbExpired;
+
         @NameInMap("IntranetSlbId")
         private String intranetSlbId;
 
         private Data(Builder builder) {
             this.internet = builder.internet;
             this.internetIp = builder.internetIp;
+            this.internetSlbExpired = builder.internetSlbExpired;
             this.internetSlbId = builder.internetSlbId;
             this.intranet = builder.intranet;
             this.intranetIp = builder.intranetIp;
+            this.intranetSlbExpired = builder.intranetSlbExpired;
             this.intranetSlbId = builder.intranetSlbId;
         }
 
@@ -424,6 +446,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
+         * @return internetSlbExpired
+         */
+        public Boolean getInternetSlbExpired() {
+            return this.internetSlbExpired;
+        }
+
+        /**
          * @return internetSlbId
          */
         public String getInternetSlbId() {
@@ -445,6 +474,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetSlbExpired
+         */
+        public Boolean getIntranetSlbExpired() {
+            return this.intranetSlbExpired;
+        }
+
+        /**
          * @return intranetSlbId
          */
         public String getIntranetSlbId() {
@@ -454,13 +490,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Internet> internet; 
             private String internetIp; 
+            private Boolean internetSlbExpired; 
             private String internetSlbId; 
             private java.util.List < Intranet> intranet; 
             private String intranetIp; 
+            private Boolean intranetSlbExpired; 
             private String intranetSlbId; 
 
             /**
-             * Internet.
+             * The ID of the SSL certificate issued by Alibaba Cloud.
              */
             public Builder internet(java.util.List < Internet> internet) {
                 this.internet = internet;
@@ -468,7 +506,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The ID of the Internet-facing SLB instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -476,7 +514,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetSlbId.
+             * InternetSlbExpired.
+             */
+            public Builder internetSlbExpired(Boolean internetSlbExpired) {
+                this.internetSlbExpired = internetSlbExpired;
+                return this;
+            }
+
+            /**
+             * Configurations of Internet-facing SLB instances.
              */
             public Builder internetSlbId(String internetSlbId) {
                 this.internetSlbId = internetSlbId;
@@ -484,7 +530,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Intranet.
+             * The ID of the SSL certificate issued by Alibaba Cloud.
              */
             public Builder intranet(java.util.List < Intranet> intranet) {
                 this.intranet = intranet;
@@ -492,7 +538,11 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -500,7 +550,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSlbId.
+             * IntranetSlbExpired.
+             */
+            public Builder intranetSlbExpired(Boolean intranetSlbExpired) {
+                this.intranetSlbExpired = intranetSlbExpired;
+                return this;
+            }
+
+            /**
+             * The IP address of the internal-facing SLB instance.
              */
             public Builder intranetSlbId(String intranetSlbId) {
                 this.intranetSlbId = intranetSlbId;

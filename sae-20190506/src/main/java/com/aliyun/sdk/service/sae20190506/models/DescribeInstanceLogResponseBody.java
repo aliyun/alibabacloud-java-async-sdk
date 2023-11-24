@@ -110,7 +110,11 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the log of the instance was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the log was obtained.
+         * *   **false**: indicates that the log could not be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,11 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +134,13 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +148,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,11 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +176,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The log of the instance.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

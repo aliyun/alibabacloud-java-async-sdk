@@ -55,7 +55,7 @@ public class DeleteConfigMapRequest extends Request {
         } 
 
         /**
-         * ConfigMapId.
+         * 1
          */
         public Builder configMapId(Long configMapId) {
             this.putQueryParameter("ConfigMapId", configMapId);

@@ -110,7 +110,13 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of components.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the list of container components of a microservice application was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the list was obtained.
+         * *   **false**: indicates that the list could not be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -210,7 +224,11 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             private String edasContainerVersion; 
 
             /**
-             * Disabled.
+             * Indicates whether the component is disabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: indicates that the component is disabled.
+             * *   **false**: indicates that the component is not disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -218,7 +236,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             }
 
             /**
-             * EdasContainerVersion.
+             * The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;

@@ -110,7 +110,13 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the canary release rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information of the change order was queried. Valid values:
+         * <p>
+         * 
+         * *   **true**: The information was queried.
+         * *   **false**: The information failed to be queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +212,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
             private Long greyTagRouteId; 
 
             /**
-             * GreyTagRouteId.
+             * The ID of the canary release rule. The ID is globally unique.
              */
             public Builder greyTagRouteId(Long greyTagRouteId) {
                 this.greyTagRouteId = greyTagRouteId;

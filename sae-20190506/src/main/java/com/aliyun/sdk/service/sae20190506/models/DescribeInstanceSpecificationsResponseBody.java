@@ -110,7 +110,13 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Information of instance types.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   If the request is successful, this parameter is not returned.****
+         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. Valid values:
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether information of the instance types is successfully obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -258,7 +276,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * Cpu.
+             * The CPU specification of the instance type. Unit: millicore.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -266,7 +284,11 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the instance type is available. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -274,7 +296,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the instance type.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -282,7 +304,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance type. Unit: MB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -290,7 +312,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecInfo.
+             * The name of the instance type.
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -298,7 +320,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the instance type.
              */
             public Builder version(Integer version) {
                 this.version = version;

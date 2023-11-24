@@ -70,7 +70,7 @@ public class DescribeApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * a0d2e04c-159d-40a8-b240-d2f2c263\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class DescribeApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * test
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);

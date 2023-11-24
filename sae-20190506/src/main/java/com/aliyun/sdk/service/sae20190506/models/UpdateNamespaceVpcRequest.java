@@ -13,8 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateNamespaceVpcRequest extends Request {
     @Query
+    @NameInMap("NameSpaceShortId")
+    private String nameSpaceShortId;
+
+    @Query
     @NameInMap("NamespaceId")
-    @Validation(required = true)
     private String namespaceId;
 
     @Query
@@ -24,6 +27,7 @@ public class UpdateNamespaceVpcRequest extends Request {
 
     private UpdateNamespaceVpcRequest(Builder builder) {
         super(builder);
+        this.nameSpaceShortId = builder.nameSpaceShortId;
         this.namespaceId = builder.namespaceId;
         this.vpcId = builder.vpcId;
     }
@@ -42,6 +46,13 @@ public class UpdateNamespaceVpcRequest extends Request {
     }
 
     /**
+     * @return nameSpaceShortId
+     */
+    public String getNameSpaceShortId() {
+        return this.nameSpaceShortId;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -56,6 +67,7 @@ public class UpdateNamespaceVpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNamespaceVpcRequest, Builder> {
+        private String nameSpaceShortId; 
         private String namespaceId; 
         private String vpcId; 
 
@@ -65,12 +77,22 @@ public class UpdateNamespaceVpcRequest extends Request {
 
         private Builder(UpdateNamespaceVpcRequest request) {
             super(request);
+            this.nameSpaceShortId = request.nameSpaceShortId;
             this.namespaceId = request.namespaceId;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * NamespaceId.
+         * NameSpaceShortId.
+         */
+        public Builder nameSpaceShortId(String nameSpaceShortId) {
+            this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
+            this.nameSpaceShortId = nameSpaceShortId;
+            return this;
+        }
+
+        /**
+         * vpc-2ze0i263cnn311nvj\*\*\*\*
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -79,7 +101,7 @@ public class UpdateNamespaceVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the request.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

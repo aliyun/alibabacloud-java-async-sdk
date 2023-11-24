@@ -153,7 +153,7 @@ public class ListAppEventsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -162,7 +162,7 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -171,7 +171,11 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the event. Valid values:
+         * <p>
+         * 
+         * *   **Warning**: an alert.
+         * *   **Normal**: a normal event.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -180,7 +184,7 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace ID.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -189,7 +193,14 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * ObjectKind.
+         * The type of the object. Valid values:
+         * <p>
+         * 
+         * *   **Deployment**: an application.
+         * *   **Pod**: an application instance.
+         * *   **Service**: a Server Load Balancer (SLB) instance.
+         * *   **HorizontalPodAutoscaler**: an auto scaling policy.
+         * *   **CloneSet**: an application.
          */
         public Builder objectKind(String objectKind) {
             this.putQueryParameter("ObjectKind", objectKind);
@@ -198,7 +209,7 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * ObjectName.
+         * The name of the object. Fuzzy search by prefix is supported.
          */
         public Builder objectName(String objectName) {
             this.putQueryParameter("ObjectName", objectName);
@@ -207,7 +218,7 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 0 to 10000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +227,7 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The cause of the event. Fuzzy search by prefix is supported.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);

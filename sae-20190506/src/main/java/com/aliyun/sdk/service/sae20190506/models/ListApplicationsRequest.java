@@ -166,7 +166,13 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -175,7 +181,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -184,7 +190,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * FieldType.
+         * true
          */
         public Builder fieldType(String fieldType) {
             this.putQueryParameter("FieldType", fieldType);
@@ -193,7 +199,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The ID of the region.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -202,7 +208,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * 1
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -211,7 +217,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * runnings
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -220,7 +226,11 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Indicates whether the application is being deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**: The application is being deleted.
+         * *   **false**: The application is not being deleted.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +239,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * The returned message.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -238,7 +248,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of applications.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

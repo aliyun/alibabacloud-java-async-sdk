@@ -110,7 +110,13 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the instance groups of the application.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information about instance groups of an application was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the information was obtained.
+         * *   **false**: indicates that the information could not be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -330,7 +344,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             private String webContainer; 
 
             /**
-             * EdasContainerVersion.
+             * The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;
@@ -338,7 +352,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -346,7 +360,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -354,7 +368,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the group.
              */
             public Builder groupType(Integer groupType) {
                 this.groupType = groupType;
@@ -362,7 +376,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * The address of the image. This parameter is required when the **PackageType** parameter is set to **Image**.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -370,7 +384,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Jdk.
+             * The version of the Java development kit (JDK) on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.
              */
             public Builder jdk(String jdk) {
                 this.jdk = jdk;
@@ -378,7 +392,28 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * The type of the application deployment package. Valid values:
+             * <p>
+             * 
+             * *   When you use a Java package, set this value to **FatJar**, **War**, or **Image**.
+             * 
+             * *   When you use a PHP package, the following values are valid:
+             * 
+             *     *   **PhpZip**
+             *     *   **IMAGE_PHP\_5\_4**
+             *     *   **IMAGE_PHP\_5\_4\_ALPINE**
+             *     *   **IMAGE_PHP\_5\_5**
+             *     *   **IMAGE_PHP\_5\_5\_ALPINE**
+             *     *   **IMAGE_PHP\_5\_6**
+             *     *   **IMAGE_PHP\_5\_6\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_0**
+             *     *   **IMAGE_PHP\_7\_0\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_1**
+             *     *   **IMAGE_PHP\_7\_1\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_2**
+             *     *   **IMAGE_PHP\_7\_2\_ALPINE**
+             *     *   **IMAGE_PHP\_7\_3**
+             *     *   **IMAGE_PHP\_7\_3\_ALPINE**
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -386,7 +421,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageUrl.
+             * The address of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**.
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -394,7 +429,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageVersion.
+             * The version of the deployment package. This parameter is required when the **PackageType** parameter is set to **FatJar**, **War**, or **PhpZip**. The parameter value will be automatically generated when you use an image to deploy the application and specify the **ImageUrl** parameter.
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -402,7 +437,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Replicas.
+             * The total number of instances.
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
@@ -410,7 +445,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RunningInstances.
+             * The number of running instances.
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -418,7 +453,7 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WebContainer.
+             * The version of the Apache Tomcat container on which the deployment package of the application depends. This parameter is invalid when the **PackageType** parameter is set to **Image**.
              */
             public Builder webContainer(String webContainer) {
                 this.webContainer = webContainer;

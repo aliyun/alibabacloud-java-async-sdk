@@ -83,7 +83,7 @@ public class UnbindSlbRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * true
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +92,7 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * Internet.
+         * true
          */
         public Builder internet(Boolean internet) {
             this.putQueryParameter("Internet", internet);
@@ -101,7 +101,7 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * Intranet.
+         * The ID of the request.
          */
         public Builder intranet(Boolean intranet) {
             this.putQueryParameter("Intranet", intranet);

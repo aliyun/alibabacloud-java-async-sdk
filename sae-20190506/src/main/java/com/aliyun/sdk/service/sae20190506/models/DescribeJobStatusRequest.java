@@ -69,7 +69,7 @@ public class DescribeJobStatusRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the job template.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class DescribeJobStatusRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

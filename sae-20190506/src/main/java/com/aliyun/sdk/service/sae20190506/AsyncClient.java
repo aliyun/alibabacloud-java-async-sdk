@@ -32,15 +32,31 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
+    /**
+      * The HTTP status code. Take note of the following rules:
+      * *   **2xx**: The call was successful.
+      * *   **3xx**: The call was redirected.
+      * *   **4xx**: The call failed.
+      * *   **5xx**: A server error occurred.
+      *
+     */
     CompletableFuture<CreateApplicationScalingRuleResponse> createApplicationScalingRule(CreateApplicationScalingRuleRequest request);
 
     CompletableFuture<CreateConfigMapResponse> createConfigMap(CreateConfigMapRequest request);
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+     */
     CompletableFuture<CreateGreyTagRouteResponse> createGreyTagRoute(CreateGreyTagRouteRequest request);
 
     CompletableFuture<CreateIngressResponse> createIngress(CreateIngressRequest request);
 
+    CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
+
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
+
+    CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
 
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
@@ -50,9 +66,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGreyTagRouteResponse> deleteGreyTagRoute(DeleteGreyTagRouteRequest request);
 
+    CompletableFuture<DeleteHistoryJobResponse> deleteHistoryJob(DeleteHistoryJobRequest request);
+
     CompletableFuture<DeleteIngressResponse> deleteIngress(DeleteIngressRequest request);
 
+    CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
+
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request);
 
@@ -92,6 +114,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceSpecificationsResponse> describeInstanceSpecifications(DescribeInstanceSpecificationsRequest request);
 
+    CompletableFuture<DescribeJobResponse> describeJob(DescribeJobRequest request);
+
+    CompletableFuture<DescribeJobHistoryResponse> describeJobHistory(DescribeJobHistoryRequest request);
+
     CompletableFuture<DescribeJobStatusResponse> describeJobStatus(DescribeJobStatusRequest request);
 
     CompletableFuture<DescribeNamespaceResponse> describeNamespace(DescribeNamespaceRequest request);
@@ -106,11 +132,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
+    CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request);
+
     CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request);
 
     CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request);
 
     CompletableFuture<ExecJobResponse> execJob(ExecJobRequest request);
+
+    CompletableFuture<GetArmsTopNMetricResponse> getArmsTopNMetric(GetArmsTopNMetricRequest request);
+
+    CompletableFuture<GetAvailabilityMetricResponse> getAvailabilityMetric(GetAvailabilityMetricRequest request);
+
+    CompletableFuture<GetChangeOrderMetricResponse> getChangeOrderMetric(GetChangeOrderMetricRequest request);
+
+    CompletableFuture<GetScaleAppMetricResponse> getScaleAppMetric(GetScaleAppMetricRequest request);
+
+    CompletableFuture<GetWarningEventMetricResponse> getWarningEventMetric(GetWarningEventMetricRequest request);
 
     CompletableFuture<ListAppEventsResponse> listAppEvents(ListAppEventsRequest request);
 
@@ -124,9 +162,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListConsumedServicesResponse> listConsumedServices(ListConsumedServicesRequest request);
 
+    /**
+      * >  You can configure only one canary release rule for each application.
+      *
+     */
     CompletableFuture<ListGreyTagRouteResponse> listGreyTagRoute(ListGreyTagRouteRequest request);
 
     CompletableFuture<ListIngressesResponse> listIngresses(ListIngressesRequest request);
+
+    CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
     CompletableFuture<ListLogConfigsResponse> listLogConfigs(ListLogConfigsRequest request);
 
@@ -136,8 +180,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListPublishedServicesResponse> listPublishedServices(ListPublishedServicesRequest request);
 
+    CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    /**
+      * > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
+      *
+     */
     CompletableFuture<OpenSaeServiceResponse> openSaeService(OpenSaeServiceRequest request);
 
     CompletableFuture<QueryResourceStaticsResponse> queryResourceStatics(QueryResourceStaticsRequest request);
@@ -158,6 +208,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopApplicationResponse> stopApplication(StopApplicationRequest request);
 
+    CompletableFuture<SuspendJobResponse> suspendJob(SuspendJobRequest request);
+
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UnbindSlbResponse> unbindSlb(UnbindSlbRequest request);
@@ -168,6 +220,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateApplicationDescriptionResponse> updateApplicationDescription(UpdateApplicationDescriptionRequest request);
 
+    /**
+      * ##
+      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
+      *
+     */
     CompletableFuture<UpdateApplicationScalingRuleResponse> updateApplicationScalingRule(UpdateApplicationScalingRuleRequest request);
 
     CompletableFuture<UpdateApplicationVswitchesResponse> updateApplicationVswitches(UpdateApplicationVswitchesRequest request);
@@ -178,8 +235,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateIngressResponse> updateIngress(UpdateIngressRequest request);
 
+    CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
     CompletableFuture<UpdateNamespaceResponse> updateNamespace(UpdateNamespaceRequest request);
 
     CompletableFuture<UpdateNamespaceVpcResponse> updateNamespaceVpc(UpdateNamespaceVpcRequest request);
+
+    CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request);
 
 }

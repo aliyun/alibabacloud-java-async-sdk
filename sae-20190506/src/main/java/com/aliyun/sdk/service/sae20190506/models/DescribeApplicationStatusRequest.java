@@ -55,7 +55,7 @@ public class DescribeApplicationStatusRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

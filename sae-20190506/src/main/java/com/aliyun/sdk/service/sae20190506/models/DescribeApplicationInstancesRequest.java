@@ -112,7 +112,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -121,7 +121,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * 1
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -130,7 +130,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -139,7 +139,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * true
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

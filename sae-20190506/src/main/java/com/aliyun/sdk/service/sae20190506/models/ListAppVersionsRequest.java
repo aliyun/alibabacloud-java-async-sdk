@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAppVersionsRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     private ListAppVersionsRequest(Builder builder) {
@@ -54,7 +55,7 @@ public class ListAppVersionsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The returned message.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

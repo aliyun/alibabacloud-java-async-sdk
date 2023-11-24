@@ -111,7 +111,7 @@ public class BindSlbRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +120,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * Internet.
+         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
          */
         public Builder internet(String internet) {
             this.putQueryParameter("Internet", internet);
@@ -129,7 +129,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * InternetSlbId.
+         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
          */
         public Builder internetSlbId(String internetSlbId) {
             this.putQueryParameter("InternetSlbId", internetSlbId);
@@ -138,7 +138,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * Intranet.
+         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
          */
         public Builder intranet(String intranet) {
             this.putQueryParameter("Intranet", intranet);
@@ -147,7 +147,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * IntranetSlbId.
+         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
          */
         public Builder intranetSlbId(String intranetSlbId) {
             this.putQueryParameter("IntranetSlbId", intranetSlbId);

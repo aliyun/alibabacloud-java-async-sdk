@@ -118,7 +118,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The total number of pages returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +126,11 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * Indicates whether the microservice list was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The list was obtained.
+         * *   **false**: The list failed to be obtained.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +138,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The details of microservices.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +146,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +162,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The page number of the current page.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -258,7 +262,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * EdasAppId.
+             * The group to which the service belongs. You can create a custom group.
              */
             public Builder edasAppId(String edasAppId) {
                 this.edasAppId = edasAppId;
@@ -266,7 +270,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * EdasAppName.
+             * The total number of instances.
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -274,7 +278,13 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The HTTP status code. Valid values:
+             * <p>
+             * 
+             * *   **2xx**: indicates that the call was successful.
+             * *   **3xx**: indicates that the call was redirected.
+             * *   **4xx**: indicates that the call failed.
+             * *   **5xx**: indicates that a server error occurred.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -282,7 +292,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNum.
+             * The name of the service.
              */
             public Builder instanceNum(Long instanceNum) {
                 this.instanceNum = instanceNum;
@@ -290,7 +300,11 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The returned error code. Valid values:
+             * <p>
+             * 
+             * - If the call is successful, the **ErrorCode** parameter is not returned.
+             * - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -298,7 +312,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The ID of the application.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -387,7 +401,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             private String totalSize; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(String currentPage) {
                 this.currentPage = currentPage;
@@ -395,7 +409,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The returned result.
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -403,7 +417,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The name of the application.
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -411,7 +425,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The version of the service. You can create a custom version.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -419,7 +433,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The number of entries returned per page. Valid values: 0 to 9999.
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

@@ -70,7 +70,7 @@ public class UpdateAppSecurityGroupRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * sg-wz969ngg2e49q5i4\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class UpdateAppSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the request.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

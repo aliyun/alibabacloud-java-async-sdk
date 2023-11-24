@@ -93,7 +93,7 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * Name.
+         * cn-hangzhou
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -102,7 +102,7 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The ID of the request.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

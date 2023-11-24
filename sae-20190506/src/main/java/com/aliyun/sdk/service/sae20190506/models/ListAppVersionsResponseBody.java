@@ -98,7 +98,11 @@ public class ListAppVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Indicates whether the historical versions of the application were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the historical versions of the application were obtained.
+         * *   **false**: indicates that the historical versions of the application could not be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +110,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The deployment method of the application. Valid values:
+         * <p>
+         * 
+         * *   **image**: indicates that the application was deployed by using an image.
+         * *   **upload**: indicates that the application was deployed by uploading a WAR or JAR package.
+         * *   **url**: indicates that the application was deployed by specifying the URL of a WAR or JAR package.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +123,13 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +137,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +145,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The information about the versions.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +241,9 @@ public class ListAppVersionsResponseBody extends TeaModel {
             private String warUrl; 
 
             /**
-             * BuildPackageUrl.
+             * *   The address of the image. This parameter is returned when the **Type** parameter is set to **image**.
+             * <p>
+             * *   The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **upload**.
              */
             public Builder buildPackageUrl(String buildPackageUrl) {
                 this.buildPackageUrl = buildPackageUrl;
@@ -234,7 +251,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **url**.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -242,7 +259,11 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -250,7 +271,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The time when the application was created.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +279,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * WarUrl.
+             * The ID of the version.
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;

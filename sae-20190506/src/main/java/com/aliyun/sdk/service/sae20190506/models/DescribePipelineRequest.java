@@ -55,7 +55,7 @@ public class DescribePipelineRequest extends Request {
         } 
 
         /**
-         * PipelineId.
+         * The ID of the batch. You can call the [DescribeChangeOrder](~~126617~~) operation to obtain the ID.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

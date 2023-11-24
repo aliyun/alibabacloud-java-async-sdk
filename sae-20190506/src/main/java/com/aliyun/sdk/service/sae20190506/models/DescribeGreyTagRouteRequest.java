@@ -55,7 +55,7 @@ public class DescribeGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * 规则ID
+         * 1
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

@@ -110,7 +110,13 @@ public class DescribePipelineResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The batch information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned for the operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the batch information was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The information was queried.
+         * *   **false**: The image failed to be found.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -294,7 +308,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             private String taskName; 
 
             /**
-             * ErrorCode.
+             * The error code returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -302,7 +316,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorIgnore.
+             * Indicates whether to execute the subsequent tasks when the task failed. Valid values:
+             * <p>
+             * 
+             * *   **0**: The subsequent tasks cannot be executed.
+             * *   **1**: The subsequent tasks can be executed.
              */
             public Builder errorIgnore(Integer errorIgnore) {
                 this.errorIgnore = errorIgnore;
@@ -310,7 +328,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned when the task could not be executed. If the task is successfully executed, this parameter is not returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -318,7 +336,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message indicating the task execution result.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -326,7 +344,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * ShowManualIgnore.
+             * Indicates whether a running task can be manually skipped. Valid values:
+             * <p>
+             * 
+             * *   **true**: The running task can be skipped.
+             * *   **false**: The zone does not allow you to change the network type of an ApsaraDB for Redis instance from classic network to VPC.
              */
             public Builder showManualIgnore(Boolean showManualIgnore) {
                 this.showManualIgnore = showManualIgnore;
@@ -334,7 +356,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The ID of the stage.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -342,7 +364,15 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task status. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task is prepared for execution.
+             * *   **1**: The task is being executed.
+             * *   **2**: successful
+             * *   **3**: The task could not be executed.
+             * *   **5**: The task is pending retry.
+             * *   **6**: The task was terminated.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -350,7 +380,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -358,7 +388,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -447,7 +477,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             private java.util.List < TaskList> taskList; 
 
             /**
-             * ExecutorType.
+             * The execution type of the stage. Valid values:
+             * <p>
+             * 
+             * *   **0**: in sequence.
+             * *   **1**: in parallel.
              */
             public Builder executorType(Integer executorType) {
                 this.executorType = executorType;
@@ -455,7 +489,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The ID of the stage.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -463,7 +497,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The name of the stage.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -471,7 +505,14 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the batch processing stage. Valid values:
+             * <p>
+             * 
+             * *   **0**: The batch is prepared for this processing stage.
+             * *   **1**: The task is being executed.
+             * *   **2**: successful
+             * *   **3**: The processing failed in this stage.
+             * *   **6**: The processing stage was terminated.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -479,7 +520,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * TaskList.
+             * The list of task statuses.
              */
             public Builder taskList(java.util.List < TaskList> taskList) {
                 this.taskList = taskList;
@@ -604,7 +645,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             private java.util.List < StageList> stageList; 
 
             /**
-             * CoStatus.
+             * The status of the change order for the batch.
              */
             public Builder coStatus(String coStatus) {
                 this.coStatus = coStatus;
@@ -612,7 +653,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStageId.
+             * The ID of the batch processing stage.
              */
             public Builder currentStageId(String currentStageId) {
                 this.currentStageId = currentStageId;
@@ -620,7 +661,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * NextPipelineId.
+             * The ID of the next batch.
              */
             public Builder nextPipelineId(String nextPipelineId) {
                 this.nextPipelineId = nextPipelineId;
@@ -628,7 +669,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the batch.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -636,7 +677,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineName.
+             * The name of the batch.
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -644,7 +685,15 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineStatus.
+             * The batch status. Valid values:
+             * <p>
+             * 
+             * *   **0**: The batch is prepared for processing.
+             * *   **1**: The task is being executed.
+             * *   **2**: successful
+             * *   **3**: The processing failed in this stage.
+             * *   **6**: The batch processing was terminated.
+             * *   **10**: The batch could not be processed due to a system exception.
              */
             public Builder pipelineStatus(Integer pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;
@@ -652,7 +701,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * ShowBatch.
+             * Indicates whether to start processing the next batch. Valid values:
+             * <p>
+             * 
+             * *   **false**: indicates that the next batch cannot be processed yet.
+             * *   **true**: indicates that the next batch can be processed now.
              */
             public Builder showBatch(Boolean showBatch) {
                 this.showBatch = showBatch;
@@ -660,7 +713,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * StageList.
+             * The list of batch processing stages.
              */
             public Builder stageList(java.util.List < StageList> stageList) {
                 this.stageList = stageList;

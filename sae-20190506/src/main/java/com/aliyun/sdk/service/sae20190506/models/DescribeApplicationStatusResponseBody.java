@@ -110,7 +110,13 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   If the request is successful, this parameter is not returned.****
+         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. Valid values:
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether information of the application is successfully obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -330,7 +348,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             private String subStatus; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -338,7 +356,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ArmsAdvancedEnabled.
+             * Indicates whether Application Real-Time Monitoring Service (ARMS) advanced monitoring is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder armsAdvancedEnabled(String armsAdvancedEnabled) {
                 this.armsAdvancedEnabled = armsAdvancedEnabled;
@@ -346,7 +368,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ArmsApmInfo.
+             * The metadata of the application in ARMS.
              */
             public Builder armsApmInfo(String armsApmInfo) {
                 this.armsApmInfo = armsApmInfo;
@@ -354,7 +376,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -362,7 +384,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStatus.
+             * The current state of the application. Valid values:
+             * <p>
+             * 
+             * *   **RUNNING**
+             * *   **STOPPED**
+             * *   **UNKNOWN**
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -370,7 +397,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAgent.
+             * Indicates whether SAE agent is enabled.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enableAgent(Boolean enableAgent) {
                 this.enableAgent = enableAgent;
@@ -378,7 +409,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FileSizeLimit.
+             * The file size limit. Unit: KB. Valid values: 0 to 10240.
              */
             public Builder fileSizeLimit(Long fileSizeLimit) {
                 this.fileSizeLimit = fileSizeLimit;
@@ -386,7 +417,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderId.
+             * The ID of the latest change order that is executed. If no change orders have been executed or if change orders have expired, an empty parameter is returned.
              */
             public Builder lastChangeOrderId(String lastChangeOrderId) {
                 this.lastChangeOrderId = lastChangeOrderId;
@@ -394,7 +425,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderRunning.
+             * Indicates whether the latest change order is being executed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder lastChangeOrderRunning(Boolean lastChangeOrderRunning) {
                 this.lastChangeOrderRunning = lastChangeOrderRunning;
@@ -402,7 +437,19 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderStatus.
+             * The state of the latest change order. Valid values:
+             * <p>
+             * 
+             * *   **READY**: The change order is ready.
+             * *   **RUNNING**: The change order is being executed.
+             * *   **SUCCESS**: The change order was executed successfully.
+             * *   **FAIL**: The change order failed to be executed.
+             * *   **ABORT**: The change order is stopped.
+             * *   **WAIT_BATCH_CONFIRM**: The change order is pending execution. You must manually confirm the release batch.
+             * *   **AUTO_BATCH_WAIT**: The change order is pending execution. SAE will automatically confirm the release batch.
+             * *   **SYSTEM_FAIL**: A system exception occurred.
+             * *   **WAIT_APPROVAL**: The change order is pending approval.
+             * *   **APPROVED**: The change order is approved and is pending execution.
              */
             public Builder lastChangeOrderStatus(String lastChangeOrderStatus) {
                 this.lastChangeOrderStatus = lastChangeOrderStatus;
@@ -410,7 +457,7 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RunningInstances.
+             * The number of running instances of the application.
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -418,7 +465,11 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * Indicates whether an error occurred while the change order was being executed. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**
+             * *   **RUNNING_BUT_HAS_ERROR** If an error occurs during a batch release, you must manually perform a rollback. In this case, the change order is still running because the task is not completed, but the state of the change order is RUNNING_BUT_HAS_ERROR.
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;

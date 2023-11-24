@@ -113,7 +113,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * DeleteAll.
+         * false
          */
         public Builder deleteAll(Boolean deleteAll) {
             this.putQueryParameter("DeleteAll", deleteAll);
@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * cn-beijing
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -140,7 +140,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * application
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +149,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * \["k1","k2"]
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

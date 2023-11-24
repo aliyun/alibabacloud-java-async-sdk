@@ -110,7 +110,13 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned. Take note of the following rules:
+         * <p>
+         * 
+         * *   **ErrorCode** is not returned if the request succeeds.
+         * *   **ErrorCode** is returned if the request fails. For more information, see the "**Error codes**" section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. Take note of the following rules:
+         * <p>
+         * 
+         * *   If the call is successful, **success** is returned.
+         * *   If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -282,7 +300,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private Long succeeded; 
 
             /**
-             * Active.
+             * The number of running instances.
              */
             public Builder active(Long active) {
                 this.active = active;
@@ -290,7 +308,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionTime.
+             * The time when the job was executed.
              */
             public Builder completionTime(Long completionTime) {
                 this.completionTime = completionTime;
@@ -298,7 +316,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Failed.
+             * The number of instances that failed to run.
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
@@ -306,7 +324,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The job ID.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -314,7 +332,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message. Take note of the following rules:
+             * <p>
+             * 
+             * *   If the call is successful, **success** is returned.
+             * *   If the call fails, an error code is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -322,7 +344,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the job was created.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -330,7 +352,13 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   **0**: The job is not executed.
+             * *   **1**: The job was executed.
+             * *   **2**: The job failed to be executed.
+             * *   **3**: The job is being executed.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -338,7 +366,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Succeeded.
+             * The number of instances that are successfully run.
              */
             public Builder succeeded(Long succeeded) {
                 this.succeeded = succeeded;

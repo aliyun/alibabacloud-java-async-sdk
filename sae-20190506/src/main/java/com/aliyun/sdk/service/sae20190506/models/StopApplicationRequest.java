@@ -55,7 +55,11 @@ public class StopApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

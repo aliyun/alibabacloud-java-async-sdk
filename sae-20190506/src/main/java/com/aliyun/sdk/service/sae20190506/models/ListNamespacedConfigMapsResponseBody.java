@@ -110,7 +110,13 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the call was successful.
+         * *   **3xx**: indicates that the call was redirected.
+         * *   **4xx**: indicates that the call failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The returned error code. Valid values:
+         * <p>
+         * 
+         * - If the call is successful, the **ErrorCode** parameter is not returned.
+         * - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, **success** is returned.
+         * *   If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the ConfigMap instances were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instances were obtained.
+         * *   **false**: The instances failed to be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -210,7 +228,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             private String appName; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -218,7 +236,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -343,7 +361,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ConfigMapId.
+             * The ID of the ConfigMap instance.
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -351,7 +369,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -359,7 +377,12 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * The data of ConfigMap key-value pairs. Format:
+             * <p>
+             * 
+             * {"k1":"v1", "k2":"v2"}
+             * 
+             * k specifies a key and v specifies a value. For more information, see [Manage and use configurations](~~171326~~).
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -367,7 +390,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +398,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the ConfigMap instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -383,7 +406,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -391,7 +414,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * RelateApps.
+             * The application that is associated with the instance.
              */
             public Builder relateApps(java.util.List < RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -399,7 +422,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the instance was last modified.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -440,7 +463,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             private java.util.List < ConfigMaps> configMaps; 
 
             /**
-             * ConfigMaps.
+             * The ConfigMap instances.
              */
             public Builder configMaps(java.util.List < ConfigMaps> configMaps) {
                 this.configMaps = configMaps;

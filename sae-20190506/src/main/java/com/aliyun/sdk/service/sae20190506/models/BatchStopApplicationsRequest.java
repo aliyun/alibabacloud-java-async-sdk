@@ -69,7 +69,7 @@ public class BatchStopApplicationsRequest extends Request {
         } 
 
         /**
-         * AppIds.
+         * The ID of the request.
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -78,7 +78,7 @@ public class BatchStopApplicationsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\*\*\*\*
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

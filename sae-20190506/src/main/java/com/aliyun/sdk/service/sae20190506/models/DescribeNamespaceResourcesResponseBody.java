@@ -110,7 +110,13 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +164,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information about resources in the namespace was queried successfully. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the query was successful.
+         * *   **false**: indicates that the query failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +176,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -195,6 +213,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
 
         @NameInMap("LastChangeOrderStatus")
         private String lastChangeOrderStatus;
+
+        @NameInMap("NameSpaceShortId")
+        private String nameSpaceShortId;
 
         @NameInMap("NamespaceId")
         private String namespaceId;
@@ -235,6 +256,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             this.lastChangeOrderId = builder.lastChangeOrderId;
             this.lastChangeOrderRunning = builder.lastChangeOrderRunning;
             this.lastChangeOrderStatus = builder.lastChangeOrderStatus;
+            this.nameSpaceShortId = builder.nameSpaceShortId;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
             this.notificationExpired = builder.notificationExpired;
@@ -309,6 +331,13 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
          */
         public String getLastChangeOrderStatus() {
             return this.lastChangeOrderStatus;
+        }
+
+        /**
+         * @return nameSpaceShortId
+         */
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         /**
@@ -390,6 +419,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private String lastChangeOrderId; 
             private Boolean lastChangeOrderRunning; 
             private String lastChangeOrderStatus; 
+            private String nameSpaceShortId; 
             private String namespaceId; 
             private String namespaceName; 
             private Boolean notificationExpired; 
@@ -402,7 +432,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * AppCount.
+             * The number of applications.
              */
             public Builder appCount(Long appCount) {
                 this.appCount = appCount;
@@ -410,7 +440,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * BelongRegion.
+             * The region to which the namespace belongs.
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -418,7 +448,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the namespace.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -426,7 +456,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * JumpServerAppId.
+             * The ID of the jump server application.
              */
             public Builder jumpServerAppId(String jumpServerAppId) {
                 this.jumpServerAppId = jumpServerAppId;
@@ -434,7 +464,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * JumpServerIp.
+             * The IP address of the jump server.
              */
             public Builder jumpServerIp(String jumpServerIp) {
                 this.jumpServerIp = jumpServerIp;
@@ -442,7 +472,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderId.
+             * The ID of the change order.
              */
             public Builder lastChangeOrderId(String lastChangeOrderId) {
                 this.lastChangeOrderId = lastChangeOrderId;
@@ -450,7 +480,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderRunning.
+             * Indicates whether a change order is being executed in the namespace. Valid values:
+             * <p>
+             * 
+             * *   **true**: indicates that a change order is being executed in the namespace.
+             * *   **false**: indicates that no change orders are being executed in the namespace.
              */
             public Builder lastChangeOrderRunning(Boolean lastChangeOrderRunning) {
                 this.lastChangeOrderRunning = lastChangeOrderRunning;
@@ -458,7 +492,19 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastChangeOrderStatus.
+             * The status of the latest change order. Valid values:
+             * <p>
+             * 
+             * *   **READY**: The change order is ready.
+             * *   **RUNNING**: The change order is being executed.
+             * *   **SUCCESS**: The change order was executed.
+             * *   **FAIL**: The change order could not be executed.
+             * *   **ABORT**: The change order was terminated.
+             * *   **WAIT_BATCH_CONFIRM**: The change order is pending execution. You must manually confirm the release batch.
+             * *   **AUTO_BATCH_WAIT**: The change order is pending execution. SAE will automatically confirm the release batch.
+             * *   **SYSTEM_FAIL**: A system exception occurred.
+             * *   **WAIT_APPROVAL**: The change order is pending approval.
+             * *   **APPROVED**: The change order is approved and is pending execution.
              */
             public Builder lastChangeOrderStatus(String lastChangeOrderStatus) {
                 this.lastChangeOrderStatus = lastChangeOrderStatus;
@@ -466,7 +512,15 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * NameSpaceShortId.
+             */
+            public Builder nameSpaceShortId(String nameSpaceShortId) {
+                this.nameSpaceShortId = nameSpaceShortId;
+                return this;
+            }
+
+            /**
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -474,7 +528,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * The name of the namespace.
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -482,7 +536,11 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationExpired.
+             * Indicates whether the notification of a change order is expired. Valid values:
+             * <p>
+             * 
+             * *   **true**: indicates that the notification is expired.
+             * *   **false**: indicates that the notification is not expired.
              */
             public Builder notificationExpired(Boolean notificationExpired) {
                 this.notificationExpired = notificationExpired;
@@ -490,7 +548,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -498,7 +556,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant in the SAE namespace.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -506,7 +564,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -514,7 +572,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -522,7 +580,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -530,7 +588,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -538,7 +596,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The name of the VPC.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

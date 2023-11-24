@@ -98,7 +98,13 @@ public class ListAppEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +112,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The events.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +120,11 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the call failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +132,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,11 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the events that occurred in the application were queried. Valid values:
+         * <p>
+         * 
+         * *   **true**: The events were queried.
+         * *   **false**: The events failed to be queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +264,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * EventType.
+             * The type of the event. Valid values:
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -258,7 +272,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The timestamp of the first occurrence of the event.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -266,7 +280,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The timestamp of the last occurrence of the event.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -274,7 +288,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The information about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -282,7 +296,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectKind.
+             * The type of the object.
              */
             public Builder objectKind(String objectKind) {
                 this.objectKind = objectKind;
@@ -290,7 +304,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of the object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -298,7 +312,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -375,7 +389,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * AppEventEntity.
+             * The events.
              */
             public Builder appEventEntity(java.util.List < AppEventEntity> appEventEntity) {
                 this.appEventEntity = appEventEntity;
@@ -383,7 +397,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -391,7 +405,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +413,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of events that occurred in an application.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

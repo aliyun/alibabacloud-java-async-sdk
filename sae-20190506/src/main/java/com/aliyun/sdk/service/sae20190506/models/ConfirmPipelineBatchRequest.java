@@ -70,7 +70,7 @@ public class ConfirmPipelineBatchRequest extends Request {
         } 
 
         /**
-         * Confirm.
+         * true
          */
         public Builder confirm(Boolean confirm) {
             this.putQueryParameter("Confirm", confirm);
@@ -79,7 +79,7 @@ public class ConfirmPipelineBatchRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * e2e-vds-feh-\*\*\*
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

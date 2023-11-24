@@ -55,7 +55,7 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         } 
 
         /**
-         * ChangeOrderId.
+         * The ID of the request.
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

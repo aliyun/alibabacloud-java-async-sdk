@@ -110,7 +110,11 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the details of the ConfigMap instance were obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: The details were obtained.
+         * *   **false**: The details failed to be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The time when the instance was last modified.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the call was successful.
+         * *   **3xx**: indicates that the call was redirected.
+         * *   **4xx**: indicates that the call failed.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned information. Valid values:
+         * <p>
+         * 
+         * *   If the call is successful, **success** is returned.
+         * *   If the call fails, an error code is returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The returned result.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -210,7 +224,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private String appName; 
 
             /**
-             * AppId.
+             * The ID of the ConfigMap instance.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -218,7 +232,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The ID of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -343,7 +357,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ConfigMapId.
+             * The name of the ConfigMap instance.
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -351,7 +365,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The application that is associated with the instance.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -359,7 +373,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * The ID of the namespace to which the instance belongs.
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -367,7 +381,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The time when the instance was created.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +389,11 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The returned error code. Valid values:
+             * <p>
+             * 
+             * *   If the call is successful, the **ErrorCode** parameter is not returned.
+             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -383,7 +401,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The description of the instance.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -391,7 +409,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * RelateApps.
+             * The name of the application.
              */
             public Builder relateApps(java.util.List < RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -399,7 +417,12 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The data of ConfigMap key-value pairs. Format:
+             * <p>
+             * 
+             * {"k1":"v1", "k2":"v2"}
+             * 
+             * k specifies a key and v specifies a value. For more information, see [Manage and use configurations](~~171326~~).
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

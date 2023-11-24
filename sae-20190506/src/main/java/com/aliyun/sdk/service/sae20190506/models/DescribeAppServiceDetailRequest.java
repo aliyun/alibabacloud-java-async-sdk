@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAppServiceDetailRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
@@ -110,7 +111,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         } 
 
         /**
-         * mse 的 appId
+         * 6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -119,7 +120,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * ServiceGroup.
+         * springCloud
          */
         public Builder serviceGroup(String serviceGroup) {
             this.putQueryParameter("ServiceGroup", serviceGroup);
@@ -128,7 +129,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * edas.service.provider
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -137,7 +138,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * springCloud
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -146,7 +147,7 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * 1.0.0
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

@@ -55,7 +55,7 @@ public class DescribeIngressRequest extends Request {
         } 
 
         /**
-         * IngressId.
+         * The returned data.
          */
         public Builder ingressId(Long ingressId) {
             this.putQueryParameter("IngressId", ingressId);

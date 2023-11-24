@@ -83,7 +83,7 @@ public class DescribeApplicationGroupsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +92,7 @@ public class DescribeApplicationGroupsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * 1
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -101,7 +101,7 @@ public class DescribeApplicationGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

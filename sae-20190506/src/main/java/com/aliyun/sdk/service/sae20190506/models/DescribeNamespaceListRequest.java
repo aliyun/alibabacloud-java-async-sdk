@@ -68,7 +68,7 @@ public class DescribeNamespaceListRequest extends Request {
         } 
 
         /**
-         * ContainCustom.
+         * true
          */
         public Builder containCustom(Boolean containCustom) {
             this.putQueryParameter("ContainCustom", containCustom);
@@ -77,7 +77,7 @@ public class DescribeNamespaceListRequest extends Request {
         }
 
         /**
-         * HybridCloudExclude.
+         * true
          */
         public Builder hybridCloudExclude(Boolean hybridCloudExclude) {
             this.putQueryParameter("HybridCloudExclude", hybridCloudExclude);

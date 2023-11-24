@@ -69,7 +69,7 @@ public class DescribeApplicationConfigRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * 7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class DescribeApplicationConfigRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * 0026ff7f-2b57-4127-bdd0-9bf202bb\*\*\*\*
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

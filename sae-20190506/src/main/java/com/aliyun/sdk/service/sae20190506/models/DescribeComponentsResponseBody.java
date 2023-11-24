@@ -110,7 +110,11 @@ public class DescribeComponentsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the component version was obtained. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that the component version was obtained.
+         * *   **false**: indicates that the component version could not be obtained.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The component type.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It is used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +168,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The details of the component.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -234,7 +244,11 @@ public class DescribeComponentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ComponentDescription.
+             * Indicates whether the component is expired. Valid values:
+             * <p>
+             * 
+             * *   **true**: The component is expired.
+             * *   **false**: The component is not expired.
              */
             public Builder componentDescription(String componentDescription) {
                 this.componentDescription = componentDescription;
@@ -242,7 +256,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentKey.
+             * The description of the component.
              */
             public Builder componentKey(String componentKey) {
                 this.componentKey = componentKey;
@@ -250,7 +264,11 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -258,7 +276,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The ID of the component.
              */
             public Builder type(String type) {
                 this.type = type;

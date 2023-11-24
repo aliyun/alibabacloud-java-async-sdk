@@ -134,7 +134,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * Code.
+         * Queries applications.
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * 20
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The number of the returned page.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -158,7 +158,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The number of entries returned on each page.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -166,7 +166,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * 20
          */
         public Builder message(String message) {
             this.message = message;
@@ -174,7 +174,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * cn-beijing:demo
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned on each page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * 1
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +198,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSize.
+         * demo-app
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -250,7 +250,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * appName
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +258,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The key of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -285,8 +285,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("Cpu")
+        private Integer cpu;
+
         @NameInMap("Instances")
         private Integer instances;
+
+        @NameInMap("Mem")
+        private Integer mem;
 
         @NameInMap("NamespaceId")
         private String namespaceId;
@@ -305,7 +311,9 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.cpu = builder.cpu;
             this.instances = builder.instances;
+            this.mem = builder.mem;
             this.namespaceId = builder.namespaceId;
             this.regionId = builder.regionId;
             this.runningInstances = builder.runningInstances;
@@ -349,10 +357,24 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
          * @return instances
          */
         public Integer getInstances() {
             return this.instances;
+        }
+
+        /**
+         * @return mem
+         */
+        public Integer getMem() {
+            return this.mem;
         }
 
         /**
@@ -388,14 +410,16 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appDescription; 
             private String appId; 
             private String appName; 
+            private Integer cpu; 
             private Integer instances; 
+            private Integer mem; 
             private String namespaceId; 
             private String regionId; 
             private Integer runningInstances; 
             private java.util.List < Tags> tags; 
 
             /**
-             * AppDeletingStatus.
+             * demo-app
              */
             public Builder appDeletingStatus(Boolean appDeletingStatus) {
                 this.appDeletingStatus = appDeletingStatus;
@@ -403,7 +427,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppDescription.
+             * \[{"key":"key","value":"value"}]
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -411,7 +435,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The total number of applications.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -419,7 +443,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The ID of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -427,7 +451,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * The total number of applications.
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -435,7 +467,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * Mem.
+             */
+            public Builder mem(Integer mem) {
+                this.mem = mem;
+                return this;
+            }
+
+            /**
+             * demo-app
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -443,7 +483,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The number of running instances.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -451,7 +491,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * RunningInstances.
+             * The value of the tag.
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -459,7 +499,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * cn-beijing:demo
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -536,7 +576,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * Applications.
+             * The description of the application.
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;
@@ -544,7 +584,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The number of application instances.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -552,7 +592,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The tags of the application.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -560,7 +600,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The information about applications.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

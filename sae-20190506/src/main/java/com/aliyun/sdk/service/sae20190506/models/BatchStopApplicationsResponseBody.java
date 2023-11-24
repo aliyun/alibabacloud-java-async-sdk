@@ -110,7 +110,11 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether the specified applications are stopped. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the change order.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +130,13 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,11 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
+         * <p>
+         * 
+         * *   **success** is returned when the request succeeds.
+         * *   An error code is returned when the request fails.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The returned data.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -198,7 +212,11 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The error code.
+             * <p>
+             * 
+             * *   If the request is successful, this parameter is not returned.****
+             * *   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

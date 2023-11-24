@@ -55,7 +55,7 @@ public class DeleteIngressRequest extends Request {
         } 
 
         /**
-         * IngressId.
+         * 87
          */
         public Builder ingressId(Long ingressId) {
             this.putQueryParameter("IngressId", ingressId);

@@ -70,7 +70,7 @@ public class ReduceApplicationCapacityByInstanceIdsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class ReduceApplicationCapacityByInstanceIdsRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the instance. Separate multiple instances with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

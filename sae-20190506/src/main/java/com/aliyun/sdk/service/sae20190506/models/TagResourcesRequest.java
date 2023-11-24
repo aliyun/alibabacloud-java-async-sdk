@@ -18,10 +18,12 @@ public class TagResourcesRequest extends Request {
 
     @Body
     @NameInMap("ResourceIds")
+    @Validation(required = true)
     private String resourceIds;
 
     @Body
     @NameInMap("ResourceType")
+    @Validation(required = true)
     private String resourceType;
 
     @Body
@@ -96,7 +98,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * application
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -105,7 +107,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The ID of the request.
          */
         public Builder resourceIds(String resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -114,7 +116,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * \[{"key":"k1","value":"v1"}]
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -123,7 +125,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

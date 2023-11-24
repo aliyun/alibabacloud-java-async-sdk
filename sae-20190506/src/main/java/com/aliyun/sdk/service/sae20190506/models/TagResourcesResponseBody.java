@@ -110,7 +110,11 @@ public class TagResourcesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * Indicates whether tags were added to the specified resources successfully. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates that tags were added to the specified resources successfully.
+         * *   **false**: indicates that tags could not be added to the specified resources.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,11 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -126,7 +134,13 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +148,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +156,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned message.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +172,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * Indicates that the operation was successful.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

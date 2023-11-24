@@ -110,7 +110,13 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +124,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information of the namespace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +132,11 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +144,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned for the operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +152,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +160,11 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information about the namespace was updated. Valid values:
+         * <p>
+         * 
+         * *   **true**: The instance was updated.
+         * *   **false**: The instance failed to be updated.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +172,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -172,6 +186,12 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("EnableMicroRegistration")
+        private Boolean enableMicroRegistration;
+
+        @NameInMap("NameSpaceShortId")
+        private String nameSpaceShortId;
+
         @NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
@@ -185,6 +205,8 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         private String regionId;
 
         private Data(Builder builder) {
+            this.enableMicroRegistration = builder.enableMicroRegistration;
+            this.nameSpaceShortId = builder.nameSpaceShortId;
             this.namespaceDescription = builder.namespaceDescription;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
@@ -197,6 +219,20 @@ public class UpdateNamespaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableMicroRegistration
+         */
+        public Boolean getEnableMicroRegistration() {
+            return this.enableMicroRegistration;
+        }
+
+        /**
+         * @return nameSpaceShortId
+         */
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         /**
@@ -228,13 +264,31 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableMicroRegistration; 
+            private String nameSpaceShortId; 
             private String namespaceDescription; 
             private String namespaceId; 
             private String namespaceName; 
             private String regionId; 
 
             /**
-             * NamespaceDescription.
+             * EnableMicroRegistration.
+             */
+            public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
+                this.enableMicroRegistration = enableMicroRegistration;
+                return this;
+            }
+
+            /**
+             * The short ID of the namespace.
+             */
+            public Builder nameSpaceShortId(String nameSpaceShortId) {
+                this.nameSpaceShortId = nameSpaceShortId;
+                return this;
+            }
+
+            /**
+             * The description of the namespace.
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -242,7 +296,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -250,7 +304,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * The name of the namespace.
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -258,7 +312,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region where the namespace resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -110,7 +110,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The ID of the trace. It can be used to query the details of a request.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information of the namespace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The ID of the request.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +134,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the region.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The error code.
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned when the request succeeds.
+         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The information of the namespace.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,13 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: indicates that the request was successful.
+         * *   **3xx**: indicates that the request was redirected.
+         * *   **4xx**: indicates that the request was invalid.
+         * *   **5xx**: indicates that a server error occurred.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -172,6 +182,12 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("EnableMicroRegistration")
+        private Boolean enableMicroRegistration;
+
+        @NameInMap("NameSpaceShortId")
+        private String nameSpaceShortId;
+
         @NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
@@ -185,6 +201,8 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String regionId;
 
         private Data(Builder builder) {
+            this.enableMicroRegistration = builder.enableMicroRegistration;
+            this.nameSpaceShortId = builder.nameSpaceShortId;
             this.namespaceDescription = builder.namespaceDescription;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
@@ -197,6 +215,20 @@ public class DescribeNamespaceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableMicroRegistration
+         */
+        public Boolean getEnableMicroRegistration() {
+            return this.enableMicroRegistration;
+        }
+
+        /**
+         * @return nameSpaceShortId
+         */
+        public String getNameSpaceShortId() {
+            return this.nameSpaceShortId;
         }
 
         /**
@@ -228,13 +260,31 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableMicroRegistration; 
+            private String nameSpaceShortId; 
             private String namespaceDescription; 
             private String namespaceId; 
             private String namespaceName; 
             private String regionId; 
 
             /**
-             * NamespaceDescription.
+             * EnableMicroRegistration.
+             */
+            public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
+                this.enableMicroRegistration = enableMicroRegistration;
+                return this;
+            }
+
+            /**
+             * NameSpaceShortId.
+             */
+            public Builder nameSpaceShortId(String nameSpaceShortId) {
+                this.nameSpaceShortId = nameSpaceShortId;
+                return this;
+            }
+
+            /**
+             * The ID of the request.
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -242,7 +292,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * cn-beijing:test
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -250,7 +300,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * The name of the namespace.
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -258,7 +308,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * cn-beijing:test
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -69,7 +69,7 @@ public class DescribeComponentsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * TOMCAT
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class DescribeComponentsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The ID of the request.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -70,7 +70,7 @@ public class EnableApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class EnableApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * The name of the auto scaling policy.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);

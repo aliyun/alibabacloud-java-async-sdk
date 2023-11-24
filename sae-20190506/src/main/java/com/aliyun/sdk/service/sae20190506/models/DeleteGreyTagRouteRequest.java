@@ -55,7 +55,7 @@ public class DeleteGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * 规则ID
+         * The ID of the request.
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

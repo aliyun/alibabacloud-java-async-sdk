@@ -112,7 +112,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * A2RN
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +121,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * cn-beijing
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * application
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +148,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * \[{"key":"k1","value":"v1"}]
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

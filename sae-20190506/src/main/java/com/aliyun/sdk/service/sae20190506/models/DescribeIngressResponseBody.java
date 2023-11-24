@@ -118,7 +118,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The port specified for the SLB listener.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The ID of the namespace.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the SLB instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The name of the routing rule.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -234,7 +234,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private Integer containerPort; 
 
             /**
-             * AppId.
+             * The domain name of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -242,7 +242,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The container port of the application specified in the forwarding rule.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -258,7 +258,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerPort.
+             * The name of the application specified in the forwarding rule.
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -291,6 +291,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @NameInMap("Path")
         private String path;
 
+        @NameInMap("RewritePath")
+        private String rewritePath;
+
         private Rules(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
@@ -298,6 +301,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.containerPort = builder.containerPort;
             this.domain = builder.domain;
             this.path = builder.path;
+            this.rewritePath = builder.rewritePath;
         }
 
         public static Builder builder() {
@@ -350,6 +354,13 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.path;
         }
 
+        /**
+         * @return rewritePath
+         */
+        public String getRewritePath() {
+            return this.rewritePath;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
@@ -357,9 +368,14 @@ public class DescribeIngressResponseBody extends TeaModel {
             private Integer containerPort; 
             private String domain; 
             private String path; 
+            private String rewritePath; 
 
             /**
-             * AppId.
+             * The protocol used to forward requests. Valid values:
+             * <p>
+             * 
+             * *   **HTTP**: used when the application needs to identify the transmitted data.
+             * *   **HTTPS**: used when the application requires encrypted data transmission.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -367,7 +383,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The path of the URL.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -383,7 +399,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerPort.
+             * The ID of the routing rule.
              */
             public Builder containerPort(Integer containerPort) {
                 this.containerPort = containerPort;
@@ -391,7 +407,11 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The type of the SLB instance based on the processing capabilities. Valid values:
+             * <p>
+             * 
+             * *   **clb**: the Classic Load Balancer (CLB) instance.
+             * *   **alb**: the Application Load Balancer (ALB) instance.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -399,10 +419,22 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The error code.
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned when the request succeeds.
+             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
              */
             public Builder path(String path) {
                 this.path = path;
+                return this;
+            }
+
+            /**
+             * RewritePath.
+             */
+            public Builder rewritePath(String rewritePath) {
+                this.rewritePath = rewritePath;
                 return this;
             }
 
@@ -416,6 +448,9 @@ public class DescribeIngressResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         @NameInMap("CertId")
         private String certId;
+
+        @NameInMap("CertIds")
+        private String certIds;
 
         @NameInMap("DefaultRule")
         private DefaultRule defaultRule;
@@ -452,6 +487,7 @@ public class DescribeIngressResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.certId = builder.certId;
+            this.certIds = builder.certIds;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
             this.id = builder.id;
@@ -478,6 +514,13 @@ public class DescribeIngressResponseBody extends TeaModel {
          */
         public String getCertId() {
             return this.certId;
+        }
+
+        /**
+         * @return certIds
+         */
+        public String getCertIds() {
+            return this.certIds;
         }
 
         /**
@@ -559,6 +602,7 @@ public class DescribeIngressResponseBody extends TeaModel {
 
         public static final class Builder {
             private String certId; 
+            private String certIds; 
             private DefaultRule defaultRule; 
             private String description; 
             private Long id; 
@@ -572,7 +616,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String slbType; 
 
             /**
-             * CertId.
+             * The name of the application specified in the default rule.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -580,7 +624,15 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRule.
+             * CertIds.
+             */
+            public Builder certIds(String certIds) {
+                this.certIds = certIds;
+                return this;
+            }
+
+            /**
+             * The forwarding rules.
              */
             public Builder defaultRule(DefaultRule defaultRule) {
                 this.defaultRule = defaultRule;
@@ -588,7 +640,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The name of the routing rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -596,7 +648,13 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The HTTP status code. Valid values:
+             * <p>
+             * 
+             * *   **2xx**: indicates that the request was successful.
+             * *   **3xx**: indicates that the request was redirected.
+             * *   **4xx**: indicates that the request was invalid.
+             * *   **5xx**: indicates that a server error occurred.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -604,7 +662,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * ListenerPort.
+             * The default rule.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -620,7 +678,11 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalanceType.
+             * Indicates whether the configurations of the routing rule were queried successfully. Valid values:
+             * <p>
+             * 
+             * *   **true**: indicates that the query was successful.
+             * *   **false**: indicates that the query failed.
              */
             public Builder loadBalanceType(String loadBalanceType) {
                 this.loadBalanceType = loadBalanceType;
@@ -628,7 +690,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The ID of the application specified in the default rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -636,7 +698,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the certificate.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -644,7 +706,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The ID of the application specified in the forwarding rule.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -652,7 +714,11 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * SlbId.
+             * The type of the SLB instance based on the IP address. Valid values:
+             * <p>
+             * 
+             * *   **internet**: the Internet-facing SLB instance.
+             * *   **intranet**: the internal-facing SLB instance.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -660,7 +726,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
-             * SlbType.
+             * The container port of the application specified in the default rule.
              */
             public Builder slbType(String slbType) {
                 this.slbType = slbType;

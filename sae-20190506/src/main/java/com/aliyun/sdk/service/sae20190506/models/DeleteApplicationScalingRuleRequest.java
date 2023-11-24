@@ -70,7 +70,7 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the request.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);

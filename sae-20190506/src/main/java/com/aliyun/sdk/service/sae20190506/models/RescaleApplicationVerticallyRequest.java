@@ -85,7 +85,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -94,7 +94,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * The destination CPU specification. Unit: millicore.
          */
         public Builder cpu(String cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -103,7 +103,7 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * Memory.
+         * The destination memory size. Unit: MB.
          */
         public Builder memory(String memory) {
             this.putQueryParameter("Memory", memory);

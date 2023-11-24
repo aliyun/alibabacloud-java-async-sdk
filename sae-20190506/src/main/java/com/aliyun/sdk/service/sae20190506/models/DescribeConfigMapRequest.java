@@ -55,7 +55,7 @@ public class DescribeConfigMapRequest extends Request {
         } 
 
         /**
-         * ConfigMapId.
+         * The ID of the request.
          */
         public Builder configMapId(Long configMapId) {
             this.putQueryParameter("ConfigMapId", configMapId);

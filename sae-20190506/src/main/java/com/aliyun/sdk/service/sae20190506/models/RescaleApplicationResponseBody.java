@@ -98,7 +98,13 @@ public class RescaleApplicationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. Take note of the following rules:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +112,7 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +120,11 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +132,7 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned for the operation.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,7 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,11 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the application is successfully scaled. Take note of the following rules:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +192,7 @@ public class RescaleApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * ChangeOrderId.
+             * The ID of the change order.
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
