@@ -32,6 +32,10 @@ public class ListIntervalAgentReportRequest extends Request {
     private String interval;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(maximum = 4133952000000D)
     private Long startTime;
@@ -42,6 +46,7 @@ public class ListIntervalAgentReportRequest extends Request {
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.interval = builder.interval;
+        this.mediaType = builder.mediaType;
         this.startTime = builder.startTime;
     }
 
@@ -87,6 +92,13 @@ public class ListIntervalAgentReportRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -98,6 +110,7 @@ public class ListIntervalAgentReportRequest extends Request {
         private Long endTime; 
         private String instanceId; 
         private String interval; 
+        private String mediaType; 
         private Long startTime; 
 
         private Builder() {
@@ -110,6 +123,7 @@ public class ListIntervalAgentReportRequest extends Request {
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.interval = request.interval;
+            this.mediaType = request.mediaType;
             this.startTime = request.startTime;
         } 
 
@@ -146,6 +160,15 @@ public class ListIntervalAgentReportRequest extends Request {
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
             this.interval = interval;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

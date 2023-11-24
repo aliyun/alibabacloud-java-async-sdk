@@ -31,12 +31,17 @@ public class ListUsersRequest extends Request {
     @NameInMap("SearchPattern")
     private String searchPattern;
 
+    @Query
+    @NameInMap("SkillGroupId")
+    private String skillGroupId;
+
     private ListUsersRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.searchPattern = builder.searchPattern;
+        this.skillGroupId = builder.skillGroupId;
     }
 
     public static Builder builder() {
@@ -80,11 +85,19 @@ public class ListUsersRequest extends Request {
         return this.searchPattern;
     }
 
+    /**
+     * @return skillGroupId
+     */
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchPattern; 
+        private String skillGroupId; 
 
         private Builder() {
             super();
@@ -96,6 +109,7 @@ public class ListUsersRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.searchPattern = request.searchPattern;
+            this.skillGroupId = request.skillGroupId;
         } 
 
         /**
@@ -131,6 +145,15 @@ public class ListUsersRequest extends Request {
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);
             this.searchPattern = searchPattern;
+            return this;
+        }
+
+        /**
+         * SkillGroupId.
+         */
+        public Builder skillGroupId(String skillGroupId) {
+            this.putQueryParameter("SkillGroupId", skillGroupId);
+            this.skillGroupId = skillGroupId;
             return this;
         }
 

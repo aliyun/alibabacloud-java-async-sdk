@@ -23,6 +23,10 @@ public class GetHistoricalInstanceReportRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(maximum = 4133952000000D)
     private Long startTime;
@@ -31,6 +35,7 @@ public class GetHistoricalInstanceReportRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.startTime = builder.startTime;
     }
 
@@ -62,6 +67,13 @@ public class GetHistoricalInstanceReportRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -71,6 +83,7 @@ public class GetHistoricalInstanceReportRequest extends Request {
     public static final class Builder extends Request.Builder<GetHistoricalInstanceReportRequest, Builder> {
         private Long endTime; 
         private String instanceId; 
+        private String mediaType; 
         private Long startTime; 
 
         private Builder() {
@@ -81,6 +94,7 @@ public class GetHistoricalInstanceReportRequest extends Request {
             super(request);
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.startTime = request.startTime;
         } 
 
@@ -99,6 +113,15 @@ public class GetHistoricalInstanceReportRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

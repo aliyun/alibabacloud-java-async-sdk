@@ -135,6 +135,9 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("AgentAnswerRate")
         private Float agentAnswerRate;
 
+        @NameInMap("AgentHandleRate")
+        private Float agentHandleRate;
+
         @NameInMap("AnswerRate")
         private Float answerRate;
 
@@ -147,14 +150,23 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("AverageTalkTime")
         private Long averageTalkTime;
 
+        @NameInMap("CallsAgentHandled")
+        private Long callsAgentHandled;
+
         @NameInMap("CallsAnswered")
         private Long callsAnswered;
+
+        @NameInMap("CallsCustomerAnswered")
+        private Long callsCustomerAnswered;
 
         @NameInMap("CallsCustomerHandled")
         private Long callsCustomerHandled;
 
         @NameInMap("CallsDialed")
         private Long callsDialed;
+
+        @NameInMap("CustomerAnswerRate")
+        private Float customerAnswerRate;
 
         @NameInMap("CustomerHandleRate")
         private Float customerHandleRate;
@@ -179,13 +191,17 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
 
         private Back2Back(Builder builder) {
             this.agentAnswerRate = builder.agentAnswerRate;
+            this.agentHandleRate = builder.agentHandleRate;
             this.answerRate = builder.answerRate;
             this.averageCustomerRingTime = builder.averageCustomerRingTime;
             this.averageRingTime = builder.averageRingTime;
             this.averageTalkTime = builder.averageTalkTime;
+            this.callsAgentHandled = builder.callsAgentHandled;
             this.callsAnswered = builder.callsAnswered;
+            this.callsCustomerAnswered = builder.callsCustomerAnswered;
             this.callsCustomerHandled = builder.callsCustomerHandled;
             this.callsDialed = builder.callsDialed;
+            this.customerAnswerRate = builder.customerAnswerRate;
             this.customerHandleRate = builder.customerHandleRate;
             this.maxCustomerRingTime = builder.maxCustomerRingTime;
             this.maxRingTime = builder.maxRingTime;
@@ -208,6 +224,13 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
          */
         public Float getAgentAnswerRate() {
             return this.agentAnswerRate;
+        }
+
+        /**
+         * @return agentHandleRate
+         */
+        public Float getAgentHandleRate() {
+            return this.agentHandleRate;
         }
 
         /**
@@ -239,10 +262,24 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return callsAgentHandled
+         */
+        public Long getCallsAgentHandled() {
+            return this.callsAgentHandled;
+        }
+
+        /**
          * @return callsAnswered
          */
         public Long getCallsAnswered() {
             return this.callsAnswered;
+        }
+
+        /**
+         * @return callsCustomerAnswered
+         */
+        public Long getCallsCustomerAnswered() {
+            return this.callsCustomerAnswered;
         }
 
         /**
@@ -257,6 +294,13 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
          */
         public Long getCallsDialed() {
             return this.callsDialed;
+        }
+
+        /**
+         * @return customerAnswerRate
+         */
+        public Float getCustomerAnswerRate() {
+            return this.customerAnswerRate;
         }
 
         /**
@@ -310,13 +354,17 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float agentAnswerRate; 
+            private Float agentHandleRate; 
             private Float answerRate; 
             private Float averageCustomerRingTime; 
             private Float averageRingTime; 
             private Long averageTalkTime; 
+            private Long callsAgentHandled; 
             private Long callsAnswered; 
+            private Long callsCustomerAnswered; 
             private Long callsCustomerHandled; 
             private Long callsDialed; 
+            private Float customerAnswerRate; 
             private Float customerHandleRate; 
             private Long maxCustomerRingTime; 
             private Long maxRingTime; 
@@ -330,6 +378,14 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
              */
             public Builder agentAnswerRate(Float agentAnswerRate) {
                 this.agentAnswerRate = agentAnswerRate;
+                return this;
+            }
+
+            /**
+             * AgentHandleRate.
+             */
+            public Builder agentHandleRate(Float agentHandleRate) {
+                this.agentHandleRate = agentHandleRate;
                 return this;
             }
 
@@ -366,10 +422,26 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
+             * CallsAgentHandled.
+             */
+            public Builder callsAgentHandled(Long callsAgentHandled) {
+                this.callsAgentHandled = callsAgentHandled;
+                return this;
+            }
+
+            /**
              * CallsAnswered.
              */
             public Builder callsAnswered(Long callsAnswered) {
                 this.callsAnswered = callsAnswered;
+                return this;
+            }
+
+            /**
+             * CallsCustomerAnswered.
+             */
+            public Builder callsCustomerAnswered(Long callsCustomerAnswered) {
+                this.callsCustomerAnswered = callsCustomerAnswered;
                 return this;
             }
 
@@ -386,6 +458,14 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
              */
             public Builder callsDialed(Long callsDialed) {
                 this.callsDialed = callsDialed;
+                return this;
+            }
+
+            /**
+             * CustomerAnswerRate.
+             */
+            public Builder customerAnswerRate(Float customerAnswerRate) {
+                this.customerAnswerRate = customerAnswerRate;
                 return this;
             }
 
@@ -453,8 +533,14 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
 
     }
     public static class Inbound extends TeaModel {
+        @NameInMap("AverageFirstResponseTime")
+        private Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         private Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        private Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         private Float averageRingTime;
@@ -519,6 +605,15 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
+        @NameInMap("TotalMessagesSent")
+        private Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        private Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        private Long totalMessagesSentByCustomer;
+
         @NameInMap("TotalRingTime")
         private Long totalRingTime;
 
@@ -529,7 +624,9 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         private Long totalWorkTime;
 
         private Inbound(Builder builder) {
+            this.averageFirstResponseTime = builder.averageFirstResponseTime;
             this.averageHoldTime = builder.averageHoldTime;
+            this.averageResponseTime = builder.averageResponseTime;
             this.averageRingTime = builder.averageRingTime;
             this.averageTalkTime = builder.averageTalkTime;
             this.averageWorkTime = builder.averageWorkTime;
@@ -551,6 +648,9 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             this.satisfactionSurveysOffered = builder.satisfactionSurveysOffered;
             this.satisfactionSurveysResponded = builder.satisfactionSurveysResponded;
             this.totalHoldTime = builder.totalHoldTime;
+            this.totalMessagesSent = builder.totalMessagesSent;
+            this.totalMessagesSentByAgent = builder.totalMessagesSentByAgent;
+            this.totalMessagesSentByCustomer = builder.totalMessagesSentByCustomer;
             this.totalRingTime = builder.totalRingTime;
             this.totalTalkTime = builder.totalTalkTime;
             this.totalWorkTime = builder.totalWorkTime;
@@ -565,10 +665,24 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return averageFirstResponseTime
+         */
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
+        /**
          * @return averageHoldTime
          */
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        /**
+         * @return averageResponseTime
+         */
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         /**
@@ -719,6 +833,27 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalMessagesSent
+         */
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        /**
+         * @return totalMessagesSentByAgent
+         */
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        /**
+         * @return totalMessagesSentByCustomer
+         */
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
+        }
+
+        /**
          * @return totalRingTime
          */
         public Long getTotalRingTime() {
@@ -740,7 +875,9 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float averageFirstResponseTime; 
             private Float averageHoldTime; 
+            private Float averageResponseTime; 
             private Float averageRingTime; 
             private Float averageTalkTime; 
             private Float averageWorkTime; 
@@ -762,15 +899,34 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             private Long satisfactionSurveysOffered; 
             private Long satisfactionSurveysResponded; 
             private Long totalHoldTime; 
+            private Long totalMessagesSent; 
+            private Long totalMessagesSentByAgent; 
+            private Long totalMessagesSentByCustomer; 
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWorkTime; 
+
+            /**
+             * AverageFirstResponseTime.
+             */
+            public Builder averageFirstResponseTime(Float averageFirstResponseTime) {
+                this.averageFirstResponseTime = averageFirstResponseTime;
+                return this;
+            }
 
             /**
              * AverageHoldTime.
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
+                return this;
+            }
+
+            /**
+             * AverageResponseTime.
+             */
+            public Builder averageResponseTime(Float averageResponseTime) {
+                this.averageResponseTime = averageResponseTime;
                 return this;
             }
 
@@ -943,6 +1099,30 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             }
 
             /**
+             * TotalMessagesSent.
+             */
+            public Builder totalMessagesSent(Long totalMessagesSent) {
+                this.totalMessagesSent = totalMessagesSent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByAgent.
+             */
+            public Builder totalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+                this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByCustomer.
+             */
+            public Builder totalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+                this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+                return this;
+            }
+
+            /**
              * TotalRingTime.
              */
             public Builder totalRingTime(Long totalRingTime) {
@@ -992,6 +1172,9 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("CallsTalk")
         private Long callsTalk;
 
+        @NameInMap("CallsTalked")
+        private Long callsTalked;
+
         @NameInMap("MaxTalkTime")
         private Long maxTalkTime;
 
@@ -1005,6 +1188,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             this.callsHandled = builder.callsHandled;
             this.callsOffered = builder.callsOffered;
             this.callsTalk = builder.callsTalk;
+            this.callsTalked = builder.callsTalked;
             this.maxTalkTime = builder.maxTalkTime;
             this.totalTalkTime = builder.totalTalkTime;
         }
@@ -1060,6 +1244,13 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return callsTalked
+         */
+        public Long getCallsTalked() {
+            return this.callsTalked;
+        }
+
+        /**
          * @return maxTalkTime
          */
         public Long getMaxTalkTime() {
@@ -1080,6 +1271,7 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             private Long callsHandled; 
             private Long callsOffered; 
             private Long callsTalk; 
+            private Long callsTalked; 
             private Long maxTalkTime; 
             private Long totalTalkTime; 
 
@@ -1128,6 +1320,14 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
              */
             public Builder callsTalk(Long callsTalk) {
                 this.callsTalk = callsTalk;
+                return this;
+            }
+
+            /**
+             * CallsTalked.
+             */
+            public Builder callsTalked(Long callsTalked) {
+                this.callsTalked = callsTalked;
                 return this;
             }
 
@@ -1883,6 +2083,18 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("TotalLoggedInTime")
         private Long totalLoggedInTime;
 
+        @NameInMap("TotalOffSiteLggedInTime")
+        private Long totalOffSiteLggedInTime;
+
+        @NameInMap("TotalOfficePhoneLoggedInTime")
+        private Long totalOfficePhoneLoggedInTime;
+
+        @NameInMap("TotalOnSiteLoggedInTime")
+        private String totalOnSiteLoggedInTime;
+
+        @NameInMap("TotalOutboundScenarioLoggedInTime")
+        private Long totalOutboundScenarioLoggedInTime;
+
         @NameInMap("TotalOutboundScenarioReadyTime")
         private Long totalOutboundScenarioReadyTime;
 
@@ -1921,6 +2133,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             this.totalCalls = builder.totalCalls;
             this.totalHoldTime = builder.totalHoldTime;
             this.totalLoggedInTime = builder.totalLoggedInTime;
+            this.totalOffSiteLggedInTime = builder.totalOffSiteLggedInTime;
+            this.totalOfficePhoneLoggedInTime = builder.totalOfficePhoneLoggedInTime;
+            this.totalOnSiteLoggedInTime = builder.totalOnSiteLoggedInTime;
+            this.totalOutboundScenarioLoggedInTime = builder.totalOutboundScenarioLoggedInTime;
             this.totalOutboundScenarioReadyTime = builder.totalOutboundScenarioReadyTime;
             this.totalOutboundScenarioTime = builder.totalOutboundScenarioTime;
             this.totalReadyTime = builder.totalReadyTime;
@@ -2091,6 +2307,34 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalOffSiteLggedInTime
+         */
+        public Long getTotalOffSiteLggedInTime() {
+            return this.totalOffSiteLggedInTime;
+        }
+
+        /**
+         * @return totalOfficePhoneLoggedInTime
+         */
+        public Long getTotalOfficePhoneLoggedInTime() {
+            return this.totalOfficePhoneLoggedInTime;
+        }
+
+        /**
+         * @return totalOnSiteLoggedInTime
+         */
+        public String getTotalOnSiteLoggedInTime() {
+            return this.totalOnSiteLoggedInTime;
+        }
+
+        /**
+         * @return totalOutboundScenarioLoggedInTime
+         */
+        public Long getTotalOutboundScenarioLoggedInTime() {
+            return this.totalOutboundScenarioLoggedInTime;
+        }
+
+        /**
          * @return totalOutboundScenarioReadyTime
          */
         public Long getTotalOutboundScenarioReadyTime() {
@@ -2148,6 +2392,10 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
             private Long totalCalls; 
             private Long totalHoldTime; 
             private Long totalLoggedInTime; 
+            private Long totalOffSiteLggedInTime; 
+            private Long totalOfficePhoneLoggedInTime; 
+            private String totalOnSiteLoggedInTime; 
+            private Long totalOutboundScenarioLoggedInTime; 
             private Long totalOutboundScenarioReadyTime; 
             private Long totalOutboundScenarioTime; 
             private Long totalReadyTime; 
@@ -2327,6 +2575,38 @@ public class ListHistoricalAgentSkillGroupReportResponseBody extends TeaModel {
              */
             public Builder totalLoggedInTime(Long totalLoggedInTime) {
                 this.totalLoggedInTime = totalLoggedInTime;
+                return this;
+            }
+
+            /**
+             * TotalOffSiteLggedInTime.
+             */
+            public Builder totalOffSiteLggedInTime(Long totalOffSiteLggedInTime) {
+                this.totalOffSiteLggedInTime = totalOffSiteLggedInTime;
+                return this;
+            }
+
+            /**
+             * TotalOfficePhoneLoggedInTime.
+             */
+            public Builder totalOfficePhoneLoggedInTime(Long totalOfficePhoneLoggedInTime) {
+                this.totalOfficePhoneLoggedInTime = totalOfficePhoneLoggedInTime;
+                return this;
+            }
+
+            /**
+             * TotalOnSiteLoggedInTime.
+             */
+            public Builder totalOnSiteLoggedInTime(String totalOnSiteLoggedInTime) {
+                this.totalOnSiteLoggedInTime = totalOnSiteLoggedInTime;
+                return this;
+            }
+
+            /**
+             * TotalOutboundScenarioLoggedInTime.
+             */
+            public Builder totalOutboundScenarioLoggedInTime(Long totalOutboundScenarioLoggedInTime) {
+                this.totalOutboundScenarioLoggedInTime = totalOutboundScenarioLoggedInTime;
                 return this;
             }
 

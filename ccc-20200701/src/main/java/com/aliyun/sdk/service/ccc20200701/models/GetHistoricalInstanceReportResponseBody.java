@@ -131,9 +131,73 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
     } 
 
+    public static class AccessChannelTypeDetailList extends TeaModel {
+        @NameInMap("AccessChannelType")
+        private String accessChannelType;
+
+        @NameInMap("CallsOffered")
+        private Long callsOffered;
+
+        private AccessChannelTypeDetailList(Builder builder) {
+            this.accessChannelType = builder.accessChannelType;
+            this.callsOffered = builder.callsOffered;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessChannelTypeDetailList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessChannelType
+         */
+        public String getAccessChannelType() {
+            return this.accessChannelType;
+        }
+
+        /**
+         * @return callsOffered
+         */
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+        public static final class Builder {
+            private String accessChannelType; 
+            private Long callsOffered; 
+
+            /**
+             * AccessChannelType.
+             */
+            public Builder accessChannelType(String accessChannelType) {
+                this.accessChannelType = accessChannelType;
+                return this;
+            }
+
+            /**
+             * CallsOffered.
+             */
+            public Builder callsOffered(Long callsOffered) {
+                this.callsOffered = callsOffered;
+                return this;
+            }
+
+            public AccessChannelTypeDetailList build() {
+                return new AccessChannelTypeDetailList(this);
+            } 
+
+        } 
+
+    }
     public static class Inbound extends TeaModel {
         @NameInMap("AbandonRate")
         private Float abandonRate;
+
+        @NameInMap("AccessChannelTypeDetailList")
+        private java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList;
 
         @NameInMap("AverageAbandonTime")
         private Float averageAbandonTime;
@@ -147,8 +211,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("AverageAbandonedInRingTime")
         private Float averageAbandonedInRingTime;
 
+        @NameInMap("AverageFirstResponseTime")
+        private Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         private Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        private Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         private Float averageRingTime;
@@ -183,6 +253,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("CallsBlindTransferred")
         private Long callsBlindTransferred;
 
+        @NameInMap("CallsCausedIVRException")
+        private Long callsCausedIVRException;
+
         @NameInMap("CallsForwardToOutsideNumber")
         private Long callsForwardToOutsideNumber;
 
@@ -212,6 +285,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         @NameInMap("CallsRinged")
         private Long callsRinged;
+
+        @NameInMap("CallsToVoicemail")
+        private Long callsToVoicemail;
 
         @NameInMap("CallsVoicemail")
         private Long callsVoicemail;
@@ -258,8 +334,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("SatisfactionSurveysResponded")
         private Long satisfactionSurveysResponded;
 
+        @NameInMap("ServiceLevel15")
+        private Float serviceLevel15;
+
         @NameInMap("ServiceLevel20")
         private Float serviceLevel20;
+
+        @NameInMap("ServiceLevel30")
+        private Float serviceLevel30;
 
         @NameInMap("TotalAbandonTime")
         private Long totalAbandonTime;
@@ -276,6 +358,15 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
+        @NameInMap("TotalMessagesSent")
+        private Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        private Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        private Long totalMessagesSentByCustomer;
+
         @NameInMap("TotalRingTime")
         private Long totalRingTime;
 
@@ -290,11 +381,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         private Inbound(Builder builder) {
             this.abandonRate = builder.abandonRate;
+            this.accessChannelTypeDetailList = builder.accessChannelTypeDetailList;
             this.averageAbandonTime = builder.averageAbandonTime;
             this.averageAbandonedInIVRTime = builder.averageAbandonedInIVRTime;
             this.averageAbandonedInQueueTime = builder.averageAbandonedInQueueTime;
             this.averageAbandonedInRingTime = builder.averageAbandonedInRingTime;
+            this.averageFirstResponseTime = builder.averageFirstResponseTime;
             this.averageHoldTime = builder.averageHoldTime;
+            this.averageResponseTime = builder.averageResponseTime;
             this.averageRingTime = builder.averageRingTime;
             this.averageTalkTime = builder.averageTalkTime;
             this.averageWaitTime = builder.averageWaitTime;
@@ -306,6 +400,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             this.callsAbandonedInVoiceNavigator = builder.callsAbandonedInVoiceNavigator;
             this.callsAttendedTransferred = builder.callsAttendedTransferred;
             this.callsBlindTransferred = builder.callsBlindTransferred;
+            this.callsCausedIVRException = builder.callsCausedIVRException;
             this.callsForwardToOutsideNumber = builder.callsForwardToOutsideNumber;
             this.callsHandled = builder.callsHandled;
             this.callsHold = builder.callsHold;
@@ -316,6 +411,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             this.callsQueuingOverflow = builder.callsQueuingOverflow;
             this.callsQueuingTimeout = builder.callsQueuingTimeout;
             this.callsRinged = builder.callsRinged;
+            this.callsToVoicemail = builder.callsToVoicemail;
             this.callsVoicemail = builder.callsVoicemail;
             this.handleRate = builder.handleRate;
             this.maxAbandonTime = builder.maxAbandonTime;
@@ -331,12 +427,17 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             this.satisfactionRate = builder.satisfactionRate;
             this.satisfactionSurveysOffered = builder.satisfactionSurveysOffered;
             this.satisfactionSurveysResponded = builder.satisfactionSurveysResponded;
+            this.serviceLevel15 = builder.serviceLevel15;
             this.serviceLevel20 = builder.serviceLevel20;
+            this.serviceLevel30 = builder.serviceLevel30;
             this.totalAbandonTime = builder.totalAbandonTime;
             this.totalAbandonedInIVRTime = builder.totalAbandonedInIVRTime;
             this.totalAbandonedInQueueTime = builder.totalAbandonedInQueueTime;
             this.totalAbandonedInRingTime = builder.totalAbandonedInRingTime;
             this.totalHoldTime = builder.totalHoldTime;
+            this.totalMessagesSent = builder.totalMessagesSent;
+            this.totalMessagesSentByAgent = builder.totalMessagesSentByAgent;
+            this.totalMessagesSentByCustomer = builder.totalMessagesSentByCustomer;
             this.totalRingTime = builder.totalRingTime;
             this.totalTalkTime = builder.totalTalkTime;
             this.totalWaitTime = builder.totalWaitTime;
@@ -356,6 +457,13 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
          */
         public Float getAbandonRate() {
             return this.abandonRate;
+        }
+
+        /**
+         * @return accessChannelTypeDetailList
+         */
+        public java.util.List < AccessChannelTypeDetailList> getAccessChannelTypeDetailList() {
+            return this.accessChannelTypeDetailList;
         }
 
         /**
@@ -387,10 +495,24 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return averageFirstResponseTime
+         */
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
+        /**
          * @return averageHoldTime
          */
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        /**
+         * @return averageResponseTime
+         */
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         /**
@@ -471,6 +593,13 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return callsCausedIVRException
+         */
+        public Long getCallsCausedIVRException() {
+            return this.callsCausedIVRException;
+        }
+
+        /**
          * @return callsForwardToOutsideNumber
          */
         public Long getCallsForwardToOutsideNumber() {
@@ -538,6 +667,13 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
          */
         public Long getCallsRinged() {
             return this.callsRinged;
+        }
+
+        /**
+         * @return callsToVoicemail
+         */
+        public Long getCallsToVoicemail() {
+            return this.callsToVoicemail;
         }
 
         /**
@@ -646,10 +782,24 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceLevel15
+         */
+        public Float getServiceLevel15() {
+            return this.serviceLevel15;
+        }
+
+        /**
          * @return serviceLevel20
          */
         public Float getServiceLevel20() {
             return this.serviceLevel20;
+        }
+
+        /**
+         * @return serviceLevel30
+         */
+        public Float getServiceLevel30() {
+            return this.serviceLevel30;
         }
 
         /**
@@ -688,6 +838,27 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalMessagesSent
+         */
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        /**
+         * @return totalMessagesSentByAgent
+         */
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        /**
+         * @return totalMessagesSentByCustomer
+         */
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
+        }
+
+        /**
          * @return totalRingTime
          */
         public Long getTotalRingTime() {
@@ -717,11 +888,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float abandonRate; 
+            private java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList; 
             private Float averageAbandonTime; 
             private Float averageAbandonedInIVRTime; 
             private Float averageAbandonedInQueueTime; 
             private Float averageAbandonedInRingTime; 
+            private Float averageFirstResponseTime; 
             private Float averageHoldTime; 
+            private Float averageResponseTime; 
             private Float averageRingTime; 
             private Float averageTalkTime; 
             private Float averageWaitTime; 
@@ -733,6 +907,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long callsAbandonedInVoiceNavigator; 
             private Long callsAttendedTransferred; 
             private Long callsBlindTransferred; 
+            private Long callsCausedIVRException; 
             private Long callsForwardToOutsideNumber; 
             private Long callsHandled; 
             private Long callsHold; 
@@ -743,6 +918,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Long callsQueuingOverflow; 
             private Long callsQueuingTimeout; 
             private Long callsRinged; 
+            private Long callsToVoicemail; 
             private Long callsVoicemail; 
             private Float handleRate; 
             private Long maxAbandonTime; 
@@ -758,12 +934,17 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Float satisfactionRate; 
             private Long satisfactionSurveysOffered; 
             private Long satisfactionSurveysResponded; 
+            private Float serviceLevel15; 
             private Float serviceLevel20; 
+            private Float serviceLevel30; 
             private Long totalAbandonTime; 
             private Long totalAbandonedInIVRTime; 
             private Long totalAbandonedInQueueTime; 
             private Long totalAbandonedInRingTime; 
             private Long totalHoldTime; 
+            private Long totalMessagesSent; 
+            private Long totalMessagesSentByAgent; 
+            private Long totalMessagesSentByCustomer; 
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWaitTime; 
@@ -774,6 +955,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
              */
             public Builder abandonRate(Float abandonRate) {
                 this.abandonRate = abandonRate;
+                return this;
+            }
+
+            /**
+             * AccessChannelTypeDetailList.
+             */
+            public Builder accessChannelTypeDetailList(java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList) {
+                this.accessChannelTypeDetailList = accessChannelTypeDetailList;
                 return this;
             }
 
@@ -810,10 +999,26 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * AverageFirstResponseTime.
+             */
+            public Builder averageFirstResponseTime(Float averageFirstResponseTime) {
+                this.averageFirstResponseTime = averageFirstResponseTime;
+                return this;
+            }
+
+            /**
              * AverageHoldTime.
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
+                return this;
+            }
+
+            /**
+             * AverageResponseTime.
+             */
+            public Builder averageResponseTime(Float averageResponseTime) {
+                this.averageResponseTime = averageResponseTime;
                 return this;
             }
 
@@ -906,6 +1111,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * CallsCausedIVRException.
+             */
+            public Builder callsCausedIVRException(Long callsCausedIVRException) {
+                this.callsCausedIVRException = callsCausedIVRException;
+                return this;
+            }
+
+            /**
              * CallsForwardToOutsideNumber.
              */
             public Builder callsForwardToOutsideNumber(Long callsForwardToOutsideNumber) {
@@ -982,6 +1195,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
+                return this;
+            }
+
+            /**
+             * CallsToVoicemail.
+             */
+            public Builder callsToVoicemail(Long callsToVoicemail) {
+                this.callsToVoicemail = callsToVoicemail;
                 return this;
             }
 
@@ -1106,10 +1327,26 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceLevel15.
+             */
+            public Builder serviceLevel15(Float serviceLevel15) {
+                this.serviceLevel15 = serviceLevel15;
+                return this;
+            }
+
+            /**
              * ServiceLevel20.
              */
             public Builder serviceLevel20(Float serviceLevel20) {
                 this.serviceLevel20 = serviceLevel20;
+                return this;
+            }
+
+            /**
+             * ServiceLevel30.
+             */
+            public Builder serviceLevel30(Float serviceLevel30) {
+                this.serviceLevel30 = serviceLevel30;
                 return this;
             }
 
@@ -1154,6 +1391,30 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * TotalMessagesSent.
+             */
+            public Builder totalMessagesSent(Long totalMessagesSent) {
+                this.totalMessagesSent = totalMessagesSent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByAgent.
+             */
+            public Builder totalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+                this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByCustomer.
+             */
+            public Builder totalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+                this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+                return this;
+            }
+
+            /**
              * TotalRingTime.
              */
             public Builder totalRingTime(Long totalRingTime) {
@@ -1187,6 +1448,67 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
             public Inbound build() {
                 return new Inbound(this);
+            } 
+
+        } 
+
+    }
+    public static class Internal extends TeaModel {
+        @NameInMap("CallsAnswered")
+        private Long callsAnswered;
+
+        @NameInMap("CallsDialed")
+        private Long callsDialed;
+
+        private Internal(Builder builder) {
+            this.callsAnswered = builder.callsAnswered;
+            this.callsDialed = builder.callsDialed;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Internal create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callsAnswered
+         */
+        public Long getCallsAnswered() {
+            return this.callsAnswered;
+        }
+
+        /**
+         * @return callsDialed
+         */
+        public Long getCallsDialed() {
+            return this.callsDialed;
+        }
+
+        public static final class Builder {
+            private Long callsAnswered; 
+            private Long callsDialed; 
+
+            /**
+             * CallsAnswered.
+             */
+            public Builder callsAnswered(Long callsAnswered) {
+                this.callsAnswered = callsAnswered;
+                return this;
+            }
+
+            /**
+             * CallsDialed.
+             */
+            public Builder callsDialed(Long callsDialed) {
+                this.callsDialed = callsDialed;
+                return this;
+            }
+
+            public Internal build() {
+                return new Internal(this);
             } 
 
         } 
@@ -1755,6 +2077,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("MaxHoldTime")
         private Long maxHoldTime;
 
+        @NameInMap("MaxLoggedInAgents")
+        private Long maxLoggedInAgents;
+
         @NameInMap("MaxReadyTime")
         private Long maxReadyTime;
 
@@ -1808,6 +2133,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             this.averageWorkTime = builder.averageWorkTime;
             this.maxBreakTime = builder.maxBreakTime;
             this.maxHoldTime = builder.maxHoldTime;
+            this.maxLoggedInAgents = builder.maxLoggedInAgents;
             this.maxReadyTime = builder.maxReadyTime;
             this.maxTalkTime = builder.maxTalkTime;
             this.maxWorkTime = builder.maxWorkTime;
@@ -1880,6 +2206,13 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
          */
         public Long getMaxHoldTime() {
             return this.maxHoldTime;
+        }
+
+        /**
+         * @return maxLoggedInAgents
+         */
+        public Long getMaxLoggedInAgents() {
+            return this.maxLoggedInAgents;
         }
 
         /**
@@ -1995,6 +2328,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             private Float averageWorkTime; 
             private Long maxBreakTime; 
             private Long maxHoldTime; 
+            private Long maxLoggedInAgents; 
             private Long maxReadyTime; 
             private Long maxTalkTime; 
             private Long maxWorkTime; 
@@ -2064,6 +2398,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
              */
             public Builder maxHoldTime(Long maxHoldTime) {
                 this.maxHoldTime = maxHoldTime;
+                return this;
+            }
+
+            /**
+             * MaxLoggedInAgents.
+             */
+            public Builder maxLoggedInAgents(Long maxLoggedInAgents) {
+                this.maxLoggedInAgents = maxLoggedInAgents;
                 return this;
             }
 
@@ -2198,6 +2540,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("Inbound")
         private Inbound inbound;
 
+        @NameInMap("Internal")
+        private Internal internal;
+
         @NameInMap("Outbound")
         private Outbound outbound;
 
@@ -2206,6 +2551,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.inbound = builder.inbound;
+            this.internal = builder.internal;
             this.outbound = builder.outbound;
             this.overall = builder.overall;
         }
@@ -2226,6 +2572,13 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return internal
+         */
+        public Internal getInternal() {
+            return this.internal;
+        }
+
+        /**
          * @return outbound
          */
         public Outbound getOutbound() {
@@ -2241,6 +2594,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Inbound inbound; 
+            private Internal internal; 
             private Outbound outbound; 
             private Overall overall; 
 
@@ -2249,6 +2603,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
              */
             public Builder inbound(Inbound inbound) {
                 this.inbound = inbound;
+                return this;
+            }
+
+            /**
+             * Internal.
+             */
+            public Builder internal(Internal internal) {
+                this.internal = internal;
                 return this;
             }
 

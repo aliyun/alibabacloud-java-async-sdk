@@ -22,6 +22,10 @@ public class ListHistoricalAgentReportRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true)
     private Integer pageNumber;
@@ -30,6 +34,10 @@ public class ListHistoricalAgentReportRequest extends Request {
     @NameInMap("PageSize")
     @Validation(required = true)
     private Integer pageSize;
+
+    @Query
+    @NameInMap("SkillGroupId")
+    private String skillGroupId;
 
     @Query
     @NameInMap("StartTime")
@@ -45,8 +53,10 @@ public class ListHistoricalAgentReportRequest extends Request {
         super(builder);
         this.agentIdList = builder.agentIdList;
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.skillGroupId = builder.skillGroupId;
         this.startTime = builder.startTime;
         this.stopTime = builder.stopTime;
     }
@@ -79,6 +89,13 @@ public class ListHistoricalAgentReportRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -90,6 +107,13 @@ public class ListHistoricalAgentReportRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return skillGroupId
+     */
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
     /**
@@ -109,8 +133,10 @@ public class ListHistoricalAgentReportRequest extends Request {
     public static final class Builder extends Request.Builder<ListHistoricalAgentReportRequest, Builder> {
         private String agentIdList; 
         private String instanceId; 
+        private String mediaType; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String skillGroupId; 
         private Long startTime; 
         private Long stopTime; 
 
@@ -122,8 +148,10 @@ public class ListHistoricalAgentReportRequest extends Request {
             super(request);
             this.agentIdList = request.agentIdList;
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.skillGroupId = request.skillGroupId;
             this.startTime = request.startTime;
             this.stopTime = request.stopTime;
         } 
@@ -147,6 +175,15 @@ public class ListHistoricalAgentReportRequest extends Request {
         }
 
         /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -161,6 +198,15 @@ public class ListHistoricalAgentReportRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SkillGroupId.
+         */
+        public Builder skillGroupId(String skillGroupId) {
+            this.putQueryParameter("SkillGroupId", skillGroupId);
+            this.skillGroupId = skillGroupId;
             return this;
         }
 

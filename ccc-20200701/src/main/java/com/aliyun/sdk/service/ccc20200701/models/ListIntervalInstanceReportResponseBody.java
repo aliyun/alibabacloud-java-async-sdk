@@ -132,6 +132,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
     } 
 
     public static class Inbound extends TeaModel {
+        @NameInMap("AbandonRate")
+        private Float abandonRate;
+
         @NameInMap("AbandonedRate")
         private Float abandonedRate;
 
@@ -147,8 +150,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("AverageAbandonedInRingTime")
         private Float averageAbandonedInRingTime;
 
+        @NameInMap("AverageFirstResponseTime")
+        private Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         private Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        private Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         private Float averageRingTime;
@@ -183,6 +192,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("CallsBlindTransferred")
         private Long callsBlindTransferred;
 
+        @NameInMap("CallsCausedIVRException")
+        private Long callsCausedIVRException;
+
         @NameInMap("CallsForwardToOutsideNumber")
         private Long callsForwardToOutsideNumber;
 
@@ -212,6 +224,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
         @NameInMap("CallsRinged")
         private Long callsRinged;
+
+        @NameInMap("CallsToVoicemail")
+        private Long callsToVoicemail;
 
         @NameInMap("CallsVoicemail")
         private Long callsVoicemail;
@@ -276,6 +291,15 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("TotalHoldTime")
         private Long totalHoldTime;
 
+        @NameInMap("TotalMessagesSent")
+        private Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        private Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        private Long totalMessagesSentByCustomer;
+
         @NameInMap("TotalRingTime")
         private Long totalRingTime;
 
@@ -289,12 +313,15 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         private Long totalWorkTime;
 
         private Inbound(Builder builder) {
+            this.abandonRate = builder.abandonRate;
             this.abandonedRate = builder.abandonedRate;
             this.averageAbandonTime = builder.averageAbandonTime;
             this.averageAbandonedInIVRTime = builder.averageAbandonedInIVRTime;
             this.averageAbandonedInQueueTime = builder.averageAbandonedInQueueTime;
             this.averageAbandonedInRingTime = builder.averageAbandonedInRingTime;
+            this.averageFirstResponseTime = builder.averageFirstResponseTime;
             this.averageHoldTime = builder.averageHoldTime;
+            this.averageResponseTime = builder.averageResponseTime;
             this.averageRingTime = builder.averageRingTime;
             this.averageTalkTime = builder.averageTalkTime;
             this.averageWaitTime = builder.averageWaitTime;
@@ -306,6 +333,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             this.callsAbandonedInVoiceNavigator = builder.callsAbandonedInVoiceNavigator;
             this.callsAttendedTransferred = builder.callsAttendedTransferred;
             this.callsBlindTransferred = builder.callsBlindTransferred;
+            this.callsCausedIVRException = builder.callsCausedIVRException;
             this.callsForwardToOutsideNumber = builder.callsForwardToOutsideNumber;
             this.callsHandled = builder.callsHandled;
             this.callsHold = builder.callsHold;
@@ -316,6 +344,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             this.callsQueuingOverflow = builder.callsQueuingOverflow;
             this.callsQueuingTimeout = builder.callsQueuingTimeout;
             this.callsRinged = builder.callsRinged;
+            this.callsToVoicemail = builder.callsToVoicemail;
             this.callsVoicemail = builder.callsVoicemail;
             this.handleRate = builder.handleRate;
             this.maxAbandonTime = builder.maxAbandonTime;
@@ -337,6 +366,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             this.totalAbandonedInQueueTime = builder.totalAbandonedInQueueTime;
             this.totalAbandonedInRingTime = builder.totalAbandonedInRingTime;
             this.totalHoldTime = builder.totalHoldTime;
+            this.totalMessagesSent = builder.totalMessagesSent;
+            this.totalMessagesSentByAgent = builder.totalMessagesSentByAgent;
+            this.totalMessagesSentByCustomer = builder.totalMessagesSentByCustomer;
             this.totalRingTime = builder.totalRingTime;
             this.totalTalkTime = builder.totalTalkTime;
             this.totalWaitTime = builder.totalWaitTime;
@@ -349,6 +381,13 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
         public static Inbound create() {
             return builder().build();
+        }
+
+        /**
+         * @return abandonRate
+         */
+        public Float getAbandonRate() {
+            return this.abandonRate;
         }
 
         /**
@@ -387,10 +426,24 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return averageFirstResponseTime
+         */
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
+        /**
          * @return averageHoldTime
          */
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        /**
+         * @return averageResponseTime
+         */
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         /**
@@ -471,6 +524,13 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return callsCausedIVRException
+         */
+        public Long getCallsCausedIVRException() {
+            return this.callsCausedIVRException;
+        }
+
+        /**
          * @return callsForwardToOutsideNumber
          */
         public Long getCallsForwardToOutsideNumber() {
@@ -538,6 +598,13 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
          */
         public Long getCallsRinged() {
             return this.callsRinged;
+        }
+
+        /**
+         * @return callsToVoicemail
+         */
+        public Long getCallsToVoicemail() {
+            return this.callsToVoicemail;
         }
 
         /**
@@ -688,6 +755,27 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalMessagesSent
+         */
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        /**
+         * @return totalMessagesSentByAgent
+         */
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        /**
+         * @return totalMessagesSentByCustomer
+         */
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
+        }
+
+        /**
          * @return totalRingTime
          */
         public Long getTotalRingTime() {
@@ -716,12 +804,15 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float abandonRate; 
             private Float abandonedRate; 
             private Float averageAbandonTime; 
             private Float averageAbandonedInIVRTime; 
             private Float averageAbandonedInQueueTime; 
             private Float averageAbandonedInRingTime; 
+            private Float averageFirstResponseTime; 
             private Float averageHoldTime; 
+            private Float averageResponseTime; 
             private Float averageRingTime; 
             private Float averageTalkTime; 
             private Float averageWaitTime; 
@@ -733,6 +824,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             private Long callsAbandonedInVoiceNavigator; 
             private Long callsAttendedTransferred; 
             private Long callsBlindTransferred; 
+            private Long callsCausedIVRException; 
             private Long callsForwardToOutsideNumber; 
             private Long callsHandled; 
             private Long callsHold; 
@@ -743,6 +835,7 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             private Long callsQueuingOverflow; 
             private Long callsQueuingTimeout; 
             private Long callsRinged; 
+            private Long callsToVoicemail; 
             private Long callsVoicemail; 
             private Float handleRate; 
             private Long maxAbandonTime; 
@@ -764,10 +857,21 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             private Long totalAbandonedInQueueTime; 
             private Long totalAbandonedInRingTime; 
             private Long totalHoldTime; 
+            private Long totalMessagesSent; 
+            private Long totalMessagesSentByAgent; 
+            private Long totalMessagesSentByCustomer; 
             private Long totalRingTime; 
             private Long totalTalkTime; 
             private Long totalWaitTime; 
             private Long totalWorkTime; 
+
+            /**
+             * AbandonRate.
+             */
+            public Builder abandonRate(Float abandonRate) {
+                this.abandonRate = abandonRate;
+                return this;
+            }
 
             /**
              * AbandonedRate.
@@ -810,10 +914,26 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * AverageFirstResponseTime.
+             */
+            public Builder averageFirstResponseTime(Float averageFirstResponseTime) {
+                this.averageFirstResponseTime = averageFirstResponseTime;
+                return this;
+            }
+
+            /**
              * AverageHoldTime.
              */
             public Builder averageHoldTime(Float averageHoldTime) {
                 this.averageHoldTime = averageHoldTime;
+                return this;
+            }
+
+            /**
+             * AverageResponseTime.
+             */
+            public Builder averageResponseTime(Float averageResponseTime) {
+                this.averageResponseTime = averageResponseTime;
                 return this;
             }
 
@@ -906,6 +1026,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             }
 
             /**
+             * CallsCausedIVRException.
+             */
+            public Builder callsCausedIVRException(Long callsCausedIVRException) {
+                this.callsCausedIVRException = callsCausedIVRException;
+                return this;
+            }
+
+            /**
              * CallsForwardToOutsideNumber.
              */
             public Builder callsForwardToOutsideNumber(Long callsForwardToOutsideNumber) {
@@ -982,6 +1110,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
              */
             public Builder callsRinged(Long callsRinged) {
                 this.callsRinged = callsRinged;
+                return this;
+            }
+
+            /**
+             * CallsToVoicemail.
+             */
+            public Builder callsToVoicemail(Long callsToVoicemail) {
+                this.callsToVoicemail = callsToVoicemail;
                 return this;
             }
 
@@ -1150,6 +1286,30 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
              */
             public Builder totalHoldTime(Long totalHoldTime) {
                 this.totalHoldTime = totalHoldTime;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSent.
+             */
+            public Builder totalMessagesSent(Long totalMessagesSent) {
+                this.totalMessagesSent = totalMessagesSent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByAgent.
+             */
+            public Builder totalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+                this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+                return this;
+            }
+
+            /**
+             * TotalMessagesSentByCustomer.
+             */
+            public Builder totalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+                this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
                 return this;
             }
 

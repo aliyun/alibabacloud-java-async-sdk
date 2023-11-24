@@ -131,7 +131,71 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
 
     } 
 
+    public static class BreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        private String breakCode;
+
+        @NameInMap("Count")
+        private Long count;
+
+        private BreakCodeDetailList(Builder builder) {
+            this.breakCode = builder.breakCode;
+            this.count = builder.count;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BreakCodeDetailList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return breakCode
+         */
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        public static final class Builder {
+            private String breakCode; 
+            private Long count; 
+
+            /**
+             * BreakCode.
+             */
+            public Builder breakCode(String breakCode) {
+                this.breakCode = breakCode;
+                return this;
+            }
+
+            /**
+             * Count.
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            public BreakCodeDetailList build() {
+                return new BreakCodeDetailList(this);
+            } 
+
+        } 
+
+    }
     public static class List extends TeaModel {
+        @NameInMap("BreakCodeDetailList")
+        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+
         @NameInMap("BreakingAgents")
         private Long breakingAgents;
 
@@ -159,6 +223,9 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("TalkingAgents")
         private Long talkingAgents;
 
+        @NameInMap("TotalAgents")
+        private Long totalAgents;
+
         @NameInMap("WaitingCalls")
         private Long waitingCalls;
 
@@ -166,6 +233,7 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         private Long workingAgents;
 
         private List(Builder builder) {
+            this.breakCodeDetailList = builder.breakCodeDetailList;
             this.breakingAgents = builder.breakingAgents;
             this.instanceId = builder.instanceId;
             this.loggedInAgents = builder.loggedInAgents;
@@ -175,6 +243,7 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             this.skillGroupId = builder.skillGroupId;
             this.skillGroupName = builder.skillGroupName;
             this.talkingAgents = builder.talkingAgents;
+            this.totalAgents = builder.totalAgents;
             this.waitingCalls = builder.waitingCalls;
             this.workingAgents = builder.workingAgents;
         }
@@ -185,6 +254,13 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return breakCodeDetailList
+         */
+        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         /**
@@ -251,6 +327,13 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalAgents
+         */
+        public Long getTotalAgents() {
+            return this.totalAgents;
+        }
+
+        /**
          * @return waitingCalls
          */
         public Long getWaitingCalls() {
@@ -265,6 +348,7 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
             private Long breakingAgents; 
             private String instanceId; 
             private Long loggedInAgents; 
@@ -274,8 +358,17 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
             private String skillGroupId; 
             private String skillGroupName; 
             private Long talkingAgents; 
+            private Long totalAgents; 
             private Long waitingCalls; 
             private Long workingAgents; 
+
+            /**
+             * BreakCodeDetailList.
+             */
+            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+                this.breakCodeDetailList = breakCodeDetailList;
+                return this;
+            }
 
             /**
              * BreakingAgents.
@@ -346,6 +439,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
              */
             public Builder talkingAgents(Long talkingAgents) {
                 this.talkingAgents = talkingAgents;
+                return this;
+            }
+
+            /**
+             * TotalAgents.
+             */
+            public Builder totalAgents(Long totalAgents) {
+                this.totalAgents = totalAgents;
                 return this;
             }
 

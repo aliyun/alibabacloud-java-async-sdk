@@ -132,8 +132,14 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AbandonRate")
+        private Float abandonRate;
+
         @NameInMap("AbandonedRate")
         private Float abandonedRate;
+
+        @NameInMap("AnswerRate")
+        private Float answerRate;
 
         @NameInMap("CallsAbandoned")
         private Long callsAbandoned;
@@ -151,7 +157,9 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         private Float occupancyRate;
 
         private Data(Builder builder) {
+            this.abandonRate = builder.abandonRate;
             this.abandonedRate = builder.abandonedRate;
+            this.answerRate = builder.answerRate;
             this.callsAbandoned = builder.callsAbandoned;
             this.callsConnected = builder.callsConnected;
             this.callsDialed = builder.callsDialed;
@@ -168,10 +176,24 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return abandonRate
+         */
+        public Float getAbandonRate() {
+            return this.abandonRate;
+        }
+
+        /**
          * @return abandonedRate
          */
         public Float getAbandonedRate() {
             return this.abandonedRate;
+        }
+
+        /**
+         * @return answerRate
+         */
+        public Float getAnswerRate() {
+            return this.answerRate;
         }
 
         /**
@@ -210,7 +232,9 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Float abandonRate; 
             private Float abandonedRate; 
+            private Float answerRate; 
             private Long callsAbandoned; 
             private Long callsConnected; 
             private Long callsDialed; 
@@ -218,10 +242,26 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             private Float occupancyRate; 
 
             /**
+             * AbandonRate.
+             */
+            public Builder abandonRate(Float abandonRate) {
+                this.abandonRate = abandonRate;
+                return this;
+            }
+
+            /**
              * AbandonedRate.
              */
             public Builder abandonedRate(Float abandonedRate) {
                 this.abandonedRate = abandonedRate;
+                return this;
+            }
+
+            /**
+             * AnswerRate.
+             */
+            public Builder answerRate(Float answerRate) {
+                this.answerRate = answerRate;
                 return this;
             }
 

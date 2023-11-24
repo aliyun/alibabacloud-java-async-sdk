@@ -135,6 +135,9 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         @NameInMap("BreakAgents")
         private Long breakAgents;
 
+        @NameInMap("BreakingAgents")
+        private Long breakingAgents;
+
         @NameInMap("Concurrency")
         private Long concurrency;
 
@@ -144,23 +147,52 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         @NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
+        @NameInMap("OutboundScenarioBreakingAgents")
+        private Long outboundScenarioBreakingAgents;
+
+        @NameInMap("OutboundScenarioReadyAgents")
+        private Long outboundScenarioReadyAgents;
+
+        @NameInMap("OutboundScenarioTalkingAgents")
+        private Long outboundScenarioTalkingAgents;
+
+        @NameInMap("OutboundScenarioWorkingAgents")
+        private Long outboundScenarioWorkingAgents;
+
         @NameInMap("ReadyAgents")
         private Long readyAgents;
+
+        @NameInMap("StatsTime")
+        private Long statsTime;
 
         @NameInMap("TalkAgents")
         private Long talkAgents;
 
+        @NameInMap("TalkingAgents")
+        private Long talkingAgents;
+
         @NameInMap("WorkAgents")
         private Long workAgents;
 
+        @NameInMap("WorkingAgents")
+        private Long workingAgents;
+
         private Data(Builder builder) {
             this.breakAgents = builder.breakAgents;
+            this.breakingAgents = builder.breakingAgents;
             this.concurrency = builder.concurrency;
             this.datetime = builder.datetime;
             this.loggedInAgents = builder.loggedInAgents;
+            this.outboundScenarioBreakingAgents = builder.outboundScenarioBreakingAgents;
+            this.outboundScenarioReadyAgents = builder.outboundScenarioReadyAgents;
+            this.outboundScenarioTalkingAgents = builder.outboundScenarioTalkingAgents;
+            this.outboundScenarioWorkingAgents = builder.outboundScenarioWorkingAgents;
             this.readyAgents = builder.readyAgents;
+            this.statsTime = builder.statsTime;
             this.talkAgents = builder.talkAgents;
+            this.talkingAgents = builder.talkingAgents;
             this.workAgents = builder.workAgents;
+            this.workingAgents = builder.workingAgents;
         }
 
         public static Builder builder() {
@@ -176,6 +208,13 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
          */
         public Long getBreakAgents() {
             return this.breakAgents;
+        }
+
+        /**
+         * @return breakingAgents
+         */
+        public Long getBreakingAgents() {
+            return this.breakingAgents;
         }
 
         /**
@@ -200,10 +239,45 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return outboundScenarioBreakingAgents
+         */
+        public Long getOutboundScenarioBreakingAgents() {
+            return this.outboundScenarioBreakingAgents;
+        }
+
+        /**
+         * @return outboundScenarioReadyAgents
+         */
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
+        }
+
+        /**
+         * @return outboundScenarioTalkingAgents
+         */
+        public Long getOutboundScenarioTalkingAgents() {
+            return this.outboundScenarioTalkingAgents;
+        }
+
+        /**
+         * @return outboundScenarioWorkingAgents
+         */
+        public Long getOutboundScenarioWorkingAgents() {
+            return this.outboundScenarioWorkingAgents;
+        }
+
+        /**
          * @return readyAgents
          */
         public Long getReadyAgents() {
             return this.readyAgents;
+        }
+
+        /**
+         * @return statsTime
+         */
+        public Long getStatsTime() {
+            return this.statsTime;
         }
 
         /**
@@ -214,26 +288,56 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
 
         /**
+         * @return talkingAgents
+         */
+        public Long getTalkingAgents() {
+            return this.talkingAgents;
+        }
+
+        /**
          * @return workAgents
          */
         public Long getWorkAgents() {
             return this.workAgents;
         }
 
+        /**
+         * @return workingAgents
+         */
+        public Long getWorkingAgents() {
+            return this.workingAgents;
+        }
+
         public static final class Builder {
             private Long breakAgents; 
+            private Long breakingAgents; 
             private Long concurrency; 
             private Long datetime; 
             private Long loggedInAgents; 
+            private Long outboundScenarioBreakingAgents; 
+            private Long outboundScenarioReadyAgents; 
+            private Long outboundScenarioTalkingAgents; 
+            private Long outboundScenarioWorkingAgents; 
             private Long readyAgents; 
+            private Long statsTime; 
             private Long talkAgents; 
+            private Long talkingAgents; 
             private Long workAgents; 
+            private Long workingAgents; 
 
             /**
              * BreakAgents.
              */
             public Builder breakAgents(Long breakAgents) {
                 this.breakAgents = breakAgents;
+                return this;
+            }
+
+            /**
+             * BreakingAgents.
+             */
+            public Builder breakingAgents(Long breakingAgents) {
+                this.breakingAgents = breakingAgents;
                 return this;
             }
 
@@ -262,10 +366,50 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
+             * OutboundScenarioBreakingAgents.
+             */
+            public Builder outboundScenarioBreakingAgents(Long outboundScenarioBreakingAgents) {
+                this.outboundScenarioBreakingAgents = outboundScenarioBreakingAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioReadyAgents.
+             */
+            public Builder outboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+                this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioTalkingAgents.
+             */
+            public Builder outboundScenarioTalkingAgents(Long outboundScenarioTalkingAgents) {
+                this.outboundScenarioTalkingAgents = outboundScenarioTalkingAgents;
+                return this;
+            }
+
+            /**
+             * OutboundScenarioWorkingAgents.
+             */
+            public Builder outboundScenarioWorkingAgents(Long outboundScenarioWorkingAgents) {
+                this.outboundScenarioWorkingAgents = outboundScenarioWorkingAgents;
+                return this;
+            }
+
+            /**
              * ReadyAgents.
              */
             public Builder readyAgents(Long readyAgents) {
                 this.readyAgents = readyAgents;
+                return this;
+            }
+
+            /**
+             * StatsTime.
+             */
+            public Builder statsTime(Long statsTime) {
+                this.statsTime = statsTime;
                 return this;
             }
 
@@ -278,10 +422,26 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             }
 
             /**
+             * TalkingAgents.
+             */
+            public Builder talkingAgents(Long talkingAgents) {
+                this.talkingAgents = talkingAgents;
+                return this;
+            }
+
+            /**
              * WorkAgents.
              */
             public Builder workAgents(Long workAgents) {
                 this.workAgents = workAgents;
+                return this;
+            }
+
+            /**
+             * WorkingAgents.
+             */
+            public Builder workingAgents(Long workingAgents) {
+                this.workingAgents = workingAgents;
                 return this;
             }
 

@@ -130,8 +130,14 @@ public class GetCampaignResponseBody extends TeaModel {
         @NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
+        @NameInMap("CasesUncompletedAfterAttempt")
+        private String casesUncompletedAfterAttempt;
+
         @NameInMap("CasesUncompletedAfterAttempted")
         private Long casesUncompletedAfterAttempted;
+
+        @NameInMap("CompletionRate")
+        private Float completionRate;
 
         @NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
@@ -179,7 +185,9 @@ public class GetCampaignResponseBody extends TeaModel {
             this.casesAborted = builder.casesAborted;
             this.casesConnected = builder.casesConnected;
             this.casesUncompleted = builder.casesUncompleted;
+            this.casesUncompletedAfterAttempt = builder.casesUncompletedAfterAttempt;
             this.casesUncompletedAfterAttempted = builder.casesUncompletedAfterAttempted;
+            this.completionRate = builder.completionRate;
             this.maxAttemptCount = builder.maxAttemptCount;
             this.minAttemptInterval = builder.minAttemptInterval;
             this.name = builder.name;
@@ -246,10 +254,24 @@ public class GetCampaignResponseBody extends TeaModel {
         }
 
         /**
+         * @return casesUncompletedAfterAttempt
+         */
+        public String getCasesUncompletedAfterAttempt() {
+            return this.casesUncompletedAfterAttempt;
+        }
+
+        /**
          * @return casesUncompletedAfterAttempted
          */
         public Long getCasesUncompletedAfterAttempted() {
             return this.casesUncompletedAfterAttempted;
+        }
+
+        /**
+         * @return completionRate
+         */
+        public Float getCompletionRate() {
+            return this.completionRate;
         }
 
         /**
@@ -350,7 +372,9 @@ public class GetCampaignResponseBody extends TeaModel {
             private Long casesAborted; 
             private Long casesConnected; 
             private Long casesUncompleted; 
+            private String casesUncompletedAfterAttempt; 
             private Long casesUncompletedAfterAttempted; 
+            private Float completionRate; 
             private Long maxAttemptCount; 
             private Long minAttemptInterval; 
             private String name; 
@@ -414,10 +438,26 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
+             * CasesUncompletedAfterAttempt.
+             */
+            public Builder casesUncompletedAfterAttempt(String casesUncompletedAfterAttempt) {
+                this.casesUncompletedAfterAttempt = casesUncompletedAfterAttempt;
+                return this;
+            }
+
+            /**
              * CasesUncompletedAfterAttempted.
              */
             public Builder casesUncompletedAfterAttempted(Long casesUncompletedAfterAttempted) {
                 this.casesUncompletedAfterAttempted = casesUncompletedAfterAttempted;
+                return this;
+            }
+
+            /**
+             * CompletionRate.
+             */
+            public Builder completionRate(Float completionRate) {
+                this.completionRate = completionRate;
                 return this;
             }
 

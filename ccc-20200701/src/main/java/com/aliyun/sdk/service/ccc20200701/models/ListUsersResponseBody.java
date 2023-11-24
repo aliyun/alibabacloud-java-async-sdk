@@ -24,6 +24,9 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("Params")
+    private java.util.List < String > params;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -32,6 +35,7 @@ public class ListUsersResponseBody extends TeaModel {
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -72,6 +76,13 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List < String > getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -83,6 +94,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List < String > params; 
         private String requestId; 
 
         /**
@@ -114,6 +126,14 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * Params.
+         */
+        public Builder params(java.util.List < String > params) {
+            this.params = params;
             return this;
         }
 
@@ -364,6 +384,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("PersonalOutboundNumberList")
         private java.util.List < PersonalOutboundNumberList> personalOutboundNumberList;
 
+        @NameInMap("Primary")
+        private Boolean primary;
+
         @NameInMap("PrimaryAccount")
         private Boolean primaryAccount;
 
@@ -396,6 +419,7 @@ public class ListUsersResponseBody extends TeaModel {
             this.loginName = builder.loginName;
             this.mobile = builder.mobile;
             this.personalOutboundNumberList = builder.personalOutboundNumberList;
+            this.primary = builder.primary;
             this.primaryAccount = builder.primaryAccount;
             this.ramId = builder.ramId;
             this.roleId = builder.roleId;
@@ -484,6 +508,13 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        /**
          * @return primaryAccount
          */
         public Boolean getPrimaryAccount() {
@@ -543,6 +574,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String loginName; 
             private String mobile; 
             private java.util.List < PersonalOutboundNumberList> personalOutboundNumberList; 
+            private Boolean primary; 
             private Boolean primaryAccount; 
             private Long ramId; 
             private String roleId; 
@@ -628,6 +660,14 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder personalOutboundNumberList(java.util.List < PersonalOutboundNumberList> personalOutboundNumberList) {
                 this.personalOutboundNumberList = personalOutboundNumberList;
+                return this;
+            }
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
                 return this;
             }
 

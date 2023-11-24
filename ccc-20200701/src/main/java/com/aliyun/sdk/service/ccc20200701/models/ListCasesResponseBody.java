@@ -132,6 +132,9 @@ public class ListCasesResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
+        @NameInMap("AbandonPhase")
+        private String abandonPhase;
+
         @NameInMap("AbandonType")
         private String abandonType;
 
@@ -154,6 +157,7 @@ public class ListCasesResponseBody extends TeaModel {
         private String state;
 
         private List(Builder builder) {
+            this.abandonPhase = builder.abandonPhase;
             this.abandonType = builder.abandonType;
             this.attemptCount = builder.attemptCount;
             this.caseId = builder.caseId;
@@ -169,6 +173,13 @@ public class ListCasesResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return abandonPhase
+         */
+        public String getAbandonPhase() {
+            return this.abandonPhase;
         }
 
         /**
@@ -221,6 +232,7 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String abandonPhase; 
             private String abandonType; 
             private Long attemptCount; 
             private String caseId; 
@@ -228,6 +240,14 @@ public class ListCasesResponseBody extends TeaModel {
             private String failureReason; 
             private String phoneNumber; 
             private String state; 
+
+            /**
+             * AbandonPhase.
+             */
+            public Builder abandonPhase(String abandonPhase) {
+                this.abandonPhase = abandonPhase;
+                return this;
+            }
 
             /**
              * AbandonType.
