@@ -54,7 +54,11 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The configurations of the custom check rule. The value is in the JSON format. Valid values of keys:
+         * <p>
+         * 
+         * *   **classKey**: the category keyword of the check rule.
+         * *   **ruleList**: the keyword of the check rule.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

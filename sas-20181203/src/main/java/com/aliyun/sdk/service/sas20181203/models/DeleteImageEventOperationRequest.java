@@ -54,7 +54,7 @@ public class DeleteImageEventOperationRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The primary key of the alert handling rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

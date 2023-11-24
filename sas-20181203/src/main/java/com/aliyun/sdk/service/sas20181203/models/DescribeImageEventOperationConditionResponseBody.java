@@ -86,7 +86,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,11 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private java.util.List < String > supportedMisType; 
 
             /**
-             * ConditionKey.
+             * The keyword of the condition. Valid values:
+             * <p>
+             * 
+             * *   **MD5**
+             * *   **PATH**
              */
             public Builder conditionKey(String conditionKey) {
                 this.conditionKey = conditionKey;
@@ -190,7 +198,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * ConditionName.
+             * The name of the condition.
              */
             public Builder conditionName(String conditionName) {
                 this.conditionName = conditionName;
@@ -198,7 +206,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedMisType.
+             * The matching types.
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -263,7 +271,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private String operationName; 
 
             /**
-             * Conditions.
+             * The rule conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -271,7 +279,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * OperationCode.
+             * The operation code.
+             * <p>
+             * 
+             * *   Only **whitelist** may be returned, which indicates that the alert event is added to the whitelist.
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -279,7 +290,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * OperationName.
+             * The name of the operation.
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -344,7 +355,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             private java.util.List < String > scenarios; 
 
             /**
-             * EventType.
+             * The alert type.
+             * <p>
+             * 
+             * *   Only **sensitiveFile** may be returned.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -352,7 +366,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * Operations.
+             * The operations.
              */
             public Builder operations(java.util.List < Operations> operations) {
                 this.operations = operations;
@@ -360,7 +374,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             }
 
             /**
-             * Scenarios.
+             * The application scopes of the rules.
              */
             public Builder scenarios(java.util.List < String > scenarios) {
                 this.scenarios = scenarios;

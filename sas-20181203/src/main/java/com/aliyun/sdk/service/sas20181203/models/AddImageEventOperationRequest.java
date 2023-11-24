@@ -124,7 +124,12 @@ public class AddImageEventOperationRequest extends Request {
         } 
 
         /**
-         * Conditions.
+         * The rule conditions. The value is in the JSON format. Valid values of keys:
+         * <p>
+         * 
+         * *   **condition**: the matching condition.
+         * *   **type**: the matching type.
+         * *   **value**: the matching value.
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -133,7 +138,7 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * EventKey.
+         * The keyword of the alert item.
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -142,7 +147,7 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the alert item.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -151,7 +156,10 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The alert type.
+         * <p>
+         * 
+         * *   Set the value to **sensitiveFile**.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -160,7 +168,10 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * OperationCode.
+         * The operation code.
+         * <p>
+         * 
+         * *   Set the value to **whitelist** to add the alert item to the whitelist.
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -169,7 +180,11 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * Scenarios.
+         * The application scope of the rule. The value is in the JSON format. Valid values of keys:
+         * <p>
+         * 
+         * *   **type**
+         * *   **value**
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);

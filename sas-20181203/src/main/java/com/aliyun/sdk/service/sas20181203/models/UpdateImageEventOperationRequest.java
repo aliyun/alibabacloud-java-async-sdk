@@ -68,7 +68,7 @@ public class UpdateImageEventOperationRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the alert handling rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +77,11 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * Scenarios.
+         * The application scope of the rule. The value is in the JSON format. Valid values:
+         * <p>
+         * 
+         * *   **type**
+         * *   **value**
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);

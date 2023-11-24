@@ -138,7 +138,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * EventKey.
+         * The keyword of the alert item.
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -156,7 +156,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the alert item.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -165,7 +165,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The alert type.
+         * <p>
+         * 
+         * *   Set the value to **sensitiveFile**.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -174,7 +177,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the alert handling rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -183,7 +186,11 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -192,7 +199,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

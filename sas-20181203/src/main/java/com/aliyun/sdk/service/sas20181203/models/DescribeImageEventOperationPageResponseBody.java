@@ -86,7 +86,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,12 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private String scenarios; 
 
             /**
-             * Conditions.
+             * The rule conditions. The value is in the JSON format. Valid values of keys:
+             * <p>
+             * 
+             * *   **condition**: the matching condition.
+             * *   **type**: the matching type.
+             * *   **value**: the matching value.
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -238,7 +247,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventKey.
+             * The keyword of the alert item.
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -246,7 +255,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert item.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -254,7 +263,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The alert type.
+             * <p>
+             * 
+             * *   Only **sensitiveFile** may be returned.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -262,7 +274,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The primary key of the alert handling rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -270,7 +282,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * OperationCode.
+             * The operation code.
+             * <p>
+             * 
+             * *   Only **whitelist** may be returned, which means that the alert item is added to the whitelist.
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -278,7 +293,11 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * Scenarios.
+             * The application scope of the rule. The value is in the JSON format. Valid values of keys:
+             * <p>
+             * 
+             * *   **type**
+             * *   **value**
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
@@ -343,7 +362,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -351,7 +370,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +378,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -412,7 +431,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private PageInfo pageInfo; 
 
             /**
-             * List.
+             * The alert handling rules.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -420,7 +439,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

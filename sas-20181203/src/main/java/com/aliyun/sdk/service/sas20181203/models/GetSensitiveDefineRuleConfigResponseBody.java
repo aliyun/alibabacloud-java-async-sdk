@@ -86,7 +86,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * RuleKey.
+             * The keyword of the check rule.
              */
             public Builder ruleKey(String ruleKey) {
                 this.ruleKey = ruleKey;
@@ -190,7 +194,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the check rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -198,7 +202,11 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * Indicates whether the check rule is selected. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -263,7 +271,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private java.util.List < RuleList> ruleList; 
 
             /**
-             * ClassKey.
+             * The category keyword of the check rule.
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -271,7 +279,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClassName.
+             * The category name of the check rule.
              */
             public Builder className(String className) {
                 this.className = className;
@@ -279,7 +287,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * The list of check rules.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -356,7 +364,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private Integer selectedCount; 
 
             /**
-             * Id.
+             * The custom configuration ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -364,7 +372,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The total number of check rules.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -372,7 +380,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTree.
+             * The tree of the check rules.
              */
             public Builder ruleTree(java.util.List < RuleTree> ruleTree) {
                 this.ruleTree = ruleTree;
@@ -380,7 +388,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedCount.
+             * The number of selected check rules.
              */
             public Builder selectedCount(Integer selectedCount) {
                 this.selectedCount = selectedCount;

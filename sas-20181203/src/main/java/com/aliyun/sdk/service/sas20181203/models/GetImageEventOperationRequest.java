@@ -68,7 +68,7 @@ public class GetImageEventOperationRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The primary key of the alert handling rule.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +77,11 @@ public class GetImageEventOperationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
