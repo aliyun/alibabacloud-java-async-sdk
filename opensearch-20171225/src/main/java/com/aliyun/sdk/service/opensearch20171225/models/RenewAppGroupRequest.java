@@ -92,7 +92,7 @@ public class RenewAppGroupRequest extends Request {
         }
 
         /**
-         * body.
+         * The renewal request body.
          */
         public Builder body(PrepayOrderInfo body) {
             this.putBodyParameter("body", body);
@@ -101,7 +101,7 @@ public class RenewAppGroupRequest extends Request {
         }
 
         /**
-         * Guaranteed request idempotence
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

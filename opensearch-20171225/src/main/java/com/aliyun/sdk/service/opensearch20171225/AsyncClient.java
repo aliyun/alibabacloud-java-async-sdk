@@ -32,9 +32,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
-      * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+      * *   When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.
       * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
-      * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+      * *   When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.
       *
      */
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
@@ -49,16 +49,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateFunctionInstanceResponse> createFunctionInstance(CreateFunctionInstanceRequest request);
 
+    CompletableFuture<CreateFunctionResourceResponse> createFunctionResource(CreateFunctionResourceRequest request);
+
     CompletableFuture<CreateFunctionTaskResponse> createFunctionTask(CreateFunctionTaskRequest request);
 
     CompletableFuture<CreateInterventionDictionaryResponse> createInterventionDictionary(CreateInterventionDictionaryRequest request);
 
     CompletableFuture<CreateQueryProcessorResponse> createQueryProcessor(CreateQueryProcessorRequest request);
 
-    /**
-      * ****
-      *
-     */
     CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request);
 
     CompletableFuture<CreateSearchStrategyResponse> createSearchStrategy(CreateSearchStrategyRequest request);
@@ -67,6 +65,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSortScriptResponse> createSortScript(CreateSortScriptRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
+      *
+     */
     CompletableFuture<CreateUserAnalyzerResponse> createUserAnalyzer(CreateUserAnalyzerRequest request);
 
     CompletableFuture<DeleteABTestExperimentResponse> deleteABTestExperiment(DeleteABTestExperimentRequest request);
@@ -76,6 +79,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteABTestSceneResponse> deleteABTestScene(DeleteABTestSceneRequest request);
 
     CompletableFuture<DeleteFunctionInstanceResponse> deleteFunctionInstance(DeleteFunctionInstanceRequest request);
+
+    CompletableFuture<DeleteFunctionResourceResponse> deleteFunctionResource(DeleteFunctionResourceRequest request);
 
     CompletableFuture<DeleteFunctionTaskResponse> deleteFunctionTask(DeleteFunctionTaskRequest request);
 
@@ -105,8 +110,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeQueryProcessorResponse> describeQueryProcessor(DescribeQueryProcessorRequest request);
 
-    CompletableFuture<DescribeRegionResponse> describeRegion(DescribeRegionRequest request);
-
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeScheduledTaskResponse> describeScheduledTask(DescribeScheduledTaskRequest request);
@@ -131,11 +134,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFunctionInstanceResponse> getFunctionInstance(GetFunctionInstanceRequest request);
 
+    CompletableFuture<GetFunctionResourceResponse> getFunctionResource(GetFunctionResourceRequest request);
+
     CompletableFuture<GetFunctionTaskResponse> getFunctionTask(GetFunctionTaskRequest request);
 
     CompletableFuture<GetFunctionVersionResponse> getFunctionVersion(GetFunctionVersionRequest request);
-
-    CompletableFuture<GetModelReportResponse> getModelReport(GetModelReportRequest request);
 
     CompletableFuture<GetScriptFileNamesResponse> getScriptFileNames(GetScriptFileNamesRequest request);
 
@@ -161,8 +164,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListAppGroupsResponse> listAppGroups(ListAppGroupsRequest request);
 
-    CompletableFuture<ListAppsResponse> listApps(ListAppsRequest request);
-
     CompletableFuture<ListDataCollectionsResponse> listDataCollections(ListDataCollectionsRequest request);
 
     CompletableFuture<ListDataSourceTableFieldsResponse> listDataSourceTableFields(ListDataSourceTableFieldsRequest request);
@@ -173,6 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFunctionInstancesResponse> listFunctionInstances(ListFunctionInstancesRequest request);
 
+    CompletableFuture<ListFunctionResourcesResponse> listFunctionResources(ListFunctionResourcesRequest request);
+
     CompletableFuture<ListFunctionTasksResponse> listFunctionTasks(ListFunctionTasksRequest request);
 
     CompletableFuture<ListInterventionDictionariesResponse> listInterventionDictionaries(ListInterventionDictionariesRequest request);
@@ -182,8 +185,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInterventionDictionaryNerResultsResponse> listInterventionDictionaryNerResults(ListInterventionDictionaryNerResultsRequest request);
 
     CompletableFuture<ListInterventionDictionaryRelatedEntitiesResponse> listInterventionDictionaryRelatedEntities(ListInterventionDictionaryRelatedEntitiesRequest request);
-
-    CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request);
 
     CompletableFuture<ListProceedingsResponse> listProceedings(ListProceedingsRequest request);
 
@@ -219,11 +220,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUserAnalyzersResponse> listUserAnalyzers(ListUserAnalyzersRequest request);
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     CompletableFuture<ModifyAppGroupResponse> modifyAppGroup(ModifyAppGroupRequest request);
 
     CompletableFuture<ModifyAppGroupQuotaResponse> modifyAppGroupQuota(ModifyAppGroupQuotaRequest request);
@@ -236,8 +232,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifySecondRankResponse> modifySecondRank(ModifySecondRankRequest request);
 
-    CompletableFuture<PreviewModelResponse> previewModel(PreviewModelRequest request);
-
     CompletableFuture<PushInterventionDictionaryEntriesResponse> pushInterventionDictionaryEntries(PushInterventionDictionaryEntriesRequest request);
 
     CompletableFuture<PushUserAnalyzerEntriesResponse> pushUserAnalyzerEntries(PushUserAnalyzerEntriesRequest request);
@@ -246,17 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReleaseSortScriptResponse> releaseSortScript(ReleaseSortScriptRequest request);
 
-    /**
-      * > If an application has two versions, you can delete only the offline version.
-      *
-     */
     CompletableFuture<RemoveAppResponse> removeApp(RemoveAppRequest request);
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     CompletableFuture<RemoveAppGroupResponse> removeAppGroup(RemoveAppGroupRequest request);
 
     CompletableFuture<RemoveDataCollectionResponse> removeDataCollection(RemoveDataCollectionRequest request);
@@ -308,6 +293,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFunctionDefaultInstanceResponse> updateFunctionDefaultInstance(UpdateFunctionDefaultInstanceRequest request);
 
     CompletableFuture<UpdateFunctionInstanceResponse> updateFunctionInstance(UpdateFunctionInstanceRequest request);
+
+    CompletableFuture<UpdateFunctionResourceResponse> updateFunctionResource(UpdateFunctionResourceRequest request);
 
     CompletableFuture<UpdateSearchStrategyResponse> updateSearchStrategy(UpdateSearchStrategyRequest request);
 

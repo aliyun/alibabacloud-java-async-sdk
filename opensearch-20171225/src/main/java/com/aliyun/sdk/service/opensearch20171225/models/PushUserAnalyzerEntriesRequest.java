@@ -83,7 +83,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         } 
 
         /**
-         * "kevin_test"
+         * The name of the analyzer.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -92,7 +92,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * entries.
+         * The entries of the custom analyzer.
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.putBodyParameter("entries", entries);
@@ -101,7 +101,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -179,7 +179,13 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             private String value; 
 
             /**
-             * cmd.
+             * The operation to be performed on the entries.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   add
+             * *   delete
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -187,7 +193,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * key.
+             * The key to be used to query entries.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -195,7 +201,10 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * splitEnabled.
+             * Specifies whether to further analyze the terms that are generated after the search query is analyzed.
+             * <p>
+             * 
+             * Default value: true.
              */
             public Builder splitEnabled(Boolean splitEnabled) {
                 this.splitEnabled = splitEnabled;
@@ -203,7 +212,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * value.
+             * The analysis result.
              */
             public Builder value(String value) {
                 this.value = value;

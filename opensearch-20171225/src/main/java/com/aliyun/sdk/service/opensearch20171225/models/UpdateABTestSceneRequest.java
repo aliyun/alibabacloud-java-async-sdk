@@ -98,7 +98,7 @@ public class UpdateABTestSceneRequest extends Request {
         } 
 
         /**
-         * The name of the application
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +107,7 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * The ID of the test scenario
+         * The ID of the test scenario.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -116,7 +116,7 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(ABTestScene body) {
             this.putBodyParameter("body", body);
@@ -125,7 +125,7 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

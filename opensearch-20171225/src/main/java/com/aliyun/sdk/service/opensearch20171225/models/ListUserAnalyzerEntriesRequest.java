@@ -99,7 +99,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         } 
 
         /**
-         * kevin_test
+         * The name of the analyzer.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -108,7 +108,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * 1
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -117,7 +117,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * 10
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -126,7 +126,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * kevintest
+         * The key to be used to query entries.
          */
         public Builder word(String word) {
             this.putQueryParameter("word", word);

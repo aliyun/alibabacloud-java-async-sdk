@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetModelReportResponse} extends {@link TeaModel}
+ * {@link ListFunctionResourcesResponse} extends {@link TeaModel}
  *
- * <p>GetModelReportResponse</p>
+ * <p>ListFunctionResourcesResponse</p>
  */
-public class GetModelReportResponse extends Response {
+public class ListFunctionResourcesResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private GetModelReportResponseBody body;
+    private ListFunctionResourcesResponseBody body;
 
-    private GetModelReportResponse(BuilderImpl builder) {
+    private ListFunctionResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetModelReportResponse create() {
+    public static ListFunctionResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class GetModelReportResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public GetModelReportResponseBody getBody() {
+    public ListFunctionResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetModelReportResponse, Builder> {
+    public interface Builder extends Response.Builder<ListFunctionResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetModelReportResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ListFunctionResourcesResponseBody body);
 
         @Override
-        GetModelReportResponse build();
+        ListFunctionResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetModelReportResponse, Builder>
+            extends Response.BuilderImpl<ListFunctionResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetModelReportResponseBody body; 
+        private Integer statusCode; 
+        private ListFunctionResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetModelReportResponse response) {
+        private BuilderImpl(ListFunctionResourcesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class GetModelReportResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(GetModelReportResponseBody body) {
+        public Builder body(ListFunctionResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetModelReportResponse build() {
-            return new GetModelReportResponse(this);
+        public ListFunctionResourcesResponse build() {
+            return new ListFunctionResourcesResponse(this);
         } 
 
     } 

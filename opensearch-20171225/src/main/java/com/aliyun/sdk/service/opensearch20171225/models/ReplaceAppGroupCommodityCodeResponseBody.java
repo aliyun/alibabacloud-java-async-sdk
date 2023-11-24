@@ -50,7 +50,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The result that was returned.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The computing resources. Unit: logical computing units (LCUs).
+             * The number of computing resources configured.
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -130,7 +130,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * The storage capacity.
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -138,16 +138,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the application. Valid values:
-             * <p>
-             * 
-             * *   opensearch.share.junior: basic
-             * *   opensearch.share.common: shared general-purpose
-             * *   opensearch.share.compute: shared computing
-             * *   opensearch.share.storage: shared storage
-             * *   opensearch.private.common: exclusive general-purpose
-             * *   opensearch.private.compute: exclusive computing
-             * *   opensearch.private.storage: exclusive storage
+             * The specifications configured.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -476,11 +467,11 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             private java.util.List < String > versions; 
 
             /**
-             * The billing method of the application. Valid values:
+             * The billing method. Valid values:
              * <p>
              * 
-             * *   POSTPAY: pay-as-you-go
-             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go.
+             * *   PREPAY: subscription.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -488,11 +479,11 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing model. Valid values:
+             * The billing type. Valid values:
              * <p>
              * 
-             * *   1: computing resources
-             * *   2: queries per second (QPS)
+             * *   1: computing resources.
+             * *   2: queries per second (QPS).
              */
             public Builder chargingWay(Integer chargingWay) {
                 this.chargingWay = chargingWay;
@@ -540,7 +531,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created rough sort expression.
+             * The ID of the rough sort expression.
              */
             public Builder firstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
                 this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
@@ -548,10 +539,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The approval status of the quotas. Valid values:
+             * The approval state of the quotas. Valid values:
              * <p>
              * 
-             * *   0: The quotas are approved.
+             * *   0: The approval status is normal.
              * *   1: The quotas are being approved.
              */
             public Builder hasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
@@ -560,7 +551,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -568,7 +559,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -576,10 +567,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance. Valid values:
+             * The lock state. Valid values:
              * <p>
              * 
-             * *   Unlock: The instance is not locked.
+             * *   Unlock: The instance is unlocked.
              * *   LockByExpiration: The instance is automatically locked after it expires.
              * *   ManualLock: The instance is manually locked.
              */
@@ -589,7 +580,11 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is automatically locked after it expires.
+             * Indicates whether the instance is automatically locked after it expires. Valid values:
+             * <p>
+             * 
+             * *   0: The instance is not automatically locked after it expires.
+             * *   1: The instance is automatically locked after it expires.
              */
             public Builder lockedByExpiration(Integer lockedByExpiration) {
                 this.lockedByExpiration = lockedByExpiration;
@@ -597,7 +592,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The name of the order.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -613,7 +608,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.
+             * The ID of the order that is in progress.
              */
             public Builder processingOrderId(String processingOrderId) {
                 this.processingOrderId = processingOrderId;
@@ -621,11 +616,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the order is complete. Valid values:
-             * <p>
-             * 
-             * *   0: The order is in progress.
-             * *   1: The order is complete.
+             * Indicates whether the order is produced.
              */
             public Builder produced(Integer produced) {
                 this.produced = produced;
@@ -641,7 +632,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The quota information.
+             * The configuration information.
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -649,7 +640,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created fine sort expression.
+             * The ID of the fine sort expression.
              */
             public Builder secondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
                 this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
@@ -657,14 +648,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
-             * <p>
-             * 
-             * *   producing
-             * *   review_pending
-             * *   config_pending
-             * *   normal
-             * *   frozen
+             * The status of the application.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -680,12 +664,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
-             * 
-             * *   standard: a standard application.
-             * *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
-             * *   enhanced: an advanced application which is of a new application type.
+             * The type of the application.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -693,7 +672,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test group was last modified.
+             * The timestamp when the application was updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -701,7 +680,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The status information.
+             * The versions.
              */
             public Builder versions(java.util.List < String > versions) {
                 this.versions = versions;

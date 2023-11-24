@@ -50,7 +50,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the test scenario. For more information, see [ABTestScene](https://www.alibabacloud.com/help/en/opensearch/latest/abtestscene).
+         * The details of the test scenario. For more information, see [ABTestScene](~~173618~~).
          */
         public Builder result(Result result) {
             this.result = result;
@@ -196,8 +196,9 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             /**
              * The status of the test. Valid values:
              * <p>
-             * - true: enabled
-             * - false: stopped
+             * 
+             * *   true: The test is started.
+             * *   false: The test is stopped.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -213,7 +214,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of traffic that is allocated to the A/B test. Valid values: [0,100].
+             * The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;

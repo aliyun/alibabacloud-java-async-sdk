@@ -84,7 +84,14 @@ public class ListDataSourceTableFieldsRequest extends Request {
         } 
 
         /**
-         * dataSourceType
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   rds
+         * *   polardb
+         * *   odps
+         * *   mysql
+         * *   drds
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putPathParameter("dataSourceType", dataSourceType);
@@ -93,7 +100,16 @@ public class ListDataSourceTableFieldsRequest extends Request {
         }
 
         /**
-         * {}
+         * The parameters of the data source. The value of the params parameter is a JSON string. The value must be URL-encoded.
+         * <p>
+         * 
+         * Different types of data sources use different parameters. For more information, see the following sections of the "DataSource" topic:
+         * 
+         * *   [rds](~~170005~~)
+         * *   [polardb](~~170005~~)
+         * *   [odps](~~170005~~)
+         * *   [mysql](~~173627~~)
+         * *   [drds](~~173627~~)
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);

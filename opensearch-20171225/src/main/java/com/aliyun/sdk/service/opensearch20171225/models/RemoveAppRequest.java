@@ -70,7 +70,7 @@ public class RemoveAppRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * The name or ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class RemoveAppRequest extends Request {
         }
 
         /**
-         * 110116134
+         * The ID of the version.
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);

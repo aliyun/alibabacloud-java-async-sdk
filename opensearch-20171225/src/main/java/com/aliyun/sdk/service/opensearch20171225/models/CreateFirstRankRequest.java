@@ -98,7 +98,7 @@ public class CreateFirstRankRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +107,7 @@ public class CreateFirstRankRequest extends Request {
         }
 
         /**
-         * 110157886
+         * The version number of the application.
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -116,7 +116,7 @@ public class CreateFirstRankRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body that contains the parameters of the rough sort expression.
          */
         public Builder body(FirstRank body) {
             this.putBodyParameter("body", body);
@@ -125,7 +125,7 @@ public class CreateFirstRankRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to perform a dry run.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

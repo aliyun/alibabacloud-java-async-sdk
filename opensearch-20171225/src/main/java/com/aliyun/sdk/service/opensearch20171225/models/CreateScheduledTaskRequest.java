@@ -78,7 +78,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * body.
+         * 请求体
          */
         public Builder body(ScheduledTask body) {
             this.putBodyParameter("body", body);

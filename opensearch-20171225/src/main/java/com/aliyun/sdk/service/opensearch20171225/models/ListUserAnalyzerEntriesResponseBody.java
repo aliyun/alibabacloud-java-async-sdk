@@ -50,7 +50,7 @@ public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +58,7 @@ public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The entries of the custom analyzer.
-         * <p>
-         * 
-         * For more information, see [UserAnalyzerEntry](~~178932~~).
+         * The entries of the custom analyzer. For more information, see UserAnalyzerEntry.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

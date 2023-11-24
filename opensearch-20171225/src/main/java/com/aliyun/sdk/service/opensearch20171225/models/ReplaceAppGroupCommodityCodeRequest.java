@@ -55,7 +55,7 @@ public class ReplaceAppGroupCommodityCodeRequest extends Request {
         } 
 
         /**
-         * my_app
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

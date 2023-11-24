@@ -24,7 +24,6 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
 
     @Body
     @NameInMap("instanceName")
-    @Validation(required = true)
     private String instanceName;
 
     private UpdateFunctionDefaultInstanceRequest(Builder builder) {

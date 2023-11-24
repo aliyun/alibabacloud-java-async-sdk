@@ -50,7 +50,7 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,12 +186,12 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the industry. Valid values:
+             * The type of the industry to which the query analysis rule was applied. Valid values:
              * <p>
              * 
-             * *   GENERAL
-             * *   ECOMMERCE
-             * *   IT_CONTENT
+             * *   GENERAL: general.
+             * *   ECOMMERCE: e-commerce.
+             * *   IT_CONTENT: IT content.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -199,7 +199,7 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes to which the query analysis rule applies.
+             * The indexes to which the query analysis rule was applied.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -216,6 +216,9 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
 
             /**
              * The features that are used in the query analysis rule.
+             * <p>
+             * 
+             * For more information, see [QueryProcessor](~~170014~~).
              */
             public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
                 this.processors = processors;
@@ -223,7 +226,7 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the query analysis rule was last updated.
+             * The time when the query analysis rule was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

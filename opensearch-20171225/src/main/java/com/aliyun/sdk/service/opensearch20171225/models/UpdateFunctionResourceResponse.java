@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListModelsResponse} extends {@link TeaModel}
+ * {@link UpdateFunctionResourceResponse} extends {@link TeaModel}
  *
- * <p>ListModelsResponse</p>
+ * <p>UpdateFunctionResourceResponse</p>
  */
-public class ListModelsResponse extends Response {
+public class UpdateFunctionResourceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private ListModelsResponseBody body;
+    private UpdateFunctionResourceResponseBody body;
 
-    private ListModelsResponse(BuilderImpl builder) {
+    private UpdateFunctionResourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListModelsResponse create() {
+    public static UpdateFunctionResourceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class ListModelsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public ListModelsResponseBody getBody() {
+    public UpdateFunctionResourceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListModelsResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateFunctionResourceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListModelsResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(UpdateFunctionResourceResponseBody body);
 
         @Override
-        ListModelsResponse build();
+        UpdateFunctionResourceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListModelsResponse, Builder>
+            extends Response.BuilderImpl<UpdateFunctionResourceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListModelsResponseBody body; 
+        private Integer statusCode; 
+        private UpdateFunctionResourceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListModelsResponse response) {
+        private BuilderImpl(UpdateFunctionResourceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class ListModelsResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(ListModelsResponseBody body) {
+        public Builder body(UpdateFunctionResourceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListModelsResponse build() {
-            return new ListModelsResponse(this);
+        public UpdateFunctionResourceResponse build() {
+            return new UpdateFunctionResourceResponse(this);
         } 
 
     } 

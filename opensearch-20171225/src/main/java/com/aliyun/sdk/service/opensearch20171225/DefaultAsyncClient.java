@@ -125,9 +125,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
-      * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+      * *   When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.
       * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
-      * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+      * *   When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.
       *
      */
     @Override
@@ -191,6 +191,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateFunctionResourceResponse> createFunctionResource(CreateFunctionResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateFunctionResource").setMethod(HttpMethod.POST).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/functions/{functionName}/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateFunctionResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateFunctionResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<CreateFunctionTaskResponse> createFunctionTask(CreateFunctionTaskRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -232,10 +246,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ****
-      *
-     */
     @Override
     public CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request) {
         try {
@@ -292,6 +302,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
+      *
+     */
     @Override
     public CompletableFuture<CreateUserAnalyzerResponse> createUserAnalyzer(CreateUserAnalyzerRequest request) {
         try {
@@ -357,6 +372,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteFunctionInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DeleteFunctionResourceResponse> deleteFunctionResource(DeleteFunctionResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFunctionResource").setMethod(HttpMethod.DELETE).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/functions/{functionName}/resources/{resourceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFunctionResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFunctionResourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -559,20 +588,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<DescribeRegionResponse> describeRegion(DescribeRegionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeRegion").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/region").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRegionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeRegionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -741,6 +756,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetFunctionResourceResponse> getFunctionResource(GetFunctionResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetFunctionResource").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/functions/{functionName}/resources/{resourceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetFunctionResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetFunctionResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetFunctionTaskResponse> getFunctionTask(GetFunctionTaskRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -763,20 +792,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetFunctionVersionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetModelReportResponse> getModelReport(GetModelReportRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelReport").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/algorithm/models/{modelName}/report").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelReportResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetModelReportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -915,20 +930,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ListAppsResponse> listApps(ListAppsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListApps").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/apps").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListAppsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<ListDataCollectionsResponse> listDataCollections(ListDataCollectionsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -999,6 +1000,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListFunctionResourcesResponse> listFunctionResources(ListFunctionResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListFunctionResources").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/functions/{functionName}/resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFunctionResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFunctionResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListFunctionTasksResponse> listFunctionTasks(ListFunctionTasksRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1063,20 +1078,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListInterventionDictionaryRelatedEntitiesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModels").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/algorithm/models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListModelsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1320,11 +1321,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     @Override
     public CompletableFuture<ModifyAppGroupResponse> modifyAppGroup(ModifyAppGroupRequest request) {
         try {
@@ -1410,20 +1406,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<PreviewModelResponse> previewModel(PreviewModelRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewModel").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/algorithm/models/{modelName}/actions/preview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewModelResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<PreviewModelResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<PushInterventionDictionaryEntriesResponse> pushInterventionDictionaryEntries(PushInterventionDictionaryEntriesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1479,10 +1461,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * > If an application has two versions, you can delete only the offline version.
-      *
-     */
     @Override
     public CompletableFuture<RemoveAppResponse> removeApp(RemoveAppRequest request) {
         try {
@@ -1497,11 +1475,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     @Override
     public CompletableFuture<RemoveAppGroupResponse> removeAppGroup(RemoveAppGroupRequest request) {
         try {
@@ -1837,6 +1810,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateFunctionInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateFunctionResourceResponse> updateFunctionResource(UpdateFunctionResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateFunctionResource").setMethod(HttpMethod.PUT).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/functions/{functionName}/resources/{resourceName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateFunctionResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateFunctionResourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

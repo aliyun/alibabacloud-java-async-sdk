@@ -125,7 +125,7 @@ public class ModifyAppGroupRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -134,7 +134,7 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * currentVersion
+         * The online version of the application.
          */
         public Builder currentVersion(String currentVersion) {
             this.putBodyParameter("currentVersion", currentVersion);
@@ -143,7 +143,7 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -155,9 +155,11 @@ public class ModifyAppGroupRequest extends Request {
          * The type of the industry. Valid values:
          * <p>
          * 
-         * *   GENERAL
-         * *   ECOMMERCE
-         * *   IT_CONTENT
+         * *   general: general.
+         * *   ecommerce: e-commerce.
+         * *   education: education.
+         * *   esports: electronic sports.
+         * *   community: content community.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -166,7 +168,7 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -175,7 +177,7 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to verify the application before modification. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

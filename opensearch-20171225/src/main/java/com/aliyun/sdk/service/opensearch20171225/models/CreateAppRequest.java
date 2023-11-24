@@ -83,7 +83,7 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +92,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(App body) {
             this.putBodyParameter("body", body);
@@ -101,7 +101,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

@@ -70,7 +70,7 @@ public class DescribeABTestSceneRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name or ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class DescribeABTestSceneRequest extends Request {
         }
 
         /**
-         * 20404
+         * The ID of the test scenario.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);

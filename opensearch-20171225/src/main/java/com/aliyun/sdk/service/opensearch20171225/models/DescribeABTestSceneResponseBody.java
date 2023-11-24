@@ -50,7 +50,7 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,8 +185,8 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
              * The status of the test scenario. Valid values:
              * <p>
              * 
-             * *   0: not in effect
-             * *   1: in effect
+             * *   0: The test is stopped.
+             * *   1: The test is started.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -194,7 +194,7 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test scenario was last modified.
+             * The time when the test was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -202,7 +202,7 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the test scenario.
+             * The indicators of the test scenarios.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

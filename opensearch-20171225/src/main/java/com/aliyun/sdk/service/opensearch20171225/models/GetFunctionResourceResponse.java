@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeRegionResponse} extends {@link TeaModel}
+ * {@link GetFunctionResourceResponse} extends {@link TeaModel}
  *
- * <p>DescribeRegionResponse</p>
+ * <p>GetFunctionResourceResponse</p>
  */
-public class DescribeRegionResponse extends Response {
+public class GetFunctionResourceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeRegionResponseBody body;
+    private GetFunctionResourceResponseBody body;
 
-    private DescribeRegionResponse(BuilderImpl builder) {
+    private GetFunctionResourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRegionResponse create() {
+    public static GetFunctionResourceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class DescribeRegionResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeRegionResponseBody getBody() {
+    public GetFunctionResourceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRegionResponse, Builder> {
+    public interface Builder extends Response.Builder<GetFunctionResourceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeRegionResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(GetFunctionResourceResponseBody body);
 
         @Override
-        DescribeRegionResponse build();
+        GetFunctionResourceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRegionResponse, Builder>
+            extends Response.BuilderImpl<GetFunctionResourceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeRegionResponseBody body; 
+        private Integer statusCode; 
+        private GetFunctionResourceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRegionResponse response) {
+        private BuilderImpl(GetFunctionResourceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class DescribeRegionResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeRegionResponseBody body) {
+        public Builder body(GetFunctionResourceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRegionResponse build() {
-            return new DescribeRegionResponse(this);
+        public GetFunctionResourceResponse build() {
+            return new GetFunctionResourceResponse(this);
         } 
 
     } 

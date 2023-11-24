@@ -50,7 +50,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute, feature function, or field to be searched for.
+             * The attribute, feature functions, or field to be searched for.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -138,10 +138,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
-             * <p>
-             * 
-             * Valid values: \[-100000,100000] (excluding 0).
+             * The weight. Valid values: \[-100000,100000]. The value cannot be 0.
              */
             public Builder weight(Float weight) {
                 this.weight = weight;

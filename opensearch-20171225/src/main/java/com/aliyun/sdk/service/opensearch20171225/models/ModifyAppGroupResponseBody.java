@@ -50,7 +50,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Response parameters
+         * The returned data.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The computing resources. Unit: logical computing units (LCUs).
+             * The computing resources. Unit: logical computing unit (LCU).
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -130,10 +130,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity.
-             * <p>
-             * 
-             * Unit: GB )
+             * The storage capacity. Unit: GB.
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -141,16 +138,16 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the application. Valid values:
+             * The specifications. Valid values:
              * <p>
              * 
-             * *   opensearch.share.junior: basic
-             * *   opensearch.share.common: shared general-purpose
-             * *   opensearch.share.compute: shared computing
-             * *   opensearch.share.storage: shared storage
-             * *   opensearch.private.common: exclusive general-purpose
-             * *   opensearch.private.compute: exclusive computing
-             * *   opensearch.private.storage: exclusive storage
+             * *   opensearch.share.junior: basic.
+             * *   opensearch.share.common: shared general-purpose.
+             * *   opensearch.share.compute: shared computing.
+             * *   opensearch.share.storage: shared storage.
+             * *   opensearch.private.common: exclusive general-purpose.
+             * *   opensearch.private.compute: exclusive computing.
+             * *   opensearch.private.storage: exclusive storage.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -479,11 +476,11 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * The billing method of the application. Valid values:
+             * The billing method. Valid values:
              * <p>
              * 
-             * *   POSTPAY: pay-as-you-go
-             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go.
+             * *   PREPAY: subscription.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -491,11 +488,11 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The billing model. Valid values:
+             * The billable item. Valid values:
              * <p>
              * 
-             * *   1: computing resources
-             * *   2: queries per second (QPS)
+             * *   1: computing resources.
+             * *   2: QPS.
              */
             public Builder chargingWay(Integer chargingWay) {
                 this.chargingWay = chargingWay;
@@ -538,9 +535,9 @@ public class ModifyAppGroupResponseBody extends TeaModel {
              * The type of the industry. Valid values:
              * <p>
              * 
-             * *   GENERAL
-             * *   ECOMMERCE
-             * *   IT_CONTENT
+             * *   GENERAL: general.
+             * *   ECOMMERCE: e-commerce.
+             * *   IT_CONTENT: IT content.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -548,7 +545,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * The time when the application expired.
              */
             public Builder expireOn(String expireOn) {
                 this.expireOn = expireOn;
@@ -556,7 +553,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created rough sort expression.
+             * The ID of the rough sort expression.
              */
             public Builder firstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
                 this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
@@ -567,8 +564,8 @@ public class ModifyAppGroupResponseBody extends TeaModel {
              * The approval status of the quotas. Valid values:
              * <p>
              * 
-             * *   0: The quotas are approved.
-             * *   1: The quotas are being approved.
+             * *   0: normal.
+             * *   1: being approved.
              */
             public Builder hasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
                 this.hasPendingQuotaReviewTask = hasPendingQuotaReviewTask;
@@ -576,7 +573,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -584,7 +581,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -592,10 +589,10 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance. Valid values:
+             * The lock status. Valid values:
              * <p>
              * 
-             * *   Unlock: The instance is not locked.
+             * *   Unlock: The instance is unlocked.
              * *   LockByExpiration: The instance is automatically locked after it expires.
              * *   ManualLock: The instance is manually locked.
              */
@@ -605,7 +602,11 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is automatically locked after it expires.
+             * Indicates whether the instance expires and is automatically locked. Valid values:
+             * <p>
+             * 
+             * *   0: no.
+             * *   1: yes.
              */
             public Builder lockedByExpiration(Integer lockedByExpiration) {
                 this.lockedByExpiration = lockedByExpiration;
@@ -629,7 +630,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.
+             * The ID of the order that is not complete for the instance.
              */
             public Builder processingOrderId(String processingOrderId) {
                 this.processingOrderId = processingOrderId;
@@ -665,7 +666,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the created fine sort expression.
+             * The ID of the fine sort expression.
              */
             public Builder secondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
                 this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
@@ -673,14 +674,14 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application. Valid values:
+             * The state of the application. Valid values:
              * <p>
              * 
-             * *   producing
-             * *   review_pending
-             * *   config_pending
-             * *   normal
-             * *   frozen
+             * *   producing: being produced.
+             * *   review_pending: being approved.
+             * *   config_pending: to be configured.
+             * *   normal: normal.
+             * *   frozen: frozen.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -699,9 +700,9 @@ public class ModifyAppGroupResponseBody extends TeaModel {
              * The type of the application. Valid values:
              * <p>
              * 
-             * *   standard: a standard application.
-             * *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
-             * *   enhanced: an advanced application which is of a new application type.
+             * *   standard: a standard edition application.
+             * *   advance: an advanced edition application of an old version. New versions are not supported for this edition.
+             * *   enhanced: an advanced edition application of a new version.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -709,7 +710,7 @@ public class ModifyAppGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application was last updated.
+             * The timestamp when the application was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

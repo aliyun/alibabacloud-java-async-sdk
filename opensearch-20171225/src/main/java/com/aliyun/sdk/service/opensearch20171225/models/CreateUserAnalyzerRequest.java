@@ -124,7 +124,7 @@ public class CreateUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * 基础分词器
+         * business.
          */
         public Builder business(String business) {
             this.putBodyParameter("business", business);
@@ -142,7 +142,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * 基础分词器类型 (AUTO, MODEL, SYSTEM, USER)
+         * businessType.
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("businessType", businessType);
@@ -151,7 +151,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * 名称
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -160,7 +160,7 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * 引擎类型 (HA3, ES)
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

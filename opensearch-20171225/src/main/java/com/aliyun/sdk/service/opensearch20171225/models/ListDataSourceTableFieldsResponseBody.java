@@ -50,7 +50,7 @@ public class ListDataSourceTableFieldsResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListDataSourceTableFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * The return result.
+         * The returned result.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

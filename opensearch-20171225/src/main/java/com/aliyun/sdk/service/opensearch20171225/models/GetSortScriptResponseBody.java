@@ -81,6 +81,9 @@ public class GetSortScriptResponseBody extends TeaModel {
         @NameInMap("scope")
         private String scope;
 
+        @NameInMap("scriptName")
+        private String scriptName;
+
         @NameInMap("status")
         private String status;
 
@@ -91,6 +94,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.modifyTime = builder.modifyTime;
             this.scope = builder.scope;
+            this.scriptName = builder.scriptName;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -125,6 +129,13 @@ public class GetSortScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return scriptName
+         */
+        public String getScriptName() {
+            return this.scriptName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -142,6 +153,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             private String createTime; 
             private String modifyTime; 
             private String scope; 
+            private String scriptName; 
             private String status; 
             private String type; 
 
@@ -166,6 +178,14 @@ public class GetSortScriptResponseBody extends TeaModel {
              */
             public Builder scope(String scope) {
                 this.scope = scope;
+                return this;
+            }
+
+            /**
+             * scriptName.
+             */
+            public Builder scriptName(String scriptName) {
+                this.scriptName = scriptName;
                 return this;
             }
 

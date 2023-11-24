@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link PreviewModelResponse} extends {@link TeaModel}
+ * {@link CreateFunctionResourceResponse} extends {@link TeaModel}
  *
- * <p>PreviewModelResponse</p>
+ * <p>CreateFunctionResourceResponse</p>
  */
-public class PreviewModelResponse extends Response {
+public class CreateFunctionResourceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private PreviewModelResponseBody body;
+    private CreateFunctionResourceResponseBody body;
 
-    private PreviewModelResponse(BuilderImpl builder) {
+    private CreateFunctionResourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PreviewModelResponse create() {
+    public static CreateFunctionResourceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class PreviewModelResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public PreviewModelResponseBody getBody() {
+    public CreateFunctionResourceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PreviewModelResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateFunctionResourceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(PreviewModelResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(CreateFunctionResourceResponseBody body);
 
         @Override
-        PreviewModelResponse build();
+        CreateFunctionResourceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PreviewModelResponse, Builder>
+            extends Response.BuilderImpl<CreateFunctionResourceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private PreviewModelResponseBody body; 
+        private Integer statusCode; 
+        private CreateFunctionResourceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PreviewModelResponse response) {
+        private BuilderImpl(CreateFunctionResourceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class PreviewModelResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(PreviewModelResponseBody body) {
+        public Builder body(CreateFunctionResourceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PreviewModelResponse build() {
-            return new PreviewModelResponse(this);
+        public CreateFunctionResourceResponse build() {
+            return new CreateFunctionResourceResponse(this);
         } 
 
     } 
