@@ -303,6 +303,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("CnNodeCount")
         private Integer cnNodeCount;
 
+        @NameInMap("ColumnarInstanceName")
+        private String columnarInstanceName;
+
+        @NameInMap("ColumnarReadDBInstances")
+        private java.util.List < String > columnarReadDBInstances;
+
         @NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -366,6 +372,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("PayType")
         private String payType;
 
+        @NameInMap("PrimaryZone")
+        @Validation(required = true)
+        private String primaryZone;
+
         @NameInMap("ReadDBInstances")
         private java.util.List < String > readDBInstances;
 
@@ -374,6 +384,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @NameInMap("SecondaryZone")
+        private String secondaryZone;
 
         @NameInMap("Series")
         private String series;
@@ -390,6 +403,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("TagSet")
         private java.util.List < TagSet> tagSet;
 
+        @NameInMap("TertiaryZone")
+        private String tertiaryZone;
+
+        @NameInMap("TopologyType")
+        @Validation(required = true)
+        private String topologyType;
+
         @NameInMap("Type")
         private String type;
 
@@ -403,6 +423,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.cdcInstanceName = builder.cdcInstanceName;
             this.cnNodeClassCode = builder.cnNodeClassCode;
             this.cnNodeCount = builder.cnNodeCount;
+            this.columnarInstanceName = builder.columnarInstanceName;
+            this.columnarReadDBInstances = builder.columnarReadDBInstances;
             this.commodityCode = builder.commodityCode;
             this.containBinlogX = builder.containBinlogX;
             this.createTime = builder.createTime;
@@ -424,14 +446,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.nodeCount = builder.nodeCount;
             this.nodes = builder.nodes;
             this.payType = builder.payType;
+            this.primaryZone = builder.primaryZone;
             this.readDBInstances = builder.readDBInstances;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.secondaryZone = builder.secondaryZone;
             this.series = builder.series;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
             this.supportBinlogX = builder.supportBinlogX;
             this.tagSet = builder.tagSet;
+            this.tertiaryZone = builder.tertiaryZone;
+            this.topologyType = builder.topologyType;
             this.type = builder.type;
             this.VPCId = builder.VPCId;
             this.zoneId = builder.zoneId;
@@ -464,6 +490,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public Integer getCnNodeCount() {
             return this.cnNodeCount;
+        }
+
+        /**
+         * @return columnarInstanceName
+         */
+        public String getColumnarInstanceName() {
+            return this.columnarInstanceName;
+        }
+
+        /**
+         * @return columnarReadDBInstances
+         */
+        public java.util.List < String > getColumnarReadDBInstances() {
+            return this.columnarReadDBInstances;
         }
 
         /**
@@ -614,6 +654,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryZone
+         */
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
+        /**
          * @return readDBInstances
          */
         public java.util.List < String > getReadDBInstances() {
@@ -632,6 +679,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return secondaryZone
+         */
+        public String getSecondaryZone() {
+            return this.secondaryZone;
         }
 
         /**
@@ -670,6 +724,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tertiaryZone
+         */
+        public String getTertiaryZone() {
+            return this.tertiaryZone;
+        }
+
+        /**
+         * @return topologyType
+         */
+        public String getTopologyType() {
+            return this.topologyType;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -694,6 +762,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String cdcInstanceName; 
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
+            private String columnarInstanceName; 
+            private java.util.List < String > columnarReadDBInstances; 
             private String commodityCode; 
             private Boolean containBinlogX; 
             private String createTime; 
@@ -715,14 +785,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer nodeCount; 
             private java.util.List < Nodes> nodes; 
             private String payType; 
+            private String primaryZone; 
             private java.util.List < String > readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
+            private String secondaryZone; 
             private String series; 
             private String status; 
             private Long storageUsed; 
             private Boolean supportBinlogX; 
             private java.util.List < TagSet> tagSet; 
+            private String tertiaryZone; 
+            private String topologyType; 
             private String type; 
             private String VPCId; 
             private String zoneId; 
@@ -748,6 +822,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder cnNodeCount(Integer cnNodeCount) {
                 this.cnNodeCount = cnNodeCount;
+                return this;
+            }
+
+            /**
+             * ColumnarInstanceName.
+             */
+            public Builder columnarInstanceName(String columnarInstanceName) {
+                this.columnarInstanceName = columnarInstanceName;
+                return this;
+            }
+
+            /**
+             * ColumnarReadDBInstances.
+             */
+            public Builder columnarReadDBInstances(java.util.List < String > columnarReadDBInstances) {
+                this.columnarReadDBInstances = columnarReadDBInstances;
                 return this;
             }
 
@@ -920,6 +1010,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * 主可用区。
+             */
+            public Builder primaryZone(String primaryZone) {
+                this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
              * ReadDBInstances.
              */
             public Builder readDBInstances(java.util.List < String > readDBInstances) {
@@ -940,6 +1038,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * 次可用区。
+             */
+            public Builder secondaryZone(String secondaryZone) {
+                this.secondaryZone = secondaryZone;
                 return this;
             }
 
@@ -980,6 +1086,26 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder tagSet(java.util.List < TagSet> tagSet) {
                 this.tagSet = tagSet;
+                return this;
+            }
+
+            /**
+             * 第三可用区。
+             */
+            public Builder tertiaryZone(String tertiaryZone) {
+                this.tertiaryZone = tertiaryZone;
+                return this;
+            }
+
+            /**
+             * 拓扑类型：
+             * <p>
+             * 
+             * - **3azones**：三可用区；
+             * - **1azone**：单可用区。
+             */
+            public Builder topologyType(String topologyType) {
+                this.topologyType = topologyType;
                 return this;
             }
 

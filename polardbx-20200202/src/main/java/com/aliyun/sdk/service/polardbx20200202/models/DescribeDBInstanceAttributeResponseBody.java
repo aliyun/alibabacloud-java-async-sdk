@@ -415,11 +415,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
+        @NameInMap("CanNotCreateColumnar")
+        private Boolean canNotCreateColumnar;
+
         @NameInMap("CnNodeClassCode")
         private String cnNodeClassCode;
 
         @NameInMap("CnNodeCount")
         private Integer cnNodeCount;
+
+        @NameInMap("ColumnarInstanceName")
+        private String columnarInstanceName;
+
+        @NameInMap("ColumnarReadDBInstances")
+        private java.util.List < String > columnarReadDBInstances;
 
         @NameInMap("CommodityCode")
         private String commodityCode;
@@ -453,6 +462,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("Description")
         private String description;
+
+        @NameInMap("DifferentDNSpec")
+        private Boolean differentDNSpec;
 
         @NameInMap("DnNodeClassCode")
         private String dnNodeClassCode;
@@ -503,6 +515,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         private String port;
 
+        @NameInMap("PrimaryZone")
+        @Validation(required = true)
+        private String primaryZone;
+
         @NameInMap("ReadDBInstances")
         private java.util.List < String > readDBInstances;
 
@@ -518,6 +534,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RightsSeparationStatus")
         private String rightsSeparationStatus;
 
+        @NameInMap("SecondaryZone")
+        private String secondaryZone;
+
         @NameInMap("Series")
         private String series;
 
@@ -529,6 +548,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("TagSet")
         private java.util.List < TagSet> tagSet;
+
+        @NameInMap("TertiaryZone")
+        private String tertiaryZone;
+
+        @NameInMap("TopologyType")
+        @Validation(required = true)
+        private String topologyType;
 
         @NameInMap("Type")
         private String type;
@@ -543,8 +569,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.canNotCreateColumnar = builder.canNotCreateColumnar;
             this.cnNodeClassCode = builder.cnNodeClassCode;
             this.cnNodeCount = builder.cnNodeCount;
+            this.columnarInstanceName = builder.columnarInstanceName;
+            this.columnarReadDBInstances = builder.columnarReadDBInstances;
             this.commodityCode = builder.commodityCode;
             this.connAddrs = builder.connAddrs;
             this.connectionString = builder.connectionString;
@@ -556,6 +585,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBType = builder.DBType;
             this.DBVersion = builder.DBVersion;
             this.description = builder.description;
+            this.differentDNSpec = builder.differentDNSpec;
             this.dnNodeClassCode = builder.dnNodeClassCode;
             this.dnNodeCount = builder.dnNodeCount;
             this.engine = builder.engine;
@@ -572,15 +602,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.network = builder.network;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.primaryZone = builder.primaryZone;
             this.readDBInstances = builder.readDBInstances;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.rightsSeparationEnabled = builder.rightsSeparationEnabled;
             this.rightsSeparationStatus = builder.rightsSeparationStatus;
+            this.secondaryZone = builder.secondaryZone;
             this.series = builder.series;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
             this.tagSet = builder.tagSet;
+            this.tertiaryZone = builder.tertiaryZone;
+            this.topologyType = builder.topologyType;
             this.type = builder.type;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
@@ -596,6 +630,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return canNotCreateColumnar
+         */
+        public Boolean getCanNotCreateColumnar() {
+            return this.canNotCreateColumnar;
+        }
+
+        /**
          * @return cnNodeClassCode
          */
         public String getCnNodeClassCode() {
@@ -607,6 +648,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getCnNodeCount() {
             return this.cnNodeCount;
+        }
+
+        /**
+         * @return columnarInstanceName
+         */
+        public String getColumnarInstanceName() {
+            return this.columnarInstanceName;
+        }
+
+        /**
+         * @return columnarReadDBInstances
+         */
+        public java.util.List < String > getColumnarReadDBInstances() {
+            return this.columnarReadDBInstances;
         }
 
         /**
@@ -684,6 +739,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return differentDNSpec
+         */
+        public Boolean getDifferentDNSpec() {
+            return this.differentDNSpec;
         }
 
         /**
@@ -799,6 +861,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryZone
+         */
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
+        /**
          * @return readDBInstances
          */
         public java.util.List < String > getReadDBInstances() {
@@ -834,6 +903,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryZone
+         */
+        public String getSecondaryZone() {
+            return this.secondaryZone;
+        }
+
+        /**
          * @return series
          */
         public String getSeries() {
@@ -859,6 +935,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public java.util.List < TagSet> getTagSet() {
             return this.tagSet;
+        }
+
+        /**
+         * @return tertiaryZone
+         */
+        public String getTertiaryZone() {
+            return this.tertiaryZone;
+        }
+
+        /**
+         * @return topologyType
+         */
+        public String getTopologyType() {
+            return this.topologyType;
         }
 
         /**
@@ -890,8 +980,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean canNotCreateColumnar; 
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
+            private String columnarInstanceName; 
+            private java.util.List < String > columnarReadDBInstances; 
             private String commodityCode; 
             private java.util.List < ConnAddrs> connAddrs; 
             private String connectionString; 
@@ -903,6 +996,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBType; 
             private String DBVersion; 
             private String description; 
+            private Boolean differentDNSpec; 
             private String dnNodeClassCode; 
             private Integer dnNodeCount; 
             private String engine; 
@@ -919,19 +1013,31 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String network; 
             private String payType; 
             private String port; 
+            private String primaryZone; 
             private java.util.List < String > readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean rightsSeparationEnabled; 
             private String rightsSeparationStatus; 
+            private String secondaryZone; 
             private String series; 
             private String status; 
             private Long storageUsed; 
             private java.util.List < TagSet> tagSet; 
+            private String tertiaryZone; 
+            private String topologyType; 
             private String type; 
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * CanNotCreateColumnar.
+             */
+            public Builder canNotCreateColumnar(Boolean canNotCreateColumnar) {
+                this.canNotCreateColumnar = canNotCreateColumnar;
+                return this;
+            }
 
             /**
              * CnNodeClassCode.
@@ -946,6 +1052,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder cnNodeCount(Integer cnNodeCount) {
                 this.cnNodeCount = cnNodeCount;
+                return this;
+            }
+
+            /**
+             * ColumnarInstanceName.
+             */
+            public Builder columnarInstanceName(String columnarInstanceName) {
+                this.columnarInstanceName = columnarInstanceName;
+                return this;
+            }
+
+            /**
+             * ColumnarReadDBInstances.
+             */
+            public Builder columnarReadDBInstances(java.util.List < String > columnarReadDBInstances) {
+                this.columnarReadDBInstances = columnarReadDBInstances;
                 return this;
             }
 
@@ -1034,6 +1156,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DifferentDNSpec.
+             */
+            public Builder differentDNSpec(Boolean differentDNSpec) {
+                this.differentDNSpec = differentDNSpec;
                 return this;
             }
 
@@ -1166,6 +1296,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * 主可用区。
+             */
+            public Builder primaryZone(String primaryZone) {
+                this.primaryZone = primaryZone;
+                return this;
+            }
+
+            /**
              * ReadDBInstances.
              */
             public Builder readDBInstances(java.util.List < String > readDBInstances) {
@@ -1206,6 +1344,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * 次可用区。
+             */
+            public Builder secondaryZone(String secondaryZone) {
+                this.secondaryZone = secondaryZone;
+                return this;
+            }
+
+            /**
              * Series.
              */
             public Builder series(String series) {
@@ -1234,6 +1380,26 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder tagSet(java.util.List < TagSet> tagSet) {
                 this.tagSet = tagSet;
+                return this;
+            }
+
+            /**
+             * 第三可用区。
+             */
+            public Builder tertiaryZone(String tertiaryZone) {
+                this.tertiaryZone = tertiaryZone;
+                return this;
+            }
+
+            /**
+             * 拓扑类型：
+             * <p>
+             * 
+             * - **3azones**：三可用区；
+             * - **1azone**：单可用区。
+             */
+            public Builder topologyType(String topologyType) {
+                this.topologyType = topologyType;
                 return this;
             }
 
