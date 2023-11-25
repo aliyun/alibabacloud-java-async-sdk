@@ -16,9 +16,19 @@ public class DescribeClusterTasksRequest extends Request {
     @NameInMap("cluster_id")
     private String clusterId;
 
+    @Query
+    @NameInMap("page_number")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("page_size")
+    private Integer pageSize;
+
     private DescribeClusterTasksRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -41,8 +51,24 @@ public class DescribeClusterTasksRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClusterTasksRequest, Builder> {
         private String clusterId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -51,6 +77,8 @@ public class DescribeClusterTasksRequest extends Request {
         private Builder(DescribeClusterTasksRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -59,6 +87,24 @@ public class DescribeClusterTasksRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * page_number.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("page_number", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * page_size.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("page_size", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

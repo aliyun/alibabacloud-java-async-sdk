@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClustersV1Request extends Request {
     @Query
+    @NameInMap("cluster_id")
+    private String clusterId;
+
+    @Query
     @NameInMap("cluster_spec")
     private String clusterSpec;
 
@@ -42,6 +46,7 @@ public class DescribeClustersV1Request extends Request {
 
     private DescribeClustersV1Request(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
         this.clusterSpec = builder.clusterSpec;
         this.clusterType = builder.clusterType;
         this.name = builder.name;
@@ -62,6 +67,13 @@ public class DescribeClustersV1Request extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -114,6 +126,7 @@ public class DescribeClustersV1Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeClustersV1Request, Builder> {
+        private String clusterId; 
         private String clusterSpec; 
         private String clusterType; 
         private String name; 
@@ -128,6 +141,7 @@ public class DescribeClustersV1Request extends Request {
 
         private Builder(DescribeClustersV1Request request) {
             super(request);
+            this.clusterId = request.clusterId;
             this.clusterSpec = request.clusterSpec;
             this.clusterType = request.clusterType;
             this.name = request.name;
@@ -136,6 +150,15 @@ public class DescribeClustersV1Request extends Request {
             this.profile = request.profile;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * cluster_id.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("cluster_id", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
 
         /**
          * The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:
