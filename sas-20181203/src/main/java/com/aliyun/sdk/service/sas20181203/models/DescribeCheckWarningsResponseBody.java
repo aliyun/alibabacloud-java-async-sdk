@@ -158,6 +158,12 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         private Long checkWarningId;
 
+        @NameInMap("ContainerId")
+        private String containerId;
+
+        @NameInMap("ContainerName")
+        private String containerName;
+
         @NameInMap("ExecErrorMessage")
         private String execErrorMessage;
 
@@ -185,6 +191,8 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private CheckWarnings(Builder builder) {
             this.checkId = builder.checkId;
             this.checkWarningId = builder.checkWarningId;
+            this.containerId = builder.containerId;
+            this.containerName = builder.containerName;
             this.execErrorMessage = builder.execErrorMessage;
             this.fixStatus = builder.fixStatus;
             this.item = builder.item;
@@ -215,6 +223,20 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
          */
         public Long getCheckWarningId() {
             return this.checkWarningId;
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
+         * @return containerName
+         */
+        public String getContainerName() {
+            return this.containerName;
         }
 
         /**
@@ -276,6 +298,8 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private Long checkWarningId; 
+            private String containerId; 
+            private String containerName; 
             private String execErrorMessage; 
             private Integer fixStatus; 
             private String item; 
@@ -298,6 +322,22 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
+                return this;
+            }
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
+
+            /**
+             * ContainerName.
+             */
+            public Builder containerName(String containerName) {
+                this.containerName = containerName;
                 return this;
             }
 

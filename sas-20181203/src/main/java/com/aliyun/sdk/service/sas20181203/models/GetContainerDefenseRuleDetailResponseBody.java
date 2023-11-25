@@ -226,7 +226,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces.
+             * An array that consists of queried namespaces.
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -302,7 +302,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * An array consisting of images that are added to the whitelist.
              */
             public Builder image(java.util.List < String > image) {
                 this.image = image;

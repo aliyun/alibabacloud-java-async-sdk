@@ -138,7 +138,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -174,7 +174,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

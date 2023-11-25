@@ -58,7 +58,7 @@ public class SubmitCheckRequest extends Request {
          * <p>
          * 
          * *   **FULL**: All check items are scanned.
-         * *   **POLICY**: Only the check items that are configured are scanned.
+         * *   **FULL**: Only the check items that are configured are scanned.
          */
         public Builder scanRange(String scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
