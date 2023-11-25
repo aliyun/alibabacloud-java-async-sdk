@@ -86,7 +86,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         private VpnPbrRouteEntries vpnPbrRouteEntries; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,10 +254,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The timestamp generated when the policy-based route was created. Unit: milliseconds.
+             * The time when the policy-based route was created. Unit: milliseconds.
              * <p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -323,7 +323,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPN gateway.
+             * The VPN gateway ID.
              */
             public Builder vpnInstanceId(String vpnInstanceId) {
                 this.vpnInstanceId = vpnInstanceId;
@@ -334,10 +334,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
              * The weight of the policy-based route. Valid values:
              * <p>
              * 
-             * - For a VPN gateway that supports the dual-tunnel mode, the default weight is **100**.
-             * - For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.
-             *    - **100**: a high priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.
-             *    - **0**: a low priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.
+             * *   For a VPN gateway that supports the dual-tunnel mode, the default value is **100**.
+             * 
+             * *   For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.
+             * 
+             *     *   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.
+             *     *   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

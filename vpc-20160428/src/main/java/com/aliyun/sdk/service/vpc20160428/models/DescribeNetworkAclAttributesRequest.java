@@ -22,6 +22,10 @@ public class DescribeNetworkAclAttributesRequest extends Request {
     private String networkAclId;
 
     @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -42,6 +46,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.networkAclId = builder.networkAclId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -76,6 +81,13 @@ public class DescribeNetworkAclAttributesRequest extends Request {
     }
 
     /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -106,6 +118,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkAclAttributesRequest, Builder> {
         private String clientToken; 
         private String networkAclId; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -119,6 +132,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.networkAclId = request.networkAclId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -145,6 +159,15 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
             this.networkAclId = networkAclId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 

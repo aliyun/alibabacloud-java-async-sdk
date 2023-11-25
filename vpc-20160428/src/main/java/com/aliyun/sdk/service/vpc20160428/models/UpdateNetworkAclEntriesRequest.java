@@ -17,6 +17,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("EgressAclEntries")
     private java.util.List < EgressAclEntries> egressAclEntries;
 
@@ -28,6 +32,10 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     @NameInMap("NetworkAclId")
     @Validation(required = true)
     private String networkAclId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
@@ -57,9 +65,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     private UpdateNetworkAclEntriesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.egressAclEntries = builder.egressAclEntries;
         this.ingressAclEntries = builder.ingressAclEntries;
         this.networkAclId = builder.networkAclId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -89,6 +99,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return egressAclEntries
      */
     public java.util.List < EgressAclEntries> getEgressAclEntries() {
@@ -107,6 +124,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
      */
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -153,9 +177,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateNetworkAclEntriesRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private java.util.List < EgressAclEntries> egressAclEntries; 
         private java.util.List < IngressAclEntries> ingressAclEntries; 
         private String networkAclId; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -170,9 +196,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         private Builder(UpdateNetworkAclEntriesRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.egressAclEntries = request.egressAclEntries;
             this.ingressAclEntries = request.ingressAclEntries;
             this.networkAclId = request.networkAclId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -192,6 +220,15 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -219,6 +256,15 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
             this.networkAclId = networkAclId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -308,6 +354,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         @NameInMap("EntryType")
         private String entryType;
 
+        @NameInMap("IpVersion")
+        private String ipVersion;
+
         @NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
@@ -327,6 +376,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             this.description = builder.description;
             this.destinationCidrIp = builder.destinationCidrIp;
             this.entryType = builder.entryType;
+            this.ipVersion = builder.ipVersion;
             this.networkAclEntryId = builder.networkAclEntryId;
             this.networkAclEntryName = builder.networkAclEntryName;
             this.policy = builder.policy;
@@ -361,6 +411,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
          */
         public String getEntryType() {
             return this.entryType;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -402,6 +459,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             private String description; 
             private String destinationCidrIp; 
             private String entryType; 
+            private String ipVersion; 
             private String networkAclEntryId; 
             private String networkAclEntryName; 
             private String policy; 
@@ -432,6 +490,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              */
             public Builder entryType(String entryType) {
                 this.entryType = entryType;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 
@@ -510,6 +576,9 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         @NameInMap("EntryType")
         private String entryType;
 
+        @NameInMap("IpVersion")
+        private String ipVersion;
+
         @NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
@@ -531,6 +600,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         private IngressAclEntries(Builder builder) {
             this.description = builder.description;
             this.entryType = builder.entryType;
+            this.ipVersion = builder.ipVersion;
             this.networkAclEntryId = builder.networkAclEntryId;
             this.networkAclEntryName = builder.networkAclEntryName;
             this.policy = builder.policy;
@@ -559,6 +629,13 @@ public class UpdateNetworkAclEntriesRequest extends Request {
          */
         public String getEntryType() {
             return this.entryType;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -606,6 +683,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         public static final class Builder {
             private String description; 
             private String entryType; 
+            private String ipVersion; 
             private String networkAclEntryId; 
             private String networkAclEntryName; 
             private String policy; 
@@ -629,6 +707,14 @@ public class UpdateNetworkAclEntriesRequest extends Request {
              */
             public Builder entryType(String entryType) {
                 this.entryType = entryType;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 

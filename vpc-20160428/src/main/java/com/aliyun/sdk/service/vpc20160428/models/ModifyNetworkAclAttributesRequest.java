@@ -21,6 +21,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("NetworkAclId")
     @Validation(required = true)
     private String networkAclId;
@@ -28,6 +32,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
     @Query
     @NameInMap("NetworkAclName")
     private String networkAclName;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
@@ -50,8 +58,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.networkAclId = builder.networkAclId;
         this.networkAclName = builder.networkAclName;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -86,6 +96,13 @@ public class ModifyNetworkAclAttributesRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return networkAclId
      */
     public String getNetworkAclId() {
@@ -97,6 +114,13 @@ public class ModifyNetworkAclAttributesRequest extends Request {
      */
     public String getNetworkAclName() {
         return this.networkAclName;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -130,8 +154,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyNetworkAclAttributesRequest, Builder> {
         private String clientToken; 
         private String description; 
+        private Boolean dryRun; 
         private String networkAclId; 
         private String networkAclName; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -145,8 +171,10 @@ public class ModifyNetworkAclAttributesRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.networkAclId = request.networkAclId;
             this.networkAclName = request.networkAclName;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -180,6 +208,15 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         }
 
         /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
@@ -197,6 +234,15 @@ public class ModifyNetworkAclAttributesRequest extends Request {
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
             this.networkAclName = networkAclName;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 

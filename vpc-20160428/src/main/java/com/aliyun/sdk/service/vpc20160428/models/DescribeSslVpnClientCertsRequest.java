@@ -222,7 +222,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +231,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +240,7 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * The region ID of the SSL client certificates to be queried.
+         * The region ID of the SSL client certificate.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.

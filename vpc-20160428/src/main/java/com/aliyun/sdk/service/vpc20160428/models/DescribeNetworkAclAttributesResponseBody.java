@@ -78,6 +78,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         @NameInMap("DestinationCidrIp")
         private String destinationCidrIp;
 
+        @NameInMap("EntryType")
+        private String entryType;
+
+        @NameInMap("IpVersion")
+        private String ipVersion;
+
         @NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
@@ -96,6 +102,8 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         private EgressAclEntry(Builder builder) {
             this.description = builder.description;
             this.destinationCidrIp = builder.destinationCidrIp;
+            this.entryType = builder.entryType;
+            this.ipVersion = builder.ipVersion;
             this.networkAclEntryId = builder.networkAclEntryId;
             this.networkAclEntryName = builder.networkAclEntryName;
             this.policy = builder.policy;
@@ -123,6 +131,20 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
          */
         public String getDestinationCidrIp() {
             return this.destinationCidrIp;
+        }
+
+        /**
+         * @return entryType
+         */
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -163,6 +185,8 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String destinationCidrIp; 
+            private String entryType; 
+            private String ipVersion; 
             private String networkAclEntryId; 
             private String networkAclEntryName; 
             private String policy; 
@@ -182,6 +206,22 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
              */
             public Builder destinationCidrIp(String destinationCidrIp) {
                 this.destinationCidrIp = destinationCidrIp;
+                return this;
+            }
+
+            /**
+             * EntryType.
+             */
+            public Builder entryType(String entryType) {
+                this.entryType = entryType;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 
@@ -292,6 +332,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("EntryType")
+        private String entryType;
+
+        @NameInMap("IpVersion")
+        private String ipVersion;
+
         @NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
@@ -312,6 +358,8 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
 
         private IngressAclEntry(Builder builder) {
             this.description = builder.description;
+            this.entryType = builder.entryType;
+            this.ipVersion = builder.ipVersion;
             this.networkAclEntryId = builder.networkAclEntryId;
             this.networkAclEntryName = builder.networkAclEntryName;
             this.policy = builder.policy;
@@ -333,6 +381,20 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return entryType
+         */
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -379,6 +441,8 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String entryType; 
+            private String ipVersion; 
             private String networkAclEntryId; 
             private String networkAclEntryName; 
             private String policy; 
@@ -391,6 +455,22 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EntryType.
+             */
+            public Builder entryType(String entryType) {
+                this.entryType = entryType;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 

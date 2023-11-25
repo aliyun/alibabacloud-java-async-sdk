@@ -86,7 +86,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The Diffie-Hellman key exchange algorithm.
+         * The list of IPsec servers.
          */
         public Builder ipsecServers(java.util.List < IpsecServers> ipsecServers) {
             this.ipsecServers = ipsecServers;
@@ -682,7 +682,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Identity as a Service (IDaaS) instance.
+             * The ID of the IDaaS instance.
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
@@ -690,7 +690,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of phase 1 negotiations.
+             * The configurations of Phase 1 negotiations.
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -706,7 +706,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of phase 2 negotiations.
+             * The configurations of Phase 2 negotiations.
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -714,7 +714,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPsec server.
+             * The IPsec server ID.
              */
             public Builder ipsecServerId(String ipsecServerId) {
                 this.ipsecServerId = ipsecServerId;
@@ -741,7 +741,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
              * The number of SSL-VPN connections supported by the VPN gateway.
              * <p>
              * 
-             * >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, if a VPN gateway supports up to five SSL-VPN connections, and three SSL-VPN connections are already established to SSL clients. In this case, you can establish at most two connections to IPsec servers.
+             * >  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -752,8 +752,8 @@ public class ListIpsecServersResponseBody extends TeaModel {
              * Indicates whether two-factor authentication is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**: The feature is disabled.
              */
             public Builder multiFactorAuthEnabled(Boolean multiFactorAuthEnabled) {
                 this.multiFactorAuthEnabled = multiFactorAuthEnabled;
@@ -777,7 +777,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether pre-shared key authentication is enabled. Pre-shared key authentication is enabled only when the value is set to **true**.
+             * Indicates whether pre-shared key authentication is enabled. Only **true** may be returned, which indicates that pre-shared key authentication is enabled.
              */
             public Builder pskEnabled(Boolean pskEnabled) {
                 this.pskEnabled = pskEnabled;

@@ -17,9 +17,17 @@ public class UnassociateNetworkAclRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("NetworkAclId")
     @Validation(required = true)
     private String networkAclId;
+
+    @Query
+    @NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
@@ -45,7 +53,9 @@ public class UnassociateNetworkAclRequest extends Request {
     private UnassociateNetworkAclRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.networkAclId = builder.networkAclId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -74,10 +84,24 @@ public class UnassociateNetworkAclRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return networkAclId
      */
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -117,7 +141,9 @@ public class UnassociateNetworkAclRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnassociateNetworkAclRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
         private String networkAclId; 
+        private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private java.util.List < Resource> resource; 
@@ -131,7 +157,9 @@ public class UnassociateNetworkAclRequest extends Request {
         private Builder(UnassociateNetworkAclRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.networkAclId = request.networkAclId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -154,11 +182,29 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * The ID of the network ACL that you want to disassociate from a resource.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
             this.networkAclId = networkAclId;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
