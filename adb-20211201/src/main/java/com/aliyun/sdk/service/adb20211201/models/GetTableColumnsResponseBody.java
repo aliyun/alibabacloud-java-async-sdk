@@ -86,7 +86,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The data returned.
+         * The queried data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. The value is an integer that is greater than 0. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,10 +102,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -115,7 +115,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -199,7 +199,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page. The value is an integer that is greater than 0. Default value: 1.
+             * The page number. Pages start from page 1. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -207,10 +207,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 30. Valid values:
+             * The number of entries per page. Valid values:
              * <p>
              * 
-             * *   **30**
+             * *   **30** (default)
              * *   **50**
              * *   **100**
              */
@@ -220,7 +220,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the table.
+             * The information about the table.
              */
             public Builder table(TableDetailModel table) {
                 this.table = table;

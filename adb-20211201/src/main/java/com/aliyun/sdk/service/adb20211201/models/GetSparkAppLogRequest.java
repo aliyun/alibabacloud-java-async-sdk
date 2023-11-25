@@ -17,6 +17,10 @@ public class GetSparkAppLogRequest extends Request {
     @Validation(required = true)
     private String appId;
 
+    @Query
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @Body
     @NameInMap("LogLength")
     @Validation(maximum = 500)
@@ -25,6 +29,7 @@ public class GetSparkAppLogRequest extends Request {
     private GetSparkAppLogRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.DBClusterId = builder.DBClusterId;
         this.logLength = builder.logLength;
     }
 
@@ -49,6 +54,13 @@ public class GetSparkAppLogRequest extends Request {
     }
 
     /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    /**
      * @return logLength
      */
     public Long getLogLength() {
@@ -57,6 +69,7 @@ public class GetSparkAppLogRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSparkAppLogRequest, Builder> {
         private String appId; 
+        private String DBClusterId; 
         private Long logLength; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class GetSparkAppLogRequest extends Request {
         private Builder(GetSparkAppLogRequest request) {
             super(request);
             this.appId = request.appId;
+            this.DBClusterId = request.DBClusterId;
             this.logLength = request.logLength;
         } 
 
@@ -78,6 +92,15 @@ public class GetSparkAppLogRequest extends Request {
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * DBClusterId.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
             return this;
         }
 

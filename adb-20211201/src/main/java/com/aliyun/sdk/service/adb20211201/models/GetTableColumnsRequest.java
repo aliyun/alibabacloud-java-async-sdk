@@ -149,7 +149,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -158,7 +158,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value is an integer that is greater than 0. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,10 +167,10 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -181,7 +181,7 @@ public class GetTableColumnsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -18,6 +18,10 @@ public class ListSparkAppAttemptsRequest extends Request {
     private String appId;
 
     @Query
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
+    @Query
     @NameInMap("PageNumber")
     @Validation(required = true, minimum = 1)
     private Long pageNumber;
@@ -30,6 +34,7 @@ public class ListSparkAppAttemptsRequest extends Request {
     private ListSparkAppAttemptsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.DBClusterId = builder.DBClusterId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -55,6 +60,13 @@ public class ListSparkAppAttemptsRequest extends Request {
     }
 
     /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -70,6 +82,7 @@ public class ListSparkAppAttemptsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSparkAppAttemptsRequest, Builder> {
         private String appId; 
+        private String DBClusterId; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -80,6 +93,7 @@ public class ListSparkAppAttemptsRequest extends Request {
         private Builder(ListSparkAppAttemptsRequest request) {
             super(request);
             this.appId = request.appId;
+            this.DBClusterId = request.DBClusterId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -93,6 +107,15 @@ public class ListSparkAppAttemptsRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * DBClusterId.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
             return this;
         }
 
