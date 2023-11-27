@@ -99,7 +99,11 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         } 
 
         /**
-         * ActiveAddressType.
+         * The new portal type of the host. Valid values:
+         * <p>
+         * 
+         * *   **Public**: public portal
+         * *   **Private**: internal portal
          */
         public Builder activeAddressType(String activeAddressType) {
             this.putQueryParameter("ActiveAddressType", activeAddressType);
@@ -108,10 +112,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
+         * The ID of the host for which you want to change the portal type. The value is a JSON string. You can add up to 100 host IDs.
          * <p>
          * 
-         * For more information about sample requests, see the "Examples" section of this topic.
+         * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder hostIds(String hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -120,7 +124,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the bastion host for which you want to change the portal type of the host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,10 +136,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.
+         * The region ID of the bastion host for which you want to change the portal type of the host.
          * <p>
          * 
-         * Set the value to **ModifyHostsActiveAddressType**.
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -44,6 +44,10 @@ public class CreateHostRequest extends Request {
     private String instanceRegionId;
 
     @Query
+    @NameInMap("NetworkDomainId")
+    private String networkDomainId;
+
+    @Query
     @NameInMap("OSType")
     @Validation(required = true)
     private String OSType;
@@ -70,6 +74,7 @@ public class CreateHostRequest extends Request {
         this.hostPublicAddress = builder.hostPublicAddress;
         this.instanceId = builder.instanceId;
         this.instanceRegionId = builder.instanceRegionId;
+        this.networkDomainId = builder.networkDomainId;
         this.OSType = builder.OSType;
         this.regionId = builder.regionId;
         this.source = builder.source;
@@ -139,6 +144,13 @@ public class CreateHostRequest extends Request {
     }
 
     /**
+     * @return networkDomainId
+     */
+    public String getNetworkDomainId() {
+        return this.networkDomainId;
+    }
+
+    /**
      * @return OSType
      */
     public String getOSType() {
@@ -174,6 +186,7 @@ public class CreateHostRequest extends Request {
         private String hostPublicAddress; 
         private String instanceId; 
         private String instanceRegionId; 
+        private String networkDomainId; 
         private String OSType; 
         private String regionId; 
         private String source; 
@@ -192,6 +205,7 @@ public class CreateHostRequest extends Request {
             this.hostPublicAddress = request.hostPublicAddress;
             this.instanceId = request.instanceId;
             this.instanceRegionId = request.instanceRegionId;
+            this.networkDomainId = request.networkDomainId;
             this.OSType = request.OSType;
             this.regionId = request.regionId;
             this.source = request.source;
@@ -274,6 +288,15 @@ public class CreateHostRequest extends Request {
         public Builder instanceRegionId(String instanceRegionId) {
             this.putQueryParameter("InstanceRegionId", instanceRegionId);
             this.instanceRegionId = instanceRegionId;
+            return this;
+        }
+
+        /**
+         * NetworkDomainId.
+         */
+        public Builder networkDomainId(String networkDomainId) {
+            this.putQueryParameter("NetworkDomainId", networkDomainId);
+            this.networkDomainId = networkDomainId;
             return this;
         }
 

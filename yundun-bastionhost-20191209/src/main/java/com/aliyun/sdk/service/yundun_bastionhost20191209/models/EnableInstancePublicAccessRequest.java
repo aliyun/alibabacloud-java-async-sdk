@@ -69,7 +69,10 @@ public class EnableInstancePublicAccessRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **EnableInstancePublicAccess**.
+         * The ID of the bastion host.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +81,7 @@ public class EnableInstancePublicAccessRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host whose Internet access is enabled.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

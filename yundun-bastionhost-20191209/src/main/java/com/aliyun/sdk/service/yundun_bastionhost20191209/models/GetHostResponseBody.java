@@ -175,6 +175,9 @@ public class GetHostResponseBody extends TeaModel {
         @NameInMap("HostPublicAddress")
         private String hostPublicAddress;
 
+        @NameInMap("NetworkDomainId")
+        private String networkDomainId;
+
         @NameInMap("OSType")
         private String OSType;
 
@@ -197,6 +200,7 @@ public class GetHostResponseBody extends TeaModel {
             this.hostName = builder.hostName;
             this.hostPrivateAddress = builder.hostPrivateAddress;
             this.hostPublicAddress = builder.hostPublicAddress;
+            this.networkDomainId = builder.networkDomainId;
             this.OSType = builder.OSType;
             this.protocols = builder.protocols;
             this.source = builder.source;
@@ -255,6 +259,13 @@ public class GetHostResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkDomainId
+         */
+        public String getNetworkDomainId() {
+            return this.networkDomainId;
+        }
+
+        /**
          * @return OSType
          */
         public String getOSType() {
@@ -296,6 +307,7 @@ public class GetHostResponseBody extends TeaModel {
             private String hostName; 
             private String hostPrivateAddress; 
             private String hostPublicAddress; 
+            private String networkDomainId; 
             private String OSType; 
             private java.util.List < Protocols> protocols; 
             private String source; 
@@ -358,6 +370,14 @@ public class GetHostResponseBody extends TeaModel {
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
+                return this;
+            }
+
+            /**
+             * NetworkDomainId.
+             */
+            public Builder networkDomainId(String networkDomainId) {
+                this.networkDomainId = networkDomainId;
                 return this;
             }
 

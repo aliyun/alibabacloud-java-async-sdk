@@ -50,7 +50,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceAttribute.
+         * The attribute information about the bastion host.
          */
         public Builder instanceAttribute(InstanceAttribute instanceAttribute) {
             this.instanceAttribute = instanceAttribute;
@@ -110,7 +110,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private Integer standardPort; 
 
             /**
-             * CustomPort.
+             * The custom port.
+             * <p>
+             * 
+             * >  You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.
              */
             public Builder customPort(Integer customPort) {
                 this.customPort = customPort;
@@ -118,7 +121,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StandardPort.
+             * The standard port of the bastion host. Valid values:
+             * <p>
+             * 
+             * *   **SSH**: 60022
+             * *   **RDP**: 63389
+             * *   **HTTPS**: 443
              */
             public Builder standardPort(Integer standardPort) {
                 this.standardPort = standardPort;
@@ -503,7 +511,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The total bandwidth of the bastion host.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -511,7 +519,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackage.
+             * The extra bandwidth plan of the bastion host.
              */
             public Builder bandwidthPackage(String bandwidthPackage) {
                 this.bandwidthPackage = bandwidthPackage;
