@@ -135,6 +135,87 @@ public class ListListenersResponseBody extends TeaModel {
 
     } 
 
+    public static class ProxyProtocolV2Config extends TeaModel {
+        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        private String ppv2PrivateLinkEpIdEnabled;
+
+        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        private String ppv2PrivateLinkEpsIdEnabled;
+
+        @NameInMap("Ppv2VpcIdEnabled")
+        private String ppv2VpcIdEnabled;
+
+        private ProxyProtocolV2Config(Builder builder) {
+            this.ppv2PrivateLinkEpIdEnabled = builder.ppv2PrivateLinkEpIdEnabled;
+            this.ppv2PrivateLinkEpsIdEnabled = builder.ppv2PrivateLinkEpsIdEnabled;
+            this.ppv2VpcIdEnabled = builder.ppv2VpcIdEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProxyProtocolV2Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ppv2PrivateLinkEpIdEnabled
+         */
+        public String getPpv2PrivateLinkEpIdEnabled() {
+            return this.ppv2PrivateLinkEpIdEnabled;
+        }
+
+        /**
+         * @return ppv2PrivateLinkEpsIdEnabled
+         */
+        public String getPpv2PrivateLinkEpsIdEnabled() {
+            return this.ppv2PrivateLinkEpsIdEnabled;
+        }
+
+        /**
+         * @return ppv2VpcIdEnabled
+         */
+        public String getPpv2VpcIdEnabled() {
+            return this.ppv2VpcIdEnabled;
+        }
+
+        public static final class Builder {
+            private String ppv2PrivateLinkEpIdEnabled; 
+            private String ppv2PrivateLinkEpsIdEnabled; 
+            private String ppv2VpcIdEnabled; 
+
+            /**
+             * Ppv2PrivateLinkEpIdEnabled.
+             */
+            public Builder ppv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+                this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
+                return this;
+            }
+
+            /**
+             * Ppv2PrivateLinkEpsIdEnabled.
+             */
+            public Builder ppv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+                this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
+                return this;
+            }
+
+            /**
+             * Ppv2VpcIdEnabled.
+             */
+            public Builder ppv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+                this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
+                return this;
+            }
+
+            public ProxyProtocolV2Config build() {
+                return new ProxyProtocolV2Config(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -248,6 +329,9 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("ProxyProtocolEnabled")
         private Boolean proxyProtocolEnabled;
 
+        @NameInMap("ProxyProtocolV2Config")
+        private ProxyProtocolV2Config proxyProtocolV2Config;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -283,6 +367,7 @@ public class ListListenersResponseBody extends TeaModel {
             this.loadBalancerId = builder.loadBalancerId;
             this.mss = builder.mss;
             this.proxyProtocolEnabled = builder.proxyProtocolEnabled;
+            this.proxyProtocolV2Config = builder.proxyProtocolV2Config;
             this.regionId = builder.regionId;
             this.secSensorEnabled = builder.secSensorEnabled;
             this.securityPolicyId = builder.securityPolicyId;
@@ -412,6 +497,13 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
+         * @return proxyProtocolV2Config
+         */
+        public ProxyProtocolV2Config getProxyProtocolV2Config() {
+            return this.proxyProtocolV2Config;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -470,6 +562,7 @@ public class ListListenersResponseBody extends TeaModel {
             private String loadBalancerId; 
             private Integer mss; 
             private Boolean proxyProtocolEnabled; 
+            private ProxyProtocolV2Config proxyProtocolV2Config; 
             private String regionId; 
             private Boolean secSensorEnabled; 
             private String securityPolicyId; 
@@ -642,6 +735,14 @@ public class ListListenersResponseBody extends TeaModel {
              */
             public Builder proxyProtocolEnabled(Boolean proxyProtocolEnabled) {
                 this.proxyProtocolEnabled = proxyProtocolEnabled;
+                return this;
+            }
+
+            /**
+             * ProxyProtocolV2Config.
+             */
+            public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
+                this.proxyProtocolV2Config = proxyProtocolV2Config;
                 return this;
             }
 

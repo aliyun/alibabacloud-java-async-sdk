@@ -67,6 +67,10 @@ public class UpdateListenerAttributeRequest extends Request {
     private Boolean proxyProtocolEnabled;
 
     @Body
+    @NameInMap("ProxyProtocolV2Config")
+    private ProxyProtocolV2Config proxyProtocolV2Config;
+
+    @Body
     @NameInMap("RegionId")
     private String regionId;
 
@@ -97,6 +101,7 @@ public class UpdateListenerAttributeRequest extends Request {
         this.listenerId = builder.listenerId;
         this.mss = builder.mss;
         this.proxyProtocolEnabled = builder.proxyProtocolEnabled;
+        this.proxyProtocolV2Config = builder.proxyProtocolV2Config;
         this.regionId = builder.regionId;
         this.secSensorEnabled = builder.secSensorEnabled;
         this.securityPolicyId = builder.securityPolicyId;
@@ -208,6 +213,13 @@ public class UpdateListenerAttributeRequest extends Request {
     }
 
     /**
+     * @return proxyProtocolV2Config
+     */
+    public ProxyProtocolV2Config getProxyProtocolV2Config() {
+        return this.proxyProtocolV2Config;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -249,6 +261,7 @@ public class UpdateListenerAttributeRequest extends Request {
         private String listenerId; 
         private Integer mss; 
         private Boolean proxyProtocolEnabled; 
+        private ProxyProtocolV2Config proxyProtocolV2Config; 
         private String regionId; 
         private Boolean secSensorEnabled; 
         private String securityPolicyId; 
@@ -273,6 +286,7 @@ public class UpdateListenerAttributeRequest extends Request {
             this.listenerId = request.listenerId;
             this.mss = request.mss;
             this.proxyProtocolEnabled = request.proxyProtocolEnabled;
+            this.proxyProtocolV2Config = request.proxyProtocolV2Config;
             this.regionId = request.regionId;
             this.secSensorEnabled = request.secSensorEnabled;
             this.securityPolicyId = request.securityPolicyId;
@@ -432,6 +446,16 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
+         * ProxyProtocolV2Config.
+         */
+        public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
+            String proxyProtocolV2ConfigShrink = shrink(proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+            this.putBodyParameter("ProxyProtocolV2Config", proxyProtocolV2ConfigShrink);
+            this.proxyProtocolV2Config = proxyProtocolV2Config;
+            return this;
+        }
+
+        /**
          * The ID of the region where the NLB instance is deployed.
          * <p>
          * 
@@ -484,4 +508,85 @@ public class UpdateListenerAttributeRequest extends Request {
 
     } 
 
+    public static class ProxyProtocolV2Config extends TeaModel {
+        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        private Boolean ppv2PrivateLinkEpIdEnabled;
+
+        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        private Boolean ppv2PrivateLinkEpsIdEnabled;
+
+        @NameInMap("Ppv2VpcIdEnabled")
+        private Boolean ppv2VpcIdEnabled;
+
+        private ProxyProtocolV2Config(Builder builder) {
+            this.ppv2PrivateLinkEpIdEnabled = builder.ppv2PrivateLinkEpIdEnabled;
+            this.ppv2PrivateLinkEpsIdEnabled = builder.ppv2PrivateLinkEpsIdEnabled;
+            this.ppv2VpcIdEnabled = builder.ppv2VpcIdEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProxyProtocolV2Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ppv2PrivateLinkEpIdEnabled
+         */
+        public Boolean getPpv2PrivateLinkEpIdEnabled() {
+            return this.ppv2PrivateLinkEpIdEnabled;
+        }
+
+        /**
+         * @return ppv2PrivateLinkEpsIdEnabled
+         */
+        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
+            return this.ppv2PrivateLinkEpsIdEnabled;
+        }
+
+        /**
+         * @return ppv2VpcIdEnabled
+         */
+        public Boolean getPpv2VpcIdEnabled() {
+            return this.ppv2VpcIdEnabled;
+        }
+
+        public static final class Builder {
+            private Boolean ppv2PrivateLinkEpIdEnabled; 
+            private Boolean ppv2PrivateLinkEpsIdEnabled; 
+            private Boolean ppv2VpcIdEnabled; 
+
+            /**
+             * Ppv2PrivateLinkEpIdEnabled.
+             */
+            public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
+                this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
+                return this;
+            }
+
+            /**
+             * Ppv2PrivateLinkEpsIdEnabled.
+             */
+            public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
+                this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
+                return this;
+            }
+
+            /**
+             * Ppv2VpcIdEnabled.
+             */
+            public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
+                this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
+                return this;
+            }
+
+            public ProxyProtocolV2Config build() {
+                return new ProxyProtocolV2Config(this);
+            } 
+
+        } 
+
+    }
 }
