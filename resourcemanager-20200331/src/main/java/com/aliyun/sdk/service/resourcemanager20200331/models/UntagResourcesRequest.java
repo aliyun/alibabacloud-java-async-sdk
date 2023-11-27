@@ -110,7 +110,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of a resource group or member.
+         * <p>
+         * 
+         * You can specify a maximum of 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -134,7 +137,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * A tag key.
+         * <p>
+         * 
+         * You can specify a maximum of 20 tag keys.
+         * 
+         * >  If you set the `All` parameter to `true`, you do not need to configure this parameter.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

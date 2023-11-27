@@ -192,7 +192,7 @@ public class CreateResourceAccountRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag key and value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

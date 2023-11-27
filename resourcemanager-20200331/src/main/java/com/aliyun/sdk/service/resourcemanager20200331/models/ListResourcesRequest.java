@@ -153,7 +153,7 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1. Default value: 1.
@@ -165,7 +165,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values: 1 to 100. Default value: 10.
@@ -207,7 +207,7 @@ public class ListResourcesRequest extends Request {
          * The resource type.
          * <p>
          * 
-         * For more information about the supported resource types, see the **Resource type** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+         * For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -216,7 +216,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * The resource types. A maximum of 50 resource types are supported.
+         * <p>
+         * 
+         * >  If you configure `ResourceTypes`, you must configure both `Service` and `ResourceType`. Otherwise, the configured Service or ResourceType does not take effect.
          */
         public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -228,7 +231,7 @@ public class ListResourcesRequest extends Request {
          * The ID of the Alibaba Cloud service.
          * <p>
          * 
-         * You can obtain the ID from the **Service code** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+         * You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -285,7 +288,11 @@ public class ListResourcesRequest extends Request {
              * The resource type.
              * <p>
              * 
-             * For more information about the supported resource types, see the **Resource type** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+             * Valid values of N: 1 to 50.
+             * 
+             * For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).
+             * 
+             * >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -296,7 +303,11 @@ public class ListResourcesRequest extends Request {
              * The ID of the Alibaba Cloud service.
              * <p>
              * 
-             * You can obtain the ID from the **Service code** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+             * Valid values of N: 1 to 50.
+             * 
+             * You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).
+             * 
+             * >  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.
              */
             public Builder service(String service) {
                 this.service = service;

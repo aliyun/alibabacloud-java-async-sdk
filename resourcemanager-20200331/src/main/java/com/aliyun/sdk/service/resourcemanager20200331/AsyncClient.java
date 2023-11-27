@@ -184,12 +184,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachPolicyResponse> detachPolicy(DetachPolicyRequest request);
 
+    CompletableFuture<DisableAssociatedTransferResponse> disableAssociatedTransfer(DisableAssociatedTransferRequest request);
+
     /**
       * After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.
       * >  If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.
       *
      */
     CompletableFuture<DisableControlPolicyResponse> disableControlPolicy(DisableControlPolicyRequest request);
+
+    CompletableFuture<EnableAssociatedTransferResponse> enableAssociatedTransfer(EnableAssociatedTransferRequest request);
 
     /**
       * The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
@@ -217,6 +221,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetAccountDeletionCheckResultResponse> getAccountDeletionCheckResult(GetAccountDeletionCheckResultRequest request);
 
+    /**
+      * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+      *
+     */
     CompletableFuture<GetAccountDeletionStatusResponse> getAccountDeletionStatus(GetAccountDeletionStatusRequest request);
 
     /**
@@ -345,7 +353,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-      * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+      * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
       *
      */
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);

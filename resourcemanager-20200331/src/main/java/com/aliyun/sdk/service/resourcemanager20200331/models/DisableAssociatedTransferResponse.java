@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceLinkedRoleDeletionStatusResponse} extends {@link TeaModel}
+ * {@link DisableAssociatedTransferResponse} extends {@link TeaModel}
  *
- * <p>GetServiceLinkedRoleDeletionStatusResponse</p>
+ * <p>DisableAssociatedTransferResponse</p>
  */
-public class GetServiceLinkedRoleDeletionStatusResponse extends Response {
+public class DisableAssociatedTransferResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetServiceLinkedRoleDeletionStatusResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetServiceLinkedRoleDeletionStatusResponseBody body;
+    private DisableAssociatedTransferResponseBody body;
 
-    private GetServiceLinkedRoleDeletionStatusResponse(BuilderImpl builder) {
+    private DisableAssociatedTransferResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetServiceLinkedRoleDeletionStatusResponse create() {
+    public static DisableAssociatedTransferResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetServiceLinkedRoleDeletionStatusResponse extends Response {
     /**
      * @return body
      */
-    public GetServiceLinkedRoleDeletionStatusResponseBody getBody() {
+    public DisableAssociatedTransferResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetServiceLinkedRoleDeletionStatusResponse, Builder> {
+    public interface Builder extends Response.Builder<DisableAssociatedTransferResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetServiceLinkedRoleDeletionStatusResponseBody body);
+        Builder body(DisableAssociatedTransferResponseBody body);
 
         @Override
-        GetServiceLinkedRoleDeletionStatusResponse build();
+        DisableAssociatedTransferResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetServiceLinkedRoleDeletionStatusResponse, Builder>
+            extends Response.BuilderImpl<DisableAssociatedTransferResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetServiceLinkedRoleDeletionStatusResponseBody body; 
+        private DisableAssociatedTransferResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetServiceLinkedRoleDeletionStatusResponse response) {
+        private BuilderImpl(DisableAssociatedTransferResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetServiceLinkedRoleDeletionStatusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetServiceLinkedRoleDeletionStatusResponseBody body) {
+        public Builder body(DisableAssociatedTransferResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetServiceLinkedRoleDeletionStatusResponse build() {
-            return new GetServiceLinkedRoleDeletionStatusResponse(this);
+        public DisableAssociatedTransferResponse build() {
+            return new DisableAssociatedTransferResponse(this);
         } 
 
     } 
