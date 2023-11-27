@@ -75,6 +75,12 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         @NameInMap("AcsUrl")
         private String acsUrl;
 
+        @NameInMap("AuthnSignAlgo")
+        private String authnSignAlgo;
+
+        @NameInMap("CertificateType")
+        private String certificateType;
+
         @NameInMap("DirectoryId")
         private String directoryId;
 
@@ -84,11 +90,17 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         @NameInMap("EntityId")
         private String entityId;
 
+        @NameInMap("SupportEncryptedAssertion")
+        private Boolean supportEncryptedAssertion;
+
         private SAMLServiceProvider(Builder builder) {
             this.acsUrl = builder.acsUrl;
+            this.authnSignAlgo = builder.authnSignAlgo;
+            this.certificateType = builder.certificateType;
             this.directoryId = builder.directoryId;
             this.encodedMetadataDocument = builder.encodedMetadataDocument;
             this.entityId = builder.entityId;
+            this.supportEncryptedAssertion = builder.supportEncryptedAssertion;
         }
 
         public static Builder builder() {
@@ -104,6 +116,20 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
          */
         public String getAcsUrl() {
             return this.acsUrl;
+        }
+
+        /**
+         * @return authnSignAlgo
+         */
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
+        }
+
+        /**
+         * @return certificateType
+         */
+        public String getCertificateType() {
+            return this.certificateType;
         }
 
         /**
@@ -127,17 +153,43 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             return this.entityId;
         }
 
+        /**
+         * @return supportEncryptedAssertion
+         */
+        public Boolean getSupportEncryptedAssertion() {
+            return this.supportEncryptedAssertion;
+        }
+
         public static final class Builder {
             private String acsUrl; 
+            private String authnSignAlgo; 
+            private String certificateType; 
             private String directoryId; 
             private String encodedMetadataDocument; 
             private String entityId; 
+            private Boolean supportEncryptedAssertion; 
 
             /**
              * The Assertion Consumer Service (ACS) URL of the SP.
              */
             public Builder acsUrl(String acsUrl) {
                 this.acsUrl = acsUrl;
+                return this;
+            }
+
+            /**
+             * AuthnSignAlgo.
+             */
+            public Builder authnSignAlgo(String authnSignAlgo) {
+                this.authnSignAlgo = authnSignAlgo;
+                return this;
+            }
+
+            /**
+             * CertificateType.
+             */
+            public Builder certificateType(String certificateType) {
+                this.certificateType = certificateType;
                 return this;
             }
 
@@ -162,6 +214,14 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * SupportEncryptedAssertion.
+             */
+            public Builder supportEncryptedAssertion(Boolean supportEncryptedAssertion) {
+                this.supportEncryptedAssertion = supportEncryptedAssertion;
                 return this;
             }
 

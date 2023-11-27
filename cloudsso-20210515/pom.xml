@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-cloudsso20210515</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   <name>alibabacloud-cloudsso20210515</name>
   <description>Alibaba Cloud cloudsso (20210515) Async SDK for Java
