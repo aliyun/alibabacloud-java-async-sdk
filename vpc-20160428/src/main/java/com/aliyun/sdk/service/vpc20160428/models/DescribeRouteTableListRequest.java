@@ -54,6 +54,10 @@ public class DescribeRouteTableListRequest extends Request {
     private String routeTableName;
 
     @Query
+    @NameInMap("RouteTableType")
+    private String routeTableType;
+
+    @Query
     @NameInMap("RouterId")
     private String routerId;
 
@@ -81,6 +85,7 @@ public class DescribeRouteTableListRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.routeTableId = builder.routeTableId;
         this.routeTableName = builder.routeTableName;
+        this.routeTableType = builder.routeTableType;
         this.routerId = builder.routerId;
         this.routerType = builder.routerType;
         this.tag = builder.tag;
@@ -171,6 +176,13 @@ public class DescribeRouteTableListRequest extends Request {
     }
 
     /**
+     * @return routeTableType
+     */
+    public String getRouteTableType() {
+        return this.routeTableType;
+    }
+
+    /**
      * @return routerId
      */
     public String getRouterId() {
@@ -209,6 +221,7 @@ public class DescribeRouteTableListRequest extends Request {
         private Long resourceOwnerId; 
         private String routeTableId; 
         private String routeTableName; 
+        private String routeTableType; 
         private String routerId; 
         private String routerType; 
         private java.util.List < Tag> tag; 
@@ -230,6 +243,7 @@ public class DescribeRouteTableListRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeTableId = request.routeTableId;
             this.routeTableName = request.routeTableName;
+            this.routeTableType = request.routeTableType;
             this.routerId = request.routerId;
             this.routerType = request.routerType;
             this.tag = request.tag;
@@ -326,6 +340,15 @@ public class DescribeRouteTableListRequest extends Request {
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
             this.routeTableName = routeTableName;
+            return this;
+        }
+
+        /**
+         * RouteTableType.
+         */
+        public Builder routeTableType(String routeTableType) {
+            this.putQueryParameter("RouteTableType", routeTableType);
+            this.routeTableType = routeTableType;
             return this;
         }
 
