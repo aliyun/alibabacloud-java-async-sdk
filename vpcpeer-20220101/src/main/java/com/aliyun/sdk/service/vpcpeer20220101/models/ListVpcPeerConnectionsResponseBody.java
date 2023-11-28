@@ -360,7 +360,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     }
     public static class VpcPeerConnects extends TeaModel {
         @NameInMap("AcceptingOwnerUid")
-        private Integer acceptingOwnerUid;
+        private Long acceptingOwnerUid;
 
         @NameInMap("AcceptingRegionId")
         private String acceptingRegionId;
@@ -393,7 +393,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         private String name;
 
         @NameInMap("OwnerId")
-        private Integer ownerId;
+        private Long ownerId;
 
         @NameInMap("RegionId")
         private String regionId;
@@ -441,7 +441,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         /**
          * @return acceptingOwnerUid
          */
-        public Integer getAcceptingOwnerUid() {
+        public Long getAcceptingOwnerUid() {
             return this.acceptingOwnerUid;
         }
 
@@ -518,7 +518,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         /**
          * @return ownerId
          */
-        public Integer getOwnerId() {
+        public Long getOwnerId() {
             return this.ownerId;
         }
 
@@ -558,7 +558,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer acceptingOwnerUid; 
+            private Long acceptingOwnerUid; 
             private String acceptingRegionId; 
             private AcceptingVpc acceptingVpc; 
             private Integer bandwidth; 
@@ -569,7 +569,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             private String gmtModified; 
             private String instanceId; 
             private String name; 
-            private Integer ownerId; 
+            private Long ownerId; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
@@ -579,7 +579,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             /**
              * The ID of the Alibaba Cloud account to which the accepter VPC belongs.
              */
-            public Builder acceptingOwnerUid(Integer acceptingOwnerUid) {
+            public Builder acceptingOwnerUid(Long acceptingOwnerUid) {
                 this.acceptingOwnerUid = acceptingOwnerUid;
                 return this;
             }
@@ -682,7 +682,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             /**
              * The ID of the Alibaba Cloud account to which the requester VPC belongs.
              */
-            public Builder ownerId(Integer ownerId) {
+            public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
                 return this;
             }

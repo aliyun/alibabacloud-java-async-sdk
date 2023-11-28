@@ -28,6 +28,10 @@ public class CreateVpcPeerConnectionRequest extends Request {
     private String acceptingVpcId;
 
     @Body
+    @NameInMap("Bandwidth")
+    private Integer bandwidth;
+
+    @Body
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -62,6 +66,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         this.acceptingAliUid = builder.acceptingAliUid;
         this.acceptingRegionId = builder.acceptingRegionId;
         this.acceptingVpcId = builder.acceptingVpcId;
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
@@ -103,6 +108,13 @@ public class CreateVpcPeerConnectionRequest extends Request {
      */
     public String getAcceptingVpcId() {
         return this.acceptingVpcId;
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -158,6 +170,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
         private Long acceptingAliUid; 
         private String acceptingRegionId; 
         private String acceptingVpcId; 
+        private Integer bandwidth; 
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
@@ -175,6 +188,7 @@ public class CreateVpcPeerConnectionRequest extends Request {
             this.acceptingAliUid = request.acceptingAliUid;
             this.acceptingRegionId = request.acceptingRegionId;
             this.acceptingVpcId = request.acceptingVpcId;
+            this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.dryRun = request.dryRun;
@@ -219,6 +233,15 @@ public class CreateVpcPeerConnectionRequest extends Request {
         public Builder acceptingVpcId(String acceptingVpcId) {
             this.putBodyParameter("AcceptingVpcId", acceptingVpcId);
             this.acceptingVpcId = acceptingVpcId;
+            return this;
+        }
+
+        /**
+         * Bandwidth.
+         */
+        public Builder bandwidth(Integer bandwidth) {
+            this.putBodyParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
             return this;
         }
 
