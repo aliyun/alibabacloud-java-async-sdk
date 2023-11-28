@@ -96,6 +96,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("SasScreen")
     private Integer sasScreen;
 
+    @NameInMap("SdkCapacity")
+    private Long sdkCapacity;
+
     @NameInMap("SlsCapacity")
     private Long slsCapacity;
 
@@ -149,6 +152,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.sasLog = builder.sasLog;
         this.sasScreen = builder.sasScreen;
+        this.sdkCapacity = builder.sdkCapacity;
         this.slsCapacity = builder.slsCapacity;
         this.threatAnalysisCapacity = builder.threatAnalysisCapacity;
         this.userDefinedAlarms = builder.userDefinedAlarms;
@@ -364,6 +368,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return sdkCapacity
+     */
+    public Long getSdkCapacity() {
+        return this.sdkCapacity;
+    }
+
+    /**
      * @return slsCapacity
      */
     public Long getSlsCapacity() {
@@ -448,6 +459,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private String requestId; 
         private Integer sasLog; 
         private Integer sasScreen; 
+        private Long sdkCapacity; 
         private Long slsCapacity; 
         private Long threatAnalysisCapacity; 
         private Integer userDefinedAlarms; 
@@ -512,7 +524,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for configuration assessment. Unit: times/month.
+         * The purchased quota for configuration assessment. Unit: times/month.
          */
         public Builder cspmCapacity(Long cspmCapacity) {
             this.cspmCapacity = cspmCapacity;
@@ -538,7 +550,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of honeypots.
+         * The purchased quota for the cloud honeypot feature.
          */
         public Builder honeypotCapacity(Long honeypotCapacity) {
             this.honeypotCapacity = honeypotCapacity;
@@ -546,7 +558,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the container image scan feature.
+         * The purchased quota for the container image scan feature.
          */
         public Builder imageScanCapacity(Long imageScanCapacity) {
             this.imageScanCapacity = imageScanCapacity;
@@ -598,7 +610,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * IsPostpay.
+         * Indicates whether the pay-as-you-go billing method is used. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder isPostpay(Boolean isPostpay) {
             this.isPostpay = isPostpay;
@@ -618,7 +634,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the last trial ends. Unit: milliseconds.
+         * The timestamp when the last trial of Security Center ends. Unit: milliseconds.
          */
         public Builder lastTrailEndTime(Long lastTrailEndTime) {
             this.lastTrailEndTime = lastTrailEndTime;
@@ -650,7 +666,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PostPayInstanceId.
+         * The instance ID of Security Center that uses the pay-as-you-go billing method.
          */
         public Builder postPayInstanceId(String postPayInstanceId) {
             this.postPayInstanceId = postPayInstanceId;
@@ -658,7 +674,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PostPayModuleSwitch.
+         * The configuration of the pay-as-you-go module. Valid values:
+         * <p>
+         * 
+         * *   **VUL**: vulnerability fixing module
          */
         public Builder postPayModuleSwitch(String postPayModuleSwitch) {
             this.postPayModuleSwitch = postPayModuleSwitch;
@@ -666,7 +685,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PostPayOpenTime.
+         * The creation time of Security Center that uses the pay-as-you-go billing method.
          */
         public Builder postPayOpenTime(Long postPayOpenTime) {
             this.postPayOpenTime = postPayOpenTime;
@@ -674,7 +693,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PostPayStatus.
+         * The status of Security Center that uses the pay-as-you-go billing method. Valid values:
+         * <p>
+         * 
+         * *   **1**: The instance runs as expected.
+         * *   **2**: The instance is stopped due to overdue payments.
          */
         public Builder postPayStatus(Integer postPayStatus) {
             this.postPayStatus = postPayStatus;
@@ -682,7 +705,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for application protection. Unit: process/month.
+         * The purchased quota for application protection. Unit: process/month.
          */
         public Builder raspCapacity(Long raspCapacity) {
             this.raspCapacity = raspCapacity;
@@ -690,10 +713,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
+         * The timestamp when Security Center was released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
          * <p>
          * 
-         * > If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).
+         * >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).
          */
         public Builder releaseTime(Long releaseTime) {
             this.releaseTime = releaseTime;
@@ -729,6 +752,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder sasScreen(Integer sasScreen) {
             this.sasScreen = sasScreen;
+            return this;
+        }
+
+        /**
+         * The purchased quota for malicious file detection SDK. Unit: process/month.
+         */
+        public Builder sdkCapacity(Long sdkCapacity) {
+            this.sdkCapacity = sdkCapacity;
             return this;
         }
 
@@ -786,7 +817,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for vulnerability fixing. Unit: times/month.
+         * The purchased quota for vulnerability fixing. Unit: times/month.
          */
         public Builder vulFixCapacity(Long vulFixCapacity) {
             this.vulFixCapacity = vulFixCapacity;

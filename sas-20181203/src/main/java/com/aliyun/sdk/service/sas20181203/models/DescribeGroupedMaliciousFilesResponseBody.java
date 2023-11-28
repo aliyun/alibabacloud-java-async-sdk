@@ -62,12 +62,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The severity of the malicious image sample. Valid values:
-         * <p>
-         * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * The details of the malicious image sample.
          */
         public Builder groupedMaliciousFileResponse(java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse) {
             this.groupedMaliciousFileResponse = groupedMaliciousFileResponse;
@@ -207,7 +202,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * The timestamp generated when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -223,7 +218,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * The timestamp generated when the last scan was performed. Unit: milliseconds.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -244,7 +239,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousKey.
+             * The keyword of the malicious image sample.
              */
             public Builder maliciousKey(String maliciousKey) {
                 this.maliciousKey = maliciousKey;
@@ -274,7 +269,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
              * *   **0**: unhandled
              * *   **1**: handled
              * *   **2**: verifying
-             * *   **3**: added to the whitelist
+             * *   **3**: whitelisted
              */
             public Builder status(Integer status) {
                 this.status = status;
