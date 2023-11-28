@@ -127,7 +127,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*
+         * The number of the returned page.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +136,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 1
+         * 1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -145,7 +145,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * \["es-cn-aaa","es-cn-bbb"]
+         * The ID of the request.
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * INSTANCE
+         * \[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -163,7 +163,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 10
+         * \["es-cn-aaa","es-cn-bbb"]
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -172,7 +172,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * \[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]
+         * The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.
+         * <p>
+         * 
+         * >  The return examples does not contain this parameter.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

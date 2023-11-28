@@ -50,7 +50,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * namespace.
+             * The namespace of the cluster.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -118,7 +118,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the namespace.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -97,7 +97,7 @@ public class CreatePipelinesRequest extends Request {
         } 
 
         /**
-         * ls-cn-oew1qbgl\*\*\*\*
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -106,7 +106,7 @@ public class CreatePipelinesRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -124,7 +124,7 @@ public class CreatePipelinesRequest extends Request {
         }
 
         /**
-         * false
+         * trigger.
          */
         public Builder trigger(Boolean trigger) {
             this.putQueryParameter("trigger", trigger);
@@ -264,7 +264,7 @@ public class CreatePipelinesRequest extends Request {
             private Integer workers; 
 
             /**
-             * 管道批延迟。单位ms。
+             * batchDelay.
              */
             public Builder batchDelay(Integer batchDelay) {
                 this.batchDelay = batchDelay;
@@ -272,7 +272,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 管道批大小。
+             * batchSize.
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -280,7 +280,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 管道具体配置。
+             * config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -288,7 +288,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 管道描述。
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -296,7 +296,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 管道Id。
+             * pipelineId.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -304,7 +304,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 队列检查点写入数。
+             * queueCheckPointWrites.
              */
             public Builder queueCheckPointWrites(Integer queueCheckPointWrites) {
                 this.queueCheckPointWrites = queueCheckPointWrites;
@@ -312,7 +312,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 队列最大字节数。单位：MB。
+             * queueMaxBytes.
              */
             public Builder queueMaxBytes(Integer queueMaxBytes) {
                 this.queueMaxBytes = queueMaxBytes;
@@ -320,7 +320,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 队列类型。
+             * queueType.
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -328,7 +328,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * 管道工作线程数。
+             * workers.
              */
             public Builder workers(Integer workers) {
                 this.workers = workers;

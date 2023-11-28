@@ -74,10 +74,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.
-         * <p>
-         * 
-         * >  The return examples does not contain this parameter.
+         * The labels of the resource.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -85,7 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The number of resources to query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -93,7 +90,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * A list of resources that have tags.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +98,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of resources that have tags.
+         * The type of the resource. Fixed to `ALIYUN::ELASTICSEARCH::INSTANCE`.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -141,7 +138,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of resources to query.
+             * The value of the tag.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -218,7 +215,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * Indicates the ID of a resource.
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -226,7 +223,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Fixed to `ALIYUN::ELASTICSEARCH::INSTANCE`.
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -234,7 +231,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -242,7 +239,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag key.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -283,7 +280,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private java.util.List < TagResource> tagResource; 
 
             /**
-             * The labels of the resource.
+             * Indicates the ID of a resource.
              */
             public Builder tagResource(java.util.List < TagResource> tagResource) {
                 this.tagResource = tagResource;

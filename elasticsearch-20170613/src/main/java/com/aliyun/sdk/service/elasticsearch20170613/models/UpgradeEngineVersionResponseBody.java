@@ -50,7 +50,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The verification information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,14 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The type of the error. Valid values:
+         * <p>
+         * 
+         * *   clusterStatus: the health status of the cluster.
+         * *   clusterConfigYml: Cluster YML File
+         * *   clusterConfigPlugins: Cluster Configuration File
+         * *   clusterResource: cluster resources
+         * *   clusterSnapshot: cluster snapshot
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -138,7 +145,11 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * errorType.
+             * The verification is passed. Valid values:
+             * <p>
+             * 
+             * *   success: through
+             * *   failed: failed
              */
             public Builder errorType(String errorType) {
                 this.errorType = errorType;
@@ -211,7 +222,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * validateResult.
+             * The error message returned.
              */
             public Builder validateResult(java.util.List < ValidateResult> validateResult) {
                 this.validateResult = validateResult;
@@ -219,7 +230,7 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * validateType.
+             * The error code returned if the request failed.
              */
             public Builder validateType(String validateType) {
                 this.validateType = validateType;

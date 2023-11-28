@@ -50,7 +50,7 @@ public class RestartCollectorResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class RestartCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the shipper is restarted. Valid values:
+         * <p>
+         * 
+         * *   true: The shipper is restarted.
+         * *   false: The shipper fails to be restarted.
          */
         public Builder result(Boolean result) {
             this.result = result;

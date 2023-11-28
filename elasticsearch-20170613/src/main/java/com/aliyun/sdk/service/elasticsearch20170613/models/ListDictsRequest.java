@@ -84,7 +84,7 @@ public class ListDictsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -93,7 +93,13 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * analyzerType.
+         * The type of the dictionary. Valid values:
+         * <p>
+         * 
+         * *   IK: IK dictionary after a standard update
+         * *   IK_HOT: IK dictionary after a rolling update
+         * *   SYNONYMS: synonym dictionary
+         * *   ALIWS: Alibaba Cloud dictionary
          */
         public Builder analyzerType(String analyzerType) {
             this.putQueryParameter("analyzerType", analyzerType);
@@ -102,7 +108,7 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the dictionary file.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

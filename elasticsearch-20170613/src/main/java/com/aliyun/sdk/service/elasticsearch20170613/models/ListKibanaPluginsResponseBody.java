@@ -62,7 +62,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The request header.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The information about the plug-ins.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The total number of entries returned.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -207,7 +207,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * description.
+             * The description of the plug-in.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -215,7 +215,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the plug-in.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * The source of the plug-in.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -231,7 +231,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * specificationUrl.
+             * The URL of the introduction to the plug-in. The value null is supported.
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -239,7 +239,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The installation status of the plug-in.
              */
             public Builder state(String state) {
                 this.state = state;

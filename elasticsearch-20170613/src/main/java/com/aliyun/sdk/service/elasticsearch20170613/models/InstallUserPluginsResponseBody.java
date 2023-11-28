@@ -50,7 +50,7 @@ public class InstallUserPluginsResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

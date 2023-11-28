@@ -50,7 +50,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The address of the documentation for the plug-in.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,16 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The status of the plug-in. Valid values:
+         * <p>
+         * 
+         * *   INSTALLED: Installed
+         * *   UNINSTALLED: Not installed
+         * *   INSTALLING: The instance is being installed.
+         * *   UNINSTALLING: The instance is being uninstalled.
+         * *   UPGRADING: The backup gateway is being upgraded.
+         * *   FAILED: Installation failed
+         * *   UNKNOWN: The cluster is lost and cannot be created.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +155,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The description of the plug-in.
+             * The source of the plug-in.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +163,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +171,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the plug-in.
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -170,7 +179,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the documentation for the plug-in.
+             * The name of the plug-in.
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -178,16 +187,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the plug-in. Valid values:
-             * <p>
-             * 
-             * *   INSTALLED: Installed
-             * *   UNINSTALLED: Not installed
-             * *   INSTALLING: The instance is being installed.
-             * *   UNINSTALLING: The instance is being uninstalled.
-             * *   UPGRADING: The backup gateway is being upgraded.
-             * *   FAILED: Installation failed
-             * *   UNKNOWN: The cluster is lost and cannot be created.
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;

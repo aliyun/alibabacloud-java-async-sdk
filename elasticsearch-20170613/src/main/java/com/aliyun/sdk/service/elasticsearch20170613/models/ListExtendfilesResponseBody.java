@@ -50,7 +50,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * filePath.
+             * The path of the driver file.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -142,7 +142,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * fileSize.
+             * The size of the driver file.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -150,7 +150,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the driver file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class ListExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

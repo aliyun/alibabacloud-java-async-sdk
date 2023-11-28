@@ -98,7 +98,7 @@ public class UpdateLogstashRequest extends Request {
         } 
 
         /**
-         * ls-cn-n6w1o5jq\*\*\*\*
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -107,7 +107,7 @@ public class UpdateLogstashRequest extends Request {
         }
 
         /**
-         * 实例节点数量。
+         * nodeAmount.
          */
         public Builder nodeAmount(Integer nodeAmount) {
             this.putBodyParameter("nodeAmount", nodeAmount);
@@ -125,7 +125,7 @@ public class UpdateLogstashRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -192,7 +192,7 @@ public class UpdateLogstashRequest extends Request {
             private String spec; 
 
             /**
-             * 实例磁盘大小。单位GB。步长为20，最大值受磁盘规格影响
+             * disk.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -200,7 +200,7 @@ public class UpdateLogstashRequest extends Request {
             }
 
             /**
-             * 磁盘存储类型
+             * diskType.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -208,7 +208,7 @@ public class UpdateLogstashRequest extends Request {
             }
 
             /**
-             * 实例规格
+             * spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;

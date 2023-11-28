@@ -90,7 +90,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The time when the instance was created.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * The state of the instance. Valid values:
+         * <p>
+         * 
+         * *   active: normal
+         * *   activating: taking effect
+         * *   inactive: frozen
+         * *   invalid: invalid
          */
         public Builder result(Result result) {
             this.result = result;
@@ -174,7 +180,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * The configuration of dedicated master nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -182,7 +188,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space.
+             * The node specifications.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -190,7 +196,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. This parameter can be ignored.
+             * The number of nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -198,7 +204,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The node specifications.
+             * The storage type of the node. This parameter can be ignored.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -275,7 +281,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * The configuration of dedicated master nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -283,7 +289,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space of the node. Unit: GB.
+             * The node specifications.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -291,7 +297,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
+             * The number of nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -299,7 +305,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The node specifications.
+             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -364,7 +370,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The storage space of the node. Unit: GB.
+             * The node specifications.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -372,11 +378,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Valid values:
-             * <p>
-             * 
-             * *   cloud_ssd: standard SSD
-             * *   cloud_efficiency: ultra disk
+             * The number of nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -384,7 +386,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The node specifications.
+             * The configuration of Kibana nodes.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -545,7 +547,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the instance was created.
+             * The private domain name of the instance.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -553,7 +555,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The configuration of data nodes.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -561,7 +563,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The private domain name of the instance.
+             * The ID of the instance.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -569,7 +571,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of the dedicated KMS instance.
+             * The node specifications.
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -577,7 +579,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The storage space of the node. Unit: GB.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -585,7 +587,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Kibana nodes.
+             * The size of the node storage space.
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -593,26 +595,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of dedicated master nodes.
+             * The storage space of the node. Unit: GB.
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
-                return this;
-            }
-
-            /**
-             * The number of data nodes.
-             */
-            public Builder nodeAmount(Integer nodeAmount) {
-                this.nodeAmount = nodeAmount;
-                return this;
-            }
-
-            /**
-             * The configuration of data nodes.
-             */
-            public Builder nodeSpec(NodeSpec nodeSpec) {
-                this.nodeSpec = nodeSpec;
                 return this;
             }
 
@@ -623,19 +609,33 @@ public class UpdateInstanceResponseBody extends TeaModel {
              * *   prepaid: subscription
              * *   postpaid: pay-as-you-go
              */
+            public Builder nodeAmount(Integer nodeAmount) {
+                this.nodeAmount = nodeAmount;
+                return this;
+            }
+
+            /**
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk
+             */
+            public Builder nodeSpec(NodeSpec nodeSpec) {
+                this.nodeSpec = nodeSpec;
+                return this;
+            }
+
+            /**
+             * The edition of the dedicated KMS instance.
+             */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
                 return this;
             }
 
             /**
-             * The state of the instance. Valid values:
-             * <p>
-             * 
-             * *   active: normal
-             * *   activating: taking effect
-             * *   inactive: frozen
-             * *   invalid: invalid
+             * The name of the instance.
              */
             public Builder status(String status) {
                 this.status = status;

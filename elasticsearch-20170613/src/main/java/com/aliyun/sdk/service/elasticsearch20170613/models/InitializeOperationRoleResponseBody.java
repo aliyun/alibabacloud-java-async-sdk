@@ -50,7 +50,7 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the service-linked role is created. Valid values:
+         * <p>
+         * 
+         * *   true: The service-linked role is created.
+         * *   false: The service-linked role fails to be created.
          */
         public Builder result(Boolean result) {
             this.result = result;

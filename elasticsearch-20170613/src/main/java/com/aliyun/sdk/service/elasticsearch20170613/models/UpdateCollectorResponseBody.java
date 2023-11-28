@@ -50,7 +50,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String fileName; 
 
             /**
-             * content.
+             * The content of the configuration file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -118,7 +118,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * The name of the configuration file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -171,7 +171,13 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * agentStatus.
+             * The installation status of the shipper on an ECS instance. Valid values:
+             * <p>
+             * 
+             * *   heartOk
+             * *   heartLost
+             * *   uninstalled
+             * *   failed
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -179,7 +185,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the ECS instance on which the shipper is installed.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -376,7 +382,12 @@ public class UpdateCollectorResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * configType.
+             * The type of the configuration items. Valid values:
+             * <p>
+             * 
+             * *   collectorTargetInstance: indicates the information about the output of the shipper.
+             * *   collectorDeployMachine: indicates the information about the machine on which the shipper is installed.
+             * *   collectorElasticsearchForKibana: indicates the information about the Elasticsearch cluster for which Kibana Dashboard is enabled.
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -384,7 +395,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * enableMonitoring.
+             * Indicates whether Kibana Monitoring is enabled. This parameter is returned only when **configType** is set to **collectorTargetInstance** and **instanceType** is set to **elasticsearch**. Valid values: true and false.
              */
             public Builder enableMonitoring(Boolean enableMonitoring) {
                 this.enableMonitoring = enableMonitoring;
@@ -392,7 +403,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * groupId.
+             * The machine group ID. This parameter is returned only when **configType** is set to **collectorDeployMachine**.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -400,7 +411,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * host.
+             * The address that is used to access Kibana over an internal network after you enable Kibana Dashboard. This parameter is returned only when **configType** is set to **collectorElasticsearchForKibana**.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -416,7 +427,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the object that is associated with the shipper. If **configType** is set to **collectorTargetInstance**, the value of this parameter is the ID of the output of the shipper. If **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**, the value of this parameter is the ID of an ACK cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -424,7 +435,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * The type of the output of the shipper. Valid values: elasticsearch and logstash. This parameter is returned only when **configType** is set to **collectorTargetInstance**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -432,7 +443,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaHost.
+             * The address that is used to access Kibana over the Internet after you enable Kibana Dashboard. This parameter is returned only when **configType** is set to **collectorElasticsearchForKibana**.
              */
             public Builder kibanaHost(String kibanaHost) {
                 this.kibanaHost = kibanaHost;
@@ -440,7 +451,10 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * machines.
+             * This parameter is returned only when configType is set to collectorDeployMachine.
+             * <p>
+             * 
+             * This parameter indicates the information about the ECS instances or ACK clusters on which the shipper is installed.
              */
             public Builder machines(java.util.List < Machines> machines) {
                 this.machines = machines;
@@ -448,7 +462,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * The transfer protocol that is used. It is the same as the protocol over which you can access the output of the shipper. Valid values: HTTP and HTTPS. This parameter is returned only when **configType** is set to **collectorTargetInstance**.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -456,7 +470,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * successPodsCount.
+             * The number of pods from which logs are successfully collected in the ACK cluster. This parameter is returned only when **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**.
              */
             public Builder successPodsCount(String successPodsCount) {
                 this.successPodsCount = successPodsCount;
@@ -464,7 +478,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * totalPodsCount.
+             * The number of pods from which logs needed to be collected in the ACK cluster. This parameter is returned only when **configType** is set to **collectorDeployMachines** and **type** is set to **ACKCluster**.
              */
             public Builder totalPodsCount(String totalPodsCount) {
                 this.totalPodsCount = totalPodsCount;
@@ -472,7 +486,11 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the machine on which the shipper is installed. This parameter is returned only when **configType** is set to **collectorDeployMachine**. Valid values:
+             * <p>
+             * 
+             * *   ECSInstanceId
+             * *   ACKCluster
              */
             public Builder type(String type) {
                 this.type = type;
@@ -480,7 +498,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * The username that is used to access the output of the shipper. Default value: elastic. This parameter is returned only when **configType** is set to **collectorTargetInstance** or **collectorElasticsearchForKibana**.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -673,7 +691,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * configs.
+             * The information about the configuration file for the shipper.
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -681,7 +699,11 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * Indicates whether the shipper is checked and updated. Valid values:
+             * <p>
+             * 
+             * *   true: The shipper is only checked.
+             * *   false: The shipper is checked and updated.
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -689,7 +711,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * extendConfigs.
+             * The extended parameters that are configured for the shipper.
              */
             public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -697,7 +719,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreatedTime.
+             * The time when the shipper was created.
              */
             public Builder gmtCreatedTime(String gmtCreatedTime) {
                 this.gmtCreatedTime = gmtCreatedTime;
@@ -705,7 +727,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * gmtUpdateTime.
+             * The time when the shipper was updated.
              */
             public Builder gmtUpdateTime(String gmtUpdateTime) {
                 this.gmtUpdateTime = gmtUpdateTime;
@@ -713,7 +735,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the shipper.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -721,7 +743,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * ownerId.
+             * The account ID.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -729,7 +751,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * resId.
+             * The shipper ID.
              */
             public Builder resId(String resId) {
                 this.resId = resId;
@@ -737,7 +759,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * resType.
+             * The type of the shipper. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.
              */
             public Builder resType(String resType) {
                 this.resType = resType;
@@ -745,7 +767,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * resVersion.
+             * The version of the shipper.
              */
             public Builder resVersion(String resVersion) {
                 this.resVersion = resVersion;
@@ -753,7 +775,11 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the shipper. Valid values:
+             * <p>
+             * 
+             * *   activing: The shipper is being initialized.
+             * *   active: The shipper is in effect.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -761,7 +787,7 @@ public class UpdateCollectorResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the VPC in which the shipper resides.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

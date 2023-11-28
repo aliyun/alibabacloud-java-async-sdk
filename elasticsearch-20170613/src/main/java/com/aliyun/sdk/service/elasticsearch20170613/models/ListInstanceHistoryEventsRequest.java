@@ -410,7 +410,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
             private String sortField; 
 
             /**
-             * 是否倒序。true，倒序；false，顺序。
+             * desc.
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -418,7 +418,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * 排序字段
+             * sortField.
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;

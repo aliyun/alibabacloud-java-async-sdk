@@ -127,7 +127,7 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * ResId.
+         * The ID of the shipper.
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);
@@ -136,7 +136,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ecsInstanceIds.
+         * The IDs of the ECS instances.
          */
         public Builder ecsInstanceIds(String ecsInstanceIds) {
             this.putQueryParameter("ecsInstanceIds", ecsInstanceIds);
@@ -145,7 +145,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * ecsInstanceName.
+         * The name of the ECS instance.
          */
         public Builder ecsInstanceName(String ecsInstanceName) {
             this.putQueryParameter("ecsInstanceName", ecsInstanceName);
@@ -154,7 +154,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -163,7 +163,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -172,7 +172,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tags of the ECS instance. You must configure tagKey and tagValue.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);

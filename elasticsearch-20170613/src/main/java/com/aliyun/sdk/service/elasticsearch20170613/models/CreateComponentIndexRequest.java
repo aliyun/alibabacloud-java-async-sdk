@@ -98,7 +98,7 @@ public class CreateComponentIndexRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

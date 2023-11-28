@@ -50,7 +50,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the diagnostic item.
+             * desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -154,7 +154,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the diagnostic item.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis.
+             * result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -170,7 +170,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion for the diagnosis.
+             * suggest.
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -178,7 +178,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the diagnostic result. Supported: TEXT (text description), CONSOLE_API (console trigger), ES_API(API trigger).
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -243,7 +243,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             private String item; 
 
             /**
-             * The details of the diagnostic item.
+             * detail.
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -251,7 +251,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * health.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -259,7 +259,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the item.
+             * item.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -372,7 +372,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             private String trigger; 
 
             /**
-             * The timestamp when the report was created. Unit: ms.
+             * createTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -380,7 +380,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Reports the list of diagnostic item information.
+             * diagnoseItems.
              */
             public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -388,7 +388,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * health.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -396,7 +396,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for diagnosis.
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -404,7 +404,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the report.
+             * reportId.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -412,7 +412,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -420,7 +420,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger mode of health diagnostics. Supported: SYSTEM (automatic system trigger), INNER (internal trigger), and USER (manual user trigger).
+             * trigger.
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;

@@ -74,7 +74,7 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * Code.
+         * The error code returned. If the API operation is successfully called, this parameter is not returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned. If the API operation is successfully called, this parameter is not returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class ResumeLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the change task is resumed. Valid values:
+         * <p>
+         * 
+         * *   true: The change task is resumed.
+         * *   false: The change task fails to be resumed.
          */
         public Builder result(Boolean result) {
             this.result = result;

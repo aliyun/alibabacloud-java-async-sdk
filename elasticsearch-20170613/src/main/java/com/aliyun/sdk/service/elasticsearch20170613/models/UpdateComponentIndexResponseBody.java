@@ -38,7 +38,7 @@ public class UpdateComponentIndexResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

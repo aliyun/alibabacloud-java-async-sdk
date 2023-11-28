@@ -111,7 +111,7 @@ public class UpgradeEngineVersionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * 升级类型。
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -129,7 +129,7 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * 升级后的版本
+         * version.
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -138,7 +138,7 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * 用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大不超过64个ASCII字符。
+         * The moderation results.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,9 +147,13 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * 是否进行升级前校验。true表示校验，false表示不校验。
+         * The monitoring type. Valid values:
          * <p>
-         * 注意：版本升级校验涉及集群YML、插件配置、集群状态、索引、资源等检查，强烈建议升级前进行前置校验，否则可能带来升级问题。
+         * 
+         * *   checkClusterHealth: Cluster Health Status
+         * *   checkConfigCompatible: Configuration Compatibility Status
+         * *   checkClusterResource: resource space status
+         * *   checkClusterSnapshot: Whether a snapshot exists
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

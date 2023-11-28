@@ -50,7 +50,7 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the pipeline is updated. Valid values:
+         * <p>
+         * 
+         * *   true: The pipeline is updated.
+         * *   false: The pipeline fails to be updated.
          */
         public Builder result(Boolean result) {
             this.result = result;

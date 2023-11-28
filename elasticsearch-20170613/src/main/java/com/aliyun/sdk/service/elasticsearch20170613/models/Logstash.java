@@ -254,7 +254,7 @@ public class Logstash extends TeaModel {
         private java.util.List < ZoneInfos> zoneInfos; 
 
         /**
-         * Config
+         * config.
          */
         public Builder config(java.util.Map < String, String > config) {
             this.config = config;
@@ -262,7 +262,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * CreatedAt
+         * createdAt.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -270,7 +270,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * DataNode
+         * dataNode.
          */
         public Builder dataNode(Boolean dataNode) {
             this.dataNode = dataNode;
@@ -278,7 +278,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * Description
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +286,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * EndTime
+         * endTime.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -294,7 +294,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * EndpointList
+         * endpointList.
          */
         public Builder endpointList(java.util.List < EndpointList> endpointList) {
             this.endpointList = endpointList;
@@ -302,7 +302,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * InstanceId
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -310,7 +310,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * NetworkConfig
+         * networkConfig.
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -318,7 +318,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * NodeAmount
+         * nodeAmount.
          */
         public Builder nodeAmount(Long nodeAmount) {
             this.nodeAmount = nodeAmount;
@@ -326,7 +326,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * NodeSpec
+         * nodeSpec.
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.nodeSpec = nodeSpec;
@@ -334,7 +334,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * PaymentType
+         * paymentType.
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -342,7 +342,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * Protocol
+         * protocol.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -350,7 +350,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * ResourceGroupId
+         * resourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -358,7 +358,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * Status
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -366,7 +366,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * Tags
+         * tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -374,7 +374,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * UpdatedAt
+         * updatedAt.
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -382,7 +382,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * Version
+         * version.
          */
         public Builder version(String version) {
             this.version = version;
@@ -390,7 +390,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * ZoneCount
+         * zoneCount.
          */
         public Builder zoneCount(Long zoneCount) {
             this.zoneCount = zoneCount;
@@ -398,7 +398,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * ZoneInfos
+         * zoneInfos.
          */
         public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -462,7 +462,7 @@ public class Logstash extends TeaModel {
             private String zoneId; 
 
             /**
-             * Host
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -470,7 +470,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * Port
+             * port.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -478,7 +478,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * ZoneId
+             * zoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -555,7 +555,7 @@ public class Logstash extends TeaModel {
             private String vswitchId; 
 
             /**
-             * Type
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -563,7 +563,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * VpcId
+             * vpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -571,7 +571,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * VsArea
+             * vsArea.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -579,7 +579,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * VswitchId
+             * vswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -644,7 +644,7 @@ public class Logstash extends TeaModel {
             private String spec; 
 
             /**
-             * Disk
+             * disk.
              */
             public Builder disk(Long disk) {
                 this.disk = disk;
@@ -652,7 +652,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * DiskType
+             * diskType.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -660,7 +660,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * Spec
+             * spec.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -713,7 +713,7 @@ public class Logstash extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey
+             * tagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -721,7 +721,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * TagValue
+             * tagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -774,7 +774,7 @@ public class Logstash extends TeaModel {
             private String zoneId; 
 
             /**
-             * Status
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -782,7 +782,7 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * ZoneId
+             * zoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

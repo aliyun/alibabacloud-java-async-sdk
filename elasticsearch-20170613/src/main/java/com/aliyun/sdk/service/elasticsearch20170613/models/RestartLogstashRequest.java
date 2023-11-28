@@ -154,7 +154,7 @@ public class RestartLogstashRequest extends Request {
         } 
 
         /**
-         * ls-cn-v0h1kzca\*\*\*\*
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -163,7 +163,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 强制重启百分比。蓝绿重启时，无法强制重启，无需设置。
+         * batchCount.
          */
         public Builder batchCount(Double batchCount) {
             this.putBodyParameter("batchCount", batchCount);
@@ -172,7 +172,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 是否蓝绿重启
+         * blueGreenDep.
          */
         public Builder blueGreenDep(Boolean blueGreenDep) {
             this.putBodyParameter("blueGreenDep", blueGreenDep);
@@ -181,7 +181,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 角色重启时，选择的角色类型。
+         * nodeTypes.
          */
         public Builder nodeTypes(java.util.List < String > nodeTypes) {
             this.putBodyParameter("nodeTypes", nodeTypes);
@@ -190,7 +190,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 节点重启时，选择的节点IP
+         * nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -199,7 +199,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 重启类型
+         * restartType.
          */
         public Builder restartType(String restartType) {
             this.putBodyParameter("restartType", restartType);
@@ -208,7 +208,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -217,7 +217,7 @@ public class RestartLogstashRequest extends Request {
         }
 
         /**
-         * true
+         * force.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

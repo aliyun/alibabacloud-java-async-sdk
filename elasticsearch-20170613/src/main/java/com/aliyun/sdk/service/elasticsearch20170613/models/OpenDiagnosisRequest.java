@@ -83,7 +83,11 @@ public class OpenDiagnosisRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * Indicates whether the intelligent O\&M feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,7 @@ public class OpenDiagnosisRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -101,7 +105,7 @@ public class OpenDiagnosisRequest extends Request {
         }
 
         /**
-         * en
+         * lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

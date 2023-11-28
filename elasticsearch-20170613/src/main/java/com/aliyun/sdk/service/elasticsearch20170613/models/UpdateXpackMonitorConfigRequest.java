@@ -125,7 +125,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         } 
 
         /**
-         * ls-cn-oew1qbgl\*\*\*\*
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -134,7 +134,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,7 +143,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * xpack 监控是否启用。设置为false时，无需设置其他参数
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -152,7 +152,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * Elasticsearch实例的访问地址。
+         * endpoints.
          */
         public Builder endpoints(java.util.List < String > endpoints) {
             this.putBodyParameter("endpoints", endpoints);
@@ -161,7 +161,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * Elasticsearch实例的访问密码。
+         * password.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -170,7 +170,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * Elasticsearch实例的用户名。
+         * userName.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

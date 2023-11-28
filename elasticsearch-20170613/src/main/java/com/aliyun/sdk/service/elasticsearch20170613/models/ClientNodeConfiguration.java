@@ -78,7 +78,7 @@ public class ClientNodeConfiguration extends TeaModel {
         private String spec; 
 
         /**
-         * 协调节点数量
+         * amount.
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -86,7 +86,7 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 协调节点磁盘大小
+         * disk.
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -94,7 +94,7 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 协调节点磁盘类型
+         * diskType.
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -102,7 +102,7 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 协调节点规格
+         * spec.
          */
         public Builder spec(String spec) {
             this.spec = spec;

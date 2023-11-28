@@ -50,7 +50,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             private String kibanaEndpoint; 
 
             /**
-             * description.
+             * The name of the Elasticsearch cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +142,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * The address that is used to access the Elasticsearch cluster over the Internet.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,7 +150,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * esInstanceId.
+             * The ID of the Elasticsearch cluster.
              */
             public Builder esInstanceId(String esInstanceId) {
                 this.esInstanceId = esInstanceId;
@@ -158,7 +158,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaEndpoint.
+             * The address that is used to access the Kibana console of the Elasticsearch cluster over the Internet.
              */
             public Builder kibanaEndpoint(String kibanaEndpoint) {
                 this.kibanaEndpoint = kibanaEndpoint;

@@ -112,7 +112,7 @@ public class ValidateShrinkNodesRequest extends Request {
         } 
 
         /**
-         * es-cn-nif1q9o8r0008\*\*\*\*
+         * 2
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -130,7 +130,7 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * 2
+         * count.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -139,7 +139,7 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * false
+         * The ID of the request.
          */
         public Builder ignoreStatus(Boolean ignoreStatus) {
             this.putQueryParameter("ignoreStatus", ignoreStatus);
@@ -148,7 +148,11 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * WORKER
+         * Returned results:
+         * <p>
+         * 
+         * *   true: can be scaled in
+         * *   false: cannot be scaled in.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("nodeType", nodeType);
@@ -254,7 +258,11 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * WORKER
+             * Returned results:
+             * <p>
+             * 
+             * *   true: can be scaled in
+             * *   false: cannot be scaled in.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

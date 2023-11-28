@@ -83,7 +83,11 @@ public class CloseDiagnosisRequest extends Request {
         } 
 
         /**
-         * es-cn-s9dsk3k4k\*\*\*\*
+         * Indicates whether intelligent O\&M is successfully disabled. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +96,7 @@ public class CloseDiagnosisRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The ID of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -101,7 +105,7 @@ public class CloseDiagnosisRequest extends Request {
         }
 
         /**
-         * spanish
+         * lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

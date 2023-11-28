@@ -83,7 +83,7 @@ public class ListVpcEndpointsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The cluster ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +92,10 @@ public class ListVpcEndpointsRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -101,7 +104,7 @@ public class ListVpcEndpointsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

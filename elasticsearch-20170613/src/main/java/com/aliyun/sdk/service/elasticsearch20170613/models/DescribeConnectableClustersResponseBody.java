@@ -50,7 +50,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
             private String networkType; 
 
             /**
-             * The ID of the instance that can communicate with each other.
+             * instances.
              */
             public Builder instances(String instances) {
                 this.instances = instances;
@@ -118,7 +118,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the instance.
+             * networkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;

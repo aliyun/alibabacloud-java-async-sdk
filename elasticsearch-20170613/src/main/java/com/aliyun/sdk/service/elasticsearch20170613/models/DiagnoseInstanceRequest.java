@@ -125,7 +125,7 @@ public class DiagnoseInstanceRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -134,7 +134,7 @@ public class DiagnoseInstanceRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The timestamp when the diagnostic report was generated.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -170,7 +170,7 @@ public class DiagnoseInstanceRequest extends Request {
         }
 
         /**
-         * en
+         * The returned data.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

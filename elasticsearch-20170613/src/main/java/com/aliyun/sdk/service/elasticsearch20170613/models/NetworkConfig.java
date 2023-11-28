@@ -86,7 +86,7 @@ public class NetworkConfig extends TeaModel {
         private java.util.List < WhiteIpGroup > whiteIpGroupList; 
 
         /**
-         * 网络类型
+         * type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -94,7 +94,7 @@ public class NetworkConfig extends TeaModel {
         }
 
         /**
-         * 专有网络VPC标识
+         * vpcId.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -102,7 +102,7 @@ public class NetworkConfig extends TeaModel {
         }
 
         /**
-         * 网络所属可用区
+         * vsArea.
          */
         public Builder vsArea(String vsArea) {
             this.vsArea = vsArea;
@@ -110,7 +110,7 @@ public class NetworkConfig extends TeaModel {
         }
 
         /**
-         * 专有网络交换机标识
+         * vswitchId.
          */
         public Builder vswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
@@ -118,7 +118,7 @@ public class NetworkConfig extends TeaModel {
         }
 
         /**
-         * IP白名单分组列表
+         * whiteIpGroupList.
          */
         public Builder whiteIpGroupList(java.util.List < WhiteIpGroup > whiteIpGroupList) {
             this.whiteIpGroupList = whiteIpGroupList;

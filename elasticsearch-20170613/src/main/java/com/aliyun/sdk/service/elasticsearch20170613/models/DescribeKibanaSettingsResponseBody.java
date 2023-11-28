@@ -50,7 +50,7 @@ public class DescribeKibanaSettingsResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeKibanaSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Some configurable Kibana settings information. For more information, see [Kibana settings](https://www.elastic.co/guide/cn/kibana/current/settings.html).
+         * Result.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

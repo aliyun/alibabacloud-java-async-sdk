@@ -129,7 +129,7 @@ public class CollectorTargetInstance extends TeaModel {
         private String userName; 
 
         /**
-         * 当前配置类型。固定值：collectorTargetInstance
+         * configType.
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -137,7 +137,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * 采集器是否启用Monitoring
+         * enableMonitoring.
          */
         public Builder enableMonitoring(Boolean enableMonitoring) {
             this.enableMonitoring = enableMonitoring;
@@ -145,7 +145,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * output实例地址
+         * hosts.
          */
         public Builder hosts(java.util.List < String > hosts) {
             this.hosts = hosts;
@@ -153,7 +153,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * output实例Id
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -161,7 +161,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * 实例类型
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -169,7 +169,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * output实例密码
+         * password.
          */
         public Builder password(String password) {
             this.password = password;
@@ -177,7 +177,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * 传输协议
+         * protocol.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -185,7 +185,7 @@ public class CollectorTargetInstance extends TeaModel {
         }
 
         /**
-         * output实例用户名
+         * userName.
          */
         public Builder userName(String userName) {
             this.userName = userName;

@@ -55,7 +55,7 @@ public class ListExtendfilesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Logstash cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

@@ -62,7 +62,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * The total number of entries returned.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The header of the response.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The trigger mode of health diagnostics. Valid values:
+         * <p>
+         * 
+         * *   SYSTEM: The system is automatically triggered.
+         * *   INNER: internal trigger
+         * *   USER: manually triggered by the user
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +123,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * The returned results.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -207,7 +212,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the diagnostic item.
+             * The diagnosis.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -215,7 +220,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the diagnostic item.
+             * The description of the diagnostic item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +228,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis.
+             * The suggestion for the diagnosis.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -231,7 +236,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion for the diagnosis.
+             * suggest.
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -239,12 +244,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the diagnostic result. Valid values:
-             * <p>
-             * 
-             * *   TEXT: text description
-             * *   CONSOLE_API: console-triggered
-             * *   ES_API: API triggered
+             * The full name of the diagnostic item.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -309,7 +309,12 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String item; 
 
             /**
-             * The details of the diagnostic item.
+             * The type of the diagnostic result. Valid values:
+             * <p>
+             * 
+             * *   TEXT: text description
+             * *   CONSOLE_API: console-triggered
+             * *   ES_API: API triggered
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -317,7 +322,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * The details of the diagnostic item.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -325,7 +330,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the item.
+             * The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.
              */
             public Builder item(String item) {
                 this.item = item;
@@ -438,7 +443,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             private String trigger; 
 
             /**
-             * The timestamp when the report was created.
+             * The ID of the report.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -446,7 +451,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * Reports the list of diagnostic item information.
+             * The name of the item.
              */
             public Builder diagnoseItems(java.util.List < DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -454,7 +459,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.
+             * Reports the list of diagnostic item information.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -462,7 +467,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for diagnosis.
+             * The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -470,7 +475,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the report.
+             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -478,7 +483,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.
+             * The ID of the instance for diagnosis.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -486,12 +491,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger mode of health diagnostics. Valid values:
-             * <p>
-             * 
-             * *   SYSTEM: The system is automatically triggered.
-             * *   INNER: internal trigger
-             * *   USER: manually triggered by the user
+             * The timestamp when the report was created.
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;

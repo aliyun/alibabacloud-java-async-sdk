@@ -139,7 +139,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         } 
 
         /**
-         * ls-cn-oew1qbgl\*\*\*\*
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -148,7 +148,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * 开启Kibana管理管道后，Kibana所在Elasticsearch实例的访问地址列表。
+         * endpoints.
          */
         public Builder endpoints(java.util.List < String > endpoints) {
             this.putBodyParameter("endpoints", endpoints);
@@ -157,7 +157,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * Kibana的密码。管理方式为ES设置
+         * password.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -166,7 +166,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * Kibana管理的管道列表。管理方式为ES设置
+         * pipelineIds.
          */
         public Builder pipelineIds(java.util.List < String > pipelineIds) {
             this.putBodyParameter("pipelineIds", pipelineIds);
@@ -175,7 +175,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * 管道管理方式
+         * pipelineManagementType.
          */
         public Builder pipelineManagementType(String pipelineManagementType) {
             this.putBodyParameter("pipelineManagementType", pipelineManagementType);
@@ -184,7 +184,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * Kibana的用户名。管理方式为ES设置
+         * userName.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);
@@ -193,7 +193,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

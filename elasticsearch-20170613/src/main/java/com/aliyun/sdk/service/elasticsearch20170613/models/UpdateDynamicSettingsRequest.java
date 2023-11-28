@@ -119,7 +119,7 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * 幂等参数
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

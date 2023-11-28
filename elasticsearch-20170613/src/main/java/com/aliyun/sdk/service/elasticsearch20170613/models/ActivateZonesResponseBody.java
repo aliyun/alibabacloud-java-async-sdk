@@ -50,7 +50,7 @@ public class ActivateZonesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ActivateZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the nodes in disabled zones are restored. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder result(Boolean result) {
             this.result = result;

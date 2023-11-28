@@ -50,7 +50,7 @@ public class ZoneInfo extends TeaModel {
         private String zoneId; 
 
         /**
-         * 可用区状态
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -58,7 +58,7 @@ public class ZoneInfo extends TeaModel {
         }
 
         /**
-         * 可用区唯一标识
+         * zoneId.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

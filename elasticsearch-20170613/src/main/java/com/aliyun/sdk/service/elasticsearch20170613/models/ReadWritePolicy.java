@@ -62,7 +62,7 @@ public class ReadWritePolicy extends TeaModel {
         private String writePolicy; 
 
         /**
-         * 是否开启自动主键
+         * autoGeneratePk.
          */
         public Builder autoGeneratePk(Boolean autoGeneratePk) {
             this.autoGeneratePk = autoGeneratePk;
@@ -70,7 +70,7 @@ public class ReadWritePolicy extends TeaModel {
         }
 
         /**
-         * 是否开启读写分离
+         * writeHa.
          */
         public Builder writeHa(Boolean writeHa) {
             this.writeHa = writeHa;
@@ -78,7 +78,7 @@ public class ReadWritePolicy extends TeaModel {
         }
 
         /**
-         * 读写分离方式
+         * writePolicy.
          */
         public Builder writePolicy(String writePolicy) {
             this.writePolicy = writePolicy;

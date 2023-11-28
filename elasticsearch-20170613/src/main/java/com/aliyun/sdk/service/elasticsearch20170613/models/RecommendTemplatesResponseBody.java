@@ -118,7 +118,15 @@ public class RecommendTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * templateName.
+             * *
+             * <p>
+             * *
+             * *
+             * *
+             * 
+             * **
+             * 
+             * ****
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

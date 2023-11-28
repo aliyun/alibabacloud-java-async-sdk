@@ -62,7 +62,7 @@ public class ListDictsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListDictsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListDictsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListDictsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The total number of entries returned.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -207,7 +207,7 @@ public class ListDictsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * downloadUrl.
+             * The link that is used to download the dictionary over the Internet. The link is valid for 90s.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -215,7 +215,7 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * fileSize.
+             * The size of the dictionary file. Unit: byte.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -223,7 +223,7 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +231,7 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -239,7 +239,11 @@ public class ListDictsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the IK dictionary. Valid values:
+             * <p>
+             * 
+             * *   MAIN: main dictionary
+             * *   STOP: stopword list
              */
             public Builder type(String type) {
                 this.type = type;

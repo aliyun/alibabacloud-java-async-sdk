@@ -111,7 +111,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         } 
 
         /**
-         * es-cn-tl329rbpc0001\*\*\*\*
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,10 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * kibana节点IP访问白名单。不可与分组同时设置。
+         * The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
+         * <p>
+         * 
+         * You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.
          */
         public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
             this.putBodyParameter("kibanaIPWhitelist", kibanaIPWhitelist);
@@ -129,7 +132,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * Kibana 访问白名单分组设置
+         * The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
          */
         public Builder whiteIpGroup(WhiteIpGroup whiteIpGroup) {
             this.putBodyParameter("whiteIpGroup", whiteIpGroup);
@@ -138,7 +141,12 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The update mode. Valid values:
+         * <p>
+         * 
+         * *   Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.
+         * *   Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.
+         * *   Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,7 +155,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
         }
 
         /**
-         * Cover
+         * The body of the request.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);
@@ -213,7 +221,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             private String whiteIpType; 
 
             /**
-             * 分组名称
+             * The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -221,7 +229,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             }
 
             /**
-             * 分组白名单列表
+             * The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -229,7 +237,7 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
             }
 
             /**
-             * 白名单类型，固定设置PUBLIC_KIBANA
+             * The IP addresses in the whitelist.
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;

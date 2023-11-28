@@ -69,7 +69,7 @@ public class ListShardRecoveriesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,11 @@ public class ListShardRecoveriesRequest extends Request {
         }
 
         /**
-         * activeOnly.
+         * Specifies whether to return information about data restoration of shards. Valid values:
+         * <p>
+         * 
+         * *   true: returns information about data restoration of shards that are being restored.
+         * *   false: returns information about data restoration of all shards.
          */
         public Builder activeOnly(Boolean activeOnly) {
             this.putQueryParameter("activeOnly", activeOnly);

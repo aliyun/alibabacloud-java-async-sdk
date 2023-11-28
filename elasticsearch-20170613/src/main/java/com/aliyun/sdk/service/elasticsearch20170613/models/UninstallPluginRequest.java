@@ -25,11 +25,16 @@ public class UninstallPluginRequest extends Request {
     @NameInMap("clientToken")
     private String clientToken;
 
+    @Query
+    @NameInMap("force")
+    private Boolean force;
+
     private UninstallPluginRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.body = builder.body;
         this.clientToken = builder.clientToken;
+        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -66,10 +71,18 @@ public class UninstallPluginRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
     public static final class Builder extends Request.Builder<UninstallPluginRequest, Builder> {
         private String instanceId; 
         private String body; 
         private String clientToken; 
+        private Boolean force; 
 
         private Builder() {
             super();
@@ -80,6 +93,7 @@ public class UninstallPluginRequest extends Request {
             this.instanceId = request.instanceId;
             this.body = request.body;
             this.clientToken = request.clientToken;
+            this.force = request.force;
         } 
 
         /**
@@ -106,6 +120,15 @@ public class UninstallPluginRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("force", force);
+            this.force = force;
             return this;
         }
 

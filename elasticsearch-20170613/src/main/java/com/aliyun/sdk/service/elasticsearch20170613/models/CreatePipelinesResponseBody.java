@@ -50,7 +50,7 @@ public class CreatePipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class CreatePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the pipeline is created. Valor:
-         * <p>
-         * 
-         * *   true: The task is created.
-         * *   false: The instance failed to be created.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

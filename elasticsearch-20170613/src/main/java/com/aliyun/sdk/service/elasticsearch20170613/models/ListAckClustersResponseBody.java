@@ -50,7 +50,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAckClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListAckClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * clusterId.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -142,7 +142,7 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * clusterType.
+             * The type of the cluster. The value is fixed as ManagedKubernetes.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -150,7 +150,7 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class ListAckClustersResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the VPC to which the cluster belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -142,7 +142,7 @@ public class ListSearchLogRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * 1531910852074
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -151,7 +151,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * 20
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -160,7 +160,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * The ID of the request.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -169,7 +169,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 1
+         * The header of the response.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -178,7 +178,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * host:172.16.\*\*.\*\* AND content:netty
+         * 1
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -187,7 +187,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * 20
+         * The number of entries returned per page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -196,7 +196,7 @@ public class ListSearchLogRequest extends Request {
         }
 
         /**
-         * INSTANCELOG
+         * 1531910852074
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

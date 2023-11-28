@@ -134,7 +134,7 @@ public class UpdateApmRequest extends Request {
         }
 
         /**
-         * apm实例名
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +143,7 @@ public class UpdateApmRequest extends Request {
         }
 
         /**
-         * es实例id
+         * outputES.
          */
         public Builder outputES(String outputES) {
             this.putBodyParameter("outputES", outputES);
@@ -152,7 +152,7 @@ public class UpdateApmRequest extends Request {
         }
 
         /**
-         * es实例密码
+         * outputESPassword.
          */
         public Builder outputESPassword(String outputESPassword) {
             this.putBodyParameter("outputESPassword", outputESPassword);
@@ -161,7 +161,7 @@ public class UpdateApmRequest extends Request {
         }
 
         /**
-         * es实例用户名
+         * outputESUserName.
          */
         public Builder outputESUserName(String outputESUserName) {
             this.putBodyParameter("outputESUserName", outputESUserName);
@@ -170,7 +170,7 @@ public class UpdateApmRequest extends Request {
         }
 
         /**
-         * apm server密码
+         * token.
          */
         public Builder token(String token) {
             this.putBodyParameter("token", token);

@@ -50,7 +50,7 @@ public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

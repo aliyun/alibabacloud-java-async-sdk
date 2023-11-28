@@ -74,7 +74,7 @@ public class PaymentInfo extends TeaModel {
         private String pricingCycle; 
 
         /**
-         * 自动续费时间周期
+         * autoRenewDuration.
          */
         public Builder autoRenewDuration(Long autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -82,7 +82,7 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * 预付费时间数
+         * duration.
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -90,7 +90,7 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * 到期是否自动续费
+         * isAutoRenew.
          */
         public Builder isAutoRenew(Boolean isAutoRenew) {
             this.isAutoRenew = isAutoRenew;
@@ -98,7 +98,7 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * 预付费时间单位
+         * pricingCycle.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;

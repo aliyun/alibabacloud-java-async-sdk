@@ -83,7 +83,7 @@ public class ListKibanaPluginsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class ListKibanaPluginsRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return. Default value: 1.
          */
         public Builder page(String page) {
             this.putQueryParameter("page", page);
@@ -101,7 +101,7 @@ public class ListKibanaPluginsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

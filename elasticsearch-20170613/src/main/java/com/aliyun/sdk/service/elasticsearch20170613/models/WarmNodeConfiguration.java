@@ -101,7 +101,7 @@ public class WarmNodeConfiguration extends TeaModel {
         private String spec; 
 
         /**
-         * 节点数量
+         * amount.
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -109,7 +109,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 节点磁盘
+         * disk.
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -117,7 +117,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 节点磁盘加密
+         * diskEncryption.
          */
         public Builder diskEncryption(Boolean diskEncryption) {
             this.diskEncryption = diskEncryption;
@@ -125,7 +125,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 节点磁盘类型
+         * diskType.
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -133,7 +133,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 节点essd磁盘等级
+         * performanceLevel.
          */
         public Builder performanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
@@ -141,7 +141,7 @@ public class WarmNodeConfiguration extends TeaModel {
         }
 
         /**
-         * 节点规格
+         * spec.
          */
         public Builder spec(String spec) {
             this.spec = spec;

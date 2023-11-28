@@ -50,7 +50,7 @@ public class RenewLogstashResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class RenewLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result. Valid values:
+         * <p>
+         * 
+         * *   true: The cluster is renewed.
+         * *   false: The cluster fails to be renewed.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -50,7 +50,7 @@ public class DeleteComponentIndexResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

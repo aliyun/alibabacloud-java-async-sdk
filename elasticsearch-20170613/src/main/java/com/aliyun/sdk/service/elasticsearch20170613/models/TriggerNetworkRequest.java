@@ -114,7 +114,7 @@ public class TriggerNetworkRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -123,7 +123,7 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * 动作类型。CLOSE：关闭; OPEN：开启
+         * actionType.
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("actionType", actionType);
@@ -132,7 +132,7 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * 网络类型。PUBLIC：公网；PRIVATE：私网
+         * networkType.
          */
         public Builder networkType(String networkType) {
             this.putBodyParameter("networkType", networkType);
@@ -141,7 +141,7 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * 实例类型。KIBANA kibana公私网/WORKER 集群公私网
+         * nodeType.
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("nodeType", nodeType);
@@ -150,7 +150,7 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * 407d02b74c49beb5bfdac7ec8bde2488
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

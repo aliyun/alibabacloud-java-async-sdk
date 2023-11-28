@@ -16,6 +16,10 @@ public class ListLogstashPluginsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListLogstashPluginsResponseBody body;
@@ -23,6 +27,7 @@ public class ListLogstashPluginsResponse extends Response {
     private ListLogstashPluginsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListLogstashPluginsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListLogstashPluginsResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListLogstashPluginsResponse extends Response {
     public interface Builder extends Response.Builder<ListLogstashPluginsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListLogstashPluginsResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListLogstashPluginsResponse extends Response {
             extends Response.BuilderImpl<ListLogstashPluginsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListLogstashPluginsResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListLogstashPluginsResponse extends Response {
         private BuilderImpl(ListLogstashPluginsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListLogstashPluginsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

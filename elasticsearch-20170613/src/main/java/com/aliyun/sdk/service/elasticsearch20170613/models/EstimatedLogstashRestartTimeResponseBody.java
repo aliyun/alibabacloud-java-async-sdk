@@ -50,7 +50,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * unit.
+             * The unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -118,7 +118,7 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The estimated restart time.
              */
             public Builder value(Long value) {
                 this.value = value;

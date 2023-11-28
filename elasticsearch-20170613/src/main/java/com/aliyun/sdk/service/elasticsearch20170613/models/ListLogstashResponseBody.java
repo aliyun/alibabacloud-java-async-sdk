@@ -62,7 +62,7 @@ public class ListLogstashResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Details of the request header.
+         * The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Detailed information about the matching instances.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Detailed information about the matching instances.
+         * The name of the VPC.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of entries returned per page.
+             * The number of data nodes.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -171,7 +171,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the cloud disk.
+             * The disk size of the node.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -179,7 +179,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the cloud disk.
+             * The instance type of the ECS instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -256,7 +256,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The network type. Currently, only Virtual Private Cloud (VPC) is supported.
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -264,7 +264,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The ID of the vSwitch.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -272,7 +272,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * vsArea.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -280,7 +280,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * vswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -357,7 +357,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The disk size of the node.
+             * The network configurations.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -365,11 +365,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to use disk encryption. Valid values:
-             * <p>
-             * 
-             * *   true: Enables the concurrent query feature for queries other than aggregate queries.
-             * *   false: Disables the concurrent query feature for queries other than aggregate queries.
+             * The ID of the VPC.
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -377,7 +373,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk.
+             * The zone where the cluster resides.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -385,7 +381,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance.
+             * The type of the disk.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -558,7 +554,7 @@ public class ListLogstashResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The tag of the instance. Valid values:
+             * The configuration information of the data node.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -566,7 +562,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The ID of the instance.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -574,7 +570,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * The time when the instance was last updated.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -582,7 +578,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The tag value of the cloud disk.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -590,7 +586,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The network configurations.
+             * The network type. Currently, only Virtual Private Cloud (VPC) is supported.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -598,7 +594,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The number of data nodes.
+             * The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -606,7 +602,11 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information of the data node.
+             * Specifies whether to use disk encryption. Valid values:
+             * <p>
+             * 
+             * *   true: Enables the concurrent query feature for queries other than aggregate queries.
+             * *   false: Disables the concurrent query feature for queries other than aggregate queries.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -614,7 +614,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).
+             * The time when the instance was created.
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -630,7 +630,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.
+             * The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -638,7 +638,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * The tag of the instance. Valid values:
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -646,7 +646,7 @@ public class ListLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.
+             * The tag key of the cloud disk.
              */
             public Builder version(String version) {
                 this.version = version;

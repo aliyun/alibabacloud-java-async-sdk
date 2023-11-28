@@ -83,7 +83,7 @@ public class UpdateDescriptionRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1ptcb30009\*\*\*\*
+         * The return results.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class UpdateDescriptionRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B350\*\*\*\*
+         * The new name of the instance.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -122,7 +122,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 诊断项说明
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * 诊断项标识。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -138,7 +138,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * 诊断项名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;

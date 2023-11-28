@@ -62,7 +62,7 @@ public class ListPluginsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * The description of the plug-in.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The return results.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * The status of the plug-in.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListPluginsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The total number of entries returned.
+             * The address of the plug-in description document.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -207,7 +207,7 @@ public class ListPluginsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The description of the plug-in.
+             * The source type of the plug-in.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -215,7 +215,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plug-in.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The source type of the plug-in.
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -231,7 +231,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the plug-in description document.
+             * The name of the plug-in.
              */
             public Builder specificationUrl(String specificationUrl) {
                 this.specificationUrl = specificationUrl;
@@ -239,7 +239,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the plug-in.
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;

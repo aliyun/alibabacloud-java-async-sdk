@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The available status of the region.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of returned database shards.
+         * The endpoint of the region.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The endpoint of the region that is exposed in the console.
+             * consoleEndpoint.
              */
             public Builder consoleEndpoint(String consoleEndpoint) {
                 this.consoleEndpoint = consoleEndpoint;
@@ -154,7 +154,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * localName.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -162,7 +162,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * regionEndpoint.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -170,7 +170,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the cluster.
+             * The name of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -178,7 +178,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The available status of the region.
+             * The endpoint of the region that is exposed in the console.
              */
             public Builder status(String status) {
                 this.status = status;

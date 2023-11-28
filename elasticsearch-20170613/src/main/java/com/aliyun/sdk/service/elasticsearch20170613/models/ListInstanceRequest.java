@@ -194,7 +194,7 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * aliyunes_test1
+         * cn-hangzhou-i
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -203,7 +203,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 6.7\_with_X-Pack
+         * advanced
          */
         public Builder esVersion(String esVersion) {
             this.putQueryParameter("esVersion", esVersion);
@@ -212,7 +212,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * advanced
+         * The number of data nodes.
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("instanceCategory", instanceCategory);
@@ -221,7 +221,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * es-cn-v641a0ta3000g\*\*\*\*
+         * postpaid
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -230,7 +230,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 1
+         * \[{"tagKey":"key1","tagValue":"value1"}]
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -239,7 +239,11 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * postpaid
+         * Specifies whether to include dedicated master nodes. Valid values:
+         * <p>
+         * 
+         * *   true: The files contain data that is dumped to the IA storage medium.
+         * *   false: The files do not contain data that is dumped to the IA storage medium.
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("paymentType", paymentType);
@@ -248,7 +252,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * rg-aekzvowej3i\*\*\*\*
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -257,7 +261,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 10
+         * vpc-bp16k1dvzxtmagcva\*\*\*\*
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -266,7 +270,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * \[{"tagKey":"key1","tagValue":"value1"}]
+         * The header of the response.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);
@@ -275,7 +279,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * vpc-bp16k1dvzxtmagcva\*\*\*\*
+         * The number of entries returned per page.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);
@@ -284,7 +288,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * cn-hangzhou-i
+         * The returned data.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("zoneId", zoneId);

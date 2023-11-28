@@ -50,7 +50,7 @@ public class DeletePipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeletePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the pipeline is deleted. Valid values:
+         * <p>
+         * 
+         * *   true: The pipeline is deleted.
+         * *   false: The pipeline fails to be deleted.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -50,7 +50,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
             private String fileName; 
 
             /**
-             * content.
+             * The content of the configuration file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -118,7 +118,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * The name of the configuration file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

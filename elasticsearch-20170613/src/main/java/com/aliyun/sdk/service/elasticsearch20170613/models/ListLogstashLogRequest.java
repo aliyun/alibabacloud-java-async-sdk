@@ -141,7 +141,7 @@ public class ListLogstashLogRequest extends Request {
         } 
 
         /**
-         * ls-cn-v0h1kzca\*\*\*\*
+         * 1531910852074
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -150,7 +150,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * 20
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -159,7 +159,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * 1531910852074
+         * The ID of the request.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -168,7 +168,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * 1
+         * The returned data.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -177,7 +177,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * host:10.7.xx.xx AND level:info AND content:opening
+         * 1
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -186,7 +186,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * 20
+         * The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -195,7 +195,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * LOGSTASH_INSTANCE_LOG
+         * 1531910852074
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

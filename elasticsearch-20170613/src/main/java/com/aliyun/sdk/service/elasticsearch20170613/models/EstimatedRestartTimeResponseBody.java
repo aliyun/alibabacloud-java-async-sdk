@@ -50,7 +50,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * unit.
+             * The unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -118,7 +118,7 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The estimated restart time.
              */
             public Builder value(Long value) {
                 this.value = value;

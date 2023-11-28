@@ -83,7 +83,7 @@ public class CreateDataTasksRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class CreateDataTasksRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * es-cn-n6w1o1x0w001c\*\*\*\*
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,7 +143,7 @@ public class CreateDataTasksRequest extends Request {
             private String sourceFilterParams; 
 
             /**
-             * 索引的过滤条件，过滤指定条件的文档来做索引重建
+             * sourceFilterParams.
              */
             public Builder sourceFilterParams(String sourceFilterParams) {
                 this.sourceFilterParams = sourceFilterParams;
@@ -275,7 +275,7 @@ public class CreateDataTasksRequest extends Request {
             private String username; 
 
             /**
-             * 集群类型。默认elasticsearch。
+             * dataSourceType.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -283,7 +283,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 当前目标索引
+             * index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -291,7 +291,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 目标索引mapping 配置
+             * mapping.
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -299,7 +299,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 当前目标集群的登陆密码
+             * password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -307,7 +307,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 索引路由字段，默认为主键
+             * routing.
              */
             public Builder routing(String routing) {
                 this.routing = routing;
@@ -315,7 +315,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 目标索引Settings配置
+             * settings.
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -323,7 +323,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 当前目标索引文档。ES集群索引概念
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -331,7 +331,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 当前目标集群的登陆用户名
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -471,7 +471,7 @@ public class CreateDataTasksRequest extends Request {
             private Integer vpcInstancePort; 
 
             /**
-             * 源集群类型。默认elasticsearch。
+             * dataSourceType.
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -479,7 +479,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 公网访问域名
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -487,7 +487,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 源集群的指定索引
+             * index.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -495,7 +495,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 源集群的集群登陆密码
+             * password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -503,7 +503,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 源集群的指定索引。此处是ES集群索引概念
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -511,7 +511,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 源集群的登陆用户名
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -519,7 +519,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 集群的vpc专有网络id(endpoint为公网域名可不填，私网ip需填写)
+             * vpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -527,7 +527,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 当前集群在vpc下的实例ID/ SLB（负载均衡） ID
+             * vpcInstanceId.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -535,7 +535,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 集群对外端口号
+             * vpcInstancePort.
              */
             public Builder vpcInstancePort(Integer vpcInstancePort) {
                 this.vpcInstancePort = vpcInstancePort;
@@ -600,7 +600,7 @@ public class CreateDataTasksRequest extends Request {
             private SourceCluster sourceCluster; 
 
             /**
-             * 迁移配置
+             * migrateConfig.
              */
             public Builder migrateConfig(MigrateConfig migrateConfig) {
                 this.migrateConfig = migrateConfig;
@@ -608,7 +608,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 目标集群信息，当前实例
+             * sinkCluster.
              */
             public Builder sinkCluster(SinkCluster sinkCluster) {
                 this.sinkCluster = sinkCluster;
@@ -616,7 +616,7 @@ public class CreateDataTasksRequest extends Request {
             }
 
             /**
-             * 源集群配置
+             * sourceCluster.
              */
             public Builder sourceCluster(SourceCluster sourceCluster) {
                 this.sourceCluster = sourceCluster;

@@ -50,7 +50,7 @@ public class UpdateDescriptionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class UpdateDescriptionResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The new name of the instance.
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;

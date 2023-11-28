@@ -83,7 +83,7 @@ public class UninstallLogstashPluginRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The list of plug-ins that have been uninstalled.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

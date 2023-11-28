@@ -2293,7 +2293,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 版本类型。
+             * instanceCategory.
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;

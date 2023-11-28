@@ -85,7 +85,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * 实例ID列表。
+         * A tag.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -94,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型，固定为INSTANCE。
+         * The request ID.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -103,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 所关联的标签列表。
+         * The value of the tag.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -159,7 +159,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签Key
+             * The returned object.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +167,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 标签Value
+             * Indicates whether tags are added to the clusters. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder value(String value) {
                 this.value = value;

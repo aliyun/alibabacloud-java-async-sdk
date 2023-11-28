@@ -209,7 +209,7 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1ptcb30009\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -290,7 +290,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The result of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -308,7 +308,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * upgrade
+         * The number of data nodes.
          */
         public Builder orderActionType(String orderActionType) {
             this.putQueryParameter("orderActionType", orderActionType);

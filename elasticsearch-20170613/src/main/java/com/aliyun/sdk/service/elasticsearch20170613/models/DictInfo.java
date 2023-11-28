@@ -74,7 +74,7 @@ public class DictInfo extends TeaModel {
         private String type; 
 
         /**
-         * 词典文件大小
+         * fileSize.
          */
         public Builder fileSize(Long fileSize) {
             this.fileSize = fileSize;
@@ -82,7 +82,7 @@ public class DictInfo extends TeaModel {
         }
 
         /**
-         * 词典文件名称
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -90,7 +90,7 @@ public class DictInfo extends TeaModel {
         }
 
         /**
-         * 词典来源
+         * sourceType.
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -98,7 +98,7 @@ public class DictInfo extends TeaModel {
         }
 
         /**
-         * 词典类型
+         * type.
          */
         public Builder type(String type) {
             this.type = type;

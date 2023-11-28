@@ -50,7 +50,7 @@ public class ListTagsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The key of the tag.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * Result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class ListTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class ListTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the ENI.
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

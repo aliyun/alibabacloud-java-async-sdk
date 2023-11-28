@@ -69,7 +69,7 @@ public class DescribeConnectableClustersRequest extends Request {
         } 
 
         /**
-         * es-cn-n6w1o1x0w001c\*\*\*\*
+         * The network type of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class DescribeConnectableClustersRequest extends Request {
         }
 
         /**
-         * true
+         * The ID of the instance that can communicate with each other.
          */
         public Builder alreadySetItems(Boolean alreadySetItems) {
             this.putQueryParameter("alreadySetItems", alreadySetItems);

@@ -139,7 +139,7 @@ public class ListInstanceIndicesRequest extends Request {
         } 
 
         /**
-         * es-cn-tl329rbpc0001\*\*\*\*
+         * false
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -157,7 +157,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * false
+         * 15
          */
         public Builder isManaged(Boolean isManaged) {
             this.putQueryParameter("isManaged", isManaged);
@@ -166,7 +166,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * false
+         * The ID of the request.
          */
         public Builder isOpenstore(Boolean isOpenstore) {
             this.putQueryParameter("isOpenstore", isOpenstore);
@@ -175,7 +175,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * log-0001
+         * 1
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -184,7 +184,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * 1
+         * The header of the response.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -193,7 +193,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * 15
+         * The total size of the index in Cloud Hosting. Unit: bytes.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

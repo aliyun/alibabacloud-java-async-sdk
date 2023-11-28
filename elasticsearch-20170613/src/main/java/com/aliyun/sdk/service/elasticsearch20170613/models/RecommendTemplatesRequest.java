@@ -79,7 +79,16 @@ public class RecommendTemplatesRequest extends Request {
         }
 
         /**
-         * usageScenario.
+         * *
+         * <p>
+         * *
+         * *
+         * *
+         * *
+         * 
+         * **
+         * 
+         * ****
          */
         public Builder usageScenario(String usageScenario) {
             this.putQueryParameter("usageScenario", usageScenario);

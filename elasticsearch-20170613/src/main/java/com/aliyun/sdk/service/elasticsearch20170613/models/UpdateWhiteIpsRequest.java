@@ -111,7 +111,7 @@ public class UpdateWhiteIpsRequest extends Request {
         } 
 
         /**
-         * es-cn-npk2154oi000b\*\*\*\*
+         * The request body.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * esIPWhitelist.
+         * The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
          */
         public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
             this.putBodyParameter("esIPWhitelist", esIPWhitelist);
@@ -129,7 +129,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * whiteIpGroup.
+         * The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
          */
         public Builder whiteIpGroup(WhiteIpGroup whiteIpGroup) {
             this.putBodyParameter("whiteIpGroup", whiteIpGroup);
@@ -138,7 +138,7 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The IP addresses in the whitelist.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -147,7 +147,10 @@ public class UpdateWhiteIpsRequest extends Request {
         }
 
         /**
-         * Cover
+         * The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
+         * <p>
+         * 
+         * >  You cannot configure both the esIPWhitelist and whiteIpGroup parameters.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("modifyMode", modifyMode);
@@ -213,7 +216,7 @@ public class UpdateWhiteIpsRequest extends Request {
             private String whiteIpType; 
 
             /**
-             * groupName.
+             * The type of the whitelist. Set the value to **PRIVATE_ES**. This value indicates a private IP address whitelist.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -221,7 +224,7 @@ public class UpdateWhiteIpsRequest extends Request {
             }
 
             /**
-             * ips.
+             * The returned result.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -229,7 +232,7 @@ public class UpdateWhiteIpsRequest extends Request {
             }
 
             /**
-             * whiteIpType.
+             * The returned result.
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;

@@ -50,7 +50,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * description.
+             * The name of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;

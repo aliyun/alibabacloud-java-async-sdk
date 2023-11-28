@@ -50,7 +50,7 @@ public class ValidateConnectionResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ValidateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the connectivity is normal. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder result(Boolean result) {
             this.result = result;

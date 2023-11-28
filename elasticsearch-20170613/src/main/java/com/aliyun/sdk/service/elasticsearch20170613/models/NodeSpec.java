@@ -88,7 +88,7 @@ public class NodeSpec extends TeaModel {
         private String spec; 
 
         /**
-         * 数据节点磁盘大小
+         * disk.
          */
         public Builder disk(Integer disk) {
             this.disk = disk;
@@ -96,7 +96,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * 数据节点磁盘加密
+         * diskEncryption.
          */
         public Builder diskEncryption(Boolean diskEncryption) {
             this.diskEncryption = diskEncryption;
@@ -104,7 +104,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * 数据节点磁盘类型
+         * diskType.
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -112,7 +112,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * 数据节点essd磁盘等级
+         * performanceLevel.
          */
         public Builder performanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
@@ -120,7 +120,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * 数据节点规格
+         * spec.
          */
         public Builder spec(String spec) {
             this.spec = spec;

@@ -73,6 +73,10 @@ public class CreateInstanceRequest extends Request {
     private String resourceGroupId;
 
     @Body
+    @NameInMap("tags")
+    private java.util.List < Tags> tags;
+
+    @Body
     @NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
@@ -100,6 +104,7 @@ public class CreateInstanceRequest extends Request {
         this.paymentInfo = builder.paymentInfo;
         this.paymentType = builder.paymentType;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.warmNodeConfiguration = builder.warmNodeConfiguration;
         this.zoneCount = builder.zoneCount;
         this.clientToken = builder.clientToken;
@@ -217,6 +222,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return warmNodeConfiguration
      */
     public WarmNodeConfiguration getWarmNodeConfiguration() {
@@ -252,6 +264,7 @@ public class CreateInstanceRequest extends Request {
         private PaymentInfo paymentInfo; 
         private String paymentType; 
         private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private Integer zoneCount; 
         private String clientToken; 
@@ -276,6 +289,7 @@ public class CreateInstanceRequest extends Request {
             this.paymentInfo = request.paymentInfo;
             this.paymentType = request.paymentType;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.warmNodeConfiguration = request.warmNodeConfiguration;
             this.zoneCount = request.zoneCount;
             this.clientToken = request.clientToken;
@@ -291,7 +305,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例名称。
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -399,11 +413,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 资源组id。
+         * resourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -426,7 +449,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -441,4 +464,65 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("tagKey")
+        private String tagKey;
+
+        @NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * tagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * tagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

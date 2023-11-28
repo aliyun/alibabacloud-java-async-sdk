@@ -50,7 +50,7 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the cluster is restored. Valid values:
+         * <p>
+         * 
+         * *   true: The cluster is restored.
+         * *   false: The cluster is not restored.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -126,7 +126,7 @@ public class ListCollectorsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the resource with which the shipper is associated.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -135,7 +135,7 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the shipper.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -144,7 +144,7 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return. Valid values: 1 to 200. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -153,7 +153,7 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * resId.
+         * The ID of the shipper.
          */
         public Builder resId(String resId) {
             this.putQueryParameter("resId", resId);
@@ -162,7 +162,7 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -171,7 +171,11 @@ public class ListCollectorsRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:
+         * <p>
+         * 
+         * *   ECS
+         * *   ACK
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

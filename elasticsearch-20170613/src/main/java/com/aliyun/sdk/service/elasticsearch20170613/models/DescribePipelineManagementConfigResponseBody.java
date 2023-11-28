@@ -50,7 +50,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * endpoints.
+             * The access addresses of the Elasticsearch cluster. Specify each address in the `http://Endpoint of the Elasticsearch cluster:Port number` format.
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -154,7 +154,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * esInstanceId.
+             * The ID of the Elasticsearch cluster.
              */
             public Builder esInstanceId(String esInstanceId) {
                 this.esInstanceId = esInstanceId;
@@ -170,7 +170,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineManagementType.
+             * The pipeline management method. Valid values: Kibana and MULTIPLE_PIPELINE.
              */
             public Builder pipelineManagementType(String pipelineManagementType) {
                 this.pipelineManagementType = pipelineManagementType;
@@ -178,7 +178,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * The username that is used to access the Elasticsearch cluster.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

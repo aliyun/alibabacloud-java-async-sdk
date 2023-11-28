@@ -50,7 +50,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The details of the log.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The timestamp of log generation. Unit: ms.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The details of the log.
+             * The IP address of the node that generates the log.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,7 +154,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node that generates the log.
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -162,7 +162,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).
+             * The ID of the instance.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -178,7 +178,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of log generation. Unit: ms.
+             * timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

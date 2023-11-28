@@ -74,7 +74,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * Code.
+         * The error code returned. If the API operation is successfully called, this parameter is not returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned. If the API operation is successfully called, this parameter is not returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class InterruptLogstashTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the task is suspended. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder result(Boolean result) {
             this.result = result;

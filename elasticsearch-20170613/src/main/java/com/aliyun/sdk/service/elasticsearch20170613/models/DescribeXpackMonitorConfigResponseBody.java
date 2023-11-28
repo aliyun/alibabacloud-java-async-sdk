@@ -50,7 +50,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,11 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * enable.
+             * Indicates whether the X-Pack Monitoring feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: enabled
+             * *   false: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -162,7 +166,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * esInstanceId.
+             * The ID of the associated Elasticsearch cluster.
              */
             public Builder esInstanceId(String esInstanceId) {
                 this.esInstanceId = esInstanceId;
@@ -178,7 +182,7 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * The username that is used to access the associated Elasticsearch cluster.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

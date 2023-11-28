@@ -112,7 +112,7 @@ public class CollectorDeployMachine extends TeaModel {
         private String type; 
 
         /**
-         * 固定值：collectorDeployMachine
+         * configType.
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -120,7 +120,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * ECS机器组Id
+         * groupId.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -128,7 +128,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * ACK集群Id
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -136,7 +136,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * 部署在ECS时，部署到的机器的相关信息，包括ECS的id和每台机器上的采集器状态
+         * machines.
          */
         public Builder machines(java.util.List < Machines> machines) {
             this.machines = machines;
@@ -144,7 +144,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * 返回ACK集群中成功采集状态的Pod节点数
+         * successPodsCount.
          */
         public Builder successPodsCount(String successPodsCount) {
             this.successPodsCount = successPodsCount;
@@ -152,7 +152,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * 返回ACK集群所有采集的Pod节点数
+         * totalPodsCount.
          */
         public Builder totalPodsCount(String totalPodsCount) {
             this.totalPodsCount = totalPodsCount;
@@ -160,7 +160,7 @@ public class CollectorDeployMachine extends TeaModel {
         }
 
         /**
-         * 采集器部署机器目标的类型，分为ECS和ACK两种
+         * type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -212,7 +212,7 @@ public class CollectorDeployMachine extends TeaModel {
             private String instanceId; 
 
             /**
-             * 当前ECS实例采集器安装状态
+             * agentStatus.
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -220,7 +220,7 @@ public class CollectorDeployMachine extends TeaModel {
             }
 
             /**
-             * ECS实例Id
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

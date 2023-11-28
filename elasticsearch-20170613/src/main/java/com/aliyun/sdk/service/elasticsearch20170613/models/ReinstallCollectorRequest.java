@@ -83,7 +83,7 @@ public class ReinstallCollectorRequest extends Request {
         } 
 
         /**
-         * ResId.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);
@@ -92,7 +92,7 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The request body parameters. For more information, see the Request body section in this topic.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -101,7 +101,11 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * body.
+         * Indicates whether the shipper is installed. Valid values:
+         * <p>
+         * 
+         * *   true: The shipper is installed.
+         * *   false: The shipper fails to be installed.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

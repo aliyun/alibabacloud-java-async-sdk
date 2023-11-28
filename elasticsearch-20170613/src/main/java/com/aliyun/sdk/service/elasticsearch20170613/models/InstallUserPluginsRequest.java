@@ -69,7 +69,7 @@ public class InstallUserPluginsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The cluster ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

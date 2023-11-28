@@ -686,7 +686,7 @@ public class Elasticsearch extends TeaModel {
         private java.util.List < ZoneInfo > zoneInfos; 
 
         /**
-         * 开启新版专有主节点
+         * advancedDedicateMaster.
          */
         public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
             this.advancedDedicateMaster = advancedDedicateMaster;
@@ -694,7 +694,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 高级配置
+         * advancedSetting.
          */
         public Builder advancedSetting(AdvancedSetting advancedSetting) {
             this.advancedSetting = advancedSetting;
@@ -702,7 +702,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Aliws词典配置
+         * aliwsDicts.
          */
         public Builder aliwsDicts(java.util.List < DictInfo > aliwsDicts) {
             this.aliwsDicts = aliwsDicts;
@@ -710,7 +710,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 协调节点配置
+         * clientNodeConfiguration.
          */
         public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
             this.clientNodeConfiguration = clientNodeConfiguration;
@@ -718,7 +718,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * createdAt.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -726,7 +726,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否包含数据节点
+         * dataNode.
          */
         public Builder dataNode(Boolean dataNode) {
             this.dataNode = dataNode;
@@ -734,7 +734,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否包含旧专有主节点
+         * dedicateMaster.
          */
         public Builder dedicateMaster(Boolean dedicateMaster) {
             this.dedicateMaster = dedicateMaster;
@@ -742,7 +742,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群自定义名称
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -750,7 +750,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * IK词典配置
+         * dictList.
          */
         public Builder dictList(java.util.List < DictInfo > dictList) {
             this.dictList = dictList;
@@ -758,7 +758,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群私网访问链接
+         * domain.
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -774,7 +774,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否开启Kibana私网访问
+         * enableKibanaPrivateNetwork.
          */
         public Builder enableKibanaPrivateNetwork(Boolean enableKibanaPrivateNetwork) {
             this.enableKibanaPrivateNetwork = enableKibanaPrivateNetwork;
@@ -782,7 +782,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否开启kibana公网访问
+         * enableKibanaPublicNetwork.
          */
         public Builder enableKibanaPublicNetwork(Boolean enableKibanaPublicNetwork) {
             this.enableKibanaPublicNetwork = enableKibanaPublicNetwork;
@@ -790,7 +790,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch是否开启公网访问
+         * enablePublic.
          */
         public Builder enablePublic(Boolean enablePublic) {
             this.enablePublic = enablePublic;
@@ -798,7 +798,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群到期时间，后付费实例默认100年
+         * endTime.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -806,7 +806,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群settings配置
+         * esConfig.
          */
         public Builder esConfig(java.util.Map < String, String > esConfig) {
             this.esConfig = esConfig;
@@ -814,7 +814,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群私网访问白名单。已废弃
+         * esIPWhitelist.
          */
         public Builder esIPWhitelist(java.util.List < String > esIPWhitelist) {
             this.esIPWhitelist = esIPWhitelist;
@@ -822,7 +822,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例版本
+         * esVersion.
          */
         public Builder esVersion(String esVersion) {
             this.esVersion = esVersion;
@@ -830,7 +830,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群扩展参数配置
+         * extendConfigs.
          */
         public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
             this.extendConfigs = extendConfigs;
@@ -838,7 +838,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否开启协调节点
+         * haveClientNode.
          */
         public Builder haveClientNode(Boolean haveClientNode) {
             this.haveClientNode = haveClientNode;
@@ -846,7 +846,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否开启弹性节点
+         * haveElasticDataNode.
          */
         public Builder haveElasticDataNode(Boolean haveElasticDataNode) {
             this.haveElasticDataNode = haveElasticDataNode;
@@ -854,7 +854,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 存在kibana节点
+         * haveKibana.
          */
         public Builder haveKibana(Boolean haveKibana) {
             this.haveKibana = haveKibana;
@@ -862,7 +862,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * IK热词词典配置
+         * ikHotDicts.
          */
         public Builder ikHotDicts(java.util.List < DictInfo > ikHotDicts) {
             this.ikHotDicts = ikHotDicts;
@@ -870,7 +870,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -886,7 +886,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana公网访问链接
+         * kibanaDomain.
          */
         public Builder kibanaDomain(String kibanaDomain) {
             this.kibanaDomain = kibanaDomain;
@@ -894,7 +894,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana公网访问白名单
+         * kibanaIPWhitelist.
          */
         public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
             this.kibanaIPWhitelist = kibanaIPWhitelist;
@@ -902,7 +902,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana公网访问端口号
+         * kibanaPort.
          */
         public Builder kibanaPort(Long kibanaPort) {
             this.kibanaPort = kibanaPort;
@@ -910,7 +910,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana私网访问链接
+         * kibanaPrivateDomain.
          */
         public Builder kibanaPrivateDomain(String kibanaPrivateDomain) {
             this.kibanaPrivateDomain = kibanaPrivateDomain;
@@ -918,7 +918,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana节点私网访问IP
+         * kibanaPrivateIPWhitelist.
          */
         public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
             this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
@@ -926,7 +926,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana私网访问端口号
+         * kibanaPrivatePort.
          */
         public Builder kibanaPrivatePort(Long kibanaPrivatePort) {
             this.kibanaPrivatePort = kibanaPrivatePort;
@@ -934,7 +934,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Kibana访问协议
+         * kibanaProtocol.
          */
         public Builder kibanaProtocol(String kibanaProtocol) {
             this.kibanaProtocol = kibanaProtocol;
@@ -950,7 +950,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例网络设置
+         * networkConfig.
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -958,7 +958,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticseach集群热数据节点数量
+         * nodeAmount.
          */
         public Builder nodeAmount(Long nodeAmount) {
             this.nodeAmount = nodeAmount;
@@ -974,7 +974,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例付费类型
+         * paymentType.
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -982,7 +982,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群私网访问端口
+         * port.
          */
         public Builder port(Long port) {
             this.port = port;
@@ -990,7 +990,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群私网访问白名单
+         * privateNetworkIpWhiteList.
          */
         public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
             this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
@@ -998,7 +998,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例类型
+         * productType.
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -1006,7 +1006,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群访问协议
+         * protocol.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -1014,7 +1014,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch公网访问
+         * publicDomain.
          */
         public Builder publicDomain(String publicDomain) {
             this.publicDomain = publicDomain;
@@ -1022,7 +1022,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群公网访问IP
+         * publicIpWhitelist.
          */
         public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
             this.publicIpWhitelist = publicIpWhitelist;
@@ -1030,7 +1030,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * Elasticsearch集群公网访问端口号
+         * publicPort.
          */
         public Builder publicPort(Long publicPort) {
             this.publicPort = publicPort;
@@ -1046,7 +1046,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 资源组标识
+         * resourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -1054,7 +1054,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 云服务VPC
+         * serviceVpc.
          */
         public Builder serviceVpc(Boolean serviceVpc) {
             this.serviceVpc = serviceVpc;
@@ -1062,7 +1062,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群变更状态
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -1070,7 +1070,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例同义词配置
+         * synonymsDicts.
          */
         public Builder synonymsDicts(java.util.List < DictInfo > synonymsDicts) {
             this.synonymsDicts = synonymsDicts;
@@ -1078,7 +1078,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 标签
+         * tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.tags = tags;
@@ -1086,7 +1086,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例修改时间
+         * updatedAt.
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -1094,7 +1094,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 是否开启冷节点
+         * warmNode.
          */
         public Builder warmNode(Boolean warmNode) {
             this.warmNode = warmNode;
@@ -1110,7 +1110,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 实例所在可用区数量
+         * zoneCount.
          */
         public Builder zoneCount(Long zoneCount) {
             this.zoneCount = zoneCount;
@@ -1118,7 +1118,7 @@ public class Elasticsearch extends TeaModel {
         }
 
         /**
-         * 集群可用区分布状态
+         * zoneInfos.
          */
         public Builder zoneInfos(java.util.List < ZoneInfo > zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -1158,7 +1158,7 @@ public class Elasticsearch extends TeaModel {
             private String gcName; 
 
             /**
-             * GC垃圾回收器名称
+             * gcName.
              */
             public Builder gcName(String gcName) {
                 this.gcName = gcName;

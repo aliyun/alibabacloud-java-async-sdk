@@ -84,7 +84,7 @@ public class ListAckClustersRequest extends Request {
         } 
 
         /**
-         * page.
+         * The number of the page to return.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -93,7 +93,7 @@ public class ListAckClustersRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -102,7 +102,7 @@ public class ListAckClustersRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * The ID of the virtual private cloud (VPC) to which the ACK clusters belong.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("vpcId", vpcId);

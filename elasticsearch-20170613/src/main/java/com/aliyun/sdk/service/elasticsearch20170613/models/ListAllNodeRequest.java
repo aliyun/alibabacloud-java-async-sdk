@@ -69,7 +69,7 @@ public class ListAllNodeRequest extends Request {
         } 
 
         /**
-         * es-cn-tl32cpgwa002l\*\*\*\*
+         * The return results.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListAllNodeRequest extends Request {
         }
 
         /**
-         * false
+         * The Java Virtual Machine (JVM) heap memory usage of the node.
          */
         public Builder extended(Boolean extended) {
             this.putQueryParameter("extended", extended);

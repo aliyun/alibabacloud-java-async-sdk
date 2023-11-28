@@ -62,7 +62,7 @@ public class ListNodesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +118,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The number of entries returned.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -171,7 +171,7 @@ public class ListNodesResponseBody extends TeaModel {
             private String ipType; 
 
             /**
-             * host.
+             * The IP address.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -179,7 +179,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ipType.
+             * The type of the IP address. Valid values:
+             * <p>
+             * 
+             * *   public: public IP address
+             * *   private: private IP address
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -232,7 +236,7 @@ public class ListNodesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * tagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -240,7 +244,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -365,7 +369,13 @@ public class ListNodesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * agentStatus.
+             * The status of the shipper on the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   heartOk: The heartbeat is normal.
+             * *   heartLost: The heartbeat is abnormal.
+             * *   uninstalled: The shipper is not installed.
+             * *   failed: The shipper fails to be installed.
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -373,7 +383,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * cloudAssistantStatus.
+             * Indicates whether the Cloud Assistant client is installed. Valid values:
+             * <p>
+             * 
+             * *   true: installed
+             * *   false: not installed
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -381,7 +395,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ecsInstanceId.
+             * The ID of the ECS instance.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -389,7 +403,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ecsInstanceName.
+             * The name of the ECS instance.
              */
             public Builder ecsInstanceName(String ecsInstanceName) {
                 this.ecsInstanceName = ecsInstanceName;
@@ -397,7 +411,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ipAddress.
+             * The IP addresses of the ECS instance.
              */
             public Builder ipAddress(java.util.List < IpAddress> ipAddress) {
                 this.ipAddress = ipAddress;
@@ -405,7 +419,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * osType.
+             * The operating system type of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   windows: Windows Server
+             * *   linux: Linux
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -413,7 +431,13 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   running: The instance is running.
+             * *   starting: The instance is being started.
+             * *   stopping: The instance is being stopped.
+             * *   stopped: The instance is stopped.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -421,7 +445,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The tags of the ECS instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

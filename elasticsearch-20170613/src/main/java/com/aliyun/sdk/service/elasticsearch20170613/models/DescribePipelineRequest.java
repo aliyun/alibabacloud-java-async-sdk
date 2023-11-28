@@ -70,7 +70,7 @@ public class DescribePipelineRequest extends Request {
         } 
 
         /**
-         * ls-cn-oew1qbgl\*\*\*\*
+         * The information about the returned pipeline. For more information, see [logstash.yml](https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html).
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class DescribePipelineRequest extends Request {
         }
 
         /**
-         * pipeline_test
+         * The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.
          */
         public Builder pipelineId(String pipelineId) {
             this.putPathParameter("PipelineId", pipelineId);

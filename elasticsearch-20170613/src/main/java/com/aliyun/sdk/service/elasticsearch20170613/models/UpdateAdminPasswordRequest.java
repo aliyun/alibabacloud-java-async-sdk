@@ -84,7 +84,7 @@ public class UpdateAdminPasswordRequest extends Request {
         } 
 
         /**
-         * es-cn-nif1q9o8r0008\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -93,7 +93,7 @@ public class UpdateAdminPasswordRequest extends Request {
         }
 
         /**
-         * Elasticsearch实例的elastic账号的密码。
+         * esAdminPassword.
          */
         public Builder esAdminPassword(String esAdminPassword) {
             this.putBodyParameter("esAdminPassword", esAdminPassword);
@@ -102,7 +102,11 @@ public class UpdateAdminPasswordRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * Indicates whether the password was updated. Valid values:
+         * <p>
+         * 
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

@@ -50,7 +50,7 @@ public class StopPipelinesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class StopPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result. Valid values:
+         * <p>
+         * 
+         * *   true: The pipelines are stopped.
+         * *   false: The pipelines fail to be stopped.
          */
         public Builder result(Boolean result) {
             this.result = result;

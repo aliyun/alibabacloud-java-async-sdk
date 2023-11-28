@@ -62,7 +62,7 @@ public class WhiteIpGroup extends TeaModel {
         private java.util.List < String > ips; 
 
         /**
-         * IP白名单分组类型
+         * WhiteIpType.
          */
         public Builder whiteIpType(String whiteIpType) {
             this.whiteIpType = whiteIpType;
@@ -70,7 +70,7 @@ public class WhiteIpGroup extends TeaModel {
         }
 
         /**
-         * IP白名单分组名称
+         * groupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -78,7 +78,7 @@ public class WhiteIpGroup extends TeaModel {
         }
 
         /**
-         * IP白名单列表
+         * ips.
          */
         public Builder ips(java.util.List < String > ips) {
             this.ips = ips;

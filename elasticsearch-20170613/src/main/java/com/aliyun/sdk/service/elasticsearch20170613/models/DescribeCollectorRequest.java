@@ -55,7 +55,7 @@ public class DescribeCollectorRequest extends Request {
         } 
 
         /**
-         * ResId.
+         * The ID of the shipper.
          */
         public Builder resId(String resId) {
             this.putPathParameter("ResId", resId);

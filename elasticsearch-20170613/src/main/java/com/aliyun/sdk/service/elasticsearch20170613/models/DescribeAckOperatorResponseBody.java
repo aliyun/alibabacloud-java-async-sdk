@@ -50,7 +50,7 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,13 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * status.
+             * The installation status of ES-operator. Valid values:
+             * <p>
+             * 
+             * *   deployed: ES-operator is installed.
+             * *   not-deploy: ES-operator is not installed.
+             * *   failed: ES-operator fails to be installed.
+             * *   unknown: The installation status of ES-operator is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -118,7 +124,7 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version of ES-operator.
              */
             public Builder version(String version) {
                 this.version = version;

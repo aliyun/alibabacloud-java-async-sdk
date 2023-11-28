@@ -62,7 +62,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * The number of returned records.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The header of the response.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Cloud Assistant the installation status, support:
+         * <p>
+         * 
+         * *   true: The Prometheus agent was installed.
+         * *   false: The Prometheus agent was not installed.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +122,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of returned records.
+             * The returned data.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -171,7 +175,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String fileName; 
 
             /**
-             * The content of the file.
+             * The name of the file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -179,7 +183,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * The information about the extended parameter.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -232,13 +236,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The status of each crawl on the ECS instance. Valid values:
-             * <p>
-             * 
-             * *   heartOk: The heartbeat is normal.
-             * *   heartLost: The heartbeat is abnormal.
-             * *   uninstalled
-             * *   failed: The installation failed.
+             * The IDs of ECS instances.
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -246,7 +244,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of ECS instances.
+             * The list of access addresses of the specified instance for the output of the collector. Displayed when the **configType** is **collectorTargetInstance**.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -395,12 +393,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The configuration type. Valid values:
-             * <p>
-             * 
-             * *   collectorTargetInstance: Collector Output
-             * *   collectorDeployMachine: Collector Deployment Machine
-             * *   Collector Elasticsearch ForKibana: Elasticsearch instance information that supports the Kibana dashboard
+             * The instance type specified by Collector Output. Supports Elasticsearch and Logstash. Displayed when the **configType** is **collectorTargetInstance**.
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -408,11 +401,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether Monitoring is enabled. This field is displayed when the **configType** is **collectorTargetInstance** and the **instanceType** is **Elasticsearch**. Valid values:
-             * <p>
-             * 
-             * *   true
-             * *   false
+             * The ID of the host group. Displayed when the **configType** is **collectorDeployMachine**.
              */
             public Builder enableMonitoring(Boolean enableMonitoring) {
                 this.enableMonitoring = enableMonitoring;
@@ -420,7 +409,12 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host group. Displayed when the **configType** is **collectorDeployMachine**.
+             * The configuration type. Valid values:
+             * <p>
+             * 
+             * *   collectorTargetInstance: Collector Output
+             * *   collectorDeployMachine: Collector Deployment Machine
+             * *   Collector Elasticsearch ForKibana: Elasticsearch instance information that supports the Kibana dashboard
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -428,7 +422,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of access addresses of the specified instance for the output of the collector. Displayed when the **configType** is **collectorTargetInstance**.
+             * The path in which Filebeat is collected.
              */
             public Builder hosts(java.util.List < String > hosts) {
                 this.hosts = hosts;
@@ -436,7 +430,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is associated with the crawker. If the **configType** parameter is set to **collectorTargetInstance**, the value of this parameter is the ID of the output collector. If the **configType** parameter is set to **collectorDeployMachines** and the **type** parameter is set to **ACKCluster**, the value of this parameter is the ID of the ACK cluster.
+             * The list of ECS instances on which the collector is deployed. Displayed when the **configType** is **collectorDeployMachines** and the **type** is **ECSInstanceId**.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -444,7 +438,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type specified by Collector Output. Supports Elasticsearch and Logstash. Displayed when the **configType** is **collectorTargetInstance**.
+             * The transmission protocol, which must be the same as the access protocol of the instance specified by Output. HTTP and HTTPS. Displayed when the **configType** is **collectorTargetInstance**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -452,7 +446,13 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of ECS instances on which the collector is deployed. Displayed when the **configType** is **collectorDeployMachines** and the **type** is **ECSInstanceId**.
+             * The status of each crawl on the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   heartOk: The heartbeat is normal.
+             * *   heartLost: The heartbeat is abnormal.
+             * *   uninstalled
+             * *   failed: The installation failed.
              */
             public Builder machines(java.util.List < Machines> machines) {
                 this.machines = machines;
@@ -460,10 +460,18 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The transmission protocol, which must be the same as the access protocol of the instance specified by Output. HTTP and HTTPS. Displayed when the **configType** is **collectorTargetInstance**.
+             * The username that is used to access the instance. The default value is elastic. Displayed when the **configType** is **collectorTargetInstance** or **collectorElasticsearchForKibana**.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * The ID of the instance that is associated with the crawker. If the **configType** parameter is set to **collectorTargetInstance**, the value of this parameter is the ID of the output collector. If the **configType** parameter is set to **collectorDeployMachines** and the **type** parameter is set to **ACKCluster**, the value of this parameter is the ID of the ACK cluster.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -473,14 +481,6 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * 
              * *   ECSInstanceId:ECS
              * *   ACKCluster: Container Kubernetes
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            /**
-             * The username that is used to access the instance. The default value is elastic. Displayed when the **configType** is **collectorTargetInstance** or **collectorElasticsearchForKibana**.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -665,7 +665,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The path in which Filebeat is collected.
+             * collectorPaths.
              */
             public Builder collectorPaths(java.util.List < String > collectorPaths) {
                 this.collectorPaths = collectorPaths;
@@ -673,7 +673,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration file information of the collector.
+             * The content of the file.
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -681,11 +681,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to verify and create a crawer. Valid values:
-             * <p>
-             * 
-             * *   true: only verifies and does not create a
-             * *   false: verifies and creates a
+             * The ID of the Alibaba Cloud account.
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -693,66 +689,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the extended parameter.
+             * Whether Monitoring is enabled. This field is displayed when the **configType** is **collectorTargetInstance** and the **instanceType** is **Elasticsearch**. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
-                return this;
-            }
-
-            /**
-             * The time when the crawl collector was created.
-             */
-            public Builder gmtCreatedTime(String gmtCreatedTime) {
-                this.gmtCreatedTime = gmtCreatedTime;
-                return this;
-            }
-
-            /**
-             * The time when the collector was updated.
-             */
-            public Builder gmtUpdateTime(String gmtUpdateTime) {
-                this.gmtUpdateTime = gmtUpdateTime;
-                return this;
-            }
-
-            /**
-             * The name of the collector.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The ID of the Alibaba Cloud account.
-             */
-            public Builder ownerId(String ownerId) {
-                this.ownerId = ownerId;
-                return this;
-            }
-
-            /**
-             * The ID of the collector instance.
-             */
-            public Builder resId(String resId) {
-                this.resId = resId;
-                return this;
-            }
-
-            /**
-             * The type of the collector. FileBeat, metricBeat, heartBeat, and auditBeat are supported.
-             */
-            public Builder resType(String resType) {
-                this.resType = resType;
-                return this;
-            }
-
-            /**
-             * The version of the collector. If the machine type of the collector is ECS, only **6.8.5\_with_community** is supported.
-             */
-            public Builder resVersion(String resVersion) {
-                this.resVersion = resVersion;
                 return this;
             }
 
@@ -763,13 +707,73 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * *   activating: The project is taking effect.
              * *   active: The instance has taken effect.
              */
+            public Builder gmtCreatedTime(String gmtCreatedTime) {
+                this.gmtCreatedTime = gmtCreatedTime;
+                return this;
+            }
+
+            /**
+             * Specifies whether to verify and create a crawer. Valid values:
+             * <p>
+             * 
+             * *   true: only verifies and does not create a
+             * *   false: verifies and creates a
+             */
+            public Builder gmtUpdateTime(String gmtUpdateTime) {
+                this.gmtUpdateTime = gmtUpdateTime;
+                return this;
+            }
+
+            /**
+             * The configuration file information of the collector.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The ID of the Virtual Private Cloud to which the collector belongs.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * The time when the collector was updated.
+             */
+            public Builder resId(String resId) {
+                this.resId = resId;
+                return this;
+            }
+
+            /**
+             * The version of the collector. If the machine type of the collector is ECS, only **6.8.5\_with_community** is supported.
+             */
+            public Builder resType(String resType) {
+                this.resType = resType;
+                return this;
+            }
+
+            /**
+             * The time when the crawl collector was created.
+             */
+            public Builder resVersion(String resVersion) {
+                this.resVersion = resVersion;
+                return this;
+            }
+
+            /**
+             * The name of the collector.
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The ID of the Virtual Private Cloud to which the collector belongs.
+             * The type of the collector. FileBeat, metricBeat, heartBeat, and auditBeat are supported.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -822,7 +826,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String ipType; 
 
             /**
-             * The IP address of the endpoint.
+             * The information about the collectors on the ECS instance.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -830,11 +834,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IP address that is used by the instance. Valid values:
-             * <p>
-             * 
-             * *   public: public endpoint
-             * *   private: private network address
+             * The IP address of the endpoint.
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -959,11 +959,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * Cloud Assistant the installation status, support:
-             * <p>
-             * 
-             * *   true: The Prometheus agent was installed.
-             * *   false: The Prometheus agent was not installed.
+             * The name of the ECS instance.
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -971,7 +967,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the collectors on the ECS instance.
+             * The ID of the collector instance.
              */
             public Builder collectors(java.util.List < Collectors> collectors) {
                 this.collectors = collectors;
@@ -979,7 +975,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The tags of the ECS instance.
              */
             public Builder ecsInstanceId(String ecsInstanceId) {
                 this.ecsInstanceId = ecsInstanceId;
@@ -987,7 +983,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * The ID of the ECS instance.
              */
             public Builder ecsInstanceName(String ecsInstanceName) {
                 this.ecsInstanceName = ecsInstanceName;
@@ -995,22 +991,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the ECS instance.
+             * The type of the IP address that is used by the instance. Valid values:
+             * <p>
+             * 
+             * *   public: public endpoint
+             * *   private: private network address
              */
             public Builder ipAddress(java.util.List < IpAddress> ipAddress) {
                 this.ipAddress = ipAddress;
-                return this;
-            }
-
-            /**
-             * The operating system type of the ECS instance. Valid values:
-             * <p>
-             * 
-             * *   windows:Windows operating system
-             * *   linux:Linux operating system
-             */
-            public Builder osType(String osType) {
-                this.osType = osType;
                 return this;
             }
 
@@ -1023,13 +1011,25 @@ public class ListEcsInstancesResponseBody extends TeaModel {
              * *   stopping: The task is being stopped.
              * *   stopped: The node is stopped.
              */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * The IP address of the ECS instance.
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The tags of the ECS instance.
+             * The operating system type of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   windows:Windows operating system
+             * *   linux:Linux operating system
              */
             public Builder tags(String tags) {
                 this.tags = tags;

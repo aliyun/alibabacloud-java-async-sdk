@@ -175,7 +175,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 是否同时自动创建数据流
+         * dataStream.
          */
         public Builder dataStream(Boolean dataStream) {
             this.putBodyParameter("dataStream", dataStream);
@@ -184,7 +184,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 生命周期策略名称
+         * ilmPolicy.
          */
         public Builder ilmPolicy(String ilmPolicy) {
             this.putBodyParameter("ilmPolicy", ilmPolicy);
@@ -193,7 +193,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 索引匹配模式正则
+         * indexPatterns.
          */
         public Builder indexPatterns(java.util.List < String > indexPatterns) {
             this.putBodyParameter("indexPatterns", indexPatterns);
@@ -202,7 +202,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 索引模版名称
+         * indexTemplate.
          */
         public Builder indexTemplate(String indexTemplate) {
             this.putBodyParameter("indexTemplate", indexTemplate);
@@ -211,7 +211,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 优先级。数组越大，优先级越高。
+         * priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("priority", priority);
@@ -220,7 +220,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * 模版设置。详情见：https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-template.html#multiple-component-templates
+         * template.
          */
         public Builder template(Template template) {
             this.putBodyParameter("template", template);
@@ -286,7 +286,7 @@ public class CreateIndexTemplateRequest extends Request {
             private String settings; 
 
             /**
-             * aliases设置
+             * aliases.
              */
             public Builder aliases(String aliases) {
                 this.aliases = aliases;
@@ -294,7 +294,7 @@ public class CreateIndexTemplateRequest extends Request {
             }
 
             /**
-             * mappings设置
+             * mappings.
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -302,7 +302,7 @@ public class CreateIndexTemplateRequest extends Request {
             }
 
             /**
-             * settings设置
+             * settings.
              */
             public Builder settings(String settings) {
                 this.settings = settings;

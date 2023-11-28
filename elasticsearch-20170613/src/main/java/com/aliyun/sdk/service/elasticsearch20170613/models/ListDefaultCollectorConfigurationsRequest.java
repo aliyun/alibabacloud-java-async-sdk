@@ -84,7 +84,13 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         } 
 
         /**
-         * resType.
+         * The shipper type. Valid values:
+         * <p>
+         * 
+         * *   fileBeat
+         * *   metricBeat
+         * *   heartBeat
+         * *   auditBeat
          */
         public Builder resType(String resType) {
             this.putQueryParameter("resType", resType);
@@ -93,7 +99,11 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * resVersion.
+         * The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:
+         * <p>
+         * 
+         * *   ECS: 6.8.5\_with_community
+         * *   ACK: 6.8.13\_with_community
          */
         public Builder resVersion(String resVersion) {
             this.putQueryParameter("resVersion", resVersion);
@@ -102,7 +112,11 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:
+         * <p>
+         * 
+         * *   ECS: ECS instance
+         * *   ACK: ACK cluster
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("sourceType", sourceType);

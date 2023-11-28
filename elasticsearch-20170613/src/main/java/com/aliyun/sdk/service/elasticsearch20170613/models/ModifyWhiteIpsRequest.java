@@ -139,7 +139,11 @@ public class ModifyWhiteIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The node type. This parameter is required if you configure the whiteIpList parameter. Valid values:
+         * <p>
+         * 
+         * *   WORKER
+         * *   KIBANA
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -148,14 +152,10 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * 修改方式，取值含义如下：
+         * The information about the IP address whitelist that you want to update. You can specify only one whitelist.
          * <p>
          * 
-         * Cover（默认值）：使用ips参数的值覆盖原IP白名单。
-         * 
-         * Append：在原IP白名单中增加ips参数中输入的IP地址。
-         * 
-         * Delete：Delete：在原IP白名单中删除ips参数中输入的IP地址，至少需要保留一个IP地址。
+         * > You cannot configure both the whiteIpList and whiteIpGroup parameters.
          */
         public Builder modifyMode(String modifyMode) {
             this.putBodyParameter("modifyMode", modifyMode);
@@ -164,7 +164,10 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * 网络类型。可选值：PRIVATE（私网）、PUBLIC（公网）。如果选填了whiteIpList参数，则该参数必填。
+         * The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
+         * <p>
+         * 
+         * > You cannot configure both the whiteIpList and whiteIpGroup parameters.
          */
         public Builder networkType(String networkType) {
             this.putBodyParameter("networkType", networkType);
@@ -173,7 +176,7 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * 节点类型。可选值：WORKER（Elasticsearch集群）、KIBANA（Kibana集群）。如果选填了whiteIpList参数，则该参数必填。
+         * The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.
          */
         public Builder nodeType(String nodeType) {
             this.putBodyParameter("nodeType", nodeType);
@@ -182,7 +185,7 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * 以白名单组whiteIpGroup传参方式，更新实例白名单安全配置。仅支持更新一个白名单组。
+         * The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
          */
         public Builder whiteIpGroup(WhiteIpGroup whiteIpGroup) {
             this.putBodyParameter("whiteIpGroup", whiteIpGroup);
@@ -191,7 +194,7 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * 白名单列表。whiteIpGroup为空时可用，更改默认分组白名单
+         * The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.
          */
         public Builder whiteIpList(java.util.List < String > whiteIpList) {
             this.putBodyParameter("whiteIpList", whiteIpList);
@@ -200,7 +203,11 @@ public class ModifyWhiteIpsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * The network type. This parameter is required if you configure the whiteIpList parameter. Valid values:
+         * <p>
+         * 
+         * *   PRIVATE
+         * *   PUBLIC
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -266,7 +273,13 @@ public class ModifyWhiteIpsRequest extends Request {
             private String whiteIpType; 
 
             /**
-             * 白名单组的组名。如果选填了whiteIpGroup参数，则该参数必填。
+             * The type of the IP address whitelist. Valid values:
+             * <p>
+             * 
+             * *   PRIVATE_KIBANA
+             * *   PRIVATE_ES
+             * *   PUBLIC_ES
+             * *   PUBLIC_KIBANA
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -274,7 +287,7 @@ public class ModifyWhiteIpsRequest extends Request {
             }
 
             /**
-             * 白名单组中的IP列表。如果选填了whiteIpGroup参数，则该参数必填。
+             * The returned result.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -282,7 +295,7 @@ public class ModifyWhiteIpsRequest extends Request {
             }
 
             /**
-             * ip白名单的类型
+             * The request ID.
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;

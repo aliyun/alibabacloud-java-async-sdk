@@ -58,7 +58,7 @@ public class DescribeDynamicSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * Result.
          */
         public Builder result(String result) {
             this.result = result;

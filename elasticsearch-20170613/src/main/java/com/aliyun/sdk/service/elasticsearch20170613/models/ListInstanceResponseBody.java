@@ -62,7 +62,13 @@ public class ListInstanceResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   active: normal
+         * *   activating: taking effect
+         * *   inactive: frozen
+         * *   invalid: invalid
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +76,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The time when the node is created.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Indicates whether it is a service VPC.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +124,11 @@ public class ListInstanceResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of entries returned per page.
+             * Specifies whether to include dedicated master nodes (obsolete). Valid values:
+             * <p>
+             * 
+             * *   true: The files contain data that is dumped to the IA storage medium.
+             * *   false: The files do not contain data that is dumped to the IA storage medium.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -195,7 +205,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -203,7 +213,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * Specifies whether to enable disk encryption for the node. Valid values:
+             * <p>
+             * 
+             * *   true: enables instant image cache.
+             * *   false: disables reuse of image cache layers.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -211,7 +225,12 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Only ultra disks (cloud_efficiency) are supported.
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: SSD.
+             * *   cloud_essd: ESSD.
+             * *   cloud_efficiency: ultra disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -219,7 +238,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * The number of nodes.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -324,11 +343,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable disk encryption for the node. Valid values:
-             * <p>
-             * 
-             * *   true: enables instant image cache.
-             * *   false: disables reuse of image cache layers.
+             * The storage type of the node.
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -336,12 +351,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Valid values:
-             * <p>
-             * 
-             * *   cloud_ssd: SSD.
-             * *   cloud_essd: ESSD.
-             * *   cloud_efficiency: ultra disk
+             * The configuration of dedicated master nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -426,7 +436,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -434,7 +444,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -442,7 +452,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node.
+             * The network configurations.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -450,7 +460,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * The number of nodes.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -527,7 +537,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The number of nodes.
+             * The network type. Only Virtual Private Cloud (VPC) is supported.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -535,7 +545,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the node storage space. Unit: GB.
+             * The vSwitch ID of the cluster.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -543,7 +553,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.
+             * The configuration of data nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -551,7 +561,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * The zone where the cluster resides.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -616,7 +626,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String whiteIpType; 
 
             /**
-             * 分组名。
+             * groupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -624,7 +634,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网络白名单列表。
+             * ips.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -632,7 +642,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网络类型。PRIVATE_ES，ES私网。PUBLIC_KIBANA。Kibana公网。PUBLIC_ES，ES公网。PRIVATE_KIBANA，Kibana私网。
+             * whiteIpType.
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;
@@ -721,7 +731,11 @@ public class ListInstanceResponseBody extends TeaModel {
             private java.util.List < WhiteIpGroupList> whiteIpGroupList; 
 
             /**
-             * The network type. Only Virtual Private Cloud (VPC) is supported.
+             * The storage type of the node. Valid values:
+             * <p>
+             * 
+             * *   cloud_ssd: standard SSD
+             * *   cloud_efficiency: ultra disk
              */
             public Builder type(String type) {
                 this.type = type;
@@ -729,7 +743,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the cluster.
+             * The storage space of the node. Unit: GB.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -737,7 +751,11 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the cluster resides.
+             * Specifies whether to use disk encryption. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -745,7 +763,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the cluster.
+             * The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -753,7 +771,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 集群公私网网络白名单分组设置。
+             * whiteIpGroupList.
              */
             public Builder whiteIpGroupList(java.util.List < WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
@@ -842,7 +860,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * The storage space of the node. Unit: GB.
+             * The vSwitch ID of the cluster.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -850,11 +868,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to use disk encryption. Valid values:
-             * <p>
-             * 
-             * *   true
-             * *   false
+             * The storage type of the node.
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -862,11 +876,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the node. Valid values:
-             * <p>
-             * 
-             * *   cloud_ssd: standard SSD
-             * *   cloud_efficiency: ultra disk
+             * The configuration of data nodes.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -874,7 +884,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.
+             * performanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -882,7 +892,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             * The zone where the cluster resides.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -935,7 +945,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The size of the node storage space. Unit: GB.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -943,7 +953,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The storage type of the node. Only ultra disks (cloud_efficiency) are supported.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1296,11 +1306,11 @@ public class ListInstanceResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * Specifies whether to include dedicated master nodes. Valid values:
+             * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   true: The files contain data that is dumped to the IA storage medium.
-             * *   false: The files do not contain data that is dumped to the IA storage medium.
+             * *   **prepaid**: subscription
+             * *   **postpaid**: pay-as-you-go
              */
             public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
                 this.advancedDedicateMaster = advancedDedicateMaster;
@@ -1308,146 +1318,10 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Coordination node configuration.
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
              */
             public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
                 this.clientNodeConfiguration = clientNodeConfiguration;
-                return this;
-            }
-
-            /**
-             * The time when the node is created.
-             */
-            public Builder createdAt(String createdAt) {
-                this.createdAt = createdAt;
-                return this;
-            }
-
-            /**
-             * Specifies whether to include dedicated master nodes (obsolete). Valid values:
-             * <p>
-             * 
-             * *   true: The files contain data that is dumped to the IA storage medium.
-             * *   false: The files do not contain data that is dumped to the IA storage medium.
-             */
-            public Builder dedicateMaster(Boolean dedicateMaster) {
-                this.dedicateMaster = dedicateMaster;
-                return this;
-            }
-
-            /**
-             * The name of the instance.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The configurations of elastic data nodes.
-             */
-            public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
-                this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
-                return this;
-            }
-
-            /**
-             * The edition of the dedicated KMS instance.
-             */
-            public Builder esVersion(String esVersion) {
-                this.esVersion = esVersion;
-                return this;
-            }
-
-            /**
-             * The configuration of cluster extension parameters.
-             */
-            public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
-                this.extendConfigs = extendConfigs;
-                return this;
-            }
-
-            /**
-             * The ID of the instance.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * Specifies whether to deploy the new architecture.
-             */
-            public Builder isNewDeployment(String isNewDeployment) {
-                this.isNewDeployment = isNewDeployment;
-                return this;
-            }
-
-            /**
-             * The configuration of Kibana nodes.
-             */
-            public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
-                this.kibanaConfiguration = kibanaConfiguration;
-                return this;
-            }
-
-            /**
-             * 集群Kibana节点公网访问白名单。
-             */
-            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
-                this.kibanaIPWhitelist = kibanaIPWhitelist;
-                return this;
-            }
-
-            /**
-             * 集群Kibana节点私网访问白名单。
-             */
-            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
-                this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
-                return this;
-            }
-
-            /**
-             * The configuration of dedicated master nodes.
-             */
-            public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
-                this.masterConfiguration = masterConfiguration;
-                return this;
-            }
-
-            /**
-             * The network configurations.
-             */
-            public Builder networkConfig(NetworkConfig networkConfig) {
-                this.networkConfig = networkConfig;
-                return this;
-            }
-
-            /**
-             * The number of data nodes.
-             */
-            public Builder nodeAmount(Integer nodeAmount) {
-                this.nodeAmount = nodeAmount;
-                return this;
-            }
-
-            /**
-             * The configuration of data nodes.
-             */
-            public Builder nodeSpec(NodeSpec nodeSpec) {
-                this.nodeSpec = nodeSpec;
-                return this;
-            }
-
-            /**
-             * The billing method of the instance. Valid values:
-             * <p>
-             * 
-             * *   **prepaid**: subscription
-             * *   **postpaid**: pay-as-you-go
-             */
-            public Builder paymentType(String paymentType) {
-                this.paymentType = paymentType;
                 return this;
             }
 
@@ -1459,13 +1333,141 @@ public class ListInstanceResponseBody extends TeaModel {
              * *   **closed**: Close
              * *   **indebt**: Overdue payments are frozen
              */
+            public Builder createdAt(String createdAt) {
+                this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * The edition of the dedicated KMS instance.
+             */
+            public Builder dedicateMaster(Boolean dedicateMaster) {
+                this.dedicateMaster = dedicateMaster;
+                return this;
+            }
+
+            /**
+             * The key of the tag.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The configuration of Kibana nodes.
+             */
+            public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
+                this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
+                return this;
+            }
+
+            /**
+             * The value of the tag.
+             */
+            public Builder esVersion(String esVersion) {
+                this.esVersion = esVersion;
+                return this;
+            }
+
+            /**
+             * The configurations of elastic data nodes.
+             */
+            public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
+                this.extendConfigs = extendConfigs;
+                return this;
+            }
+
+            /**
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The configuration of cluster extension parameters.
+             */
+            public Builder isNewDeployment(String isNewDeployment) {
+                this.isNewDeployment = isNewDeployment;
+                return this;
+            }
+
+            /**
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             */
+            public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
+                this.kibanaConfiguration = kibanaConfiguration;
+                return this;
+            }
+
+            /**
+             * kibanaIPWhitelist.
+             */
+            public Builder kibanaIPWhitelist(java.util.List < String > kibanaIPWhitelist) {
+                this.kibanaIPWhitelist = kibanaIPWhitelist;
+                return this;
+            }
+
+            /**
+             * kibanaPrivateIPWhitelist.
+             */
+            public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
+                this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
+                return this;
+            }
+
+            /**
+             * The VPC ID of the cluster.
+             */
+            public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
+                this.masterConfiguration = masterConfiguration;
+                return this;
+            }
+
+            /**
+             * The instance type of the node. For more information, see [Specifications](~~271718~~).
+             */
+            public Builder networkConfig(NetworkConfig networkConfig) {
+                this.networkConfig = networkConfig;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
+             */
+            public Builder nodeAmount(Integer nodeAmount) {
+                this.nodeAmount = nodeAmount;
+                return this;
+            }
+
+            /**
+             * The VPC ID of the cluster.
+             */
+            public Builder nodeSpec(NodeSpec nodeSpec) {
+                this.nodeSpec = nodeSpec;
+                return this;
+            }
+
+            /**
+             * The time when the instance was last updated.
+             */
+            public Builder paymentType(String paymentType) {
+                this.paymentType = paymentType;
+                return this;
+            }
+
+            /**
+             * The tags of the instance. Each tag is a key-value pair.
+             */
             public Builder postpaidServiceStatus(String postpaidServiceStatus) {
                 this.postpaidServiceStatus = postpaidServiceStatus;
                 return this;
             }
 
             /**
-             * Elasticsearch集群私网访问白名单。
+             * privateNetworkIpWhiteList.
              */
             public Builder privateNetworkIpWhiteList(java.util.List < String > privateNetworkIpWhiteList) {
                 this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
@@ -1473,7 +1475,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Elasticsearch集群公网访问白名单。
+             * publicIpWhitelist.
              */
             public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;
@@ -1481,7 +1483,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the instance.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1489,7 +1491,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a service VPC.
+             * Specifies whether to deploy the new architecture.
              */
             public Builder serviceVpc(Boolean serviceVpc) {
                 this.serviceVpc = serviceVpc;
@@ -1497,13 +1499,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
-             * 
-             * *   active: normal
-             * *   activating: taking effect
-             * *   inactive: frozen
-             * *   invalid: invalid
+             * The name of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1511,7 +1507,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance. Each tag is a key-value pair.
+             * The number of nodes.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1519,7 +1515,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * Coordination node configuration.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -1527,7 +1523,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the cluster.
+             * vpcInstanceId.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

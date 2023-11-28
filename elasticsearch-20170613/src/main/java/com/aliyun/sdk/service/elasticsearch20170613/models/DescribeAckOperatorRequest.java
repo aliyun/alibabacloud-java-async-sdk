@@ -55,7 +55,7 @@ public class DescribeAckOperatorRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

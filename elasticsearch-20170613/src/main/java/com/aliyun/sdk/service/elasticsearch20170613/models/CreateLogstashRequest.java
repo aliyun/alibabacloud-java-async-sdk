@@ -170,7 +170,7 @@ public class CreateLogstashRequest extends Request {
         } 
 
         /**
-         * Logstash实例别名。
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -224,7 +224,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * Logstash实例所属资源组。
+         * resourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -242,7 +242,7 @@ public class CreateLogstashRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -506,7 +506,7 @@ public class CreateLogstashRequest extends Request {
             private String pricingCycle; 
 
             /**
-             * 自动续费包月周期
+             * autoRenewDuration.
              */
             public Builder autoRenewDuration(Long autoRenewDuration) {
                 this.autoRenewDuration = autoRenewDuration;
@@ -514,7 +514,7 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * 包月周期
+             * duration.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -522,7 +522,7 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * 是否自动续费
+             * isAutoRenew.
              */
             public Builder isAutoRenew(Boolean isAutoRenew) {
                 this.isAutoRenew = isAutoRenew;
@@ -530,7 +530,7 @@ public class CreateLogstashRequest extends Request {
             }
 
             /**
-             * 日期单位
+             * pricingCycle.
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;

@@ -62,7 +62,16 @@ public class ListSearchLogResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The header of the response.
+         * The level of the log. Valid values:
+         * <p>
+         * 
+         * *   warn: warning log
+         * *   info: information log
+         * *   error: error log
+         * *   trace: trace logs
+         * *   debug: debug logs
+         * 
+         * The level information has been migrated to the contentCollection field.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +79,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The list of logs returned by the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +87,7 @@ public class ListSearchLogResponseBody extends TeaModel {
         }
 
         /**
-         * The list of logs returned by the request.
+         * The content of the log entry. Migrated to the contentCollection field.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -118,7 +127,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * The number of entries returned per page.
+             * The IP address of the node that generates the log.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -219,7 +228,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The content of the log entry. Migrated to the contentCollection field.
+             * The ID of the instance.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -227,7 +236,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the log entry. Different content fields are returned for different log types.
+             * contentCollection.
              */
             public Builder contentCollection(java.util.Map < String, ? > contentCollection) {
                 this.contentCollection = contentCollection;
@@ -235,7 +244,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node that generates the log.
+             * Details of the log entry. Different content fields are returned for different log types.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -243,7 +252,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * instanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -251,16 +260,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the log. Valid values:
-             * <p>
-             * 
-             * *   warn: warning log
-             * *   info: information log
-             * *   error: error log
-             * *   trace: trace logs
-             * *   debug: debug logs
-             * 
-             * The level information has been migrated to the contentCollection field.
+             * The timestamp when the log is generated. Unit: ms.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -268,7 +268,7 @@ public class ListSearchLogResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the log is generated. Unit: ms.
+             * timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

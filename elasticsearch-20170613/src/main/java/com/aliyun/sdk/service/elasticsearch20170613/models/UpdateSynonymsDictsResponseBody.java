@@ -50,7 +50,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * fileSize.
+             * The size of the dictionary file. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -142,7 +142,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,11 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source type of the dictionary file. Valid values:
+             * <p>
+             * 
+             * *   OSS
+             * *   ORIGIN
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -158,7 +162,7 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The dictionary type. The value is fixed as SYNONYMS.
              */
             public Builder type(String type) {
                 this.type = type;

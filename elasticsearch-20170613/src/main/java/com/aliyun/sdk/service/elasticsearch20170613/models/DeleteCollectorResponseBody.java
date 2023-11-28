@@ -50,7 +50,7 @@ public class DeleteCollectorResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the shipper is deleted. Valid values:
+         * <p>
+         * 
+         * *   true: The shipper is deleted.
+         * *   false: The shipper fails to be deleted.
          */
         public Builder result(Boolean result) {
             this.result = result;

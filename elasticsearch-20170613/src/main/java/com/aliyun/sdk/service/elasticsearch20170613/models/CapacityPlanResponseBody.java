@@ -50,7 +50,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the current request.
+         * The response of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The response of the request.
+         * The extension configuration information.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,21 +122,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * The type of the configuration. Set the value to sharedDisk.
-             * <p>
-             * 
-             * >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+             * The size of the disk. Unit: GiB.
              */
             public Builder configType(String configType) {
                 this.configType = configType;
-                return this;
-            }
-
-            /**
-             * The size of the disk. Unit: GiB.
-             */
-            public Builder disk(Long disk) {
-                this.disk = disk;
                 return this;
             }
 
@@ -145,6 +134,19 @@ public class CapacityPlanResponseBody extends TeaModel {
              * <p>
              * 
              * >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
+             */
+            public Builder disk(Long disk) {
+                this.disk = disk;
+                return this;
+            }
+
+            /**
+             * The version type. Valid values:
+             * <p>
+             * 
+             * *   advanced: enhanced edition
+             * *   x-pack: Commercial Edition
+             * *   community: community version
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -245,7 +247,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The number of cores.
+             * The number of CPUs of the cloud desktop.
              */
             public Builder amount(Long amount) {
                 this.amount = amount;
@@ -253,18 +255,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPUs of the cloud desktop.
+             * The size of the disk. Unit: GiB.
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
-                return this;
-            }
-
-            /**
-             * The size of the disk. Unit: GiB.
-             */
-            public Builder disk(Long disk) {
-                this.disk = disk;
                 return this;
             }
 
@@ -278,16 +272,16 @@ public class CapacityPlanResponseBody extends TeaModel {
              * *   local_ssd: local SSD
              * *   local_efficiency: local ultra disk
              */
-            public Builder diskType(String diskType) {
-                this.diskType = diskType;
+            public Builder disk(Long disk) {
+                this.disk = disk;
                 return this;
             }
 
             /**
              * The memory size of the current node role.
              */
-            public Builder memory(Long memory) {
-                this.memory = memory;
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
                 return this;
             }
 
@@ -301,6 +295,18 @@ public class CapacityPlanResponseBody extends TeaModel {
              * *   KIBANA: Kibana node
              * *   COORDINATING: client node
              * *   ELASTIC_WORKER: elastic node
+             */
+            public Builder memory(Long memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * The result calculated based on the capacity planning. No default value is available. The values are as follows:
+             * <p>
+             * 
+             * *   true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.
+             * *   false: The number of data nodes calculated by capacity planning is less than 50.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -377,7 +383,10 @@ public class CapacityPlanResponseBody extends TeaModel {
             private Boolean oversizedCluster; 
 
             /**
-             * The extension configuration information.
+             * The type of the configuration. Set the value to sharedDisk.
+             * <p>
+             * 
+             * >  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).
              */
             public Builder extendConfigs(java.util.List < ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -385,12 +394,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The version type. Valid values:
-             * <p>
-             * 
-             * *   advanced: enhanced edition
-             * *   x-pack: Commercial Edition
-             * *   community: community version
+             * The node information.
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -398,7 +402,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The node information.
+             * The number of cores.
              */
             public Builder nodeConfigurations(java.util.List < NodeConfigurations> nodeConfigurations) {
                 this.nodeConfigurations = nodeConfigurations;
@@ -406,11 +410,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The result calculated based on the capacity planning. No default value is available. The values are as follows:
-             * <p>
-             * 
-             * *   true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.
-             * *   false: The number of data nodes calculated by capacity planning is less than 50.
+             * OversizedCluster.
              */
             public Builder oversizedCluster(Boolean oversizedCluster) {
                 this.oversizedCluster = oversizedCluster;

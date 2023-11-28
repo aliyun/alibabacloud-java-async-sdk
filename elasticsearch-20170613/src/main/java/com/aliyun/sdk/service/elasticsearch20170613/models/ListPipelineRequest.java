@@ -99,7 +99,7 @@ public class ListPipelineRequest extends Request {
         } 
 
         /**
-         * ls-cn-oew1qbgl\*\*\*\*
+         * 15
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -108,7 +108,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * 1
+         * The header of the response.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -117,7 +117,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * pipeline_test
+         * The ID of the request.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("pipelineId", pipelineId);
@@ -126,7 +126,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * 15
+         * The total number of returned entries.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

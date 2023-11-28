@@ -74,7 +74,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * Code.
+         * The response code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The color that indicates the health status of the cluster.
          */
         public Builder result(String result) {
             this.result = result;

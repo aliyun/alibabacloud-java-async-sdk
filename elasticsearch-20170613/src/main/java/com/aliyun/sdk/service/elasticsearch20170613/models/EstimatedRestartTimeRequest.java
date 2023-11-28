@@ -83,7 +83,7 @@ public class EstimatedRestartTimeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class EstimatedRestartTimeRequest extends Request {
         }
 
         /**
-         * force.
+         * Specifies whether to forcibly restart the cluster. Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

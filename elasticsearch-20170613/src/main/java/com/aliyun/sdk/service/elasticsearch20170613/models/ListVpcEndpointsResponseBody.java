@@ -50,7 +50,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The details of the endpoints.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -194,7 +194,16 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * connectionStatus.
+             * The status of the endpoint connection. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Connecting
+             * *   Connected
+             * *   Disconnecting
+             * *   Disconnected
+             * *   Deleting
+             * *   ServiceDeleted
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -202,7 +211,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time when the endpoint was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +219,11 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointBusinessStatus.
+             * The business status of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   FinancialLocked
              */
             public Builder endpointBusinessStatus(String endpointBusinessStatus) {
                 this.endpointBusinessStatus = endpointBusinessStatus;
@@ -218,7 +231,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointDomain.
+             * The domain name of the endpoint. The domain name is used for connection configuration.
              */
             public Builder endpointDomain(String endpointDomain) {
                 this.endpointDomain = endpointDomain;
@@ -226,7 +239,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointId.
+             * The ID of the endpoint.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -234,7 +247,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointName.
+             * The name of the endpoint.
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -242,7 +255,13 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointStatus.
+             * The status of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   Creating
+             * *   Active
+             * *   Pending
+             * *   Deleting
              */
             public Builder endpointStatus(String endpointStatus) {
                 this.endpointStatus = endpointStatus;
@@ -250,7 +269,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * The ID of the endpoint service with which the endpoint is associated.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -258,7 +277,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * The name of the endpoint service with which the endpoint is associated.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

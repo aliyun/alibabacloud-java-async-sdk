@@ -50,7 +50,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * fileSize.
+             * The size of the driver file. Unit: byte.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -130,7 +130,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the driver file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +138,7 @@ public class UpdateExtendfilesResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The source of the driver file. This parameter is fixed as ORIGIN, which indicates that the driver file is retained.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

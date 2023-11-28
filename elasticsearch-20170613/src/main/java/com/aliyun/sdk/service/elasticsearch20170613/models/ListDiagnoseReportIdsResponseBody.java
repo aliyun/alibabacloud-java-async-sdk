@@ -62,7 +62,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -70,7 +70,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
             private Integer xTotalCount; 
 
             /**
-             * X-Total-Count.
+             * The total number of entries returned.
              */
             public Builder xTotalCount(Integer xTotalCount) {
                 this.xTotalCount = xTotalCount;

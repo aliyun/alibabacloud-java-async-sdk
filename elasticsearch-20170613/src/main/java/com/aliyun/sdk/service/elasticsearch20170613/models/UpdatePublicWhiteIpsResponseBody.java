@@ -50,7 +50,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * Cover
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
             private java.util.List < String > publicIpWhitelist; 
 
             /**
-             * The results that are returned.
+             * publicIpWhitelist.
              */
             public Builder publicIpWhitelist(java.util.List < String > publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;

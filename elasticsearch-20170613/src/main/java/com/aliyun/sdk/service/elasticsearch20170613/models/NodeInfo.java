@@ -74,7 +74,7 @@ public class NodeInfo extends TeaModel {
         private String zoneId; 
 
         /**
-         * 节点IP
+         * host.
          */
         public Builder host(String host) {
             this.host = host;
@@ -82,7 +82,7 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * 节点名称
+         * hostName.
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -90,7 +90,7 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * 节点端口号
+         * port.
          */
         public Builder port(Long port) {
             this.port = port;
@@ -98,7 +98,7 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * 节点所在可用区标识
+         * zoneId.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

@@ -50,7 +50,7 @@ public class UpdateLogstashChargeTypeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class UpdateLogstashChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the billing method of the cluster is switched. Valid values:
+         * <p>
+         * 
+         * *   true: The billing method is switched.
+         * *   false: The billing method fails to be switched.
          */
         public Builder result(Boolean result) {
             this.result = result;

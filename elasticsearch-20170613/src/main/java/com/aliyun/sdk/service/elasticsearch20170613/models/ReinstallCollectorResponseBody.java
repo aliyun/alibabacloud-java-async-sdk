@@ -58,7 +58,7 @@ public class ReinstallCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The ID of the request.
          */
         public Builder result(Boolean result) {
             this.result = result;

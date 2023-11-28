@@ -85,7 +85,7 @@ public class ListAckNamespacesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class ListAckNamespacesRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -103,7 +103,7 @@ public class ListAckNamespacesRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

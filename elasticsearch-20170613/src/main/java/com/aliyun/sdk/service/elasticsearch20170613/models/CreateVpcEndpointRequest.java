@@ -111,7 +111,7 @@ public class CreateVpcEndpointRequest extends Request {
         } 
 
         /**
-         * es-cn-2r429tctl000d\*\*\*\*
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -120,7 +120,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*
+         * The returned result details.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,7 +129,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * 终端节点服务ID
+         * serviceId.
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("serviceId", serviceId);
@@ -138,7 +138,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * 可用区ID
+         * zoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zoneId", zoneId);
@@ -147,7 +147,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * false
+         * The ID of the user endpoint service associated with the endpoint.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

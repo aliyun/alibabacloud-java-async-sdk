@@ -173,7 +173,7 @@ public class CreateCollectorRequest extends Request {
         } 
 
         /**
-         * filebeat的采集路径，只有ECS机器上的使用
+         * collectorPaths.
          */
         public Builder collectorPaths(java.util.List < String > collectorPaths) {
             this.putBodyParameter("collectorPaths", collectorPaths);
@@ -182,7 +182,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 配置文件信息
+         * configs.
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.putBodyParameter("configs", configs);
@@ -191,7 +191,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 创建是否校验。true:只校验不创建，false：校验并创建
+         * dryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -200,7 +200,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 采集器Output实例配置
+         * extendConfigs.
          */
         public Builder extendConfigs(java.util.List < java.util.Map<String, ?>> extendConfigs) {
             this.putBodyParameter("extendConfigs", extendConfigs);
@@ -209,7 +209,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 采集器实例名称，自定义
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -218,7 +218,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 采集器类型。
+         * resType.
          */
         public Builder resType(String resType) {
             this.putBodyParameter("resType", resType);
@@ -227,7 +227,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 采集器版本
+         * resVersion.
          */
         public Builder resVersion(String resVersion) {
             this.putBodyParameter("resVersion", resVersion);
@@ -236,7 +236,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 采集器所属专有网络ID。
+         * vpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -245,7 +245,7 @@ public class CreateCollectorRequest extends Request {
         }
 
         /**
-         * 5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*
+         * The ID of the created crawer.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -301,7 +301,7 @@ public class CreateCollectorRequest extends Request {
             private String fileName; 
 
             /**
-             * 文件内容。详见：https://help.aliyun.com/document_detail/146447.html
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -309,7 +309,7 @@ public class CreateCollectorRequest extends Request {
             }
 
             /**
-             * 文件路径名称
+             * fileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

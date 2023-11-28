@@ -50,7 +50,7 @@ public class CloseHttpsResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class CloseHttpsResponseBody extends TeaModel {
         }
 
         /**
-         * Return results:
-         * <p>
-         * 
-         * *   true: HTTPS protocol closed successfully
-         * *   false: HTTPS protocol closed failed
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

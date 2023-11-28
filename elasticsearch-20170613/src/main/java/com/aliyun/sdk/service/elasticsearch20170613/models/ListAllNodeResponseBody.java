@@ -50,7 +50,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The zone ID of the node.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListAllNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The return results.
+         * The CPU utilization.
+         * <p>
+         * 
+         * >  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -194,10 +197,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The CPU utilization.
-             * <p>
-             * 
-             * >  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.
+             * The disk usage.
              */
             public Builder cpuPercent(String cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -205,7 +205,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage.
+             * The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.
              */
             public Builder diskUsedPercent(String diskUsedPercent) {
                 this.diskUsedPercent = diskUsedPercent;
@@ -213,7 +213,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.
+             * health.
              */
             public Builder health(String health) {
                 this.health = health;
@@ -221,7 +221,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The Java Virtual Machine (JVM) heap memory usage of the node.
+             * The IP address of the node.
              */
             public Builder heapPercent(String heapPercent) {
                 this.heapPercent = heapPercent;
@@ -229,7 +229,7 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * The port that is used to connect to the node.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -237,10 +237,26 @@ public class ListAllNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The 1-minute load of the node.
+             * loadOneM.
              */
             public Builder loadOneM(String loadOneM) {
                 this.loadOneM = loadOneM;
+                return this;
+            }
+
+            /**
+             * The 1-minute load of the node.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
+                return this;
+            }
+
+            /**
+             * port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
                 return this;
             }
 
@@ -253,22 +269,6 @@ public class ListAllNodeResponseBody extends TeaModel {
              * *   WORKER_WARM: warm node
              * *   COORDINATING: client node
              * *   KIBANA: Kibana node
-             */
-            public Builder nodeType(String nodeType) {
-                this.nodeType = nodeType;
-                return this;
-            }
-
-            /**
-             * The port that is used to connect to the node.
-             */
-            public Builder port(Integer port) {
-                this.port = port;
-                return this;
-            }
-
-            /**
-             * The zone ID of the node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

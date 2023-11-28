@@ -69,7 +69,7 @@ public class ListDiagnoseIndicesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The cluster ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListDiagnoseIndicesRequest extends Request {
         }
 
         /**
-         * lang.
+         * The language. Multiple languages are supported.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

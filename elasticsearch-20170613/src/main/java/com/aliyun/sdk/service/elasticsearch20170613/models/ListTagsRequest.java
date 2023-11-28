@@ -69,7 +69,7 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * 20
+         * The return results.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -78,7 +78,7 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * INSTANCE
+         * The tag value of the ENI.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

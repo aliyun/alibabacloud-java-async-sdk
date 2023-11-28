@@ -143,7 +143,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The cluster ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -152,7 +152,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * The end of the time range to query. The value must be a UNIX timestamp.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -161,7 +161,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * lang.
+         * The language of the reports.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -170,7 +170,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * page.
+         * The number of the page to return. Valid values: 1 to 200. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -179,7 +179,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries to return on each page. Valid values: 1 to 500. Default value: 10.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -188,7 +188,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * The beginning of the time range to query. The value must be a UNIX timestamp.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -197,7 +197,7 @@ public class ListDiagnoseReportIdsRequest extends Request {
         }
 
         /**
-         * trigger.
+         * The method that is used to trigger health diagnostics. Valid values: SYSTEM, INNER, and USER.
          */
         public Builder trigger(String trigger) {
             this.putQueryParameter("trigger", trigger);

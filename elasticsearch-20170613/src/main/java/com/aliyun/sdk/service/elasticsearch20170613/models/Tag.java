@@ -50,7 +50,7 @@ public class Tag extends TeaModel {
         private String tagValue; 
 
         /**
-         * 标签Key
+         * tagKey.
          */
         public Builder tagKey(String tagKey) {
             this.tagKey = tagKey;
@@ -58,7 +58,7 @@ public class Tag extends TeaModel {
         }
 
         /**
-         * 标签Value
+         * tagValue.
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

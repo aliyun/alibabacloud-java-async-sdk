@@ -50,7 +50,7 @@ public class CloseDiagnosisResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class CloseDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether intelligent O\&M is successfully disabled. Valid values:
-         * <p>
-         * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

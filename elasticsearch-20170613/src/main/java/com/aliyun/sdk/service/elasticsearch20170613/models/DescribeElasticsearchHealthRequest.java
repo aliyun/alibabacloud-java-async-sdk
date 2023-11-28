@@ -55,7 +55,7 @@ public class DescribeElasticsearchHealthRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

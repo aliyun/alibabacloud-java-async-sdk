@@ -50,7 +50,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * fileSize.
+             * The size of the dictionary file. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -142,7 +142,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,11 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The type of the source of the dictionary file. Valid values:
+             * <p>
+             * 
+             * *   OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.
+             * *   ORIGIN: previously uploaded dictionary.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -158,7 +162,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the dictionary. Valid values:
+             * <p>
+             * 
+             * *   STOP: stopword list
+             * *   MAIN: main dictionary
+             * *   SYNONYMS: synonym dictionary
+             * *   ALI_WS: Alibaba Cloud dictionary
              */
             public Builder type(String type) {
                 this.type = type;
@@ -235,7 +245,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -243,7 +253,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The storage capacity. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -251,7 +261,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -259,7 +269,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specification category.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -336,7 +346,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * amount.
+             * The number of nodes.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -344,7 +354,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * The storage capacity. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -352,7 +362,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -360,7 +370,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specification category.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -437,7 +447,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * type.
+             * The network type. Only the VPC is supported.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -445,7 +455,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -453,7 +463,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * The zone where the cluster resides.
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -461,7 +471,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * The ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -526,7 +536,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * disk.
+             * The storage capacity. Unit: GB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -534,7 +544,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * The storage type.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -542,7 +552,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specification category.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -619,7 +629,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * fileSize.
+             * The size of the dictionary file. Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -627,7 +637,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the dictionary file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -635,7 +645,11 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * The type of the source of the dictionary file. Valid values:
+             * <p>
+             * 
+             * *   OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.
+             * *   ORIGIN: previously uploaded dictionary.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -643,7 +657,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the dictionary. Valid values:
+             * <p>
+             * 
+             * *   STOP: stopword list
+             * *   MAIN: main dictionary
+             * *   SYNONYMS: synonym dictionary
+             * *   ALI_WS: Alibaba Cloud dictionary
              */
             public Builder type(String type) {
                 this.type = type;
@@ -900,7 +920,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             private String updatedAt; 
 
             /**
-             * createdAt.
+             * The time when the cluster was created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -908,7 +928,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The name of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -916,7 +936,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * dictList.
+             * The configurations of IK dictionaries.
              */
             public Builder dictList(java.util.List < DictList> dictList) {
                 this.dictList = dictList;
@@ -924,7 +944,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * The internal endpoint of the cluster.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -932,7 +952,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * esVersion.
+             * The version of the cluster.
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -940,7 +960,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The ID of the cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -948,7 +968,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaConfiguration.
+             * The configurations of Kibana nodes.
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -956,7 +976,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaDomain.
+             * The public endpoint of the Kibana console of the cluster.
              */
             public Builder kibanaDomain(String kibanaDomain) {
                 this.kibanaDomain = kibanaDomain;
@@ -964,7 +984,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPort.
+             * The port number that is used to access the Kibana console of the cluster over the Internet.
              */
             public Builder kibanaPort(Integer kibanaPort) {
                 this.kibanaPort = kibanaPort;
@@ -972,7 +992,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * masterConfiguration.
+             * The configurations of dedicated master nodes.
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -980,7 +1000,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * The network configurations.
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -988,7 +1008,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * The number of data nodes in the cluster.
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -996,7 +1016,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * The configurations of data nodes.
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1004,7 +1024,11 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * The billing method of the cluster. Valid values:
+             * <p>
+             * 
+             * *   prepaid: subscription
+             * *   postpaid: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1012,7 +1036,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * publicDomain.
+             * The public endpoint of the cluster.
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -1020,7 +1044,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * publicPort.
+             * The port number that is used to access the cluster over the Internet.
              */
             public Builder publicPort(Integer publicPort) {
                 this.publicPort = publicPort;
@@ -1028,7 +1052,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   active: The cluster is normal.
+             * *   activating: The cluster is being activated.
+             * *   Inactive: The cluster is frozen.
+             * *   invalid: The cluster is valid.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1036,7 +1066,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * synonymsDicts.
+             * The configurations of synonym dictionaries.
              */
             public Builder synonymsDicts(java.util.List < SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -1044,7 +1074,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * The time when the cluster was last updated.
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

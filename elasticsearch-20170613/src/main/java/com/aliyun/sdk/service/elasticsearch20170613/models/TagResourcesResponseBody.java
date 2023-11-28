@@ -50,7 +50,7 @@ public class TagResourcesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +58,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Returned results:
-         * <p>
-         * 
-         * *   true: The tag resource relationship is created.
-         * *   false: The tag resource relationship fails to be created.
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;
