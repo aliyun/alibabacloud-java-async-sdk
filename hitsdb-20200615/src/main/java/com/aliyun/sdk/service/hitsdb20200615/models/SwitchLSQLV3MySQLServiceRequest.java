@@ -7,22 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceIpWhiteListRequest} extends {@link RequestModel}
+ * {@link SwitchLSQLV3MySQLServiceRequest} extends {@link RequestModel}
  *
- * <p>UpdateInstanceIpWhiteListRequest</p>
+ * <p>SwitchLSQLV3MySQLServiceRequest</p>
  */
-public class UpdateInstanceIpWhiteListRequest extends Request {
+public class SwitchLSQLV3MySQLServiceRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("Delete")
-    private Boolean delete;
-
-    @Query
-    @NameInMap("GroupName")
-    private String groupName;
+    @NameInMap("ActionType")
+    @Validation(required = true)
+    private Integer actionType;
 
     @Query
     @NameInMap("InstanceId")
@@ -48,25 +45,18 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityIpList")
-    @Validation(required = true)
-    private String securityIpList;
-
-    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private UpdateInstanceIpWhiteListRequest(Builder builder) {
+    private SwitchLSQLV3MySQLServiceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.delete = builder.delete;
-        this.groupName = builder.groupName;
+        this.actionType = builder.actionType;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityIpList = builder.securityIpList;
         this.securityToken = builder.securityToken;
     }
 
@@ -74,7 +64,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateInstanceIpWhiteListRequest create() {
+    public static SwitchLSQLV3MySQLServiceRequest create() {
         return builder().build();
     }
 
@@ -91,17 +81,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return delete
+     * @return actionType
      */
-    public Boolean getDelete() {
-        return this.delete;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
+    public Integer getActionType() {
+        return this.actionType;
     }
 
     /**
@@ -140,46 +123,35 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return securityIpList
-     */
-    public String getSecurityIpList() {
-        return this.securityIpList;
-    }
-
-    /**
      * @return securityToken
      */
     public String getSecurityToken() {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<UpdateInstanceIpWhiteListRequest, Builder> {
+    public static final class Builder extends Request.Builder<SwitchLSQLV3MySQLServiceRequest, Builder> {
         private String regionId; 
-        private Boolean delete; 
-        private String groupName; 
+        private Integer actionType; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityIpList; 
         private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceIpWhiteListRequest request) {
+        private Builder(SwitchLSQLV3MySQLServiceRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.delete = request.delete;
-            this.groupName = request.groupName;
+            this.actionType = request.actionType;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityIpList = request.securityIpList;
             this.securityToken = request.securityToken;
         } 
 
@@ -193,25 +165,16 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to clear all IP addresses and CIDR blocks in the whitelist.
+         * ActionType.
          */
-        public Builder delete(Boolean delete) {
-            this.putQueryParameter("Delete", delete);
-            this.delete = delete;
+        public Builder actionType(Integer actionType) {
+            this.putQueryParameter("ActionType", actionType);
+            this.actionType = actionType;
             return this;
         }
 
         /**
-         * GroupName.
-         */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -256,18 +219,6 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The IP addresses or CIDR blocks that you want to add to the whitelist.
-         * <p>
-         * 
-         * >  If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. If you add the CIDR block 192.168.0.0/24 to the whitelist, you can use all IP addresses in the CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).
-         */
-        public Builder securityIpList(String securityIpList) {
-            this.putQueryParameter("SecurityIpList", securityIpList);
-            this.securityIpList = securityIpList;
-            return this;
-        }
-
-        /**
          * SecurityToken.
          */
         public Builder securityToken(String securityToken) {
@@ -277,8 +228,8 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         @Override
-        public UpdateInstanceIpWhiteListRequest build() {
-            return new UpdateInstanceIpWhiteListRequest(this);
+        public SwitchLSQLV3MySQLServiceRequest build() {
+            return new SwitchLSQLV3MySQLServiceRequest(this);
         } 
 
     } 

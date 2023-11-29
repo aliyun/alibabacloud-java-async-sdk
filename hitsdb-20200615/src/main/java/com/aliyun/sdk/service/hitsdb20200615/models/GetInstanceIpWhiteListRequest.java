@@ -150,7 +150,7 @@ public class GetInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.
+         * The ID of the instance whose whitelists you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to obtain the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

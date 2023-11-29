@@ -172,7 +172,11 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The display language of the regions in the returned results. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN** (default): Chinese.
+         * *   **en-US**: English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
