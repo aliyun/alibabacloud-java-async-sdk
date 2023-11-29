@@ -74,7 +74,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * count.
+         * The number of log shipping jobs returned on the current page.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -82,7 +82,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * statistics.
+         * The statistics about log shipping jobs.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -90,7 +90,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * tasks.
+         * The details of log shipping jobs.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -98,7 +98,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of log shipping jobs.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -162,7 +162,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             private Long success; 
 
             /**
-             * fail.
+             * The number of log shipping jobs that are in the fail state.
              */
             public Builder fail(Long fail) {
                 this.fail = fail;
@@ -170,7 +170,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * running.
+             * The number of log shipping jobs that are in the running state.
              */
             public Builder running(Long running) {
                 this.running = running;
@@ -178,7 +178,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * The number of log shipping jobs that are in the success state.
              */
             public Builder success(Long success) {
                 this.success = success;
@@ -303,7 +303,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * id.
+             * The ID of the log shipping job.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -311,7 +311,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskCode.
+             * The error code of the log shipping job.
              */
             public Builder taskCode(String taskCode) {
                 this.taskCode = taskCode;
@@ -319,7 +319,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskCreateTime.
+             * The start time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -327,7 +327,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskDataLines.
+             * The number of logs that are shipped in the log shipping job.
              */
             public Builder taskDataLines(Integer taskDataLines) {
                 this.taskDataLines = taskDataLines;
@@ -335,7 +335,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskFinishTime.
+             * The end time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder taskFinishTime(Long taskFinishTime) {
                 this.taskFinishTime = taskFinishTime;
@@ -343,7 +343,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskLastDataReceiveTime.
+             * The time when Simple Log Service receives the most recent log of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder taskLastDataReceiveTime(Long taskLastDataReceiveTime) {
                 this.taskLastDataReceiveTime = taskLastDataReceiveTime;
@@ -351,7 +351,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskMessage.
+             * The error message of the log shipping job.
              */
             public Builder taskMessage(String taskMessage) {
                 this.taskMessage = taskMessage;
@@ -359,7 +359,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * The status of the log shipping job. Valid values: running, success, and fail.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

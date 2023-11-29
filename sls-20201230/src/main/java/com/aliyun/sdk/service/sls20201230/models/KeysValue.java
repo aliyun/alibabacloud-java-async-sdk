@@ -99,7 +99,11 @@ public class KeysValue extends TeaModel {
         private Boolean docValue; 
 
         /**
-         * caseSensitive.
+         * Specifies whether to enable case sensitivity. This parameter is required only when **type** is set to **text**. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = caseSensitive;
@@ -107,7 +111,11 @@ public class KeysValue extends TeaModel {
         }
 
         /**
-         * chn.
+         * Specifies whether to include Chinese characters. This parameter is required only when **type** is set to **text**. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder chn(Boolean chn) {
             this.chn = chn;
@@ -115,7 +123,7 @@ public class KeysValue extends TeaModel {
         }
 
         /**
-         * type.
+         * The data type of the field value. Valid values: text, json, double, and long.
          */
         public Builder type(String type) {
             this.type = type;
@@ -123,7 +131,7 @@ public class KeysValue extends TeaModel {
         }
 
         /**
-         * alias.
+         * The alias of the field.
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -131,7 +139,7 @@ public class KeysValue extends TeaModel {
         }
 
         /**
-         * token.
+         * The delimiters that are used to split text.
          */
         public Builder token(java.util.List < String > token) {
             this.token = token;
@@ -139,7 +147,7 @@ public class KeysValue extends TeaModel {
         }
 
         /**
-         * doc_value.
+         * Specifies whether to turn on Enable Analytics for the field.
          */
         public Builder docValue(Boolean docValue) {
             this.docValue = docValue;

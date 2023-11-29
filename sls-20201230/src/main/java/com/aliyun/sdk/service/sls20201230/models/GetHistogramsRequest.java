@@ -128,7 +128,7 @@ public class GetHistogramsRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +137,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -146,7 +146,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * from.
+         * The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -155,7 +155,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * query.
+         * The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see [Log search overview](~~43772~~).
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -164,7 +164,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * to.
+         * The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);
@@ -173,7 +173,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * topic.
+         * The topic of the logs.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);

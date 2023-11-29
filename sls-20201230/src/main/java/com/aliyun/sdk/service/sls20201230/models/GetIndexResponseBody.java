@@ -146,7 +146,7 @@ public class GetIndexResponseBody extends TeaModel {
         private Integer ttl; 
 
         /**
-         * index_mode.
+         * The type of the index.
          */
         public Builder indexMode(String indexMode) {
             this.indexMode = indexMode;
@@ -154,7 +154,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * keys.
+         * The configurations of field indexes. A field index is in the key-value format in which the key specifies the name of the field and the value specifies the index configuration of the field.
          */
         public Builder keys(java.util.Map < String, KeysValue > keys) {
             this.keys = keys;
@@ -162,7 +162,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * lastModifyTime.
+         * The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder lastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -170,7 +170,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * line.
+         * The configurations of full-text indexes.
          */
         public Builder line(Line line) {
             this.line = line;
@@ -178,7 +178,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * log_reduce.
+         * Indicates whether the log clustering feature is enabled.
          */
         public Builder logReduce(Boolean logReduce) {
             this.logReduce = logReduce;
@@ -186,7 +186,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * log_reduce_black_list.
+         * The fields in the blacklist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.logReduceBlackList = logReduceBlackList;
@@ -194,7 +194,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * log_reduce_white_list.
+         * The fields in the whitelist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.logReduceWhiteList = logReduceWhiteList;
@@ -202,7 +202,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * max_text_len.
+         * The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of the max_text_len parameter. Valid values: 64 to 16384. Unit: bytes.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.maxTextLen = maxTextLen;
@@ -210,7 +210,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * storage.
+         * The storage type. The value is fixed as pg.
          */
         public Builder storage(String storage) {
             this.storage = storage;
@@ -218,7 +218,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * ttl.
+         * The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -306,7 +306,11 @@ public class GetIndexResponseBody extends TeaModel {
             private java.util.List < String > token; 
 
             /**
-             * caseSensitive.
+             * Indicates whether case sensitivity is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -314,7 +318,11 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * chn.
+             * Indicates whether Chinese characters are included. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -322,7 +330,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * exclude_keys.
+             * The excluded fields.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -330,7 +338,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * include_keys.
+             * The included fields.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -338,7 +346,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * The delimiters.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

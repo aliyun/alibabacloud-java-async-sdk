@@ -115,7 +115,7 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -124,7 +124,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -133,7 +133,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * consumerGroup.
+         * The name of the consumer group. The name must be unique in a project.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putBodyParameter("consumerGroup", consumerGroup);
@@ -142,7 +142,16 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * order.
+         * Specifies whether to consume data in sequence. Valid values:
+         * <p>
+         * 
+         * *   true
+         * 
+         *     *   In a shard, data is consumed in ascending order based on the value of the \*\*\__tag\_\_:\__receive_time\_\_\*\* field.
+         *     *   If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.
+         *     *   If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.
+         * 
+         * *   false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.
          */
         public Builder order(Boolean order) {
             this.putBodyParameter("order", order);
@@ -151,7 +160,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * timeout.
+         * The timeout period. If the server does not receive heartbeats from a consumer within the timeout period, the server deletes the consumer. Unit: seconds.
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

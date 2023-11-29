@@ -85,7 +85,7 @@ public class CreateLoggingRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +94,7 @@ public class CreateLoggingRequest extends Request {
         }
 
         /**
-         * loggingDetails.
+         * The configurations of service logs.
          */
         public Builder loggingDetails(java.util.List < LoggingDetails> loggingDetails) {
             this.putBodyParameter("loggingDetails", loggingDetails);
@@ -103,7 +103,7 @@ public class CreateLoggingRequest extends Request {
         }
 
         /**
-         * loggingProject.
+         * The name of the project to which service logs are stored.
          */
         public Builder loggingProject(String loggingProject) {
             this.putBodyParameter("loggingProject", loggingProject);
@@ -159,7 +159,7 @@ public class CreateLoggingRequest extends Request {
             private String type; 
 
             /**
-             * logstore.
+             * The name of the Logstore to which service logs of the type are stored.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -167,7 +167,17 @@ public class CreateLoggingRequest extends Request {
             }
 
             /**
-             * type.
+             * The type of service logs. Valid values:
+             * <p>
+             * 
+             * *   consumergroup_log: the consumption delay logs of consumer groups.
+             * *   logtail_alarm: the alert logs of Logtail.
+             * *   operation_log: the operation logs.
+             * *   logtail_profile: the collection logs of Logtail.
+             * *   metering: the metering logs.
+             * *   logtail_status: the status logs of Logtail.
+             * *   scheduledsqlalert: the run logs of Scheduled SQL jobs.
+             * *   etl_alert: the run logs of data transformation jobs.
              */
             public Builder type(String type) {
                 this.type = type;

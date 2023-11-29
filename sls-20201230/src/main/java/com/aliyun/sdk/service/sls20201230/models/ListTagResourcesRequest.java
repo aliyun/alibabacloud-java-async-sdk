@@ -83,7 +83,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * resourceId.
+         * The IDs of the resources for which you want to query tags. You must specify at least one of resourceId and tags.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "resourceId", "json");
@@ -93,7 +93,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource. Set the value to project.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -102,7 +102,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tags that you want to use to filter resources based on exact match. Each tag is a key-value pair. You must specify at least one of resourceId and tags.
+         * <p>
+         * 
+         * You can enter up to 20 tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -158,7 +161,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of the tag that you want to use to filter resources. For example, if you set the key to `"test-key"`, only resources to which the key is added are returned.``
              */
             public Builder key(String key) {
                 this.key = key;
@@ -166,7 +169,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of the tag that you want to use to filter resources. If you set the value to null, resources are filtered based only on the key of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

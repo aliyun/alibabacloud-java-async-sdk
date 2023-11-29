@@ -62,7 +62,7 @@ public class ListShipperResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * count.
+         * The number of log shipping jobs returned.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListShipperResponseBody extends TeaModel {
         }
 
         /**
-         * shipper.
+         * The names of the log shipping jobs.
          */
         public Builder shipper(java.util.List < String > shipper) {
             this.shipper = shipper;
@@ -78,7 +78,7 @@ public class ListShipperResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of log shipping jobs.
          */
         public Builder total(Long total) {
             this.total = total;

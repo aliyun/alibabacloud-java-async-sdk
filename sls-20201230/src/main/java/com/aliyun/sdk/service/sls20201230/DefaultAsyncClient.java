@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ApplyConfigToMachineGroupResponse> applyConfigToMachineGroup(ApplyConfigToMachineGroupRequest request) {
         try {
@@ -123,6 +127,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   You can create up to 30 consumer groups for a Logstore.
+      * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request) {
         try {
@@ -151,6 +162,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request) {
         try {
@@ -165,6 +180,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request) {
         try {
@@ -179,6 +198,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateLogStoreResponse> createLogStore(CreateLogStoreRequest request) {
         try {
@@ -193,6 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateLoggingResponse> createLogging(CreateLoggingRequest request) {
         try {
@@ -221,6 +249,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateMachineGroupResponse> createMachineGroup(CreateMachineGroupRequest request) {
         try {
@@ -235,6 +268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateOssExternalStoreResponse> createOssExternalStore(CreateOssExternalStoreRequest request) {
         try {
@@ -263,6 +300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request) {
         try {
@@ -277,6 +318,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request) {
         try {
@@ -361,6 +407,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request) {
         try {
@@ -389,6 +439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -403,6 +457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteExternalStoreResponse> deleteExternalStore(DeleteExternalStoreRequest request) {
         try {
@@ -417,6 +475,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request) {
         try {
@@ -431,6 +494,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteLogStoreResponse> deleteLogStore(DeleteLogStoreRequest request) {
         try {
@@ -473,6 +541,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request) {
         try {
@@ -501,6 +574,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteProjectPolicyResponse> deleteProjectPolicy(DeleteProjectPolicyRequest request) {
         try {
@@ -515,6 +593,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteSavedSearchResponse> deleteSavedSearch(DeleteSavedSearchRequest request) {
         try {
@@ -529,6 +612,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<DeleteShipperResponse> deleteShipper(DeleteShipperRequest request) {
         try {
@@ -585,6 +672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetAppliedConfigsResponse> getAppliedConfigs(GetAppliedConfigsRequest request) {
         try {
@@ -599,6 +690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetAppliedMachineGroupsResponse> getAppliedMachineGroups(GetAppliedMachineGroupsRequest request) {
         try {
@@ -613,6 +708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request) {
         try {
@@ -655,6 +754,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetContextLogsResponse> getContextLogs(GetContextLogsRequest request) {
         try {
@@ -669,6 +773,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+      *     *   A project can have multiple Logstores.
+      *     *   A Logstore can have multiple shards.
+      *     *   You can use a cursor to obtain a log in a shard.
+      *
+     */
     @Override
     public CompletableFuture<GetCursorResponse> getCursor(GetCursorRequest request) {
         try {
@@ -711,6 +824,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request) {
         try {
@@ -725,6 +843,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+      *
+     */
     @Override
     public CompletableFuture<GetHistogramsResponse> getHistograms(GetHistogramsRequest request) {
         try {
@@ -739,6 +870,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request) {
         try {
@@ -753,6 +889,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetLogStoreResponse> getLogStore(GetLogStoreRequest request) {
         try {
@@ -781,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetLoggingResponse> getLogging(GetLoggingRequest request) {
         try {
@@ -795,6 +940,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+      *
+     */
     @Override
     public CompletableFuture<GetLogsResponse> getLogs(GetLogsRequest request) {
         try {
@@ -809,6 +967,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+      * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+      * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      *
+     */
     @Override
     public CompletableFuture<GetLogsV2Response> getLogsV2(GetLogsV2Request request) {
         try {
@@ -838,6 +1004,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetMLServiceResultsResponse> getMLServiceResults(GetMLServiceResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMLServiceResults").setMethod(HttpMethod.POST).setPathRegex("/ml/service/{serviceName}/analysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMLServiceResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMLServiceResultsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
+    @Override
     public CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -851,6 +1035,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request) {
         try {
@@ -865,6 +1054,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   You can use the query parameter to specify a standard SQL statement.
+      * *   You must specify a project in the domain name of the request.
+      * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+      * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetProjectLogsResponse> getProjectLogs(GetProjectLogsRequest request) {
         try {
@@ -879,6 +1077,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetProjectPolicyResponse> getProjectPolicy(GetProjectPolicyRequest request) {
         try {
@@ -893,6 +1096,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetSavedSearchResponse> getSavedSearch(GetSavedSearchRequest request) {
         try {
@@ -907,6 +1115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<GetShipperStatusResponse> getShipperStatus(GetShipperStatusRequest request) {
         try {
@@ -991,6 +1203,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request) {
         try {
@@ -1019,6 +1236,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Only one custom domain name can be bound to each project.
+      *
+     */
     @Override
     public CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request) {
         try {
@@ -1033,6 +1255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListExternalStoreResponse> listExternalStore(ListExternalStoreRequest request) {
         try {
@@ -1047,6 +1273,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListLogStoresResponse> listLogStores(ListLogStoresRequest request) {
         try {
@@ -1075,6 +1306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListMachineGroupResponse> listMachineGroup(ListMachineGroupRequest request) {
         try {
@@ -1089,6 +1324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListMachinesResponse> listMachines(ListMachinesRequest request) {
         try {
@@ -1103,6 +1342,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListProjectResponse> listProject(ListProjectRequest request) {
         try {
@@ -1117,6 +1361,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListSavedSearchResponse> listSavedSearch(ListSavedSearchRequest request) {
         try {
@@ -1145,6 +1394,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListShipperResponse> listShipper(ListShipperRequest request) {
         try {
@@ -1159,6 +1412,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -1187,6 +1445,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+      *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+      *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+      *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+      *
+     */
     @Override
     public CompletableFuture<PutProjectPolicyResponse> putProjectPolicy(PutProjectPolicyRequest request) {
         try {
@@ -1215,6 +1482,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<QueryMLServiceResultsResponse> queryMLServiceResults(QueryMLServiceResultsRequest request) {
         try {
@@ -1229,6 +1500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<RemoveConfigFromMachineGroupResponse> removeConfigFromMachineGroup(RemoveConfigFromMachineGroupRequest request) {
         try {
@@ -1243,6 +1518,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+      *
+     */
     @Override
     public CompletableFuture<SplitShardResponse> splitShard(SplitShardRequest request) {
         try {
@@ -1257,6 +1538,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1271,6 +1557,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {
@@ -1327,6 +1618,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request) {
         try {
@@ -1355,6 +1651,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request) {
         try {
@@ -1369,6 +1670,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLogStoreResponse> updateLogStore(UpdateLogStoreRequest request) {
         try {
@@ -1397,6 +1704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLoggingResponse> updateLogging(UpdateLoggingRequest request) {
         try {
@@ -1425,6 +1736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateMachineGroupResponse> updateMachineGroup(UpdateMachineGroupRequest request) {
         try {
@@ -1439,6 +1754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateMachineGroupMachineResponse> updateMachineGroupMachine(UpdateMachineGroupMachineRequest request) {
         try {
@@ -1453,6 +1772,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateOssExternalStoreResponse> updateOssExternalStore(UpdateOssExternalStoreRequest request) {
         try {
@@ -1467,6 +1790,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request) {
         try {
@@ -1481,6 +1809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateRdsExternalStoreResponse> updateRdsExternalStore(UpdateRdsExternalStoreRequest request) {
         try {

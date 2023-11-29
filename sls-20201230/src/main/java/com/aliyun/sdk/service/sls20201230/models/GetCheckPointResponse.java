@@ -189,7 +189,7 @@ public class GetCheckPointResponse extends Response {
             private String consumer; 
 
             /**
-             * Shard ID。
+             * The shard ID.
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;
@@ -197,7 +197,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * checkpoint.
+             * The value of the checkpoint.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -205,7 +205,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * updateTime.
+             * The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -213,7 +213,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * consumer.
+             * The consumer at the checkpoint.
              */
             public Builder consumer(String consumer) {
                 this.consumer = consumer;

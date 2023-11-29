@@ -62,7 +62,7 @@ public class ListLogStoresResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * count.
+         * The number of entries that are returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * logstores.
+         * The Logstores that meet the query conditions.
          */
         public Builder logstores(java.util.List < String > logstores) {
             this.logstores = logstores;
@@ -78,7 +78,7 @@ public class ListLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The number of the Logstores that meet the query conditions.
          */
         public Builder total(Integer total) {
             this.total = total;

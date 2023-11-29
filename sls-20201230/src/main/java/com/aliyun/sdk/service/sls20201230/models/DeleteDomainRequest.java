@@ -70,7 +70,7 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * domainName.
+         * The domain name to be deleted.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);

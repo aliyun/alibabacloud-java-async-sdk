@@ -97,7 +97,7 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * domainName.
+         * The domain name that is used to match custom domain names. For example, if you set domainName to `example.com`, the matched domain names are `a.example.com` and `b.example.com`.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
@@ -115,7 +115,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +124,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page. Default value: 500. Maximum value: 500.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

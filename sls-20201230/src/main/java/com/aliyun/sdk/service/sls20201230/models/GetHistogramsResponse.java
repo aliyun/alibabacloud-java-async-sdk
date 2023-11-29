@@ -189,7 +189,10 @@ public class GetHistogramsResponse extends Response {
             private String progress; 
 
             /**
-             * from.
+             * The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>
+             * 
+             * The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -197,7 +200,10 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * to.
+             * The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>
+             * 
+             * The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
              */
             public Builder to(Long to) {
                 this.to = to;
@@ -205,7 +211,7 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * count.
+             * The number of logs that are generated within the subinterval.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -213,7 +219,12 @@ public class GetHistogramsResponse extends Response {
             }
 
             /**
-             * progress.
+             * Indicates whether the query and analysis results in the subinterval is complete. Valid values:
+             * <p>
+             * 
+             * Complete: The query is successful, and the complete query and analysis results are returned.
+             * 
+             * Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.
              */
             public Builder progress(String progress) {
                 this.progress = progress;

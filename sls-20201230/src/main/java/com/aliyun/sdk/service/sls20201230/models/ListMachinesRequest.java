@@ -98,7 +98,7 @@ public class ListMachinesRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -107,7 +107,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * machineGroup.
+         * The name of the machine group.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -116,7 +116,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -125,7 +125,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page. Default value: 100. Maximum value: 500.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

@@ -85,7 +85,7 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +94,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -103,7 +103,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * consumerGroup.
+         * The name of the consumer group.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);

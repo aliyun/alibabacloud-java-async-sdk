@@ -77,7 +77,7 @@ public class PutProjectPolicyRequest extends Request {
         }
 
         /**
-         * body.
+         * The project policy.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

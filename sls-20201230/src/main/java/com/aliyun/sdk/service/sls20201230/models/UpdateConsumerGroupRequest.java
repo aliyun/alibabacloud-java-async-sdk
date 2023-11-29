@@ -113,7 +113,7 @@ public class UpdateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -122,7 +122,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -131,7 +131,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * consumerGroup.
+         * The name of the consumer group.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
@@ -140,7 +140,11 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * order.
+         * Specifies whether to consume data in sequence. Valid values:
+         * <p>
+         * 
+         * *   true: If a shard is split, the data in the original shard is consumed first. Then, the data in the new shards is consumed at the same time. If shards are merged, the data in the original shards is consumed first. Then, the data in the new shard is consumed.
+         * *   false: The data in all shards is consumed at the same time. If a new shard is generated after a shard is split or shards are merged, the data in the new shard is immediately consumed.
          */
         public Builder order(Boolean order) {
             this.putBodyParameter("order", order);
@@ -149,7 +153,7 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
-         * timeout.
+         * The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds.
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

@@ -168,7 +168,7 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -177,7 +177,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -186,7 +186,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * keys.
+         * The configuration of field indexes. A field index is a key-value pair in which the key specifies the name of the field and the value specifies the index configuration of the field. You must specify this parameter, the line parameter, or both parameters. For more information, see Example.
          */
         public Builder keys(java.util.Map < String, KeysValue > keys) {
             this.putBodyParameter("keys", keys);
@@ -195,7 +195,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * line.
+         * The configuration of full-text indexes. You must specify this parameter, the keys parameter, or both parameters. For more information, see Example.
          */
         public Builder line(Line line) {
             this.putBodyParameter("line", line);
@@ -204,7 +204,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce.
+         * Specifies whether to turn on LogReduce. After you turn on LogReduce, either the whitelist or blacklist takes effect.
          */
         public Builder logReduce(Boolean logReduce) {
             this.putBodyParameter("log_reduce", logReduce);
@@ -213,7 +213,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce_black_list.
+         * The fields in the blacklist that you want to use to cluster logs.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.putBodyParameter("log_reduce_black_list", logReduceBlackList);
@@ -222,7 +222,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce_white_list.
+         * The fields in the whitelist that you want to use to cluster logs.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.putBodyParameter("log_reduce_white_list", logReduceWhiteList);
@@ -231,7 +231,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * max_text_len.
+         * The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of max_text_len. Valid values: 64 to 16384.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.putBodyParameter("max_text_len", maxTextLen);
@@ -240,7 +240,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * ttl.
+         * The retention period of logs. Unit: days. Valid values: 7, 30, and 90.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
@@ -331,7 +331,11 @@ public class CreateIndexRequest extends Request {
             private java.util.List < String > token; 
 
             /**
-             * caseSensitive.
+             * Specifies whether to enable case sensitivity. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false (default)
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -339,7 +343,11 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * chn.
+             * Specifies whether to include Chinese characters. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false (default)
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -347,7 +355,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * exclude_keys.
+             * The excluded fields. You cannot specify both include_keys and exclude_keys.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -355,7 +363,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * include_keys.
+             * The included fields. You cannot specify both include_keys and exclude_keys.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -363,7 +371,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * token.
+             * The delimiters. You can specify a delimiter to delimit the content of a field value. For more information about delimiters, see Example.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

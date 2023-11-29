@@ -145,7 +145,7 @@ public class GetContextLogsRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -154,7 +154,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -163,7 +163,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * back_lines.
+         * The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: (0,100].
          */
         public Builder backLines(Long backLines) {
             this.putQueryParameter("back_lines", backLines);
@@ -172,7 +172,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * forward_lines.
+         * The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: (0,100].
          */
         public Builder forwardLines(Long forwardLines) {
             this.putQueryParameter("forward_lines", forwardLines);
@@ -181,7 +181,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * pack_id.
+         * The unique identifier of the log group to which the start log belongs.
          */
         public Builder packId(String packId) {
             this.putQueryParameter("pack_id", packId);
@@ -190,7 +190,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * pack_meta.
+         * The unique context identifier of the start log in the log group.
          */
         public Builder packMeta(String packMeta) {
             this.putQueryParameter("pack_meta", packMeta);
@@ -199,7 +199,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of the data in the Logstore. Set the value to context_log.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

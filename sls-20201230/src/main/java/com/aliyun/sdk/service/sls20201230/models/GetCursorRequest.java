@@ -100,7 +100,7 @@ public class GetCursorRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +109,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -118,7 +118,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * Shard ID。
+         * The shard ID.
          */
         public Builder shardId(Integer shardId) {
             this.putPathParameter("shardId", shardId);
@@ -127,7 +127,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * from.
+         * The point in time that you want to use to query a cursor. Set the value to a UNIX timestamp or a string such as `begin` and `end`.
          */
         public Builder from(String from) {
             this.putQueryParameter("from", from);

@@ -54,7 +54,7 @@ public class DeleteProjectPolicyRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

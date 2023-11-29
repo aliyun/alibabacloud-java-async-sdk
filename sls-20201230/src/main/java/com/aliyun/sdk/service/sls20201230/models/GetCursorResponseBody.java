@@ -38,7 +38,7 @@ public class GetCursorResponseBody extends TeaModel {
         private String cursor; 
 
         /**
-         * cursor.
+         * The value of the cursor.
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;

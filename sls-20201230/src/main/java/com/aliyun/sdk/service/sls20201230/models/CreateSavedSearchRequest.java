@@ -138,7 +138,7 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * displayName.
+         * The display name.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -147,7 +147,7 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore to which the saved search belongs.
          */
         public Builder logstore(String logstore) {
             this.putBodyParameter("logstore", logstore);
@@ -156,7 +156,7 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * savedsearchName.
+         * The name of the saved search. The name must be 3 to 63 characters in length.
          */
         public Builder savedsearchName(String savedsearchName) {
             this.putBodyParameter("savedsearchName", savedsearchName);
@@ -165,7 +165,7 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * searchQuery.
+         * The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the `Search statement|Analytic statement` format. For more information about search statements and analytic statements, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).
          */
         public Builder searchQuery(String searchQuery) {
             this.putBodyParameter("searchQuery", searchQuery);
@@ -174,7 +174,7 @@ public class CreateSavedSearchRequest extends Request {
         }
 
         /**
-         * topic.
+         * The topic of the log.
          */
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);

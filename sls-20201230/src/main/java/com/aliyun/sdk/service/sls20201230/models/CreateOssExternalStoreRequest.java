@@ -100,7 +100,7 @@ public class CreateOssExternalStoreRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +109,7 @@ public class CreateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * externalStoreName.
+         * The name of the external store.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putBodyParameter("externalStoreName", externalStoreName);
@@ -118,7 +118,7 @@ public class CreateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * parameter.
+         * The parameters that are configured for the external store.
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -127,7 +127,7 @@ public class CreateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * storeType.
+         * The type of the external store. Set the value to oss.
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -183,7 +183,7 @@ public class CreateOssExternalStoreRequest extends Request {
             private String type; 
 
             /**
-             * name.
+             * The name of the field.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +191,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * type.
+             * The type of the field.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -298,7 +298,7 @@ public class CreateOssExternalStoreRequest extends Request {
             private java.util.List < String > objects; 
 
             /**
-             * accessid.
+             * The AccessKey ID of your account.
              */
             public Builder accessid(String accessid) {
                 this.accessid = accessid;
@@ -306,7 +306,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * accesskey.
+             * The AccessKey secret of your account.
              */
             public Builder accesskey(String accesskey) {
                 this.accesskey = accesskey;
@@ -314,7 +314,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -322,7 +322,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * columns.
+             * The associated fields.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -330,7 +330,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * The OSS endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -338,7 +338,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * objects.
+             * The associated objects.
              */
             public Builder objects(java.util.List < String > objects) {
                 this.objects = objects;

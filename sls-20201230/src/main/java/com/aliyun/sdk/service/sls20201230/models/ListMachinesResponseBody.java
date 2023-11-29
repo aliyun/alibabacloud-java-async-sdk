@@ -62,7 +62,7 @@ public class ListMachinesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * count.
+         * The number of machines that are returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * machines.
+         * The machines that are returned.
          */
         public Builder machines(java.util.List < Machine > machines) {
             this.machines = machines;
@@ -78,7 +78,7 @@ public class ListMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of machines.
          */
         public Builder total(Integer total) {
             this.total = total;

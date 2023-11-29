@@ -70,7 +70,7 @@ public class CreateDomainRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * domainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);

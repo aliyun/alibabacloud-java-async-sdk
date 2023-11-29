@@ -113,7 +113,7 @@ public class SplitShardRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -122,7 +122,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -131,7 +131,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * shard.
+         * The ID of the shard.
          */
         public Builder shard(Integer shard) {
             this.putPathParameter("shard", shard);
@@ -140,7 +140,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * key.
+         * The position where the shard is split.
          */
         public Builder key(String key) {
             this.putQueryParameter("key", key);
@@ -149,7 +149,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * shardCount.
+         * The number of new shards that are generated after splitting.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("shardCount", shardCount);

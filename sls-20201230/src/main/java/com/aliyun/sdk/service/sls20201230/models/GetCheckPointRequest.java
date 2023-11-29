@@ -99,7 +99,7 @@ public class GetCheckPointRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -108,7 +108,7 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -117,7 +117,7 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * consumerGroup.
+         * The name of the consumer group.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
@@ -126,7 +126,11 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * shard.
+         * The shard ID.
+         * <p>
+         * 
+         * *   If the specified shard does not exist, an empty list is returned.
+         * *   If no shard ID is specified, the checkpoints of all shards are returned.
          */
         public Builder shard(Integer shard) {
             this.putQueryParameter("shard", shard);

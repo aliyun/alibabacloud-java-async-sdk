@@ -128,7 +128,7 @@ public class CreateMachineGroupRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +137,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupAttribute.
+         * The attributes of the machine group.
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
@@ -146,7 +146,13 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupName.
+         * The name of the machine group. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name of each machine group in a project must be unique.
+         * *   It can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
+         * *   It must start and end with a lowercase letter or a digit.
+         * *   It must be 3 to 128 characters in length.
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("groupName", groupName);
@@ -155,7 +161,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupType.
+         * The type of the machine group. The parameter can be left empty.
          */
         public Builder groupType(String groupType) {
             this.putBodyParameter("groupType", groupType);
@@ -164,7 +170,11 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * machineIdentifyType.
+         * The type of the machine group identifier. Valid values:
+         * <p>
+         * 
+         * *   ip: The machine group uses IP addresses as identifiers.
+         * *   userdefined: The machine group uses custom identifiers.
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.putBodyParameter("machineIdentifyType", machineIdentifyType);
@@ -173,7 +183,11 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * machineList.
+         * The identifiers of machine group.
+         * <p>
+         * 
+         * *   If you set machineIdentifyType to ip, enter the IP address of the machine.
+         * *   If you set machineIdentifyType to userdefined, enter a custom identifier.
          */
         public Builder machineList(java.util.List < String > machineList) {
             this.putBodyParameter("machineList", machineList);
@@ -227,7 +241,7 @@ public class CreateMachineGroupRequest extends Request {
             private String groupTopic; 
 
             /**
-             * externalName.
+             * The identifier of the external management system on which the machine group depends.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -235,7 +249,7 @@ public class CreateMachineGroupRequest extends Request {
             }
 
             /**
-             * groupTopic.
+             * The log topic of the machine group.
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

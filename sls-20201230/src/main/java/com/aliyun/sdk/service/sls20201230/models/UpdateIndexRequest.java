@@ -169,7 +169,7 @@ public class UpdateIndexRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -178,7 +178,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -187,7 +187,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * keys.
+         * The configuration of field indexes. A field index is a key-value pair in which the key specifies the name of the field and the value specifies the index configuration of the field.
          */
         public Builder keys(java.util.Map < String, KeysValue > keys) {
             this.putBodyParameter("keys", keys);
@@ -196,7 +196,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * line.
+         * The configuration of full-text indexes.
          */
         public Builder line(Line line) {
             this.putBodyParameter("line", line);
@@ -205,7 +205,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce.
+         * Specifies whether to turn on LogReduce. If you turn on LogReduce, only one of `log_reduce_white_list` and `log_reduce_black_list` takes effect.
          */
         public Builder logReduce(Boolean logReduce) {
             this.putBodyParameter("log_reduce", logReduce);
@@ -214,7 +214,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce_black_list.
+         * The fields in the blacklist that you want to use to cluster logs.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.putBodyParameter("log_reduce_black_list", logReduceBlackList);
@@ -223,7 +223,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * log_reduce_white_list.
+         * The fields in the whitelist that you want to use to cluster logs.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.putBodyParameter("log_reduce_white_list", logReduceWhiteList);
@@ -232,7 +232,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * max_text_len.
+         * The maximum length of a field value that can be retained.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.putBodyParameter("max_text_len", maxTextLen);
@@ -241,7 +241,7 @@ public class UpdateIndexRequest extends Request {
         }
 
         /**
-         * ttl.
+         * The retention period of data. Unit: days. Valid values: 7, 30, and 90.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
@@ -334,7 +334,11 @@ public class UpdateIndexRequest extends Request {
             private java.util.List < String > token; 
 
             /**
-             * caseSensitive.
+             * Specifies whether to enable case sensitivity. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -342,7 +346,11 @@ public class UpdateIndexRequest extends Request {
             }
 
             /**
-             * chn.
+             * Specifies whether to include Chinese characters. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -350,7 +358,7 @@ public class UpdateIndexRequest extends Request {
             }
 
             /**
-             * exclude_keys.
+             * The excluded fields. You cannot specify both include_keys and exclude_keys.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -358,7 +366,7 @@ public class UpdateIndexRequest extends Request {
             }
 
             /**
-             * include_keys.
+             * The included fields. You cannot specify both include_keys and exclude_keys.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -366,7 +374,7 @@ public class UpdateIndexRequest extends Request {
             }
 
             /**
-             * token.
+             * The delimiters that are used to split text.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

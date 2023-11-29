@@ -97,7 +97,7 @@ public class ListExternalStoreRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListExternalStoreRequest extends Request {
         }
 
         /**
-         * externalStoreName.
+         * The name of the external store. You can query external stores that contain a specified string.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putQueryParameter("externalStoreName", externalStoreName);
@@ -115,7 +115,7 @@ public class ListExternalStoreRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +124,7 @@ public class ListExternalStoreRequest extends Request {
         }
 
         /**
-         * sizs.
+         * The number of entries per page. Maximum value: 500.
          */
         public Builder sizs(Integer sizs) {
             this.putQueryParameter("sizs", sizs);

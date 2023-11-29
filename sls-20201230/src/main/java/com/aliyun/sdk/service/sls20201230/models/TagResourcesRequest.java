@@ -85,7 +85,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * resourceId.
+         * The resource IDs. You can specify only one resource and add tags to the resource.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -94,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource. Set the value to project.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);
@@ -103,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tags that you want to add to the resource. Up to 20 tags are supported at a time. Each tag is a key-value pair.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -159,7 +159,12 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of the tag. The key must meet the following requirements:
+             * <p>
+             * 
+             * *   The key must be `1 to 128` characters in length.
+             * *   The key cannot contain `"http://"` or `"https://"`.
+             * *   The key cannot start with `"acs:"` or `"aliyun"`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +172,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of the tag. The value must meet the following requirements:
+             * <p>
+             * 
+             * *   The value must be `1 to 128` characters in length.
+             * *   The value cannot contain `"http://"` or `"https://"`.
              */
             public Builder value(String value) {
                 this.value = value;

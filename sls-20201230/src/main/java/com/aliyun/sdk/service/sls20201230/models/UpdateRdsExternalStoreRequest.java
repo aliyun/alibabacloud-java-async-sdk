@@ -101,7 +101,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -110,7 +110,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * externalStoreName.
+         * The name of the external store.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putPathParameter("externalStoreName", externalStoreName);
@@ -120,7 +120,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * parameter.
+         * The parameter struct.
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -129,7 +129,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * storeType.
+         * The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -273,7 +273,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             private String vpcId; 
 
             /**
-             * db.
+             * The name of the database in the ApsaraDB RDS for MySQL instance.
              */
             public Builder db(String db) {
                 this.db = db;
@@ -281,7 +281,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * host.
+             * The internal or public endpoint of the ApsaraDB RDS for MySQL instance.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -289,7 +289,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * instance-id.
+             * The ID of the ApsaraDB RDS for MySQL instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -297,7 +297,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * password.
+             * The password that is used to log on to the ApsaraDB RDS for MySQL instance.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -305,7 +305,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * port.
+             * The internal or public port of the ApsaraDB RDS for MySQL instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -313,7 +313,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * region.
+             * The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -321,7 +321,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * table.
+             * The name of the database table in the ApsaraDB RDS for MySQL instance.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -329,7 +329,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * username.
+             * The username that is used to log on to the ApsaraDB RDS for MySQL instance.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -337,7 +337,7 @@ public class UpdateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * vpc-id.
+             * The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

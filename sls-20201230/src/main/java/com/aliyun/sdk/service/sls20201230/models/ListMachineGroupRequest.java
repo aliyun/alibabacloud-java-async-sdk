@@ -97,7 +97,7 @@ public class ListMachineGroupRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * groupName.
+         * The name of the machine group. This parameter is used to filter machine groups. Partial match is supported.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("groupName", groupName);
@@ -115,7 +115,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +124,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page. Maximum value: 500.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

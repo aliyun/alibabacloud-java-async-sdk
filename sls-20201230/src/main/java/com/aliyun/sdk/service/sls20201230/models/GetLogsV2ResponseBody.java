@@ -50,7 +50,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         private Meta meta; 
 
         /**
-         * data.
+         * The returned result.
          */
         public Builder data(java.util.List < java.util.Map<String, String>> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         }
 
         /**
-         * meta.
+         * The metadata that is returned.
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
@@ -230,7 +230,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             private String whereQuery; 
 
             /**
-             * aggQuery.
+             * The SQL statement after | in the query statement.
              */
             public Builder aggQuery(String aggQuery) {
                 this.aggQuery = aggQuery;
@@ -238,7 +238,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * count.
+             * The number of rows that are returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -246,7 +246,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedMillisecond.
+             * The amount of time that is consumed by the request. Unit: milliseconds.
              */
             public Builder elapsedMillisecond(Long elapsedMillisecond) {
                 this.elapsedMillisecond = elapsedMillisecond;
@@ -254,7 +254,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * hasSQL.
+             * Indicates whether the query is an SQL query.
              */
             public Builder hasSQL(Boolean hasSQL) {
                 this.hasSQL = hasSQL;
@@ -262,7 +262,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * isAccurate.
+             * Indicates whether the returned result is accurate.
              */
             public Builder isAccurate(Boolean isAccurate) {
                 this.isAccurate = isAccurate;
@@ -270,7 +270,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * keys.
+             * All keys in the query result.
              */
             public Builder keys(java.util.List < String > keys) {
                 this.keys = keys;
@@ -278,7 +278,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * processedBytes.
+             * The number of logs that are processed in the request.
              */
             public Builder processedBytes(Long processedBytes) {
                 this.processedBytes = processedBytes;
@@ -286,7 +286,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * processedRows.
+             * The number of rows that are processed in the request.
              */
             public Builder processedRows(Integer processedRows) {
                 this.processedRows = processedRows;
@@ -294,7 +294,11 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * Indicates whether the query result is complete. Valid values:
+             * <p>
+             * 
+             * *   Complete: The query was successful, and the complete result is returned.
+             * *   Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -302,7 +306,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * telementryType.
+             * The type of observable data.
              */
             public Builder telementryType(String telementryType) {
                 this.telementryType = telementryType;
@@ -310,7 +314,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * terms.
+             * All terms in the query statement.
              */
             public Builder terms(java.util.List < java.util.Map<String, ?>> terms) {
                 this.terms = terms;
@@ -318,7 +322,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * whereQuery.
+             * The part before | in the query statement.
              */
             public Builder whereQuery(String whereQuery) {
                 this.whereQuery = whereQuery;

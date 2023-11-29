@@ -98,7 +98,7 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * dataRedundancyType.
+         * Data redundancy type
          */
         public Builder dataRedundancyType(String dataRedundancyType) {
             this.putBodyParameter("dataRedundancyType", dataRedundancyType);
@@ -107,7 +107,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the project.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -116,7 +116,13 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * projectName.
+         * The name of the project. The name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must be unique.
+         * *   It can contain only lowercase letters, digits, and hyphens (-).
+         * *   It must start and end with a lowercase letter or a digit.
+         * *   It must be 3 to 63 characters in length.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);
@@ -125,7 +131,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);

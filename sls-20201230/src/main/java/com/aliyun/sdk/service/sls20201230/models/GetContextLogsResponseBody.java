@@ -86,7 +86,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         private Long totalLines; 
 
         /**
-         * back_lines.
+         * The number of logs that are generated before the generation time of the start log.
          */
         public Builder backLines(Long backLines) {
             this.backLines = backLines;
@@ -94,7 +94,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * forward_lines.
+         * The number of logs that are generated after the generation time of the start log.
          */
         public Builder forwardLines(Long forwardLines) {
             this.forwardLines = forwardLines;
@@ -102,7 +102,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * logs.
+         * The logs that are returned.
          */
         public Builder logs(java.util.List < java.util.Map<String, ?>> logs) {
             this.logs = logs;
@@ -110,7 +110,11 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * progress.
+         * Indicates whether the query and analysis results are complete. Valid values:
+         * <p>
+         * 
+         * *   Complete: The query is successful, and the complete query and analysis results are returned.
+         * *   Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.
          */
         public Builder progress(String progress) {
             this.progress = progress;
@@ -118,7 +122,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * total_lines.
+         * The total number of logs that are returned. The logs include the start log that is specified in the request.
          */
         public Builder totalLines(Long totalLines) {
             this.totalLines = totalLines;

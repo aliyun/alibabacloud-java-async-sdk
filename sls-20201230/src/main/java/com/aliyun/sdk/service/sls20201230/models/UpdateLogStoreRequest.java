@@ -227,7 +227,7 @@ public class UpdateLogStoreRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -236,7 +236,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -245,7 +245,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * appendMeta.
+         * Specifies whether to record public IP addresses. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder appendMeta(Boolean appendMeta) {
             this.putBodyParameter("appendMeta", appendMeta);
@@ -254,7 +258,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * autoSplit.
+         * Specifies whether to enable automatic sharding. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder autoSplit(Boolean autoSplit) {
             this.putBodyParameter("autoSplit", autoSplit);
@@ -263,7 +271,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * enable_tracking.
+         * Specifies whether to enable the web tracking feature. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableTracking(Boolean enableTracking) {
             this.putBodyParameter("enable_tracking", enableTracking);
@@ -272,7 +284,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * encrypt_conf.
+         * The data structure of the encryption configuration.
          */
         public Builder encryptConf(EncryptConf encryptConf) {
             this.putBodyParameter("encrypt_conf", encryptConf);
@@ -281,7 +293,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * hot_ttl.
+         * The retention period of data in the hot storage tier of the Logstore. Minimum value: 30. Unit: day. You can specify a value that ranges from 30 to the value of ttl. Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](~~308645~~).
          */
         public Builder hotTtl(Integer hotTtl) {
             this.putBodyParameter("hot_ttl", hotTtl);
@@ -290,7 +302,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * logstoreName.
+         * The name of the Logstore.
          */
         public Builder logstoreName(String logstoreName) {
             this.putBodyParameter("logstoreName", logstoreName);
@@ -299,7 +311,10 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * maxSplitShard.
+         * The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 64.
+         * <p>
+         * 
+         * > If you set autoSplit to true, you must specify maxSplitShard.
          */
         public Builder maxSplitShard(Integer maxSplitShard) {
             this.putBodyParameter("maxSplitShard", maxSplitShard);
@@ -308,7 +323,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * mode.
+         * The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores.
+         * <p>
+         * 
+         * *   **standard**: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.
+         * *   **query**: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the volume of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.
          */
         public Builder mode(String mode) {
             this.putBodyParameter("mode", mode);
@@ -317,7 +336,10 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * shardCount.
+         * The number of shards.
+         * <p>
+         * 
+         * > You cannot call the UpdateLogstore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.
          */
         public Builder shardCount(Integer shardCount) {
             this.putBodyParameter("shardCount", shardCount);
@@ -326,7 +348,11 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * telemetryType.
+         * The type of the log that you want to query. Valid values:
+         * <p>
+         * 
+         * *   None: all types of logs.
+         * *   Metrics: metrics.
          */
         public Builder telemetryType(String telemetryType) {
             this.putBodyParameter("telemetryType", telemetryType);
@@ -335,7 +361,7 @@ public class UpdateLogStoreRequest extends Request {
         }
 
         /**
-         * ttl.
+         * The retention period of data. Unit: day. Valid values: 1 to 3650. If you set ttl to 3650, data is permanently stored.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);

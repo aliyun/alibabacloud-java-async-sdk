@@ -157,7 +157,7 @@ public class GetShipperStatusRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -166,7 +166,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -175,7 +175,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * shipperName.
+         * The name of the log shipping job.
          */
         public Builder shipperName(String shipperName) {
             this.putPathParameter("shipperName", shipperName);
@@ -184,7 +184,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * from.
+         * The start time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -193,7 +193,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -202,7 +202,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page. Default value: 100. Maximum value: 500.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -211,7 +211,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * status.
+         * The status of the log shipping job. This parameter is empty by default, which indicates that log shipping jobs in all states are returned. Valid values: success, fail, and running.
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -220,7 +220,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * to.
+         * The end time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);

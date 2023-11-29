@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListProjectRequest</p>
  */
 public class ListProjectRequest extends Request {
-    @Path
-    @NameInMap("resourceGroupId")
-    private String resourceGroupId;
-
     @Query
     @NameInMap("offset")
     private Integer offset;
@@ -25,14 +21,18 @@ public class ListProjectRequest extends Request {
     private String projectName;
 
     @Query
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("size")
     private Integer size;
 
     private ListProjectRequest(Builder builder) {
         super(builder);
-        this.resourceGroupId = builder.resourceGroupId;
         this.offset = builder.offset;
         this.projectName = builder.projectName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.size = builder.size;
     }
 
@@ -50,13 +50,6 @@ public class ListProjectRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
      * @return offset
      */
     public Integer getOffset() {
@@ -71,6 +64,13 @@ public class ListProjectRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return size
      */
     public Integer getSize() {
@@ -78,9 +78,9 @@ public class ListProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListProjectRequest, Builder> {
-        private String resourceGroupId; 
         private Integer offset; 
         private String projectName; 
+        private String resourceGroupId; 
         private Integer size; 
 
         private Builder() {
@@ -89,23 +89,14 @@ public class ListProjectRequest extends Request {
 
         private Builder(ListProjectRequest request) {
             super(request);
-            this.resourceGroupId = request.resourceGroupId;
             this.offset = request.offset;
             this.projectName = request.projectName;
+            this.resourceGroupId = request.resourceGroupId;
             this.size = request.size;
         } 
 
         /**
-         * resourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putPathParameter("resourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -114,7 +105,7 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * projectName.
+         * The name of the project.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("projectName", projectName);
@@ -123,7 +114,16 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * size.
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The number of entries per page. Default value: 100. This operation can return up to 500 projects.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

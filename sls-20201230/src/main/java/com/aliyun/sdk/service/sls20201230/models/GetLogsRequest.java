@@ -185,7 +185,7 @@ public class GetLogsRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -194,7 +194,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The Logstore whose logs you want to query.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -203,7 +203,18 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * from.
+         * The beginning of the time range to query. The value is the log time that is specified when log data is written.
+         * <p>
+         * 
+         * *   The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the **from** parameter, but does not include the end time specified by the **to** parameter. If you specify the same value for the **from** and **to** parameters, the interval is invalid, and an error message is returned.
+         * *   The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * 
+         * > To ensure that full data can be queried, specify a query time range that is accurate to the minute. If you also specify a time range in an analytic statement, Simple Log Service uses the time range specified in the analytic statement for query and analysis.
+         * 
+         * If you want to specify a time range that is accurate to the second in your analytic statement, you must use the from_unixtime or to_unixtime function to convert the time format. For more information about the functions, see [from_unixtime function](~~63451~~) and [to_unixtime function](~~63451~~). Examples:
+         * 
+         * *   `* | SELECT * FROM log WHERE from_unixtime(__time__) > from_unixtime(1664186624) AND from_unixtime(__time__) < now()`
+         * *   `* | SELECT * FROM log WHERE __time__ > to_unixtime(date_parse(\"2022-10-19 15:46:05\", \"%Y-%m-%d %H:%i:%s\")) AND __time__ < to_unixtime(now())`
          */
         public Builder from(Integer from) {
             this.putQueryParameter("from", from);
@@ -212,7 +223,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * line.
+         * The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100.
          */
         public Builder line(Long line) {
             this.putQueryParameter("line", line);
@@ -221,7 +232,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0.
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("offset", offset);
@@ -230,7 +241,13 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * powerSql.
+         * Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](~~223777~~). Valid values:
+         * <p>
+         * 
+         * *   true: enables the Dedicated SQL feature.
+         * *   false (default): enables the Standard SQL feature.
+         * 
+         * You can use the powerSql or **query** parameter to configure Dedicated SQL.
          */
         public Builder powerSql(Boolean powerSql) {
             this.putQueryParameter("powerSql", powerSql);
@@ -239,7 +256,10 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * query.
+         * The search statement or the query statement. For more information, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~). If you add `set session parallel_sql=true;` to the analytic statement in the query parameter, Dedicated SQL is used. For example, you can set the query parameter to `* | set session parallel_sql=true; select count(*) as pv`. For more information about common errors that may occur during log query and analysis, see [How do I resolve common errors that occur when I query and analyze logs?](~~61628~~)
+         * <p>
+         * 
+         * > If you specify an analytic statement in the value of the query parameter, the line and offset parameters do not take effect. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to limit the number of logs to return on each page. For more information, see [Paged query](~~89994~~).
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -248,7 +268,16 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * reverse.
+         * Specifies whether to return logs in reverse chronological order of log timestamps. The log timestamps are accurate to the minute. Valid values:
+         * <p>
+         * 
+         * *   true: returns logs in reverse chronological order of log timestamps.
+         * *   false (default): returns logs in chronological order of log timestamps.
+         * 
+         * > 
+         * 
+         * *   The reverse parameter takes effect only when the query parameter is set to a search statement. The reverse parameter specifies the method used to sort returned logs.
+         * *   If the query parameter is set to a query statement, the reverse parameter does not take effect. The method used to sort returned logs is specified by the ORDER BY clause in the analytic statement. If you use the keyword asc in the ORDER BY clause, the logs are sorted in chronological order. If you use the keyword desc in the ORDER BY clause, the logs are sorted in reverse chronological order. By default, asc is used in the ORDER BY clause.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("reverse", reverse);
@@ -257,7 +286,18 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * to.
+         * The end of the time range to query. The value is the log time that is specified when log data is written.
+         * <p>
+         * 
+         * *   The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the **from** parameter, but does not include the end time specified by the **to** parameter. If you specify the same value for the **from** and **to** parameters, the interval is invalid, and an error message is returned.
+         * *   The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * 
+         * > To ensure that full data can be queried, specify a query time range that is accurate to the minute. If you also specify a time range in an analytic statement, Simple Log Service uses the time range specified in the analytic statement for query and analysis.
+         * 
+         * If you want to specify a time range that is accurate to the second in your analytic statement, you must use the from_unixtime or to_unixtime function to convert the time format. For more information about the functions, see [from_unixtime function](~~63451~~) and [to_unixtime function](~~63451~~). Examples:
+         * 
+         * *   `* | SELECT * FROM log WHERE from_unixtime(__time__) > from_unixtime(1664186624) AND from_unixtime(__time__) < now()`
+         * *   `* | SELECT * FROM log WHERE __time__ > to_unixtime(date_parse(\"2022-10-19 15:46:05\", \"%Y-%m-%d %H:%i:%s\")) AND __time__ < to_unixtime(now())`
          */
         public Builder to(Integer to) {
             this.putQueryParameter("to", to);
@@ -266,7 +306,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * topic.
+         * The topic of the logs. The default value is double quotation marks (""). For more information, see [Topic](~~48881~~).
          */
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);

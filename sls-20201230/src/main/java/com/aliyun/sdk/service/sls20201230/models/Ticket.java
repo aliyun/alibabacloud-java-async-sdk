@@ -40,15 +40,6 @@ public class Ticket extends TeaModel {
     @NameInMap("ticketId")
     private String ticketId;
 
-    @NameInMap("type")
-    private String type;
-
-    @NameInMap("unlimitedExpiration")
-    private Boolean unlimitedExpiration;
-
-    @NameInMap("unlimitedNumber")
-    private Boolean unlimitedNumber;
-
     @NameInMap("usedNumber")
     private Integer usedNumber;
 
@@ -65,9 +56,6 @@ public class Ticket extends TeaModel {
         this.number = builder.number;
         this.ticket = builder.ticket;
         this.ticketId = builder.ticketId;
-        this.type = builder.type;
-        this.unlimitedExpiration = builder.unlimitedExpiration;
-        this.unlimitedNumber = builder.unlimitedNumber;
         this.usedNumber = builder.usedNumber;
         this.valid = builder.valid;
     }
@@ -144,27 +132,6 @@ public class Ticket extends TeaModel {
     }
 
     /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
-     * @return unlimitedExpiration
-     */
-    public Boolean getUnlimitedExpiration() {
-        return this.unlimitedExpiration;
-    }
-
-    /**
-     * @return unlimitedNumber
-     */
-    public Boolean getUnlimitedNumber() {
-        return this.unlimitedNumber;
-    }
-
-    /**
      * @return usedNumber
      */
     public Integer getUsedNumber() {
@@ -188,9 +155,6 @@ public class Ticket extends TeaModel {
         private Integer number; 
         private String ticket; 
         private String ticketId; 
-        private String type; 
-        private Boolean unlimitedExpiration; 
-        private Boolean unlimitedNumber; 
         private Integer usedNumber; 
         private Boolean valid; 
 
@@ -263,30 +227,6 @@ public class Ticket extends TeaModel {
          */
         public Builder ticketId(String ticketId) {
             this.ticketId = ticketId;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * unlimitedExpiration.
-         */
-        public Builder unlimitedExpiration(Boolean unlimitedExpiration) {
-            this.unlimitedExpiration = unlimitedExpiration;
-            return this;
-        }
-
-        /**
-         * unlimitedNumber.
-         */
-        public Builder unlimitedNumber(Boolean unlimitedNumber) {
-            this.unlimitedNumber = unlimitedNumber;
             return this;
         }
 

@@ -129,7 +129,7 @@ public class UpdateMachineGroupRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +138,7 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupName.
+         * The name of the machine group.
          */
         public Builder groupName(String groupName) {
             this.putPathParameter("groupName", groupName);
@@ -148,7 +148,7 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupAttribute.
+         * The attribute of the machine group. This parameter is empty by default.
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
@@ -157,7 +157,7 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * groupType.
+         * The type of the machine group. Set the value to an empty string.
          */
         public Builder groupType(String groupType) {
             this.putBodyParameter("groupType", groupType);
@@ -166,7 +166,11 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * machineIdentifyType.
+         * The identifier type of the machine group. Valid values:
+         * <p>
+         * 
+         * *   ip: The machine group uses IP addresses as identifiers.
+         * *   userdefined: The machine group uses custom identifiers.
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.putBodyParameter("machineIdentifyType", machineIdentifyType);
@@ -175,7 +179,11 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * machineList.
+         * The identifiers of the machines in the machine group.
+         * <p>
+         * 
+         * *   If you set machineIdentifyType to ip, enter the IP addresses of the machines.
+         * *   If you set machineIdentifyType to userdefined, enter a custom identifier.
          */
         public Builder machineList(java.util.List < String > machineList) {
             this.putBodyParameter("machineList", machineList);
@@ -229,7 +237,7 @@ public class UpdateMachineGroupRequest extends Request {
             private String groupTopic; 
 
             /**
-             * externalName.
+             * The identifier of the external management system on which the machine group depends. This parameter is empty by default.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -237,7 +245,7 @@ public class UpdateMachineGroupRequest extends Request {
             }
 
             /**
-             * groupTopic.
+             * The topic of the machine group. This parameter is empty by default.
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

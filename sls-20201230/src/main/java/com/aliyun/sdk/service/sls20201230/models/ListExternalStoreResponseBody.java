@@ -62,7 +62,7 @@ public class ListExternalStoreResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * count.
+         * The number of external stores returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListExternalStoreResponseBody extends TeaModel {
         }
 
         /**
-         * externalstores.
+         * The names of the external stores.
          */
         public Builder externalstores(java.util.List < ExternalStore > externalstores) {
             this.externalstores = externalstores;
@@ -78,7 +78,7 @@ public class ListExternalStoreResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The number of external stores that meet the query conditions.
          */
         public Builder total(Integer total) {
             this.total = total;

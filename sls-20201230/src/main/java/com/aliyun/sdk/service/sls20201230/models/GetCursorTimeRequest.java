@@ -100,7 +100,7 @@ public class GetCursorTimeRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +109,7 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -118,7 +118,7 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * shard id。
+         * The shard ID.
          */
         public Builder shardId(Integer shardId) {
             this.putPathParameter("shardId", shardId);
@@ -127,7 +127,7 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * cursor.
+         * The cursor.
          */
         public Builder cursor(String cursor) {
             this.putQueryParameter("cursor", cursor);

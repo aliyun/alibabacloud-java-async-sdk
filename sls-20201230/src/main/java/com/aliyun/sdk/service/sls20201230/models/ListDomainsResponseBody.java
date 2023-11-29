@@ -62,7 +62,7 @@ public class ListDomainsResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * count.
+         * The number of domain names that are returned on the current page.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * domains.
+         * The domain names.
          */
         public Builder domains(java.util.List < String > domains) {
             this.domains = domains;
@@ -78,7 +78,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of domain names that are returned.
          */
         public Builder total(Long total) {
             this.total = total;

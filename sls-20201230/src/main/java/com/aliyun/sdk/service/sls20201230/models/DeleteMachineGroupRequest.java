@@ -70,7 +70,7 @@ public class DeleteMachineGroupRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class DeleteMachineGroupRequest extends Request {
         }
 
         /**
-         * machineGroup.
+         * The name of the machine group.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);

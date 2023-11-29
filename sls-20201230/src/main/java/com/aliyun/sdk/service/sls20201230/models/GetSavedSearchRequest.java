@@ -70,7 +70,7 @@ public class GetSavedSearchRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class GetSavedSearchRequest extends Request {
         }
 
         /**
-         * savedsearchName.
+         * The name of the saved search.
          */
         public Builder savedsearchName(String savedsearchName) {
             this.putPathParameter("savedsearchName", savedsearchName);

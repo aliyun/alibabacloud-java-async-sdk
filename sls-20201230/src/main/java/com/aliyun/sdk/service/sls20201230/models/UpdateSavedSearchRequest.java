@@ -130,7 +130,7 @@ public class UpdateSavedSearchRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -139,7 +139,7 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * savedsearchName.
+         * The name of the saved search that you want to update.
          */
         public Builder savedsearchName(String savedsearchName) {
             this.putPathParameter("savedsearchName", savedsearchName);
@@ -149,7 +149,7 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * displayName.
+         * The display name.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -158,7 +158,7 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore to which the saved search belongs.
          */
         public Builder logstore(String logstore) {
             this.putBodyParameter("logstore", logstore);
@@ -167,7 +167,10 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * searchQuery.
+         * The search statement or the query statement of the saved search. A query statement consists of a search statement and an analytic statement in the Search statement|Analytic statement format.
+         * <p>
+         * 
+         * For more information, see Log search overview and Log analysis overview.
          */
         public Builder searchQuery(String searchQuery) {
             this.putBodyParameter("searchQuery", searchQuery);
@@ -176,7 +179,7 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * topic.
+         * The topic of the logs.
          */
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);

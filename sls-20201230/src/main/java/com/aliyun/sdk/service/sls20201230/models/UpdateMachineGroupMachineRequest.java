@@ -99,7 +99,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -108,7 +108,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * machineGroup.
+         * The name of the machine group.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -117,7 +117,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * action.
+         * The operation on the machine. Valid values: add and delete. A value of add specifies to add the machine to the machine group. A value of delete specifies to remove the machine from the machine group.
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);
@@ -126,7 +126,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * body.
+         * The machines to be added or removed.
          */
         public Builder body(java.util.List < String > body) {
             this.putBodyParameter("body", body);

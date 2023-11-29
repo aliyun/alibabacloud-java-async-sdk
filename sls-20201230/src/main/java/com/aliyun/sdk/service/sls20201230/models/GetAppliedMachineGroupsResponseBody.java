@@ -50,7 +50,7 @@ public class GetAppliedMachineGroupsResponseBody extends TeaModel {
         private java.util.List < String > machinegroups; 
 
         /**
-         * count.
+         * The number of returned machine groups.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -58,7 +58,7 @@ public class GetAppliedMachineGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * machinegroups.
+         * The names of the returned machine groups.
          */
         public Builder machinegroups(java.util.List < String > machinegroups) {
             this.machinegroups = machinegroups;

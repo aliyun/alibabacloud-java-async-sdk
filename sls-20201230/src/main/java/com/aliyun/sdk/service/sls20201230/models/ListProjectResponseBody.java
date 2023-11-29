@@ -62,7 +62,7 @@ public class ListProjectResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * count.
+         * The number of returned projects on the current page.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * projects.
+         * The projects that meet the query conditions.
          */
         public Builder projects(java.util.List < Project > projects) {
             this.projects = projects;
@@ -78,7 +78,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of projects that meet the query conditions.
          */
         public Builder total(Long total) {
             this.total = total;

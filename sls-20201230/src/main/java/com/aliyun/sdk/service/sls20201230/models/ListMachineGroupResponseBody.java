@@ -62,7 +62,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * count.
+         * The number of machine groups that are returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * machinegroups.
+         * The machine groups that meet the query conditions.
          */
         public Builder machinegroups(java.util.List < String > machinegroups) {
             this.machinegroups = machinegroups;
@@ -78,7 +78,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of machine groups that meet the query conditions.
          */
         public Builder total(Integer total) {
             this.total = total;

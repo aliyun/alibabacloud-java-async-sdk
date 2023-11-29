@@ -84,7 +84,7 @@ public class GetProjectLogsRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -93,7 +93,13 @@ public class GetProjectLogsRequest extends Request {
         }
 
         /**
-         * powerSql.
+         * Specifies whether to enable the Dedicated SQL feature. For more information, see [Enable Dedicated SQL](~~223777~~). Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default): enables the Standard SQL feature.
+         * 
+         * You can use the powerSql or **query** parameter to configure Dedicated SQL.
          */
         public Builder powerSql(Boolean powerSql) {
             this.putQueryParameter("powerSql", powerSql);
@@ -102,7 +108,7 @@ public class GetProjectLogsRequest extends Request {
         }
 
         /**
-         * query.
+         * The standard SQL statement. In this example, the SQL statement queries the number of page views (PVs) from 2022-03-01 10:41:40 to 2022-03-01 10:56:40 in a Logstore whose name is nginx-moni.
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

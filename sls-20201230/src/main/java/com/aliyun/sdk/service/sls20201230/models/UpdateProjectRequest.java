@@ -70,7 +70,7 @@ public class UpdateProjectRequest extends Request {
         } 
 
         /**
-         * Project名称。
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the project. The default value is an empty string.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
