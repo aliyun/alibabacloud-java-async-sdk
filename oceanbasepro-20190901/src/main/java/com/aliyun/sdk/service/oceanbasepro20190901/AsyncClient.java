@@ -74,6 +74,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAvailableMemResourceResponse> describeAvailableMemResource(DescribeAvailableMemResourceRequest request);
 
+    CompletableFuture<DescribeAvailableSpecResponse> describeAvailableSpec(DescribeAvailableSpecRequest request);
+
+    CompletableFuture<DescribeAvailableZoneResponse> describeAvailableZone(DescribeAvailableZoneRequest request);
+
     CompletableFuture<DescribeCharsetResponse> describeCharset(DescribeCharsetRequest request);
 
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
@@ -147,6 +151,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowSQLListResponse> describeSlowSQLList(DescribeSlowSQLListRequest request);
 
     CompletableFuture<DescribeTenantResponse> describeTenant(DescribeTenantRequest request);
+
+    CompletableFuture<DescribeTenantEncryptionResponse> describeTenantEncryption(DescribeTenantEncryptionRequest request);
 
     CompletableFuture<DescribeTenantMetricsResponse> describeTenantMetrics(DescribeTenantMetricsRequest request);
 
