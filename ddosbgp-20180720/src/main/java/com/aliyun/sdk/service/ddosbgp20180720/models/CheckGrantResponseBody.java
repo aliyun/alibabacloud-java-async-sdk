@@ -50,7 +50,7 @@ public class CheckGrantResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class CheckGrantResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
+         * <p>
+         * 
+         * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+         * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
          */
         public Builder status(Integer status) {
             this.status = status;

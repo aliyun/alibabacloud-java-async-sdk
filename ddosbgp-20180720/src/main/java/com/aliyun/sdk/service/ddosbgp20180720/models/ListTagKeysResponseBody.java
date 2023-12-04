@@ -86,7 +86,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tags.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tag values that correspond to each key.
+         * The list of tags and the details of each tag.
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -118,7 +118,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tags and the details of each tag.
+         * The total number of tags.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * The key of each tag.
+             * The total number of tag values that correspond to each key.
              */
             public Builder tagCount(Integer tagCount) {
                 this.tagCount = tagCount;
@@ -178,7 +178,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The key of each tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;

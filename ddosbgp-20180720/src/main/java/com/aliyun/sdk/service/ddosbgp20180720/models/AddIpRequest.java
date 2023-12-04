@@ -98,14 +98,28 @@ public class AddIpRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * The ID of the Anti-DDoS Origin Enterprise instance.
          * <p>
          * 
-         * For more information about resource groups, see [Create a resource group](~~94485~~).
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The list of IP addresses that you want to add to the Anti-DDoS Origin Enterprise instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:
+         * <p>
+         * 
+         * *   **ip**: required. The IP address that you want to add. Data type: string.
+         * 
+         *     > The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
+         */
+        public Builder ipList(String ipList) {
+            this.putQueryParameter("IpList", ipList);
+            this.ipList = ipList;
             return this;
         }
 
@@ -115,15 +129,6 @@ public class AddIpRequest extends Request {
          * 
          * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
          */
-        public Builder ipList(String ipList) {
-            this.putQueryParameter("IpList", ipList);
-            this.ipList = ipList;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
@@ -131,10 +136,10 @@ public class AddIpRequest extends Request {
         }
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+         * The ID of the resource group to which the Anti-DDoS Origin Enterprise instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          * <p>
          * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

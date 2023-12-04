@@ -68,7 +68,10 @@ public class DescribeExcpetionCountRequest extends Request {
         } 
 
         /**
-         * DescribeExcpetionCount
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +80,10 @@ public class DescribeExcpetionCountRequest extends Request {
         }
 
         /**
-         * Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

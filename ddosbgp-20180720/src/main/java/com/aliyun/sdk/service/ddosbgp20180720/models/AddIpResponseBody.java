@@ -38,7 +38,7 @@ public class AddIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Adds IP addresses to an Anti-DDoS Origin Enterprise instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

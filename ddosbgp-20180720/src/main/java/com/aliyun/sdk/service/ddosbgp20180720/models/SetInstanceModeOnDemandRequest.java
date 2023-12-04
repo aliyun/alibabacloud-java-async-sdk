@@ -84,7 +84,10 @@ public class SetInstanceModeOnDemandRequest extends Request {
         } 
 
         /**
-         * SetInstanceModeOnDemand
+         * The IDs of on-demand instances.
+         * <p>
+         * 
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -93,7 +96,11 @@ public class SetInstanceModeOnDemandRequest extends Request {
         }
 
         /**
-         * SetInstanceModeOnDemand
+         * The scheduling mode of the on-demand instance. Valid values:
+         * <p>
+         * 
+         * *   **manual**: manual scheduling
+         * *   **netflow-auto**: automatic scheduling
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -102,7 +109,10 @@ public class SetInstanceModeOnDemandRequest extends Request {
         }
 
         /**
-         * WB269094
+         * The region ID of the on-demand instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

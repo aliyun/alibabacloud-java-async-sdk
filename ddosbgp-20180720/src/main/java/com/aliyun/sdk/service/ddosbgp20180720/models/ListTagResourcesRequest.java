@@ -126,10 +126,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
-         * <p>
-         * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * The query token. Set the value to the **NextToken** value that is returned in the last call to the ListTagResources operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -138,7 +135,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListTagResources**.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Origin instance.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -156,7 +159,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The value of the tag that is added to the instance.
+         * The IDs of Anti-DDoS Origin Instances to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -165,10 +171,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The value of the tag to query.
-         * <p>
-         * 
-         * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+         * The type of the resource to query. Set the value to **INSTANCE**, which indicates instances.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -177,10 +180,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The key of the tag to query.
-         * <p>
-         * 
-         * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+         * The tags to query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -234,7 +234,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the request.
+             * The key of the tag to query.
+             * <p>
+             * 
+             * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -242,7 +245,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.
+             * The value of the tag to query.
+             * <p>
+             * 
+             * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
              */
             public Builder value(String value) {
                 this.value = value;

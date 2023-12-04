@@ -157,7 +157,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         } 
 
         /**
-         * The timestamp that indicates the end time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * The timestamp that specifies the end of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,7 +166,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * The ID of the on-demand instance to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,13 +175,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
-         * 
-         * *   **hole_begin **: indicates that the event is in the blackhole state.
-         * *   **hole_end **: indicates that blackhole ends.
-         * *   **defense_begin **: indicates that the event is in the cleaning state.
-         * *   **defense_end **: indicates that cleaning ends.
+         * The IP address of the protection target.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -190,7 +184,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The IP address of the protection target.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -199,7 +193,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the on-demand instance to query.
+         * The number of entries to return on each page. The maximum value is **50**. The default value is **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +211,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -226,7 +220,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeOnDemandDdosEvent**.
+         * The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

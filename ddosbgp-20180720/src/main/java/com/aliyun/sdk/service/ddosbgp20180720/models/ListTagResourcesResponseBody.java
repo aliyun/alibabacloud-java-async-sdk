@@ -62,10 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-         * <p>
-         * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * The query token that is returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ListTagResources
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * WB269094
+         * The list of tags that are added to the Anti-DDoS Origin instance.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -157,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the Anti-DDoS Origin instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -165,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -173,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The key of the tag that is added to the instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -181,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag that is added to the instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

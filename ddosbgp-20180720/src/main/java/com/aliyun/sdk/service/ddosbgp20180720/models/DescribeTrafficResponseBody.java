@@ -50,7 +50,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the traffic statistics.
+         * The queried traffic statistics.
          */
         public Builder flowList(java.util.List < FlowList> flowList) {
             this.flowList = flowList;
@@ -58,7 +58,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             private Integer time; 
 
             /**
-             * AttackBps.
+             * The bandwidth of attack traffic. Unit: bit/s.
+             * <p>
+             * 
+             * >  This parameter is returned only if attack traffic exists.
              */
             public Builder attackBps(Long attackBps) {
                 this.attackBps = attackBps;
@@ -178,7 +181,10 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * Queries traffic statistics of an Anti-DDoS Origin instance within a specific time period.
+             * The packet forwarding rate of attack traffic. Unit: packets per second.
+             * <p>
+             * 
+             * >  This parameter is returned only if attack traffic exists.
              */
             public Builder attackPps(Long attackPps) {
                 this.attackPps = attackPps;
@@ -186,10 +192,11 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+             * The type of the traffic statistics. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the "**Examples**" section of this topic.
+             * *   **max**: the peak traffic within the specified interval
+             * *   **avg**: the average traffic within the specified interval
              */
             public Builder flowType(String flowType) {
                 this.flowType = flowType;
@@ -197,7 +204,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * Kbps.
+             * The bandwidth of the total traffic. Unit: Kbit/s.
              */
             public Builder kbps(Integer kbps) {
                 this.kbps = kbps;
@@ -205,7 +212,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeTraffic
+             * The ID of the traffic statistics.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -213,7 +220,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * WB269094
+             * The packet forwarding rate of the total traffic. Unit: packets per second.
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -221,7 +228,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder time(Integer time) {
                 this.time = time;

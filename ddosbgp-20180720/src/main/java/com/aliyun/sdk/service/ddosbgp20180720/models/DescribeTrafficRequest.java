@@ -167,23 +167,14 @@ public class DescribeTrafficRequest extends Request {
         } 
 
         /**
-         * The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * If you do not specify this parameter, the current system time is used as the end time.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
-         * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
-         */
-        public Builder flowType(String flowType) {
-            this.putQueryParameter("FlowType", flowType);
-            this.flowType = flowType;
             return this;
         }
 
@@ -193,6 +184,20 @@ public class DescribeTrafficRequest extends Request {
          * 
          * *   **max**: the peak traffic within the specified interval
          * *   **avg**: the average traffic within the specified interval
+         */
+        public Builder flowType(String flowType) {
+            this.putQueryParameter("FlowType", flowType);
+            this.flowType = flowType;
+            return this;
+        }
+
+        /**
+         * The ID of the Anti-DDoS Origin instance to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+         * 
+         * If you specify an on-demand instance, you must configure the **Interval** parameter.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -210,10 +215,10 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The packet forwarding rate of attack traffic. Unit: packets per second.
+         * The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.
          * <p>
          * 
-         * >  This parameter is returned only if attack traffic exists.
+         * >  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](~~118701~~) operation to query all protected objects of the Anti-DDoS Origin instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -222,7 +227,7 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeTraffic**.
+         * The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.
          */
         public Builder ipnet(String ipnet) {
             this.putQueryParameter("Ipnet", ipnet);
@@ -231,7 +236,10 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The bandwidth of the total traffic. Unit: Kbit/s.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,12 +248,10 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The ID of the Anti-DDoS Origin instance to query.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
          * <p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
-         * 
-         * If you specify an on-demand instance, you must configure the **Interval** parameter.
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -254,10 +260,7 @@ public class DescribeTrafficRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
-         * <p>
-         * 
-         * If you do not specify this parameter, the current system time is used as the end time.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -38,7 +38,7 @@ public class DeleteIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Removes specific IP addresses from an Anti-DDoS Origin Enterprise instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

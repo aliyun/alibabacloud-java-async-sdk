@@ -62,7 +62,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).
+         * The details about the DDoS attack event.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -78,7 +78,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
+         * The total number of DDoS attack events.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -178,10 +178,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-             * <p>
-             * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -189,7 +186,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The attacked IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -197,7 +194,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * WB269094
+             * The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -205,7 +202,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -213,7 +210,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeDdosEvent
+             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -221,7 +218,13 @@ public class DescribeDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.
+             * The status of the DDoS attack event. Valid values:
+             * <p>
+             * 
+             * *   **hole_begin**: indicates that blackhole filtering is triggered for the attacked IP address.
+             * *   **hole_end**: indicates that blackhole filtering is deactivated for the attacked IP address.
+             * *   **defense_begin**: indicates that attack traffic is being scrubbed.
+             * *   **defense_end**: indicates that attack traffic is scrubbed.
              */
             public Builder status(String status) {
                 this.status = status;

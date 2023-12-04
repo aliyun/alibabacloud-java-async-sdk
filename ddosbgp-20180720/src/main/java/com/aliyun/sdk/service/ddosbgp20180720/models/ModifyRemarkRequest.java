@@ -98,7 +98,10 @@ public class ModifyRemarkRequest extends Request {
         } 
 
         /**
-         * Adds remarks for a specific Anti-DDoS Origin instance.
+         * The ID of the Anti-DDoS Origin instance for which you want to add remarks.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +110,10 @@ public class ModifyRemarkRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +122,7 @@ public class ModifyRemarkRequest extends Request {
         }
 
         /**
-         * ModifyRemark
+         * The remarks for the Anti-DDoS Origin instance.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -125,7 +131,10 @@ public class ModifyRemarkRequest extends Request {
         }
 
         /**
-         * WB269094
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

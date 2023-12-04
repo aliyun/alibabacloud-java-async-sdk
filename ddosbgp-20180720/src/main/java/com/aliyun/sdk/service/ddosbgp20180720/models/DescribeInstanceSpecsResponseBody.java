@@ -50,7 +50,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.
+         * The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -58,7 +58,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the unlimited protection feature can be enabled.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer packBasicThre; 
 
             /**
-             * Bandwidth.
+             * The bandwidth of the package configuration.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -190,7 +190,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Anti-DDoS Origin Enterprise instance.
+             * The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.
              */
             public Builder bindIpCount(Integer bindIpCount) {
                 this.bindIpCount = bindIpCount;
@@ -198,7 +198,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeInstanceSpecs
+             * The burstable bandwidth of each protected IP address. Unit: Gbit/s.
              */
             public Builder ipAdvanceThre(Integer ipAdvanceThre) {
                 this.ipAdvanceThre = ipAdvanceThre;
@@ -206,7 +206,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * WB269094
+             * The basic bandwidth of each protected IP address. Unit: Gbit/s.
              */
             public Builder ipBasicThre(Integer ipBasicThre) {
                 this.ipBasicThre = ipBasicThre;
@@ -214,7 +214,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * IpSpec.
+             * The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.
              */
             public Builder ipSpec(Integer ipSpec) {
                 this.ipSpec = ipSpec;
@@ -222,7 +222,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeInstanceSpecs
+             * The normal clean bandwidth. Unit: Mbit/s.
              */
             public Builder normalBandwidth(Integer normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -230,10 +230,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-             * <p>
-             * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * The burstable protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.
              */
             public Builder packAdvThre(Integer packAdvThre) {
                 this.packAdvThre = packAdvThre;
@@ -241,7 +238,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.
              */
             public Builder packBasicThre(Integer packBasicThre) {
                 this.packBasicThre = packBasicThre;
@@ -262,6 +259,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("AvailableDeleteBlackholeCount")
         private String availableDeleteBlackholeCount;
 
+        @NameInMap("DefenseTimesPercent")
+        private Integer defenseTimesPercent;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -280,6 +280,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private InstanceSpecs(Builder builder) {
             this.availableDefenseTimes = builder.availableDefenseTimes;
             this.availableDeleteBlackholeCount = builder.availableDeleteBlackholeCount;
+            this.defenseTimesPercent = builder.defenseTimesPercent;
             this.instanceId = builder.instanceId;
             this.isFullDefenseMode = builder.isFullDefenseMode;
             this.packConfig = builder.packConfig;
@@ -307,6 +308,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
          */
         public String getAvailableDeleteBlackholeCount() {
             return this.availableDeleteBlackholeCount;
+        }
+
+        /**
+         * @return defenseTimesPercent
+         */
+        public Integer getDefenseTimesPercent() {
+            return this.defenseTimesPercent;
         }
 
         /**
@@ -347,6 +355,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer availableDefenseTimes; 
             private String availableDeleteBlackholeCount; 
+            private Integer defenseTimesPercent; 
             private String instanceId; 
             private Integer isFullDefenseMode; 
             private PackConfig packConfig; 
@@ -354,10 +363,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer totalDefenseTimes; 
 
             /**
-             * The ID of the Anti-DDoS Origin Enterprise instance. This parameter value is a string consisting of JSON arrays. Each element in a JSON array indicates an instance ID. If you want to query more than one instance, separate instance IDs with commas (,).
-             * <p>
-             * 
-             * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.
+             * The number of times that the unlimited protection feature can be enabled.
              */
             public Builder availableDefenseTimes(Integer availableDefenseTimes) {
                 this.availableDefenseTimes = availableDefenseTimes;
@@ -365,7 +371,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.
+             * The number of times that blackhole filtering can be deactivated.
              */
             public Builder availableDeleteBlackholeCount(String availableDeleteBlackholeCount) {
                 this.availableDeleteBlackholeCount = availableDeleteBlackholeCount;
@@ -373,10 +379,38 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.
+             * DefenseTimesPercent.
+             */
+            public Builder defenseTimesPercent(Integer defenseTimesPercent) {
+                this.defenseTimesPercent = defenseTimesPercent;
+                return this;
+            }
+
+            /**
+             * The ID of the Anti-DDoS Origin Enterprise instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the unlimited protection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **0**: The unlimited protection feature is disabled.
+             * *   **1**: The unlimited protection feature is enabled.
+             */
+            public Builder isFullDefenseMode(Integer isFullDefenseMode) {
+                this.isFullDefenseMode = isFullDefenseMode;
+                return this;
+            }
+
+            /**
+             * The configurations of the Anti-DDoS Origin Enterprise instance, including the number of protected IP addresses and protection bandwidth.
+             */
+            public Builder packConfig(PackConfig packConfig) {
+                this.packConfig = packConfig;
                 return this;
             }
 
@@ -385,22 +419,6 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
              * <p>
              * 
              * >  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.
-             */
-            public Builder isFullDefenseMode(Integer isFullDefenseMode) {
-                this.isFullDefenseMode = isFullDefenseMode;
-                return this;
-            }
-
-            /**
-             * The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.
-             */
-            public Builder packConfig(PackConfig packConfig) {
-                this.packConfig = packConfig;
-                return this;
-            }
-
-            /**
-             * The number of times that blackhole filtering can be deactivated.
              */
             public Builder region(String region) {
                 this.region = region;

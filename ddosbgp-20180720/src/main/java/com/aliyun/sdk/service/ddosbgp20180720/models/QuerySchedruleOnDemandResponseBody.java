@@ -86,7 +86,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * The configurations of the scheduling rule.
+         * The ID of the on-demand instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -94,7 +94,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+         * The configurations of the scheduling rule.
          */
         public Builder ruleConfig(java.util.List < RuleConfig> ruleConfig) {
             this.ruleConfig = ruleConfig;
@@ -110,7 +110,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR block of the on-demand instance.
+         * The status of the scheduling rule.
          */
         public Builder ruleStatus(java.util.List < RuleStatus> ruleStatus) {
             this.ruleStatus = ruleStatus;
@@ -118,11 +118,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the scheduling rule is enabled. Valid values:
-         * <p>
-         * 
-         * *   **on**: enabled
-         * *   **off**: disabled
+         * The ID of the Alibaba Cloud account.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -270,11 +266,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The stop method of the scheduling rule. Valid values:
-             * <p>
-             * 
-             * *   **auto**: The scheduling rule automatically stops.
-             * *   **manual**: The scheduling rule is manually stopped.
+             * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
              */
             public Builder ruleAction(String ruleAction) {
                 this.ruleAction = ruleAction;
@@ -282,10 +274,49 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduling rule.
+             * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
+             * <p>
+             * 
+             * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
              */
             public Builder ruleConditionCnt(String ruleConditionCnt) {
                 this.ruleConditionCnt = ruleConditionCnt;
+                return this;
+            }
+
+            /**
+             * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+             */
+            public Builder ruleConditionKpps(String ruleConditionKpps) {
+                this.ruleConditionKpps = ruleConditionKpps;
+                return this;
+            }
+
+            /**
+             * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+             */
+            public Builder ruleConditionMbps(String ruleConditionMbps) {
+                this.ruleConditionMbps = ruleConditionMbps;
+                return this;
+            }
+
+            /**
+             * The name of the scheduling rule.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * Indicates whether the scheduling rule is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**: enabled
+             * *   **off**: disabled
+             */
+            public Builder ruleSwitch(String ruleSwitch) {
+                this.ruleSwitch = ruleSwitch;
                 return this;
             }
 
@@ -297,28 +328,28 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * 
              * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
              */
-            public Builder ruleConditionKpps(String ruleConditionKpps) {
-                this.ruleConditionKpps = ruleConditionKpps;
+            public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
+                this.ruleUndoBeginTime = ruleUndoBeginTime;
                 return this;
             }
 
             /**
-             * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
+             * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
              */
-            public Builder ruleConditionMbps(String ruleConditionMbps) {
-                this.ruleConditionMbps = ruleConditionMbps;
+            public Builder ruleUndoEndTime(String ruleUndoEndTime) {
+                this.ruleUndoEndTime = ruleUndoEndTime;
                 return this;
             }
 
             /**
-             * The scheduling status. Valid values:
+             * The stop method of the scheduling rule. Valid values:
              * <p>
              * 
-             * *   **scheduled**
-             * *   **unscheduled**
+             * *   **auto**: The scheduling rule automatically stops.
+             * *   **manual**: The scheduling rule is manually stopped.
              */
-            public Builder ruleName(String ruleName) {
-                this.ruleName = ruleName;
+            public Builder ruleUndoMode(String ruleUndoMode) {
+                this.ruleUndoMode = ruleUndoMode;
                 return this;
             }
 
@@ -329,41 +360,6 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
              * 
              * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
-             */
-            public Builder ruleSwitch(String ruleSwitch) {
-                this.ruleSwitch = ruleSwitch;
-                return this;
-            }
-
-            /**
-             * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
-             */
-            public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
-                this.ruleUndoBeginTime = ruleUndoBeginTime;
-                return this;
-            }
-
-            /**
-             * The status of the scheduling rule.
-             */
-            public Builder ruleUndoEndTime(String ruleUndoEndTime) {
-                this.ruleUndoEndTime = ruleUndoEndTime;
-                return this;
-            }
-
-            /**
-             * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
-             * <p>
-             * 
-             * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
-             */
-            public Builder ruleUndoMode(String ruleUndoMode) {
-                this.ruleUndoMode = ruleUndoMode;
-                return this;
-            }
-
-            /**
-             * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -416,7 +412,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             private String ruleSchedStatus; 
 
             /**
-             * Net.
+             * The CIDR block of the on-demand instance.
              */
             public Builder net(String net) {
                 this.net = net;
@@ -424,10 +420,11 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+             * The scheduling status. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * *   **scheduled**
+             * *   **unscheduled**
              */
             public Builder ruleSchedStatus(String ruleSchedStatus) {
                 this.ruleSchedStatus = ruleSchedStatus;

@@ -62,7 +62,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The number of the page to return.
+         * The details about the Anti-DDoS Origin instance.
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -70,7 +70,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the tag that is added to the Anti-DDoS Origin instance to query.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,13 +78,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.
-         * *   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.
+         * The total number of Anti-DDoS Origin instances.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -103,6 +97,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
         @NameInMap("BlackholdingCount")
         private String blackholdingCount;
+
+        @NameInMap("CommodityType")
+        private String commodityType;
 
         @NameInMap("CoverageType")
         private Integer coverageType;
@@ -134,6 +131,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         private InstanceList(Builder builder) {
             this.autoRenewal = builder.autoRenewal;
             this.blackholdingCount = builder.blackholdingCount;
+            this.commodityType = builder.commodityType;
             this.coverageType = builder.coverageType;
             this.expireTime = builder.expireTime;
             this.gmtCreate = builder.gmtCreate;
@@ -165,6 +163,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          */
         public String getBlackholdingCount() {
             return this.blackholdingCount;
+        }
+
+        /**
+         * @return commodityType
+         */
+        public String getCommodityType() {
+            return this.commodityType;
         }
 
         /**
@@ -233,6 +238,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoRenewal; 
             private String blackholdingCount; 
+            private String commodityType; 
             private Integer coverageType; 
             private Long expireTime; 
             private Long gmtCreate; 
@@ -244,10 +250,11 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+             * Indicates whether auto-renewal is enabled for the instance. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -255,10 +262,21 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * BlackholdingCount.
+             * The number of protected public IP addresses for which blackhole filtering is triggered.
+             * <p>
+             * 
+             * >  You can call the [DeleteBlackhole](~~118692~~) operation to deactivate blackhole filtering for a protected IP address.
              */
             public Builder blackholdingCount(String blackholdingCount) {
                 this.blackholdingCount = blackholdingCount;
+                return this;
+            }
+
+            /**
+             * CommodityType.
+             */
+            public Builder commodityType(String commodityType) {
+                this.commodityType = commodityType;
                 return this;
             }
 
@@ -271,7 +289,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeInstanceList
+             * The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -279,7 +297,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -287,7 +305,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -295,7 +313,11 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The mitigation plan of the instance. Valid values:
+             * <p>
+             * 
+             * *   **0**: the Professional mitigation plan
+             * *   **1**: the Enterprise mitigation plan
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -303,7 +325,11 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The protocol type of the IP address asset that is protected by the instance. Valid values:
+             * <p>
+             * 
+             * *   **Ipv4**: IPv4
+             * *   **Ipv6**: IPv6
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -311,7 +337,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * WB269094
+             * The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.
+             * *   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -319,7 +351,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of all Anti-DDoS Origin instances.
+             * The remarks of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -327,7 +359,12 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the instance.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: normal
+             * *   **2**: expired
+             * *   **3**: released
              */
             public Builder status(String status) {
                 this.status = status;

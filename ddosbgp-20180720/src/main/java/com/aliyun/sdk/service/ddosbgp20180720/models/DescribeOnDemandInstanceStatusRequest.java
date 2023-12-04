@@ -69,11 +69,10 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The mode used to start the on-demand instance. Valid values:
+         * The IDs of on-demand instances.
          * <p>
          * 
-         * *   **manual**: The instance is manually started.
-         * *   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -82,7 +81,10 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         }
 
         /**
-         * The details of the on-demand instance.
+         * The region ID of the on-demand instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

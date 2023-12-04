@@ -155,10 +155,10 @@ public class DescribePackIpListRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * The ID of the Anti-DDoS Origin instance to query.
          * <p>
          * 
-         * If you do not specify this parameter, the instance belongs to the default resource group.
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +167,7 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The protected IP address to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -176,7 +176,7 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The ID of the member.
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -185,11 +185,20 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribePackIpList**.
+         * The number of the page to return.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
             this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -202,15 +211,6 @@ public class DescribePackIpListRequest extends Request {
          * *   **EIP**: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.
          * *   **WAF**: a Web Application Firewall (WAF) instance.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The protected IP address to query.
-         */
         public Builder productName(String productName) {
             this.putQueryParameter("ProductName", productName);
             this.productName = productName;
@@ -218,7 +218,10 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The list of IP addresses that are protected by the Anti-DDoS Origin instance.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,13 +230,10 @@ public class DescribePackIpListRequest extends Request {
         }
 
         /**
-         * The type of the cloud asset to which the IP address belongs. Valid values:
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
          * <p>
          * 
-         * *   **ECS**: an ECS instance.
-         * *   **SLB**: an CLB instance.
-         * *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
-         * *   **WAF**: a WAF instance.
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

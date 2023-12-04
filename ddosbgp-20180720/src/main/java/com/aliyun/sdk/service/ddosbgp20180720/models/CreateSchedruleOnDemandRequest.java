@@ -218,7 +218,10 @@ public class CreateSchedruleOnDemandRequest extends Request {
         } 
 
         /**
-         * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+         * The ID of the on-demand instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -227,10 +230,10 @@ public class CreateSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+         * The region ID of the on-demand instance.
          * <p>
          * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,15 +242,53 @@ public class CreateSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The stop method of the scheduling rule. Valid values:
-         * <p>
-         * 
-         * *   **auto**: The scheduling rule automatically stops.
-         * *   **manual**: The scheduling rule is manually stopped.
+         * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
             this.ruleAction = ruleAction;
+            return this;
+        }
+
+        /**
+         * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
+         * <p>
+         * 
+         * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
+         */
+        public Builder ruleConditionCnt(String ruleConditionCnt) {
+            this.putQueryParameter("RuleConditionCnt", ruleConditionCnt);
+            this.ruleConditionCnt = ruleConditionCnt;
+            return this;
+        }
+
+        /**
+         * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+         */
+        public Builder ruleConditionKpps(String ruleConditionKpps) {
+            this.putQueryParameter("RuleConditionKpps", ruleConditionKpps);
+            this.ruleConditionKpps = ruleConditionKpps;
+            return this;
+        }
+
+        /**
+         * The threshold of inbound bandwidth. Unit: Mbit/s. Minimum value: **100**.
+         */
+        public Builder ruleConditionMbps(String ruleConditionMbps) {
+            this.putQueryParameter("RuleConditionMbps", ruleConditionMbps);
+            this.ruleConditionMbps = ruleConditionMbps;
+            return this;
+        }
+
+        /**
+         * The name of the scheduling rule.
+         * <p>
+         * 
+         * The name can contain lowercase letters, digits, hyphens (-), and underscores (\_). The name can be up to 32 characters in length. We recommend that you use the ID of the on-demand instance as the name. Example: `ddosbgp-cn-z2q1qzxb****`.
+         */
+        public Builder ruleName(String ruleName) {
+            this.putQueryParameter("RuleName", ruleName);
+            this.ruleName = ruleName;
             return this;
         }
 
@@ -258,39 +299,9 @@ public class CreateSchedruleOnDemandRequest extends Request {
          * *   **on**: enabled
          * *   **off**: disabled
          */
-        public Builder ruleConditionCnt(String ruleConditionCnt) {
-            this.putQueryParameter("RuleConditionCnt", ruleConditionCnt);
-            this.ruleConditionCnt = ruleConditionCnt;
-            return this;
-        }
-
-        /**
-         * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
-         */
-        public Builder ruleConditionKpps(String ruleConditionKpps) {
-            this.putQueryParameter("RuleConditionKpps", ruleConditionKpps);
-            this.ruleConditionKpps = ruleConditionKpps;
-            return this;
-        }
-
-        /**
-         * If the inbound bandwidth or packets consecutively exceed the threshold for the specified number of times, the scheduling rule is triggered and traffic is rerouted to the on-demand instance. The specified number of times is the value of this parameter.
-         * <p>
-         * 
-         * >  The threshold of inbound bandwidth is the value of **RuleConditionMbps**. The threshold of inbound packets is the value of **RuleConditionKpps**.
-         */
-        public Builder ruleConditionMbps(String ruleConditionMbps) {
-            this.putQueryParameter("RuleConditionMbps", ruleConditionMbps);
-            this.ruleConditionMbps = ruleConditionMbps;
-            return this;
-        }
-
-        /**
-         * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
-         */
-        public Builder ruleName(String ruleName) {
-            this.putQueryParameter("RuleName", ruleName);
-            this.ruleName = ruleName;
+        public Builder ruleSwitch(String ruleSwitch) {
+            this.putQueryParameter("RuleSwitch", ruleSwitch);
+            this.ruleSwitch = ruleSwitch;
             return this;
         }
 
@@ -302,9 +313,31 @@ public class CreateSchedruleOnDemandRequest extends Request {
          * 
          * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
          */
-        public Builder ruleSwitch(String ruleSwitch) {
-            this.putQueryParameter("RuleSwitch", ruleSwitch);
-            this.ruleSwitch = ruleSwitch;
+        public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
+            this.putQueryParameter("RuleUndoBeginTime", ruleUndoBeginTime);
+            this.ruleUndoBeginTime = ruleUndoBeginTime;
+            return this;
+        }
+
+        /**
+         * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
+         */
+        public Builder ruleUndoEndTime(String ruleUndoEndTime) {
+            this.putQueryParameter("RuleUndoEndTime", ruleUndoEndTime);
+            this.ruleUndoEndTime = ruleUndoEndTime;
+            return this;
+        }
+
+        /**
+         * The stop method of the scheduling rule. Valid values:
+         * <p>
+         * 
+         * *   **auto**: The scheduling rule automatically stops.
+         * *   **manual**: The scheduling rule is manually stopped.
+         */
+        public Builder ruleUndoMode(String ruleUndoMode) {
+            this.putQueryParameter("RuleUndoMode", ruleUndoMode);
+            this.ruleUndoMode = ruleUndoMode;
             return this;
         }
 
@@ -315,36 +348,6 @@ public class CreateSchedruleOnDemandRequest extends Request {
          * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
          * 
          * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
-         */
-        public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
-            this.putQueryParameter("RuleUndoBeginTime", ruleUndoBeginTime);
-            this.ruleUndoBeginTime = ruleUndoBeginTime;
-            return this;
-        }
-
-        /**
-         * The region ID of the on-demand instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
-         */
-        public Builder ruleUndoEndTime(String ruleUndoEndTime) {
-            this.putQueryParameter("RuleUndoEndTime", ruleUndoEndTime);
-            this.ruleUndoEndTime = ruleUndoEndTime;
-            return this;
-        }
-
-        /**
-         * The end time of the period during which the scheduling rule is automatically stopped. The time must be in the 24-hour clock and in the `hh:mm` format.
-         */
-        public Builder ruleUndoMode(String ruleUndoMode) {
-            this.putQueryParameter("RuleUndoMode", ruleUndoMode);
-            this.ruleUndoMode = ruleUndoMode;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

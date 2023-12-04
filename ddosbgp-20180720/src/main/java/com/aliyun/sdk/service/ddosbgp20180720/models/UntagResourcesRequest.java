@@ -127,7 +127,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **UntagResources**.
+         * Specifies whether to remove all tags from the specified Anti-DDoS Origin Enterprise instances.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -136,7 +136,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * testKey1
+         * The ID of the region where the Anti-DDoS Origin Enterprise instances reside.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +145,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the specified resource. Set the value to **INSTANCE**.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -163,7 +163,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The type of the specified resource. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

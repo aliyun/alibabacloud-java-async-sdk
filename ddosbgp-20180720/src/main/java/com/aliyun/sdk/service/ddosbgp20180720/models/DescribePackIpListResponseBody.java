@@ -86,7 +86,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The ID of the request.
+         * The HTTP status code of the request.
+         * <p>
+         * 
+         * For more information about status codes, see [Common parameters](~~118841~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * WB269094
+         * The IP addresses that are protected by the instance.
          */
         public Builder ipList(java.util.List < IpList> ipList) {
             this.ipList = ipList;
@@ -102,10 +105,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-         * <p>
-         * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +113,11 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * DescribePackIpList
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call is successful.
+         * *   **false**: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -121,7 +125,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the IP addresses that are protected by a specific Anti-DDoS Origin instance.
+         * The number of protected IP addresses.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -221,7 +225,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -229,7 +233,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * The ID of the member.
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -237,7 +241,13 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The type of the cloud asset to which the IP address belongs. Valid values:
+             * <p>
+             * 
+             * *   **ECS**: an ECS instance.
+             * *   **SLB**: a CLB instance, originally called an SLB instance.
+             * *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
+             * *   **WAF**: a WAF instance.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -245,7 +255,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the protected IP address belongs.
+             * <p>
+             * 
+             * >  If the protected IP address is in the same region as the instance, this parameter is not returned.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -253,7 +266,10 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.
+             * <p>
+             * 
+             * >  If no descriptions are provided for the asset, this parameter is not returned.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -261,7 +277,11 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the IP address. Valid values:
+             * <p>
+             * 
+             * *   **normal**: The IP address is in the normal state, which indicates that the IP address is not under attack.
+             * *   **hole_begin**: Blackhole filtering is triggered for the IP address.
              */
             public Builder status(String status) {
                 this.status = status;

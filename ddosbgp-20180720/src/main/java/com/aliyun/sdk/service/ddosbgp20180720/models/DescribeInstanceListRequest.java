@@ -224,7 +224,7 @@ public class DescribeInstanceListRequest extends Request {
         } 
 
         /**
-         * The details about the Anti-DDoS Origin instance.
+         * The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the `["<Instance ID 1>","<Instance ID 2>",……]` format.
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -233,7 +233,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the `["<Instance ID 1>","<Instance ID 2>",……]` format.
+         * The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: the Professional mitigation plan
+         * *   **1**: the Enterprise mitigation plan
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -251,7 +255,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.
+         * The IP address of the object that is protected by the Anti-DDoS Origin instance to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -260,7 +264,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.
+         * The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:
+         * <p>
+         * 
+         * *   **Ipv4**: IPv4
+         * *   **Ipv6**: IPv6
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -269,11 +277,10 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:
+         * The field that is used to sort the Anti-DDoS Origin instances. Set the value to **expireTime**, which indicates that the instances are sorted based on the expiration time.
          * <p>
          * 
-         * *   **0**: the Professional mitigation plan
-         * *   **1**: the Enterprise mitigation plan
+         * You can set the **Orderdire** parameter to specify the sorting method.
          */
         public Builder orderby(String orderby) {
             this.putQueryParameter("Orderby", orderby);
@@ -282,7 +289,11 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The key of the tag that is added to the Anti-DDoS Origin instance to query.
+         * The sorting method. Valid values:
+         * <p>
+         * 
+         * *   **desc**: the descending order. This is the default value.
+         * *   **asc**: the ascending order.
          */
         public Builder orderdire(String orderdire) {
             this.putQueryParameter("Orderdire", orderdire);
@@ -291,7 +302,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The total number of Anti-DDoS Origin instances.
+         * The number of the page to return.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -300,7 +311,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * The IP address of the object that is protected by the Anti-DDoS Origin instance to query.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -321,11 +332,7 @@ public class DescribeInstanceListRequest extends Request {
         }
 
         /**
-         * Indicates whether auto-renewal is enabled for the instance. Valid values:
-         * <p>
-         * 
-         * *   **true**: enabled
-         * *   **false**: disabled
+         * The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -400,7 +407,7 @@ public class DescribeInstanceListRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the instance.
+             * The key of the tag that is added to the Anti-DDoS Origin instance to query.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,10 +415,7 @@ public class DescribeInstanceListRequest extends Request {
             }
 
             /**
-             * The field that is used to sort the Anti-DDoS Origin instances. Set the value to **expireTime**, which indicates that the instances are sorted based on the expiration time.
-             * <p>
-             * 
-             * You can set the **Orderdire** parameter to specify the sorting method.
+             * The value of the tag that is added to the Anti-DDoS Origin instance to query.
              */
             public Builder value(String value) {
                 this.value = value;

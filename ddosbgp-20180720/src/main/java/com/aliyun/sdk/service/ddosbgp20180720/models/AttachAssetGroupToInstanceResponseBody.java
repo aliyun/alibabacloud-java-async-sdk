@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteSchedruleOnDemandResponseBody} extends {@link TeaModel}
+ * {@link AttachAssetGroupToInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteSchedruleOnDemandResponseBody</p>
+ * <p>AttachAssetGroupToInstanceResponseBody</p>
  */
-public class DeleteSchedruleOnDemandResponseBody extends TeaModel {
+public class AttachAssetGroupToInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteSchedruleOnDemandResponseBody(Builder builder) {
+    private AttachAssetGroupToInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteSchedruleOnDemandResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteSchedruleOnDemandResponseBody create() {
+    public static AttachAssetGroupToInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class DeleteSchedruleOnDemandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteSchedruleOnDemandResponseBody build() {
-            return new DeleteSchedruleOnDemandResponseBody(this);
+        public AttachAssetGroupToInstanceResponseBody build() {
+            return new AttachAssetGroupToInstanceResponseBody(this);
         } 
 
     } 

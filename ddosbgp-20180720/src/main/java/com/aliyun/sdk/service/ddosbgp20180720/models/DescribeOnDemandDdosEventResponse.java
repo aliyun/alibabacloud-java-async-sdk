@@ -16,6 +16,10 @@ public class DescribeOnDemandDdosEventResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeOnDemandDdosEventResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeOnDemandDdosEventResponse extends Response {
     private DescribeOnDemandDdosEventResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeOnDemandDdosEventResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeOnDemandDdosEventResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeOnDemandDdosEventResponse extends Response {
     public interface Builder extends Response.Builder<DescribeOnDemandDdosEventResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeOnDemandDdosEventResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeOnDemandDdosEventResponse extends Response {
             extends Response.BuilderImpl<DescribeOnDemandDdosEventResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeOnDemandDdosEventResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeOnDemandDdosEventResponse extends Response {
         private BuilderImpl(DescribeOnDemandDdosEventResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeOnDemandDdosEventResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

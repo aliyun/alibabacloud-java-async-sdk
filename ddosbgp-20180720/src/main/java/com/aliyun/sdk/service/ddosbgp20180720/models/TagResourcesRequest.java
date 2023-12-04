@@ -113,10 +113,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+         * The ID of the region where the Anti-DDoS Origin instance resides.
          * <p>
          * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **TagResources**.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -143,7 +146,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Adds tags to Anti-DDoS Origin instances.
+         * The type of the resource to which you want to add tags. Set the value to **INSTANCE**, which indicates instances.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -206,7 +209,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * WB269094
+             * The key of the tag to add.
+             * <p>
+             * 
+             * >  If the specified key does not exist, a key is created.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,7 +220,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag to add.
+             * <p>
+             * 
+             * >  If the specified value does not exist, a value is created.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -68,11 +68,10 @@ public class CheckAccessLogAuthRequest extends Request {
         } 
 
         /**
-         * Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:
+         * The ID of the region where the Anti-DDoS Origin instance resides.
          * <p>
          * 
-         * *   **true**: Anti-DDoS Origin was authorized.
-         * *   **false**: Anti-DDoS Origin was not authorized.
+         * For more information about the valid values of this parameter, see [Regions and zones](~~188196~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -81,7 +80,10 @@ public class CheckAccessLogAuthRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

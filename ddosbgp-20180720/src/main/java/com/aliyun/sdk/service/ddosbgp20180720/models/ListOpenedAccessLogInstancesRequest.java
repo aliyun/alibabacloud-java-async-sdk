@@ -96,7 +96,10 @@ public class ListOpenedAccessLogInstancesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: **1**.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * For more information about the valid values of this parameter, see [Regions and zones](~~188196~~).
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +108,7 @@ public class ListOpenedAccessLogInstancesRequest extends Request {
         }
 
         /**
-         * The number of the Anti-DDoS Origin instances for which log analysis was enabled.
+         * The number of the page to return. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +117,7 @@ public class ListOpenedAccessLogInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +126,10 @@ public class ListOpenedAccessLogInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

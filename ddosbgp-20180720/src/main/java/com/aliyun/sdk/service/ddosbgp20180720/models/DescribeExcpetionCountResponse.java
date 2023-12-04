@@ -16,6 +16,10 @@ public class DescribeExcpetionCountResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeExcpetionCountResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeExcpetionCountResponse extends Response {
     private DescribeExcpetionCountResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeExcpetionCountResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeExcpetionCountResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeExcpetionCountResponse extends Response {
     public interface Builder extends Response.Builder<DescribeExcpetionCountResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeExcpetionCountResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeExcpetionCountResponse extends Response {
             extends Response.BuilderImpl<DescribeExcpetionCountResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeExcpetionCountResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeExcpetionCountResponse extends Response {
         private BuilderImpl(DescribeExcpetionCountResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeExcpetionCountResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

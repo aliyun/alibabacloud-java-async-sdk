@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateSchedruleOnDemandResponse} extends {@link TeaModel}
+ * {@link AttachAssetGroupToInstanceResponse} extends {@link TeaModel}
  *
- * <p>CreateSchedruleOnDemandResponse</p>
+ * <p>AttachAssetGroupToInstanceResponse</p>
  */
-public class CreateSchedruleOnDemandResponse extends Response {
+public class AttachAssetGroupToInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class CreateSchedruleOnDemandResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateSchedruleOnDemandResponseBody body;
+    private AttachAssetGroupToInstanceResponseBody body;
 
-    private CreateSchedruleOnDemandResponse(BuilderImpl builder) {
+    private AttachAssetGroupToInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateSchedruleOnDemandResponse create() {
+    public static AttachAssetGroupToInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class CreateSchedruleOnDemandResponse extends Response {
     /**
      * @return body
      */
-    public CreateSchedruleOnDemandResponseBody getBody() {
+    public AttachAssetGroupToInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateSchedruleOnDemandResponse, Builder> {
+    public interface Builder extends Response.Builder<AttachAssetGroupToInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateSchedruleOnDemandResponseBody body);
+        Builder body(AttachAssetGroupToInstanceResponseBody body);
 
         @Override
-        CreateSchedruleOnDemandResponse build();
+        AttachAssetGroupToInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateSchedruleOnDemandResponse, Builder>
+            extends Response.BuilderImpl<AttachAssetGroupToInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateSchedruleOnDemandResponseBody body; 
+        private AttachAssetGroupToInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateSchedruleOnDemandResponse response) {
+        private BuilderImpl(AttachAssetGroupToInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class CreateSchedruleOnDemandResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateSchedruleOnDemandResponseBody body) {
+        public Builder body(AttachAssetGroupToInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateSchedruleOnDemandResponse build() {
-            return new CreateSchedruleOnDemandResponse(this);
+        public AttachAssetGroupToInstanceResponse build() {
+            return new AttachAssetGroupToInstanceResponse(this);
         } 
 
     } 

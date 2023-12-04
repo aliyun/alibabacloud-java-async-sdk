@@ -62,7 +62,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the Anti-DDoS Origin instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,11 +70,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
-         * <p>
-         * 
-         * *   **true**: Log analysis was enabled.
-         * *   **false**: Log analysis was disabled.
+         * The configuration of log analysis for the Anti-DDoS Origin instance.
          */
         public Builder slsConfigStatus(java.util.List < SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
@@ -82,7 +78,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of log analysis for the Anti-DDoS Origin instance.
+         * The number of the Anti-DDoS Origin instances for which log analysis was enabled.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,7 +130,11 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Enable.
+             * Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: Log analysis was enabled.
+             * *   **false**: Log analysis was disabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -142,10 +142,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-             * <p>
-             * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * The ID of the Anti-DDoS Origin instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -50,7 +50,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * The details of the on-demand instance.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -58,7 +58,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR block of the on-demand instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * WB269094
+             * The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:
+             * <p>
+             * 
+             * *   **region**: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see **Codes of data centers outside the Chinese mainland**.
+             * *   **declared**: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.
              */
             public Builder declared(String declared) {
                 this.declared = declared;
@@ -178,7 +182,10 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * The description of the on-demand instance.
+             * <p>
+             * 
+             * >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -186,7 +193,10 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeOnDemandInstanceStatus
+             * The ID of the on-demand instance.
+             * <p>
+             * 
+             * >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -194,10 +204,11 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+             * The mode used to start the on-demand instance. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * *   **manual**: The instance is manually started.
+             * *   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -205,7 +216,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Net.
+             * The CIDR block of the on-demand instance.
              */
             public Builder net(String net) {
                 this.net = net;
@@ -213,7 +224,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeOnDemandInstanceStatus
+             * The number of the autonomous system (AS). Set the value to **0**, which indicates that AS is disabled.
              */
             public Builder registedAs(String registedAs) {
                 this.registedAs = registedAs;
@@ -221,7 +232,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

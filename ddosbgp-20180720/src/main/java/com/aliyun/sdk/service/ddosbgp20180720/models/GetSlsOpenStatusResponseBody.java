@@ -50,7 +50,7 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         private Boolean slsOpenStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +58,11 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         }
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
+         * Indicates whether Log Service was activated. Valid values:
          * <p>
          * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * *   **true**: Log Service was activated.
+         * *   **false**: Log Service was not activated.
          */
         public Builder slsOpenStatus(Boolean slsOpenStatus) {
             this.slsOpenStatus = slsOpenStatus;

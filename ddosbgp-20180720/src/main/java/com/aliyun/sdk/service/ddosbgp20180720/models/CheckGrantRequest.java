@@ -82,7 +82,11 @@ public class CheckGrantRequest extends Request {
         } 
 
         /**
-         * IsSlr.
+         * Specifies whether to allow Anti-DDoS Origin to check the service-linked role. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder isSlr(Boolean isSlr) {
             this.putQueryParameter("IsSlr", isSlr);
@@ -91,7 +95,10 @@ public class CheckGrantRequest extends Request {
         }
 
         /**
-         * WB269094
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +107,10 @@ public class CheckGrantRequest extends Request {
         }
 
         /**
-         * CheckGrant
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

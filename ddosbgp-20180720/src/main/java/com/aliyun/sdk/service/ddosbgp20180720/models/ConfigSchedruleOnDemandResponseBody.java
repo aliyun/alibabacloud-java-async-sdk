@@ -38,10 +38,7 @@ public class ConfigSchedruleOnDemandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-         * <p>
-         * 
-         * For more information about sample requests, see the **"Examples"** section of this topic.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

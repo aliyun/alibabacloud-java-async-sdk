@@ -62,7 +62,7 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * WB269094
+         * The number of assets that are in an abnormal state.
          */
         public Builder exceptionIpCount(Integer exceptionIpCount) {
             this.exceptionIpCount = exceptionIpCount;
@@ -70,7 +70,7 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTimeCount.
+         * The number of Anti-DDoS Origin instances that are about to expire.
          */
         public Builder expireTimeCount(Integer expireTimeCount) {
             this.expireTimeCount = expireTimeCount;
@@ -78,7 +78,7 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

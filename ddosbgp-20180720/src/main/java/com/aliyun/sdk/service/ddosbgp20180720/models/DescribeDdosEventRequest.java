@@ -157,44 +157,11 @@ public class DescribeDdosEventRequest extends Request {
         } 
 
         /**
-         * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
+         * The end time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The status of the DDoS attack event. Valid values:
-         * <p>
-         * 
-         * *   **hole_begin**: indicates that blackhole filtering is triggered for the attacked IP address.
-         * *   **hole_end**: indicates that blackhole filtering is deactivated for the attacked IP address.
-         * *   **defense_begin**: indicates that attack traffic is being scrubbed.
-         * *   **defense_end**: indicates that attack traffic is scrubbed.
-         */
-        public Builder ip(String ip) {
-            this.putQueryParameter("Ip", ip);
-            this.ip = ip;
-            return this;
-        }
-
-        /**
-         * The attacked IP address to query.
-         */
-        public Builder pageNo(Integer pageNo) {
-            this.putQueryParameter("PageNo", pageNo);
-            this.pageNo = pageNo;
             return this;
         }
 
@@ -204,6 +171,33 @@ public class DescribeDdosEventRequest extends Request {
          * 
          * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
          */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The attacked IP address to query.
+         */
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
@@ -211,7 +205,10 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The details about the DDoS attack event.
+         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +217,10 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -229,7 +229,7 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeDdosEvent**
+         * The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

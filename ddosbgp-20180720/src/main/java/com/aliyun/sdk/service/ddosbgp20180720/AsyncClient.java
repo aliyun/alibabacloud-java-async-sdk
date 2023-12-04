@@ -20,12 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddIpResponse> addIp(AddIpRequest request);
 
+    CompletableFuture<AttachAssetGroupToInstanceResponse> attachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request);
+
     CompletableFuture<CheckAccessLogAuthResponse> checkAccessLogAuth(CheckAccessLogAuthRequest request);
 
     /**
-      * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-      * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-      * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<CheckGrantResponse> checkGrant(CheckGrantRequest request);
@@ -44,31 +46,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBlackholeResponse> deleteBlackhole(DeleteBlackholeRequest request);
 
     /**
-      * The ID of the Anti-DDoS Origin Enterprise instance.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+      * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
       *
      */
     CompletableFuture<DeleteIpResponse> deleteIp(DeleteIpRequest request);
 
     CompletableFuture<DeleteSchedruleOnDemandResponse> deleteSchedruleOnDemand(DeleteSchedruleOnDemandRequest request);
 
+    CompletableFuture<DescribeAssetGroupResponse> describeAssetGroup(DescribeAssetGroupRequest request);
+
+    CompletableFuture<DescribeAssetGroupToInstanceResponse> describeAssetGroupToInstance(DescribeAssetGroupToInstanceRequest request);
+
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DescribeDdosEventResponse> describeDdosEvent(DescribeDdosEventRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+      * ## Usage notes
+      * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
       *
      */
     CompletableFuture<DescribeExcpetionCountResponse> describeExcpetionCount(DescribeExcpetionCountRequest request);
 
     /**
-      * The status of the instance. Valid values:
-      * *   **1**: normal
-      * *   **2**: expired
-      * *   **3**: released
+      * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DescribeInstanceListResponse> describeInstanceList(DescribeInstanceListRequest request);
@@ -76,7 +83,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceSpecsResponse> describeInstanceSpecs(DescribeInstanceSpecsRequest request);
 
     /**
-      * The ID of the resource group.
+      * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
       *
      */
     CompletableFuture<DescribeOnDemandDdosEventResponse> describeOnDemandDdosEvent(DescribeOnDemandDdosEventRequest request);
@@ -90,7 +97,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeOpEntitiesResponse> describeOpEntities(DescribeOpEntitiesRequest request);
 
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DescribePackIpListResponse> describePackIpList(DescribePackIpListRequest request);
@@ -98,11 +107,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
-      * The bandwidth of attack traffic. Unit: bit/s.
-      * >  This parameter is returned only if attack traffic exists.
+      * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+      * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+      * ## Limits
+      * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DescribeTrafficResponse> describeTraffic(DescribeTrafficRequest request);
+
+    CompletableFuture<DettachAssetGroupToInstanceResponse> dettachAssetGroupToInstance(DettachAssetGroupToInstanceRequest request);
 
     CompletableFuture<GetSlsOpenStatusResponse> getSlsOpenStatus(GetSlsOpenStatusRequest request);
 
@@ -111,14 +124,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
 
     /**
-      * The ID of the region where the Anti-DDoS Origin instance resides.
-      * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+      * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
       *
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **ModifyRemark**.
+      * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<ModifyRemarkResponse> modifyRemark(ModifyRemarkRequest request);
@@ -128,8 +142,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetInstanceModeOnDemandResponse> setInstanceModeOnDemand(SetInstanceModeOnDemandRequest request);
 
     /**
-      * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+      * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
