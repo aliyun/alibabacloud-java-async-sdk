@@ -271,6 +271,9 @@ public class IsvUserSaveRequest extends Request {
         @Validation(required = true)
         private String userName;
 
+        @NameInMap("user_nick")
+        private String userNick;
+
         private UserList(Builder builder) {
             this.baseCityCode = builder.baseCityCode;
             this.birthday = builder.birthday;
@@ -290,6 +293,7 @@ public class IsvUserSaveRequest extends Request {
             this.thirdDepartIdList = builder.thirdDepartIdList;
             this.userId = builder.userId;
             this.userName = builder.userName;
+            this.userNick = builder.userNick;
         }
 
         public static Builder builder() {
@@ -426,6 +430,13 @@ public class IsvUserSaveRequest extends Request {
             return this.userName;
         }
 
+        /**
+         * @return userNick
+         */
+        public String getUserNick() {
+            return this.userNick;
+        }
+
         public static final class Builder {
             private String baseCityCode; 
             private String birthday; 
@@ -445,6 +456,7 @@ public class IsvUserSaveRequest extends Request {
             private java.util.List < String > thirdDepartIdList; 
             private String userId; 
             private String userName; 
+            private String userNick; 
 
             /**
              * base_city_code.
@@ -587,6 +599,14 @@ public class IsvUserSaveRequest extends Request {
              */
             public Builder userName(String userName) {
                 this.userName = userName;
+                return this;
+            }
+
+            /**
+             * user_nick.
+             */
+            public Builder userNick(String userNick) {
+                this.userNick = userNick;
                 return this;
             }
 

@@ -541,6 +541,7 @@ public class CarApplyAddRequest extends Request {
         private java.util.List < CarCitySet> carCitySet;
 
         @NameInMap("user_id")
+        @Validation(required = true)
         private String userId;
 
         private TravelerStandard(Builder builder) {

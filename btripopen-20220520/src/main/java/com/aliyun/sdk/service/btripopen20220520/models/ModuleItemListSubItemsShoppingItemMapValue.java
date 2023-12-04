@@ -12,22 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModuleItemListSubItemsShoppingItemMapValue</p>
  */
 public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
+    @NameInMap("search_price")
+    private SearchPrice searchPrice;
+
     @NameInMap("id")
     private String id;
 
     @NameInMap("cabin_quantity")
     private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity;
 
-    @NameInMap("search_price")
-    private SearchPrice searchPrice;
-
     @NameInMap("segment_price")
     private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice;
 
     private ModuleItemListSubItemsShoppingItemMapValue(Builder builder) {
+        this.searchPrice = builder.searchPrice;
         this.id = builder.id;
         this.cabinQuantity = builder.cabinQuantity;
-        this.searchPrice = builder.searchPrice;
         this.segmentPrice = builder.segmentPrice;
     }
 
@@ -37,6 +37,13 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
 
     public static ModuleItemListSubItemsShoppingItemMapValue create() {
         return builder().build();
+    }
+
+    /**
+     * @return searchPrice
+     */
+    public SearchPrice getSearchPrice() {
+        return this.searchPrice;
     }
 
     /**
@@ -54,13 +61,6 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     }
 
     /**
-     * @return searchPrice
-     */
-    public SearchPrice getSearchPrice() {
-        return this.searchPrice;
-    }
-
-    /**
      * @return segmentPrice
      */
     public java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > getSegmentPrice() {
@@ -68,10 +68,18 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     }
 
     public static final class Builder {
+        private SearchPrice searchPrice; 
         private String id; 
         private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity; 
-        private SearchPrice searchPrice; 
         private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice; 
+
+        /**
+         * search_price.
+         */
+        public Builder searchPrice(SearchPrice searchPrice) {
+            this.searchPrice = searchPrice;
+            return this;
+        }
 
         /**
          * id
@@ -86,14 +94,6 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
          */
         public Builder cabinQuantity(java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity) {
             this.cabinQuantity = cabinQuantity;
-            return this;
-        }
-
-        /**
-         * search_price.
-         */
-        public Builder searchPrice(SearchPrice searchPrice) {
-            this.searchPrice = searchPrice;
             return this;
         }
 
