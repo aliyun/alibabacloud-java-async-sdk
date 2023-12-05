@@ -367,6 +367,67 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
     }
+    public static class ServerGroupStickySession extends TeaModel {
+        @NameInMap("Enabled")
+        private Boolean enabled;
+
+        @NameInMap("Timeout")
+        private Integer timeout;
+
+        private ServerGroupStickySession(Builder builder) {
+            this.enabled = builder.enabled;
+            this.timeout = builder.timeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerGroupStickySession create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return timeout
+         */
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer timeout; 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Timeout.
+             */
+            public Builder timeout(Integer timeout) {
+                this.timeout = timeout;
+                return this;
+            }
+
+            public ServerGroupStickySession build() {
+                return new ServerGroupStickySession(this);
+            } 
+
+        } 
+
+    }
     public static class ServerGroupTuples extends TeaModel {
         @NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -429,10 +490,14 @@ public class ListRulesResponseBody extends TeaModel {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupStickySession")
+        private ServerGroupStickySession serverGroupStickySession;
+
         @NameInMap("ServerGroupTuples")
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
+            this.serverGroupStickySession = builder.serverGroupStickySession;
             this.serverGroupTuples = builder.serverGroupTuples;
         }
 
@@ -445,6 +510,13 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverGroupStickySession
+         */
+        public ServerGroupStickySession getServerGroupStickySession() {
+            return this.serverGroupStickySession;
+        }
+
+        /**
          * @return serverGroupTuples
          */
         public java.util.List < ServerGroupTuples> getServerGroupTuples() {
@@ -452,7 +524,16 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ServerGroupStickySession serverGroupStickySession; 
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
+
+            /**
+             * ServerGroupStickySession.
+             */
+            public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
+                this.serverGroupStickySession = serverGroupStickySession;
+                return this;
+            }
 
             /**
              * The server groups to which requests are forwarded.
@@ -1048,8 +1129,12 @@ public class ListRulesResponseBody extends TeaModel {
         @NameInMap("MirrorGroupConfig")
         private MirrorGroupConfig mirrorGroupConfig;
 
+        @NameInMap("TargetType")
+        private String targetType;
+
         private TrafficMirrorConfig(Builder builder) {
             this.mirrorGroupConfig = builder.mirrorGroupConfig;
+            this.targetType = builder.targetType;
         }
 
         public static Builder builder() {
@@ -1067,14 +1152,30 @@ public class ListRulesResponseBody extends TeaModel {
             return this.mirrorGroupConfig;
         }
 
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
         public static final class Builder {
             private MirrorGroupConfig mirrorGroupConfig; 
+            private String targetType; 
 
             /**
              * The configuration of the server group to which traffic is mirrored.
              */
             public Builder mirrorGroupConfig(MirrorGroupConfig mirrorGroupConfig) {
                 this.mirrorGroupConfig = mirrorGroupConfig;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
                 return this;
             }
 

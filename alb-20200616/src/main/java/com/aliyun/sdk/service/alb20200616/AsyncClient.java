@@ -67,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AttachCommonBandwidthPackageToLoadBalancerResponse> attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request);
 
+    /**
+      * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+      *
+     */
     CompletableFuture<CancelShiftLoadBalancerZonesResponse> cancelShiftLoadBalancerZones(CancelShiftLoadBalancerZonesRequest request);
 
     /**
@@ -356,6 +360,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<StartListenerResponse> startListener(StartListenerRequest request);
 
+    /**
+      * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+      *
+     */
     CompletableFuture<StartShiftLoadBalancerZonesResponse> startShiftLoadBalancerZones(StartShiftLoadBalancerZonesRequest request);
 
     /**
