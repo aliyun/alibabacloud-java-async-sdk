@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryMcdpAimResponse} extends {@link TeaModel}
+ * {@link MTRSOCRServiceResponse} extends {@link TeaModel}
  *
- * <p>QueryMcdpAimResponse</p>
+ * <p>MTRSOCRServiceResponse</p>
  */
-public class QueryMcdpAimResponse extends Response {
+public class MTRSOCRServiceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class QueryMcdpAimResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryMcdpAimResponseBody body;
+    private MTRSOCRServiceResponseBody body;
 
-    private QueryMcdpAimResponse(BuilderImpl builder) {
+    private MTRSOCRServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryMcdpAimResponse create() {
+    public static MTRSOCRServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class QueryMcdpAimResponse extends Response {
     /**
      * @return body
      */
-    public QueryMcdpAimResponseBody getBody() {
+    public MTRSOCRServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryMcdpAimResponse, Builder> {
+    public interface Builder extends Response.Builder<MTRSOCRServiceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryMcdpAimResponseBody body);
+        Builder body(MTRSOCRServiceResponseBody body);
 
         @Override
-        QueryMcdpAimResponse build();
+        MTRSOCRServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryMcdpAimResponse, Builder>
+            extends Response.BuilderImpl<MTRSOCRServiceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryMcdpAimResponseBody body; 
+        private MTRSOCRServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryMcdpAimResponse response) {
+        private BuilderImpl(MTRSOCRServiceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class QueryMcdpAimResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryMcdpAimResponseBody body) {
+        public Builder body(MTRSOCRServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryMcdpAimResponse build() {
-            return new QueryMcdpAimResponse(this);
+        public MTRSOCRServiceResponse build() {
+            return new MTRSOCRServiceResponse(this);
         } 
 
     } 

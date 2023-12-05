@@ -150,6 +150,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LogMsaQueryResponse> logMsaQuery(LogMsaQueryRequest request);
 
+    CompletableFuture<MTRSOCRServiceResponse> mTRSOCRService(MTRSOCRServiceRequest request);
+
     CompletableFuture<OpenApiAddActiveCodeResponse> openApiAddActiveCode(OpenApiAddActiveCodeRequest request);
 
     CompletableFuture<OpenApiAddActiveSceneResponse> openApiAddActiveScene(OpenApiAddActiveSceneRequest request);

@@ -7,53 +7,47 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UploadBitcodeToMsaRequest} extends {@link RequestModel}
+ * {@link MTRSOCRServiceRequest} extends {@link RequestModel}
  *
- * <p>UploadBitcodeToMsaRequest</p>
+ * <p>MTRSOCRServiceRequest</p>
  */
-public class UploadBitcodeToMsaRequest extends Request {
+public class MTRSOCRServiceRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Body
     @NameInMap("AppId")
-    @Validation(required = true)
     private String appId;
 
     @Body
-    @NameInMap("Bitcode")
-    private String bitcode;
+    @NameInMap("ImageRaw")
+    @Validation(required = true)
+    private String imageRaw;
 
     @Body
-    @NameInMap("CodeVersion")
-    private String codeVersion;
-
-    @Body
-    @NameInMap("License")
-    private String license;
+    @NameInMap("Mask")
+    private Boolean mask;
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private String tenantId;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     @Body
     @NameInMap("WorkspaceId")
-    @Validation(required = true)
     private String workspaceId;
 
-    private UploadBitcodeToMsaRequest(Builder builder) {
+    private MTRSOCRServiceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.appId = builder.appId;
-        this.bitcode = builder.bitcode;
-        this.codeVersion = builder.codeVersion;
-        this.license = builder.license;
+        this.imageRaw = builder.imageRaw;
+        this.mask = builder.mask;
         this.tenantId = builder.tenantId;
         this.type = builder.type;
         this.workspaceId = builder.workspaceId;
@@ -63,7 +57,7 @@ public class UploadBitcodeToMsaRequest extends Request {
         return new Builder();
     }
 
-    public static UploadBitcodeToMsaRequest create() {
+    public static MTRSOCRServiceRequest create() {
         return builder().build();
     }
 
@@ -87,24 +81,17 @@ public class UploadBitcodeToMsaRequest extends Request {
     }
 
     /**
-     * @return bitcode
+     * @return imageRaw
      */
-    public String getBitcode() {
-        return this.bitcode;
+    public String getImageRaw() {
+        return this.imageRaw;
     }
 
     /**
-     * @return codeVersion
+     * @return mask
      */
-    public String getCodeVersion() {
-        return this.codeVersion;
-    }
-
-    /**
-     * @return license
-     */
-    public String getLicense() {
-        return this.license;
+    public Boolean getMask() {
+        return this.mask;
     }
 
     /**
@@ -128,12 +115,11 @@ public class UploadBitcodeToMsaRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<UploadBitcodeToMsaRequest, Builder> {
+    public static final class Builder extends Request.Builder<MTRSOCRServiceRequest, Builder> {
         private String regionId; 
         private String appId; 
-        private String bitcode; 
-        private String codeVersion; 
-        private String license; 
+        private String imageRaw; 
+        private Boolean mask; 
         private String tenantId; 
         private String type; 
         private String workspaceId; 
@@ -142,13 +128,12 @@ public class UploadBitcodeToMsaRequest extends Request {
             super();
         } 
 
-        private Builder(UploadBitcodeToMsaRequest request) {
+        private Builder(MTRSOCRServiceRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.appId = request.appId;
-            this.bitcode = request.bitcode;
-            this.codeVersion = request.codeVersion;
-            this.license = request.license;
+            this.imageRaw = request.imageRaw;
+            this.mask = request.mask;
             this.tenantId = request.tenantId;
             this.type = request.type;
             this.workspaceId = request.workspaceId;
@@ -173,29 +158,20 @@ public class UploadBitcodeToMsaRequest extends Request {
         }
 
         /**
-         * Bitcode.
+         * ImageRaw.
          */
-        public Builder bitcode(String bitcode) {
-            this.putBodyParameter("Bitcode", bitcode);
-            this.bitcode = bitcode;
+        public Builder imageRaw(String imageRaw) {
+            this.putBodyParameter("ImageRaw", imageRaw);
+            this.imageRaw = imageRaw;
             return this;
         }
 
         /**
-         * CodeVersion.
+         * Mask.
          */
-        public Builder codeVersion(String codeVersion) {
-            this.putBodyParameter("CodeVersion", codeVersion);
-            this.codeVersion = codeVersion;
-            return this;
-        }
-
-        /**
-         * License.
-         */
-        public Builder license(String license) {
-            this.putBodyParameter("License", license);
-            this.license = license;
+        public Builder mask(Boolean mask) {
+            this.putBodyParameter("Mask", mask);
+            this.mask = mask;
             return this;
         }
 
@@ -227,8 +203,8 @@ public class UploadBitcodeToMsaRequest extends Request {
         }
 
         @Override
-        public UploadBitcodeToMsaRequest build() {
-            return new UploadBitcodeToMsaRequest(this);
+        public MTRSOCRServiceRequest build() {
+            return new MTRSOCRServiceRequest(this);
         } 
 
     } 
