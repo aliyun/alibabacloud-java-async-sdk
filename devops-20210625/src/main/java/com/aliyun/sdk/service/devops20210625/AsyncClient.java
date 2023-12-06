@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
 
+    CompletableFuture<CreateCommitStatusResponse> createCommitStatus(CreateCommitStatusRequest request);
+
     CompletableFuture<CreateDeployKeyResponse> createDeployKey(CreateDeployKeyRequest request);
 
     CompletableFuture<CreateFileResponse> createFile(CreateFileRequest request);
@@ -162,6 +164,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMergeRequestResponse> getMergeRequest(GetMergeRequestRequest request);
 
+    CompletableFuture<GetMergeRequestChangeTreeResponse> getMergeRequestChangeTree(GetMergeRequestChangeTreeRequest request);
+
     CompletableFuture<GetOrganizationMemberResponse> getOrganizationMember(GetOrganizationMemberRequest request);
 
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
@@ -220,6 +224,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<JoinPipelineGroupResponse> joinPipelineGroup(JoinPipelineGroupRequest request);
 
+    CompletableFuture<ListCommitStatusesResponse> listCommitStatuses(ListCommitStatusesRequest request);
+
     CompletableFuture<ListFlowTagGroupsResponse> listFlowTagGroups(ListFlowTagGroupsRequest request);
 
     CompletableFuture<ListGroupMemberResponse> listGroupMember(ListGroupMemberRequest request);
@@ -227,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupRepositoriesResponse> listGroupRepositories(ListGroupRepositoriesRequest request);
 
     CompletableFuture<ListHostGroupsResponse> listHostGroups(ListHostGroupsRequest request);
+
+    CompletableFuture<ListMergeRequestCommentsResponse> listMergeRequestComments(ListMergeRequestCommentsRequest request);
+
+    CompletableFuture<ListMergeRequestFilesReadsResponse> listMergeRequestFilesReads(ListMergeRequestFilesReadsRequest request);
+
+    CompletableFuture<ListMergeRequestPatchSetsResponse> listMergeRequestPatchSets(ListMergeRequestPatchSetsRequest request);
 
     CompletableFuture<ListMergeRequestsResponse> listMergeRequests(ListMergeRequestsRequest request);
 
