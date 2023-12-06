@@ -90,7 +90,7 @@ public class ApproveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class ApproveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

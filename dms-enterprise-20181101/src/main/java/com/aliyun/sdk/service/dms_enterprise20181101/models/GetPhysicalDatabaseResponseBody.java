@@ -499,7 +499,7 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAlias.
+             * The alias of the database instance.
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;

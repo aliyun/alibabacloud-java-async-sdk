@@ -86,7 +86,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         }
 
         /**
-         * LineageResult.
+         * Returned data set of SQL lineage.
          */
         public Builder lineageResult(LineageResult lineageResult) {
             this.lineageResult = lineageResult;
@@ -110,7 +110,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,11 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private String code; 
 
             /**
-             * CalWay.
+             * The calculating method. Valid values:
+             * <p>
+             * 
+             * *   **DIRECT**: No function or expression is used.
+             * *   **EXPR**: A function or expression is used.
              */
             public Builder calWay(String calWay) {
                 this.calWay = calWay;
@@ -178,7 +186,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The SQL code snippet for field processing.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -267,7 +275,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private String src; 
 
             /**
-             * Dst.
+             * The target.
              */
             public Builder dst(String dst) {
                 this.dst = dst;
@@ -275,7 +283,15 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * LineageType.
+             * The type of the lineage. Valid values:
+             * <p>
+             * 
+             * *   **FIELD_DEPEND_FIELD**: Fields depend on fields.
+             * *   **TABLE_DEPEND_TABLE**: Tables depend on tables.
+             * *   **FIELD_INFLU_TABLE**: Fields influence tables.
+             * *   **FIELD_INFLU_FIELD**: Fields influence fields.
+             * *   **FIELD_INFLU_TABLE**: Tables influence fields.
+             * *   **FIELD_JOIN_FIELD**: Fields are associated with fields.
              */
             public Builder lineageType(String lineageType) {
                 this.lineageType = lineageType;
@@ -283,7 +299,10 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * OperType.
+             * The operation type of the SQL statement in which the data lineage is generated. For example, if the operation type is SELECT, the data lineage is generated from a SELECT statement.
+             * <p>
+             * 
+             * >  This field is an extended field which has no practical use.
              */
             public Builder operType(String operType) {
                 this.operType = operType;
@@ -291,7 +310,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessDetail.
+             * The handling details. This parameter is returned only when LineageType is FIELD_DEPEND_FIELD.
              */
             public Builder processDetail(ProcessDetail processDetail) {
                 this.processDetail = processDetail;
@@ -299,7 +318,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Src.
+             * The source.
              */
             public Builder src(String src) {
                 this.src = src;
@@ -340,7 +359,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The name of the field.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -417,7 +436,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Fields.
+             * The fields in the metatable.
              */
             public Builder fields(java.util.List < Fields> fields) {
                 this.fields = fields;
@@ -425,7 +444,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The object name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -433,7 +452,11 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of metadata. Valid values:
+             * <p>
+             * 
+             * *   **DDL**: The metadata comes from parsed SQL statements or definition of databases and tables collected by DMS.
+             * *   **LINEAGE**: The metadata comes from lineage analysis results.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -441,7 +464,12 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The object type. Valid values:
+             * <p>
+             * 
+             * *   **TABLE**
+             * *   **VIEW**
+             * *   **TMP_TABLE**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -494,7 +522,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             private java.util.List < ObjectMetadata> objectMetadata; 
 
             /**
-             * Lineages.
+             * The details about the lineage.
              */
             public Builder lineages(java.util.List < Lineages> lineages) {
                 this.lineages = lineages;
@@ -502,7 +530,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectMetadata.
+             * The table and field metadata information.
              */
             public Builder objectMetadata(java.util.List < ObjectMetadata> objectMetadata) {
                 this.objectMetadata = objectMetadata;

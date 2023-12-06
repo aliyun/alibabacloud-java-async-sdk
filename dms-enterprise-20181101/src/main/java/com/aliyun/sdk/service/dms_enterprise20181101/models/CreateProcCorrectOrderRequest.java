@@ -260,6 +260,9 @@ public class CreateProcCorrectOrderRequest extends Request {
         @Validation(required = true)
         private java.util.List < DbItemList> dbItemList;
 
+        @NameInMap("ExecMode")
+        private String execMode;
+
         @NameInMap("ExecSQL")
         @Validation(required = true)
         private String execSQL;
@@ -276,6 +279,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         private Param(Builder builder) {
             this.classify = builder.classify;
             this.dbItemList = builder.dbItemList;
+            this.execMode = builder.execMode;
             this.execSQL = builder.execSQL;
             this.rollbackAttachmentName = builder.rollbackAttachmentName;
             this.rollbackSQL = builder.rollbackSQL;
@@ -302,6 +306,13 @@ public class CreateProcCorrectOrderRequest extends Request {
          */
         public java.util.List < DbItemList> getDbItemList() {
             return this.dbItemList;
+        }
+
+        /**
+         * @return execMode
+         */
+        public String getExecMode() {
+            return this.execMode;
         }
 
         /**
@@ -335,6 +346,7 @@ public class CreateProcCorrectOrderRequest extends Request {
         public static final class Builder {
             private String classify; 
             private java.util.List < DbItemList> dbItemList; 
+            private String execMode; 
             private String execSQL; 
             private String rollbackAttachmentName; 
             private String rollbackSQL; 
@@ -353,6 +365,14 @@ public class CreateProcCorrectOrderRequest extends Request {
              */
             public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
+                return this;
+            }
+
+            /**
+             * ExecMode.
+             */
+            public Builder execMode(String execMode) {
+                this.execMode = execMode;
                 return this;
             }
 

@@ -408,7 +408,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             private String workflowStatusDesc; 
 
             /**
-             * AttachmentKey.
+             * The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
              */
             public Builder attachmentKey(String attachmentKey) {
                 this.attachmentKey = attachmentKey;
@@ -464,7 +464,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OriginAttachmentName.
+             * The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.
              */
             public Builder originAttachmentName(String originAttachmentName) {
                 this.originAttachmentName = originAttachmentName;

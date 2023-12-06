@@ -86,7 +86,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PreCheckResult.
+         * Indicates the result of the precheck task.
          */
         public Builder preCheckResult(PreCheckResult preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -110,7 +110,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             private String SQL; 
 
             /**
-             * AffectRows.
+             * The estimated number of data rows to be affected.
              */
             public Builder affectRows(Long affectRows) {
                 this.affectRows = affectRows;
@@ -178,7 +182,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * The SQL statement.
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -272,7 +276,11 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             private PreCheckResultPreCheckDetailList preCheckDetailList; 
 
             /**
-             * IgnoreAffectRows.
+             * Specifies whether to skip verification. Valid values:
+             * <p>
+             * 
+             * - true
+             * - false
              */
             public Builder ignoreAffectRows(Boolean ignoreAffectRows) {
                 this.ignoreAffectRows = ignoreAffectRows;
@@ -280,7 +288,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PreCheckDetailList.
+             * The list of pre-check details.
              */
             public Builder preCheckDetailList(PreCheckResultPreCheckDetailList preCheckDetailList) {
                 this.preCheckDetailList = preCheckDetailList;

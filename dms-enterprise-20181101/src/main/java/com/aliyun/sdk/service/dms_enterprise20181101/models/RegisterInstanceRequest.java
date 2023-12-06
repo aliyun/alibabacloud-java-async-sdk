@@ -36,6 +36,10 @@ public class RegisterInstanceRequest extends Request {
     private Long dbaUid;
 
     @Query
+    @NameInMap("DbaUidByString")
+    private String dbaUidByString;
+
+    @Query
     @NameInMap("DdlOnline")
     private Integer ddlOnline;
 
@@ -136,6 +140,7 @@ public class RegisterInstanceRequest extends Request {
         this.databasePassword = builder.databasePassword;
         this.databaseUser = builder.databaseUser;
         this.dbaUid = builder.dbaUid;
+        this.dbaUidByString = builder.dbaUidByString;
         this.ddlOnline = builder.ddlOnline;
         this.ecsInstanceId = builder.ecsInstanceId;
         this.ecsRegion = builder.ecsRegion;
@@ -205,6 +210,13 @@ public class RegisterInstanceRequest extends Request {
      */
     public Long getDbaUid() {
         return this.dbaUid;
+    }
+
+    /**
+     * @return dbaUidByString
+     */
+    public String getDbaUidByString() {
+        return this.dbaUidByString;
     }
 
     /**
@@ -360,6 +372,7 @@ public class RegisterInstanceRequest extends Request {
         private String databasePassword; 
         private String databaseUser; 
         private Long dbaUid; 
+        private String dbaUidByString; 
         private Integer ddlOnline; 
         private String ecsInstanceId; 
         private String ecsRegion; 
@@ -393,6 +406,7 @@ public class RegisterInstanceRequest extends Request {
             this.databasePassword = request.databasePassword;
             this.databaseUser = request.databaseUser;
             this.dbaUid = request.dbaUid;
+            this.dbaUidByString = request.dbaUidByString;
             this.ddlOnline = request.ddlOnline;
             this.ecsInstanceId = request.ecsInstanceId;
             this.ecsRegion = request.ecsRegion;
@@ -467,6 +481,15 @@ public class RegisterInstanceRequest extends Request {
         public Builder dbaUid(Long dbaUid) {
             this.putQueryParameter("DbaUid", dbaUid);
             this.dbaUid = dbaUid;
+            return this;
+        }
+
+        /**
+         * DbaUidByString.
+         */
+        public Builder dbaUidByString(String dbaUidByString) {
+            this.putQueryParameter("DbaUidByString", dbaUidByString);
+            this.dbaUidByString = dbaUidByString;
             return this;
         }
 

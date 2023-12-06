@@ -108,7 +108,10 @@ public class AnalyzeSQLLineageRequest extends Request {
         }
 
         /**
-         * DbId.
+         * The database ID.
+         * <p>
+         * 
+         * >  You can call one of the [SearchDatabase](~~141876~~), [ListDatabases](~~141873~~), and [GetDatabase](~~141869~~) operations to obtain the database ID provided in the DatabaseId response parameter.
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -117,7 +120,7 @@ public class AnalyzeSQLLineageRequest extends Request {
         }
 
         /**
-         * SqlContent.
+         * The SQL statement.
          */
         public Builder sqlContent(String sqlContent) {
             this.putQueryParameter("SqlContent", sqlContent);
@@ -126,7 +129,10 @@ public class AnalyzeSQLLineageRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -195,10 +195,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to query the field name.
+         * The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the field name.
          * <p>
          * 
-         * >  You can also call the [ListColumns](~~141870~~) operation to query the field name.
+         * >  You can also call the [ListColumns](~~141870~~) operation to obtain the field name.
          */
         public Builder columnName(String columnName) {
             this.putQueryParameter("ColumnName", columnName);
@@ -207,7 +207,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID.
+         * The ID of the database. You can call the [ListDatabases](~~141873~~) operation to obtain the ID.
          */
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
@@ -216,7 +216,12 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * The desensitization algorithm of the field setting. The default value is false. The values are as follows:
+         * <p>
+         * 
+         * - **true**: default desensitization algorithm.
+         * 
+         * - **false** :semi-desensitization algorithm.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -228,8 +233,8 @@ public class ModifyDesensitizationStrategyRequest extends Request {
          * Specifies whether the database is a logical database. Valid values:
          * <p>
          * 
-         * *   **true:** The database is a physical database.
-         * *   **false:** The database is a logical database.
+         * *   **true**: The database is a physical database.
+         * *   **false**: The database is a logical database.
          */
         public Builder isLogic(Boolean isLogic) {
             this.putQueryParameter("IsLogic", isLogic);
@@ -238,11 +243,11 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether to reset the masking rule. Valid values:
+         * Specifies whether to reset the masking rule. Valid value:
          * <p>
          * 
-         * *   **true**: resets the masking rule.
-         * *   **false**: does not reset the masking rule. This is the default value.
+         * *   **true**: Reset the masking rule.
+         * *   **false**: Do not reset the masking rule. This is the default value.
          */
         public Builder isReset(Boolean isReset) {
             this.putQueryParameter("IsReset", isReset);
@@ -260,11 +265,14 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to query the database name.
+         * The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the database name.
          * <p>
          * 
-         * > * If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to query the database name.
-         * > * If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to query the database name.
+         * > 
+         * 
+         * *   If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the database name.
+         * 
+         * *   If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of the database.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -273,10 +281,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         }
 
         /**
-         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to query the table name.
+         * The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the table name.
          * <p>
          * 
-         * >  You can also call the [ListTables](~~141878~~) operation to query the table name.
+         * >  You can also call the [ListTables](~~141878~~) operation to obtain the table name.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -288,7 +296,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
          * The ID of the tenant.
          * <p>
          * 
-         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

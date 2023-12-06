@@ -62,7 +62,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +158,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * FailCount.
+             * The number of failed archiving tickets.
              */
             public Builder failCount(Long failCount) {
                 this.failCount = failCount;
@@ -162,7 +166,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessingCount.
+             * The number of in-progress archiving tickets.
              */
             public Builder processingCount(Long processingCount) {
                 this.processingCount = processingCount;
@@ -170,7 +174,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * The number of successful archiving tickets.
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -178,7 +182,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of archiving tickets.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

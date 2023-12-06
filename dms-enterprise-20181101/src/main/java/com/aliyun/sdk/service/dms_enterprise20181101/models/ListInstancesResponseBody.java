@@ -122,7 +122,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,8 +133,8 @@ public class ListInstancesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * - **true**: The request was successful.
-         * - **false**: The request failed.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -289,7 +289,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule set corresponding to the control mode.
+             * The name of the security rule corresponding to the control mode.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -638,7 +638,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The password that is used to log on to the database.
+             * The password that is used to log on to the database instance.
              */
             public Builder databasePassword(String databasePassword) {
                 this.databasePassword = databasePassword;
@@ -654,7 +654,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database administrator (DBA) for the database instance.
+             * The ID of the database administrator (DBA) of the database instance.
              */
             public Builder dbaId(String dbaId) {
                 this.dbaId = dbaId;
@@ -662,7 +662,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the DBA for the database instance.
+             * The nickname of the DBA of the instance.
              */
             public Builder dbaNickName(String dbaNickName) {
                 this.dbaNickName = dbaNickName;
@@ -697,14 +697,14 @@ public class ListInstancesResponseBody extends TeaModel {
              * The type of the environment to which the database instance belongs. Valid values:
              * <p>
              * 
-             * *   **product**: production environment
+             * *   **product:** production environment
              * *   **dev**: development environment
-             * *   **pre**: staging environment
+             * *   **pre**: pre-release environment
              * *   **test**: test environment
              * *   **sit**: SIT environment
              * *   **uat**: UAT environment
              * *   **pet**: stress testing environment
-             * *   **stag**: STAG environment
+             * *   **stag:** staging environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -736,7 +736,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database instance.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -760,7 +760,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner for the database instance.
+             * The IDs of the owners of the database instance.
              */
             public Builder ownerIdList(OwnerIdList ownerIdList) {
                 this.ownerIdList = ownerIdList;
@@ -768,7 +768,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the owner for the database instance.
+             * The nicknames of the owners of the database instance.
              */
             public Builder ownerNameList(OwnerNameList ownerNameList) {
                 this.ownerNameList = ownerNameList;
@@ -792,7 +792,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security rule set for the database instance.
+             * The ID of the security rule set of the database instance.
              */
             public Builder safeRuleId(String safeRuleId) {
                 this.safeRuleId = safeRuleId;
@@ -800,7 +800,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SellSitd.
+             * Indicates whether the sensitive data protection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder sellSitd(Boolean sellSitd) {
                 this.sellSitd = sellSitd;
@@ -836,7 +840,7 @@ public class ListInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **1:**: enabled
              */
             public Builder useDsql(Integer useDsql) {
                 this.useDsql = useDsql;

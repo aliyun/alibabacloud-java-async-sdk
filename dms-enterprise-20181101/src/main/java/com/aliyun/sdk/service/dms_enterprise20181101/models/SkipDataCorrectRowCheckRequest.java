@@ -108,7 +108,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ticket ID. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -117,7 +117,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason for skipping the verification on the number of rows in the precheck for data change.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -126,7 +126,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

@@ -40,6 +40,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AddTaskFlowEdgesResponse> addTaskFlowEdges(AddTaskFlowEdgesRequest request);
 
+    /**
+      * The following conditions must be met before you call this API operation.
+      * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+      * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+      *
+     */
     CompletableFuture<AnalyzeSQLLineageResponse> analyzeSQLLineage(AnalyzeSQLLineageRequest request);
 
     CompletableFuture<ApproveOrderResponse> approveOrder(ApproveOrderRequest request);
@@ -167,6 +173,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadFileJobResponse> createUploadFileJob(CreateUploadFileJobRequest request);
 
     CompletableFuture<CreateUploadOSSFileJobResponse> createUploadOSSFileJob(CreateUploadOSSFileJobRequest request);
+
+    CompletableFuture<DeleteAuthorityTemplateResponse> deleteAuthorityTemplate(DeleteAuthorityTemplateRequest request);
 
     /**
       * Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
@@ -424,6 +432,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
 
     CompletableFuture<InspectProxyAccessSecretResponse> inspectProxyAccessSecret(InspectProxyAccessSecretRequest request);
+
+    CompletableFuture<ListAuthorityTemplateResponse> listAuthorityTemplate(ListAuthorityTemplateRequest request);
 
     CompletableFuture<ListClassificationTemplatesResponse> listClassificationTemplates(ListClassificationTemplatesRequest request);
 

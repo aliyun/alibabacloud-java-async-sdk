@@ -201,14 +201,14 @@ public class ListInstancesRequest extends Request {
          * The type of the environment to which the database instance belongs. Valid values:
          * <p>
          * 
-         * *   **product**: production environment
+         * *   **product:** production environment
          * *   **dev**: development environment
-         * *   **pre**: staging environment
+         * *   **pre**: pre-release environment
          * *   **test**: test environment
          * *   **sit**: system integration testing (SIT) environment
          * *   **uat**: user acceptance testing (UAT) environment
          * *   **pet**: stress testing environment
-         * *   **stag**: STAG environment
+         * *   **stag:** staging environment
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -235,8 +235,8 @@ public class ListInstancesRequest extends Request {
          * The status of the database instance. Valid values:
          * <p>
          * 
-         * *   **NORMAL**: normal
-         * *   **DISABLE**: disabled
+         * *   **NORMAL**
+         * *   **DISABLE**
          */
         public Builder instanceState(String instanceState) {
             this.putQueryParameter("InstanceState", instanceState);
@@ -248,8 +248,8 @@ public class ListInstancesRequest extends Request {
          * The network type of the database instance. Valid values:
          * <p>
          * 
-         * *   **CLASSIC**: classic network
-         * *   **VPC**: VPC
+         * *   **CLASSIC:** classic network
+         * *   **VPC:** VPC
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);

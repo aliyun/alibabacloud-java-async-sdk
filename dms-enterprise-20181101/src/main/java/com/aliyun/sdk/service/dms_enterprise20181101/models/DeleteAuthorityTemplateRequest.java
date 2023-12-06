@@ -7,29 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDataArchiveOrderDetailRequest} extends {@link RequestModel}
+ * {@link DeleteAuthorityTemplateRequest} extends {@link RequestModel}
  *
- * <p>GetDataArchiveOrderDetailRequest</p>
+ * <p>DeleteAuthorityTemplateRequest</p>
  */
-public class GetDataArchiveOrderDetailRequest extends Request {
+public class DeleteAuthorityTemplateRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("OrderId")
-    @Validation(required = true, minimum = 1)
-    private Long orderId;
+    @NameInMap("TemplateId")
+    @Validation(required = true)
+    private Long templateId;
 
     @Query
     @NameInMap("Tid")
-    @Validation(minimum = 1)
     private Long tid;
 
-    private GetDataArchiveOrderDetailRequest(Builder builder) {
+    private DeleteAuthorityTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.orderId = builder.orderId;
+        this.templateId = builder.templateId;
         this.tid = builder.tid;
     }
 
@@ -37,7 +36,7 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         return new Builder();
     }
 
-    public static GetDataArchiveOrderDetailRequest create() {
+    public static DeleteAuthorityTemplateRequest create() {
         return builder().build();
     }
 
@@ -54,10 +53,10 @@ public class GetDataArchiveOrderDetailRequest extends Request {
     }
 
     /**
-     * @return orderId
+     * @return templateId
      */
-    public Long getOrderId() {
-        return this.orderId;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
     /**
@@ -67,19 +66,19 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         return this.tid;
     }
 
-    public static final class Builder extends Request.Builder<GetDataArchiveOrderDetailRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteAuthorityTemplateRequest, Builder> {
         private String regionId; 
-        private Long orderId; 
+        private Long templateId; 
         private Long tid; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDataArchiveOrderDetailRequest request) {
+        private Builder(DeleteAuthorityTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.orderId = request.orderId;
+            this.templateId = request.templateId;
             this.tid = request.tid;
         } 
 
@@ -93,19 +92,16 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         }
 
         /**
-         * The IDs of data archiving tickets.
+         * TemplateId.
          */
-        public Builder orderId(Long orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         /**
-         * The tenant ID.
-         * <p>
-         * 
-         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -114,8 +110,8 @@ public class GetDataArchiveOrderDetailRequest extends Request {
         }
 
         @Override
-        public GetDataArchiveOrderDetailRequest build() {
-            return new GetDataArchiveOrderDetailRequest(this);
+        public DeleteAuthorityTemplateRequest build() {
+            return new DeleteAuthorityTemplateRequest(this);
         } 
 
     } 

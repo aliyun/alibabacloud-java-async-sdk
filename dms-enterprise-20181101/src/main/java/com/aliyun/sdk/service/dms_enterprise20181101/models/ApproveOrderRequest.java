@@ -168,7 +168,7 @@ public class ApproveOrderRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which you want to call this operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -177,7 +177,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * ApprovalNodeId.
+         * If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The ID of the user that is added as the new approval node. This node must be a user-defined approval node. You can call the ListUserDefineWorkFlowNodes operation to obtain the value of this parameter.
          */
         public Builder approvalNodeId(Long approvalNodeId) {
             this.putQueryParameter("ApprovalNodeId", approvalNodeId);
@@ -186,7 +186,11 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * ApprovalNodePos.
+         * If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The position of the new approval node. Valid values:
+         * <p>
+         * 
+         * *   **PRE_ADD_APPROVAL_NODE**: before the current approval node.
+         * *   **POST_ADD_APPROVAL_NODE**: after the current approval node.
          */
         public Builder approvalNodePos(String approvalNodePos) {
             this.putQueryParameter("ApprovalNodePos", approvalNodePos);
@@ -198,9 +202,11 @@ public class ApproveOrderRequest extends Request {
          * The action that you want to perform on the ticket. Valid values:
          * <p>
          * 
-         * *   AGREE: approve
-         * *   CANCEL: cancel
-         * *   REJECT: reject
+         * *   **AGREE**
+         * *   **CANCEL**
+         * *   **REJECT**
+         * *   **TRANSFER**
+         * *   **ADD_APPROVAL_NODE**
          */
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -218,7 +224,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * NewApprover.
+         * The ID of the user to which the ticket is transferred. If ApprovalType is set to TRANSFER, you need to specify this parameter.
          */
         public Builder newApprover(Long newApprover) {
             this.putQueryParameter("NewApprover", newApprover);
@@ -227,7 +233,7 @@ public class ApproveOrderRequest extends Request {
         }
 
         /**
-         * OldApprover.
+         * The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.
          */
         public Builder oldApprover(Long oldApprover) {
             this.putQueryParameter("OldApprover", oldApprover);

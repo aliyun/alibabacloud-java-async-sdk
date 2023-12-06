@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateAuthorityTemplateResponseBody} extends {@link TeaModel}
+ * {@link ListAuthorityTemplateResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAuthorityTemplateResponseBody</p>
+ * <p>ListAuthorityTemplateResponseBody</p>
  */
-public class UpdateAuthorityTemplateResponseBody extends TeaModel {
-    @NameInMap("AuthorityTemplateView")
-    private AuthorityTemplateView authorityTemplateView;
+public class ListAuthorityTemplateResponseBody extends TeaModel {
+    @NameInMap("AuthorityTemplateViewList")
+    private AuthorityTemplateViewList authorityTemplateViewList;
 
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -30,28 +30,32 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("Tid")
     private Long tid;
 
-    private UpdateAuthorityTemplateResponseBody(Builder builder) {
-        this.authorityTemplateView = builder.authorityTemplateView;
+    @NameInMap("TotalCount")
+    private Long totalCount;
+
+    private ListAuthorityTemplateResponseBody(Builder builder) {
+        this.authorityTemplateViewList = builder.authorityTemplateViewList;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
         this.success = builder.success;
         this.tid = builder.tid;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateAuthorityTemplateResponseBody create() {
+    public static ListAuthorityTemplateResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return authorityTemplateView
+     * @return authorityTemplateViewList
      */
-    public AuthorityTemplateView getAuthorityTemplateView() {
-        return this.authorityTemplateView;
+    public AuthorityTemplateViewList getAuthorityTemplateViewList() {
+        return this.authorityTemplateViewList;
     }
 
     /**
@@ -89,24 +93,32 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         return this.tid;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
-        private AuthorityTemplateView authorityTemplateView; 
+        private AuthorityTemplateViewList authorityTemplateViewList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
         private Long tid; 
+        private Long totalCount; 
 
         /**
-         * The details of the permission template.
+         * AuthorityTemplateViewList.
          */
-        public Builder authorityTemplateView(AuthorityTemplateView authorityTemplateView) {
-            this.authorityTemplateView = authorityTemplateView;
+        public Builder authorityTemplateViewList(AuthorityTemplateViewList authorityTemplateViewList) {
+            this.authorityTemplateViewList = authorityTemplateViewList;
             return this;
         }
 
         /**
-         * The error code.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +126,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +134,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +142,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,20 +150,31 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the tenant.
+         * Tid.
          */
         public Builder tid(Long tid) {
             this.tid = tid;
             return this;
         }
 
-        public UpdateAuthorityTemplateResponseBody build() {
-            return new UpdateAuthorityTemplateResponseBody(this);
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public ListAuthorityTemplateResponseBody build() {
+            return new ListAuthorityTemplateResponseBody(this);
         } 
 
     } 
 
     public static class AuthorityTemplateView extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("CreatorId")
         private Long creatorId;
 
@@ -169,6 +188,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         private Long templateId;
 
         private AuthorityTemplateView(Builder builder) {
+            this.createTime = builder.createTime;
             this.creatorId = builder.creatorId;
             this.description = builder.description;
             this.name = builder.name;
@@ -181,6 +201,13 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
 
         public static AuthorityTemplateView create() {
             return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -212,13 +239,22 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createTime; 
             private Long creatorId; 
             private String description; 
             private String name; 
             private Long templateId; 
 
             /**
-             * The ID of the user who created the permission template.
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreatorId.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -226,7 +262,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the permission template.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +270,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the permission template.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,7 +278,7 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission template.
+             * TemplateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -251,6 +287,47 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
 
             public AuthorityTemplateView build() {
                 return new AuthorityTemplateView(this);
+            } 
+
+        } 
+
+    }
+    public static class AuthorityTemplateViewList extends TeaModel {
+        @NameInMap("AuthorityTemplateView")
+        private java.util.List < AuthorityTemplateView> authorityTemplateView;
+
+        private AuthorityTemplateViewList(Builder builder) {
+            this.authorityTemplateView = builder.authorityTemplateView;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthorityTemplateViewList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authorityTemplateView
+         */
+        public java.util.List < AuthorityTemplateView> getAuthorityTemplateView() {
+            return this.authorityTemplateView;
+        }
+
+        public static final class Builder {
+            private java.util.List < AuthorityTemplateView> authorityTemplateView; 
+
+            /**
+             * AuthorityTemplateView.
+             */
+            public Builder authorityTemplateView(java.util.List < AuthorityTemplateView> authorityTemplateView) {
+                this.authorityTemplateView = authorityTemplateView;
+                return this;
+            }
+
+            public AuthorityTemplateViewList build() {
+                return new AuthorityTemplateViewList(this);
             } 
 
         } 

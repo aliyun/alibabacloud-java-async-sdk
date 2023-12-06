@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AddDesensitizationRuleResponseBody} extends {@link TeaModel}
+ * {@link DeleteAuthorityTemplateResponseBody} extends {@link TeaModel}
  *
- * <p>AddDesensitizationRuleResponseBody</p>
+ * <p>DeleteAuthorityTemplateResponseBody</p>
  */
-public class AddDesensitizationRuleResponseBody extends TeaModel {
+public class DeleteAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -21,25 +21,25 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
-    private Integer ruleId;
-
     @NameInMap("Success")
     private Boolean success;
 
-    private AddDesensitizationRuleResponseBody(Builder builder) {
+    @NameInMap("Tid")
+    private Long tid;
+
+    private DeleteAuthorityTemplateResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
-        this.ruleId = builder.ruleId;
         this.success = builder.success;
+        this.tid = builder.tid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AddDesensitizationRuleResponseBody create() {
+    public static DeleteAuthorityTemplateResponseBody create() {
         return builder().build();
     }
 
@@ -65,28 +65,28 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
     }
 
     /**
-     * @return ruleId
-     */
-    public Integer getRuleId() {
-        return this.ruleId;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
         return this.success;
     }
 
+    /**
+     * @return tid
+     */
+    public Long getTid() {
+        return this.tid;
+    }
+
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private Integer ruleId; 
         private Boolean success; 
+        private Long tid; 
 
         /**
-         * The error code that is returned.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,27 +110,23 @@ public class AddDesensitizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID generated for the data masking rule.
-         */
-        public Builder ruleId(Integer ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-
-        /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public AddDesensitizationRuleResponseBody build() {
-            return new AddDesensitizationRuleResponseBody(this);
+        /**
+         * Tid.
+         */
+        public Builder tid(Long tid) {
+            this.tid = tid;
+            return this;
+        }
+
+        public DeleteAuthorityTemplateResponseBody build() {
+            return new DeleteAuthorityTemplateResponseBody(this);
         } 
 
     } 

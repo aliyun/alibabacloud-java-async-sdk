@@ -120,7 +120,7 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * OrderResultType.
+         * The type of the identity. Default value: AS_ADMIN.
          */
         public Builder orderResultType(String orderResultType) {
             this.putQueryParameter("OrderResultType", orderResultType);
@@ -129,7 +129,7 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * PluginType.
+         * The plugin type. Default value: DATA_ARCHIVE.
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -138,7 +138,7 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * SearchDateType.
+         * The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.
          */
         public Builder searchDateType(String searchDateType) {
             this.putQueryParameter("SearchDateType", searchDateType);
@@ -147,7 +147,10 @@ public class GetDataArchiveCountRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * >  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](~~181330~~).
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

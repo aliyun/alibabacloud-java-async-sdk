@@ -98,7 +98,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * DataArchiveOrderDetail.
+         * The details of data archiving tickets.
          */
         public Builder dataArchiveOrderDetail(DataArchiveOrderDetail dataArchiveOrderDetail) {
             this.dataArchiveOrderDetail = dataArchiveOrderDetail;
@@ -106,7 +106,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the call failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that is returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * Tracks service requests.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -382,7 +386,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Boolean triggerOnce; 
 
             /**
-             * CreatorId.
+             * The ID of the user who created the task flow.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -390,7 +394,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronBeginDate.
+             * The start time for scheduling. The task flow is not scheduled before this point in time.
              */
             public Builder cronBeginDate(String cronBeginDate) {
                 this.cronBeginDate = cronBeginDate;
@@ -398,7 +402,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronEndDate.
+             * The end time for scheduling. The task flow is not scheduled after this point in time.
              */
             public Builder cronEndDate(String cronEndDate) {
                 this.cronEndDate = cronEndDate;
@@ -406,7 +410,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CronTrigger.
+             * Indicates whether the archiving task is a scheduled task. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder cronTrigger(Boolean cronTrigger) {
                 this.cronTrigger = cronTrigger;
@@ -414,7 +422,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DWDevelop.
+             * Indicates whether the task is used to develop warehouses.
+             * <p>
+             * 
+             * >  This field is a retained field that is not in use.
              */
             public Builder DWDevelop(Boolean DWDevelop) {
                 this.DWDevelop = DWDevelop;
@@ -422,7 +433,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DagName.
+             * The name of the workflow.
              */
             public Builder dagName(String dagName) {
                 this.dagName = dagName;
@@ -430,7 +441,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DagOwnerId.
+             * The ID of the owner of the workflow.
              */
             public Builder dagOwnerId(String dagOwnerId) {
                 this.dagOwnerId = dagOwnerId;
@@ -438,7 +449,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeployId.
+             * The ID of the deployment record.
              */
             public Builder deployId(Long deployId) {
                 this.deployId = deployId;
@@ -446,7 +457,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the workflow.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -454,7 +465,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EditDagId.
+             * The ID of the editable workflow version.
              */
             public Builder editDagId(Long editDagId) {
                 this.editDagId = editDagId;
@@ -462,7 +473,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the workflow was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -470,7 +481,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the workflow was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -478,7 +489,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -486,7 +497,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsPublic.
+             * Indicates whether the workflow is public. Valid values:
+             * <p>
+             * 
+             * *   **0**: not public.
+             * *   **1**: public.
              */
             public Builder isPublic(Long isPublic) {
                 this.isPublic = isPublic;
@@ -494,7 +509,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Legacy.
+             * Indicates whether the task is a historical task. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder legacy(Boolean legacy) {
                 this.legacy = legacy;
@@ -502,7 +521,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * System.
+             * Indicates whether the task was created by the system. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder system(Boolean system) {
                 this.system = system;
@@ -510,7 +533,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -518,7 +541,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerOnce.
+             * Indicates whether the workflow is triggered to run once. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder triggerOnce(Boolean triggerOnce) {
                 this.triggerOnce = triggerOnce;
@@ -655,7 +682,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * DbType.
+             * The type of the instance engine. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -663,7 +690,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the security rule set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -671,7 +698,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FreeOrStable.
+             * Indicates whether the instance is managed in Flexible Management or Stable Change mode. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder freeOrStable(Boolean freeOrStable) {
                 this.freeOrStable = freeOrStable;
@@ -679,7 +710,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the security rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -687,7 +718,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the security rule was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -695,7 +726,12 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupMode.
+             * The type of the control mode of the instance. Valid values:
+             * <p>
+             * 
+             * *   **COMMON**: The instance is managed in Security Collaboration mode.
+             * *   **NONE_CONTROL**: The instance is managed in Flexible Management mode.
+             * *   **STABLE**: The instance is managed in Stable Change mode.
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -703,7 +739,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the security rule that corresponds to the control mode.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -711,7 +747,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the security rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -719,7 +755,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LastMenderId.
+             * The user ID of the last modified security rule.
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;
@@ -1120,7 +1156,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String unitType; 
 
             /**
-             * Alias.
+             * The alias of the database instance.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1128,7 +1164,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlterTimeout.
+             * The timeout period of queries on the database.
              */
             public Builder alterTimeout(Long alterTimeout) {
                 this.alterTimeout = alterTimeout;
@@ -1136,7 +1172,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetControl.
+             * Indicates whether access control is enabled for data assets. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder assetControl(Boolean assetControl) {
                 this.assetControl = assetControl;
@@ -1144,7 +1184,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogName.
+             * The name of the instance in the instance list.
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -1152,7 +1192,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterNode.
+             * Indicates whether the instance is added to the DMS whitelist.
              */
             public Builder clusterNode(String clusterNode) {
                 this.clusterNode = clusterNode;
@@ -1160,7 +1200,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The ID of the database. You can call the [SearchDatabase](~~141876~~) operation to query the ID of the database.
+             * <p>
+             * 
+             * >  You can call the [ListDatabases](~~141873~~) operation to query the ID of a physical database or the [ListLogicDatabases](~~141874~~) operation to query the ID of a logical database.
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -1168,7 +1211,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -1176,7 +1219,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbaId.
+             * The ID of the database administrator (DBA) of the instance.
              */
             public Builder dbaId(Long dbaId) {
                 this.dbaId = dbaId;
@@ -1184,7 +1227,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbaName.
+             * The nickname of the DBA of the instance.
              */
             public Builder dbaName(String dbaName) {
                 this.dbaName = dbaName;
@@ -1192,7 +1235,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The complete endpoint of the database.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1200,7 +1243,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Encoding.
+             * The encoding format of the database.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -1208,7 +1251,17 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment to which the database belongs. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment
+             * *   **dev**: development environment
+             * *   **pre**: staging environment
+             * *   **test**: test environment
+             * *   **sit**: system integration testing (SIT) environment
+             * *   **uat**: user acceptance testing (UAT) environment
+             * *   **pet**: stress testing environment
+             * *   **stag**: STAG environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1216,7 +1269,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Follow.
+             * Indicates whether the instance needs special attention. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder follow(Boolean follow) {
                 this.follow = follow;
@@ -1224,7 +1281,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The endpoint that is used to connect to the database.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1232,7 +1289,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Idc.
+             * The region in which the database instance resides.
              */
             public Builder idc(String idc) {
                 this.idc = idc;
@@ -1240,7 +1297,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IdcTitle.
+             * The name of the region in which the database instance resides.
              */
             public Builder idcTitle(String idcTitle) {
                 this.idcTitle = idcTitle;
@@ -1248,7 +1305,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the database belongs.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -1256,7 +1313,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSource.
+             * The source of the database instance.Valid values:
+             * <p>
+             * 
+             * *   **RDS**: an ApsaraDB RDS instance.
+             * *   **ECS_OWN**: a self-managed database deployed on an Elastic Compute Service (ECS) instance.
+             * *   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.
+             * *   **VPC_ID**: a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits.
+             * *   **GATEWAY**: a database instance connected by using a database gateway.
              */
             public Builder instanceSource(String instanceSource) {
                 this.instanceSource = instanceSource;
@@ -1264,7 +1328,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LastSyncTime.
+             * The time when the database information was last obtained.
              */
             public Builder lastSyncTime(String lastSyncTime) {
                 this.lastSyncTime = lastSyncTime;
@@ -1272,7 +1336,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The instance level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1280,7 +1344,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is logical. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -1288,7 +1356,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerIds.
+             * The IDs of the owners of the databases, which are stored as an array. You can call the [GetUser](~~147098~~) or [ListUsers](~~141938~~) operation to query the IDs of the owners.
+             * <p>
+             * 
+             * >  The value of OwnerIds is the same as the value of UserId
              */
             public Builder ownerIds(java.util.List < Long > ownerIds) {
                 this.ownerIds = ownerIds;
@@ -1296,7 +1367,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNames.
+             * The usernames of the database owners.
              */
             public Builder ownerNames(java.util.List < String > ownerNames) {
                 this.ownerNames = ownerNames;
@@ -1304,7 +1375,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port that is used to connect to the database.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1312,7 +1383,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -1320,7 +1391,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -1328,7 +1399,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StandardGroup.
+             * The details of the control mode of the instance.
              */
             public Builder standardGroup(StandardGroup standardGroup) {
                 this.standardGroup = standardGroup;
@@ -1336,7 +1407,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the database. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The database is running as expected.
+             * *   **DISABLE**: The database is disabled.
+             * *   **OFFLINE**: The database is unpublished.
+             * *   **NOT_EXIST**: The database does not exist.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1344,7 +1421,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The number of tables.
              */
             public Builder tableCount(Long tableCount) {
                 this.tableCount = tableCount;
@@ -1352,7 +1429,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TnsName.
+             * The name of TNS.
              */
             public Builder tnsName(String tnsName) {
                 this.tnsName = tnsName;
@@ -1360,7 +1437,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UnitType.
+             * The unit type.
              */
             public Builder unitType(String unitType) {
                 this.unitType = unitType;
@@ -1545,7 +1622,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * BusinessTime.
+             * The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -1553,7 +1630,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * The ID of the task. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -1561,7 +1638,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1569,7 +1646,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the task flow was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1577,7 +1654,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the task flow was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1585,7 +1662,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryDagId.
+             * The ID of the historical task flow.
              */
             public Builder historyDagId(Long historyDagId) {
                 this.historyDagId = historyDagId;
@@ -1593,7 +1670,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The instance ID of the running task flow.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1601,7 +1678,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunningContext.
+             * The running scenario of the last task flow.
              */
             public Builder lastRunningContext(String lastRunningContext) {
                 this.lastRunningContext = lastRunningContext;
@@ -1609,7 +1686,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * The running details of the task.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -1617,7 +1694,15 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **0**: waiting for execution.
+             * *   **1**: running.
+             * *   **2**: suspended.
+             * *   **3**: failed.
+             * *   **4**: successful.
+             * *   **5**: complete.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -1625,7 +1710,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1633,7 +1718,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The mode in which the task flow was triggered. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task flow was triggered based on a schedule.
+             * *   **1**: The task flow was manually triggered.
              */
             public Builder triggerType(Long triggerType) {
                 this.triggerType = triggerType;
@@ -1641,7 +1730,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1682,7 +1771,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String cronFireType; 
 
             /**
-             * CronFireType.
+             * The type of scheduled triggering.
              */
             public Builder cronFireType(String cronFireType) {
                 this.cronFireType = cronFireType;
@@ -1807,7 +1896,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private java.util.Map < String, ? > tempTableNameMap; 
 
             /**
-             * DagInfo.
+             * The information about the workflow.
              */
             public Builder dagInfo(DagInfo dagInfo) {
                 this.dagInfo = dagInfo;
@@ -1815,7 +1904,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbBaseInfo.
+             * The database information related to data archiving tickets.
              */
             public Builder dbBaseInfo(DbBaseInfo dbBaseInfo) {
                 this.dbBaseInfo = dbBaseInfo;
@@ -1823,7 +1912,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTotal.
+             * The total number of archiving tasks.
              */
             public Builder instanceTotal(Long instanceTotal) {
                 this.instanceTotal = instanceTotal;
@@ -1831,7 +1920,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * The list of archiving tasks.
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -1839,7 +1928,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextFireTimeResult.
+             * The time when the next task is triggered.
              */
             public Builder nextFireTimeResult(NextFireTimeResult nextFireTimeResult) {
                 this.nextFireTimeResult = nextFireTimeResult;
@@ -1847,7 +1936,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageIndex.
+             * The page number.
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -1855,7 +1944,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -1863,7 +1952,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TempTableNameMap.
+             * The name of the temporary table that is generated by the archiving task (indicated by the archiving task ID).
              */
             public Builder tempTableNameMap(java.util.Map < String, ? > tempTableNameMap) {
                 this.tempTableNameMap = tempTableNameMap;
@@ -1916,7 +2005,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String tableWhere; 
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1924,7 +2013,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableWhere.
+             * The filter conditions.
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;
@@ -2073,7 +2162,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private java.util.List < String > variables; 
 
             /**
-             * ArchiveMethod.
+             * The type of the archiving destination.
              */
             public Builder archiveMethod(String archiveMethod) {
                 this.archiveMethod = archiveMethod;
@@ -2081,7 +2170,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbSchema.
+             * The schema of the database and table to be archived.
              */
             public Builder dbSchema(String dbSchema) {
                 this.dbSchema = dbSchema;
@@ -2089,7 +2178,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is logical.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -2097,7 +2190,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderAfter.
+             * The post behavior of archiving.
              */
             public Builder orderAfter(java.util.List < String > orderAfter) {
                 this.orderAfter = orderAfter;
@@ -2105,7 +2198,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RunMethod.
+             * The running method, which indicates whether to run the task immediately or at a specific point in time.
              */
             public Builder runMethod(String runMethod) {
                 this.runMethod = runMethod;
@@ -2113,7 +2206,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDatabaseId.
+             * The ID of the source database.
              */
             public Builder sourceDatabaseId(Long sourceDatabaseId) {
                 this.sourceDatabaseId = sourceDatabaseId;
@@ -2121,7 +2214,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableIncludes.
+             * The list of the archived tables and the filter conditions.
              */
             public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
@@ -2129,7 +2222,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableMapping.
+             * The mapping of schemas.
              */
             public Builder tableMapping(java.util.List < String > tableMapping) {
                 this.tableMapping = tableMapping;
@@ -2137,7 +2230,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceId.
+             * The ID of the destination instance.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -2145,7 +2238,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * The time variable defined for scheduled archiving.
              */
             public Builder variables(java.util.List < String > variables) {
                 this.variables = variables;
@@ -2354,7 +2447,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String workflowStatusDesc; 
 
             /**
-             * Comment.
+             * The description of the data archiving tickets.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -2362,7 +2455,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Committer.
+             * The user who submitted the ticket.
              */
             public Builder committer(String committer) {
                 this.committer = committer;
@@ -2370,7 +2463,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommitterId.
+             * The ID of the user who submitted the ticket. The ID is a user ID and not the ID of an Alibaba Cloud account.
              */
             public Builder committerId(Long committerId) {
                 this.committerId = committerId;
@@ -2378,7 +2471,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the ticket was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2386,7 +2479,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the ticket was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -2394,7 +2487,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of data archiving tickets.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2402,7 +2495,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PluginExtraData.
+             * The additional information about the ticket.
              */
             public Builder pluginExtraData(PluginExtraData pluginExtraData) {
                 this.pluginExtraData = pluginExtraData;
@@ -2410,7 +2503,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PluginParam.
+             * The ticket creation parameter. The value is a JSON string. For more information, see [PluginType parameter](~~429109~~).
              */
             public Builder pluginParam(PluginParam pluginParam) {
                 this.pluginParam = pluginParam;
@@ -2418,7 +2511,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PluginType.
+             * The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see [PluginType parameter](~~429109~~).
              */
             public Builder pluginType(String pluginType) {
                 this.pluginType = pluginType;
@@ -2426,7 +2519,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedUserList.
+             * The user IDs related to the ticket.
              */
             public Builder relatedUserList(java.util.List < Long > relatedUserList) {
                 this.relatedUserList = relatedUserList;
@@ -2434,7 +2527,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedUserNickList.
+             * The nicknames of the users that are related to the ticket.
              */
             public Builder relatedUserNickList(java.util.List < String > relatedUserNickList) {
                 this.relatedUserNickList = relatedUserNickList;
@@ -2442,7 +2535,16 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * The status code of the ticket. Valid values:
+             * <p>
+             * 
+             * *   **new**: newly created.
+             * *   **toaudit**: being reviewed.
+             * *   **Approved**: approved.
+             * *   **reject**: rejected.
+             * *   **processing**: being executed.
+             * *   **Success**: successful.
+             * *   **closed**: disabled.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -2450,7 +2552,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The status description of the ticket.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -2458,7 +2560,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceId.
+             * The ID of the approval process. You can call the [GetOrderBaseInfo](~~144642~~) operation to obtain the ID of the approval process.
              */
             public Builder workflowInstanceId(Long workflowInstanceId) {
                 this.workflowInstanceId = workflowInstanceId;
@@ -2466,7 +2568,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowStatusDesc.
+             * The description of the approval process.
              */
             public Builder workflowStatusDesc(String workflowStatusDesc) {
                 this.workflowStatusDesc = workflowStatusDesc;

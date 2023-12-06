@@ -142,7 +142,7 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
          */
         public Builder tid(Long tid) {
             this.tid = tid;

@@ -150,7 +150,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * Comment.
+         * The description of the task.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -159,7 +159,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * Param.
+         * The parameters for archiving data.
          */
         public Builder param(Param param) {
             String paramShrink = shrink(param, "Param", "json");
@@ -169,7 +169,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The ID of the parent ticket. A parent ticket is generated only when a sub ticket is created.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -178,7 +178,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * PluginType.
+         * The plugin type. Default value: DATA_ARCHIVE.
          */
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
@@ -187,7 +187,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * RelatedUserList.
+         * The list of the related users.
          */
         public Builder relatedUserList(java.util.List < String > relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
@@ -197,7 +197,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);
@@ -252,7 +252,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             private String tableWhere; 
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -260,7 +260,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * TableWhere.
+             * The filter condition specified by the WHERE clause of the archiving configuration.
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;
@@ -501,7 +501,14 @@ public class CreateDataArchiveOrderRequest extends Request {
             private java.util.List < Variables> variables; 
 
             /**
-             * ArchiveMethod.
+             * The database for archiving data. Valid values:
+             * <p>
+             * 
+             * *   inner_oss: Built-in Object Storage Service (OSS) of Database Backup (DBS).
+             * *   oss_userself: OSS of user.
+             * *   mysql: ApsaraDB RDS for MySQL.
+             * *   polardb: PolarDB for MySQL.
+             * *   lindorm: Lindorm.
              */
             public Builder archiveMethod(String archiveMethod) {
                 this.archiveMethod = archiveMethod;
@@ -509,7 +516,9 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * CronStr.
+             * 填写Crontab表达式，以便定期执行任务，更多信息，请参见[Crontab表达式](~~206581~~)。
+             * <p>
+             * 当运行方式为周期归档时需要填写该参数。
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
@@ -517,7 +526,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * Logic.
+             * Specifies whether the database is a logical database.
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -525,7 +534,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * OrderAfter.
+             * The post behaviors.
              */
             public Builder orderAfter(java.util.List < String > orderAfter) {
                 this.orderAfter = orderAfter;
@@ -533,7 +542,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * RunMethod.
+             * The running mode. Only now is supported, which indicates that data archiving is immediately executed.
              */
             public Builder runMethod(String runMethod) {
                 this.runMethod = runMethod;
@@ -541,7 +550,11 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * SourceCatalogName.
+             * 源库目录（catalog）。
+             * <p>
+             * - **def**：对于两层逻辑结构的数据库，如MySQL，PolarDB MySQL，AnalyticDB MySQL，固定为def。
+             * - **空字符串**： 对于lindorm与MongoDB，填入空字符串。
+             * - **catalog名**：对于三层逻辑结构的数据库，如PostgreSQL，填入catalog名。
              */
             public Builder sourceCatalogName(String sourceCatalogName) {
                 this.sourceCatalogName = sourceCatalogName;
@@ -549,7 +562,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * SourceInstanceName.
+             * 源实例名称。
              */
             public Builder sourceInstanceName(String sourceInstanceName) {
                 this.sourceInstanceName = sourceInstanceName;
@@ -557,7 +570,9 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * SourceSchemaName.
+             * 源库Schema，源库与目标库同名。
+             * <p>
+             * 如MySQL为库名，PostgreSQL为Schema名。
              */
             public Builder sourceSchemaName(String sourceSchemaName) {
                 this.sourceSchemaName = sourceSchemaName;
@@ -565,7 +580,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * TableIncludes.
+             * The collection of tables to be archived.
              */
             public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
@@ -573,7 +588,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * TableMapping.
+             * The table names mapped in the destination database.
              */
             public Builder tableMapping(java.util.List < String > tableMapping) {
                 this.tableMapping = tableMapping;
@@ -581,7 +596,11 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * TargetInstanceHost.
+             * 目标库Host，若目标实例同时开放了内网与公网，优先写入内网Host。
+             * <p>
+             * 
+             * - 若归档目标为OSS，则为Bucket名。
+             * - 若归档目标为专属存储，则为inner_oss。
              */
             public Builder targetInstanceHost(String targetInstanceHost) {
                 this.targetInstanceHost = targetInstanceHost;
@@ -589,7 +608,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * Variables.
+             * The configuration of archiving variables.
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;
