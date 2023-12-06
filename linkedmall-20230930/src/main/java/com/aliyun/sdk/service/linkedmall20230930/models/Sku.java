@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Sku</p>
  */
 public class Sku extends TeaModel {
+    @NameInMap("barcode")
+    private String barcode;
+
     @NameInMap("canSell")
     private Boolean canSell;
 
@@ -58,6 +61,7 @@ public class Sku extends TeaModel {
     private String title;
 
     private Sku(Builder builder) {
+        this.barcode = builder.barcode;
         this.canSell = builder.canSell;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
@@ -81,6 +85,13 @@ public class Sku extends TeaModel {
 
     public static Sku create() {
         return builder().build();
+    }
+
+    /**
+     * @return barcode
+     */
+    public String getBarcode() {
+        return this.barcode;
     }
 
     /**
@@ -189,6 +200,7 @@ public class Sku extends TeaModel {
     }
 
     public static final class Builder {
+        private String barcode; 
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
@@ -204,6 +216,14 @@ public class Sku extends TeaModel {
         private String skuSpecsCode; 
         private String skuStatus; 
         private String title; 
+
+        /**
+         * barcode.
+         */
+        public Builder barcode(String barcode) {
+            this.barcode = barcode;
+            return this;
+        }
 
         /**
          * canSell.

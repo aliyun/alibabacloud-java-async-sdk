@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Product</p>
  */
 public class Product extends TeaModel {
+    @NameInMap("brandName")
+    private String brandName;
+
     @NameInMap("canSell")
     private Boolean canSell;
 
@@ -76,6 +79,7 @@ public class Product extends TeaModel {
     private String title;
 
     private Product(Builder builder) {
+        this.brandName = builder.brandName;
         this.canSell = builder.canSell;
         this.categoryChain = builder.categoryChain;
         this.categoryLeafId = builder.categoryLeafId;
@@ -105,6 +109,13 @@ public class Product extends TeaModel {
 
     public static Product create() {
         return builder().build();
+    }
+
+    /**
+     * @return brandName
+     */
+    public String getBrandName() {
+        return this.brandName;
     }
 
     /**
@@ -255,6 +266,7 @@ public class Product extends TeaModel {
     }
 
     public static final class Builder {
+        private String brandName; 
         private Boolean canSell; 
         private java.util.List < Category > categoryChain; 
         private Long categoryLeafId; 
@@ -276,6 +288,14 @@ public class Product extends TeaModel {
         private String taxCode; 
         private Integer taxRate; 
         private String title; 
+
+        /**
+         * brandName.
+         */
+        public Builder brandName(String brandName) {
+            this.brandName = brandName;
+            return this;
+        }
 
         /**
          * canSell.
