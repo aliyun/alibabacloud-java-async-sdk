@@ -60,6 +60,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("OutputChannels")
     private java.util.List < OutputChannels> outputChannels;
 
+    @NameInMap("OutputModel")
+    private OutputModel outputModel;
+
     @NameInMap("ReasonCode")
     private String reasonCode;
 
@@ -119,6 +122,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.latestMetrics = builder.latestMetrics;
         this.latestProgress = builder.latestProgress;
         this.outputChannels = builder.outputChannels;
+        this.outputModel = builder.outputModel;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.requestId = builder.requestId;
@@ -256,6 +260,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return outputModel
+     */
+    public OutputModel getOutputModel() {
+        return this.outputModel;
+    }
+
+    /**
      * @return reasonCode
      */
     public String getReasonCode() {
@@ -370,6 +381,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private java.util.List < LatestMetrics> latestMetrics; 
         private LatestProgress latestProgress; 
         private java.util.List < OutputChannels> outputChannels; 
+        private OutputModel outputModel; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
@@ -514,6 +526,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * OutputModel.
+         */
+        public Builder outputModel(OutputModel outputModel) {
+            this.outputModel = outputModel;
+            return this;
+        }
+
+        /**
          * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
@@ -631,6 +651,127 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     } 
 
+    public static class InstanceSpec extends TeaModel {
+        @NameInMap("CPU")
+        private String CPU;
+
+        @NameInMap("GPU")
+        private String GPU;
+
+        @NameInMap("GPUType")
+        private String GPUType;
+
+        @NameInMap("Memory")
+        private String memory;
+
+        @NameInMap("SharedMemory")
+        private String sharedMemory;
+
+        private InstanceSpec(Builder builder) {
+            this.CPU = builder.CPU;
+            this.GPU = builder.GPU;
+            this.GPUType = builder.GPUType;
+            this.memory = builder.memory;
+            this.sharedMemory = builder.sharedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return CPU
+         */
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        /**
+         * @return GPU
+         */
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        /**
+         * @return GPUType
+         */
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return sharedMemory
+         */
+        public String getSharedMemory() {
+            return this.sharedMemory;
+        }
+
+        public static final class Builder {
+            private String CPU; 
+            private String GPU; 
+            private String GPUType; 
+            private String memory; 
+            private String sharedMemory; 
+
+            /**
+             * CPU.
+             */
+            public Builder CPU(String CPU) {
+                this.CPU = CPU;
+                return this;
+            }
+
+            /**
+             * GPU.
+             */
+            public Builder GPU(String GPU) {
+                this.GPU = GPU;
+                return this;
+            }
+
+            /**
+             * GPUType.
+             */
+            public Builder GPUType(String GPUType) {
+                this.GPUType = GPUType;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * SharedMemory.
+             */
+            public Builder sharedMemory(String sharedMemory) {
+                this.sharedMemory = sharedMemory;
+                return this;
+            }
+
+            public InstanceSpec build() {
+                return new InstanceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class ComputeResource extends TeaModel {
         @NameInMap("EcsCount")
         private Long ecsCount;
@@ -638,9 +779,21 @@ public class GetTrainingJobResponseBody extends TeaModel {
         @NameInMap("EcsSpec")
         private String ecsSpec;
 
+        @NameInMap("InstanceCount")
+        private Long instanceCount;
+
+        @NameInMap("InstanceSpec")
+        private InstanceSpec instanceSpec;
+
+        @NameInMap("ResourceId")
+        private String resourceId;
+
         private ComputeResource(Builder builder) {
             this.ecsCount = builder.ecsCount;
             this.ecsSpec = builder.ecsSpec;
+            this.instanceCount = builder.instanceCount;
+            this.instanceSpec = builder.instanceSpec;
+            this.resourceId = builder.resourceId;
         }
 
         public static Builder builder() {
@@ -665,9 +818,33 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.ecsSpec;
         }
 
+        /**
+         * @return instanceCount
+         */
+        public Long getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        /**
+         * @return instanceSpec
+         */
+        public InstanceSpec getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
         public static final class Builder {
             private Long ecsCount; 
             private String ecsSpec; 
+            private Long instanceCount; 
+            private InstanceSpec instanceSpec; 
+            private String resourceId; 
 
             /**
              * EcsCount.
@@ -682,6 +859,30 @@ public class GetTrainingJobResponseBody extends TeaModel {
              */
             public Builder ecsSpec(String ecsSpec) {
                 this.ecsSpec = ecsSpec;
+                return this;
+            }
+
+            /**
+             * InstanceCount.
+             */
+            public Builder instanceCount(Long instanceCount) {
+                this.instanceCount = instanceCount;
+                return this;
+            }
+
+            /**
+             * InstanceSpec.
+             */
+            public Builder instanceSpec(InstanceSpec instanceSpec) {
+                this.instanceSpec = instanceSpec;
+                return this;
+            }
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
                 return this;
             }
 
@@ -1316,6 +1517,67 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
             public OutputChannels build() {
                 return new OutputChannels(this);
+            } 
+
+        } 
+
+    }
+    public static class OutputModel extends TeaModel {
+        @NameInMap("OutputChannelName")
+        private String outputChannelName;
+
+        @NameInMap("Uri")
+        private String uri;
+
+        private OutputModel(Builder builder) {
+            this.outputChannelName = builder.outputChannelName;
+            this.uri = builder.uri;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutputModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outputChannelName
+         */
+        public String getOutputChannelName() {
+            return this.outputChannelName;
+        }
+
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
+        public static final class Builder {
+            private String outputChannelName; 
+            private String uri; 
+
+            /**
+             * OutputChannelName.
+             */
+            public Builder outputChannelName(String outputChannelName) {
+                this.outputChannelName = outputChannelName;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
+                return this;
+            }
+
+            public OutputModel build() {
+                return new OutputModel(this);
             } 
 
         } 
