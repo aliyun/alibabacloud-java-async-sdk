@@ -32,7 +32,6 @@ public class ModifyPlaybookRequest extends Request {
 
     @Body
     @NameInMap("Taskflow")
-    @Validation(required = true)
     private String taskflow;
 
     private ModifyPlaybookRequest(Builder builder) {
