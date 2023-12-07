@@ -70,7 +70,7 @@ public class PublishFunctionVersionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class PublishFunctionVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * The information about the function version.
          */
         public Builder body(PublishVersionInput body) {
             this.putBodyParameter("body", body);

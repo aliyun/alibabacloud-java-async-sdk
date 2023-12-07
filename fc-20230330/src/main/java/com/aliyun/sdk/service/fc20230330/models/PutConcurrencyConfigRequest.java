@@ -70,7 +70,7 @@ public class PutConcurrencyConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class PutConcurrencyConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * The concurrency configurations.
          */
         public Builder body(PutConcurrencyInput body) {
             this.putBodyParameter("body", body);

@@ -82,7 +82,7 @@ public class ListProvisionConfigsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The name of the function. If this parameter is not specified, the provisioned configurations of all functions are listed.
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -91,7 +91,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * limit.
+         * Number of provisioned configurations to return.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -100,7 +100,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

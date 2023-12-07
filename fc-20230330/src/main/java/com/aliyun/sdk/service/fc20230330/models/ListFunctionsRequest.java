@@ -82,7 +82,7 @@ public class ListFunctionsRequest extends Request {
         } 
 
         /**
-         * limit.
+         * The number of functions to return.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -91,7 +91,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -100,7 +100,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * prefix.
+         * A prefix of function names.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

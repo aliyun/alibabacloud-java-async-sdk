@@ -82,7 +82,7 @@ public class ListTaggedResourcesRequest extends Request {
         } 
 
         /**
-         * limit.
+         * The number of resources to return.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -91,7 +91,7 @@ public class ListTaggedResourcesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -100,7 +100,7 @@ public class ListTaggedResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource quantity. ALIYUN::FC::FUNCTION indicates functions in Function Compute 3.0. ALIYUN::FC::SERVICE indicates the original service of Function Compute. The default value is ALIYUN::FC:FUNCTION.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

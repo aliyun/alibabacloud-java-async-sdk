@@ -83,7 +83,7 @@ public class UntagResourceRequest extends Request {
         } 
 
         /**
-         * all.
+         * Specifies whether to delete all tags.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -92,7 +92,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * arn.
+         * The resource ID.
          */
         public Builder arn(String arn) {
             this.putQueryParameter("arn", arn);
@@ -101,7 +101,7 @@ public class UntagResourceRequest extends Request {
         }
 
         /**
-         * tagKeys.
+         * The tag name.
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("tagKeys", tagKeys);

@@ -55,7 +55,7 @@ public class GetResourceTagsRequest extends Request {
         } 
 
         /**
-         * arn.
+         * The resource ID.
          */
         public Builder arn(String arn) {
             this.putQueryParameter("arn", arn);
