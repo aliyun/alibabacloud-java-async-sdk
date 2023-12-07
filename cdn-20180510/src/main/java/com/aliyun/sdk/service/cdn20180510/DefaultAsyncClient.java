@@ -129,6 +129,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * **
+      * **The maximum number of times that each user can call this operation per second is 20.
+      *
+     */
+    @Override
+    public CompletableFuture<BatchDescribeCdnIpInfoResponse> batchDescribeCdnIpInfo(BatchDescribeCdnIpInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDescribeCdnIpInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDescribeCdnIpInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDescribeCdnIpInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
       * *   You can call this operation up to 30 times per second per account.
       * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
       * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](~~388994~~).
@@ -687,6 +706,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeCdnDeliverListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeCdnDomainAtoaLogsResponse> describeCdnDomainAtoaLogs(DescribeCdnDomainAtoaLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCdnDomainAtoaLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCdnDomainAtoaLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCdnDomainAtoaLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

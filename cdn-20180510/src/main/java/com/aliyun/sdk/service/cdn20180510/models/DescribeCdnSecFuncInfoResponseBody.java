@@ -86,7 +86,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         private String retCode; 
 
         /**
-         * Content.
+         * Queried data.
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -94,7 +94,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -102,7 +102,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatus.
+         * The HTTP status code returned.
          */
         public Builder httpStatus(String httpStatus) {
             this.httpStatus = httpStatus;
@@ -110,7 +110,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * The HTTP request response code.
+         * <p>
+         * 
+         * *   0: OK.
+         * *   Values other than 0: an error.
          */
         public Builder retCode(String retCode) {
             this.retCode = retCode;
@@ -170,7 +174,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * The tag.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -178,7 +182,7 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value.
              */
             public Builder value(String value) {
                 this.value = value;

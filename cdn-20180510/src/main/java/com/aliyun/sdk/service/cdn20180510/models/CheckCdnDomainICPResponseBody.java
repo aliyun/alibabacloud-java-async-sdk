@@ -50,7 +50,7 @@ public class CheckCdnDomainICPResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class CheckCdnDomainICPResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the resource plan. Valid value:
+         * <p>
+         * 
+         * *   **DomainIsRegistration**: An ICP filing is obtained for the domain name.
+         * *   **DomainNotRegistration**: No ICP filing is obtained for the domain name.
          */
         public Builder status(String status) {
             this.status = status;

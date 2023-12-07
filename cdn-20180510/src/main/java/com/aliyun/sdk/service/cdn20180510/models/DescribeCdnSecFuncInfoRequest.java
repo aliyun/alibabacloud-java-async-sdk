@@ -70,7 +70,11 @@ public class DescribeCdnSecFuncInfoRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language.
+         * <p>
+         * 
+         * *   en: English
+         * *   zh: Chinese
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -79,7 +83,11 @@ public class DescribeCdnSecFuncInfoRequest extends Request {
         }
 
         /**
-         * SecFuncType.
+         * The type of the security feature. Valid values:
+         * <p>
+         * 
+         * *   CipherSuiteGroupCustomize: custom cipher suite.
+         * *   CipherSuiteGroupStrict: dustom cipher suite.
          */
         public Builder secFuncType(String secFuncType) {
             this.putQueryParameter("SecFuncType", secFuncType);
