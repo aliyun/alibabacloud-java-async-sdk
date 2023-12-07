@@ -16,6 +16,10 @@ public class CreateWarningStrategyConfigResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateWarningStrategyConfigResponseBody body;
@@ -23,6 +27,7 @@ public class CreateWarningStrategyConfigResponse extends Response {
     private CreateWarningStrategyConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateWarningStrategyConfigResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateWarningStrategyConfigResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateWarningStrategyConfigResponse extends Response {
     public interface Builder extends Response.Builder<CreateWarningStrategyConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateWarningStrategyConfigResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateWarningStrategyConfigResponse extends Response {
             extends Response.BuilderImpl<CreateWarningStrategyConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateWarningStrategyConfigResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateWarningStrategyConfigResponse extends Response {
         private BuilderImpl(CreateWarningStrategyConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateWarningStrategyConfigResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

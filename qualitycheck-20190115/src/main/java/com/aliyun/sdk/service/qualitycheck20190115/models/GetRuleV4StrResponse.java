@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateRuleByIdResponse} extends {@link TeaModel}
+ * {@link GetRuleV4StrResponse} extends {@link TeaModel}
  *
- * <p>UpdateRuleByIdResponse</p>
+ * <p>GetRuleV4StrResponse</p>
  */
-public class UpdateRuleByIdResponse extends Response {
+public class GetRuleV4StrResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class UpdateRuleByIdResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpdateRuleByIdResponseBody body;
+    private GetRuleV4StrResponseBody body;
 
-    private UpdateRuleByIdResponse(BuilderImpl builder) {
+    private GetRuleV4StrResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateRuleByIdResponse create() {
+    public static GetRuleV4StrResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class UpdateRuleByIdResponse extends Response {
     /**
      * @return body
      */
-    public UpdateRuleByIdResponseBody getBody() {
+    public GetRuleV4StrResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateRuleByIdResponse, Builder> {
+    public interface Builder extends Response.Builder<GetRuleV4StrResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateRuleByIdResponseBody body);
+        Builder body(GetRuleV4StrResponseBody body);
 
         @Override
-        UpdateRuleByIdResponse build();
+        GetRuleV4StrResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateRuleByIdResponse, Builder>
+            extends Response.BuilderImpl<GetRuleV4StrResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateRuleByIdResponseBody body; 
+        private GetRuleV4StrResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateRuleByIdResponse response) {
+        private BuilderImpl(GetRuleV4StrResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class UpdateRuleByIdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateRuleByIdResponseBody body) {
+        public Builder body(GetRuleV4StrResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateRuleByIdResponse build() {
-            return new UpdateRuleByIdResponse(this);
+        public GetRuleV4StrResponse build() {
+            return new GetRuleV4StrResponse(this);
         } 
 
     } 

@@ -118,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRuleV4Response> getRuleV4(GetRuleV4Request request);
 
+    /**
+      * @deprecated
+      *
+     */
+    CompletableFuture<GetRuleV4StrResponse> getRuleV4Str(GetRuleV4StrRequest request);
+
     CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request);
 
     CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);

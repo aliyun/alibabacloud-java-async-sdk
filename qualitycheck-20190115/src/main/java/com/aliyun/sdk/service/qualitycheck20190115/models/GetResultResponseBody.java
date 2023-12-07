@@ -2995,6 +2995,12 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Remark9")
         private String remark9;
 
+        @NameInMap("TaskConfigId")
+        private Long taskConfigId;
+
+        @NameInMap("TaskConfigName")
+        private String taskConfigName;
+
         @NameInMap("Url")
         private String url;
 
@@ -3024,6 +3030,8 @@ public class GetResultResponseBody extends TeaModel {
             this.remark7 = builder.remark7;
             this.remark8 = builder.remark8;
             this.remark9 = builder.remark9;
+            this.taskConfigId = builder.taskConfigId;
+            this.taskConfigName = builder.taskConfigName;
             this.url = builder.url;
         }
 
@@ -3211,6 +3219,20 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskConfigId
+         */
+        public Long getTaskConfigId() {
+            return this.taskConfigId;
+        }
+
+        /**
+         * @return taskConfigName
+         */
+        public String getTaskConfigName() {
+            return this.taskConfigName;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -3243,6 +3265,8 @@ public class GetResultResponseBody extends TeaModel {
             private String remark7; 
             private String remark8; 
             private String remark9; 
+            private Long taskConfigId; 
+            private String taskConfigName; 
             private String url; 
 
             /**
@@ -3442,6 +3466,22 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder remark9(String remark9) {
                 this.remark9 = remark9;
+                return this;
+            }
+
+            /**
+             * TaskConfigId.
+             */
+            public Builder taskConfigId(Long taskConfigId) {
+                this.taskConfigId = taskConfigId;
+                return this;
+            }
+
+            /**
+             * TaskConfigName.
+             */
+            public Builder taskConfigName(String taskConfigName) {
+                this.taskConfigName = taskConfigName;
                 return this;
             }
 
