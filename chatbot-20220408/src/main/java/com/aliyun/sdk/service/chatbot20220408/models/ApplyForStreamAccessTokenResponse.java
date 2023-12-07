@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteConnQuestionResponse} extends {@link TeaModel}
+ * {@link ApplyForStreamAccessTokenResponse} extends {@link TeaModel}
  *
- * <p>DeleteConnQuestionResponse</p>
+ * <p>ApplyForStreamAccessTokenResponse</p>
  */
-public class DeleteConnQuestionResponse extends Response {
+public class ApplyForStreamAccessTokenResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DeleteConnQuestionResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DeleteConnQuestionResponseBody body;
+    private ApplyForStreamAccessTokenResponseBody body;
 
-    private DeleteConnQuestionResponse(BuilderImpl builder) {
+    private ApplyForStreamAccessTokenResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteConnQuestionResponse create() {
+    public static ApplyForStreamAccessTokenResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DeleteConnQuestionResponse extends Response {
     /**
      * @return body
      */
-    public DeleteConnQuestionResponseBody getBody() {
+    public ApplyForStreamAccessTokenResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteConnQuestionResponse, Builder> {
+    public interface Builder extends Response.Builder<ApplyForStreamAccessTokenResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteConnQuestionResponseBody body);
+        Builder body(ApplyForStreamAccessTokenResponseBody body);
 
         @Override
-        DeleteConnQuestionResponse build();
+        ApplyForStreamAccessTokenResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteConnQuestionResponse, Builder>
+            extends Response.BuilderImpl<ApplyForStreamAccessTokenResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteConnQuestionResponseBody body; 
+        private ApplyForStreamAccessTokenResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteConnQuestionResponse response) {
+        private BuilderImpl(ApplyForStreamAccessTokenResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DeleteConnQuestionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteConnQuestionResponseBody body) {
+        public Builder body(ApplyForStreamAccessTokenResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteConnQuestionResponse build() {
-            return new DeleteConnQuestionResponse(this);
+        public ApplyForStreamAccessTokenResponse build() {
+            return new ApplyForStreamAccessTokenResponse(this);
         } 
 
     } 

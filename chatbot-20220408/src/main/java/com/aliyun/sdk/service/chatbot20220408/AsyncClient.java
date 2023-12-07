@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ApplyForStreamAccessTokenResponse> applyForStreamAccessToken(ApplyForStreamAccessTokenRequest request);
+
     CompletableFuture<AssociateResponse> associate(AssociateRequest request);
 
     CompletableFuture<BeginSessionResponse> beginSession(BeginSessionRequest request);
