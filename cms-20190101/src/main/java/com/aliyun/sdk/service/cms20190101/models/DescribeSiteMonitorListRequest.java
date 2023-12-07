@@ -136,7 +136,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The page number. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -145,7 +145,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +163,7 @@ public class DescribeSiteMonitorListRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
+         * The task status. Valid values:
          * <p>
          * 
          * *   1: The task is enabled.

@@ -21,6 +21,10 @@ public class DescribeAlertLogCountRequest extends Request {
     private Long endTime;
 
     @Query
+    @NameInMap("EventType")
+    private String eventType;
+
+    @Query
     @NameInMap("GroupBy")
     @Validation(required = true)
     private String groupBy;
@@ -58,6 +62,10 @@ public class DescribeAlertLogCountRequest extends Request {
     private String product;
 
     @Query
+    @NameInMap("RuleId")
+    private String ruleId;
+
+    @Query
     @NameInMap("RuleName")
     private String ruleName;
 
@@ -81,6 +89,7 @@ public class DescribeAlertLogCountRequest extends Request {
         super(builder);
         this.contactGroup = builder.contactGroup;
         this.endTime = builder.endTime;
+        this.eventType = builder.eventType;
         this.groupBy = builder.groupBy;
         this.groupId = builder.groupId;
         this.lastMin = builder.lastMin;
@@ -90,6 +99,7 @@ public class DescribeAlertLogCountRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.product = builder.product;
+        this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.searchKey = builder.searchKey;
         this.sendStatus = builder.sendStatus;
@@ -122,6 +132,13 @@ public class DescribeAlertLogCountRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
     }
 
     /**
@@ -188,6 +205,13 @@ public class DescribeAlertLogCountRequest extends Request {
     }
 
     /**
+     * @return ruleId
+     */
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -225,6 +249,7 @@ public class DescribeAlertLogCountRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAlertLogCountRequest, Builder> {
         private String contactGroup; 
         private Long endTime; 
+        private String eventType; 
         private String groupBy; 
         private String groupId; 
         private String lastMin; 
@@ -234,6 +259,7 @@ public class DescribeAlertLogCountRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String product; 
+        private String ruleId; 
         private String ruleName; 
         private String searchKey; 
         private String sendStatus; 
@@ -248,6 +274,7 @@ public class DescribeAlertLogCountRequest extends Request {
             super(request);
             this.contactGroup = request.contactGroup;
             this.endTime = request.endTime;
+            this.eventType = request.eventType;
             this.groupBy = request.groupBy;
             this.groupId = request.groupId;
             this.lastMin = request.lastMin;
@@ -257,6 +284,7 @@ public class DescribeAlertLogCountRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.product = request.product;
+            this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.searchKey = request.searchKey;
             this.sendStatus = request.sendStatus;
@@ -286,6 +314,15 @@ public class DescribeAlertLogCountRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
             return this;
         }
 
@@ -391,6 +428,15 @@ public class DescribeAlertLogCountRequest extends Request {
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
             this.product = product;
+            return this;
+        }
+
+        /**
+         * RuleId.
+         */
+        public Builder ruleId(String ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
             return this;
         }
 

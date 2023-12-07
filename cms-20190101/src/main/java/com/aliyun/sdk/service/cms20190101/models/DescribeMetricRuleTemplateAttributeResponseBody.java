@@ -89,7 +89,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +105,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +121,11 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +201,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+             * The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -318,7 +318,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+             * The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -435,7 +435,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private Integer times; 
 
             /**
-             * The comparison operator that is used to compare the metric value with the threshold. Valid values:
+             * The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -609,7 +609,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 报警模板的标签键。
+             * The tag key of the alert template.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -617,7 +617,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 报警模板的标签值。
+             * The tag value of the alert template.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -795,7 +795,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String webhook; 
 
             /**
-             * The abbreviation of the cloud service name.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -811,7 +811,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 报警模板标签。
+             * The tags of the alert template.
              */
             public Builder labels(AlertTemplateLabels labels) {
                 this.labels = labels;
@@ -819,7 +819,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The metric name.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -827,7 +827,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the cloud service.
+             * The namespace of the Alibaba Cloud service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -835,12 +835,12 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The processing method of alerts when no monitoring data is found. Valid values:
+             * The method that is used to handle alerts when no monitoring data is found. Valid values:
              * <p>
              * 
-             * *   KEEP_LAST_STATE (default value): No operation is performed.
+             * *   KEEP_LAST_STATE (default): No operation is performed.
              * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
-             * *   OK: The alert rule has no active alerts.
+             * *   OK: The status is considered normal.
              */
             public Builder noDataPolicy(String noDataPolicy) {
                 this.noDataPolicy = noDataPolicy;
@@ -994,7 +994,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * The list of alert templates.
+             * The queried alert templates.
              */
             public Builder alertTemplates(AlertTemplates alertTemplates) {
                 this.alertTemplates = alertTemplates;
@@ -1002,7 +1002,7 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the alert template.
              */
             public Builder description(String description) {
                 this.description = description;

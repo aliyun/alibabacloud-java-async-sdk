@@ -138,7 +138,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * AlertBeforeTime.
+         * Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.
          */
         public Builder alertBeforeTime(String alertBeforeTime) {
             this.putQueryParameter("AlertBeforeTime", alertBeforeTime);

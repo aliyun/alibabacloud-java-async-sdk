@@ -71,7 +71,7 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
          * The name of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
          * <p>
          * 
-         * For more information about how to query the names of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
+         * For information about how to obtain the name of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -83,7 +83,7 @@ public class DescribeMetricRuleTemplateAttributeRequest extends Request {
          * The ID of the alert template. You must specify at least one of the `Name` and `TemplateId` parameters.
          * <p>
          * 
-         * For more information about how to query the IDs of alert templates, see [DescribeMetricRuleTemplateList](~~114982~~).
+         * For information about how to obtain the ID of an alert template, see [DescribeMetricRuleTemplateList](~~114982~~).
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

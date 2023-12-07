@@ -295,6 +295,9 @@ public class EscalationRule extends TeaModel {
 
     }
     public static class Escalations extends TeaModel {
+        @NameInMap("BackupContactGroups")
+        private java.util.List < String > backupContactGroups;
+
         @NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
@@ -305,6 +308,7 @@ public class EscalationRule extends TeaModel {
         private Long escalateMin;
 
         private Escalations(Builder builder) {
+            this.backupContactGroups = builder.backupContactGroups;
             this.contactGroups = builder.contactGroups;
             this.contactGroupsByLevel = builder.contactGroupsByLevel;
             this.escalateMin = builder.escalateMin;
@@ -316,6 +320,13 @@ public class EscalationRule extends TeaModel {
 
         public static Escalations create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupContactGroups
+         */
+        public java.util.List < String > getBackupContactGroups() {
+            return this.backupContactGroups;
         }
 
         /**
@@ -340,9 +351,18 @@ public class EscalationRule extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > backupContactGroups; 
             private java.util.List < String > contactGroups; 
             private ContactGroupsByLevel contactGroupsByLevel; 
             private Long escalateMin; 
+
+            /**
+             * BackupContactGroups.
+             */
+            public Builder backupContactGroups(java.util.List < String > backupContactGroups) {
+                this.backupContactGroups = backupContactGroups;
+                return this;
+            }
 
             /**
              * ContactGroups.

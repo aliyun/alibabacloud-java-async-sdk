@@ -1180,7 +1180,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+      * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
       *
      */
     @Override
@@ -1467,7 +1467,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+      * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
       *
      */
     @Override

@@ -259,7 +259,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             private String relation; 
 
             /**
-             * Keywords.
+             * 事件匹配的关键字列表。
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -267,7 +267,11 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * 多个关键字的条件。取值：
+             * <p>
+             * 
+             * - OR： 多个关键字之间或的关系。
+             * - NOT：不包含关键字。表示匹配非关键字列表中的所有事件。
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -511,7 +515,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * KeywordFilterObj.
+             * 过滤关键词。
              */
             public Builder keywordFilterObj(KeywordFilterObj keywordFilterObj) {
                 this.keywordFilterObj = keywordFilterObj;
@@ -543,7 +547,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SQLFilter.
+             * 按照SQL过滤日志。如果符合条件，则触发报警。
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;
@@ -660,7 +664,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The event pattern. This parameter specifies the trigger conditions of an event.
+             * The event pattern. This parameter describes the trigger conditions of an event.
              */
             public Builder eventPattern(EventPattern eventPattern) {
                 this.eventPattern = eventPattern;
@@ -668,7 +672,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values: Valid values:
+             * The event type. Valid values:
              * <p>
              * 
              * *   SYSTEM: system event

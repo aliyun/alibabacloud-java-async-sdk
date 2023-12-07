@@ -21,6 +21,10 @@ public class DescribeAlertLogListRequest extends Request {
     private Long endTime;
 
     @Query
+    @NameInMap("EventType")
+    private String eventType;
+
+    @Query
     @NameInMap("GroupBy")
     private String groupBy;
 
@@ -84,6 +88,7 @@ public class DescribeAlertLogListRequest extends Request {
         super(builder);
         this.contactGroup = builder.contactGroup;
         this.endTime = builder.endTime;
+        this.eventType = builder.eventType;
         this.groupBy = builder.groupBy;
         this.groupId = builder.groupId;
         this.lastMin = builder.lastMin;
@@ -126,6 +131,13 @@ public class DescribeAlertLogListRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
     }
 
     /**
@@ -236,6 +248,7 @@ public class DescribeAlertLogListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAlertLogListRequest, Builder> {
         private String contactGroup; 
         private Long endTime; 
+        private String eventType; 
         private String groupBy; 
         private String groupId; 
         private String lastMin; 
@@ -260,6 +273,7 @@ public class DescribeAlertLogListRequest extends Request {
             super(request);
             this.contactGroup = request.contactGroup;
             this.endTime = request.endTime;
+            this.eventType = request.eventType;
             this.groupBy = request.groupBy;
             this.groupId = request.groupId;
             this.lastMin = request.lastMin;
@@ -292,6 +306,15 @@ public class DescribeAlertLogListRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
             return this;
         }
 

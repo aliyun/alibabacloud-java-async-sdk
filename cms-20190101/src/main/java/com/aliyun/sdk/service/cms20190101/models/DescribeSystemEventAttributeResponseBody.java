@@ -141,6 +141,9 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         @NameInMap("GroupId")
         private String groupId;
 
+        @NameInMap("Id")
+        private String id;
+
         @NameInMap("InstanceName")
         private String instanceName;
 
@@ -168,6 +171,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         private SystemEvent(Builder builder) {
             this.content = builder.content;
             this.groupId = builder.groupId;
+            this.id = builder.id;
             this.instanceName = builder.instanceName;
             this.level = builder.level;
             this.name = builder.name;
@@ -198,6 +202,13 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
          */
         public String getGroupId() {
             return this.groupId;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
         }
 
         /**
@@ -259,6 +270,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String groupId; 
+            private String id; 
             private String instanceName; 
             private String level; 
             private String name; 
@@ -281,6 +293,14 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 

@@ -119,7 +119,12 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * IsEnable.
+         * Specifies whether to enable the event-triggered alert rule. Valid values:
+         * <p>
+         * 
+         * true (default)
+         * 
+         * false
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -137,7 +142,7 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1. Default value: 1.
@@ -149,10 +154,10 @@ public class DescribeEventRuleListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * A minimum of one entry can be returned on each page. Default value: 10.
+         * Pages start from page 1. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

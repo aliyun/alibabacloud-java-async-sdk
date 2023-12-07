@@ -106,7 +106,10 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,20 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Datapoints.
+         * The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:
+         * <p>
+         * 
+         * *   ecs: Elastic Compute Service (ECS)
+         * *   rds: ApsaraDB RDS
+         * *   slb: Server Load Balancer (SLB)
+         * *   redis_standard: ApsaraDB for Redis of the standard architecture
+         * *   redis_sharding: ApsaraDB for Redis of the cluster architecture
+         * *   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture
+         * *   mongodb: ApsaraDB for MongoDB of the replica set architecture
+         * *   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture
+         * *   hbase: ApsaraDB for HBase
+         * *   elasticsearch: Elasticsearch
+         * *   opensearch: OpenSearch
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -122,7 +138,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +146,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,11 +154,11 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -156,8 +172,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     } 
 
     public static class AlertInitConfig extends TeaModel {
+        @NameInMap("ComparisonOperator")
+        private String comparisonOperator;
+
         @NameInMap("EvaluationCount")
         private String evaluationCount;
+
+        @NameInMap("Level")
+        private String level;
 
         @NameInMap("MetricName")
         private String metricName;
@@ -175,7 +197,9 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         private String threshold;
 
         private AlertInitConfig(Builder builder) {
+            this.comparisonOperator = builder.comparisonOperator;
             this.evaluationCount = builder.evaluationCount;
+            this.level = builder.level;
             this.metricName = builder.metricName;
             this.namespace = builder.namespace;
             this.period = builder.period;
@@ -192,10 +216,24 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return comparisonOperator
+         */
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        /**
          * @return evaluationCount
          */
         public String getEvaluationCount() {
             return this.evaluationCount;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
         }
 
         /**
@@ -234,7 +272,9 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comparisonOperator; 
             private String evaluationCount; 
+            private String level; 
             private String metricName; 
             private String namespace; 
             private String period; 
@@ -242,7 +282,40 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             private String threshold; 
 
             /**
-             * The consecutive number of times for which the metric value is measured before an alert is triggered.
+             * The operator that is used to compare the metric value with the threshold for Warn-level alerts.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   LessThanThreshold: less than the threshold
+             * 
+             * *   GreaterThanLastWeek: greater than the metric value at the same time last week
+             * 
+             * *   LessThanOrEqualToThreshold: less than or equal to the threshold
+             * 
+             * *   NotEqualToThreshold: does not equal to the threshold
+             * 
+             * *   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle
+             * 
+             * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
+             * 
+             * *   LessThanYesterday: less than the metric value at the same time yesterday
+             * 
+             * *   LessThanLastWeek: less than the metric value at the same time last week
+             * 
+             * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
+             * 
+             * *   GreaterThanThreshold: greater than the threshold
+             * 
+             * *   LessThanLastPeriod: less than the metric value in the last monitoring cycle
+             */
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
+                return this;
+            }
+
+            /**
+             * The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.
              */
             public Builder evaluationCount(String evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -250,7 +323,42 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The alert level.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   INFO
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   WARN
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CRITICAL
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -266,7 +374,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The aggregation period of the monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The aggregation period of monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder period(String period) {
                 this.period = period;
@@ -274,7 +382,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical aggregation method that is used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The method used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -282,7 +390,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of the metric value.
+             * The alert threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -384,7 +492,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The abbreviation of the service name.
              */
             public Builder product(String product) {
                 this.product = product;

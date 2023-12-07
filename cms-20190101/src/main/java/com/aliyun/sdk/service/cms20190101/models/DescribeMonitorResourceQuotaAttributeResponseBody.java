@@ -712,7 +712,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of alert text messages.
+             * The total quota of browser detection tasks.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -720,7 +720,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of alert text messages in your resource plan.
+             * The quota of browser detection tasks in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -728,7 +728,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of alert text messages in your resource plan.
+             * The used quota of browser detection tasks in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -880,10 +880,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of ECS detection points for site monitoring.
-             * <p>
-             * 
-             * > The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.
+             * The total quota of mobile detection tasks.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -891,7 +888,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of ECS detection points for site monitoring in your resource plan.
+             * The quota of mobile detection tasks in your resource plan.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -899,10 +896,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of ECS detection points for site monitoring in your resource plan.
-             * <p>
-             * 
-             * > The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.
+             * The used quota of mobile detection tasks in your resource plan.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;
@@ -1345,7 +1339,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * SiteMonitorBrowser.
+             * The quota of browser detection tasks.
              */
             public Builder siteMonitorBrowser(SiteMonitorBrowser siteMonitorBrowser) {
                 this.siteMonitorBrowser = siteMonitorBrowser;
@@ -1361,7 +1355,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * SiteMonitorMobile.
+             * The quota of mobile detection tasks.
              */
             public Builder siteMonitorMobile(SiteMonitorMobile siteMonitorMobile) {
                 this.siteMonitorMobile = siteMonitorMobile;

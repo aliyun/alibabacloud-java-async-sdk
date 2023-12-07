@@ -22,6 +22,14 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
     private String namespace;
 
     @Query
+    @NameInMap("NamespaceRegion")
+    private String namespaceRegion;
+
+    @Query
+    @NameInMap("NamespaceType")
+    private String namespaceType;
+
+    @Query
     @NameInMap("Spec")
     private String spec;
 
@@ -29,6 +37,8 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.namespace = builder.namespace;
+        this.namespaceRegion = builder.namespaceRegion;
+        this.namespaceType = builder.namespaceType;
         this.spec = builder.spec;
     }
 
@@ -60,6 +70,20 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
     }
 
     /**
+     * @return namespaceRegion
+     */
+    public String getNamespaceRegion() {
+        return this.namespaceRegion;
+    }
+
+    /**
+     * @return namespaceType
+     */
+    public String getNamespaceType() {
+        return this.namespaceType;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -69,6 +93,8 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHybridMonitorNamespaceRequest, Builder> {
         private String description; 
         private String namespace; 
+        private String namespaceRegion; 
+        private String namespaceType; 
         private String spec; 
 
         private Builder() {
@@ -79,6 +105,8 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
             super(request);
             this.description = request.description;
             this.namespace = request.namespace;
+            this.namespaceRegion = request.namespaceRegion;
+            this.namespaceType = request.namespaceType;
             this.spec = request.spec;
         } 
 
@@ -100,6 +128,24 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * NamespaceRegion.
+         */
+        public Builder namespaceRegion(String namespaceRegion) {
+            this.putQueryParameter("NamespaceRegion", namespaceRegion);
+            this.namespaceRegion = namespaceRegion;
+            return this;
+        }
+
+        /**
+         * NamespaceType.
+         */
+        public Builder namespaceType(String namespaceType) {
+            this.putQueryParameter("NamespaceType", namespaceType);
+            this.namespaceType = namespaceType;
             return this;
         }
 

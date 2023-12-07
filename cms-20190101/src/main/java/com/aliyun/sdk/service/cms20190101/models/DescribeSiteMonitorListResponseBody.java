@@ -122,10 +122,10 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status code.
+         * The status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +141,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -149,7 +149,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -157,7 +157,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,11 +173,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -185,7 +185,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -299,7 +299,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assertion. Valid values:
+             * The assertion type. Valid values:
              * <p>
              * 
              * *   response_time: checks whether the response time meets expectations.
@@ -779,7 +779,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * Indicates whether the certificate is verified. Valid values:
              * <p>
              * 
-             * *   false (default value): The certificate is not verified.
+             * *   false (default): The certificate is not verified.
              * *   true: The certificate is verified.
              */
             public Builder certVerify(Boolean certVerify) {
@@ -799,7 +799,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:
              * <p>
              * 
-             * *   false (default value): MTR is not automatically used to diagnose network issues if a task fails.
+             * *   false (default): MTR is not automatically used to diagnose network issues if a task fails.
              * *   true: MTR is automatically used to diagnose network issues if a task fails.
              */
             public Builder diagnosisMtr(Boolean diagnosisMtr) {
@@ -811,7 +811,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:
              * <p>
              * 
-             * *   false (default value): Ping requests are not automatically sent to detect network latency if a detection task fails.
+             * *   false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.
              * *   true: Ping requests are automatically sent to detect network latency if a detection task fails.
              */
             public Builder diagnosisPing(Boolean diagnosisPing) {
@@ -845,7 +845,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:
              * <p>
              * 
-             * *   A (default value): a record that specifies an IP address related to the specified host name or domain name.
+             * *   A (default): a record that specifies an IP address related to the specified host name or domain name.
              * *   CNAME: a record that maps multiple domain names to a domain name.
              * *   NS: a record that specifies a DNS server used to parse domain names.
              * *   MX: a record that links domain names to the address of a mail server.
@@ -861,7 +861,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * Indicates whether the DNS server of the carrier is used.
              * <p>
              * 
-             * *   true (default value): The DNS server of the carrier is used.
+             * *   true (default): The DNS server of the carrier is used.
              * *   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.
              */
             public Builder enableOperatorDns(Boolean enableOperatorDns) {
@@ -906,7 +906,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * <p>
              * 
              * *   true: The password is decoded by using the Base64 algorithm.
-             * *   false (default value): The password is not decoded by using the Base64 algorithm.
+             * *   false (default): The password is not decoded by using the Base64 algorithm.
              */
             public Builder isBase64Encode(String isBase64Encode) {
                 this.isBase64Encode = isBase64Encode;
@@ -953,7 +953,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * The protocol type of DNS detection. Valid values:
              * <p>
              * 
-             * *   udp (default value)
+             * *   udp (default)
              * *   tcp
              * *   tcp-tls
              */
@@ -966,7 +966,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * Indicates whether the PROXY protocol is enabled. Valid values:
              * <p>
              * 
-             * *   false (default value): The PROXY protocol is disabled.
+             * *   false (default): The PROXY protocol is disabled.
              * *   true: The PROXY protocol is enabled.
              */
             public Builder proxyProtocol(Boolean proxyProtocol) {
@@ -1039,7 +1039,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
              * <p>
              * 
              * *   true: Redirects are not followed.
-             * *   false (default value): Redirects are followed.
+             * *   false (default): Redirects are followed.
              */
             public Builder unfollowRedirect(Boolean unfollowRedirect) {
                 this.unfollowRedirect = unfollowRedirect;
@@ -1204,7 +1204,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * AgentGroup.
+             * The detection point type. Valid values:
+             * <p>
+             * 
+             * *   PC
+             * *   MOBILE
              */
             public Builder agentGroup(String agentGroup) {
                 this.agentGroup = agentGroup;
@@ -1252,7 +1256,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   1: The task is enabled.

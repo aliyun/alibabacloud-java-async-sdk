@@ -307,7 +307,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExporterRuleListResponse> describeExporterRuleList(DescribeExporterRuleListRequest request);
 
     /**
-      * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.
+      * You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and configure alert rules for the process monitoring task.
       *
      */
     CompletableFuture<DescribeGroupMonitoringAgentProcessResponse> describeGroupMonitoringAgentProcess(DescribeGroupMonitoringAgentProcessRequest request);
@@ -402,7 +402,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMetricRuleTargetsResponse> describeMetricRuleTargets(DescribeMetricRuleTargetsRequest request);
 
     /**
-      * This topic provides an example to show how to query the details of an alert template whose ID is `70****`.
+      * This topic provides an example on how to query the details of an alert template whose ID is `70****`.
       *
      */
     CompletableFuture<DescribeMetricRuleTemplateAttributeResponse> describeMetricRuleTemplateAttribute(DescribeMetricRuleTemplateAttributeRequest request);

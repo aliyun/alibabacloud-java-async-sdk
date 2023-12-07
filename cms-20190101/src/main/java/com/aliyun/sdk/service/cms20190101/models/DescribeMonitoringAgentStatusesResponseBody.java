@@ -89,7 +89,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the request was successful.
+         * > The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The host status information.
+         * The status information.
          */
         public Builder nodeStatusList(NodeStatusList nodeStatusList) {
             this.nodeStatusList = nodeStatusList;
@@ -139,6 +139,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     } 
 
     public static class NodeStatus extends TeaModel {
+        @NameInMap("AgentInstallErrorCode")
+        private String agentInstallErrorCode;
+
         @NameInMap("AutoInstall")
         private Boolean autoInstall;
 
@@ -164,6 +167,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         private String status;
 
         private NodeStatus(Builder builder) {
+            this.agentInstallErrorCode = builder.agentInstallErrorCode;
             this.autoInstall = builder.autoInstall;
             this.instanceId = builder.instanceId;
             this.osMonitorConfig = builder.osMonitorConfig;
@@ -180,6 +184,13 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
 
         public static NodeStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentInstallErrorCode
+         */
+        public String getAgentInstallErrorCode() {
+            return this.agentInstallErrorCode;
         }
 
         /**
@@ -239,6 +250,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentInstallErrorCode; 
             private Boolean autoInstall; 
             private String instanceId; 
             private String osMonitorConfig; 
@@ -247,6 +259,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private String osMonitorStatus; 
             private String osMonitorVersion; 
             private String status; 
+
+            /**
+             * AgentInstallErrorCode.
+             */
+            public Builder agentInstallErrorCode(String agentInstallErrorCode) {
+                this.agentInstallErrorCode = agentInstallErrorCode;
+                return this;
+            }
 
             /**
              * Indicates whether the CloudMonitor agent is automatically installed. Valid values:
@@ -269,11 +289,12 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SysAK monitoring feature is enabled.`` Valid values:
+             * SysOM插件的配置信息`sysak`是否开启监控。取值：
              * <p>
              * 
-             * *   `true`: The SysAK monitoring feature is enabled.
-             * *   `false`: the SysAK monitoring feature is disabled.
+             * - true：`sysak`开启监控。
+             * 
+             * - false：`sysak`未开启监控。
              */
             public Builder osMonitorConfig(String osMonitorConfig) {
                 this.osMonitorConfig = osMonitorConfig;
@@ -326,7 +347,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The SysOM version.
+             * SysOM监控的插件版本。
              */
             public Builder osMonitorVersion(String osMonitorVersion) {
                 this.osMonitorVersion = osMonitorVersion;

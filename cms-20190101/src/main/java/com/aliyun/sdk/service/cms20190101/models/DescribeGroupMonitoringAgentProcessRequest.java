@@ -106,7 +106,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The page number. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,7 @@ public class DescribeGroupMonitoringAgentProcessRequest extends Request {
         }
 
         /**
-         * The name of the process monitoring task.
+         * The process name.
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);

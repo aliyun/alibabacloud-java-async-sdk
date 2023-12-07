@@ -402,10 +402,18 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
+        @NameInMap("NamespaceRegion")
+        private String namespaceRegion;
+
+        @NameInMap("SLSProject")
+        private String SLSProject;
+
         @NameInMap("Spec")
         private String spec;
 
         private Detail(Builder builder) {
+            this.namespaceRegion = builder.namespaceRegion;
+            this.SLSProject = builder.SLSProject;
             this.spec = builder.spec;
         }
 
@@ -418,6 +426,20 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceRegion
+         */
+        public String getNamespaceRegion() {
+            return this.namespaceRegion;
+        }
+
+        /**
+         * @return SLSProject
+         */
+        public String getSLSProject() {
+            return this.SLSProject;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -425,7 +447,25 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String namespaceRegion; 
+            private String SLSProject; 
             private String spec; 
+
+            /**
+             * NamespaceRegion.
+             */
+            public Builder namespaceRegion(String namespaceRegion) {
+                this.namespaceRegion = namespaceRegion;
+                return this;
+            }
+
+            /**
+             * SLSProject.
+             */
+            public Builder SLSProject(String SLSProject) {
+                this.SLSProject = SLSProject;
+                return this;
+            }
 
             /**
              * The data retention period. Valid values:
@@ -475,6 +515,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         @NameInMap("Namespace")
         private String namespace;
 
+        @NameInMap("NamespaceType")
+        private String namespaceType;
+
         @NameInMap("NotAliyunTaskNumber")
         private Long notAliyunTaskNumber;
 
@@ -487,6 +530,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             this.isDelete = builder.isDelete;
             this.modifyTime = builder.modifyTime;
             this.namespace = builder.namespace;
+            this.namespaceType = builder.namespaceType;
             this.notAliyunTaskNumber = builder.notAliyunTaskNumber;
         }
 
@@ -555,6 +599,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceType
+         */
+        public String getNamespaceType() {
+            return this.namespaceType;
+        }
+
+        /**
          * @return notAliyunTaskNumber
          */
         public Long getNotAliyunTaskNumber() {
@@ -570,6 +621,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private Integer isDelete; 
             private String modifyTime; 
             private String namespace; 
+            private String namespaceType; 
             private Long notAliyunTaskNumber; 
 
             /**
@@ -640,6 +692,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * NamespaceType.
+             */
+            public Builder namespaceType(String namespaceType) {
+                this.namespaceType = namespaceType;
                 return this;
             }
 

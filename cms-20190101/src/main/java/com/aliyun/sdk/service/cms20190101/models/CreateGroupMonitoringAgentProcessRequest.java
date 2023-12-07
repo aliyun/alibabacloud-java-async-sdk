@@ -485,9 +485,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * The alert level. Valid values:
              * <p>
              * 
-             * *   critical (default)
-             * *   warn
-             * *   info
+             * *   critical (default): critical
+             * *   warn: warning
+             * *   info: information
              * 
              * Valid values of N: 1 to 3.
              */
@@ -497,10 +497,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The time period during which the alert rule is ineffective.
-             * <p>
-             * 
-             * Valid values of N: 1 to 3.
+             * This parameter is deprecated.
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
@@ -508,7 +505,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to 1 hour. Default value: 86400, which is equivalent to one day.
+             * The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.
              * <p>
              * 
              * Valid values of N: 1 to 3.
@@ -546,6 +543,8 @@ public class CreateGroupMonitoringAgentProcessRequest extends Request {
              * <p>
              * 
              * Valid values of N: 1 to 3.
+             * 
+             * Unit: cores.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
