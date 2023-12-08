@@ -369,7 +369,11 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             private String shard; 
 
             /**
-             * Indicates whether the operation is active.
+             * Indicates whether the operation is active. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -409,7 +413,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The driver.
+             * The driver for MongoDB.
              */
             public Builder driver(String driver) {
                 this.driver = driver;
@@ -425,7 +429,11 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is marked as terminated. If the operation is marked as terminated, true is returned.
+             * Indicates whether the operation is marked as terminated.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder killPending(Boolean killPending) {
                 this.killPending = killPending;
@@ -505,7 +513,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             }
 
             /**
-             * The shard.
+             * The ID of the data shard.
+             * <p>
+             * 
+             * >  This parameter is returned for sharded cluster instances.
              */
             public Builder shard(String shard) {
                 this.shard = shard;

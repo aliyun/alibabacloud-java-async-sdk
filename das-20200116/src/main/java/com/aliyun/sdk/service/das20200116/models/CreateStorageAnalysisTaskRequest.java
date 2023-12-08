@@ -7,14 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMongoDBCurrentOpRequest} extends {@link RequestModel}
+ * {@link CreateStorageAnalysisTaskRequest} extends {@link RequestModel}
  *
- * <p>GetMongoDBCurrentOpRequest</p>
+ * <p>CreateStorageAnalysisTaskRequest</p>
  */
-public class GetMongoDBCurrentOpRequest extends Request {
+public class CreateStorageAnalysisTaskRequest extends Request {
     @Query
-    @NameInMap("FilterDoc")
-    private String filterDoc;
+    @NameInMap("DbName")
+    private String dbName;
 
     @Query
     @NameInMap("InstanceId")
@@ -26,22 +26,22 @@ public class GetMongoDBCurrentOpRequest extends Request {
     private String nodeId;
 
     @Query
-    @NameInMap("Role")
-    private String role;
+    @NameInMap("TableName")
+    private String tableName;
 
-    private GetMongoDBCurrentOpRequest(Builder builder) {
+    private CreateStorageAnalysisTaskRequest(Builder builder) {
         super(builder);
-        this.filterDoc = builder.filterDoc;
+        this.dbName = builder.dbName;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
-        this.role = builder.role;
+        this.tableName = builder.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetMongoDBCurrentOpRequest create() {
+    public static CreateStorageAnalysisTaskRequest create() {
         return builder().build();
     }
 
@@ -51,10 +51,10 @@ public class GetMongoDBCurrentOpRequest extends Request {
     }
 
     /**
-     * @return filterDoc
+     * @return dbName
      */
-    public String getFilterDoc() {
-        return this.filterDoc;
+    public String getDbName() {
+        return this.dbName;
     }
 
     /**
@@ -72,41 +72,41 @@ public class GetMongoDBCurrentOpRequest extends Request {
     }
 
     /**
-     * @return role
+     * @return tableName
      */
-    public String getRole() {
-        return this.role;
+    public String getTableName() {
+        return this.tableName;
     }
 
-    public static final class Builder extends Request.Builder<GetMongoDBCurrentOpRequest, Builder> {
-        private String filterDoc; 
+    public static final class Builder extends Request.Builder<CreateStorageAnalysisTaskRequest, Builder> {
+        private String dbName; 
         private String instanceId; 
         private String nodeId; 
-        private String role; 
+        private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetMongoDBCurrentOpRequest request) {
+        private Builder(CreateStorageAnalysisTaskRequest request) {
             super(request);
-            this.filterDoc = request.filterDoc;
+            this.dbName = request.dbName;
             this.instanceId = request.instanceId;
             this.nodeId = request.nodeId;
-            this.role = request.role;
+            this.tableName = request.tableName;
         } 
 
         /**
-         * The `db.currentOp()` command that is used to filter sessions. For more information, see [db.currentOp()](https://docs.mongodb.com/manual/reference/method/db.currentOp/) of MongoDB Documentation.
+         * DbName.
          */
-        public Builder filterDoc(String filterDoc) {
-            this.putQueryParameter("FilterDoc", filterDoc);
-            this.filterDoc = filterDoc;
+        public Builder dbName(String dbName) {
+            this.putQueryParameter("DbName", dbName);
+            this.dbName = dbName;
             return this;
         }
 
         /**
-         * The instance ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,10 +115,7 @@ public class GetMongoDBCurrentOpRequest extends Request {
         }
 
         /**
-         * The node ID.
-         * <p>
-         * 
-         * >  If you do not specify a node ID, the sessions of the primary node are queried by default.
+         * NodeId.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -127,17 +124,17 @@ public class GetMongoDBCurrentOpRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify the parameter.
+         * TableName.
          */
-        public Builder role(String role) {
-            this.putQueryParameter("Role", role);
-            this.role = role;
+        public Builder tableName(String tableName) {
+            this.putQueryParameter("TableName", tableName);
+            this.tableName = tableName;
             return this;
         }
 
         @Override
-        public GetMongoDBCurrentOpRequest build() {
-            return new GetMongoDBCurrentOpRequest(this);
+        public CreateStorageAnalysisTaskRequest build() {
+            return new CreateStorageAnalysisTaskRequest(this);
         } 
 
     } 

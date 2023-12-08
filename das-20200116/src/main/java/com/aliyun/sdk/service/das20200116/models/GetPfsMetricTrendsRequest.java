@@ -113,7 +113,7 @@ public class GetPfsMetricTrendsRequest extends Request {
          * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * <p>
          * 
-         * >  The end time must be later than the start time. You can view the data of up to seven days within the last month.
+         * >  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -149,7 +149,7 @@ public class GetPfsMetricTrendsRequest extends Request {
          * The node ID.
          * <p>
          * 
-         * >  You must specify this parameter for an ApsaraDB RDS for MySQL Cluster Edition instance and a PolarDB for MySQL cluster.
+         * >  You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);

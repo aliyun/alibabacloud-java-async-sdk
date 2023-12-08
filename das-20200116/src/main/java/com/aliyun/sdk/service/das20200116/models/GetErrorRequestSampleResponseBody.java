@@ -261,7 +261,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -269,7 +269,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * The error code that is returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -277,7 +277,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +301,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SQL query.
+             * The SQL query ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -317,7 +317,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL query was executed. The value of this parameter is a UNIX timestamp. Unit: ms.
+             * The time when the SQL query was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
