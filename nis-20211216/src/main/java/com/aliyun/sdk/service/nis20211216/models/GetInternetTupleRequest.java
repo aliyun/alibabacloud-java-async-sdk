@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetInternetTupleRequest extends Request {
     @Query
     @NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List < Long > accountIds;
 
     @Query
     @NameInMap("BeginTime")
@@ -142,7 +142,7 @@ public class GetInternetTupleRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List < Long > getAccountIds() {
         return this.accountIds;
     }
 
@@ -287,7 +287,7 @@ public class GetInternetTupleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetInternetTupleRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List < Long > accountIds; 
         private Long beginTime; 
         private String cloudIp; 
         private String cloudIsp; 
@@ -341,7 +341,7 @@ public class GetInternetTupleRequest extends Request {
         /**
          * The IDs of member accounts.
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List < Long > accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
             this.accountIds = accountIds;
             return this;

@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetTransitRouterFlowTopNRequest extends Request {
     @Query
     @NameInMap("AccountIds")
-    private java.util.List < String > accountIds;
+    private java.util.List < Long > accountIds;
 
     @Query
     @NameInMap("BandwithPackageId")
@@ -127,7 +127,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
     /**
      * @return accountIds
      */
-    public java.util.List < String > getAccountIds() {
+    public java.util.List < Long > getAccountIds() {
         return this.accountIds;
     }
 
@@ -251,7 +251,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTransitRouterFlowTopNRequest, Builder> {
-        private java.util.List < String > accountIds; 
+        private java.util.List < Long > accountIds; 
         private String bandwithPackageId; 
         private Long beginTime; 
         private String cenId; 
@@ -299,7 +299,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         /**
          * The IDs of member accounts.
          */
-        public Builder accountIds(java.util.List < String > accountIds) {
+        public Builder accountIds(java.util.List < Long > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
