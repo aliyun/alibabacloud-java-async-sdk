@@ -116,14 +116,14 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceARN = response.resourceARN;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceARN = request.resourceARN;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tagKey = request.tagKey;
         } 
 
         /**
@@ -145,7 +145,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resources.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceARN.
+         * The Alibaba Cloud Resource Name (ARN) of a resource.
          */
         public Builder resourceARN(java.util.List < String > resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
@@ -172,7 +172,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * A tag key.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

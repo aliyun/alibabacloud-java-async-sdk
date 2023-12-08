@@ -62,7 +62,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Keys.
+         * The information of the tag keys.
          */
         public Builder keys(Keys keys) {
             this.keys = keys;
@@ -70,7 +70,11 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * Indicates whether the next query is required. The value of this parameter may be empty.
+         * <p>
+         * 
+         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
+         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +82,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +146,11 @@ public class ListTagKeysResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * Category.
+             * The type of the resource tag. Valid values:
+             * <p>
+             * 
+             * *   custom
+             * *   system
              */
             public Builder category(String category) {
                 this.category = category;
@@ -150,7 +158,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the tag key.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -158,7 +166,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -199,7 +207,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             private java.util.List < Key> key; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(java.util.List < Key> key) {
                 this.key = key;

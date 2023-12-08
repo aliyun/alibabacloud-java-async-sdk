@@ -116,14 +116,14 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceARN = response.resourceARN;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.tags = response.tags;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceARN = request.resourceARN;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tags = request.tags;
         } 
 
         /**
@@ -145,7 +145,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resources.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceARN.
+         * The Alibaba Cloud Resource Name (ARN) of a resource.
          */
         public Builder resourceARN(java.util.List < String > resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
@@ -172,7 +172,17 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The key-value pairs of tags. You can specify 1 to 10 key-value pairs.
+         * <p>
+         * 
+         * If you specify multiple tags, the system adds all the tags to the specified resources.
+         * 
+         * Limits:
+         * 
+         * *   A tag key must be 1 to 128 characters in length.
+         * *   A tag value must be 1 to 128 characters in length.
+         * *   Tag keys and tag values are case-sensitive.
+         * *   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

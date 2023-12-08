@@ -63,7 +63,11 @@ public class ListResourcesByTagResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * 表示当前调用返回读取到的位置，空或者空字符串代表数据已经读取完毕
+         * Indicates whether the `next query` is required.
+         * <p>
+         * 
+         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.
+         * *   If the value of this parameter is not empty, the next query is required, and the value is the `token` used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -71,7 +75,7 @@ public class ListResourcesByTagResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +83,7 @@ public class ListResourcesByTagResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The information of the resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -143,7 +147,11 @@ public class ListResourcesByTagResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Category.
+             * The type of the tag. Valid values:
+             * <p>
+             * 
+             * *   custom
+             * *   system
              */
             public Builder category(String category) {
                 this.category = category;
@@ -151,7 +159,7 @@ public class ListResourcesByTagResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -159,7 +167,7 @@ public class ListResourcesByTagResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,7 +220,7 @@ public class ListResourcesByTagResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -220,7 +228,10 @@ public class ListResourcesByTagResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The information of the tags.
+             * <p>
+             * 
+             * This parameter is returned only if the `IncludeAllTags` parameter is set to `True`.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

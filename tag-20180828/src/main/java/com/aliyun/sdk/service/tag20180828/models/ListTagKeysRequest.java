@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagKeysRequest</p>
  */
 public class ListTagKeysRequest extends Request {
+    @Query
     @NameInMap("TagFilter")
     private TagFilter tagFilter;
 
@@ -178,31 +179,39 @@ public class ListTagKeysRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagKeysRequest response) {
-            super(response);
-            this.tagFilter = response.tagFilter;
-            this.category = response.category;
-            this.fuzzyType = response.fuzzyType;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.queryType = response.queryType;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceType = response.resourceType;
+        private Builder(ListTagKeysRequest request) {
+            super(request);
+            this.tagFilter = request.tagFilter;
+            this.category = request.category;
+            this.fuzzyType = request.fuzzyType;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.queryType = request.queryType;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceType = request.resourceType;
         } 
 
         /**
          * TagFilter.
          */
         public Builder tagFilter(TagFilter tagFilter) {
+            this.putQueryParameter("TagFilter", tagFilter);
             this.tagFilter = tagFilter;
             return this;
         }
 
         /**
-         * Category.
+         * The type of the resource tags. This parameter specifies a filter condition for the query. Valid values:
+         * <p>
+         * 
+         * *   all (default value)
+         * *   custom
+         * *   system
+         * 
+         * >  The value of this parameter is not case-sensitive.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -211,7 +220,13 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * FuzzyType.
+         * The type of the query. Valid values:
+         * <p>
+         * 
+         * *   EQUAL: exact match. This is the default value.
+         * *   PREFIX: prefix-based fuzzy match.
+         * 
+         * >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
          */
         public Builder fuzzyType(String fuzzyType) {
             this.putQueryParameter("FuzzyType", fuzzyType);
@@ -220,7 +235,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -247,7 +262,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of tag keys to return on each page.
+         * <p>
+         * 
+         * Maximum value: 1000. Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,7 +274,13 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The category of the tags. This parameter specifies a filter condition for the query. Valid values:
+         * <p>
+         * 
+         * *   ResourceTag: resource tags, including custom and system tags. This is the default value.
+         * *   MetaTag: preset tags.
+         * 
+         * >  The value of this parameter is not case-sensitive.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -265,7 +289,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * For more information about region IDs, see [Endpoints](~~2330902~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -283,7 +310,13 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. This parameter specifies a filter condition for the query.
+         * <p>
+         * 
+         * Format: `ALIYUN::${ProductCode}::${ResourceType}`. All letters in the value of this parameter must be in uppercase.
+         * 
+         * *   `ProductCode`: the service code. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
+         * *   `ResourceType`: the resource type. You can set this field to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -325,7 +358,12 @@ public class ListTagKeysRequest extends Request {
             private String key; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * This parameter is used together with the `FuzzyType` parameter.
+             * 
+             * >  This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.
              */
             public Builder key(String key) {
                 this.key = key;

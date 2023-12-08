@@ -115,18 +115,21 @@ public class DeleteTagRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTagRequest response) {
-            super(response);
-            this.key = response.key;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.value = response.value;
+        private Builder(DeleteTagRequest request) {
+            super(request);
+            this.key = request.key;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.value = request.value;
         } 
 
         /**
-         * Key.
+         * The tag key.
+         * <p>
+         * 
+         * If no tag value is associated with a tag key, you can specify the `Key` parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the `Key` and `Value` parameters to delete a preset tag.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -153,7 +156,10 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  Only `cn-hangzhou` is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +177,7 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * Value.
+         * The tag value.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

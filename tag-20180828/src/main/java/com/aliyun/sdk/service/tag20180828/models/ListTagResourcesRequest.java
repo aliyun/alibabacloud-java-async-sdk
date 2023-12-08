@@ -153,21 +153,28 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.category = response.category;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceARN = response.resourceARN;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.tags = response.tags;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.category = request.category;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceARN = request.resourceARN;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tags = request.tags;
         } 
 
         /**
-         * Category.
+         * The type of the tag. Valid values:
+         * <p>
+         * 
+         * *   Custom
+         * *   System
+         * *   All
+         * 
+         * Default value: All.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -176,7 +183,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -203,7 +210,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 1000. Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +222,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resources.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +231,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceARN.
+         * The Alibaba Cloud Resource Name (ARN) of a resource.
          */
         public Builder resourceARN(java.util.List < String > resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
@@ -239,7 +249,17 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The key-value pairs of tags. You can specify 1 to 10 key-value pairs.
+         * <p>
+         * 
+         * If you specify multiple tags, the system queries the resources to which all these tags are added.
+         * 
+         * Limits:
+         * 
+         * *   A tag key must be 1 to 128 characters in length.
+         * *   A tag value must be 1 to 128 characters in length.
+         * *   Tag keys and tag values are case-sensitive.
+         * *   Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

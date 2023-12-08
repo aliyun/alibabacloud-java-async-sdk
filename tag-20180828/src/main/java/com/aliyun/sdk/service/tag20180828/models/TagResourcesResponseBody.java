@@ -50,7 +50,14 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedResources.
+         * The information about the resources to which tags fail to be added.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If tags are added to all resources, the value of `FailedResources` is empty.
+         * 
+         * *   If tags fail to be added to some or all resources, the value of `FailedResources` contains the detailed information about the resources.
          */
         public Builder failedResources(FailedResources failedResources) {
             this.failedResources = failedResources;
@@ -58,7 +65,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +117,7 @@ public class TagResourcesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -118,7 +125,7 @@ public class TagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -171,7 +178,7 @@ public class TagResourcesResponseBody extends TeaModel {
             private Result result; 
 
             /**
-             * ResourceARN.
+             * The ARN of the resource.
              */
             public Builder resourceARN(String resourceARN) {
                 this.resourceARN = resourceARN;
@@ -179,7 +186,7 @@ public class TagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The information about the error.
              */
             public Builder result(Result result) {
                 this.result = result;

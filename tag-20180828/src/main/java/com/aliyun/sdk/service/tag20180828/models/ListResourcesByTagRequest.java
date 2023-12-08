@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourcesByTagRequest</p>
  */
 public class ListResourcesByTagRequest extends Request {
+    @Query
     @NameInMap("TagFilter")
     private TagFilter tagFilter;
 
@@ -50,6 +51,7 @@ public class ListResourcesByTagRequest extends Request {
 
     @Query
     @NameInMap("ResourceType")
+    @Validation(required = true)
     private String resourceType;
 
     private ListResourcesByTagRequest(Builder builder) {
@@ -165,30 +167,35 @@ public class ListResourcesByTagRequest extends Request {
             super();
         } 
 
-        private Builder(ListResourcesByTagRequest response) {
-            super(response);
-            this.tagFilter = response.tagFilter;
-            this.fuzzyType = response.fuzzyType;
-            this.includeAllTags = response.includeAllTags;
-            this.maxResult = response.maxResult;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceType = response.resourceType;
+        private Builder(ListResourcesByTagRequest request) {
+            super(request);
+            this.tagFilter = request.tagFilter;
+            this.fuzzyType = request.fuzzyType;
+            this.includeAllTags = request.includeAllTags;
+            this.maxResult = request.maxResult;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceType = request.resourceType;
         } 
 
         /**
          * TagFilter.
          */
         public Builder tagFilter(TagFilter tagFilter) {
+            this.putQueryParameter("TagFilter", tagFilter);
             this.tagFilter = tagFilter;
             return this;
         }
 
         /**
-         * FuzzyType.
+         * The type of the query. Valid values:
+         * <p>
+         * 
+         * *   EQUAL: exact match for resources to which the specified tag is added. This is the default value.
+         * *   NOT: exact match for resources to which the specified tag is not added.
          */
         public Builder fuzzyType(String fuzzyType) {
             this.putQueryParameter("FuzzyType", fuzzyType);
@@ -197,7 +204,11 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * IncludeAllTags.
+         * Specifies whether to return the information of tags added to the resources. Valid values:
+         * <p>
+         * 
+         * *   False: does not return the information of tags added to the resources. This is the default value.
+         * *   True: returns the information of all tags added to the resources.
          */
         public Builder includeAllTags(Boolean includeAllTags) {
             this.putQueryParameter("IncludeAllTags", includeAllTags);
@@ -206,7 +217,10 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Default value: 50. Maximum value: 1000.
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -215,7 +229,7 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -242,7 +256,10 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * For more information about region IDs, see [Endpoints](~~2330902~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +277,11 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. This parameter specifies a filter condition for the query.
+         * <p>
+         * 
+         * *   If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
+         * *   If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in **Types of resources that support queries based on the NOT operator**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -277,6 +298,7 @@ public class ListResourcesByTagRequest extends Request {
 
     public static class TagFilter extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")
@@ -314,7 +336,10 @@ public class ListResourcesByTagRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. This parameter specifies a filter condition for the query.
+             * <p>
+             * 
+             * The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +347,10 @@ public class ListResourcesByTagRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. This parameter specifies a filter condition for the query.
+             * <p>
+             * 
+             * The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
              */
             public Builder value(String value) {
                 this.value = value;

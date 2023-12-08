@@ -102,13 +102,13 @@ public class CreateTagsRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTagsRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.tagKeyValueParamList = response.tagKeyValueParamList;
+        private Builder(CreateTagsRequest request) {
+            super(request);
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tagKeyValueParamList = request.tagKeyValueParamList;
         } 
 
         /**
@@ -130,7 +130,10 @@ public class CreateTagsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  Only `cn-hangzhou` is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +151,7 @@ public class CreateTagsRequest extends Request {
         }
 
         /**
-         * TagKeyValueParamList.
+         * The tag keys and values list.
          */
         public Builder tagKeyValueParamList(java.util.List < TagKeyValueParamList> tagKeyValueParamList) {
             this.putQueryParameter("TagKeyValueParamList", tagKeyValueParamList);
@@ -202,7 +205,10 @@ public class CreateTagsRequest extends Request {
             private String value; 
 
             /**
-             * Description.
+             * The description of the tag value.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,7 +216,12 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -276,7 +287,10 @@ public class CreateTagsRequest extends Request {
             private java.util.List < TagValueParamList> tagValueParamList; 
 
             /**
-             * Description.
+             * The description of the tag key.
+             * <p>
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +298,12 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * 
+             * Valid values of N: 1 to 10.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +311,7 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * TagValueParamList.
+             * The tag values list.
              */
             public Builder tagValueParamList(java.util.List < TagValueParamList> tagValueParamList) {
                 this.tagValueParamList = tagValueParamList;
