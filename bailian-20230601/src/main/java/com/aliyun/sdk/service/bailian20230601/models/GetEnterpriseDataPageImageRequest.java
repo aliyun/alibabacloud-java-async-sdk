@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetEnterpriseDataPageImageRequest extends Request {
     @Query
     @NameInMap("AgentKey")
+    @Validation(required = true)
     private String agentKey;
 
     @Query
     @NameInMap("DataId")
+    @Validation(required = true)
     private String dataId;
 
     private GetEnterpriseDataPageImageRequest(Builder builder) {

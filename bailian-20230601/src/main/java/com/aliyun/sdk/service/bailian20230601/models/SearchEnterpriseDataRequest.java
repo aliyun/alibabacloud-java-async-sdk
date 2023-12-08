@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SearchEnterpriseDataRequest extends Request {
     @Query
     @NameInMap("AgentKey")
+    @Validation(required = true)
     private String agentKey;
 
     @Query
@@ -30,6 +31,7 @@ public class SearchEnterpriseDataRequest extends Request {
 
     @Query
     @NameInMap("Query")
+    @Validation(required = true)
     private String query;
 
     @Query

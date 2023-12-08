@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetImportTaskResultRequest extends Request {
     @Query
     @NameInMap("AgentKey")
+    @Validation(required = true)
     private String agentKey;
 
     @Query
     @NameInMap("TaskId")
+    @Validation(required = true)
     private String taskId;
 
     private GetImportTaskResultRequest(Builder builder) {

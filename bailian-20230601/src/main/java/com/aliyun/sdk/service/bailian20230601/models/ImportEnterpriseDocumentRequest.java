@@ -14,10 +14,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ImportEnterpriseDocumentRequest extends Request {
     @Query
     @NameInMap("AgentKey")
+    @Validation(required = true)
     private String agentKey;
 
     @Query
+    @NameInMap("DataType")
+    private Integer dataType;
+
+    @Query
     @NameInMap("DocumentList")
+    @Validation(required = true)
     private java.util.List < DocumentList> documentList;
 
     @Query
@@ -35,6 +41,7 @@ public class ImportEnterpriseDocumentRequest extends Request {
     private ImportEnterpriseDocumentRequest(Builder builder) {
         super(builder);
         this.agentKey = builder.agentKey;
+        this.dataType = builder.dataType;
         this.documentList = builder.documentList;
         this.ownerId = builder.ownerId;
         this.storeId = builder.storeId;
@@ -59,6 +66,13 @@ public class ImportEnterpriseDocumentRequest extends Request {
      */
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    /**
+     * @return dataType
+     */
+    public Integer getDataType() {
+        return this.dataType;
     }
 
     /**
@@ -91,6 +105,7 @@ public class ImportEnterpriseDocumentRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportEnterpriseDocumentRequest, Builder> {
         private String agentKey; 
+        private Integer dataType; 
         private java.util.List < DocumentList> documentList; 
         private Long ownerId; 
         private Long storeId; 
@@ -103,6 +118,7 @@ public class ImportEnterpriseDocumentRequest extends Request {
         private Builder(ImportEnterpriseDocumentRequest request) {
             super(request);
             this.agentKey = request.agentKey;
+            this.dataType = request.dataType;
             this.documentList = request.documentList;
             this.ownerId = request.ownerId;
             this.storeId = request.storeId;
@@ -115,6 +131,15 @@ public class ImportEnterpriseDocumentRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * DataType.
+         */
+        public Builder dataType(Integer dataType) {
+            this.putQueryParameter("DataType", dataType);
+            this.dataType = dataType;
             return this;
         }
 
@@ -171,9 +196,11 @@ public class ImportEnterpriseDocumentRequest extends Request {
         private Boolean fileCanDownload;
 
         @NameInMap("FileLink")
+        @Validation(required = true)
         private String fileLink;
 
         @NameInMap("FileName")
+        @Validation(required = true)
         private String fileName;
 
         @NameInMap("FilePreviewLink")

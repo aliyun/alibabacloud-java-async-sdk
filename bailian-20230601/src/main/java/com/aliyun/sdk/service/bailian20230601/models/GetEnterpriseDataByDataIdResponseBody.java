@@ -153,9 +153,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
         @NameInMap("DataTypeCode")
         private Integer dataTypeCode;
 
-        @NameInMap("DownloadUrl")
-        private String downloadUrl;
-
         @NameInMap("StatusDetail")
         private String statusDetail;
 
@@ -176,7 +173,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
             this.dataStatusCode = builder.dataStatusCode;
             this.dataType = builder.dataType;
             this.dataTypeCode = builder.dataTypeCode;
-            this.downloadUrl = builder.downloadUrl;
             this.statusDetail = builder.statusDetail;
             this.storeType = builder.storeType;
             this.tags = builder.tags;
@@ -241,13 +237,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
         }
 
         /**
-         * @return downloadUrl
-         */
-        public String getDownloadUrl() {
-            return this.downloadUrl;
-        }
-
-        /**
          * @return statusDetail
          */
         public String getStatusDetail() {
@@ -283,7 +272,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
             private Integer dataStatusCode; 
             private String dataType; 
             private Integer dataTypeCode; 
-            private String downloadUrl; 
             private String statusDetail; 
             private String storeType; 
             private String tags; 
@@ -342,14 +330,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
              */
             public Builder dataTypeCode(Integer dataTypeCode) {
                 this.dataTypeCode = dataTypeCode;
-                return this;
-            }
-
-            /**
-             * DownloadUrl.
-             */
-            public Builder downloadUrl(String downloadUrl) {
-                this.downloadUrl = downloadUrl;
                 return this;
             }
 

@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddEnterpriseTagResponse> addEnterpriseTag(AddEnterpriseTagRequest request);
+
     CompletableFuture<CancelFineTuneJobResponse> cancelFineTuneJob(CancelFineTuneJobRequest request);
 
     CompletableFuture<CreateFineTuneJobResponse> createFineTuneJob(CreateFineTuneJobRequest request);
@@ -27,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTextEmbeddingsResponse> createTextEmbeddings(CreateTextEmbeddingsRequest request);
 
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
+
+    CompletableFuture<DelEnterpriseTagResponse> delEnterpriseTag(DelEnterpriseTagRequest request);
 
     CompletableFuture<DeleteEnterpriseDataResponse> deleteEnterpriseData(DeleteEnterpriseDataRequest request);
 
@@ -46,9 +50,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetEnterpriseDataParseResultResponse> getEnterpriseDataParseResult(GetEnterpriseDataParseResultRequest request);
 
+    CompletableFuture<GetFileStoreUploadPolicyResponse> getFileStoreUploadPolicy(GetFileStoreUploadPolicyRequest request);
+
     CompletableFuture<GetImportTaskResultResponse> getImportTaskResult(GetImportTaskResultRequest request);
 
+    CompletableFuture<GetPromptResponse> getPrompt(GetPromptRequest request);
+
     CompletableFuture<ImportEnterpriseDocumentResponse> importEnterpriseDocument(ImportEnterpriseDocumentRequest request);
+
+    CompletableFuture<ImportUserDocumentResponse> importUserDocument(ImportUserDocumentRequest request);
 
     CompletableFuture<ListFineTuneJobsResponse> listFineTuneJobs(ListFineTuneJobsRequest request);
 
@@ -56,6 +66,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryEnterpriseDataListResponse> queryEnterpriseDataList(QueryEnterpriseDataListRequest request);
 
+    CompletableFuture<QueryEnterpriseDataTagResponse> queryEnterpriseDataTag(QueryEnterpriseDataTagRequest request);
+
+    CompletableFuture<QueryEnterpriseTagListResponse> queryEnterpriseTagList(QueryEnterpriseTagListRequest request);
+
+    CompletableFuture<QueryUserDocumentResponse> queryUserDocument(QueryUserDocumentRequest request);
+
     CompletableFuture<SearchEnterpriseDataResponse> searchEnterpriseData(SearchEnterpriseDataRequest request);
+
+    CompletableFuture<UpdateEnterpriseDataInfoResponse> updateEnterpriseDataInfo(UpdateEnterpriseDataInfoRequest request);
+
+    CompletableFuture<UpdateEnterpriseDataTagResponse> updateEnterpriseDataTag(UpdateEnterpriseDataTagRequest request);
+
+    CompletableFuture<UpdateEnterpriseTagResponse> updateEnterpriseTag(UpdateEnterpriseTagRequest request);
 
 }
