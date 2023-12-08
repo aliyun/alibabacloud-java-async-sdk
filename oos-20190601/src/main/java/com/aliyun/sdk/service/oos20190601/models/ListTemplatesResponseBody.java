@@ -115,6 +115,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Category")
         private String category;
 
+        @NameInMap("Constraints")
+        private String constraints;
+
         @NameInMap("CreatedBy")
         private String createdBy;
 
@@ -130,8 +133,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Hash")
         private String hash;
 
+        @NameInMap("IsFavorite")
+        private Boolean isFavorite;
+
         @NameInMap("Popularity")
         private Integer popularity;
+
+        @NameInMap("Publisher")
+        private String publisher;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -168,12 +177,15 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         private Templates(Builder builder) {
             this.category = builder.category;
+            this.constraints = builder.constraints;
             this.createdBy = builder.createdBy;
             this.createdDate = builder.createdDate;
             this.description = builder.description;
             this.hasTrigger = builder.hasTrigger;
             this.hash = builder.hash;
+            this.isFavorite = builder.isFavorite;
             this.popularity = builder.popularity;
+            this.publisher = builder.publisher;
             this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
             this.tags = builder.tags;
@@ -200,6 +212,13 @@ public class ListTemplatesResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return constraints
+         */
+        public String getConstraints() {
+            return this.constraints;
         }
 
         /**
@@ -238,10 +257,24 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isFavorite
+         */
+        public Boolean getIsFavorite() {
+            return this.isFavorite;
+        }
+
+        /**
          * @return popularity
          */
         public Integer getPopularity() {
             return this.popularity;
+        }
+
+        /**
+         * @return publisher
+         */
+        public String getPublisher() {
+            return this.publisher;
         }
 
         /**
@@ -323,12 +356,15 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private String constraints; 
             private String createdBy; 
             private String createdDate; 
             private String description; 
             private Boolean hasTrigger; 
             private String hash; 
+            private Boolean isFavorite; 
             private Integer popularity; 
+            private String publisher; 
             private String resourceGroupId; 
             private String shareType; 
             private java.util.Map < String, ? > tags; 
@@ -346,6 +382,14 @@ public class ListTemplatesResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * Constraints.
+             */
+            public Builder constraints(String constraints) {
+                this.constraints = constraints;
                 return this;
             }
 
@@ -390,6 +434,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * IsFavorite.
+             */
+            public Builder isFavorite(Boolean isFavorite) {
+                this.isFavorite = isFavorite;
+                return this;
+            }
+
+            /**
              * The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.
              * <p>
              * 
@@ -397,6 +449,14 @@ public class ListTemplatesResponseBody extends TeaModel {
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
+                return this;
+            }
+
+            /**
+             * Publisher.
+             */
+            public Builder publisher(String publisher) {
+                this.publisher = publisher;
                 return this;
             }
 

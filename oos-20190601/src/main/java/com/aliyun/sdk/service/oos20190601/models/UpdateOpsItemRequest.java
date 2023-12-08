@@ -340,7 +340,7 @@ public class UpdateOpsItemRequest extends Request {
         }
 
         /**
-         * The list of solutions.
+         * The solutions.
          */
         public Builder solutions(String solutions) {
             this.putQueryParameter("Solutions", solutions);

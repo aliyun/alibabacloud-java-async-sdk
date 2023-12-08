@@ -439,7 +439,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -455,7 +455,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The patch source configurations.
+             * The configurations of patch sources.
              */
             public Builder sources(java.util.List < String > sources) {
                 this.sources = sources;
@@ -463,7 +463,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tags of the patch baseline.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

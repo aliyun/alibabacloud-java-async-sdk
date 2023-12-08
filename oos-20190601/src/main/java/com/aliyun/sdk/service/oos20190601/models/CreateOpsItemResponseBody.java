@@ -50,7 +50,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The O\&M item.
+         * The information about the O\&M item.
          */
         public Builder opsItem(OpsItem opsItem) {
             this.opsItem = opsItem;
@@ -58,7 +58,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +290,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The information about the properties of the O\&M item.
+             * The attributes of the O\&M item.
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -298,7 +298,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The category.
+             * The category of the O\&M item.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -314,7 +314,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created the OpsItem.
+             * The user who created the O\&M item.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -322,7 +322,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the O\&M item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +330,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The user who modified the O\&M item.
+             * The user who last modified the O\&M item.
              */
             public Builder lastModifiedBy(String lastModifiedBy) {
                 this.lastModifiedBy = lastModifiedBy;
@@ -346,7 +346,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * The priority of the O\&M item.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -362,7 +362,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the associated resource.
+             * The ARNs of the associated resources.
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -370,7 +370,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level.
+             * The severity level of the O\&M item.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -378,7 +378,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The solution.
+             * The solutions.
              */
             public Builder solutions(String solutions) {
                 this.solutions = solutions;
@@ -386,7 +386,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The source business.
+             * The source business of the O\&M item.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -394,7 +394,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The state of the O\&M item.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -402,7 +402,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tags of the O\&M item.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;

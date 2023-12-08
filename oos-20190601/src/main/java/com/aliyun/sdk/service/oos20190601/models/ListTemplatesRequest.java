@@ -33,6 +33,10 @@ public class ListTemplatesRequest extends Request {
     private Boolean hasTrigger;
 
     @Query
+    @NameInMap("IsFavorite")
+    private Boolean isFavorite;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -83,6 +87,7 @@ public class ListTemplatesRequest extends Request {
         this.createdDateAfter = builder.createdDateAfter;
         this.createdDateBefore = builder.createdDateBefore;
         this.hasTrigger = builder.hasTrigger;
+        this.isFavorite = builder.isFavorite;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -142,6 +147,13 @@ public class ListTemplatesRequest extends Request {
      */
     public Boolean getHasTrigger() {
         return this.hasTrigger;
+    }
+
+    /**
+     * @return isFavorite
+     */
+    public Boolean getIsFavorite() {
+        return this.isFavorite;
     }
 
     /**
@@ -227,6 +239,7 @@ public class ListTemplatesRequest extends Request {
         private String createdDateAfter; 
         private String createdDateBefore; 
         private Boolean hasTrigger; 
+        private Boolean isFavorite; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -250,6 +263,7 @@ public class ListTemplatesRequest extends Request {
             this.createdDateAfter = request.createdDateAfter;
             this.createdDateBefore = request.createdDateBefore;
             this.hasTrigger = request.hasTrigger;
+            this.isFavorite = request.isFavorite;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
@@ -319,6 +333,15 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
+         * IsFavorite.
+         */
+        public Builder isFavorite(Boolean isFavorite) {
+            this.putQueryParameter("IsFavorite", isFavorite);
+            this.isFavorite = isFavorite;
+            return this;
+        }
+
+        /**
          * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
@@ -375,6 +398,7 @@ public class ListTemplatesRequest extends Request {
          * *   **Popularity**: The system sorts the returned templates based on the popularity of the template.
          * *   **TemplateName**: The system sorts the returned templates based on the name of the template.
          * *   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.
+         * *   **UpdateDate**: The system sorts the returned templates based on the update time of the template.
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);

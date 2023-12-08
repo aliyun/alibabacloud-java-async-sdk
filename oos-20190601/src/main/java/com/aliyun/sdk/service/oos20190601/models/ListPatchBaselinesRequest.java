@@ -268,7 +268,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

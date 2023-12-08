@@ -50,7 +50,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The O\&M item.
+         * The information about the O\&M item.
          */
         public Builder opsItem(OpsItem opsItem) {
             this.opsItem = opsItem;
@@ -290,7 +290,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The information about the properties of the O\&M item.
+             * The attributes of the O\&M item.
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -378,7 +378,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The list of solutions.
+             * The solutions.
              */
             public Builder solutions(java.util.List < String > solutions) {
                 this.solutions = solutions;

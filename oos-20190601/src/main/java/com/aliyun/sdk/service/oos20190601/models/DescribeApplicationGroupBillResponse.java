@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateApplicationResponse} extends {@link TeaModel}
+ * {@link DescribeApplicationGroupBillResponse} extends {@link TeaModel}
  *
- * <p>CreateApplicationResponse</p>
+ * <p>DescribeApplicationGroupBillResponse</p>
  */
-public class CreateApplicationResponse extends Response {
+public class DescribeApplicationGroupBillResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateApplicationResponseBody body;
+    private DescribeApplicationGroupBillResponseBody body;
 
-    private CreateApplicationResponse(BuilderImpl builder) {
+    private DescribeApplicationGroupBillResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static CreateApplicationResponse create() {
+    public static DescribeApplicationGroupBillResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class CreateApplicationResponse extends Response {
     /**
      * @return body
      */
-    public CreateApplicationResponseBody getBody() {
+    public DescribeApplicationGroupBillResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateApplicationResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeApplicationGroupBillResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CreateApplicationResponseBody body);
+        Builder body(DescribeApplicationGroupBillResponseBody body);
 
         @Override
-        CreateApplicationResponse build();
+        DescribeApplicationGroupBillResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateApplicationResponse, Builder>
+            extends Response.BuilderImpl<DescribeApplicationGroupBillResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CreateApplicationResponseBody body; 
+        private DescribeApplicationGroupBillResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateApplicationResponse response) {
+        private BuilderImpl(DescribeApplicationGroupBillResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class CreateApplicationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateApplicationResponseBody body) {
+        public Builder body(DescribeApplicationGroupBillResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateApplicationResponse build() {
-            return new CreateApplicationResponse(this);
+        public DescribeApplicationGroupBillResponse build() {
+            return new DescribeApplicationGroupBillResponse(this);
         } 
 
     } 

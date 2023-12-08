@@ -350,7 +350,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             }
 
             /**
-             * The user who modified the O\&M item.
+             * The user who last modified the O\&M item.
              */
             public Builder lastModifiedBy(String lastModifiedBy) {
                 this.lastModifiedBy = lastModifiedBy;

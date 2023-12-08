@@ -208,7 +208,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The ID of the service.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

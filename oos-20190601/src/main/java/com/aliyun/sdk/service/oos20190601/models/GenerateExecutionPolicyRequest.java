@@ -21,8 +21,11 @@ public class GenerateExecutionPolicyRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("TemplateContent")
+    private String templateContent;
+
+    @Query
     @NameInMap("TemplateName")
-    @Validation(required = true)
     private String templateName;
 
     @Query
@@ -33,6 +36,7 @@ public class GenerateExecutionPolicyRequest extends Request {
         super(builder);
         this.ramRole = builder.ramRole;
         this.regionId = builder.regionId;
+        this.templateContent = builder.templateContent;
         this.templateName = builder.templateName;
         this.templateVersion = builder.templateVersion;
     }
@@ -65,6 +69,13 @@ public class GenerateExecutionPolicyRequest extends Request {
     }
 
     /**
+     * @return templateContent
+     */
+    public String getTemplateContent() {
+        return this.templateContent;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
@@ -81,6 +92,7 @@ public class GenerateExecutionPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateExecutionPolicyRequest, Builder> {
         private String ramRole; 
         private String regionId; 
+        private String templateContent; 
         private String templateName; 
         private String templateVersion; 
 
@@ -92,6 +104,7 @@ public class GenerateExecutionPolicyRequest extends Request {
             super(request);
             this.ramRole = request.ramRole;
             this.regionId = request.regionId;
+            this.templateContent = request.templateContent;
             this.templateName = request.templateName;
             this.templateVersion = request.templateVersion;
         } 
@@ -111,6 +124,15 @@ public class GenerateExecutionPolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TemplateContent.
+         */
+        public Builder templateContent(String templateContent) {
+            this.putQueryParameter("TemplateContent", templateContent);
+            this.templateContent = templateContent;
             return this;
         }
 

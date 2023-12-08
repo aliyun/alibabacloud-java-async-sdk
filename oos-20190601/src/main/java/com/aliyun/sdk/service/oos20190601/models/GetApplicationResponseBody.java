@@ -122,7 +122,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private java.util.List < String > templateIds; 
 
             /**
-             * ContactGroups.
+             * The alert contact list.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -130,7 +130,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckUrl.
+             * The health check URL of the application.
              */
             public Builder healthCheckUrl(String healthCheckUrl) {
                 this.healthCheckUrl = healthCheckUrl;
@@ -138,7 +138,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateIds.
+             * The ID of the alert template.
              */
             public Builder templateIds(java.util.List < String > templateIds) {
                 this.templateIds = templateIds;
@@ -275,7 +275,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AlarmConfig.
+             * The configurations of application alerts.
              */
             public Builder alarmConfig(AlarmConfig alarmConfig) {
                 this.alarmConfig = alarmConfig;
@@ -283,7 +283,34 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * The type of the application.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ComputeNest
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Custom
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DingTalk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -323,7 +350,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The ID of the service.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
