@@ -340,6 +340,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("ExtStorageSize")
+        private Integer extStorageSize;
+
+        @NameInMap("ExtStorageType")
+        private String extStorageType;
+
         @NameInMap("IsExpired")
         private String isExpired;
 
@@ -357,6 +363,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ScaleOutStatus")
         private ScaleOutStatus scaleOutStatus;
@@ -395,12 +404,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.DBNodeCount = builder.DBNodeCount;
             this.DBNodeStorage = builder.DBNodeStorage;
             this.expireTime = builder.expireTime;
+            this.extStorageSize = builder.extStorageSize;
+            this.extStorageType = builder.extStorageType;
             this.isExpired = builder.isExpired;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.payType = builder.payType;
             this.port = builder.port;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.scaleOutStatus = builder.scaleOutStatus;
             this.storageType = builder.storageType;
             this.tags = builder.tags;
@@ -524,6 +536,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return extStorageSize
+         */
+        public Integer getExtStorageSize() {
+            return this.extStorageSize;
+        }
+
+        /**
+         * @return extStorageType
+         */
+        public String getExtStorageType() {
+            return this.extStorageType;
+        }
+
+        /**
          * @return isExpired
          */
         public String getIsExpired() {
@@ -563,6 +589,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -630,12 +663,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private Long DBNodeCount; 
             private Long DBNodeStorage; 
             private String expireTime; 
+            private Integer extStorageSize; 
+            private String extStorageType; 
             private String isExpired; 
             private String lockMode; 
             private String lockReason; 
             private String payType; 
             private Integer port; 
             private String regionId; 
+            private String resourceGroupId; 
             private ScaleOutStatus scaleOutStatus; 
             private String storageType; 
             private Tags tags; 
@@ -765,6 +801,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * ExtStorageSize.
+             */
+            public Builder extStorageSize(Integer extStorageSize) {
+                this.extStorageSize = extStorageSize;
+                return this;
+            }
+
+            /**
+             * ExtStorageType.
+             */
+            public Builder extStorageType(String extStorageType) {
+                this.extStorageType = extStorageType;
+                return this;
+            }
+
+            /**
              * IsExpired.
              */
             public Builder isExpired(String isExpired) {
@@ -813,6 +865,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * ScaleOutStatus.
              */
             public Builder scaleOutStatus(ScaleOutStatus scaleOutStatus) {
@@ -853,7 +913,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

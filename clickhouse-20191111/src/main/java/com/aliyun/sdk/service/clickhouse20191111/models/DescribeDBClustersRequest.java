@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClustersRequest extends Request {
     @Query
-    @NameInMap("ControlVersion")
-    private String controlVersion;
-
-    @Query
     @NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
@@ -50,6 +46,10 @@ public class DescribeDBClustersRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -63,7 +63,6 @@ public class DescribeDBClustersRequest extends Request {
 
     private DescribeDBClustersRequest(Builder builder) {
         super(builder);
-        this.controlVersion = builder.controlVersion;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
@@ -72,6 +71,7 @@ public class DescribeDBClustersRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
@@ -88,13 +88,6 @@ public class DescribeDBClustersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return controlVersion
-     */
-    public String getControlVersion() {
-        return this.controlVersion;
     }
 
     /**
@@ -154,6 +147,13 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -175,7 +175,6 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBClustersRequest, Builder> {
-        private String controlVersion; 
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
@@ -184,6 +183,7 @@ public class DescribeDBClustersRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
@@ -192,30 +192,21 @@ public class DescribeDBClustersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClustersRequest response) {
-            super(response);
-            this.controlVersion = response.controlVersion;
-            this.DBClusterDescription = response.DBClusterDescription;
-            this.DBClusterIds = response.DBClusterIds;
-            this.DBClusterStatus = response.DBClusterStatus;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tag = response.tag;
+        private Builder(DescribeDBClustersRequest request) {
+            super(request);
+            this.DBClusterDescription = request.DBClusterDescription;
+            this.DBClusterIds = request.DBClusterIds;
+            this.DBClusterStatus = request.DBClusterStatus;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
         } 
-
-        /**
-         * ControlVersion.
-         */
-        public Builder controlVersion(String controlVersion) {
-            this.putQueryParameter("ControlVersion", controlVersion);
-            this.controlVersion = controlVersion;
-            return this;
-        }
 
         /**
          * DBClusterDescription.
@@ -286,6 +277,15 @@ public class DescribeDBClustersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

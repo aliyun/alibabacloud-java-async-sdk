@@ -144,11 +144,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         private String accountType;
 
+        @NameInMap("ConfigType")
+        private String configType;
+
         private Account(Builder builder) {
             this.accountDescription = builder.accountDescription;
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
+            this.configType = builder.configType;
         }
 
         public static Builder builder() {
@@ -187,11 +191,19 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountType;
         }
 
+        /**
+         * @return configType
+         */
+        public String getConfigType() {
+            return this.configType;
+        }
+
         public static final class Builder {
             private String accountDescription; 
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+            private String configType; 
 
             /**
              * AccountDescription.
@@ -222,6 +234,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * ConfigType.
+             */
+            public Builder configType(String configType) {
+                this.configType = configType;
                 return this;
             }
 

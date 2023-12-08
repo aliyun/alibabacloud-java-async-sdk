@@ -15,6 +15,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     @NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
+    @NameInMap("EnableSLB")
+    @Validation(required = true)
+    private Boolean enableSLB;
+
     @NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
@@ -23,6 +27,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     private DescribeDBClusterNetInfoItemsResponseBody(Builder builder) {
         this.clusterNetworkType = builder.clusterNetworkType;
+        this.enableSLB = builder.enableSLB;
         this.netInfoItems = builder.netInfoItems;
         this.requestId = builder.requestId;
     }
@@ -43,6 +48,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableSLB
+     */
+    public Boolean getEnableSLB() {
+        return this.enableSLB;
+    }
+
+    /**
      * @return netInfoItems
      */
     public NetInfoItems getNetInfoItems() {
@@ -58,6 +70,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String clusterNetworkType; 
+        private Boolean enableSLB; 
         private NetInfoItems netInfoItems; 
         private String requestId; 
 
@@ -66,6 +79,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
+            return this;
+        }
+
+        /**
+         * EnableSLB.
+         */
+        public Builder enableSLB(Boolean enableSLB) {
+            this.enableSLB = enableSLB;
             return this;
         }
 
@@ -98,11 +119,17 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         @NameInMap("HttpPort")
         private String httpPort;
 
+        @NameInMap("HttpsPort")
+        private String httpsPort;
+
         @NameInMap("IPAddress")
         private String IPAddress;
 
         @NameInMap("JdbcPort")
         private String jdbcPort;
+
+        @NameInMap("MySQLPort")
+        private String mySQLPort;
 
         @NameInMap("NetType")
         private String netType;
@@ -116,8 +143,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         private NetInfoItem(Builder builder) {
             this.connectionString = builder.connectionString;
             this.httpPort = builder.httpPort;
+            this.httpsPort = builder.httpsPort;
             this.IPAddress = builder.IPAddress;
             this.jdbcPort = builder.jdbcPort;
+            this.mySQLPort = builder.mySQLPort;
             this.netType = builder.netType;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -146,6 +175,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpsPort
+         */
+        public String getHttpsPort() {
+            return this.httpsPort;
+        }
+
+        /**
          * @return IPAddress
          */
         public String getIPAddress() {
@@ -157,6 +193,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
          */
         public String getJdbcPort() {
             return this.jdbcPort;
+        }
+
+        /**
+         * @return mySQLPort
+         */
+        public String getMySQLPort() {
+            return this.mySQLPort;
         }
 
         /**
@@ -183,8 +226,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         public static final class Builder {
             private String connectionString; 
             private String httpPort; 
+            private String httpsPort; 
             private String IPAddress; 
             private String jdbcPort; 
+            private String mySQLPort; 
             private String netType; 
             private String vSwitchId; 
             private String vpcId; 
@@ -206,6 +251,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
+             * HttpsPort.
+             */
+            public Builder httpsPort(String httpsPort) {
+                this.httpsPort = httpsPort;
+                return this;
+            }
+
+            /**
              * IPAddress.
              */
             public Builder IPAddress(String IPAddress) {
@@ -218,6 +271,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
              */
             public Builder jdbcPort(String jdbcPort) {
                 this.jdbcPort = jdbcPort;
+                return this;
+            }
+
+            /**
+             * MySQLPort.
+             */
+            public Builder mySQLPort(String mySQLPort) {
+                this.mySQLPort = mySQLPort;
                 return this;
             }
 

@@ -142,20 +142,27 @@ public class CreateAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccountRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateAccountRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AccountDescription.
+         * The description of the database account.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The description cannot start with http:// or https://.
+         * 
+         * *   The description must be 0 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -164,7 +171,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the database account.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The name must be unique in the cluster.
+         * 
+         * *   The name can contain lowercase letters, digits, and underscores (\_).
+         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
+         * *   The name must be 2 to 64 characters in length.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -173,7 +189,15 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the database account.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+         * 
+         * *   The password can contain the following special characters: ! @ # $ % ^ & \* ( ) \_ + - =
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -182,7 +206,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

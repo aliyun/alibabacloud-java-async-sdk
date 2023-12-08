@@ -211,21 +211,21 @@ public class TransferVersionRequest extends Request {
             super();
         } 
 
-        private Builder(TransferVersionRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceAccount = response.sourceAccount;
-            this.sourcePassword = response.sourcePassword;
-            this.targetAccount = response.targetAccount;
-            this.targetDbClusterId = response.targetDbClusterId;
-            this.targetPassword = response.targetPassword;
+        private Builder(TransferVersionRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceAccount = request.sourceAccount;
+            this.sourcePassword = request.sourcePassword;
+            this.targetAccount = request.targetAccount;
+            this.targetDbClusterId = request.targetDbClusterId;
+            this.targetPassword = request.targetPassword;
         } 
 
         /**

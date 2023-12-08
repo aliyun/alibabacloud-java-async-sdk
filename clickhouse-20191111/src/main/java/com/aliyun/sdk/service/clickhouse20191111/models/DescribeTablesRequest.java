@@ -38,10 +38,6 @@ public class DescribeTablesRequest extends Request {
     @Validation(required = true)
     private String schemaName;
 
-    @Query
-    @NameInMap("TableName")
-    private String tableName;
-
     private DescribeTablesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -50,7 +46,6 @@ public class DescribeTablesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.schemaName = builder.schemaName;
-        this.tableName = builder.tableName;
     }
 
     public static Builder builder() {
@@ -108,13 +103,6 @@ public class DescribeTablesRequest extends Request {
         return this.schemaName;
     }
 
-    /**
-     * @return tableName
-     */
-    public String getTableName() {
-        return this.tableName;
-    }
-
     public static final class Builder extends Request.Builder<DescribeTablesRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
@@ -122,21 +110,19 @@ public class DescribeTablesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String schemaName; 
-        private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTablesRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schemaName = response.schemaName;
-            this.tableName = response.tableName;
+        private Builder(DescribeTablesRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.schemaName = request.schemaName;
         } 
 
         /**
@@ -190,15 +176,6 @@ public class DescribeTablesRequest extends Request {
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
             this.schemaName = schemaName;
-            return this;
-        }
-
-        /**
-         * TableName.
-         */
-        public Builder tableName(String tableName) {
-            this.putQueryParameter("TableName", tableName);
-            this.tableName = tableName;
             return this;
         }
 

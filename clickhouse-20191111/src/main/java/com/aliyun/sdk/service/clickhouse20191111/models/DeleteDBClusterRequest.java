@@ -101,13 +101,13 @@ public class DeleteDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBClusterRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DeleteDBClusterRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

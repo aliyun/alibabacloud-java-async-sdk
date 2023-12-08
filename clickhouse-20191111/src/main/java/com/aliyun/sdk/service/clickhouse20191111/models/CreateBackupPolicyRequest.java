@@ -40,6 +40,10 @@ public class CreateBackupPolicyRequest extends Request {
     private String preferredBackupTime;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -55,6 +59,7 @@ public class CreateBackupPolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -115,6 +120,13 @@ public class CreateBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -135,6 +147,7 @@ public class CreateBackupPolicyRequest extends Request {
         private Long ownerId; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -142,20 +155,21 @@ public class CreateBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupPolicyRequest response) {
-            super(response);
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(CreateBackupPolicyRequest request) {
+            super(request);
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -164,7 +178,7 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -191,7 +205,16 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -200,11 +223,23 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).
+         * <p>
+         * 
+         * For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
             this.preferredBackupTime = preferredBackupTime;
+            return this;
+        }
+
+        /**
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

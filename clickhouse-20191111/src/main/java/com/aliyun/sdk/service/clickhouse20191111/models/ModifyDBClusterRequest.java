@@ -157,17 +157,17 @@ public class ModifyDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterRequest response) {
-            super(response);
-            this.DBClusterClass = response.DBClusterClass;
-            this.DBClusterId = response.DBClusterId;
-            this.DBNodeGroupCount = response.DBNodeGroupCount;
-            this.DBNodeStorage = response.DBNodeStorage;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBClusterRequest request) {
+            super(request);
+            this.DBClusterClass = request.DBClusterClass;
+            this.DBClusterId = request.DBClusterId;
+            this.DBNodeGroupCount = request.DBNodeGroupCount;
+            this.DBNodeStorage = request.DBNodeStorage;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

@@ -127,15 +127,15 @@ public class ModifyDBConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBConfigRequest response) {
-            super(response);
-            this.config = response.config;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyDBConfigRequest request) {
+            super(request);
+            this.config = request.config;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

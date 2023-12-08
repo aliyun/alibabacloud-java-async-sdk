@@ -26,6 +26,10 @@ public class ModifyDBClusterConfigRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Reason")
+    private String reason;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -47,6 +51,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.reason = builder.reason;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -88,6 +93,13 @@ public class ModifyDBClusterConfigRequest extends Request {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -119,6 +131,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String reason; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -128,15 +141,16 @@ public class ModifyDBClusterConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBClusterConfigRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.userConfig = response.userConfig;
+        private Builder(ModifyDBClusterConfigRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.reason = request.reason;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.userConfig = request.userConfig;
         } 
 
         /**
@@ -163,6 +177,15 @@ public class ModifyDBClusterConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.putQueryParameter("Reason", reason);
+            this.reason = reason;
             return this;
         }
 

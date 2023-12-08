@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.clickhouse20191111.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeConfigVersionDifferenceRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeConfigVersionDifferenceRequest</p>
+ */
+public class DescribeConfigVersionDifferenceRequest extends Request {
+    @Query
+    @NameInMap("ChangeId")
+    @Validation(required = true)
+    private String changeId;
+
+    @Query
+    @NameInMap("DBClusterId")
+    @Validation(required = true)
+    private String DBClusterId;
+
+    private DescribeConfigVersionDifferenceRequest(Builder builder) {
+        super(builder);
+        this.changeId = builder.changeId;
+        this.DBClusterId = builder.DBClusterId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeConfigVersionDifferenceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return changeId
+     */
+    public String getChangeId() {
+        return this.changeId;
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeConfigVersionDifferenceRequest, Builder> {
+        private String changeId; 
+        private String DBClusterId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeConfigVersionDifferenceRequest request) {
+            super(request);
+            this.changeId = request.changeId;
+            this.DBClusterId = request.DBClusterId;
+        } 
+
+        /**
+         * ChangeId.
+         */
+        public Builder changeId(String changeId) {
+            this.putQueryParameter("ChangeId", changeId);
+            this.changeId = changeId;
+            return this;
+        }
+
+        /**
+         * DBClusterId.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        @Override
+        public DescribeConfigVersionDifferenceRequest build() {
+            return new DescribeConfigVersionDifferenceRequest(this);
+        } 
+
+    } 
+
+}

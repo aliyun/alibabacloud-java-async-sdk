@@ -145,7 +145,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String backupSetInfo;
 
         @NameInMap("BackupSize")
-        private Integer backupSize;
+        private Long backupSize;
 
         @NameInMap("BackupStartTime")
         private String backupStartTime;
@@ -159,6 +159,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("DBClusterId")
         private String DBClusterId;
 
+        @NameInMap("ExpireDate")
+        private String expireDate;
+
         private Items(Builder builder) {
             this.backupEndTime = builder.backupEndTime;
             this.backupId = builder.backupId;
@@ -169,6 +172,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupStatus = builder.backupStatus;
             this.backupType = builder.backupType;
             this.DBClusterId = builder.DBClusterId;
+            this.expireDate = builder.expireDate;
         }
 
         public static Builder builder() {
@@ -210,7 +214,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupSize
          */
-        public Integer getBackupSize() {
+        public Long getBackupSize() {
             return this.backupSize;
         }
 
@@ -242,16 +246,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.DBClusterId;
         }
 
+        /**
+         * @return expireDate
+         */
+        public String getExpireDate() {
+            return this.expireDate;
+        }
+
         public static final class Builder {
             private String backupEndTime; 
             private String backupId; 
             private String backupMethod; 
             private String backupSetInfo; 
-            private Integer backupSize; 
+            private Long backupSize; 
             private String backupStartTime; 
             private String backupStatus; 
             private String backupType; 
             private String DBClusterId; 
+            private String expireDate; 
 
             /**
              * BackupEndTime.
@@ -288,7 +300,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * BackupSize.
              */
-            public Builder backupSize(Integer backupSize) {
+            public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
                 return this;
             }
@@ -322,6 +334,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
+                return this;
+            }
+
+            /**
+             * ExpireDate.
+             */
+            public Builder expireDate(String expireDate) {
+                this.expireDate = expireDate;
                 return this;
             }
 

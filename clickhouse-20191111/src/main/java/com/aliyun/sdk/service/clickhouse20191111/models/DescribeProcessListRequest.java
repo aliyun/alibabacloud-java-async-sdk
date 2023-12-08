@@ -208,21 +208,21 @@ public class DescribeProcessListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeProcessListRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.initialQueryId = response.initialQueryId;
-            this.initialUser = response.initialUser;
-            this.keyword = response.keyword;
-            this.order = response.order;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryDurationMs = response.queryDurationMs;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeProcessListRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.initialQueryId = request.initialQueryId;
+            this.initialUser = request.initialUser;
+            this.keyword = request.keyword;
+            this.order = request.order;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryDurationMs = request.queryDurationMs;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

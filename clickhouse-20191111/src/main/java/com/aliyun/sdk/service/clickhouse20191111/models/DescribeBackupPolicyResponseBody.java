@@ -15,6 +15,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
+    @NameInMap("BackupSize")
+    private String backupSize;
+
     @NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
@@ -29,6 +32,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
+        this.backupSize = builder.backupSize;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public Integer getBackupRetentionPeriod() {
         return this.backupRetentionPeriod;
+    }
+
+    /**
+     * @return backupSize
+     */
+    public String getBackupSize() {
+        return this.backupSize;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer backupRetentionPeriod; 
+        private String backupSize; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * BackupSize.
+         */
+        public Builder backupSize(String backupSize) {
+            this.backupSize = backupSize;
             return this;
         }
 

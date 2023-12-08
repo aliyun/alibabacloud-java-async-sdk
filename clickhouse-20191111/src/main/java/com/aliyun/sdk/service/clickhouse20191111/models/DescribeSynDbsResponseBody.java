@@ -78,11 +78,11 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         @NameInMap("RdsId")
         private String rdsId;
 
-        @NameInMap("RdsPassword")
-        private String rdsPassword;
-
         @NameInMap("RdsUserName")
         private String rdsUserName;
+
+        @NameInMap("RdsVpcUrl")
+        private String rdsVpcUrl;
 
         @NameInMap("SynDb")
         private String synDb;
@@ -93,8 +93,8 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         private SynDbs(Builder builder) {
             this.errorMsg = builder.errorMsg;
             this.rdsId = builder.rdsId;
-            this.rdsPassword = builder.rdsPassword;
             this.rdsUserName = builder.rdsUserName;
+            this.rdsVpcUrl = builder.rdsVpcUrl;
             this.synDb = builder.synDb;
             this.synStatus = builder.synStatus;
         }
@@ -122,17 +122,17 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * @return rdsPassword
-         */
-        public String getRdsPassword() {
-            return this.rdsPassword;
-        }
-
-        /**
          * @return rdsUserName
          */
         public String getRdsUserName() {
             return this.rdsUserName;
+        }
+
+        /**
+         * @return rdsVpcUrl
+         */
+        public String getRdsVpcUrl() {
+            return this.rdsVpcUrl;
         }
 
         /**
@@ -152,8 +152,8 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public static final class Builder {
             private String errorMsg; 
             private String rdsId; 
-            private String rdsPassword; 
             private String rdsUserName; 
+            private String rdsVpcUrl; 
             private String synDb; 
             private Boolean synStatus; 
 
@@ -174,18 +174,18 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * RdsPassword.
-             */
-            public Builder rdsPassword(String rdsPassword) {
-                this.rdsPassword = rdsPassword;
-                return this;
-            }
-
-            /**
              * RdsUserName.
              */
             public Builder rdsUserName(String rdsUserName) {
                 this.rdsUserName = rdsUserName;
+                return this;
+            }
+
+            /**
+             * RdsVpcUrl.
+             */
+            public Builder rdsVpcUrl(String rdsVpcUrl) {
+                this.rdsVpcUrl = rdsVpcUrl;
                 return this;
             }
 

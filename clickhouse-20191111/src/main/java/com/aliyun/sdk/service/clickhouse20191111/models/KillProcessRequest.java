@@ -127,15 +127,15 @@ public class KillProcessRequest extends Request {
             super();
         } 
 
-        private Builder(KillProcessRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.initialQueryId = response.initialQueryId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(KillProcessRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.initialQueryId = request.initialQueryId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

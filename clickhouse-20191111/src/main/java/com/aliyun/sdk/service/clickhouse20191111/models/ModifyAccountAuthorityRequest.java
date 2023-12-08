@@ -210,21 +210,21 @@ public class ModifyAccountAuthorityRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAccountAuthorityRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.allowDatabases = response.allowDatabases;
-            this.allowDictionaries = response.allowDictionaries;
-            this.DBClusterId = response.DBClusterId;
-            this.ddlAuthority = response.ddlAuthority;
-            this.dmlAuthority = response.dmlAuthority;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.totalDatabases = response.totalDatabases;
-            this.totalDictionaries = response.totalDictionaries;
+        private Builder(ModifyAccountAuthorityRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.allowDatabases = request.allowDatabases;
+            this.allowDictionaries = request.allowDictionaries;
+            this.DBClusterId = request.DBClusterId;
+            this.ddlAuthority = request.ddlAuthority;
+            this.dmlAuthority = request.dmlAuthority;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.totalDatabases = request.totalDatabases;
+            this.totalDictionaries = request.totalDictionaries;
         } 
 
         /**

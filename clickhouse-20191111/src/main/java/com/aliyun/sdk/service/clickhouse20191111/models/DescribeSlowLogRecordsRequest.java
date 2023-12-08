@@ -184,19 +184,19 @@ public class DescribeSlowLogRecordsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSlowLogRecordsRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryDurationMs = response.queryDurationMs;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeSlowLogRecordsRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryDurationMs = request.queryDurationMs;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

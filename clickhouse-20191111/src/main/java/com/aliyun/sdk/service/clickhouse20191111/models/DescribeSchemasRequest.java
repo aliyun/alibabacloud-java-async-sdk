@@ -33,14 +33,6 @@ public class DescribeSchemasRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SchemaName")
-    private String schemaName;
-
-    @Query
-    @NameInMap("TableName")
-    private String tableName;
-
     private DescribeSchemasRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -48,8 +40,6 @@ public class DescribeSchemasRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.schemaName = builder.schemaName;
-        this.tableName = builder.tableName;
     }
 
     public static Builder builder() {
@@ -100,42 +90,24 @@ public class DescribeSchemasRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return schemaName
-     */
-    public String getSchemaName() {
-        return this.schemaName;
-    }
-
-    /**
-     * @return tableName
-     */
-    public String getTableName() {
-        return this.tableName;
-    }
-
     public static final class Builder extends Request.Builder<DescribeSchemasRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String schemaName; 
-        private String tableName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSchemasRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.schemaName = response.schemaName;
-            this.tableName = response.tableName;
+        private Builder(DescribeSchemasRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -180,24 +152,6 @@ public class DescribeSchemasRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SchemaName.
-         */
-        public Builder schemaName(String schemaName) {
-            this.putQueryParameter("SchemaName", schemaName);
-            this.schemaName = schemaName;
-            return this;
-        }
-
-        /**
-         * TableName.
-         */
-        public Builder tableName(String tableName) {
-            this.putQueryParameter("TableName", tableName);
-            this.tableName = tableName;
             return this;
         }
 

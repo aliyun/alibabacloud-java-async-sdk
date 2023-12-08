@@ -237,23 +237,23 @@ public class CreateAccountAndAuthorityRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccountAndAuthorityRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.allowDatabases = response.allowDatabases;
-            this.allowDictionaries = response.allowDictionaries;
-            this.DBClusterId = response.DBClusterId;
-            this.ddlAuthority = response.ddlAuthority;
-            this.dmlAuthority = response.dmlAuthority;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.totalDatabases = response.totalDatabases;
-            this.totalDictionaries = response.totalDictionaries;
+        private Builder(CreateAccountAndAuthorityRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.allowDatabases = request.allowDatabases;
+            this.allowDictionaries = request.allowDictionaries;
+            this.DBClusterId = request.DBClusterId;
+            this.ddlAuthority = request.ddlAuthority;
+            this.dmlAuthority = request.dmlAuthority;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.totalDatabases = request.totalDatabases;
+            this.totalDictionaries = request.totalDictionaries;
         } 
 
         /**

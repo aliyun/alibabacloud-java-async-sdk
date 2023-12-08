@@ -238,6 +238,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AliUid")
         private String aliUid;
 
+        @NameInMap("AppointmentRestartTime")
+        private String appointmentRestartTime;
+
         @NameInMap("Bid")
         private String bid;
 
@@ -289,11 +292,23 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Engine")
         private String engine;
 
+        @NameInMap("EngineLatestMinorVersion")
+        private String engineLatestMinorVersion;
+
+        @NameInMap("EngineMinorVersion")
+        private String engineMinorVersion;
+
         @NameInMap("EngineVersion")
         private String engineVersion;
 
         @NameInMap("ExpireTime")
         private String expireTime;
+
+        @NameInMap("ExtStorageSize")
+        private Integer extStorageSize;
+
+        @NameInMap("ExtStorageType")
+        private String extStorageType;
 
         @NameInMap("IsExpired")
         private String isExpired;
@@ -303,6 +318,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("LockReason")
         private String lockReason;
+
+        @NameInMap("MaintainAutoType")
+        private Boolean maintainAutoType;
 
         @NameInMap("MaintainTime")
         private String maintainTime;
@@ -316,11 +334,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("PublicConnectionString")
         private String publicConnectionString;
 
+        @NameInMap("PublicIpAddr")
+        private String publicIpAddr;
+
         @NameInMap("PublicPort")
         private String publicPort;
 
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ScaleOutStatus")
         private ScaleOutStatus scaleOutStatus;
@@ -337,6 +361,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("SupportMysqlPort")
         private Boolean supportMysqlPort;
 
+        @NameInMap("SupportOss")
+        private Integer supportOss;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -349,11 +376,21 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("VpcIpAddr")
+        private String vpcIpAddr;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
+        @NameInMap("ZoneIdVswitchMap")
+        private java.util.Map < String, ? > zoneIdVswitchMap;
+
+        @NameInMap("ZookeeperClass")
+        private String zookeeperClass;
+
         private DBCluster(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.appointmentRestartTime = builder.appointmentRestartTime;
             this.bid = builder.bid;
             this.category = builder.category;
             this.commodityCode = builder.commodityCode;
@@ -371,27 +408,38 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.encryptionKey = builder.encryptionKey;
             this.encryptionType = builder.encryptionType;
             this.engine = builder.engine;
+            this.engineLatestMinorVersion = builder.engineLatestMinorVersion;
+            this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.extStorageSize = builder.extStorageSize;
+            this.extStorageType = builder.extStorageType;
             this.isExpired = builder.isExpired;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
+            this.maintainAutoType = builder.maintainAutoType;
             this.maintainTime = builder.maintainTime;
             this.payType = builder.payType;
             this.port = builder.port;
             this.publicConnectionString = builder.publicConnectionString;
+            this.publicIpAddr = builder.publicIpAddr;
             this.publicPort = builder.publicPort;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.scaleOutStatus = builder.scaleOutStatus;
             this.storageType = builder.storageType;
             this.supportBackup = builder.supportBackup;
             this.supportHttpsPort = builder.supportHttpsPort;
             this.supportMysqlPort = builder.supportMysqlPort;
+            this.supportOss = builder.supportOss;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.vpcCloudInstanceId = builder.vpcCloudInstanceId;
             this.vpcId = builder.vpcId;
+            this.vpcIpAddr = builder.vpcIpAddr;
             this.zoneId = builder.zoneId;
+            this.zoneIdVswitchMap = builder.zoneIdVswitchMap;
+            this.zookeeperClass = builder.zookeeperClass;
         }
 
         public static Builder builder() {
@@ -407,6 +455,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return appointmentRestartTime
+         */
+        public String getAppointmentRestartTime() {
+            return this.appointmentRestartTime;
         }
 
         /**
@@ -529,6 +584,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineLatestMinorVersion
+         */
+        public String getEngineLatestMinorVersion() {
+            return this.engineLatestMinorVersion;
+        }
+
+        /**
+         * @return engineMinorVersion
+         */
+        public String getEngineMinorVersion() {
+            return this.engineMinorVersion;
+        }
+
+        /**
          * @return engineVersion
          */
         public String getEngineVersion() {
@@ -540,6 +609,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return extStorageSize
+         */
+        public Integer getExtStorageSize() {
+            return this.extStorageSize;
+        }
+
+        /**
+         * @return extStorageType
+         */
+        public String getExtStorageType() {
+            return this.extStorageType;
         }
 
         /**
@@ -561,6 +644,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getLockReason() {
             return this.lockReason;
+        }
+
+        /**
+         * @return maintainAutoType
+         */
+        public Boolean getMaintainAutoType() {
+            return this.maintainAutoType;
         }
 
         /**
@@ -592,6 +682,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIpAddr
+         */
+        public String getPublicIpAddr() {
+            return this.publicIpAddr;
+        }
+
+        /**
          * @return publicPort
          */
         public String getPublicPort() {
@@ -603,6 +700,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -641,6 +745,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportOss
+         */
+        public Integer getSupportOss() {
+            return this.supportOss;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -669,14 +780,36 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcIpAddr
+         */
+        public String getVpcIpAddr() {
+            return this.vpcIpAddr;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
             return this.zoneId;
         }
 
+        /**
+         * @return zoneIdVswitchMap
+         */
+        public java.util.Map < String, ? > getZoneIdVswitchMap() {
+            return this.zoneIdVswitchMap;
+        }
+
+        /**
+         * @return zookeeperClass
+         */
+        public String getZookeeperClass() {
+            return this.zookeeperClass;
+        }
+
         public static final class Builder {
             private String aliUid; 
+            private String appointmentRestartTime; 
             private String bid; 
             private String category; 
             private String commodityCode; 
@@ -694,33 +827,52 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String encryptionKey; 
             private String encryptionType; 
             private String engine; 
+            private String engineLatestMinorVersion; 
+            private String engineMinorVersion; 
             private String engineVersion; 
             private String expireTime; 
+            private Integer extStorageSize; 
+            private String extStorageType; 
             private String isExpired; 
             private String lockMode; 
             private String lockReason; 
+            private Boolean maintainAutoType; 
             private String maintainTime; 
             private String payType; 
             private Integer port; 
             private String publicConnectionString; 
+            private String publicIpAddr; 
             private String publicPort; 
             private String regionId; 
+            private String resourceGroupId; 
             private ScaleOutStatus scaleOutStatus; 
             private String storageType; 
             private Integer supportBackup; 
             private Boolean supportHttpsPort; 
             private Boolean supportMysqlPort; 
+            private Integer supportOss; 
             private Tags tags; 
             private String vSwitchId; 
             private String vpcCloudInstanceId; 
             private String vpcId; 
+            private String vpcIpAddr; 
             private String zoneId; 
+            private java.util.Map < String, ? > zoneIdVswitchMap; 
+            private String zookeeperClass; 
 
             /**
              * AliUid.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * AppointmentRestartTime.
+             */
+            public Builder appointmentRestartTime(String appointmentRestartTime) {
+                this.appointmentRestartTime = appointmentRestartTime;
                 return this;
             }
 
@@ -861,6 +1013,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * EngineLatestMinorVersion.
+             */
+            public Builder engineLatestMinorVersion(String engineLatestMinorVersion) {
+                this.engineLatestMinorVersion = engineLatestMinorVersion;
+                return this;
+            }
+
+            /**
+             * EngineMinorVersion.
+             */
+            public Builder engineMinorVersion(String engineMinorVersion) {
+                this.engineMinorVersion = engineMinorVersion;
+                return this;
+            }
+
+            /**
              * EngineVersion.
              */
             public Builder engineVersion(String engineVersion) {
@@ -873,6 +1041,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * ExtStorageSize.
+             */
+            public Builder extStorageSize(Integer extStorageSize) {
+                this.extStorageSize = extStorageSize;
+                return this;
+            }
+
+            /**
+             * ExtStorageType.
+             */
+            public Builder extStorageType(String extStorageType) {
+                this.extStorageType = extStorageType;
                 return this;
             }
 
@@ -897,6 +1081,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
+                return this;
+            }
+
+            /**
+             * MaintainAutoType.
+             */
+            public Builder maintainAutoType(Boolean maintainAutoType) {
+                this.maintainAutoType = maintainAutoType;
                 return this;
             }
 
@@ -933,6 +1125,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * PublicIpAddr.
+             */
+            public Builder publicIpAddr(String publicIpAddr) {
+                this.publicIpAddr = publicIpAddr;
+                return this;
+            }
+
+            /**
              * PublicPort.
              */
             public Builder publicPort(String publicPort) {
@@ -945,6 +1145,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -989,6 +1197,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * SupportOss.
+             */
+            public Builder supportOss(Integer supportOss) {
+                this.supportOss = supportOss;
+                return this;
+            }
+
+            /**
              * Tags.
              */
             public Builder tags(Tags tags) {
@@ -1013,10 +1229,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcIpAddr.
+             */
+            public Builder vpcIpAddr(String vpcIpAddr) {
+                this.vpcIpAddr = vpcIpAddr;
                 return this;
             }
 
@@ -1025,6 +1249,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * ZoneIdVswitchMap.
+             */
+            public Builder zoneIdVswitchMap(java.util.Map < String, ? > zoneIdVswitchMap) {
+                this.zoneIdVswitchMap = zoneIdVswitchMap;
+                return this;
+            }
+
+            /**
+             * ZookeeperClass.
+             */
+            public Builder zookeeperClass(String zookeeperClass) {
+                this.zookeeperClass = zookeeperClass;
                 return this;
             }
 

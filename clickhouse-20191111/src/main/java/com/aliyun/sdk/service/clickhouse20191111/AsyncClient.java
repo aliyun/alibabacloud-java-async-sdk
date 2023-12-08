@@ -22,18 +22,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckClickhouseToRDSResponse> checkClickhouseToRDS(CheckClickhouseToRDSRequest request);
 
+    CompletableFuture<CheckModifyConfigNeedRestartResponse> checkModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request);
+
     CompletableFuture<CheckMonitorAlertResponse> checkMonitorAlert(CheckMonitorAlertRequest request);
 
     CompletableFuture<CheckScaleOutBalancedResponse> checkScaleOutBalanced(CheckScaleOutBalancedRequest request);
 
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
-    CompletableFuture<CheckVersionTransferResponse> checkVersionTransfer(CheckVersionTransferRequest request);
-
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     CompletableFuture<CreateAccountAndAuthorityResponse> createAccountAndAuthority(CreateAccountAndAuthorityRequest request);
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+     */
     CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
 
     CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request);
@@ -46,13 +50,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateRDSToClickhouseDbResponse> createRDSToClickhouseDb(CreateRDSToClickhouseDbRequest request);
 
+    CompletableFuture<CreateSQLAccountResponse> createSQLAccount(CreateSQLAccountRequest request);
+
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request);
-
-    CompletableFuture<DeleteLorneTaskResponse> deleteLorneTask(DeleteLorneTaskRequest request);
 
     CompletableFuture<DeleteSyndbResponse> deleteSyndb(DeleteSyndbRequest request);
 
@@ -64,19 +68,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAllDataSourcesResponse> describeAllDataSources(DescribeAllDataSourcesRequest request);
 
-    CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request);
-
     CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
 
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request);
 
+    CompletableFuture<DescribeConfigHistoryResponse> describeConfigHistory(DescribeConfigHistoryRequest request);
+
+    CompletableFuture<DescribeConfigVersionDifferenceResponse> describeConfigVersionDifference(DescribeConfigVersionDifferenceRequest request);
+
     CompletableFuture<DescribeDBClusterAccessWhiteListResponse> describeDBClusterAccessWhiteList(DescribeDBClusterAccessWhiteListRequest request);
 
     CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request);
 
     CompletableFuture<DescribeDBClusterConfigResponse> describeDBClusterConfig(DescribeDBClusterConfigRequest request);
+
+    CompletableFuture<DescribeDBClusterConfigInXMLResponse> describeDBClusterConfigInXML(DescribeDBClusterConfigInXMLRequest request);
 
     CompletableFuture<DescribeDBClusterNetInfoItemsResponse> describeDBClusterNetInfoItems(DescribeDBClusterNetInfoItemsRequest request);
 
@@ -86,37 +94,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBConfigResponse> describeDBConfig(DescribeDBConfigRequest request);
 
-    CompletableFuture<DescribeLogHubAttributeResponse> describeLogHubAttribute(DescribeLogHubAttributeRequest request);
-
-    CompletableFuture<DescribeLogStoreKeysResponse> describeLogStoreKeys(DescribeLogStoreKeysRequest request);
-
-    CompletableFuture<DescribeLoghubDetailResponse> describeLoghubDetail(DescribeLoghubDetailRequest request);
-
-    CompletableFuture<DescribeLorneLogResponse> describeLorneLog(DescribeLorneLogRequest request);
-
-    CompletableFuture<DescribeLorneTasksResponse> describeLorneTasks(DescribeLorneTasksRequest request);
-
-    CompletableFuture<DescribeLorneTasksMCountResponse> describeLorneTasksMCount(DescribeLorneTasksMCountRequest request);
-
-    CompletableFuture<DescribeLorneTasksMetricsResponse> describeLorneTasksMetrics(DescribeLorneTasksMetricsRequest request);
-
     CompletableFuture<DescribeOSSStorageResponse> describeOSSStorage(DescribeOSSStorageRequest request);
 
     CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request);
-
-    CompletableFuture<DescribeRDSTablesResponse> describeRDSTables(DescribeRDSTablesRequest request);
-
-    CompletableFuture<DescribeRDSVpcResponse> describeRDSVpc(DescribeRDSVpcRequest request);
-
-    CompletableFuture<DescribeRDSschemasResponse> describeRDSschemas(DescribeRDSschemasRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request);
 
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
-
-    CompletableFuture<DescribeSlowLogTrendResponse> describeSlowLogTrend(DescribeSlowLogTrendRequest request);
 
     CompletableFuture<DescribeSynDbTablesResponse> describeSynDbTables(DescribeSynDbTablesRequest request);
 
@@ -140,17 +126,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBClusterConfigResponse> modifyDBClusterConfig(ModifyDBClusterConfigRequest request);
 
+    CompletableFuture<ModifyDBClusterConfigInXMLResponse> modifyDBClusterConfigInXML(ModifyDBClusterConfigInXMLRequest request);
+
     CompletableFuture<ModifyDBClusterDescriptionResponse> modifyDBClusterDescription(ModifyDBClusterDescriptionRequest request);
 
     CompletableFuture<ModifyDBClusterMaintainTimeResponse> modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request);
 
     CompletableFuture<ModifyDBConfigResponse> modifyDBConfig(ModifyDBConfigRequest request);
 
+    CompletableFuture<ModifyMinorVersionGreadeTypeResponse> modifyMinorVersionGreadeType(ModifyMinorVersionGreadeTypeRequest request);
+
     CompletableFuture<ModifyRDSToClickhouseDbResponse> modifyRDSToClickhouseDb(ModifyRDSToClickhouseDbRequest request);
-
-    CompletableFuture<OperateLogHubResponse> operateLogHub(OperateLogHubRequest request);
-
-    CompletableFuture<OperateLorneTaskStatusResponse> operateLorneTaskStatus(OperateLorneTaskStatusRequest request);
 
     CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request);
 
@@ -158,8 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
-    CompletableFuture<SearchRDSTablesResponse> searchRDSTables(SearchRDSTablesRequest request);
-
     CompletableFuture<TransferVersionResponse> transferVersion(TransferVersionRequest request);
+
+    CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request);
 
 }

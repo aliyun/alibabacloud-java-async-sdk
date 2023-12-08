@@ -142,16 +142,16 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterPerformanceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBClusterPerformanceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

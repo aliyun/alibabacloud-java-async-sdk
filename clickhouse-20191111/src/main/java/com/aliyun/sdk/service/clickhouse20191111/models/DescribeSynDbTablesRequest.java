@@ -115,14 +115,14 @@ public class DescribeSynDbTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSynDbTablesRequest response) {
-            super(response);
-            this.dbClusterId = response.dbClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.synDb = response.synDb;
+        private Builder(DescribeSynDbTablesRequest request) {
+            super(request);
+            this.dbClusterId = request.dbClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.synDb = request.synDb;
         } 
 
         /**

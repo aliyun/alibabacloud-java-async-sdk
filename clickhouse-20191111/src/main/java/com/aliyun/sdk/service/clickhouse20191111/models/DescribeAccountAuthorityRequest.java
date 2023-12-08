@@ -127,15 +127,15 @@ public class DescribeAccountAuthorityRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountAuthorityRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeAccountAuthorityRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

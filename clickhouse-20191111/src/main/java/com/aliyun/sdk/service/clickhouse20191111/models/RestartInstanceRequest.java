@@ -46,6 +46,10 @@ public class RestartInstanceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("RestartTime")
+    private String restartTime;
+
     private RestartInstanceRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -56,6 +60,7 @@ public class RestartInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.restartTime = builder.restartTime;
     }
 
     public static Builder builder() {
@@ -127,6 +132,13 @@ public class RestartInstanceRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return restartTime
+     */
+    public String getRestartTime() {
+        return this.restartTime;
+    }
+
     public static final class Builder extends Request.Builder<RestartInstanceRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
@@ -136,21 +148,23 @@ public class RestartInstanceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String restartTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RestartInstanceRequest response) {
-            super(response);
-            this.DBClusterId = response.DBClusterId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(RestartInstanceRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.restartTime = request.restartTime;
         } 
 
         /**
@@ -222,6 +236,15 @@ public class RestartInstanceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RestartTime.
+         */
+        public Builder restartTime(String restartTime) {
+            this.putQueryParameter("RestartTime", restartTime);
+            this.restartTime = restartTime;
             return this;
         }
 

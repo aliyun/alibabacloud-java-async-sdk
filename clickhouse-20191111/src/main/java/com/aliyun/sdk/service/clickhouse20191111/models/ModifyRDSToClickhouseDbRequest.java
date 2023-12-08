@@ -265,25 +265,25 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyRDSToClickhouseDbRequest response) {
-            super(response);
-            this.ckPassword = response.ckPassword;
-            this.ckUserName = response.ckUserName;
-            this.clickhousePort = response.clickhousePort;
-            this.dbClusterId = response.dbClusterId;
-            this.limitUpper = response.limitUpper;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.rdsId = response.rdsId;
-            this.rdsPassword = response.rdsPassword;
-            this.rdsPort = response.rdsPort;
-            this.rdsSynDb = response.rdsSynDb;
-            this.rdsSynTables = response.rdsSynTables;
-            this.rdsUserName = response.rdsUserName;
-            this.rdsVpcId = response.rdsVpcId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.skipUnsupported = response.skipUnsupported;
+        private Builder(ModifyRDSToClickhouseDbRequest request) {
+            super(request);
+            this.ckPassword = request.ckPassword;
+            this.ckUserName = request.ckUserName;
+            this.clickhousePort = request.clickhousePort;
+            this.dbClusterId = request.dbClusterId;
+            this.limitUpper = request.limitUpper;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.rdsId = request.rdsId;
+            this.rdsPassword = request.rdsPassword;
+            this.rdsPort = request.rdsPort;
+            this.rdsSynDb = request.rdsSynDb;
+            this.rdsSynTables = request.rdsSynTables;
+            this.rdsUserName = request.rdsUserName;
+            this.rdsVpcId = request.rdsVpcId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.skipUnsupported = request.skipUnsupported;
         } 
 
         /**

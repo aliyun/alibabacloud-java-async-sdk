@@ -67,6 +67,10 @@ public class CreateRDSToClickhouseDbRequest extends Request {
     private String rdsVpcId;
 
     @Query
+    @NameInMap("RdsVpcUrl")
+    private String rdsVpcUrl;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -98,6 +102,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         this.rdsPort = builder.rdsPort;
         this.rdsUserName = builder.rdsUserName;
         this.rdsVpcId = builder.rdsVpcId;
+        this.rdsVpcUrl = builder.rdsVpcUrl;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.skipUnsupported = builder.skipUnsupported;
@@ -202,6 +207,13 @@ public class CreateRDSToClickhouseDbRequest extends Request {
     }
 
     /**
+     * @return rdsVpcUrl
+     */
+    public String getRdsVpcUrl() {
+        return this.rdsVpcUrl;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -242,6 +254,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         private Long rdsPort; 
         private String rdsUserName; 
         private String rdsVpcId; 
+        private String rdsVpcUrl; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean skipUnsupported; 
@@ -251,24 +264,25 @@ public class CreateRDSToClickhouseDbRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRDSToClickhouseDbRequest response) {
-            super(response);
-            this.ckPassword = response.ckPassword;
-            this.ckUserName = response.ckUserName;
-            this.clickhousePort = response.clickhousePort;
-            this.dbClusterId = response.dbClusterId;
-            this.limitUpper = response.limitUpper;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.rdsId = response.rdsId;
-            this.rdsPassword = response.rdsPassword;
-            this.rdsPort = response.rdsPort;
-            this.rdsUserName = response.rdsUserName;
-            this.rdsVpcId = response.rdsVpcId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.skipUnsupported = response.skipUnsupported;
-            this.synDbTables = response.synDbTables;
+        private Builder(CreateRDSToClickhouseDbRequest request) {
+            super(request);
+            this.ckPassword = request.ckPassword;
+            this.ckUserName = request.ckUserName;
+            this.clickhousePort = request.clickhousePort;
+            this.dbClusterId = request.dbClusterId;
+            this.limitUpper = request.limitUpper;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.rdsId = request.rdsId;
+            this.rdsPassword = request.rdsPassword;
+            this.rdsPort = request.rdsPort;
+            this.rdsUserName = request.rdsUserName;
+            this.rdsVpcId = request.rdsVpcId;
+            this.rdsVpcUrl = request.rdsVpcUrl;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.skipUnsupported = request.skipUnsupported;
+            this.synDbTables = request.synDbTables;
         } 
 
         /**
@@ -376,6 +390,15 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         public Builder rdsVpcId(String rdsVpcId) {
             this.putQueryParameter("RdsVpcId", rdsVpcId);
             this.rdsVpcId = rdsVpcId;
+            return this;
+        }
+
+        /**
+         * RdsVpcUrl.
+         */
+        public Builder rdsVpcUrl(String rdsVpcUrl) {
+            this.putQueryParameter("RdsVpcUrl", rdsVpcUrl);
+            this.rdsVpcUrl = rdsVpcUrl;
             return this;
         }
 
