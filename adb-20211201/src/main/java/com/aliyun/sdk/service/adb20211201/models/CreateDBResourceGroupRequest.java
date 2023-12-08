@@ -169,7 +169,7 @@ public class CreateDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * ClusterMode.
+         * A reserved parameter.
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -178,7 +178,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ClusterSizeResource.
+         * A reserved parameter.
          */
         public Builder clusterSizeResource(String clusterSizeResource) {
             this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
@@ -225,7 +225,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MaxClusterCount.
+         * A reserved parameter.
          */
         public Builder maxClusterCount(Integer maxClusterCount) {
             this.putQueryParameter("MaxClusterCount", maxClusterCount);
@@ -247,7 +247,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MinClusterCount.
+         * A reserved parameter.
          */
         public Builder minClusterCount(Integer minClusterCount) {
             this.putQueryParameter("MinClusterCount", minClusterCount);
@@ -256,11 +256,11 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The minimum reserved computing resources. Unit: AnalyticDB Compute Unit (ACU).
+         * The minimum reserved computing resources. Unit: AnalyticDB Compute Units (ACUs).
          * <p>
          * 
-         * *   If GroupType is set to Interactive, set the value to 16ACU.
-         * *   If GroupType is set to Job, set the value to 0ACU.
+         * *   When GroupType is set to Interactive, set this parameter to 16 ACUs.
+         * *   When GroupType is set to Job, set this parameter to 0 ACUs.
          */
         public Builder minComputeResource(String minComputeResource) {
             this.putQueryParameter("MinComputeResource", minComputeResource);

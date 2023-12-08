@@ -69,10 +69,10 @@ public class GetSparkAppInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the application. 
+         * The application ID.
          * <p>
          * 
-         * >  You can call the [ListSparkApps](~~612475~~) operation to query the Spark application ID.
+         * >  You can call the [ListSparkApps](~~455888~~) operation to query the Spark application IDs.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);

@@ -16,10 +16,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    private Integer statusCode;
-
     @NameInMap("body")
     @Validation(required = true)
     private DescribeAdbMySqlColumnsResponseBody body;
@@ -27,7 +23,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
     private DescribeAdbMySqlColumnsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
-        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -48,13 +43,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
     }
 
     /**
-     * @return statusCode
-     */
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
      * @return body
      */
     public DescribeAdbMySqlColumnsResponseBody getBody() {
@@ -64,8 +52,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
     public interface Builder extends Response.Builder<DescribeAdbMySqlColumnsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
-
-        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeAdbMySqlColumnsResponseBody body);
 
@@ -78,7 +64,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
             extends Response.BuilderImpl<DescribeAdbMySqlColumnsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private Integer statusCode; 
         private DescribeAdbMySqlColumnsResponseBody body; 
 
         private BuilderImpl() {
@@ -88,7 +73,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
         private BuilderImpl(DescribeAdbMySqlColumnsResponse response) {
             super(response);
             this.headers = response.headers;
-            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -98,15 +82,6 @@ public class DescribeAdbMySqlColumnsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * statusCode.
-         */
-        @Override
-        public Builder statusCode(Integer statusCode) {
-            this.statusCode = statusCode;
             return this;
         }
 

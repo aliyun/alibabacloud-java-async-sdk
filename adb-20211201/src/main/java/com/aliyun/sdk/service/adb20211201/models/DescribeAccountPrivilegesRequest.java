@@ -40,7 +40,6 @@ public class DescribeAccountPrivilegesRequest extends Request {
 
     @Query
     @NameInMap("PrivilegeType")
-    @Validation(required = true)
     private String privilegeType;
 
     @Query

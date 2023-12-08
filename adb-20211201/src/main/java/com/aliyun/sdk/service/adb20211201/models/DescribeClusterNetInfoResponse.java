@@ -16,10 +16,6 @@ public class DescribeClusterNetInfoResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    private Integer statusCode;
-
     @NameInMap("body")
     @Validation(required = true)
     private DescribeClusterNetInfoResponseBody body;
@@ -27,7 +23,6 @@ public class DescribeClusterNetInfoResponse extends Response {
     private DescribeClusterNetInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
-        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -48,13 +43,6 @@ public class DescribeClusterNetInfoResponse extends Response {
     }
 
     /**
-     * @return statusCode
-     */
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
      * @return body
      */
     public DescribeClusterNetInfoResponseBody getBody() {
@@ -64,8 +52,6 @@ public class DescribeClusterNetInfoResponse extends Response {
     public interface Builder extends Response.Builder<DescribeClusterNetInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
-
-        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeClusterNetInfoResponseBody body);
 
@@ -78,7 +64,6 @@ public class DescribeClusterNetInfoResponse extends Response {
             extends Response.BuilderImpl<DescribeClusterNetInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private Integer statusCode; 
         private DescribeClusterNetInfoResponseBody body; 
 
         private BuilderImpl() {
@@ -88,7 +73,6 @@ public class DescribeClusterNetInfoResponse extends Response {
         private BuilderImpl(DescribeClusterNetInfoResponse response) {
             super(response);
             this.headers = response.headers;
-            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -98,15 +82,6 @@ public class DescribeClusterNetInfoResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * statusCode.
-         */
-        @Override
-        public Builder statusCode(Integer statusCode) {
-            this.statusCode = statusCode;
             return this;
         }
 

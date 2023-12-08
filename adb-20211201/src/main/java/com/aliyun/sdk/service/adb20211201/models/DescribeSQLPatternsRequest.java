@@ -19,7 +19,6 @@ public class DescribeSQLPatternsRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
-    @Validation(required = true)
     private String endTime;
 
     @Query
@@ -32,7 +31,6 @@ public class DescribeSQLPatternsRequest extends Request {
 
     @Query
     @NameInMap("Order")
-    @Validation(required = true)
     private String order;
 
     @Query
@@ -50,7 +48,6 @@ public class DescribeSQLPatternsRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     private DescribeSQLPatternsRequest(Builder builder) {

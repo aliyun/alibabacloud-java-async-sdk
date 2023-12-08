@@ -19,12 +19,10 @@ public class DescribePatternPerformanceRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
-    @Validation(required = true)
     private String endTime;
 
     @Query
     @NameInMap("PatternId")
-    @Validation(required = true)
     private String patternId;
 
     @Query
@@ -34,7 +32,6 @@ public class DescribePatternPerformanceRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
     private DescribePatternPerformanceRequest(Builder builder) {

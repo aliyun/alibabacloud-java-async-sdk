@@ -16,10 +16,6 @@ public class GetTableObjectsResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    private Integer statusCode;
-
     @NameInMap("body")
     @Validation(required = true)
     private GetTableObjectsResponseBody body;
@@ -27,7 +23,6 @@ public class GetTableObjectsResponse extends Response {
     private GetTableObjectsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
-        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -48,13 +43,6 @@ public class GetTableObjectsResponse extends Response {
     }
 
     /**
-     * @return statusCode
-     */
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
      * @return body
      */
     public GetTableObjectsResponseBody getBody() {
@@ -64,8 +52,6 @@ public class GetTableObjectsResponse extends Response {
     public interface Builder extends Response.Builder<GetTableObjectsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
-
-        Builder statusCode(Integer statusCode);
 
         Builder body(GetTableObjectsResponseBody body);
 
@@ -78,7 +64,6 @@ public class GetTableObjectsResponse extends Response {
             extends Response.BuilderImpl<GetTableObjectsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private Integer statusCode; 
         private GetTableObjectsResponseBody body; 
 
         private BuilderImpl() {
@@ -88,7 +73,6 @@ public class GetTableObjectsResponse extends Response {
         private BuilderImpl(GetTableObjectsResponse response) {
             super(response);
             this.headers = response.headers;
-            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -98,15 +82,6 @@ public class GetTableObjectsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * statusCode.
-         */
-        @Override
-        public Builder statusCode(Integer statusCode) {
-            this.statusCode = statusCode;
             return this;
         }
 
