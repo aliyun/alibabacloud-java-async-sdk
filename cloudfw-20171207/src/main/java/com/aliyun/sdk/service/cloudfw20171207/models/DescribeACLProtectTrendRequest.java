@@ -96,7 +96,7 @@ public class DescribeACLProtectTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +105,11 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +118,7 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * This parameter is deprecated.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -123,7 +127,7 @@ public class DescribeACLProtectTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

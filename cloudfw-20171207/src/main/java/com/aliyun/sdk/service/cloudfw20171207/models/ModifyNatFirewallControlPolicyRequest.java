@@ -54,6 +54,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
     private String destinationType;
 
     @Query
+    @NameInMap("Direction")
+    private String direction;
+
+    @Query
     @NameInMap("DomainResolveType")
     private String domainResolveType;
 
@@ -120,6 +124,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         this.destPortType = builder.destPortType;
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
+        this.direction = builder.direction;
         this.domainResolveType = builder.domainResolveType;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
@@ -209,6 +214,13 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
      */
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
     }
 
     /**
@@ -312,6 +324,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         private String destPortType; 
         private String destination; 
         private String destinationType; 
+        private String direction; 
         private String domainResolveType; 
         private Long endTime; 
         private String lang; 
@@ -341,6 +354,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
             this.destPortType = request.destPortType;
             this.destination = request.destination;
             this.destinationType = request.destinationType;
+            this.direction = request.direction;
             this.domainResolveType = request.domainResolveType;
             this.endTime = request.endTime;
             this.lang = request.lang;
@@ -464,6 +478,15 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
             this.destinationType = destinationType;
+            return this;
+        }
+
+        /**
+         * Direction.
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
             return this;
         }
 

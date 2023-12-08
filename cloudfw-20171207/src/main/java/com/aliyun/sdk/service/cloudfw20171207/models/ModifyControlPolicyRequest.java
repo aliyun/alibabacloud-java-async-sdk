@@ -371,10 +371,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the access control policy.
+         * The UUID of the access control policy.
          * <p>
          * 
-         * >  If you want to modify the configurations of an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.
+         * >  To modify an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](~~138866~~) interface to query the UUID.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -401,7 +401,7 @@ public class ModifyControlPolicyRequest extends Request {
          * *   **Memcache**
          * *   **SSL**
          * 
-         * >  The value **ANY** indicates all types of applications.
+         * >  The value ANY** indicates all types of applications.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -410,7 +410,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * The application names. You can specify multiple application names.
+         * The application names.
          */
         public Builder applicationNameList(java.util.List < String > applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
@@ -462,10 +462,10 @@ public class ModifyControlPolicyRequest extends Request {
          * The destination address in the access control policy.
          * <p>
          * 
-         * *   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.XX.XX/24
-         * *   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group
-         * *   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com
-         * *   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]
+         * *   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.XX.XX/24.
+         * *   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group.
+         * *   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com.
+         * *   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"].
          */
         public Builder destination(String destination) {
             this.putQueryParameter("Destination", destination);
@@ -477,10 +477,10 @@ public class ModifyControlPolicyRequest extends Request {
          * The type of the destination address in the access control policy. Valid values:
          * <p>
          * 
-         * *   **net**: destination CIDR block
-         * *   **group**: destination address book
-         * *   **domain**: destination domain name
-         * *   **location**: destination location
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **domain**: domain name
+         * *   **location**: location
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -502,7 +502,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -511,7 +514,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
+         * The language of the content within the request and the response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese (default)
@@ -524,7 +527,7 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * The type of the protocol in the access control policy. Valid values:
+         * The protocol type supported by the access control policy. Valid values:
          * <p>
          * 
          * *   **ANY**
@@ -532,7 +535,7 @@ public class ModifyControlPolicyRequest extends Request {
          * *   **UDP**
          * *   **ICMP**
          * 
-         * >  The value **ANY** indicates all types of protocols.
+         * >  The value ANY** indicates all types of applications.
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);
@@ -554,7 +557,17 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatDays.
+         * The days of a week or of a month on which the access control policy takes effect.
+         * <p>
+         * 
+         * *   If you set RepeatType to `Permanent`, `None`, or `Daily`, the value of this parameter is an empty array. Example: \[]
+         * *   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6]
+         * 
+         * >  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.
+         * 
+         * *   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31]
+         * 
+         * >  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.
          */
         public Builder repeatDays(java.util.List < Long > repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -563,7 +576,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatEndTime.
+         * The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder repeatEndTime(String repeatEndTime) {
             this.putQueryParameter("RepeatEndTime", repeatEndTime);
@@ -572,7 +588,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatStartTime.
+         * The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder repeatStartTime(String repeatStartTime) {
             this.putQueryParameter("RepeatStartTime", repeatStartTime);
@@ -581,7 +600,14 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * The recurrence type for the access control policy to take effect. Valid values:
+         * <p>
+         * 
+         * *   **Permanent** (default): The policy always takes effect.
+         * *   **None**: The policy takes effect for only once.
+         * *   **Daily**: The policy takes effect on a daily basis.
+         * *   **Weekly**: The policy takes effect on a weekly basis.
+         * *   **Monthly**: The policy takes effect on a monthly basis.
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -593,8 +619,8 @@ public class ModifyControlPolicyRequest extends Request {
          * The source address in the access control policy.
          * <p>
          * 
-         * *   If **SourceType** is set to net, the value of **Source** is a CIDR block. Example: 1.2.XX.XX/24
-         * *   If **SourceType** is set to group, the value of **Source** is an address book. Example: db_group
+         * *   If **SourceType** is set to net, the value of **Source** is a CIDR block. Example: 1.2.XX.XX/24.
+         * *   If **SourceType** is set to group, the value of **Source** is an address book. Example: db_group.
          * *   If **SourceType** is set to location, the value of **Source** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]
          */
         public Builder source(String source) {
@@ -607,9 +633,9 @@ public class ModifyControlPolicyRequest extends Request {
          * The type of the source address in the access control policy. Valid values:
          * <p>
          * 
-         * *   **net**: source CIDR block
-         * *   **group**: source address book
-         * *   **location**: source location
+         * *   **net**: CIDR block
+         * *   **group**: address book
+         * *   **location**: location
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -618,7 +644,10 @@ public class ModifyControlPolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

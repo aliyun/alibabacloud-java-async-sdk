@@ -191,8 +191,8 @@ public class CreateVpcFirewallConfigureRequest extends Request {
          * The status of the VPC firewall after you create the firewall. Valid values:
          * <p>
          * 
-         * *   **open**: After you create the VPC firewall, the firewall is automatically enabled. This is the default value.
-         * *   **close**: After you create the VPC firewall, the firewall is not automatically enabled. To enable the firewall, you can call the [ModifyVpcFirewallSwitchStatus](~~342935~~) operation.
+         * *   **open**: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.
+         * *   **close**: After you create the VPC firewall, the VPC firewall is disabled. To enable the firewall, you can call the [ModifyVpcFirewallSwitchStatus](~~342935~~) operation.
          */
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
@@ -201,11 +201,11 @@ public class CreateVpcFirewallConfigureRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. Valid values:
+         * The language of the content within the request and the response. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -239,7 +239,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
          * The region ID of the local VPC.
          * <p>
          * 
-         * >  For more information about regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+         * >  For more information about the regions in which Cloud Firewall is available, see [Supported regions](~~195657~~).
          */
         public Builder localVpcRegion(String localVpcRegion) {
             this.putQueryParameter("LocalVpcRegion", localVpcRegion);
@@ -282,7 +282,7 @@ public class CreateVpcFirewallConfigureRequest extends Request {
          * The region ID of the peer VPC.
          * <p>
          * 
-         * >  For more information about regions in which Cloud Firewall is supported, see [Supported regions](~~195657~~).
+         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
          */
         public Builder peerVpcRegion(String peerVpcRegion) {
             this.putQueryParameter("PeerVpcRegion", peerVpcRegion);

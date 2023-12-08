@@ -101,6 +101,9 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         @NameInMap("AclRuleCount")
         private Integer aclRuleCount;
 
+        @NameInMap("IsDefault")
+        private Boolean isDefault;
+
         @NameInMap("MemberUid")
         private String memberUid;
 
@@ -108,6 +111,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             this.aclGroupId = builder.aclGroupId;
             this.aclGroupName = builder.aclGroupName;
             this.aclRuleCount = builder.aclRuleCount;
+            this.isDefault = builder.isDefault;
             this.memberUid = builder.memberUid;
         }
 
@@ -141,6 +145,13 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return isDefault
+         */
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
+        /**
          * @return memberUid
          */
         public String getMemberUid() {
@@ -151,6 +162,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             private String aclGroupId; 
             private String aclGroupName; 
             private Integer aclRuleCount; 
+            private Boolean isDefault; 
             private String memberUid; 
 
             /**
@@ -189,6 +201,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
              */
             public Builder aclRuleCount(Integer aclRuleCount) {
                 this.aclRuleCount = aclRuleCount;
+                return this;
+            }
+
+            /**
+             * IsDefault.
+             */
+            public Builder isDefault(Boolean isDefault) {
+                this.isDefault = isDefault;
                 return this;
             }
 

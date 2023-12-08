@@ -62,7 +62,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataList.
+         * The data returned.
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -70,7 +70,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -286,7 +286,13 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String trafficPercent7Day; 
 
             /**
-             * AclRecommendDetail.
+             * The reason why recommended intelligent policies are unavailable. Valid values:
+             * <p>
+             * 
+             * *   No recommended intelligent policies are available.
+             * *   This feature is available only to some users.
+             * *   The policy configuration has been modified. No recommended intelligent policies are available.
+             * *   The recommended intelligent policies have been configured. No new recommended intelligent policies are available.
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -294,7 +300,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsInstanceId.
+             * The instance ID.
              */
             public Builder assetsInstanceId(String assetsInstanceId) {
                 this.assetsInstanceId = assetsInstanceId;
@@ -302,7 +308,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsName.
+             * The instance name.
              */
             public Builder assetsName(String assetsName) {
                 this.assetsName = assetsName;
@@ -310,7 +316,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * AssetsType.
+             * The asset type of the instance.
              */
             public Builder assetsType(String assetsType) {
                 this.assetsType = assetsType;
@@ -318,7 +324,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * DetailNum.
+             * The total number of ports.
              */
             public Builder detailNum(Integer detailNum) {
                 this.detailNum = detailNum;
@@ -326,7 +332,11 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * HasAclRecommend.
+             * Specifies whether an access control policy is recommended. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
@@ -334,7 +344,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * PortList.
+             * The list of ports.
              */
             public Builder portList(java.util.List < String > portList) {
                 this.portList = portList;
@@ -342,7 +352,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * The public IP address of the instance.
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -350,7 +360,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The region ID of the instance.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -358,7 +368,13 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **3**: high risk
+             * *   **2**: medium risk
+             * *   **1**: low risk
+             * *   **0**: no risk
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -366,7 +382,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * RiskReason.
+             * The reason for the risk.
              */
             public Builder riskReason(String riskReason) {
                 this.riskReason = riskReason;
@@ -374,7 +390,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceNameList.
+             * The list of applications.
              */
             public Builder serviceNameList(java.util.List < String > serviceNameList) {
                 this.serviceNameList = serviceNameList;
@@ -382,7 +398,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent1Day.
+             * The percentage of traffic of a day. Unit: percent (%).
              */
             public Builder trafficPercent1Day(String trafficPercent1Day) {
                 this.trafficPercent1Day = trafficPercent1Day;
@@ -390,7 +406,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent30Day.
+             * The percentage of traffic of 30 days. Unit: percent (%).
              */
             public Builder trafficPercent30Day(String trafficPercent30Day) {
                 this.trafficPercent30Day = trafficPercent30Day;
@@ -398,7 +414,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent7Day.
+             * The percentage of traffic of seven days. Unit: percent (%).
              */
             public Builder trafficPercent7Day(String trafficPercent7Day) {
                 this.trafficPercent7Day = trafficPercent7Day;
@@ -463,7 +479,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -471,7 +487,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -479,7 +495,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

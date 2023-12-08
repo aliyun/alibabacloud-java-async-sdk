@@ -16,10 +16,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    private Integer statusCode;
-
     @NameInMap("body")
     @Validation(required = true)
     private ResetVpcFirewallRuleHitCountResponseBody body;
@@ -27,7 +23,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
     private ResetVpcFirewallRuleHitCountResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
-        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -48,13 +43,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
     }
 
     /**
-     * @return statusCode
-     */
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
      * @return body
      */
     public ResetVpcFirewallRuleHitCountResponseBody getBody() {
@@ -64,8 +52,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
     public interface Builder extends Response.Builder<ResetVpcFirewallRuleHitCountResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
-
-        Builder statusCode(Integer statusCode);
 
         Builder body(ResetVpcFirewallRuleHitCountResponseBody body);
 
@@ -78,7 +64,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
             extends Response.BuilderImpl<ResetVpcFirewallRuleHitCountResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private Integer statusCode; 
         private ResetVpcFirewallRuleHitCountResponseBody body; 
 
         private BuilderImpl() {
@@ -88,7 +73,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
         private BuilderImpl(ResetVpcFirewallRuleHitCountResponse response) {
             super(response);
             this.headers = response.headers;
-            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -98,15 +82,6 @@ public class ResetVpcFirewallRuleHitCountResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * statusCode.
-         */
-        @Override
-        public Builder statusCode(Integer statusCode) {
-            this.statusCode = statusCode;
             return this;
         }
 

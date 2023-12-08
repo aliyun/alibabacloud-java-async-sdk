@@ -543,7 +543,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the access control policy was created.
+             * The time when the access control policy was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -595,7 +595,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination address in the access control policy. The value of this parameter varies based on the value of the DestinationType parameter. Valid values:
+             * The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:
              * <p>
              * 
              * *   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
@@ -635,7 +635,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
              * *   **net**: CIDR block
              * *   **group**: address book
              * *   **domain**: domain name
-             * *   **location**
+             * *   **location**: location
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -651,7 +651,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time of the DNS resolution result. The value is a timestamp. Unit: seconds.
+             * The time when the Domain Name System (DNS) resolution was performed. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
@@ -662,9 +662,9 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
              * The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
              * <p>
              * 
-             * *   **1**: Fully qualified domain name (FQDN)-based
-             * *   **2**: Domain Name System (DNS)-based
-             * *   **3**: FQDN and DNS-based
+             * *   **0**: fully qualified domain name (FQDN) resolution
+             * *   **1**: dynamic DNS resolution
+             * *   **2**: FQDN resolution and dynamic DNS resolution
              */
             public Builder domainResolveType(Integer domainResolveType) {
                 this.domainResolveType = domainResolveType;
@@ -680,7 +680,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The times when the access control policy was last hit. The value is a timestamp. Unit: seconds.
+             * The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -696,7 +696,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the access control policy was modified.
+             * The time when the access control policy was modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -723,7 +723,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol in the access control policy. Valid values:
+             * The protocol type in the access control policy. Valid values:
              * <p>
              * 
              * *   **ANY**
@@ -810,7 +810,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source address book in the access control policy. Valid values:
+             * The type of the source address in the access control policy. Valid values:
              * <p>
              * 
              * *   **net**: CIDR block
@@ -823,7 +823,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated based on the following formula: Quota that is consumed by an access control policy = Number of source CIDR blocks × Number of destination CIDR blocks, regions, or resolved domain names × *Number of applications* × Number of ports.
+             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.
              */
             public Builder spreadCnt(String spreadCnt) {
                 this.spreadCnt = spreadCnt;

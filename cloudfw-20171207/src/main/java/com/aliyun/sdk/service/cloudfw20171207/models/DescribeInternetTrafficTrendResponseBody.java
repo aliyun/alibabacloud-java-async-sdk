@@ -206,7 +206,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         private Long totalSession; 
 
         /**
-         * AvgInBps.
+         * The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.
          */
         public Builder avgInBps(Long avgInBps) {
             this.avgInBps = avgInBps;
@@ -214,7 +214,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgOutBps.
+         * The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.
          */
         public Builder avgOutBps(Long avgOutBps) {
             this.avgOutBps = avgOutBps;
@@ -222,7 +222,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgSession.
+         * The average number of requests.
          */
         public Builder avgSession(Long avgSession) {
             this.avgSession = avgSession;
@@ -230,7 +230,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * AvgTotalBps.
+         * The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.
          */
         public Builder avgTotalBps(Long avgTotalBps) {
             this.avgTotalBps = avgTotalBps;
@@ -238,7 +238,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * DataList.
+         * The statistics on traffic.
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -246,7 +246,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBandwidthTime.
+         * The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder maxBandwidthTime(Long maxBandwidthTime) {
             this.maxBandwidthTime = maxBandwidthTime;
@@ -254,7 +254,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxInBps.
+         * The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.
          */
         public Builder maxInBps(Long maxInBps) {
             this.maxInBps = maxInBps;
@@ -262,7 +262,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxOutBps.
+         * The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.
          */
         public Builder maxOutBps(Long maxOutBps) {
             this.maxOutBps = maxOutBps;
@@ -270,7 +270,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxSession.
+         * The number of requests during the peak hour of the network throughout.
          */
         public Builder maxSession(Long maxSession) {
             this.maxSession = maxSession;
@@ -278,7 +278,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxTotalBps.
+         * The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.
          */
         public Builder maxTotalBps(Long maxTotalBps) {
             this.maxTotalBps = maxTotalBps;
@@ -286,7 +286,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -294,7 +294,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBytes.
+         * The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.
          */
         public Builder totalBytes(Long totalBytes) {
             this.totalBytes = totalBytes;
@@ -302,7 +302,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalInBytes.
+         * The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.
          */
         public Builder totalInBytes(Long totalInBytes) {
             this.totalInBytes = totalInBytes;
@@ -310,7 +310,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalOutBytes.
+         * The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.
          */
         public Builder totalOutBytes(Long totalOutBytes) {
             this.totalOutBytes = totalOutBytes;
@@ -318,7 +318,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSession.
+         * The total number of requests.
          */
         public Builder totalSession(Long totalSession) {
             this.totalSession = totalSession;
@@ -466,7 +466,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             private Long totalBps; 
 
             /**
-             * InBps.
+             * The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -474,7 +474,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -482,7 +482,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * InPps.
+             * The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).
              */
             public Builder inPps(Long inPps) {
                 this.inPps = inPps;
@@ -490,7 +490,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * NewConn.
+             * The number of new connections.
              */
             public Builder newConn(Long newConn) {
                 this.newConn = newConn;
@@ -498,7 +498,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * The outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -506,7 +506,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -514,7 +514,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * OutPps.
+             * The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.
              */
             public Builder outPps(Long outPps) {
                 this.outPps = outPps;
@@ -522,7 +522,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * SessionCount.
+             * The number of requests.
              */
             public Builder sessionCount(Long sessionCount) {
                 this.sessionCount = sessionCount;
@@ -530,7 +530,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder time(Integer time) {
                 this.time = time;
@@ -538,7 +538,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBps.
+             * The total inbound and outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;

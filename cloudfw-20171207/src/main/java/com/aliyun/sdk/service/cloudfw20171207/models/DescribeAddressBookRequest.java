@@ -18,7 +18,6 @@ public class DescribeAddressBookRequest extends Request {
 
     @Query
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     private String currentPage;
 
     @Query
@@ -31,7 +30,6 @@ public class DescribeAddressBookRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private String pageSize;
 
     @Query

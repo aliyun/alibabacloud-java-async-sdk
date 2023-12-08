@@ -62,7 +62,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         /**
-         * TrFirewallRoutePolicies.
+         * The routing policies.
          */
         public Builder trFirewallRoutePolicies(java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies) {
             this.trFirewallRoutePolicies = trFirewallRoutePolicies;
@@ -130,7 +130,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the secondary traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -138,7 +138,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * CandidateType.
+             * The type of the secondary traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -191,7 +191,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the primary traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -199,7 +199,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * CandidateType.
+             * The type of the primary traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -312,7 +312,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             private String trFirewallRoutePolicyId; 
 
             /**
-             * DestCandidateList.
+             * The secondary traffic redirection instances.
              */
             public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
                 this.destCandidateList = destCandidateList;
@@ -320,7 +320,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDescription.
+             * The description of the routing policy.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -328,7 +328,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the routing policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -336,7 +336,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyStatus.
+             * The status of the routing policy. Valid values:
+             * <p>
+             * 
+             * *   creating: The policy is being created.
+             * *   deleting: The policy is being deleted.
+             * *   opening: The policy is being enabled.
+             * *   opened: The policy is enabled.
+             * *   closing: The policy is being disabled.
+             * *   closed: The policy is disabled.
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -344,7 +352,12 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the traffic redirection scenario of the VPC firewall. Valid values:
+             * <p>
+             * 
+             * *   **fullmesh**: interconnected instances
+             * *   **one_to_one**: instance to instance
+             * *   **end_to_end**: instance to instances
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -352,7 +365,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * SrcCandidateList.
+             * The primary traffic redirection instances.
              */
             public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
                 this.srcCandidateList = srcCandidateList;
@@ -360,7 +373,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRoutePolicyId.
+             * The ID of the routing policy.
              */
             public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
                 this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

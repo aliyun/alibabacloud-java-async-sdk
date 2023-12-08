@@ -18,6 +18,10 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
     private String aclUuid;
 
     @Query
+    @NameInMap("Direction")
+    private String direction;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -33,6 +37,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
     private ModifyNatFirewallControlPolicyPositionRequest(Builder builder) {
         super(builder);
         this.aclUuid = builder.aclUuid;
+        this.direction = builder.direction;
         this.lang = builder.lang;
         this.natGatewayId = builder.natGatewayId;
         this.newOrder = builder.newOrder;
@@ -59,6 +64,13 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
     }
 
     /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -81,6 +93,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNatFirewallControlPolicyPositionRequest, Builder> {
         private String aclUuid; 
+        private String direction; 
         private String lang; 
         private String natGatewayId; 
         private Integer newOrder; 
@@ -92,6 +105,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         private Builder(ModifyNatFirewallControlPolicyPositionRequest request) {
             super(request);
             this.aclUuid = request.aclUuid;
+            this.direction = request.direction;
             this.lang = request.lang;
             this.natGatewayId = request.natGatewayId;
             this.newOrder = request.newOrder;
@@ -103,6 +117,15 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
             this.aclUuid = aclUuid;
+            return this;
+        }
+
+        /**
+         * Direction.
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
             return this;
         }
 

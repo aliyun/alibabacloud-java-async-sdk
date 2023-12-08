@@ -170,7 +170,13 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The direction of the internet traffic.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **in**: inbound traffic
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -179,7 +185,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +194,11 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content in the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -197,7 +207,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * SourceCode.
+         * The source code.
          */
         public Builder sourceCode(String sourceCode) {
             this.putQueryParameter("SourceCode", sourceCode);
@@ -206,7 +216,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The IP address of the access source.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -215,7 +225,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * SrcPrivateIP.
+         * The private IP address of the source.
          */
         public Builder srcPrivateIP(String srcPrivateIP) {
             this.putQueryParameter("SrcPrivateIP", srcPrivateIP);
@@ -224,7 +234,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * SrcPublicIP.
+         * The public IP address of the source.
          */
         public Builder srcPublicIP(String srcPublicIP) {
             this.putQueryParameter("SrcPublicIP", srcPublicIP);
@@ -233,7 +243,7 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -242,7 +252,11 @@ public class DescribeInternetTrafficTrendRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * The type of the traffic that is captured. Valid values:
+         * <p>
+         * 
+         * *   **max** (default): peak traffic
+         * *   **avg**: average traffic
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

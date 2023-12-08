@@ -110,7 +110,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private java.util.List < TrendList> trendList; 
 
         /**
-         * InProtectCnt.
+         * The number of internal requests that are blocked by the ACL feature.
          */
         public Builder inProtectCnt(Long inProtectCnt) {
             this.inProtectCnt = inProtectCnt;
@@ -118,7 +118,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * InterVPCProtectCnt.
+         * This parameter is deprecated.
          */
         public Builder interVPCProtectCnt(Long interVPCProtectCnt) {
             this.interVPCProtectCnt = interVPCProtectCnt;
@@ -126,7 +126,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * The interval for returning data. Unit: seconds.
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -134,7 +134,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * OutProtectCnt.
+         * The number of external requests that are blocked by the ACL feature.
          */
         public Builder outProtectCnt(Long outProtectCnt) {
             this.outProtectCnt = outProtectCnt;
@@ -142,7 +142,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalProtectCnt.
+         * The total number of requests that are blocked by the ACL feature.
          */
         public Builder totalProtectCnt(Long totalProtectCnt) {
             this.totalProtectCnt = totalProtectCnt;
@@ -158,7 +158,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TrendList.
+         * The statistics on the requests that are blocked by the ACL feature.
          */
         public Builder trendList(java.util.List < TrendList> trendList) {
             this.trendList = trendList;
@@ -210,7 +210,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * ProtectCnt.
+             * The number of requests that are blocked by ACL on the current day.
              */
             public Builder protectCnt(Integer protectCnt) {
                 this.protectCnt = protectCnt;
@@ -218,7 +218,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The UNIX timestamp at midnight (00:00:00) of each day, which indicates the date of the current day. Unit: seconds.
              */
             public Builder time(Long time) {
                 this.time = time;
