@@ -1059,6 +1059,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAvailableHoneypotResponse> listAvailableHoneypot(ListAvailableHoneypotRequest request);
 
+    CompletableFuture<ListBackupRecordResponse> listBackupRecord(ListBackupRecordRequest request);
+
     CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request);
 
     CompletableFuture<ListCheckItemResponse> listCheckItem(ListCheckItemRequest request);

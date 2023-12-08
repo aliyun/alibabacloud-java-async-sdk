@@ -421,7 +421,12 @@ public class DescribeImageListBySensitiveFileRequest extends Request {
         }
 
         /**
-         * Status.
+         * The sensitive file status. Valid values:
+         * <p>
+         * 
+         * *   **0**: unhandled
+         * *   **1**: ignored
+         * *   **2**: false positive
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

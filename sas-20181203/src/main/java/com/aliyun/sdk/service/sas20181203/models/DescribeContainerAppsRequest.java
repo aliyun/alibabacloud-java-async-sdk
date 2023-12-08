@@ -98,7 +98,7 @@ public class DescribeContainerAppsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class DescribeContainerAppsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -116,7 +116,7 @@ public class DescribeContainerAppsRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The application value that you want to query. Fuzzy match is supported.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -125,7 +125,10 @@ public class DescribeContainerAppsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

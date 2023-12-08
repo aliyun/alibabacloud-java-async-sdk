@@ -110,7 +110,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The groups.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether exceptions are handled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +226,11 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * GroupFlag.
+             * The server group type. Valid values:
+             * <p>
+             * 
+             * *   **0**: default group
+             * *   **1**: other group
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -230,7 +238,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The server group ID.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -238,7 +246,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The server group name.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -327,7 +335,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -335,7 +343,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -343,7 +351,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -351,7 +359,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +367,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -23,7 +23,6 @@ public class FixCheckWarningsRequest extends Request {
 
     @Query
     @NameInMap("RiskId")
-    @Validation(required = true)
     private Long riskId;
 
     @Query

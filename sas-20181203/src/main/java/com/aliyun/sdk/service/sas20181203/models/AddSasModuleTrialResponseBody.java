@@ -50,7 +50,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AuthLimit.
+             * The authorized quota.
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -154,7 +154,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * GmtEnd.
+             * The end time of the trial use.
              */
             public Builder gmtEnd(Long gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -162,7 +162,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStart.
+             * The start time of the trial use.
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -170,7 +170,11 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * The module code. Valid values:
+             * <p>
+             * 
+             * *   **vulFix**: vulnerability fixing
+             * *   **cloudSiem**: threat analysis
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -178,7 +182,11 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the trial use. Valid values:
+             * <p>
+             * 
+             * *   **1**: The feature is in trial use.
+             * *   **0**: The trial use ends.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -219,7 +227,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             private java.util.List < TrialRecordList> trialRecordList; 
 
             /**
-             * TrialRecordList.
+             * The trial use record.
              */
             public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;

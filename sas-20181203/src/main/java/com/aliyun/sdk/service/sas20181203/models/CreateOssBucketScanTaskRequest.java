@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOssBucketScanTaskRequest extends Request {
     @Query
+    @NameInMap("AllKeyPrefix")
+    private Boolean allKeyPrefix;
+
+    @Query
     @NameInMap("BucketNameList")
     @Validation(required = true)
     private java.util.List < String > bucketNameList;
@@ -20,6 +24,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
     @Query
     @NameInMap("ExcludeKeySuffixList")
     private java.util.List < String > excludeKeySuffixList;
+
+    @Query
+    @NameInMap("KeyPrefixList")
+    private java.util.List < String > keyPrefixList;
 
     @Query
     @NameInMap("KeySuffixList")
@@ -32,8 +40,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
 
     private CreateOssBucketScanTaskRequest(Builder builder) {
         super(builder);
+        this.allKeyPrefix = builder.allKeyPrefix;
         this.bucketNameList = builder.bucketNameList;
         this.excludeKeySuffixList = builder.excludeKeySuffixList;
+        this.keyPrefixList = builder.keyPrefixList;
         this.keySuffixList = builder.keySuffixList;
         this.scanMode = builder.scanMode;
     }
@@ -52,6 +62,13 @@ public class CreateOssBucketScanTaskRequest extends Request {
     }
 
     /**
+     * @return allKeyPrefix
+     */
+    public Boolean getAllKeyPrefix() {
+        return this.allKeyPrefix;
+    }
+
+    /**
      * @return bucketNameList
      */
     public java.util.List < String > getBucketNameList() {
@@ -63,6 +80,13 @@ public class CreateOssBucketScanTaskRequest extends Request {
      */
     public java.util.List < String > getExcludeKeySuffixList() {
         return this.excludeKeySuffixList;
+    }
+
+    /**
+     * @return keyPrefixList
+     */
+    public java.util.List < String > getKeyPrefixList() {
+        return this.keyPrefixList;
     }
 
     /**
@@ -80,8 +104,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOssBucketScanTaskRequest, Builder> {
+        private Boolean allKeyPrefix; 
         private java.util.List < String > bucketNameList; 
         private java.util.List < String > excludeKeySuffixList; 
+        private java.util.List < String > keyPrefixList; 
         private java.util.List < String > keySuffixList; 
         private Integer scanMode; 
 
@@ -91,14 +117,25 @@ public class CreateOssBucketScanTaskRequest extends Request {
 
         private Builder(CreateOssBucketScanTaskRequest request) {
             super(request);
+            this.allKeyPrefix = request.allKeyPrefix;
             this.bucketNameList = request.bucketNameList;
             this.excludeKeySuffixList = request.excludeKeySuffixList;
+            this.keyPrefixList = request.keyPrefixList;
             this.keySuffixList = request.keySuffixList;
             this.scanMode = request.scanMode;
         } 
 
         /**
-         * BucketNameList.
+         * AllKeyPrefix.
+         */
+        public Builder allKeyPrefix(Boolean allKeyPrefix) {
+            this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
+            this.allKeyPrefix = allKeyPrefix;
+            return this;
+        }
+
+        /**
+         * The names of the buckets.
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -107,7 +144,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * ExcludeKeySuffixList.
+         * The suffixes of the objects that you do not want to check.
          */
         public Builder excludeKeySuffixList(java.util.List < String > excludeKeySuffixList) {
             this.putQueryParameter("ExcludeKeySuffixList", excludeKeySuffixList);
@@ -116,7 +153,16 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * KeySuffixList.
+         * KeyPrefixList.
+         */
+        public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
+            this.putQueryParameter("KeyPrefixList", keyPrefixList);
+            this.keyPrefixList = keyPrefixList;
+            return this;
+        }
+
+        /**
+         * The suffixes of the objects that you want to check.
          */
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -125,7 +171,11 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * ScanMode.
+         * The check mode. Valid values:
+         * <p>
+         * 
+         * *   **1**: checks all objects in the bucket.
+         * *   **2**: checks only new objects in the bucket.
          */
         public Builder scanMode(Integer scanMode) {
             this.putQueryParameter("ScanMode", scanMode);

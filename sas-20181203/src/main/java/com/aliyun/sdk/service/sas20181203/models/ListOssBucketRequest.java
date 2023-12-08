@@ -68,7 +68,7 @@ public class ListOssBucketRequest extends Request {
         } 
 
         /**
-         * BucketName.
+         * The name of the bucket.
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,7 +77,11 @@ public class ListOssBucketRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content in the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

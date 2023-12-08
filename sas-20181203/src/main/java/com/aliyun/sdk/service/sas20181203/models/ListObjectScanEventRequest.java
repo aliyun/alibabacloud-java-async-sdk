@@ -196,7 +196,7 @@ public class ListObjectScanEventRequest extends Request {
         } 
 
         /**
-         * BucketName.
+         * The name of the OSS bucket.
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -205,7 +205,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -214,7 +214,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the alert.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -223,7 +223,11 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -232,7 +236,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * Md5.
+         * The MD5 hash value of the file.
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -241,7 +245,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * OssKey.
+         * The key of the file that is stored in an OSS bucket.
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -250,7 +254,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +263,12 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * The risk level of the alert. Valid values:
+         * <p>
+         * 
+         * *   **high**
+         * *   **medium**
+         * *   **low**
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -268,7 +277,11 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * Source.
+         * The method that is used to detect the malicious file. Valid values:
+         * <p>
+         * 
+         * *   **API**: uses API operations.
+         * *   **OSS**: uses Object Storage Service (OSS) file check.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -277,7 +290,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * TimeEnd.
+         * The end of the time range during which the exception is detected.
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -286,7 +299,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * TimeStart.
+         * The beginning of the time range during which the exception is detected.
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

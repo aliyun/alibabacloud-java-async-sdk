@@ -50,7 +50,7 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

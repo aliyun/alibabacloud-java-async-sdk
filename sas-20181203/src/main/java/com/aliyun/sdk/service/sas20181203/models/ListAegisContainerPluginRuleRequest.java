@@ -112,7 +112,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * The query condition.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -121,7 +121,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -130,7 +130,11 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,7 +143,7 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +152,11 @@ public class ListAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: custom
+         * *   **1**: system
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);

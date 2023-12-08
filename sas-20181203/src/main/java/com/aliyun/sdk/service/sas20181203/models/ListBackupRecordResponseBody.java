@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeCustomBlockInstancesResponseBody} extends {@link TeaModel}
+ * {@link ListBackupRecordResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeCustomBlockInstancesResponseBody</p>
+ * <p>ListBackupRecordResponseBody</p>
  */
-public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+public class ListBackupRecordResponseBody extends TeaModel {
+    @NameInMap("BackupRecordList")
+    private java.util.List < BackupRecordList> backupRecordList;
 
     @NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -21,8 +21,8 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DescribeCustomBlockInstancesResponseBody(Builder builder) {
-        this.instanceList = builder.instanceList;
+    private ListBackupRecordResponseBody(Builder builder) {
+        this.backupRecordList = builder.backupRecordList;
         this.pageInfo = builder.pageInfo;
         this.requestId = builder.requestId;
     }
@@ -31,15 +31,15 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeCustomBlockInstancesResponseBody create() {
+    public static ListBackupRecordResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return instanceList
+     * @return backupRecordList
      */
-    public java.util.List < InstanceList> getInstanceList() {
-        return this.instanceList;
+    public java.util.List < BackupRecordList> getBackupRecordList() {
+        return this.backupRecordList;
     }
 
     /**
@@ -57,15 +57,15 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List < BackupRecordList> backupRecordList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * The server ID.
+         * The details of the backup record.
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
-            this.instanceList = instanceList;
+        public Builder backupRecordList(java.util.List < BackupRecordList> backupRecordList) {
+            this.backupRecordList = backupRecordList;
             return this;
         }
 
@@ -78,28 +78,46 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DescribeCustomBlockInstancesResponseBody build() {
-            return new DescribeCustomBlockInstancesResponseBody(this);
+        public ListBackupRecordResponseBody build() {
+            return new ListBackupRecordResponseBody(this);
         } 
 
     } 
 
-    public static class InstanceList extends TeaModel {
-        @NameInMap("AliNetOnline")
-        private Boolean aliNetOnline;
+    public static class BackupRecordList extends TeaModel {
+        @NameInMap("BackupEndTime")
+        private Long backupEndTime;
 
-        @NameInMap("BlockType")
-        private String blockType;
+        @NameInMap("BackupJobId")
+        private String backupJobId;
+
+        @NameInMap("BackupPlanId")
+        private String backupPlanId;
+
+        @NameInMap("BackupStartTime")
+        private Long backupStartTime;
+
+        @NameInMap("BackupStatus")
+        private String backupStatus;
+
+        @NameInMap("ClientId")
+        private String clientId;
 
         @NameInMap("ErrorCode")
         private String errorCode;
+
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -110,24 +128,30 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Status")
-        private Integer status;
+        @NameInMap("Ip")
+        private String ip;
 
-        @NameInMap("SuccessInfo")
-        private String successInfo;
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("Uuid")
         private String uuid;
 
-        private InstanceList(Builder builder) {
-            this.aliNetOnline = builder.aliNetOnline;
-            this.blockType = builder.blockType;
+        private BackupRecordList(Builder builder) {
+            this.backupEndTime = builder.backupEndTime;
+            this.backupJobId = builder.backupJobId;
+            this.backupPlanId = builder.backupPlanId;
+            this.backupStartTime = builder.backupStartTime;
+            this.backupStatus = builder.backupStatus;
+            this.clientId = builder.clientId;
             this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+            this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
-            this.status = builder.status;
-            this.successInfo = builder.successInfo;
+            this.ip = builder.ip;
+            this.regionId = builder.regionId;
             this.uuid = builder.uuid;
         }
 
@@ -135,22 +159,50 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static InstanceList create() {
+        public static BackupRecordList create() {
             return builder().build();
         }
 
         /**
-         * @return aliNetOnline
+         * @return backupEndTime
          */
-        public Boolean getAliNetOnline() {
-            return this.aliNetOnline;
+        public Long getBackupEndTime() {
+            return this.backupEndTime;
         }
 
         /**
-         * @return blockType
+         * @return backupJobId
          */
-        public String getBlockType() {
-            return this.blockType;
+        public String getBackupJobId() {
+            return this.backupJobId;
+        }
+
+        /**
+         * @return backupPlanId
+         */
+        public String getBackupPlanId() {
+            return this.backupPlanId;
+        }
+
+        /**
+         * @return backupStartTime
+         */
+        public Long getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        /**
+         * @return backupStatus
+         */
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
         }
 
         /**
@@ -158,6 +210,20 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
          */
         public String getErrorCode() {
             return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -182,17 +248,17 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return ip
          */
-        public Integer getStatus() {
-            return this.status;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
-         * @return successInfo
+         * @return regionId
          */
-        public String getSuccessInfo() {
-            return this.successInfo;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -203,42 +269,77 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Boolean aliNetOnline; 
-            private String blockType; 
+            private Long backupEndTime; 
+            private String backupJobId; 
+            private String backupPlanId; 
+            private Long backupStartTime; 
+            private String backupStatus; 
+            private String clientId; 
             private String errorCode; 
+            private String errorMessage; 
+            private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
-            private Integer status; 
-            private String successInfo; 
+            private String ip; 
+            private String regionId; 
             private String uuid; 
 
             /**
-             * The status of the host network extension. Valid values:
-             * <p>
-             * 
-             * *   **true**: online
-             * *   **false**: offline
+             * The timestamp when the backup task ended. Unit: milliseconds.
              */
-            public Builder aliNetOnline(Boolean aliNetOnline) {
-                this.aliNetOnline = aliNetOnline;
+            public Builder backupEndTime(Long backupEndTime) {
+                this.backupEndTime = backupEndTime;
                 return this;
             }
 
             /**
-             * The blocking type. Valid values:
-             * <p>
-             * 
-             * *   **group**: security group
-             * *   **alinet**: host network extension
+             * The backup task ID.
              */
-            public Builder blockType(String blockType) {
-                this.blockType = blockType;
+            public Builder backupJobId(String backupJobId) {
+                this.backupJobId = backupJobId;
                 return this;
             }
 
             /**
-             * The error code returned.
+             * The backup plan ID.
+             */
+            public Builder backupPlanId(String backupPlanId) {
+                this.backupPlanId = backupPlanId;
+                return this;
+            }
+
+            /**
+             * The timestamp when the backup task started. Unit: milliseconds.
+             */
+            public Builder backupStartTime(Long backupStartTime) {
+                this.backupStartTime = backupStartTime;
+                return this;
+            }
+
+            /**
+             * The backup task status. Valid value:
+             * <p>
+             * 
+             * *   **BACKUP_COMPLETE**: The backup task is successful.
+             * *   **BACKUP_FAILED**: The backup task failed.
+             * *   **PARTIAL_COMPLETE**: The backup task is partially successful.
+             */
+            public Builder backupStatus(String backupStatus) {
+                this.backupStatus = backupStatus;
+                return this;
+            }
+
+            /**
+             * The ID of the anti-ransomware agent.
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * The error code of the backup task.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,7 +347,23 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * The error message of the backup task.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The instance ID of the server.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The instance name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -270,36 +387,31 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled for the server.
-             * <p>
-             * 
-             * *   **2**: enabling failed
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * The IP address of the server.
              */
-            public Builder status(Integer status) {
-                this.status = status;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * The information that is returned after brute-force attacks are blocked.
+             * The ID of the region in which the backup is stored.
              */
-            public Builder successInfo(String successInfo) {
-                this.successInfo = successInfo;
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
             /**
-             * The UUID of the server.
+             * The UUID of the server whose data is backed up based on the anti-ransomware policy.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
                 return this;
             }
 
-            public InstanceList build() {
-                return new InstanceList(this);
+            public BackupRecordList build() {
+                return new BackupRecordList(this);
             } 
 
         } 
@@ -384,7 +496,7 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: **20**.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -392,7 +504,7 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers to which the defense rule is applied.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

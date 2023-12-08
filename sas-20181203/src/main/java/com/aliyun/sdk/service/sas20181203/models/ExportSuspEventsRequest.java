@@ -41,6 +41,10 @@ public class ExportSuspEventsRequest extends Request {
     private String from;
 
     @Query
+    @NameInMap("GroupId")
+    private Long groupId;
+
+    @Query
     @NameInMap("Id")
     private Long id;
 
@@ -109,6 +113,7 @@ public class ExportSuspEventsRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.from = builder.from;
+        this.groupId = builder.groupId;
         this.id = builder.id;
         this.lang = builder.lang;
         this.levels = builder.levels;
@@ -186,6 +191,13 @@ public class ExportSuspEventsRequest extends Request {
      */
     public String getFrom() {
         return this.from;
+    }
+
+    /**
+     * @return groupId
+     */
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -301,6 +313,7 @@ public class ExportSuspEventsRequest extends Request {
         private String currentPage; 
         private String dealed; 
         private String from; 
+        private Long groupId; 
         private Long id; 
         private String lang; 
         private String levels; 
@@ -330,6 +343,7 @@ public class ExportSuspEventsRequest extends Request {
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.from = request.from;
+            this.groupId = request.groupId;
             this.id = request.id;
             this.lang = request.lang;
             this.levels = request.levels;
@@ -432,7 +446,19 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the new server group to which the servers belong.
+         * <p>
+         * 
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The unique ID of the alert event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -477,7 +503,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * OperateErrorCodeList.
+         * The status codes of alert events.
          */
         public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
@@ -599,7 +625,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * UniqueInfo.
+         * The unique key of the alert event.
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
@@ -608,7 +634,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The unique ID of the associated instance.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

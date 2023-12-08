@@ -50,7 +50,7 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
         private java.util.List < String > tagValues; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TagValues.
+         * The tag values.
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;

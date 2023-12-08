@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOssScanConfigRequest extends Request {
     @Query
+    @NameInMap("AllKeyPrefix")
+    private Boolean allKeyPrefix;
+
+    @Query
     @NameInMap("BucketNameList")
     private java.util.List < String > bucketNameList;
 
@@ -25,8 +29,16 @@ public class CreateOssScanConfigRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("KeyPrefixList")
+    private java.util.List < String > keyPrefixList;
+
+    @Query
     @NameInMap("KeySuffixList")
     private java.util.List < String > keySuffixList;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
 
     @Query
     @NameInMap("ScanDayList")
@@ -38,10 +50,13 @@ public class CreateOssScanConfigRequest extends Request {
 
     private CreateOssScanConfigRequest(Builder builder) {
         super(builder);
+        this.allKeyPrefix = builder.allKeyPrefix;
         this.bucketNameList = builder.bucketNameList;
         this.enable = builder.enable;
         this.endTime = builder.endTime;
+        this.keyPrefixList = builder.keyPrefixList;
         this.keySuffixList = builder.keySuffixList;
+        this.name = builder.name;
         this.scanDayList = builder.scanDayList;
         this.startTime = builder.startTime;
     }
@@ -57,6 +72,13 @@ public class CreateOssScanConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allKeyPrefix
+     */
+    public Boolean getAllKeyPrefix() {
+        return this.allKeyPrefix;
     }
 
     /**
@@ -81,10 +103,24 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return keyPrefixList
+     */
+    public java.util.List < String > getKeyPrefixList() {
+        return this.keyPrefixList;
+    }
+
+    /**
      * @return keySuffixList
      */
     public java.util.List < String > getKeySuffixList() {
         return this.keySuffixList;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -102,10 +138,13 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOssScanConfigRequest, Builder> {
+        private Boolean allKeyPrefix; 
         private java.util.List < String > bucketNameList; 
         private Integer enable; 
         private String endTime; 
+        private java.util.List < String > keyPrefixList; 
         private java.util.List < String > keySuffixList; 
+        private String name; 
         private java.util.List < Integer > scanDayList; 
         private String startTime; 
 
@@ -115,16 +154,28 @@ public class CreateOssScanConfigRequest extends Request {
 
         private Builder(CreateOssScanConfigRequest request) {
             super(request);
+            this.allKeyPrefix = request.allKeyPrefix;
             this.bucketNameList = request.bucketNameList;
             this.enable = request.enable;
             this.endTime = request.endTime;
+            this.keyPrefixList = request.keyPrefixList;
             this.keySuffixList = request.keySuffixList;
+            this.name = request.name;
             this.scanDayList = request.scanDayList;
             this.startTime = request.startTime;
         } 
 
         /**
-         * BucketNameList.
+         * AllKeyPrefix.
+         */
+        public Builder allKeyPrefix(Boolean allKeyPrefix) {
+            this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
+            this.allKeyPrefix = allKeyPrefix;
+            return this;
+        }
+
+        /**
+         * The names of buckets.
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -133,7 +184,11 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the policy. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -142,7 +197,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the scan ends. The time must be in the HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -151,7 +206,16 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * KeySuffixList.
+         * KeyPrefixList.
+         */
+        public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
+            this.putQueryParameter("KeyPrefixList", keyPrefixList);
+            this.keyPrefixList = keyPrefixList;
+            return this;
+        }
+
+        /**
+         * The suffixes of the files to scan.
          */
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -160,7 +224,16 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * ScanDayList.
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The days on which the scan is executed in a week.
          */
         public Builder scanDayList(java.util.List < Integer > scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
@@ -169,7 +242,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the scan starts. The time must be in the HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

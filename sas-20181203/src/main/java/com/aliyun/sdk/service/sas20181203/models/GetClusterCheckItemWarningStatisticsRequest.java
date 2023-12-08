@@ -80,7 +80,10 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * The server UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

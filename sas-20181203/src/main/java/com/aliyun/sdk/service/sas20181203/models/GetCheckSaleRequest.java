@@ -54,7 +54,11 @@ public class GetCheckSaleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which the Security Center instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** inside China
+         * *   Global **ap-southeast-1:** outside China
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -275,7 +275,7 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

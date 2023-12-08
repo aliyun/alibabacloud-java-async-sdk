@@ -286,7 +286,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * 要查询漏洞影响的容器名称。
+         * The name of the container that is affected by the vulnerability.
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -295,9 +295,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * 首次扫描时间结束时间。
+         * The end time of the first scan.
          * <p>
-         * > 时间戳，单位为毫秒。
+         * 
+         * >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTsEnd(Long createTsEnd) {
             this.putQueryParameter("CreateTsEnd", createTsEnd);
@@ -306,9 +307,10 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * 首次扫描时间起始时间。
+         * The start time of the first scan.
          * <p>
-         * > 时间戳，单位为毫秒。
+         * 
+         * >  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder createTsStart(Long createTsStart) {
             this.putQueryParameter("CreateTsStart", createTsStart);
@@ -317,7 +319,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * CveId.
+         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -351,7 +353,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * 要查询漏洞影响的镜像名称。
+         * The name of the image that is affected by the vulnerability.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -387,7 +389,7 @@ public class ExportVulRequest extends Request {
         }
 
         /**
-         * 要查询漏洞影响的进程路径。
+         * The path of the process that is affected by the vulnerability.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

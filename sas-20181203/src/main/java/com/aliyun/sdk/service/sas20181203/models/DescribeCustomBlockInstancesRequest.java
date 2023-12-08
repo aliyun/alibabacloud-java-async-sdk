@@ -124,7 +124,10 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that you want to specify in the rule.
+         * <p>
+         * 
+         * >  You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to obtain the IP address.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -133,7 +136,11 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * Bound.
+         * The traffic direction that you want to specify in the custom rule. Valid values:
+         * <p>
+         * 
+         * *   **in**: inbound
+         * *   **out**: outbound
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -142,7 +149,7 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -151,7 +158,7 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +176,12 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether the rule is enabled for the server.
+         * <p>
+         * 
+         * *   **2**: enabling failed
+         * *   **1**: enabled
+         * *   **0**: disabled
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

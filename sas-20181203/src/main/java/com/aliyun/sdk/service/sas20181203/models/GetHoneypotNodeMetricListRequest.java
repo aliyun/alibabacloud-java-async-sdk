@@ -152,7 +152,11 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Valid values:
+         * <p>
+         * 
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC
+         * *   Date format: YYYY-MM-DDThh:mm:ssZ
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +165,10 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * Express.
+         * The expression that is used to compute the query results in real time.
+         * <p>
+         * 
+         * >  Only the groupby expression is supported. This expression is similar to the GROUP BY statement that applies to databases.
          */
         public Builder express(String express) {
             this.putQueryParameter("Express", express);
@@ -170,7 +177,10 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * Length.
+         * The number of entries per page.
+         * <p>
+         * 
+         * >  The maximum value of the Length parameter in a request is 1440.
          */
         public Builder length(String length) {
             this.putQueryParameter("Length", length);
@@ -179,7 +189,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * The metric that is used to monitor the cloud service.
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -188,7 +198,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace of the cloud service. Format: acs_cloud service name.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -197,7 +207,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The management node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -206,7 +216,7 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * Period.
+         * The time interval. Unit: seconds. Valid values: 60, 300, and 900.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -215,7 +225,12 @@ public class GetHoneypotNodeMetricListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The following formats are supported:
+         * <p>
+         * 
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC
+         * *   Date format: YYYY-MM-DDThh:mm:ssZ
+         * *   The interval between the start time and the end time is less than or equal to 31 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

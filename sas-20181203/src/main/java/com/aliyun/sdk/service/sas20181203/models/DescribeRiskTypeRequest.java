@@ -95,7 +95,11 @@ public class DescribeRiskTypeRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. Valid values:
+         * <p>
+         * 
+         * *   **default**: host baseline
+         * *   **agentless**: agentless baseline
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

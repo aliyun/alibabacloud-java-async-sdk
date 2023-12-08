@@ -54,7 +54,10 @@ public class GetCommonSwitchConfigRequest extends Request {
         } 
 
         /**
-         * Type.
+         * The type of the common switch.
+         * <p>
+         * 
+         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the switch type from the response parameter SwitchId.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

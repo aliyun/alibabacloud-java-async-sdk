@@ -110,7 +110,7 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +119,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +132,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. If the return value of NextToken is empty, no next query is to be sent. If a value of NextToken is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +141,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. Maximum value: 2000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +150,11 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * UseNextToken.
+         * Specifies whether to use NextToken to query vulnerabilities. If you set this parameter to true, TotalCount is not returned. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

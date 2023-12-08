@@ -188,7 +188,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remark of the operation.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

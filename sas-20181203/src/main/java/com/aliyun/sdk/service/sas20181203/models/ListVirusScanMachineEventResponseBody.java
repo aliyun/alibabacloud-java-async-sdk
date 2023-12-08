@@ -62,7 +62,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of the alert event.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * InfoType.
+             * The display type of the value for ValueDisplay. Valid value:
+             * <p>
+             * 
+             * *   **download_url**, which indicates a download URL.
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -162,7 +165,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * NameDisplay.
+             * The display name of the alert event.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -170,7 +173,13 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The format in which the details of the exception are displayed.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **text**
+             * *   **html**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +187,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * ValueDisplay.
+             * The attribute information about the exception. The information includes the logon time or location of an alert triggered by an unusual logon, and the trojan file path or trojan type of an alert.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -303,7 +312,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Details.
+             * The details of the exception.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -311,7 +320,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the alert event.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -319,7 +328,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert event. The value indicates a subtype.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -327,7 +336,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -335,7 +344,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -343,7 +352,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -351,7 +360,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimeStamp.
+             * The timestamp when the alert event was last generated. Unit: milliseconds.
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -359,7 +368,12 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk level of the alert event. Valid values:
+             * <p>
+             * 
+             * *   **serious**
+             * *   **suspicious**
+             * *   **remind**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -424,7 +438,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -432,7 +446,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -440,7 +454,7 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

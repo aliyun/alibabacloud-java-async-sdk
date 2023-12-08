@@ -98,7 +98,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +242,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             private String signature; 
 
             /**
-             * Accessid.
+             * The key ID that is required for the file upload.
              */
             public Builder accessid(String accessid) {
                 this.accessid = accessid;
@@ -246,7 +250,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * The expiration time of the URL. The value is a timestamp. You can use the value to determine whether the URL expires. If the expiration time arrives, you can no longer use the URL to upload files.
              */
             public Builder expire(String expire) {
                 this.expire = expire;
@@ -254,7 +258,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The request URL during the upload.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -262,7 +266,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The full path of the file in OSS. The file is uploaded by calling the OSS PostObject operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -270,7 +274,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * The limits that are imposed on the file upload. The limits include the file size.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -278,7 +282,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * The signature that is calculated based on **AccessKeySecret** and **Policy**. When you call an Object Storage Service (OSS) API operation, OSS uses the signature information to verify the POST request.
              */
             public Builder signature(String signature) {
                 this.signature = signature;

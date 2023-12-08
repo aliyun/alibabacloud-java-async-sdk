@@ -82,7 +82,12 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * RefreshConfigType.
+         * The type of the configuration. Valid values:
+         * <p>
+         * 
+         * *   **0**: server synchronization task
+         * *   **1**: cloud service synchronization task
+         * *   **2**: scheduled AccessKey pair verification task
          */
         public Builder refreshConfigType(Integer refreshConfigType) {
             this.putQueryParameter("RefreshConfigType", refreshConfigType);
@@ -100,7 +105,7 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);

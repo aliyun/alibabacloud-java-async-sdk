@@ -50,7 +50,7 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
             private String targetSyncStatus; 
 
             /**
-             * TargetDefault.
+             * Specifies whether to turn on the switch for newly added servers. Valid values:
+             * <p>
+             * 
+             * *   **add**: By default, the switch is turned on for newly added servers.
+             * *   **del**: By default, the switch is turned off for newly added servers.
              */
             public Builder targetDefault(String targetDefault) {
                 this.targetDefault = targetDefault;
@@ -118,7 +122,11 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSyncStatus.
+             * The status of the synchronization. Valid values:
+             * <p>
+             * 
+             * *   **sync**: The modifications are being synchronized.
+             * *   **valid**: The modifications has taken effect.
              */
             public Builder targetSyncStatus(String targetSyncStatus) {
                 this.targetSyncStatus = targetSyncStatus;

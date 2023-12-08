@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOssScanConfigResponseBody</p>
  */
 public class CreateOssScanConfigResponseBody extends TeaModel {
+    @NameInMap("Id")
+    private Long id;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private CreateOssScanConfigResponseBody(Builder builder) {
+        this.id = builder.id;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class CreateOssScanConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,10 +46,19 @@ public class CreateOssScanConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long id; 
         private String requestId; 
 
         /**
-         * RequestId.
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

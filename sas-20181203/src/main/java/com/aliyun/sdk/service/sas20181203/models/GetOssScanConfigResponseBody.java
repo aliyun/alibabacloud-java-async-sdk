@@ -50,7 +50,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,6 +72,15 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AllKeyPrefix")
+        private Boolean allKeyPrefix;
+
+        @NameInMap("BucketCount")
+        private Integer bucketCount;
+
+        @NameInMap("BucketName")
+        private String bucketName;
+
         @NameInMap("BucketNameList")
         private java.util.List < String > bucketNameList;
 
@@ -81,8 +90,20 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("KeyPrefixList")
+        private java.util.List < String > keyPrefixList;
+
         @NameInMap("KeySuffixList")
         private java.util.List < String > keySuffixList;
+
+        @NameInMap("LastUpdateTime")
+        private Long lastUpdateTime;
+
+        @NameInMap("Name")
+        private String name;
 
         @NameInMap("ScanDayList")
         private java.util.List < Integer > scanDayList;
@@ -91,10 +112,17 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         private String startTime;
 
         private Data(Builder builder) {
+            this.allKeyPrefix = builder.allKeyPrefix;
+            this.bucketCount = builder.bucketCount;
+            this.bucketName = builder.bucketName;
             this.bucketNameList = builder.bucketNameList;
             this.enable = builder.enable;
             this.endTime = builder.endTime;
+            this.id = builder.id;
+            this.keyPrefixList = builder.keyPrefixList;
             this.keySuffixList = builder.keySuffixList;
+            this.lastUpdateTime = builder.lastUpdateTime;
+            this.name = builder.name;
             this.scanDayList = builder.scanDayList;
             this.startTime = builder.startTime;
         }
@@ -105,6 +133,27 @@ public class GetOssScanConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return allKeyPrefix
+         */
+        public Boolean getAllKeyPrefix() {
+            return this.allKeyPrefix;
+        }
+
+        /**
+         * @return bucketCount
+         */
+        public Integer getBucketCount() {
+            return this.bucketCount;
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         /**
@@ -129,10 +178,38 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return keyPrefixList
+         */
+        public java.util.List < String > getKeyPrefixList() {
+            return this.keyPrefixList;
+        }
+
+        /**
          * @return keySuffixList
          */
         public java.util.List < String > getKeySuffixList() {
             return this.keySuffixList;
+        }
+
+        /**
+         * @return lastUpdateTime
+         */
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -150,15 +227,46 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allKeyPrefix; 
+            private Integer bucketCount; 
+            private String bucketName; 
             private java.util.List < String > bucketNameList; 
             private Integer enable; 
             private String endTime; 
+            private String id; 
+            private java.util.List < String > keyPrefixList; 
             private java.util.List < String > keySuffixList; 
+            private Long lastUpdateTime; 
+            private String name; 
             private java.util.List < Integer > scanDayList; 
             private String startTime; 
 
             /**
-             * BucketNameList.
+             * AllKeyPrefix.
+             */
+            public Builder allKeyPrefix(Boolean allKeyPrefix) {
+                this.allKeyPrefix = allKeyPrefix;
+                return this;
+            }
+
+            /**
+             * BucketCount.
+             */
+            public Builder bucketCount(Integer bucketCount) {
+                this.bucketCount = bucketCount;
+                return this;
+            }
+
+            /**
+             * BucketName.
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * The names of the buckets.
              */
             public Builder bucketNameList(java.util.List < String > bucketNameList) {
                 this.bucketNameList = bucketNameList;
@@ -166,7 +274,11 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the check policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled.
+             * *   **0**: disabled.
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -174,7 +286,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the check. The time is in the HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -182,7 +294,23 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KeySuffixList.
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * KeyPrefixList.
+             */
+            public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
+                this.keyPrefixList = keyPrefixList;
+                return this;
+            }
+
+            /**
+             * The suffixes of the objects that are checked.
              */
             public Builder keySuffixList(java.util.List < String > keySuffixList) {
                 this.keySuffixList = keySuffixList;
@@ -190,7 +318,23 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScanDayList.
+             * LastUpdateTime.
+             */
+            public Builder lastUpdateTime(Long lastUpdateTime) {
+                this.lastUpdateTime = lastUpdateTime;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The days when the check is performed. The value indicates the days of the week.
              */
             public Builder scanDayList(java.util.List < Integer > scanDayList) {
                 this.scanDayList = scanDayList;
@@ -198,7 +342,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the check. The time is in the HH:mm:ss format.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

@@ -50,7 +50,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             private Long totalObject; 
 
             /**
-             * ExpireTime.
+             * The expiration time of the purchased quota.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -214,7 +214,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HighRisk.
+             * The number of high-risk objects.
              */
             public Builder highRisk(Long highRisk) {
                 this.highRisk = highRisk;
@@ -222,7 +222,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LowRisk.
+             * The number of low-risk objects.
              */
             public Builder lowRisk(Long lowRisk) {
                 this.lowRisk = lowRisk;
@@ -230,7 +230,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MediumRisk.
+             * The number of medium-risk objects.
              */
             public Builder mediumRisk(Long mediumRisk) {
                 this.mediumRisk = mediumRisk;
@@ -238,7 +238,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NoScanBucket.
+             * The number of buckets that are not checked.
              */
             public Builder noScanBucket(Integer noScanBucket) {
                 this.noScanBucket = noScanBucket;
@@ -246,7 +246,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RemainAuth.
+             * The remaining quota.
              */
             public Builder remainAuth(Integer remainAuth) {
                 this.remainAuth = remainAuth;
@@ -254,7 +254,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RiskBucket.
+             * The number of buckets in which at-risk objects exist.
              */
             public Builder riskBucket(Integer riskBucket) {
                 this.riskBucket = riskBucket;
@@ -262,7 +262,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ScanObject.
+             * The number of objects that are checked.
              */
             public Builder scanObject(Long scanObject) {
                 this.scanObject = scanObject;
@@ -270,7 +270,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBucket.
+             * The total number of buckets.
              */
             public Builder totalBucket(Integer totalBucket) {
                 this.totalBucket = totalBucket;
@@ -278,7 +278,7 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalObject.
+             * The total number of objects in the bucket.
              */
             public Builder totalObject(Long totalObject) {
                 this.totalObject = totalObject;

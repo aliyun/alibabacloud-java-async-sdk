@@ -155,14 +155,14 @@ public class RefreshAssetsRequest extends Request {
         }
 
         /**
-         * 服务器厂商。取值：
+         * The type of the server. Valid values:
          * <p>
          * 
-         * - **0**：阿里云资产
-         * - **1**：云外资产
-         * - **2**：IDC资产
-         * - **3**、**4**、**5**、**7**：其它云资产
-         * - **8**：轻量级资产
+         * *   **0**: an asset provided by Alibaba Cloud
+         * *   **1**: a third-party cloud asset
+         * *   **2**: an asset in a data center
+         * *   **3**, **4**, **5**, and **7**: an asset provided by another cloud
+         * *   **8**: a lightweight asset
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);

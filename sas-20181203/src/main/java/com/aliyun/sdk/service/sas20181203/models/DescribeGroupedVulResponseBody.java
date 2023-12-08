@@ -346,13 +346,13 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application protection feature is supported.
+             * Indicates whether the application protection feature is supported. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: not supported
+             * *   **1**: supported
              * 
-             * > If this parameter is not returned, the application protection feature is not supported.
+             * >  If this parameter is not returned, the application protection feature is not supported.
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -368,15 +368,15 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the vulnerability. Valid values:
+             * The tag of the vulnerability. Valid values:
              * <p>
              * 
-             * *   Restart required
-             * *   Remote utilization
-             * *   EXP exists
-             * *   Available
-             * *   Elevation of Privilege
-             * *   Code Execution
+             * *   **Restart required**
+             * *   **Remote utilization**
+             * *   **EXP exists**
+             * *   **Available**
+             * *   **Elevation of Privilege**
+             * *   **Code Execution**
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -400,7 +400,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              * *   **cms**: Web-CMS vulnerability
              * *   **app**: application vulnerability
              * *   **emg**: urgent vulnerability
-             * *   **sca**: vulnerability that is detected based on software component analysis
+             * *   **sca**: vulnerability that is detected by software component analysis
              */
             public Builder type(String type) {
                 this.type = type;

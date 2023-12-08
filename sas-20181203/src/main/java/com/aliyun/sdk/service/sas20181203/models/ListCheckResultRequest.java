@@ -268,7 +268,11 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * CustomParam.
+         * Specifies whether the check item supports custom parameters. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder customParam(Boolean customParam) {
             this.putQueryParameter("CustomParam", customParam);

@@ -50,7 +50,7 @@ public class GetHoneypotNodeMetricListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The monitoring data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetHoneypotNodeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

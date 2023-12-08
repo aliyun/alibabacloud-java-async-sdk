@@ -171,7 +171,111 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
     } 
 
+    public static class CheckDetails extends TeaModel {
+        @NameInMap("AffiliatedRiskTypes")
+        private java.util.List < String > affiliatedRiskTypes;
+
+        @NameInMap("AffiliatedRisks")
+        private java.util.List < String > affiliatedRisks;
+
+        @NameInMap("CheckId")
+        private Long checkId;
+
+        @NameInMap("CheckItem")
+        private String checkItem;
+
+        private CheckDetails(Builder builder) {
+            this.affiliatedRiskTypes = builder.affiliatedRiskTypes;
+            this.affiliatedRisks = builder.affiliatedRisks;
+            this.checkId = builder.checkId;
+            this.checkItem = builder.checkItem;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CheckDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return affiliatedRiskTypes
+         */
+        public java.util.List < String > getAffiliatedRiskTypes() {
+            return this.affiliatedRiskTypes;
+        }
+
+        /**
+         * @return affiliatedRisks
+         */
+        public java.util.List < String > getAffiliatedRisks() {
+            return this.affiliatedRisks;
+        }
+
+        /**
+         * @return checkId
+         */
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return checkItem
+         */
+        public String getCheckItem() {
+            return this.checkItem;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > affiliatedRiskTypes; 
+            private java.util.List < String > affiliatedRisks; 
+            private Long checkId; 
+            private String checkItem; 
+
+            /**
+             * AffiliatedRiskTypes.
+             */
+            public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
+                this.affiliatedRiskTypes = affiliatedRiskTypes;
+                return this;
+            }
+
+            /**
+             * AffiliatedRisks.
+             */
+            public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
+                this.affiliatedRisks = affiliatedRisks;
+                return this;
+            }
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(Long checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * CheckItem.
+             */
+            public Builder checkItem(String checkItem) {
+                this.checkItem = checkItem;
+                return this;
+            }
+
+            public CheckDetails build() {
+                return new CheckDetails(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
+        @NameInMap("CheckDetails")
+        private java.util.List < CheckDetails> checkDetails;
+
         @NameInMap("CheckType")
         private String checkType;
 
@@ -179,6 +283,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         private String checkTypeDisName;
 
         private Data(Builder builder) {
+            this.checkDetails = builder.checkDetails;
             this.checkType = builder.checkType;
             this.checkTypeDisName = builder.checkTypeDisName;
         }
@@ -189,6 +294,13 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return checkDetails
+         */
+        public java.util.List < CheckDetails> getCheckDetails() {
+            return this.checkDetails;
         }
 
         /**
@@ -206,8 +318,17 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < CheckDetails> checkDetails; 
             private String checkType; 
             private String checkTypeDisName; 
+
+            /**
+             * CheckDetails.
+             */
+            public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
+                this.checkDetails = checkDetails;
+                return this;
+            }
 
             /**
              * CheckType.

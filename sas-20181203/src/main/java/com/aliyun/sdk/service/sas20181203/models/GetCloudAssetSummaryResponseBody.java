@@ -58,7 +58,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +180,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
              * *   **23**: Data Security Center (DSC)
              * *   **24**: Elastic IP Address (EIP)
              * *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
-             * *   **26**: PolarDB for Xscale (PolarDB-X)
+             * *   **26**: PolarDB-X
              * *   **27**: Elasticsearch
              */
             public Builder assetType(Integer assetType) {
@@ -205,7 +205,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The type of the server. Valid values:
+             * <p>
+             * 
+             * *   **0**: an asset provided by Alibaba Cloud
+             * *   **1**: a third-party cloud asset
+             * *   **2**: an asset in a data center
+             * *   **3**, **4**, **5**, and **7**: an asset provided by another cloud
+             * *   **8**: a lightweight cloud asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -278,7 +285,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCountTotal.
+             * The total number of cloud service instances.
              */
             public Builder instanceCountTotal(Integer instanceCountTotal) {
                 this.instanceCountTotal = instanceCountTotal;
@@ -286,7 +293,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRiskCountTotal.
+             * The total number of cloud service instances that are at risk.
              */
             public Builder instanceRiskCountTotal(Integer instanceRiskCountTotal) {
                 this.instanceRiskCountTotal = instanceRiskCountTotal;

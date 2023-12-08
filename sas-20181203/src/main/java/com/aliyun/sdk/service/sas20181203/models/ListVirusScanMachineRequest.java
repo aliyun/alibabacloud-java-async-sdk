@@ -98,7 +98,7 @@ public class ListVirusScanMachineRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +107,7 @@ public class ListVirusScanMachineRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +116,7 @@ public class ListVirusScanMachineRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The information about the server that you want to query. The value can be the name or the IP address of the server.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -125,7 +125,7 @@ public class ListVirusScanMachineRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

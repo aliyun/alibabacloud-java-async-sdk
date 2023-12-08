@@ -78,7 +78,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the restoration task.
+         * An array that consists of the restoration tasks.
          */
         public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
@@ -313,6 +313,9 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         @NameInMap("VaultId")
         private String vaultId;
 
+        @NameInMap("VaultRegionId")
+        private String vaultRegionId;
+
         private RestoreJobs(Builder builder) {
             this.actualBytes = builder.actualBytes;
             this.bytesDone = builder.bytesDone;
@@ -354,6 +357,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             this.updatedTime = builder.updatedTime;
             this.uuid = builder.uuid;
             this.vaultId = builder.vaultId;
+            this.vaultRegionId = builder.vaultRegionId;
         }
 
         public static Builder builder() {
@@ -644,6 +648,13 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             return this.vaultId;
         }
 
+        /**
+         * @return vaultRegionId
+         */
+        public String getVaultRegionId() {
+            return this.vaultRegionId;
+        }
+
         public static final class Builder {
             private Long actualBytes; 
             private Long bytesDone; 
@@ -685,9 +696,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             private Long updatedTime; 
             private String uuid; 
             private String vaultId; 
+            private String vaultRegionId; 
 
             /**
-             * The size of the backup file. Unit: bytes.
+             * The size of backup data. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -711,7 +723,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware agent that is used to perform the restoration task.
+             * The ID of the anti-ransomware agent that is used to restore data.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -815,7 +827,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The directory in which the restored file is stored. The value is the directory that you specify for protection when you create the anti-ransomware policy
+             * The included directory based on which the files to restore are located. The value is the directory that you specify for protection when you create the anti-ransomware policy
              */
             public Builder includes(String includes) {
                 this.includes = includes;
@@ -855,7 +867,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of files that are restored.
+             * The number of files that are backed up.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -863,7 +875,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of files that need to be restored.
+             * The total number of files that you want to restore.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -871,7 +883,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -887,7 +899,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * The ID of the request, which is used to locate and troubleshoot issues.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -947,7 +959,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The restored content.
+             * The path to the source file that you want to restore.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -963,7 +975,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The speed at which data is restored. Unit: byte/s.
+             * The speed of data restoration. Unit: byte/s.
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -980,7 +992,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
              * *   **CANCELING**: The task is being canceled.
              * *   **CANCELED**: The task is canceled.
              * *   **PARTIAL_COMPLETE**: The task is partially successful.
-             * *   **CREATED**: The task was created but is not run.
+             * *   **CREATED**: The task is created but is not run.
              * *   **EXPIRED**: The task is not updated.
              * *   **QUEUED**: The task is waiting to be run.
              * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
@@ -1019,6 +1031,14 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the backup vault resides.
+             */
+            public Builder vaultRegionId(String vaultRegionId) {
+                this.vaultRegionId = vaultRegionId;
                 return this;
             }
 

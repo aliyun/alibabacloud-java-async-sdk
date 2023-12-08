@@ -50,7 +50,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AuthLimit.
+             * The authorized quota.
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -154,7 +154,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtEnd.
+             * The end time of the trial use.
              */
             public Builder gmtEnd(Long gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -162,7 +162,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStart.
+             * The start time of the trial use.
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -170,7 +170,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * The module code. Valid values:
+             * <p>
+             * 
+             * *   **vulFix**: vulnerability fixing
+             * *   **cloudSiem**: threat analysis
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -178,7 +182,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the trial use. Valid values:
+             * <p>
+             * 
+             * *   **1**: The feature is in trial use.
+             * *   **0**: The trial use ends.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -243,7 +251,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             private java.util.List < TrialRecordList> trialRecordList; 
 
             /**
-             * CanTry.
+             * Indicates whether the user is qualified for the trial use. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder canTry(Boolean canTry) {
                 this.canTry = canTry;
@@ -251,7 +263,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * The module code. Valid values:
+             * <p>
+             * 
+             * *   **vulFix**: vulnerability fixing
+             * *   **cloudSiem**: threat analysis
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -259,7 +275,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TrialRecordList.
+             * The trial use record.
              */
             public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;

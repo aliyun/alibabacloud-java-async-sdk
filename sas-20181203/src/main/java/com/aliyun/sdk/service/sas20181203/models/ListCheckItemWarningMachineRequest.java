@@ -47,7 +47,6 @@ public class ListCheckItemWarningMachineRequest extends Request {
 
     @Query
     @NameInMap("RiskType")
-    @Validation(required = true)
     private String riskType;
 
     @Query
@@ -57,6 +56,10 @@ public class ListCheckItemWarningMachineRequest extends Request {
     @Query
     @NameInMap("Status")
     private Integer status;
+
+    @Query
+    @NameInMap("UuidList")
+    private java.util.List < String > uuidList;
 
     private ListCheckItemWarningMachineRequest(Builder builder) {
         super(builder);
@@ -71,6 +74,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         this.riskType = builder.riskType;
         this.source = builder.source;
         this.status = builder.status;
+        this.uuidList = builder.uuidList;
     }
 
     public static Builder builder() {
@@ -163,6 +167,13 @@ public class ListCheckItemWarningMachineRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return uuidList
+     */
+    public java.util.List < String > getUuidList() {
+        return this.uuidList;
+    }
+
     public static final class Builder extends Request.Builder<ListCheckItemWarningMachineRequest, Builder> {
         private Long checkId; 
         private String containerFieldName; 
@@ -175,6 +186,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         private String riskType; 
         private String source; 
         private Integer status; 
+        private java.util.List < String > uuidList; 
 
         private Builder() {
             super();
@@ -193,6 +205,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
             this.riskType = request.riskType;
             this.source = request.source;
             this.status = request.status;
+            this.uuidList = request.uuidList;
         } 
 
         /**
@@ -316,6 +329,15 @@ public class ListCheckItemWarningMachineRequest extends Request {
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * UuidList.
+         */
+        public Builder uuidList(java.util.List < String > uuidList) {
+            this.putQueryParameter("UuidList", uuidList);
+            this.uuidList = uuidList;
             return this;
         }
 

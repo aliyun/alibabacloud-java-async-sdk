@@ -55,7 +55,7 @@ public class MarkMonitorAccountsRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * The IDs of the members.
          */
         public Builder accountIds(String accountIds) {
             this.putQueryParameter("AccountIds", accountIds);

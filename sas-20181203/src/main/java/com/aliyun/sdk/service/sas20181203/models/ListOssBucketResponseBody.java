@@ -50,7 +50,7 @@ public class ListOssBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data that is returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListOssBucketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,12 +87,16 @@ public class ListOssBucketResponseBody extends TeaModel {
         @NameInMap("Support")
         private Boolean support;
 
+        @NameInMap("SupportConfig")
+        private String supportConfig;
+
         private Data(Builder builder) {
             this.bucketName = builder.bucketName;
             this.message = builder.message;
             this.regionId = builder.regionId;
             this.storageClass = builder.storageClass;
             this.support = builder.support;
+            this.supportConfig = builder.supportConfig;
         }
 
         public static Builder builder() {
@@ -138,15 +142,23 @@ public class ListOssBucketResponseBody extends TeaModel {
             return this.support;
         }
 
+        /**
+         * @return supportConfig
+         */
+        public String getSupportConfig() {
+            return this.supportConfig;
+        }
+
         public static final class Builder {
             private String bucketName; 
             private String message; 
             private String regionId; 
             private String storageClass; 
             private Boolean support; 
+            private String supportConfig; 
 
             /**
-             * BucketName.
+             * The name of the bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -154,7 +166,7 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The reason why the bucket cannot be checked.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -162,7 +174,7 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -170,7 +182,13 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * StorageClass.
+             * The storage class of the bucket. Valid values:
+             * <p>
+             * 
+             * *   Standard (default)
+             * *   IA
+             * *   Archive
+             * *   ColdArchive
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -178,10 +196,22 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Support.
+             * Indicates whether the bucket can be checked. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder support(Boolean support) {
                 this.support = support;
+                return this;
+            }
+
+            /**
+             * SupportConfig.
+             */
+            public Builder supportConfig(String supportConfig) {
+                this.supportConfig = supportConfig;
                 return this;
             }
 

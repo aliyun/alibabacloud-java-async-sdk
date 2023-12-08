@@ -110,7 +110,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The total number of entries.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,7 +126,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +214,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
             private Integer strategyCount; 
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -218,7 +222,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyCount.
+             * The number of policies.
              */
             public Builder strategyCount(Integer strategyCount) {
                 this.strategyCount = strategyCount;

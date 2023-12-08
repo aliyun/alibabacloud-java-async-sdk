@@ -320,7 +320,8 @@ public class DescribeGroupedVulRequest extends Request {
          * Specifies whether the vulnerability is handled. Valid values:
          * <p>
          * 
-         * **y**: yes **n**: no
+         * *   **y**: handled
+         * *   **n**: not handled
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -377,7 +378,7 @@ public class DescribeGroupedVulRequest extends Request {
          * The Alibaba Cloud account ID of the member in the resource directory.
          * <p>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -386,15 +387,15 @@ public class DescribeGroupedVulRequest extends Request {
         }
 
         /**
-         * The tag that is used to filter vulnerabilities. Valid values:
+         * The tag that is used to search for the vulnerability. Valid values:
          * <p>
          * 
-         * *   Restart required
-         * *   Remote utilization
-         * *   EXP exists
-         * *   Available
-         * *   Elevation of Privilege
-         * *   Code Execution
+         * *   **Restart required**
+         * *   **Remote utilization**
+         * *   **EXP exists**
+         * *   **Available**
+         * *   **Elevation of Privilege**
+         * *   **Code Execution**
          */
         public Builder searchTags(String searchTags) {
             this.putQueryParameter("SearchTags", searchTags);
@@ -422,8 +423,8 @@ public class DescribeGroupedVulRequest extends Request {
          * *   **cve**: Linux software vulnerability
          * *   **sys**: Windows system vulnerability
          * *   **cms**: Web-CMS vulnerability
-         * *   **app**: application vulnerability
-         * *   **emg**: urgent vulnerability
+         * *   **app**: application vulnerability that is detected by network scanning
+         * *   **sca**: application vulnerability that is detected by software component analysis
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

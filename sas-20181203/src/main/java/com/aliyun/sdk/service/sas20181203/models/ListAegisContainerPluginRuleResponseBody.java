@@ -62,7 +62,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         private java.util.List < RuleList> ruleList; 
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleList.
+         * The rules.
          */
         public Builder ruleList(java.util.List < RuleList> ruleList) {
             this.ruleList = ruleList;
@@ -142,7 +142,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -150,7 +150,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -319,7 +319,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private java.util.List < String > whiteImages; 
 
             /**
-             * GmtCreate.
+             * The time when the rule was created. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -327,7 +327,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the rule was modified. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -335,7 +335,11 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The action of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: Alert
+             * *   **2**: Block
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -343,7 +347,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescription.
+             * The description of the rule.
              */
             public Builder ruleDescription(String ruleDescription) {
                 this.ruleDescription = ruleDescription;
@@ -351,7 +355,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -359,7 +363,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -367,7 +371,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTemplateId.
+             * The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.
              */
             public Builder ruleTemplateId(String ruleTemplateId) {
                 this.ruleTemplateId = ruleTemplateId;
@@ -375,7 +379,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTemplateName.
+             * The name of the rule template.
              */
             public Builder ruleTemplateName(String ruleTemplateName) {
                 this.ruleTemplateName = ruleTemplateName;
@@ -383,7 +387,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedPolicy.
+             * The fields in the value of the rule subtype.
              */
             public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
                 this.selectedPolicy = selectedPolicy;
@@ -391,7 +395,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * The switch ID of the rule.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -399,7 +403,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteImages.
+             * The images that are added to the whitelist of the rule.
              */
             public Builder whiteImages(java.util.List < String > whiteImages) {
                 this.whiteImages = whiteImages;

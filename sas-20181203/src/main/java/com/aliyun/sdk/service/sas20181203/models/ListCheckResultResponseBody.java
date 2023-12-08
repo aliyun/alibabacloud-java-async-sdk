@@ -178,7 +178,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String standardShowName; 
 
             /**
-             * The requirement item ID of the check item.
+             * The ID of the requirement item for the check item.
              */
             public Builder requirementId(Long requirementId) {
                 this.requirementId = requirementId;
@@ -186,7 +186,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the requirement item of the check item.
+             * The display name of the requirement item for the check item.
              */
             public Builder requirementShowName(String requirementShowName) {
                 this.requirementShowName = requirementShowName;
@@ -194,7 +194,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The section ID of the check item.
+             * The ID of the section for the check item.
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -202,7 +202,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The section display name of section of the check item.
+             * The display name of the section for the check item.
              */
             public Builder sectionShowName(String sectionShowName) {
                 this.sectionShowName = sectionShowName;
@@ -411,7 +411,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the check policies.
+             * The check policies.
              */
             public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -465,28 +465,28 @@ public class ListCheckResultResponseBody extends TeaModel {
              * The asset type of the cloud service. Valid values:
              * <p>
              * 
-             * *   **ECS**: Elastic Compute Service (ECS)
-             * *   **SLB**: Server Load Balancer (SLB)
+             * *   **ECS**: ECS
+             * *   **SLB**: SLB
              * *   **RDS**: ApsaraDB RDS
-             * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
-             * *   **KVSTORE**: ApsaraDB for Redis
+             * *   **MONGODB**: MongoDB
+             * *   **KVSTORE**: Redis
              * *   **ACR**: Container Registry
-             * *   **CSK**: Container Service for Kubernetes (ACK)
-             * *   **VPC**: Virtual Private Cloud (VPC)
+             * *   **CSK**: ACK
+             * *   **VPC**: VPC
              * *   **ACTIONTRAIL**: ActionTrail
-             * *   **CDN**: Alibaba Cloud CDN (CDN)
-             * *   **CAS**: Certificate Management Service
+             * *   **CDN**: CDN
+             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
              * *   **RDC**: Apsara Devops
-             * *   **RAM**: Resource Access Management (RAM)
+             * *   **RAM**: RAM
              * *   **DDOS**: Anti-DDoS
-             * *   **WAF**: Web Application Firewall (WAF)
-             * *   **OSS**: Object Storage Service (OSS)
+             * *   **WAF**: WAF
+             * *   **OSS**: OSS
              * *   **POLARDB**: PolarDB
              * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-             * *   **MSE**: Microservices Engine (MSE)
-             * *   **NAS**: Apsara File Storage NAS (NAS)
-             * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
-             * *   **EIP**: Elastic IP Address (EIP)
+             * *   **MSE**: MSE
+             * *   **NAS**: NAS
+             * *   **SDDP**: SDDP
+             * *   **EIP**: EIP
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -494,7 +494,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the last check was performed. Unit: milliseconds.
+             * The timestamp when the last check was performed. Unit: milliseconds.
              */
             public Builder lastCheckTime(Long lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -518,11 +518,11 @@ public class ListCheckResultResponseBody extends TeaModel {
              * The status of the check item. Valid values:
              * <p>
              * 
-             * *   **PASS**
-             * *   **NOT_PASS**
-             * *   **CHECKING**
-             * *   **NOT_CHECK**
-             * *   **WHITELIST**
+             * *   **PASS**: passed
+             * *   **NOT_PASS**: failed
+             * *   **CHECKING**: being checked
+             * *   **NOT_CHECK**: not checked
+             * *   **WHITELIST**: added to the whitelist
              */
             public Builder status(String status) {
                 this.status = status;
@@ -530,7 +530,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The message returned if the status of the check item is abnormal.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

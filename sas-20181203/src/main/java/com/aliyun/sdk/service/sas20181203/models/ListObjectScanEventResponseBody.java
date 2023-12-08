@@ -62,7 +62,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * Name.
+             * The name of the parameter in the file details.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -174,7 +174,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * NameDisplay.
+             * The display name of the alert.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -182,7 +182,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The value type of the parameter in the file details.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -190,7 +190,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -198,7 +198,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * ValueDisplay.
+             * The value of the parameter.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -395,7 +395,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * BucketName.
+             * The name of the OSS bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -403,7 +403,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * The details of the file.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -411,7 +411,11 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * DisplaySandboxResult.
+             * Indicates whether the file can be detected by cloud sandbox. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder displaySandboxResult(String displaySandboxResult) {
                 this.displaySandboxResult = displaySandboxResult;
@@ -419,7 +423,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The ID of the alert.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -427,7 +431,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -435,7 +439,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * The path to the file.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -443,7 +447,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * The timestamp at which the alert was first detected.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -451,7 +455,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp at which the alert was last detected.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -459,7 +463,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The MD5 hash value of the file.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -467,7 +471,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * OssKey.
+             * The key of the file that is stored in the OSS bucket.
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
@@ -475,7 +479,12 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the alert. Valid values:
+             * <p>
+             * 
+             * *   **high**
+             * *   **medium**
+             * *   **low**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -483,7 +492,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Sha1.
+             * The SHA-1 hash value of the file.
              */
             public Builder sha1(String sha1) {
                 this.sha1 = sha1;
@@ -491,7 +500,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Sha256.
+             * The SHA-256 hash value of the file.
              */
             public Builder sha256(String sha256) {
                 this.sha256 = sha256;
@@ -499,7 +508,11 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The method that is used to detect the malicious file. Valid values:
+             * <p>
+             * 
+             * *   **API**: uses API operations.
+             * *   **OSS**: uses OSS file check.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -564,7 +577,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -572,7 +585,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +593,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

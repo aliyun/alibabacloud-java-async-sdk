@@ -140,7 +140,7 @@ public class ListOssBucketScanInfoRequest extends Request {
         } 
 
         /**
-         * BucketName.
+         * The name of the bucket.
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -149,7 +149,7 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +158,7 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * FuzzBucketName.
+         * The name of the bucket that is used for fuzzy match.
          */
         public Builder fuzzBucketName(String fuzzBucketName) {
             this.putQueryParameter("FuzzBucketName", fuzzBucketName);
@@ -167,7 +167,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * HasRisk.
+         * Specifies whether at-risk objects are detected. Valid values:
+         * <p>
+         * 
+         * *   **0**: No at-risk objects are detected.
+         * *   **1**: At-risk objects are detected.
          */
         public Builder hasRisk(Integer hasRisk) {
             this.putQueryParameter("HasRisk", hasRisk);
@@ -176,7 +180,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content in the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -185,7 +193,7 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +202,13 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * Status.
+         * The check status of the bucket. Valid values:
+         * <p>
+         * 
+         * *   **1**: The bucket is not checked.
+         * *   **2**: All objects in the bucket are being checked.
+         * *   **3**: Only new objects in the bucket are being checked.
+         * *   **4**: The bucket is checked.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

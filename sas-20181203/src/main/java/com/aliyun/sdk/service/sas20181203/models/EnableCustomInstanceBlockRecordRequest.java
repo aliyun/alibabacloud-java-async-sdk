@@ -98,7 +98,7 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         } 
 
         /**
-         * BlockIp.
+         * The IP address that you want to block.
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -107,7 +107,11 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         }
 
         /**
-         * Bound.
+         * The traffic direction from the IP address that you want to block. Valid value:
+         * <p>
+         * 
+         * *   **in**
+         * *   **out**
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -125,7 +129,7 @@ public class EnableCustomInstanceBlockRecordRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

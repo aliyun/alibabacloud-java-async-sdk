@@ -54,7 +54,7 @@ public class GetOssBucketScanStatisticRequest extends Request {
         } 
 
         /**
-         * BucketNameList.
+         * The names of the buckets.
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);

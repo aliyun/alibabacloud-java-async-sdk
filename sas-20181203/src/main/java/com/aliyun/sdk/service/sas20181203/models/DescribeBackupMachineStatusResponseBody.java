@@ -157,6 +157,9 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         @NameInMap("SavedBackupCount")
         private Integer savedBackupCount;
 
+        @NameInMap("ServiceStatus")
+        private String serviceStatus;
+
         @NameInMap("Status")
         private String status;
 
@@ -175,6 +178,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.savedBackupCount = builder.savedBackupCount;
+            this.serviceStatus = builder.serviceStatus;
             this.status = builder.status;
             this.uuid = builder.uuid;
             this.vaultId = builder.vaultId;
@@ -245,6 +249,13 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceStatus
+         */
+        public String getServiceStatus() {
+            return this.serviceStatus;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -274,6 +285,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String instanceId; 
             private String regionId; 
             private Integer savedBackupCount; 
+            private String serviceStatus; 
             private String status; 
             private String uuid; 
             private String vaultId; 
@@ -347,6 +359,18 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
              */
             public Builder savedBackupCount(Integer savedBackupCount) {
                 this.savedBackupCount = savedBackupCount;
+                return this;
+            }
+
+            /**
+             * The status of the anti-ransomware service. Valid values:
+             * <p>
+             * *   **SERVICE_EXCEPTION**: Service exception
+             * *   **RESTORING**: Restoring
+             * *   **BACKING_UP**: Backup in process
+             */
+            public Builder serviceStatus(String serviceStatus) {
+                this.serviceStatus = serviceStatus;
                 return this;
             }
 

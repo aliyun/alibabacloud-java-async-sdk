@@ -69,7 +69,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         } 
 
         /**
-         * The information about the remarks.
+         * The remarks.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

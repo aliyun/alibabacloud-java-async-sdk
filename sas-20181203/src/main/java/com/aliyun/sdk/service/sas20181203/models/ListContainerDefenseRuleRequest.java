@@ -124,7 +124,7 @@ public class ListContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The conditions.
+         * The details of the condition.
          */
         public Builder conditions(java.util.List < Conditions> conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -154,7 +154,11 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -175,7 +179,11 @@ public class ListContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The rule type. Valid values:
+         * <p>
+         * 
+         * *   1: system rule
+         * *   2: user-defined rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -229,10 +237,10 @@ public class ListContainerDefenseRuleRequest extends Request {
             private String value; 
 
             /**
-             * The type of the condition. Valid values:
+             * The condition type. Valid values:
              * <p>
              * 
-             * *   **ruleName: the name of the rule**
+             * *   **ruleName**: the rule name
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,7 +248,7 @@ public class ListContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The value of the condition.
+             * The rule content.
              */
             public Builder value(String value) {
                 this.value = value;

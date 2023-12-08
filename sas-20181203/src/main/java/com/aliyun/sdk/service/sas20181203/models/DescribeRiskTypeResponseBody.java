@@ -525,7 +525,11 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthFlag.
+             * The baseline subtype permission flag of the current user version. Valid values:
+             * <p>
+             * 
+             * - **true**: Have access
+             * - **false**: No permissions
              */
             public Builder authFlag(Boolean authFlag) {
                 this.authFlag = authFlag;
@@ -541,7 +545,11 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedOs.
+             * The operating system type of the server. Valid values:
+             * <p>
+             * 
+             * - **windows**
+             * - **linux**
              */
             public Builder supportedOs(String supportedOs) {
                 this.supportedOs = supportedOs;
@@ -634,7 +642,11 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthFlag.
+             * The baseline type flag of the current user version. Valid values:
+             * <p>
+             * 
+             * - **true**: Have access
+             * - **false**: No permissions
              */
             public Builder authFlag(Boolean authFlag) {
                 this.authFlag = authFlag;

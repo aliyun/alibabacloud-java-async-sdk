@@ -50,7 +50,7 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstallVersion.
+         * The default installation version.
          */
         public Builder installVersion(String installVersion) {
             this.installVersion = installVersion;
@@ -58,7 +58,7 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -150,7 +150,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the sensitive files.
+         * The information about the sensitive file.
          */
         public Builder sensitiveFileList(java.util.List < SensitiveFileList> sensitiveFileList) {
             this.sensitiveFileList = sensitiveFileList;
@@ -407,7 +407,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private String sensitiveFileName; 
 
             /**
-             * ClassKey.
+             * The key of the sensitive file type.
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -415,7 +415,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             }
 
             /**
-             * ClassName.
+             * The name of the sensitive file type.
              */
             public Builder className(String className) {
                 this.className = className;
@@ -439,7 +439,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the last baseline check was performed. Unit: milliseconds.
+             * The timestamp generated when the last scan was performed. Unit: milliseconds.
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -460,7 +460,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of alerts for the sensitive file. Valid value:
+             * The type of the alert for the sensitive file. Valid values:
              * <p>
              * 
              * *   **npm_token**: NPM access token
@@ -528,7 +528,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
              * *   **rdp**: RDP
              * *   **mailgun_key**: Mailgun webhook signing key
              * *   **mailchimp_api_key**: API key for Mailchimp
-             * *   **netrc_cfg**: .netrc configuration file
+             * *   **netrc_cfg**: netrc configuration file
              * *   **openvpn_cfg**: OpenVPN configuration
              * *   **github_refresh_token**: GitHub refresh token
              * *   **salesforce**: Salesforce credentials

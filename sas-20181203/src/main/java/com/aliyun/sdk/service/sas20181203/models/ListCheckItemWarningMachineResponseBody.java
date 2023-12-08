@@ -229,6 +229,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("FixList")
         private java.util.List < FixList> fixList;
 
+        @NameInMap("FixStatus")
+        private Integer fixStatus;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -240,6 +243,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
         @NameInMap("IntranetIp")
         private String intranetIp;
+
+        @NameInMap("LastHandleTime")
+        private Long lastHandleTime;
 
         @NameInMap("LastScanTime")
         private Long lastScanTime;
@@ -277,10 +283,12 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             this.containerId = builder.containerId;
             this.containerName = builder.containerName;
             this.fixList = builder.fixList;
+            this.fixStatus = builder.fixStatus;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.lastHandleTime = builder.lastHandleTime;
             this.lastScanTime = builder.lastScanTime;
             this.portOpen = builder.portOpen;
             this.prompt = builder.prompt;
@@ -337,6 +345,13 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return fixStatus
+         */
+        public Integer getFixStatus() {
+            return this.fixStatus;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -362,6 +377,13 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          */
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        /**
+         * @return lastHandleTime
+         */
+        public Long getLastHandleTime() {
+            return this.lastHandleTime;
         }
 
         /**
@@ -440,10 +462,12 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String containerId; 
             private String containerName; 
             private java.util.List < FixList> fixList; 
+            private Integer fixStatus; 
             private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private Long lastHandleTime; 
             private Long lastScanTime; 
             private Boolean portOpen; 
             private String prompt; 
@@ -508,6 +532,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
+             * FixStatus.
+             */
+            public Builder fixStatus(Integer fixStatus) {
+                this.fixStatus = fixStatus;
+                return this;
+            }
+
+            /**
              * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
@@ -536,6 +568,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * LastHandleTime.
+             */
+            public Builder lastHandleTime(Long lastHandleTime) {
+                this.lastHandleTime = lastHandleTime;
                 return this;
             }
 

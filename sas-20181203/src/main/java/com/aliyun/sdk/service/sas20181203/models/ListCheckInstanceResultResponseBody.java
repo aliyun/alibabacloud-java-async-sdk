@@ -234,7 +234,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -265,7 +265,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the exceptions of check items.
+             * The exception message of the check item.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -346,7 +346,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check results for the instance. Valid values:
+             * The format of the check result for the instance. Valid values:
              * <p>
              * 
              * *   **text**
@@ -467,7 +467,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the search condition is supported. Valid values:
+             * Indicates whether the search condition is used. Valid values:
              * <p>
              * 
              * *   **true**
@@ -479,7 +479,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the search condition.
+             * The search key.
              */
             public Builder searchKey(String searchKey) {
                 this.searchKey = searchKey;
@@ -495,7 +495,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the check result for the instance. Valid values:
+             * The type of the check result for the instance. Valid values:
              * <p>
              * 
              * *   **text**

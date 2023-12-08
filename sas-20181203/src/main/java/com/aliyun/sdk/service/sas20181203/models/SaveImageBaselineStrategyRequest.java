@@ -136,7 +136,11 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:
+         * <p>
+         * 
+         * *   **default**: the baseline check policy for images
+         * *   **agentless**: agentless detection
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

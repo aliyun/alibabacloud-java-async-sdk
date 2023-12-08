@@ -62,7 +62,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * The returned virus scan tasks.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * EndTime.
+             * The timestamp when the virus scan task ended. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -258,7 +258,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -266,7 +266,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -274,7 +274,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -282,7 +282,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the task in percentage.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -290,7 +290,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanPath.
+             * The information about the file that is scanned.
              */
             public Builder scanPath(java.util.List < String > scanPath) {
                 this.scanPath = scanPath;
@@ -298,7 +298,11 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanType.
+             * The type of the virus scan task. Valid values:
+             * <p>
+             * 
+             * *   **system**: automatic scan task
+             * *   **user**: custom scan task
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -306,7 +310,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The timestamp when the virus scan task started. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -314,7 +318,13 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the virus scan task. Valid values:
+             * <p>
+             * 
+             * *   **1**: running
+             * *   **2**: complete
+             * *   **3**: failed
+             * *   **4**: timed out
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -322,7 +332,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the virus scan task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -330,7 +340,10 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the virus scan task.
+             * <p>
+             * 
+             * *   The value is fixed as **VIRUS_VUL_SCHEDULE_SCAN**, which indicates a virus scan task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -338,7 +351,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -403,7 +416,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -411,7 +424,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -419,7 +432,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

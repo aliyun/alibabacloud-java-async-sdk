@@ -62,7 +62,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * EventCount.
+             * The number of times that the alert is triggered.
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -186,7 +186,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -194,7 +194,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -202,7 +202,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the associated server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -210,7 +210,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the associated server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -218,7 +218,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -283,7 +283,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -291,7 +291,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -299,7 +299,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

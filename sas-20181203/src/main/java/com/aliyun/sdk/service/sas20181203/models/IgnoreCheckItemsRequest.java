@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IgnoreCheckItemsRequest extends Request {
     @Query
     @NameInMap("CheckAndRiskTypeList")
-    @Validation(required = true)
     private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList;
+
+    @Query
+    @NameInMap("CheckIds")
+    private java.util.List < Long > checkIds;
 
     @Query
     @NameInMap("Lang")
@@ -41,6 +44,7 @@ public class IgnoreCheckItemsRequest extends Request {
     private IgnoreCheckItemsRequest(Builder builder) {
         super(builder);
         this.checkAndRiskTypeList = builder.checkAndRiskTypeList;
+        this.checkIds = builder.checkIds;
         this.lang = builder.lang;
         this.reason = builder.reason;
         this.source = builder.source;
@@ -66,6 +70,13 @@ public class IgnoreCheckItemsRequest extends Request {
      */
     public java.util.List < CheckAndRiskTypeList> getCheckAndRiskTypeList() {
         return this.checkAndRiskTypeList;
+    }
+
+    /**
+     * @return checkIds
+     */
+    public java.util.List < Long > getCheckIds() {
+        return this.checkIds;
     }
 
     /**
@@ -105,6 +116,7 @@ public class IgnoreCheckItemsRequest extends Request {
 
     public static final class Builder extends Request.Builder<IgnoreCheckItemsRequest, Builder> {
         private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList; 
+        private java.util.List < Long > checkIds; 
         private String lang; 
         private String reason; 
         private String source; 
@@ -118,6 +130,7 @@ public class IgnoreCheckItemsRequest extends Request {
         private Builder(IgnoreCheckItemsRequest request) {
             super(request);
             this.checkAndRiskTypeList = request.checkAndRiskTypeList;
+            this.checkIds = request.checkIds;
             this.lang = request.lang;
             this.reason = request.reason;
             this.source = request.source;
@@ -131,6 +144,15 @@ public class IgnoreCheckItemsRequest extends Request {
         public Builder checkAndRiskTypeList(java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList) {
             this.putQueryParameter("CheckAndRiskTypeList", checkAndRiskTypeList);
             this.checkAndRiskTypeList = checkAndRiskTypeList;
+            return this;
+        }
+
+        /**
+         * CheckIds.
+         */
+        public Builder checkIds(java.util.List < Long > checkIds) {
+            this.putQueryParameter("CheckIds", checkIds);
+            this.checkIds = checkIds;
             return this;
         }
 
@@ -157,11 +179,11 @@ public class IgnoreCheckItemsRequest extends Request {
         }
 
         /**
-         * Data Sources. Valid values:
+         * The data source. Valid values:
          * <p>
          * 
-         * *   **default**: Host baseline
-         * *   **agentless**: Agentless baseline
+         * *   **default**: host baseline
+         * *   **agentless**: agentless baseline
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -13,8 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCheckWarningDetailRequest extends Request {
     @Query
+    @NameInMap("CheckId")
+    private String checkId;
+
+    @Query
     @NameInMap("CheckWarningId")
-    @Validation(required = true)
     private Long checkWarningId;
 
     @Query
@@ -29,12 +32,18 @@ public class DescribeCheckWarningDetailRequest extends Request {
     @NameInMap("SourceIp")
     private String sourceIp;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private DescribeCheckWarningDetailRequest(Builder builder) {
         super(builder);
+        this.checkId = builder.checkId;
         this.checkWarningId = builder.checkWarningId;
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -48,6 +57,13 @@ public class DescribeCheckWarningDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return checkId
+     */
+    public String getCheckId() {
+        return this.checkId;
     }
 
     /**
@@ -78,11 +94,20 @@ public class DescribeCheckWarningDetailRequest extends Request {
         return this.sourceIp;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCheckWarningDetailRequest, Builder> {
+        private String checkId; 
         private Long checkWarningId; 
         private String lang; 
         private Long resourceDirectoryAccountId; 
         private String sourceIp; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -90,11 +115,22 @@ public class DescribeCheckWarningDetailRequest extends Request {
 
         private Builder(DescribeCheckWarningDetailRequest request) {
             super(request);
+            this.checkId = request.checkId;
             this.checkWarningId = request.checkWarningId;
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
+            this.uuid = request.uuid;
         } 
+
+        /**
+         * CheckId.
+         */
+        public Builder checkId(String checkId) {
+            this.putQueryParameter("CheckId", checkId);
+            this.checkId = checkId;
+            return this;
+        }
 
         /**
          * The ID of the alert that is triggered by the check item.
@@ -139,6 +175,15 @@ public class DescribeCheckWarningDetailRequest extends Request {
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
             this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

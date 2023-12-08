@@ -29,6 +29,14 @@ public class ListCheckTypesRequest extends Request {
     private Long riskId;
 
     @Query
+    @NameInMap("ShowChecks")
+    private Boolean showChecks;
+
+    @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("Uuid")
     private String uuid;
 
@@ -38,6 +46,8 @@ public class ListCheckTypesRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskId = builder.riskId;
+        this.showChecks = builder.showChecks;
+        this.source = builder.source;
         this.uuid = builder.uuid;
     }
 
@@ -83,6 +93,20 @@ public class ListCheckTypesRequest extends Request {
     }
 
     /**
+     * @return showChecks
+     */
+    public Boolean getShowChecks() {
+        return this.showChecks;
+    }
+
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -94,6 +118,8 @@ public class ListCheckTypesRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private Long riskId; 
+        private Boolean showChecks; 
+        private String source; 
         private String uuid; 
 
         private Builder() {
@@ -106,6 +132,8 @@ public class ListCheckTypesRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskId = request.riskId;
+            this.showChecks = request.showChecks;
+            this.source = request.source;
             this.uuid = request.uuid;
         } 
 
@@ -142,6 +170,24 @@ public class ListCheckTypesRequest extends Request {
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
             this.riskId = riskId;
+            return this;
+        }
+
+        /**
+         * ShowChecks.
+         */
+        public Builder showChecks(Boolean showChecks) {
+            this.putQueryParameter("ShowChecks", showChecks);
+            this.showChecks = showChecks;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

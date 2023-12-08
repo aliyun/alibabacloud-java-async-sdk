@@ -125,7 +125,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * The cloud assets.
+         * The details of the cloud asset.
          */
         public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
@@ -255,7 +255,7 @@ public class ListCloudAssetInstancesRequest extends Request {
              * The subtype of the cloud asset.
              * <p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.
+             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtype of the cloud asset.
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -266,7 +266,7 @@ public class ListCloudAssetInstancesRequest extends Request {
              * The type of the cloud asset.
              * <p>
              * 
-             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.
+             * You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the cloud asset type.
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -274,7 +274,14 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * The server type. Valid values:
+             * <p>
+             * 
+             * *   **0**: a cloud asset provided by Alibaba Cloud
+             * *   **1**: a cloud asset outside Alibaba Cloud
+             * *   **2**: a cloud asset in a data center
+             * *   **3**, **4**, **5**, and **7**: a cloud asset provided by a third-party service provider
+             * *   **8**: a lightweight cloud asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

@@ -82,7 +82,7 @@ public class InstallHybridProxyRequest extends Request {
         } 
 
         /**
-         * ClusterName.
+         * The cluster name.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -91,7 +91,7 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * InstallCode.
+         * The installation code.
          */
         public Builder installCode(String installCode) {
             this.putQueryParameter("InstallCode", installCode);
@@ -100,7 +100,7 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * YundunUuids.
+         * The UUIDs of the proxy servers.
          */
         public Builder yundunUuids(java.util.List < String > yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);

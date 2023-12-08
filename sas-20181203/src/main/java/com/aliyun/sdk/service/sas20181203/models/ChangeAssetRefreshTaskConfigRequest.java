@@ -68,7 +68,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * The asset synchronization configurations.
+         * The asset synchronization configuration.
          */
         public Builder assetRefreshConfigs(java.util.List < AssetRefreshConfigs> assetRefreshConfigs) {
             this.putQueryParameter("AssetRefreshConfigs", assetRefreshConfigs);
@@ -167,7 +167,12 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             private Integer vendor; 
 
             /**
-             * RefreshConfigType.
+             * The type of the configuration. Valid values:
+             * <p>
+             * 
+             * *   **0**: server synchronization task
+             * *   **1**: cloud service synchronization task
+             * *   **2**: scheduled AccessKey pair verification task
              */
             public Builder refreshConfigType(Integer refreshConfigType) {
                 this.refreshConfigType = refreshConfigType;
@@ -175,15 +180,15 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The interval at which assets are synchronized. Unit: minutes. Valid values:
+             * The synchronization cycle. Valid values:
              * <p>
              * 
-             * *   **60**
-             * *   **180**
-             * *   **360**
-             * *   **720**
-             * *   **1440**
-             * *   **10080**
+             * *   **60**: 60 minutes
+             * *   **180**: 3 hours
+             * *   **360**: 6 hours
+             * *   **720**: 12 hours
+             * *   **1440**: 1 day
+             * *   **10080**: 7 days
              */
             public Builder schedulePeriod(Integer schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -191,11 +196,11 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The status of the asset synchronization feature. Valid values:
+             * The status of the configuration. Valid values:
              * <p>
              * 
-             * *   **1**: Asset synchronization is enabled.
-             * *   **0**: Asset synchronization is disabled.
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -203,7 +208,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * TargetId.
+             * The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -215,8 +220,8 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
              * <p>
              * 
              * *   **3**: Tencent Cloud
-             * *   **4**: HUAWEI CLOUD
-             * *   **7**: Amazon Web Services (AWS)
+             * *   **4**: Huawei Cloud
+             * *   **7**: Amazon Web Services (AWS) Cloud
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

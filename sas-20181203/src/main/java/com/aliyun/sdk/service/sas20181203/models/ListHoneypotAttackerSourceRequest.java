@@ -138,7 +138,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * EndTimeStamp.
+         * The end of the time range to query. This value is a timestamp.
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -156,7 +156,11 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,7 +169,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +178,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * An array that consists of risk levels.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -183,7 +187,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address of the attack.
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -192,7 +196,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * StartTimeStamp.
+         * The beginning of the time range to query. This value is a timestamp.
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

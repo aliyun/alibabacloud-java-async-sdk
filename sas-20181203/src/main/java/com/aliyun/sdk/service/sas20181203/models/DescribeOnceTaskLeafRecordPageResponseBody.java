@@ -62,7 +62,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the sub-tasks.
+         * The details of the sub-task.
          */
         public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -314,7 +314,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -322,7 +322,19 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * CostTimeInfo.
+             * The time consumed. The value is in the JSON format. The end time of each item is displayed.
+             * <p>
+             * 
+             * *   **vul**: system vulnerabilities
+             * *   **scaVul**: application vulnerabilities
+             * *   **scaVul**: baseline
+             * *   **binary**: binary
+             * *   **forbiddenPackageInfo**: information about the prohibited package
+             * *   **identificationInfo**: identity authentication
+             * *   **script**: malicious scripts
+             * *   **sensitiveFile**: sensitive files
+             * *   **sensitiveInfo**: AccessKey pair leaks
+             * *   **webshell**: website scripts
              */
             public Builder costTimeInfo(String costTimeInfo) {
                 this.costTimeInfo = costTimeInfo;
@@ -683,7 +695,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the sub-task.
+             * The execution result.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -707,13 +719,13 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the sub-task. Valid values:
+             * The sub-task status. Valid values:
              * <p>
              * 
              * *   **INIT**: The sub-task is not started.
              * *   **START**: The sub-task is started.
              * *   **SUCCESS**: The sub-task is complete.
-             * *   **TIMEOUT**: The task timed out.
+             * *   **TIMEOUT**: The sub-task timed out.
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -729,7 +741,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assets that are scanned.
+             * The type of the assets that are scanned. Valid values:
              * <p>
              * 
              * *   **IMAGE_REPO**: image repository

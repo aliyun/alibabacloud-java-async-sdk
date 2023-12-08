@@ -205,7 +205,12 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The rule type. Valid values:
+         * <p>
+         * 
+         * *   2: user-defined rules
+         * 
+         * > Only the value 2 is supported.
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -381,7 +386,7 @@ public class AddContainerDefenseRuleRequest extends Request {
              * The hash values of the files that need to be added to the whitelist.
              * <p>
              * 
-             * >  This parameter is not supported.
+             * > This parameter is not supported.
              */
             public Builder hash(java.util.List < String > hash) {
                 this.hash = hash;
@@ -389,7 +394,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * Image.
+             * The images that need to be added to the whitelist.
              */
             public Builder image(java.util.List < String > image) {
                 this.image = image;

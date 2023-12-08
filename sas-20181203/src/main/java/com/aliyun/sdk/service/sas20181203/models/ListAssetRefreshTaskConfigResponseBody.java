@@ -50,7 +50,7 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consist of the configurations.
+         * The asset synchronization configuration.
          */
         public Builder assetRefreshConfig(java.util.List < AssetRefreshConfig> assetRefreshConfig) {
             this.assetRefreshConfig = assetRefreshConfig;
@@ -134,7 +134,12 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
             private Integer vendor; 
 
             /**
-             * RefreshConfigType.
+             * The type of the configuration. Valid values:
+             * <p>
+             * 
+             * *   **0**: server synchronization task
+             * *   **1**: cloud service synchronization task
+             * *   **2**: scheduled AccessKey pair verification task
              */
             public Builder refreshConfigType(Integer refreshConfigType) {
                 this.refreshConfigType = refreshConfigType;
@@ -158,7 +163,7 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of asset synchonization. Valid values:
+             * The status of the configuration. Valid values:
              * <p>
              * 
              * *   **1**: enabled
@@ -174,7 +179,7 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
              * <p>
              * 
              * *   **3**: Tencent Cloud
-             * *   **4**: HUAWEI CLOUD
+             * *   **4**: Huawei Cloud
              * *   **7**: Amazon Web Services (AWS) Cloud
              */
             public Builder vendor(Integer vendor) {

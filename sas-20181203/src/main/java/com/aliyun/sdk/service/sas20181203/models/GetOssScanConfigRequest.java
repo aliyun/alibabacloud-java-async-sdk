@@ -12,8 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOssScanConfigRequest</p>
  */
 public class GetOssScanConfigRequest extends Request {
+    @Query
+    @NameInMap("BucketName")
+    private String bucketName;
+
+    @Query
+    @NameInMap("Id")
+    private String id;
+
     private GetOssScanConfigRequest(Builder builder) {
         super(builder);
+        this.bucketName = builder.bucketName;
+        this.id = builder.id;
     }
 
     public static Builder builder() {
@@ -29,7 +39,23 @@ public class GetOssScanConfigRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return bucketName
+     */
+    public String getBucketName() {
+        return this.bucketName;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
     public static final class Builder extends Request.Builder<GetOssScanConfigRequest, Builder> {
+        private String bucketName; 
+        private String id; 
 
         private Builder() {
             super();
@@ -37,7 +63,27 @@ public class GetOssScanConfigRequest extends Request {
 
         private Builder(GetOssScanConfigRequest request) {
             super(request);
+            this.bucketName = request.bucketName;
+            this.id = request.id;
         } 
+
+        /**
+         * BucketName.
+         */
+        public Builder bucketName(String bucketName) {
+            this.putQueryParameter("BucketName", bucketName);
+            this.bucketName = bucketName;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
 
         @Override
         public GetOssScanConfigRequest build() {

@@ -50,7 +50,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * InfoType.
+             * The type of the item.
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -166,7 +166,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -174,7 +174,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * NameDisplay.
+             * The display name of the item.
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -182,7 +182,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the item.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -190,7 +190,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the item.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -198,7 +198,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * ValueDisplay.
+             * The display value of the item.
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -275,7 +275,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             private String md5; 
 
             /**
-             * Details.
+             * The details of the alert event.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -283,7 +283,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert item.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -291,7 +291,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the object.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -299,7 +299,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The MD5 hash value of the object.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;

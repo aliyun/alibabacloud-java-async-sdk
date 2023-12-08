@@ -98,7 +98,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the baseline check item.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -198,7 +202,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the baseline check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +255,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The baseline information.
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -259,7 +263,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk levels.
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -312,7 +316,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the malicious sample.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -320,7 +324,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the malicious sample.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -373,7 +377,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The information about the malicious samples.
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -381,7 +385,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk levels.
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -434,7 +438,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The vulnerability ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -442,7 +446,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The vulnerability name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -495,7 +499,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * Item.
+             * The vulnerability information.
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
@@ -503,7 +507,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk levels.
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -568,7 +572,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private Vul vul; 
 
             /**
-             * Baseline.
+             * The baseline configuration information.
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -576,7 +580,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousFile.
+             * The configuration information about the malicious sample.
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -584,7 +588,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Vul.
+             * The vulnerability configuration information.
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -661,7 +665,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > namespaceList; 
 
             /**
-             * AckPolicyInstanceId.
+             * The ID of the rule in the cluster.
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -669,7 +673,11 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * AllNamespace.
+             * Specifies whether all namespaces are included. Valid values:
+             * <p>
+             * 
+             * *   **1**: All namespaces are included.
+             * *   **0**: Not all namespaces are included.
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -677,7 +685,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -685,7 +693,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceList.
+             * The namespaces.
              */
             public Builder namespaceList(java.util.List < String > namespaceList) {
                 this.namespaceList = namespaceList;
@@ -918,7 +926,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * AlarmDetail.
+             * The rule configuration information.
              */
             public Builder alarmDetail(AlarmDetail alarmDetail) {
                 this.alarmDetail = alarmDetail;
@@ -926,7 +934,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -934,7 +942,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The cluster name.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -942,7 +950,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number. Default value: **1**. Pages start from page 1.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -950,7 +958,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The rule description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -958,7 +966,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The image names.
              */
             public Builder imageName(java.util.List < String > imageName) {
                 this.imageName = imageName;
@@ -966,7 +974,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The image tags.
              */
             public Builder label(java.util.List < String > label) {
                 this.label = label;
@@ -974,7 +982,11 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language of the content within the request and response. Default value: **zh**. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -982,7 +994,11 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousImage.
+             * Indicates whether the rule applies to malicious Internet images. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder maliciousImage(Boolean maliciousImage) {
                 this.maliciousImage = maliciousImage;
@@ -990,7 +1006,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -998,7 +1014,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * The action that is performed when the rule is hit. Valid values:
+             * <p>
+             * 
+             * *   **1**: trigger alerts
+             * *   **2**: block
+             * *   **3**: allow
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -1006,7 +1027,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * The scope.
              */
             public Builder scopes(java.util.List < Scopes> scopes) {
                 this.scopes = scopes;
@@ -1014,7 +1035,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * The rule ID.
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -1022,7 +1043,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * The rule name.
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -1030,7 +1051,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyTemplateId.
+             * The ID of the rule template.
              */
             public Builder strategyTemplateId(Long strategyTemplateId) {
                 this.strategyTemplateId = strategyTemplateId;
@@ -1038,7 +1059,11 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * UnScanedImage.
+             * Indicates whether the rule applies to unscanned images. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder unScanedImage(Boolean unScanedImage) {
                 this.unScanedImage = unScanedImage;
@@ -1046,7 +1071,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * The image tags that are added to the whitelist.
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

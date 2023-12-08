@@ -68,7 +68,7 @@ public class GetObjectScanEventRequest extends Request {
         } 
 
         /**
-         * EventId.
+         * The ID of the alert event.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -77,7 +77,11 @@ public class GetObjectScanEventRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content in the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

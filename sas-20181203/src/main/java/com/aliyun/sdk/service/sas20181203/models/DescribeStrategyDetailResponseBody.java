@@ -492,6 +492,9 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("On")
         private Boolean on;
 
+        @NameInMap("SupportedOs")
+        private String supportedOs;
+
         @NameInMap("TypeName")
         private String typeName;
 
@@ -499,6 +502,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             this.alias = builder.alias;
             this.checkDetails = builder.checkDetails;
             this.on = builder.on;
+            this.supportedOs = builder.supportedOs;
             this.typeName = builder.typeName;
         }
 
@@ -532,6 +536,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedOs
+         */
+        public String getSupportedOs() {
+            return this.supportedOs;
+        }
+
+        /**
          * @return typeName
          */
         public String getTypeName() {
@@ -542,6 +553,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String alias; 
             private java.util.List < CheckDetails> checkDetails; 
             private Boolean on; 
+            private String supportedOs; 
             private String typeName; 
 
             /**
@@ -569,6 +581,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              */
             public Builder on(Boolean on) {
                 this.on = on;
+                return this;
+            }
+
+            /**
+             * SupportedOs.
+             */
+            public Builder supportedOs(String supportedOs) {
+                this.supportedOs = supportedOs;
                 return this;
             }
 

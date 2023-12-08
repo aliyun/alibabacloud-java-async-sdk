@@ -55,7 +55,10 @@ public class DeleteSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * RuleId.
+         * The rule ID.
+         * <p>
+         * 
+         * >  You can call the ListContainerWebDefenseRule operation to query the rule ID.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

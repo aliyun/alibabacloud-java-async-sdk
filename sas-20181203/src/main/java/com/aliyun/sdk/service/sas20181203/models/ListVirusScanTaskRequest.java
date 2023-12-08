@@ -236,7 +236,7 @@ public class ListVirusScanTaskRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -245,7 +245,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The timestamp when the virus scan task ended. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -254,7 +254,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the server.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -263,7 +263,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * The private IP address of the server.
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -272,7 +272,11 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -281,7 +285,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * MachineName.
+         * The name of the server.
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -290,7 +294,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -299,7 +303,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * RootTask.
+         * Specifies whether the virus scan task is the root task.
          */
         public Builder rootTask(Boolean rootTask) {
             this.putQueryParameter("RootTask", rootTask);
@@ -308,7 +312,10 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * RootTaskId.
+         * The ID of the root task.
+         * <p>
+         * 
+         * >  You can call the [GetVirusScanLatestTaskStatistic](~~GetVirusScanLatestTaskStatistic~~) operation to query the ID.
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -317,7 +324,11 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * ScanType.
+         * The type of the virus scan task. Valid values:
+         * <p>
+         * 
+         * *   **system**: automatic scan task
+         * *   **user**: custom scan task
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -326,7 +337,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp when the virus scan task started. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -335,7 +346,13 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the virus scan task. Valid values:
+         * <p>
+         * 
+         * *   **1**: running
+         * *   **2**: complete
+         * *   **3**: failed
+         * *   **4**: timed out
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -344,7 +361,7 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The statuses of virus scan tasks.
          */
         public Builder statusList(java.util.List < Integer > statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -353,7 +370,10 @@ public class ListVirusScanTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the virus scan task.
+         * <p>
+         * 
+         * >  You can call the [ListVirusScanTask](~~ListVirusScanTask~~) operation to query the ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

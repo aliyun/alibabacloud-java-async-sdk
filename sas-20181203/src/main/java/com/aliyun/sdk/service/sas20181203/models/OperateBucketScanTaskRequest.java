@@ -68,7 +68,7 @@ public class OperateBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * BucketName.
+         * The name of the bucket.
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,7 +77,10 @@ public class OperateBucketScanTaskRequest extends Request {
         }
 
         /**
-         * OperateCode.
+         * The operation that you want to perform on the bucket. Valid value:
+         * <p>
+         * 
+         * *   **1**: cancels the bucket check.
          */
         public Builder operateCode(Integer operateCode) {
             this.putQueryParameter("OperateCode", operateCode);

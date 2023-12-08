@@ -134,7 +134,10 @@ public class DescribeSuspEventDetailRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

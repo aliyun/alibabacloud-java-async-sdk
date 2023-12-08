@@ -321,7 +321,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The digest of the image.
+             * The image digest.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -337,7 +337,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image instance.
+             * The image instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +361,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * The image repository name.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -390,7 +390,12 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The sensitive file status. Valid values:
+             * <p>
+             * 
+             * *   **0**: unhandled
+             * *   **1**: ignored
+             * *   **2**: false positive
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,7 +403,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * The tag that is added to the image.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -406,7 +411,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * The image UUID.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

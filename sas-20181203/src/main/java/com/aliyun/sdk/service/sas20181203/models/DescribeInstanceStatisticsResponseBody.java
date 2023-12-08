@@ -50,7 +50,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk information about assets.
+         * The risk information about the asset.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -326,7 +326,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer weakPWNum; 
 
             /**
-             * The number of unusual logons by using the account of the asset.
+             * The number of unusual logons to the asset.
              */
             public Builder account(Integer account) {
                 this.account = account;
@@ -374,7 +374,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentlessVulSys.
+             * The number of Windows vulnerabilities detected by using agentless detection.
              */
             public Builder agentlessVulSys(Integer agentlessVulSys) {
                 this.agentlessVulSys = agentlessVulSys;
@@ -438,7 +438,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts generated on the asset.
+             * The number of alerts generated for the asset.
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;
@@ -462,7 +462,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance UUID of the asset.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

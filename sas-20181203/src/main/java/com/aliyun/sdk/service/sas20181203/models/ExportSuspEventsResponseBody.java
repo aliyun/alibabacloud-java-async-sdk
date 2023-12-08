@@ -70,7 +70,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export record.
+         * The ID of the export record of the anomalous event.
          */
         public Builder id(Integer id) {
             this.id = id;

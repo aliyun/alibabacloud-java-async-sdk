@@ -110,7 +110,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The source IP addresses of the attack.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -258,7 +262,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * EventCount.
+             * The total number of attack events.
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -266,7 +270,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * LastTargetHoneypot.
+             * The most recent honeypot that was attacked.
              */
             public Builder lastTargetHoneypot(String lastTargetHoneypot) {
                 this.lastTargetHoneypot = lastTargetHoneypot;
@@ -274,7 +278,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * LastTargetIp.
+             * The most recent IP address that was attacked.
              */
             public Builder lastTargetIp(String lastTargetIp) {
                 this.lastTargetIp = lastTargetIp;
@@ -282,7 +286,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The last time when the attack event occurred.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -290,7 +294,12 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **2**: low
+             * *   **3**: medium
+             * *   **4**: high
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -298,7 +307,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * The source IP address of the attack.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -375,7 +384,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -383,7 +392,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -391,7 +400,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +408,7 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
