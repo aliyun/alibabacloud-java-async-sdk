@@ -994,6 +994,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("status")
         private String status;
 
+        @NameInMap("superAdmins")
+        private java.util.List < String > superAdmins;
+
         @NameInMap("type")
         private String type;
 
@@ -1009,6 +1012,7 @@ public class GetProjectResponseBody extends TeaModel {
             this.saleTag = builder.saleTag;
             this.securityProperties = builder.securityProperties;
             this.status = builder.status;
+            this.superAdmins = builder.superAdmins;
             this.type = builder.type;
         }
 
@@ -1098,6 +1102,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return superAdmins
+         */
+        public java.util.List < String > getSuperAdmins() {
+            return this.superAdmins;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -1116,6 +1127,7 @@ public class GetProjectResponseBody extends TeaModel {
             private SaleTag saleTag; 
             private SecurityProperties securityProperties; 
             private String status; 
+            private java.util.List < String > superAdmins; 
             private String type; 
 
             /**
@@ -1203,6 +1215,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * superAdmins.
+             */
+            public Builder superAdmins(java.util.List < String > superAdmins) {
+                this.superAdmins = superAdmins;
                 return this;
             }
 

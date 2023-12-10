@@ -15,11 +15,23 @@ public class GetPackageResponseBody extends TeaModel {
     @NameInMap("data")
     private Data data;
 
+    @NameInMap("errorCode")
+    private String errorCode;
+
+    @NameInMap("errorMsg")
+    private String errorMsg;
+
+    @NameInMap("httpCode")
+    private Integer httpCode;
+
     @NameInMap("requestId")
     private String requestId;
 
     private GetPackageResponseBody(Builder builder) {
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.errorMsg = builder.errorMsg;
+        this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +51,27 @@ public class GetPackageResponseBody extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMsg
+     */
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    /**
+     * @return httpCode
+     */
+    public Integer getHttpCode() {
+        return this.httpCode;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +80,9 @@ public class GetPackageResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+        private String errorCode; 
+        private String errorMsg; 
+        private Integer httpCode; 
         private String requestId; 
 
         /**
@@ -54,6 +90,30 @@ public class GetPackageResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * errorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * errorMsg.
+         */
+        public Builder errorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+
+        /**
+         * httpCode.
+         */
+        public Builder httpCode(Integer httpCode) {
+            this.httpCode = httpCode;
             return this;
         }
 
@@ -139,9 +199,13 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
+        @NameInMap("schemaName")
+        private String schemaName;
+
         private Function(Builder builder) {
             this.actions = builder.actions;
             this.name = builder.name;
+            this.schemaName = builder.schemaName;
         }
 
         public static Builder builder() {
@@ -166,9 +230,17 @@ public class GetPackageResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public static final class Builder {
             private java.util.List < String > actions; 
             private String name; 
+            private String schemaName; 
 
             /**
              * The operations that were performed on the function.
@@ -186,6 +258,14 @@ public class GetPackageResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * schemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
             public Function build() {
                 return new Function(this);
             } 
@@ -200,9 +280,13 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
+        @NameInMap("schemaName")
+        private String schemaName;
+
         private Resource(Builder builder) {
             this.actions = builder.actions;
             this.name = builder.name;
+            this.schemaName = builder.schemaName;
         }
 
         public static Builder builder() {
@@ -227,9 +311,17 @@ public class GetPackageResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public static final class Builder {
             private java.util.List < String > actions; 
             private String name; 
+            private String schemaName; 
 
             /**
              * The operations that were performed on the resource.
@@ -247,6 +339,14 @@ public class GetPackageResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * schemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
             public Resource build() {
                 return new Resource(this);
             } 
@@ -261,9 +361,13 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
+        @NameInMap("schemaName")
+        private String schemaName;
+
         private Table(Builder builder) {
             this.actions = builder.actions;
             this.name = builder.name;
+            this.schemaName = builder.schemaName;
         }
 
         public static Builder builder() {
@@ -288,9 +392,17 @@ public class GetPackageResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
         public static final class Builder {
             private java.util.List < String > actions; 
             private String name; 
+            private String schemaName; 
 
             /**
              * The operations that were performed on the table.
@@ -305,6 +417,14 @@ public class GetPackageResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * schemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
                 return this;
             }
 

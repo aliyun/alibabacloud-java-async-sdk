@@ -1098,7 +1098,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * threeTierModel.
+             * Indicates whether the current project support the three-tier model
              */
             public Builder threeTierModel(Boolean threeTierModel) {
                 this.threeTierModel = threeTierModel;

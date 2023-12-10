@@ -180,7 +180,7 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * listSystemCatalog.
+         * The flag to choose whether list the specific catalog - system_catalog.
          */
         public Builder listSystemCatalog(Boolean listSystemCatalog) {
             this.putQueryParameter("listSystemCatalog", listSystemCatalog);
