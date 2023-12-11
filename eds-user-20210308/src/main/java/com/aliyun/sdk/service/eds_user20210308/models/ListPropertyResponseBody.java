@@ -62,7 +62,7 @@ public class ListPropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the properties.
+         * The token that is used for the next query. If this parameter is empty, all results have been returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information about the properties.
          */
         public Builder properties(java.util.List < Properties> properties) {
             this.properties = properties;
@@ -78,7 +78,7 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the property.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListPropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -138,7 +138,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValueId.
+             * The ID of the property value.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -203,7 +203,7 @@ public class ListPropertyResponseBody extends TeaModel {
             private java.util.List < PropertyValues> propertyValues; 
 
             /**
-             * The operation that you want to perform. Set the value to **ListProperty**.
+             * The ID of the property.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -211,7 +211,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * Queries all user properties within an Alibaba Cloud account.
+             * The name of the property.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -219,7 +219,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * ListProperty
+             * Details about the property values.
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;

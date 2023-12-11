@@ -50,7 +50,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PropertyValueInfos.
+         * Details about property values.
          */
         public Builder propertyValueInfos(java.util.List < PropertyValueInfos> propertyValueInfos) {
             this.propertyValueInfos = propertyValueInfos;
@@ -58,7 +58,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * ListPropertyValue
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -118,7 +118,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValueId.
+             * The ID of the property value.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;

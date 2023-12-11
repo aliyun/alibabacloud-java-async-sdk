@@ -385,6 +385,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("RealNickName")
+        private String realNickName;
+
         @NameInMap("Remark")
         private String remark;
 
@@ -405,6 +408,7 @@ public class FilterUsersResponseBody extends TeaModel {
             this.isTenantManager = builder.isTenantManager;
             this.ownerType = builder.ownerType;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
             this.status = builder.status;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
@@ -489,6 +493,13 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -520,6 +531,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Boolean isTenantManager; 
             private String ownerType; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
             private Long status; 
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
@@ -666,6 +678,14 @@ public class FilterUsersResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RealNickName.
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
                 return this;
             }
 

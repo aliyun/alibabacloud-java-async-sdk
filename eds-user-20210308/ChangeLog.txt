@@ -1,3 +1,6 @@
+2023-12-11 Version: 1.0.6
+- Generated java-async 2021-03-08 for eds-user.
+
 2023-09-26 Version: 1.0.5
 - Generated java-async 2021-03-08 for eds-user.
 

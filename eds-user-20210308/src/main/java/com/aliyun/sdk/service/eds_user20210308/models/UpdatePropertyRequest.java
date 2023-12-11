@@ -84,7 +84,7 @@ public class UpdatePropertyRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **UpdateProperty**.
+         * The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -93,7 +93,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * The property values that failed to be modified.
+         * The new property name.
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -102,7 +102,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * The new property value N.
+         * The values of property.
          */
         public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
@@ -156,7 +156,7 @@ public class UpdatePropertyRequest extends Request {
             private Long propertyValueId; 
 
             /**
-             * The error code.
+             * The new property value.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -164,7 +164,7 @@ public class UpdatePropertyRequest extends Request {
             }
 
             /**
-             * The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
+             * The ID of property value that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;

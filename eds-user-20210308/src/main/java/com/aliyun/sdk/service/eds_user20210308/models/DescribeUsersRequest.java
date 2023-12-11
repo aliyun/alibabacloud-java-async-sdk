@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUsersRequest extends Request {
     @Body
+    @NameInMap("BizType")
+    private String bizType;
+
+    @Body
     @NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
@@ -41,8 +45,13 @@ public class DescribeUsersRequest extends Request {
     @NameInMap("OrgId")
     private String orgId;
 
+    @Body
+    @NameInMap("SolutionId")
+    private String solutionId;
+
     private DescribeUsersRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
@@ -50,6 +59,7 @@ public class DescribeUsersRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
+        this.solutionId = builder.solutionId;
     }
 
     public static Builder builder() {
@@ -63,6 +73,13 @@ public class DescribeUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -114,7 +131,15 @@ public class DescribeUsersRequest extends Request {
         return this.orgId;
     }
 
+    /**
+     * @return solutionId
+     */
+    public String getSolutionId() {
+        return this.solutionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
+        private String bizType; 
         private java.util.List < String > endUserIds; 
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
@@ -122,6 +147,7 @@ public class DescribeUsersRequest extends Request {
         private Long maxResults; 
         private String nextToken; 
         private String orgId; 
+        private String solutionId; 
 
         private Builder() {
             super();
@@ -129,6 +155,7 @@ public class DescribeUsersRequest extends Request {
 
         private Builder(DescribeUsersRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
@@ -136,7 +163,17 @@ public class DescribeUsersRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
+            this.solutionId = request.solutionId;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putBodyParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * The list of usernames that must be exactly matched.
@@ -204,6 +241,15 @@ public class DescribeUsersRequest extends Request {
         public Builder orgId(String orgId) {
             this.putBodyParameter("OrgId", orgId);
             this.orgId = orgId;
+            return this;
+        }
+
+        /**
+         * SolutionId.
+         */
+        public Builder solutionId(String solutionId) {
+            this.putBodyParameter("SolutionId", solutionId);
+            this.solutionId = solutionId;
             return this;
         }
 

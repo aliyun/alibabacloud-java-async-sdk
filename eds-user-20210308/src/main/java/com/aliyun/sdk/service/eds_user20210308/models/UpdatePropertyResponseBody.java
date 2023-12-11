@@ -50,7 +50,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         private UpdateResult updateResult; 
 
         /**
-         * The name of the property.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the property.
+         * The result of the modification.
          */
         public Builder updateResult(UpdateResult updateResult) {
             this.updateResult = updateResult;
@@ -134,7 +134,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private String propertyValue; 
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -150,7 +150,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyId.
+             * The ID of the property.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -158,7 +158,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValue.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -211,7 +211,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * Modifies a user property.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -219,7 +219,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the property.
+             * The ID of the property value.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -272,7 +272,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private java.util.List < SavePropertyValues> savePropertyValues; 
 
             /**
-             * UpdateProperty
+             * The property values that failed to be modified.
              */
             public Builder failedPropertyValues(java.util.List < FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
@@ -280,7 +280,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The property values that were modified.
              */
             public Builder savePropertyValues(java.util.List < SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
@@ -353,7 +353,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of property value N that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
+             * The name of the property.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -361,7 +361,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * The property values that were modified.
+             * The result of the property value modification.
              */
             public Builder savePropertyValueModel(SavePropertyValueModel savePropertyValueModel) {
                 this.savePropertyValueModel = savePropertyValueModel;
