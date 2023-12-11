@@ -84,12 +84,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         @NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("GmtCreate")
-        private Long gmtCreate;
-
-        @NameInMap("GmtModified")
-        private Long gmtModified;
-
         @NameInMap("ModifyUser")
         private String modifyUser;
 
@@ -107,8 +101,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             this.extensionCode = builder.extensionCode;
             this.extensionDesc = builder.extensionDesc;
             this.extensionName = builder.extensionName;
-            this.gmtCreate = builder.gmtCreate;
-            this.gmtModified = builder.gmtModified;
             this.modifyUser = builder.modifyUser;
             this.owner = builder.owner;
             this.parameterSetting = builder.parameterSetting;
@@ -152,20 +144,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         }
 
         /**
-         * @return gmtCreate
-         */
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        /**
          * @return modifyUser
          */
         public String getModifyUser() {
@@ -198,8 +176,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
             private String extensionCode; 
             private String extensionDesc; 
             private String extensionName; 
-            private Long gmtCreate; 
-            private Long gmtModified; 
             private String modifyUser; 
             private String owner; 
             private String parameterSetting; 
@@ -234,22 +210,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
-                return this;
-            }
-
-            /**
-             * The timestamp when extension was modified.
-             */
-            public Builder gmtCreate(Long gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * GmtModified.
-             */
-            public Builder gmtModified(Long gmtModified) {
-                this.gmtModified = gmtModified;
                 return this;
             }
 

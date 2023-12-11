@@ -37,6 +37,10 @@ public class GetInstanceStatusStatisticRequest extends Request {
     private Long projectId;
 
     @Body
+    @NameInMap("SchedulerPeriod")
+    private String schedulerPeriod;
+
+    @Body
     @NameInMap("SchedulerType")
     private String schedulerType;
 
@@ -47,6 +51,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         this.dagType = builder.dagType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
+        this.schedulerPeriod = builder.schedulerPeriod;
         this.schedulerType = builder.schedulerType;
     }
 
@@ -99,6 +104,13 @@ public class GetInstanceStatusStatisticRequest extends Request {
     }
 
     /**
+     * @return schedulerPeriod
+     */
+    public String getSchedulerPeriod() {
+        return this.schedulerPeriod;
+    }
+
+    /**
      * @return schedulerType
      */
     public String getSchedulerType() {
@@ -111,6 +123,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         private String dagType; 
         private String projectEnv; 
         private Long projectId; 
+        private String schedulerPeriod; 
         private String schedulerType; 
 
         private Builder() {
@@ -124,6 +137,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
             this.dagType = request.dagType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
+            this.schedulerPeriod = request.schedulerPeriod;
             this.schedulerType = request.schedulerType;
         } 
 
@@ -175,6 +189,15 @@ public class GetInstanceStatusStatisticRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * SchedulerPeriod.
+         */
+        public Builder schedulerPeriod(String schedulerPeriod) {
+            this.putBodyParameter("SchedulerPeriod", schedulerPeriod);
+            this.schedulerPeriod = schedulerPeriod;
             return this;
         }
 

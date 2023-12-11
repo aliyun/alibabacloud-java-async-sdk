@@ -16,10 +16,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
-    private Integer statusCode;
-
     @NameInMap("body")
     @Validation(required = true)
     private ListEnabledExtensionsForProjectResponseBody body;
@@ -27,7 +23,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
     private ListEnabledExtensionsForProjectResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
-        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -48,13 +43,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
     }
 
     /**
-     * @return statusCode
-     */
-    public Integer getStatusCode() {
-        return this.statusCode;
-    }
-
-    /**
      * @return body
      */
     public ListEnabledExtensionsForProjectResponseBody getBody() {
@@ -64,8 +52,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
     public interface Builder extends Response.Builder<ListEnabledExtensionsForProjectResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
-
-        Builder statusCode(Integer statusCode);
 
         Builder body(ListEnabledExtensionsForProjectResponseBody body);
 
@@ -78,7 +64,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
             extends Response.BuilderImpl<ListEnabledExtensionsForProjectResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private Integer statusCode; 
         private ListEnabledExtensionsForProjectResponseBody body; 
 
         private BuilderImpl() {
@@ -88,7 +73,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
         private BuilderImpl(ListEnabledExtensionsForProjectResponse response) {
             super(response);
             this.headers = response.headers;
-            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -98,15 +82,6 @@ public class ListEnabledExtensionsForProjectResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
-            return this;
-        }
-
-        /**
-         * statusCode.
-         */
-        @Override
-        public Builder statusCode(Integer statusCode) {
-            this.statusCode = statusCode;
             return this;
         }
 

@@ -46,6 +46,10 @@ public class ListInstancesRequest extends Request {
     private String nodeName;
 
     @Body
+    @NameInMap("OrderBy")
+    private String orderBy;
+
+    @Body
     @NameInMap("Owner")
     private String owner;
 
@@ -86,6 +90,7 @@ public class ListInstancesRequest extends Request {
         this.endBizdate = builder.endBizdate;
         this.nodeId = builder.nodeId;
         this.nodeName = builder.nodeName;
+        this.orderBy = builder.orderBy;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -165,6 +170,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return owner
      */
     public String getOwner() {
@@ -222,6 +234,7 @@ public class ListInstancesRequest extends Request {
         private String endBizdate; 
         private Long nodeId; 
         private String nodeName; 
+        private String orderBy; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -244,6 +257,7 @@ public class ListInstancesRequest extends Request {
             this.endBizdate = request.endBizdate;
             this.nodeId = request.nodeId;
             this.nodeName = request.nodeName;
+            this.orderBy = request.orderBy;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -326,6 +340,15 @@ public class ListInstancesRequest extends Request {
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
             this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putBodyParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 
