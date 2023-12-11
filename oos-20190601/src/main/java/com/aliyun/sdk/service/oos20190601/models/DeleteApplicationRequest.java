@@ -25,11 +25,16 @@ public class DeleteApplicationRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("RetainResource")
+    private Boolean retainResource;
+
     private DeleteApplicationRequest(Builder builder) {
         super(builder);
         this.force = builder.force;
         this.name = builder.name;
         this.regionId = builder.regionId;
+        this.retainResource = builder.retainResource;
     }
 
     public static Builder builder() {
@@ -66,10 +71,18 @@ public class DeleteApplicationRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return retainResource
+     */
+    public Boolean getRetainResource() {
+        return this.retainResource;
+    }
+
     public static final class Builder extends Request.Builder<DeleteApplicationRequest, Builder> {
         private Boolean force; 
         private String name; 
         private String regionId; 
+        private Boolean retainResource; 
 
         private Builder() {
             super();
@@ -80,6 +93,7 @@ public class DeleteApplicationRequest extends Request {
             this.force = request.force;
             this.name = request.name;
             this.regionId = request.regionId;
+            this.retainResource = request.retainResource;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class DeleteApplicationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RetainResource.
+         */
+        public Builder retainResource(Boolean retainResource) {
+            this.putQueryParameter("RetainResource", retainResource);
+            this.retainResource = retainResource;
             return this;
         }
 
