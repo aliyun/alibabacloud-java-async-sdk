@@ -34,6 +34,7 @@ public class QueryNetListRequest extends Request {
 
     @Query
     @NameInMap("SaleId")
+    @Validation(required = true)
     private String saleId;
 
     private QueryNetListRequest(Builder builder) {
