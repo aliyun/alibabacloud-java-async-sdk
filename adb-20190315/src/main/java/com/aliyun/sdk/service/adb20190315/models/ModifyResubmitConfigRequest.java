@@ -7,28 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeEIURangeRequest} extends {@link RequestModel}
+ * {@link ModifyResubmitConfigRequest} extends {@link RequestModel}
  *
- * <p>DescribeEIURangeRequest</p>
+ * <p>ModifyResubmitConfigRequest</p>
  */
-public class DescribeEIURangeRequest extends Request {
-    @Query
-    @NameInMap("ComputeResource")
-    @Validation(required = true)
-    private String computeResource;
-
+public class ModifyResubmitConfigRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
-    private String DBClusterId;
-
-    @Query
-    @NameInMap("DBClusterVersion")
-    private String DBClusterVersion;
-
-    @Query
-    @NameInMap("Operation")
     @Validation(required = true)
-    private String operation;
+    private String DBClusterId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -37,11 +24,6 @@ public class DescribeEIURangeRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
-
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -56,29 +38,26 @@ public class DescribeEIURangeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
+    @NameInMap("Rules")
+    @Validation(required = true)
+    private java.util.List < Rules> rules;
 
-    private DescribeEIURangeRequest(Builder builder) {
+    private ModifyResubmitConfigRequest(Builder builder) {
         super(builder);
-        this.computeResource = builder.computeResource;
         this.DBClusterId = builder.DBClusterId;
-        this.DBClusterVersion = builder.DBClusterVersion;
-        this.operation = builder.operation;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.zoneId = builder.zoneId;
+        this.rules = builder.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeEIURangeRequest create() {
+    public static ModifyResubmitConfigRequest create() {
         return builder().build();
     }
 
@@ -88,31 +67,10 @@ public class DescribeEIURangeRequest extends Request {
     }
 
     /**
-     * @return computeResource
-     */
-    public String getComputeResource() {
-        return this.computeResource;
-    }
-
-    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    /**
-     * @return DBClusterVersion
-     */
-    public String getDBClusterVersion() {
-        return this.DBClusterVersion;
-    }
-
-    /**
-     * @return operation
-     */
-    public String getOperation() {
-        return this.operation;
     }
 
     /**
@@ -127,13 +85,6 @@ public class DescribeEIURangeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -158,52 +109,35 @@ public class DescribeEIURangeRequest extends Request {
     }
 
     /**
-     * @return zoneId
+     * @return rules
      */
-    public String getZoneId() {
-        return this.zoneId;
+    public java.util.List < Rules> getRules() {
+        return this.rules;
     }
 
-    public static final class Builder extends Request.Builder<DescribeEIURangeRequest, Builder> {
-        private String computeResource; 
+    public static final class Builder extends Request.Builder<ModifyResubmitConfigRequest, Builder> {
         private String DBClusterId; 
-        private String DBClusterVersion; 
-        private String operation; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String zoneId; 
+        private java.util.List < Rules> rules; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEIURangeRequest request) {
+        private Builder(ModifyResubmitConfigRequest request) {
             super(request);
-            this.computeResource = request.computeResource;
             this.DBClusterId = request.DBClusterId;
-            this.DBClusterVersion = request.DBClusterVersion;
-            this.operation = request.operation;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.zoneId = request.zoneId;
+            this.rules = request.rules;
         } 
-
-        /**
-         * ComputeResource.
-         */
-        public Builder computeResource(String computeResource) {
-            this.putQueryParameter("ComputeResource", computeResource);
-            this.computeResource = computeResource;
-            return this;
-        }
 
         /**
          * DBClusterId.
@@ -211,24 +145,6 @@ public class DescribeEIURangeRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
-            return this;
-        }
-
-        /**
-         * DBClusterVersion.
-         */
-        public Builder DBClusterVersion(String DBClusterVersion) {
-            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
-            this.DBClusterVersion = DBClusterVersion;
-            return this;
-        }
-
-        /**
-         * Operation.
-         */
-        public Builder operation(String operation) {
-            this.putQueryParameter("Operation", operation);
-            this.operation = operation;
             return this;
         }
 
@@ -251,16 +167,7 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The resource group ID.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,19 +194,141 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * Rules.
          */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
+        public Builder rules(java.util.List < Rules> rules) {
+            String rulesShrink = shrink(rules, "Rules", "json");
+            this.putQueryParameter("Rules", rulesShrink);
+            this.rules = rules;
             return this;
         }
 
         @Override
-        public DescribeEIURangeRequest build() {
-            return new DescribeEIURangeRequest(this);
+        public ModifyResubmitConfigRequest build() {
+            return new ModifyResubmitConfigRequest(this);
         } 
 
     } 
 
+    public static class Rules extends TeaModel {
+        @NameInMap("ExceedMemoryException")
+        private Boolean exceedMemoryException;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("PeakMemory")
+        private String peakMemory;
+
+        @NameInMap("QueryTime")
+        private String queryTime;
+
+        @NameInMap("TargetGroupName")
+        private String targetGroupName;
+
+        private Rules(Builder builder) {
+            this.exceedMemoryException = builder.exceedMemoryException;
+            this.groupName = builder.groupName;
+            this.peakMemory = builder.peakMemory;
+            this.queryTime = builder.queryTime;
+            this.targetGroupName = builder.targetGroupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return exceedMemoryException
+         */
+        public Boolean getExceedMemoryException() {
+            return this.exceedMemoryException;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return peakMemory
+         */
+        public String getPeakMemory() {
+            return this.peakMemory;
+        }
+
+        /**
+         * @return queryTime
+         */
+        public String getQueryTime() {
+            return this.queryTime;
+        }
+
+        /**
+         * @return targetGroupName
+         */
+        public String getTargetGroupName() {
+            return this.targetGroupName;
+        }
+
+        public static final class Builder {
+            private Boolean exceedMemoryException; 
+            private String groupName; 
+            private String peakMemory; 
+            private String queryTime; 
+            private String targetGroupName; 
+
+            /**
+             * ExceedMemoryException.
+             */
+            public Builder exceedMemoryException(Boolean exceedMemoryException) {
+                this.exceedMemoryException = exceedMemoryException;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * PeakMemory.
+             */
+            public Builder peakMemory(String peakMemory) {
+                this.peakMemory = peakMemory;
+                return this;
+            }
+
+            /**
+             * QueryTime.
+             */
+            public Builder queryTime(String queryTime) {
+                this.queryTime = queryTime;
+                return this;
+            }
+
+            /**
+             * TargetGroupName.
+             */
+            public Builder targetGroupName(String targetGroupName) {
+                this.targetGroupName = targetGroupName;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
 }

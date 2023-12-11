@@ -7,24 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyLogBackupPolicyRequest} extends {@link RequestModel}
+ * {@link DescribeResubmitConfigRequest} extends {@link RequestModel}
  *
- * <p>ModifyLogBackupPolicyRequest</p>
+ * <p>DescribeResubmitConfigRequest</p>
  */
-public class ModifyLogBackupPolicyRequest extends Request {
+public class DescribeResubmitConfigRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("EnableBackupLog")
+    @NameInMap("GroupName")
     @Validation(required = true)
-    private String enableBackupLog;
-
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
-    private String logBackupRetentionPeriod;
+    private String groupName;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -46,11 +42,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyLogBackupPolicyRequest(Builder builder) {
+    private DescribeResubmitConfigRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.enableBackupLog = builder.enableBackupLog;
-        this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.groupName = builder.groupName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -62,7 +57,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyLogBackupPolicyRequest create() {
+    public static DescribeResubmitConfigRequest create() {
         return builder().build();
     }
 
@@ -79,17 +74,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return enableBackupLog
+     * @return groupName
      */
-    public String getEnableBackupLog() {
-        return this.enableBackupLog;
-    }
-
-    /**
-     * @return logBackupRetentionPeriod
-     */
-    public String getLogBackupRetentionPeriod() {
-        return this.logBackupRetentionPeriod;
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -127,10 +115,9 @@ public class ModifyLogBackupPolicyRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyLogBackupPolicyRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeResubmitConfigRequest, Builder> {
         private String DBClusterId; 
-        private String enableBackupLog; 
-        private String logBackupRetentionPeriod; 
+        private String groupName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -141,11 +128,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLogBackupPolicyRequest request) {
+        private Builder(DescribeResubmitConfigRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.enableBackupLog = request.enableBackupLog;
-            this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
+            this.groupName = request.groupName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -154,7 +140,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * DBClusterId.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -163,27 +149,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable log backup. Valid values:
-         * <p>
-         * 
-         * *   **Enable**
-         * *   **Disable**
+         * GroupName.
          */
-        public Builder enableBackupLog(String enableBackupLog) {
-            this.putQueryParameter("EnableBackupLog", enableBackupLog);
-            this.enableBackupLog = enableBackupLog;
-            return this;
-        }
-
-        /**
-         * The number of days for which to retain backup files. Valid values: 7 to 730.
-         * <p>
-         * 
-         * > The default value is 7.
-         */
-        public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
-            this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
-            this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
             return this;
         }
 
@@ -206,7 +176,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -233,8 +203,8 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         @Override
-        public ModifyLogBackupPolicyRequest build() {
-            return new ModifyLogBackupPolicyRequest(this);
+        public DescribeResubmitConfigRequest build() {
+            return new DescribeResubmitConfigRequest(this);
         } 
 
     } 

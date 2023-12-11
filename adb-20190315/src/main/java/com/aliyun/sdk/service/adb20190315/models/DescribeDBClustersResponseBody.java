@@ -173,7 +173,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * The tag key.
              * <p>
              * 
-             * > You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
+             * >  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -702,7 +702,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * *   **CLUSTER**: reserved mode for Cluster Edition.
              * *   **MIXED_STORAGE**: elastic mode for Cluster Edition.
              * 
-             * > For more information about cluster editions, see [Editions](~~205001~~).
+             * >  For more information about cluster editions, see [Editions](~~205001~~).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -825,11 +825,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * *   **cloud**: basic disk.
              * *   **cloud_ssd**: standard SSD.
              * *   **cloud_efficiency**: ultra disk.
-             * *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+             * *   **cloud_essd**: PL0 enhanced SSD (ESSD).
+             * *   **cloud_essd**: PL1 ESSD.
              * *   **cloud_essd2**: PL2 ESSD.
              * *   **cloud_essd3**: PL3 ESSD.
              * 
-             * > For more information, see [ESSDs](~~122389~~).
+             * >  For more information, see [ESSDs](~~122389~~).
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -848,7 +849,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
              * <p>
              * 
-             * > This parameter is returned only for clusters in elastic mode.
+             * >  This parameter is returned only for clusters in elastic mode.
              */
             public Builder elasticIOResource(Integer elasticIOResource) {
                 this.elasticIOResource = elasticIOResource;
@@ -933,7 +934,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * The reason why the cluster is locked.
              * <p>
              * 
-             * > This parameter is returned only when the cluster was locked. **instance_expire** is returned.
+             * >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -993,7 +994,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

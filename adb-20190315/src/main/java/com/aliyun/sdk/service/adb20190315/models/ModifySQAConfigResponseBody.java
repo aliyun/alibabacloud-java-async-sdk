@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GrantOperatorPermissionResponseBody} extends {@link TeaModel}
+ * {@link ModifySQAConfigResponseBody} extends {@link TeaModel}
  *
- * <p>GrantOperatorPermissionResponseBody</p>
+ * <p>ModifySQAConfigResponseBody</p>
  */
-public class GrantOperatorPermissionResponseBody extends TeaModel {
+public class ModifySQAConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GrantOperatorPermissionResponseBody(Builder builder) {
+    private ModifySQAConfigResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class GrantOperatorPermissionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GrantOperatorPermissionResponseBody create() {
+    public static ModifySQAConfigResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class GrantOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GrantOperatorPermissionResponseBody build() {
-            return new GrantOperatorPermissionResponseBody(this);
+        public ModifySQAConfigResponseBody build() {
+            return new ModifySQAConfigResponseBody(this);
         } 
 
     } 

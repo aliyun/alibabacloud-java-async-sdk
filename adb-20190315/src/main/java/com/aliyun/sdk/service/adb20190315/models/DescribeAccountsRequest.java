@@ -139,7 +139,7 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * The account of the database.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -148,9 +148,9 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * *   Normal: standard account
+         * *   Normal: standard account.
          * <p>
-         * *   Super: privileged account
+         * *   Super: privileged account.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -159,7 +159,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

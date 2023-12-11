@@ -56,12 +56,20 @@ public class CreateDBClusterRequest extends Request {
     private String DBNodeStorage;
 
     @Query
+    @NameInMap("DiskEncryption")
+    private String diskEncryption;
+
+    @Query
     @NameInMap("ElasticIOResource")
     private String elasticIOResource;
 
     @Query
     @NameInMap("ExecutorCount")
     private String executorCount;
+
+    @Query
+    @NameInMap("KmsId")
+    private String kmsId;
 
     @Query
     @NameInMap("Mode")
@@ -153,8 +161,10 @@ public class CreateDBClusterRequest extends Request {
         this.DBClusterVersion = builder.DBClusterVersion;
         this.DBNodeGroupCount = builder.DBNodeGroupCount;
         this.DBNodeStorage = builder.DBNodeStorage;
+        this.diskEncryption = builder.diskEncryption;
         this.elasticIOResource = builder.elasticIOResource;
         this.executorCount = builder.executorCount;
+        this.kmsId = builder.kmsId;
         this.mode = builder.mode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -260,6 +270,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return diskEncryption
+     */
+    public String getDiskEncryption() {
+        return this.diskEncryption;
+    }
+
+    /**
      * @return elasticIOResource
      */
     public String getElasticIOResource() {
@@ -271,6 +288,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getExecutorCount() {
         return this.executorCount;
+    }
+
+    /**
+     * @return kmsId
+     */
+    public String getKmsId() {
+        return this.kmsId;
     }
 
     /**
@@ -417,8 +441,10 @@ public class CreateDBClusterRequest extends Request {
         private String DBClusterVersion; 
         private String DBNodeGroupCount; 
         private String DBNodeStorage; 
+        private String diskEncryption; 
         private String elasticIOResource; 
         private String executorCount; 
+        private String kmsId; 
         private String mode; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -455,8 +481,10 @@ public class CreateDBClusterRequest extends Request {
             this.DBClusterVersion = request.DBClusterVersion;
             this.DBNodeGroupCount = request.DBNodeGroupCount;
             this.DBNodeStorage = request.DBNodeStorage;
+            this.diskEncryption = request.diskEncryption;
             this.elasticIOResource = request.elasticIOResource;
             this.executorCount = request.executorCount;
+            this.kmsId = request.kmsId;
             this.mode = request.mode;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -601,6 +629,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * DiskEncryption.
+         */
+        public Builder diskEncryption(String diskEncryption) {
+            this.putQueryParameter("DiskEncryption", diskEncryption);
+            this.diskEncryption = diskEncryption;
+            return this;
+        }
+
+        /**
          * The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
          */
         public Builder elasticIOResource(String elasticIOResource) {
@@ -615,6 +652,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder executorCount(String executorCount) {
             this.putQueryParameter("ExecutorCount", executorCount);
             this.executorCount = executorCount;
+            return this;
+        }
+
+        /**
+         * KmsId.
+         */
+        public Builder kmsId(String kmsId) {
+            this.putQueryParameter("KmsId", kmsId);
+            this.kmsId = kmsId;
             return this;
         }
 

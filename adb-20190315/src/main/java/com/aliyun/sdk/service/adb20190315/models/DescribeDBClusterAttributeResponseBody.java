@@ -110,10 +110,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              * <p>
              * 
-             * > You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.
+             * >  You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -121,7 +121,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -218,6 +218,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("DBVersion")
         private String DBVersion;
+
+        @NameInMap("DiskEncryption")
+        private String diskEncryption;
 
         @NameInMap("DiskPerformanceLevel")
         private String diskPerformanceLevel;
@@ -327,6 +330,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.DBNodeCount = builder.DBNodeCount;
             this.DBNodeStorage = builder.DBNodeStorage;
             this.DBVersion = builder.DBVersion;
+            this.diskEncryption = builder.diskEncryption;
             this.diskPerformanceLevel = builder.diskPerformanceLevel;
             this.diskType = builder.diskType;
             this.dtsJobId = builder.dtsJobId;
@@ -464,6 +468,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getDBVersion() {
             return this.DBVersion;
+        }
+
+        /**
+         * @return diskEncryption
+         */
+        public String getDiskEncryption() {
+            return this.diskEncryption;
         }
 
         /**
@@ -698,6 +709,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Long DBNodeCount; 
             private Long DBNodeStorage; 
             private String DBVersion; 
+            private String diskEncryption; 
             private String diskPerformanceLevel; 
             private String diskType; 
             private String dtsJobId; 
@@ -738,7 +750,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **CLUSTER**: reserved mode for Cluster Edition.
              * *   **MIXED_STORAGE**: elastic mode for Cluster Edition.
              * 
-             * > For more information about cluster editions, see [Editions](~~205001~~).
+             * >  For more information about cluster editions, see [Editions](~~205001~~).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -758,7 +770,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of computing resources that are used by the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
+             * The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -858,6 +870,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * DiskEncryption.
+             */
+            public Builder diskEncryption(String diskEncryption) {
+                this.diskEncryption = diskEncryption;
+                return this;
+            }
+
+            /**
              * The ESSD performance level.
              */
             public Builder diskPerformanceLevel(String diskPerformanceLevel) {
@@ -873,11 +893,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **cloud**: basic disk.
              * *   **cloud_ssd**: standard SSD.
              * *   **cloud_efficiency**: ultra disk.
-             * *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+             * *   **cloud_essd0**: PL0 enhanced SSD (ESSD).
+             * *   **cloud_essd**: PL1 ESSD.
              * *   **cloud_essd2**: PL2 ESSD.
              * *   **cloud_essd3**: PL3 ESSD.
              * 
-             * > For more information about ESSDs, see [ESSD specifications](~~122389~~).
+             * >  For more information about ESSDs, see [ESSDs](~~122389~~).
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1007,7 +1028,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * The ID of the key that is used to encrypt disk data.
              * <p>
              * 
-             * > This parameter is returned only when disk encryption is enabled.
+             * >  This parameter is returned only when disk encryption is enabled.
              */
             public Builder kmsId(String kmsId) {
                 this.kmsId = kmsId;
@@ -1033,7 +1054,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * The reason why the cluster is locked.
              * <p>
              * 
-             * > This parameter is returned only when the cluster was locked. The value is **instance_expire**.
+             * >  This parameter is returned only when the cluster was locked. **instance_expire** is returned.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1041,10 +1062,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the cluster. The window is in the *HH:mmZ-HH:mmZ* format. The time is displayed in UTC. Example: *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
+             * The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
              * <p>
              * 
-             * > For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
+             * >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -1058,7 +1079,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **flexible**: elastic mode.
              * *   **reserver**: reserved mode.
              * 
-             * > For more information about cluster modes, see [Editions](~~205001~~).
+             * >  For more information about cluster modes, see [Editions](~~205001~~).
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1102,7 +1123,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1110,7 +1131,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of storage resources that are used by the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
+             * The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;

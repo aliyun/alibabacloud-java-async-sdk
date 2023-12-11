@@ -167,7 +167,7 @@ public class DescribeComputeResourceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -185,7 +185,10 @@ public class DescribeComputeResourceRequest extends Request {
         }
 
         /**
-         * Migrate.
+         * The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:
+         * <p>
+         * - **true**
+         * - **false**(default value)
          */
         public Builder migrate(Boolean migrate) {
             this.putQueryParameter("Migrate", migrate);

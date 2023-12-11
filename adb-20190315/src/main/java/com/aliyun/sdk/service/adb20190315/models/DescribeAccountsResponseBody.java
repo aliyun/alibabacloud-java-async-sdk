@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of database accounts.
+         * The queried database accounts.
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountType; 
 
             /**
-             * The description of the account.
+             * The description of the database account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -142,7 +142,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * The name of the database account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -150,12 +150,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account.
+             * The state of the database account. Valid values:
              * <p>
              * 
-             * *   Creating: The account is being created.
-             * *   Available: The account is available.
-             * *   Deleting: The account is being deleted.
+             * *   Creating
+             * *   Available
+             * *   Deleting
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -163,9 +163,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * *   Normal: standard account
+             * *   Normal: standard account.
              * <p>
-             * *   Super: privileged account
+             * *   Super: privileged account.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

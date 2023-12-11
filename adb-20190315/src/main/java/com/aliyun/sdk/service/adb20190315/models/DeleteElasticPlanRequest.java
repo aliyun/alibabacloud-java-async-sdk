@@ -126,7 +126,10 @@ public class DeleteElasticPlanRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~612241~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +138,10 @@ public class DeleteElasticPlanRequest extends Request {
         }
 
         /**
-         * The name of the elastic plan.
+         * The name of the scaling plan.
+         * <p>
+         * 
+         * > You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);

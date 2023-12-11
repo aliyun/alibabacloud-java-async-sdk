@@ -144,7 +144,7 @@ public class GrantOperatorPermissionRequest extends Request {
          * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

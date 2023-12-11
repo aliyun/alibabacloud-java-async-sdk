@@ -157,12 +157,8 @@ public class ModifyMaintenanceActionRequest extends Request {
         /**
          * The ID of the pending O\&M event. You can specify multiple IDs to batch change the switchover time. Separate multiple IDs with commas (,).
          * <p>
-         * 
-         * > 
-         * 
-         * *   You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.
-         * 
-         * *   You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).
+         * > - You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.
+         * > - You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -192,9 +188,7 @@ public class ModifyMaintenanceActionRequest extends Request {
          * The ID of the region where the pending O\&M event occurs.
          * <p>
          * 
-         * > 
-         * 
-         * *   You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * > - You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +197,7 @@ public class ModifyMaintenanceActionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

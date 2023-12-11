@@ -182,10 +182,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * The ID of the AnalyticDB for MySQL cluster.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -217,37 +217,37 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          * 
          *     *   **AnalyticDB_Connections**: the number of database connections.
          * 
-         * *   Write
+         * *   Writes
          * 
          *     *   **AnalyticDB_TPS**: the write transactions per second (TPS).
          *     *   **AnalyticDB_InsertRT**: the write response time.
-         *     *   **AnalyticDB_InsertBytes**: the write throughout.
+         *     *   **AnalyticDB_InsertBytes**: the write throughput.
          * 
-         * *   Update
+         * *   Updates
          * 
          *     *   **AnalyticDB_UpdateRT**: the update response time.
          * 
-         * *   Delete
+         * *   Deletion
          * 
          *     *   **AnalyticDB_DeleteRT**: the delete response time.
          * 
-         * *   Query
+         * *   Queries
          * 
          *     *   **AnalyticDB_QPS**: the queries per second (QPS).
          *     *   **AnalyticDB_QueryRT**: the query response time.
          *     *   **AnalyticDB_QueryWaitTime**: the query wait time.
          * 
-         * *   Disk
+         * *   Disks
          * 
          *     *   **AnalyticDB_IO**: the disk I/O throughput.
          *     *   **AnalyticDB_IO_UTIL**: the I/O utilization.
          *     *   **AnalyticDB_IO_WAIT**: the I/O wait time.
          *     *   **AnalyticDB_IOPS**: the disk input/output operations per second (IOPS).
-         *     *   **AnalyticDB_DiskUsage**: the disk usage.
-         *     *   **AnalyticDB_HotDataDiskUsage**: the disk usage of hot data.
-         *     *   **AnalyticDB_ColdDataDiskUsage**: the disk usage of cold data.
+         *     *   **AnalyticDB_DiskUsage**: the disk space that is used.
+         *     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
+         *     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by cold data.
          * 
-         * > If you leave this parameter empty, the values of all the preceding performance metrics are returned.
+         * >  If you leave this parameter empty, the values of all the preceding performance metrics are returned.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -274,7 +274,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -301,7 +301,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * ResourcePools.
+         * The name of the resource group.
          */
         public Builder resourcePools(String resourcePools) {
             this.putQueryParameter("ResourcePools", resourcePools);

@@ -140,7 +140,7 @@ public class DescribeTablesRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,7 +167,10 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

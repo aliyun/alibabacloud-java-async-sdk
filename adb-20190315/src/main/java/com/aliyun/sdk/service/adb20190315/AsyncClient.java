@@ -114,7 +114,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the [DescribeAuditLogConfig](~~190628~~) operation to query the status of SQL audit. If SQL audit is disabled, you can call the [ModifyAuditLogConfig](~~190629~~) operation to enable SQL audit.
-      * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.
+      * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried. The following operations are not recorded in SQL audit logs: **INSERT INTO VALUES**, **REPLACE INTO VALUES**, and **UPSERT INTO VALUES**.
       *
      */
     CompletableFuture<DescribeAuditLogRecordsResponse> describeAuditLogRecords(DescribeAuditLogRecordsRequest request);
@@ -217,6 +217,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
+    CompletableFuture<DescribeResubmitConfigResponse> describeResubmitConfig(DescribeResubmitConfigRequest request);
+
+    CompletableFuture<DescribeSQAConfigResponse> describeSQAConfig(DescribeSQAConfigRequest request);
+
     CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request);
 
     CompletableFuture<DescribeSQLPlanResponse> describeSQLPlan(DescribeSQLPlanRequest request);
@@ -240,6 +244,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * >  For more information about table statistics, see [View monitoring information of resource pools](~~188721~~).
       *
+     * @tags Perth
      */
     CompletableFuture<DescribeTableStatisticsResponse> describeTableStatistics(DescribeTableStatisticsRequest request);
 
@@ -262,6 +267,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableAdviceServiceResponse> enableAdviceService(EnableAdviceServiceRequest request);
 
     /**
+      * ###
       * If you need Alibaba Cloud technical support to perform operations on your AnalyticDB for MySQL cluster, you must grant permissions to the service account of your cluster. When the validity period of the authorization ends, the granted permissions are automatically revoked.
       *
      */
@@ -324,6 +330,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyLogBackupPolicyResponse> modifyLogBackupPolicy(ModifyLogBackupPolicyRequest request);
 
     CompletableFuture<ModifyMaintenanceActionResponse> modifyMaintenanceAction(ModifyMaintenanceActionRequest request);
+
+    CompletableFuture<ModifyResubmitConfigResponse> modifyResubmitConfig(ModifyResubmitConfigRequest request);
+
+    CompletableFuture<ModifySQAConfigResponse> modifySQAConfig(ModifySQAConfigRequest request);
 
     CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request);
 

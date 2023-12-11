@@ -40,6 +40,10 @@ public class DescribeTableStatisticsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -55,6 +59,7 @@ public class DescribeTableStatisticsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -115,6 +120,13 @@ public class DescribeTableStatisticsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -135,6 +147,7 @@ public class DescribeTableStatisticsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -150,6 +163,7 @@ public class DescribeTableStatisticsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -216,6 +230,18 @@ public class DescribeTableStatisticsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

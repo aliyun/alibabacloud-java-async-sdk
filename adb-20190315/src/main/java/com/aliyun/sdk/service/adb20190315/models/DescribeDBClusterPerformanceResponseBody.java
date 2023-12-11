@@ -182,7 +182,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The name of the performance metric.
+             * The name of the performance metric value.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +190,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the cluster.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -279,7 +279,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the performance metric.
+             * The unit of the performance metrics.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

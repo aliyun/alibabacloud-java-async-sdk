@@ -50,7 +50,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of tables.
+         * The queried tables.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The ID of the cluster.
+             * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;

@@ -142,7 +142,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String backupMethod;
 
         @NameInMap("BackupSize")
-        private Integer backupSize;
+        private Long backupSize;
 
         @NameInMap("BackupStartTime")
         private String backupStartTime;
@@ -195,7 +195,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupSize
          */
-        public Integer getBackupSize() {
+        public Long getBackupSize() {
             return this.backupSize;
         }
 
@@ -224,7 +224,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupEndTime; 
             private String backupId; 
             private String backupMethod; 
-            private Integer backupSize; 
+            private Long backupSize; 
             private String backupStartTime; 
             private String backupType; 
             private String DBClusterId; 
@@ -256,7 +256,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * The backup size. Unit: bytes.
              */
-            public Builder backupSize(Integer backupSize) {
+            public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
                 return this;
             }
