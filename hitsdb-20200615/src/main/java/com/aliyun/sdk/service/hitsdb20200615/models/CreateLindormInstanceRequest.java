@@ -25,6 +25,14 @@ public class CreateLindormInstanceRequest extends Request {
     private String archVersion;
 
     @Query
+    @NameInMap("AutoRenewDuration")
+    private String autoRenewDuration;
+
+    @Query
+    @NameInMap("AutoRenewal")
+    private Boolean autoRenewal;
+
+    @Query
     @NameInMap("ColdStorage")
     private Integer coldStorage;
 
@@ -189,6 +197,8 @@ public class CreateLindormInstanceRequest extends Request {
         this.arbiterVSwitchId = builder.arbiterVSwitchId;
         this.arbiterZoneId = builder.arbiterZoneId;
         this.archVersion = builder.archVersion;
+        this.autoRenewDuration = builder.autoRenewDuration;
+        this.autoRenewal = builder.autoRenewal;
         this.coldStorage = builder.coldStorage;
         this.coreSingleStorage = builder.coreSingleStorage;
         this.coreSpec = builder.coreSpec;
@@ -261,6 +271,20 @@ public class CreateLindormInstanceRequest extends Request {
      */
     public String getArchVersion() {
         return this.archVersion;
+    }
+
+    /**
+     * @return autoRenewDuration
+     */
+    public String getAutoRenewDuration() {
+        return this.autoRenewDuration;
+    }
+
+    /**
+     * @return autoRenewal
+     */
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     /**
@@ -533,6 +557,8 @@ public class CreateLindormInstanceRequest extends Request {
         private String arbiterVSwitchId; 
         private String arbiterZoneId; 
         private String archVersion; 
+        private String autoRenewDuration; 
+        private Boolean autoRenewal; 
         private Integer coldStorage; 
         private Integer coreSingleStorage; 
         private String coreSpec; 
@@ -581,6 +607,8 @@ public class CreateLindormInstanceRequest extends Request {
             this.arbiterVSwitchId = request.arbiterVSwitchId;
             this.arbiterZoneId = request.arbiterZoneId;
             this.archVersion = request.archVersion;
+            this.autoRenewDuration = request.autoRenewDuration;
+            this.autoRenewal = request.autoRenewal;
             this.coldStorage = request.coldStorage;
             this.coreSingleStorage = request.coreSingleStorage;
             this.coreSpec = request.coreSpec;
@@ -651,6 +679,24 @@ public class CreateLindormInstanceRequest extends Request {
         public Builder archVersion(String archVersion) {
             this.putQueryParameter("ArchVersion", archVersion);
             this.archVersion = archVersion;
+            return this;
+        }
+
+        /**
+         * AutoRenewDuration.
+         */
+        public Builder autoRenewDuration(String autoRenewDuration) {
+            this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
+            this.autoRenewDuration = autoRenewDuration;
+            return this;
+        }
+
+        /**
+         * AutoRenewal.
+         */
+        public Builder autoRenewal(Boolean autoRenewal) {
+            this.putQueryParameter("AutoRenewal", autoRenewal);
+            this.autoRenewal = autoRenewal;
             return this;
         }
 
