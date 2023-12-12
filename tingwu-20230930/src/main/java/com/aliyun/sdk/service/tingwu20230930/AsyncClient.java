@@ -20,6 +20,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
+    CompletableFuture<CreateTranscriptionPhrasesResponse> createTranscriptionPhrases(CreateTranscriptionPhrasesRequest request);
+
+    CompletableFuture<DeleteTranscriptionPhrasesResponse> deleteTranscriptionPhrases(DeleteTranscriptionPhrasesRequest request);
+
     CompletableFuture<GetTaskInfoResponse> getTaskInfo(GetTaskInfoRequest request);
+
+    CompletableFuture<GetTranscriptionPhrasesResponse> getTranscriptionPhrases(GetTranscriptionPhrasesRequest request);
+
+    CompletableFuture<ListTranscriptionPhrasesResponse> listTranscriptionPhrases(ListTranscriptionPhrasesRequest request);
+
+    CompletableFuture<UpdateTranscriptionPhrasesResponse> updateTranscriptionPhrases(UpdateTranscriptionPhrasesRequest request);
 
 }

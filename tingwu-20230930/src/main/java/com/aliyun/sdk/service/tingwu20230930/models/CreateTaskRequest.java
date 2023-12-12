@@ -520,11 +520,15 @@ public class CreateTaskRequest extends Request {
         @NameInMap("OutputLevel")
         private Integer outputLevel;
 
+        @NameInMap("PhraseId")
+        private String phraseId;
+
         private Transcription(Builder builder) {
             this.audioEventDetectionEnabled = builder.audioEventDetectionEnabled;
             this.diarization = builder.diarization;
             this.diarizationEnabled = builder.diarizationEnabled;
             this.outputLevel = builder.outputLevel;
+            this.phraseId = builder.phraseId;
         }
 
         public static Builder builder() {
@@ -563,11 +567,19 @@ public class CreateTaskRequest extends Request {
             return this.outputLevel;
         }
 
+        /**
+         * @return phraseId
+         */
+        public String getPhraseId() {
+            return this.phraseId;
+        }
+
         public static final class Builder {
             private Boolean audioEventDetectionEnabled; 
             private Diarization diarization; 
             private Boolean diarizationEnabled; 
             private Integer outputLevel; 
+            private String phraseId; 
 
             /**
              * AudioEventDetectionEnabled.
@@ -598,6 +610,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder outputLevel(Integer outputLevel) {
                 this.outputLevel = outputLevel;
+                return this;
+            }
+
+            /**
+             * PhraseId.
+             */
+            public Builder phraseId(String phraseId) {
+                this.phraseId = phraseId;
                 return this;
             }
 
