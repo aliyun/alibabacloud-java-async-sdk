@@ -16,6 +16,10 @@ public class DescribeTransferHistoryResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeTransferHistoryResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeTransferHistoryResponse extends Response {
     private DescribeTransferHistoryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeTransferHistoryResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeTransferHistoryResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeTransferHistoryResponse extends Response {
     public interface Builder extends Response.Builder<DescribeTransferHistoryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeTransferHistoryResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeTransferHistoryResponse extends Response {
             extends Response.BuilderImpl<DescribeTransferHistoryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeTransferHistoryResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeTransferHistoryResponse extends Response {
         private BuilderImpl(DescribeTransferHistoryResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeTransferHistoryResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

@@ -26,6 +26,14 @@ public class DescribeSynDbsRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -38,6 +46,8 @@ public class DescribeSynDbsRequest extends Request {
         this.dbClusterId = builder.dbClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -77,6 +87,20 @@ public class DescribeSynDbsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -94,6 +118,8 @@ public class DescribeSynDbsRequest extends Request {
         private String dbClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,6 +132,8 @@ public class DescribeSynDbsRequest extends Request {
             this.dbClusterId = request.dbClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -134,6 +162,24 @@ public class DescribeSynDbsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
