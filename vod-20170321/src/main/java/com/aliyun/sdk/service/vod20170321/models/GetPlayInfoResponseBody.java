@@ -681,6 +681,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StorageClass")
+        private String storageClass;
+
         @NameInMap("Title")
         private String title;
 
@@ -694,6 +697,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             this.duration = builder.duration;
             this.mediaType = builder.mediaType;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.title = builder.title;
             this.videoId = builder.videoId;
         }
@@ -749,6 +753,13 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -769,6 +780,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private String duration; 
             private String mediaType; 
             private String status; 
+            private String storageClass; 
             private String title; 
             private String videoId; 
 
@@ -821,6 +833,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 

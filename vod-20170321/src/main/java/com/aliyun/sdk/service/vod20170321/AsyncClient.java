@@ -57,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AddVodDomainResponse> addVodDomain(AddVodDomainRequest request);
 
+    CompletableFuture<AddVodStorageForAppResponse> addVodStorageForApp(AddVodStorageForAppRequest request);
+
     /**
       * > *   After you create a snapshot template, you can specify the ID of the snapshot template in the request of the [SubmitSnapshotJob](~~72213~~) operation to take snapshots.
       * > *   You can receive the [SnapshotComplete](~~57337~~) event notification by using an HTTP or HTTPS URL or in Message Service (MNS). For more information, see [Overview](~~55627~~).

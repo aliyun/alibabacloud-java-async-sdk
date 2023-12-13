@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateMediaStorageClassRequest extends Request {
     @Query
+    @NameInMap("AllowUpdateWithoutTimeLimit")
+    private Boolean allowUpdateWithoutTimeLimit;
+
+    @Query
     @NameInMap("MediaIds")
     @Validation(required = true)
     private String mediaIds;
@@ -32,6 +36,7 @@ public class UpdateMediaStorageClassRequest extends Request {
 
     private UpdateMediaStorageClassRequest(Builder builder) {
         super(builder);
+        this.allowUpdateWithoutTimeLimit = builder.allowUpdateWithoutTimeLimit;
         this.mediaIds = builder.mediaIds;
         this.restoreTier = builder.restoreTier;
         this.scope = builder.scope;
@@ -49,6 +54,13 @@ public class UpdateMediaStorageClassRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowUpdateWithoutTimeLimit
+     */
+    public Boolean getAllowUpdateWithoutTimeLimit() {
+        return this.allowUpdateWithoutTimeLimit;
     }
 
     /**
@@ -80,6 +92,7 @@ public class UpdateMediaStorageClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateMediaStorageClassRequest, Builder> {
+        private Boolean allowUpdateWithoutTimeLimit; 
         private String mediaIds; 
         private String restoreTier; 
         private String scope; 
@@ -91,11 +104,21 @@ public class UpdateMediaStorageClassRequest extends Request {
 
         private Builder(UpdateMediaStorageClassRequest request) {
             super(request);
+            this.allowUpdateWithoutTimeLimit = request.allowUpdateWithoutTimeLimit;
             this.mediaIds = request.mediaIds;
             this.restoreTier = request.restoreTier;
             this.scope = request.scope;
             this.storageClass = request.storageClass;
         } 
+
+        /**
+         * AllowUpdateWithoutTimeLimit.
+         */
+        public Builder allowUpdateWithoutTimeLimit(Boolean allowUpdateWithoutTimeLimit) {
+            this.putQueryParameter("AllowUpdateWithoutTimeLimit", allowUpdateWithoutTimeLimit);
+            this.allowUpdateWithoutTimeLimit = allowUpdateWithoutTimeLimit;
+            return this;
+        }
 
         /**
          * The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:
