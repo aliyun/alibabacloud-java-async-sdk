@@ -24,11 +24,16 @@ public class UpdateQuotaRequest extends Request {
     @NameInMap("Labels")
     private java.util.List < Label > labels;
 
+    @Body
+    @NameInMap("QueueStrategy")
+    private String queueStrategy;
+
     private UpdateQuotaRequest(Builder builder) {
         super(builder);
         this.quotaId = builder.quotaId;
         this.description = builder.description;
         this.labels = builder.labels;
+        this.queueStrategy = builder.queueStrategy;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class UpdateQuotaRequest extends Request {
         return this.labels;
     }
 
+    /**
+     * @return queueStrategy
+     */
+    public String getQueueStrategy() {
+        return this.queueStrategy;
+    }
+
     public static final class Builder extends Request.Builder<UpdateQuotaRequest, Builder> {
         private String quotaId; 
         private String description; 
         private java.util.List < Label > labels; 
+        private String queueStrategy; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class UpdateQuotaRequest extends Request {
             this.quotaId = request.quotaId;
             this.description = request.description;
             this.labels = request.labels;
+            this.queueStrategy = request.queueStrategy;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class UpdateQuotaRequest extends Request {
         public Builder labels(java.util.List < Label > labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * QueueStrategy.
+         */
+        public Builder queueStrategy(String queueStrategy) {
+            this.putBodyParameter("QueueStrategy", queueStrategy);
+            this.queueStrategy = queueStrategy;
             return this;
         }
 
