@@ -66,10 +66,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private TransformInstanceChargeTypeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -85,7 +81,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
         this.pricingCycle = builder.pricingCycle;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -192,13 +187,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<TransformInstanceChargeTypeRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
@@ -213,7 +201,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
         private String pricingCycle; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -234,7 +221,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
             this.pricingCycle = request.pricingCycle;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -253,7 +239,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * *   **true**
          * *   **false**
          * 
-         * > Default value: **true**.
+         * >  Default value: **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -335,7 +321,11 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
+         * The subscription duration. Valid values:
+         * <p>
+         * 
+         * *   If the PricingCycle parameter is set to Month, the valid values of this parameter range from **1** to **9**.
+         * *   If the PricingCycle parameter is set to Year, the valid values of this parameter are **1**, **2**, **3**, and **5**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -344,7 +334,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The unit of the subscription duration. Valid values:
+         * <p>
+         * 
+         * *   **Month**
+         * *   **Year**
+         * 
+         * Default value: Month.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -367,15 +363,6 @@ public class TransformInstanceChargeTypeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

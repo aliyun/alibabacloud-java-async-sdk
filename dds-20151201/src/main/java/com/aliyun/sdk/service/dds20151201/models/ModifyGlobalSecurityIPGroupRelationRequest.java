@@ -43,10 +43,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ModifyGlobalSecurityIPGroupRelationRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -56,7 +52,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -121,13 +116,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ModifyGlobalSecurityIPGroupRelationRequest, Builder> {
         private String DBClusterId; 
         private String globalSecurityGroupId; 
@@ -136,7 +124,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -151,7 +138,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -214,15 +200,6 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

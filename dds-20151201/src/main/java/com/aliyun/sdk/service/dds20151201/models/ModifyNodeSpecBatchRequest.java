@@ -66,10 +66,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ModifyNodeSpecBatchRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -85,7 +81,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -192,13 +187,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ModifyNodeSpecBatchRequest, Builder> {
         private Boolean autoPay; 
         private String businessInfo; 
@@ -213,7 +201,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -234,7 +221,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -375,15 +361,6 @@ public class ModifyNodeSpecBatchRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

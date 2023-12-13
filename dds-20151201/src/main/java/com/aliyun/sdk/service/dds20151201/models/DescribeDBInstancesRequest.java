@@ -101,10 +101,6 @@ public class DescribeDBInstancesRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -144,7 +140,6 @@ public class DescribeDBInstancesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -319,13 +314,6 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -376,7 +364,6 @@ public class DescribeDBInstancesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
@@ -410,7 +397,6 @@ public class DescribeDBInstancesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -655,15 +641,6 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

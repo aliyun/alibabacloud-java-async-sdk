@@ -146,10 +146,6 @@ public class CreateDBInstanceRequest extends Request {
     private String securityIPList;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("SrcDBInstanceId")
     private String srcDBInstanceId;
 
@@ -211,7 +207,6 @@ public class CreateDBInstanceRequest extends Request {
         this.restoreTime = builder.restoreTime;
         this.secondaryZoneId = builder.secondaryZoneId;
         this.securityIPList = builder.securityIPList;
-        this.securityToken = builder.securityToken;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.storageEngine = builder.storageEngine;
         this.storageType = builder.storageType;
@@ -459,13 +454,6 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return srcDBInstanceId
      */
     public String getSrcDBInstanceId() {
@@ -547,7 +535,6 @@ public class CreateDBInstanceRequest extends Request {
         private String restoreTime; 
         private String secondaryZoneId; 
         private String securityIPList; 
-        private String securityToken; 
         private String srcDBInstanceId; 
         private String storageEngine; 
         private String storageType; 
@@ -594,7 +581,6 @@ public class CreateDBInstanceRequest extends Request {
             this.restoreTime = request.restoreTime;
             this.secondaryZoneId = request.secondaryZoneId;
             this.securityIPList = request.securityIPList;
-            this.securityToken = request.securityToken;
             this.srcDBInstanceId = request.srcDBInstanceId;
             this.storageEngine = request.storageEngine;
             this.storageType = request.storageType;
@@ -984,15 +970,6 @@ public class CreateDBInstanceRequest extends Request {
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
             this.securityIPList = securityIPList;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

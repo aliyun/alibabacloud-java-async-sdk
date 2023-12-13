@@ -51,10 +51,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
@@ -69,7 +65,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.zoneId = builder.zoneId;
     }
 
@@ -150,13 +145,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -173,7 +161,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String zoneId; 
 
         private Builder() {
@@ -191,7 +178,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.zoneId = request.zoneId;
         } 
 
@@ -285,15 +271,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

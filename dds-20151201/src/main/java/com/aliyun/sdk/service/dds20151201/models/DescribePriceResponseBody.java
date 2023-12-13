@@ -306,7 +306,11 @@ public class DescribePriceResponseBody extends TeaModel {
             private PromotionRuleIdList promotionRuleIdList; 
 
             /**
-             * The billing method to which the coupon was applied. Valid values: **payondemand**: subscription. **payasyougo**: pay-as-you-go.
+             * The activity type of the coupon. Valid values:
+             * <p>
+             * 
+             * *   **payondemand**: subscription
+             * *   **payasyougo**: pay-as-you-go
              */
             public Builder activityCategory(String activityCategory) {
                 this.activityCategory = activityCategory;
@@ -366,7 +370,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The rules that match the coupon.
+             * Details about the rules that match the coupon.
              */
             public Builder promotionRuleIdList(PromotionRuleIdList promotionRuleIdList) {
                 this.promotionRuleIdList = promotionRuleIdList;
@@ -561,7 +565,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * The coupons.
+             * The information of coupons.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -601,7 +605,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ShowDiscountInfo.
+             * Indicates whether the information of the discount is displayed.
              */
             public Builder showDiscountInfo(Boolean showDiscountInfo) {
                 this.showDiscountInfo = showDiscountInfo;
@@ -674,7 +678,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The name of the rule.
+             * The rule name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -682,7 +686,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * The rule ID.
              */
             public Builder ruleDescId(Long ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -690,7 +694,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the rule.
+             * The rule title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -869,7 +873,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -877,7 +881,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price of the order.
+             * The list price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;

@@ -50,7 +50,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private ZoneInfos zoneInfos; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of information of nodes in the zone.
+         * The information of nodes in the zone.
          */
         public Builder zoneInfos(ZoneInfos zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -162,7 +162,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
              * *   **shard**
              * *   **mongos**
              * 
-             * >  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.
+             * > Valid value for replica set instances: **normal**. Valid values for sharded cluster instances: **configServer**, **shard**, and **mongos**.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -170,7 +170,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role.
+             * The role ID.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -191,7 +191,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * The zone ID of the node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

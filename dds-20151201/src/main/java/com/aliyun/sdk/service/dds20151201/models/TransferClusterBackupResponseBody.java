@@ -50,7 +50,7 @@ public class TransferClusterBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlreadyDone.
+         * Indicates whether the instance is switched to the cluster backup mode. If the value of this parameter is **1**, the instance is switched to the cluster backup mode.
          */
         public Builder alreadyDone(String alreadyDone) {
             this.alreadyDone = alreadyDone;
@@ -58,7 +58,7 @@ public class TransferClusterBackupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

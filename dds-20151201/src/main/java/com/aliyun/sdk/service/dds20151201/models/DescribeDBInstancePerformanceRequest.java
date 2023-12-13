@@ -60,10 +60,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     private String roleId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -81,7 +77,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleId = builder.roleId;
-        this.securityToken = builder.securityToken;
         this.startTime = builder.startTime;
     }
 
@@ -176,13 +171,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -201,7 +189,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleId; 
-        private String securityToken; 
         private String startTime; 
 
         private Builder() {
@@ -221,7 +208,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleId = request.roleId;
-            this.securityToken = request.securityToken;
             this.startTime = request.startTime;
         } 
 
@@ -340,15 +326,6 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

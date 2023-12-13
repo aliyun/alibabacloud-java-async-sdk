@@ -50,10 +50,6 @@ public class ModifyDBInstanceTDERequest extends Request {
     private String roleARN;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("TDEStatus")
     @Validation(required = true)
     private String TDEStatus;
@@ -69,7 +65,6 @@ public class ModifyDBInstanceTDERequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleARN = builder.roleARN;
-        this.securityToken = builder.securityToken;
         this.TDEStatus = builder.TDEStatus;
     }
 
@@ -150,13 +145,6 @@ public class ModifyDBInstanceTDERequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return TDEStatus
      */
     public String getTDEStatus() {
@@ -173,7 +161,6 @@ public class ModifyDBInstanceTDERequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleARN; 
-        private String securityToken; 
         private String TDEStatus; 
 
         private Builder() {
@@ -191,7 +178,6 @@ public class ModifyDBInstanceTDERequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleARN = request.roleARN;
-            this.securityToken = request.securityToken;
             this.TDEStatus = request.TDEStatus;
         } 
 
@@ -283,15 +269,6 @@ public class ModifyDBInstanceTDERequest extends Request {
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
             this.roleARN = roleARN;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

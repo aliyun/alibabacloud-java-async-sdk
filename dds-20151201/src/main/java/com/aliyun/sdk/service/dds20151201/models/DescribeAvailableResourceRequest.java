@@ -54,10 +54,6 @@ public class DescribeAvailableResourceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("StorageType")
     private String storageType;
 
@@ -77,7 +73,6 @@ public class DescribeAvailableResourceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.storageType = builder.storageType;
         this.zoneId = builder.zoneId;
     }
@@ -166,13 +161,6 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return storageType
      */
     public String getStorageType() {
@@ -197,7 +185,6 @@ public class DescribeAvailableResourceRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String storageType; 
         private String zoneId; 
 
@@ -217,13 +204,12 @@ public class DescribeAvailableResourceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.storageType = request.storageType;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * DBInstanceClass.
+         * The instance type of the instance.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -245,7 +231,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -254,10 +240,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Default value: PrePaid. Valid values:
+         * The billing method of the instance. Valid values:
          * <p>
          * 
-         * *   **PrePaid**: subscription
+         * *   **PrePaid** (default): subscription
          * *   **PostPaid**: pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
@@ -321,16 +307,16 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * StorageType.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * - **local_ssd**: local SSD 
+         * - **cloud_essd1**: PL1 enhanced SSD (ESSD) 
+         * - **cloud_essd2**: PL2 ESSD 
+         * - **cloud_essd3**: PL3 ESSD 
+         * - **cloud_auto**: ESSD AutoPL 
+         * 
+         * By default, this parameter is empty, which indicates that all types of storage resources are queried.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

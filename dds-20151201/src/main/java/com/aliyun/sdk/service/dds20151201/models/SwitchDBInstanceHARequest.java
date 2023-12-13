@@ -46,10 +46,6 @@ public class SwitchDBInstanceHARequest extends Request {
     private String roleIds;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("SwitchMode")
     @Validation(maximum = 1)
     private Integer switchMode;
@@ -64,7 +60,6 @@ public class SwitchDBInstanceHARequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleIds = builder.roleIds;
-        this.securityToken = builder.securityToken;
         this.switchMode = builder.switchMode;
     }
 
@@ -138,13 +133,6 @@ public class SwitchDBInstanceHARequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return switchMode
      */
     public Integer getSwitchMode() {
@@ -160,7 +148,6 @@ public class SwitchDBInstanceHARequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleIds; 
-        private String securityToken; 
         private Integer switchMode; 
 
         private Builder() {
@@ -177,7 +164,6 @@ public class SwitchDBInstanceHARequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleIds = request.roleIds;
-            this.securityToken = request.securityToken;
             this.switchMode = request.switchMode;
         } 
 
@@ -260,15 +246,6 @@ public class SwitchDBInstanceHARequest extends Request {
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
             this.roleIds = roleIds;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

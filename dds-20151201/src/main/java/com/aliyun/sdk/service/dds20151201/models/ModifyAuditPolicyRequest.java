@@ -47,10 +47,6 @@ public class ModifyAuditPolicyRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("ServiceType")
     private String serviceType;
 
@@ -69,7 +65,6 @@ public class ModifyAuditPolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.serviceType = builder.serviceType;
         this.storagePeriod = builder.storagePeriod;
     }
@@ -144,13 +139,6 @@ public class ModifyAuditPolicyRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return serviceType
      */
     public String getServiceType() {
@@ -173,7 +161,6 @@ public class ModifyAuditPolicyRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String serviceType; 
         private Integer storagePeriod; 
 
@@ -191,7 +178,6 @@ public class ModifyAuditPolicyRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.serviceType = request.serviceType;
             this.storagePeriod = request.storagePeriod;
         } 
@@ -269,15 +255,6 @@ public class ModifyAuditPolicyRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

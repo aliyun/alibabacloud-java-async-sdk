@@ -58,10 +58,6 @@ public class DescribeBackupsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -78,7 +74,6 @@ public class DescribeBackupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.startTime = builder.startTime;
     }
 
@@ -173,13 +168,6 @@ public class DescribeBackupsRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -198,7 +186,6 @@ public class DescribeBackupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String startTime; 
 
         private Builder() {
@@ -218,7 +205,6 @@ public class DescribeBackupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.startTime = request.startTime;
         } 
 
@@ -327,15 +313,6 @@ public class DescribeBackupsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -42,10 +42,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("VpcAuthMode")
     private String vpcAuthMode;
 
@@ -58,7 +54,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.vpcAuthMode = builder.vpcAuthMode;
     }
 
@@ -125,13 +120,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return vpcAuthMode
      */
     public String getVpcAuthMode() {
@@ -146,7 +134,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String vpcAuthMode; 
 
         private Builder() {
@@ -162,7 +149,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.vpcAuthMode = request.vpcAuthMode;
         } 
 
@@ -226,15 +212,6 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -84,10 +84,6 @@ public class ModifyNodeSpecRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("SwitchTime")
     private String switchTime;
 
@@ -110,7 +106,6 @@ public class ModifyNodeSpecRequest extends Request {
         this.readonlyReplicas = builder.readonlyReplicas;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.switchTime = builder.switchTime;
     }
 
@@ -247,13 +242,6 @@ public class ModifyNodeSpecRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return switchTime
      */
     public String getSwitchTime() {
@@ -278,7 +266,6 @@ public class ModifyNodeSpecRequest extends Request {
         private Integer readonlyReplicas; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String switchTime; 
 
         private Builder() {
@@ -304,7 +291,6 @@ public class ModifyNodeSpecRequest extends Request {
             this.readonlyReplicas = request.readonlyReplicas;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.switchTime = request.switchTime;
         } 
 
@@ -486,15 +472,6 @@ public class ModifyNodeSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

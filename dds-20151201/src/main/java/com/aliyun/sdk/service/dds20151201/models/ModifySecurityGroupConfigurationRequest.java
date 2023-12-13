@@ -42,10 +42,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ModifySecurityGroupConfigurationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -55,7 +51,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityGroupId = builder.securityGroupId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -120,13 +115,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityGroupConfigurationRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -135,7 +123,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -150,7 +137,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityGroupId = request.securityGroupId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -217,15 +203,6 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

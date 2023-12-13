@@ -66,10 +66,6 @@ public class DescribePriceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DescribePriceRequest(Builder builder) {
         super(builder);
         this.businessInfo = builder.businessInfo;
@@ -85,7 +81,6 @@ public class DescribePriceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -192,13 +187,6 @@ public class DescribePriceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
         private String businessInfo; 
         private String commodityCode; 
@@ -213,7 +201,6 @@ public class DescribePriceRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -234,7 +221,6 @@ public class DescribePriceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -255,7 +241,10 @@ public class DescribePriceRequest extends Request {
          * *   **dds_sharding**: a sharded cluster instance that uses the pay-as-you-go billing method
          * *   **badds_sharding**: a sharded cluster instance that uses the subscription billing method
          * *   **badds_sharding_intl**: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+         * *   **dds_sharding_intl**: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
          * *   **badds_sharding_jp**: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)
+         * *   **badds_intl**: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)
+         * *   **dds_intl**: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -368,15 +357,6 @@ public class DescribePriceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

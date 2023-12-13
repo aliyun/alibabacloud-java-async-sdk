@@ -58,10 +58,6 @@ public class TransformToPrePaidRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private TransformToPrePaidRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -75,7 +71,6 @@ public class TransformToPrePaidRequest extends Request {
         this.period = builder.period;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -168,13 +163,6 @@ public class TransformToPrePaidRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<TransformToPrePaidRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
@@ -187,7 +175,6 @@ public class TransformToPrePaidRequest extends Request {
         private Long period; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -206,7 +193,6 @@ public class TransformToPrePaidRequest extends Request {
             this.period = request.period;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -317,15 +303,6 @@ public class TransformToPrePaidRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

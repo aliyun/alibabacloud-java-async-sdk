@@ -59,10 +59,6 @@ public class EvaluateResourceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("ShardsInfo")
     private String shardsInfo;
 
@@ -88,7 +84,6 @@ public class EvaluateResourceRequest extends Request {
         this.replicationFactor = builder.replicationFactor;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.shardsInfo = builder.shardsInfo;
         this.storage = builder.storage;
         this.zoneId = builder.zoneId;
@@ -185,13 +180,6 @@ public class EvaluateResourceRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return shardsInfo
      */
     public String getShardsInfo() {
@@ -224,7 +212,6 @@ public class EvaluateResourceRequest extends Request {
         private String replicationFactor; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String shardsInfo; 
         private String storage; 
         private String zoneId; 
@@ -246,7 +233,6 @@ public class EvaluateResourceRequest extends Request {
             this.replicationFactor = request.replicationFactor;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.shardsInfo = request.shardsInfo;
             this.storage = request.storage;
             this.zoneId = request.zoneId;
@@ -367,15 +353,6 @@ public class EvaluateResourceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

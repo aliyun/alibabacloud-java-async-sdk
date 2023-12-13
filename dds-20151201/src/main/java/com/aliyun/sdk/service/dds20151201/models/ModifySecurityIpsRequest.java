@@ -54,10 +54,6 @@ public class ModifySecurityIpsRequest extends Request {
     @Validation(required = true)
     private String securityIps;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ModifySecurityIpsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -70,7 +66,6 @@ public class ModifySecurityIpsRequest extends Request {
         this.securityIpGroupAttribute = builder.securityIpGroupAttribute;
         this.securityIpGroupName = builder.securityIpGroupName;
         this.securityIps = builder.securityIps;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -156,13 +151,6 @@ public class ModifySecurityIpsRequest extends Request {
         return this.securityIps;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ModifySecurityIpsRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -174,7 +162,6 @@ public class ModifySecurityIpsRequest extends Request {
         private String securityIpGroupAttribute; 
         private String securityIpGroupName; 
         private String securityIps; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -192,7 +179,6 @@ public class ModifySecurityIpsRequest extends Request {
             this.securityIpGroupAttribute = request.securityIpGroupAttribute;
             this.securityIpGroupName = request.securityIpGroupName;
             this.securityIps = request.securityIps;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -296,15 +282,6 @@ public class ModifySecurityIpsRequest extends Request {
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);
             this.securityIps = securityIps;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

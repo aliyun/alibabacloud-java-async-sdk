@@ -71,10 +71,6 @@ public class CreateNodeBatchRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("ShardDirect")
     private Boolean shardDirect;
 
@@ -94,7 +90,6 @@ public class CreateNodeBatchRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.shardDirect = builder.shardDirect;
     }
 
@@ -210,13 +205,6 @@ public class CreateNodeBatchRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return shardDirect
      */
     public Boolean getShardDirect() {
@@ -238,7 +226,6 @@ public class CreateNodeBatchRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private Boolean shardDirect; 
 
         private Builder() {
@@ -261,7 +248,6 @@ public class CreateNodeBatchRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.shardDirect = request.shardDirect;
         } 
 
@@ -388,15 +374,6 @@ public class CreateNodeBatchRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -51,10 +51,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     private String retainClassic;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -78,7 +74,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.retainClassic = builder.retainClassic;
-        this.securityToken = builder.securityToken;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -161,13 +156,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -198,7 +186,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String retainClassic; 
-        private String securityToken; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -218,7 +205,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.retainClassic = request.retainClassic;
-            this.securityToken = request.securityToken;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -237,7 +223,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
          * The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
          * <p>
          * 
-         * >  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
+         * > This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -246,7 +232,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -255,11 +241,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The network type to switch to. Valid values:
+         * The network type to switch to. Valid value:
          * <p>
          * 
          * *   **VPC**
-         * *   **Classic**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -307,11 +292,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
          * Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:
          * <p>
          * 
-         * - **True**: retains the original classic network address.
-         * - **False**: does not retain the original classic network address.
+         * *   **True**: retains the original classic network address.
+         * *   **False**: does not retain the original classic network address.
          * 
-         * > * This parameter is required when the **NetworkType** parameter is set to **VPC**.
-         * > * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
+         * > 
+         * 
+         * *   This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * 
+         * *   If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -320,19 +308,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch.
+         * The ID of the vSwitch in the VPC.
          * <p>
          * 
-         * >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * > This parameter is required when the **NetworkType** parameter is set to **VPC**.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -341,10 +320,10 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The ID of the VPC.
          * <p>
          * 
-         * >  This parameter is required when the **NetworkType** parameter is set to **VPC**.
+         * > This parameter is required when the **NetworkType** parameter is set to **VPC**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -353,7 +332,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~468365~~) operation to query the most recent zone list.
+         * 可用区ID，您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -86,7 +86,18 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * EncryptionKey.
+         * The custom key of the instance.
+         * <p>
+         * 
+         * The Bring Your Own Key (BYOK) feature allows you to manage and obtain your own encryption key. This feature is supported only in the following regions:
+         * 
+         * *   cn-hangzhou
+         * *   cn-shanghai
+         * *   cn-beijing
+         * *   cn-shenzhen
+         * *   cn-hongkong
+         * *   ap-southeast-1
+         * *   ap-southeast-3
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -94,7 +105,7 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptorName.
+         * The encryption algorithm.
          */
         public Builder encryptorName(String encryptorName) {
             this.encryptorName = encryptorName;
@@ -102,7 +113,7 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,7 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RoleARN.
+         * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.
          */
         public Builder roleARN(String roleARN) {
             this.roleARN = roleARN;
@@ -118,7 +129,11 @@ public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TDEStatus.
+         * The TDE status. Valid values:
+         * <p>
+         * 
+         * *   **enabled**
+         * *   **disabled**
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

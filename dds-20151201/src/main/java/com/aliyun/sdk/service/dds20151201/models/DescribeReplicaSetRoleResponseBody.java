@@ -62,7 +62,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the replica set roles.
+         * The details of the roles of the replica set instance.
          */
         public Builder replicaSets(ReplicaSets replicaSets) {
             this.replicaSets = replicaSets;
@@ -78,7 +78,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the node.
+             * The port number that is used to connect to the node.
              */
             public Builder connectionPort(String connectionPort) {
                 this.connectionPort = connectionPort;
@@ -202,12 +202,12 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
+             * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **VPC**
-             * *   **Classic**
-             * *   **Public**
+             * *   **VPC**: the virtual private cloud (VPC)
+             * *   **Classic**: the classic network
+             * *   **Public**: the Internet
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -215,7 +215,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node in the replica set.
+             * The role of the node in the replica set instance. Valid values:
              * <p>
              * 
              * *   **Primary**

@@ -42,10 +42,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
     @Validation(required = true)
     private String SSLAction;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private ModifyDBInstanceSSLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -55,7 +51,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.SSLAction = builder.SSLAction;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -120,13 +115,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
         return this.SSLAction;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDBInstanceSSLRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -135,7 +123,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String SSLAction; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -150,7 +137,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.SSLAction = request.SSLAction;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -218,15 +204,6 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder SSLAction(String SSLAction) {
             this.putQueryParameter("SSLAction", SSLAction);
             this.SSLAction = SSLAction;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

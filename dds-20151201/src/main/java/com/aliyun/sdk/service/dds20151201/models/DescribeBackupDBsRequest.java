@@ -49,10 +49,6 @@ public class DescribeBackupDBsRequest extends Request {
     private String restoreTime;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("SourceDBInstance")
     private String sourceDBInstance;
 
@@ -67,7 +63,6 @@ public class DescribeBackupDBsRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
-        this.securityToken = builder.securityToken;
         this.sourceDBInstance = builder.sourceDBInstance;
     }
 
@@ -148,13 +143,6 @@ public class DescribeBackupDBsRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return sourceDBInstance
      */
     public String getSourceDBInstance() {
@@ -171,7 +159,6 @@ public class DescribeBackupDBsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
-        private String securityToken; 
         private String sourceDBInstance; 
 
         private Builder() {
@@ -189,7 +176,6 @@ public class DescribeBackupDBsRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
-            this.securityToken = request.securityToken;
             this.sourceDBInstance = request.sourceDBInstance;
         } 
 
@@ -279,15 +265,6 @@ public class DescribeBackupDBsRequest extends Request {
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
             this.restoreTime = restoreTime;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -58,10 +58,6 @@ public class DescribeClusterBackupsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -78,7 +74,6 @@ public class DescribeClusterBackupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.startTime = builder.startTime;
     }
 
@@ -173,13 +168,6 @@ public class DescribeClusterBackupsRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -198,7 +186,6 @@ public class DescribeClusterBackupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String startTime; 
 
         private Builder() {
@@ -218,7 +205,6 @@ public class DescribeClusterBackupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.startTime = request.startTime;
         } 
 
@@ -232,7 +218,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the cluster backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -241,7 +227,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -250,7 +236,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -259,7 +245,11 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * IsOnlyGetClusterBackUp.
+         * Specifies whether to query information about child nodes in the cluster backup. Valid values:
+         * <p>
+         * 
+         * *   **true**: The system returns only the basic information of the cluster backup.
+         * *   **false** (default): The system returns the backup information of all child nodes.
          */
         public Builder isOnlyGetClusterBackUp(Boolean isOnlyGetClusterBackUp) {
             this.putQueryParameter("IsOnlyGetClusterBackUp", isOnlyGetClusterBackUp);
@@ -286,7 +276,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Default value: **1**. The page number must be a positive integer.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -295,7 +285,12 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,16 +317,7 @@ public class DescribeClusterBackupsRequest extends Request {
         }
 
         /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

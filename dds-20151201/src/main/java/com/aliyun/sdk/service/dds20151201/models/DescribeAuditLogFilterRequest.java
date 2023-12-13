@@ -41,10 +41,6 @@ public class DescribeAuditLogFilterRequest extends Request {
     @NameInMap("RoleType")
     private String roleType;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DescribeAuditLogFilterRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -54,7 +50,6 @@ public class DescribeAuditLogFilterRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleType = builder.roleType;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -119,13 +114,6 @@ public class DescribeAuditLogFilterRequest extends Request {
         return this.roleType;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAuditLogFilterRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -134,7 +122,6 @@ public class DescribeAuditLogFilterRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleType; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -149,7 +136,6 @@ public class DescribeAuditLogFilterRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleType = request.roleType;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -217,15 +203,6 @@ public class DescribeAuditLogFilterRequest extends Request {
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
             this.roleType = roleType;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

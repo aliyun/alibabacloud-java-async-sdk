@@ -38,10 +38,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("TargetRegionId")
     @Validation(required = true)
     private String targetRegionId;
@@ -54,7 +50,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.targetRegionId = builder.targetRegionId;
     }
 
@@ -114,13 +109,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return targetRegionId
      */
     public String getTargetRegionId() {
@@ -134,7 +122,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String targetRegionId; 
 
         private Builder() {
@@ -149,7 +136,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.targetRegionId = request.targetRegionId;
         } 
 
@@ -204,15 +190,6 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         private java.util.List < RestoreRanges> restoreRanges; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreRanges.
+         * The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.
          */
         public Builder restoreRanges(java.util.List < RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
@@ -122,7 +122,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             private String restoreType; 
 
             /**
-             * RestoreBeginTime.
+             * The beginning of the time range to which data can be restored.
              */
             public Builder restoreBeginTime(String restoreBeginTime) {
                 this.restoreBeginTime = restoreBeginTime;
@@ -130,7 +130,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreEndTime.
+             * The end of the time range to which data can be restored.
              */
             public Builder restoreEndTime(String restoreEndTime) {
                 this.restoreEndTime = restoreEndTime;
@@ -138,7 +138,10 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreType.
+             * The method used to restore data. Valid values:
+             * <p>
+             * 
+             * *   \*\* PointInTime\*\* (default): Data is restored based on point in time
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;
