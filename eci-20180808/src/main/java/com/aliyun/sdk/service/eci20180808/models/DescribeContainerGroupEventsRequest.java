@@ -183,7 +183,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         } 
 
         /**
-         * ContainerGroupIds.
+         * The IDs of the elastic container instances. You can specify up to 20 IDs. Each ID must be a JSON string.
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -192,7 +192,13 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * EventSource.
+         * The event source. Valid values:
+         * <p>
+         * 
+         * *   EciService
+         * *   K8sAgent
+         * 
+         * This parameter is empty by default. This indicates that all events are queried.
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);
@@ -201,7 +207,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of elastic container instances to be returned for this request. Default value: 200.
+         * <p>
+         * 
+         * >  The number of elastic container instances to be returned is no greater than this parameter value.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -210,7 +219,10 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>
+         * 
+         * You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -219,7 +231,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,7 +240,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +249,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * SinceSecond.
+         * A relative time in seconds before the current time from which to show event information. This parameter is used to poll incremental events.
          */
         public Builder sinceSecond(Integer sinceSecond) {
             this.putQueryParameter("SinceSecond", sinceSecond);
@@ -246,7 +258,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is added to the elastic container instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -255,7 +267,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -264,7 +276,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -318,7 +330,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -326,7 +338,7 @@ public class DescribeContainerGroupEventsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

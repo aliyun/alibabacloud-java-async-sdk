@@ -170,7 +170,7 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         } 
 
         /**
-         * 幂等参数
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,7 +179,7 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * ContainerGroupId.
+         * The ID of the elastic container instance.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -188,7 +188,15 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * NewSize.
+         * The size of the volume after the volume is scaled up. Unit: GiB. Valid values:
+         * <p>
+         * 
+         * *   Ultra disk (cloud_efficiency): 20 to 32768
+         * *   Standard SSD (cloud_ssd): 20 to 32768
+         * *   Enhanced SSD (cloud_essd): 20 to 32768
+         * *   Basic disk (cloud): 5 to 2000
+         * 
+         * >  The capacity of the volume after the volume is scaled up must be greater than the original capacity of the volume. If the new capacity is equal to the original capacity of the volume, only the file system is scaled up.
          */
         public Builder newSize(Long newSize) {
             this.putQueryParameter("NewSize", newSize);
@@ -215,7 +223,7 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +250,7 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * VolumeName.
+         * The name of the volume that you want to scale up. The volume must be an Alibaba Cloud disk.
          */
         public Builder volumeName(String volumeName) {
             this.putQueryParameter("VolumeName", volumeName);

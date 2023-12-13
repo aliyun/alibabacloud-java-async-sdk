@@ -50,7 +50,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * The details of the O\&M tasks.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             private String resultType; 
 
             /**
-             * CreateTime.
+             * The time when the O\&M task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the O\&M task expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -174,7 +174,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OpsStatus.
+             * The status of the O\&M task.
              */
             public Builder opsStatus(String opsStatus) {
                 this.opsStatus = opsStatus;
@@ -182,7 +182,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OpsType.
+             * The type of the O\&M task.
              */
             public Builder opsType(String opsType) {
                 this.opsType = opsType;
@@ -190,7 +190,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultContent.
+             * The content of the O\&M result. The content is the download URL of the files that are generated for the O\&M task.
              */
             public Builder resultContent(String resultContent) {
                 this.resultContent = resultContent;
@@ -198,7 +198,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultType.
+             * The type of the O\&M result. Valid value: OSS. This value indicates that the files generated for the O\&M task are saved to Object Storage Service (OSS) buckets.
              */
             public Builder resultType(String resultType) {
                 this.resultType = resultType;

@@ -50,7 +50,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PriceInfo.
+         * The information about the prices and discount rules.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +58,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The rule ID.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -248,7 +248,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -256,7 +256,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -264,7 +264,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The name of the resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -272,7 +272,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * Details about the pricing rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -280,7 +280,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The transaction price.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -410,7 +410,11 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The currency unit. Valid values:
+             * <p>
+             * 
+             * *   CNY: This value only applies to the China site (aliyun.com).
+             * *   USD: This value only applies to the International site (alibabacloud.com).
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -418,7 +422,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DetailInfos.
+             * The information about the price.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -426,7 +430,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -434,7 +438,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -442,7 +446,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The transaction price, which is equal to the original price minus the discount.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -495,7 +499,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * The description of the promotion rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -503,7 +507,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the promotion rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -621,7 +625,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * InstanceType.
+             * The ECS instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -629,7 +633,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPrice.
+             * The original price.
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
@@ -637,7 +641,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPrice.
+             * The prices of preemptible elastic container instances.
              */
             public Builder spotPrice(Float spotPrice) {
                 this.spotPrice = spotPrice;
@@ -645,7 +649,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -686,7 +690,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private java.util.List < SpotPrice> spotPrice; 
 
             /**
-             * SpotPrice.
+             * The prices of preemptible elastic container instances.
              */
             public Builder spotPrice(java.util.List < SpotPrice> spotPrice) {
                 this.spotPrice = spotPrice;
@@ -751,7 +755,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private SpotPrices spotPrices; 
 
             /**
-             * Price.
+             * The price.
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -759,7 +763,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * Details about the promotion rules.
              */
             public Builder rules(PriceInfoRules rules) {
                 this.rules = rules;
@@ -767,7 +771,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPrices.
+             * The information about the prices of preemptible elastic container instances.
              */
             public Builder spotPrices(SpotPrices spotPrices) {
                 this.spotPrices = spotPrices;

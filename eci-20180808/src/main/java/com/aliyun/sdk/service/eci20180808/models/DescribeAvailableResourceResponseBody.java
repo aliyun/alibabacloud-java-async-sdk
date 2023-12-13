@@ -50,7 +50,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZones.
+         * The zones in which the specified resources are available.
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +58,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +72,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     } 
 
     public static class SupportedResource extends TeaModel {
+        @NameInMap("StatusCategory")
+        private String statusCategory;
+
         @NameInMap("Value")
         private String value;
 
         private SupportedResource(Builder builder) {
+            this.statusCategory = builder.statusCategory;
             this.value = builder.value;
         }
 
@@ -88,6 +92,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusCategory
+         */
+        public String getStatusCategory() {
+            return this.statusCategory;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -95,10 +106,29 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String statusCategory; 
             private String value; 
 
             /**
-             * Value.
+             * The category of resources based on stock status. Valid values:
+             * <p>
+             * 
+             * *   WithStock: Resources are in sufficient stock.
+             * *   ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.
+             * *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.
+             * *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.
+             */
+            public Builder statusCategory(String statusCategory) {
+                this.statusCategory = statusCategory;
+                return this;
+            }
+
+            /**
+             * The ECS instance types or instance families that are available in the zones.
+             * <p>
+             * 
+             * *   If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.
+             * *   If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -192,7 +222,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SupportedResources.
+             * The information about the resources that are available in the zones.
              */
             public Builder supportedResources(SupportedResources supportedResources) {
                 this.supportedResources = supportedResources;
@@ -200,7 +230,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the resource. Valid values:
+             * <p>
+             * 
+             * *   InstanceTypeFamily: instance families.
+             * *   InstanceType: instance types.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -306,7 +340,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AvailableResources.
+             * The resources that are available in the specified zone.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -314,7 +348,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the resources.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +356,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the resources.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

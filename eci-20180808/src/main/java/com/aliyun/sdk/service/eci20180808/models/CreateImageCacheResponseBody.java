@@ -62,7 +62,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerGroupId.
+         * The ID of the intermediate elastic container instance that is used to create the image cache.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
@@ -70,7 +70,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * ImageCacheId.
+         * The ID of the image cache.
          */
         public Builder imageCacheId(String imageCacheId) {
             this.imageCacheId = imageCacheId;
@@ -78,7 +78,7 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -17,6 +17,18 @@ public class UpdateVirtualNodeRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ClusterDNS")
+    private String clusterDNS;
+
+    @Query
+    @NameInMap("ClusterDomain")
+    private String clusterDomain;
+
+    @Query
+    @NameInMap("CustomResources")
+    private String customResources;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -30,10 +42,6 @@ public class UpdateVirtualNodeRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
-    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -42,19 +50,12 @@ public class UpdateVirtualNodeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityGroupId")
-    private String securityGroupId;
-
-    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     @Query
-    @NameInMap("VSwitchId")
-    private String vSwitchId;
-
-    @Query
     @NameInMap("VirtualNodeId")
+    @Validation(required = true)
     private String virtualNodeId;
 
     @Query
@@ -64,15 +65,15 @@ public class UpdateVirtualNodeRequest extends Request {
     private UpdateVirtualNodeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.clusterDNS = builder.clusterDNS;
+        this.clusterDomain = builder.clusterDomain;
+        this.customResources = builder.customResources;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityGroupId = builder.securityGroupId;
         this.tag = builder.tag;
-        this.vSwitchId = builder.vSwitchId;
         this.virtualNodeId = builder.virtualNodeId;
         this.virtualNodeName = builder.virtualNodeName;
     }
@@ -98,6 +99,27 @@ public class UpdateVirtualNodeRequest extends Request {
     }
 
     /**
+     * @return clusterDNS
+     */
+    public String getClusterDNS() {
+        return this.clusterDNS;
+    }
+
+    /**
+     * @return clusterDomain
+     */
+    public String getClusterDomain() {
+        return this.clusterDomain;
+    }
+
+    /**
+     * @return customResources
+     */
+    public String getCustomResources() {
+        return this.customResources;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -119,13 +141,6 @@ public class UpdateVirtualNodeRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -140,24 +155,10 @@ public class UpdateVirtualNodeRequest extends Request {
     }
 
     /**
-     * @return securityGroupId
-     */
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
         return this.tag;
-    }
-
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
     }
 
     /**
@@ -176,15 +177,15 @@ public class UpdateVirtualNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateVirtualNodeRequest, Builder> {
         private String clientToken; 
+        private String clusterDNS; 
+        private String clusterDomain; 
+        private String customResources; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityGroupId; 
         private java.util.List < Tag> tag; 
-        private String vSwitchId; 
         private String virtualNodeId; 
         private String virtualNodeName; 
 
@@ -195,25 +196,52 @@ public class UpdateVirtualNodeRequest extends Request {
         private Builder(UpdateVirtualNodeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.clusterDNS = request.clusterDNS;
+            this.clusterDomain = request.clusterDomain;
+            this.customResources = request.customResources;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityGroupId = request.securityGroupId;
             this.tag = request.tag;
-            this.vSwitchId = request.vSwitchId;
             this.virtualNodeId = request.virtualNodeId;
             this.virtualNodeName = request.virtualNodeName;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The IP address of the DNS server. If `dnsPolicy=ClusterFirst` is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).
+         */
+        public Builder clusterDNS(String clusterDNS) {
+            this.putQueryParameter("ClusterDNS", clusterDNS);
+            this.clusterDNS = clusterDNS;
+            return this;
+        }
+
+        /**
+         * The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.
+         */
+        public Builder clusterDomain(String clusterDomain) {
+            this.putQueryParameter("ClusterDomain", clusterDomain);
+            this.clusterDomain = clusterDomain;
+            return this;
+        }
+
+        /**
+         * The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the `Resource name = Number of resources` format to specify custom resources. Separate multiple resources with commas (,).
+         */
+        public Builder customResources(String customResources) {
+            this.putQueryParameter("CustomResources", customResources);
+            this.customResources = customResources;
             return this;
         }
 
@@ -236,20 +264,11 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the virtual node.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -272,16 +291,7 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * Tag.
+         * The tags to add to the virtual node.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -290,16 +300,7 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * VirtualNodeId.
+         * The ID of the virtual node.
          */
         public Builder virtualNodeId(String virtualNodeId) {
             this.putQueryParameter("VirtualNodeId", virtualNodeId);
@@ -308,7 +309,7 @@ public class UpdateVirtualNodeRequest extends Request {
         }
 
         /**
-         * VirtualNodeName.
+         * The name of the virtual node.
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
@@ -362,7 +363,7 @@ public class UpdateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the virtual node.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +371,7 @@ public class UpdateVirtualNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the virtual node.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -74,7 +74,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ContainerGroups.
+         * Details about the elastic container instances.
          */
         public Builder containerGroups(java.util.List < ContainerGroups> containerGroups) {
             this.containerGroups = containerGroups;
@@ -82,7 +82,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. The value is unique.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of queried instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -222,7 +222,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -230,7 +230,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -238,7 +238,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -246,7 +246,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -254,7 +254,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -262,7 +262,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -270,7 +270,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -278,7 +278,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The container status. Valid values:
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Terminated
              */
             public Builder state(String state) {
                 this.state = state;
@@ -319,7 +324,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String fieldPath; 
 
             /**
-             * FieldPath.
+             * The path of the field.
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -360,7 +365,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private FieldRef fieldRef; 
 
             /**
-             * FieldRef.
+             * The specified field.
              */
             public Builder fieldRef(FieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -425,7 +430,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private ValueFrom valueFrom; 
 
             /**
-             * Key.
+             * The environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,7 +438,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -441,7 +446,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFrom.
+             * The source of the variable value. This parameter has a value only when the Value parameter is not empty.
              */
             public Builder valueFrom(ValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -506,7 +511,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String scheme; 
 
             /**
-             * Path.
+             * The path to which HTTP GET requests were sent.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -514,7 +519,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port to which HTTP GET requests were sent.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -522,7 +527,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * The protocol type of the HTTP GET requests.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -575,7 +580,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * Host.
+             * The hostname.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -583,7 +588,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -708,7 +713,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer timeoutSeconds; 
 
             /**
-             * Execs.
+             * The commands that are used to check the containers.
              */
             public Builder execs(java.util.List < String > execs) {
                 this.execs = execs;
@@ -716,7 +721,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureThreshold.
+             * The minimum number of consecutive failures that must occur for the check to be considered failed. Default value: 3.
              */
             public Builder failureThreshold(Integer failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -724,7 +729,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpGet.
+             * The HTTP GET method that is used to check the container.
              */
             public Builder httpGet(HttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -732,7 +737,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialDelaySeconds.
+             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -740,7 +745,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodSeconds.
+             * The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -748,7 +753,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessThreshold.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -756,7 +761,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TcpSocket.
+             * The TCP socket method that is used to check the container.
              */
             public Builder tcpSocket(TcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -764,7 +769,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * The timeout period of the health check. Unit: seconds. Default value: 1. Minimum value: 1.
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -817,7 +822,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -825,7 +830,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -950,7 +955,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -958,7 +963,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -966,7 +971,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -974,7 +979,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -982,7 +987,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -990,7 +995,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -998,7 +1003,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1006,7 +1011,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The container status. Valid values:
+             * <p>
+             * 
+             * *   Waiting: The container is being started.
+             * *   Running: The container is running.
+             * *   Terminated: The container stops running.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1071,7 +1081,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String scheme; 
 
             /**
-             * Path.
+             * The path to which the system sends an HTTP GET request for a probe.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1079,7 +1089,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port to which the system sends an HTTP GET request for a health check.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1087,7 +1097,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * The protocol type of the HTTP GET requests.
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1140,7 +1150,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * Host.
+             * The IP address of the host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1148,7 +1158,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1273,7 +1283,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer timeoutSeconds; 
 
             /**
-             * Execs.
+             * The commands to be executed in containers when you use a command-line interface (CLI) to perform health checks.
              */
             public Builder execs(java.util.List < String > execs) {
                 this.execs = execs;
@@ -1281,7 +1291,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FailureThreshold.
+             * The minimum number of consecutive failures that must occur for the check to be considered failed. Default value: 3.
              */
             public Builder failureThreshold(Integer failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -1289,7 +1299,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpGet.
+             * The HTTP GET method that is used to check the container.
              */
             public Builder httpGet(ReadinessProbeHttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -1297,7 +1307,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialDelaySeconds.
+             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -1305,7 +1315,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodSeconds.
+             * The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1313,7 +1323,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessThreshold.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1321,7 +1331,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TcpSocket.
+             * The TCP socket method that is used to check the container.
              */
             public Builder tcpSocket(ReadinessProbeTcpSocket tcpSocket) {
                 this.tcpSocket = tcpSocket;
@@ -1329,7 +1339,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * The timeout period of the health check. Unit: seconds. Default value: 1. Minimum value: 1.
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -1370,7 +1380,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < String > adds; 
 
             /**
-             * Adds.
+             * The permissions specific to the process in the container.
              */
             public Builder adds(java.util.List < String > adds) {
                 this.adds = adds;
@@ -1435,7 +1445,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Long runAsUser; 
 
             /**
-             * Capability.
+             * The permissions specific to the processes in the container.
              */
             public Builder capability(Capability capability) {
                 this.capability = capability;
@@ -1443,7 +1453,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -1451,7 +1461,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RunAsUser.
+             * The ID of the user that runs the container.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -1478,11 +1488,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("ReadOnly")
         private Boolean readOnly;
 
+        @NameInMap("SubPath")
+        private String subPath;
+
         private VolumeMounts(Builder builder) {
             this.mountPath = builder.mountPath;
             this.mountPropagation = builder.mountPropagation;
             this.name = builder.name;
             this.readOnly = builder.readOnly;
+            this.subPath = builder.subPath;
         }
 
         public static Builder builder() {
@@ -1521,14 +1535,22 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.readOnly;
         }
 
+        /**
+         * @return subPath
+         */
+        public String getSubPath() {
+            return this.subPath;
+        }
+
         public static final class Builder {
             private String mountPath; 
             private String mountPropagation; 
             private String name; 
             private Boolean readOnly; 
+            private String subPath; 
 
             /**
-             * MountPath.
+             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1536,7 +1558,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of volumes. Mount propagation allows the sharing of volumes that are mounted on a container to other containers in the same pod, or even to other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or to the subdirectories of the volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to the volume or to the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -1544,7 +1571,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1552,10 +1579,18 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * Indicates whether the volume is read-only.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
+                return this;
+            }
+
+            /**
+             * The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.
+             */
+            public Builder subPath(String subPath) {
+                this.subPath = subPath;
                 return this;
             }
 
@@ -1845,7 +1880,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * Args.
+             * The arguments that are passed to the startup command of the container.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -1853,7 +1888,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Commands.
+             * The container startup commands.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -1861,7 +1896,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that you want to allocate to the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -1869,7 +1904,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentState.
+             * The current container status.
              */
             public Builder currentState(CurrentState currentState) {
                 this.currentState = currentState;
@@ -1877,7 +1912,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVars.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1885,7 +1920,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -1893,7 +1928,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1901,7 +1936,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePullPolicy.
+             * The policy for image pulling. Valid values:
+             * <p>
+             * 
+             * *   Always: Image pulling is always performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -1909,7 +1949,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LivenessProbe.
+             * The liveness probe of the container.
              */
             public Builder livenessProbe(LivenessProbe livenessProbe) {
                 this.livenessProbe = livenessProbe;
@@ -1917,7 +1957,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -1925,7 +1965,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1933,7 +1973,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The exposed port and protocol of the container.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -1941,7 +1981,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousState.
+             * The previous state of the container.
              */
             public Builder previousState(PreviousState previousState) {
                 this.previousState = previousState;
@@ -1949,7 +1989,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadinessProbe.
+             * The readiness probe that is used to check whether the container is ready to serve a request.
              */
             public Builder readinessProbe(ReadinessProbe readinessProbe) {
                 this.readinessProbe = readinessProbe;
@@ -1957,7 +1997,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ready.
+             * Indicates whether the container passed the readiness probe.
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -1965,7 +2005,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * The number of times that the container restarted.
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -1973,7 +2013,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityContext.
+             * The security context of the elastic container instance.
              */
             public Builder securityContext(SecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -1981,7 +2021,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Stdin.
+             * Indicates whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -1989,7 +2029,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StdinOnce.
+             * Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a sing attach. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and receive data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -1997,7 +2037,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tty.
+             * Indicates whether interaction is enabled. Default value: false If the Command parameter is a `/bin/bash` command, the value is true.
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -2005,7 +2045,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMounts.
+             * Information about the mounted volumes.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -2013,7 +2053,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2066,7 +2106,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The variable name of the option.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2074,7 +2114,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the object.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2139,7 +2179,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < String > searches; 
 
             /**
-             * NameServers.
+             * The IP addresses of DNS servers.
              */
             public Builder nameServers(java.util.List < String > nameServers) {
                 this.nameServers = nameServers;
@@ -2147,7 +2187,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * The objects. Each object is a name-value pair. The value is optional.
              */
             public Builder options(java.util.List < Options> options) {
                 this.options = options;
@@ -2155,7 +2195,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Searches.
+             * The lookup domains of DNS server N.
              */
             public Builder searches(java.util.List < String > searches) {
                 this.searches = searches;
@@ -2208,7 +2248,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the Sysctl parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2216,7 +2256,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the Sysctl parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2257,7 +2297,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < Sysctls> sysctls; 
 
             /**
-             * Sysctls.
+             * The Sysctl parameters.
              */
             public Builder sysctls(java.util.List < Sysctls> sysctls) {
                 this.sysctls = sysctls;
@@ -2370,7 +2410,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of the events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -2378,7 +2418,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The time when the event started.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -2386,7 +2426,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The time when the event ended.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -2394,7 +2434,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2402,7 +2442,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The category to which the event belongs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2410,7 +2450,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The event name.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2418,7 +2458,11 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   Warning
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2471,7 +2515,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * Hostnames.
+             * The information about the host.
              */
             public Builder hostnames(java.util.List < String > hostnames) {
                 this.hostnames = hostnames;
@@ -2479,7 +2523,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2604,7 +2648,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -2612,7 +2656,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -2620,7 +2664,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -2628,7 +2672,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2636,7 +2680,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2644,7 +2688,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -2652,7 +2696,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2660,7 +2704,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The container status. Valid values:
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Terminated
              */
             public Builder state(String state) {
                 this.state = state;
@@ -2701,7 +2750,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String fieldPath; 
 
             /**
-             * FieldPath.
+             * The path from which the fields come in the specified version. Only `status.podIP` is supported.
              */
             public Builder fieldPath(String fieldPath) {
                 this.fieldPath = fieldPath;
@@ -2742,7 +2791,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private ValueFromFieldRef fieldRef; 
 
             /**
-             * FieldRef.
+             * The specified field.
              */
             public Builder fieldRef(ValueFromFieldRef fieldRef) {
                 this.fieldRef = fieldRef;
@@ -2807,7 +2856,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private EnvironmentVarsValueFrom valueFrom; 
 
             /**
-             * Key.
+             * The environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2815,7 +2864,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2823,7 +2872,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueFrom.
+             * The source of the variable value. This parameter has a value only when the Value parameter is not empty.
              */
             public Builder valueFrom(EnvironmentVarsValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -2876,7 +2925,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -2884,7 +2933,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3009,7 +3058,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DetailStatus.
+             * The details of the container status.
              */
             public Builder detailStatus(String detailStatus) {
                 this.detailStatus = detailStatus;
@@ -3017,7 +3066,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code of the container.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -3025,7 +3074,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the container stopped running.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -3033,7 +3082,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the container status.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -3041,7 +3090,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason why the container is in this state.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -3049,7 +3098,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The code of the container status.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -3057,7 +3106,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3065,7 +3114,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the container. Valid values: Waiting, Running, and Terminated.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -3106,7 +3155,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < String > adds; 
 
             /**
-             * Adds.
+             * The permissions specific to the process in the container.
              */
             public Builder adds(java.util.List < String > adds) {
                 this.adds = adds;
@@ -3171,7 +3220,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Long runAsUser; 
 
             /**
-             * Capability.
+             * The permissions specific to the processes in the container.
              */
             public Builder capability(SecurityContextCapability capability) {
                 this.capability = capability;
@@ -3179,7 +3228,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyRootFilesystem.
+             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -3187,7 +3236,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RunAsUser.
+             * The UID that is used to run the entry point of the container process.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -3264,7 +3313,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * MountPath.
+             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3272,7 +3321,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of volumes. Mount propagation allows the sharing of volumes that are mounted on a container to other containers in the same pod, or even to other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or to the subdirectories of the volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to the volume or to the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3280,7 +3334,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the volume. The name is the same as the volume you selected when you purchased the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3288,7 +3342,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * Default value: false.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3521,7 +3575,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * Args.
+             * The arguments that are passed to the startup command.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -3529,7 +3583,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * The startup commands of the containers.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -3537,7 +3591,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -3545,7 +3599,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentState.
+             * The current container status.
              */
             public Builder currentState(InitContainersCurrentState currentState) {
                 this.currentState = currentState;
@@ -3553,7 +3607,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVars.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < InitContainersEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -3561,7 +3615,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -3569,7 +3623,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -3577,7 +3631,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImagePullPolicy.
+             * The policy for image pulling. Valid values:
+             * <p>
+             * 
+             * *   Always: Image pulling is always performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3585,7 +3644,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The size of memory that is allocated to the init container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3593,7 +3652,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the init container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3601,7 +3660,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The exposed port and protocol of the container.
              */
             public Builder ports(java.util.List < InitContainersPorts> ports) {
                 this.ports = ports;
@@ -3609,7 +3668,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousState.
+             * The previous state of the container.
              */
             public Builder previousState(InitContainersPreviousState previousState) {
                 this.previousState = previousState;
@@ -3617,7 +3676,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ready.
+             * Indicates whether the container passed the readiness probe.
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -3625,7 +3684,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * The number of times the container restarted.
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -3633,7 +3692,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityContext.
+             * The security context of the container.
              */
             public Builder securityContext(InitContainersSecurityContext securityContext) {
                 this.securityContext = securityContext;
@@ -3641,7 +3700,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeMounts.
+             * The information about the volumes that are mounted to the init container.
              */
             public Builder volumeMounts(java.util.List < InitContainersVolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -3649,7 +3708,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -3702,7 +3761,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3710,7 +3769,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3763,7 +3822,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Content.
+             * The content of the configuration file. Maximum size: 32 KB.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -3771,7 +3830,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The relative path of the configuration file.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -3794,6 +3853,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
         @NameInMap("DiskVolumeFsType")
         private String diskVolumeFsType;
+
+        @NameInMap("EmptyDirVolumeMedium")
+        private String emptyDirVolumeMedium;
+
+        @NameInMap("EmptyDirVolumeSizeLimit")
+        private String emptyDirVolumeSizeLimit;
 
         @NameInMap("FlexVolumeDriver")
         private String flexVolumeDriver;
@@ -3823,6 +3888,8 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             this.configFileVolumeConfigFileToPaths = builder.configFileVolumeConfigFileToPaths;
             this.diskVolumeDiskId = builder.diskVolumeDiskId;
             this.diskVolumeFsType = builder.diskVolumeFsType;
+            this.emptyDirVolumeMedium = builder.emptyDirVolumeMedium;
+            this.emptyDirVolumeSizeLimit = builder.emptyDirVolumeSizeLimit;
             this.flexVolumeDriver = builder.flexVolumeDriver;
             this.flexVolumeFsType = builder.flexVolumeFsType;
             this.flexVolumeOptions = builder.flexVolumeOptions;
@@ -3860,6 +3927,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          */
         public String getDiskVolumeFsType() {
             return this.diskVolumeFsType;
+        }
+
+        /**
+         * @return emptyDirVolumeMedium
+         */
+        public String getEmptyDirVolumeMedium() {
+            return this.emptyDirVolumeMedium;
+        }
+
+        /**
+         * @return emptyDirVolumeSizeLimit
+         */
+        public String getEmptyDirVolumeSizeLimit() {
+            return this.emptyDirVolumeSizeLimit;
         }
 
         /**
@@ -3922,6 +4003,8 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
             private String diskVolumeDiskId; 
             private String diskVolumeFsType; 
+            private String emptyDirVolumeMedium; 
+            private String emptyDirVolumeSizeLimit; 
             private String flexVolumeDriver; 
             private String flexVolumeFsType; 
             private String flexVolumeOptions; 
@@ -3932,7 +4015,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConfigFileVolumeConfigFileToPaths.
+             * The paths to configuration files.
              */
             public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
@@ -3940,7 +4023,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskVolumeDiskId.
+             * The ID of the disk when you set the Type parameter to DiskVolume.
              */
             public Builder diskVolumeDiskId(String diskVolumeDiskId) {
                 this.diskVolumeDiskId = diskVolumeDiskId;
@@ -3948,7 +4031,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskVolumeFsType.
+             * The file system type of the disk volume.
              */
             public Builder diskVolumeFsType(String diskVolumeFsType) {
                 this.diskVolumeFsType = diskVolumeFsType;
@@ -3956,7 +4039,27 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeDriver.
+             * The storage media of emptyDir volume N. This parameter is empty by default, indicating that the node file system is used as the storage media. Valid values:
+             * <p>
+             * 
+             * *   Memory: uses memory as the storage media.
+             * *   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
+             */
+            public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
+                this.emptyDirVolumeMedium = emptyDirVolumeMedium;
+                return this;
+            }
+
+            /**
+             * The storage capacity of emptyDir volume N.
+             */
+            public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
+                this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
+                return this;
+            }
+
+            /**
+             * The name of the FlexVolume driver.
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -3964,7 +4067,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeFsType.
+             * The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.
              */
             public Builder flexVolumeFsType(String flexVolumeFsType) {
                 this.flexVolumeFsType = flexVolumeFsType;
@@ -3972,7 +4075,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FlexVolumeOptions.
+             * The options when you set the Volume.N.Type parameter to FlexVolume.
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -3980,7 +4083,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumePath.
+             * The path of the NFS volume.
              */
             public Builder NFSVolumePath(String NFSVolumePath) {
                 this.NFSVolumePath = NFSVolumePath;
@@ -3988,7 +4091,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumeReadOnly.
+             * Indicates whether the volume is read-only.
              */
             public Builder NFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
                 this.NFSVolumeReadOnly = NFSVolumeReadOnly;
@@ -3996,7 +4099,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NFSVolumeServer.
+             * The endpoint of the server when you set the Type parameter to NFSVolume.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -4004,7 +4107,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4012,7 +4115,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the volume. Valid values:
+             * <p>
+             * 
+             * *   EmptyDirVolume
+             * *   NFSVolume
+             * *   ConfigFileVolume
+             * *   FlexVolume
              */
             public Builder type(String type) {
                 this.type = type;
@@ -4497,7 +4606,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ContainerGroupId.
+             * The instance ID.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -4505,7 +4614,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerGroupName.
+             * The instance name.
              */
             public Builder containerGroupName(String containerGroupName) {
                 this.containerGroupName = containerGroupName;
@@ -4513,7 +4622,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Containers.
+             * The containers in the elastic container instance.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -4521,7 +4630,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that are allocated to the elastic container instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4529,7 +4638,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the system created the elastic container instance after the system received the request. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -4537,7 +4646,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Discount.
+             * The discount.
              */
             public Builder discount(Integer discount) {
                 this.discount = discount;
@@ -4545,7 +4654,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DnsConfig.
+             * The Domain Name System (DNS) settings.
              */
             public Builder dnsConfig(DnsConfig dnsConfig) {
                 this.dnsConfig = dnsConfig;
@@ -4553,7 +4662,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EciSecurityContext.
+             * The security context of the elastic container instance.
              */
             public Builder eciSecurityContext(EciSecurityContext eciSecurityContext) {
                 this.eciSecurityContext = eciSecurityContext;
@@ -4561,7 +4670,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceId.
+             * The ID of the elastic network interface (ENI).
              */
             public Builder eniInstanceId(String eniInstanceId) {
                 this.eniInstanceId = eniInstanceId;
@@ -4569,7 +4678,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EphemeralStorage.
+             * The size of the temporary storage space. Unit: GiB.
              */
             public Builder ephemeralStorage(Integer ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -4577,7 +4686,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * The events about the elastic container instance. A maximum of 50 events can be returned.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -4585,7 +4694,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the elastic container instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -4593,7 +4702,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedTime.
+             * The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder failedTime(String failedTime) {
                 this.failedTime = failedTime;
@@ -4601,7 +4710,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAliases.
+             * The hostname mapping of a container in the elastic container instance.
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
@@ -4609,7 +4718,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InitContainers.
+             * The information about the init containers.
              */
             public Builder initContainers(java.util.List < InitContainers> initContainers) {
                 this.initContainers = initContainers;
@@ -4617,7 +4726,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -4625,7 +4734,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -4633,7 +4742,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -4641,7 +4750,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Address.
+             * The IPv6 address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -4649,7 +4758,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the elastic container instance. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4657,7 +4766,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RamRoleName.
+             * The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -4665,7 +4774,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -4673,7 +4782,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -4681,7 +4790,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RestartPolicy.
+             * The restart policy of the elastic container instance. Valid values:
+             * <p>
+             * 
+             * *   Never: never restarts the elastic container instance.
+             * *   Always: always restarts the elastic container instance.
+             * *   OnFailure: restarts the instance if it fails to run.
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -4689,7 +4803,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group to which the instance belongs.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4697,7 +4811,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price for the preemptible elastic container instance.
+             * <p>
+             * 
+             * This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Double spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -4705,7 +4822,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy for the instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot (default): The instance is created as a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance that has a maximum price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -4713,7 +4835,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   Pending: The elastic container instance is being started.
+             * *   Running: The elastic container instance is running.
+             * *   Succeeded: The elastic container instance runs successfully.
+             * *   Failed: The elastic container instance fails to run.
+             * *   Scheduling: The elastic container instance is being created.
+             * *   ScheduleFailed: The elastic container instance fails to be created.
+             * *   Restarting: The elastic container instance is being restarted.
+             * *   Updating: The elastic container instance is being updated.
+             * *   Terminating: The elastic container instance is being terminated.
+             * *   Expired: The instance expired.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4721,7 +4855,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SucceededTime.
+             * The time when all containers in the elastic container instance exit. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder succeededTime(String succeededTime) {
                 this.succeededTime = succeededTime;
@@ -4729,7 +4863,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -4737,7 +4871,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantEniInstanceId.
+             * This parameter is unavailable.
              */
             public Builder tenantEniInstanceId(String tenantEniInstanceId) {
                 this.tenantEniInstanceId = tenantEniInstanceId;
@@ -4745,7 +4879,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantEniIp.
+             * This parameter is unavailable.
              */
             public Builder tenantEniIp(String tenantEniIp) {
                 this.tenantEniIp = tenantEniIp;
@@ -4753,7 +4887,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantSecurityGroupId.
+             * This parameter is unavailable.
              */
             public Builder tenantSecurityGroupId(String tenantSecurityGroupId) {
                 this.tenantSecurityGroupId = tenantSecurityGroupId;
@@ -4761,7 +4895,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantVSwitchId.
+             * This parameter is unavailable.
              */
             public Builder tenantVSwitchId(String tenantVSwitchId) {
                 this.tenantVSwitchId = tenantVSwitchId;
@@ -4769,7 +4903,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -4777,7 +4911,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Volumes.
+             * The information about the volumes.
              */
             public Builder volumes(java.util.List < Volumes> volumes) {
                 this.volumes = volumes;
@@ -4785,7 +4919,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the elastic container instances belong.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -4793,7 +4927,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone to which the instance belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

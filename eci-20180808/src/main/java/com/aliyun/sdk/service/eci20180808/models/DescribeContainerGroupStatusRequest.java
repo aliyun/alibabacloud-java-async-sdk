@@ -169,7 +169,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         } 
 
         /**
-         * ContainerGroupIds.
+         * The IDs of the instances. You can specify up to 20 IDs. Each ID must be a string in the JSON format.
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -178,7 +178,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * Limit.
+         * Specifies the maximum number of elastic container instances to be returned for this request. Default value: 200.
+         * <p>
+         * 
+         * > The number of returned resources can be less than or equal to the value of this parameter.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -187,7 +190,9 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.\
+         * <p>
+         * You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -196,7 +201,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instances.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -205,7 +210,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instances belong.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -214,7 +219,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * SinceSecond.
+         * A relative time in seconds before the current time from which to show elastic container instances whose status changes. This parameter is used to poll status of elastic container instances.
          */
         public Builder sinceSecond(Integer sinceSecond) {
             this.putQueryParameter("SinceSecond", sinceSecond);
@@ -223,7 +228,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is bound to the instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -232,7 +237,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -241,7 +246,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instances.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -295,7 +300,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -303,7 +308,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * Details of the events.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries of returned events.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * Name.
+             * The event name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +138,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -191,7 +191,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String host; 
 
             /**
-             * Component.
+             * The component.
              */
             public Builder component(String component) {
                 this.component = component;
@@ -199,7 +199,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -288,7 +288,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * ApiVersion.
+             * The version of Kubernetes.
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -296,7 +296,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * The resource type.
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -304,7 +304,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The resource name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace where the resource resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -320,7 +320,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The resource ID.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -481,7 +481,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private InvolvedObject involvedObject; 
 
             /**
-             * Count.
+             * The number of events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -489,7 +489,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The first occurrence time of the event.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -497,7 +497,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The most recent occurrence time of the event.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -505,7 +505,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -513,7 +513,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata of the event.
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -521,7 +521,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -529,7 +529,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportingComponent.
+             * The component from which the event is reported.
              */
             public Builder reportingComponent(String reportingComponent) {
                 this.reportingComponent = reportingComponent;
@@ -537,7 +537,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportingInstance.
+             * The instance from which the event is reported.
              */
             public Builder reportingInstance(String reportingInstance) {
                 this.reportingInstance = reportingInstance;
@@ -545,7 +545,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source.
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -553,7 +553,11 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The event type. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   Warning
              */
             public Builder type(String type) {
                 this.type = type;
@@ -561,7 +565,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * involvedObject.
+             * The resource object that the event is about.
              */
             public Builder involvedObject(InvolvedObject involvedObject) {
                 this.involvedObject = involvedObject;
@@ -576,15 +580,31 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("Annotations")
+        private String annotations;
+
         @NameInMap("ContainerGroupId")
         private String containerGroupId;
 
         @NameInMap("Events")
         private java.util.List < Events> events;
 
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Namespace")
+        private String namespace;
+
+        @NameInMap("uuid")
+        private String uuid;
+
         private Data(Builder builder) {
+            this.annotations = builder.annotations;
             this.containerGroupId = builder.containerGroupId;
             this.events = builder.events;
+            this.name = builder.name;
+            this.namespace = builder.namespace;
+            this.uuid = builder.uuid;
         }
 
         public static Builder builder() {
@@ -593,6 +613,13 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return annotations
+         */
+        public String getAnnotations() {
+            return this.annotations;
         }
 
         /**
@@ -609,12 +636,45 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.events;
         }
 
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return uuid
+         */
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public static final class Builder {
+            private String annotations; 
             private String containerGroupId; 
             private java.util.List < Events> events; 
+            private String name; 
+            private String namespace; 
+            private String uuid; 
 
             /**
-             * ContainerGroupId.
+             * The annotations of the elastic container instance.
+             */
+            public Builder annotations(String annotations) {
+                this.annotations = annotations;
+                return this;
+            }
+
+            /**
+             * The ID of the elastic container instance.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -622,10 +682,34 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * The events.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
+                return this;
+            }
+
+            /**
+             * The name of the elastic container instance.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The namespace where the elastic container instance resides.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * The UUID of the elastic container instance.
+             */
+            public Builder uuid(String uuid) {
+                this.uuid = uuid;
                 return this;
             }
 

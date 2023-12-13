@@ -141,7 +141,7 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         } 
 
         /**
-         * ContainerGroupId.
+         * The ID of the elastic container instance.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -150,7 +150,11 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * OpsType.
+         * The type of the O\&M task. Valid values:
+         * <p>
+         * 
+         * *   coredump
+         * *   tcpdump
          */
         public Builder opsType(String opsType) {
             this.putQueryParameter("OpsType", opsType);
@@ -177,7 +181,7 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

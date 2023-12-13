@@ -25,8 +25,24 @@ public class DescribeImageCachesRequest extends Request {
     private String imageCacheName;
 
     @Query
+    @NameInMap("ImageFullMatch")
+    private Boolean imageFullMatch;
+
+    @Query
+    @NameInMap("ImageMatchCountRequest")
+    private Integer imageMatchCountRequest;
+
+    @Query
+    @NameInMap("Limit")
+    private Integer limit;
+
+    @Query
     @NameInMap("MatchImage")
     private java.util.List < String > matchImage;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -66,7 +82,11 @@ public class DescribeImageCachesRequest extends Request {
         this.image = builder.image;
         this.imageCacheId = builder.imageCacheId;
         this.imageCacheName = builder.imageCacheName;
+        this.imageFullMatch = builder.imageFullMatch;
+        this.imageMatchCountRequest = builder.imageMatchCountRequest;
+        this.limit = builder.limit;
         this.matchImage = builder.matchImage;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -112,10 +132,38 @@ public class DescribeImageCachesRequest extends Request {
     }
 
     /**
+     * @return imageFullMatch
+     */
+    public Boolean getImageFullMatch() {
+        return this.imageFullMatch;
+    }
+
+    /**
+     * @return imageMatchCountRequest
+     */
+    public Integer getImageMatchCountRequest() {
+        return this.imageMatchCountRequest;
+    }
+
+    /**
+     * @return limit
+     */
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    /**
      * @return matchImage
      */
     public java.util.List < String > getMatchImage() {
         return this.matchImage;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -178,7 +226,11 @@ public class DescribeImageCachesRequest extends Request {
         private String image; 
         private String imageCacheId; 
         private String imageCacheName; 
+        private Boolean imageFullMatch; 
+        private Integer imageMatchCountRequest; 
+        private Integer limit; 
         private java.util.List < String > matchImage; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -197,7 +249,11 @@ public class DescribeImageCachesRequest extends Request {
             this.image = request.image;
             this.imageCacheId = request.imageCacheId;
             this.imageCacheName = request.imageCacheName;
+            this.imageFullMatch = request.imageFullMatch;
+            this.imageMatchCountRequest = request.imageMatchCountRequest;
+            this.limit = request.limit;
             this.matchImage = request.matchImage;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -209,7 +265,7 @@ public class DescribeImageCachesRequest extends Request {
         } 
 
         /**
-         * Image.
+         * The container images.
          */
         public Builder image(String image) {
             this.putQueryParameter("Image", image);
@@ -218,7 +274,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * ImageCacheId.
+         * The IDs of the image caches.
          */
         public Builder imageCacheId(String imageCacheId) {
             this.putQueryParameter("ImageCacheId", imageCacheId);
@@ -227,7 +283,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * ImageCacheName.
+         * The names of the image caches.
          */
         public Builder imageCacheName(String imageCacheName) {
             this.putQueryParameter("ImageCacheName", imageCacheName);
@@ -236,11 +292,51 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * MatchImage.
+         * Specifies whether the image layers of the image caches must contain all image layers of the container image.\
+         * <p>
+         * If you configure MatchImage, you can configure this parameter to further filter query results.
+         */
+        public Builder imageFullMatch(Boolean imageFullMatch) {
+            this.putQueryParameter("ImageFullMatch", imageFullMatch);
+            this.imageFullMatch = imageFullMatch;
+            return this;
+        }
+
+        /**
+         * The quantity of image caches whose image layers contain all image layers of the container image.\
+         * <p>
+         * If you configure MatchImage, you can configure this parameter to further filter query results.
+         */
+        public Builder imageMatchCountRequest(Integer imageMatchCountRequest) {
+            this.putQueryParameter("ImageMatchCountRequest", imageMatchCountRequest);
+            this.imageMatchCountRequest = imageMatchCountRequest;
+            return this;
+        }
+
+        /**
+         * The maximum entries of query results that are allowed to be displayed.
+         */
+        public Builder limit(Integer limit) {
+            this.putQueryParameter("Limit", limit);
+            this.limit = limit;
+            return this;
+        }
+
+        /**
+         * The container images used to match the image caches that you want to query. You can specify a maximum of 100 container images.
          */
         public Builder matchImage(java.util.List < String > matchImage) {
             this.putQueryParameter("MatchImage", matchImage);
             this.matchImage = matchImage;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -263,7 +359,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image caches.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +368,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the image caches belong.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,7 +395,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The IDs of the snapshots that correspond to the image caches.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -308,7 +404,7 @@ public class DescribeImageCachesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the image caches.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -362,7 +458,7 @@ public class DescribeImageCachesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the image cache.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +466,7 @@ public class DescribeImageCachesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the image cache.
              */
             public Builder value(String value) {
                 this.value = value;

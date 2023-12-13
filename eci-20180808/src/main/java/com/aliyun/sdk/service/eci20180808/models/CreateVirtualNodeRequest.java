@@ -17,6 +17,18 @@ public class CreateVirtualNodeRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ClusterDNS")
+    private String clusterDNS;
+
+    @Query
+    @NameInMap("ClusterDomain")
+    private String clusterDomain;
+
+    @Query
+    @NameInMap("CustomResources")
+    private String customResources;
+
+    @Query
     @NameInMap("EipInstanceId")
     private String eipInstanceId;
 
@@ -54,10 +66,6 @@ public class CreateVirtualNodeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("RotateCertificateEnabled")
-    private Boolean rotateCertificateEnabled;
-
-    @Query
     @NameInMap("SecurityGroupId")
     @Validation(required = true)
     private String securityGroupId;
@@ -90,6 +98,9 @@ public class CreateVirtualNodeRequest extends Request {
     private CreateVirtualNodeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.clusterDNS = builder.clusterDNS;
+        this.clusterDomain = builder.clusterDomain;
+        this.customResources = builder.customResources;
         this.eipInstanceId = builder.eipInstanceId;
         this.enablePublicNetwork = builder.enablePublicNetwork;
         this.kubeConfig = builder.kubeConfig;
@@ -99,7 +110,6 @@ public class CreateVirtualNodeRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.rotateCertificateEnabled = builder.rotateCertificateEnabled;
         this.securityGroupId = builder.securityGroupId;
         this.tag = builder.tag;
         this.taint = builder.taint;
@@ -127,6 +137,27 @@ public class CreateVirtualNodeRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return clusterDNS
+     */
+    public String getClusterDNS() {
+        return this.clusterDNS;
+    }
+
+    /**
+     * @return clusterDomain
+     */
+    public String getClusterDomain() {
+        return this.clusterDomain;
+    }
+
+    /**
+     * @return customResources
+     */
+    public String getCustomResources() {
+        return this.customResources;
     }
 
     /**
@@ -193,13 +224,6 @@ public class CreateVirtualNodeRequest extends Request {
     }
 
     /**
-     * @return rotateCertificateEnabled
-     */
-    public Boolean getRotateCertificateEnabled() {
-        return this.rotateCertificateEnabled;
-    }
-
-    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -250,6 +274,9 @@ public class CreateVirtualNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateVirtualNodeRequest, Builder> {
         private String clientToken; 
+        private String clusterDNS; 
+        private String clusterDomain; 
+        private String customResources; 
         private String eipInstanceId; 
         private Boolean enablePublicNetwork; 
         private String kubeConfig; 
@@ -259,7 +286,6 @@ public class CreateVirtualNodeRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private Boolean rotateCertificateEnabled; 
         private String securityGroupId; 
         private java.util.List < Tag> tag; 
         private java.util.List < Taint> taint; 
@@ -275,6 +301,9 @@ public class CreateVirtualNodeRequest extends Request {
         private Builder(CreateVirtualNodeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.clusterDNS = request.clusterDNS;
+            this.clusterDomain = request.clusterDomain;
+            this.customResources = request.customResources;
             this.eipInstanceId = request.eipInstanceId;
             this.enablePublicNetwork = request.enablePublicNetwork;
             this.kubeConfig = request.kubeConfig;
@@ -284,7 +313,6 @@ public class CreateVirtualNodeRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.rotateCertificateEnabled = request.rotateCertificateEnabled;
             this.securityGroupId = request.securityGroupId;
             this.tag = request.tag;
             this.taint = request.taint;
@@ -295,7 +323,7 @@ public class CreateVirtualNodeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -304,7 +332,34 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * EipInstanceId.
+         * The IP address of the DNS server. If dnsPolicy=ClusterFirst is configured for the Elastic Container Instance pod, Elastic Container Instance uses the configuration to provide DNS services to containers. You can configure multiple IP addresses. Separate multiple IP addresses with commas (,).
+         */
+        public Builder clusterDNS(String clusterDNS) {
+            this.putQueryParameter("ClusterDNS", clusterDNS);
+            this.clusterDNS = clusterDNS;
+            return this;
+        }
+
+        /**
+         * The domain name of the cluster. If this parameter is specified, in addition to the search domain of the host, Kubelet configures all containers to search for the specified domain name.
+         */
+        public Builder clusterDomain(String clusterDomain) {
+            this.putQueryParameter("ClusterDomain", clusterDomain);
+            this.clusterDomain = clusterDomain;
+            return this;
+        }
+
+        /**
+         * The custom resources that are supported by the virtual node. If a custom resource is specified in the request of an Elastic Container Instance pod, the pod is scheduled to run on the virtual node that supports the custom resource. You can use the Resource name = Number of resources format to specify custom resources. Separate multiple resources with commas (,).
+         */
+        public Builder customResources(String customResources) {
+            this.putQueryParameter("CustomResources", customResources);
+            this.customResources = customResources;
+            return this;
+        }
+
+        /**
+         * The ID of the elastic IP address (EIP).
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -313,7 +368,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * EnablePublicNetwork.
+         * Specifies whether to enable Internet access for the VNode. Default value: false.
+         * <p>
+         * 
+         * If the value of this parameter is true, the VNode exposes a public IP address to external services.
          */
         public Builder enablePublicNetwork(Boolean enablePublicNetwork) {
             this.putQueryParameter("EnablePublicNetwork", enablePublicNetwork);
@@ -322,7 +380,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * KubeConfig.
+         * KubeConfig of the Kubernetes cluster to which the VNode is to be connected. The value must be Base64-encoded.
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -349,7 +407,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the virtual node.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -358,7 +416,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -385,16 +443,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * RotateCertificateEnabled.
-         */
-        public Builder rotateCertificateEnabled(Boolean rotateCertificateEnabled) {
-            this.putQueryParameter("RotateCertificateEnabled", rotateCertificateEnabled);
-            this.rotateCertificateEnabled = rotateCertificateEnabled;
-            return this;
-        }
-
-        /**
-         * SecurityGroupId.
+         * The ID of the security group. The VNode and the elastic container instances in the VNode are added to the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -421,7 +470,13 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * TlsBootstrapEnabled.
+         * Specifies whether to enable TLS bootstrapping. If you set this parameter to true, use the KubeConfig certificate for TLS bootstrapping. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
+         * 
+         * Default value: false.
          */
         public Builder tlsBootstrapEnabled(Boolean tlsBootstrapEnabled) {
             this.putQueryParameter("TlsBootstrapEnabled", tlsBootstrapEnabled);
@@ -430,7 +485,10 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch. The vSwitch is connected to the VNode and the elastic container instances in the VNode.
+         * <p>
+         * 
+         * You can specify 1 to 10 vSwitches for a VPC.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -439,7 +497,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * VirtualNodeName.
+         * he name of the VNode. The name must be 2 to 128 characters in length, and can contain lowercase letters, digits, periods (.), and hyphens (-).
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
@@ -448,7 +506,7 @@ public class CreateVirtualNodeRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the VNode.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -502,7 +560,7 @@ public class CreateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -510,7 +568,7 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -575,7 +633,12 @@ public class CreateVirtualNodeRequest extends Request {
             private String value; 
 
             /**
-             * Effect.
+             * The effect of taint N. Valid values of N: 1 to 20. Valid values:
+             * <p>
+             * 
+             * - NoSchedule: No pods are scheduled to the nodes that have the taint.
+             * - NoExecute: Existing pods in the node are evicted while no pods are scheduled to the nodes that have the taint.
+             * - PreferNoSchedule: Pods are preferentially not scheduled to the nodes that have the taint.
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -583,7 +646,7 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * Key.
+             * The key of taint.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -591,7 +654,7 @@ public class CreateVirtualNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of taint.
              */
             public Builder value(String value) {
                 this.value = value;

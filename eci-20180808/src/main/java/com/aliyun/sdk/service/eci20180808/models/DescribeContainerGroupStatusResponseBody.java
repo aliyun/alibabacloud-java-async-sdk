@@ -74,7 +74,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The collection of status of the elastic container instances.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -186,7 +186,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -194,7 +194,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -202,7 +202,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * lastTransitionTime.
+             * The time when the status last changed.
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -210,7 +210,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the pod condition.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +218,13 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the pod condition. Valid values:
+             * <p>
+             * 
+             * *   PodScheduled
+             * *   Ready
+             * *   Initialized
+             * *   Unschedulable
              */
             public Builder type(String type) {
                 this.type = type;
@@ -259,7 +265,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAtstartedAt; 
 
             /**
-             * StartedAtstartedAt.
+             * The start time.
              */
             public Builder startedAtstartedAt(String startedAtstartedAt) {
                 this.startedAtstartedAt = startedAtstartedAt;
@@ -372,7 +378,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAt; 
 
             /**
-             * ContainerID.
+             * The container ID.
              */
             public Builder containerID(String containerID) {
                 this.containerID = containerID;
@@ -380,7 +386,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -388,7 +394,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedAt.
+             * The end time.
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -396,7 +402,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -404,7 +410,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -412,7 +418,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The signal code.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -420,7 +426,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartedAt.
+             * The start time.
              */
             public Builder startedAt(String startedAt) {
                 this.startedAt = startedAt;
@@ -473,7 +479,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -481,7 +487,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -546,7 +552,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private Waiting waiting; 
 
             /**
-             * Running.
+             * The container is created and running.
              */
             public Builder running(Running running) {
                 this.running = running;
@@ -554,7 +560,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Terminated.
+             * The container is terminated and exits after a successful or failed run.
              */
             public Builder terminated(Terminated terminated) {
                 this.terminated = terminated;
@@ -562,7 +568,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Waiting.
+             * The container is waiting for being created.
              */
             public Builder waiting(Waiting waiting) {
                 this.waiting = waiting;
@@ -603,7 +609,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAtstartedAt; 
 
             /**
-             * StartedAtstartedAt.
+             * The start time.
              */
             public Builder startedAtstartedAt(String startedAtstartedAt) {
                 this.startedAtstartedAt = startedAtstartedAt;
@@ -716,7 +722,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAt; 
 
             /**
-             * ContainerID.
+             * The container ID.
              */
             public Builder containerID(String containerID) {
                 this.containerID = containerID;
@@ -724,7 +730,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExitCode.
+             * The exit code.
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -732,7 +738,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedAt.
+             * The end time.
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -740,7 +746,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -748,7 +754,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -756,7 +762,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Signal.
+             * The signal code.
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -764,7 +770,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartedAt.
+             * The start time.
              */
             public Builder startedAt(String startedAt) {
                 this.startedAt = startedAt;
@@ -817,7 +823,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -825,7 +831,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -890,7 +896,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private StateWaiting waiting; 
 
             /**
-             * Running.
+             * The container is created and running.
              */
             public Builder running(StateRunning running) {
                 this.running = running;
@@ -898,7 +904,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Terminated.
+             * The container is terminated and exits after a successful or failed run.
              */
             public Builder terminated(StateTerminated terminated) {
                 this.terminated = terminated;
@@ -906,7 +912,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Waiting.
+             * The container is waiting for being created.
              */
             public Builder waiting(StateWaiting waiting) {
                 this.waiting = waiting;
@@ -1031,7 +1037,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private State state; 
 
             /**
-             * Image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1039,7 +1045,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ImageID.
+             * The image ID.
              */
             public Builder imageID(String imageID) {
                 this.imageID = imageID;
@@ -1047,7 +1053,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LastState.
+             * The most recent state of the container.
              */
             public Builder lastState(LastState lastState) {
                 this.lastState = lastState;
@@ -1055,7 +1061,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1063,7 +1069,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Ready.
+             * Indicates whether the container is ready for use.
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -1071,7 +1077,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RestartCount.
+             * The number of restarts.
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -1079,7 +1085,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Started.
+             * Indicates whether the container is started.
              */
             public Builder started(Boolean started) {
                 this.started = started;
@@ -1087,7 +1093,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the container. Valid values:
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Terminated
              */
             public Builder state(State state) {
                 this.state = state;
@@ -1128,7 +1139,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * Ip.
+             * The IP address of the pod.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1253,7 +1264,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Conditions.
+             * The information about the pod conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -1261,7 +1272,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerStatuses.
+             * The state information about the container.
              */
             public Builder containerStatuses(java.util.List < ContainerStatuses> containerStatuses) {
                 this.containerStatuses = containerStatuses;
@@ -1269,7 +1280,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * HostIp.
+             * The IP address of the host.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -1277,7 +1288,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * The lifecycle phase of the pod.
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -1285,7 +1296,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PodIp.
+             * The IP address of the pod.
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -1293,7 +1304,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PodIps.
+             * The collection of pod IP addresses.
              */
             public Builder podIps(java.util.List < PodIps> podIps) {
                 this.podIps = podIps;
@@ -1301,7 +1312,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * QosClass.
+             * The quality of service (QoS) of the pod.
              */
             public Builder qosClass(String qosClass) {
                 this.qosClass = qosClass;
@@ -1309,7 +1320,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the container started to run.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1324,6 +1335,9 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("Annotations")
+        private String annotations;
+
         @NameInMap("ContainerGroupId")
         private String containerGroupId;
 
@@ -1343,6 +1357,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         private String uuid;
 
         private Data(Builder builder) {
+            this.annotations = builder.annotations;
             this.containerGroupId = builder.containerGroupId;
             this.name = builder.name;
             this.namespace = builder.namespace;
@@ -1357,6 +1372,13 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return annotations
+         */
+        public String getAnnotations() {
+            return this.annotations;
         }
 
         /**
@@ -1402,6 +1424,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String annotations; 
             private String containerGroupId; 
             private String name; 
             private String namespace; 
@@ -1410,7 +1433,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ContainerGroupId.
+             * The annotations of the elastic container instance.
+             */
+            public Builder annotations(String annotations) {
+                this.annotations = annotations;
+                return this;
+            }
+
+            /**
+             * The ID of the elastic container instance.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -1418,7 +1449,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the elastic container instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1426,7 +1457,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace where the elastic container instance resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1434,7 +1465,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PodStatus.
+             * The state information about the elastic container instance.
              */
             public Builder podStatus(PodStatus podStatus) {
                 this.podStatus = podStatus;
@@ -1442,7 +1473,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the elastic container instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1450,7 +1481,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * uuid.
+             * The UUID of the elastic container instance. The UUID of an elastic container instance is similar to the UID of a Kubernetes pod in concept and usage.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

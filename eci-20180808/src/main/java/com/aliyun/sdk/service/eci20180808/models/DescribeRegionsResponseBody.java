@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * The queried regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private java.util.List < String > zones; 
 
             /**
-             * RecommendZones.
+             * The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.
              */
             public Builder recommendZones(java.util.List < String > recommendZones) {
                 this.recommendZones = recommendZones;
@@ -142,7 +142,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * The endpoint for the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -150,7 +150,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -158,7 +158,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * The queried zones.
              */
             public Builder zones(java.util.List < String > zones) {
                 this.zones = zones;

@@ -251,7 +251,7 @@ public class DescribeContainerGroupsRequest extends Request {
         } 
 
         /**
-         * ContainerGroupIds.
+         * The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -260,7 +260,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * ContainerGroupName.
+         * The name of the elastic container instance.
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -269,7 +269,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of resources to return. Default value: 20. Maximum value: 20.
+         * <p>
+         * 
+         * >  The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -278,7 +281,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. If this parameter is left empty, all results have been returned.
+         * <p>
+         * 
+         * > You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -305,7 +311,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -314,7 +320,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the elastic container instances belong. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -341,7 +347,19 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the elastic container instance. Valid values:
+         * <p>
+         * 
+         * *   Pending: The instance is being started.
+         * *   Running: The instance is running.
+         * *   Succeeded: The instance runs successfully.
+         * *   Failed: The instance fails to run.
+         * *   Scheduling: The instance is being created.
+         * *   ScheduleFailed: The instance fails to be created.
+         * *   Restarting: The instance is being restarted.
+         * *   Updating: The instance is being updated.
+         * *   Terminating: The instance is being terminated.
+         * *   Expired: The instance expires.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -350,7 +368,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -359,7 +377,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the elastic container instances are connected.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -368,7 +386,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * WithEvent.
+         * Specifies whether to return event information.
          */
         public Builder withEvent(Boolean withEvent) {
             this.putQueryParameter("WithEvent", withEvent);
@@ -377,7 +395,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -431,7 +452,7 @@ public class DescribeContainerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the instances.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +460,7 @@ public class DescribeContainerGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value of the instances.
              */
             public Builder value(String value) {
                 this.value = value;

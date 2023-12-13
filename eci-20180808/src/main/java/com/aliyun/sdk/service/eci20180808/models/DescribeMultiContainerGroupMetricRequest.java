@@ -154,7 +154,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         } 
 
         /**
-         * ContainerGroupIds.
+         * The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -163,7 +163,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * The type of the monitoring data. Set the value to summary. This value indicates that records are returned.
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -190,7 +190,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +199,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the elastic container instances belong.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

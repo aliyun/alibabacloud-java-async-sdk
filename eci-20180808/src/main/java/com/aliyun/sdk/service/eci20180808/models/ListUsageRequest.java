@@ -22,6 +22,7 @@ public class ListUsageRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -128,7 +129,7 @@ public class ListUsageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

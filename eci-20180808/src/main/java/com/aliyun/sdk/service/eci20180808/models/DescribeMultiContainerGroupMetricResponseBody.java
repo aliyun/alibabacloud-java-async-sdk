@@ -50,7 +50,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MonitorDatas.
+         * The monitoring data of the elastic container instances.
          */
         public Builder monitorDatas(java.util.List < MonitorDatas> monitorDatas) {
             this.monitorDatas = monitorDatas;
@@ -58,7 +58,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usageNanoCores; 
 
             /**
-             * Limit.
+             * The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.
              */
             public Builder limit(Long limit) {
                 this.limit = limit;
@@ -142,7 +142,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Load.
+             * The average load in the last 10 seconds.
              */
             public Builder load(Long load) {
                 this.load = load;
@@ -150,7 +150,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageCoreNanoSeconds.
+             * The cumulative usage of vCPUs.
              */
             public Builder usageCoreNanoSeconds(Long usageCoreNanoSeconds) {
                 this.usageCoreNanoSeconds = usageCoreNanoSeconds;
@@ -158,7 +158,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageNanoCores.
+             * The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.
              */
             public Builder usageNanoCores(Long usageNanoCores) {
                 this.usageNanoCores = usageNanoCores;
@@ -235,7 +235,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usageNanoCores; 
 
             /**
-             * Limit.
+             * The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.
              */
             public Builder limit(Long limit) {
                 this.limit = limit;
@@ -243,7 +243,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Load.
+             * The average load in the last 10 seconds.
              */
             public Builder load(Long load) {
                 this.load = load;
@@ -251,7 +251,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageCoreNanoSeconds.
+             * The cumulative usage of vCPUs.
              */
             public Builder usageCoreNanoSeconds(Long usageCoreNanoSeconds) {
                 this.usageCoreNanoSeconds = usageCoreNanoSeconds;
@@ -259,7 +259,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageNanoCores.
+             * The vCPU usage in the sampling window. Unit for the sampling window: nanoseconds.
              */
             public Builder usageNanoCores(Long usageNanoCores) {
                 this.usageNanoCores = usageNanoCores;
@@ -348,7 +348,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long workingSet; 
 
             /**
-             * AvailableBytes.
+             * The size of the available memory. Unit: bytes.
              */
             public Builder availableBytes(Long availableBytes) {
                 this.availableBytes = availableBytes;
@@ -356,7 +356,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Cache.
+             * The size of the cache. Unit: bytes.
              */
             public Builder cache(Long cache) {
                 this.cache = cache;
@@ -364,7 +364,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Rss.
+             * The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.
              */
             public Builder rss(Long rss) {
                 this.rss = rss;
@@ -372,7 +372,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageBytes.
+             * The size of the used memory. Unit: bytes.
              */
             public Builder usageBytes(Long usageBytes) {
                 this.usageBytes = usageBytes;
@@ -380,7 +380,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingSet.
+             * The usage of the working set. Unit: bytes.
              */
             public Builder workingSet(Long workingSet) {
                 this.workingSet = workingSet;
@@ -445,7 +445,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * CPU.
+             * The vCPU monitoring data of the container.
              */
             public Builder CPU(ContainersCPU CPU) {
                 this.CPU = CPU;
@@ -453,7 +453,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory monitoring data of the container.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -461,7 +461,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -550,7 +550,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long writeIo; 
 
             /**
-             * Device.
+             * The name of the disk.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -558,7 +558,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * ReadBytes.
+             * The amount of data that was read from the disk. Unit: bytes.
              */
             public Builder readBytes(Long readBytes) {
                 this.readBytes = readBytes;
@@ -566,7 +566,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * ReadIo.
+             * This parameter is unavailable for public use.
              */
             public Builder readIo(Long readIo) {
                 this.readIo = readIo;
@@ -574,7 +574,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * WriteBytes.
+             * The amount of data that was written to the disk. Unit: bytes.
              */
             public Builder writeBytes(Long writeBytes) {
                 this.writeBytes = writeBytes;
@@ -582,7 +582,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * WriteIo.
+             * This parameter is unavailable for public use.
              */
             public Builder writeIo(Long writeIo) {
                 this.writeIo = writeIo;
@@ -659,7 +659,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long usage; 
 
             /**
-             * Available.
+             * The size of the available space.
              */
             public Builder available(Long available) {
                 this.available = available;
@@ -667,7 +667,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The total file system space.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -675,7 +675,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * FsName.
+             * The name of the partition.
              */
             public Builder fsName(String fsName) {
                 this.fsName = fsName;
@@ -683,7 +683,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * The size of used space.
              */
             public Builder usage(Long usage) {
                 this.usage = usage;
@@ -772,7 +772,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long workingSet; 
 
             /**
-             * AvailableBytes.
+             * The size of the available memory. Unit: bytes.
              */
             public Builder availableBytes(Long availableBytes) {
                 this.availableBytes = availableBytes;
@@ -780,7 +780,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Cache.
+             * The size of the cache. Unit: bytes.
              */
             public Builder cache(Long cache) {
                 this.cache = cache;
@@ -788,7 +788,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Rss.
+             * The size of the resident memory set, which indicates the size of the physical memory that is actually used. Unit: bytes.
              */
             public Builder rss(Long rss) {
                 this.rss = rss;
@@ -796,7 +796,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * UsageBytes.
+             * The size of the used memory. Unit: bytes.
              */
             public Builder usageBytes(Long usageBytes) {
                 this.usageBytes = usageBytes;
@@ -804,7 +804,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * WorkingSet.
+             * The usage of the working set. Unit: bytes.
              */
             public Builder workingSet(Long workingSet) {
                 this.workingSet = workingSet;
@@ -941,7 +941,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private Long txPackets; 
 
             /**
-             * Name.
+             * The name of the NIC.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -949,7 +949,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * RxBytes.
+             * The total number of bytes received.
              */
             public Builder rxBytes(Long rxBytes) {
                 this.rxBytes = rxBytes;
@@ -957,7 +957,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * RxDrops.
+             * The number of packets that fail to be received.
              */
             public Builder rxDrops(Long rxDrops) {
                 this.rxDrops = rxDrops;
@@ -965,7 +965,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * RxErrors.
+             * The number of receipt errors.
              */
             public Builder rxErrors(Long rxErrors) {
                 this.rxErrors = rxErrors;
@@ -973,7 +973,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * RxPackets.
+             * The total number of packets received.
              */
             public Builder rxPackets(Long rxPackets) {
                 this.rxPackets = rxPackets;
@@ -981,7 +981,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * TxBytes.
+             * The total number of bytes sent.
              */
             public Builder txBytes(Long txBytes) {
                 this.txBytes = txBytes;
@@ -989,7 +989,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * TxDrops.
+             * The number of packets that fail to arrive at their destination.
              */
             public Builder txDrops(Long txDrops) {
                 this.txDrops = txDrops;
@@ -997,7 +997,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * TxErrors.
+             * The total number of sending errors.
              */
             public Builder txErrors(Long txErrors) {
                 this.txErrors = txErrors;
@@ -1005,7 +1005,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * TxPackets.
+             * The total number of packets sent.
              */
             public Builder txPackets(Long txPackets) {
                 this.txPackets = txPackets;
@@ -1046,7 +1046,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private java.util.List < Interfaces> interfaces; 
 
             /**
-             * Interfaces.
+             * The monitoring data of network interface controllers (NICs).
              */
             public Builder interfaces(java.util.List < Interfaces> interfaces) {
                 this.interfaces = interfaces;
@@ -1159,7 +1159,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * CPU.
+             * The monitoring data of vCPUs.
              */
             public Builder CPU(CPU CPU) {
                 this.CPU = CPU;
@@ -1167,7 +1167,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Containers.
+             * The monitoring data of containers.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -1175,7 +1175,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * The monitoring data of disks.
              */
             public Builder disk(java.util.List < Disk> disk) {
                 this.disk = disk;
@@ -1183,7 +1183,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Filesystem.
+             * The monitoring data of file system partitions.
              */
             public Builder filesystem(java.util.List < Filesystem> filesystem) {
                 this.filesystem = filesystem;
@@ -1191,7 +1191,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The monitoring data of the memory.
              */
             public Builder memory(RecordsMemory memory) {
                 this.memory = memory;
@@ -1199,7 +1199,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The monitoring data of the network.
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1207,7 +1207,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the entry of monitoring data was collected. The time follows the RFC 3339 format.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -1260,7 +1260,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             private java.util.List < Records> records; 
 
             /**
-             * ContainerGroupId.
+             * The ID of the elastic container instance.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -1268,7 +1268,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * The details about monitoring data.
              */
             public Builder records(java.util.List < Records> records) {
                 this.records = records;

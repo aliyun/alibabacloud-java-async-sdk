@@ -15,12 +15,20 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     @NameInMap("ImageCaches")
     private java.util.List < ImageCaches> imageCaches;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeImageCachesResponseBody(Builder builder) {
         this.imageCaches = builder.imageCaches;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -39,18 +47,34 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < ImageCaches> imageCaches; 
+        private String nextToken; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
-         * ImageCaches.
+         * The information about image caches.
          */
         public Builder imageCaches(java.util.List < ImageCaches> imageCaches) {
             this.imageCaches = imageCaches;
@@ -58,10 +82,26 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The total number of entries returned.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -87,6 +127,9 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Reason")
+        private String reason;
+
         @NameInMap("Type")
         private String type;
 
@@ -96,6 +139,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             this.lastTimestamp = builder.lastTimestamp;
             this.message = builder.message;
             this.name = builder.name;
+            this.reason = builder.reason;
             this.type = builder.type;
         }
 
@@ -143,6 +187,13 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -155,10 +206,11 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private String lastTimestamp; 
             private String message; 
             private String name; 
+            private String reason; 
             private String type; 
 
             /**
-             * Count.
+             * The number of events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -166,7 +218,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The time when the event started.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -174,7 +226,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The time when the event ended.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -182,7 +234,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -190,7 +242,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the event.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +250,15 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The cause of the event.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * The type of the event. Valid values:
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,7 +311,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +319,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -279,6 +339,9 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
         @NameInMap("CreationTime")
         private String creationTime;
+
+        @NameInMap("EliminationStrategy")
+        private String eliminationStrategy;
 
         @NameInMap("Events")
         private java.util.List < Events> events;
@@ -325,6 +388,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         private ImageCaches(Builder builder) {
             this.containerGroupId = builder.containerGroupId;
             this.creationTime = builder.creationTime;
+            this.eliminationStrategy = builder.eliminationStrategy;
             this.events = builder.events;
             this.expireDateTime = builder.expireDateTime;
             this.flashSnapshotId = builder.flashSnapshotId;
@@ -361,6 +425,13 @@ public class DescribeImageCachesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return eliminationStrategy
+         */
+        public String getEliminationStrategy() {
+            return this.eliminationStrategy;
         }
 
         /**
@@ -464,6 +535,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         public static final class Builder {
             private String containerGroupId; 
             private String creationTime; 
+            private String eliminationStrategy; 
             private java.util.List < Events> events; 
             private String expireDateTime; 
             private String flashSnapshotId; 
@@ -480,7 +552,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * ContainerGroupId.
+             * The ID of the elastic container instance.
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -488,7 +560,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image cache was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -496,7 +568,18 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Events.
+             * The elimination policy of the image cache. This parameter is empty by default, which indicates that the image cache is always retained.
+             * <p>
+             * 
+             * You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least regularly used.
+             */
+            public Builder eliminationStrategy(String eliminationStrategy) {
+                this.eliminationStrategy = eliminationStrategy;
+                return this;
+            }
+
+            /**
+             * The events of pulling an image to create the image cache.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -504,7 +587,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDateTime.
+             * The time when the image cache expires.
              */
             public Builder expireDateTime(String expireDateTime) {
                 this.expireDateTime = expireDateTime;
@@ -512,7 +595,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * FlashSnapshotId.
+             * The ID of the local snapshot. A temporary local snapshot is created if the instant image cache feature is enabled.
              */
             public Builder flashSnapshotId(String flashSnapshotId) {
                 this.flashSnapshotId = flashSnapshotId;
@@ -520,7 +603,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCacheId.
+             * The ID of the image cache.
              */
             public Builder imageCacheId(String imageCacheId) {
                 this.imageCacheId = imageCacheId;
@@ -528,7 +611,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCacheName.
+             * The name of the image cache.
              */
             public Builder imageCacheName(String imageCacheName) {
                 this.imageCacheName = imageCacheName;
@@ -536,7 +619,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCacheSize.
+             * The size of the image cache. Unit: GiB.
              */
             public Builder imageCacheSize(Integer imageCacheSize) {
                 this.imageCacheSize = imageCacheSize;
@@ -544,7 +627,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Images.
+             * The images contained in the image cache.
              */
             public Builder images(java.util.List < String > images) {
                 this.images = images;
@@ -552,7 +635,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * LastMatchedTime.
+             * The time when the image cache was last matched.
              */
             public Builder lastMatchedTime(String lastMatchedTime) {
                 this.lastMatchedTime = lastMatchedTime;
@@ -560,7 +643,10 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of creating the snapshot that is used to create the image cache.
+             * <p>
+             * 
+             * >  If the instant image cache feature is enabled, the system creates a temporary local snapshot and then a regular snapshot. In this case, this parameter indicates the progress of creating the regular snapshot.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -568,7 +654,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the image cache.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -576,7 +662,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the image cache belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -584,7 +670,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot that corresponds to the image cache.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -592,7 +678,17 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image cache. Valid values:
+             * <p>
+             * 
+             * *   Preparing: The image cache is being prepared.
+             * *   Creating: The image is being created.
+             * *   Ready: The image cache is created.
+             * *   Failed: The image cache failed to be created.
+             * *   Updating: The image cache is being updated.
+             * *   UpdateFailed: The image cache failed to be updated.
+             * 
+             * The image cache is ready for use when it is in the Ready state.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -600,7 +696,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the image cache.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

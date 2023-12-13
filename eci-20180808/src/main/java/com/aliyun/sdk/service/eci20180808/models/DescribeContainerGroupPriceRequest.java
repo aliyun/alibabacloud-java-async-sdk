@@ -50,6 +50,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SpotDuration")
+    private Integer spotDuration;
+
+    @Query
     @NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
@@ -72,6 +76,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.spotDuration = builder.spotDuration;
         this.spotPriceLimit = builder.spotPriceLimit;
         this.spotStrategy = builder.spotStrategy;
         this.zoneId = builder.zoneId;
@@ -154,6 +159,13 @@ public class DescribeContainerGroupPriceRequest extends Request {
     }
 
     /**
+     * @return spotDuration
+     */
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
+    /**
      * @return spotPriceLimit
      */
     public Float getSpotPriceLimit() {
@@ -184,6 +196,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer spotDuration; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private String zoneId; 
@@ -203,13 +216,14 @@ public class DescribeContainerGroupPriceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.spotDuration = request.spotDuration;
             this.spotPriceLimit = request.spotPriceLimit;
             this.spotStrategy = request.spotStrategy;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * Cpu.
+         * The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -218,7 +232,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * EphemeralStorage.
+         * The storage size of the temporary storage space. Unit: GiB.
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -227,7 +241,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance. For information about the ECS instance types that are supported by Elastic Container Instance, see [ECS instance types that are supported by Elastic Container Instance](~~114664~~).
+         * <p>
+         * 
+         * > If you specify this parameter, the specified specifications of vCPUs and memory are ignored. Only the price of the ECS instance type is returned.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -236,7 +253,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * Memory.
+         * The size of the memory. Unit: GiB. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -263,7 +280,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~146965~~) operation to query the most recent region and zone list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +307,16 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * SpotPriceLimit.
+         * The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.
+         */
+        public Builder spotDuration(Integer spotDuration) {
+            this.putQueryParameter("SpotDuration", spotDuration);
+            this.spotDuration = spotDuration;
+            return this;
+        }
+
+        /**
+         * The maximum hourly price of the preemptible elastic container instance. The value can contain up to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -299,7 +325,14 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * SpotStrategy.
+         * The bidding policy for the elastic container instance. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+         * 
+         * Default value: NoSpot.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -308,7 +341,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~146965~~) operation to query the most recent region and zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

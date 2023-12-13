@@ -224,7 +224,7 @@ public class DescribeContainerLogRequest extends Request {
         } 
 
         /**
-         * ContainerGroupId.
+         * The instance ID.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -233,7 +233,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * ContainerName.
+         * The name of the container.
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -242,7 +242,13 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * LastTime.
+         * Specifies whether to query the logs of the previous container if the container exits and restarts. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder lastTime(Boolean lastTime) {
             this.putQueryParameter("LastTime", lastTime);
@@ -251,7 +257,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * LimitBytes.
+         * The limit on the total size of logs. Unit: bytes. Valid values: 1 to 1048576(1 MB).
          */
         public Builder limitBytes(Long limitBytes) {
             this.putQueryParameter("LimitBytes", limitBytes);
@@ -278,7 +284,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the elastic container instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,7 +311,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * SinceSeconds.
+         * A relative time in seconds before the current time from which to show logs. Examples: 10, 20, and 30.
          */
         public Builder sinceSeconds(Integer sinceSeconds) {
             this.putQueryParameter("SinceSeconds", sinceSeconds);
@@ -314,7 +320,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -323,7 +329,7 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * Tail.
+         * The number of log entries that you want to query. Default value: 500. Maximum value: 2000. A maximum of 1 MB of logs can be returned.
          */
         public Builder tail(Integer tail) {
             this.putQueryParameter("Tail", tail);
@@ -332,7 +338,13 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * Timestamps.
+         * Specifies whether to return the timestamps of logs. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder timestamps(Boolean timestamps) {
             this.putQueryParameter("Timestamps", timestamps);

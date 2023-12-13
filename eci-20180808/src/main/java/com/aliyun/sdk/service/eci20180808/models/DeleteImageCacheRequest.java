@@ -140,7 +140,7 @@ public class DeleteImageCacheRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +149,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * ImageCacheId.
+         * The ID of the image cache.
          */
         public Builder imageCacheId(String imageCacheId) {
             this.putQueryParameter("ImageCacheId", imageCacheId);
@@ -176,7 +176,7 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image cache.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

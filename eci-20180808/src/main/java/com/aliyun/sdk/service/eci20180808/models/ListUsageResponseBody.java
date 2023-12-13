@@ -50,7 +50,17 @@ public class ListUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Attributes.
+         * The information about the used amounts and upper limits of privileges and quotas that you have in the specified region. The information contains the following items:
+         * <p>
+         * 
+         * *   UsedCpu: the number of existing vCPUs.
+         * *   MaxCpu: the upper limit of vCPUs.
+         * *   MaxImageCacheCount: the upper limit of manually created image caches.
+         * *   UsedImageCacheCount: the number of existing image caches that are manually created.
+         * *   MaxAutoImageCacheCount: the upper limit of automatically created image caches.
+         * *   UsedAutoImageCacheCount: the number of existing image caches that are automatically created.
+         * *   MaxDataCacheCount: the upper limit of DataCaches.
+         * *   UsedDataCacheCount: the number of existing DataCaches.
          */
         public Builder attributes(java.util.Map < String, ? > attributes) {
             this.attributes = attributes;
@@ -58,7 +68,7 @@ public class ListUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

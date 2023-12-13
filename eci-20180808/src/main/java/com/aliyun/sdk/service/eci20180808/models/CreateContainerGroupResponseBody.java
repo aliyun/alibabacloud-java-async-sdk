@@ -50,7 +50,7 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerGroupId.
+         * The ID of the elastic container instance.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
@@ -58,7 +58,7 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

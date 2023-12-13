@@ -50,7 +50,7 @@ public class CreateVirtualNodeResponseBody extends TeaModel {
         private String virtualNodeId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVirtualNodeResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualNodeId.
+         * The ID of the VNode.
          */
         public Builder virtualNodeId(String virtualNodeId) {
             this.virtualNodeId = virtualNodeId;

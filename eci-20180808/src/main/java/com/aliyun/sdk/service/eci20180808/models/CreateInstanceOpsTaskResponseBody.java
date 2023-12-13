@@ -50,7 +50,7 @@ public class CreateInstanceOpsTaskResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateInstanceOpsTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The creation result of the O&M task.
          */
         public Builder result(String result) {
             this.result = result;

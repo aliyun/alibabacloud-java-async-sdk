@@ -74,7 +74,7 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         private String webSocketUri; 
 
         /**
-         * HttpUrl.
+         * The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see [Use and integrate the Elastic Container Instance terminal](~~202846~~).
          */
         public Builder httpUrl(String httpUrl) {
             this.httpUrl = httpUrl;
@@ -82,7 +82,7 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         }
 
         /**
-         * SyncResponse.
+         * The output of the command. This parameter is returned only if Sync is set to true.
          */
         public Builder syncResponse(String syncResponse) {
             this.syncResponse = syncResponse;
@@ -98,7 +98,7 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         }
 
         /**
-         * WebSocketUri.
+         * The WebSocket URL. You can use this URL to establish a WebSocket connection with the container.
          */
         public Builder webSocketUri(String webSocketUri) {
             this.webSocketUri = webSocketUri;

@@ -198,7 +198,9 @@ public class ExecContainerCommandRequest extends Request {
         } 
 
         /**
-         * Command.
+         * The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
+         * <p>
+         * The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -207,7 +209,7 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * ContainerGroupId.
+         * The ID of the elastic container instance.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -216,7 +218,7 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * ContainerName.
+         * The name of the container.
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -243,7 +245,7 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +272,7 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Stdin.
+         * Specifies whether to read the commands from standard input (stdin). Default value: true.
          */
         public Builder stdin(Boolean stdin) {
             this.putQueryParameter("Stdin", stdin);
@@ -279,7 +281,9 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Sync.
+         * Specifies whether to run the command immediately and return the result. Default value: false.\
+         * <p>
+         * If you set this parameter to true, set the value of TTY to false.
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -288,7 +292,9 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * TTY.
+         * Specifies whether to enable interaction. Default value: false.\
+         * <p>
+         * If the command is a /bin/bash command, set the value to true.
          */
         public Builder TTY(Boolean TTY) {
             this.putQueryParameter("TTY", TTY);

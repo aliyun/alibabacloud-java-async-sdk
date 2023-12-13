@@ -167,7 +167,7 @@ public class DescribeContainerGroupMetricRequest extends Request {
         } 
 
         /**
-         * ContainerGroupId.
+         * The instance ID.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -176,7 +176,10 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The default value is the current time.
+         * <p>
+         * 
+         * Specify the time in RFC 3339 format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -203,7 +206,10 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * Period.
+         * The data aggregation period. Unit: seconds. Valid values: 15, 30, 60, and 600. Default value: 60.
+         * <p>
+         * 
+         * >  If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -212,7 +218,7 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +245,10 @@ public class DescribeContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The beginning of the time range must be a time point in the last 30 days. The default value is 5 minutes before the value of EndTime.
+         * <p>
+         * 
+         * Specify the time in RFC 3339 format. For example, to query the data starting from March 12, 2019, 09:00 UTC+8, you can set the parameter to 2019-03-12T09:00:00.000+08:00 or 2019-03-12T01:00:00.000Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

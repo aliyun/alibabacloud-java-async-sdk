@@ -62,7 +62,7 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerName.
+         * The container name.
          */
         public Builder containerName(String containerName) {
             this.containerName = containerName;
@@ -70,7 +70,7 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * The content of the log.
          */
         public Builder content(String content) {
             this.content = content;
@@ -78,7 +78,7 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

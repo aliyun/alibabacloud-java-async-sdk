@@ -74,7 +74,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         private java.util.List < VirtualNodes> virtualNodes; 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +82,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of virtual nodes that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -98,7 +98,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualNodes.
+         * The virtual nodes that were queried.
          */
         public Builder virtualNodes(java.util.List < VirtualNodes> virtualNodes) {
             this.virtualNodes = virtualNodes;
@@ -210,7 +210,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of events.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -218,7 +218,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTimestamp.
+             * The time when the event started.
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -226,7 +226,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * LastTimestamp.
+             * The time when the event ended.
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -234,7 +234,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message of the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -242,7 +242,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the object to which the event belongs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -250,7 +250,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The name of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -258,7 +258,11 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   Warning
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +315,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -319,7 +323,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,17 +338,8 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
     }
     public static class VirtualNodes extends TeaModel {
-        @NameInMap("ClusterId")
-        private String clusterId;
-
-        @NameInMap("Cpu")
-        private Float cpu;
-
         @NameInMap("CreationTime")
         private String creationTime;
-
-        @NameInMap("EniInstanceId")
-        private String eniInstanceId;
 
         @NameInMap("Events")
         private java.util.List < Events> events;
@@ -355,20 +350,11 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Memory")
-        private Float memory;
-
-        @NameInMap("RamRoleName")
-        private String ramRoleName;
-
         @NameInMap("RegionId")
         private String regionId;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
-
-        @NameInMap("SecurityGroupId")
-        private String securityGroupId;
 
         @NameInMap("Status")
         private String status;
@@ -376,41 +362,35 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VSwitchId")
-        private String vSwitchId;
-
         @NameInMap("VirtualNodeId")
         private String virtualNodeId;
 
         @NameInMap("VirtualNodeName")
         private String virtualNodeName;
 
+        @NameInMap("VirtualNodeSecurityGroupId")
+        private String virtualNodeSecurityGroupId;
+
+        @NameInMap("VirtualNodeVSwitchId")
+        private String virtualNodeVSwitchId;
+
         @NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
-        private String zoneId;
-
         private VirtualNodes(Builder builder) {
-            this.clusterId = builder.clusterId;
-            this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
-            this.eniInstanceId = builder.eniInstanceId;
             this.events = builder.events;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
-            this.memory = builder.memory;
-            this.ramRoleName = builder.ramRoleName;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
-            this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
-            this.vSwitchId = builder.vSwitchId;
             this.virtualNodeId = builder.virtualNodeId;
             this.virtualNodeName = builder.virtualNodeName;
+            this.virtualNodeSecurityGroupId = builder.virtualNodeSecurityGroupId;
+            this.virtualNodeVSwitchId = builder.virtualNodeVSwitchId;
             this.vpcId = builder.vpcId;
-            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -422,31 +402,10 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * @return clusterId
-         */
-        public String getClusterId() {
-            return this.clusterId;
-        }
-
-        /**
-         * @return cpu
-         */
-        public Float getCpu() {
-            return this.cpu;
-        }
-
-        /**
          * @return creationTime
          */
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        /**
-         * @return eniInstanceId
-         */
-        public String getEniInstanceId() {
-            return this.eniInstanceId;
         }
 
         /**
@@ -471,20 +430,6 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * @return memory
-         */
-        public Float getMemory() {
-            return this.memory;
-        }
-
-        /**
-         * @return ramRoleName
-         */
-        public String getRamRoleName() {
-            return this.ramRoleName;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -496,13 +441,6 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         /**
@@ -520,13 +458,6 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
-         * @return vSwitchId
-         */
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        /**
          * @return virtualNodeId
          */
         public String getVirtualNodeId() {
@@ -541,58 +472,43 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return virtualNodeSecurityGroupId
+         */
+        public String getVirtualNodeSecurityGroupId() {
+            return this.virtualNodeSecurityGroupId;
+        }
+
+        /**
+         * @return virtualNodeVSwitchId
+         */
+        public String getVirtualNodeVSwitchId() {
+            return this.virtualNodeVSwitchId;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
             return this.vpcId;
         }
 
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
         public static final class Builder {
-            private String clusterId; 
-            private Float cpu; 
             private String creationTime; 
-            private String eniInstanceId; 
             private java.util.List < Events> events; 
             private String internetIp; 
             private String intranetIp; 
-            private Float memory; 
-            private String ramRoleName; 
             private String regionId; 
             private String resourceGroupId; 
-            private String securityGroupId; 
             private String status; 
             private java.util.List < Tags> tags; 
-            private String vSwitchId; 
             private String virtualNodeId; 
             private String virtualNodeName; 
+            private String virtualNodeSecurityGroupId; 
+            private String virtualNodeVSwitchId; 
             private String vpcId; 
-            private String zoneId; 
 
             /**
-             * ClusterId.
-             */
-            public Builder clusterId(String clusterId) {
-                this.clusterId = clusterId;
-                return this;
-            }
-
-            /**
-             * Cpu.
-             */
-            public Builder cpu(Float cpu) {
-                this.cpu = cpu;
-                return this;
-            }
-
-            /**
-             * CreationTime.
+             * The time when the virtual node was created. The time follows the RFC 3339 standard and is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -600,15 +516,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceId.
-             */
-            public Builder eniInstanceId(String eniInstanceId) {
-                this.eniInstanceId = eniInstanceId;
-                return this;
-            }
-
-            /**
-             * Events.
+             * The events about the virtual node.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -616,7 +524,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the virtual node.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -624,7 +532,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the virtual node.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -632,23 +540,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
-             */
-            public Builder memory(Float memory) {
-                this.memory = memory;
-                return this;
-            }
-
-            /**
-             * RamRoleName.
-             */
-            public Builder ramRoleName(String ramRoleName) {
-                this.ramRoleName = ramRoleName;
-                return this;
-            }
-
-            /**
-             * RegionId.
+             * The ID of the region in which the virtual node resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -656,7 +548,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the virtual node belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -664,15 +556,12 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            /**
-             * Status.
+             * The status of the virtual node. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Ready
+             * *   Failed
              */
             public Builder status(String status) {
                 this.status = status;
@@ -680,7 +569,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are bound to the virtual node.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -688,15 +577,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
-             */
-            public Builder vSwitchId(String vSwitchId) {
-                this.vSwitchId = vSwitchId;
-                return this;
-            }
-
-            /**
-             * VirtualNodeId.
+             * The ID of the virtual node.
              */
             public Builder virtualNodeId(String virtualNodeId) {
                 this.virtualNodeId = virtualNodeId;
@@ -704,7 +585,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualNodeName.
+             * The name of the virtual node.
              */
             public Builder virtualNodeName(String virtualNodeName) {
                 this.virtualNodeName = virtualNodeName;
@@ -712,18 +593,26 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the security group to which the virtual node belongs.
              */
-            public Builder vpcId(String vpcId) {
-                this.vpcId = vpcId;
+            public Builder virtualNodeSecurityGroupId(String virtualNodeSecurityGroupId) {
+                this.virtualNodeSecurityGroupId = virtualNodeSecurityGroupId;
                 return this;
             }
 
             /**
-             * ZoneId.
+             * The ID of the vSwitch with which the virtual node is associated.
              */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
+            public Builder virtualNodeVSwitchId(String virtualNodeVSwitchId) {
+                this.virtualNodeVSwitchId = virtualNodeVSwitchId;
+                return this;
+            }
+
+            /**
+             * The ID of the VPC to which the virtual node belongs.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

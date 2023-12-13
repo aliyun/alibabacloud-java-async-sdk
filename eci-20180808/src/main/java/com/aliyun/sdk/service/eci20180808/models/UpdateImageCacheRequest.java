@@ -29,6 +29,10 @@ public class UpdateImageCacheRequest extends Request {
     private String eipInstanceId;
 
     @Query
+    @NameInMap("EliminationStrategy")
+    private String eliminationStrategy;
+
+    @Query
     @NameInMap("Flash")
     private Boolean flash;
 
@@ -108,6 +112,7 @@ public class UpdateImageCacheRequest extends Request {
         this.autoMatchImageCache = builder.autoMatchImageCache;
         this.clientToken = builder.clientToken;
         this.eipInstanceId = builder.eipInstanceId;
+        this.eliminationStrategy = builder.eliminationStrategy;
         this.flash = builder.flash;
         this.flashCopyCount = builder.flashCopyCount;
         this.image = builder.image;
@@ -167,6 +172,13 @@ public class UpdateImageCacheRequest extends Request {
      */
     public String getEipInstanceId() {
         return this.eipInstanceId;
+    }
+
+    /**
+     * @return eliminationStrategy
+     */
+    public String getEliminationStrategy() {
+        return this.eliminationStrategy;
     }
 
     /**
@@ -300,6 +312,7 @@ public class UpdateImageCacheRequest extends Request {
         private Boolean autoMatchImageCache; 
         private String clientToken; 
         private String eipInstanceId; 
+        private String eliminationStrategy; 
         private Boolean flash; 
         private Integer flashCopyCount; 
         private java.util.List < String > image; 
@@ -329,6 +342,7 @@ public class UpdateImageCacheRequest extends Request {
             this.autoMatchImageCache = request.autoMatchImageCache;
             this.clientToken = request.clientToken;
             this.eipInstanceId = request.eipInstanceId;
+            this.eliminationStrategy = request.eliminationStrategy;
             this.flash = request.flash;
             this.flashCopyCount = request.flashCopyCount;
             this.image = request.image;
@@ -350,7 +364,7 @@ public class UpdateImageCacheRequest extends Request {
         } 
 
         /**
-         * AcrRegistryInfo.
+         * The information about the Container Registry Enterprise Edition instance.
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -359,7 +373,13 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * AutoMatchImageCache.
+         * Specifies whether to enable reuse of image cache layers. If you enable this feature and the image cache that you want to create and an existing image cache contain duplicate image layers, the system reuses the duplicate image layers to create the new image cache. This accelerates the creation of the image cache. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
             this.putQueryParameter("AutoMatchImageCache", autoMatchImageCache);
@@ -368,7 +388,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -377,7 +397,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * EipInstanceId.
+         * The ID of the elastic IP address (EIP). If you want to pull public images, you must make sure that the elastic container instance can access the Internet. To enable Internet access, you can configure an EIP or a NAT gateway for the instance.
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -386,7 +406,25 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * Flash.
+         * The elimination policy for the image cache. This parameter is empty by default, which indicates that the image cache is always retained.
+         * <p>
+         * 
+         * You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least recently used.
+         */
+        public Builder eliminationStrategy(String eliminationStrategy) {
+            this.putQueryParameter("EliminationStrategy", eliminationStrategy);
+            this.eliminationStrategy = eliminationStrategy;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the instant image cache feature. The feature can accelerate the creation of image caches. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder flash(Boolean flash) {
             this.putQueryParameter("Flash", flash);
@@ -395,7 +433,10 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * FlashCopyCount.
+         * The number of duplicates of temporary local snapshots. By default, the system creates one snapshot for each image cache. If you use the image cache to create multiple elastic container instances at a time, we recommend that you configure this parameter to create multiple snapshot duplicates for the image cache. We recommend that you create one snapshot duplicate for creation of every 1,000 elastic container instances.
+         * <p>
+         * 
+         * > If you enable the instant image cache feature by setting Flash to true, a local snapshot is first created during the creation of the image cache. After the local snapshot is created, regular snapshots start to be created. After the regular snapshots are created, the local snapshot is automatically deleted.
          */
         public Builder flashCopyCount(Integer flashCopyCount) {
             this.putQueryParameter("FlashCopyCount", flashCopyCount);
@@ -404,7 +445,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * Image.
+         * Container images that are used to create the image cache.
          */
         public Builder image(java.util.List < String > image) {
             this.putQueryParameter("Image", image);
@@ -413,7 +454,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ImageCacheId.
+         * The ID of the image cache.
          */
         public Builder imageCacheId(String imageCacheId) {
             this.putQueryParameter("ImageCacheId", imageCacheId);
@@ -422,7 +463,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ImageCacheName.
+         * The name of the image cache.
          */
         public Builder imageCacheName(String imageCacheName) {
             this.putQueryParameter("ImageCacheName", imageCacheName);
@@ -431,7 +472,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ImageCacheSize.
+         * The size of the image cache. Unit: GiB. Default value: 20.
          */
         public Builder imageCacheSize(Integer imageCacheSize) {
             this.putQueryParameter("ImageCacheSize", imageCacheSize);
@@ -440,7 +481,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ImageRegistryCredential.
+         * The information about the image repository.
          */
         public Builder imageRegistryCredential(java.util.List < ImageRegistryCredential> imageRegistryCredential) {
             this.putQueryParameter("ImageRegistryCredential", imageRegistryCredential);
@@ -467,7 +508,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the image cache.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -476,7 +517,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the image cache belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -503,7 +544,10 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * RetentionDays.
+         * The retention period of the image cache. Unit: days. When the retention period elapses, the image cache expires and is deleted. By default, image caches never expire.
+         * <p>
+         * 
+         * > The image caches that fail to be created are retained for only 1 day.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -512,7 +556,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group to which the image cache belongs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -521,7 +565,10 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * StandardCopyCount.
+         * The number of duplicates of regular snapshots. By default, the system creates one snapshot for each image cache. If you use the image cache to create multiple elastic container instances at a time, we recommend that you configure this parameter to create multiple snapshot duplicates for the image cache. We recommend that you create one snapshot duplicate for creation of every 1,000 elastic container instances.
+         * <p>
+         * 
+         * > If you disable the instant image cache feature by setting Flash to false, only regular snapshots are generated when you create an image cache.
          */
         public Builder standardCopyCount(Integer standardCopyCount) {
             this.putQueryParameter("StandardCopyCount", standardCopyCount);
@@ -530,7 +577,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the image cache. A maximum of 20 tags can be added to the image cache.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -539,7 +586,7 @@ public class UpdateImageCacheRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the image cache is connected.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -617,7 +664,7 @@ public class UpdateImageCacheRequest extends Request {
             private String regionId; 
 
             /**
-             * Domain.
+             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).
              */
             public Builder domain(java.util.List < String > domain) {
                 this.domain = domain;
@@ -625,7 +672,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -633,7 +680,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * InstanceName.
+             * The name of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -641,7 +688,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * The region ID of the Container Registry Enterprise Edition instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -706,7 +753,7 @@ public class UpdateImageCacheRequest extends Request {
             private String userName; 
 
             /**
-             * Password.
+             * The password that is used to access the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -714,7 +761,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * Server.
+             * The image repository address without `http://` or `https://` as a prefix.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -722,7 +769,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * UserName.
+             * The username that is used to access the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -775,7 +822,7 @@ public class UpdateImageCacheRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the image cache.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -783,7 +830,7 @@ public class UpdateImageCacheRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the image cache.
              */
             public Builder value(String value) {
                 this.value = value;

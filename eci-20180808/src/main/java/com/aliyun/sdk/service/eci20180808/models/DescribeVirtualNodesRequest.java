@@ -50,10 +50,6 @@ public class DescribeVirtualNodesRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityGroupId")
-    private String securityGroupId;
-
-    @Query
     @NameInMap("Status")
     private String status;
 
@@ -62,20 +58,12 @@ public class DescribeVirtualNodesRequest extends Request {
     private java.util.List < Tag> tag;
 
     @Query
-    @NameInMap("VSwitchId")
-    private String vSwitchId;
-
-    @Query
     @NameInMap("VirtualNodeIds")
     private String virtualNodeIds;
 
     @Query
     @NameInMap("VirtualNodeName")
     private String virtualNodeName;
-
-    @Query
-    @NameInMap("ZoneId")
-    private String zoneId;
 
     private DescribeVirtualNodesRequest(Builder builder) {
         super(builder);
@@ -88,13 +76,10 @@ public class DescribeVirtualNodesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityGroupId = builder.securityGroupId;
         this.status = builder.status;
         this.tag = builder.tag;
-        this.vSwitchId = builder.vSwitchId;
         this.virtualNodeIds = builder.virtualNodeIds;
         this.virtualNodeName = builder.virtualNodeName;
-        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -174,13 +159,6 @@ public class DescribeVirtualNodesRequest extends Request {
     }
 
     /**
-     * @return securityGroupId
-     */
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -192,13 +170,6 @@ public class DescribeVirtualNodesRequest extends Request {
      */
     public java.util.List < Tag> getTag() {
         return this.tag;
-    }
-
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
     }
 
     /**
@@ -215,13 +186,6 @@ public class DescribeVirtualNodesRequest extends Request {
         return this.virtualNodeName;
     }
 
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeVirtualNodesRequest, Builder> {
         private String clientToken; 
         private Long limit; 
@@ -232,13 +196,10 @@ public class DescribeVirtualNodesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityGroupId; 
         private String status; 
         private java.util.List < Tag> tag; 
-        private String vSwitchId; 
         private String virtualNodeIds; 
         private String virtualNodeName; 
-        private String zoneId; 
 
         private Builder() {
             super();
@@ -255,17 +216,14 @@ public class DescribeVirtualNodesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityGroupId = request.securityGroupId;
             this.status = request.status;
             this.tag = request.tag;
-            this.vSwitchId = request.vSwitchId;
             this.virtualNodeIds = request.virtualNodeIds;
             this.virtualNodeName = request.virtualNodeName;
-            this.zoneId = request.zoneId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -274,7 +232,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of resources that are allowed to return for this request. Default value: 20. Maximum value: 20.
+         * <p>
+         * 
+         * >  The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -283,7 +244,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is empty, all results have been returned.
+         * <p>
+         * 
+         * You do not need to specify this parameter in the first request. From the second request, you can obtain the token from the result returned by the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -310,7 +274,7 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the virtual nodes.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +283,7 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -346,16 +310,12 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
-         */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * Status.
+         * The status of the virtual node. Valid values:
+         * <p>
+         * 
+         * *   Pending
+         * *   Ready
+         * *   Failed
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -364,7 +324,7 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are bound to the virtual node.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,16 +333,7 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * VirtualNodeIds.
+         * The IDs of the virtual nodes. You can specify up to 20 IDs. Each ID must be a string in the JSON format.
          */
         public Builder virtualNodeIds(String virtualNodeIds) {
             this.putQueryParameter("VirtualNodeIds", virtualNodeIds);
@@ -391,20 +342,11 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * VirtualNodeName.
+         * The names of the virtual nodes.
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
             this.virtualNodeName = virtualNodeName;
-            return this;
-        }
-
-        /**
-         * ZoneId.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putQueryParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
             return this;
         }
 
@@ -454,7 +396,7 @@ public class DescribeVirtualNodesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -462,7 +404,7 @@ public class DescribeVirtualNodesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
