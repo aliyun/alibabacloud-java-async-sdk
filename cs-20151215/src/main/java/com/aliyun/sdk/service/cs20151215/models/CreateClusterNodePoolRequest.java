@@ -46,6 +46,10 @@ public class CreateClusterNodePoolRequest extends Request {
     private Long maxNodes;
 
     @Body
+    @NameInMap("node_config")
+    private NodeConfig nodeConfig;
+
+    @Body
     @NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
@@ -67,6 +71,7 @@ public class CreateClusterNodePoolRequest extends Request {
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.maxNodes = builder.maxNodes;
+        this.nodeConfig = builder.nodeConfig;
         this.nodepoolInfo = builder.nodepoolInfo;
         this.scalingGroup = builder.scalingGroup;
         this.teeConfig = builder.teeConfig;
@@ -142,6 +147,13 @@ public class CreateClusterNodePoolRequest extends Request {
     }
 
     /**
+     * @return nodeConfig
+     */
+    public NodeConfig getNodeConfig() {
+        return this.nodeConfig;
+    }
+
+    /**
      * @return nodepoolInfo
      */
     public NodepoolInfo getNodepoolInfo() {
@@ -171,6 +183,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private Long maxNodes; 
+        private NodeConfig nodeConfig; 
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
         private TeeConfig teeConfig; 
@@ -189,6 +202,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.kubernetesConfig = request.kubernetesConfig;
             this.management = request.management;
             this.maxNodes = request.maxNodes;
+            this.nodeConfig = request.nodeConfig;
             this.nodepoolInfo = request.nodepoolInfo;
             this.scalingGroup = request.scalingGroup;
             this.teeConfig = request.teeConfig;
@@ -278,6 +292,15 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * node_config.
+         */
+        public Builder nodeConfig(NodeConfig nodeConfig) {
+            this.putBodyParameter("node_config", nodeConfig);
+            this.nodeConfig = nodeConfig;
+            return this;
+        }
+
+        /**
          * The configurations of the node pool.
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
@@ -319,18 +342,15 @@ public class CreateClusterNodePoolRequest extends Request {
         private String eipInternetChargeType;
 
         @NameInMap("enable")
-        @Validation(required = true)
         private Boolean enable;
 
         @NameInMap("is_bond_eip")
         private Boolean isBondEip;
 
         @NameInMap("max_instances")
-        @Validation(required = true)
         private Long maxInstances;
 
         @NameInMap("min_instances")
-        @Validation(required = true)
         private Long minInstances;
 
         @NameInMap("type")
@@ -658,15 +678,16 @@ public class CreateClusterNodePoolRequest extends Request {
         private String nodeNameMode;
 
         @NameInMap("runtime")
-        @Validation(required = true)
         private String runtime;
 
         @NameInMap("runtime_version")
-        @Validation(required = true)
         private String runtimeVersion;
 
         @NameInMap("taints")
         private java.util.List < Taint > taints;
+
+        @NameInMap("unschedulable")
+        private Boolean unschedulable;
 
         @NameInMap("user_data")
         private String userData;
@@ -679,6 +700,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.runtime = builder.runtime;
             this.runtimeVersion = builder.runtimeVersion;
             this.taints = builder.taints;
+            this.unschedulable = builder.unschedulable;
             this.userData = builder.userData;
         }
 
@@ -740,6 +762,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return unschedulable
+         */
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -754,6 +783,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String runtime; 
             private String runtimeVersion; 
             private java.util.List < Taint > taints; 
+            private Boolean unschedulable; 
             private String userData; 
 
             /**
@@ -827,6 +857,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
+                return this;
+            }
+
+            /**
+             * unschedulable.
+             */
+            public Builder unschedulable(Boolean unschedulable) {
+                this.unschedulable = unschedulable;
                 return this;
             }
 
@@ -993,7 +1031,6 @@ public class CreateClusterNodePoolRequest extends Request {
         private Boolean autoUpgrade;
 
         @NameInMap("max_unavailable")
-        @Validation(required = true)
         private Long maxUnavailable;
 
         @NameInMap("surge")
@@ -1117,10 +1154,10 @@ public class CreateClusterNodePoolRequest extends Request {
         private AutoVulFixPolicy autoVulFixPolicy;
 
         @NameInMap("enable")
-        @Validation(required = true)
         private Boolean enable;
 
         @NameInMap("upgrade_config")
+        @Deprecated
         private UpgradeConfig upgradeConfig;
 
         private Management(Builder builder) {
@@ -1286,6 +1323,47 @@ public class CreateClusterNodePoolRequest extends Request {
 
             public Management build() {
                 return new Management(this);
+            } 
+
+        } 
+
+    }
+    public static class NodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        private KubeletConfig kubeletConfiguration;
+
+        private NodeConfig(Builder builder) {
+            this.kubeletConfiguration = builder.kubeletConfiguration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kubeletConfiguration
+         */
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+        public static final class Builder {
+            private KubeletConfig kubeletConfiguration; 
+
+            /**
+             * kubelet_configuration.
+             */
+            public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
+                this.kubeletConfiguration = kubeletConfiguration;
+                return this;
+            }
+
+            public NodeConfig build() {
+                return new NodeConfig(this);
             } 
 
         } 
@@ -1575,6 +1653,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("auto_renew_period")
         private Long autoRenewPeriod;
 
+        @NameInMap("cis_enabled")
+        private Boolean cisEnabled;
+
         @NameInMap("compensate_with_on_demand")
         private Boolean compensateWithOnDemand;
 
@@ -1610,6 +1691,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("key_pair")
         private String keyPair;
 
+        @NameInMap("login_as_non_root")
+        private Boolean loginAsNonRoot;
+
         @NameInMap("login_password")
         private String loginPassword;
 
@@ -1629,6 +1713,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String periodUnit;
 
         @NameInMap("platform")
+        @Deprecated
         private String platform;
 
         @NameInMap("private_pool_options")
@@ -1646,6 +1731,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("security_group_ids")
         private java.util.List < String > securityGroupIds;
 
+        @NameInMap("soc_enabled")
+        private Boolean socEnabled;
+
         @NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
@@ -1661,9 +1749,20 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("system_disk_bursting_enabled")
         private Boolean systemDiskBurstingEnabled;
 
+        @NameInMap("system_disk_categories")
+        private java.util.List < String > systemDiskCategories;
+
         @NameInMap("system_disk_category")
-        @Validation(required = true)
         private String systemDiskCategory;
+
+        @NameInMap("system_disk_encrypt_algorithm")
+        private String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        private Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        private String systemDiskKmsKeyId;
 
         @NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
@@ -1672,7 +1771,6 @@ public class CreateClusterNodePoolRequest extends Request {
         private Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
-        @Validation(required = true)
         private Long systemDiskSize;
 
         @NameInMap("tags")
@@ -1685,6 +1783,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private ScalingGroup(Builder builder) {
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.cisEnabled = builder.cisEnabled;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.dataDisks = builder.dataDisks;
             this.deploymentsetId = builder.deploymentsetId;
@@ -1696,6 +1795,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.keyPair = builder.keyPair;
+            this.loginAsNonRoot = builder.loginAsNonRoot;
             this.loginPassword = builder.loginPassword;
             this.multiAzPolicy = builder.multiAzPolicy;
             this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
@@ -1708,12 +1808,17 @@ public class CreateClusterNodePoolRequest extends Request {
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.socEnabled = builder.socEnabled;
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
             this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategories = builder.systemDiskCategories;
             this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskEncryptAlgorithm = builder.systemDiskEncryptAlgorithm;
+            this.systemDiskEncrypted = builder.systemDiskEncrypted;
+            this.systemDiskKmsKeyId = builder.systemDiskKmsKeyId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
@@ -1741,6 +1846,13 @@ public class CreateClusterNodePoolRequest extends Request {
          */
         public Long getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return cisEnabled
+         */
+        public Boolean getCisEnabled() {
+            return this.cisEnabled;
         }
 
         /**
@@ -1818,6 +1930,13 @@ public class CreateClusterNodePoolRequest extends Request {
          */
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         /**
@@ -1905,6 +2024,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return socEnabled
+         */
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        /**
          * @return spotInstancePools
          */
         public Long getSpotInstancePools() {
@@ -1940,10 +2066,38 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return systemDiskCategories
+         */
+        public java.util.List < String > getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskEncryptAlgorithm
+         */
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        /**
+         * @return systemDiskEncrypted
+         */
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        /**
+         * @return systemDiskKmsKeyId
+         */
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
         }
 
         /**
@@ -1984,6 +2138,7 @@ public class CreateClusterNodePoolRequest extends Request {
         public static final class Builder {
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
+            private Boolean cisEnabled; 
             private Boolean compensateWithOnDemand; 
             private java.util.List < DataDisk > dataDisks; 
             private String deploymentsetId; 
@@ -1995,6 +2150,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
+            private Boolean loginAsNonRoot; 
             private String loginPassword; 
             private String multiAzPolicy; 
             private Long onDemandBaseCapacity; 
@@ -2007,12 +2163,17 @@ public class CreateClusterNodePoolRequest extends Request {
             private String scalingPolicy; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private Boolean socEnabled; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
             private java.util.List < SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
             private Boolean systemDiskBurstingEnabled; 
+            private java.util.List < String > systemDiskCategories; 
             private String systemDiskCategory; 
+            private String systemDiskEncryptAlgorithm; 
+            private Boolean systemDiskEncrypted; 
+            private String systemDiskKmsKeyId; 
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
@@ -2041,6 +2202,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * cis_enabled.
+             */
+            public Builder cisEnabled(Boolean cisEnabled) {
+                this.cisEnabled = cisEnabled;
                 return this;
             }
 
@@ -2156,6 +2325,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * login_as_non_root.
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
                 return this;
             }
 
@@ -2286,6 +2463,14 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * soc_enabled.
+             */
+            public Builder socEnabled(Boolean socEnabled) {
+                this.socEnabled = socEnabled;
+                return this;
+            }
+
+            /**
              * The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.
              */
             public Builder spotInstancePools(Long spotInstancePools) {
@@ -2342,6 +2527,14 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * system_disk_categories.
+             */
+            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+                this.systemDiskCategories = systemDiskCategories;
+                return this;
+            }
+
+            /**
              * The type of system disk. Valid values:
              * <p>
              * 
@@ -2353,6 +2546,30 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypt_algorithm.
+             */
+            public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+                this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypted.
+             */
+            public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
+                this.systemDiskEncrypted = systemDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * system_disk_kms_key_id.
+             */
+            public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
+                this.systemDiskKmsKeyId = systemDiskKmsKeyId;
                 return this;
             }
 
@@ -2423,7 +2640,6 @@ public class CreateClusterNodePoolRequest extends Request {
     }
     public static class TeeConfig extends TeaModel {
         @NameInMap("tee_enable")
-        @Validation(required = true)
         private Boolean teeEnable;
 
         private TeeConfig(Builder builder) {

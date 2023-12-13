@@ -35,6 +35,9 @@ public class Nodepool extends TeaModel {
     @NameInMap("max_nodes")
     private Long maxNodes;
 
+    @NameInMap("node_config")
+    private NodeConfig nodeConfig;
+
     @NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
@@ -52,6 +55,7 @@ public class Nodepool extends TeaModel {
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.maxNodes = builder.maxNodes;
+        this.nodeConfig = builder.nodeConfig;
         this.nodepoolInfo = builder.nodepoolInfo;
         this.scalingGroup = builder.scalingGroup;
         this.teeConfig = builder.teeConfig;
@@ -115,6 +119,13 @@ public class Nodepool extends TeaModel {
     }
 
     /**
+     * @return nodeConfig
+     */
+    public NodeConfig getNodeConfig() {
+        return this.nodeConfig;
+    }
+
+    /**
      * @return nodepoolInfo
      */
     public NodepoolInfo getNodepoolInfo() {
@@ -143,6 +154,7 @@ public class Nodepool extends TeaModel {
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private Long maxNodes; 
+        private NodeConfig nodeConfig; 
         private NodepoolInfo nodepoolInfo; 
         private ScalingGroup scalingGroup; 
         private TeeConfig teeConfig; 
@@ -200,6 +212,14 @@ public class Nodepool extends TeaModel {
          */
         public Builder maxNodes(Long maxNodes) {
             this.maxNodes = maxNodes;
+            return this;
+        }
+
+        /**
+         * node_config.
+         */
+        public Builder nodeConfig(NodeConfig nodeConfig) {
+            this.nodeConfig = nodeConfig;
             return this;
         }
 
@@ -709,12 +729,154 @@ public class Nodepool extends TeaModel {
         } 
 
     }
+    public static class AutoRepairPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        private AutoRepairPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoRepairPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            public AutoRepairPolicy build() {
+                return new AutoRepairPolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoUpgradePolicy extends TeaModel {
+        @NameInMap("auto_upgrade_kubelet")
+        private Boolean autoUpgradeKubelet;
+
+        private AutoUpgradePolicy(Builder builder) {
+            this.autoUpgradeKubelet = builder.autoUpgradeKubelet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoUpgradePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoUpgradeKubelet
+         */
+        public Boolean getAutoUpgradeKubelet() {
+            return this.autoUpgradeKubelet;
+        }
+
+        public static final class Builder {
+            private Boolean autoUpgradeKubelet; 
+
+            /**
+             * auto_upgrade_kubelet.
+             */
+            public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
+                this.autoUpgradeKubelet = autoUpgradeKubelet;
+                return this;
+            }
+
+            public AutoUpgradePolicy build() {
+                return new AutoUpgradePolicy(this);
+            } 
+
+        } 
+
+    }
+    public static class AutoVulFixPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        private Boolean restartNode;
+
+        @NameInMap("vul_level")
+        private String vulLevel;
+
+        private AutoVulFixPolicy(Builder builder) {
+            this.restartNode = builder.restartNode;
+            this.vulLevel = builder.vulLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoVulFixPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return restartNode
+         */
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        /**
+         * @return vulLevel
+         */
+        public String getVulLevel() {
+            return this.vulLevel;
+        }
+
+        public static final class Builder {
+            private Boolean restartNode; 
+            private String vulLevel; 
+
+            /**
+             * restart_node.
+             */
+            public Builder restartNode(Boolean restartNode) {
+                this.restartNode = restartNode;
+                return this;
+            }
+
+            /**
+             * vul_level.
+             */
+            public Builder vulLevel(String vulLevel) {
+                this.vulLevel = vulLevel;
+                return this;
+            }
+
+            public AutoVulFixPolicy build() {
+                return new AutoVulFixPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class UpgradeConfig extends TeaModel {
         @NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
 
         @NameInMap("max_unavailable")
-        @Validation(required = true)
         private Long maxUnavailable;
 
         @NameInMap("surge")
@@ -815,15 +977,35 @@ public class Nodepool extends TeaModel {
         @NameInMap("auto_repair")
         private Boolean autoRepair;
 
+        @NameInMap("auto_repair_policy")
+        private AutoRepairPolicy autoRepairPolicy;
+
+        @NameInMap("auto_upgrade")
+        private Boolean autoUpgrade;
+
+        @NameInMap("auto_upgrade_policy")
+        private AutoUpgradePolicy autoUpgradePolicy;
+
+        @NameInMap("auto_vul_fix")
+        private Boolean autoVulFix;
+
+        @NameInMap("auto_vul_fix_policy")
+        private AutoVulFixPolicy autoVulFixPolicy;
+
         @NameInMap("enable")
-        @Validation(required = true)
         private Boolean enable;
 
         @NameInMap("upgrade_config")
+        @Deprecated
         private UpgradeConfig upgradeConfig;
 
         private Management(Builder builder) {
             this.autoRepair = builder.autoRepair;
+            this.autoRepairPolicy = builder.autoRepairPolicy;
+            this.autoUpgrade = builder.autoUpgrade;
+            this.autoUpgradePolicy = builder.autoUpgradePolicy;
+            this.autoVulFix = builder.autoVulFix;
+            this.autoVulFixPolicy = builder.autoVulFixPolicy;
             this.enable = builder.enable;
             this.upgradeConfig = builder.upgradeConfig;
         }
@@ -844,6 +1026,41 @@ public class Nodepool extends TeaModel {
         }
 
         /**
+         * @return autoRepairPolicy
+         */
+        public AutoRepairPolicy getAutoRepairPolicy() {
+            return this.autoRepairPolicy;
+        }
+
+        /**
+         * @return autoUpgrade
+         */
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        /**
+         * @return autoUpgradePolicy
+         */
+        public AutoUpgradePolicy getAutoUpgradePolicy() {
+            return this.autoUpgradePolicy;
+        }
+
+        /**
+         * @return autoVulFix
+         */
+        public Boolean getAutoVulFix() {
+            return this.autoVulFix;
+        }
+
+        /**
+         * @return autoVulFixPolicy
+         */
+        public AutoVulFixPolicy getAutoVulFixPolicy() {
+            return this.autoVulFixPolicy;
+        }
+
+        /**
          * @return enable
          */
         public Boolean getEnable() {
@@ -859,6 +1076,11 @@ public class Nodepool extends TeaModel {
 
         public static final class Builder {
             private Boolean autoRepair; 
+            private AutoRepairPolicy autoRepairPolicy; 
+            private Boolean autoUpgrade; 
+            private AutoUpgradePolicy autoUpgradePolicy; 
+            private Boolean autoVulFix; 
+            private AutoVulFixPolicy autoVulFixPolicy; 
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
@@ -867,6 +1089,46 @@ public class Nodepool extends TeaModel {
              */
             public Builder autoRepair(Boolean autoRepair) {
                 this.autoRepair = autoRepair;
+                return this;
+            }
+
+            /**
+             * auto_repair_policy.
+             */
+            public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
+                this.autoRepairPolicy = autoRepairPolicy;
+                return this;
+            }
+
+            /**
+             * auto_upgrade.
+             */
+            public Builder autoUpgrade(Boolean autoUpgrade) {
+                this.autoUpgrade = autoUpgrade;
+                return this;
+            }
+
+            /**
+             * auto_upgrade_policy.
+             */
+            public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
+                this.autoUpgradePolicy = autoUpgradePolicy;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix.
+             */
+            public Builder autoVulFix(Boolean autoVulFix) {
+                this.autoVulFix = autoVulFix;
+                return this;
+            }
+
+            /**
+             * auto_vul_fix_policy.
+             */
+            public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
+                this.autoVulFixPolicy = autoVulFixPolicy;
                 return this;
             }
 
@@ -888,6 +1150,47 @@ public class Nodepool extends TeaModel {
 
             public Management build() {
                 return new Management(this);
+            } 
+
+        } 
+
+    }
+    public static class NodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        private KubeletConfig kubeletConfiguration;
+
+        private NodeConfig(Builder builder) {
+            this.kubeletConfiguration = builder.kubeletConfiguration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kubeletConfiguration
+         */
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+        public static final class Builder {
+            private KubeletConfig kubeletConfiguration; 
+
+            /**
+             * kubelet_configuration.
+             */
+            public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
+                this.kubeletConfiguration = kubeletConfiguration;
+                return this;
+            }
+
+            public NodeConfig build() {
+                return new NodeConfig(this);
             } 
 
         } 
@@ -1200,6 +1503,9 @@ public class Nodepool extends TeaModel {
         @NameInMap("key_pair")
         private String keyPair;
 
+        @NameInMap("login_as_non_root")
+        private Boolean loginAsNonRoot;
+
         @NameInMap("login_password")
         private String loginPassword;
 
@@ -1219,6 +1525,7 @@ public class Nodepool extends TeaModel {
         private String periodUnit;
 
         @NameInMap("platform")
+        @Deprecated
         private String platform;
 
         @NameInMap("private_pool_options")
@@ -1251,9 +1558,20 @@ public class Nodepool extends TeaModel {
         @NameInMap("system_disk_bursting_enabled")
         private Boolean systemDiskBurstingEnabled;
 
+        @NameInMap("system_disk_categories")
+        private java.util.List < String > systemDiskCategories;
+
         @NameInMap("system_disk_category")
-        @Validation(required = true)
         private String systemDiskCategory;
+
+        @NameInMap("system_disk_encrypt_algorithm")
+        private String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        private Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        private String systemDiskKmsKeyId;
 
         @NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
@@ -1262,7 +1580,6 @@ public class Nodepool extends TeaModel {
         private Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
-        @Validation(required = true)
         private Long systemDiskSize;
 
         @NameInMap("tags")
@@ -1286,6 +1603,7 @@ public class Nodepool extends TeaModel {
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.keyPair = builder.keyPair;
+            this.loginAsNonRoot = builder.loginAsNonRoot;
             this.loginPassword = builder.loginPassword;
             this.multiAzPolicy = builder.multiAzPolicy;
             this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
@@ -1303,7 +1621,11 @@ public class Nodepool extends TeaModel {
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
             this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategories = builder.systemDiskCategories;
             this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskEncryptAlgorithm = builder.systemDiskEncryptAlgorithm;
+            this.systemDiskEncrypted = builder.systemDiskEncrypted;
+            this.systemDiskKmsKeyId = builder.systemDiskKmsKeyId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
@@ -1408,6 +1730,13 @@ public class Nodepool extends TeaModel {
          */
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         /**
@@ -1530,10 +1859,38 @@ public class Nodepool extends TeaModel {
         }
 
         /**
+         * @return systemDiskCategories
+         */
+        public java.util.List < String > getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskEncryptAlgorithm
+         */
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        /**
+         * @return systemDiskEncrypted
+         */
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        /**
+         * @return systemDiskKmsKeyId
+         */
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
         }
 
         /**
@@ -1585,6 +1942,7 @@ public class Nodepool extends TeaModel {
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
+            private Boolean loginAsNonRoot; 
             private String loginPassword; 
             private String multiAzPolicy; 
             private Long onDemandBaseCapacity; 
@@ -1602,7 +1960,11 @@ public class Nodepool extends TeaModel {
             private java.util.List < SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
             private Boolean systemDiskBurstingEnabled; 
+            private java.util.List < String > systemDiskCategories; 
             private String systemDiskCategory; 
+            private String systemDiskEncryptAlgorithm; 
+            private Boolean systemDiskEncrypted; 
+            private String systemDiskKmsKeyId; 
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
@@ -1710,6 +2072,14 @@ public class Nodepool extends TeaModel {
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * login_as_non_root.
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
                 return this;
             }
 
@@ -1850,10 +2220,42 @@ public class Nodepool extends TeaModel {
             }
 
             /**
+             * system_disk_categories.
+             */
+            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+                this.systemDiskCategories = systemDiskCategories;
+                return this;
+            }
+
+            /**
              * system_disk_category.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypt_algorithm.
+             */
+            public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+                this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypted.
+             */
+            public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
+                this.systemDiskEncrypted = systemDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * system_disk_kms_key_id.
+             */
+            public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
+                this.systemDiskKmsKeyId = systemDiskKmsKeyId;
                 return this;
             }
 

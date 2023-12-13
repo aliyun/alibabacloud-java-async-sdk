@@ -900,6 +900,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private Boolean enable;
 
         @NameInMap("upgrade_config")
+        @Deprecated
         private UpgradeConfig upgradeConfig;
 
         private Management(Builder builder) {
@@ -1289,6 +1290,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("image_id")
         private String imageId;
 
+        @NameInMap("image_type")
+        private String imageType;
+
         @NameInMap("instance_charge_type")
         private String instanceChargeType;
 
@@ -1323,6 +1327,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private String periodUnit;
 
         @NameInMap("platform")
+        @Deprecated
         private String platform;
 
         @NameInMap("private_pool_options")
@@ -1346,11 +1351,29 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("spot_strategy")
         private String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_categories")
+        private java.util.List < String > systemDiskCategories;
+
         @NameInMap("system_disk_category")
         private String systemDiskCategory;
 
+        @NameInMap("system_disk_encrypt_algorithm")
+        private String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        private Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        private String systemDiskKmsKeyId;
+
         @NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
         private Long systemDiskSize;
@@ -1368,6 +1391,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.dataDisks = builder.dataDisks;
             this.desiredSize = builder.desiredSize;
             this.imageId = builder.imageId;
+            this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
@@ -1387,8 +1411,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategories = builder.systemDiskCategories;
             this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskEncryptAlgorithm = builder.systemDiskEncryptAlgorithm;
+            this.systemDiskEncrypted = builder.systemDiskEncrypted;
+            this.systemDiskKmsKeyId = builder.systemDiskKmsKeyId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
             this.vswitchIds = builder.vswitchIds;
@@ -1442,6 +1472,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return imageType
+         */
+        public String getImageType() {
+            return this.imageType;
         }
 
         /**
@@ -1578,6 +1615,20 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
+         * @return systemDiskCategories
+         */
+        public java.util.List < String > getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -1585,10 +1636,38 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return systemDiskEncryptAlgorithm
+         */
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        /**
+         * @return systemDiskEncrypted
+         */
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        /**
+         * @return systemDiskKmsKeyId
+         */
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
+        }
+
+        /**
          * @return systemDiskPerformanceLevel
          */
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         /**
@@ -1619,6 +1698,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private java.util.List < DataDisk > dataDisks; 
             private Long desiredSize; 
             private String imageId; 
+            private String imageType; 
             private String instanceChargeType; 
             private java.util.List < String > instanceTypes; 
             private String internetChargeType; 
@@ -1638,8 +1718,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Boolean spotInstanceRemedy; 
             private java.util.List < SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
+            private Boolean systemDiskBurstingEnabled; 
+            private java.util.List < String > systemDiskCategories; 
             private String systemDiskCategory; 
+            private String systemDiskEncryptAlgorithm; 
+            private Boolean systemDiskEncrypted; 
+            private String systemDiskKmsKeyId; 
             private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
             private java.util.List < Tag > tags; 
             private java.util.List < String > vswitchIds; 
@@ -1702,6 +1788,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * image_type.
+             */
+            public Builder imageType(String imageType) {
+                this.imageType = imageType;
                 return this;
             }
 
@@ -1910,6 +2004,22 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
+             * system_disk_bursting_enabled.
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_categories.
+             */
+            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+                this.systemDiskCategories = systemDiskCategories;
+                return this;
+            }
+
+            /**
              * The type of system disk. Valid values:
              * <p>
              * 
@@ -1924,10 +2034,42 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
+             * system_disk_encrypt_algorithm.
+             */
+            public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+                this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypted.
+             */
+            public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
+                this.systemDiskEncrypted = systemDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * system_disk_kms_key_id.
+             */
+            public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
+                this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+                return this;
+            }
+
+            /**
              * The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](~~122389~~).
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * system_disk_provisioned_iops.
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
                 return this;
             }
 

@@ -573,6 +573,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("taints")
         private java.util.List < Taint > taints;
 
+        @NameInMap("unschedulable")
+        private Boolean unschedulable;
+
         @NameInMap("user_data")
         private String userData;
 
@@ -584,6 +587,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.runtime = builder.runtime;
             this.runtimeVersion = builder.runtimeVersion;
             this.taints = builder.taints;
+            this.unschedulable = builder.unschedulable;
             this.userData = builder.userData;
         }
 
@@ -645,6 +649,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return unschedulable
+         */
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -659,6 +670,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String runtime; 
             private String runtimeVersion; 
             private java.util.List < Taint > taints; 
+            private Boolean unschedulable; 
             private String userData; 
 
             /**
@@ -732,6 +744,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
+                return this;
+            }
+
+            /**
+             * unschedulable.
+             */
+            public Builder unschedulable(Boolean unschedulable) {
+                this.unschedulable = unschedulable;
                 return this;
             }
 
@@ -1552,6 +1572,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_renew_period")
         private Long autoRenewPeriod;
 
+        @NameInMap("cis_enabled")
+        private Boolean cisEnabled;
+
         @NameInMap("compensate_with_on_demand")
         private Boolean compensateWithOnDemand;
 
@@ -1567,6 +1590,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("image_id")
         private String imageId;
 
+        @NameInMap("image_type")
+        private String imageType;
+
         @NameInMap("instance_charge_type")
         private String instanceChargeType;
 
@@ -1581,6 +1607,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         @NameInMap("key_pair")
         private String keyPair;
+
+        @NameInMap("login_as_non_root")
+        private Boolean loginAsNonRoot;
 
         @NameInMap("login_password")
         private String loginPassword;
@@ -1624,6 +1653,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         private java.util.List < String > securityGroupIds;
 
+        @NameInMap("soc_enabled")
+        private Boolean socEnabled;
+
         @NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
@@ -1636,11 +1668,29 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("spot_strategy")
         private String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_categories")
+        private java.util.List < String > systemDiskCategories;
+
         @NameInMap("system_disk_category")
         private String systemDiskCategory;
 
+        @NameInMap("system_disk_encrypt_algorithm")
+        private String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        private Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        private String systemDiskKmsKeyId;
+
         @NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
         private Long systemDiskSize;
@@ -1654,16 +1704,19 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private ScalingGroup(Builder builder) {
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.cisEnabled = builder.cisEnabled;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.dataDisks = builder.dataDisks;
             this.deploymentsetId = builder.deploymentsetId;
             this.desiredSize = builder.desiredSize;
             this.imageId = builder.imageId;
+            this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.keyPair = builder.keyPair;
+            this.loginAsNonRoot = builder.loginAsNonRoot;
             this.loginPassword = builder.loginPassword;
             this.multiAzPolicy = builder.multiAzPolicy;
             this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
@@ -1678,12 +1731,19 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.socEnabled = builder.socEnabled;
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
+            this.systemDiskCategories = builder.systemDiskCategories;
             this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskEncryptAlgorithm = builder.systemDiskEncryptAlgorithm;
+            this.systemDiskEncrypted = builder.systemDiskEncrypted;
+            this.systemDiskKmsKeyId = builder.systemDiskKmsKeyId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
             this.vswitchIds = builder.vswitchIds;
@@ -1709,6 +1769,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         public Long getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return cisEnabled
+         */
+        public Boolean getCisEnabled() {
+            return this.cisEnabled;
         }
 
         /**
@@ -1747,6 +1814,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageType
+         */
+        public String getImageType() {
+            return this.imageType;
+        }
+
+        /**
          * @return instanceChargeType
          */
         public String getInstanceChargeType() {
@@ -1779,6 +1853,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         /**
@@ -1880,6 +1961,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return socEnabled
+         */
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
+        /**
          * @return spotInstancePools
          */
         public Long getSpotInstancePools() {
@@ -1908,6 +1996,20 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
+         * @return systemDiskCategories
+         */
+        public java.util.List < String > getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -1915,10 +2017,38 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskEncryptAlgorithm
+         */
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        /**
+         * @return systemDiskEncrypted
+         */
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        /**
+         * @return systemDiskKmsKeyId
+         */
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
+        }
+
+        /**
          * @return systemDiskPerformanceLevel
          */
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         /**
@@ -1945,16 +2075,19 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
+            private Boolean cisEnabled; 
             private Boolean compensateWithOnDemand; 
             private java.util.List < DataDisk > dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
             private String imageId; 
+            private String imageType; 
             private String instanceChargeType; 
             private java.util.List < String > instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
+            private Boolean loginAsNonRoot; 
             private String loginPassword; 
             private String multiAzPolicy; 
             private Long onDemandBaseCapacity; 
@@ -1969,12 +2102,19 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String scalingPolicy; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private Boolean socEnabled; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
             private java.util.List < SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
+            private Boolean systemDiskBurstingEnabled; 
+            private java.util.List < String > systemDiskCategories; 
             private String systemDiskCategory; 
+            private String systemDiskEncryptAlgorithm; 
+            private Boolean systemDiskEncrypted; 
+            private String systemDiskKmsKeyId; 
             private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
             private java.util.List < Tag > tags; 
             private java.util.List < String > vswitchIds; 
@@ -1999,6 +2139,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * cis_enabled.
+             */
+            public Builder cisEnabled(Boolean cisEnabled) {
+                this.cisEnabled = cisEnabled;
                 return this;
             }
 
@@ -2047,6 +2195,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
+             * image_type.
+             */
+            public Builder imageType(String imageType) {
+                this.imageType = imageType;
+                return this;
+            }
+
+            /**
              * The billing method of the nodes in the node pool. Valid values:
              * <p>
              * 
@@ -2087,6 +2243,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
+                return this;
+            }
+
+            /**
+             * login_as_non_root.
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
                 return this;
             }
 
@@ -2235,6 +2399,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
+             * soc_enabled.
+             */
+            public Builder socEnabled(Boolean socEnabled) {
+                this.socEnabled = socEnabled;
+                return this;
+            }
+
+            /**
              * The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.
              */
             public Builder spotInstancePools(Long spotInstancePools) {
@@ -2278,6 +2450,22 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
+             * system_disk_bursting_enabled.
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * system_disk_categories.
+             */
+            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+                this.systemDiskCategories = systemDiskCategories;
+                return this;
+            }
+
+            /**
              * The type of system disk. Valid values:
              * <p>
              * 
@@ -2290,10 +2478,42 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
+             * system_disk_encrypt_algorithm.
+             */
+            public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+                this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+                return this;
+            }
+
+            /**
+             * system_disk_encrypted.
+             */
+            public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
+                this.systemDiskEncrypted = systemDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * system_disk_kms_key_id.
+             */
+            public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
+                this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+                return this;
+            }
+
+            /**
              * The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs (ESSDs).
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * system_disk_provisioned_iops.
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
                 return this;
             }
 

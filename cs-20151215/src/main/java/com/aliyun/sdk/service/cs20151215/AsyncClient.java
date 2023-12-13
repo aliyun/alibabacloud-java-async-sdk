@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelComponentUpgradeResponse> cancelComponentUpgrade(CancelComponentUpgradeRequest request);
 
+    CompletableFuture<CancelOperationPlanResponse> cancelOperationPlan(CancelOperationPlanRequest request);
+
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
     CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request);
@@ -191,6 +193,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<FixNodePoolVulsResponse> fixNodePoolVuls(FixNodePoolVulsRequest request);
 
+    CompletableFuture<GetClusterAddonInstanceResponse> getClusterAddonInstance(GetClusterAddonInstanceRequest request);
+
     CompletableFuture<GetClusterCheckResponse> getClusterCheck(GetClusterCheckRequest request);
 
     CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request);
@@ -207,6 +211,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
 
     CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request);
+
+    CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
+
+    CompletableFuture<ListClusterAddonInstancesResponse> listClusterAddonInstances(ListClusterAddonInstancesRequest request);
 
     CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
 

@@ -30,6 +30,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("file_system")
     private String fileSystem;
 
+    @NameInMap("kms_key_id")
+    private String kmsKeyId;
+
     @NameInMap("mount_target")
     private String mountTarget;
 
@@ -49,6 +52,7 @@ public class DataDisk extends TeaModel {
         this.category = builder.category;
         this.encrypted = builder.encrypted;
         this.fileSystem = builder.fileSystem;
+        this.kmsKeyId = builder.kmsKeyId;
         this.mountTarget = builder.mountTarget;
         this.performanceLevel = builder.performanceLevel;
         this.provisionedIops = builder.provisionedIops;
@@ -106,6 +110,13 @@ public class DataDisk extends TeaModel {
     }
 
     /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
      * @return mountTarget
      */
     public String getMountTarget() {
@@ -140,6 +151,7 @@ public class DataDisk extends TeaModel {
         private String category; 
         private String encrypted; 
         private String fileSystem; 
+        private String kmsKeyId; 
         private String mountTarget; 
         private String performanceLevel; 
         private Long provisionedIops; 
@@ -190,6 +202,14 @@ public class DataDisk extends TeaModel {
          */
         public Builder fileSystem(String fileSystem) {
             this.fileSystem = fileSystem;
+            return this;
+        }
+
+        /**
+         * kms_key_id.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 
