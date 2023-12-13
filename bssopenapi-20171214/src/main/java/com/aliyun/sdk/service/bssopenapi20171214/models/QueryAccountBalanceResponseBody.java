@@ -147,12 +147,16 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         @NameInMap("MybankCreditAmount")
         private String mybankCreditAmount;
 
+        @NameInMap("QuotaLimit")
+        private String quotaLimit;
+
         private Data(Builder builder) {
             this.availableAmount = builder.availableAmount;
             this.availableCashAmount = builder.availableCashAmount;
             this.creditAmount = builder.creditAmount;
             this.currency = builder.currency;
             this.mybankCreditAmount = builder.mybankCreditAmount;
+            this.quotaLimit = builder.quotaLimit;
         }
 
         public static Builder builder() {
@@ -198,12 +202,20 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             return this.mybankCreditAmount;
         }
 
+        /**
+         * @return quotaLimit
+         */
+        public String getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
         public static final class Builder {
             private String availableAmount; 
             private String availableCashAmount; 
             private String creditAmount; 
             private String currency; 
             private String mybankCreditAmount; 
+            private String quotaLimit; 
 
             /**
              * The available balance of the account.
@@ -247,6 +259,14 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
              */
             public Builder mybankCreditAmount(String mybankCreditAmount) {
                 this.mybankCreditAmount = mybankCreditAmount;
+                return this;
+            }
+
+            /**
+             * QuotaLimit.
+             */
+            public Builder quotaLimit(String quotaLimit) {
+                this.quotaLimit = quotaLimit;
                 return this;
             }
 

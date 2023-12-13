@@ -55,6 +55,10 @@ public class DescribeInstanceBillRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PipCode")
+    private String pipCode;
+
+    @Query
     @NameInMap("ProductCode")
     private String productCode;
 
@@ -78,6 +82,7 @@ public class DescribeInstanceBillRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerId = builder.ownerId;
+        this.pipCode = builder.pipCode;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
         this.subscriptionType = builder.subscriptionType;
@@ -167,6 +172,13 @@ public class DescribeInstanceBillRequest extends Request {
     }
 
     /**
+     * @return pipCode
+     */
+    public String getPipCode() {
+        return this.pipCode;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -198,6 +210,7 @@ public class DescribeInstanceBillRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private Long ownerId; 
+        private String pipCode; 
         private String productCode; 
         private String productType; 
         private String subscriptionType; 
@@ -218,6 +231,7 @@ public class DescribeInstanceBillRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerId = request.ownerId;
+            this.pipCode = request.pipCode;
             this.productCode = request.productCode;
             this.productType = request.productType;
             this.subscriptionType = request.subscriptionType;
@@ -328,6 +342,15 @@ public class DescribeInstanceBillRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PipCode.
+         */
+        public Builder pipCode(String pipCode) {
+            this.putQueryParameter("PipCode", pipCode);
+            this.pipCode = pipCode;
             return this;
         }
 

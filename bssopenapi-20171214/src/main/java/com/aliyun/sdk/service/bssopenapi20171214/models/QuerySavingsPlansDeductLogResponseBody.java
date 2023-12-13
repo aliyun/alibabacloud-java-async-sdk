@@ -135,6 +135,12 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("BillModule")
         private String billModule;
 
+        @NameInMap("BillingCycle")
+        private String billingCycle;
+
+        @NameInMap("BillingOfficialPrice")
+        private String billingOfficialPrice;
+
         @NameInMap("DeductCommodity")
         private String deductCommodity;
 
@@ -147,6 +153,9 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("DeductRate")
         private String deductRate;
 
+        @NameInMap("DeductedOfficialPrice")
+        private String deductedOfficialPrice;
+
         @NameInMap("DiscountRate")
         private String discountRate;
 
@@ -156,8 +165,17 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("InstanceSpec")
+        private String instanceSpec;
+
+        @NameInMap("InstanceTypeFamily")
+        private String instanceTypeFamily;
+
         @NameInMap("OwnerId")
         private Long ownerId;
+
+        @NameInMap("Region")
+        private String region;
 
         @NameInMap("SavingsType")
         private String savingsType;
@@ -170,14 +188,20 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.billModule = builder.billModule;
+            this.billingCycle = builder.billingCycle;
+            this.billingOfficialPrice = builder.billingOfficialPrice;
             this.deductCommodity = builder.deductCommodity;
             this.deductFee = builder.deductFee;
             this.deductInstanceId = builder.deductInstanceId;
             this.deductRate = builder.deductRate;
+            this.deductedOfficialPrice = builder.deductedOfficialPrice;
             this.discountRate = builder.discountRate;
             this.endTime = builder.endTime;
             this.instanceId = builder.instanceId;
+            this.instanceSpec = builder.instanceSpec;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
             this.ownerId = builder.ownerId;
+            this.region = builder.region;
             this.savingsType = builder.savingsType;
             this.startTime = builder.startTime;
             this.userId = builder.userId;
@@ -196,6 +220,20 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
          */
         public String getBillModule() {
             return this.billModule;
+        }
+
+        /**
+         * @return billingCycle
+         */
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        /**
+         * @return billingOfficialPrice
+         */
+        public String getBillingOfficialPrice() {
+            return this.billingOfficialPrice;
         }
 
         /**
@@ -227,6 +265,13 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return deductedOfficialPrice
+         */
+        public String getDeductedOfficialPrice() {
+            return this.deductedOfficialPrice;
+        }
+
+        /**
          * @return discountRate
          */
         public String getDiscountRate() {
@@ -248,10 +293,31 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceSpec
+         */
+        public String getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        /**
+         * @return instanceTypeFamily
+         */
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        /**
          * @return ownerId
          */
         public Long getOwnerId() {
             return this.ownerId;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
         }
 
         /**
@@ -277,14 +343,20 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         public static final class Builder {
             private String billModule; 
+            private String billingCycle; 
+            private String billingOfficialPrice; 
             private String deductCommodity; 
             private String deductFee; 
             private String deductInstanceId; 
             private String deductRate; 
+            private String deductedOfficialPrice; 
             private String discountRate; 
             private String endTime; 
             private String instanceId; 
+            private String instanceSpec; 
+            private String instanceTypeFamily; 
             private Long ownerId; 
+            private String region; 
             private String savingsType; 
             private String startTime; 
             private Long userId; 
@@ -294,6 +366,22 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
              */
             public Builder billModule(String billModule) {
                 this.billModule = billModule;
+                return this;
+            }
+
+            /**
+             * BillingCycle.
+             */
+            public Builder billingCycle(String billingCycle) {
+                this.billingCycle = billingCycle;
+                return this;
+            }
+
+            /**
+             * BillingOfficialPrice.
+             */
+            public Builder billingOfficialPrice(String billingOfficialPrice) {
+                this.billingOfficialPrice = billingOfficialPrice;
                 return this;
             }
 
@@ -330,6 +418,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
+             * DeductedOfficialPrice.
+             */
+            public Builder deductedOfficialPrice(String deductedOfficialPrice) {
+                this.deductedOfficialPrice = deductedOfficialPrice;
+                return this;
+            }
+
+            /**
              * The discount used for the current deduction.
              */
             public Builder discountRate(String discountRate) {
@@ -354,10 +450,34 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceSpec.
+             */
+            public Builder instanceSpec(String instanceSpec) {
+                this.instanceSpec = instanceSpec;
+                return this;
+            }
+
+            /**
+             * InstanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
              * OwnerId.
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
                 return this;
             }
 
