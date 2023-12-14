@@ -202,6 +202,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyInstanceTagsResponse> modifyInstanceTags(ModifyInstanceTagsRequest request);
 
+    CompletableFuture<ModifyInstanceTemporaryCapacityResponse> modifyInstanceTemporaryCapacity(ModifyInstanceTemporaryCapacityRequest request);
+
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
 
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);

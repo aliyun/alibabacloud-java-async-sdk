@@ -118,7 +118,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Double executeTime;
 
         @NameInMap("ExecutorRpc")
-        private Double executorRpc;
+        private Boolean executorRpc;
 
         @NameInMap("ExpectedWorkerCount")
         private Double expectedWorkerCount;
@@ -130,7 +130,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Double getPlanTime;
 
         @NameInMap("HitPlan")
-        private Double hitPlan;
+        private Boolean hitPlan;
 
         @NameInMap("Inner")
         private Boolean inner;
@@ -202,7 +202,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private String statement;
 
         @NameInMap("TableScan")
-        private Double tableScan;
+        private Boolean tableScan;
 
         @NameInMap("TraceId")
         private String traceId;
@@ -399,7 +399,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return executorRpc
          */
-        public Double getExecutorRpc() {
+        public Boolean getExecutorRpc() {
             return this.executorRpc;
         }
 
@@ -427,7 +427,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return hitPlan
          */
-        public Double getHitPlan() {
+        public Boolean getHitPlan() {
             return this.hitPlan;
         }
 
@@ -595,7 +595,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return tableScan
          */
-        public Double getTableScan() {
+        public Boolean getTableScan() {
             return this.tableScan;
         }
 
@@ -671,11 +671,11 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double diskReads; 
             private Double elapsedTime; 
             private Double executeTime; 
-            private Double executorRpc; 
+            private Boolean executorRpc; 
             private Double expectedWorkerCount; 
             private String fullSqlText; 
             private Double getPlanTime; 
-            private Double hitPlan; 
+            private Boolean hitPlan; 
             private Boolean inner; 
             private Double memstoreReadRows; 
             private Double netTime; 
@@ -699,7 +699,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private String sqlType; 
             private Double ssstoreReadRows; 
             private String statement; 
-            private Double tableScan; 
+            private Boolean tableScan; 
             private String traceId; 
             private String transHash; 
             private Double usedWorkerCount; 
@@ -832,7 +832,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             /**
              * Whether to initiate RPC.
              */
-            public Builder executorRpc(Double executorRpc) {
+            public Builder executorRpc(Boolean executorRpc) {
                 this.executorRpc = executorRpc;
                 return this;
             }
@@ -864,7 +864,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             /**
              * Whether to hit the execution plan.
              */
-            public Builder hitPlan(Double hitPlan) {
+            public Builder hitPlan(Boolean hitPlan) {
                 this.hitPlan = hitPlan;
                 return this;
             }
@@ -1056,7 +1056,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             /**
              * Whether to perform full table scan.
              */
-            public Builder tableScan(Double tableScan) {
+            public Builder tableScan(Boolean tableScan) {
                 this.tableScan = tableScan;
                 return this;
             }
