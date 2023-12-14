@@ -12,39 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeliveryResponseBody</p>
  */
 public class ListDeliveryResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("DyCode")
-    private String dyCode;
-
-    @NameInMap("DyMessage")
-    private String dyMessage;
-
-    @NameInMap("ErrCode")
-    private String errCode;
-
-    @NameInMap("Message")
-    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private ListDeliveryResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.dyCode = builder.dyCode;
-        this.dyMessage = builder.dyMessage;
-        this.errCode = builder.errCode;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -56,45 +32,10 @@ public class ListDeliveryResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dyCode
-     */
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    /**
-     * @return dyMessage
-     */
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    /**
-     * @return errCode
-     */
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -104,33 +45,12 @@ public class ListDeliveryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private String dyCode; 
-        private String dyMessage; 
-        private String errCode; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,50 +58,10 @@ public class ListDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * DyCode.
-         */
-        public Builder dyCode(String dyCode) {
-            this.dyCode = dyCode;
-            return this;
-        }
-
-        /**
-         * DyMessage.
-         */
-        public Builder dyMessage(String dyMessage) {
-            this.dyMessage = dyMessage;
-            return this;
-        }
-
-        /**
-         * ErrCode.
-         */
-        public Builder errCode(String errCode) {
-            this.errCode = errCode;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -230,7 +110,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The ID of the extended parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -238,7 +118,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the extended parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +243,11 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * CanOperateOrNot.
+             * Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder canOperateOrNot(Boolean canOperateOrNot) {
                 this.canOperateOrNot = canOperateOrNot;
@@ -371,7 +255,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraParameters.
+             * The extended parameter.
              */
             public Builder extraParameters(java.util.List < ExtraParameters> extraParameters) {
                 this.extraParameters = extraParameters;
@@ -379,7 +263,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The code of the log.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -387,7 +271,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * This parameter is deprecated.
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -395,7 +279,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogNameEn.
+             * This parameter is deprecated.
              */
             public Builder logNameEn(String logNameEn) {
                 this.logNameEn = logNameEn;
@@ -403,7 +287,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogNameKey.
+             * The language code of the log that is used to indicate the language in which the log is displayed.
              */
             public Builder logNameKey(String logNameKey) {
                 this.logNameKey = logNameKey;
@@ -411,7 +295,11 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the log delivery. Valid values:
+             * <p>
+             * 
+             * *   true: The logs are being delivered.
+             * *   false: The log delivery feature is disabled.
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -419,7 +307,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -496,7 +384,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String productName; 
 
             /**
-             * LogList.
+             * The logs of the cloud services.
              */
             public Builder logList(java.util.List < LogList> logList) {
                 this.logList = logList;
@@ -504,7 +392,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogMap.
+             * The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.
              */
             public Builder logMap(java.util.Map < String, java.util.List<DataProductListLogMapValue>> logMap) {
                 this.logMap = logMap;
@@ -512,7 +400,32 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the cloud service. Valid values:
+             * <p>
+             * 
+             * *   qcloud_waf
+             * *   qlcoud_cfw
+             * *   hcloud_waf
+             * *   hcloud_cfw
+             * *   ddos
+             * *   sas
+             * *   cfw
+             * *   config
+             * *   csk
+             * *   fc
+             * *   rds
+             * *   nas
+             * *   apigateway
+             * *   cdn
+             * *   mongodb
+             * *   eip
+             * *   slb
+             * *   vpc
+             * *   actiontrail
+             * *   waf
+             * *   bastionhost
+             * *   oss
+             * *   polardb
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -520,7 +433,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * This parameter is deprecated.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -621,7 +534,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String searchUrl; 
 
             /**
-             * DashboardUrl.
+             * The URL that is displayed in charts.
              */
             public Builder dashboardUrl(String dashboardUrl) {
                 this.dashboardUrl = dashboardUrl;
@@ -629,7 +542,11 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * DisplaySwitchOrNot.
+             * Indicates whether the log delivery switch is displayed. Default value: true. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder displaySwitchOrNot(Boolean displaySwitchOrNot) {
                 this.displaySwitchOrNot = displaySwitchOrNot;
@@ -637,7 +554,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -645,7 +562,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * ProductList.
+             * The cloud services.
              */
             public Builder productList(java.util.List < ProductList> productList) {
                 this.productList = productList;
@@ -653,7 +570,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -661,7 +578,7 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * SearchUrl.
+             * The URL that is used for log analysis.
              */
             public Builder searchUrl(String searchUrl) {
                 this.searchUrl = searchUrl;

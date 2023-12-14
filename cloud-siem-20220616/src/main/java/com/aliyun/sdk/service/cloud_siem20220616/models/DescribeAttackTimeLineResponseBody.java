@@ -86,7 +86,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -386,7 +390,12 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             private String logTime; 
 
             /**
-             * AlertLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -394,7 +403,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The alert name in English.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -402,7 +411,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameCode.
+             * The internal code of the alert name.
              */
             public Builder alertNameCode(String alertNameCode) {
                 this.alertNameCode = alertNameCode;
@@ -410,7 +419,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameEn.
+             * The alert name in English.
              */
             public Builder alertNameEn(String alertNameEn) {
                 this.alertNameEn = alertNameEn;
@@ -418,7 +427,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProd.
+             * The source of the alert.
              */
             public Builder alertSrcProd(String alertSrcProd) {
                 this.alertSrcProd = alertSrcProd;
@@ -426,7 +435,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProdModule.
+             * The sub-module of the alert source.
              */
             public Builder alertSrcProdModule(String alertSrcProdModule) {
                 this.alertSrcProdModule = alertSrcProdModule;
@@ -434,7 +443,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTime.
+             * The time when the alert was triggered.
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -442,7 +451,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTitle.
+             * The title of the alert.
              */
             public Builder alertTitle(String alertTitle) {
                 this.alertTitle = alertTitle;
@@ -450,7 +459,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTitleEn.
+             * The alert title in English.
              */
             public Builder alertTitleEn(String alertTitleEn) {
                 this.alertTitleEn = alertTitleEn;
@@ -458,7 +467,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -466,7 +475,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeCode.
+             * The internal code of the alert type.
              */
             public Builder alertTypeCode(String alertTypeCode) {
                 this.alertTypeCode = alertTypeCode;
@@ -474,7 +483,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeEn.
+             * The alert type in English.
              */
             public Builder alertTypeEn(String alertTypeEn) {
                 this.alertTypeEn = alertTypeEn;
@@ -482,7 +491,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUuid.
+             * The UUID of the alert
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -490,7 +499,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AssetId.
+             * The logical ID of the asset.
              */
             public Builder assetId(String assetId) {
                 this.assetId = assetId;
@@ -498,7 +507,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AssetList.
+             * The details of the asset.
              */
             public Builder assetList(String assetList) {
                 this.assetList = assetList;
@@ -506,7 +515,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AssetName.
+             * The name of the asset.
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -514,7 +523,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * AttCk.
+             * The tag of the ATT\&CK attack.
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -522,7 +531,12 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The cloud code. Valid values:
+             * <p>
+             * 
+             * *   aliyun: Alibaba Cloud
+             * *   qcloud: Tencent Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -530,7 +544,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -538,7 +552,7 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * The time when the alert was recorded.
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;

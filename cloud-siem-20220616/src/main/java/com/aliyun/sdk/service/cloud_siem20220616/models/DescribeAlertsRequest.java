@@ -196,7 +196,7 @@ public class DescribeAlertsRequest extends Request {
         } 
 
         /**
-         * AlertTitle.
+         * The title of the alert.
          */
         public Builder alertTitle(String alertTitle) {
             this.putBodyParameter("AlertTitle", alertTitle);
@@ -205,7 +205,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * AlertUuid.
+         * The UUID of the alert.
          */
         public Builder alertUuid(String alertUuid) {
             this.putBodyParameter("AlertUuid", alertUuid);
@@ -214,7 +214,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -223,7 +223,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -232,7 +232,11 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * IsDefend.
+         * Specifies whether an attack is defended. Valid values:
+         * <p>
+         * 
+         * *   0: detected.
+         * *   1: blocked.
          */
         public Builder isDefend(String isDefend) {
             this.putBodyParameter("IsDefend", isDefend);
@@ -241,7 +245,12 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * Level.
+         * The risk level. The value is a JSON array. Valid values:
+         * <p>
+         * 
+         * *   serious: high
+         * *   suspicious: medium
+         * *   remind: low
          */
         public Builder level(java.util.List < String > level) {
             this.putBodyParameter("Level", level);
@@ -250,7 +259,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -259,7 +268,11 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -268,7 +281,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the alert.
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -277,7 +290,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -286,7 +299,7 @@ public class DescribeAlertsRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the Alibaba Cloud account within which the alert is generated.
          */
         public Builder subUserId(String subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

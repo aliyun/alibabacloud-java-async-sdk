@@ -86,7 +86,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
             private String uuid; 
 
             /**
-             * Description.
+             * The description of the playbook.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +218,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
             }
 
             /**
-             * DisplayName.
+             * The display name of the playbook.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -222,7 +226,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
             }
 
             /**
-             * Name.
+             * The unique identifier name of the playbook.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +234,12 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
             }
 
             /**
-             * ParamType.
+             * The input parameter template of the playbook. Valid values:
+             * <p>
+             * 
+             * *   template-ip: IP address
+             * *   template-process: process
+             * *   template-filee: file
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -238,7 +247,7 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
             }
 
             /**
-             * Uuid.
+             * The UUID of the playbook.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

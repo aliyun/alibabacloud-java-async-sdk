@@ -292,7 +292,7 @@ public class PostCustomizeRuleRequest extends Request {
         } 
 
         /**
-         * AlertType.
+         * The risk type.
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -301,7 +301,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * AlertTypeMds.
+         * The internal code of the risk type.
          */
         public Builder alertTypeMds(String alertTypeMds) {
             this.putBodyParameter("AlertTypeMds", alertTypeMds);
@@ -310,7 +310,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * EventTransferExt.
+         * The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.
          */
         public Builder eventTransferExt(String eventTransferExt) {
             this.putBodyParameter("EventTransferExt", eventTransferExt);
@@ -319,7 +319,11 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * EventTransferSwitch.
+         * Specifies whether to convert an alert to an event. Valid values:
+         * <p>
+         * 
+         * *   0: no
+         * *   1: yes
          */
         public Builder eventTransferSwitch(Integer eventTransferSwitch) {
             this.putBodyParameter("EventTransferSwitch", eventTransferSwitch);
@@ -328,7 +332,12 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * EventTransferType.
+         * The event generation method. Valid values:
+         * <p>
+         * 
+         * *   default: The default method is used.
+         * *   singleToSingle: The system generates an event for each alert.
+         * *   allToSingle: The system generates an event for alerts within a period of time.
          */
         public Builder eventTransferType(String eventTransferType) {
             this.putBodyParameter("EventTransferType", eventTransferType);
@@ -337,7 +346,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the rule.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -346,7 +355,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * LogSource.
+         * The log source of the rule.
          */
         public Builder logSource(String logSource) {
             this.putBodyParameter("LogSource", logSource);
@@ -355,7 +364,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * LogSourceMds.
+         * The internal code of the log source.
          */
         public Builder logSourceMds(String logSourceMds) {
             this.putBodyParameter("LogSourceMds", logSourceMds);
@@ -364,7 +373,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * LogType.
+         * The log type of the rule.
          */
         public Builder logType(String logType) {
             this.putBodyParameter("LogType", logType);
@@ -373,7 +382,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * LogTypeMds.
+         * The internal code of the log type.
          */
         public Builder logTypeMds(String logTypeMds) {
             this.putBodyParameter("LogTypeMds", logTypeMds);
@@ -382,7 +391,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * QueryCycle.
+         * The window length of the rule.
          */
         public Builder queryCycle(String queryCycle) {
             this.putBodyParameter("QueryCycle", queryCycle);
@@ -391,7 +400,11 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -400,7 +413,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleCondition.
+         * The query condition of the rule. The value is in the JSON format.
          */
         public Builder ruleCondition(String ruleCondition) {
             this.putBodyParameter("RuleCondition", ruleCondition);
@@ -409,7 +422,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleDesc.
+         * The description of the rule.
          */
         public Builder ruleDesc(String ruleDesc) {
             this.putBodyParameter("RuleDesc", ruleDesc);
@@ -418,7 +431,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleGroup.
+         * The log aggregation field of the rule. The value is a JSON string.
          */
         public Builder ruleGroup(String ruleGroup) {
             this.putBodyParameter("RuleGroup", ruleGroup);
@@ -427,7 +440,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -436,7 +449,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleThreshold.
+         * The threshold configuration of the rule. The value is in the JSON format.
          */
         public Builder ruleThreshold(String ruleThreshold) {
             this.putBodyParameter("RuleThreshold", ruleThreshold);
@@ -445,7 +458,12 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * ThreatLevel.
+         * The risk level. Valid values:
+         * <p>
+         * 
+         * *   serious: high
+         * *   suspicious: medium
+         * *   remind: low
          */
         public Builder threatLevel(String threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

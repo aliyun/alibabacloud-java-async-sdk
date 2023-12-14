@@ -86,7 +86,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -263,7 +267,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Key.
+             * The attribute key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +275,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * The name of the key.
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -279,7 +283,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The value of the key.
              */
             public Builder values(String values) {
                 this.values = values;
@@ -452,7 +456,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AlertUuid.
+             * The UUID of the alert associated with the event.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -460,7 +464,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account in SIEM.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -468,7 +472,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetId.
+             * The logical ID of the asset.
              */
             public Builder assetId(String assetId) {
                 this.assetId = assetId;
@@ -476,7 +480,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetInfo.
+             * The display information of the asset is in the JSON format.
              */
             public Builder assetInfo(java.util.List < AssetInfo> assetInfo) {
                 this.assetInfo = assetInfo;
@@ -484,7 +488,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetName.
+             * The name of the asset.
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -492,7 +496,15 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   ip
+             * *   domain
+             * *   url
+             * *   process
+             * *   file
+             * *   host
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -500,7 +512,12 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The cloud code of the entity. Valid values:
+             * <p>
+             * 
+             * *   aliyun: Alibaba Cloud
+             * *   qcloud: Tencent Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -508,7 +525,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the asset was synchronized.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -516,7 +533,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the asset was last updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -524,7 +541,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -532,7 +549,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -540,7 +557,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the associated account to which the asset belongs.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -593,7 +610,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -601,7 +618,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

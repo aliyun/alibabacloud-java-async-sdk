@@ -12,39 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStorageResponseBody</p>
  */
 public class GetStorageResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("DyCode")
-    private String dyCode;
-
-    @NameInMap("DyMessage")
-    private String dyMessage;
-
-    @NameInMap("ErrCode")
-    private String errCode;
-
-    @NameInMap("Message")
-    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private GetStorageResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.dyCode = builder.dyCode;
-        this.dyMessage = builder.dyMessage;
-        this.errCode = builder.errCode;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -56,45 +32,10 @@ public class GetStorageResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dyCode
-     */
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    /**
-     * @return dyMessage
-     */
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    /**
-     * @return errCode
-     */
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -104,33 +45,12 @@ public class GetStorageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private String dyCode; 
-        private String dyMessage; 
-        private String errCode; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The information about the storage.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,50 +58,10 @@ public class GetStorageResponseBody extends TeaModel {
         }
 
         /**
-         * DyCode.
-         */
-        public Builder dyCode(String dyCode) {
-            this.dyCode = dyCode;
-            return this;
-        }
-
-        /**
-         * DyMessage.
-         */
-        public Builder dyMessage(String dyMessage) {
-            this.dyMessage = dyMessage;
-            return this;
-        }
-
-        /**
-         * ErrCode.
-         */
-        public Builder errCode(String errCode) {
-            this.errCode = errCode;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -254,7 +134,11 @@ public class GetStorageResponseBody extends TeaModel {
             private Integer ttl; 
 
             /**
-             * CanOperate.
+             * Indicates whether the storage region can be changed for once. Default value: false Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder canOperate(Boolean canOperate) {
                 this.canOperate = canOperate;
@@ -262,7 +146,11 @@ public class GetStorageResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayRegion.
+             * Indicates whether the storage region can be changed. Default value: false Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder displayRegion(Boolean displayRegion) {
                 this.displayRegion = displayRegion;
@@ -270,7 +158,7 @@ public class GetStorageResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the logs are stored. Default value: cn-shanghai. Valid values: cn-shanghai for the China site and ap-southeast-1 for the international site.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -278,7 +166,7 @@ public class GetStorageResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The storage period of logs. Unit: day. Default value: 180. Valid values: 30 to 3000.
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;

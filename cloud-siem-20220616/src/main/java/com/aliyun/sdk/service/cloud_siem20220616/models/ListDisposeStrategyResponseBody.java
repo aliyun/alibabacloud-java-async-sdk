@@ -86,7 +86,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -479,7 +483,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             private String taskParam; 
 
             /**
-             * AlertUuid.
+             * The UUID of the alert.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -487,7 +491,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account that is associated with the policy in SIEM.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -495,7 +499,11 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveStatus.
+             * The status of the policy. Valid values:
+             * <p>
+             * 
+             * *   0: invalid
+             * *   1: valid
              */
             public Builder effectiveStatus(Integer effectiveStatus) {
                 this.effectiveStatus = effectiveStatus;
@@ -503,7 +511,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Entity.
+             * The details of the entity. The value is a JSON array.
              */
             public Builder entity(java.util.List < ? > entity) {
                 this.entity = entity;
@@ -511,7 +519,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The ID of the entity.
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -519,7 +527,12 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the entity. Valid values:
+             * <p>
+             * 
+             * *   ip
+             * *   process
+             * *   file
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -527,7 +540,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The summary information about the failed task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -535,7 +548,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The end time of the task.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -543,7 +556,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -551,7 +564,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -559,7 +572,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -567,7 +580,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentName.
+             * The name of the event.
              */
             public Builder incidentName(String incidentName) {
                 this.incidentName = incidentName;
@@ -575,7 +588,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -583,7 +596,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookName.
+             * The name of the playbook, which is the unique identifier of the playbook.
              */
             public Builder playbookName(String playbookName) {
                 this.playbookName = playbookName;
@@ -591,7 +604,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookType.
+             * The type of the playbook. Valid values:
+             * <p>
+             * 
+             * *   system: user-triggered playbook
+             * *   custom: event-triggered playbook
+             * *   custom_alert: alert-triggered playbook
+             * *   soar-manual: user-run playbook
+             * *   soar-mdr: MDR-run playbook
              */
             public Builder playbookType(String playbookType) {
                 this.playbookType = playbookType;
@@ -599,7 +619,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -607,7 +627,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The scope of the policy.
              */
             public Builder scope(java.util.List < ? > scope) {
                 this.scope = scope;
@@ -615,7 +635,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SophonTaskId.
+             * The ID of the SOAR handling policy.
              */
             public Builder sophonTaskId(String sophonTaskId) {
                 this.sophonTaskId = sophonTaskId;
@@ -623,7 +643,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The running status of the playbook. Valid values:
+             * <p>
+             * 
+             * *   200: successful
+             * *   10: deleted
+             * *   5: failed
+             * *   0: initial
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -631,7 +657,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * SubAliuid.
+             * The ID of the Alibaba account that is used to configure the policy.
              */
             public Builder subAliuid(Long subAliuid) {
                 this.subAliuid = subAliuid;
@@ -639,7 +665,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TaskParam.
+             * The parameters that are used to trigger the playbook. The value is in the JSON format.
              */
             public Builder taskParam(String taskParam) {
                 this.taskParam = taskParam;
@@ -692,7 +718,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -700,7 +726,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

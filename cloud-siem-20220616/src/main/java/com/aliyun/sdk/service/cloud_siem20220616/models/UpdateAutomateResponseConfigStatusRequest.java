@@ -82,7 +82,7 @@ public class UpdateAutomateResponseConfigStatusRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The IDs of the automatic response rules. The value is a JSON array.
          */
         public Builder ids(String ids) {
             this.putBodyParameter("Ids", ids);
@@ -91,7 +91,11 @@ public class UpdateAutomateResponseConfigStatusRequest extends Request {
         }
 
         /**
-         * InUse.
+         * Specifies whether the rule is enabled. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder inUse(Boolean inUse) {
             this.putBodyParameter("InUse", inUse);
@@ -100,7 +104,11 @@ public class UpdateAutomateResponseConfigStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

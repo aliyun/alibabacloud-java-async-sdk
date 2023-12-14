@@ -86,7 +86,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
             private String assetType; 
 
             /**
-             * AssetNum.
+             * The number of assets.
              */
             public Builder assetNum(Integer assetNum) {
                 this.assetNum = assetNum;
@@ -178,7 +182,15 @@ public class DescribeCloudSiemAssetsCounterResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   ip
+             * *   domain
+             * *   url
+             * *   process
+             * *   file
+             * *   host
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;

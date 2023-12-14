@@ -182,7 +182,12 @@ public class ListAutomateResponseConfigsRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * The type of the handling action. Valid values:
+         * <p>
+         * 
+         * *   doPlaybook: runs a playbook.
+         * *   changeEventStatus: changes the status of an event.
+         * *   changeThreatLevel: changes the risk level of an event.
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("ActionType", actionType);
@@ -191,7 +196,11 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * AutoResponseType.
+         * The type of the automated response rule. Valid values:
+         * <p>
+         * 
+         * *   event
+         * *   alert
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -200,7 +209,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -209,7 +218,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the automated response rule.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -218,7 +227,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -227,7 +236,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -236,7 +245,11 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -245,7 +258,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the automated response rule.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -254,7 +267,11 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the rule. Valid values:
+         * <p>
+         * 
+         * *   0: disabled
+         * *   100: enabled
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -263,7 +280,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the user who created the rule.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

@@ -84,7 +84,7 @@ public class DoSelfDelegateRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * The Alibaba Cloud account of an ordinary member of the threat analysis feature.
          */
         public Builder aliUid(Long aliUid) {
             this.putBodyParameter("AliUid", aliUid);
@@ -93,7 +93,11 @@ public class DoSelfDelegateRequest extends Request {
         }
 
         /**
-         * DelegateOrNot.
+         * Specifies whether to use a delegated administrator account. Valid values:
+         * <p>
+         * 
+         * *   1: use a delegated administrator account.
+         * *   0: do not use a delegated administrator account.
          */
         public Builder delegateOrNot(Integer delegateOrNot) {
             this.putBodyParameter("DelegateOrNot", delegateOrNot);
@@ -102,7 +106,11 @@ public class DoSelfDelegateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
+         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

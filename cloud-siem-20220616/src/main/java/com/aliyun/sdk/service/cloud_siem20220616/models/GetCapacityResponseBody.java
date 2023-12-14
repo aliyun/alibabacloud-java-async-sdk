@@ -12,39 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCapacityResponseBody</p>
  */
 public class GetCapacityResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("DyCode")
-    private String dyCode;
-
-    @NameInMap("DyMessage")
-    private String dyMessage;
-
-    @NameInMap("ErrCode")
-    private String errCode;
-
-    @NameInMap("Message")
-    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private GetCapacityResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.dyCode = builder.dyCode;
-        this.dyMessage = builder.dyMessage;
-        this.errCode = builder.errCode;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -56,45 +32,10 @@ public class GetCapacityResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dyCode
-     */
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    /**
-     * @return dyMessage
-     */
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    /**
-     * @return errCode
-     */
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -104,33 +45,12 @@ public class GetCapacityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private String dyCode; 
-        private String dyMessage; 
-        private String errCode; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The information about the storage capacity.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,50 +58,10 @@ public class GetCapacityResponseBody extends TeaModel {
         }
 
         /**
-         * DyCode.
-         */
-        public Builder dyCode(String dyCode) {
-            this.dyCode = dyCode;
-            return this;
-        }
-
-        /**
-         * DyMessage.
-         */
-        public Builder dyMessage(String dyMessage) {
-            this.dyMessage = dyMessage;
-            return this;
-        }
-
-        /**
-         * ErrCode.
-         */
-        public Builder errCode(String errCode) {
-            this.errCode = errCode;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -242,7 +122,11 @@ public class GetCapacityResponseBody extends TeaModel {
             private Double usedCapacity; 
 
             /**
-             * ExistLogStore.
+             * Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:
+             * <p>
+             * 
+             * *   true: The logs are in the normal state. The log analysis feature is available.
+             * *   false: The logs are being cleared. The log analysis feature is unavailable.
              */
             public Builder existLogStore(Boolean existLogStore) {
                 this.existLogStore = existLogStore;
@@ -250,7 +134,7 @@ public class GetCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * PreservedCapacity.
+             * The purchased storage capacity of the threat analysis feature. Unit: GB.
              */
             public Builder preservedCapacity(Long preservedCapacity) {
                 this.preservedCapacity = preservedCapacity;
@@ -258,7 +142,7 @@ public class GetCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * The billable storage capacity of the threat analysis feature. Unit: GB.
              */
             public Builder usedCapacity(Double usedCapacity) {
                 this.usedCapacity = usedCapacity;

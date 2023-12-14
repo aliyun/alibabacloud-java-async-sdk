@@ -86,7 +86,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -263,7 +267,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Key.
+             * The attribute key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +275,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * The name of the key.
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -279,7 +283,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The value of the key.
              */
             public Builder values(String values) {
                 this.values = values;
@@ -692,7 +696,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AlertDesc.
+             * The description of the alert.
              */
             public Builder alertDesc(String alertDesc) {
                 this.alertDesc = alertDesc;
@@ -700,7 +704,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertDescCode.
+             * The internal code of the alert description.
              */
             public Builder alertDescCode(String alertDescCode) {
                 this.alertDescCode = alertDescCode;
@@ -708,7 +712,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertDescEn.
+             * The description of the alert in English.
              */
             public Builder alertDescEn(String alertDescEn) {
                 this.alertDescEn = alertDescEn;
@@ -716,7 +720,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertDetail.
+             * The details of the alert.
              */
             public Builder alertDetail(String alertDetail) {
                 this.alertDetail = alertDetail;
@@ -724,7 +728,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertInfoList.
+             * The displayed details of the alert.
              */
             public Builder alertInfoList(java.util.List < AlertInfoList> alertInfoList) {
                 this.alertInfoList = alertInfoList;
@@ -732,7 +736,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevel.
+             * The threat level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -740,7 +749,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -748,7 +757,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameCode.
+             * The internal code of the alert name.
              */
             public Builder alertNameCode(String alertNameCode) {
                 this.alertNameCode = alertNameCode;
@@ -756,7 +765,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameEn.
+             * The name of the alert in English.
              */
             public Builder alertNameEn(String alertNameEn) {
                 this.alertNameEn = alertNameEn;
@@ -764,7 +773,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProd.
+             * The service for which the alert associated with the event is generated.
              */
             public Builder alertSrcProd(String alertSrcProd) {
                 this.alertSrcProd = alertSrcProd;
@@ -772,7 +781,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProdModule.
+             * The sub-module of ther alert source.
              */
             public Builder alertSrcProdModule(String alertSrcProdModule) {
                 this.alertSrcProdModule = alertSrcProdModule;
@@ -780,7 +789,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTitle.
+             * The title of the alert.
              */
             public Builder alertTitle(String alertTitle) {
                 this.alertTitle = alertTitle;
@@ -788,7 +797,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTitleEn.
+             * The title of the alert in English.
              */
             public Builder alertTitleEn(String alertTitleEn) {
                 this.alertTitleEn = alertTitleEn;
@@ -796,7 +805,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The alert type.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -804,7 +813,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeCode.
+             * The internal code of the alert type.
              */
             public Builder alertTypeCode(String alertTypeCode) {
                 this.alertTypeCode = alertTypeCode;
@@ -812,7 +821,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeEn.
+             * The type of the alert in English.
              */
             public Builder alertTypeEn(String alertTypeEn) {
                 this.alertTypeEn = alertTypeEn;
@@ -820,7 +829,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUuid.
+             * The UUID of the alert.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -828,7 +837,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetList.
+             * The details of the asset.
              */
             public Builder assetList(String assetList) {
                 this.assetList = assetList;
@@ -836,7 +845,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AttCk.
+             * The tag of the ATT\&CK attack.
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -844,7 +853,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The cloud code. Valid values:
+             * <p>
+             * 
+             * *   aliyun: Alibaba Cloud
+             * *   qcloud: Tencent Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -852,7 +866,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the alert was closed.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -860,7 +874,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the alert was received.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -868,7 +882,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the alert was last updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -876,7 +890,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The unique ID of the alert.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -884,7 +898,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -892,7 +906,11 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefend.
+             * Indicates whether an attack is defended. Valid values:
+             * <p>
+             * 
+             * *   0: detected.
+             * *   1: blocked.
              */
             public Builder isDefend(String isDefend) {
                 this.isDefend = isDefend;
@@ -900,7 +918,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * The time when the alert was recorded.
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -908,7 +926,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * LogUuid.
+             * The UUID of the alert log.
              */
             public Builder logUuid(String logUuid) {
                 this.logUuid = logUuid;
@@ -916,7 +934,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is associated with the alert in SIEM.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -924,7 +942,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * OccurTime.
+             * The time when the alert is triggered.
              */
             public Builder occurTime(String occurTime) {
                 this.occurTime = occurTime;
@@ -932,7 +950,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time at which the alert was first generated.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -940,7 +958,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account within which the alert is generated.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -993,7 +1011,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -1001,7 +1019,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

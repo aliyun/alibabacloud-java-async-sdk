@@ -86,7 +86,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliUid.
+             * The ID of the security information and event management (SIEM) user.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -202,7 +206,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Domains.
+             * An array consisting of the domain names that are protected by the WAF instance.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -210,7 +214,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Web Application Firewall (WAF) instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +222,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

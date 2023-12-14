@@ -86,7 +86,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +246,11 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Channel.
+             * The channel of the contact information. Valid values:
+             * <p>
+             * 
+             * *   message
+             * *   mail
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -250,7 +258,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -258,7 +266,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -266,7 +274,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the recipient who receives the event handling result.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +282,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -282,7 +290,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTitle.
+             * The message title.
              */
             public Builder messageTitle(String messageTitle) {
                 this.messageTitle = messageTitle;
@@ -290,7 +298,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Receiver.
+             * The contact information of the recipient.
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -298,7 +306,11 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the message is sent. Valid values:
+             * <p>
+             * 
+             * *   0: not sent
+             * *   1: sent
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -375,7 +387,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * EventDispose.
+             * An array consisting of JSON objects that are configured for event handling.
              */
             public Builder eventDispose(java.util.List < ? > eventDispose) {
                 this.eventDispose = eventDispose;
@@ -383,7 +395,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverInfo.
+             * The JSON object that is configured for an alert recipient.
              */
             public Builder receiverInfo(ReceiverInfo receiverInfo) {
                 this.receiverInfo = receiverInfo;
@@ -391,7 +403,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The description of the event.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -399,7 +411,13 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   0: not handled
+             * *   1: handing
+             * *   5: handling failed
+             * *   10: handled
              */
             public Builder status(Integer status) {
                 this.status = status;

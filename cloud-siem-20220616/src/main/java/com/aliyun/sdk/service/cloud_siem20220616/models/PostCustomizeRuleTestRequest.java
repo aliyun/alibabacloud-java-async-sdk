@@ -96,7 +96,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the rule.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -105,7 +105,11 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -114,7 +118,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * SimulatedData.
+         * The simulation data for the testing. This parameter is available only when TestType is set to simulate.
          */
         public Builder simulatedData(String simulatedData) {
             this.putBodyParameter("SimulatedData", simulatedData);
@@ -123,7 +127,11 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * TestType.
+         * The testing type. Valid values:
+         * <p>
+         * 
+         * *   simulate: simulation data test
+         * *   business: business data test
          */
         public Builder testType(String testType) {
             this.putBodyParameter("TestType", testType);

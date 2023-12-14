@@ -98,7 +98,7 @@ public class GetHistogramsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
          */
         public Builder from(Integer from) {
             this.putBodyParameter("From", from);
@@ -107,7 +107,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * Query.
+         * The SQL statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax and limits of search statements, see [Log search overview](https://help.aliyun.com/zh/sls/user-guide/search-syntax?spm=a2c4g.11186623.0.i2#concept-tnd-1jq-zdb).
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -116,7 +116,11 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
+         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -125,7 +129,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * To.
+         * The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.
          */
         public Builder to(Integer to) {
             this.putBodyParameter("To", to);

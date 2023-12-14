@@ -83,7 +83,7 @@ public class CloseDeliveryRequest extends Request {
         } 
 
         /**
-         * LogCode.
+         * The log code of the cloud service, such as the code of the process log for Security Center. You can obtain the log code from the response of the ListDelivery operation.
          */
         public Builder logCode(String logCode) {
             this.putBodyParameter("LogCode", logCode);
@@ -92,7 +92,32 @@ public class CloseDeliveryRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the cloud service. Valid values:
+         * <p>
+         * 
+         * *   qcloud_waf
+         * *   qlcoud_cfw
+         * *   hcloud_waf
+         * *   hcloud_cfw
+         * *   ddos
+         * *   sas
+         * *   cfw
+         * *   config
+         * *   csk
+         * *   fc
+         * *   rds
+         * *   nas
+         * *   apigateway
+         * *   cdn
+         * *   mongodb
+         * *   eip
+         * *   slb
+         * *   vpc
+         * *   actiontrail
+         * *   waf
+         * *   bastionhost
+         * *   oss
+         * *   polardb
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -101,7 +126,11 @@ public class CloseDeliveryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
+         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

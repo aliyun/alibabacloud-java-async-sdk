@@ -86,7 +86,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -190,7 +194,7 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateData.
+             * The historical data that is used in the simulation test.
              */
             public Builder simulateData(String simulateData) {
                 this.simulateData = simulateData;
@@ -198,7 +202,14 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   0: The rule is in the initial state.
+             * *   10: The simulation data is tested.
+             * *   15: The business data is being tested.
+             * *   20: The business data test ends.
+             * *   100: The rule takes effect.
              */
             public Builder status(Integer status) {
                 this.status = status;

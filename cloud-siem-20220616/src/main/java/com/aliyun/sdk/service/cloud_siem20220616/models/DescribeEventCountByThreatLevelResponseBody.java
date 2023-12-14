@@ -86,7 +86,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             private Long undealEventNum; 
 
             /**
-             * EventNum.
+             * The total number of events.
              */
             public Builder eventNum(Long eventNum) {
                 this.eventNum = eventNum;
@@ -214,7 +218,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * HighLevelEventNum.
+             * The number of high-risk events.
              */
             public Builder highLevelEventNum(Long highLevelEventNum) {
                 this.highLevelEventNum = highLevelEventNum;
@@ -222,7 +226,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * LowLevelEventNum.
+             * The number of low-risk events.
              */
             public Builder lowLevelEventNum(Long lowLevelEventNum) {
                 this.lowLevelEventNum = lowLevelEventNum;
@@ -230,7 +234,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * MediumLevelEventNum.
+             * The number of medium-risk events.
              */
             public Builder mediumLevelEventNum(Long mediumLevelEventNum) {
                 this.mediumLevelEventNum = mediumLevelEventNum;
@@ -238,7 +242,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * UndealEventNum.
+             * The number of unhandled events.
              */
             public Builder undealEventNum(Long undealEventNum) {
                 this.undealEventNum = undealEventNum;

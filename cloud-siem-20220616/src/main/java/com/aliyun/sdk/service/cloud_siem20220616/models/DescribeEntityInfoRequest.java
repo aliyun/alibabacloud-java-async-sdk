@@ -110,7 +110,7 @@ public class DescribeEntityInfoRequest extends Request {
         } 
 
         /**
-         * EntityId.
+         * The logical ID of the entity.
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -119,7 +119,7 @@ public class DescribeEntityInfoRequest extends Request {
         }
 
         /**
-         * EntityIdentity.
+         * The feature value of the entity. Fuzzy match is supported.
          */
         public Builder entityIdentity(String entityIdentity) {
             this.putBodyParameter("EntityIdentity", entityIdentity);
@@ -128,7 +128,7 @@ public class DescribeEntityInfoRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -137,7 +137,11 @@ public class DescribeEntityInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -146,7 +150,7 @@ public class DescribeEntityInfoRequest extends Request {
         }
 
         /**
-         * SophonTaskId.
+         * The ID of the SOAR handling policy.
          */
         public Builder sophonTaskId(String sophonTaskId) {
             this.putBodyParameter("SophonTaskId", sophonTaskId);

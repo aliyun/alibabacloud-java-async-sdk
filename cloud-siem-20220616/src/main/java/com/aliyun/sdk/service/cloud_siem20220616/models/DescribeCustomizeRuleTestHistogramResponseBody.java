@@ -86,7 +86,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             private Long to; 
 
             /**
-             * Count.
+             * The number of alerts that are generated in the query time range.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -190,7 +194,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -198,7 +202,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder to(Long to) {
                 this.to = to;

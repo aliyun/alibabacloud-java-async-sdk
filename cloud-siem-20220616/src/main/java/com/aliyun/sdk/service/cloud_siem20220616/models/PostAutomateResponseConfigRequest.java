@@ -152,7 +152,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         } 
 
         /**
-         * ActionConfig.
+         * The configuration of the action that is performed after the rule is hit. The value is in JSON format.
          */
         public Builder actionConfig(String actionConfig) {
             this.putBodyParameter("ActionConfig", actionConfig);
@@ -161,7 +161,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * The action that is performed after the rule is hit. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   doPlaybook: Execute a playbook.
+         * *   changeEventStatus: Change the event status.
+         * *   changeThreatLevel: Change the threat level of the event.
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("ActionType", actionType);
@@ -170,7 +175,11 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * AutoResponseType.
+         * The rule type. Valid values:
+         * <p>
+         * 
+         * *   event
+         * *   alert
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -179,7 +188,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * ExecutionCondition.
+         * The trigger condition of the rule. The value is in JSON format.
          */
         public Builder executionCondition(String executionCondition) {
             this.putBodyParameter("ExecutionCondition", executionCondition);
@@ -188,7 +197,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * Id.
+         * The rule ID.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -197,7 +206,11 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -206,7 +219,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The rule name.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -215,7 +228,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the user who created the rule.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

@@ -86,7 +86,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * Function.
+             * The aggregate function.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -178,7 +182,7 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The display name of the aggregate function.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

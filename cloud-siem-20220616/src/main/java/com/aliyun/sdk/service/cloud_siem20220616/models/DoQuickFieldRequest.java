@@ -141,7 +141,7 @@ public class DoQuickFieldRequest extends Request {
         } 
 
         /**
-         * From.
+         * The time when the quick analysis starts. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Integer from) {
             this.putBodyParameter("From", from);
@@ -150,7 +150,7 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * Index.
+         * The index field.
          */
         public Builder index(String index) {
             this.putBodyParameter("Index", index);
@@ -159,7 +159,7 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of pages to return. Default value: 1.
          */
         public Builder page(Integer page) {
             this.putBodyParameter("Page", page);
@@ -168,7 +168,11 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
+         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -177,7 +181,7 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * The sorting of the query and analysis results. By default, the results are sorted in descending order.
          */
         public Builder reverse(Boolean reverse) {
             this.putBodyParameter("Reverse", reverse);
@@ -186,7 +190,7 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of entries per page. Default value: 10.
          */
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
@@ -195,7 +199,7 @@ public class DoQuickFieldRequest extends Request {
         }
 
         /**
-         * To.
+         * The time when the quick analysis ends. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Integer to) {
             this.putBodyParameter("To", to);

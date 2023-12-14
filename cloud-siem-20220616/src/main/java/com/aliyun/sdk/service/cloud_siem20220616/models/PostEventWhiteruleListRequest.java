@@ -83,7 +83,7 @@ public class PostEventWhiteruleListRequest extends Request {
         } 
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -92,7 +92,11 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -101,7 +105,7 @@ public class PostEventWhiteruleListRequest extends Request {
         }
 
         /**
-         * WhiteruleList.
+         * The alert whitelist rule. The value is a JSON object.
          */
         public Builder whiteruleList(String whiteruleList) {
             this.putBodyParameter("WhiteruleList", whiteruleList);

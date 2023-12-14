@@ -168,7 +168,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         } 
 
         /**
-         * AlertTitle.
+         * The title of the alert.
          */
         public Builder alertTitle(String alertTitle) {
             this.putBodyParameter("AlertTitle", alertTitle);
@@ -177,7 +177,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -186,7 +186,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The ID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -195,7 +195,11 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * IsDefend.
+         * Specifies whether an attack is defended. Valid values:
+         * <p>
+         * 
+         * *   0: detected
+         * *   1: blocked
          */
         public Builder isDefend(String isDefend) {
             this.putBodyParameter("IsDefend", isDefend);
@@ -204,7 +208,12 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * Level.
+         * The risk levels. The value is a JSON array. Valid values:
+         * <p>
+         * 
+         * *   serious: high
+         * *   suspicious: medium
+         * *   remind: low
          */
         public Builder level(java.util.List < String > level) {
             this.putBodyParameter("Level", level);
@@ -213,7 +222,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -222,7 +231,11 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -231,7 +244,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source of the alert.
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -240,7 +253,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the account within which the alert is generated.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

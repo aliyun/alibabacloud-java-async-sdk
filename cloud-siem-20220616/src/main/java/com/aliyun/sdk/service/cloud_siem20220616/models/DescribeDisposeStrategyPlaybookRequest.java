@@ -84,7 +84,7 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -93,7 +93,11 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -102,7 +106,7 @@ public class DescribeDisposeStrategyPlaybookRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

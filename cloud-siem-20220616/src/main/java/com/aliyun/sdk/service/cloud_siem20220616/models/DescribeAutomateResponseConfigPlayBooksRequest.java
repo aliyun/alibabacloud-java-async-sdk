@@ -82,7 +82,11 @@ public class DescribeAutomateResponseConfigPlayBooksRequest extends Request {
         } 
 
         /**
-         * AutoResponseType.
+         * The type of the automated response rule. Valid values:
+         * <p>
+         * 
+         * *   event
+         * *   alert
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -91,7 +95,12 @@ public class DescribeAutomateResponseConfigPlayBooksRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The entity type of the playbook. Valid values:
+         * <p>
+         * 
+         * *   ip
+         * *   process
+         * *   file
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -100,7 +109,11 @@ public class DescribeAutomateResponseConfigPlayBooksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

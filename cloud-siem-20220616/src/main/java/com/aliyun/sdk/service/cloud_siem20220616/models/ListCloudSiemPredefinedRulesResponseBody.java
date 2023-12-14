@@ -86,7 +86,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -347,7 +351,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             private String threatLevel; 
 
             /**
-             * AlertType.
+             * The type of the risk.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -355,7 +359,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -363,7 +367,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -371,7 +375,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the predefined rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -379,7 +383,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescMds.
+             * The internal code of the rule description.
              */
             public Builder ruleDescMds(String ruleDescMds) {
                 this.ruleDescMds = ruleDescMds;
@@ -387,7 +391,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -395,7 +399,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleNameMds.
+             * The internal code of the rule name.
              */
             public Builder ruleNameMds(String ruleNameMds) {
                 this.ruleNameMds = ruleNameMds;
@@ -403,7 +407,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The log source of the rule.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -411,7 +415,11 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the predefined rule. Valid values:
+             * <p>
+             * 
+             * *   0: The rule is in the initial state.
+             * *   100: The rule takes effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -419,7 +427,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * The threat level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -472,7 +485,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -480,7 +493,7 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

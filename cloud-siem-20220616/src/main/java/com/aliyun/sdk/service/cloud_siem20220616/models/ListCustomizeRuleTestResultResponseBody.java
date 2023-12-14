@@ -86,7 +86,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -407,7 +411,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AlertDesc.
+             * The description of the alert.
              */
             public Builder alertDesc(String alertDesc) {
                 this.alertDesc = alertDesc;
@@ -415,7 +419,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * AlertDetail.
+             * The alert details in the JSON format.
              */
             public Builder alertDetail(String alertDetail) {
                 this.alertDetail = alertDetail;
@@ -423,7 +427,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProd.
+             * The source of the alert.
              */
             public Builder alertSrcProd(String alertSrcProd) {
                 this.alertSrcProd = alertSrcProd;
@@ -431,7 +435,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSrcProdModule.
+             * The sub-module of the source.
              */
             public Builder alertSrcProdModule(String alertSrcProdModule) {
                 this.alertSrcProdModule = alertSrcProdModule;
@@ -439,7 +443,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * AttCk.
+             * The tag of the ATT\&CK attack.
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -447,7 +451,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert, which corresponds to the name of the custom rule.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -455,7 +459,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The risk type, which indicates the alert type.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -463,7 +467,12 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder level(String level) {
                 this.level = level;
@@ -471,7 +480,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * LogSource.
+             * The log source of the rule.
              */
             public Builder logSource(String logSource) {
                 this.logSource = logSource;
@@ -479,7 +488,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * The time when the alert was recorded.
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -487,7 +496,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * LogType.
+             * The log type of the rule.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -495,7 +504,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is associated with the alert in SIEM.
              */
             public Builder mainUserId(String mainUserId) {
                 this.mainUserId = mainUserId;
@@ -503,7 +512,11 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * The status of the alert data. Valid values:
+             * <p>
+             * 
+             * *   test: business test data
+             * *   online: online data
              */
             public Builder onlineStatus(String onlineStatus) {
                 this.onlineStatus = onlineStatus;
@@ -511,7 +524,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account within which the alert is generated.
              */
             public Builder subUserId(String subUserId) {
                 this.subUserId = subUserId;
@@ -519,7 +532,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the alert.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -572,7 +585,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -580,7 +593,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

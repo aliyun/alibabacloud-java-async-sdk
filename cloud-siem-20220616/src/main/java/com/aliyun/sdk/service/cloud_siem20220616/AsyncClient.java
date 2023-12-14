@@ -18,17 +18,35 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddDataSourceResponse> addDataSource(AddDataSourceRequest request);
+
+    CompletableFuture<AddDataSourceLogResponse> addDataSourceLog(AddDataSourceLogRequest request);
+
+    CompletableFuture<AddUserResponse> addUser(AddUserRequest request);
+
+    CompletableFuture<AddUserSourceLogConfigResponse> addUserSourceLogConfig(AddUserSourceLogConfigRequest request);
+
     CompletableFuture<BatchJobCheckResponse> batchJobCheck(BatchJobCheckRequest request);
 
     CompletableFuture<BatchJobSubmitResponse> batchJobSubmit(BatchJobSubmitRequest request);
+
+    CompletableFuture<BindAccountResponse> bindAccount(BindAccountRequest request);
 
     CompletableFuture<CloseDeliveryResponse> closeDelivery(CloseDeliveryRequest request);
 
     CompletableFuture<DeleteAutomateResponseConfigResponse> deleteAutomateResponseConfig(DeleteAutomateResponseConfigRequest request);
 
+    CompletableFuture<DeleteBindAccountResponse> deleteBindAccount(DeleteBindAccountRequest request);
+
     CompletableFuture<DeleteCustomizeRuleResponse> deleteCustomizeRule(DeleteCustomizeRuleRequest request);
 
+    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
+
+    CompletableFuture<DeleteDataSourceLogResponse> deleteDataSourceLog(DeleteDataSourceLogRequest request);
+
     CompletableFuture<DeleteQuickQueryResponse> deleteQuickQuery(DeleteQuickQueryRequest request);
+
+    CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
     CompletableFuture<DeleteWhiteRuleListResponse> deleteWhiteRuleList(DeleteWhiteRuleListRequest request);
 
@@ -54,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAttackTimeLineResponse> describeAttackTimeLine(DescribeAttackTimeLineRequest request);
 
+    CompletableFuture<DescribeAuthResponse> describeAuth(DescribeAuthRequest request);
+
     CompletableFuture<DescribeAutomateResponseConfigCounterResponse> describeAutomateResponseConfigCounter(DescribeAutomateResponseConfigCounterRequest request);
 
     CompletableFuture<DescribeAutomateResponseConfigFeatureResponse> describeAutomateResponseConfigFeature(DescribeAutomateResponseConfigFeatureRequest request);
@@ -68,6 +88,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCloudSiemEventsResponse> describeCloudSiemEvents(DescribeCloudSiemEventsRequest request);
 
+    CompletableFuture<DescribeCsImportedProdStatusByUserResponse> describeCsImportedProdStatusByUser(DescribeCsImportedProdStatusByUserRequest request);
+
     CompletableFuture<DescribeCustomizeRuleResponse> describeCustomizeRule(DescribeCustomizeRuleRequest request);
 
     CompletableFuture<DescribeCustomizeRuleCountResponse> describeCustomizeRuleCount(DescribeCustomizeRuleCountRequest request);
@@ -75,6 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomizeRuleTestResponse> describeCustomizeRuleTest(DescribeCustomizeRuleTestRequest request);
 
     CompletableFuture<DescribeCustomizeRuleTestHistogramResponse> describeCustomizeRuleTestHistogram(DescribeCustomizeRuleTestHistogramRequest request);
+
+    CompletableFuture<DescribeDataSourceInstanceResponse> describeDataSourceInstance(DescribeDataSourceInstanceRequest request);
+
+    CompletableFuture<DescribeDataSourceParametersResponse> describeDataSourceParameters(DescribeDataSourceParametersRequest request);
 
     CompletableFuture<DescribeDisposeAndPlaybookResponse> describeDisposeAndPlaybook(DescribeDisposeAndPlaybookRequest request);
 
@@ -85,6 +111,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventCountByThreatLevelResponse> describeEventCountByThreatLevel(DescribeEventCountByThreatLevelRequest request);
 
     CompletableFuture<DescribeEventDisposeResponse> describeEventDispose(DescribeEventDisposeRequest request);
+
+    CompletableFuture<DescribeImportedLogCountResponse> describeImportedLogCount(DescribeImportedLogCountRequest request);
 
     CompletableFuture<DescribeJobStatusResponse> describeJobStatus(DescribeJobStatusRequest request);
 
@@ -98,9 +126,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeOperatorsResponse> describeOperators(DescribeOperatorsRequest request);
 
+    CompletableFuture<DescribeProdCountResponse> describeProdCount(DescribeProdCountRequest request);
+
     CompletableFuture<DescribeScopeUsersResponse> describeScopeUsers(DescribeScopeUsersRequest request);
 
+    CompletableFuture<DescribeServiceStatusResponse> describeServiceStatus(DescribeServiceStatusRequest request);
+
     CompletableFuture<DescribeStorageResponse> describeStorage(DescribeStorageRequest request);
+
+    CompletableFuture<DescribeUserBuyStatusResponse> describeUserBuyStatus(DescribeUserBuyStatusRequest request);
 
     CompletableFuture<DescribeWafScopeResponse> describeWafScope(DescribeWafScopeRequest request);
 
@@ -109,6 +143,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DoQuickFieldResponse> doQuickField(DoQuickFieldRequest request);
 
     CompletableFuture<DoSelfDelegateResponse> doSelfDelegate(DoSelfDelegateRequest request);
+
+    CompletableFuture<EnableAccessForCloudSiemResponse> enableAccessForCloudSiem(EnableAccessForCloudSiemRequest request);
+
+    CompletableFuture<EnableServiceForCloudSiemResponse> enableServiceForCloudSiem(EnableServiceForCloudSiemRequest request);
 
     CompletableFuture<GetCapacityResponse> getCapacity(GetCapacityRequest request);
 
@@ -120,7 +158,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetStorageResponse> getStorage(GetStorageRequest request);
 
+    CompletableFuture<ListAccountAccessIdResponse> listAccountAccessId(ListAccountAccessIdRequest request);
+
+    CompletableFuture<ListAccountsByLogResponse> listAccountsByLog(ListAccountsByLogRequest request);
+
+    CompletableFuture<ListAllProdsResponse> listAllProds(ListAllProdsRequest request);
+
     CompletableFuture<ListAutomateResponseConfigsResponse> listAutomateResponseConfigs(ListAutomateResponseConfigsRequest request);
+
+    CompletableFuture<ListBindAccountResponse> listBindAccount(ListBindAccountRequest request);
+
+    CompletableFuture<ListBindDataSourcesResponse> listBindDataSources(ListBindDataSourcesRequest request);
 
     CompletableFuture<ListCloudSiemCustomizeRulesResponse> listCloudSiemCustomizeRules(ListCloudSiemCustomizeRulesRequest request);
 
@@ -128,13 +176,33 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCustomizeRuleTestResultResponse> listCustomizeRuleTestResult(ListCustomizeRuleTestResultRequest request);
 
+    CompletableFuture<ListDataSourceLogsResponse> listDataSourceLogs(ListDataSourceLogsRequest request);
+
+    CompletableFuture<ListDataSourceTypesResponse> listDataSourceTypes(ListDataSourceTypesRequest request);
+
     CompletableFuture<ListDeliveryResponse> listDelivery(ListDeliveryRequest request);
 
     CompletableFuture<ListDisposeStrategyResponse> listDisposeStrategy(ListDisposeStrategyRequest request);
 
+    CompletableFuture<ListImportedLogsByProdResponse> listImportedLogsByProd(ListImportedLogsByProdRequest request);
+
     CompletableFuture<ListOperationResponse> listOperation(ListOperationRequest request);
 
+    CompletableFuture<ListProjectLogStoresResponse> listProjectLogStores(ListProjectLogStoresRequest request);
+
     CompletableFuture<ListQuickQueryResponse> listQuickQuery(ListQuickQueryRequest request);
+
+    CompletableFuture<ListRdUsersResponse> listRdUsers(ListRdUsersRequest request);
+
+    CompletableFuture<ListUserProdLogsResponse> listUserProdLogs(ListUserProdLogsRequest request);
+
+    CompletableFuture<ListUsersByProdResponse> listUsersByProd(ListUsersByProdRequest request);
+
+    CompletableFuture<ModifyBindAccountResponse> modifyBindAccount(ModifyBindAccountRequest request);
+
+    CompletableFuture<ModifyDataSourceResponse> modifyDataSource(ModifyDataSourceRequest request);
+
+    CompletableFuture<ModifyDataSourceLogResponse> modifyDataSourceLog(ModifyDataSourceLogRequest request);
 
     CompletableFuture<OpenDeliveryResponse> openDelivery(OpenDeliveryRequest request);
 
@@ -159,6 +227,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetStorageResponse> setStorage(SetStorageRequest request);
 
     CompletableFuture<ShowQuickAnalysisResponse> showQuickAnalysis(ShowQuickAnalysisRequest request);
+
+    CompletableFuture<SubmitImportLogTasksResponse> submitImportLogTasks(SubmitImportLogTasksRequest request);
+
+    CompletableFuture<SubmitJobsResponse> submitJobs(SubmitJobsRequest request);
 
     CompletableFuture<UpdateAutomateResponseConfigStatusResponse> updateAutomateResponseConfigStatus(UpdateAutomateResponseConfigStatusRequest request);
 

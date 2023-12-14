@@ -124,7 +124,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         } 
 
         /**
-         * EventDispose.
+         * The configuration of event handling. The value is a JSON object.
          */
         public Builder eventDispose(String eventDispose) {
             this.putBodyParameter("EventDispose", eventDispose);
@@ -133,7 +133,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -142,7 +142,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * ReceiverInfo.
+         * The configuration of the alert recipient. The value is a JSON object.
          */
         public Builder receiverInfo(String receiverInfo) {
             this.putBodyParameter("ReceiverInfo", receiverInfo);
@@ -151,7 +151,11 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -160,7 +164,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks of the event.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -169,7 +173,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   0: unhandled
+         * *   1: handing
+         * *   5: handling failed
+         * *   10: handled
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

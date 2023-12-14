@@ -86,7 +86,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             private Integer mediumRuleNum; 
 
             /**
-             * HighRuleNum.
+             * The number of rules that are used to identify high-risk threats.
              */
             public Builder highRuleNum(Integer highRuleNum) {
                 this.highRuleNum = highRuleNum;
@@ -202,7 +206,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * InUseRuleNum.
+             * The total number of rules.
              */
             public Builder inUseRuleNum(Integer inUseRuleNum) {
                 this.inUseRuleNum = inUseRuleNum;
@@ -210,7 +214,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * LowRuleNum.
+             * The number of rules that are used to identify low-risk threats.
              */
             public Builder lowRuleNum(Integer lowRuleNum) {
                 this.lowRuleNum = lowRuleNum;
@@ -218,7 +222,7 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * MediumRuleNum.
+             * The number of rules that are used to identify medium-risk threats.
              */
             public Builder mediumRuleNum(Integer mediumRuleNum) {
                 this.mediumRuleNum = mediumRuleNum;

@@ -86,7 +86,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -431,7 +435,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             private Float threatScore; 
 
             /**
-             * AlertNum.
+             * The number of alerts that are associated with the event.
              */
             public Builder alertNum(Integer alertNum) {
                 this.alertNum = alertNum;
@@ -439,7 +443,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account to which the event belongs.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -447,7 +451,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AssetNum.
+             * The number of assets that are associated with the event.
              */
             public Builder assetNum(Integer assetNum) {
                 this.assetNum = assetNum;
@@ -455,7 +459,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AttCkLabels.
+             * The tags of the ATT\&CK attack.
              */
             public Builder attCkLabels(java.util.List < String > attCkLabels) {
                 this.attCkLabels = attCkLabels;
@@ -463,7 +467,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSources.
+             * The sources of the alert.
              */
             public Builder dataSources(java.util.List < String > dataSources) {
                 this.dataSources = dataSources;
@@ -471,7 +475,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the event.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -479,7 +483,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionEn.
+             * The event description in English.
              */
             public Builder descriptionEn(String descriptionEn) {
                 this.descriptionEn = descriptionEn;
@@ -487,7 +491,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtContent.
+             * The extended event information in the JSON format.
              */
             public Builder extContent(String extContent) {
                 this.extContent = extContent;
@@ -495,7 +499,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the event occurred.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -503,7 +507,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the event was last updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -511,7 +515,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentName.
+             * The name of the event.
              */
             public Builder incidentName(String incidentName) {
                 this.incidentName = incidentName;
@@ -519,7 +523,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentNameEn.
+             * The event name in English.
              */
             public Builder incidentNameEn(String incidentNameEn) {
                 this.incidentNameEn = incidentNameEn;
@@ -527,7 +531,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -535,7 +539,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks of the event.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -543,7 +547,13 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   0: unhandled
+             * *   1: handling
+             * *   5: handling failed
+             * *   10: handled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -551,7 +561,12 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -559,7 +574,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatScore.
+             * The risk score of the event. Valid values: 0 to 100. A higher value indicates a higher risk level.
              */
             public Builder threatScore(Float threatScore) {
                 this.threatScore = threatScore;
@@ -612,7 +627,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -620,7 +635,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

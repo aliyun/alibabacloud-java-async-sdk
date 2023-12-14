@@ -86,7 +86,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -311,7 +315,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private Boolean wafPlaybook; 
 
             /**
-             * Description.
+             * The playbook description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -319,7 +323,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the playbook.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -327,7 +331,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The playbook name, which is the unique identifier of the playbook.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +339,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OpCode.
+             * The opcode of the playbook, which corresponds to the opcode of the playbook recommended for entity handling.
              */
             public Builder opCode(String opCode) {
                 this.opCode = opCode;
@@ -343,7 +347,11 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OpLevel.
+             * Indicates whether quick event handling is selected by default. Valid values:
+             * <p>
+             * 
+             * *   2: Quick event handling is selected.
+             * *   1: Quick event handling is displayed but not selected.
              */
             public Builder opLevel(String opLevel) {
                 this.opLevel = opLevel;
@@ -351,7 +359,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * TaskConfig.
+             * The opcode configuration.
              */
             public Builder taskConfig(String taskConfig) {
                 this.taskConfig = taskConfig;
@@ -359,7 +367,11 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * WafPlaybook.
+             * Indicates whether the playbook is intended for Web Application Firewall (WAF). Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder wafPlaybook(Boolean wafPlaybook) {
                 this.wafPlaybook = wafPlaybook;
@@ -484,7 +496,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private java.util.List < ? > scope; 
 
             /**
-             * AlertNum.
+             * The number of alerts that are associated with the entity.
              */
             public Builder alertNum(Integer alertNum) {
                 this.alertNum = alertNum;
@@ -492,7 +504,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Dispose.
+             * The object for handling.
              */
             public Builder dispose(String dispose) {
                 this.dispose = dispose;
@@ -500,7 +512,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The entity ID
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -508,7 +520,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * EntityInfo.
+             * The entity information.
              */
             public Builder entityInfo(java.util.Map < String, ? > entityInfo) {
                 this.entityInfo = entityInfo;
@@ -516,7 +528,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OpcodeMap.
+             * The key-value pairs each of which consists of opcode and oplevel.
              */
             public Builder opcodeMap(java.util.Map < String, String > opcodeMap) {
                 this.opcodeMap = opcodeMap;
@@ -524,7 +536,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OpcodeSet.
+             * An array consisting of the codes of playbooks that are recommended for entity handling.
              */
             public Builder opcodeSet(java.util.List < String > opcodeSet) {
                 this.opcodeSet = opcodeSet;
@@ -532,7 +544,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookList.
+             * The playbooks that can handle the entity.
              */
             public Builder playbookList(java.util.List < PlaybookList> playbookList) {
                 this.playbookList = playbookList;
@@ -540,7 +552,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * An array consisting of the IDs of the users who can handle objects.
              */
             public Builder scope(java.util.List < ? > scope) {
                 this.scope = scope;
@@ -593,7 +605,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -601,7 +613,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

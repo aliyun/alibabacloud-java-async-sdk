@@ -210,7 +210,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         } 
 
         /**
-         * AssetId.
+         * The ID of the asset that is associated with the event.
          */
         public Builder assetId(String assetId) {
             this.putBodyParameter("AssetId", assetId);
@@ -219,7 +219,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -228,7 +228,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -237,7 +237,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the event.
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
@@ -246,7 +246,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The ID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -255,7 +255,11 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The sort order. Valid values:
+         * <p>
+         * 
+         * *   desc: descending order
+         * *   asc: ascending order
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -264,7 +268,11 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * The sort field. Valid values:
+         * <p>
+         * 
+         * *   GmtModified: sorts the events by creation time. This is the default value.
+         * *   ThreatScore: sorts the events by risk score.
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -273,7 +281,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -282,7 +290,11 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -291,7 +303,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -300,7 +312,13 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   0: unhandled
+         * *   1: handling
+         * *   5: handling failed
+         * *   10: handled
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -309,7 +327,12 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * ThreadLevel.
+         * The risk levels of the events. The value is a JSON array. Valid values:
+         * <p>
+         * 
+         * *   serious: high
+         * *   suspicious: medium
+         * *   remind: low
          */
         public Builder threadLevel(java.util.List < String > threadLevel) {
             this.putBodyParameter("ThreadLevel", threadLevel);

@@ -86,7 +86,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
             private String logTypeName; 
 
             /**
-             * LogType.
+             * The log type of the rule.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -178,7 +182,7 @@ public class DescribeLogTypeResponseBody extends TeaModel {
             }
 
             /**
-             * LogTypeName.
+             * The internal code of the log type.
              */
             public Builder logTypeName(String logTypeName) {
                 this.logTypeName = logTypeName;

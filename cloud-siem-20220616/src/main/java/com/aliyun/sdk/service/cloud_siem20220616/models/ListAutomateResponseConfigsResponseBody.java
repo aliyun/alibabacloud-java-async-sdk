@@ -86,7 +86,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -359,7 +363,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * ActionConfig.
+             * The configuration of the action that is performed after the rule is hit. The value is in JSON format.
              */
             public Builder actionConfig(String actionConfig) {
                 this.actionConfig = actionConfig;
@@ -367,7 +371,12 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionType.
+             * The type of the handling action. Multiple types are separated by commas (,). Valid values:
+             * <p>
+             * 
+             * *   doPlaybook: runs a playbook.
+             * *   changeEventStatus: changes the status of an event.
+             * *   changeThreatLevel: changes the risk level of an event.
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -375,7 +384,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account that is associated with the rule in SIEM.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -383,7 +392,11 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoResponseType.
+             * The type of the automated response rule. Valid values:
+             * <p>
+             * 
+             * *   event
+             * *   alert
              */
             public Builder autoResponseType(String autoResponseType) {
                 this.autoResponseType = autoResponseType;
@@ -391,7 +404,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionCondition.
+             * The trigger condition of the rule. The value is in the JSON format.
              */
             public Builder executionCondition(String executionCondition) {
                 this.executionCondition = executionCondition;
@@ -399,7 +412,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -407,7 +420,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -415,7 +428,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the automated response rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -423,7 +436,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the automated response rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -431,7 +444,11 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   100: enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -439,7 +456,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the user who created the rule.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -492,7 +509,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -500,7 +517,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

@@ -110,7 +110,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -119,7 +119,12 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The entity type. Valid values:
+         * <p>
+         * 
+         * *   ip: IP address
+         * *   process: process
+         * *   file: file
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -128,7 +133,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -137,7 +142,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -146,7 +151,11 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

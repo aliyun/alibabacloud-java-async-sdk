@@ -68,7 +68,7 @@ public class DescribeCustomizeRuleTestRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the rule.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -77,7 +77,11 @@ public class DescribeCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

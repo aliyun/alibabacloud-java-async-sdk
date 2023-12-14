@@ -86,7 +86,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             private Integer productNum; 
 
             /**
-             * All.
+             * The total number of alerts.
              */
             public Builder all(Long all) {
                 this.all = all;
@@ -214,7 +218,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * High.
+             * The number of high-risk alerts.
              */
             public Builder high(Long high) {
                 this.high = high;
@@ -222,7 +226,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * Low.
+             * The number of low-risk alerts.
              */
             public Builder low(Long low) {
                 this.low = low;
@@ -230,7 +234,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * Medium.
+             * The number of medium-risk alerts.
              */
             public Builder medium(Long medium) {
                 this.medium = medium;
@@ -238,7 +242,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * ProductNum.
+             * The number of connected services.
              */
             public Builder productNum(Integer productNum) {
                 this.productNum = productNum;

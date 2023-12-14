@@ -12,39 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogStoreResponseBody</p>
  */
 public class DescribeLogStoreResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("DyCode")
-    private String dyCode;
-
-    @NameInMap("DyMessage")
-    private String dyMessage;
-
-    @NameInMap("ErrCode")
-    private String errCode;
-
-    @NameInMap("Message")
-    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private DescribeLogStoreResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.dyCode = builder.dyCode;
-        this.dyMessage = builder.dyMessage;
-        this.errCode = builder.errCode;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -56,45 +32,10 @@ public class DescribeLogStoreResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return dyCode
-     */
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    /**
-     * @return dyMessage
-     */
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    /**
-     * @return errCode
-     */
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -104,33 +45,12 @@ public class DescribeLogStoreResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private String dyCode; 
-        private String dyMessage; 
-        private String errCode; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The response of the threat analysis feature.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,50 +58,10 @@ public class DescribeLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * DyCode.
-         */
-        public Builder dyCode(String dyCode) {
-            this.dyCode = dyCode;
-            return this;
-        }
-
-        /**
-         * DyMessage.
-         */
-        public Builder dyMessage(String dyMessage) {
-            this.dyMessage = dyMessage;
-            return this;
-        }
-
-        /**
-         * ErrCode.
-         */
-        public Builder errCode(String errCode) {
-            this.errCode = errCode;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 
@@ -290,7 +170,11 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             private Integer ttl; 
 
             /**
-             * AppendMeta.
+             * Indicates whether the following time points are added after the log arrives: the time points when the public IP address of the client and the log arrive. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder appendMeta(Boolean appendMeta) {
                 this.appendMeta = appendMeta;
@@ -298,7 +182,11 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * AutoSplit.
+             * Indicates whether the automatic sharding feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder autoSplit(Boolean autoSplit) {
                 this.autoSplit = autoSplit;
@@ -306,7 +194,11 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * EnableTracking.
+             * Indicates whether the web tracking feature is enabled to collect user information from browsers, iOS applications, or Android applications. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableTracking(Boolean enableTracking) {
                 this.enableTracking = enableTracking;
@@ -314,7 +206,7 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * The name of the Logstore in Simple Log Service.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -322,7 +214,7 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSplitShard.
+             * The maximum number of shards that can be generated by using the automatic sharding feature.
              */
             public Builder maxSplitShard(Integer maxSplitShard) {
                 this.maxSplitShard = maxSplitShard;
@@ -330,7 +222,7 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * ShardCount.
+             * The number of shards in Log Service.
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
@@ -338,7 +230,7 @@ public class DescribeLogStoreResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The retention period of data. Unit: day.
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;

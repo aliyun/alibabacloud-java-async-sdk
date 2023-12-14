@@ -86,7 +86,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -491,7 +495,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             private String threatLevel; 
 
             /**
-             * AlertType.
+             * The type of the risk.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -499,7 +503,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeMds.
+             * The internal code of the risk type.
              */
             public Builder alertTypeMds(String alertTypeMds) {
                 this.alertTypeMds = alertTypeMds;
@@ -507,7 +511,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account in SIEM.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -515,7 +519,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EventTransferExt.
+             * The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
              */
             public Builder eventTransferExt(String eventTransferExt) {
                 this.eventTransferExt = eventTransferExt;
@@ -523,7 +527,11 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EventTransferSwitch.
+             * Indicates whether the system generates an event for the alert. Valid values:
+             * <p>
+             * 
+             * *   0: no.
+             * *   1: yes.
              */
             public Builder eventTransferSwitch(Integer eventTransferSwitch) {
                 this.eventTransferSwitch = eventTransferSwitch;
@@ -531,7 +539,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EventTransferType.
+             * The event generation method. Valid values:
+             * <p>
+             * 
+             * *   default: The default method is used.
+             * *   singleToSingle: The system generates an event for each alert.
+             * *   allToSingle: The system generates an event for alerts within a period of time.
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -539,7 +552,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the custom rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -547,7 +560,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the custom rule was last updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -555,7 +568,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the custom rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -563,7 +576,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogSource.
+             * The log source of the rule.
              */
             public Builder logSource(String logSource) {
                 this.logSource = logSource;
@@ -571,7 +584,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogSourceMds.
+             * The internal code of the log source.
              */
             public Builder logSourceMds(String logSourceMds) {
                 this.logSourceMds = logSourceMds;
@@ -579,7 +592,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogType.
+             * The log type of the rule.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -587,7 +600,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogTypeMds.
+             * The internal code of the log type.
              */
             public Builder logTypeMds(String logTypeMds) {
                 this.logTypeMds = logTypeMds;
@@ -595,7 +608,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCycle.
+             * The window length of the rule. The HTML escape characters are reversed.
              */
             public Builder queryCycle(String queryCycle) {
                 this.queryCycle = queryCycle;
@@ -603,7 +616,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCondition.
+             * The query condition of the rule in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleCondition(String ruleCondition) {
                 this.ruleCondition = ruleCondition;
@@ -611,7 +624,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDesc.
+             * The description of the rule.
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -619,7 +632,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleGroup.
+             * The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.
              */
             public Builder ruleGroup(String ruleGroup) {
                 this.ruleGroup = ruleGroup;
@@ -627,7 +640,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -635,7 +648,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleThreshold.
+             * The threshold configurations of the rule in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleThreshold(String ruleThreshold) {
                 this.ruleThreshold = ruleThreshold;
@@ -643,7 +656,11 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * *   predefine
+             * *   customize
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -651,7 +668,14 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The rule status. Valid values:
+             * <p>
+             * 
+             * *   0: The rule is in the initial state.
+             * *   10: The simulation data is tested.
+             * *   15: The business data is being tested.
+             * *   20: The business data test ends.
+             * *   100: The rule takes effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -659,7 +683,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * The threat level. Valid values:
+             * <p>
+             * 
+             * *   serious: high
+             * *   suspicious: medium
+             * *   remind: low
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -712,7 +741,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -720,7 +749,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

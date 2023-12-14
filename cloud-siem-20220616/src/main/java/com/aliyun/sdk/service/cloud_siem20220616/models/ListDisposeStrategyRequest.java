@@ -240,7 +240,7 @@ public class ListDisposeStrategyRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -249,7 +249,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * EffectiveStatus.
+         * The status of the policy. Valid values:
+         * <p>
+         * 
+         * *   0: invalid
+         * *   1: valid
          */
         public Builder effectiveStatus(Integer effectiveStatus) {
             this.putBodyParameter("EffectiveStatus", effectiveStatus);
@@ -258,7 +262,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -267,7 +271,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * EntityIdentity.
+         * The feature value of the entity. Fuzzy match is supported.
          */
         public Builder entityIdentity(String entityIdentity) {
             this.putBodyParameter("EntityIdentity", entityIdentity);
@@ -276,7 +280,12 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The entity type of the playbook. Valid values:
+         * <p>
+         * 
+         * *   ip
+         * *   process
+         * *   file
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -285,7 +294,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * Order.
+         * The sort order. Valid values:
+         * <p>
+         * 
+         * *   desc: descending order.
+         * *   asc: ascending order.
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -294,7 +307,12 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * The sort field. Valid values:
+         * <p>
+         * 
+         * *   GmtModified: sorts the policies by update time.
+         * *   GmtCreate: sorts the policies by creation time.
+         * *   FinishTime: sorts the policies by end time.
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -303,7 +321,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -312,7 +330,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * PlaybookName.
+         * The name of the playbook, which is the unique identifier of the playbook.
          */
         public Builder playbookName(String playbookName) {
             this.putBodyParameter("PlaybookName", playbookName);
@@ -321,7 +339,14 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * PlaybookTypes.
+         * The type of the playbook. Valid values:
+         * <p>
+         * 
+         * *   system: user-triggered playbook
+         * *   custom: event-triggered playbook
+         * *   custom_alert: alert-triggered playbook
+         * *   soar-manual: user-run playbook
+         * *   soar-mdr: MDR-run playbook
          */
         public Builder playbookTypes(String playbookTypes) {
             this.putBodyParameter("PlaybookTypes", playbookTypes);
@@ -330,7 +355,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -339,7 +364,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -348,7 +377,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * SophonTaskId.
+         * The ID of the SOAR handling policy.
          */
         public Builder sophonTaskId(String sophonTaskId) {
             this.putBodyParameter("SophonTaskId", sophonTaskId);
@@ -357,7 +386,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

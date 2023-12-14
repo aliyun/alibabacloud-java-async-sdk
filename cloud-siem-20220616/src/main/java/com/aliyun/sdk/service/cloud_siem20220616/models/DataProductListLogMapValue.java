@@ -122,7 +122,7 @@ public class DataProductListLogMapValue extends TeaModel {
         private java.util.List < ExtraParameters> extraParameters; 
 
         /**
-         * LogCode.
+         * The code of the log.
          */
         public Builder logCode(String logCode) {
             this.logCode = logCode;
@@ -130,7 +130,7 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * LogName.
+         * This parameter is deprecated.
          */
         public Builder logName(String logName) {
             this.logName = logName;
@@ -138,7 +138,7 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * LogNameEn.
+         * This parameter is deprecated.
          */
         public Builder logNameEn(String logNameEn) {
             this.logNameEn = logNameEn;
@@ -146,7 +146,7 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * LogNameKey.
+         * The language code of the log that is used to indicate the language in which the log is displayed.
          */
         public Builder logNameKey(String logNameKey) {
             this.logNameKey = logNameKey;
@@ -154,7 +154,11 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the log delivery. Valid values:
+         * <p>
+         * 
+         * *   true: The logs are being delivered.
+         * *   false: The log delivery feature is disabled.
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -162,7 +166,11 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * CanOperateOrNot.
+         * Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder canOperateOrNot(Boolean canOperateOrNot) {
             this.canOperateOrNot = canOperateOrNot;
@@ -170,7 +178,7 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * Topic.
+         * The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.
          */
         public Builder topic(String topic) {
             this.topic = topic;
@@ -178,7 +186,7 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * ExtraParameters.
+         * The extended parameter.
          */
         public Builder extraParameters(java.util.List < ExtraParameters> extraParameters) {
             this.extraParameters = extraParameters;
@@ -230,7 +238,7 @@ public class DataProductListLogMapValue extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The ID of the extended parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -238,7 +246,7 @@ public class DataProductListLogMapValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the extended parameter.
              */
             public Builder value(String value) {
                 this.value = value;

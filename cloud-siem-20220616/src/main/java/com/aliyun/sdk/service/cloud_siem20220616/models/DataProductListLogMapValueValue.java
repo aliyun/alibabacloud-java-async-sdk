@@ -50,7 +50,7 @@ public class DataProductListLogMapValueValue extends TeaModel {
         private String value; 
 
         /**
-         * Key.
+         * The ID of the extended parameter.
          */
         public Builder key(String key) {
             this.key = key;
@@ -58,7 +58,7 @@ public class DataProductListLogMapValueValue extends TeaModel {
         }
 
         /**
-         * Value.
+         * The value of the extended parameter.
          */
         public Builder value(String value) {
             this.value = value;

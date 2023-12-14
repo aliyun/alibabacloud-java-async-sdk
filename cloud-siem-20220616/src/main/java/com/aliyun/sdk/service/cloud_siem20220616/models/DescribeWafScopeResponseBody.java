@@ -86,7 +86,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeWafScopeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account in SIEM.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -190,7 +194,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
             }
 
             /**
-             * Domains.
+             * The domain names that are protected by the WAF instance.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -198,7 +202,7 @@ public class DescribeWafScopeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the WAF instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

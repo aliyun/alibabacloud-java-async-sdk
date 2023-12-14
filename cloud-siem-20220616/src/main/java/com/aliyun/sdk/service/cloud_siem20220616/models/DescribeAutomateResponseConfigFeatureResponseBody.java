@@ -86,7 +86,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             private String valueMds; 
 
             /**
-             * Value.
+             * The enumerated value of the right operand.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -178,7 +182,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * ValueMds.
+             * The internal code of the enumerated value.
              */
             public Builder valueMds(String valueMds) {
                 this.valueMds = valueMds;
@@ -303,7 +307,11 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             private java.util.List < String > supportTag; 
 
             /**
-             * HasRightValue.
+             * Indicates whether the right operand is required. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder hasRightValue(Boolean hasRightValue) {
                 this.hasRightValue = hasRightValue;
@@ -311,7 +319,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * Index.
+             * The position of the operator in the operator list.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -319,7 +327,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * Operator.
+             * The operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -327,7 +335,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * OperatorDescCn.
+             * The description of the operator in Chinese.
              */
             public Builder operatorDescCn(String operatorDescCn) {
                 this.operatorDescCn = operatorDescCn;
@@ -335,7 +343,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * OperatorDescEn.
+             * The description of the operator in English.
              */
             public Builder operatorDescEn(String operatorDescEn) {
                 this.operatorDescEn = operatorDescEn;
@@ -343,7 +351,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * OperatorName.
+             * The display name of the operator.
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -351,7 +359,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * SupportDataType.
+             * The data types that are supported by the current operator. The data types are separated by commas (,).
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -359,7 +367,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * SupportTag.
+             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. This parameter is empty by default.
              */
             public Builder supportTag(java.util.List < String > supportTag) {
                 this.supportTag = supportTag;
@@ -436,7 +444,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             private java.util.List < SupportOperators> supportOperators; 
 
             /**
-             * DataType.
+             * The data type of the condition field in the automated response rule.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -444,7 +452,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * Feature.
+             * The name of the condition field in the automated response rule.
              */
             public Builder feature(String feature) {
                 this.feature = feature;
@@ -452,7 +460,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * RightValueEnums.
+             * The enumerated values of the right operand for the field.
              */
             public Builder rightValueEnums(java.util.List < RightValueEnums> rightValueEnums) {
                 this.rightValueEnums = rightValueEnums;
@@ -460,7 +468,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * SupportOperators.
+             * The operators that are supported for the condition field.
              */
             public Builder supportOperators(java.util.List < SupportOperators> supportOperators) {
                 this.supportOperators = supportOperators;

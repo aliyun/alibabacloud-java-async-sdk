@@ -112,7 +112,15 @@ public class DescribeCloudSiemAssetsRequest extends Request {
         } 
 
         /**
-         * AssetType.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   ip
+         * *   domain
+         * *   url
+         * *   process
+         * *   file
+         * *   host
          */
         public Builder assetType(String assetType) {
             this.putBodyParameter("AssetType", assetType);
@@ -121,7 +129,7 @@ public class DescribeCloudSiemAssetsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -130,7 +138,7 @@ public class DescribeCloudSiemAssetsRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -139,7 +147,7 @@ public class DescribeCloudSiemAssetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -148,7 +156,11 @@ public class DescribeCloudSiemAssetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

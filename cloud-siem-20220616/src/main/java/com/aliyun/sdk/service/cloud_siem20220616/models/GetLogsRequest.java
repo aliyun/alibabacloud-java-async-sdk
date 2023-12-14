@@ -156,7 +156,7 @@ public class GetLogsRequest extends Request {
         } 
 
         /**
-         * From.
+         * The time when the query starts. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder from(Integer from) {
             this.putBodyParameter("From", from);
@@ -165,7 +165,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The page number. Pages start from page 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putBodyParameter("PageIndex", pageIndex);
@@ -174,7 +174,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 0 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -183,7 +183,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * Query.
+         * The search statement or the analytic statement. For more information, see [Log search overview](https://help.aliyun.com/zh/sls/user-guide/log-analysis-overview?spm=a2c4g.11186623.0.i1#t13103.html) and [Log analysis overview](https://help.aliyun.com/zh/sls/user-guide/search-syntax?spm=a2c4g.11186623.0.i0#concept-tnd-1jq-zdb).
          */
         public Builder query(String query) {
             this.putBodyParameter("Query", query);
@@ -192,7 +192,11 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside the Chinese mainland or in the China (Hong Kong) region.
+         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -201,7 +205,11 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * ReverseOrNot.
+         * Specifies whether to sort the results of the log query by time in minutes in descending order. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder reverseOrNot(Boolean reverseOrNot) {
             this.putBodyParameter("ReverseOrNot", reverseOrNot);
@@ -210,7 +218,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * To.
+         * The time when the query ends. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
          */
         public Builder to(Integer to) {
             this.putBodyParameter("To", to);
@@ -219,7 +227,7 @@ public class GetLogsRequest extends Request {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.putBodyParameter("Total", total);

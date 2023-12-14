@@ -86,7 +86,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +210,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
             private String logCode; 
 
             /**
-             * ActivityName.
+             * The type of the log to which the field belongs.
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -214,7 +218,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldDesc.
+             * The internal code of the field description.
              */
             public Builder fieldDesc(String fieldDesc) {
                 this.fieldDesc = fieldDesc;
@@ -222,7 +226,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * The name of the field.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -230,7 +234,11 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldType.
+             * The data type of the field. Valid values:
+             * <p>
+             * 
+             * *   varchar
+             * *   bigint
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -238,7 +246,7 @@ public class DescribeLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The log source to which the field belongs.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;

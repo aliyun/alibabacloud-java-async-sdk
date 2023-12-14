@@ -68,7 +68,7 @@ public class DeleteCustomizeRuleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region in which the service is deployed.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -77,7 +77,7 @@ public class DeleteCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

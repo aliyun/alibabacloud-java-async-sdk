@@ -196,7 +196,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         } 
 
         /**
-         * AlertType.
+         * The alert type.
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -205,7 +205,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -214,7 +214,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -223,7 +223,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the rule.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -232,7 +232,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -241,7 +241,11 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -250,7 +254,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -259,7 +263,11 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   predefine
+         * *   customize
          */
         public Builder ruleType(String ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -268,7 +276,7 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -277,7 +285,14 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the rule. Valid values:
+         * <p>
+         * 
+         * *   0: The rule is in the initial state.
+         * *   10: The simulation data is tested.
+         * *   15: The business data is being tested.
+         * *   20: The business data test ends.
+         * *   100: The rule takes effect.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -286,7 +301,12 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
-         * ThreatLevel.
+         * The risk level. The value is a JSON array. Valid values:
+         * <p>
+         * 
+         * *   serious: high
+         * *   suspicious: medium
+         * *   remind: low
          */
         public Builder threatLevel(java.util.List < String > threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

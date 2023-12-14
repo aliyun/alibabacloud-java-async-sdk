@@ -86,7 +86,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeOperatorsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             private java.util.List < String > supportTag; 
 
             /**
-             * Index.
+             * The position of the operator in the operator list.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -238,7 +242,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -246,7 +250,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorDescCn.
+             * The description of the operator in Chinese.
              */
             public Builder operatorDescCn(String operatorDescCn) {
                 this.operatorDescCn = operatorDescCn;
@@ -254,7 +258,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorDescEn.
+             * The description of the operator in English.
              */
             public Builder operatorDescEn(String operatorDescEn) {
                 this.operatorDescEn = operatorDescEn;
@@ -262,7 +266,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * The display name of the operator.
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -270,7 +274,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDataType.
+             * The data types that are supported by the current operator. The data types are separated by commas (,).
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -278,7 +282,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportTag.
+             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. This parameter is empty by default.
              */
             public Builder supportTag(java.util.List < String > supportTag) {
                 this.supportTag = supportTag;

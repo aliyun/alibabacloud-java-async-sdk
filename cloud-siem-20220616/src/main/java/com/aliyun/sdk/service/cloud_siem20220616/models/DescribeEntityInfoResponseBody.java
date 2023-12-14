@@ -86,7 +86,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
             private java.util.Map < String, ? > tipInfo; 
 
             /**
-             * EntityId.
+             * The logical ID of the entity.
              */
             public Builder entityId(Long entityId) {
                 this.entityId = entityId;
@@ -202,7 +206,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EntityInfo.
+             * The information about the entry.
              */
             public Builder entityInfo(java.util.Map < String, ? > entityInfo) {
                 this.entityInfo = entityInfo;
@@ -210,7 +214,15 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the entity. Valid values:
+             * <p>
+             * 
+             * *   ip
+             * *   domain
+             * *   url
+             * *   process
+             * *   file
+             * *   host
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -218,7 +230,7 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TipInfo.
+             * The information about the risk Intelligence.
              */
             public Builder tipInfo(java.util.Map < String, ? > tipInfo) {
                 this.tipInfo = tipInfo;

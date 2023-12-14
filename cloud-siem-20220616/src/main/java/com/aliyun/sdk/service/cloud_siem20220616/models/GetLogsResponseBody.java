@@ -86,7 +86,7 @@ public class GetLogsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The results of the log query.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class GetLogsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number. Pages start from page 1.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -299,7 +303,11 @@ public class GetLogsResponseBody extends TeaModel {
             private java.util.List < ? > lines; 
 
             /**
-             * CompleteOrNot.
+             * The status of the log query. Valid values:
+             * <p>
+             * 
+             * *   true: The query is complete and the returned result is complete.
+             * *   false: The query is complete but the returned result is incomplete. You must resend the request to obtain the complete result.
              */
             public Builder completeOrNot(Boolean completeOrNot) {
                 this.completeOrNot = completeOrNot;
@@ -307,7 +315,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Cost.
+             * The time period of the log query. Unit: milliseconds.
              */
             public Builder cost(Long cost) {
                 this.cost = cost;
@@ -315,7 +323,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of entries returned.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -323,7 +331,11 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HasSql.
+             * Indicated whether an analytic statement is contained. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder hasSql(Boolean hasSql) {
                 this.hasSql = hasSql;
@@ -331,7 +343,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Keys.
+             * The index fields of the logs.
              */
             public Builder keys(java.util.List < String > keys) {
                 this.keys = keys;
@@ -339,7 +351,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Lines.
+             * The raw data generated in the query.
              */
             public Builder lines(java.util.List < ? > lines) {
                 this.lines = lines;
@@ -392,7 +404,7 @@ public class GetLogsResponseBody extends TeaModel {
             private ResponseData responseData; 
 
             /**
-             * PageInfo.
+             * The result on the current page.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -400,7 +412,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The log.
              */
             public Builder responseData(ResponseData responseData) {
                 this.responseData = responseData;
