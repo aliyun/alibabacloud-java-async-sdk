@@ -156,12 +156,20 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
     private String xForwardedFor;
 
     @Query
+    @NameInMap("XForwardedFor_ClientSrcPort")
+    private String xForwardedForClientSrcPort;
+
+    @Query
     @NameInMap("XForwardedFor_SLBID")
     private String xForwardedForSLBID;
 
     @Query
     @NameInMap("XForwardedFor_SLBIP")
     private String xForwardedForSLBIP;
+
+    @Query
+    @NameInMap("XForwardedFor_SLBPORT")
+    private String xForwardedForSLBPORT;
 
     @Query
     @NameInMap("XForwardedFor_proto")
@@ -202,8 +210,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         this.vServerGroup = builder.vServerGroup;
         this.vServerGroupId = builder.vServerGroupId;
         this.xForwardedFor = builder.xForwardedFor;
+        this.xForwardedForClientSrcPort = builder.xForwardedForClientSrcPort;
         this.xForwardedForSLBID = builder.xForwardedForSLBID;
         this.xForwardedForSLBIP = builder.xForwardedForSLBIP;
+        this.xForwardedForSLBPORT = builder.xForwardedForSLBPORT;
         this.xForwardedForProto = builder.xForwardedForProto;
     }
 
@@ -452,6 +462,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
     }
 
     /**
+     * @return xForwardedForClientSrcPort
+     */
+    public String getXForwardedForClientSrcPort() {
+        return this.xForwardedForClientSrcPort;
+    }
+
+    /**
      * @return xForwardedForSLBID
      */
     public String getXForwardedForSLBID() {
@@ -463,6 +480,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
      */
     public String getXForwardedForSLBIP() {
         return this.xForwardedForSLBIP;
+    }
+
+    /**
+     * @return xForwardedForSLBPORT
+     */
+    public String getXForwardedForSLBPORT() {
+        return this.xForwardedForSLBPORT;
     }
 
     /**
@@ -506,8 +530,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         private String vServerGroup; 
         private String vServerGroupId; 
         private String xForwardedFor; 
+        private String xForwardedForClientSrcPort; 
         private String xForwardedForSLBID; 
         private String xForwardedForSLBIP; 
+        private String xForwardedForSLBPORT; 
         private String xForwardedForProto; 
 
         private Builder() {
@@ -549,8 +575,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
             this.vServerGroup = request.vServerGroup;
             this.vServerGroupId = request.vServerGroupId;
             this.xForwardedFor = request.xForwardedFor;
+            this.xForwardedForClientSrcPort = request.xForwardedForClientSrcPort;
             this.xForwardedForSLBID = request.xForwardedForSLBID;
             this.xForwardedForSLBIP = request.xForwardedForSLBIP;
+            this.xForwardedForSLBPORT = request.xForwardedForSLBPORT;
             this.xForwardedForProto = request.xForwardedForProto;
         } 
 
@@ -974,6 +1002,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
+         * XForwardedFor_ClientSrcPort.
+         */
+        public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
+            this.putQueryParameter("XForwardedFor_ClientSrcPort", xForwardedForClientSrcPort);
+            this.xForwardedForClientSrcPort = xForwardedForClientSrcPort;
+            return this;
+        }
+
+        /**
          * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
          * <p>
          * 
@@ -996,6 +1033,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
             this.putQueryParameter("XForwardedFor_SLBIP", xForwardedForSLBIP);
             this.xForwardedForSLBIP = xForwardedForSLBIP;
+            return this;
+        }
+
+        /**
+         * XForwardedFor_SLBPORT.
+         */
+        public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
+            this.putQueryParameter("XForwardedFor_SLBPORT", xForwardedForSLBPORT);
+            this.xForwardedForSLBPORT = xForwardedForSLBPORT;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers in the primary/secondary server group.
+         * The primary/secondary server groups.
          */
         public Builder masterSlaveServerGroups(MasterSlaveServerGroups masterSlaveServerGroups) {
             this.masterSlaveServerGroups = masterSlaveServerGroups;
@@ -58,7 +58,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The listening port.
+             * The listener port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -118,7 +118,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The listening protocol.
+             * The listener protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -200,7 +200,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private Listeners listeners; 
 
             /**
-             * The list of listeners.
+             * The listeners.
              */
             public Builder listeners(Listeners listeners) {
                 this.listeners = listeners;
@@ -253,7 +253,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag keys.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -261,7 +261,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag values.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -399,7 +399,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the CLB instance was created. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -423,7 +423,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * The tags to add to the resource.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

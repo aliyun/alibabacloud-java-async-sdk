@@ -62,7 +62,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers in the primary/secondary server group.
+         * The backend servers in the primary/secondary server group.
          */
         public Builder masterSlaveBackendServers(MasterSlaveBackendServers masterSlaveBackendServers) {
             this.masterSlaveBackendServers = masterSlaveBackendServers;
@@ -70,7 +70,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the primary/secondary server group.
+         * The primary/secondary server group ID.
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -78,7 +78,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The port number used by the backend server.
+             * The port that is used by the backend server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -213,11 +213,11 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
+             * The service type of the backend server. Valid values:
              * <p>
              * 
-             * *   **ecs**: an ECS instance
-             * *   **eni**: an ENI
+             * *   **ecs**
+             * *   **eni**
              */
             public Builder type(String type) {
                 this.type = type;

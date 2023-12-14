@@ -126,7 +126,7 @@ public class DeleteDomainExtensionRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name extension to be deleted.
+         * The ID of the additional domain name that you want to delete.
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -153,7 +153,7 @@ public class DeleteDomainExtensionRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the SLB instance belongs.
+         * The region ID of the Server Load Balancer (SLB) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

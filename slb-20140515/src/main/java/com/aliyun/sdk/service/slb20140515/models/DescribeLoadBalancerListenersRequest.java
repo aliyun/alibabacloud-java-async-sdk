@@ -210,7 +210,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the listener.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -219,7 +219,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the CLB instance.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -252,10 +252,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.
+         * Valid values: **1** to **100**. If you do not specify this parameter, the default value **20** is used.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -327,7 +327,7 @@ public class DescribeLoadBalancerListenersRequest extends Request {
         }
 
         /**
-         * 标签列表。
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -381,10 +381,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
             private String value; 
 
             /**
-             * 资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,9 +392,10 @@ public class DescribeLoadBalancerListenersRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
+             * The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
              * <p>
-             * 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

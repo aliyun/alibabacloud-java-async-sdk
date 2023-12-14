@@ -1980,7 +1980,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源的标签键。
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1988,7 +1988,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * 资源的标签值。
+             * The tag value.
+             * <p>
+             * 
+             * For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -2637,7 +2640,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * 标签列表。
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

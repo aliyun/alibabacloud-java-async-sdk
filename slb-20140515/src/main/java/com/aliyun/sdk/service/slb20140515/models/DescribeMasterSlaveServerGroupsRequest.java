@@ -168,7 +168,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the primary/secondary server group.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -180,8 +180,8 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
          * Specifies whether to return information about the associated listeners. Valid values:
          * <p>
          * 
-         * *   **true**: returns information about the associated listeners.
-         * *   **false**: does not return information about the associated listeners.
+         * *   **true**
+         * *   **false**
          */
         public Builder includeListener(Boolean includeListener) {
             this.putQueryParameter("IncludeListener", includeListener);
@@ -190,7 +190,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * The CLB instance ID.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -217,7 +217,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the Classic Load Balancer (CLB) instance.
+         * The region ID of the CLB instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,10 +298,10 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys.
+             * The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,10 +309,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.
-             * <p>
-             * 
-             * The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

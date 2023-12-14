@@ -168,7 +168,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the Classic Load Balancer (CLB) instance.
+         * The ID of the SLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -177,46 +177,49 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The list of backend servers in the primary/secondary server group.
+         * The backend servers in the primary/secondary server group.
          * <p>
          * 
          * The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.
          * 
-         * *   **ServerId**: This parameter is required. Specify the ID of the backend server. This parameter must be of the STRING type.
+         * *   **ServerId**: Required. Specify the ID of the backend server. The value must be of the STRING type.
          * 
-         * *   **Port**: This parameter is required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.
+         * *   **Port**: Required. Specify the port that is used by the backend server. The value must be of the INTEGER type. Valid values: **1** to **65535**.
          * 
-         * *   **Weight**: This parameter is required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.
+         * *   **Weight**: Required. Specify the weight of the backend server. The value must be of the INTEGER type. Valid values: **0** to **100**.
          * 
-         * *   **Description**: This parameter is optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).
+         * *   \*\*Description \*\*: Optional. The description of the backend server. The value must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
          * 
-         * *   **ServerType**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:
+         * *   **ServerType**: the type of the backend server. The value must be of the STRING type. Valid values:
          * 
-         *     *   **Master**: primary server
+         *     *   **Master**
          * 
-         *     <!---->
+         * *   **Slave**
          * 
-         *     *   **Slave**: secondary server
+         * *   **Type**: the service type of backend server. The value must be of the STRING type. Valid values:
          * 
-         * *   **Type**: Specify the type of backend server. This parameter must be of the STRING type. Valid values:
+         *     *   **ecs**
+         *     *   **eni**
          * 
-         *     *   **ecs**: an ECS instance
-         *     *   **eni**: an elastic network interface (ENI)
+         * *   **ServerIp**
          * 
-         * *   **ServerIp**: the IP address of the ECS instance or ENI
+         * A primary/secondary server group can contain up to two backend servers.
          * 
-         * A primary/secondary server group can contain at most two backend servers.
-         * 
-         * If you do not set this parameter, an empty primary/secondary server group is created.
+         * If you do not specify this parameter, an empty primary/secondary server group is created.
          * 
          * Examples:
          * 
-         * *   ECS: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"82","ServerType":"Master","Description":"test-112" }, { "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"84","ServerType":"Slave","Description":"test-112" }]`
+         * *   ECS instances:
          * 
-         * <!---->
+         * `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"82","ServerType":"Master","Description":"test-112" }, { "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"84","ServerType":"Slave","Description":"test-112" }]`
          * 
-         * *   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
-         * *   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
+         * *   ENIs:
+         * 
+         *     `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
+         * 
+         * *   IP addresses of ENIs:
+         * 
+         *     `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
          */
         public Builder masterSlaveBackendServers(String masterSlaveBackendServers) {
             this.putQueryParameter("MasterSlaveBackendServers", masterSlaveBackendServers);
@@ -252,7 +255,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
+         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -279,7 +282,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * 标签列表。
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -333,7 +336,10 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * 资源标签键。N的取值范围：**1**~**20**。一旦输入该值，则不允许为空字符串。
+             * <p>
+             * 
+             * 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -341,7 +347,9 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
+             * <p>
+             * 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
              */
             public Builder value(String value) {
                 this.value = value;

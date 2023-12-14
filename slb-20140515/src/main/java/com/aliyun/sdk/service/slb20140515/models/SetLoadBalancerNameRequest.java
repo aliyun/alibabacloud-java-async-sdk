@@ -140,7 +140,7 @@ public class SetLoadBalancerNameRequest extends Request {
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the CLB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -149,7 +149,10 @@ public class SetLoadBalancerNameRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The new name of the CLB instance.
+         * <p>
+         * 
+         * The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
