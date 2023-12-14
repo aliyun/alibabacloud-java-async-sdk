@@ -47,6 +47,10 @@ public class CreateApplicationRequest extends Request {
     private Integer refreshTokenValidity;
 
     @Query
+    @NameInMap("RequiredScopes")
+    private String requiredScopes;
+
+    @Query
     @NameInMap("SecretRequired")
     private Boolean secretRequired;
 
@@ -60,6 +64,7 @@ public class CreateApplicationRequest extends Request {
         this.predefinedScopes = builder.predefinedScopes;
         this.redirectUris = builder.redirectUris;
         this.refreshTokenValidity = builder.refreshTokenValidity;
+        this.requiredScopes = builder.requiredScopes;
         this.secretRequired = builder.secretRequired;
     }
 
@@ -133,6 +138,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return requiredScopes
+     */
+    public String getRequiredScopes() {
+        return this.requiredScopes;
+    }
+
+    /**
      * @return secretRequired
      */
     public Boolean getSecretRequired() {
@@ -148,6 +160,7 @@ public class CreateApplicationRequest extends Request {
         private String predefinedScopes; 
         private String redirectUris; 
         private Integer refreshTokenValidity; 
+        private String requiredScopes; 
         private Boolean secretRequired; 
 
         private Builder() {
@@ -164,6 +177,7 @@ public class CreateApplicationRequest extends Request {
             this.predefinedScopes = request.predefinedScopes;
             this.redirectUris = request.redirectUris;
             this.refreshTokenValidity = request.refreshTokenValidity;
+            this.requiredScopes = request.requiredScopes;
             this.secretRequired = request.secretRequired;
         } 
 
@@ -276,16 +290,23 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * RequiredScopes.
+         */
+        public Builder requiredScopes(String requiredScopes) {
+            this.putQueryParameter("RequiredScopes", requiredScopes);
+            this.requiredScopes = requiredScopes;
+            return this;
+        }
+
+        /**
          * Indicates whether a secret is required. Valid values:
          * <p>
          * 
          * *   true
          * *   false
          * 
-         * > 
-         * 
-         * *   For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
-         * *   For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
+         * >- For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
+         * >- For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
          */
         public Builder secretRequired(Boolean secretRequired) {
             this.putQueryParameter("SecretRequired", secretRequired);

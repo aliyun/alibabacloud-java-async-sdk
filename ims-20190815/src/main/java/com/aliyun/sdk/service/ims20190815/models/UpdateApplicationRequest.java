@@ -42,6 +42,10 @@ public class UpdateApplicationRequest extends Request {
     private Integer newRefreshTokenValidity;
 
     @Query
+    @NameInMap("NewRequiredScopes")
+    private String newRequiredScopes;
+
+    @Query
     @NameInMap("NewSecretRequired")
     private Boolean newSecretRequired;
 
@@ -54,6 +58,7 @@ public class UpdateApplicationRequest extends Request {
         this.newPredefinedScopes = builder.newPredefinedScopes;
         this.newRedirectUris = builder.newRedirectUris;
         this.newRefreshTokenValidity = builder.newRefreshTokenValidity;
+        this.newRequiredScopes = builder.newRequiredScopes;
         this.newSecretRequired = builder.newSecretRequired;
     }
 
@@ -120,6 +125,13 @@ public class UpdateApplicationRequest extends Request {
     }
 
     /**
+     * @return newRequiredScopes
+     */
+    public String getNewRequiredScopes() {
+        return this.newRequiredScopes;
+    }
+
+    /**
      * @return newSecretRequired
      */
     public Boolean getNewSecretRequired() {
@@ -134,6 +146,7 @@ public class UpdateApplicationRequest extends Request {
         private String newPredefinedScopes; 
         private String newRedirectUris; 
         private Integer newRefreshTokenValidity; 
+        private String newRequiredScopes; 
         private Boolean newSecretRequired; 
 
         private Builder() {
@@ -149,6 +162,7 @@ public class UpdateApplicationRequest extends Request {
             this.newPredefinedScopes = request.newPredefinedScopes;
             this.newRedirectUris = request.newRedirectUris;
             this.newRefreshTokenValidity = request.newRefreshTokenValidity;
+            this.newRequiredScopes = request.newRequiredScopes;
             this.newSecretRequired = request.newSecretRequired;
         } 
 
@@ -232,6 +246,15 @@ public class UpdateApplicationRequest extends Request {
         public Builder newRefreshTokenValidity(Integer newRefreshTokenValidity) {
             this.putQueryParameter("NewRefreshTokenValidity", newRefreshTokenValidity);
             this.newRefreshTokenValidity = newRefreshTokenValidity;
+            return this;
+        }
+
+        /**
+         * NewRequiredScopes.
+         */
+        public Builder newRequiredScopes(String newRequiredScopes) {
+            this.putQueryParameter("NewRequiredScopes", newRequiredScopes);
+            this.newRequiredScopes = newRequiredScopes;
             return this;
         }
 

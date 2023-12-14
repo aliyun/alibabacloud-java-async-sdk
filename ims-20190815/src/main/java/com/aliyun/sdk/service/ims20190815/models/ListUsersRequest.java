@@ -91,7 +91,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
+         * The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
          * <p>
          * 
          * Valid values: 1 to 1000. Default value: 1000.
@@ -103,7 +103,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * The tags. A maximum number of 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

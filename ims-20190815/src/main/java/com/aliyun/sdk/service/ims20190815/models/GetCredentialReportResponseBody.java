@@ -105,7 +105,11 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(String isTruncated) {
             this.isTruncated = isTruncated;
@@ -113,7 +117,7 @@ public class GetCredentialReportResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The parameter that is used to obtain the truncated part. This parameter takes effect only when `IsTruncated` is set to true.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

@@ -78,9 +78,13 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Required")
+        private Boolean required;
+
         private PredefinedScope(Builder builder) {
             this.description = builder.description;
             this.name = builder.name;
+            this.required = builder.required;
         }
 
         public static Builder builder() {
@@ -105,9 +109,17 @@ public class CreateApplicationResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
         public static final class Builder {
             private String description; 
             private String name; 
+            private Boolean required; 
 
             /**
              * The description of the permission scope.
@@ -122,6 +134,14 @@ public class CreateApplicationResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Required.
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
                 return this;
             }
 

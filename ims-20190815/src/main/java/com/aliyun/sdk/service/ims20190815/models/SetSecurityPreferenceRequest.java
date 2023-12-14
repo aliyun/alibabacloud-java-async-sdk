@@ -245,7 +245,7 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * The subnet mask that specifies the IP addresses from which you can log on to the Alibaba Cloud Management Console. This parameter takes effect on password-based logon and single sign-on (SSO). However, this parameter does not take effect on API calls that are authenticated by using AccessKey pairs.
+         * The subnet mask that specifies the IP addresses from which you can log on to the Alibaba Cloud Management Console. This parameter takes effect on password-based logon and single sign-on (SSO). This parameter does not take effect on API calls that are authenticated by using AccessKey pairs.
          * <p>
          * 
          * *   If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.
@@ -253,7 +253,7 @@ public class SetSecurityPreferenceRequest extends Request {
          * 
          * If you need to specify multiple subnet masks, separate the subnet masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.
          * 
-         * You can specify up to 25 subnet masks. The total length of the subnet masks can be a maximum of 512 characters.
+         * You can specify up to 40 subnet masks. The total length of the subnet masks can be a maximum of 512 characters.
          */
         public Builder loginNetworkMasks(String loginNetworkMasks) {
             this.putQueryParameter("LoginNetworkMasks", loginNetworkMasks);

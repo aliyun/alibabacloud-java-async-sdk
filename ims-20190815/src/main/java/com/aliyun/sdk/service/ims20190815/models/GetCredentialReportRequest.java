@@ -68,7 +68,10 @@ public class GetCredentialReportRequest extends Request {
         } 
 
         /**
-         * MaxItems.
+         * The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.
+         * <p>
+         * 
+         * Valid values: 1 to 3501. Default value: 3501.
          */
         public Builder maxItems(String maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -77,7 +80,7 @@ public class GetCredentialReportRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

@@ -282,7 +282,7 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the issuer,
+             * The URL of the issuer.
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;

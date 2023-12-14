@@ -94,7 +94,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the RAM user.
+         * The details of the RAM user.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -154,7 +154,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -162,7 +162,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -372,7 +372,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM user was created.
+             * The point in time when the RAM user was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -391,7 +391,7 @@ public class ListUsersResponseBody extends TeaModel {
              * The email address of the RAM user.
              * <p>
              * 
-             * >  This parameter is valid only on the China site (aliyun.com).
+             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -399,7 +399,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the RAM user logged on to the Alibaba Cloud Management Console.
+             * The timestamp when the RAM user last logged on to the console.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -410,7 +410,7 @@ public class ListUsersResponseBody extends TeaModel {
              * The mobile phone number of the RAM user.
              * <p>
              * 
-             * >  This parameter is valid only on the China site (aliyun.com).
+             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -431,7 +431,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of tags.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -439,7 +439,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the RAM user was updated.
+             * The point in time when the information about the RAM user was last modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
