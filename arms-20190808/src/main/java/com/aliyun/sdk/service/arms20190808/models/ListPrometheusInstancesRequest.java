@@ -84,7 +84,18 @@ public class ListPrometheusInstancesRequest extends Request {
         } 
 
         /**
-         * 实例类型
+         * Optional instance types (if left blank, all types of instances will be queried):
+         * <p>
+         * - cloud-product-prometheus 
+         * - ManagedKubernetes
+         * - satellite
+         * - Ask
+         * - remote-write-prometheus
+         * - cloud-monitor-cmee
+         * - ExternalKubernetes
+         * - vpc-prometheus
+         * - cloud-monitor-direct
+         * - Edge Kubernetes
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -93,7 +104,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -84,7 +84,7 @@ public class DeleteEnvironmentRequest extends Request {
         } 
 
         /**
-         * DeletePromInstance.
+         * cascade delete Prometheus instance.
          */
         public Builder deletePromInstance(Boolean deletePromInstance) {
             this.putQueryParameter("DeletePromInstance", deletePromInstance);
@@ -93,7 +93,7 @@ public class DeleteEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -102,7 +102,7 @@ public class DeleteEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

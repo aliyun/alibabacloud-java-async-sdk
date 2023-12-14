@@ -18,6 +18,7 @@ public class GetSyntheticTaskDetailRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
+    @Validation(required = true)
     private String taskId;
 
     private GetSyntheticTaskDetailRequest(Builder builder) {

@@ -157,7 +157,7 @@ public class CreateEnvironmentRequest extends Request {
         } 
 
         /**
-         * Locale, the default is Chinese zh | en.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -166,7 +166,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Resource instance ID bound to the environment, including container instance ID or VpcId.
+         * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -175,7 +175,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment name.
+         * The name of the environment.
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -184,11 +184,12 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment subtypes:
+         * The subtype of the environment. Valid values:
          * <p>
-         * - CS: Currently supports ACK.
-         * - ECS: ECS is currently supported.
-         * - Cloud: Currently supports Cloud.
+         * 
+         * *   CS: Container Service for Kubernetes (ACK)
+         * *   ECS: ECS
+         * *   Cloud: cloud service
          */
         public Builder environmentSubType(String environmentSubType) {
             this.putQueryParameter("EnvironmentSubType", environmentSubType);
@@ -197,11 +198,12 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment type:
+         * The type of the environment. Valid values:
          * <p>
-         * - CS: Container Service.
-         * - ECS.
-         * - Cloud: cloud service.
+         * 
+         * *   CS: Container Service
+         * *   ECS: Elastic Compute Service
+         * *   Cloud: cloud service
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
@@ -228,7 +230,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags to add to the instance.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

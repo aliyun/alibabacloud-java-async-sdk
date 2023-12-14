@@ -470,7 +470,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * AlertPiplines.
+         * Alarm Notification Channel Configuration. Used for compatibility with legacy rules.
          */
         public Builder alertPiplines(String alertPiplines) {
             this.putBodyParameter("AlertPiplines", alertPiplines);
@@ -572,7 +572,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * DataConfig.
+         * Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.
+         * <p>
+         * 
+         * - Fill with zero: 0
+         * - Fill with one: 1
+         * - Fill with null: 2 (default, does not trigger an alarm)
          */
         public Builder dataConfig(String dataConfig) {
             this.putBodyParameter("DataConfig", dataConfig);
@@ -639,7 +644,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * MarkTags.
+         * Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.
          */
         public Builder markTags(java.util.List < MarkTags> markTags) {
             this.putBodyParameter("MarkTags", markTags);
@@ -678,7 +683,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Notice.
+         * Effective Time and Notification Time. Used for compatibility with legacy rules.
          */
         public Builder notice(String notice) {
             this.putBodyParameter("Notice", notice);
@@ -687,7 +692,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * NotifyMode.
+         * Notification Mode. Normal mode or Simplified mode.
          */
         public Builder notifyMode(String notifyMode) {
             this.putBodyParameter("NotifyMode", notifyMode);
@@ -736,7 +741,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -790,7 +795,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The Tag Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -798,7 +803,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * The Tag Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -851,7 +856,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -859,7 +864,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

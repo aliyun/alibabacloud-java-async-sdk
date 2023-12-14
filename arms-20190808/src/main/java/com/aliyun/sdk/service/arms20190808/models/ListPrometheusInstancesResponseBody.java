@@ -74,7 +74,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried Prometheus instances. The value is a JSON string.
+         * The Prometheus instances in the region in the JSON format.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

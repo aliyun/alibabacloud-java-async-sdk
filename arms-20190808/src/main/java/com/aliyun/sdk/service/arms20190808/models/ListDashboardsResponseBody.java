@@ -70,7 +70,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * PrometheusServiceOpened.
+         * The indicators of whether the Prometheus service has been activated.
          */
         public Builder prometheusServiceOpened(String prometheusServiceOpened) {
             this.prometheusServiceOpened = prometheusServiceOpened;

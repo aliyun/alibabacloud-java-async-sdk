@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnvironmentResponseBody} extends {@link TeaModel}
+ * {@link UpdateMetricDropResponseBody} extends {@link TeaModel}
  *
- * <p>CreateEnvironmentResponseBody</p>
+ * <p>UpdateMetricDropResponseBody</p>
  */
-public class CreateEnvironmentResponseBody extends TeaModel {
+public class UpdateMetricDropResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private Long code;
 
     @NameInMap("Data")
     private String data;
@@ -24,25 +24,29 @@ public class CreateEnvironmentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateEnvironmentResponseBody(Builder builder) {
+    @NameInMap("Success")
+    private Boolean success;
+
+    private UpdateMetricDropResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateEnvironmentResponseBody create() {
+    public static UpdateMetricDropResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
@@ -67,22 +71,30 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
-        private Integer code; 
+        private Long code; 
         private String data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * Code.
          */
-        public Builder code(Integer code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The ID of the created environment.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +102,7 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,15 +110,23 @@ public class CreateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateEnvironmentResponseBody build() {
-            return new CreateEnvironmentResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public UpdateMetricDropResponseBody build() {
+            return new UpdateMetricDropResponseBody(this);
         } 
 
     } 

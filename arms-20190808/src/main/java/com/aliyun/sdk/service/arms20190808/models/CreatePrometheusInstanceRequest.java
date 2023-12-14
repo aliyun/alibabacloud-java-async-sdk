@@ -210,7 +210,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * 创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。
+         * To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
+         * <p>
+         * - true
+         * - false
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -219,7 +222,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs��.
+         * The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -237,7 +240,12 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The type of the Prometheus instance. Valid values: remote-write: Prometheus instance for remote write. ecs: Prometheus instance for ECS. cloud-monitor�: Prometheus instance for cloud services in China. cloud-product: Prometheus instance for Alibaba Cloud services outside China. global-view: Prometheus instance for GlobalView. aliyun-cs��: Prometheus instance for Container Service.
+         * Types include:
+         * <p>
+         * - remote-write: General-purpose Instance
+         * - ecs: Prometheus for ECS
+         * - global-view: Global Aggregation Instance
+         * - aliyun-cs: Prometheus Instance for Container Service
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

@@ -50,7 +50,11 @@ public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
         }
 
         /**
-         * Activates the service-linked role AliyunServiceRoleForXtrace for Tracing Analysis.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

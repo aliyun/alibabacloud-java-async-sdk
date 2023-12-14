@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetSyntheticMonitorsRequest extends Request {
     @Query
     @NameInMap("Filter")
+    @Validation(required = true)
     private Filter filter;
 
     @Query
@@ -95,12 +96,15 @@ public class GetSyntheticMonitorsRequest extends Request {
 
     public static class Filter extends TeaModel {
         @NameInMap("MonitorCategory")
+        @Validation(required = true)
         private Integer monitorCategory;
 
         @NameInMap("Network")
+        @Validation(required = true)
         private Integer network;
 
         @NameInMap("TaskType")
+        @Validation(required = true)
         private Integer taskType;
 
         private Filter(Builder builder) {

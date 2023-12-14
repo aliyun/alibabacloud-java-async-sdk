@@ -220,6 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAppApiByPageResponse> getAppApiByPage(GetAppApiByPageRequest request);
 
+    CompletableFuture<GetAppJVMConfigResponse> getAppJVMConfig(GetAppJVMConfigRequest request);
+
     CompletableFuture<GetAuthTokenResponse> getAuthToken(GetAuthTokenRequest request);
 
     CompletableFuture<GetCloudClusterAllUrlResponse> getCloudClusterAllUrl(GetCloudClusterAllUrlRequest request);
@@ -517,6 +519,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
 
     CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request);
+
+    CompletableFuture<UpdateMetricDropResponse> updateMetricDrop(UpdateMetricDropRequest request);
 
     CompletableFuture<UpdatePrometheusAlertRuleResponse> updatePrometheusAlertRule(UpdatePrometheusAlertRuleRequest request);
 

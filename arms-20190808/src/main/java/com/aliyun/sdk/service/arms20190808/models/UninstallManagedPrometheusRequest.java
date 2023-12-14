@@ -32,7 +32,6 @@ public class UninstallManagedPrometheusRequest extends Request {
 
     @Query
     @NameInMap("VpcId")
-    @Validation(required = true)
     private String vpcId;
 
     private UninstallManagedPrometheusRequest(Builder builder) {

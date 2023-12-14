@@ -493,6 +493,9 @@ public class ListAlertsResponseBody extends TeaModel {
 
     }
     public static class ListAlerts extends TeaModel {
+        @NameInMap("AcknowledgeTime")
+        private Long acknowledgeTime;
+
         @NameInMap("Activities")
         private java.util.List < Activities> activities;
 
@@ -508,11 +511,26 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("Describe")
+        private String describe;
+
         @NameInMap("DispatchRuleId")
         private Float dispatchRuleId;
 
         @NameInMap("DispatchRuleName")
         private String dispatchRuleName;
+
+        @NameInMap("Handler")
+        private String handler;
+
+        @NameInMap("NotifyRobots")
+        private String notifyRobots;
+
+        @NameInMap("Owner")
+        private String owner;
+
+        @NameInMap("RecoverTime")
+        private Long recoverTime;
 
         @NameInMap("Severity")
         private String severity;
@@ -524,13 +542,19 @@ public class ListAlertsResponseBody extends TeaModel {
         private Long state;
 
         private ListAlerts(Builder builder) {
+            this.acknowledgeTime = builder.acknowledgeTime;
             this.activities = builder.activities;
             this.alertEvents = builder.alertEvents;
             this.alertId = builder.alertId;
             this.alertName = builder.alertName;
             this.createTime = builder.createTime;
+            this.describe = builder.describe;
             this.dispatchRuleId = builder.dispatchRuleId;
             this.dispatchRuleName = builder.dispatchRuleName;
+            this.handler = builder.handler;
+            this.notifyRobots = builder.notifyRobots;
+            this.owner = builder.owner;
+            this.recoverTime = builder.recoverTime;
             this.severity = builder.severity;
             this.solution = builder.solution;
             this.state = builder.state;
@@ -542,6 +566,13 @@ public class ListAlertsResponseBody extends TeaModel {
 
         public static ListAlerts create() {
             return builder().build();
+        }
+
+        /**
+         * @return acknowledgeTime
+         */
+        public Long getAcknowledgeTime() {
+            return this.acknowledgeTime;
         }
 
         /**
@@ -580,6 +611,13 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return describe
+         */
+        public String getDescribe() {
+            return this.describe;
+        }
+
+        /**
          * @return dispatchRuleId
          */
         public Float getDispatchRuleId() {
@@ -591,6 +629,34 @@ public class ListAlertsResponseBody extends TeaModel {
          */
         public String getDispatchRuleName() {
             return this.dispatchRuleName;
+        }
+
+        /**
+         * @return handler
+         */
+        public String getHandler() {
+            return this.handler;
+        }
+
+        /**
+         * @return notifyRobots
+         */
+        public String getNotifyRobots() {
+            return this.notifyRobots;
+        }
+
+        /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
+         * @return recoverTime
+         */
+        public Long getRecoverTime() {
+            return this.recoverTime;
         }
 
         /**
@@ -615,16 +681,30 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long acknowledgeTime; 
             private java.util.List < Activities> activities; 
             private java.util.List < AlertEvents> alertEvents; 
             private Long alertId; 
             private String alertName; 
             private String createTime; 
+            private String describe; 
             private Float dispatchRuleId; 
             private String dispatchRuleName; 
+            private String handler; 
+            private String notifyRobots; 
+            private String owner; 
+            private Long recoverTime; 
             private String severity; 
             private String solution; 
             private Long state; 
+
+            /**
+             * AcknowledgeTime.
+             */
+            public Builder acknowledgeTime(Long acknowledgeTime) {
+                this.acknowledgeTime = acknowledgeTime;
+                return this;
+            }
 
             /**
              * The list of activities.
@@ -667,6 +747,14 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
+             * Describe.
+             */
+            public Builder describe(String describe) {
+                this.describe = describe;
+                return this;
+            }
+
+            /**
              * The ID of the notification policy.
              */
             public Builder dispatchRuleId(Float dispatchRuleId) {
@@ -679,6 +767,38 @@ public class ListAlertsResponseBody extends TeaModel {
              */
             public Builder dispatchRuleName(String dispatchRuleName) {
                 this.dispatchRuleName = dispatchRuleName;
+                return this;
+            }
+
+            /**
+             * Handler.
+             */
+            public Builder handler(String handler) {
+                this.handler = handler;
+                return this;
+            }
+
+            /**
+             * NotifyRobots.
+             */
+            public Builder notifyRobots(String notifyRobots) {
+                this.notifyRobots = notifyRobots;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
+             * RecoverTime.
+             */
+            public Builder recoverTime(Long recoverTime) {
+                this.recoverTime = recoverTime;
                 return this;
             }
 

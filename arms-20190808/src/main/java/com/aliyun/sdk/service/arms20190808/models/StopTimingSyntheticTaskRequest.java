@@ -18,6 +18,7 @@ public class StopTimingSyntheticTaskRequest extends Request {
 
     @Query
     @NameInMap("TaskIds")
+    @Validation(required = true)
     private java.util.List < String > taskIds;
 
     private StopTimingSyntheticTaskRequest(Builder builder) {
@@ -68,7 +69,7 @@ public class StopTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +78,7 @@ public class StopTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * The task IDs.
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");

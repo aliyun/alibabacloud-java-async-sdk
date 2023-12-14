@@ -7,29 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UninstallPromClusterRequest} extends {@link RequestModel}
+ * {@link UpdateMetricDropRequest} extends {@link RequestModel}
  *
- * <p>UninstallPromClusterRequest</p>
+ * <p>UpdateMetricDropRequest</p>
  */
-public class UninstallPromClusterRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
-    private String aliyunLang;
-
+public class UpdateMetricDropRequest extends Request {
     @Query
     @NameInMap("ClusterId")
-    @Validation(required = true)
     private String clusterId;
 
     @Query
+    @NameInMap("MetricDrop")
+    private String metricDrop;
+
+    @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
-    private UninstallPromClusterRequest(Builder builder) {
+    private UpdateMetricDropRequest(Builder builder) {
         super(builder);
-        this.aliyunLang = builder.aliyunLang;
         this.clusterId = builder.clusterId;
+        this.metricDrop = builder.metricDrop;
         this.regionId = builder.regionId;
     }
 
@@ -37,20 +35,13 @@ public class UninstallPromClusterRequest extends Request {
         return new Builder();
     }
 
-    public static UninstallPromClusterRequest create() {
+    public static UpdateMetricDropRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return aliyunLang
-     */
-    public String getAliyunLang() {
-        return this.aliyunLang;
     }
 
     /**
@@ -61,42 +52,37 @@ public class UninstallPromClusterRequest extends Request {
     }
 
     /**
+     * @return metricDrop
+     */
+    public String getMetricDrop() {
+        return this.metricDrop;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<UninstallPromClusterRequest, Builder> {
-        private String aliyunLang; 
+    public static final class Builder extends Request.Builder<UpdateMetricDropRequest, Builder> {
         private String clusterId; 
+        private String metricDrop; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UninstallPromClusterRequest request) {
+        private Builder(UpdateMetricDropRequest request) {
             super(request);
-            this.aliyunLang = request.aliyunLang;
             this.clusterId = request.clusterId;
+            this.metricDrop = request.metricDrop;
             this.regionId = request.regionId;
         } 
 
         /**
-         * Language environment(If left blank, defaults to zh):
-         * <p>
-         * - zh
-         * - en
-         */
-        public Builder aliyunLang(String aliyunLang) {
-            this.putQueryParameter("AliyunLang", aliyunLang);
-            this.aliyunLang = aliyunLang;
-            return this;
-        }
-
-        /**
-         * The cluster ID.
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -105,7 +91,16 @@ public class UninstallPromClusterRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * MetricDrop.
+         */
+        public Builder metricDrop(String metricDrop) {
+            this.putQueryParameter("MetricDrop", metricDrop);
+            this.metricDrop = metricDrop;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,8 +109,8 @@ public class UninstallPromClusterRequest extends Request {
         }
 
         @Override
-        public UninstallPromClusterRequest build() {
-            return new UninstallPromClusterRequest(this);
+        public UpdateMetricDropRequest build() {
+            return new UpdateMetricDropRequest(this);
         } 
 
     } 

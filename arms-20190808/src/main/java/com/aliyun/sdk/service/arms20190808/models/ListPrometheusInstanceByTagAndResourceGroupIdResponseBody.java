@@ -173,6 +173,9 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     }
     public static class PrometheusInstances extends TeaModel {
+        @NameInMap("AuthToken")
+        private String authToken;
+
         @NameInMap("ClusterId")
         private String clusterId;
 
@@ -185,11 +188,35 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
+        @NameInMap("HttpApiInterUrl")
+        private String httpApiInterUrl;
+
+        @NameInMap("HttpApiIntraUrl")
+        private String httpApiIntraUrl;
+
         @NameInMap("PaymentType")
         private String paymentType;
 
+        @NameInMap("PushGatewayInterUrl")
+        private String pushGatewayInterUrl;
+
+        @NameInMap("PushGatewayIntraUrl")
+        private String pushGatewayIntraUrl;
+
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("RemoteReadInterUrl")
+        private String remoteReadInterUrl;
+
+        @NameInMap("RemoteReadIntraUrl")
+        private String remoteReadIntraUrl;
+
+        @NameInMap("RemoteWriteInterUrl")
+        private String remoteWriteInterUrl;
+
+        @NameInMap("RemoteWriteIntraUrl")
+        private String remoteWriteIntraUrl;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -216,12 +243,21 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         private String vpcId;
 
         private PrometheusInstances(Builder builder) {
+            this.authToken = builder.authToken;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.clusterType = builder.clusterType;
             this.grafanaInstanceId = builder.grafanaInstanceId;
+            this.httpApiInterUrl = builder.httpApiInterUrl;
+            this.httpApiIntraUrl = builder.httpApiIntraUrl;
             this.paymentType = builder.paymentType;
+            this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
+            this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
             this.regionId = builder.regionId;
+            this.remoteReadInterUrl = builder.remoteReadInterUrl;
+            this.remoteReadIntraUrl = builder.remoteReadIntraUrl;
+            this.remoteWriteInterUrl = builder.remoteWriteInterUrl;
+            this.remoteWriteIntraUrl = builder.remoteWriteIntraUrl;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
             this.securityGroupId = builder.securityGroupId;
@@ -238,6 +274,13 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
         public static PrometheusInstances create() {
             return builder().build();
+        }
+
+        /**
+         * @return authToken
+         */
+        public String getAuthToken() {
+            return this.authToken;
         }
 
         /**
@@ -269,6 +312,20 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
+         * @return httpApiInterUrl
+         */
+        public String getHttpApiInterUrl() {
+            return this.httpApiInterUrl;
+        }
+
+        /**
+         * @return httpApiIntraUrl
+         */
+        public String getHttpApiIntraUrl() {
+            return this.httpApiIntraUrl;
+        }
+
+        /**
          * @return paymentType
          */
         public String getPaymentType() {
@@ -276,10 +333,52 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
+         * @return pushGatewayInterUrl
+         */
+        public String getPushGatewayInterUrl() {
+            return this.pushGatewayInterUrl;
+        }
+
+        /**
+         * @return pushGatewayIntraUrl
+         */
+        public String getPushGatewayIntraUrl() {
+            return this.pushGatewayIntraUrl;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return remoteReadInterUrl
+         */
+        public String getRemoteReadInterUrl() {
+            return this.remoteReadInterUrl;
+        }
+
+        /**
+         * @return remoteReadIntraUrl
+         */
+        public String getRemoteReadIntraUrl() {
+            return this.remoteReadIntraUrl;
+        }
+
+        /**
+         * @return remoteWriteInterUrl
+         */
+        public String getRemoteWriteInterUrl() {
+            return this.remoteWriteInterUrl;
+        }
+
+        /**
+         * @return remoteWriteIntraUrl
+         */
+        public String getRemoteWriteIntraUrl() {
+            return this.remoteWriteIntraUrl;
         }
 
         /**
@@ -339,12 +438,21 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         public static final class Builder {
+            private String authToken; 
             private String clusterId; 
             private String clusterName; 
             private String clusterType; 
             private String grafanaInstanceId; 
+            private String httpApiInterUrl; 
+            private String httpApiIntraUrl; 
             private String paymentType; 
+            private String pushGatewayInterUrl; 
+            private String pushGatewayIntraUrl; 
             private String regionId; 
+            private String remoteReadInterUrl; 
+            private String remoteReadIntraUrl; 
+            private String remoteWriteInterUrl; 
+            private String remoteWriteIntraUrl; 
             private String resourceGroupId; 
             private String resourceType; 
             private String securityGroupId; 
@@ -353,6 +461,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String userId; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * AuthToken.
+             */
+            public Builder authToken(String authToken) {
+                this.authToken = authToken;
+                return this;
+            }
 
             /**
              * The ID of the Prometheus instance.
@@ -394,6 +510,22 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
+             * HttpApiInterUrl.
+             */
+            public Builder httpApiInterUrl(String httpApiInterUrl) {
+                this.httpApiInterUrl = httpApiInterUrl;
+                return this;
+            }
+
+            /**
+             * HttpApiIntraUrl.
+             */
+            public Builder httpApiIntraUrl(String httpApiIntraUrl) {
+                this.httpApiIntraUrl = httpApiIntraUrl;
+                return this;
+            }
+
+            /**
              * The billing method. Valid values:
              * <p>
              * 
@@ -406,10 +538,58 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
+             * PushGatewayInterUrl.
+             */
+            public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
+                this.pushGatewayInterUrl = pushGatewayInterUrl;
+                return this;
+            }
+
+            /**
+             * PushGatewayIntraUrl.
+             */
+            public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
+                this.pushGatewayIntraUrl = pushGatewayIntraUrl;
+                return this;
+            }
+
+            /**
              * The region ID of the Prometheus instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RemoteReadInterUrl.
+             */
+            public Builder remoteReadInterUrl(String remoteReadInterUrl) {
+                this.remoteReadInterUrl = remoteReadInterUrl;
+                return this;
+            }
+
+            /**
+             * RemoteReadIntraUrl.
+             */
+            public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
+                this.remoteReadIntraUrl = remoteReadIntraUrl;
+                return this;
+            }
+
+            /**
+             * RemoteWriteInterUrl.
+             */
+            public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
+                this.remoteWriteInterUrl = remoteWriteInterUrl;
+                return this;
+            }
+
+            /**
+             * RemoteWriteIntraUrl.
+             */
+            public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
+                this.remoteWriteIntraUrl = remoteWriteIntraUrl;
                 return this;
             }
 

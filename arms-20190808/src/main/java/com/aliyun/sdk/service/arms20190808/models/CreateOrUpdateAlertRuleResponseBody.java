@@ -741,7 +741,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the filter condition.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1266,7 +1266,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyMode.
+             * Notification Mode.
              */
             public Builder notifyMode(String notifyMode) {
                 this.notifyMode = notifyMode;
@@ -1306,7 +1306,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

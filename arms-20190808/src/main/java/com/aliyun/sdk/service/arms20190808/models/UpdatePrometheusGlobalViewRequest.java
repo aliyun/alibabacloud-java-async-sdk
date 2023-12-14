@@ -141,7 +141,10 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * 创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。
+         * To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
+         * <p>
+         * - true
+         * - false
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -159,7 +162,7 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the global aggregation instance.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -168,7 +171,7 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * MostRegionId.
+         * The region ID of the global aggregation instance.
          */
         public Builder mostRegionId(String mostRegionId) {
             this.putQueryParameter("MostRegionId", mostRegionId);
