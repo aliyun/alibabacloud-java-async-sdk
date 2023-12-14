@@ -36,7 +36,6 @@ public class StopDesktopsRequest extends Request {
 
     @Query
     @NameInMap("LoginToken")
-    @Validation(required = true)
     private String loginToken;
 
     @Query
@@ -48,6 +47,10 @@ public class StopDesktopsRequest extends Request {
     @NameInMap("SessionId")
     private String sessionId;
 
+    @Query
+    @NameInMap("SessionToken")
+    private String sessionToken;
+
     private StopDesktopsRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
@@ -58,6 +61,7 @@ public class StopDesktopsRequest extends Request {
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.sessionToken = builder.sessionToken;
     }
 
     public static Builder builder() {
@@ -129,6 +133,13 @@ public class StopDesktopsRequest extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return sessionToken
+     */
+    public String getSessionToken() {
+        return this.sessionToken;
+    }
+
     public static final class Builder extends Request.Builder<StopDesktopsRequest, Builder> {
         private String clientId; 
         private String clientOS; 
@@ -138,6 +149,7 @@ public class StopDesktopsRequest extends Request {
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
+        private String sessionToken; 
 
         private Builder() {
             super();
@@ -153,10 +165,11 @@ public class StopDesktopsRequest extends Request {
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.sessionToken = request.sessionToken;
         } 
 
         /**
-         * The ID of the client.
+         * The client ID. The system generates a unique ID for each client.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -165,7 +178,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The OS used by the client.
+         * The client OS.
          */
         public Builder clientOS(String clientOS) {
             this.putQueryParameter("ClientOS", clientOS);
@@ -174,7 +187,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +196,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The version of the client.
+         * The client version.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -192,7 +205,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of cloud desktops. You can specify most at 20 IDs of cloud desktops.
+         * The cloud desktop IDs. You can specify 1 to 20 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -201,7 +214,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The logon credential.
+         * The logon token.
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -210,7 +223,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,11 +232,20 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the session.
+         * The session ID.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * The logon token.
+         */
+        public Builder sessionToken(String sessionToken) {
+            this.putQueryParameter("SessionToken", sessionToken);
+            this.sessionToken = sessionToken;
             return this;
         }
 

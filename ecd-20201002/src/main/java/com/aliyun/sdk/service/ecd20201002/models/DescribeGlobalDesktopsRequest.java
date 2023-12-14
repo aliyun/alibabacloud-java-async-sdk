@@ -42,6 +42,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
     private String keyword;
 
     @Query
+    @NameInMap("LoginRegionId")
+    private String loginRegionId;
+
+    @Query
     @NameInMap("LoginToken")
     @Validation(required = true)
     private String loginToken;
@@ -95,6 +99,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         this.desktopStatus = builder.desktopStatus;
         this.directoryId = builder.directoryId;
         this.keyword = builder.keyword;
+        this.loginRegionId = builder.loginRegionId;
         this.loginToken = builder.loginToken;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -168,6 +173,13 @@ public class DescribeGlobalDesktopsRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return loginRegionId
+     */
+    public String getLoginRegionId() {
+        return this.loginRegionId;
     }
 
     /**
@@ -255,6 +267,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         private String desktopStatus; 
         private String directoryId; 
         private String keyword; 
+        private String loginRegionId; 
         private String loginToken; 
         private Integer maxResults; 
         private String nextToken; 
@@ -280,6 +293,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
             this.desktopStatus = request.desktopStatus;
             this.directoryId = request.directoryId;
             this.keyword = request.keyword;
+            this.loginRegionId = request.loginRegionId;
             this.loginToken = request.loginToken;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -348,11 +362,20 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * 关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * LoginRegionId.
+         */
+        public Builder loginRegionId(String loginRegionId) {
+            this.putQueryParameter("LoginRegionId", loginRegionId);
+            this.loginRegionId = loginRegionId;
             return this;
         }
 

@@ -40,6 +40,10 @@ public class ApproveFotaUpdateRequest extends Request {
     @NameInMap("SessionId")
     private String sessionId;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private ApproveFotaUpdateRequest(Builder builder) {
         super(builder);
         this.appVersion = builder.appVersion;
@@ -48,6 +52,7 @@ public class ApproveFotaUpdateRequest extends Request {
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class ApproveFotaUpdateRequest extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<ApproveFotaUpdateRequest, Builder> {
         private String appVersion; 
         private String clientId; 
@@ -112,6 +124,7 @@ public class ApproveFotaUpdateRequest extends Request {
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -125,6 +138,7 @@ public class ApproveFotaUpdateRequest extends Request {
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class ApproveFotaUpdateRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

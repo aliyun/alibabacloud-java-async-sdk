@@ -142,7 +142,7 @@ public class RefreshLoginTokenRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud Workspace client. The ID is unique.
+         * ClientId.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -151,7 +151,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * > This parameter is not available to the public.
+         * DirectoryId.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -160,7 +160,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * The name of the end user.
+         * EndUserId.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -169,7 +169,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * The logon token.
+         * LoginToken.
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -178,7 +178,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * OfficeSiteId.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -187,7 +187,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +196,7 @@ public class RefreshLoginTokenRequest extends Request {
         }
 
         /**
-         * The ID of the session.
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

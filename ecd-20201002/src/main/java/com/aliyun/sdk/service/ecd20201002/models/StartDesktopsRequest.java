@@ -156,7 +156,7 @@ public class StartDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the client.
+         * The ID of the request.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -174,7 +174,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +183,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The version of the client.
+         * StartDesktops
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -192,7 +192,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.
+         * DesktopId.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -201,7 +201,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The logon credential.
+         * The ID of cloud desktop N. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -210,7 +210,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The logon credential.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +219,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the session.
+         * The operation that you want to perform. Set the value to StartDesktops.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

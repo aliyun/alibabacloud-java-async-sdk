@@ -50,7 +50,7 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         private Token token; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

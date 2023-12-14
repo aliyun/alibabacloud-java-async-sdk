@@ -334,7 +334,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * This is a parameter only for internal use.
+         * > This is a parameter only for internal use.
          */
         public Builder windowDisplayMode(String windowDisplayMode) {
             this.windowDisplayMode = windowDisplayMode;

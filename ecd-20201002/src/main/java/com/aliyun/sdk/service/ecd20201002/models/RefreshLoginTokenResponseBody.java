@@ -50,7 +50,7 @@ public class RefreshLoginTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logon token.
+         * LoginToken.
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
@@ -58,7 +58,7 @@ public class RefreshLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

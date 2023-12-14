@@ -235,10 +235,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
-      *
-     */
     @Override
     public CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request) {
         try {
@@ -338,8 +334,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * If the call is successful, the cloud desktops enter the Running state.
+      * The ID of the client.
       *
      */
     @Override
@@ -371,7 +366,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
       * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
       *
      */

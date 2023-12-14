@@ -31,6 +31,10 @@ public class StartRecordContentRequest extends Request {
     private String desktopId;
 
     @Query
+    @NameInMap("FilePath")
+    private String filePath;
+
+    @Query
     @NameInMap("LoginToken")
     @Validation(required = true)
     private String loginToken;
@@ -51,6 +55,7 @@ public class StartRecordContentRequest extends Request {
         this.clientOS = builder.clientOS;
         this.clientVersion = builder.clientVersion;
         this.desktopId = builder.desktopId;
+        this.filePath = builder.filePath;
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
@@ -98,6 +103,13 @@ public class StartRecordContentRequest extends Request {
     }
 
     /**
+     * @return filePath
+     */
+    public String getFilePath() {
+        return this.filePath;
+    }
+
+    /**
      * @return loginToken
      */
     public String getLoginToken() {
@@ -123,6 +135,7 @@ public class StartRecordContentRequest extends Request {
         private String clientOS; 
         private String clientVersion; 
         private String desktopId; 
+        private String filePath; 
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
@@ -137,6 +150,7 @@ public class StartRecordContentRequest extends Request {
             this.clientOS = request.clientOS;
             this.clientVersion = request.clientVersion;
             this.desktopId = request.desktopId;
+            this.filePath = request.filePath;
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
@@ -175,6 +189,15 @@ public class StartRecordContentRequest extends Request {
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * FilePath.
+         */
+        public Builder filePath(String filePath) {
+            this.putQueryParameter("FilePath", filePath);
+            this.filePath = filePath;
             return this;
         }
 

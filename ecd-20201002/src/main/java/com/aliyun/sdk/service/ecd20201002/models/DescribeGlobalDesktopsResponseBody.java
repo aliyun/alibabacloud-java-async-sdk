@@ -130,7 +130,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ClientType.
+             * 客户端类型，取值：
+             * <p>
+             * 
+             * - macos：Mac客户端
+             * - ios：IOS客户端
+             * - android：Android客户端
+             * - html5：Web客户端
+             * - windows：Windows客户端
+             * - linux：Linux客户端
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -138,7 +146,11 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * 客户端状态，取值：
+             * <p>
+             * 
+             * - ON：允许登录
+             * - OFF：不允许登录
              */
             public Builder status(String status) {
                 this.status = status;
@@ -153,14 +165,23 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class DesktopTimers extends TeaModel {
+        @NameInMap("AllowClientSetting")
+        private Boolean allowClientSetting;
+
         @NameInMap("CronExpression")
         private String cronExpression;
 
         @NameInMap("Enforce")
         private Boolean enforce;
 
+        @NameInMap("ExecutionTime")
+        private String executionTime;
+
         @NameInMap("Interval")
         private Integer interval;
+
+        @NameInMap("OperationType")
+        private String operationType;
 
         @NameInMap("ResetType")
         private String resetType;
@@ -169,9 +190,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String timerType;
 
         private DesktopTimers(Builder builder) {
+            this.allowClientSetting = builder.allowClientSetting;
             this.cronExpression = builder.cronExpression;
             this.enforce = builder.enforce;
+            this.executionTime = builder.executionTime;
             this.interval = builder.interval;
+            this.operationType = builder.operationType;
             this.resetType = builder.resetType;
             this.timerType = builder.timerType;
         }
@@ -182,6 +206,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
         public static DesktopTimers create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowClientSetting
+         */
+        public Boolean getAllowClientSetting() {
+            return this.allowClientSetting;
         }
 
         /**
@@ -199,10 +230,24 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return executionTime
+         */
+        public String getExecutionTime() {
+            return this.executionTime;
+        }
+
+        /**
          * @return interval
          */
         public Integer getInterval() {
             return this.interval;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
         }
 
         /**
@@ -220,11 +265,22 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowClientSetting; 
             private String cronExpression; 
             private Boolean enforce; 
+            private String executionTime; 
             private Integer interval; 
+            private String operationType; 
             private String resetType; 
             private String timerType; 
+
+            /**
+             * AllowClientSetting.
+             */
+            public Builder allowClientSetting(Boolean allowClientSetting) {
+                this.allowClientSetting = allowClientSetting;
+                return this;
+            }
 
             /**
              * CronExpression.
@@ -243,10 +299,26 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * ExecutionTime.
+             */
+            public Builder executionTime(String executionTime) {
+                this.executionTime = executionTime;
+                return this;
+            }
+
+            /**
              * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
                 return this;
             }
 
@@ -373,6 +445,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNote")
         private String releaseNote;
 
+        @NameInMap("ReleaseNoteEn")
+        private String releaseNoteEn;
+
+        @NameInMap("ReleaseNoteJp")
+        private String releaseNoteJp;
+
         @NameInMap("Size")
         private String size;
 
@@ -383,6 +461,8 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.newAppVersion = builder.newAppVersion;
             this.project = builder.project;
             this.releaseNote = builder.releaseNote;
+            this.releaseNoteEn = builder.releaseNoteEn;
+            this.releaseNoteJp = builder.releaseNoteJp;
             this.size = builder.size;
         }
 
@@ -437,6 +517,20 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return releaseNoteEn
+         */
+        public String getReleaseNoteEn() {
+            return this.releaseNoteEn;
+        }
+
+        /**
+         * @return releaseNoteJp
+         */
+        public String getReleaseNoteJp() {
+            return this.releaseNoteJp;
+        }
+
+        /**
          * @return size
          */
         public String getSize() {
@@ -450,6 +544,8 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String newAppVersion; 
             private String project; 
             private String releaseNote; 
+            private String releaseNoteEn; 
+            private String releaseNoteJp; 
             private String size; 
 
             /**
@@ -497,6 +593,22 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
+                return this;
+            }
+
+            /**
+             * ReleaseNoteEn.
+             */
+            public Builder releaseNoteEn(String releaseNoteEn) {
+                this.releaseNoteEn = releaseNoteEn;
+                return this;
+            }
+
+            /**
+             * ReleaseNoteJp.
+             */
+            public Builder releaseNoteJp(String releaseNoteJp) {
+                this.releaseNoteJp = releaseNoteJp;
                 return this;
             }
 
@@ -631,6 +743,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("GpuMemory")
         private Integer gpuMemory;
 
+        @NameInMap("HibernationBeta")
+        private Boolean hibernationBeta;
+
         @NameInMap("HostName")
         private String hostName;
 
@@ -655,8 +770,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteId")
         private String officeSiteId;
 
+        @NameInMap("Os")
+        private String os;
+
         @NameInMap("OsType")
         private String osType;
+
+        @NameInMap("Platform")
+        private String platform;
 
         @NameInMap("PolicyGroupId")
         private String policyGroupId;
@@ -670,8 +791,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("SessionType")
+        private String sessionType;
+
         @NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
+
+        @NameInMap("SupportHibernation")
+        private Boolean supportHibernation;
 
         @NameInMap("UserCustomName")
         private String userCustomName;
@@ -695,6 +822,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.fotaUpdate = builder.fotaUpdate;
             this.gpuMemory = builder.gpuMemory;
+            this.hibernationBeta = builder.hibernationBeta;
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
             this.lastStartTime = builder.lastStartTime;
@@ -703,12 +831,16 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.networkInterfaceIp = builder.networkInterfaceIp;
             this.officeSiteId = builder.officeSiteId;
+            this.os = builder.os;
             this.osType = builder.osType;
+            this.platform = builder.platform;
             this.policyGroupId = builder.policyGroupId;
             this.protocolType = builder.protocolType;
             this.realDesktopId = builder.realDesktopId;
             this.regionId = builder.regionId;
+            this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
+            this.supportHibernation = builder.supportHibernation;
             this.userCustomName = builder.userCustomName;
         }
 
@@ -847,6 +979,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hibernationBeta
+         */
+        public Boolean getHibernationBeta() {
+            return this.hibernationBeta;
+        }
+
+        /**
          * @return hostName
          */
         public String getHostName() {
@@ -903,10 +1042,24 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return os
+         */
+        public String getOs() {
+            return this.os;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -938,10 +1091,24 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionType
+         */
+        public String getSessionType() {
+            return this.sessionType;
+        }
+
+        /**
          * @return sessions
          */
         public java.util.List < Sessions> getSessions() {
             return this.sessions;
+        }
+
+        /**
+         * @return supportHibernation
+         */
+        public Boolean getSupportHibernation() {
+            return this.supportHibernation;
         }
 
         /**
@@ -970,6 +1137,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String expiredTime; 
             private FotaUpdate fotaUpdate; 
             private Integer gpuMemory; 
+            private Boolean hibernationBeta; 
             private String hostName; 
             private String imageId; 
             private String lastStartTime; 
@@ -978,12 +1146,16 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private Long memory; 
             private String networkInterfaceIp; 
             private String officeSiteId; 
+            private String os; 
             private String osType; 
+            private String platform; 
             private String policyGroupId; 
             private String protocolType; 
             private String realDesktopId; 
             private String regionId; 
+            private String sessionType; 
             private java.util.List < Sessions> sessions; 
+            private Boolean supportHibernation; 
             private String userCustomName; 
 
             /**
@@ -995,7 +1167,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Clients.
+             * 支持的客户端信息
              */
             public Builder clients(java.util.List < Clients> clients) {
                 this.clients = clients;
@@ -1131,6 +1303,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * HibernationBeta.
+             */
+            public Builder hibernationBeta(Boolean hibernationBeta) {
+                this.hibernationBeta = hibernationBeta;
+                return this;
+            }
+
+            /**
              * HostName.
              */
             public Builder hostName(String hostName) {
@@ -1195,10 +1375,26 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * Os.
+             */
+            public Builder os(String os) {
+                this.os = os;
+                return this;
+            }
+
+            /**
              * OsType.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 
@@ -1235,10 +1431,26 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * SessionType.
+             */
+            public Builder sessionType(String sessionType) {
+                this.sessionType = sessionType;
+                return this;
+            }
+
+            /**
              * Sessions.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
+                return this;
+            }
+
+            /**
+             * SupportHibernation.
+             */
+            public Builder supportHibernation(Boolean supportHibernation) {
+                this.supportHibernation = supportHibernation;
                 return this;
             }
 

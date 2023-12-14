@@ -46,10 +46,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
 
-    /**
-      * The validity period of a logon token is 15 minutes. If an end user does not exit a client in 15 minutes, the logon token for the client must be refreshed. You can call this operation to refresh the client token.
-      *
-     */
     CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request);
 
     CompletableFuture<ReportSessionStatusResponse> reportSessionStatus(ReportSessionStatusRequest request);
@@ -65,8 +61,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetFingerPrintTemplateDescriptionResponse> setFingerPrintTemplateDescription(SetFingerPrintTemplateDescriptionRequest request);
 
     /**
-      * ## Description
-      * If the call is successful, the cloud desktops enter the Running state.
+      * The ID of the client.
       *
      */
     CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request);
@@ -74,7 +69,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRecordContentResponse> startRecordContent(StartRecordContentRequest request);
 
     /**
-      * ## Description
       * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
       *
      */
