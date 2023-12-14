@@ -306,8 +306,24 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
         @NameInMap("Code")
         private String code;
 
+        @NameInMap("Height")
+        private Integer height;
+
+        @NameInMap("Width")
+        private Integer width;
+
+        @NameInMap("X")
+        private Integer x;
+
+        @NameInMap("Y")
+        private Integer y;
+
         private AvatarInfo(Builder builder) {
             this.code = builder.code;
+            this.height = builder.height;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
         }
 
         public static Builder builder() {
@@ -325,14 +341,78 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends Request {
             return this.code;
         }
 
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
         public static final class Builder {
             private String code; 
+            private Integer height; 
+            private Integer width; 
+            private Integer x; 
+            private Integer y; 
 
             /**
              * Code.
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
                 return this;
             }
 
