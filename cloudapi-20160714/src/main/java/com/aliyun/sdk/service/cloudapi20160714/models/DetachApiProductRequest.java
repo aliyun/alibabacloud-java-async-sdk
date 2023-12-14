@@ -84,7 +84,7 @@ public class DetachApiProductRequest extends Request {
         } 
 
         /**
-         * ApiProductId.
+         * The ID of the API product.
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -93,7 +93,7 @@ public class DetachApiProductRequest extends Request {
         }
 
         /**
-         * Apis.
+         * The APIs that you want to detach from the API product.
          */
         public Builder apis(java.util.List < Apis> apis) {
             this.putQueryParameter("Apis", apis);
@@ -158,7 +158,7 @@ public class DetachApiProductRequest extends Request {
             private String stageName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -166,7 +166,12 @@ public class DetachApiProductRequest extends Request {
             }
 
             /**
-             * StageName.
+             * The environment to which the API is published. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the pre-release environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

@@ -84,7 +84,7 @@ public class ValidateVpcConnectivityRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the API Gateway instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class ValidateVpcConnectivityRequest extends Request {
         }
 
         /**
-         * VpcAccessId.
+         * The ID of the VPC access authorization.
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);

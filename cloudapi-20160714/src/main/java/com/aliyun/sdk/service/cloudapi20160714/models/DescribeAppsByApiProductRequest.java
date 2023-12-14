@@ -111,7 +111,7 @@ public class DescribeAppsByApiProductRequest extends Request {
         } 
 
         /**
-         * ApiProductId.
+         * The ID of the API product.
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -120,7 +120,7 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -129,7 +129,7 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +138,7 @@ public class DescribeAppsByApiProductRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

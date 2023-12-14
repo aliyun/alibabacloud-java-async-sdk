@@ -710,7 +710,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration items of API requests sent by API Gateway to the backend service.
+         * The configuration items of API requests that API Gateway sends to the backend service.
          */
         public Builder serviceConfig(ServiceConfig serviceConfig) {
             this.serviceConfig = serviceConfig;
@@ -754,13 +754,13 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the two-way communication API. Valid values:
+         * The type of the two-way communication API.
          * <p>
          * 
-         * *   **COMMON**: general APIs
-         * *   **REGISTER**: registered APIs
-         * *   **UNREGISTER**: unregistered APIs
-         * *   **NOTIFY**: downstream notification
+         * *   **COMMON**: common API
+         * *   **REGISTER**: registered API
+         * *   **UNREGISTER**: unregistered API
+         * *   **NOTIFY**: downstream notification API
          */
         public Builder webSocketApiType(String webSocketApiType) {
             this.webSocketApiType = webSocketApiType;
@@ -917,7 +917,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * The value of the parameter.
+             * The constant parameter value.
              */
             public Builder constantValue(String constantValue) {
                 this.constantValue = constantValue;
@@ -925,7 +925,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -941,7 +941,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service parameter.
+             * The mapped parameter name in the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -1071,7 +1071,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * Examples
+             * The example value.
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -1079,7 +1079,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1103,7 +1103,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the corresponding backend parameter.
+             * The mapped parameter name in the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -1225,7 +1225,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values: RELEASE and TEST.
+             * The environment to which the API is published. Valid values: RELEASE and TEST.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1343,7 +1343,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String model; 
 
             /**
-             * Error codes
+             * The returned error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1351,7 +1351,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The error description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1359,7 +1359,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Error message
+             * The returned error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1367,7 +1367,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Model
+             * The model.
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1910,7 +1910,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder apiParameterName(String apiParameterName) {
                 this.apiParameterName = apiParameterName;
@@ -1934,7 +1934,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Examples
+             * The example value.
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -1942,7 +1942,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1950,7 +1950,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The order in the document.
+             * The order in which the parameter is sorted in the document.
              */
             public Builder docOrder(Integer docOrder) {
                 this.docOrder = docOrder;
@@ -1966,7 +1966,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that can be entered when **ParameterType** is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
+             * The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -1990,7 +1990,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum parameter length when **ParameterType** is set to String.
+             * The maximum length of the parameter value if the **ParameterType** parameter is set to String.
              */
             public Builder maxLength(Long maxLength) {
                 this.maxLength = maxLength;
@@ -1998,7 +1998,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
+             * The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -2006,7 +2006,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum parameter length when **ParameterType** is set to String.
+             * The minimum length of the parameter value if the **ParameterType** parameter is set to String.
              */
             public Builder minLength(Long minLength) {
                 this.minLength = minLength;
@@ -2014,7 +2014,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
+             * The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
              */
             public Builder minValue(Long minValue) {
                 this.minValue = minValue;
@@ -2022,7 +2022,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
+             * The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -2030,7 +2030,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression used for parameter validation when **ParameterType** is set to String.
+             * The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;
@@ -2625,7 +2625,16 @@ public class DescribeApiResponseBody extends TeaModel {
             private String ossRegionId; 
 
             /**
-             * Action.
+             * The operation options on OSS. Valid values:
+             * <p>
+             * 
+             * *   GetObject
+             * *   PostObject
+             * *   DeleteObject
+             * *   PutObject
+             * *   HeadObject
+             * *   GetObjectMeta
+             * *   AppendObject
              */
             public Builder action(String action) {
                 this.action = action;
@@ -2641,7 +2650,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The stored object or folder path.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3084,7 +3093,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Information when the backend service is OSS
+             * The information returned when the backend service is Object Storage Service (OSS).
              */
             public Builder ossConfig(OssConfig ossConfig) {
                 this.ossConfig = ossConfig;
@@ -3217,7 +3226,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the back-end service parameter.
+             * The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -3225,7 +3234,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service parameter.
+             * The mapped parameter name in the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -3319,7 +3328,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * The corresponding frontend parameter name. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.
+             * The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
              */
             public Builder requestParameterName(String requestParameterName) {
                 this.requestParameterName = requestParameterName;
@@ -3327,7 +3336,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backend service parameter.
+             * The mapped parameter name in the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;
@@ -3457,7 +3466,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * Examples
+             * The example value.
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -3465,7 +3474,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3489,7 +3498,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the corresponding backend parameter.
+             * The mapped parameter name in the backend service.
              */
             public Builder serviceParameterName(String serviceParameterName) {
                 this.serviceParameterName = serviceParameterName;

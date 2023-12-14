@@ -64,8 +64,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation is intended for API providers.
-      * *   The name of each API within the same group must be unique.
-      * *   Each request path within the same group must be unique.
+      * *   The name of an API must be unique within an API group.
+      * *   A request path must be unique within an API group.
       * *   The QPS limit on this operation is 50 per user.
       *
      */
@@ -450,7 +450,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDeployedApiResponse> describeDeployedApi(DescribeDeployedApiRequest request);
 
     /**
-      * *   This API is intended for API providers.
+      * *   This operation is intended for API callers.
       *
      */
     CompletableFuture<DescribeDeployedApisResponse> describeDeployedApis(DescribeDeployedApisRequest request);
@@ -643,6 +643,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyApiGroupResponse> modifyApiGroup(ModifyApiGroupRequest request);
+
+    CompletableFuture<ModifyApiGroupInstanceResponse> modifyApiGroupInstance(ModifyApiGroupInstanceRequest request);
 
     CompletableFuture<ModifyApiGroupNetworkPolicyResponse> modifyApiGroupNetworkPolicy(ModifyApiGroupNetworkPolicyRequest request);
 

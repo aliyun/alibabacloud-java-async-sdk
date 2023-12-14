@@ -164,7 +164,7 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
-         * The content of the certificate.
+         * The certificate content.
          */
         public Builder certificateBody(String certificateBody) {
             this.putQueryParameter("CertificateBody", certificateBody);

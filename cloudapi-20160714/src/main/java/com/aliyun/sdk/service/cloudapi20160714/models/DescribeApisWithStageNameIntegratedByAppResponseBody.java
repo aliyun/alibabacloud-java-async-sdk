@@ -86,7 +86,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         private Integer totalCount; 
 
         /**
-         * AppApiRelationInfos.
+         * The authorization information of the API.
          */
         public Builder appApiRelationInfos(AppApiRelationInfos appApiRelationInfos) {
             this.appApiRelationInfos = appApiRelationInfos;
@@ -290,7 +290,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             private java.util.Map < String, String > stageNameAndAuth; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -298,7 +298,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -306,7 +306,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * AuthorizationSource.
+             * The authorization source.
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -314,7 +314,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * CreatedTime.
+             * The time when the authorization was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +322,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * Description.
+             * The API description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -330,7 +330,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -338,7 +338,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -346,7 +346,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * Method.
+             * The request HTTP method for the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -354,7 +354,11 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * Operator.
+             * The authorizer. Valid values:
+             * <p>
+             * 
+             * *   **PROVIDER:**: the API owner
+             * *   **CONSUMER:**: the API caller
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -362,7 +366,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * Path.
+             * The API request path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -370,7 +374,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -378,7 +382,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * StageNameAndAuth.
+             * The mapping information between environments and authorizations.
              */
             public Builder stageNameAndAuth(java.util.Map < String, String > stageNameAndAuth) {
                 this.stageNameAndAuth = stageNameAndAuth;

@@ -15,8 +15,12 @@ public class SetVpcAccessResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("VpcAccessId")
+    private String vpcAccessId;
+
     private SetVpcAccessResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.vpcAccessId = builder.vpcAccessId;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class SetVpcAccessResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return vpcAccessId
+     */
+    public String getVpcAccessId() {
+        return this.vpcAccessId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String vpcAccessId; 
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * VpcAccessId.
+         */
+        public Builder vpcAccessId(String vpcAccessId) {
+            this.vpcAccessId = vpcAccessId;
             return this;
         }
 

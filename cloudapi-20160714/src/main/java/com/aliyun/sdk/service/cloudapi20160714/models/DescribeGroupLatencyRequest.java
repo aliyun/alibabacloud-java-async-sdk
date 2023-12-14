@@ -114,7 +114,7 @@ public class DescribeGroupLatencyRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,7 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +141,12 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment in which you want to perform the query. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the staging environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -150,7 +155,7 @@ public class DescribeGroupLatencyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

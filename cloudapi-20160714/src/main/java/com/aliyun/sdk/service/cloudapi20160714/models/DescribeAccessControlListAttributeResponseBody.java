@@ -86,7 +86,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclEntrys.
+         * The information about the access control policy.
          */
         public Builder aclEntrys(AclEntrys aclEntrys) {
             this.aclEntrys = aclEntrys;
@@ -94,7 +94,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AclId.
+         * The ID of the access control policy.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -102,7 +102,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AclName.
+         * The name of the access control policy.
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -110,7 +110,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IsUsed.
+         * Indicates whether the policy was used.
          */
         public Builder isUsed(String isUsed) {
             this.isUsed = isUsed;
@@ -118,7 +118,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String aclEntryIp; 
 
             /**
-             * AclEntryComment.
+             * The description of an entry.
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -178,7 +178,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AclEntryIp.
+             * The entries of the access control policy.
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;

@@ -142,7 +142,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Extended Fields.
+         * The extended information.
          */
         public Builder extend(String extend) {
             this.extend = extend;

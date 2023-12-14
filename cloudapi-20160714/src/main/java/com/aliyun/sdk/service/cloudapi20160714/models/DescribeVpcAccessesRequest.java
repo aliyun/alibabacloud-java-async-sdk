@@ -37,6 +37,10 @@ public class DescribeVpcAccessesRequest extends Request {
     private String securityToken;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VpcAccessId")
     private String vpcAccessId;
 
@@ -52,6 +56,7 @@ public class DescribeVpcAccessesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.port = builder.port;
         this.securityToken = builder.securityToken;
+        this.tag = builder.tag;
         this.vpcAccessId = builder.vpcAccessId;
         this.vpcId = builder.vpcId;
     }
@@ -112,6 +117,13 @@ public class DescribeVpcAccessesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcAccessId
      */
     public String getVpcAccessId() {
@@ -132,6 +144,7 @@ public class DescribeVpcAccessesRequest extends Request {
         private Integer pageSize; 
         private String port; 
         private String securityToken; 
+        private java.util.List < Tag> tag; 
         private String vpcAccessId; 
         private String vpcId; 
 
@@ -147,6 +160,7 @@ public class DescribeVpcAccessesRequest extends Request {
             this.pageSize = request.pageSize;
             this.port = request.port;
             this.securityToken = request.securityToken;
+            this.tag = request.tag;
             this.vpcAccessId = request.vpcAccessId;
             this.vpcId = request.vpcId;
         } 
@@ -206,6 +220,15 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * VpcAccessId.
          */
         public Builder vpcAccessId(String vpcAccessId) {
@@ -230,4 +253,65 @@ public class DescribeVpcAccessesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

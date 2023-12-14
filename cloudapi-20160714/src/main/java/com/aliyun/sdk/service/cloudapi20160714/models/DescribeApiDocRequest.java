@@ -124,11 +124,11 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
+         * The environment to which the API is published. Valid values:
          * <p>
          * 
          * *   **RELEASE**
-         * *   **TEST.**
+         * *   **TEST**
          * 
          * If this parameter is not specified, the default value is used, which is RELEASE.
          */

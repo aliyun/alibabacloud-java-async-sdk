@@ -198,7 +198,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * Extend.
+         * The extended information.
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);

@@ -86,7 +86,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiProductInfoList.
+         * The information about API products.
          */
         public Builder apiProductInfoList(ApiProductInfoList apiProductInfoList) {
             this.apiProductInfoList = apiProductInfoList;
@@ -94,7 +94,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
             private String apiProductId; 
 
             /**
-             * ApiProductId.
+             * The ID of the API product.
              */
             public Builder apiProductId(String apiProductId) {
                 this.apiProductId = apiProductId;

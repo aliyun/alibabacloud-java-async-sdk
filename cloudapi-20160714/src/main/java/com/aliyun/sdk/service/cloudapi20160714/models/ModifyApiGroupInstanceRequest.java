@@ -7,61 +7,53 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateModelRequest} extends {@link RequestModel}
+ * {@link ModifyApiGroupInstanceRequest} extends {@link RequestModel}
  *
- * <p>CreateModelRequest</p>
+ * <p>ModifyApiGroupInstanceRequest</p>
  */
-public class CreateModelRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    private String description;
-
+public class ModifyApiGroupInstanceRequest extends Request {
     @Query
     @NameInMap("GroupId")
     @Validation(required = true)
     private String groupId;
 
     @Query
-    @NameInMap("ModelName")
-    @Validation(required = true)
-    private String modelName;
+    @NameInMap("Remark")
+    private String remark;
 
     @Query
-    @NameInMap("Schema")
-    @Validation(required = true)
-    private String schema;
+    @NameInMap("SecurityToken")
+    private String securityToken;
 
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    private CreateModelRequest(Builder builder) {
+    @Query
+    @NameInMap("TargetInstanceId")
+    @Validation(required = true)
+    private String targetInstanceId;
+
+    private ModifyApiGroupInstanceRequest(Builder builder) {
         super(builder);
-        this.description = builder.description;
         this.groupId = builder.groupId;
-        this.modelName = builder.modelName;
-        this.schema = builder.schema;
+        this.remark = builder.remark;
+        this.securityToken = builder.securityToken;
         this.tag = builder.tag;
+        this.targetInstanceId = builder.targetInstanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateModelRequest create() {
+    public static ModifyApiGroupInstanceRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
     }
 
     /**
@@ -72,17 +64,17 @@ public class CreateModelRequest extends Request {
     }
 
     /**
-     * @return modelName
+     * @return remark
      */
-    public String getModelName() {
-        return this.modelName;
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
-     * @return schema
+     * @return securityToken
      */
-    public String getSchema() {
-        return this.schema;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     /**
@@ -92,37 +84,35 @@ public class CreateModelRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<CreateModelRequest, Builder> {
-        private String description; 
+    /**
+     * @return targetInstanceId
+     */
+    public String getTargetInstanceId() {
+        return this.targetInstanceId;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyApiGroupInstanceRequest, Builder> {
         private String groupId; 
-        private String modelName; 
-        private String schema; 
+        private String remark; 
+        private String securityToken; 
         private java.util.List < Tag> tag; 
+        private String targetInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateModelRequest request) {
+        private Builder(ModifyApiGroupInstanceRequest request) {
             super(request);
-            this.description = request.description;
             this.groupId = request.groupId;
-            this.modelName = request.modelName;
-            this.schema = request.schema;
+            this.remark = request.remark;
+            this.securityToken = request.securityToken;
             this.tag = request.tag;
+            this.targetInstanceId = request.targetInstanceId;
         } 
 
         /**
-         * The description of the model definition.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The ID of the API group to which the model belongs.
+         * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -131,20 +121,20 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * The name of the model. The name must be unique within the group.
+         * Remark.
          */
-        public Builder modelName(String modelName) {
-            this.putQueryParameter("ModelName", modelName);
-            this.modelName = modelName;
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 
         /**
-         * The definition of the model in JSON Schema.
+         * SecurityToken.
          */
-        public Builder schema(String schema) {
-            this.putQueryParameter("Schema", schema);
-            this.schema = schema;
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 
@@ -157,18 +147,29 @@ public class CreateModelRequest extends Request {
             return this;
         }
 
+        /**
+         * TargetInstanceId.
+         */
+        public Builder targetInstanceId(String targetInstanceId) {
+            this.putQueryParameter("TargetInstanceId", targetInstanceId);
+            this.targetInstanceId = targetInstanceId;
+            return this;
+        }
+
         @Override
-        public CreateModelRequest build() {
-            return new CreateModelRequest(this);
+        public ModifyApiGroupInstanceRequest build() {
+            return new ModifyApiGroupInstanceRequest(this);
         } 
 
     } 
 
     public static class Tag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")
+        @Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {

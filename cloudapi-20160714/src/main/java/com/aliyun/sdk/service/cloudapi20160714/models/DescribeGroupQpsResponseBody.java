@@ -110,7 +110,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The time.
+             * The point in time.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that fall into the time range.
+             * The number of requests at the specified point in time.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

@@ -50,7 +50,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LatencyPacket.
+         * The latency information.
          */
         public Builder latencyPacket(LatencyPacket latencyPacket) {
             this.latencyPacket = latencyPacket;
@@ -58,7 +58,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * Item.
+             * The metric. Valid values:
+             * <p>
+             * 
+             * *   latency: the backend processing latency
+             * *   gatewayLatency: the API Gateway processing latency
              */
             public Builder item(String item) {
                 this.item = item;
@@ -130,7 +134,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTime.
+             * The point in time when the latency data was collected. The format is YYYY-MM-DDThh:mm:ssZ.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +142,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The latency. Unit: ms.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

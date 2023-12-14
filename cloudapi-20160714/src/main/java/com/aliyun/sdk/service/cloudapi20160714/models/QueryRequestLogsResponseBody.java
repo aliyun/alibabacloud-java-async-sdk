@@ -58,7 +58,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of request logs.
+         * The request logs.
          */
         public Builder requestLogs(RequestLogs requestLogs) {
             this.requestLogs = requestLogs;
@@ -614,7 +614,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             private String plugin; 
 
             /**
-             * The ID of the API.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -622,7 +622,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -630,7 +630,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -638,7 +638,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackendRequestEnd.
+             * The time when API Gateway finished forwarding the request to the backend service.
              */
             public Builder backendRequestEnd(Long backendRequestEnd) {
                 this.backendRequestEnd = backendRequestEnd;
@@ -646,7 +646,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackendRequestStart.
+             * The time when API Gateway started to forward the request to the backend service.
              */
             public Builder backendRequestStart(Long backendRequestStart) {
                 this.backendRequestStart = backendRequestStart;
@@ -654,7 +654,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackendResponseEnd.
+             * The time when API Gateway finished receiving the response from the backend service.
              */
             public Builder backendResponseEnd(Long backendResponseEnd) {
                 this.backendResponseEnd = backendResponseEnd;
@@ -662,7 +662,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BackendResponseStart.
+             * The time when API Gateway started to receive the response from the backend service.
              */
             public Builder backendResponseStart(Long backendResponseStart) {
                 this.backendResponseStart = backendResponseStart;
@@ -686,7 +686,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application from which an API request is sent.
+             * The application ID that is used by the caller.
              */
             public Builder consumerAppId(String consumerAppId) {
                 this.consumerAppId = consumerAppId;
@@ -694,7 +694,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The application key used by the caller.
+             * The App Key that is used by the caller.
              */
             public Builder consumerAppKey(String consumerAppKey) {
                 this.consumerAppKey = consumerAppKey;
@@ -702,7 +702,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom trace.
+             * The custom trace ID.
              */
             public Builder customTraceId(String customTraceId) {
                 this.customTraceId = customTraceId;
@@ -710,7 +710,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the request.
+             * The requested domain name in the request.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -718,7 +718,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * The error code that is returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -726,7 +726,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request fails.
+             * The error message returned if the call fails.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -742,7 +742,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FrontRequestEnd.
+             * The time when API Gateway finished receiving the request.
              */
             public Builder frontRequestEnd(Long frontRequestEnd) {
                 this.frontRequestEnd = frontRequestEnd;
@@ -750,7 +750,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FrontRequestStart.
+             * The time when API Gateway started to receive the request.
              */
             public Builder frontRequestStart(Long frontRequestStart) {
                 this.frontRequestStart = frontRequestStart;
@@ -758,7 +758,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FrontResponseEnd.
+             * The time when API Gateway finished forwarding the response to the client.
              */
             public Builder frontResponseEnd(Long frontResponseEnd) {
                 this.frontResponseEnd = frontResponseEnd;
@@ -766,7 +766,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FrontResponseStart.
+             * The time when API Gateway started to forward the response to the client.
              */
             public Builder frontResponseStart(Long frontResponseStart) {
                 this.frontResponseStart = frontResponseStart;
@@ -790,7 +790,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method used to send the request.
+             * The HTTP method that is used to send the request.
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -830,7 +830,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region in which the instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -854,7 +854,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The request ID.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -918,7 +918,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
+             * The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.
              */
             public Builder serviceLatency(String serviceLatency) {
                 this.serviceLatency = serviceLatency;
@@ -942,7 +942,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code.
+             * The status code returned.
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -958,7 +958,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of plug-ins hit by the request and the relevant context.
+             * The plug-in hit by the request and the relevant context.
              */
             public Builder plugin(String plugin) {
                 this.plugin = plugin;

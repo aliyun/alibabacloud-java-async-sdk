@@ -84,7 +84,7 @@ public class AttachApiProductRequest extends Request {
         } 
 
         /**
-         * ApiProductId.
+         * The ID of the API product.
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
@@ -93,7 +93,7 @@ public class AttachApiProductRequest extends Request {
         }
 
         /**
-         * Apis.
+         * The APIs to be attached.
          */
         public Builder apis(java.util.List < Apis> apis) {
             this.putQueryParameter("Apis", apis);
@@ -158,7 +158,7 @@ public class AttachApiProductRequest extends Request {
             private String stageName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -166,7 +166,12 @@ public class AttachApiProductRequest extends Request {
             }
 
             /**
-             * StageName.
+             * The environment. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the staging environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

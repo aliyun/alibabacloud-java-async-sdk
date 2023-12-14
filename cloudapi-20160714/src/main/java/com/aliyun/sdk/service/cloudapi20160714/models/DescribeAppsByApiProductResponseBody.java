@@ -86,7 +86,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AuthorizedApps.
+         * The information about authorized applications.
          */
         public Builder authorizedApps(AuthorizedApps authorizedApps) {
             this.authorizedApps = authorizedApps;
@@ -94,7 +94,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             private String extend; 
 
             /**
-             * AppId.
+             * The application ID.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -226,7 +226,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -234,7 +234,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * AuthValidTime.
+             * The expiration time of the authorization. The time is in GMT. An empty value indicates that the authorization does not expire.
              */
             public Builder authValidTime(String authValidTime) {
                 this.authValidTime = authValidTime;
@@ -242,7 +242,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizedTime.
+             * The time when the authorization was created. The time is in GMT.
              */
             public Builder authorizedTime(String authorizedTime) {
                 this.authorizedTime = authorizedTime;
@@ -250,7 +250,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The authorization description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * The extended information.
              */
             public Builder extend(String extend) {
                 this.extend = extend;

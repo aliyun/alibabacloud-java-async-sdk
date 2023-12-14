@@ -170,7 +170,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -332,7 +332,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the app.
+             * The application ID.
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -340,7 +340,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -348,7 +348,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time (UTC) of the app.
+             * The creation time (UTC) of the application.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -356,7 +356,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the app.
+             * The application description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -364,7 +364,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Extended Fields.
+             * The extended information.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -372,7 +372,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time (UTC) of the app.
+             * The modification time (UTC) of the application.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

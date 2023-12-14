@@ -256,8 +256,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation is intended for API providers.
-      * *   The name of each API within the same group must be unique.
-      * *   Each request path within the same group must be unique.
+      * *   The name of an API must be unique within an API group.
+      * *   A request path must be unique within an API group.
       * *   The QPS limit on this operation is 50 per user.
       *
      */
@@ -1614,7 +1614,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This API is intended for API providers.
+      * *   This operation is intended for API callers.
       *
      */
     @Override
@@ -2427,6 +2427,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyApiGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyApiGroupInstanceResponse> modifyApiGroupInstance(ModifyApiGroupInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyApiGroupInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyApiGroupInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyApiGroupInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

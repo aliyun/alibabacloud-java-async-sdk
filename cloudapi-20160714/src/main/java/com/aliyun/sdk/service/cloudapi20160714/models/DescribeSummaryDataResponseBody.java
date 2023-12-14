@@ -98,7 +98,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         private Integer usageInstanceNum; 
 
         /**
-         * ExpireInstanceNum.
+         * The number of subscription dedicated instances that expire in 14 days or less.
          */
         public Builder expireInstanceNum(Integer expireInstanceNum) {
             this.expireInstanceNum = expireInstanceNum;
@@ -106,7 +106,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.region = region;
@@ -114,7 +114,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageApiNum.
+         * The number of APIs.
          */
         public Builder usageApiNum(Integer usageApiNum) {
             this.usageApiNum = usageApiNum;
@@ -130,7 +130,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageGroupNum.
+         * The number of API groups.
          */
         public Builder usageGroupNum(Integer usageGroupNum) {
             this.usageGroupNum = usageGroupNum;
@@ -138,7 +138,7 @@ public class DescribeSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageInstanceNum.
+         * The number of running dedicated instances.
          */
         public Builder usageInstanceNum(Integer usageInstanceNum) {
             this.usageInstanceNum = usageInstanceNum;

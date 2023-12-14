@@ -522,7 +522,11 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DisableInnerDomain.
+         * Indicates whether access over the public second-level domain name is enabled. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder disableInnerDomain(Boolean disableInnerDomain) {
             this.disableInnerDomain = disableInnerDomain;
@@ -891,7 +895,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String wildcardDomainPatterns; 
 
             /**
-             * The name of the bound runtime environment.
+             * The environment in which the associated API group runs.
              */
             public Builder bindStageName(String bindStageName) {
                 this.bindStageName = bindStageName;
@@ -907,7 +911,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL certificate.
+             * The SSL certificate name.
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -915,7 +919,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateValidEnd.
+             * The time when the certificate expires.
              */
             public Builder certificateValidEnd(Long certificateValidEnd) {
                 this.certificateValidEnd = certificateValidEnd;
@@ -923,7 +927,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateValidStart.
+             * The time when the certificate takes effect.
              */
             public Builder certificateValidStart(Long certificateValidStart) {
                 this.certificateValidStart = certificateValidStart;
@@ -954,8 +958,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              * The domain name resolution status. Valid values:
              * <p>
              * 
-             * *   **RESOLVED**: The domain name has been resolved.
-             * *   **UNRESOLVED**: The domain name has not been resolved.
+             * *   **RESOLVED**
+             * *   **UNRESOLVED**
              */
             public Builder domainCNAMEStatus(String domainCNAMEStatus) {
                 this.domainCNAMEStatus = domainCNAMEStatus;
@@ -983,7 +987,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name-related remarks, such as the cause for a domain name exception.
+             * Remarks about the domain name, such as the cause of an exception.
              */
             public Builder domainRemark(String domainRemark) {
                 this.domainRemark = domainRemark;
@@ -999,7 +1003,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to redirect HTTP requests to HTTPS.
+             * Indicates whether to redirect HTTP requests as HTTPS requests.
              */
             public Builder isHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
                 this.isHttpRedirectToHttps = isHttpRedirectToHttps;
@@ -1113,7 +1117,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The description of the runtime environment.
+             * The environment description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1121,7 +1125,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the runtime environment.
+             * The environment ID.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -1129,7 +1133,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment.
+             * The environment name.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

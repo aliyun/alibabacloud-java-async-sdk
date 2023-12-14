@@ -206,7 +206,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AccessKey.
+             * The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -214,7 +214,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * The authentication method.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -222,7 +222,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Clusters.
+             * The name of the cluster to which the microservice belongs.
              */
             public Builder clusters(String clusters) {
                 this.clusters = clusters;
@@ -230,7 +230,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the microservice that is registered with Nacos belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -238,7 +238,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The ID of the namespace where the microservice that is registered with Nacos resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -246,7 +246,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -254,7 +254,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SecretKey.
+             * The SecretKey of the RAM user that has the resource management permissions on MSE.
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -262,7 +262,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServerAddress.
+             * The Nacos service address.
              */
             public Builder serverAddress(String serverAddress) {
                 this.serverAddress = serverAddress;
@@ -270,7 +270,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The microservice name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +278,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -331,7 +331,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String rcType; 
 
             /**
-             * NacosConfig.
+             * The Nacos configurations.
              */
             public Builder nacosConfig(NacosConfig nacosConfig) {
                 this.nacosConfig = nacosConfig;
@@ -339,7 +339,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RcType.
+             * The registry type.
              */
             public Builder rcType(String rcType) {
                 this.rcType = rcType;
@@ -500,7 +500,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The microservice name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -585,7 +585,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event bus.
+             * The event bus.
              */
             public Builder eventBus(String eventBus) {
                 this.eventBus = eventBus;
@@ -742,7 +742,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Function Compute service.
+             * The type of the service in Function Compute.
              */
             public Builder fcType(String fcType) {
                 this.fcType = fcType;
@@ -750,7 +750,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The function name defined in Function Compute.
+             * The function name that is defined in Function Compute.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -758,7 +758,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The backend service path.
+             * Indicates whether the backend service receives only the service path.
              */
             public Builder onlyBusinessPath(Boolean onlyBusinessPath) {
                 this.onlyBusinessPath = onlyBusinessPath;
@@ -774,7 +774,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -782,7 +782,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service name defined in Function Compute.
+             * The service name that is defined in Function Compute.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -835,7 +835,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String headerValue; 
 
             /**
-             * HeaderName.
+             * The name of the header parameter.
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -843,7 +843,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HeaderValue.
+             * The value of the header parameter.
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -908,7 +908,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String mockStatusCode; 
 
             /**
-             * MockHeaders.
+             * The header returned for service mocking.
              */
             public Builder mockHeaders(java.util.List < MockHeaders> mockHeaders) {
                 this.mockHeaders = mockHeaders;
@@ -916,7 +916,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MockResult.
+             * The result returned for service mocking.
              */
             public Builder mockResult(String mockResult) {
                 this.mockResult = mockResult;
@@ -924,7 +924,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MockStatusCode.
+             * The status code that is returned for service mocking.
              */
             public Builder mockStatusCode(String mockStatusCode) {
                 this.mockStatusCode = mockStatusCode;
@@ -985,7 +985,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Object Storage Service (OSS) bucket.
+             * The region ID of the OSS bucket.
              */
             public Builder ossRegionId(String ossRegionId) {
                 this.ossRegionId = ossRegionId;
@@ -1106,7 +1106,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC Configuration.
+             * The name of the VPC configuration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1138,7 +1138,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * http/https
+             * Indicates whether HTTP or HTTPS is used.
              */
             public Builder vpcScheme(String vpcScheme) {
                 this.vpcScheme = vpcScheme;
@@ -1307,7 +1307,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private VpcConfig vpcConfig; 
 
             /**
-             * DiscoveryConfig.
+             * The information about the backend service whose type is Service Discovery.
              */
             public Builder discoveryConfig(DiscoveryConfig discoveryConfig) {
                 this.discoveryConfig = discoveryConfig;
@@ -1323,7 +1323,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service that is EventBridge.
+             * The information about the backend service whose type is EventBridge.
              */
             public Builder eventBridgeConfig(EventBridgeConfig eventBridgeConfig) {
                 this.eventBridgeConfig = eventBridgeConfig;
@@ -1331,7 +1331,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is FC_EVENT or FC_HTTP.
+             * The information about the backend service whose type is Function Compute.
              */
             public Builder functionComputeConfig(FunctionComputeConfig functionComputeConfig) {
                 this.functionComputeConfig = functionComputeConfig;
@@ -1347,7 +1347,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MockConfig.
+             * The information about the backend service whose type is Mock.
              */
             public Builder mockConfig(MockConfig mockConfig) {
                 this.mockConfig = mockConfig;
@@ -1355,7 +1355,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the backend service whose type is OSS.
+             * The information about the backend service whose type is Object Storage Service (OSS).
              */
             public Builder ossConfig(OssConfig ossConfig) {
                 this.ossConfig = ossConfig;
@@ -1500,7 +1500,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * The backend configurations.
+             * The backend service configurations.
              */
             public Builder backendConfig(BackendConfig backendConfig) {
                 this.backendConfig = backendConfig;
@@ -1548,7 +1548,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment.
+             * The environment name.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1669,7 +1669,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backend service was created.
+             * The configurations of the backend service in the environment.
              */
             public Builder backendModels(java.util.List < BackendModels> backendModels) {
                 this.backendModels = backendModels;

@@ -86,7 +86,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiInfoList.
+         * The information about the returned APIs.
          */
         public Builder apiInfoList(ApiInfoList apiInfoList) {
             this.apiInfoList = apiInfoList;
@@ -94,7 +94,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -262,7 +262,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -270,7 +270,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The API description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -286,7 +286,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -294,7 +294,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The request method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -302,7 +302,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -310,7 +310,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the API is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -318,7 +318,12 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The environment to which the API is published. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the staging environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

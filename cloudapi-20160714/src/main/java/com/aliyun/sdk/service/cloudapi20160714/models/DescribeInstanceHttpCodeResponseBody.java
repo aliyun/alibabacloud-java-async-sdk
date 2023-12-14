@@ -50,7 +50,7 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of HTTP status codes returned.
+         * The HTTP status codes.
          */
         public Builder instanceHttpCode(InstanceHttpCode instanceHttpCode) {
             this.instanceHttpCode = instanceHttpCode;
@@ -110,7 +110,7 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * The HTTP status code.
+             * The HTTP status code returned.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -118,7 +118,7 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of HTTP status codes returned.
+             * The corresponding value.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

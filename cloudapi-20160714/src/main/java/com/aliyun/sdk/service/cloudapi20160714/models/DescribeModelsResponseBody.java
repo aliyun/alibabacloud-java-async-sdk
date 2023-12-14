@@ -131,6 +131,108 @@ public class DescribeModelsResponseBody extends TeaModel {
 
     } 
 
+    public static class TagInfo extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private TagInfo(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagInfo build() {
+                return new TagInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("TagInfo")
+        private java.util.List < TagInfo> tagInfo;
+
+        private Tags(Builder builder) {
+            this.tagInfo = builder.tagInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagInfo
+         */
+        public java.util.List < TagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagInfo> tagInfo; 
+
+            /**
+             * TagInfo.
+             */
+            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+                this.tagInfo = tagInfo;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ModelDetail extends TeaModel {
         @NameInMap("CreatedTime")
         private String createdTime;
@@ -156,6 +258,9 @@ public class DescribeModelsResponseBody extends TeaModel {
         @NameInMap("Schema")
         private String schema;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         private ModelDetail(Builder builder) {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
@@ -165,6 +270,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             this.modelRef = builder.modelRef;
             this.modifiedTime = builder.modifiedTime;
             this.schema = builder.schema;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -231,6 +337,13 @@ public class DescribeModelsResponseBody extends TeaModel {
             return this.schema;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String createdTime; 
             private String description; 
@@ -240,6 +353,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String modelRef; 
             private String modifiedTime; 
             private String schema; 
+            private Tags tags; 
 
             /**
              * The time when the model was created.
@@ -302,6 +416,14 @@ public class DescribeModelsResponseBody extends TeaModel {
              */
             public Builder schema(String schema) {
                 this.schema = schema;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

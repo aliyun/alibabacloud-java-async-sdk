@@ -62,7 +62,11 @@ public class ValidateVpcConnectivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Connected.
+         * Indicates whether the API Gateway instance is connected to the port. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder connected(Boolean connected) {
             this.connected = connected;
@@ -70,7 +74,12 @@ public class ValidateVpcConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * IpType.
+         * Indicates whether the instance in the authorization is an ECS instance or an SLB instance when the instance ID in the authorization is an IP address. Valid values:
+         * <p>
+         * 
+         * *   **ECS**
+         * *   **SLB**
+         * *   **INVALID**: The instance type corresponding to the IP address is invalid.
          */
         public Builder ipType(String ipType) {
             this.ipType = ipType;
@@ -78,7 +87,7 @@ public class ValidateVpcConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -74,7 +74,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         private String taskStatus; 
 
         /**
-         * ApiResults.
+         * The execution status of the subtask. Valid values:
+         * <p>
+         * 
+         * *   RUNNING
+         * *   WAIT
+         * *   OVER
+         * *   FAIL
+         * *   CANCEL
          */
         public Builder apiResults(ApiResults apiResults) {
             this.apiResults = apiResults;
@@ -82,7 +89,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ModelResults.
+         * The execution status of the subtask. Valid values:
+         * <p>
+         * 
+         * *   RUNNING
+         * *   WAIT
+         * *   OVER
+         * *   FAIL
+         * *   CANCEL
          */
         public Builder modelResults(ModelResults modelResults) {
             this.modelResults = modelResults;
@@ -90,7 +104,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +112,11 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status of the import task. Valid values:
+         * <p>
+         * 
+         * *   Running
+         * *   Finished
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;

@@ -114,7 +114,7 @@ public class DescribeGroupTrafficRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time for the query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -123,7 +123,7 @@ public class DescribeGroupTrafficRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +141,12 @@ public class DescribeGroupTrafficRequest extends Request {
         }
 
         /**
-         * StageName.
+         * The environment to which the APIs in the API group are published. Valid values:
+         * <p>
+         * 
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the staging environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);
@@ -150,7 +155,7 @@ public class DescribeGroupTrafficRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time for the query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

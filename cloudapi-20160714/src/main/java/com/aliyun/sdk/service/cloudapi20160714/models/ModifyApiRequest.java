@@ -488,7 +488,7 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * BackendEnable.
+         * Configuration Mode
          */
         public Builder backendEnable(Boolean backendEnable) {
             this.putQueryParameter("BackendEnable", backendEnable);

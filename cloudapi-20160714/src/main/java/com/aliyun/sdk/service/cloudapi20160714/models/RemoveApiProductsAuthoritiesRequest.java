@@ -84,7 +84,7 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
         } 
 
         /**
-         * ApiProductIds.
+         * The API products.
          */
         public Builder apiProductIds(java.util.List < String > apiProductIds) {
             String apiProductIdsShrink = shrink(apiProductIds, "ApiProductIds", "simple");
@@ -94,7 +94,7 @@ public class RemoveApiProductsAuthoritiesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);

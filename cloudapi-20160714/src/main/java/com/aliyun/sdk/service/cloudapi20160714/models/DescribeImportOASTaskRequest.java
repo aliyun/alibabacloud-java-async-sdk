@@ -69,7 +69,7 @@ public class DescribeImportOASTaskRequest extends Request {
         } 
 
         /**
-         * OperationId.
+         * The ID of the asynchronous API import task that was generated during the import operation. This ID is used to query the execution status of the API import task.
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);

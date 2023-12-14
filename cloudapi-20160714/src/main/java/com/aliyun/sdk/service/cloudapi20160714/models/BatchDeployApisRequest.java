@@ -98,7 +98,7 @@ public class BatchDeployApisRequest extends Request {
         } 
 
         /**
-         * The APIs that you want to operate.
+         * The APIs that you want to publish.
          */
         public Builder api(java.util.List < Api> api) {
             this.putQueryParameter("Api", api);
@@ -186,7 +186,7 @@ public class BatchDeployApisRequest extends Request {
             private String groupId; 
 
             /**
-             * The ID of the API.
+             * The API ID.
              */
             public Builder apiUid(String apiUid) {
                 this.apiUid = apiUid;
@@ -194,7 +194,7 @@ public class BatchDeployApisRequest extends Request {
             }
 
             /**
-             * The ID of the API group.
+             * The API group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

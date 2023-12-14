@@ -470,7 +470,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * The returned error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -486,7 +486,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * The returned error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -909,7 +909,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * The name of the API parameter.
+             * The name of the parameter in the API request.
              */
             public Builder apiParameterName(String apiParameterName) {
                 this.apiParameterName = apiParameterName;
@@ -925,7 +925,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Default value
+             * The default value.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -933,7 +933,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Example
+             * The example value.
              */
             public Builder demoValue(String demoValue) {
                 this.demoValue = demoValue;
@@ -941,7 +941,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Description
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -949,7 +949,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The order in the document.
+             * The order in which the parameter is sorted in the document.
              */
             public Builder docOrder(Integer docOrder) {
                 this.docOrder = docOrder;
@@ -957,7 +957,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.
+             * Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.
              */
             public Builder docShow(String docShow) {
                 this.docShow = docShow;
@@ -965,7 +965,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.
+             * The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -1021,7 +1021,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * The data type of the parameter.
              */
             public Builder parameterType(String parameterType) {
                 this.parameterType = parameterType;
@@ -1029,7 +1029,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression used for parameter validation when ParameterType is set to String.
+             * The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;
@@ -1037,7 +1037,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * Required
+             * Indicates whether the parameter is required.
              */
             public Builder required(String required) {
                 this.required = required;

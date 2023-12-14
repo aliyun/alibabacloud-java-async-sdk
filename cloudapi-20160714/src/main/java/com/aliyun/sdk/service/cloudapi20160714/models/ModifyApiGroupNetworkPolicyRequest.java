@@ -153,7 +153,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         } 
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -162,7 +162,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * HttpsPolicy.
+         * The HTTPS security policy.
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -171,7 +171,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * InnerDomainEnable.
+         * Specifies whether to disable the public second-level domain name.
          */
         public Builder innerDomainEnable(Boolean innerDomainEnable) {
             this.putQueryParameter("InnerDomainEnable", innerDomainEnable);
@@ -180,7 +180,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * InternetEnable.
+         * Specifies whether to enable the virtual private cloud (VPC) second-level domain name.
          */
         public Builder internetEnable(Boolean internetEnable) {
             this.putQueryParameter("InternetEnable", internetEnable);
@@ -189,7 +189,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * InternetIPV6Enable.
+         * Specifies whether to enable IPv6. Valid values: **true** and **false**.
          */
         public Builder internetIPV6Enable(Boolean internetIPV6Enable) {
             this.putQueryParameter("InternetIPV6Enable", internetIPV6Enable);
@@ -207,7 +207,11 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * VpcIntranetEnable.
+         * Specifies whether to enable the VPC domain name. Valid values:
+         * <p>
+         * 
+         * *   TRUE
+         * *   FALSE
          */
         public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
             this.putQueryParameter("VpcIntranetEnable", vpcIntranetEnable);
@@ -216,7 +220,7 @@ public class ModifyApiGroupNetworkPolicyRequest extends Request {
         }
 
         /**
-         * VpcSlbIntranetEnable.
+         * Specifies whether to enable the self-calling domain name.
          */
         public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
             this.putQueryParameter("VpcSlbIntranetEnable", vpcSlbIntranetEnable);

@@ -136,7 +136,7 @@ public class CreatePluginRequest extends Request {
         }
 
         /**
-         * The plug-in definition statement, which can be in JSON or YAML format.
+         * The plug-in definition. Supported formats: JSON and YAML.
          */
         public Builder pluginData(String pluginData) {
             this.putQueryParameter("PluginData", pluginData);

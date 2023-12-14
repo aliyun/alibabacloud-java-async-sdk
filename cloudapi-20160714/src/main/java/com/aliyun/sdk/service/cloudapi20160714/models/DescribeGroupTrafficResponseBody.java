@@ -50,7 +50,7 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         private TrafficPerSecond trafficPerSecond; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficPerSecond.
+         * The traffic information per second.
          */
         public Builder trafficPerSecond(TrafficPerSecond trafficPerSecond) {
             this.trafficPerSecond = trafficPerSecond;
@@ -122,7 +122,11 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             private String itemValue; 
 
             /**
-             * Item.
+             * The metric. Valid values:
+             * <p>
+             * 
+             * *   inbound: traffic consumed by requests
+             * *   outbound: traffic consumed by responses
              */
             public Builder item(String item) {
                 this.item = item;
@@ -130,7 +134,7 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTime.
+             * The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.
              */
             public Builder itemTime(String itemTime) {
                 this.itemTime = itemTime;
@@ -138,7 +142,7 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * The traffic volume per second.
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

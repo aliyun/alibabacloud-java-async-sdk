@@ -69,7 +69,7 @@ public class DeleteApiProductRequest extends Request {
         } 
 
         /**
-         * ApiProductId.
+         * The ID of the API product.
          */
         public Builder apiProductId(String apiProductId) {
             this.putQueryParameter("ApiProductId", apiProductId);
