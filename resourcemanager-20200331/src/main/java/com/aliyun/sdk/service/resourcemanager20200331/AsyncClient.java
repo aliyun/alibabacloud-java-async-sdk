@@ -293,6 +293,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAncestorsResponse> listAncestors(ListAncestorsRequest request);
 
+    CompletableFuture<ListAssociatedTransferSettingResponse> listAssociatedTransferSetting(ListAssociatedTransferSettingRequest request);
+
     /**
       * This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named `FullAliyunAccess`.
       *
@@ -466,6 +468,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UpdateAccountResponse> updateAccount(UpdateAccountRequest request);
+
+    CompletableFuture<UpdateAssociatedTransferSettingResponse> updateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request);
 
     /**
       * In this example, the name of the access control policy whose ID is `cp-jExXAqIYkwHN****` is changed to `NewControlPolicy`.
