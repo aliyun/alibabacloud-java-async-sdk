@@ -70,7 +70,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the servers on which the same risk item is detected.
+         * The servers on which the same risk item is detected.
          */
         public Builder machines(java.util.List < Machines> machines) {
             this.machines = machines;
@@ -193,8 +193,8 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
              * Indicates whether Security Center is authorized to protect the asset. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -202,7 +202,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +210,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

@@ -242,7 +242,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * AllKeyPrefix.
+             * Whether to match all file prefixes.
              */
             public Builder allKeyPrefix(Boolean allKeyPrefix) {
                 this.allKeyPrefix = allKeyPrefix;
@@ -250,7 +250,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BucketCount.
+             * The number of the buckets.
              */
             public Builder bucketCount(Integer bucketCount) {
                 this.bucketCount = bucketCount;
@@ -258,7 +258,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * The name of the bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -294,7 +294,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the policy.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -302,7 +302,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefixList.
+             * The prefixes of the object that you want to check.
              */
             public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
                 this.keyPrefixList = keyPrefixList;
@@ -318,7 +318,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LastUpdateTime.
+             * The time when the policy last update.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -326,7 +326,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the policy.
              */
             public Builder name(String name) {
                 this.name = name;

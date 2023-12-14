@@ -50,7 +50,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The defense rule against container escapes.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -130,7 +130,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -138,7 +138,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * The switch ID.
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

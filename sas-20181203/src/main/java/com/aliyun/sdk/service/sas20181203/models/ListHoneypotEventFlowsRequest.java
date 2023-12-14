@@ -124,7 +124,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -133,7 +133,12 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * Dealed.
+         * The status of the event. Valid values:
+         * <p>
+         * 
+         * *   **y**: handled
+         * *   **n**: unhandled
+         * *   **a**: all statuses
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -142,7 +147,11 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -151,7 +160,10 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -160,7 +172,7 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -169,7 +181,10 @@ public class ListHoneypotEventFlowsRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * The ID of the alert event. The ID of the management account of the ListHoneypotEvents resource directory.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotEvents](~~ListHoneypotEvents~~) operation to query the IDs of alert events.
          */
         public Builder securityEventId(Long securityEventId) {
             this.putBodyParameter("SecurityEventId", securityEventId);

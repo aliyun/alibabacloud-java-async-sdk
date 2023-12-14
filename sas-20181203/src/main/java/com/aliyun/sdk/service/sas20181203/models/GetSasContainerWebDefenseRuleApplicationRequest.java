@@ -54,7 +54,10 @@ public class GetSasContainerWebDefenseRuleApplicationRequest extends Request {
         } 
 
         /**
-         * RuleId.
+         * The ID of the rule.
+         * <p>
+         * 
+         * >  You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

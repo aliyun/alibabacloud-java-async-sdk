@@ -110,7 +110,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The alert whitelist rules of sensitive files that are detected by using the agentless detection feature.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -318,7 +322,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private String targetValue; 
 
             /**
-             * Count.
+             * The number of the assets on which the rule takes effect.
+             * <p>
+             * 
+             * >  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -326,7 +333,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert.
+             * <p>
+             * 
+             * *   The value is fixed as ALL, which indicates all alert types.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -334,7 +344,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * The field that is used in the whitelist rule.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -342,7 +352,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * The value of the field that is used in the whitelist rule.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -350,7 +360,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -358,7 +368,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -366,7 +376,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -374,7 +384,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The logical operator of the whitelist rule.
+             * <p>
+             * 
+             * *   The value is fixed as strEqual, which indicates the equality operator (=).
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -382,7 +395,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The feature to which this operation belongs.
+             * <p>
+             * 
+             * *   The value is fixed as agentless, which indicates the agentless detection feature.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -390,7 +406,11 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the assets on which the rule takes effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   SELECTION_KEY: selected assets
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -398,7 +418,11 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetValue.
+             * The assets on which the rule takes effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   Others: selected assets
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;
@@ -475,7 +499,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -483,7 +507,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -491,7 +515,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -499,7 +523,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

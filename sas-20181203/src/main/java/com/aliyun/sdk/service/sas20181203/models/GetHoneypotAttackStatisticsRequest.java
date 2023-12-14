@@ -154,7 +154,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -163,7 +163,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * EndTimeStamp.
+         * The end time. The value is a UNIX timestamp.
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -172,7 +172,11 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +185,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +194,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * RiskLevelList.
+         * The risk levels.
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -199,7 +203,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address of the attack.
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -208,7 +212,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * StartTimeStamp.
+         * The start time. The value is a UNIX timestamp.
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);
@@ -217,7 +221,13 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         }
 
         /**
-         * StatisticsType.
+         * The type of the attack source statistics. Valid values:
+         * <p>
+         * 
+         * *   **TOP_ATTACKED_AGENT**: the top 5 probes that are attacked the most frequently
+         * *   **TOP_ATTACKED_IP**: the top 5 IP addresses that are attacked the most frequently
+         * *   **ATTACK_EVENT_TYPE**: the type of the intrusion event
+         * *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot
          */
         public Builder statisticsType(String statisticsType) {
             this.putQueryParameter("StatisticsType", statisticsType);

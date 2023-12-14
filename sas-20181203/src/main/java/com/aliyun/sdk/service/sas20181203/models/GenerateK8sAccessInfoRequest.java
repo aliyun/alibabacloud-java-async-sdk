@@ -184,7 +184,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * AliyunYundunGatewayApiName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -193,7 +193,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayPopName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -202,7 +202,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayProjectName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -211,7 +211,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AuditLogStore.
+         * The Simple Log Service Logstore that is used to store the audit logs.
          */
         public Builder auditLogStore(String auditLogStore) {
             this.putQueryParameter("AuditLogStore", auditLogStore);
@@ -220,7 +220,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AuditProject.
+         * The Simple Log Service project that is used to store the audit logs.
          */
         public Builder auditProject(String auditProject) {
             this.putQueryParameter("AuditProject", auditProject);
@@ -229,7 +229,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AuditRegionId.
+         * The ID of the region in which the audit logs are stored.
          */
         public Builder auditRegionId(String auditRegionId) {
             this.putQueryParameter("AuditRegionId", auditRegionId);
@@ -238,7 +238,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The name of the Kubernetes cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -247,7 +247,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * ExpireDate.
+         * The time at which the container ends to be added.
          */
         public Builder expireDate(Long expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -256,7 +256,7 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The group ID.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -265,7 +265,14 @@ public class GenerateK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * The service provider of the cloud asset. Valid values:
+         * <p>
+         * 
+         * *   **Tencent**
+         * *   **HUAWEICLOUD**
+         * *   **Azure**
+         * *   **AWS**
+         * *   **Others**
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

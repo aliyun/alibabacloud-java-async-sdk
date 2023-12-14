@@ -110,7 +110,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * The details of the attacker profile.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -134,7 +134,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +226,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private java.util.List < String > realIp; 
 
             /**
-             * ExternalIp.
+             * The public IP addresses.
              */
             public Builder externalIp(java.util.List < String > externalIp) {
                 this.externalIp = externalIp;
@@ -230,7 +234,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIp.
+             * The private IP addresses.
              */
             public Builder internalIp(java.util.List < String > internalIp) {
                 this.internalIp = internalIp;
@@ -238,7 +242,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * RealIp.
+             * The originating IP addresses.
              */
             public Builder realIp(java.util.List < String > realIp) {
                 this.realIp = realIp;
@@ -351,7 +355,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private java.util.List < String > social; 
 
             /**
-             * AttackCount.
+             * The number of attacks.
              */
             public Builder attackCount(Integer attackCount) {
                 this.attackCount = attackCount;
@@ -359,7 +363,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * Browser.
+             * The information about the browsers of the attack source.
              */
             public Builder browser(java.util.List < String > browser) {
                 this.browser = browser;
@@ -367,7 +371,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The information about the hosts of the attack source.
              */
             public Builder host(java.util.List < String > host) {
                 this.host = host;
@@ -375,7 +379,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp at which the attack was last detected. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -383,7 +387,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network information about the attack source.
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -391,7 +395,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * PortraitId.
+             * The attacker profile ID.
              */
             public Builder portraitId(String portraitId) {
                 this.portraitId = portraitId;
@@ -399,7 +403,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * Social.
+             * The social information about the attack source.
              */
             public Builder social(java.util.List < String > social) {
                 this.social = social;
@@ -476,7 +480,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -484,7 +488,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -492,7 +496,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -500,7 +504,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

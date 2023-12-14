@@ -96,7 +96,7 @@ public class ModifyImageRegistryRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -105,7 +105,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password.
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -114,7 +114,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * TransPerHour.
+         * The number of images that are scanned per hour.
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putBodyParameter("TransPerHour", transPerHour);
@@ -123,7 +123,7 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -142,7 +142,11 @@ public class AddContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +155,11 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The action that you want to specify for the rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: triggers alerts.
+         * *   **2**: blocks escapes.
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -160,7 +168,7 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). The names of rules that are created for the same user must be unique.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -169,7 +177,7 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleTemplateId.
+         * The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.
          */
         public Builder ruleTemplateId(Integer ruleTemplateId) {
             this.putQueryParameter("RuleTemplateId", ruleTemplateId);
@@ -178,7 +186,11 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: custom rule
+         * *   **1**: system rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -187,7 +199,7 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * SelectedPolicy.
+         * The check items that are enabled for the rule.
          */
         public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
             this.putQueryParameter("SelectedPolicy", selectedPolicy);
@@ -196,7 +208,7 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * WhiteImages.
+         * The images that are added to the whitelist.
          */
         public Builder whiteImages(java.util.List < String > whiteImages) {
             this.putQueryParameter("WhiteImages", whiteImages);

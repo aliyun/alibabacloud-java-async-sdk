@@ -152,7 +152,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -161,7 +161,10 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the alert.
+         * <p>
+         * 
+         * *   Set the value to ALL, which indicates all alert types.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -170,7 +173,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * Field.
+         * The field that you want to use in the whitelist rule.
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -179,7 +182,7 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * FieldValue.
+         * The value of the field that you want to use in the whitelist rule.
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -188,7 +191,10 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * Operator.
+         * The logical operator that you want to use in the whitelist rule.
+         * <p>
+         * 
+         * *   Set the value to strEqual, which indicates the equality operator (=).
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
@@ -197,7 +203,10 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * Source.
+         * The feature to which this operation belongs.
+         * <p>
+         * 
+         * *   Set the value to agentless, which indicates the agentless detection feature.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -206,7 +215,11 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the assets on which you want the whitelist rule to take effect. Valid values:
+         * <p>
+         * 
+         * *   ALL: all assets
+         * *   SELECTION_KEY: selected assets
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -215,7 +228,11 @@ public class UpdateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * TargetValue.
+         * The assets on which you want the whitelist rule to take effect. Valid values:
+         * <p>
+         * 
+         * *   ALL: all assets
+         * *   Others: selected assets
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

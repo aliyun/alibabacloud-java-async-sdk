@@ -54,7 +54,7 @@ public class GetMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the whitelist rule.
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

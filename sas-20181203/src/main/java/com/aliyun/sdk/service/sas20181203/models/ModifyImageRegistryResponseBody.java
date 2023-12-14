@@ -110,7 +110,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * N/A
          */
         public Builder data(Object data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,11 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * The execution duration.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

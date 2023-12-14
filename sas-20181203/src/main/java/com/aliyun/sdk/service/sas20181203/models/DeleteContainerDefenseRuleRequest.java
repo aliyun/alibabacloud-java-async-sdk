@@ -54,7 +54,10 @@ public class DeleteContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * RuleIds.
+         * The IDs of the rules that you want to delete.
+         * <p>
+         * 
+         * >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule IDs.
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

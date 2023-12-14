@@ -139,7 +139,11 @@ public class ModifyContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +152,11 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The action mode of the rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: alerts
+         * *   **2**: block
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -157,7 +165,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -166,7 +174,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -175,7 +183,11 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: user-defined rule
+         * *   **1**: built-in rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -184,7 +196,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * SelectedPolicy.
+         * The rule items.
          */
         public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
             this.putQueryParameter("SelectedPolicy", selectedPolicy);
@@ -193,7 +205,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * WhiteImages.
+         * The images that are added to the whitelist.
          */
         public Builder whiteImages(java.util.List < String > whiteImages) {
             this.putQueryParameter("WhiteImages", whiteImages);

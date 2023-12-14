@@ -70,7 +70,7 @@ public class BindHybridProxyRequest extends Request {
         } 
 
         /**
-         * ClusterName.
+         * The name of the proxy cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -79,7 +79,7 @@ public class BindHybridProxyRequest extends Request {
         }
 
         /**
-         * YundunUuids.
+         * The UUIDs of servers that you want to add to Security Center over the proxy server.
          */
         public Builder yundunUuids(java.util.List < String > yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);

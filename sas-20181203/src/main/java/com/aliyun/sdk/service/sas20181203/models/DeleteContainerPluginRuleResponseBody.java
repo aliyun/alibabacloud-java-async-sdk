@@ -50,7 +50,11 @@ public class DeleteContainerPluginRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the container plug-in is manually deleted. Valid values: **true** and **false**.
+         * Indicates whether the container plug-in is manually deleted. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder data(Boolean data) {
             this.data = data;

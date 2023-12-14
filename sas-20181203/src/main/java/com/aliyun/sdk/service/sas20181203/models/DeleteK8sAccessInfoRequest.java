@@ -97,7 +97,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * AliyunYundunGatewayApiName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -106,7 +106,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayPopName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -115,7 +115,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayProjectName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -124,7 +124,7 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

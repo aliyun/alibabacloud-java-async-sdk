@@ -82,7 +82,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         } 
 
         /**
-         * The IDs of tasks.
+         * The task IDs.
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

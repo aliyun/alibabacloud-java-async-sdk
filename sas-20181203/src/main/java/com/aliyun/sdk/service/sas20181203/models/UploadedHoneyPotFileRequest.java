@@ -143,7 +143,10 @@ public class UploadedHoneyPotFileRequest extends Request {
         } 
 
         /**
-         * FileKey.
+         * The file key that you use to upload the file.
+         * <p>
+         * 
+         * >  The key is in the format of HONEYPOT_FILE/{Timestamp}\_{Custom file name}.
          */
         public Builder fileKey(String fileKey) {
             this.putQueryParameter("FileKey", fileKey);
@@ -152,7 +155,7 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the file that you want to upload.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -161,7 +164,7 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * FileType.
+         * The file type.
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -170,7 +173,7 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * HoneypotImageName.
+         * The name of the honeypot image.
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -179,7 +182,11 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +195,10 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the management node to which the honeypot belongs.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes. operation to query the management node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -197,7 +207,7 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * TemplateExtra.
+         * The prompt template that corresponds to the file.
          */
         public Builder templateExtra(String templateExtra) {
             this.putQueryParameter("TemplateExtra", templateExtra);

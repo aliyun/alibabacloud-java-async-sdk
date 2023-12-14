@@ -54,7 +54,7 @@ public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the whitelist rule. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

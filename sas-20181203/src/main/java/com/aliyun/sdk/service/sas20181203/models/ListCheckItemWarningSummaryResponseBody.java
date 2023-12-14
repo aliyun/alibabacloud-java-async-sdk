@@ -62,7 +62,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk statistics of check items.
+         * The risk statistics of check items.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -270,7 +270,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AffiliatedRiskTypes.
+             * The list of the baseline categories of attribution.
              */
             public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
@@ -278,7 +278,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AffiliatedRisks.
+             * The list of baselines attribution.
              */
             public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
@@ -310,10 +310,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check item.Valid values:
+             * The risk level of the check item. Valid values:
              * <p>
+             * 
              * *   **high**
-             * *  **medium**
+             * *   **medium**
              * *   **low**
              */
             public Builder checkLevel(String checkLevel) {
@@ -330,10 +331,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Checks if the item belongs to the container runtime category.Valid values:
+             * Indicates whether the check item belongs to the container runtime type. Valid values:
              * <p>
+             * 
              * *   **true**
-             * *  **false**
+             * *   **false**
              */
             public Builder containerCheckItem(Boolean containerCheckItem) {
                 this.containerCheckItem = containerCheckItem;
@@ -357,11 +359,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk status of the check item.Valid values:
+             * The risk status of the check item. Valid values:
              * <p>
-             * *  **1**: failed
              * 
-             * *  **3**: passed
+             * *   **1**: failed
+             * *   **3**: passed
              */
             public Builder status(Integer status) {
                 this.status = status;

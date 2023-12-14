@@ -70,7 +70,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the fingerprints of the ports.
+         * The fingerprints of the ports.
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -351,7 +351,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The IP address that is bound to the listening port.
+             * The IP address bound to the port.
              */
             public Builder bindIp(String bindIp) {
                 this.bindIp = bindIp;
@@ -367,7 +367,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +375,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -415,7 +415,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port.
+             * The listener port.
              */
             public Builder port(String port) {
                 this.port = port;

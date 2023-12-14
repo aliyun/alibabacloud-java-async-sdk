@@ -54,7 +54,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * ConfigList.
+         * The whitelist rules.
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.putQueryParameter("ConfigList", configList);
@@ -180,7 +180,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             private String targetValue; 
 
             /**
-             * ConfigId.
+             * The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -188,7 +188,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * EventName.
+             * The name of the alert.
+             * <p>
+             * 
+             * *   Set the value to **ALL**, which indicates all alert types.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -196,7 +199,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * Field.
+             * The field that you want to use in the whitelist rule.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -204,7 +207,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * FieldValue.
+             * The value of the field that you want to use in the whitelist rule.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -212,7 +215,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The logical operator that you want to use in the whitelist rule.
+             * <p>
+             * 
+             * *   Set the value to strEqual, which indicates the equality operator (=).
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -220,7 +226,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * Source.
+             * The feature to which this operation belongs.
+             * <p>
+             * 
+             * *   Set the value to agentless, which indicates the agentless detection feature.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -228,7 +237,11 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * The type of the assets on which you want the whitelist rule to take effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   SELECTION_KEY: selected assets
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -236,7 +249,11 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * TargetValue.
+             * The assets on which you want the whitelist rule to take effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   Others: selected assets
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

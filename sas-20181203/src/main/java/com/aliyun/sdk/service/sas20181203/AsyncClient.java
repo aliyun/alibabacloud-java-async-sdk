@@ -236,6 +236,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteOpaStrategyNewResponse> deleteOpaStrategyNew(DeleteOpaStrategyNewRequest request);
 
+    CompletableFuture<DeleteOssScanConfigResponse> deleteOssScanConfig(DeleteOssScanConfigRequest request);
+
     CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request);
 
     CompletableFuture<DeleteSasContainerWebDefenseRuleResponse> deleteSasContainerWebDefenseRule(DeleteSasContainerWebDefenseRuleRequest request);
@@ -1141,6 +1143,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInterceptionTargetPageResponse> listInterceptionTargetPage(ListInterceptionTargetPageRequest request);
 
+    /**
+      * You can use this operation to query the access information about Kubernetes clusters.
+      *
+     */
     CompletableFuture<ListK8sAccessInfoResponse> listK8sAccessInfo(ListK8sAccessInfoRequest request);
 
     CompletableFuture<ListMaliciousFileWhitelistConfigsResponse> listMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request);
@@ -1152,6 +1158,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOssBucketResponse> listOssBucket(ListOssBucketRequest request);
 
     CompletableFuture<ListOssBucketScanInfoResponse> listOssBucketScanInfo(ListOssBucketScanInfoRequest request);
+
+    CompletableFuture<ListOssScanConfigResponse> listOssScanConfig(ListOssScanConfigRequest request);
 
     CompletableFuture<ListPluginForUuidResponse> listPluginForUuid(ListPluginForUuidRequest request);
 
@@ -1444,6 +1452,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveCheckResultWhiteListResponse> removeCheckResultWhiteList(RemoveCheckResultWhiteListRequest request);
 
+    CompletableFuture<ResetHoneypotResponse> resetHoneypot(ResetHoneypotRequest request);
+
     CompletableFuture<RetryAgentlessTaskResponse> retryAgentlessTask(RetryAgentlessTaskRequest request);
 
     CompletableFuture<RetryInstallProbeResponse> retryInstallProbe(RetryInstallProbeRequest request);
@@ -1471,6 +1481,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartBaselineSecurityCheckResponse> startBaselineSecurityCheck(StartBaselineSecurityCheckRequest request);
 
     CompletableFuture<StartDiscoverDatabaseTaskResponse> startDiscoverDatabaseTask(StartDiscoverDatabaseTaskRequest request);
+
+    CompletableFuture<StartHoneypotResponse> startHoneypot(StartHoneypotRequest request);
 
     CompletableFuture<StartPreCheckDatabaseResponse> startPreCheckDatabase(StartPreCheckDatabaseRequest request);
 

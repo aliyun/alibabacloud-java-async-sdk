@@ -50,7 +50,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * K8sAccessInfos.
+         * The information about the Kubernetes clusters.
          */
         public Builder k8sAccessInfos(java.util.List < K8sAccessInfos> k8sAccessInfos) {
             this.k8sAccessInfos = k8sAccessInfos;
@@ -58,7 +58,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             private String vendor; 
 
             /**
-             * AliUid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -238,7 +238,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuditLogStore.
+             * The Simple Log Service Logstore that is used to store the audit logs.
              */
             public Builder auditLogStore(String auditLogStore) {
                 this.auditLogStore = auditLogStore;
@@ -246,7 +246,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuditProject.
+             * The Simple Log Service project that is used to store the audit logs.
              */
             public Builder auditProject(String auditProject) {
                 this.auditProject = auditProject;
@@ -254,7 +254,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuditRegionId.
+             * The ID of the region in which the server is deployed.
              */
             public Builder auditRegionId(String auditRegionId) {
                 this.auditRegionId = auditRegionId;
@@ -262,7 +262,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -270,7 +270,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -278,7 +278,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The expiration time.
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -286,7 +286,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the server group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -294,7 +294,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the server group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -302,7 +302,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The UUID of the access information.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -310,7 +310,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstallKey.
+             * The installation key of the Kubernetes cluster.
              */
             public Builder installKey(String installKey) {
                 this.installKey = installKey;
@@ -318,7 +318,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * The service provider.
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

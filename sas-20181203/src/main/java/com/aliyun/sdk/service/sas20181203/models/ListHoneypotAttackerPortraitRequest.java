@@ -124,7 +124,7 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +133,7 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         }
 
         /**
-         * EndTimeStamp.
+         * The end of the time range to query. The value is a UNIX timestamp.
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -142,7 +142,11 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +155,10 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +167,7 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * The source IP address of the attack.
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -169,7 +176,7 @@ public class ListHoneypotAttackerPortraitRequest extends Request {
         }
 
         /**
-         * StartTimeStamp.
+         * The beginning of the time range to query. The value is a UNIX timestamp.
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

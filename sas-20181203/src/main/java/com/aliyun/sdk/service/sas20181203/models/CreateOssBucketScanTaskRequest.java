@@ -126,7 +126,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * AllKeyPrefix.
+         * Whether to match all prefixes.
          */
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
@@ -153,7 +153,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * KeyPrefixList.
+         * The prefixes of the objects that you want to check.
          */
         public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);

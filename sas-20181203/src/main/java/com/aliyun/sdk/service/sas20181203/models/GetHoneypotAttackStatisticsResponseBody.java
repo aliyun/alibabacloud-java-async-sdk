@@ -98,7 +98,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The statistics.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             private String statisticsValue; 
 
             /**
-             * StatisticsCount.
+             * The number of times the value is counted.
              */
             public Builder statisticsCount(Integer statisticsCount) {
                 this.statisticsCount = statisticsCount;
@@ -198,7 +202,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticsValue.
+             * The statistical value.
              */
             public Builder statisticsValue(String statisticsValue) {
                 this.statisticsValue = statisticsValue;
@@ -263,7 +267,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             private String statisticsType; 
 
             /**
-             * Count.
+             * The number of entries on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -271,7 +275,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotAttackStatistics.
+             * The statistics details.
              */
             public Builder honeypotAttackStatistics(java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics) {
                 this.honeypotAttackStatistics = honeypotAttackStatistics;
@@ -279,7 +283,13 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticsType.
+             * The type of the attack source statistics. Valid values:
+             * <p>
+             * 
+             * *   **TOP_ATTACKED_AGENT**: the top five probes that are attacked the most frequently.
+             * *   **TOP_ATTACKED_IP**: the top five IP addresses that are attacked the most frequently.
+             * *   **ATTACK_EVENT_TYPE**: the type of the intrusion event.
+             * *   **ATTACK_HONEYPOT_TYPE**: the type of the attacked honeypot.
              */
             public Builder statisticsType(String statisticsType) {
                 this.statisticsType = statisticsType;

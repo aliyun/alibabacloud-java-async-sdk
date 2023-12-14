@@ -50,7 +50,7 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CriteriaList.
+         * The information about the search condition.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -58,7 +58,7 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,19 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Name.
+             * The name of the search condition. Valid values:
+             * <p>
+             * 
+             * *   **instanceId**: the ID of the container instance.
+             * *   **clusterId**: the cluster ID.
+             * *   **regionId**: the ID of the region in which the container resides.
+             * *   **clusterName**: the name of the cluster.
+             * *   **clusterType**: the type of the cluster.
+             * *   **hostIp**: the public IP address.
+             * *   **pod**: the pod.
+             * *   **podIp**: the IP address of the pod.
+             * *   **containerId**: the container ID.
+             * *   **containerScope**: the type of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +142,11 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the search condition. Valid values:
+             * <p>
+             * 
+             * *   **input**: The search condition needs to be specified.
+             * *   **select**: The search condition is an option that can be selected from the drop-down list.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +154,7 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values.
              */
             public Builder values(String values) {
                 this.values = values;

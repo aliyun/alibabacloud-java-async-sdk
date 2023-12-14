@@ -54,7 +54,7 @@ public class GetSasContainerWebDefenseRuleCriteriaRequest extends Request {
         } 
 
         /**
-         * Value.
+         * The value of the search condition. Fuzzy match is supported.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

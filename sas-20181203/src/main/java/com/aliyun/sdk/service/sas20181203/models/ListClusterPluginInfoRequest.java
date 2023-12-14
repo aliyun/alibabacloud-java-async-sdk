@@ -83,7 +83,7 @@ public class ListClusterPluginInfoRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The IDs of the clusters.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -92,7 +92,11 @@ public class ListClusterPluginInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +105,7 @@ public class ListClusterPluginInfoRequest extends Request {
         }
 
         /**
-         * PluginName.
+         * The name of the plug-in.
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);

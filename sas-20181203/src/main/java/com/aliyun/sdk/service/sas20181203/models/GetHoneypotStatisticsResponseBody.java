@@ -98,7 +98,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The honeypot usage statistics.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +254,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             private Integer usedVpcProbeCount; 
 
             /**
-             * TotalHoneypotCount.
+             * The total number of honeypots.
              */
             public Builder totalHoneypotCount(Integer totalHoneypotCount) {
                 this.totalHoneypotCount = totalHoneypotCount;
@@ -258,7 +262,11 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNodeStatus.
+             * The health status of the management node. Valid values:
+             * <p>
+             * 
+             * *   1: normal
+             * *   2: abnormal
              */
             public Builder totalNodeStatus(Integer totalNodeStatus) {
                 this.totalNodeStatus = totalNodeStatus;
@@ -266,7 +274,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalProbeCount.
+             * The total number of authorized probes.
              */
             public Builder totalProbeCount(Integer totalProbeCount) {
                 this.totalProbeCount = totalProbeCount;
@@ -274,7 +282,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedHoneypotCount.
+             * The number of deployed honeypots.
              */
             public Builder usedHoneypotCount(Integer usedHoneypotCount) {
                 this.usedHoneypotCount = usedHoneypotCount;
@@ -282,7 +290,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedHostProbeCount.
+             * The number of deployed host probes.
              */
             public Builder usedHostProbeCount(Integer usedHostProbeCount) {
                 this.usedHostProbeCount = usedHostProbeCount;
@@ -290,7 +298,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedProbeCount.
+             * The number of deployed probes.
              */
             public Builder usedProbeCount(Integer usedProbeCount) {
                 this.usedProbeCount = usedProbeCount;
@@ -298,7 +306,7 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedVpcProbeCount.
+             * The number of deployed VPC probes.
              */
             public Builder usedVpcProbeCount(Integer usedVpcProbeCount) {
                 this.usedVpcProbeCount = usedVpcProbeCount;

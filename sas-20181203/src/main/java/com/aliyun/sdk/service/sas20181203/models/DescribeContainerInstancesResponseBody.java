@@ -62,7 +62,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about containers.
+         * The details of the container asset.
          */
         public Builder containerInstanceList(java.util.List < ContainerInstanceList> containerInstanceList) {
             this.containerInstanceList = containerInstanceList;
@@ -506,7 +506,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of cluster.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -514,7 +514,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -538,7 +538,11 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The container is exposed.
+             * Indicates whether the asset is exposed to the Internet.
+             * <p>
+             * 
+             * *   **1**: exposed
+             * *   **0**: not exposed
              */
             public Builder exposed(Integer exposed) {
                 this.exposed = exposed;
@@ -546,7 +550,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The container exposed details .
+             * The exposure details. The value is a JSON string.
              */
             public Builder exposedDetail(String exposedDetail) {
                 this.exposedDetail = exposedDetail;
@@ -574,7 +578,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * The IP address of the host.
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -598,7 +602,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -614,7 +618,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * The namespace of the image repository.
              */
             public Builder imageRepoNamespace(String imageRepoNamespace) {
                 this.imageRepoNamespace = imageRepoNamespace;

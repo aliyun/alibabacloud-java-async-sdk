@@ -82,7 +82,7 @@ public class DeleteContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);

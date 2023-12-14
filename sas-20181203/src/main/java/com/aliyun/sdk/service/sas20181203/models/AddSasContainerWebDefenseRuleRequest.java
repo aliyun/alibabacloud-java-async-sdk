@@ -69,7 +69,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * PathConfDTOList.
+         * The paths that you want to protect.
          */
         public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
             this.putQueryParameter("PathConfDTOList", pathConfDTOList);
@@ -78,7 +78,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -231,7 +231,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             private java.util.List < String > processPathList; 
 
             /**
-             * BackupPath.
+             * The backup path.
              */
             public Builder backupPath(String backupPath) {
                 this.backupPath = backupPath;
@@ -239,7 +239,11 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * DefenseMode.
+             * The prevention mode. Valid values:
+             * <p>
+             * 
+             * *   **block**
+             * *   **audit**
              */
             public Builder defenseMode(String defenseMode) {
                 this.defenseMode = defenseMode;
@@ -247,7 +251,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * DefensePath.
+             * The path that you want to protect.
              */
             public Builder defensePath(String defensePath) {
                 this.defensePath = defensePath;
@@ -255,7 +259,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFile.
+             * The file that you want to exclude.
              */
             public Builder excludeFile(String excludeFile) {
                 this.excludeFile = excludeFile;
@@ -263,7 +267,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFilePath.
+             * The path to the file that you want to exclude.
              */
             public Builder excludeFilePath(String excludeFilePath) {
                 this.excludeFilePath = excludeFilePath;
@@ -271,7 +275,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFileType.
+             * The type of the file that you want to exclude.
              */
             public Builder excludeFileType(String excludeFileType) {
                 this.excludeFileType = excludeFileType;
@@ -279,7 +283,11 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * GuardType.
+             * The protecion mode. Valid values:
+             * <p>
+             * 
+             * *   **0**: basic mode (whitelist)
+             * *   **1**: complex mode (blacklist)
              */
             public Builder guardType(Integer guardType) {
                 this.guardType = guardType;
@@ -287,7 +295,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * IncludeFile.
+             * The file that you want to include.
              */
             public Builder includeFile(String includeFile) {
                 this.includeFile = includeFile;
@@ -295,7 +303,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * IncludeFileType.
+             * The type of the file that you want to include.
              */
             public Builder includeFileType(String includeFileType) {
                 this.includeFileType = includeFileType;
@@ -303,7 +311,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ProcessPathList.
+             * The processes that you want to add to the whitelist.
              */
             public Builder processPathList(java.util.List < String > processPathList) {
                 this.processPathList = processPathList;

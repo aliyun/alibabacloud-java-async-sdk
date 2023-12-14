@@ -50,7 +50,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * ContainerWebDefenseAppList.
+         * The applications.
          */
         public Builder containerWebDefenseAppList(java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList) {
             this.containerWebDefenseAppList = containerWebDefenseAppList;
@@ -58,7 +58,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             private String tag; 
 
             /**
-             * AliUid.
+             * The user ID.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -178,7 +178,10 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * ClusterId.
+             * The ID of the container cluster.
+             * <p>
+             * 
+             * >  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](~~182997~~) operation.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -186,7 +189,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * GmtCreate.
+             * The time when the application was created. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -194,7 +197,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * GmtModified.
+             * The last modification time. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -202,7 +205,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * Id.
+             * The ID of the node.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -210,7 +213,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -218,7 +221,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
             }
 
             /**
-             * Tag.
+             * The value of the application label.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

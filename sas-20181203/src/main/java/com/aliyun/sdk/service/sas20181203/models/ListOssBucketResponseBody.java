@@ -208,7 +208,11 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * SupportConfig.
+             * Whether to support config. Valid values:
+             * <p>
+             * 
+             * * true
+             * * false
              */
             public Builder supportConfig(String supportConfig) {
                 this.supportConfig = supportConfig;

@@ -96,7 +96,7 @@ public class ListK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * AliyunYundunGatewayApiName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -105,7 +105,7 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayPopName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -114,7 +114,7 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * AliyunYundunGatewayProjectName.
+         * This parameter is deprecated.
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -123,7 +123,11 @@ public class ListK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

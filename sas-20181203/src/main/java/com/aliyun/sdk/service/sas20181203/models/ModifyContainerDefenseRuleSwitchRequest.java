@@ -68,7 +68,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         } 
 
         /**
-         * RuleIds.
+         * The IDs of rules.
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -77,7 +77,11 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         }
 
         /**
-         * RuleSwitch.
+         * The status of the rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **0**: disabled
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);

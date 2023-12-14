@@ -83,7 +83,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * PathConfDTOList.
+         * The paths that are protected.
          */
         public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
             this.putQueryParameter("PathConfDTOList", pathConfDTOList);
@@ -92,7 +92,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -101,7 +101,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -266,7 +266,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             private java.util.List < String > processPathList; 
 
             /**
-             * BackupPath.
+             * The backup paths.
              */
             public Builder backupPath(String backupPath) {
                 this.backupPath = backupPath;
@@ -274,7 +274,11 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * DefenseMode.
+             * The prevention mode. Valid values:
+             * <p>
+             * 
+             * *   **block**
+             * *   **audit**
              */
             public Builder defenseMode(String defenseMode) {
                 this.defenseMode = defenseMode;
@@ -282,7 +286,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * DefensePath.
+             * The path that is protected.
              */
             public Builder defensePath(String defensePath) {
                 this.defensePath = defensePath;
@@ -290,7 +294,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFile.
+             * The files that are excluded.
              */
             public Builder excludeFile(String excludeFile) {
                 this.excludeFile = excludeFile;
@@ -298,7 +302,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFilePath.
+             * The paths to the files that are excluded.
              */
             public Builder excludeFilePath(String excludeFilePath) {
                 this.excludeFilePath = excludeFilePath;
@@ -306,7 +310,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ExcludeFileType.
+             * The types of the files that are excluded.
              */
             public Builder excludeFileType(String excludeFileType) {
                 this.excludeFileType = excludeFileType;
@@ -314,7 +318,11 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * GuardType.
+             * The protection mode. Valid values:
+             * <p>
+             * 
+             * *   **0**: basic mode (whitelist)
+             * *   **1**: complex mode (blacklist)
              */
             public Builder guardType(Integer guardType) {
                 this.guardType = guardType;
@@ -322,7 +330,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * IncludeFile.
+             * The files that are included.
              */
             public Builder includeFile(String includeFile) {
                 this.includeFile = includeFile;
@@ -330,7 +338,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * IncludeFileType.
+             * The type of the files that are included.
              */
             public Builder includeFileType(String includeFileType) {
                 this.includeFileType = includeFileType;
@@ -338,7 +346,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * PathConfId.
+             * The path ID.
              */
             public Builder pathConfId(Long pathConfId) {
                 this.pathConfId = pathConfId;
@@ -346,7 +354,7 @@ public class ModifySasContainerWebDefenseRuleRequest extends Request {
             }
 
             /**
-             * ProcessPathList.
+             * The processes that are added to the whitelist.
              */
             public Builder processPathList(java.util.List < String > processPathList) {
                 this.processPathList = processPathList;

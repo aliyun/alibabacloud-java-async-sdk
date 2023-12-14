@@ -86,7 +86,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetFileDetectReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +258,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             private String threatTypes; 
 
             /**
-             * Basic.
+             * The basic information about the detected file.
              */
             public Builder basic(String basic) {
                 this.basic = basic;
@@ -262,7 +266,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * FileHash.
+             * The hash value of the file.
              */
             public Builder fileHash(String fileHash) {
                 this.fileHash = fileHash;
@@ -270,7 +274,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * Filename.
+             * The name of the file.
              */
             public Builder filename(String filename) {
                 this.filename = filename;
@@ -278,7 +282,11 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * HasData.
+             * Indicates whether the file data exists in the cloud sandbox. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasData(Boolean hasData) {
                 this.hasData = hasData;
@@ -286,7 +294,12 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * Intelligences.
+             * The threat intelligence event, which is a JSON array.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   The threat type. The value is an array. The elements in the array can be DDoS trojans, mining programs, network layer intrusions, network service scans, network sharing and discovery, mining pools, exploits, dark webs, malicious logons, malicious download sources, C\&C servers, webshells, and web attacks.
              */
             public Builder intelligences(String intelligences) {
                 this.intelligences = intelligences;
@@ -294,7 +307,7 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * Sandbox.
+             * The details of the cloud sandbox check results.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -302,7 +315,11 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * ShowTab.
+             * Indicates whether the check report is displayed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder showTab(Boolean showTab) {
                 this.showTab = showTab;
@@ -310,7 +327,12 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatLevel.
+             * The threat level. Valid values:
+             * <p>
+             * 
+             * *   **0**: normal
+             * *   **1**: suspicious
+             * *   **2**: high
              */
             public Builder threatLevel(Long threatLevel) {
                 this.threatLevel = threatLevel;
@@ -318,7 +340,13 @@ public class GetFileDetectReportResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatTypes.
+             * The risk tags and server tags that are generated by analyzing threat intelligence and security events. The value is a string array. The array includes the following elements:
+             * <p>
+             * 
+             * *   **threat_type_desc**: the threat type.
+             * *   **last_find_time**: the last time the threat was detected.
+             * *   **risk_type**: indicates whether the tag is malicious. The value 0 indicates that the tag is not malicious. The value 1 indicates that the tag is malicious. The value -1 indicates that whether the tag type is malicious is unknown.
+             * *   **threat_type**: the threat type. The value is an array. The elements in the array can be network layer intrusion, network service scanning, network sharing and discovery, mining pool, exploits, darknet, malicious logon, malicious download source, central control, web shell, and web attack.
              */
             public Builder threatTypes(String threatTypes) {
                 this.threatTypes = threatTypes;

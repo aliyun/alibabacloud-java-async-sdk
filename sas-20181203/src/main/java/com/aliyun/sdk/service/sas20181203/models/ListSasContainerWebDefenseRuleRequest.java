@@ -96,7 +96,17 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **name**: the name of the search condition.
+         * 
+         * *   **value**: the value of the search condition.
+         * 
+         * *   **logicalExp**: the logical relation for multiple search conditions. Valid values:
+         * 
+         *     *   **OR**: The search conditions use a logical **OR**.
+         *     *   **AND**: The search conditions use a logical **AND**.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -105,7 +115,7 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +124,11 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * LogicalExp.
+         * The logical relation for multiple search conditions. Valid values:
+         * <p>
+         * 
+         * *   **OR**: The search conditions use a logical **OR**.
+         * *   **AND**: The search conditions use a logical **AND**.
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -123,7 +137,7 @@ public class ListSasContainerWebDefenseRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

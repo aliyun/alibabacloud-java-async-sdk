@@ -294,7 +294,12 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigStatus.
+             * Configuration status, valid values:
+             * <p>
+             * 
+             * - **0**: No Configuration.
+             * - **1**: Not Open.
+             * - **2**: Open.
              */
             public Builder configStatus(Integer configStatus) {
                 this.configStatus = configStatus;

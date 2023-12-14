@@ -180,7 +180,7 @@ public class UpdateOssScanConfigRequest extends Request {
         } 
 
         /**
-         * AllKeyPrefix.
+         * Whether to match all file prefixes.
          */
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
@@ -220,7 +220,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -229,7 +229,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * KeyPrefixList.
+         * The prefixes of the object that you want to check.
          */
         public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
@@ -247,7 +247,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

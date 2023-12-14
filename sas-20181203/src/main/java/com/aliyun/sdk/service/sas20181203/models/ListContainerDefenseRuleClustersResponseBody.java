@@ -266,7 +266,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
+             * <p>
+             * 
+             * >  You can call the [ListInterceptionRulePage](~~2590599~~) operation to query the IDs of rules.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

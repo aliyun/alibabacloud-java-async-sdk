@@ -166,7 +166,7 @@ public class DescribePropertyPortDetailRequest extends Request {
         } 
 
         /**
-         * The IP address that is bound to the listening port.
+         * The IP address bound to the port.
          */
         public Builder bindIp(String bindIp) {
             this.putQueryParameter("BindIp", bindIp);

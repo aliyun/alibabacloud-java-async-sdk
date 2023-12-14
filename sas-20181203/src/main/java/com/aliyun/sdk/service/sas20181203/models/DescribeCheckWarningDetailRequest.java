@@ -124,7 +124,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * The ID of the check item.
+         * <p>
+         * 
+         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.
          */
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -179,7 +182,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The server UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

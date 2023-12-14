@@ -62,7 +62,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContainerWebDefenseRuleList.
+         * The rules for container tamper-proofing.
          */
         public Builder containerWebDefenseRuleList(java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList) {
             this.containerWebDefenseRuleList = containerWebDefenseRuleList;
@@ -70,7 +70,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private java.util.List < String > processPathList; 
 
             /**
-             * BackupPath.
+             * The backup paths.
              */
             public Builder backupPath(String backupPath) {
                 this.backupPath = backupPath;
@@ -234,7 +234,11 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseMode.
+             * The prevention mode. Valid values:
+             * <p>
+             * 
+             * *   **block**
+             * *   **audit**
              */
             public Builder defenseMode(String defenseMode) {
                 this.defenseMode = defenseMode;
@@ -242,7 +246,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DefensePath.
+             * The protected path.
              */
             public Builder defensePath(String defensePath) {
                 this.defensePath = defensePath;
@@ -250,7 +254,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeFile.
+             * The file that is excluded.
              */
             public Builder excludeFile(String excludeFile) {
                 this.excludeFile = excludeFile;
@@ -258,7 +262,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeFilePath.
+             * The path to the file that is excluded.
              */
             public Builder excludeFilePath(String excludeFilePath) {
                 this.excludeFilePath = excludeFilePath;
@@ -266,7 +270,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeFileType.
+             * The type of the file that is excluded.
              */
             public Builder excludeFileType(String excludeFileType) {
                 this.excludeFileType = excludeFileType;
@@ -274,7 +278,11 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GuardType.
+             * The protection mode. Valid values:
+             * <p>
+             * 
+             * *   **0**: basic mode (whitelist)
+             * *   **1**: complex mode (blacklist)
              */
             public Builder guardType(Integer guardType) {
                 this.guardType = guardType;
@@ -282,7 +290,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeFile.
+             * The file that is included.
              */
             public Builder includeFile(String includeFile) {
                 this.includeFile = includeFile;
@@ -290,7 +298,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeFileType.
+             * The type of the file that is included.
              */
             public Builder includeFileType(String includeFileType) {
                 this.includeFileType = includeFileType;
@@ -298,7 +306,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessPathList.
+             * The processes that are added to the whitelist.
              */
             public Builder processPathList(java.util.List < String > processPathList) {
                 this.processPathList = processPathList;
@@ -423,7 +431,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer ruleStatus; 
 
             /**
-             * AliUid.
+             * The user ID.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -431,7 +439,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ApptotalCount.
+             * The number of the applications.
              */
             public Builder apptotalCount(Integer apptotalCount) {
                 this.apptotalCount = apptotalCount;
@@ -439,7 +447,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -447,7 +455,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The timestamp when the alert event was last modified. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -455,7 +463,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -463,7 +471,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PathConfDTOList.
+             * The paths that are protected.
              */
             public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
                 this.pathConfDTOList = pathConfDTOList;
@@ -471,7 +479,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -479,7 +487,11 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleStatus.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder ruleStatus(Integer ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -556,7 +568,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -564,7 +576,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -572,7 +584,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,7 +592,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -54,7 +54,7 @@ public class ListInstanceRiskNumRequest extends Request {
         } 
 
         /**
-         * InstanceList.
+         * The instances.
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -108,7 +108,7 @@ public class ListInstanceRiskNumRequest extends Request {
             private String uuid; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -116,7 +116,7 @@ public class ListInstanceRiskNumRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * The UUID of the instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

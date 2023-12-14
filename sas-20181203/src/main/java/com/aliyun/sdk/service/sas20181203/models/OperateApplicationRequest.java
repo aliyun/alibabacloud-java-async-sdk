@@ -70,7 +70,7 @@ public class OperateApplicationRequest extends Request {
         } 
 
         /**
-         * ContainerWebDefenseApplicationDTOS.
+         * The container application that is protected from being tampered with.
          */
         public Builder containerWebDefenseApplicationDTOS(java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS) {
             this.putQueryParameter("ContainerWebDefenseApplicationDTOS", containerWebDefenseApplicationDTOS);
@@ -79,7 +79,7 @@ public class OperateApplicationRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -160,7 +160,10 @@ public class OperateApplicationRequest extends Request {
             private String tag; 
 
             /**
-             * ClusterId.
+             * The ID of the cluster to which the container belongs.
+             * <p>
+             * 
+             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -168,7 +171,11 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * Flag.
+             * Specifies whether to apply the configuration to the asset. Valid values:
+             * <p>
+             * 
+             * *   **add**: applied
+             * *   **del**: not applied
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -176,7 +183,7 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * Id.
+             * The application ID. If the application is newly added, you do not need to specify this parameter.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -184,7 +191,7 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * Tag.
+             * The value of the application tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

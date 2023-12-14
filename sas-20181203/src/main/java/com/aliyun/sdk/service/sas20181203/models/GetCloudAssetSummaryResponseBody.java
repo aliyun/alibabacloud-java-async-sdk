@@ -180,7 +180,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
              * *   **23**: Data Security Center (DSC)
              * *   **24**: Elastic IP Address (EIP)
              * *   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)
-             * *   **26**: PolarDB-X
+             * *   **26**: PolarDB for Xscale (PolarDB-X)
              * *   **27**: Elasticsearch
              */
             public Builder assetType(Integer assetType) {
@@ -205,14 +205,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server. Valid values:
+             * The server type. Valid values:
              * <p>
              * 
              * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
+             * *   **1**: an asset outside Alibaba Cloud
              * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: an asset provided by another cloud
-             * *   **8**: a lightweight cloud asset
+             * *   **3**, **4**, **5**, and **7**: an asset provided by a third-party service provider
+             * *   **8**: a lightweight asset
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

@@ -68,7 +68,11 @@ public class GetAegisContainerPluginRuleCriteriaRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class GetAegisContainerPluginRuleCriteriaRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the search condition.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

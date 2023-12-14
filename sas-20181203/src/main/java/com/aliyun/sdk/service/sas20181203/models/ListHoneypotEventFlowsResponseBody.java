@@ -110,7 +110,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * HoneypotEventFlows.
+         * The attack timelines.
          */
         public Builder honeypotEventFlows(java.util.List < HoneypotEventFlows> honeypotEventFlows) {
             this.honeypotEventFlows = honeypotEventFlows;
@@ -126,7 +126,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -150,7 +150,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -450,7 +454,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * AgentId.
+             * The ID of the probe.
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -458,7 +462,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * AgentName.
+             * The name of the probe.
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -466,7 +470,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DockerId.
+             * The ID of the container.
              */
             public Builder dockerId(String dockerId) {
                 this.dockerId = dockerId;
@@ -474,7 +478,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DstIp.
+             * The destination IP address.
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -482,7 +486,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DstPort.
+             * The destination port.
              */
             public Builder dstPort(Integer dstPort) {
                 this.dstPort = dstPort;
@@ -490,7 +494,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * EventConnection.
+             * The UUID of the connection in the attack.
              */
             public Builder eventConnection(String eventConnection) {
                 this.eventConnection = eventConnection;
@@ -498,7 +502,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * The extended information about the attack payload.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -506,7 +510,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Extra1.
+             * The extension information about the virtual private cloud (VPC).
              */
             public Builder extra1(String extra1) {
                 this.extra1 = extra1;
@@ -514,7 +518,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOssUrl.
+             * The Object Storage Service (OSS) URL of the file.
              */
             public Builder fileOssUrl(String fileOssUrl) {
                 this.fileOssUrl = fileOssUrl;
@@ -522,7 +526,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FirstTime.
+             * The timestamp when the intrusion event was first occurred.
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -530,7 +534,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotEventId.
+             * The ID of the intrusion event. The value is a string.
              */
             public Builder honeypotEventId(String honeypotEventId) {
                 this.honeypotEventId = honeypotEventId;
@@ -538,7 +542,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotId.
+             * The ID of the honeypot.
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -546,7 +550,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * HoneypotName.
+             * The name of the honeypot.
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -554,7 +558,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp when the intrusion event was last occurred.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -562,7 +566,12 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **2**: low
+             * *   **3**: medium
+             * *   **4**: high
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -570,7 +579,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventId.
+             * The ID of the intrusion event.
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -578,7 +587,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * The source IP address.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -586,7 +595,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcMac.
+             * The source media access control (MAC) address.
              */
             public Builder srcMac(String srcMac) {
                 this.srcMac = srcMac;
@@ -594,7 +603,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPort.
+             * The source port number.
              */
             public Builder srcPort(Integer srcPort) {
                 this.srcPort = srcPort;
@@ -602,7 +611,12 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The handling status of the intrusion event. Valid values:
+             * <p>
+             * 
+             * *   **1**: pending handling
+             * *   **2**: ignored
+             * *   **4**: confirmed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -610,7 +624,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeId.
+             * The ID of the attack type.
              */
             public Builder typeId(String typeId) {
                 this.typeId = typeId;
@@ -618,7 +632,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The UUID of an attack in the intrusion event.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -695,7 +709,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -703,7 +717,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -711,7 +725,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -719,7 +733,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

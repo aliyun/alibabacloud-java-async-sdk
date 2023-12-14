@@ -50,7 +50,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The information about the plug-in.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * ErrorCode.
+             * The error code returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -238,7 +238,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message returned.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -246,7 +246,11 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Installed.
+             * Indicates whether the plug-in is installed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder installed(Boolean installed) {
                 this.installed = installed;
@@ -254,7 +258,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MachineInternetIp.
+             * The public IP address of the server.
              */
             public Builder machineInternetIp(String machineInternetIp) {
                 this.machineInternetIp = machineInternetIp;
@@ -262,7 +266,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MachineIntranetIp.
+             * The private IP address of the server.
              */
             public Builder machineIntranetIp(String machineIntranetIp) {
                 this.machineIntranetIp = machineIntranetIp;
@@ -270,7 +274,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MachineName.
+             * The name of the server.
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -278,7 +282,11 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * The type of the instance. Valid values include:
+             * <p>
+             * 
+             * *   **ecs**: Elastic Compute Service (ECS) instance
+             * *   **slb**: Server Load Balancer (SLB) instance
              */
             public Builder machineType(Long machineType) {
                 this.machineType = machineType;
@@ -286,7 +294,13 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * Indicates whether the Security Center agent is online. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * >  If the Security Center agent of the server is offline, Security Center does not protect the server.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -294,7 +308,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PluginName.
+             * The name of the plug-in.
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -302,7 +316,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PluginVersion.
+             * The version of the plug-in.
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -310,7 +324,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -318,7 +332,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -395,7 +409,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private java.util.List < NodePluginInfoList> nodePluginInfoList; 
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -403,7 +417,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -411,7 +425,12 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterStatus.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   1: normal
+             * *   2: abnormal
+             * *   3: offline
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -419,7 +438,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodePluginInfoList.
+             * The plug-ins.
              */
             public Builder nodePluginInfoList(java.util.List < NodePluginInfoList> nodePluginInfoList) {
                 this.nodePluginInfoList = nodePluginInfoList;

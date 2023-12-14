@@ -54,7 +54,7 @@ public class DeleteOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * StrategyIds.
+         * The IDs of rules.
          */
         public Builder strategyIds(java.util.List < Long > strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

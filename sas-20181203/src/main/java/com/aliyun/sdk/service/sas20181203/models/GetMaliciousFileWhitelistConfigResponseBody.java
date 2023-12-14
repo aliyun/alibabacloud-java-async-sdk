@@ -98,7 +98,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code. The value 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +302,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             private String targetValue; 
 
             /**
-             * Count.
+             * The number of assets on which the whitelist rule takes effect.
+             * <p>
+             * 
+             * >  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -306,7 +313,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the alert.
+             * <p>
+             * 
+             * *   The value is fixed as ALL, which indicates all alert types.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -314,7 +324,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * The field that is used in the whitelist rule.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -322,7 +332,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FieldValue.
+             * The value of the field that is used in the whitelist rule.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -330,7 +340,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -338,7 +348,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -346,7 +356,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the whitelist rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -354,7 +364,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The logical operator that is used in the whitelist rule.
+             * <p>
+             * 
+             * *   The value is fixed as strEqual, which indicates the equality operator (=).
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -362,7 +375,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The feature to which this operation belongs.
+             * <p>
+             * 
+             * *   The value is fixed as agentless, which indicates the agentless detection feature.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -370,7 +386,11 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the assets on which the whitelist rule takes effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   SELECTION_KEY: selected assets
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -378,7 +398,11 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetValue.
+             * The assets on which the whitelist rule takes effect. Valid values:
+             * <p>
+             * 
+             * *   ALL: all assets
+             * *   Others: selected assets
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

@@ -159,10 +159,11 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * Specifies whether the check item passed the baseline check. Valid values:
+         * The risk status of the check item. Valid values:
          * <p>
-         * *   **1**: no
-         * *   **3**: yes
+         * 
+         * *   **1**: failed
+         * *   **3**: passed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

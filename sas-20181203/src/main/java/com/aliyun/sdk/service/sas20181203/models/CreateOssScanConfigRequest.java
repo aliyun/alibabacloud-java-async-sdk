@@ -166,7 +166,7 @@ public class CreateOssScanConfigRequest extends Request {
         } 
 
         /**
-         * AllKeyPrefix.
+         * Whether to match all prefixes.
          */
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
@@ -206,7 +206,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * KeyPrefixList.
+         * The prefixes of the object that you want to check.
          */
         public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
@@ -224,7 +224,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

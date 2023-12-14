@@ -50,7 +50,7 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The unique value of the created rule.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

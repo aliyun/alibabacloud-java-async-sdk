@@ -152,7 +152,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the rule.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -161,7 +161,11 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * The action specified in the rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: alert
+         * *   **2**: block
          */
         public Builder ruleAction(Integer ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -170,7 +174,10 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
+         * <p>
+         * 
+         * >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the IDs of rules.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -179,7 +186,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -188,7 +195,11 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleSwitch.
+         * The status of the rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **0**: disabled
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -197,7 +208,11 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   1: system rule
+         * *   2: custom rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -206,7 +221,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The effective scope of the rule.
          */
         public Builder scope(java.util.List < Scope> scope) {
             this.putQueryParameter("Scope", scope);
@@ -215,7 +230,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * The whitelist.
          */
         public Builder whitelist(Whitelist whitelist) {
             String whitelistShrink = shrink(whitelist, "Whitelist", "json");
@@ -282,7 +297,11 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             private java.util.List < String > namespaces; 
 
             /**
-             * AllNamespace.
+             * Specifies whether to include all namespaces. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -290,7 +309,10 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster on which the rule takes effect.
+             * <p>
+             * 
+             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -298,7 +320,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * Namespaces.
+             * The namespaces.
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -363,7 +385,10 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             private java.util.List < String > path; 
 
             /**
-             * Hash.
+             * The hash values of the files that need to be added to the whitelist.
+             * <p>
+             * 
+             * >  This parameter is not supported.
              */
             public Builder hash(java.util.List < String > hash) {
                 this.hash = hash;
@@ -371,7 +396,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * Image.
+             * The images that need to be added to the whitelist.
              */
             public Builder image(java.util.List < String > image) {
                 this.image = image;
@@ -379,7 +404,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * Path.
+             * The paths to the files that need to be added to the whitelist.
              */
             public Builder path(java.util.List < String > path) {
                 this.path = path;

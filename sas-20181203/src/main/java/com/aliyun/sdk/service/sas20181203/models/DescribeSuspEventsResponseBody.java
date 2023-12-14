@@ -1282,7 +1282,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the associated instance.
+             * The public IP address that is associated with instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1346,7 +1346,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LargeModel.
+             * Indicates whether the large model analysis tag is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder largeModel(Boolean largeModel) {
                 this.largeModel = largeModel;
@@ -1386,8 +1390,8 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              * The status of the malicious behavior defense rule. Valid values:
              * <p>
              * 
-             * *   **open**: enabled.
-             * *   **close**: disabled.
+             * *   **open**
+             * *   **close**
              */
             public Builder maliciousRuleStatus(String maliciousRuleStatus) {
                 this.maliciousRuleStatus = maliciousRuleStatus;
@@ -1463,7 +1467,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the associated alert events.
+             * The ID of the associated alert event.
              */
             public Builder securityEventIds(String securityEventIds) {
                 this.securityEventIds = securityEventIds;

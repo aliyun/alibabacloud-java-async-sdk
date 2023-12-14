@@ -50,7 +50,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceRiskNum.
+         * The information about the risks in the instance.
          */
         public Builder instanceRiskNum(java.util.List < InstanceRiskNum> instanceRiskNum) {
             this.instanceRiskNum = instanceRiskNum;
@@ -58,7 +58,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +118,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -231,7 +231,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private Integer weakPassWordCount; 
 
             /**
-             * SuspiciousHighCount.
+             * The number of high-risk alerts.
              */
             public Builder suspiciousHighCount(Integer suspiciousHighCount) {
                 this.suspiciousHighCount = suspiciousHighCount;
@@ -239,7 +239,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * SuspiciousLowCount.
+             * The number of low-risk alerts.
              */
             public Builder suspiciousLowCount(Integer suspiciousLowCount) {
                 this.suspiciousLowCount = suspiciousLowCount;
@@ -247,7 +247,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * SuspiciousMediumCount.
+             * The number of medium-risk alerts.
              */
             public Builder suspiciousMediumCount(Integer suspiciousMediumCount) {
                 this.suspiciousMediumCount = suspiciousMediumCount;
@@ -255,7 +255,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * VulHighCount.
+             * The number of high-risk vulnerabilities.
              */
             public Builder vulHighCount(Integer vulHighCount) {
                 this.vulHighCount = vulHighCount;
@@ -263,7 +263,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * VulLowCount.
+             * The number of low-risk vulnerabilities.
              */
             public Builder vulLowCount(Integer vulLowCount) {
                 this.vulLowCount = vulLowCount;
@@ -271,7 +271,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * VulMediumCount.
+             * The number of medium-risk vulnerabilities.
              */
             public Builder vulMediumCount(Integer vulMediumCount) {
                 this.vulMediumCount = vulMediumCount;
@@ -279,7 +279,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * WeakPassWordCount.
+             * The number of weak passwords exposed on the Internet.
              */
             public Builder weakPassWordCount(Integer weakPassWordCount) {
                 this.weakPassWordCount = weakPassWordCount;
@@ -332,7 +332,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private RiskNumEntity riskNumEntity; 
 
             /**
-             * InstanceItem.
+             * The information about the instance.
              */
             public Builder instanceItem(InstanceItem instanceItem) {
                 this.instanceItem = instanceItem;
@@ -340,7 +340,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * RiskNumEntity.
+             * The statistics about the risks.
              */
             public Builder riskNumEntity(RiskNumEntity riskNumEntity) {
                 this.riskNumEntity = riskNumEntity;

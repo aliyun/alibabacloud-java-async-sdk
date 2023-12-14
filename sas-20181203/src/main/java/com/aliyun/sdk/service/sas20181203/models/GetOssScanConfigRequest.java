@@ -68,7 +68,7 @@ public class GetOssScanConfigRequest extends Request {
         } 
 
         /**
-         * BucketName.
+         * The name of the bucket.
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -77,7 +77,7 @@ public class GetOssScanConfigRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

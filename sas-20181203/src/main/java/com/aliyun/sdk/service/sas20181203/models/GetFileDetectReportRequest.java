@@ -110,7 +110,7 @@ public class GetFileDetectReportRequest extends Request {
         } 
 
         /**
-         * EventId.
+         * The event ID that corresponds to the file to be detected.
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -119,7 +119,16 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * Field.
+         * The field that you want to query. You can enter multiple fields and separate them with commas (,).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **ThreatTypes**: the type of the threat intelligence event
+         * *   **Intelligences**: the threat intelligence event
+         * *   **ThreatLevel**: the level of the threat intelligence event
+         * *   **Basic**: the basic information about the report (the scan result)
+         * *   **Sandbox**: the cloud sandbox check report
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -128,7 +137,7 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * FileHash.
+         * The hash value of the file to be detected.
          */
         public Builder fileHash(String fileHash) {
             this.putQueryParameter("FileHash", fileHash);
@@ -137,7 +146,11 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +159,11 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The data source type. Valid values:
+         * <p>
+         * 
+         * *   **machine**: host alerts
+         * *   **object_scan**: file detection alerts
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

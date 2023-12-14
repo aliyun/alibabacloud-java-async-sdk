@@ -70,11 +70,14 @@ public class CreateAssetSelectionConfigRequest extends Request {
         } 
 
         /**
-         * The business type that you want to select for the asset. Valid values:
+         * The feature that you want to select for the asset. Valid values:
          * <p>
          * 
-         * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
-         * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
+         * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection and removal
+         * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for viruses
+         * *   **AGENTLESS_MALICIOUS_WHITE_LIST_\[ID]**: a whitelist rule for alerts that are detected by using the agentless detection feature
+         * *   **AGENTLESS_VUL_WHITE_LIST_\[ID]**: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature
+         * *   **FILE_PROTECT_RULE_SWITCH_TYPE_\[ID]**: core file protection
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);

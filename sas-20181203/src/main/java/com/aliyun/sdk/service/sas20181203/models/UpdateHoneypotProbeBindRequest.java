@@ -208,7 +208,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * BindId.
+         * The unique ID of the honeypot to which the probe is bound.
          */
         public Builder bindId(String bindId) {
             this.putQueryParameter("BindId", bindId);
@@ -217,7 +217,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * BindPortList.
+         * The ports that are bound to the probe.
          */
         public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
@@ -226,7 +226,11 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * BindType.
+         * The operation that the probe performs. Valid values:
+         * <p>
+         * 
+         * *   **forward_honey**: forward traffic to a honeypot
+         * *   **scan_port**: monitor and scan
          */
         public Builder bindType(String bindType) {
             this.putQueryParameter("BindType", bindType);
@@ -235,7 +239,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -244,7 +248,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * HoneypotId.
+         * The honeypot ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -253,7 +260,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * Id.
+         * The port ID of the probe service.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -262,7 +269,11 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -271,7 +282,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,7 +294,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * Ports.
+         * The ports that are monitored.
          */
         public Builder ports(String ports) {
             this.putQueryParameter("Ports", ports);
@@ -289,7 +303,10 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * ProbeId.
+         * The probe ID.
+         * <p>
+         * 
+         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -298,7 +315,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * ServiceIpList.
+         * The IP addresses that are monitored.
          */
         public Builder serviceIpList(java.util.List < String > serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
@@ -307,7 +324,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * SetStatus.
+         * The status of the port.
          */
         public Builder setStatus(Integer setStatus) {
             this.putQueryParameter("SetStatus", setStatus);
@@ -421,7 +438,11 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * BindPort.
+             * Specifies whether to bind a port. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -429,7 +450,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * EndPort.
+             * The end port on which the probe monitors.
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -437,7 +458,11 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Fixed.
+             * Specifies whether the port is fixed. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -445,7 +470,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Id.
+             * The UUID of the port.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -453,7 +478,11 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Proto.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -461,7 +490,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * StartPort.
+             * The start port on which the probe monitors.
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -469,7 +498,7 @@ public class UpdateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * TargetPort.
+             * The destination port.
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
