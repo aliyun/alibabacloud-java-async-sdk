@@ -984,6 +984,9 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class UserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        private String defaultRoute;
+
         @NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
@@ -997,6 +1000,7 @@ public class CreateTrainingJobRequest extends Request {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
             this.securityGroupId = builder.securityGroupId;
             this.switchId = builder.switchId;
@@ -1009,6 +1013,13 @@ public class CreateTrainingJobRequest extends Request {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return defaultRoute
+         */
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         /**
@@ -1040,10 +1051,19 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String defaultRoute; 
             private java.util.List < String > extendedCIDRs; 
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
+
+            /**
+             * DefaultRoute.
+             */
+            public Builder defaultRoute(String defaultRoute) {
+                this.defaultRoute = defaultRoute;
+                return this;
+            }
 
             /**
              * ExtendedCIDRs.
