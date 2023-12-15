@@ -23,6 +23,10 @@ public class CreateBackendRequest extends Request {
     private String backendType;
 
     @Query
+    @NameInMap("CreateEventBridgeServiceLinkedRole")
+    private Boolean createEventBridgeServiceLinkedRole;
+
+    @Query
     @NameInMap("CreateSlr")
     private Boolean createSlr;
 
@@ -42,6 +46,7 @@ public class CreateBackendRequest extends Request {
         super(builder);
         this.backendName = builder.backendName;
         this.backendType = builder.backendType;
+        this.createEventBridgeServiceLinkedRole = builder.createEventBridgeServiceLinkedRole;
         this.createSlr = builder.createSlr;
         this.description = builder.description;
         this.securityToken = builder.securityToken;
@@ -76,6 +81,13 @@ public class CreateBackendRequest extends Request {
     }
 
     /**
+     * @return createEventBridgeServiceLinkedRole
+     */
+    public Boolean getCreateEventBridgeServiceLinkedRole() {
+        return this.createEventBridgeServiceLinkedRole;
+    }
+
+    /**
      * @return createSlr
      */
     public Boolean getCreateSlr() {
@@ -106,6 +118,7 @@ public class CreateBackendRequest extends Request {
     public static final class Builder extends Request.Builder<CreateBackendRequest, Builder> {
         private String backendName; 
         private String backendType; 
+        private Boolean createEventBridgeServiceLinkedRole; 
         private Boolean createSlr; 
         private String description; 
         private String securityToken; 
@@ -119,6 +132,7 @@ public class CreateBackendRequest extends Request {
             super(request);
             this.backendName = request.backendName;
             this.backendType = request.backendType;
+            this.createEventBridgeServiceLinkedRole = request.createEventBridgeServiceLinkedRole;
             this.createSlr = request.createSlr;
             this.description = request.description;
             this.securityToken = request.securityToken;
@@ -140,6 +154,15 @@ public class CreateBackendRequest extends Request {
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
             this.backendType = backendType;
+            return this;
+        }
+
+        /**
+         * CreateEventBridgeServiceLinkedRole.
+         */
+        public Builder createEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
+            this.putQueryParameter("CreateEventBridgeServiceLinkedRole", createEventBridgeServiceLinkedRole);
+            this.createEventBridgeServiceLinkedRole = createEventBridgeServiceLinkedRole;
             return this;
         }
 
