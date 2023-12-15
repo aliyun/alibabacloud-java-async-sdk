@@ -39,6 +39,12 @@ public class JobSettings extends TeaModel {
     @NameInMap("ErrorMonitoringArgs")
     private String errorMonitoringArgs;
 
+    @NameInMap("JobReservedMinutes")
+    private Integer jobReservedMinutes;
+
+    @NameInMap("JobReservedPolicy")
+    private String jobReservedPolicy;
+
     @NameInMap("OversoldType")
     private String oversoldType;
 
@@ -58,6 +64,8 @@ public class JobSettings extends TeaModel {
         this.enableRDMA = builder.enableRDMA;
         this.enableTideResource = builder.enableTideResource;
         this.errorMonitoringArgs = builder.errorMonitoringArgs;
+        this.jobReservedMinutes = builder.jobReservedMinutes;
+        this.jobReservedPolicy = builder.jobReservedPolicy;
         this.oversoldType = builder.oversoldType;
         this.pipelineId = builder.pipelineId;
         this.tags = builder.tags;
@@ -135,6 +143,20 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return jobReservedMinutes
+     */
+    public Integer getJobReservedMinutes() {
+        return this.jobReservedMinutes;
+    }
+
+    /**
+     * @return jobReservedPolicy
+     */
+    public String getJobReservedPolicy() {
+        return this.jobReservedPolicy;
+    }
+
+    /**
      * @return oversoldType
      */
     public String getOversoldType() {
@@ -165,6 +187,8 @@ public class JobSettings extends TeaModel {
         private Boolean enableRDMA; 
         private Boolean enableTideResource; 
         private String errorMonitoringArgs; 
+        private Integer jobReservedMinutes; 
+        private String jobReservedPolicy; 
         private String oversoldType; 
         private String pipelineId; 
         private java.util.Map < String, String > tags; 
@@ -238,6 +262,22 @@ public class JobSettings extends TeaModel {
          */
         public Builder errorMonitoringArgs(String errorMonitoringArgs) {
             this.errorMonitoringArgs = errorMonitoringArgs;
+            return this;
+        }
+
+        /**
+         * JobReservedMinutes.
+         */
+        public Builder jobReservedMinutes(Integer jobReservedMinutes) {
+            this.jobReservedMinutes = jobReservedMinutes;
+            return this;
+        }
+
+        /**
+         * JobReservedPolicy.
+         */
+        public Builder jobReservedPolicy(String jobReservedPolicy) {
+            this.jobReservedPolicy = jobReservedPolicy;
             return this;
         }
 

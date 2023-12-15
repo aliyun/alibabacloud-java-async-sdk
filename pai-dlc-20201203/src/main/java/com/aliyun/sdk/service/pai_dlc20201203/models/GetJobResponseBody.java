@@ -839,9 +839,13 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("MountPath")
         private String mountPath;
 
+        @NameInMap("Uri")
+        private String uri;
+
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
             this.mountPath = builder.mountPath;
+            this.uri = builder.uri;
         }
 
         public static Builder builder() {
@@ -866,9 +870,17 @@ public class GetJobResponseBody extends TeaModel {
             return this.mountPath;
         }
 
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
         public static final class Builder {
             private String dataSourceId; 
             private String mountPath; 
+            private String uri; 
 
             /**
              * DataSourceId.
@@ -883,6 +895,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
                 return this;
             }
 

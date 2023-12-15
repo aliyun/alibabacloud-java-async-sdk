@@ -86,6 +86,10 @@ public class ListJobsRequest extends Request {
     private java.util.Map < String, String > tags;
 
     @Query
+    @NameInMap("UserIdForFilter")
+    private String userIdForFilter;
+
+    @Query
     @NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -108,6 +112,7 @@ public class ListJobsRequest extends Request {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.userIdForFilter = builder.userIdForFilter;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -244,6 +249,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return userIdForFilter
+     */
+    public String getUserIdForFilter() {
+        return this.userIdForFilter;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -268,6 +280,7 @@ public class ListJobsRequest extends Request {
         private String startTime; 
         private String status; 
         private java.util.Map < String, String > tags; 
+        private String userIdForFilter; 
         private String workspaceId; 
 
         private Builder() {
@@ -293,6 +306,7 @@ public class ListJobsRequest extends Request {
             this.startTime = request.startTime;
             this.status = request.status;
             this.tags = request.tags;
+            this.userIdForFilter = request.userIdForFilter;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -447,6 +461,15 @@ public class ListJobsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * UserIdForFilter.
+         */
+        public Builder userIdForFilter(String userIdForFilter) {
+            this.putQueryParameter("UserIdForFilter", userIdForFilter);
+            this.userIdForFilter = userIdForFilter;
             return this;
         }
 

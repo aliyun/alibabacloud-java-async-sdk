@@ -595,9 +595,13 @@ public class CreateJobRequest extends Request {
         @NameInMap("MountPath")
         private String mountPath;
 
+        @NameInMap("Uri")
+        private String uri;
+
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
             this.mountPath = builder.mountPath;
+            this.uri = builder.uri;
         }
 
         public static Builder builder() {
@@ -622,9 +626,17 @@ public class CreateJobRequest extends Request {
             return this.mountPath;
         }
 
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
         public static final class Builder {
             private String dataSourceId; 
             private String mountPath; 
+            private String uri; 
 
             /**
              * DataSourceId.
@@ -639,6 +651,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
                 return this;
             }
 
