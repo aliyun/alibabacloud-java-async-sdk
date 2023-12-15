@@ -86,7 +86,7 @@ public class Children extends TeaModel {
         private Long parentCategoryId; 
 
         /**
-         * 地区代号
+         * AreaCode.
          */
         public Builder areaCode(String areaCode) {
             this.areaCode = areaCode;
@@ -94,7 +94,7 @@ public class Children extends TeaModel {
         }
 
         /**
-         * 分类Id
+         * CategoryId.
          */
         public Builder categoryId(Long categoryId) {
             this.categoryId = categoryId;
@@ -102,7 +102,7 @@ public class Children extends TeaModel {
         }
 
         /**
-         * 子元素
+         * Childrens.
          */
         public Builder childrens(java.util.List < Children > childrens) {
             this.childrens = childrens;
@@ -110,7 +110,7 @@ public class Children extends TeaModel {
         }
 
         /**
-         * 名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -118,7 +118,7 @@ public class Children extends TeaModel {
         }
 
         /**
-         * 父分类Id
+         * ParentCategoryId.
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.parentCategoryId = parentCategoryId;

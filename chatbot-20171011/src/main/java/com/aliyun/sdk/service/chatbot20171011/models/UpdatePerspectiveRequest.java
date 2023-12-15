@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePerspectiveRequest</p>
  */
 public class UpdatePerspectiveRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -26,16 +30,12 @@ public class UpdatePerspectiveRequest extends Request {
     @Validation(required = true)
     private String perspectiveId;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private UpdatePerspectiveRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.name = builder.name;
         this.perspectiveId = builder.perspectiveId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +49,13 @@ public class UpdatePerspectiveRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +79,11 @@ public class UpdatePerspectiveRequest extends Request {
         return this.perspectiveId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdatePerspectiveRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String name; 
         private String perspectiveId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,14 +91,23 @@ public class UpdatePerspectiveRequest extends Request {
 
         private Builder(UpdatePerspectiveRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.name = request.name;
             this.perspectiveId = request.perspectiveId;
-            this.regionId = request.regionId;
         } 
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -121,15 +130,6 @@ public class UpdatePerspectiveRequest extends Request {
         public Builder perspectiveId(String perspectiveId) {
             this.putQueryParameter("PerspectiveId", perspectiveId);
             this.perspectiveId = perspectiveId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

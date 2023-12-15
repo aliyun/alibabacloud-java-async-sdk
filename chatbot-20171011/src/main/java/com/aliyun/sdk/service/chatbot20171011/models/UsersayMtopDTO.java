@@ -62,7 +62,7 @@ public class UsersayMtopDTO extends TeaModel {
         private Boolean strict; 
 
         /**
-         * Data
+         * Data.
          */
         public Builder data(java.util.List < SectionMtopDTO > data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class UsersayMtopDTO extends TeaModel {
         }
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -78,7 +78,7 @@ public class UsersayMtopDTO extends TeaModel {
         }
 
         /**
-         * Strict
+         * Strict.
          */
         public Builder strict(Boolean strict) {
             this.strict = strict;

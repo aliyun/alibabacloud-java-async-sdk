@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBotRequest</p>
  */
 public class CreateBotRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("AgentKey")
     private String agentKey;
@@ -34,22 +38,18 @@ public class CreateBotRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("RobotType")
     private String robotType;
 
     private CreateBotRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.avatar = builder.avatar;
         this.introduction = builder.introduction;
         this.languageCode = builder.languageCode;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.robotType = builder.robotType;
     }
 
@@ -64,6 +64,13 @@ public class CreateBotRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -102,13 +109,6 @@ public class CreateBotRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return robotType
      */
     public String getRobotType() {
@@ -116,12 +116,12 @@ public class CreateBotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBotRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String avatar; 
         private String introduction; 
         private String languageCode; 
         private String name; 
-        private String regionId; 
         private String robotType; 
 
         private Builder() {
@@ -130,17 +130,26 @@ public class CreateBotRequest extends Request {
 
         private Builder(CreateBotRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.avatar = request.avatar;
             this.introduction = request.introduction;
             this.languageCode = request.languageCode;
             this.name = request.name;
-            this.regionId = request.regionId;
             this.robotType = request.robotType;
         } 
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -181,15 +190,6 @@ public class CreateBotRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

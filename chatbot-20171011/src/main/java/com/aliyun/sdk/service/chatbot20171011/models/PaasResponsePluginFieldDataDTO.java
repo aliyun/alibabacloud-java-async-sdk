@@ -50,7 +50,7 @@ public class PaasResponsePluginFieldDataDTO extends TeaModel {
         private String name; 
 
         /**
-         * ContentResponse
+         * ContentResponse.
          */
         public Builder contentResponse(PaasResponseNodeContentDTO contentResponse) {
             this.contentResponse = contentResponse;
@@ -58,7 +58,7 @@ public class PaasResponsePluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;

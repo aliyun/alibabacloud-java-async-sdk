@@ -126,6 +126,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryCoreWordsResponse> queryCoreWords(QueryCoreWordsRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<QueryDialogsResponse> queryDialogs(QueryDialogsRequest request);
 
     CompletableFuture<QueryEntitiesResponse> queryEntities(QueryEntitiesRequest request);

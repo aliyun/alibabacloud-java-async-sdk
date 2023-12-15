@@ -50,7 +50,7 @@ public class PaasProcessData extends TeaModel {
         private java.util.List < PaasNodeDTO > nodes; 
 
         /**
-         * Edges
+         * Edges.
          */
         public Builder edges(java.util.List < PaasEdgeDTO > edges) {
             this.edges = edges;
@@ -58,7 +58,7 @@ public class PaasProcessData extends TeaModel {
         }
 
         /**
-         * Nodes
+         * Nodes.
          */
         public Builder nodes(java.util.List < PaasNodeDTO > nodes) {
             this.nodes = nodes;

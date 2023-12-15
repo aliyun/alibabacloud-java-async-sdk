@@ -50,7 +50,7 @@ public class SectionMtopDTO extends TeaModel {
         private String text; 
 
         /**
-         * SlotId
+         * SlotId.
          */
         public Builder slotId(String slotId) {
             this.slotId = slotId;
@@ -58,7 +58,7 @@ public class SectionMtopDTO extends TeaModel {
         }
 
         /**
-         * Text
+         * Text.
          */
         public Builder text(String text) {
             this.text = text;

@@ -62,7 +62,7 @@ public class PaasEntryPluginFieldDataDTO extends TeaModel {
         private String name; 
 
         /**
-         * ContentEntry
+         * ContentEntry.
          */
         public Builder contentEntry(java.util.List < PaasConditionSetDTO > contentEntry) {
             this.contentEntry = contentEntry;
@@ -70,7 +70,7 @@ public class PaasEntryPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * LifeSpan
+         * LifeSpan.
          */
         public Builder lifeSpan(Long lifeSpan) {
             this.lifeSpan = lifeSpan;
@@ -78,7 +78,7 @@ public class PaasEntryPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;

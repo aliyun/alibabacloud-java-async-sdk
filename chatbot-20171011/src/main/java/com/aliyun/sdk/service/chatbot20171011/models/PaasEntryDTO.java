@@ -38,7 +38,7 @@ public class PaasEntryDTO extends TeaModel {
         private PaasEntryPluginFieldDataDTO pluginFieldDataEntry; 
 
         /**
-         * PluginFieldDataEntry
+         * PluginFieldDataEntry.
          */
         public Builder pluginFieldDataEntry(PaasEntryPluginFieldDataDTO pluginFieldDataEntry) {
             this.pluginFieldDataEntry = pluginFieldDataEntry;

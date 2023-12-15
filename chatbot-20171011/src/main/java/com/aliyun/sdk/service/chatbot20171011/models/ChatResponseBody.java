@@ -1107,7 +1107,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 在线场景，反问标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1123,7 +1123,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 语音场景，澄清内容
+             * VoiceTitle.
              */
             public Builder voiceTitle(String voiceTitle) {
                 this.voiceTitle = voiceTitle;

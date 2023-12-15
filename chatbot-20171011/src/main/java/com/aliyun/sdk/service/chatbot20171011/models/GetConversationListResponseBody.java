@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConversationListResponseBody extends TeaModel {
     @NameInMap("Messages")
-    private java.util.List < java.util.Map<String, ?>> messages;
+    private java.util.List < java.util.Map<String, String>> messages;
 
     @NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +46,7 @@ public class GetConversationListResponseBody extends TeaModel {
     /**
      * @return messages
      */
-    public java.util.List < java.util.Map<String, ?>> getMessages() {
+    public java.util.List < java.util.Map<String, String>> getMessages() {
         return this.messages;
     }
 
@@ -79,7 +79,7 @@ public class GetConversationListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, ?>> messages; 
+        private java.util.List < java.util.Map<String, String>> messages; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +88,7 @@ public class GetConversationListResponseBody extends TeaModel {
         /**
          * Messages.
          */
-        public Builder messages(java.util.List < java.util.Map<String, ?>> messages) {
+        public Builder messages(java.util.List < java.util.Map<String, String>> messages) {
             this.messages = messages;
             return this;
         }

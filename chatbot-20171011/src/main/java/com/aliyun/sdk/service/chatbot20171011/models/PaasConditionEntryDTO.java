@@ -86,7 +86,7 @@ public class PaasConditionEntryDTO extends TeaModel {
         private String value; 
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -94,7 +94,7 @@ public class PaasConditionEntryDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,7 +102,7 @@ public class PaasConditionEntryDTO extends TeaModel {
         }
 
         /**
-         * Term
+         * Term.
          */
         public Builder term(String term) {
             this.term = term;
@@ -110,7 +110,7 @@ public class PaasConditionEntryDTO extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -118,7 +118,7 @@ public class PaasConditionEntryDTO extends TeaModel {
         }
 
         /**
-         * Value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

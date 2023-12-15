@@ -88,7 +88,7 @@ public class PaasFunctionPluginParams extends TeaModel {
         private String url; 
 
         /**
-         * Body
+         * Body.
          */
         public Builder body(String body) {
             this.body = body;
@@ -96,7 +96,7 @@ public class PaasFunctionPluginParams extends TeaModel {
         }
 
         /**
-         * Header
+         * Header.
          */
         public Builder header(java.util.Map < String, String > header) {
             this.header = header;
@@ -104,7 +104,7 @@ public class PaasFunctionPluginParams extends TeaModel {
         }
 
         /**
-         * Method
+         * Method.
          */
         public Builder method(String method) {
             this.method = method;
@@ -112,7 +112,7 @@ public class PaasFunctionPluginParams extends TeaModel {
         }
 
         /**
-         * Query
+         * Query.
          */
         public Builder query(java.util.Map < String, String > query) {
             this.query = query;
@@ -120,7 +120,7 @@ public class PaasFunctionPluginParams extends TeaModel {
         }
 
         /**
-         * Url
+         * Url.
          */
         public Builder url(String url) {
             this.url = url;

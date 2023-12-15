@@ -50,7 +50,7 @@ public class PaasButtonListDTO extends TeaModel {
         private String intro; 
 
         /**
-         * Button
+         * Button.
          */
         public Builder button(java.util.List < PaasButtonDTO > button) {
             this.button = button;
@@ -58,7 +58,7 @@ public class PaasButtonListDTO extends TeaModel {
         }
 
         /**
-         * Intro
+         * Intro.
          */
         public Builder intro(String intro) {
             this.intro = intro;

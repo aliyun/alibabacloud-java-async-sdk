@@ -74,7 +74,7 @@ public class PaasResponseNodeContentDTO extends TeaModel {
         private String type; 
 
         /**
-         * ButtonList
+         * ButtonList.
          */
         public Builder buttonList(PaasButtonListDTO buttonList) {
             this.buttonList = buttonList;
@@ -82,7 +82,7 @@ public class PaasResponseNodeContentDTO extends TeaModel {
         }
 
         /**
-         * Image
+         * Image.
          */
         public Builder image(String image) {
             this.image = image;
@@ -90,7 +90,7 @@ public class PaasResponseNodeContentDTO extends TeaModel {
         }
 
         /**
-         * Text
+         * Text.
          */
         public Builder text(String text) {
             this.text = text;
@@ -98,7 +98,7 @@ public class PaasResponseNodeContentDTO extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;

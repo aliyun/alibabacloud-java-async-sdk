@@ -330,7 +330,7 @@ public class QueryKnowledgesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeId.
+             * FAQ ID
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;

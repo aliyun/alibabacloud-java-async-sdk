@@ -98,7 +98,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         private String value; 
 
         /**
-         * IsArray
+         * IsArray.
          */
         public Builder isArray(Boolean isArray) {
             this.isArray = isArray;
@@ -106,7 +106,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         }
 
         /**
-         * IsNecessary
+         * IsNecessary.
          */
         public Builder isNecessary(Boolean isNecessary) {
             this.isNecessary = isNecessary;
@@ -114,7 +114,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         }
 
         /**
-         * LifeSpan
+         * LifeSpan.
          */
         public Builder lifeSpan(Integer lifeSpan) {
             this.lifeSpan = lifeSpan;
@@ -122,7 +122,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +130,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         }
 
         /**
-         * Question
+         * Question.
          */
         public Builder question(java.util.List < String > question) {
             this.question = question;
@@ -138,7 +138,7 @@ public class PaasSlotConfigDTO extends TeaModel {
         }
 
         /**
-         * Value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

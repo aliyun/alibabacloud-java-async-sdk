@@ -290,7 +290,7 @@ public class DescribeKnowledgeResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeId.
+         * FAQ ID
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -442,7 +442,7 @@ public class DescribeKnowledgeResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * KnowledgeId.
+             * FAQ ID
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;

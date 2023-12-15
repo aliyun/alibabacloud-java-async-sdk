@@ -362,7 +362,7 @@ public class DescribeDialogFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * 0 for deleted, 1 for inSandbox, 2 for draft，3 for online
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -370,7 +370,7 @@ public class DescribeDialogFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * null
          */
         public Builder tags(String tags) {
             this.tags = tags;

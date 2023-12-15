@@ -74,7 +74,7 @@ public class PaasEdgeDTO extends TeaModel {
         private String target; 
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -82,7 +82,7 @@ public class PaasEdgeDTO extends TeaModel {
         }
 
         /**
-         * Label
+         * Label.
          */
         public Builder label(String label) {
             this.label = label;
@@ -90,7 +90,7 @@ public class PaasEdgeDTO extends TeaModel {
         }
 
         /**
-         * Source
+         * Source.
          */
         public Builder source(String source) {
             this.source = source;
@@ -98,7 +98,7 @@ public class PaasEdgeDTO extends TeaModel {
         }
 
         /**
-         * Target
+         * Target.
          */
         public Builder target(String target) {
             this.target = target;

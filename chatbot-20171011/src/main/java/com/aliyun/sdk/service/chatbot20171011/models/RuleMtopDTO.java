@@ -74,7 +74,7 @@ public class RuleMtopDTO extends TeaModel {
         private java.util.List < String > warning; 
 
         /**
-         * Error
+         * Error.
          */
         public Builder error(java.util.List < String > error) {
             this.error = error;
@@ -82,7 +82,7 @@ public class RuleMtopDTO extends TeaModel {
         }
 
         /**
-         * Strict
+         * Strict.
          */
         public Builder strict(Boolean strict) {
             this.strict = strict;
@@ -90,7 +90,7 @@ public class RuleMtopDTO extends TeaModel {
         }
 
         /**
-         * Text
+         * Text.
          */
         public Builder text(String text) {
             this.text = text;
@@ -98,7 +98,7 @@ public class RuleMtopDTO extends TeaModel {
         }
 
         /**
-         * Warning
+         * Warning.
          */
         public Builder warning(java.util.List < String > warning) {
             this.warning = warning;

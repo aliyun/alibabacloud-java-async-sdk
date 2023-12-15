@@ -86,7 +86,7 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         private String name; 
 
         /**
-         * ContentSlot
+         * ContentSlot.
          */
         public Builder contentSlot(java.util.List < PaasSlotConfigDTO > contentSlot) {
             this.contentSlot = contentSlot;
@@ -94,7 +94,7 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * IntentId
+         * IntentId.
          */
         public Builder intentId(String intentId) {
             this.intentId = intentId;
@@ -102,7 +102,7 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * IntentName
+         * IntentName.
          */
         public Builder intentName(String intentName) {
             this.intentName = intentName;
@@ -110,7 +110,7 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * IsSysIntent
+         * IsSysIntent.
          */
         public Builder isSysIntent(Boolean isSysIntent) {
             this.isSysIntent = isSysIntent;
@@ -118,7 +118,7 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;

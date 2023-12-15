@@ -146,7 +146,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         private String type; 
 
         /**
-         * AliyunFunction
+         * AliyunFunction.
          */
         public Builder aliyunFunction(String aliyunFunction) {
             this.aliyunFunction = aliyunFunction;
@@ -154,7 +154,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * AliyunService
+         * AliyunService.
          */
         public Builder aliyunService(String aliyunService) {
             this.aliyunService = aliyunService;
@@ -162,7 +162,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -170,7 +170,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -178,7 +178,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * EndPoint
+         * EndPoint.
          */
         public Builder endPoint(String endPoint) {
             this.endPoint = endPoint;
@@ -186,7 +186,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Function
+         * Function.
          */
         public Builder function(String function) {
             this.function = function;
@@ -194,7 +194,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -202,7 +202,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Params
+         * Params.
          */
         public Builder params(java.util.Map < String, ? > params) {
             this.params = params;
@@ -210,7 +210,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Switch
+         * Switch.
          */
         public Builder _switch(java.util.List < PaasSwitchCaseDTO > _switch) {
             this._switch = _switch;
@@ -218,7 +218,7 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;

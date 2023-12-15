@@ -50,7 +50,7 @@ public class TagMtopDTO extends TeaModel {
         private String value; 
 
         /**
-         * UserSayId
+         * UserSayId.
          */
         public Builder userSayId(String userSayId) {
             this.userSayId = userSayId;
@@ -58,7 +58,7 @@ public class TagMtopDTO extends TeaModel {
         }
 
         /**
-         * Value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

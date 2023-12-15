@@ -86,7 +86,7 @@ public class PaasSwitchCaseDTO extends TeaModel {
         private String variableName; 
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -94,7 +94,7 @@ public class PaasSwitchCaseDTO extends TeaModel {
         }
 
         /**
-         * Label
+         * Label.
          */
         public Builder label(String label) {
             this.label = label;
@@ -102,7 +102,7 @@ public class PaasSwitchCaseDTO extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -110,7 +110,7 @@ public class PaasSwitchCaseDTO extends TeaModel {
         }
 
         /**
-         * Value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;
@@ -118,7 +118,7 @@ public class PaasSwitchCaseDTO extends TeaModel {
         }
 
         /**
-         * VariableName
+         * VariableName.
          */
         public Builder variableName(String variableName) {
             this.variableName = variableName;

@@ -795,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ****
+      *
+     */
     @Override
     public CompletableFuture<QueryDialogsResponse> queryDialogs(QueryDialogsRequest request) {
         try {

@@ -86,7 +86,7 @@ public class IntentCreateDTO extends TeaModel {
         private java.util.List < UsersayMtopDTO > userSay; 
 
         /**
-         * IntentId
+         * IntentId.
          */
         public Builder intentId(Long intentId) {
             this.intentId = intentId;
@@ -94,7 +94,7 @@ public class IntentCreateDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,7 +102,7 @@ public class IntentCreateDTO extends TeaModel {
         }
 
         /**
-         * RuleCheck
+         * RuleCheck.
          */
         public Builder ruleCheck(java.util.List < RuleMtopDTO > ruleCheck) {
             this.ruleCheck = ruleCheck;
@@ -118,7 +118,7 @@ public class IntentCreateDTO extends TeaModel {
         }
 
         /**
-         * UserSay
+         * UserSay.
          */
         public Builder userSay(java.util.List < UsersayMtopDTO > userSay) {
             this.userSay = userSay;

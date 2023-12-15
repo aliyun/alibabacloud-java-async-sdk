@@ -38,7 +38,7 @@ public class PaasConditionSetDTO extends TeaModel {
         private java.util.List < PaasConditionEntryDTO > conditionEntries; 
 
         /**
-         * ConditionEntries
+         * ConditionEntries.
          */
         public Builder conditionEntries(java.util.List < PaasConditionEntryDTO > conditionEntries) {
             this.conditionEntries = conditionEntries;

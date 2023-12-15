@@ -122,7 +122,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         private String value; 
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -130,7 +130,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * IsArray
+         * IsArray.
          */
         public Builder isArray(Boolean isArray) {
             this.isArray = isArray;
@@ -138,7 +138,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * IsNecessary
+         * IsNecessary.
          */
         public Builder isNecessary(Boolean isNecessary) {
             this.isNecessary = isNecessary;
@@ -146,7 +146,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * LifeSpan
+         * LifeSpan.
          */
         public Builder lifeSpan(Integer lifeSpan) {
             this.lifeSpan = lifeSpan;
@@ -154,7 +154,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +162,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * Question
+         * Question.
          */
         public Builder question(java.util.List < String > question) {
             this.question = question;
@@ -170,7 +170,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * Tags
+         * Tags.
          */
         public Builder tags(java.util.List < TagMtopDTO > tags) {
             this.tags = tags;
@@ -178,7 +178,7 @@ public class SlotrecordMtopDTO extends TeaModel {
         }
 
         /**
-         * Value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

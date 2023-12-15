@@ -62,7 +62,7 @@ public class PaasButtonDTO extends TeaModel {
         private String type; 
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -70,7 +70,7 @@ public class PaasButtonDTO extends TeaModel {
         }
 
         /**
-         * Text
+         * Text.
          */
         public Builder text(String text) {
             this.text = text;
@@ -78,7 +78,7 @@ public class PaasButtonDTO extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;

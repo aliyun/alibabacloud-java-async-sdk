@@ -98,7 +98,7 @@ public class PaasNodeDTO extends TeaModel {
         private Double yy; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class PaasNodeDTO extends TeaModel {
         }
 
         /**
-         * Id
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -114,7 +114,7 @@ public class PaasNodeDTO extends TeaModel {
         }
 
         /**
-         * Label
+         * Label.
          */
         public Builder label(String label) {
             this.label = label;
@@ -122,7 +122,7 @@ public class PaasNodeDTO extends TeaModel {
         }
 
         /**
-         * PluginData
+         * PluginData.
          */
         public Builder pluginData(PaasPluginDataDTO pluginData) {
             this.pluginData = pluginData;
@@ -130,7 +130,7 @@ public class PaasNodeDTO extends TeaModel {
         }
 
         /**
-         * Xx
+         * Xx.
          */
         public Builder xx(Double xx) {
             this.xx = xx;
@@ -138,7 +138,7 @@ public class PaasNodeDTO extends TeaModel {
         }
 
         /**
-         * Yy
+         * Yy.
          */
         public Builder yy(Double yy) {
             this.yy = yy;
