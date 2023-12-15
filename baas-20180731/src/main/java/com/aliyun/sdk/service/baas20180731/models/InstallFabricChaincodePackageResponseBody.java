@@ -1,0 +1,475 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.baas20180731.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link InstallFabricChaincodePackageResponseBody} extends {@link TeaModel}
+ *
+ * <p>InstallFabricChaincodePackageResponseBody</p>
+ */
+public class InstallFabricChaincodePackageResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    private Integer errorCode;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("Result")
+    private Result result;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    private InstallFabricChaincodePackageResponseBody(Builder builder) {
+        this.errorCode = builder.errorCode;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.result = builder.result;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static InstallFabricChaincodePackageResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return errorCode
+     */
+    public Integer getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return result
+     */
+    public Result getResult() {
+        return this.result;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private Integer errorCode; 
+        private String message; 
+        private String requestId; 
+        private Result result; 
+        private Boolean success; 
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(Integer errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Result.
+         */
+        public Builder result(Result result) {
+            this.result = result;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public InstallFabricChaincodePackageResponseBody build() {
+            return new InstallFabricChaincodePackageResponseBody(this);
+        } 
+
+    } 
+
+    public static class Result extends TeaModel {
+        @NameInMap("ChaincodePackageId")
+        private String chaincodePackageId;
+
+        @NameInMap("Checksum")
+        private String checksum;
+
+        @NameInMap("DeleteTime")
+        private Long deleteTime;
+
+        @NameInMap("Deleted")
+        private Boolean deleted;
+
+        @NameInMap("InstallTime")
+        private Long installTime;
+
+        @NameInMap("Label")
+        private String label;
+
+        @NameInMap("Md5sum")
+        private String md5sum;
+
+        @NameInMap("OrganizationId")
+        private String organizationId;
+
+        @NameInMap("OssBucket")
+        private String ossBucket;
+
+        @NameInMap("OssURL")
+        private String ossURL;
+
+        @NameInMap("ProviderBid")
+        private String providerBid;
+
+        @NameInMap("ProviderUid")
+        private Long providerUid;
+
+        @NameInMap("State")
+        private String state;
+
+        @NameInMap("Type")
+        private Integer type;
+
+        @NameInMap("TypeName")
+        private String typeName;
+
+        @NameInMap("UploadTime")
+        private Long uploadTime;
+
+        private Result(Builder builder) {
+            this.chaincodePackageId = builder.chaincodePackageId;
+            this.checksum = builder.checksum;
+            this.deleteTime = builder.deleteTime;
+            this.deleted = builder.deleted;
+            this.installTime = builder.installTime;
+            this.label = builder.label;
+            this.md5sum = builder.md5sum;
+            this.organizationId = builder.organizationId;
+            this.ossBucket = builder.ossBucket;
+            this.ossURL = builder.ossURL;
+            this.providerBid = builder.providerBid;
+            this.providerUid = builder.providerUid;
+            this.state = builder.state;
+            this.type = builder.type;
+            this.typeName = builder.typeName;
+            this.uploadTime = builder.uploadTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return chaincodePackageId
+         */
+        public String getChaincodePackageId() {
+            return this.chaincodePackageId;
+        }
+
+        /**
+         * @return checksum
+         */
+        public String getChecksum() {
+            return this.checksum;
+        }
+
+        /**
+         * @return deleteTime
+         */
+        public Long getDeleteTime() {
+            return this.deleteTime;
+        }
+
+        /**
+         * @return deleted
+         */
+        public Boolean getDeleted() {
+            return this.deleted;
+        }
+
+        /**
+         * @return installTime
+         */
+        public Long getInstallTime() {
+            return this.installTime;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return md5sum
+         */
+        public String getMd5sum() {
+            return this.md5sum;
+        }
+
+        /**
+         * @return organizationId
+         */
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        /**
+         * @return ossBucket
+         */
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
+        /**
+         * @return ossURL
+         */
+        public String getOssURL() {
+            return this.ossURL;
+        }
+
+        /**
+         * @return providerBid
+         */
+        public String getProviderBid() {
+            return this.providerBid;
+        }
+
+        /**
+         * @return providerUid
+         */
+        public Long getProviderUid() {
+            return this.providerUid;
+        }
+
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
+        /**
+         * @return typeName
+         */
+        public String getTypeName() {
+            return this.typeName;
+        }
+
+        /**
+         * @return uploadTime
+         */
+        public Long getUploadTime() {
+            return this.uploadTime;
+        }
+
+        public static final class Builder {
+            private String chaincodePackageId; 
+            private String checksum; 
+            private Long deleteTime; 
+            private Boolean deleted; 
+            private Long installTime; 
+            private String label; 
+            private String md5sum; 
+            private String organizationId; 
+            private String ossBucket; 
+            private String ossURL; 
+            private String providerBid; 
+            private Long providerUid; 
+            private String state; 
+            private Integer type; 
+            private String typeName; 
+            private Long uploadTime; 
+
+            /**
+             * ChaincodePackageId.
+             */
+            public Builder chaincodePackageId(String chaincodePackageId) {
+                this.chaincodePackageId = chaincodePackageId;
+                return this;
+            }
+
+            /**
+             * Checksum.
+             */
+            public Builder checksum(String checksum) {
+                this.checksum = checksum;
+                return this;
+            }
+
+            /**
+             * DeleteTime.
+             */
+            public Builder deleteTime(Long deleteTime) {
+                this.deleteTime = deleteTime;
+                return this;
+            }
+
+            /**
+             * Deleted.
+             */
+            public Builder deleted(Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+            }
+
+            /**
+             * InstallTime.
+             */
+            public Builder installTime(Long installTime) {
+                this.installTime = installTime;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * Md5sum.
+             */
+            public Builder md5sum(String md5sum) {
+                this.md5sum = md5sum;
+                return this;
+            }
+
+            /**
+             * OrganizationId.
+             */
+            public Builder organizationId(String organizationId) {
+                this.organizationId = organizationId;
+                return this;
+            }
+
+            /**
+             * OssBucket.
+             */
+            public Builder ossBucket(String ossBucket) {
+                this.ossBucket = ossBucket;
+                return this;
+            }
+
+            /**
+             * OssURL.
+             */
+            public Builder ossURL(String ossURL) {
+                this.ossURL = ossURL;
+                return this;
+            }
+
+            /**
+             * ProviderBid.
+             */
+            public Builder providerBid(String providerBid) {
+                this.providerBid = providerBid;
+                return this;
+            }
+
+            /**
+             * ProviderUid.
+             */
+            public Builder providerUid(Long providerUid) {
+                this.providerUid = providerUid;
+                return this;
+            }
+
+            /**
+             * State.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * TypeName.
+             */
+            public Builder typeName(String typeName) {
+                this.typeName = typeName;
+                return this;
+            }
+
+            /**
+             * UploadTime.
+             */
+            public Builder uploadTime(Long uploadTime) {
+                this.uploadTime = uploadTime;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+}

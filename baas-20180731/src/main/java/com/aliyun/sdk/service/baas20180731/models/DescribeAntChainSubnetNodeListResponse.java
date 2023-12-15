@@ -1,0 +1,129 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.baas20180731.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeAntChainSubnetNodeListResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeAntChainSubnetNodeListResponse</p>
+ */
+public class DescribeAntChainSubnetNodeListResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private DescribeAntChainSubnetNodeListResponseBody body;
+
+    private DescribeAntChainSubnetNodeListResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static DescribeAntChainSubnetNodeListResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeAntChainSubnetNodeListResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeAntChainSubnetNodeListResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeAntChainSubnetNodeListResponseBody body);
+
+        @Override
+        DescribeAntChainSubnetNodeListResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeAntChainSubnetNodeListResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private DescribeAntChainSubnetNodeListResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeAntChainSubnetNodeListResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeAntChainSubnetNodeListResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeAntChainSubnetNodeListResponse build() {
+            return new DescribeAntChainSubnetNodeListResponse(this);
+        } 
+
+    } 
+
+}
