@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UnregisterDeviceResponse} extends {@link TeaModel}
+ * {@link GetAccessChannelOfStagingResponse} extends {@link TeaModel}
  *
- * <p>UnregisterDeviceResponse</p>
+ * <p>GetAccessChannelOfStagingResponse</p>
  */
-public class UnregisterDeviceResponse extends Response {
+public class GetAccessChannelOfStagingResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class UnregisterDeviceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private UnregisterDeviceResponseBody body;
+    private GetAccessChannelOfStagingResponseBody body;
 
-    private UnregisterDeviceResponse(BuilderImpl builder) {
+    private GetAccessChannelOfStagingResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UnregisterDeviceResponse create() {
+    public static GetAccessChannelOfStagingResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class UnregisterDeviceResponse extends Response {
     /**
      * @return body
      */
-    public UnregisterDeviceResponseBody getBody() {
+    public GetAccessChannelOfStagingResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UnregisterDeviceResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAccessChannelOfStagingResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UnregisterDeviceResponseBody body);
+        Builder body(GetAccessChannelOfStagingResponseBody body);
 
         @Override
-        UnregisterDeviceResponse build();
+        GetAccessChannelOfStagingResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UnregisterDeviceResponse, Builder>
+            extends Response.BuilderImpl<GetAccessChannelOfStagingResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UnregisterDeviceResponseBody body; 
+        private GetAccessChannelOfStagingResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UnregisterDeviceResponse response) {
+        private BuilderImpl(GetAccessChannelOfStagingResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class UnregisterDeviceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UnregisterDeviceResponseBody body) {
+        public Builder body(GetAccessChannelOfStagingResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UnregisterDeviceResponse build() {
-            return new UnregisterDeviceResponse(this);
+        public GetAccessChannelOfStagingResponse build() {
+            return new GetAccessChannelOfStagingResponse(this);
         } 
 
     } 

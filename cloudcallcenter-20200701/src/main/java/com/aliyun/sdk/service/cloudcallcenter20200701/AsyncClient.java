@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDemoInstanceResponse> createDemoInstance(CreateDemoInstanceRequest request);
 
+    CompletableFuture<GetAccessChannelOfStagingResponse> getAccessChannelOfStaging(GetAccessChannelOfStagingRequest request);
+
     CompletableFuture<GetCampaignResponse> getCampaign(GetCampaignRequest request);
 
     CompletableFuture<GetHistoricalCampaignReportResponse> getHistoricalCampaignReport(GetHistoricalCampaignReportRequest request);
@@ -59,6 +61,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMonoRecordingsResponse> listMonoRecordings(ListMonoRecordingsRequest request);
 
     CompletableFuture<PauseCampaignResponse> pauseCampaign(PauseCampaignRequest request);
+
+    CompletableFuture<ProcessAliMeCallbackOfStagingResponse> processAliMeCallbackOfStaging(ProcessAliMeCallbackOfStagingRequest request);
 
     CompletableFuture<ReplaceMigrationAvailableNumbersResponse> replaceMigrationAvailableNumbers(ReplaceMigrationAvailableNumbersRequest request);
 
