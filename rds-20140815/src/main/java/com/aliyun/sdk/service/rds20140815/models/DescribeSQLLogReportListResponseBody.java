@@ -94,7 +94,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of reports on the current page.
+         * The number of SQL log reports on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records returned.
+         * The total number of entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -198,7 +198,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement returned.
+             * The SQL statement.
              * <p>
              * 
              * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.
@@ -303,7 +303,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement returned. 
+             * The SQL statement.
              * <p>
              * 
              * >  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.

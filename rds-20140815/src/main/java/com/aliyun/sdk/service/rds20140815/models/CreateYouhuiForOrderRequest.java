@@ -127,7 +127,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         } 
 
         /**
-         * The ticket ID.
+         * The activity ID.
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);

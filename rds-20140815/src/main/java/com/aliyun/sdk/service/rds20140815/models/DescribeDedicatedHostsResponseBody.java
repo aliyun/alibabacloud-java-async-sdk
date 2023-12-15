@@ -62,7 +62,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the dedicated cluster.
+         * The host group ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -70,7 +70,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of hosts returned.
+         * The host information.
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -78,7 +78,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -442,7 +442,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The account of the host. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.
+             * The host account. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -450,11 +450,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system allows you to create instances on the host. Valid values:
+             * Specifies whether instances can be deployed on the host. Valid values:
              * <p>
              * 
-             * *   **0**: The system does not allow you to create instances on the host.
-             * *   **1**: The system allows you to create instances on the host.
+             * *   **0**: Instances cannot be deployed on the host.
+             * *   **1**: Instances can be deployed on the host.
              */
             public Builder allocationStatus(String allocationStatus) {
                 this.allocationStatus = allocationStatus;
@@ -462,7 +462,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bastion host.
+             * The bastion host ID.
              */
             public Builder bastionInstanceId(String bastionInstanceId) {
                 this.bastionInstanceId = bastionInstanceId;
@@ -470,7 +470,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+             * The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
              */
             public Builder CPUAllocationRatio(String CPUAllocationRatio) {
                 this.CPUAllocationRatio = CPUAllocationRatio;
@@ -478,7 +478,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used cores on the host.
+             * The number of used CPU cores on the host. Unit: cores.
              */
             public Builder cpuUsed(String cpuUsed) {
                 this.cpuUsed = cpuUsed;
@@ -494,7 +494,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
+             * The dedicated cluster ID.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -502,7 +502,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host.
+             * The host ID.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -510,7 +510,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
+             * The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).
              */
             public Builder diskAllocationRatio(String diskAllocationRatio) {
                 this.diskAllocationRatio = diskAllocationRatio;
@@ -534,7 +534,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cores that are configured for the host.
+             * The total number of CPU cores that are configured for the host. Unit: cores.
              */
             public Builder hostCPU(String hostCPU) {
                 this.hostCPU = hostCPU;
@@ -542,7 +542,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the host.
+             * The instance type of the host.
              */
             public Builder hostClass(String hostClass) {
                 this.hostClass = hostClass;
@@ -558,7 +558,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * The host name.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -569,13 +569,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              * The status of the host. Valid values:
              * <p>
              * 
-             * *   **0**: The host is being created.
-             * *   **1**: The host is running.
-             * *   **2**: The host is faulty.
-             * *   **3**: The host is being replaced.
-             * *   **4**: The host is deprecated.
-             * *   **5**: The host is being deleted.
-             * *   **6**: The host is restarting.
+             * *   **0**: creating
+             * *   **1**: running
+             * *   **2**: faulty
+             * *   **3**: being replaced
+             * *   **4**: deprecated
+             * *   **5**: deleting
+             * *   **6**: restarting
              */
             public Builder hostStatus(String hostStatus) {
                 this.hostStatus = hostStatus;
@@ -591,10 +591,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of storage media that is used for the host. Valid values:
+             * The storage type of the host. Valid values:
              * <p>
              * 
-             * *   **dhg_cloud_ssd**: enhanced SSD
+             * *   **dhg_cloud_ssd**: ESSD
              * *   **dhg_local_ssd**: local SSD
              */
             public Builder hostType(String hostType) {
@@ -611,12 +611,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the host. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:
+             * The host image. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:
              * <p>
              * 
-             * *   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition
-             * *   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition
-             * *   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition
+             * *   **WindowsWithMssqlStdLicense**: a Windows image that contains the licenses of SQL Server Standard Edition
+             * *   **WindowsWithMssqlEntLisence**: a Windows image that contains the licenses of SQL Server Enterprise Edition
+             * *   **WindowsWithMssqlWebLisence**: a Windows image that contains the licenses of SQL Server Web Edition
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -640,7 +640,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of used memory space on the host. Unit: MB.
+             * The size of the used memory. Unit: MB.
              */
             public Builder memoryUsed(String memoryUsed) {
                 this.memoryUsed = memoryUsed;
@@ -648,7 +648,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operating system permissions of the host can be granted. Valid values:
+             * Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:
              * <p>
              * 
              * *   **0** or **null**: The permissions cannot be granted.
@@ -726,7 +726,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts; 
 
             /**
-             * An array that consists of hosts returned.
+             * The host information.
              */
             public Builder dedicatedHosts(java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts) {
                 this.dedicatedHosts = dedicatedHosts;

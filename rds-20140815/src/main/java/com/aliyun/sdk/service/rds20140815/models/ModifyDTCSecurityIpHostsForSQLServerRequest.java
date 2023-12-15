@@ -170,7 +170,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -197,7 +197,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,7 +224,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).
+         * The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Separate multiple entries with semicolon (;).
          * <p>
          * 
          * >  For more information about how to query the computer hostname, see [Configure a distributed transaction whitelist](~~124321~~).
@@ -245,7 +245,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * The name of the whitelist.
+         * The name of the IP address whitelist.
          */
         public Builder whiteListGroupName(String whiteListGroupName) {
             this.putQueryParameter("WhiteListGroupName", whiteListGroupName);

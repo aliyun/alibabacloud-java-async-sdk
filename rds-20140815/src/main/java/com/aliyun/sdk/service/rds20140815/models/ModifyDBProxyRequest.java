@@ -31,12 +31,20 @@ public class ModifyDBProxyRequest extends Request {
     private String DBProxyInstanceNum;
 
     @Query
+    @NameInMap("DBProxyInstanceType")
+    private String DBProxyInstanceType;
+
+    @Query
     @NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PersistentConnectionStatus")
+    private String persistentConnectionStatus;
 
     @Query
     @NameInMap("RegionId")
@@ -68,8 +76,10 @@ public class ModifyDBProxyRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBProxyEngineType = builder.DBProxyEngineType;
         this.DBProxyInstanceNum = builder.DBProxyInstanceNum;
+        this.DBProxyInstanceType = builder.DBProxyInstanceType;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.ownerId = builder.ownerId;
+        this.persistentConnectionStatus = builder.persistentConnectionStatus;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -120,6 +130,13 @@ public class ModifyDBProxyRequest extends Request {
     }
 
     /**
+     * @return DBProxyInstanceType
+     */
+    public String getDBProxyInstanceType() {
+        return this.DBProxyInstanceType;
+    }
+
+    /**
      * @return instanceNetworkType
      */
     public String getInstanceNetworkType() {
@@ -131,6 +148,13 @@ public class ModifyDBProxyRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return persistentConnectionStatus
+     */
+    public String getPersistentConnectionStatus() {
+        return this.persistentConnectionStatus;
     }
 
     /**
@@ -180,8 +204,10 @@ public class ModifyDBProxyRequest extends Request {
         private String DBInstanceId; 
         private String DBProxyEngineType; 
         private String DBProxyInstanceNum; 
+        private String DBProxyInstanceType; 
         private String instanceNetworkType; 
         private Long ownerId; 
+        private String persistentConnectionStatus; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -199,8 +225,10 @@ public class ModifyDBProxyRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBProxyEngineType = request.DBProxyEngineType;
             this.DBProxyInstanceNum = request.DBProxyInstanceNum;
+            this.DBProxyInstanceType = request.DBProxyInstanceType;
             this.instanceNetworkType = request.instanceNetworkType;
             this.ownerId = request.ownerId;
+            this.persistentConnectionStatus = request.persistentConnectionStatus;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -223,7 +251,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -253,6 +281,15 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
+         * A reserved parameter. You do not need to specify this parameter.
+         */
+        public Builder DBProxyInstanceType(String DBProxyInstanceType) {
+            this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);
+            this.DBProxyInstanceType = DBProxyInstanceType;
+            return this;
+        }
+
+        /**
          * The network type of the instance. Set the value to **VPC**.
          * <p>
          * 
@@ -274,7 +311,16 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * PersistentConnectionStatus.
+         */
+        public Builder persistentConnectionStatus(String persistentConnectionStatus) {
+            this.putQueryParameter("PersistentConnectionStatus", persistentConnectionStatus);
+            this.persistentConnectionStatus = persistentConnectionStatus;
+            return this;
+        }
+
+        /**
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +356,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.
+         * The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
          * <p>
          * 
          * >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.
@@ -322,7 +368,7 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.
+         * The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.
          * <p>
          * 
          * >  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.

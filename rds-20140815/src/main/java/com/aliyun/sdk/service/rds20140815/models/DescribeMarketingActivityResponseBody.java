@@ -87,7 +87,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique ID (UID) of the Alibaba Cloud account.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -95,7 +95,9 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The BID of the account to which the Anycast EIP belongs.
+         * *   China site: 26842
+         * <p>
+         * *   International site: 26888
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -103,7 +105,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the instance.
+         * The activity parameters
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -111,7 +113,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -119,7 +121,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -475,10 +477,9 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: High-availability Edition
+             * *   **HighAvailability**: RDS High-availability Edition
+             * *   **AlwaysOn**: RDS Cluster Edition
              * *   **Finance**: RDS Enterprise Edition
-             * 
-             * > This parameter is returned only when **InstanceLevel** is set to **1**.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -486,13 +487,11 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Valid values:
+             * The payment type. Valid values:
              * <p>
              * 
-             * *   **PostPaid** (default): pay-as-you-go
-             * *   **PrePaid**: subscription
-             * 
-             * > **Period** is required if you set the value of this parameter to **PrePaid**.
+             * *   POSTPAY: pay-as-you-go
+             * *   PREPAY: subscription
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -500,7 +499,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
+             * The instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -516,7 +515,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPU cores. Unit: cores.
+             * The number of CPU cores that are supported by the instance type. Unit: cores.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -524,11 +523,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size. Unit: GB.
-             * <p>
-             * 
-             * *   The disk size that you specify must be greater than or equal to the current disk size of the instance.
-             * *   For more information about the valid values, see [Billing](~~84737~~).
+             * The disk capacity per node. Unit: GB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -539,10 +534,11 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
              * The database engine of the instance. Valid values:
              * <p>
              * 
-             * *   **MySQL**
-             * *   **PostgreSQL**
-             * *   **SQLServer**
-             * *   **MariaDB**
+             * *   MySQL
+             * *   SQLServer
+             * *   PostgreSQL
+             * *   PPAS
+             * *   MariaDB
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -550,7 +546,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -582,7 +578,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIombps
+             * The maximum I/O throughput. Unit: Mbit/s.
              */
             public Builder maxIombps(Integer maxIombps) {
                 this.maxIombps = maxIombps;
@@ -590,7 +586,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIops
+             * The maximum IOPS.
              */
             public Builder maxIops(Integer maxIops) {
                 this.maxIops = maxIops;
@@ -598,7 +594,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size that you applied for each instance. Unit: MB.
+             * The memory size.
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -611,9 +607,9 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
              * 
              * *   **local_ssd**: local SSD
              * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-             * *   **cloud_essd2**: ESSD of PL2
-             * *   **cloud_essd3**: ESSD of PL3
+             * *   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)
+             * *   **cloud_essd2**: PL2 ESSD
+             * *   **cloud_essd3**: PL3 ESSD
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -621,7 +617,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeCategory
+             * The RDS edition after the upgrade.
              */
             public Builder upgradeCategory(String upgradeCategory) {
                 this.upgradeCategory = upgradeCategory;
@@ -629,7 +625,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeClassCode
+             * The instance type after the upgrade.
              */
             public Builder upgradeClassCode(String upgradeClassCode) {
                 this.upgradeClassCode = upgradeClassCode;
@@ -637,7 +633,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeClassGroup
+             * The instance family after the upgrade.
              */
             public Builder upgradeClassGroup(String upgradeClassGroup) {
                 this.upgradeClassGroup = upgradeClassGroup;
@@ -645,7 +641,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeCpu
+             * The number of CPU cores after the upgrade.
              */
             public Builder upgradeCpu(String upgradeCpu) {
                 this.upgradeCpu = upgradeCpu;
@@ -653,7 +649,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeDescContent
+             * The description of the upgrade.
              */
             public Builder upgradeDescContent(String upgradeDescContent) {
                 this.upgradeDescContent = upgradeDescContent;
@@ -661,7 +657,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeDiskSize
+             * The disk capacity after the upgrade.
              */
             public Builder upgradeDiskSize(Integer upgradeDiskSize) {
                 this.upgradeDiskSize = upgradeDiskSize;
@@ -669,7 +665,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeMaxConnections
+             * The maximum number of concurrent connections after the upgrade.
              */
             public Builder upgradeMaxConnections(Integer upgradeMaxConnections) {
                 this.upgradeMaxConnections = upgradeMaxConnections;
@@ -677,7 +673,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeMaxIombps
+             * The maximum I/O throughput after the upgrade. Unit: Mbit/s.
              */
             public Builder upgradeMaxIombps(Integer upgradeMaxIombps) {
                 this.upgradeMaxIombps = upgradeMaxIombps;
@@ -685,7 +681,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeMaxIops
+             * The maximum IOPS after the upgrade.
              */
             public Builder upgradeMaxIops(Integer upgradeMaxIops) {
                 this.upgradeMaxIops = upgradeMaxIops;
@@ -693,7 +689,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeMemory
+             * The memory size after the upgrade.
              */
             public Builder upgradeMemory(Long upgradeMemory) {
                 this.upgradeMemory = upgradeMemory;
@@ -701,7 +697,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeReferencePrice
+             * The reference price of the upgrade.
              */
             public Builder upgradeReferencePrice(String upgradeReferencePrice) {
                 this.upgradeReferencePrice = upgradeReferencePrice;
@@ -709,7 +705,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStorageType
+             * The storage type after the upgrade.
              */
             public Builder upgradeStorageType(String upgradeStorageType) {
                 this.upgradeStorageType = upgradeStorageType;

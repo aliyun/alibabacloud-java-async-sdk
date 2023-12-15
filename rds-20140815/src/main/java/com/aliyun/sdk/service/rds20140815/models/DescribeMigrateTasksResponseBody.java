@@ -98,7 +98,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -262,7 +262,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The type of the migration task. Valid values:
+             * The migration task type. Valid values:
              * <p>
              * 
              * *   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.
@@ -282,7 +282,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -314,7 +314,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the migration task.
+             * The migration task ID.
              */
             public Builder migrateTaskId(String migrateTaskId) {
                 this.migrateTaskId = migrateTaskId;

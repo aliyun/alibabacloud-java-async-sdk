@@ -371,10 +371,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the pending task belongs. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.
          * <p>
          * 
-         * > The value **all** indicates all regions.
+         * >  The value **all** indicates all regions.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

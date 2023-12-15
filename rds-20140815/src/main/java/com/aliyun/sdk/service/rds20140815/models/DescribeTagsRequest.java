@@ -190,10 +190,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          * <p>
          * 
-         * > If you specify this parameter, all tags that are added to the instance are queried. Other filter conditions are invalid.
+         * >  If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -220,7 +220,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -80,11 +80,10 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
          * *   **Enable**
          * *   **Disable**
          * 
-         * The return value is a JSON string. Examples:
+         * The return value is a JSON string. Example:
          * 
-         * {"status":"Disable", "check_interval_seconds": 60,
-         * 
-         * "max_failed_login_attempts": 60, "blocking_seconds": 600}
+         *     {"status":"Disable", "check_interval_seconds": 60,
+         *               "max_failed_login_attempts": 60, "blocking_seconds": 600}
          * 
          * Description:
          * 
@@ -108,9 +107,9 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
          * *   **Enable**
          * *   **Disable**
          * 
-         * The return value is a JSON string. Example:
+         * In this case, the return value is a JSON string. Examples:
          * 
-         * {"status":"Disable"}.
+         *     {"status":"Disable"}.
          */
         public Builder persistentConnectionsConfiguration(String persistentConnectionsConfiguration) {
             this.persistentConnectionsConfiguration = persistentConnectionsConfiguration;
@@ -118,7 +117,7 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +133,7 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
          * 
          * The return value is a JSON string. Example:
          * 
-         * {"status":"Enable"}.
+         *     {"status":"Enable"}
          */
         public Builder transparentSwitchConfiguration(String transparentSwitchConfiguration) {
             this.transparentSwitchConfiguration = transparentSwitchConfiguration;

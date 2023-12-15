@@ -225,7 +225,10 @@ public class RestoreDdrTableRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
+         * The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the IDs of the backup sets that are available to an instance.
+         * <p>
+         * 
+         * >  If you set the **RestoreType** parameter to **0**, you must also specify the BackupId parameter.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -234,7 +237,7 @@ public class RestoreDdrTableRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -243,7 +246,7 @@ public class RestoreDdrTableRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The source instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -261,7 +264,7 @@ public class RestoreDdrTableRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +273,7 @@ public class RestoreDdrTableRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -324,10 +327,10 @@ public class RestoreDdrTableRequest extends Request {
         }
 
         /**
-         * The ID of the source instance if you want to restore data to a point in time.
+         * The ID of the source instance whose data you want to restore to a point in time.
          * <p>
          * 
-         * > : If you set **RestoreType** to **1**, you must also specify this parameter.
+         * >  If you set the **RestoreType** parameter to **1**, you must also specify the SourceDBInstanceName parameter.
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);

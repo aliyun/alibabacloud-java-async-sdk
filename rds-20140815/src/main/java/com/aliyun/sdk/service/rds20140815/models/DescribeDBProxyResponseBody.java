@@ -42,6 +42,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     private String DBProxyInstanceType;
 
+    @NameInMap("DBProxyPersistentConnectionStatus")
+    private String DBProxyPersistentConnectionStatus;
+
     @NameInMap("DBProxyServiceStatus")
     private String DBProxyServiceStatus;
 
@@ -65,6 +68,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         this.DBProxyInstanceSize = builder.DBProxyInstanceSize;
         this.DBProxyInstanceStatus = builder.DBProxyInstanceStatus;
         this.DBProxyInstanceType = builder.DBProxyInstanceType;
+        this.DBProxyPersistentConnectionStatus = builder.DBProxyPersistentConnectionStatus;
         this.DBProxyServiceStatus = builder.DBProxyServiceStatus;
         this.dbProxyEndpointItems = builder.dbProxyEndpointItems;
         this.requestId = builder.requestId;
@@ -150,6 +154,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBProxyPersistentConnectionStatus
+     */
+    public String getDBProxyPersistentConnectionStatus() {
+        return this.DBProxyPersistentConnectionStatus;
+    }
+
+    /**
      * @return DBProxyServiceStatus
      */
     public String getDBProxyServiceStatus() {
@@ -188,6 +199,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         private String DBProxyInstanceSize; 
         private String DBProxyInstanceStatus; 
         private String DBProxyInstanceType; 
+        private String DBProxyPersistentConnectionStatus; 
         private String DBProxyServiceStatus; 
         private DbProxyEndpointItems dbProxyEndpointItems; 
         private String requestId; 
@@ -287,6 +299,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.DBProxyInstanceType = DBProxyInstanceType;
+            return this;
+        }
+
+        /**
+         * DBProxyPersistentConnectionStatus.
+         */
+        public Builder DBProxyPersistentConnectionStatus(String DBProxyPersistentConnectionStatus) {
+            this.DBProxyPersistentConnectionStatus = DBProxyPersistentConnectionStatus;
             return this;
         }
 

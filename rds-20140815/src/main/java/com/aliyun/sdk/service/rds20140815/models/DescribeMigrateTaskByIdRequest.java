@@ -126,7 +126,7 @@ public class DescribeMigrateTaskByIdRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -135,7 +135,7 @@ public class DescribeMigrateTaskByIdRequest extends Request {
         }
 
         /**
-         * The ID of the migration task. You can call the [DescribeMigrateTasks](~~64563~~) operation to query the ID of the migration task.
+         * The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.
          */
         public Builder migrateTaskId(String migrateTaskId) {
             this.putQueryParameter("MigrateTaskId", migrateTaskId);

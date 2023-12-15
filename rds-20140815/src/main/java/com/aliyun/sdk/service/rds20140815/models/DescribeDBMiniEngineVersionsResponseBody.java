@@ -161,6 +161,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         private String engineVersion;
 
+        @NameInMap("ExpireDate")
+        private String expireDate;
+
         @NameInMap("ExpireStatus")
         private String expireStatus;
 
@@ -189,6 +192,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             this.communityMinorVersion = builder.communityMinorVersion;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.expireDate = builder.expireDate;
             this.expireStatus = builder.expireStatus;
             this.isHotfixVersion = builder.isHotfixVersion;
             this.minorVersion = builder.minorVersion;
@@ -226,6 +230,13 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
          */
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        /**
+         * @return expireDate
+         */
+        public String getExpireDate() {
+            return this.expireDate;
         }
 
         /**
@@ -288,6 +299,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             private String communityMinorVersion; 
             private String engine; 
             private String engineVersion; 
+            private String expireDate; 
             private String expireStatus; 
             private Boolean isHotfixVersion; 
             private String minorVersion; 
@@ -321,6 +333,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * ExpireDate.
+             */
+            public Builder expireDate(String expireDate) {
+                this.expireDate = expireDate;
                 return this;
             }
 

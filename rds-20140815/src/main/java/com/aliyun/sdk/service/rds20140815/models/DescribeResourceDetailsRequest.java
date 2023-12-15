@@ -149,7 +149,7 @@ public class DescribeResourceDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -167,7 +167,7 @@ public class DescribeResourceDetailsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +176,7 @@ public class DescribeResourceDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

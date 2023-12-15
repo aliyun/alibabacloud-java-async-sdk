@@ -228,7 +228,7 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

@@ -86,7 +86,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the primary instance.
+         * The primary instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,7 +94,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The latency of data replication between the primary instance and the read-only instance.
+         * The latency of data replication. Unit: seconds.
          */
         public Builder delayTime(Integer delayTime) {
             this.delayTime = delayTime;
@@ -102,7 +102,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of latency information.
+         * The latency information.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the read-only instance.
+         * The read-only instance ID.
          */
         public Builder readDBInstanceId(String readDBInstanceId) {
             this.readDBInstanceId = readDBInstanceId;
@@ -118,7 +118,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -340,7 +340,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the read-only instance.
+             * The read-only instance ID.
              */
             public Builder readDBInstanceName(String readDBInstanceName) {
                 this.readDBInstanceName = readDBInstanceName;
@@ -498,7 +498,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private ItemsReadonlyInstanceDelay readonlyInstanceDelay; 
 
             /**
-             * The ID of the primary instance.
+             * The primary instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -507,9 +507,6 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
             /**
              * An array that consists of information about the read-only instance.
-             * <p>
-             * 
-             * >  This parameter is returned only when the primary instance runs the MySQL database engine.
              */
             public Builder readDBInstanceNames(ReadDBInstanceNames readDBInstanceNames) {
                 this.readDBInstanceNames = readDBInstanceNames;
@@ -517,10 +514,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of latencies.
-             * <p>
-             * 
-             * >  This parameter is returned only when the primary instance runs the MySQL database engine.
+             * The latency of data replication.
              */
             public Builder readDelayTimes(ReadDelayTimes readDelayTimes) {
                 this.readDelayTimes = readDelayTimes;
@@ -528,10 +522,10 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of information about the write-ahead log (WAL) latency.
+             * The information about the write-ahead log (WAL) latency.
              * <p>
              * 
-             * >  This parameter is returned only when the primary instance runs the PostgreSQL database engine.
+             * >  This parameter is returned only when the primary instance runs PostgreSQL.
              */
             public Builder readonlyInstanceDelay(ItemsReadonlyInstanceDelay readonlyInstanceDelay) {
                 this.readonlyInstanceDelay = readonlyInstanceDelay;
@@ -572,7 +566,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             private java.util.List < ItemsItems> items; 
 
             /**
-             * An array that consists of latency information.
+             * The latency information.
              */
             public Builder items(java.util.List < ItemsItems> items) {
                 this.items = items;

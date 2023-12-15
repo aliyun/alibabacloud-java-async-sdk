@@ -153,7 +153,7 @@ public class CreateTempDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. You can call the DescribeBackups operation to query backup set IDs.
+         * The backup set ID. You can call the DescribeBackups operation to query the backup set ID.
          * <p>
          * 
          * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
@@ -192,7 +192,7 @@ public class CreateTempDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -469,10 +469,10 @@ public class CreateDdrInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.
+         * The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.
          * <p>
          * 
-         * > If you set **RestoreType** to **BackupSet**, you must specify this parameter.
+         * >  This parameter is required when you set the **RestoreType** parameter to **BackupSet**.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -514,10 +514,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
          * <p>
          * 
-         * > The name cannot start with http:// or https://.
+         * >  The value cannot start with http:// or https://.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -648,7 +648,7 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
+         * The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -657,7 +657,7 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the destination instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -666,7 +666,7 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -705,10 +705,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The method that is used to restore data. Valid values:
+         * The restoration method that you want to use. Valid values:
          * <p>
          * 
-         * *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.
+         * *   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.
          * *   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.
          */
         public Builder restoreType(String restoreType) {
@@ -731,10 +731,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the source instance if you want to restore data to a point in time.
+         * The source instance ID, which is used if you want to restore data to a point in time.
          * <p>
          * 
-         * > If you set **RestoreType** to **BackupTime**, you must specify this parameter.
+         * >  This parameter is required when you set the **RestoreType** parameter to **BackupTime**.
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -785,10 +785,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The VPC ID of the instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+         * The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
          * <p>
          * 
-         * > If you specify this parameter, you must also specify **ZoneId**.
+         * >  If you specify this parameter, you must also specify the **ZoneId** parameter.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -797,10 +797,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+         * The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.
          * <p>
          * 
-         * > If you specify this parameter, you must also specify **ZoneId**.
+         * >  If you specify this parameter, you must also specify the **ZoneId** parameter.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

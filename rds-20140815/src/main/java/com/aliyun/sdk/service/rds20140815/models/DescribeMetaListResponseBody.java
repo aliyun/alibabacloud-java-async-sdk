@@ -110,7 +110,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -118,7 +118,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the information about the databases and tables whose data is included in the backup set.
+         * The information about the databases and tables whose data is included in the backup set.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -222,7 +222,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             private String tables; 
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -230,7 +230,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the table. Unit: KB.
+             * The table size. Unit: KB.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -238,7 +238,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * The table name.
              */
             public Builder tables(String tables) {
                 this.tables = tables;

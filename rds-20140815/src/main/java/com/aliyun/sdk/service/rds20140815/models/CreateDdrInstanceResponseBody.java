@@ -89,7 +89,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
          * The endpoint that is used to connect to the destination instance.
          * <p>
          * 
-         * > **DBInstanceNetType** indicates whether the endpoint is internal or public.
+         * >  The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -97,7 +97,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the destination instance.
+         * The destination instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -105,7 +105,7 @@ public class CreateDdrInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

@@ -140,7 +140,7 @@ public class CancelImportRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -149,10 +149,10 @@ public class CancelImportRequest extends Request {
         }
 
         /**
-         * The ID of the migration task.
+         * The migration task ID.
          * <p>
-         *  
-         * > This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).
+         * 
+         * >  This parameter is returned when the migration task is started. For more information, see ImportDatabaseBetweenInstances.
          */
         public Builder importId(Integer importId) {
             this.putQueryParameter("ImportId", importId);
@@ -179,7 +179,7 @@ public class CancelImportRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

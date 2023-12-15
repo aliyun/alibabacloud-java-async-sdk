@@ -345,7 +345,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the pending event. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

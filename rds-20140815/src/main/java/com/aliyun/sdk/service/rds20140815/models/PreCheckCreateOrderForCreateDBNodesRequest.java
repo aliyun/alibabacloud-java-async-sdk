@@ -251,13 +251,13 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically complete the payment. Valid value:
+         * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
          * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
          * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
          * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -275,7 +275,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -284,7 +284,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The commodity code of the instance. Valid values:
+         * The commodity code. Valid values:
          * <p>
          * 
          * *   **bards**: The instance is a pay-as-you-go primary instance.
@@ -303,7 +303,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -312,7 +312,10 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The details about the node.
+         * The information about the node.
+         * <p>
+         * 
+         * >  This parameter is used for ApsaraDB RDS for MySQL instances on RDS Cluster Edition.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -322,12 +325,13 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The major engine version of the destination instance. The value of this parameter varies based on the value of **Engine**.
+         * The database engine version of the instance. Valid values:
          * <p>
          * 
-         * *   Valid values when Engine is set to MySQL: **5.5, 5.6, 5.7, and 8.0**
-         * *   Valid values when Engine is set to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
-         * *   Valid values when Engine is set to PostgreSQL: **9.4, 10.0, 11.0, 12.0, and 13.0**
+         * *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**
+         * *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**
+         * *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**
+         * *   Valid value if you set Engine to MariaDB: **10.3**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -367,7 +371,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -376,7 +380,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The resource of the instance.
+         * The resource.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -403,7 +407,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
-         * The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+         * The zone ID. You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -457,7 +461,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The specification information of the node.
+             * The instance type of the node.
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;

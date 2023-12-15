@@ -204,7 +204,7 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -246,11 +246,14 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template.
+         * The parameter template ID.
          * <p>
          * 
-         * > *   If you specify this parameter, you do not need to specify **Parameters**.
-         * > *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.
+         * > 
+         * 
+         * *   If you specify this parameter, you do not need to specify **Parameters**.
+         * 
+         * *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -259,10 +262,10 @@ public class ModifyParameterRequest extends Request {
         }
 
         /**
-         * The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the [DescribeParameterTemplates](~~26284~~) operation to query parameter names and values.
+         * The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the DescribeParameterTemplates operation to query parameter names and values.
          * <p>
          * 
-         * > If you specify this parameter, you do not need to specify **ParameterGroupId**.
+         * >  If you specify this parameter, you do not need to specify **ParameterGroupId**.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -305,8 +308,8 @@ public class ModifyParameterRequest extends Request {
          * <p>
          * 
          * *   **Immediately**: immediately modifies the parameter. This is the default value.
-         * *   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of the instance.
-         * *   **ScheduleTime**: The modification takes effect at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.
+         * *   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.
+         * *   **ScheduleTime**: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

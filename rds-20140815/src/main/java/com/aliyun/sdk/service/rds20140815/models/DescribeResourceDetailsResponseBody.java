@@ -202,7 +202,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.
+         * The size of the backup log. Unit: bytes.
          */
         public Builder backupLogSize(Long backupLogSize) {
             this.backupLogSize = backupLogSize;
@@ -210,7 +210,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.
+         * The size of the backup data. Unit: MB.
          */
         public Builder backupSize(Long backupSize) {
             this.backupSize = backupSize;
@@ -218,7 +218,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Database Storage.
+         * The disk capacity of the instance.
          */
         public Builder dbInstanceStorage(Long dbInstanceStorage) {
             this.dbInstanceStorage = dbInstanceStorage;
@@ -226,7 +226,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyInstance name.
+         * The name of the proxy instance.
          */
         public Builder dbProxyInstanceName(String dbProxyInstanceName) {
             this.dbProxyInstanceName = dbProxyInstanceName;
@@ -234,7 +234,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.
+         * The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.
          */
         public Builder diskUsed(Long diskUsed) {
             this.diskUsed = diskUsed;
@@ -242,7 +242,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Instance StorageType
+         * The storage type of the instance.
          */
         public Builder instanceStorageType(String instanceStorageType) {
             this.instanceStorageType = instanceStorageType;
@@ -250,7 +250,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Whitelist Rules.
+         * The rule for the IP address whitelist of the instance.
          */
         public Builder rdsEcsSecurityGroupRel(java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
             this.rdsEcsSecurityGroupRel = rdsEcsSecurityGroupRel;
@@ -258,7 +258,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID.
          */
         public Builder region(String region) {
             this.region = region;
@@ -266,7 +266,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +274,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -282,7 +282,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+         * The IP address whitelist of the instance. For more information, see [Configure IP address whitelists](~~43185~~). If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:
          * <p>
          * 
          * *   IP addresses, such as 10.10.XX.XX.
@@ -297,6 +297,9 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
 
         /**
          * The vSwitch ID.
+         * <p>
+         * 
+         * >  The vSwitch must belong to the same zone as the instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -304,7 +307,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * VPC ID.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

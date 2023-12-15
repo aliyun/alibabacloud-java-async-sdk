@@ -74,7 +74,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the whitelist configuration. Valid values:
+         * The result of the IP address whitelist configuration. Valid values:
          * <p>
          * 
          * *   **Success**
@@ -94,7 +94,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

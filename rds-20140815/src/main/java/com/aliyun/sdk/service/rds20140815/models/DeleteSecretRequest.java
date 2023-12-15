@@ -191,10 +191,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the **DescribeDBInstances** operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          * <p>
          * 
-         * > If you specify this parameter, you must also specify **SecretName**.
+         * >  If you specify this parameter, you must also specify the **SecretName** parameter. parameter.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -224,7 +224,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the **DescribeRegions** operation to query the most recent region list.
+         * The region ID. You can call the DescribeSecrets operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -233,7 +233,7 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the **DescribeDBInstanceAttribute** operation to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,10 +260,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the **CreateSecret** operation to obtain the value of this parameter.
+         * The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.
          * <p>
          * 
-         * > You must specify one of **SecretName** and SecretArn.
+         * >  You must specify one of the SecretArn and **SecretName** parameters.
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);

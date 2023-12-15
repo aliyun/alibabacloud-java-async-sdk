@@ -112,7 +112,7 @@ public class LockAccountRequest extends Request {
         } 
 
         /**
-         * The account that you want to lock. You can lock only one account at a time.
+         * The account that you want to lock. You can lock only a single account at a time.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -121,7 +121,7 @@ public class LockAccountRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB RDS for PostgreSQL instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

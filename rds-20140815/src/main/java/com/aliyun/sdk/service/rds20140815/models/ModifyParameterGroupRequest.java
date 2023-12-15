@@ -221,7 +221,7 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The parameter template ID. You can call the [DescribeParameterGroups](~~144491~~) operation to query the parameter template ID.
+         * The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -262,10 +262,10 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          * <p>
          * 
-         * > The region of a parameter template cannot be changed. You can call the [CloneParameterGroup](~~144581~~) operation to replicate a parameter template to a specific region.
+         * >  The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to replicate a parameter template to a specific region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,7 +274,7 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

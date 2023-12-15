@@ -70,7 +70,7 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region for which the event history feature is enabled or disabled.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,7 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

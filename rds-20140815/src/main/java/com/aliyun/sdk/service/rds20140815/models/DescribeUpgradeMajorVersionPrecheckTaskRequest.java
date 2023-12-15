@@ -169,7 +169,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -196,10 +196,10 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The number of the page to return in the upgrade check report.
+         * The page number.
          * <p>
          * 
-         * Valid values: any non-zero positive integer. Default value: 1.
+         * Valid values: any non-zero positive integer. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -208,12 +208,12 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page of the upgrade check report.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values:
          * 
-         * *   30 (This is the default value.)
+         * *   30 (default)
          * *   50
          * *   100
          */
@@ -243,9 +243,6 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
 
         /**
          * The new major engine version of the instance. The new major engine version must be later than the original major engine version.
-         * <p>
-         * 
-         * For example, if the original major engine version is PostgreSQL 9.4, the new major engine version can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, or PostgreSQL 13.
          */
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
@@ -254,7 +251,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends Request {
         }
 
         /**
-         * The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter that is returned from the call of the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation.
+         * The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

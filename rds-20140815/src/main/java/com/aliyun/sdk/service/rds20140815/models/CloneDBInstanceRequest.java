@@ -463,12 +463,12 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set.
+         * The backup set ID.
          * <p>
          * 
-         * You can call the [DescribeBackups](~~26273~~) operation to query the backup sets.
+         * You can call the DescribeBackups operation to query the backup set ID.
          * 
-         * > You must specify at least one of the **BackupId** and **RestoreTime** parameters.
+         * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -513,15 +513,15 @@ public class CloneDBInstanceRequest extends Request {
          * 
          * *   **Basic**: RDS Basic Edition.
          * *   **HighAvailability**: RDS High-availability Edition.
-         * *   **AlwaysOn**: RDS Cluster Edition for SQL Server.
-         * *   **cluster**: RDS Cluster Edition for MySQL.
+         * *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.
+         * *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.
          * *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
          * 
-         * **Serverless instance**
+         * **Serverless instances**
          * 
-         * *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
-         * *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.
-         * *   **serverless_ha**: RDS Serverless High-availability Edition for SQL Server.
+         * *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.
+         * *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL
+         * *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server
          * 
          * >  You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.
          */
@@ -667,7 +667,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -765,10 +765,10 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+         * The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.
          * <p>
          * 
-         * > By default, the new instance resides in the same region as the original instance.
+         * >  Set this value to the zone ID of the original instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

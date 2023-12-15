@@ -222,7 +222,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -282,7 +282,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
+         * The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

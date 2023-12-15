@@ -265,12 +265,12 @@ public class RecoveryDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
+         * The backup set ID. You can call the DescribeBackups operation to query the backup set ID.
          * <p>
          * 
          * If you specify this parameter, you do not need to specify **DBInstanceId**.
          * 
-         * > You must specify at least one of **BackupId** and **RestoreTime**.
+         * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -291,8 +291,11 @@ public class RecoveryDBInstanceRequest extends Request {
          * The ID of the original instance.
          * <p>
          * 
-         * > *   If you specify BackupId, you do not need to specify this parameter.
-         * > *   If you specify RestoreTime, you must also specify this parameter.
+         * > 
+         * 
+         * *   If you specify BackupId, you do not need to specify this parameter.
+         * 
+         * *   If you specify RestoreTime, you must also specify this parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -302,6 +305,9 @@ public class RecoveryDBInstanceRequest extends Request {
 
         /**
          * The storage capacity of the new instance. Unit: GB. For more information, see [Instance types](~~26312~~).
+         * <p>
+         * 
+         * >  You must set this parameter to a value that is greater than or equal to the storage capacity of the original instance.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -314,7 +320,7 @@ public class RecoveryDBInstanceRequest extends Request {
          * <p>
          * 
          * *   **local_ssd/ephemeral_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_ssd**: standard SSD.
          * *   **cloud_essd**: enhanced SSD (ESSD)
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
@@ -355,8 +361,8 @@ public class RecoveryDBInstanceRequest extends Request {
          * The billing method of the new instance. Valid values:
          * <p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -380,7 +386,7 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.
+         * The internal IP address of the new instance. The internal IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

@@ -107,7 +107,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The ID of the instance that serves as the unit node you want to remove. You can call the [DescribeGadInstances](~~330105~~) query the ID of the instance.
+         * The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.
          */
         public Builder memberInstanceName(String memberInstanceName) {
             this.putQueryParameter("MemberInstanceName", memberInstanceName);
@@ -116,7 +116,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The region ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the information.
+         * The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class DetachGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -218,7 +218,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             private String logStatus; 
 
             /**
-             * The name of the file.
+             * The file name.
              */
             public Builder fileID(String fileID) {
                 this.fileID = fileID;

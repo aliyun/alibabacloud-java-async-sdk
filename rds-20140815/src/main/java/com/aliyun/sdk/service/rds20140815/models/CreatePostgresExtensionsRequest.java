@@ -56,6 +56,10 @@ public class CreatePostgresExtensionsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RiskConfirmed")
+    private Boolean riskConfirmed;
+
+    @Query
     @NameInMap("SourceDatabase")
     private String sourceDatabase;
 
@@ -71,6 +75,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.riskConfirmed = builder.riskConfirmed;
         this.sourceDatabase = builder.sourceDatabase;
     }
 
@@ -158,6 +163,13 @@ public class CreatePostgresExtensionsRequest extends Request {
     }
 
     /**
+     * @return riskConfirmed
+     */
+    public Boolean getRiskConfirmed() {
+        return this.riskConfirmed;
+    }
+
+    /**
      * @return sourceDatabase
      */
     public String getSourceDatabase() {
@@ -175,6 +187,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean riskConfirmed; 
         private String sourceDatabase; 
 
         private Builder() {
@@ -193,6 +206,7 @@ public class CreatePostgresExtensionsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.riskConfirmed = request.riskConfirmed;
             this.sourceDatabase = request.sourceDatabase;
         } 
 
@@ -283,6 +297,15 @@ public class CreatePostgresExtensionsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RiskConfirmed.
+         */
+        public Builder riskConfirmed(Boolean riskConfirmed) {
+            this.putQueryParameter("RiskConfirmed", riskConfirmed);
+            this.riskConfirmed = riskConfirmed;
             return this;
         }
 

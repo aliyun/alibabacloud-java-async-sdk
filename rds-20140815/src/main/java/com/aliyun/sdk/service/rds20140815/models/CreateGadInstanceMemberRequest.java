@@ -145,7 +145,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         } 
 
         /**
-         * The ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the central node.
+         * The ID of the central node . You can call the DescribeGadInstances operation to query the ID.
          */
         public Builder centralDBInstanceId(String centralDBInstanceId) {
             this.putQueryParameter("CentralDBInstanceId", centralDBInstanceId);
@@ -154,7 +154,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The username of the privileged account of the central node. You can call the [DescribeAccounts](~~26265~~) operation to query the privileged account of the central node.
+         * The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.
          */
         public Builder centralRdsDtsAdminAccount(String centralRdsDtsAdminAccount) {
             this.putQueryParameter("CentralRdsDtsAdminAccount", centralRdsDtsAdminAccount);
@@ -172,7 +172,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The region ID of the central node. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder centralRegionId(String centralRegionId) {
             this.putQueryParameter("CentralRegionId", centralRegionId);
@@ -199,7 +199,7 @@ public class CreateGadInstanceMemberRequest extends Request {
         }
 
         /**
-         * The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the global active database cluster.
+         * The ID of the global active database cluster. You can call the DescribeGadInstances operation to query the ID.
          */
         public Builder gadInstanceId(String gadInstanceId) {
             this.putQueryParameter("GadInstanceId", gadInstanceId);
@@ -438,7 +438,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.
+             * The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableResource operation to query the storage capacity range that is available for a specific instance type in a region.
              * <p>
              * 
              * **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
@@ -454,9 +454,9 @@ public class CreateGadInstanceMemberRequest extends Request {
              * 
              * *   **local_ssd**: local SSDs
              * *   **cloud_ssd**: standard SSDs
-             * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
-             * *   **cloud_essd2**: ESSDs of PL2.
-             * *   **cloud_essd3**: ESSD of PL3.
+             * *   **cloud_essd**: PL1 ESSDs
+             * *   **cloud_essd2**: PL2 ESSDs
+             * *   **cloud_essd3**: PL3 ESSD
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -464,7 +464,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the available instance types in a region.
+             * The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the DescribeAvailableResource operation to query the available instance types in a region.
              * <p>
              * 
              * **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
@@ -535,7 +535,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The region ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+             * The region ID of the unit node that you want to create. You can call the DescribeRegions operation to query the most recent region list.
              * <p>
              * 
              * **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
@@ -582,7 +582,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The zone ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+             * The zone ID of the unit node that you want to create. You can call the DescribeRegions operation to query zone ID.
              * <p>
              * 
              * **N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.
@@ -593,7 +593,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The zone ID of the secondary node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+             * The zone ID of the secondary node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.
              * <p>
              * 
              * *   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.
@@ -607,7 +607,7 @@ public class CreateGadInstanceMemberRequest extends Request {
             }
 
             /**
-             * The zone ID of the logger node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.
+             * The zone ID of the logger node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.
              * <p>
              * 
              * *   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.

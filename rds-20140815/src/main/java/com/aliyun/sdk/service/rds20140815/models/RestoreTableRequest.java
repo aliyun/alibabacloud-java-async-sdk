@@ -182,10 +182,10 @@ public class RestoreTableRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
+         * The backup set ID. You can call the DescribeBackups operation to obtain the backup set ID.
          * <p>
          * 
-         * > You must specify at least one of BackupId or **RestoreTime** parameters.
+         * >  You must specify at least one of **BackupId** or **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -194,7 +194,7 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +203,7 @@ public class RestoreTableRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

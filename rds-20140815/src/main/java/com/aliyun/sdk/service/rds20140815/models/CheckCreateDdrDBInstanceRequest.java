@@ -242,10 +242,10 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.
+         * The ID of the backup set that is used for the restoration. You can call the DescribeCrossRegionBackups operation to query the backup set ID.
          * <p>
          * 
-         * > If you set **RestoreType** to **0**, you must also specify this parameter.
+         * >  This parameter must be specified when the **RestoreType** parameter is set to **0**.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -309,7 +309,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the destination instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +318,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -375,7 +375,7 @@ public class CheckCreateDdrDBInstanceRequest extends Request {
          * The ID of the source instance if you want to restore data to a point in time.
          * <p>
          * 
-         * > If you set **RestoreType** to **1**, you must also specify this parameter.
+         * >  This parameter must be specified when the **RestoreType** parameter is set to **1**.
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);

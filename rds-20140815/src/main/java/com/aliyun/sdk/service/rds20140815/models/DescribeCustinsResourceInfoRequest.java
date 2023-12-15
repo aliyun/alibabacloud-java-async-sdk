@@ -111,7 +111,7 @@ public class DescribeCustinsResourceInfoRequest extends Request {
         } 
 
         /**
-         * The instance ID. Separate multiple values with commas (,).
+         * The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -129,7 +129,7 @@ public class DescribeCustinsResourceInfoRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

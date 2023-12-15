@@ -86,7 +86,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * An array that consists of the details about each SQL audit log entry.
+         * The details about each SQL audit log entry.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -250,7 +250,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -258,7 +258,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the SQL statement was executed. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -282,7 +282,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement that is executed in the query.
+             * The SQL statement.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -290,7 +290,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the thread.
+             * The thread ID.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;

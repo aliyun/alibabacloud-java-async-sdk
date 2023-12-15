@@ -155,7 +155,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         } 
 
         /**
-         * The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -213,7 +213,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.
+         * The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -222,7 +222,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * The name of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.
+         * The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

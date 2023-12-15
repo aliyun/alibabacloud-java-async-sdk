@@ -402,9 +402,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          *     *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.
          *     *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.
          * 
-         *     **
-         * 
-         *     **Note** If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.
+         * > If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -523,9 +521,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          *     *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**
          *     *   Valid value if you set Engine to PostgreSQL: **14.0**
          * 
-         *     **
-         * 
-         *     **Note**ApsaraDB RDS for MariaDB does not support serverless instances.
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -782,11 +778,8 @@ public class ModifyDBInstanceSpecRequest extends Request {
              * *   **true**
              * *   **false** (default)
              * 
-             * > 
-             * 
-             * *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.
-             * 
-             * *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
+             * > *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a transient connection that lasts approximately 1 minute occurs during forced scaling. Process with caution.
+             * > *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;

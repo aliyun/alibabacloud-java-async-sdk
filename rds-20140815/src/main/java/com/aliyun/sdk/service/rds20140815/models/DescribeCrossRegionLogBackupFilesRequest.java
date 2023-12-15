@@ -184,7 +184,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the cross-region data backup file is stored. You can call the [DescribeCrossRegionBackupDBInstance](~~121737~~) operation to query the most recent region list.
+         * The ID of the destination region within which the cross-region backup file is stored. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.
          */
         public Builder crossBackupRegion(String crossBackupRegion) {
             this.putQueryParameter("CrossBackupRegion", crossBackupRegion);
@@ -248,7 +248,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

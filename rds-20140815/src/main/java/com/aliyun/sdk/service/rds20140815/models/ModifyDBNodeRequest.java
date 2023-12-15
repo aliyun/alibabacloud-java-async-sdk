@@ -305,7 +305,10 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * Effective time, value:
+         * <p>
+         * - Immediate (default value): takes effect immediately.
+         * - MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);

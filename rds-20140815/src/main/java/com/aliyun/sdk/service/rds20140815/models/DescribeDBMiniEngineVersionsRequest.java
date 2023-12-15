@@ -167,7 +167,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,7 +176,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The dedicated cluster ID. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -216,7 +216,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The RDS edition of the instance. Valid values:
+         * The instance edition. Valid values:
          * <p>
          * 
          * *   **Basic**: RDS Basic Edition
@@ -230,7 +230,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

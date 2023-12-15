@@ -86,7 +86,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the attributes in the upgrade check report.
+         * The information about the upgrade check report.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -268,7 +268,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
              * *   Success
              * *   Fail
              * 
-             * >  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred. After you handle the errors, you can try again. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).
+             * >  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).
              */
             public Builder result(String result) {
                 this.result = result;

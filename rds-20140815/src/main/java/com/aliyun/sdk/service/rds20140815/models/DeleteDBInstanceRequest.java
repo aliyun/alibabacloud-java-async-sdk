@@ -159,7 +159,7 @@ public class DeleteDBInstanceRequest extends Request {
          * *   **Lastest**: Only the last archived backup file is retained.
          * *   **All**: All archived backup files are retained.
          * 
-         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * > This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

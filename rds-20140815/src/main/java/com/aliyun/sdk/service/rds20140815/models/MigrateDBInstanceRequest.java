@@ -219,7 +219,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -251,7 +251,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +290,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host to which you want to migrate the primary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
+         * The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -299,7 +299,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the host to which you want to migrate the secondary instance. You can call the [DescribeDedicatedHosts](~~200944~~) operation to obtain the ID of the host.
+         * The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);

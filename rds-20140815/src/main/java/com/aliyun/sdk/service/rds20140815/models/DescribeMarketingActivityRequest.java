@@ -169,7 +169,7 @@ public class DescribeMarketingActivityRequest extends Request {
         } 
 
         /**
-         * The unique ID (UID) of the Alibaba Cloud account.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliUid(Long aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -178,7 +178,9 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The BID of the account to which the Anycast EIP belongs.
+         * *   China site: 26842
+         * <p>
+         * *   International site: 26888
          */
         public Builder bid(String bid) {
             this.putQueryParameter("Bid", bid);
@@ -205,7 +207,7 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,7 +216,7 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,7 +243,7 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * Upgrade Code
+         * The service name.
          */
         public Builder upgradeCode(String upgradeCode) {
             this.putQueryParameter("UpgradeCode", upgradeCode);

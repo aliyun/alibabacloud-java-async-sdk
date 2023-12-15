@@ -62,7 +62,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +70,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of ECS security groups.
+         * An array that consists of information about the ECS security group.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +78,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of an ECS security group. Valid values:
+             * The network type of the ECS security group. Valid values:
              * <p>
              * 
              * *   **Classic**
@@ -154,7 +154,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

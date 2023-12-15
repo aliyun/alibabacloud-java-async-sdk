@@ -166,7 +166,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The password of the account.
+         * The password of the host account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -175,7 +175,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -184,7 +184,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The hostname of the instance. You can call the [DescribeDBInstanceIpHostname](~~610525~~) operation to query the hostname.
+         * The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -202,7 +202,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.
          */
         public Builder regionID(String regionID) {
             this.putQueryParameter("RegionID", regionID);

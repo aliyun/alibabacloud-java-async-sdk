@@ -79,7 +79,7 @@ public class ConfirmNotifyRequest extends Request {
         }
 
         /**
-         * The IDs of the notifications that needs to be confirmed. You can call the [QueryNotify](~~427959~~) operation to query notifications for an instance.
+         * The notification IDs.
          */
         public Builder notifyIdList(java.util.List < Long > notifyIdList) {
             String notifyIdListShrink = shrink(notifyIdList, "NotifyIdList", "json");

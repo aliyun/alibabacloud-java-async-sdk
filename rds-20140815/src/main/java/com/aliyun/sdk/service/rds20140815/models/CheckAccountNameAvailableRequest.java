@@ -162,10 +162,7 @@ public class CheckAccountNameAvailableRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
-         * <p>
-         * 
-         * >  This operation is not supported for instances that run SQL Server 2017 (cluster edition).
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

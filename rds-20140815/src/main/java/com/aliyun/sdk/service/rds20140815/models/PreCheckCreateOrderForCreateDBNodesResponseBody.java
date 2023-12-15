@@ -62,7 +62,7 @@ public class PreCheckCreateOrderForCreateDBNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * The information about nodes that fail to be created.
          */
         public Builder failures(Failures failures) {
             this.failures = failures;
@@ -70,7 +70,7 @@ public class PreCheckCreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the result of the precheck task.
+         * The precheck result.
          */
         public Builder preCheckResult(Boolean preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -78,7 +78,7 @@ public class PreCheckCreateOrderForCreateDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,13 +130,13 @@ public class PreCheckCreateOrderForCreateDBNodesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The response code returned. Valid values:
+             * The response code. Valid values:
              * <p>
              * 
              * *   **200**: success
              * *   **400**: client error
              * *   **401**: identity authentication failed
-             * *   **404**: request page not found
+             * *   **404**: requested page not found
              * *   **500**: server error
              */
             public Builder code(String code) {
@@ -186,7 +186,7 @@ public class PreCheckCreateOrderForCreateDBNodesResponseBody extends TeaModel {
             private java.util.List < FailuresFailures> failures; 
 
             /**
-             * The returned data.
+             * The information about nodes that fail to be created.
              */
             public Builder failures(java.util.List < FailuresFailures> failures) {
                 this.failures = failures;

@@ -69,7 +69,7 @@ public class CalculateDBInstanceWeightRequest extends Request {
         } 
 
         /**
-         * The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.
+         * The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

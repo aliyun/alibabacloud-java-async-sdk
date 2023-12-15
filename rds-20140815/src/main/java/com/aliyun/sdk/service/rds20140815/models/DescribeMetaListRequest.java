@@ -223,10 +223,10 @@ public class DescribeMetaListRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set from which you want to restore data. You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.
+         * The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the backup set ID.
          * <p>
          * 
-         * > If you set the **RestoreType** parameter to **BackupSetID**, you must also specify this parameter.
+         * >  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.
          */
         public Builder backupSetID(Integer backupSetID) {
             this.putQueryParameter("BackupSetID", backupSetID);
@@ -235,7 +235,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -244,7 +244,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -310,7 +310,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -337,10 +337,10 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the [DescribeBackups](~~26273~~) operation to query the restorable time range.
+         * The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the DescribeBackups operation to query the restorable time range.
          * <p>
          * 
-         * > If you set the **RestoreType** parameter to **RestoreTime**, you must also specify this parameter.
+         * >  This parameter must be specified when the **RestoreType** parameter is set to **RestoreTime**.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
