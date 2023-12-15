@@ -50,7 +50,7 @@ public class CreateTransitRouterCidrResponseBody extends TeaModel {
         private String transitRouterCidrId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateTransitRouterCidrResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterCidrId.
+         * The ID of the CIDR block.
          */
         public Builder transitRouterCidrId(String transitRouterCidrId) {
             this.transitRouterCidrId = transitRouterCidrId;

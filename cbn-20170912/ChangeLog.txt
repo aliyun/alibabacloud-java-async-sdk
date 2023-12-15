@@ -1,3 +1,6 @@
+2023-12-15 Version: 1.0.13
+- Generated java-async 2017-09-12 for Cbn.
+
 2023-11-23 Version: 1.0.12
 - Generated java-async 2017-09-12 for Cbn.
 

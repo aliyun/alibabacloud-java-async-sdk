@@ -38,6 +38,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DefaultLinkType")
+    private String defaultLinkType;
+
+    @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -94,6 +98,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         this.cenBandwidthPackageId = builder.cenBandwidthPackageId;
         this.cenId = builder.cenId;
         this.clientToken = builder.clientToken;
+        this.defaultLinkType = builder.defaultLinkType;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -161,6 +166,13 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return defaultLinkType
+     */
+    public String getDefaultLinkType() {
+        return this.defaultLinkType;
     }
 
     /**
@@ -254,6 +266,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         private String cenBandwidthPackageId; 
         private String cenId; 
         private String clientToken; 
+        private String defaultLinkType; 
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -279,6 +292,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
             this.cenBandwidthPackageId = request.cenBandwidthPackageId;
             this.cenId = request.cenId;
             this.clientToken = request.clientToken;
+            this.defaultLinkType = request.defaultLinkType;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -359,6 +373,15 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DefaultLinkType.
+         */
+        public Builder defaultLinkType(String defaultLinkType) {
+            this.putQueryParameter("DefaultLinkType", defaultLinkType);
+            this.defaultLinkType = defaultLinkType;
             return this;
         }
 

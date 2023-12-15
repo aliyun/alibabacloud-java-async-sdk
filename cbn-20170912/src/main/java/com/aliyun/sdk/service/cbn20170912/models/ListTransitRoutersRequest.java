@@ -236,7 +236,7 @@ public class ListTransitRoutersRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -245,7 +245,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * FeatureFilter.
+         * The field that is used to enable or disable a feature of the transit router.
          */
         public Builder featureFilter(java.util.List < FeatureFilter> featureFilter) {
             this.putQueryParameter("FeatureFilter", featureFilter);
@@ -272,7 +272,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -281,7 +281,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +290,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -317,7 +320,14 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the transit router. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The transit router is being created.
+         * *   **Active**: The transit router is available.
+         * *   **Modifying**: The transit router is being modified
+         * *   **Deleting**: The transit router is being deleted.
+         * *   **Upgrading**: The transit router is being upgraded.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -326,7 +336,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -335,7 +348,7 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -344,7 +357,10 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * TransitRouterName.
+         * The name of the Enterprise Edition transit router.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);
@@ -353,7 +369,11 @@ public class ListTransitRoutersRequest extends Request {
         }
 
         /**
-         * Type.
+         * The edition of the transit router. Valid values:
+         * <p>
+         * 
+         * *   **Enterprise**: Enhance Edition
+         * *   **Basic**: Basic Edition
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -407,7 +427,10 @@ public class ListTransitRoutersRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The value of the field that is used to enable or disable a feature of the transit router. Supported fields:
+             * <p>
+             * 
+             * *   **Multicast**: the multicast feature.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +438,11 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The fields that are used to enable or disable the features of the transit router. The **Multicast** field supports only one value. Valid values:
+             * <p>
+             * 
+             * *   **Enabled**: enables multicast.
+             * *   **Disabled**: disables multicast.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -468,7 +495,12 @@ public class ListTransitRoutersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -476,7 +508,12 @@ public class ListTransitRoutersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

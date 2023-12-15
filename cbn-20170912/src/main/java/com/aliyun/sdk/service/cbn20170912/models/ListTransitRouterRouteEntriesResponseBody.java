@@ -86,7 +86,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         private java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries; 
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +94,11 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If the **NextToken** parameter is empty, no next page exists.
-         * *   If a value of **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried routes.
+         * A list of route entries.
          */
         public Builder transitRouterRouteEntries(java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries) {
             this.transitRouterRouteEntries = transitRouterRouteEntries;
@@ -222,7 +222,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             private Integer preference; 
 
             /**
-             * AsPaths.
+             * The route AS path.
              */
             public Builder asPaths(java.util.List < String > asPaths) {
                 this.asPaths = asPaths;
@@ -230,7 +230,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Communities.
+             * The route community.
              */
             public Builder communities(java.util.List < String > communities) {
                 this.communities = communities;
@@ -238,7 +238,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInstanceId.
+             * The source instance ID.
              */
             public Builder originInstanceId(String originInstanceId) {
                 this.originInstanceId = originInstanceId;
@@ -246,7 +246,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInstanceType.
+             * The source instance type. Valid values:
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **VBR**
+             * *   **TR**
+             * *   **VPN**
+             * *   **CCN**
              */
             public Builder originInstanceType(String originInstanceType) {
                 this.originInstanceType = originInstanceType;
@@ -254,7 +261,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginRouteType.
+             * The route type. Valid values:
+             * <p>
+             * 
+             * *   **System**
+             * *   **Custom**
+             * *   **static**
+             * *   **BGP**
+             * *   **BlackHole**
              */
             public Builder originRouteType(String originRouteType) {
                 this.originRouteType = originRouteType;
@@ -262,7 +276,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Preference.
+             * The route priority.
+             * <p>
+             * 
+             * A smaller value indicates a higher priority.
              */
             public Builder preference(Integer preference) {
                 this.preference = preference;
@@ -495,7 +512,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             private String transitRouterRouteEntryType; 
 
             /**
-             * The time when the route was created.
+             * The time when the route entry was created.
              * <p>
              * 
              * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
@@ -520,7 +537,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PathAttributes.
+             * The route attributes.
              */
             public Builder pathAttributes(PathAttributes pathAttributes) {
                 this.pathAttributes = pathAttributes;
@@ -528,7 +545,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListId.
+             * The prefix list ID.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -536,12 +553,12 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the route.
+             * The route tag.
              * <p>
              * 
-             * Only **PermitVbr** may be returned, which indicates that the route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+             * Only **PermitVbr** may be returned, which indicates that the route is advertised only to the route tables of the virtual border routers (VBRs) that are connected to the transit router.
              * 
-             * >  This parameter is returned only for automatically learned routes.
+             * >  This parameter is returned only for routes whose CIDR blocks are automatically generated by the system.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -549,7 +566,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the route.
+             * The route description.
              * <p>
              * 
              * >  This parameter is returned only for static routes.
@@ -590,7 +607,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * The next hop ID. This parameter is not returned if the route is a blackhole route.
              */
             public Builder transitRouterRouteEntryNextHopId(String transitRouterRouteEntryNextHopId) {
                 this.transitRouterRouteEntryNextHopId = transitRouterRouteEntryNextHopId;
@@ -598,7 +615,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryNextHopResourceId.
+             * The next hop ID.
              */
             public Builder transitRouterRouteEntryNextHopResourceId(String transitRouterRouteEntryNextHopResourceId) {
                 this.transitRouterRouteEntryNextHopResourceId = transitRouterRouteEntryNextHopResourceId;
@@ -606,7 +623,13 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryNextHopResourceType.
+             * The next hop type. Valid values:
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **VBR**
+             * *   **TR**
+             * *   **VPN**
              */
             public Builder transitRouterRouteEntryNextHopResourceType(String transitRouterRouteEntryNextHopResourceType) {
                 this.transitRouterRouteEntryNextHopResourceType = transitRouterRouteEntryNextHopResourceType;
@@ -614,7 +637,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of next hop. Valid values:
+             * The next hop type. Valid values:
              * <p>
              * 
              * *   **BlackHole**: a blackhole route. Packets destined for the destination CIDR block of the route are dropped.
@@ -626,7 +649,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryOriginResourceId.
+             * The source instance ID.
              */
             public Builder transitRouterRouteEntryOriginResourceId(String transitRouterRouteEntryOriginResourceId) {
                 this.transitRouterRouteEntryOriginResourceId = transitRouterRouteEntryOriginResourceId;
@@ -634,7 +657,13 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRouteEntryOriginResourceType.
+             * The source instance type. Valid values:
+             * <p>
+             * 
+             * *   **VPC**
+             * *   **VBR**
+             * *   **TR**
+             * *   **VPN**
              */
             public Builder transitRouterRouteEntryOriginResourceType(String transitRouterRouteEntryOriginResourceType) {
                 this.transitRouterRouteEntryOriginResourceType = transitRouterRouteEntryOriginResourceType;
@@ -642,12 +671,16 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values:
+             * The route status. Valid values:
              * <p>
              * 
-             * *   **Creating**: The route is being created.
-             * *   **Active**: The route is available.
-             * *   **Deleting**: The route is being deleted.
+             * *   **Active**
+             * *   **Rejected**
+             * *   **Prohibited**
+             * *   **Standby**
+             * *   **Candidate**
+             * *   **Creating**
+             * *   **Deleting**
              */
             public Builder transitRouterRouteEntryStatus(String transitRouterRouteEntryStatus) {
                 this.transitRouterRouteEntryStatus = transitRouterRouteEntryStatus;
@@ -658,8 +691,8 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
              * The type of the route. Valid values:
              * <p>
              * 
-             * *   **Static**: a static route
-             * *   **Propagated**: an automatically learned route
+             * *   **Static**: static routes.
+             * *   **Propagated**: automatically learned by the route table.
              */
             public Builder transitRouterRouteEntryType(String transitRouterRouteEntryType) {
                 this.transitRouterRouteEntryType = transitRouterRouteEntryType;

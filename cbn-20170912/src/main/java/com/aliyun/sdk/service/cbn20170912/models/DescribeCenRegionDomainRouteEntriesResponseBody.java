@@ -86,13 +86,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The status of the route. Valid values: 
-         * <p>
-         * 
-         * - **Active**: The route is active.
-         * - **Candidate**: The route is a standby route.
-         * - **Rejected**: The route is rejected.
-         * - **Prohibited**: The route is prohibited.
+         * The array of routes.
          */
         public Builder cenRouteEntries(CenRouteEntries cenRouteEntries) {
             this.cenRouteEntries = cenRouteEntries;
@@ -100,7 +94,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The route maps that the routes match in the outbound direction.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -108,7 +102,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route map.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -116,7 +110,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +118,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance specified as the next hop in the route.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +211,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * 312501
+             * The ID of the region where the route map is applied.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -225,7 +219,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeCenRegionDomainRouteEntries
+             * The ID of the route map.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -319,7 +313,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the request.
+             * The ID of the region where the route map is applied.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -327,7 +321,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the network instance specified as the next hop in the route belongs.
+             * The ID of the route map.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -582,7 +576,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AsPaths.
+             * The AS paths of the routes.
              */
             public Builder asPaths(AsPaths asPaths) {
                 this.asPaths = asPaths;
@@ -590,7 +584,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the routes of a Cloud Enterprise Network (CEN) instance in a specified region.
+             * The route maps that the routes match in the outbound direction.
              */
             public Builder cenOutRouteMapRecords(CenOutRouteMapRecords cenOutRouteMapRecords) {
                 this.cenOutRouteMapRecords = cenOutRouteMapRecords;
@@ -598,7 +592,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The route maps that the routes match in the inbound direction.
              */
             public Builder cenRouteMapRecords(CenRouteMapRecords cenRouteMapRecords) {
                 this.cenRouteMapRecords = cenRouteMapRecords;
@@ -606,7 +600,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Communities.
+             * The community attributes of the routes.
              */
             public Builder communities(Communities communities) {
                 this.communities = communities;
@@ -614,7 +608,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -622,13 +616,18 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the route. 
-             * <p>
-             * 
-             * > A smaller value indicates a higher priority.
+             * The ID of the instance specified as the next hop in the route.
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the network instance specified as the next hop in the route belongs.
+             */
+            public Builder nextHopRegionId(String nextHopRegionId) {
+                this.nextHopRegionId = nextHopRegionId;
                 return this;
             }
 
@@ -641,8 +640,45 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
              * - **CCN**
              * - **local_service**: system route. No next hop is specified.
              */
-            public Builder nextHopRegionId(String nextHopRegionId) {
-                this.nextHopRegionId = nextHopRegionId;
+            public Builder nextHopType(String nextHopType) {
+                this.nextHopType = nextHopType;
+                return this;
+            }
+
+            /**
+             * The priority of the route. 
+             * <p>
+             * 
+             * > A smaller value indicates a higher priority.
+             */
+            public Builder preference(Integer preference) {
+                this.preference = preference;
+                return this;
+            }
+
+            /**
+             * The status of the route. Valid values: 
+             * <p>
+             * 
+             * - **Active**: The route is active.
+             * - **Candidate**: The route is a standby route.
+             * - **Rejected**: The route is rejected.
+             * - **Prohibited**: The route is prohibited.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Whether the route can be advertised to other regions. Valid values: 
+             * <p>
+             * 
+             * - **Active**: The route can be advertised to other regions.
+             * - **Prohibited**: The route cannot be advertised to other regions.
+             */
+            public Builder toOtherRegionStatus(String toOtherRegionStatus) {
+                this.toOtherRegionStatus = toOtherRegionStatus;
                 return this;
             }
 
@@ -653,38 +689,6 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
              * - **CEN**: route that is advertised through CEN
              * - **Custom**: custom route
              * - **System**: system route
-             */
-            public Builder nextHopType(String nextHopType) {
-                this.nextHopType = nextHopType;
-                return this;
-            }
-
-            /**
-             * The page number of the returned page.
-             */
-            public Builder preference(Integer preference) {
-                this.preference = preference;
-                return this;
-            }
-
-            /**
-             * The AS paths of the routes.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The ID of the route map.
-             */
-            public Builder toOtherRegionStatus(String toOtherRegionStatus) {
-                this.toOtherRegionStatus = toOtherRegionStatus;
-                return this;
-            }
-
-            /**
-             * The destination CIDR block of the route.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -170,9 +170,9 @@ public class UpdateTransitRouterRouteEntryRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,7 +233,7 @@ public class UpdateTransitRouterRouteEntryRequest extends Request {
          * The new description of the route.
          * <p>
          * 
-         * The description must be 1 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+         * The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
          */
         public Builder transitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {
             this.putQueryParameter("TransitRouterRouteEntryDescription", transitRouterRouteEntryDescription);

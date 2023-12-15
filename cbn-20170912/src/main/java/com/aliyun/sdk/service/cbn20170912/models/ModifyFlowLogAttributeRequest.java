@@ -183,7 +183,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -192,7 +192,12 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -201,7 +206,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the flow log.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -210,7 +218,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * FlowLogId.
+         * The ID of the flow log.
          */
         public Builder flowLogId(String flowLogId) {
             this.putQueryParameter("FlowLogId", flowLogId);
@@ -219,7 +227,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * FlowLogName.
+         * The new name of the flow log.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
@@ -246,7 +257,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the flow log is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

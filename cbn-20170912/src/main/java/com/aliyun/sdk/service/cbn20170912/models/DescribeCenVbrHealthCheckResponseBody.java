@@ -135,6 +135,9 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         @NameInMap("CenId")
         private String cenId;
 
+        @NameInMap("Description")
+        private String description;
+
         @NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
@@ -158,6 +161,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
         private VbrHealthCheck(Builder builder) {
             this.cenId = builder.cenId;
+            this.description = builder.description;
             this.healthCheckInterval = builder.healthCheckInterval;
             this.healthCheckOnly = builder.healthCheckOnly;
             this.healthCheckSourceIp = builder.healthCheckSourceIp;
@@ -180,6 +184,13 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
          */
         public String getCenId() {
             return this.cenId;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -233,6 +244,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cenId; 
+            private String description; 
             private Integer healthCheckInterval; 
             private Boolean healthCheckOnly; 
             private String healthCheckSourceIp; 
@@ -246,6 +258,14 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

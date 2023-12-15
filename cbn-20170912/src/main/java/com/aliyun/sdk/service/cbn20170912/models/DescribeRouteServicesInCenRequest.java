@@ -195,7 +195,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeRouteServicesInCen**.
+         * The ID of the region where the cloud service is accessed.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -204,7 +204,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The information about the cloud services.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -213,7 +213,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The description of the cloud service.
+         * The service address of the cloud service.
+         * <p>
+         * 
+         * You can enter a domain name, an IP address, or a CIDR block.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -222,12 +225,10 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The status of the cloud service. Valid values:
+         * The ID of the region where the cloud service is deployed.
          * <p>
          * 
-         * *   **Creating**: The cloud service is being created.
-         * *   **Active**: The cloud service is available.
-         * *   **Deleting**: The cloud service is being deleted.
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);
@@ -236,10 +237,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cloud service is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
+         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);
@@ -266,7 +264,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -275,7 +273,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -50,7 +50,7 @@ public class CreateCenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -58,7 +58,7 @@ public class CreateCenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

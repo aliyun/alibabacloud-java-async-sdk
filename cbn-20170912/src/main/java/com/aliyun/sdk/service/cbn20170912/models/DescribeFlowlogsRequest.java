@@ -278,10 +278,7 @@ public class DescribeFlowlogsRequest extends Request {
         } 
 
         /**
-         * The name of the Logstore where the flow log is stored.
-         * <p>
-         * 
-         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-). It must start or end with a lowercase letter or a digit.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -290,35 +287,16 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The name of the flow log.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The name of the project where the flow log is stored.
-         * <p>
-         * 
-         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
-         */
-        public Builder flowLogId(String flowLogId) {
-            this.putQueryParameter("FlowLogId", flowLogId);
-            this.flowLogId = flowLogId;
             return this;
         }
 
@@ -328,6 +306,27 @@ public class DescribeFlowlogsRequest extends Request {
          * 
          * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The ID of the flow log.
+         */
+        public Builder flowLogId(String flowLogId) {
+            this.putQueryParameter("FlowLogId", flowLogId);
+            this.flowLogId = flowLogId;
+            return this;
+        }
+
+        /**
+         * The name of the flow log.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);
             this.flowLogName = flowLogName;
@@ -335,7 +334,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The name of the Logstore where the flow log is stored.
+         * <p>
+         * 
+         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-). It must start or end with a lowercase letter or a digit.
          */
         public Builder logStoreName(String logStoreName) {
             this.putQueryParameter("LogStoreName", logStoreName);
@@ -362,10 +364,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -374,12 +373,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The tag key.
-         * <p>
-         * 
-         * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-         * 
-         * You can specify at most 20 tag keys.
+         * The number of entries to return on each page. Minimum value: **1**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -388,11 +382,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The status of the flow log. Valid values:
+         * The name of the project where the flow log is stored.
          * <p>
          * 
-         * *   **Active**: The flow log is enabled.
-         * *   **Inactive**: The flow log is disabled.
+         * The name must be 3 to 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). It must start or end with a lowercase letter or a digit.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -401,7 +394,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The ID of the flow log.
+         * The ID of the region where the flow log is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -428,7 +424,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Minimum value: **1**. Default value: **20**.
+         * The status of the flow log. Valid values:
+         * <p>
+         * 
+         * *   **Active**: The flow log is enabled.
+         * *   **Inactive**: The flow log is disabled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -437,12 +437,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * The information about the tags.
          * <p>
          * 
-         * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-         * 
-         * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -451,7 +449,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the network instance connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -505,7 +503,12 @@ public class DescribeFlowlogsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the network instance connection.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -513,7 +516,12 @@ public class DescribeFlowlogsRequest extends Request {
             }
 
             /**
-             * The response.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

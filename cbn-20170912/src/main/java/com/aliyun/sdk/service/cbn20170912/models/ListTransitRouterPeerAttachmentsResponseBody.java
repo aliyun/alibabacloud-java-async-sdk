@@ -215,6 +215,9 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("DefaultLinkType")
+        private String defaultLinkType;
+
         @NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
@@ -258,6 +261,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             this.cenBandwidthPackageId = builder.cenBandwidthPackageId;
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
+            this.defaultLinkType = builder.defaultLinkType;
             this.geographicSpanId = builder.geographicSpanId;
             this.peerTransitRouterId = builder.peerTransitRouterId;
             this.peerTransitRouterOwnerId = builder.peerTransitRouterOwnerId;
@@ -320,6 +324,13 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return defaultLinkType
+         */
+        public String getDefaultLinkType() {
+            return this.defaultLinkType;
         }
 
         /**
@@ -413,6 +424,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String cenBandwidthPackageId; 
             private String cenId; 
             private String creationTime; 
+            private String defaultLinkType; 
             private String geographicSpanId; 
             private String peerTransitRouterId; 
             private Long peerTransitRouterOwnerId; 
@@ -487,6 +499,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DefaultLinkType.
+             */
+            public Builder defaultLinkType(String defaultLinkType) {
+                this.defaultLinkType = defaultLinkType;
                 return this;
             }
 

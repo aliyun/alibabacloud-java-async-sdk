@@ -211,7 +211,7 @@ public class CreateTransitRouterCidrRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **CreateTransitRouterCidr**.
+         * The CIDR block of the transit router.
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -220,14 +220,12 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * *   **true** (default): yes
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
          * 
-         *     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
-         * 
-         * *   **false**: no
+         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -236,10 +234,10 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The name of the CIDR block.
+         * The description of the CIDR block.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -248,7 +246,11 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,7 +259,10 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The CIDR block that you want to create for the transit router.
+         * The name of the CIDR block.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -284,10 +289,14 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The description of the CIDR block.
+         * Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
          * <p>
+         * - **true** (default): yes
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         *   A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached. 
+         * 
+         *   The blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router. 
+         * - **false**: no
          */
         public Builder publishCidrRoute(Boolean publishCidrRoute) {
             this.putQueryParameter("PublishCidrRoute", publishCidrRoute);
@@ -296,7 +305,7 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
+         * The region ID of the transit router.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
