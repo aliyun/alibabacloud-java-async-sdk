@@ -1,3 +1,6 @@
+2023-12-15 Version: 1.0.10
+- Generated java-async 2017-03-21 for vod.
+
 2023-12-13 Version: 1.0.9
 - Generated java-async 2017-03-21 for vod.
 

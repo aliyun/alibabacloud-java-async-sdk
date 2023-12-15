@@ -33,6 +33,10 @@ public class SubmitSnapshotJobRequest extends Request {
     private Long specifiedOffsetTime;
 
     @Query
+    @NameInMap("SpecifiedOffsetTimes")
+    private java.util.List < Long > specifiedOffsetTimes;
+
+    @Query
     @NameInMap("SpriteSnapshotConfig")
     private String spriteSnapshotConfig;
 
@@ -55,6 +59,7 @@ public class SubmitSnapshotJobRequest extends Request {
         this.interval = builder.interval;
         this.snapshotTemplateId = builder.snapshotTemplateId;
         this.specifiedOffsetTime = builder.specifiedOffsetTime;
+        this.specifiedOffsetTimes = builder.specifiedOffsetTimes;
         this.spriteSnapshotConfig = builder.spriteSnapshotConfig;
         this.userData = builder.userData;
         this.videoId = builder.videoId;
@@ -110,6 +115,13 @@ public class SubmitSnapshotJobRequest extends Request {
     }
 
     /**
+     * @return specifiedOffsetTimes
+     */
+    public java.util.List < Long > getSpecifiedOffsetTimes() {
+        return this.specifiedOffsetTimes;
+    }
+
+    /**
      * @return spriteSnapshotConfig
      */
     public String getSpriteSnapshotConfig() {
@@ -143,6 +155,7 @@ public class SubmitSnapshotJobRequest extends Request {
         private Long interval; 
         private String snapshotTemplateId; 
         private Long specifiedOffsetTime; 
+        private java.util.List < Long > specifiedOffsetTimes; 
         private String spriteSnapshotConfig; 
         private String userData; 
         private String videoId; 
@@ -159,6 +172,7 @@ public class SubmitSnapshotJobRequest extends Request {
             this.interval = request.interval;
             this.snapshotTemplateId = request.snapshotTemplateId;
             this.specifiedOffsetTime = request.specifiedOffsetTime;
+            this.specifiedOffsetTimes = request.specifiedOffsetTimes;
             this.spriteSnapshotConfig = request.spriteSnapshotConfig;
             this.userData = request.userData;
             this.videoId = request.videoId;
@@ -216,6 +230,16 @@ public class SubmitSnapshotJobRequest extends Request {
         public Builder specifiedOffsetTime(Long specifiedOffsetTime) {
             this.putQueryParameter("SpecifiedOffsetTime", specifiedOffsetTime);
             this.specifiedOffsetTime = specifiedOffsetTime;
+            return this;
+        }
+
+        /**
+         * SpecifiedOffsetTimes.
+         */
+        public Builder specifiedOffsetTimes(java.util.List < Long > specifiedOffsetTimes) {
+            String specifiedOffsetTimesShrink = shrink(specifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
+            this.putQueryParameter("SpecifiedOffsetTimes", specifiedOffsetTimesShrink);
+            this.specifiedOffsetTimes = specifiedOffsetTimes;
             return this;
         }
 
