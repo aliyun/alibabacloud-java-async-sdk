@@ -161,6 +161,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("airline_corp_name")
         private String airlineCorpName;
 
+        @NameInMap("alipay_id")
+        private String alipayId;
+
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
@@ -438,6 +441,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.advanceDay = builder.advanceDay;
             this.airlineCorpCode = builder.airlineCorpCode;
             this.airlineCorpName = builder.airlineCorpName;
+            this.alipayId = builder.alipayId;
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
             this.applyArrCityName = builder.applyArrCityName;
@@ -558,6 +562,13 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getAirlineCorpName() {
             return this.airlineCorpName;
+        }
+
+        /**
+         * @return alipayId
+         */
+        public String getAlipayId() {
+            return this.alipayId;
         }
 
         /**
@@ -1201,6 +1212,7 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private Integer advanceDay; 
             private String airlineCorpCode; 
             private String airlineCorpName; 
+            private String alipayId; 
             private String alipayTradeNo; 
             private String applyArrCityCode; 
             private String applyArrCityName; 
@@ -1314,6 +1326,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder airlineCorpName(String airlineCorpName) {
                 this.airlineCorpName = airlineCorpName;
+                return this;
+            }
+
+            /**
+             * alipay_id.
+             */
+            public Builder alipayId(String alipayId) {
+                this.alipayId = alipayId;
                 return this;
             }
 
