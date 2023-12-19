@@ -194,6 +194,9 @@ public class MassPushRequest extends Request {
         @NameInMap("AndroidVivoPushMode")
         private Integer androidVivoPushMode;
 
+        @NameInMap("AndroidVivoReceiptId")
+        private String androidVivoReceiptId;
+
         @NameInMap("AndroidXiaoMiActivity")
         @Deprecated
         private String androidXiaoMiActivity;
@@ -336,6 +339,7 @@ public class MassPushRequest extends Request {
             this.androidRenderStyle = builder.androidRenderStyle;
             this.androidTargetUserType = builder.androidTargetUserType;
             this.androidVivoPushMode = builder.androidVivoPushMode;
+            this.androidVivoReceiptId = builder.androidVivoReceiptId;
             this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
             this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
             this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
@@ -611,6 +615,13 @@ public class MassPushRequest extends Request {
         }
 
         /**
+         * @return androidVivoReceiptId
+         */
+        public String getAndroidVivoReceiptId() {
+            return this.androidVivoReceiptId;
+        }
+
+        /**
          * @return androidXiaoMiActivity
          */
         public String getAndroidXiaoMiActivity() {
@@ -875,6 +886,7 @@ public class MassPushRequest extends Request {
             private String androidRenderStyle; 
             private Integer androidTargetUserType; 
             private Integer androidVivoPushMode; 
+            private String androidVivoReceiptId; 
             private String androidXiaoMiActivity; 
             private String androidXiaoMiNotifyBody; 
             private String androidXiaoMiNotifyTitle; 
@@ -1170,6 +1182,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidVivoPushMode(Integer androidVivoPushMode) {
                 this.androidVivoPushMode = androidVivoPushMode;
+                return this;
+            }
+
+            /**
+             * AndroidVivoReceiptId.
+             */
+            public Builder androidVivoReceiptId(String androidVivoReceiptId) {
+                this.androidVivoReceiptId = androidVivoReceiptId;
                 return this;
             }
 

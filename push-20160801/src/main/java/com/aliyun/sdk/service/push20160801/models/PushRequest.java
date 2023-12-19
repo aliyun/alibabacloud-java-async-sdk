@@ -147,6 +147,10 @@ public class PushRequest extends Request {
     private Integer androidVivoPushMode;
 
     @Query
+    @NameInMap("AndroidVivoReceiptId")
+    private String androidVivoReceiptId;
+
+    @Query
     @NameInMap("AndroidXiaoMiActivity")
     @Deprecated
     private String androidXiaoMiActivity;
@@ -348,6 +352,7 @@ public class PushRequest extends Request {
         this.androidRenderStyle = builder.androidRenderStyle;
         this.androidTargetUserType = builder.androidTargetUserType;
         this.androidVivoPushMode = builder.androidVivoPushMode;
+        this.androidVivoReceiptId = builder.androidVivoReceiptId;
         this.androidXiaoMiActivity = builder.androidXiaoMiActivity;
         this.androidXiaoMiNotifyBody = builder.androidXiaoMiNotifyBody;
         this.androidXiaoMiNotifyTitle = builder.androidXiaoMiNotifyTitle;
@@ -631,6 +636,13 @@ public class PushRequest extends Request {
      */
     public Integer getAndroidVivoPushMode() {
         return this.androidVivoPushMode;
+    }
+
+    /**
+     * @return androidVivoReceiptId
+     */
+    public String getAndroidVivoReceiptId() {
+        return this.androidVivoReceiptId;
     }
 
     /**
@@ -940,6 +952,7 @@ public class PushRequest extends Request {
         private Integer androidRenderStyle; 
         private Integer androidTargetUserType; 
         private Integer androidVivoPushMode; 
+        private String androidVivoReceiptId; 
         private String androidXiaoMiActivity; 
         private String androidXiaoMiNotifyBody; 
         private String androidXiaoMiNotifyTitle; 
@@ -1019,6 +1032,7 @@ public class PushRequest extends Request {
             this.androidRenderStyle = request.androidRenderStyle;
             this.androidTargetUserType = request.androidTargetUserType;
             this.androidVivoPushMode = request.androidVivoPushMode;
+            this.androidVivoReceiptId = request.androidVivoReceiptId;
             this.androidXiaoMiActivity = request.androidXiaoMiActivity;
             this.androidXiaoMiNotifyBody = request.androidXiaoMiNotifyBody;
             this.androidXiaoMiNotifyTitle = request.androidXiaoMiNotifyTitle;
@@ -1354,6 +1368,15 @@ public class PushRequest extends Request {
         public Builder androidVivoPushMode(Integer androidVivoPushMode) {
             this.putQueryParameter("AndroidVivoPushMode", androidVivoPushMode);
             this.androidVivoPushMode = androidVivoPushMode;
+            return this;
+        }
+
+        /**
+         * AndroidVivoReceiptId.
+         */
+        public Builder androidVivoReceiptId(String androidVivoReceiptId) {
+            this.putQueryParameter("AndroidVivoReceiptId", androidVivoReceiptId);
+            this.androidVivoReceiptId = androidVivoReceiptId;
             return this;
         }
 
