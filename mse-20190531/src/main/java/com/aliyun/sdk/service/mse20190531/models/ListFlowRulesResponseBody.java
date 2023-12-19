@@ -209,6 +209,9 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @NameInMap("Resource")
         private String resource;
 
+        @NameInMap("ResourceType")
+        private Integer resourceType;
+
         @NameInMap("RuleId")
         private Long ruleId;
 
@@ -229,6 +232,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.resource = builder.resource;
+            this.resourceType = builder.resourceType;
             this.ruleId = builder.ruleId;
             this.threshold = builder.threshold;
             this.trafficTags = builder.trafficTags;
@@ -313,6 +317,13 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public Integer getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return ruleId
          */
         public Long getRuleId() {
@@ -344,6 +355,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private String namespace; 
             private String regionId; 
             private String resource; 
+            private Integer resourceType; 
             private Long ruleId; 
             private Float threshold; 
             private java.util.Map < String, ? > trafficTags; 
@@ -471,6 +483,14 @@ public class ListFlowRulesResponseBody extends TeaModel {
              */
             public Builder resource(String resource) {
                 this.resource = resource;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(Integer resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

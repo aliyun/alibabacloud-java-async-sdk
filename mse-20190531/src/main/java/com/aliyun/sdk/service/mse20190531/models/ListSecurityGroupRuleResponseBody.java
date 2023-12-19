@@ -156,6 +156,9 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AuthCidrs")
+        private java.util.List < String > authCidrs;
+
         @NameInMap("Description")
         private String description;
 
@@ -184,6 +187,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         private String securityGroupId;
 
         private Data(Builder builder) {
+            this.authCidrs = builder.authCidrs;
             this.description = builder.description;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -201,6 +205,13 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return authCidrs
+         */
+        public java.util.List < String > getAuthCidrs() {
+            return this.authCidrs;
         }
 
         /**
@@ -267,6 +278,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > authCidrs; 
             private String description; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -276,6 +288,14 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             private String ipProtocol; 
             private String portRange; 
             private String securityGroupId; 
+
+            /**
+             * AuthCidrs.
+             */
+            public Builder authCidrs(java.util.List < String > authCidrs) {
+                this.authCidrs = authCidrs;
+                return this;
+            }
 
             /**
              * The rule description.

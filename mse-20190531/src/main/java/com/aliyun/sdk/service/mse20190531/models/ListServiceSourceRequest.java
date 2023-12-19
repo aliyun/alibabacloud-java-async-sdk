@@ -107,7 +107,7 @@ public class ListServiceSourceRequest extends Request {
          * Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:
          * <p>
          * 
-         * *   K8S
+         * *   K8s
          * *   MSE
          * *   MSE_ZK
          * *   SAE

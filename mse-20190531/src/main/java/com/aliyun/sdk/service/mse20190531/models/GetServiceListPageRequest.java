@@ -200,7 +200,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 应用名字。
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);

@@ -61,6 +61,10 @@ public class CreateCircuitBreakerRuleRequest extends Request {
     private String resource;
 
     @Query
+    @NameInMap("ResourceType")
+    private Integer resourceType;
+
+    @Query
     @NameInMap("RetryTimeoutMs")
     private Integer retryTimeoutMs;
 
@@ -91,6 +95,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceType = builder.resourceType;
         this.retryTimeoutMs = builder.retryTimeoutMs;
         this.statIntervalMs = builder.statIntervalMs;
         this.strategy = builder.strategy;
@@ -188,6 +193,13 @@ public class CreateCircuitBreakerRuleRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public Integer getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return retryTimeoutMs
      */
     public Integer getRetryTimeoutMs() {
@@ -227,6 +239,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         private String namespace; 
         private String regionId; 
         private String resource; 
+        private Integer resourceType; 
         private Integer retryTimeoutMs; 
         private Integer statIntervalMs; 
         private Integer strategy; 
@@ -249,6 +262,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
             this.namespace = request.namespace;
             this.regionId = request.regionId;
             this.resource = request.resource;
+            this.resourceType = request.resourceType;
             this.retryTimeoutMs = request.retryTimeoutMs;
             this.statIntervalMs = request.statIntervalMs;
             this.strategy = request.strategy;
@@ -374,6 +388,15 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(Integer resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

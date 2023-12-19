@@ -155,7 +155,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * MaintenanceEndTime.
+         * The end time of the O\&M window.
          */
         public Builder maintenanceEndTime(String maintenanceEndTime) {
             this.putQueryParameter("MaintenanceEndTime", maintenanceEndTime);
@@ -164,7 +164,7 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * MaintenanceStartTime.
+         * The start time of the O\&M window.
          */
         public Builder maintenanceStartTime(String maintenanceStartTime) {
             this.putQueryParameter("MaintenanceStartTime", maintenanceStartTime);

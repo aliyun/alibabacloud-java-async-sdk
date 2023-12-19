@@ -53,6 +53,10 @@ public class CreateFlowRuleRequest extends Request {
     private String resource;
 
     @Query
+    @NameInMap("ResourceType")
+    private Integer resourceType;
+
+    @Query
     @NameInMap("Threshold")
     @Validation(required = true)
     private Integer threshold;
@@ -68,6 +72,7 @@ public class CreateFlowRuleRequest extends Request {
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
+        this.resourceType = builder.resourceType;
         this.threshold = builder.threshold;
     }
 
@@ -148,6 +153,13 @@ public class CreateFlowRuleRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public Integer getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return threshold
      */
     public Integer getThreshold() {
@@ -164,6 +176,7 @@ public class CreateFlowRuleRequest extends Request {
         private String namespace; 
         private String regionId; 
         private String resource; 
+        private Integer resourceType; 
         private Integer threshold; 
 
         private Builder() {
@@ -181,6 +194,7 @@ public class CreateFlowRuleRequest extends Request {
             this.namespace = request.namespace;
             this.regionId = request.regionId;
             this.resource = request.resource;
+            this.resourceType = request.resourceType;
             this.threshold = request.threshold;
         } 
 
@@ -312,6 +326,15 @@ public class CreateFlowRuleRequest extends Request {
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(Integer resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

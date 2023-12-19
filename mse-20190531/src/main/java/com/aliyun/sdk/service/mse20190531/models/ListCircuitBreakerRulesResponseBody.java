@@ -185,6 +185,9 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         @NameInMap("Resource")
         private String resource;
 
+        @NameInMap("ResourceType")
+        private Integer resourceType;
+
         @NameInMap("RetryTimeoutMs")
         private Integer retryTimeoutMs;
 
@@ -212,6 +215,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.resource = builder.resource;
+            this.resourceType = builder.resourceType;
             this.retryTimeoutMs = builder.retryTimeoutMs;
             this.ruleId = builder.ruleId;
             this.statIntervalMs = builder.statIntervalMs;
@@ -305,6 +309,13 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public Integer getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return retryTimeoutMs
          */
         public Integer getRetryTimeoutMs() {
@@ -351,6 +362,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             private String namespace; 
             private String regionId; 
             private String resource; 
+            private Integer resourceType; 
             private Integer retryTimeoutMs; 
             private Long ruleId; 
             private Integer statIntervalMs; 
@@ -442,6 +454,14 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
              */
             public Builder resource(String resource) {
                 this.resource = resource;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(Integer resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

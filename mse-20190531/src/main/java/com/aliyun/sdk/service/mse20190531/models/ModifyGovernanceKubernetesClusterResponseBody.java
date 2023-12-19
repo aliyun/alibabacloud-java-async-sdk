@@ -98,7 +98,7 @@ public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The deletion result.
          */
         public Builder data(Boolean data) {
             this.data = data;

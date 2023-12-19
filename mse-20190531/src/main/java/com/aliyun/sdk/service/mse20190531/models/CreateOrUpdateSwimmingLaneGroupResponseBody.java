@@ -86,7 +86,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;

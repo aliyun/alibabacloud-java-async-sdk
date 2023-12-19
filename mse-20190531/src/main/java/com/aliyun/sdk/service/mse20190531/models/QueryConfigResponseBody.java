@@ -663,7 +663,7 @@ public class QueryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ConsoleUIEnabled.
+             * Indicates whether the Nacos open source console is enabled.
              */
             public Builder consoleUIEnabled(Boolean consoleUIEnabled) {
                 this.consoleUIEnabled = consoleUIEnabled;

@@ -17,6 +17,10 @@ public class DeleteSecurityGroupRuleRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("CascadingDelete")
+    private Boolean cascadingDelete;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -27,6 +31,7 @@ public class DeleteSecurityGroupRuleRequest extends Request {
     private DeleteSecurityGroupRuleRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.cascadingDelete = builder.cascadingDelete;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
     }
@@ -52,6 +57,13 @@ public class DeleteSecurityGroupRuleRequest extends Request {
     }
 
     /**
+     * @return cascadingDelete
+     */
+    public Boolean getCascadingDelete() {
+        return this.cascadingDelete;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -67,6 +79,7 @@ public class DeleteSecurityGroupRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteSecurityGroupRuleRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean cascadingDelete; 
         private String gatewayUniqueId; 
         private Long id; 
 
@@ -77,6 +90,7 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         private Builder(DeleteSecurityGroupRuleRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.cascadingDelete = request.cascadingDelete;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
         } 
@@ -91,6 +105,15 @@ public class DeleteSecurityGroupRuleRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * CascadingDelete.
+         */
+        public Builder cascadingDelete(Boolean cascadingDelete) {
+            this.putQueryParameter("CascadingDelete", cascadingDelete);
+            this.cascadingDelete = cascadingDelete;
             return this;
         }
 

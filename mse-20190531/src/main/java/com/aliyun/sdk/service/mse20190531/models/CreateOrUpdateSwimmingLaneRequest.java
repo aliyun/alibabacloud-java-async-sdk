@@ -318,7 +318,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. The value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.
+         * The tag.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

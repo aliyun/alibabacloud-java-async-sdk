@@ -120,7 +120,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * NamespaceInfos.
+         * The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.
          */
         public Builder namespaceInfos(java.util.List < NamespaceInfos> namespaceInfos) {
             String namespaceInfosShrink = shrink(namespaceInfos, "NamespaceInfos", "json");
@@ -130,7 +130,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * The region in which the cluster resides.
+         * The ID of the region in which the instance resides. The region is supported by MSE.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +184,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             private String name; 
 
             /**
-             * MseNamespace.
+             * The microservice namespace.If you do not specify this parameter, Microservice Governance is not enabled for the namespace.
              */
             public Builder mseNamespace(String mseNamespace) {
                 this.mseNamespace = mseNamespace;
@@ -192,7 +192,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the Kubernetes namespace.
              */
             public Builder name(String name) {
                 this.name = name;

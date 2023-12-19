@@ -86,7 +86,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -359,7 +359,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The start time of the O\&M time window.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -367,7 +367,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The end time of the O\&M time window.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1000,7 +1000,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 弹性公网IP（EIP）的实例ID
+             * The ID of the instance that is associated with the Elastic IP Address (EIP).
              */
             public Builder eipInstanceId(String eipInstanceId) {
                 this.eipInstanceId = eipInstanceId;
@@ -1008,7 +1008,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 到期时间（包年包月）
+             * The time when the subscription instance expires.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -1120,7 +1120,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaintenancePeriod.
+             * The O\&M time window.
              */
             public Builder maintenancePeriod(MaintenancePeriod maintenancePeriod) {
                 this.maintenancePeriod = maintenancePeriod;
@@ -1178,7 +1178,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ENI网络接入的安全组ID
+             * The ID of the security group to which the elastic network interface (ENI) is connected.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1186,7 +1186,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ENI网络接入的安全组类型
+             * The type of the security group to which the ENI is connected.
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;

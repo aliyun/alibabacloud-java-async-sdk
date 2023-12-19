@@ -45,6 +45,10 @@ public class AddServiceSourceRequest extends Request {
     private String source;
 
     @Query
+    @NameInMap("ToAuthorizeSecurityGroups")
+    private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
+
+    @Query
     @NameInMap("Type")
     private String type;
 
@@ -58,6 +62,7 @@ public class AddServiceSourceRequest extends Request {
         this.name = builder.name;
         this.pathList = builder.pathList;
         this.source = builder.source;
+        this.toAuthorizeSecurityGroups = builder.toAuthorizeSecurityGroups;
         this.type = builder.type;
     }
 
@@ -131,6 +136,13 @@ public class AddServiceSourceRequest extends Request {
     }
 
     /**
+     * @return toAuthorizeSecurityGroups
+     */
+    public java.util.List < ToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
+        return this.toAuthorizeSecurityGroups;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -146,6 +158,7 @@ public class AddServiceSourceRequest extends Request {
         private String name; 
         private java.util.List < String > pathList; 
         private String source; 
+        private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups; 
         private String type; 
 
         private Builder() {
@@ -162,6 +175,7 @@ public class AddServiceSourceRequest extends Request {
             this.name = request.name;
             this.pathList = request.pathList;
             this.source = request.source;
+            this.toAuthorizeSecurityGroups = request.toAuthorizeSecurityGroups;
             this.type = request.type;
         } 
 
@@ -246,6 +260,16 @@ public class AddServiceSourceRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * ToAuthorizeSecurityGroups.
+         */
+        public Builder toAuthorizeSecurityGroups(java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
+            String toAuthorizeSecurityGroupsShrink = shrink(toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
+            this.putQueryParameter("ToAuthorizeSecurityGroups", toAuthorizeSecurityGroupsShrink);
+            this.toAuthorizeSecurityGroups = toAuthorizeSecurityGroups;
             return this;
         }
 
@@ -370,6 +394,87 @@ public class AddServiceSourceRequest extends Request {
 
             public IngressOptionsRequest build() {
                 return new IngressOptionsRequest(this);
+            } 
+
+        } 
+
+    }
+    public static class ToAuthorizeSecurityGroups extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("PortRange")
+        private String portRange;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        private ToAuthorizeSecurityGroups(Builder builder) {
+            this.description = builder.description;
+            this.portRange = builder.portRange;
+            this.securityGroupId = builder.securityGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ToAuthorizeSecurityGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return portRange
+         */
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String portRange; 
+            private String securityGroupId; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * PortRange.
+             */
+            public Builder portRange(String portRange) {
+                this.portRange = portRange;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            public ToAuthorizeSecurityGroups build() {
+                return new ToAuthorizeSecurityGroups(this);
             } 
 
         } 

@@ -964,7 +964,19 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.
+             * The status of the gateway. Valid values: 
+             * <p>
+             * * 0: The gateway is being created. 
+             * * 1: The gateway fails to be created. 
+             * * 2: The gateway is running. 
+             * * 3: The gateway is changing. 
+             * * 4: The gateway is scaling down. 
+             * * 6: The gateway is scaling up. 
+             * * 8: The gateway is being deleted. 
+             * * 10: The gateway is restarting. 
+             * * 11: The gateway is being rebuilt. 
+             * * 12: The gateway is updating. 
+             * * 13: The gateway fails to be updated.
              */
             public Builder status(Integer status) {
                 this.status = status;

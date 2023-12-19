@@ -141,7 +141,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends Request {
         }
 
         /**
-         * The information about the header configuration policy.
+         * The description of user header settings.
          */
         public Builder headerOpJSON(String headerOpJSON) {
             this.putQueryParameter("HeaderOpJSON", headerOpJSON);

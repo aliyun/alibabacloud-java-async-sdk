@@ -189,7 +189,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * The Microservices Engine (MSE) namespace to which the application belongs.
+         * The MSE namespace to which the application belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
