@@ -195,7 +195,12 @@ public class ListIpsecServersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IPsec server belongs.
+         * <p>
+         * 
+         * The IPsec server has the same resource group as its associated VPN gateway instance.
+         * 
+         * You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

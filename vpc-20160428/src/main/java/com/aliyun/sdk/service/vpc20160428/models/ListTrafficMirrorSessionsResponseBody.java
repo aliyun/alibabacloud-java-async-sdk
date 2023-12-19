@@ -177,6 +177,9 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     }
     public static class TrafficMirrorSessions extends TeaModel {
+        @NameInMap("CreationTime")
+        private String creationTime;
+
         @NameInMap("Enabled")
         private Boolean enabled;
 
@@ -223,6 +226,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         private Integer virtualNetworkId;
 
         private TrafficMirrorSessions(Builder builder) {
+            this.creationTime = builder.creationTime;
             this.enabled = builder.enabled;
             this.packetLength = builder.packetLength;
             this.priority = builder.priority;
@@ -246,6 +250,13 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
         public static TrafficMirrorSessions create() {
             return builder().build();
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -354,6 +365,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String creationTime; 
             private Boolean enabled; 
             private Integer packetLength; 
             private Integer priority; 
@@ -369,6 +381,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             private String trafficMirrorTargetId; 
             private String trafficMirrorTargetType; 
             private Integer virtualNetworkId; 
+
+            /**
+             * The time when the session is created.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
 
             /**
              * Indicates whether the traffic mirror session was enabled.

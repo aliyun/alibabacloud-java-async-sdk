@@ -224,6 +224,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         private String prefixListStatus;
 
+        @NameInMap("PrefixListType")
+        private String prefixListType;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -249,6 +252,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             this.prefixListId = builder.prefixListId;
             this.prefixListName = builder.prefixListName;
             this.prefixListStatus = builder.prefixListStatus;
+            this.prefixListType = builder.prefixListType;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
@@ -328,6 +332,13 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
 
         /**
+         * @return prefixListType
+         */
+        public String getPrefixListType() {
+            return this.prefixListType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -372,6 +383,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             private String prefixListId; 
             private String prefixListName; 
             private String prefixListStatus; 
+            private String prefixListType; 
             private String regionId; 
             private String resourceGroupId; 
             private String shareType; 
@@ -458,6 +470,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
              */
             public Builder prefixListStatus(String prefixListStatus) {
                 this.prefixListStatus = prefixListStatus;
+                return this;
+            }
+
+            /**
+             * PrefixListType.
+             */
+            public Builder prefixListType(String prefixListType) {
+                this.prefixListType = prefixListType;
                 return this;
             }
 

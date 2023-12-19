@@ -83,6 +83,7 @@ public class CreateNatGatewayRequest extends Request {
 
     @Query
     @NameInMap("SecurityProtectionEnabled")
+    @Deprecated
     private Boolean securityProtectionEnabled;
 
     @Query
@@ -544,8 +545,7 @@ public class CreateNatGatewayRequest extends Request {
          * Specifies whether to enable the firewall feature. Valid values:
          * <p>
          * 
-         * *   **false** (default)
-         * *   **true**
+         * *   **false** (default)><notice>This parameter is deprecated.></notice>
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);

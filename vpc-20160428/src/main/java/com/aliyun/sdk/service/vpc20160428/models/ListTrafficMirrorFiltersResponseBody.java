@@ -739,6 +739,9 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     }
     public static class TrafficMirrorFilters extends TeaModel {
+        @NameInMap("CreationTime")
+        private String creationTime;
+
         @NameInMap("EgressRules")
         private java.util.List < EgressRules> egressRules;
 
@@ -764,6 +767,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         private String trafficMirrorFilterStatus;
 
         private TrafficMirrorFilters(Builder builder) {
+            this.creationTime = builder.creationTime;
             this.egressRules = builder.egressRules;
             this.ingressRules = builder.ingressRules;
             this.resourceGroupId = builder.resourceGroupId;
@@ -780,6 +784,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
         public static TrafficMirrorFilters create() {
             return builder().build();
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -839,6 +850,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String creationTime; 
             private java.util.List < EgressRules> egressRules; 
             private java.util.List < IngressRules> ingressRules; 
             private String resourceGroupId; 
@@ -847,6 +859,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String trafficMirrorFilterId; 
             private String trafficMirrorFilterName; 
             private String trafficMirrorFilterStatus; 
+
+            /**
+             * The time when the filter is created.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
 
             /**
              * The details about the outbound rules.

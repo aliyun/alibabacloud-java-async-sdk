@@ -86,7 +86,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
+             * <p>
+             * 
+             * A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +181,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
+             * <p>
+             * 
+             * A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".
              */
             public Builder value(String value) {
                 this.value = value;
@@ -759,9 +765,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
              * The service status of the router interface. Valid values:
              * <p>
              * 
-             * *   **Normal**: normal
-             * *   **FinancialLocked**: locked due to overdue payments
-             * *   **SecurityLocked**: locked due to security reasons
+             * *   **Normal**
+             * *   **FinancialLocked**
+             * *   **SecurityLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -769,7 +775,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method.
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -815,7 +821,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range queried.
+             * The end of the time range during which data was queried.
              * <p>
              * 
              * The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.
@@ -826,11 +832,11 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Default value: false. Valid values:
+             * Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:
              * <p>
              * 
              * *   **true**
-             * *   **false**
+             * *   **false** (default)
              */
             public Builder fastLinkMode(Boolean fastLinkMode) {
                 this.fastLinkMode = fastLinkMode;
@@ -846,7 +852,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate of the heath check.
+             * The rate of heath checks.
              */
             public Builder hcRate(Integer hcRate) {
                 this.hcRate = hcRate;
@@ -998,7 +1004,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth after the renewal takes effect. Unit: Mbit/s.
+             * The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.
              */
             public Builder reservationBandwidth(String reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -1006,7 +1012,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method that is used after the renewal takes effect.
+             * The metering method that is used after the renewal takes effect. Valid values:
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -1014,7 +1020,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the renewal order.
+             * The type of the renewal order. Valid values:
              */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
@@ -1022,7 +1028,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * Resource Group ID.
+             * <p>
+             * 
+             * For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1082,7 +1091,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the resource.
              */
             public Builder tags(RouterInterfaceTypeTags tags) {
                 this.tags = tags;

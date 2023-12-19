@@ -231,7 +231,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tag information.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -285,7 +285,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that is added to the resource. You can specify at most 20 tag keys. 
+             * The key of the tag that is added to the resource. You can specify at most 20 tag keys.
              * <p>
              * 
              * The key cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
@@ -298,10 +298,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that is added to the resource. You can specify at most 20 tag values. 
+             * The value of the tag that is added to the resource. You can specify at most 20 tag values.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * The tag value cannot exceed 128 characters in length. The value cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              * 
              * > When you call this operation, the **Tag.N.Value** parameter is required and can be an empty string.
              */

@@ -182,7 +182,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter information.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -191,11 +191,11 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * Specifies whether renewal data is included. Default value: false. Valid values:
+         * Specifies whether renewal data is included. Valid values:
          * <p>
          * 
          * *   **true**
-         * *   **false**
+         * *   **false** (default)
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -213,7 +213,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +222,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +243,10 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * Resource Group ID.
+         * <p>
+         * 
+         * For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -270,7 +273,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -338,7 +341,7 @@ public class DescribeRouterInterfacesRequest extends Request {
              * *   **Status**: the status of the router interface.
              * *   **Name**: the name of the router interface.
              * 
-             * >  The logical operator between multiple values in the filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator between filter conditions is AND, which means that a result is returned only when all conditions are met.
+             * >  The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,7 +349,7 @@ public class DescribeRouterInterfacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -399,21 +402,10 @@ public class DescribeRouterInterfacesRequest extends Request {
             private String value; 
 
             /**
-             * The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
+             * The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.
              * <p>
              * 
-             * *   **RouterInterfaceId**: the ID of the router interface.
-             * *   **RouterId**: the ID of the router.
-             * *   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.
-             * *   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.
-             * *   **OppositeInterfaceId**: the ID of the peer router interface.
-             * *   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.
-             * *   **OppositeRouterId**: the ID of the peer router.
-             * *   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.
-             * *   **Status**: the status of the router interface.
-             * *   **Name**: the name of the router interface.
-             * 
-             * >  The logical operator between multiple values in the filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator between filter conditions is AND, which means that a result is returned only when all conditions are met.
+             * A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".
              */
             public Builder key(String key) {
                 this.key = key;
@@ -421,7 +413,10 @@ public class DescribeRouterInterfacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.
+             * <p>
+             * 
+             * A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".
              */
             public Builder value(String value) {
                 this.value = value;

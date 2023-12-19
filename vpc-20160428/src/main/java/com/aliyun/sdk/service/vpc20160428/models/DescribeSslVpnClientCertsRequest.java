@@ -252,7 +252,11 @@ public class DescribeSslVpnClientCertsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the SSL client certificate belongs.
+         * <p>
+         * 
+         * The SSL client certificate is the same as the resource group of the SSL server associated with it.
+         * You can call the [DescribeSslVpnServers](~~2526933~~) operation to query the ID of the resource group to which the SSL server belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -266,7 +266,10 @@ public class DescribeVpnConnectionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * IPsec连接所属的资源组ID。
+         * <p>
+         * 
+         * 您可以调用[ListResourceGroups](~~158855~~)接口查询资源组ID。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

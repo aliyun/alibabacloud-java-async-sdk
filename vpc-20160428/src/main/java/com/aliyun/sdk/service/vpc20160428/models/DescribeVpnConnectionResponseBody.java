@@ -584,7 +584,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IPsec-VPN connection belongs.
+         * <p>
+         * 
+         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -1068,7 +1071,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the IPsec-VPN connection.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1076,7 +1079,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the IPsec-VPN connection.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1221,8 +1224,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
              * The negotiation state of BGP. Valid values:
              * <p>
              * 
-             * *   **success**: normal
-             * *   **false**: abnormal
+             * *   **success**
+             * *   **false**
              */
             public Builder bgpStatus(String bgpStatus) {
                 this.bgpStatus = bgpStatus;
@@ -1230,7 +1233,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The ASN of the tunnel on the Alibaba Cloud side.
+             * The ASN on the Alibaba Cloud side.
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -1238,7 +1241,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP IP address of the tunnel on the Alibaba Cloud side.
+             * The BGP address on the Alibaba Cloud side.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -1435,7 +1438,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The DH group in the IKE phase.
+             * The Diffie-Hellman (DH) group in the IKE phase.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -1816,12 +1819,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The tunnel status. Valid values: 
+             * The tunnel status. Valid values:
              * <p>
              * 
              * *   **active**
              * *   **updating**
-             * *   **deleted**
+             * *   **deleting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1843,7 +1846,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP configuration.
+             * The BGP configurations.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1867,7 +1870,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Phase 2 negotiations.
+             * The configurations of Phase 2 negotiations.
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -1875,10 +1878,10 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * The zone of the tunnel.
+             * The zone where the tunnel is deployed.
              * <p>
              * 
-             * You can call [DescribeZones](~~36064~~) to query zone IDs and mapping between zone IDs and zone names.
+             * You can call [DescribeZones](~~36064~~) to query zone IDs.
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;

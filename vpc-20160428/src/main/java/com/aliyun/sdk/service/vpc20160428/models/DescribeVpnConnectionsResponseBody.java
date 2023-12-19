@@ -290,7 +290,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The Diffie-Hellman (DH) group in the IKE phase.
+             * The DH group in the IKE phase.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -635,8 +635,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * The negotiation state of BGP. Valid values:
              * <p>
              * 
-             * *   **success**: normal
-             * *   **false**: abnormal
+             * *   **success**
+             * *   **false**
              */
             public Builder bgpStatus(String bgpStatus) {
                 this.bgpStatus = bgpStatus;
@@ -644,7 +644,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ASN of the tunnel on the Alibaba Cloud side.
+             * The ASN on the Alibaba Cloud side.
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -652,7 +652,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP IP address of the tunnel on the Alibaba Cloud side.
+             * The BGP address on the Alibaba Cloud side.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -1210,7 +1210,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * The CA certificate of the tunnel peer.
              * <p>
              * 
-             * This parameter is returned only if the VPN gateway is of the ShangMi (SM) type.
+             * This parameter is returned only if the VPN gateway is of the SM type.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -1235,7 +1235,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * 
              * *   **active**
              * *   **updating**
-             * *   **deleted**
+             * *   **deleting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1257,7 +1257,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The BGP configuration.
+             * The BGP configurations.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1281,7 +1281,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Phase 2 negotiations.
+             * The configurations of Phase 2 negotiations.
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -1471,7 +1471,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether advertised routes are withdrawn when the health check fails. Valid values:
+             * Indicates whether advertised routes are withdrawn when the health check fails.
              * <p>
              * 
              * *   **revoke_route**: Advertised routes are withdrawn.
@@ -1502,8 +1502,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * The state of the health check. Valid values:
              * <p>
              * 
-             * *   **success**: normal
-             * *   **failed**: abnormal
+             * *   **success**
+             * *   **failed**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1640,7 +1640,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The autonomous system number (ASN) of the peer.
+             * The ASN of the peer.
              */
             public Builder peerAsn(Long peerAsn) {
                 this.peerAsn = peerAsn;
@@ -1659,8 +1659,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * The negotiation state of the BGP routing protocol. Valid values:
              * <p>
              * 
-             * *   **success**: normal
-             * *   **false**: abnormal
+             * *   **success**
+             * *   **false**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2053,7 +2053,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource that is associated with the IPsec-VPN connection. Valid values:
+             * The type of resource that is associated with the IPsec-VPN connection. Valid values:
              * <p>
              * 
              * *   **CEN**: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.
@@ -2097,7 +2097,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:
+             * Indicates whether IPsec negotiations immediately start.
              * <p>
              * 
              * *   **true**: Negotiations are reinitiated after the configuration is changed.
@@ -2109,14 +2109,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the dead peer detection (DPD) feature is enabled for the IPsec-VPN connection. Valid values:
+             * Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:
              * <p>
              * 
-             * *   **true**: The DPD feature is enabled.
+             * *   **true**
              * 
              *     The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.
              * 
-             * *   **false**: The DPD feature is disabled. The initiator of the IPsec-VPN connection does not send DPD packets.
+             * *   **false**
              */
             public Builder enableDpd(Boolean enableDpd) {
                 this.enableDpd = enableDpd;
@@ -2124,7 +2124,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:
+             * Indicates whether NAT traversal is enabled for the IPsec-VPN connection.
              * <p>
              * 
              * *   **true**
@@ -2151,7 +2151,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Phase 1 negotiations.
+             * The configurations of Phase 1 negotiations.
              */
             public Builder ikeConfig(IkeConfig ikeConfig) {
                 this.ikeConfig = ikeConfig;
@@ -2170,7 +2170,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of Phase 2 negotiations.
+             * The configurations of Phase 2 negotiations.
              */
             public Builder ipsecConfig(IpsecConfig ipsecConfig) {
                 this.ipsecConfig = ipsecConfig;
@@ -2200,8 +2200,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
              * The network type of the IPsec-VPN connection. Valid values:
              * <p>
              * 
-             * *   **public**: an encrypted connection over the Internet
-             * *   **private**: an encrypted connection over private networks
+             * *   **public**
+             * *   **private**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -2217,7 +2217,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block on the data center side.
+             * The CIDR block of the data center.
              * <p>
              * 
              * Multiple CIDR blocks are separated by commas (,).
@@ -2228,7 +2228,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the IPsec-VPN connection belongs.
+             * <p>
+             * 
+             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2264,7 +2267,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the IPsec-VPN connection. Valid values:
+             * The status of the IPsec-VPN connection. Valid values:
              * <p>
              * 
              * *   **ike_sa_not_established**: Phase 1 negotiations failed.
@@ -2278,7 +2281,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags added to the IPsec-VPN connection.
+             * The list of tags to be added to the IPsec-VPN connection.
              */
             public Builder tag(VpnConnectionTag tag) {
                 this.tag = tag;

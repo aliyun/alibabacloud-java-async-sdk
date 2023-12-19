@@ -428,6 +428,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         private String ipAddress;
 
+        @NameInMap("Mode")
+        private String mode;
+
         @NameInMap("Name")
         private String name;
 
@@ -436,6 +439,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         @NameInMap("OperationLocks")
         private OperationLocks operationLocks;
+
+        @NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
 
         @NameInMap("PublicIpAddressPoolId")
         private String publicIpAddressPoolId;
@@ -504,9 +510,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.internetChargeType = builder.internetChargeType;
             this.ipAddress = builder.ipAddress;
+            this.mode = builder.mode;
             this.name = builder.name;
             this.netmode = builder.netmode;
             this.operationLocks = builder.operationLocks;
+            this.privateIpAddress = builder.privateIpAddress;
             this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
             this.regionId = builder.regionId;
             this.reservationActiveTime = builder.reservationActiveTime;
@@ -680,6 +688,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -698,6 +713,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         public OperationLocks getOperationLocks() {
             return this.operationLocks;
+        }
+
+        /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
         }
 
         /**
@@ -827,9 +849,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String instanceType; 
             private String internetChargeType; 
             private String ipAddress; 
+            private String mode; 
             private String name; 
             private String netmode; 
             private OperationLocks operationLocks; 
+            private String privateIpAddress; 
             private String publicIpAddressPoolId; 
             private String regionId; 
             private String reservationActiveTime; 
@@ -1068,6 +1092,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
              * The name of the EIP.
              */
             public Builder name(String name) {
@@ -1088,6 +1120,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
+                return this;
+            }
+
+            /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
                 return this;
             }
 

@@ -280,7 +280,10 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the SSL client certificate belongs.
+             * <p>
+             * 
+             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
