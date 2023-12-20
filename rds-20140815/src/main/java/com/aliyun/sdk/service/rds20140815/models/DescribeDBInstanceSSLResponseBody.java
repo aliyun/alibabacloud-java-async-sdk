@@ -30,6 +30,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("ConnectionString")
     private String connectionString;
 
+    @NameInMap("ForceEncryption")
+    private String forceEncryption;
+
     @NameInMap("LastModifyStatus")
     private String lastModifyStatus;
 
@@ -69,6 +72,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("ServerKey")
     private String serverKey;
 
+    @NameInMap("TlsVersion")
+    private String tlsVersion;
+
     private DescribeDBInstanceSSLResponseBody(Builder builder) {
         this.ACL = builder.ACL;
         this.CAType = builder.CAType;
@@ -76,6 +82,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         this.clientCACertExpireTime = builder.clientCACertExpireTime;
         this.clientCertRevocationList = builder.clientCertRevocationList;
         this.connectionString = builder.connectionString;
+        this.forceEncryption = builder.forceEncryption;
         this.lastModifyStatus = builder.lastModifyStatus;
         this.modifyStatusReason = builder.modifyStatusReason;
         this.replicationACL = builder.replicationACL;
@@ -89,6 +96,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         this.serverCAUrl = builder.serverCAUrl;
         this.serverCert = builder.serverCert;
         this.serverKey = builder.serverKey;
+        this.tlsVersion = builder.tlsVersion;
     }
 
     public static Builder builder() {
@@ -139,6 +147,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
      */
     public String getConnectionString() {
         return this.connectionString;
+    }
+
+    /**
+     * @return forceEncryption
+     */
+    public String getForceEncryption() {
+        return this.forceEncryption;
     }
 
     /**
@@ -232,6 +247,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         return this.serverKey;
     }
 
+    /**
+     * @return tlsVersion
+     */
+    public String getTlsVersion() {
+        return this.tlsVersion;
+    }
+
     public static final class Builder {
         private String ACL; 
         private String CAType; 
@@ -239,6 +261,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String clientCACertExpireTime; 
         private String clientCertRevocationList; 
         private String connectionString; 
+        private String forceEncryption; 
         private String lastModifyStatus; 
         private String modifyStatusReason; 
         private String replicationACL; 
@@ -252,6 +275,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String serverCAUrl; 
         private String serverCert; 
         private String serverKey; 
+        private String tlsVersion; 
 
         /**
          * The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:
@@ -308,6 +332,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
+            return this;
+        }
+
+        /**
+         * ForceEncryption.
+         */
+        public Builder forceEncryption(String forceEncryption) {
+            this.forceEncryption = forceEncryption;
             return this;
         }
 
@@ -445,6 +477,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
          */
         public Builder serverKey(String serverKey) {
             this.serverKey = serverKey;
+            return this;
+        }
+
+        /**
+         * TlsVersion.
+         */
+        public Builder tlsVersion(String tlsVersion) {
+            this.tlsVersion = tlsVersion;
             return this;
         }
 

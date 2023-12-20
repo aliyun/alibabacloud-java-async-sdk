@@ -47,6 +47,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("ForceEncryption")
+    private String forceEncryption;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -78,6 +82,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     @NameInMap("ServerKey")
     private String serverKey;
 
+    @Query
+    @NameInMap("TlsVersion")
+    private String tlsVersion;
+
     private ModifyDBInstanceSSLRequest(Builder builder) {
         super(builder);
         this.ACL = builder.ACL;
@@ -88,6 +96,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         this.clientCrlEnabled = builder.clientCrlEnabled;
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
+        this.forceEncryption = builder.forceEncryption;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.replicationACL = builder.replicationACL;
@@ -96,6 +105,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         this.SSLEnabled = builder.SSLEnabled;
         this.serverCert = builder.serverCert;
         this.serverKey = builder.serverKey;
+        this.tlsVersion = builder.tlsVersion;
     }
 
     public static Builder builder() {
@@ -168,6 +178,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
     }
 
     /**
+     * @return forceEncryption
+     */
+    public String getForceEncryption() {
+        return this.forceEncryption;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -223,6 +240,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
         return this.serverKey;
     }
 
+    /**
+     * @return tlsVersion
+     */
+    public String getTlsVersion() {
+        return this.tlsVersion;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceSSLRequest, Builder> {
         private String ACL; 
         private String CAType; 
@@ -232,6 +256,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         private Integer clientCrlEnabled; 
         private String connectionString; 
         private String DBInstanceId; 
+        private String forceEncryption; 
         private String ownerAccount; 
         private Long ownerId; 
         private String replicationACL; 
@@ -240,6 +265,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         private Integer SSLEnabled; 
         private String serverCert; 
         private String serverKey; 
+        private String tlsVersion; 
 
         private Builder() {
             super();
@@ -255,6 +281,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             this.clientCrlEnabled = request.clientCrlEnabled;
             this.connectionString = request.connectionString;
             this.DBInstanceId = request.DBInstanceId;
+            this.forceEncryption = request.forceEncryption;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.replicationACL = request.replicationACL;
@@ -263,6 +290,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             this.SSLEnabled = request.SSLEnabled;
             this.serverCert = request.serverCert;
             this.serverKey = request.serverKey;
+            this.tlsVersion = request.tlsVersion;
         } 
 
         /**
@@ -356,6 +384,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
+         * ForceEncryption.
+         */
+        public Builder forceEncryption(String forceEncryption) {
+            this.putQueryParameter("ForceEncryption", forceEncryption);
+            this.forceEncryption = forceEncryption;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -434,6 +471,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder serverKey(String serverKey) {
             this.putQueryParameter("ServerKey", serverKey);
             this.serverKey = serverKey;
+            return this;
+        }
+
+        /**
+         * TlsVersion.
+         */
+        public Builder tlsVersion(String tlsVersion) {
+            this.putQueryParameter("TlsVersion", tlsVersion);
+            this.tlsVersion = tlsVersion;
             return this;
         }
 
