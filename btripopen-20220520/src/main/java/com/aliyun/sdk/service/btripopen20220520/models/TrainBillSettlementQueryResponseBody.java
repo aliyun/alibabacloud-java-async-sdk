@@ -275,6 +275,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         private String overApplyId;
 
+        @NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
         @NameInMap("primary_id")
         private Long primaryId;
 
@@ -410,6 +416,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
             this.overApplyId = builder.overApplyId;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
             this.primaryId = builder.primaryId;
             this.printTicketPrice = builder.printTicketPrice;
             this.projectCode = builder.projectCode;
@@ -739,6 +747,20 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
          * @return primaryId
          */
         public Long getPrimaryId() {
@@ -997,6 +1019,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String orderId; 
             private Double orderPrice; 
             private String overApplyId; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
             private Long primaryId; 
             private Double printTicketPrice; 
             private String projectCode; 
@@ -1354,6 +1378,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
                 return this;
             }
 

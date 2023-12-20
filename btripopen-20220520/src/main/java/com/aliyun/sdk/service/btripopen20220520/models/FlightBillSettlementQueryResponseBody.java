@@ -353,6 +353,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         private String overApplyId;
 
+        @NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
         @NameInMap("person_settle_price")
         private Double personSettlePrice;
 
@@ -505,6 +511,8 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             this.oilFee = builder.oilFee;
             this.orderId = builder.orderId;
             this.overApplyId = builder.overApplyId;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
             this.personSettlePrice = builder.personSettlePrice;
             this.preBookTip = builder.preBookTip;
             this.primaryId = builder.primaryId;
@@ -1013,6 +1021,20 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
          * @return personSettlePrice
          */
         public Double getPersonSettlePrice() {
@@ -1276,6 +1298,8 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             private Double oilFee; 
             private String orderId; 
             private String overApplyId; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
             private Double personSettlePrice; 
             private String preBookTip; 
             private Long primaryId; 
@@ -1838,6 +1862,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
                 return this;
             }
 

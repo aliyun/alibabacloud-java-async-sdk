@@ -352,6 +352,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         private String overApplyId;
 
+        @NameInMap("payment_department_id")
+        private String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        private String paymentDepartmentName;
+
         @NameInMap("primary_id")
         private Long primaryId;
 
@@ -488,6 +494,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.orderStatusDesc = builder.orderStatusDesc;
             this.overApplyId = builder.overApplyId;
+            this.paymentDepartmentId = builder.paymentDepartmentId;
+            this.paymentDepartmentName = builder.paymentDepartmentName;
             this.primaryId = builder.primaryId;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
@@ -944,6 +952,20 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return paymentDepartmentId
+         */
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        /**
+         * @return paymentDepartmentName
+         */
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
+        }
+
+        /**
          * @return primaryId
          */
         public Long getPrimaryId() {
@@ -1179,6 +1201,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String orderId; 
             private String orderStatusDesc; 
             private String overApplyId; 
+            private String paymentDepartmentId; 
+            private String paymentDepartmentName; 
             private Long primaryId; 
             private String projectCode; 
             private String projectName; 
@@ -1682,6 +1706,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder overApplyId(String overApplyId) {
                 this.overApplyId = overApplyId;
+                return this;
+            }
+
+            /**
+             * payment_department_id.
+             */
+            public Builder paymentDepartmentId(String paymentDepartmentId) {
+                this.paymentDepartmentId = paymentDepartmentId;
+                return this;
+            }
+
+            /**
+             * payment_department_name.
+             */
+            public Builder paymentDepartmentName(String paymentDepartmentName) {
+                this.paymentDepartmentName = paymentDepartmentName;
                 return this;
             }
 
