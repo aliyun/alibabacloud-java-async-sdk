@@ -324,9 +324,50 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    public static class MeetingAssistance extends TeaModel {
+        @NameInMap("Types")
+        private java.util.List < String > types;
+
+        private MeetingAssistance(Builder builder) {
+            this.types = builder.types;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeetingAssistance create() {
+            return builder().build();
+        }
+
+        /**
+         * @return types
+         */
+        public java.util.List < String > getTypes() {
+            return this.types;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > types; 
+
+            /**
+             * Types.
+             */
+            public Builder types(java.util.List < String > types) {
+                this.types = types;
+                return this;
+            }
+
+            public MeetingAssistance build() {
+                return new MeetingAssistance(this);
+            } 
+
+        } 
+
+    }
     public static class Summarization extends TeaModel {
         @NameInMap("Types")
-        private java.util.Map < String, ? > types;
+        private java.util.List < String > types;
 
         private Summarization(Builder builder) {
             this.types = builder.types;
@@ -343,17 +384,17 @@ public class CreateTaskRequest extends Request {
         /**
          * @return types
          */
-        public java.util.Map < String, ? > getTypes() {
+        public java.util.List < String > getTypes() {
             return this.types;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > types; 
+            private java.util.List < String > types; 
 
             /**
              * Types.
              */
-            public Builder types(java.util.Map < String, ? > types) {
+            public Builder types(java.util.List < String > types) {
                 this.types = types;
                 return this;
             }
@@ -633,7 +674,7 @@ public class CreateTaskRequest extends Request {
         private Integer outputLevel;
 
         @NameInMap("TargetLanguages")
-        private java.util.Map < String, ? > targetLanguages;
+        private java.util.List < String > targetLanguages;
 
         private Translation(Builder builder) {
             this.outputLevel = builder.outputLevel;
@@ -658,13 +699,13 @@ public class CreateTaskRequest extends Request {
         /**
          * @return targetLanguages
          */
-        public java.util.Map < String, ? > getTargetLanguages() {
+        public java.util.List < String > getTargetLanguages() {
             return this.targetLanguages;
         }
 
         public static final class Builder {
             private Integer outputLevel; 
-            private java.util.Map < String, ? > targetLanguages; 
+            private java.util.List < String > targetLanguages; 
 
             /**
              * OutputLevel.
@@ -677,7 +718,7 @@ public class CreateTaskRequest extends Request {
             /**
              * TargetLanguages.
              */
-            public Builder targetLanguages(java.util.Map < String, ? > targetLanguages) {
+            public Builder targetLanguages(java.util.List < String > targetLanguages) {
                 this.targetLanguages = targetLanguages;
                 return this;
             }
@@ -692,6 +733,9 @@ public class CreateTaskRequest extends Request {
     public static class Parameters extends TeaModel {
         @NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;
+
+        @NameInMap("MeetingAssistance")
+        private MeetingAssistance meetingAssistance;
 
         @NameInMap("MeetingAssistanceEnabled")
         private Boolean meetingAssistanceEnabled;
@@ -719,6 +763,7 @@ public class CreateTaskRequest extends Request {
 
         private Parameters(Builder builder) {
             this.autoChaptersEnabled = builder.autoChaptersEnabled;
+            this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
             this.summarization = builder.summarization;
@@ -742,6 +787,13 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        /**
+         * @return meetingAssistance
+         */
+        public MeetingAssistance getMeetingAssistance() {
+            return this.meetingAssistance;
         }
 
         /**
@@ -802,6 +854,7 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Boolean autoChaptersEnabled; 
+            private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
             private Boolean pptExtractionEnabled; 
             private Summarization summarization; 
@@ -816,6 +869,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder autoChaptersEnabled(Boolean autoChaptersEnabled) {
                 this.autoChaptersEnabled = autoChaptersEnabled;
+                return this;
+            }
+
+            /**
+             * MeetingAssistance.
+             */
+            public Builder meetingAssistance(MeetingAssistance meetingAssistance) {
+                this.meetingAssistance = meetingAssistance;
                 return this;
             }
 
