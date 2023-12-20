@@ -164,6 +164,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
 
+    CompletableFuture<ListEiamInstancesResponse> listEiamInstances(ListEiamInstancesRequest request);
+
+    CompletableFuture<ListEiamRegionsResponse> listEiamRegions(ListEiamRegionsRequest request);
+
     CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request);
 
     CompletableFuture<ListGroupsForApplicationResponse> listGroupsForApplication(ListGroupsForApplicationRequest request);
