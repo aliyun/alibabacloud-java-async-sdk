@@ -111,7 +111,7 @@ public class RecoverIndexRequest extends Request {
         } 
 
         /**
-         * Restores data from an index.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -129,7 +129,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -147,7 +147,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The name of the index
          */
         public Builder indexName(String indexName) {
             this.putBodyParameter("indexName", indexName);

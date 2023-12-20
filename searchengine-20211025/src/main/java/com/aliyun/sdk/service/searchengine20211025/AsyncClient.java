@@ -74,7 +74,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAdvanceConfigResponse> deleteAdvanceConfig(DeleteAdvanceConfigRequest request);
 
     /**
-      * The result returned
+      * ## Method
+      * `DELETE`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
      */
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
@@ -205,6 +208,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+      *
+     */
     CompletableFuture<ListDateSourceGenerationsResponse> listDateSourceGenerations(ListDateSourceGenerationsRequest request);
 
     CompletableFuture<ListIndexesResponse> listIndexes(ListIndexesRequest request);
@@ -249,7 +259,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAdvanceConfigFileResponse> modifyAdvanceConfigFile(ModifyAdvanceConfigFileRequest request);
 
     /**
-      * The name of the cluster
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
      */
     CompletableFuture<ModifyClusterDescResponse> modifyClusterDesc(ModifyClusterDescRequest request);
@@ -360,7 +373,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishIndexVersionResponse> publishIndexVersion(PublishIndexVersionRequest request);
 
     /**
-      * The name of the index
+      * ### Method
+      * `POST`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/recover-index`
       *
      */
     CompletableFuture<RecoverIndexResponse> recoverIndex(RecoverIndexRequest request);

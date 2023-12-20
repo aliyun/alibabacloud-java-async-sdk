@@ -167,7 +167,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The result returned
+      * ## Method
+      * `DELETE`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
      */
     @Override
@@ -510,7 +513,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListClusterNamesResponse> listClusterNames(ListClusterNamesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterNames").setMethod(HttpMethod.GET).setPathRegex("/openapi/ha3/instances/{instanceId}/cluster-names").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterNames").setMethod(HttpMethod.GET).setPathRegex("/openapi/ha3/cluster-names").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterNamesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -598,6 +601,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+      *
+     */
     @Override
     public CompletableFuture<ListDateSourceGenerationsResponse> listDateSourceGenerations(ListDateSourceGenerationsRequest request) {
         try {
@@ -726,7 +736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the cluster
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
      */
     @Override
@@ -981,7 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the index
+      * ### Method
+      * `POST`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/recover-index`
       *
      */
     @Override

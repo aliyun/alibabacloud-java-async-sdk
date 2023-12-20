@@ -99,10 +99,7 @@ public class ListDateSourceGenerationsRequest extends Request {
         } 
 
         /**
-         * ### Sample requests
-         * <p>
-         * 
-         * `GET /openapi/ha3/instances/ha3_instances_id/data-sources/my_data_source/generations??domainName=pre_domain_1`
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -111,33 +108,7 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * ### Sample responses
-         * <p>
-         * 
-         *     {
-         *       "requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         *       "result": [
-         *         {
-         *           "generationId":1626143930,
-         *           "timestamp":16261436737,
-         *           "createTime":1626143673,
-         *           "status":"STOPPED",
-         *           "partition":{
-         *             "index1":1
-         *           },
-         *           "buildDeployId":122
-         *         },{
-         *           "generationId":1626143930,
-         *           "timestamp":16261435453,
-         *           "createTime":1626143673,
-         *           "status":"STOPPED",
-         *           "partition":{
-         *             "index1":1
-         *           },
-         *           "buildDeployId":122
-         *         }
-         *       ]
-         *     }
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -146,7 +117,7 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * domainName.
+         * The data center where the data source is deployed.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);
@@ -155,7 +126,11 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * Obtains the data restoration version of a data source.
+         * The valid state of the data source. Valid values: true and false. The default value of this parameter is true.
+         * <p>
+         * 
+         * 1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.
+         * 2.  false indicates that all generations are returned.
          */
         public Builder validStatus(Boolean validStatus) {
             this.putQueryParameter("validStatus", validStatus);

@@ -84,7 +84,7 @@ public class ModifyClusterDescRequest extends Request {
         } 
 
         /**
-         * WB01240825
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * clusterName.
+         * The name of the cluster
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -102,7 +102,7 @@ public class ModifyClusterDescRequest extends Request {
         }
 
         /**
-         * body.
+         * The parameters in the request body
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);

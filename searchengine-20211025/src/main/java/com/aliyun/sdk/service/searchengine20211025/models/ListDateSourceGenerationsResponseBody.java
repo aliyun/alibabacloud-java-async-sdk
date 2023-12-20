@@ -178,7 +178,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time to start index building.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -186,7 +186,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * dataDumpRoot.
+             * The directory where the index file created by using the dump table is saved.
              */
             public Builder dataDumpRoot(String dataDumpRoot) {
                 this.dataDumpRoot = dataDumpRoot;
@@ -194,7 +194,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * generation.
+             * The primary key of the generation.
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -202,7 +202,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * Key indicates the name of the index. value indicates the number of shards.
              */
             public Builder partition(java.util.Map < String, Integer > partition) {
                 this.partition = partition;
@@ -210,7 +210,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +218,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * The timestamp when the offline indexing was initiated.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

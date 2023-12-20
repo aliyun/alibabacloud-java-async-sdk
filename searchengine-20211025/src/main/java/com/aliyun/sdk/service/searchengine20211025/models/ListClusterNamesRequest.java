@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterNamesRequest</p>
  */
 public class ListClusterNamesRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
-    private String instanceId;
-
     private ListClusterNamesRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
     }
 
     public static Builder builder() {
@@ -35,15 +29,7 @@ public class ListClusterNamesRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public static final class Builder extends Request.Builder<ListClusterNamesRequest, Builder> {
-        private String instanceId; 
 
         private Builder() {
             super();
@@ -51,17 +37,7 @@ public class ListClusterNamesRequest extends Request {
 
         private Builder(ListClusterNamesRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
         } 
-
-        /**
-         * instanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putPathParameter("instanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         @Override
         public ListClusterNamesRequest build() {

@@ -92,7 +92,7 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the index.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);
@@ -101,38 +101,7 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * ## Sample requests
-         * <p>
-         * 
-         * ﻿
-         * 
-         *     PUT /openapi/ha3/instances/ha3_instance_nameclusters/test_cluster/index-version
-         * 
-         * ﻿
-         * 
-         *     [
-         *     ﻿
-         *       {
-         *     ﻿
-         *         "indexName": "index1",
-         *     ﻿
-         *         "version": "123456",
-         *     ﻿
-         *         "buildDeployId": "20201010"
-         *     ﻿
-         *       },
-         *     ﻿
-         *       {
-         *     ﻿
-         *         "indexName": "index1",
-         *     ﻿
-         *         "version": "123456",
-         *     ﻿
-         *         "buildDeployId": "20201010"
-         *     ﻿
-         *       }
-         *     ﻿
-         *     ]
+         * The keyword used to search for a version. Fuzzy match is supported.
          */
         public Builder body(java.util.List < ModifyIndexVersionRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -198,7 +167,7 @@ public class ModifyIndexVersionRequest extends Request {
             private String version; 
 
             /**
-             * buildDeployId.
+             * The ID of the index deployed in offline mode.
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -206,7 +175,7 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * WB01240825
+             * The name of the index.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -214,7 +183,7 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * version.
+             * The version of the index.
              */
             public Builder version(String version) {
                 this.version = version;

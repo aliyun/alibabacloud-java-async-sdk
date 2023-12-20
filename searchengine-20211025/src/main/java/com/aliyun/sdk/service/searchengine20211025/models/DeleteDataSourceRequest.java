@@ -70,7 +70,7 @@ public class DeleteDataSourceRequest extends Request {
         } 
 
         /**
-         * WB01240825
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

@@ -16,6 +16,10 @@ public class ListAdvanceConfigDirResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private ListAdvanceConfigDirResponseBody body;
@@ -23,6 +27,7 @@ public class ListAdvanceConfigDirResponse extends Response {
     private ListAdvanceConfigDirResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class ListAdvanceConfigDirResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListAdvanceConfigDirResponseBody getBody() {
@@ -52,6 +64,8 @@ public class ListAdvanceConfigDirResponse extends Response {
     public interface Builder extends Response.Builder<ListAdvanceConfigDirResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListAdvanceConfigDirResponseBody body);
 
@@ -64,6 +78,7 @@ public class ListAdvanceConfigDirResponse extends Response {
             extends Response.BuilderImpl<ListAdvanceConfigDirResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListAdvanceConfigDirResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class ListAdvanceConfigDirResponse extends Response {
         private BuilderImpl(ListAdvanceConfigDirResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class ListAdvanceConfigDirResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
