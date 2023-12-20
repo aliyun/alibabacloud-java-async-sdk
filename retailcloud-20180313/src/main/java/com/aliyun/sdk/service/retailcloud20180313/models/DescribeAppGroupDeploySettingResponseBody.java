@@ -86,7 +86,7 @@ public class DescribeAppGroupDeploySettingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * CodeEnum
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -170,7 +170,7 @@ public class DescribeAppGroupDeploySettingResponseBody extends TeaModel {
             private Long defaultPacketId; 
 
             /**
-             * 默认代码包描述
+             * DefaultPacketComment.
              */
             public Builder defaultPacketComment(String defaultPacketComment) {
                 this.defaultPacketComment = defaultPacketComment;
@@ -178,7 +178,7 @@ public class DescribeAppGroupDeploySettingResponseBody extends TeaModel {
             }
 
             /**
-             * 默认代码包id
+             * DefaultPacketId.
              */
             public Builder defaultPacketId(Long defaultPacketId) {
                 this.defaultPacketId = defaultPacketId;

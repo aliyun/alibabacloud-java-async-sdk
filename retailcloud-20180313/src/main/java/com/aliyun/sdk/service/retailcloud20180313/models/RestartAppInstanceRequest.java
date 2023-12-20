@@ -85,7 +85,7 @@ public class RestartAppInstanceRequest extends Request {
         } 
 
         /**
-         * appId
+         * AppId.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -94,7 +94,7 @@ public class RestartAppInstanceRequest extends Request {
         }
 
         /**
-         * appInstanceIdList
+         * AppInstanceIdList.
          */
         public Builder appInstanceIdList(java.util.List < Long > appInstanceIdList) {
             this.putQueryParameter("AppInstanceIdList", appInstanceIdList);
@@ -103,7 +103,7 @@ public class RestartAppInstanceRequest extends Request {
         }
 
         /**
-         * envId
+         * EnvId.
          */
         public Builder envId(Long envId) {
             this.putQueryParameter("EnvId", envId);

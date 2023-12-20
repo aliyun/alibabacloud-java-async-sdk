@@ -124,7 +124,7 @@ public class CreateEciConfigRequest extends Request {
         } 
 
         /**
-         * appEnvId
+         * AppEnvId.
          */
         public Builder appEnvId(Long appEnvId) {
             this.putQueryParameter("AppEnvId", appEnvId);
@@ -133,7 +133,7 @@ public class CreateEciConfigRequest extends Request {
         }
 
         /**
-         * eipBandwidth
+         * EipBandwidth.
          */
         public Builder eipBandwidth(Integer eipBandwidth) {
             this.putQueryParameter("EipBandwidth", eipBandwidth);
@@ -142,7 +142,7 @@ public class CreateEciConfigRequest extends Request {
         }
 
         /**
-         * enableEciSchedulePolicy
+         * EnableEciSchedulePolicy.
          */
         public Builder enableEciSchedulePolicy(Boolean enableEciSchedulePolicy) {
             this.putQueryParameter("EnableEciSchedulePolicy", enableEciSchedulePolicy);
@@ -151,7 +151,7 @@ public class CreateEciConfigRequest extends Request {
         }
 
         /**
-         * mirrorCache
+         * MirrorCache.
          */
         public Builder mirrorCache(Boolean mirrorCache) {
             this.putQueryParameter("MirrorCache", mirrorCache);
@@ -160,7 +160,7 @@ public class CreateEciConfigRequest extends Request {
         }
 
         /**
-         * normalInstanceLimit
+         * NormalInstanceLimit.
          */
         public Builder normalInstanceLimit(Integer normalInstanceLimit) {
             this.putQueryParameter("NormalInstanceLimit", normalInstanceLimit);
@@ -169,7 +169,7 @@ public class CreateEciConfigRequest extends Request {
         }
 
         /**
-         * scheduleVirtualNode
+         * ScheduleVirtualNode.
          */
         public Builder scheduleVirtualNode(Boolean scheduleVirtualNode) {
             this.putQueryParameter("ScheduleVirtualNode", scheduleVirtualNode);

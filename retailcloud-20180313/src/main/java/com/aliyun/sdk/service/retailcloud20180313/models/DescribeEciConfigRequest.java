@@ -54,7 +54,7 @@ public class DescribeEciConfigRequest extends Request {
         } 
 
         /**
-         * appEnvId
+         * AppEnvId.
          */
         public Builder appEnvId(Long appEnvId) {
             this.putQueryParameter("AppEnvId", appEnvId);

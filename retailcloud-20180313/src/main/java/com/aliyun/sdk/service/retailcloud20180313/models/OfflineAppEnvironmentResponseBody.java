@@ -86,7 +86,7 @@ public class OfflineAppEnvironmentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * CodeEnum
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;

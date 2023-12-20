@@ -212,6 +212,208 @@ public class ListDeployConfigResponseBody extends TeaModel {
         } 
 
     }
+    public static class ContainerResourceLimit extends TeaModel {
+        @NameInMap("Cpu")
+        private String cpu;
+
+        @NameInMap("Gpu")
+        private String gpu;
+
+        @NameInMap("Memory")
+        private String memory;
+
+        @NameInMap("Storage")
+        private String storage;
+
+        private ContainerResourceLimit(Builder builder) {
+            this.cpu = builder.cpu;
+            this.gpu = builder.gpu;
+            this.memory = builder.memory;
+            this.storage = builder.storage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContainerResourceLimit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return gpu
+         */
+        public String getGpu() {
+            return this.gpu;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return storage
+         */
+        public String getStorage() {
+            return this.storage;
+        }
+
+        public static final class Builder {
+            private String cpu; 
+            private String gpu; 
+            private String memory; 
+            private String storage; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(String cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Gpu.
+             */
+            public Builder gpu(String gpu) {
+                this.gpu = gpu;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * Storage.
+             */
+            public Builder storage(String storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            public ContainerResourceLimit build() {
+                return new ContainerResourceLimit(this);
+            } 
+
+        } 
+
+    }
+    public static class ContainerResourceRequest extends TeaModel {
+        @NameInMap("Cpu")
+        private String cpu;
+
+        @NameInMap("Gpu")
+        private String gpu;
+
+        @NameInMap("Memory")
+        private String memory;
+
+        @NameInMap("Storage")
+        private String storage;
+
+        private ContainerResourceRequest(Builder builder) {
+            this.cpu = builder.cpu;
+            this.gpu = builder.gpu;
+            this.memory = builder.memory;
+            this.storage = builder.storage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContainerResourceRequest create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return gpu
+         */
+        public String getGpu() {
+            return this.gpu;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return storage
+         */
+        public String getStorage() {
+            return this.storage;
+        }
+
+        public static final class Builder {
+            private String cpu; 
+            private String gpu; 
+            private String memory; 
+            private String storage; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(String cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Gpu.
+             */
+            public Builder gpu(String gpu) {
+                this.gpu = gpu;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * Storage.
+             */
+            public Builder storage(String storage) {
+                this.storage = storage;
+                return this;
+            }
+
+            public ContainerResourceRequest build() {
+                return new ContainerResourceRequest(this);
+            } 
+
+        } 
+
+    }
     public static class ContainerYamlConf extends TeaModel {
         @NameInMap("ConfigMap")
         private String configMap;
@@ -360,6 +562,12 @@ public class ListDeployConfigResponseBody extends TeaModel {
         @NameInMap("ContainerCodePath")
         private ContainerCodePath containerCodePath;
 
+        @NameInMap("ContainerResourceLimit")
+        private ContainerResourceLimit containerResourceLimit;
+
+        @NameInMap("ContainerResourceRequest")
+        private ContainerResourceRequest containerResourceRequest;
+
         @NameInMap("ContainerYamlConf")
         private ContainerYamlConf containerYamlConf;
 
@@ -375,6 +583,8 @@ public class ListDeployConfigResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.containerCodePath = builder.containerCodePath;
+            this.containerResourceLimit = builder.containerResourceLimit;
+            this.containerResourceRequest = builder.containerResourceRequest;
             this.containerYamlConf = builder.containerYamlConf;
             this.envType = builder.envType;
             this.id = builder.id;
@@ -401,6 +611,20 @@ public class ListDeployConfigResponseBody extends TeaModel {
          */
         public ContainerCodePath getContainerCodePath() {
             return this.containerCodePath;
+        }
+
+        /**
+         * @return containerResourceLimit
+         */
+        public ContainerResourceLimit getContainerResourceLimit() {
+            return this.containerResourceLimit;
+        }
+
+        /**
+         * @return containerResourceRequest
+         */
+        public ContainerResourceRequest getContainerResourceRequest() {
+            return this.containerResourceRequest;
         }
 
         /**
@@ -434,6 +658,8 @@ public class ListDeployConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Long appId; 
             private ContainerCodePath containerCodePath; 
+            private ContainerResourceLimit containerResourceLimit; 
+            private ContainerResourceRequest containerResourceRequest; 
             private ContainerYamlConf containerYamlConf; 
             private String envType; 
             private Long id; 
@@ -452,6 +678,22 @@ public class ListDeployConfigResponseBody extends TeaModel {
              */
             public Builder containerCodePath(ContainerCodePath containerCodePath) {
                 this.containerCodePath = containerCodePath;
+                return this;
+            }
+
+            /**
+             * ContainerResourceLimit.
+             */
+            public Builder containerResourceLimit(ContainerResourceLimit containerResourceLimit) {
+                this.containerResourceLimit = containerResourceLimit;
+                return this;
+            }
+
+            /**
+             * ContainerResourceRequest.
+             */
+            public Builder containerResourceRequest(ContainerResourceRequest containerResourceRequest) {
+                this.containerResourceRequest = containerResourceRequest;
                 return this;
             }
 

@@ -93,7 +93,7 @@ public class OfflineAppEnvironmentRequest extends Request {
         }
 
         /**
-         * 是否删除PVC，未传递默认不删除
+         * DeletePvc.
          */
         public Builder deletePvc(Boolean deletePvc) {
             this.putQueryParameter("DeletePvc", deletePvc);

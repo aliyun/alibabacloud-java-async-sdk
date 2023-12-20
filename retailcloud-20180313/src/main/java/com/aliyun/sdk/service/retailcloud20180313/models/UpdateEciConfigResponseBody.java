@@ -74,7 +74,7 @@ public class UpdateEciConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpdateEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errMsg
+         * ErrMsg.
          */
         public Builder errMsg(String errMsg) {
             this.errMsg = errMsg;
@@ -90,7 +90,7 @@ public class UpdateEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpdateEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * result
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -138,7 +138,7 @@ public class UpdateEciConfigResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * success
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -74,7 +74,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errMsg
+         * ErrMsg.
          */
         public Builder errMsg(String errMsg) {
             this.errMsg = errMsg;
@@ -90,7 +90,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
         }
 
         /**
-         * result
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -198,7 +198,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             private Boolean scheduleVirtualNode; 
 
             /**
-             * appEnvId
+             * AppEnvId.
              */
             public Builder appEnvId(Long appEnvId) {
                 this.appEnvId = appEnvId;
@@ -206,7 +206,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             }
 
             /**
-             * eipBandwidth
+             * EipBandwidth.
              */
             public Builder eipBandwidth(Integer eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -214,7 +214,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             }
 
             /**
-             * enableEciSchedulePolicy
+             * EnableEciSchedulePolicy.
              */
             public Builder enableEciSchedulePolicy(Boolean enableEciSchedulePolicy) {
                 this.enableEciSchedulePolicy = enableEciSchedulePolicy;
@@ -222,7 +222,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             }
 
             /**
-             * mirrorCache
+             * MirrorCache.
              */
             public Builder mirrorCache(Boolean mirrorCache) {
                 this.mirrorCache = mirrorCache;
@@ -230,7 +230,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             }
 
             /**
-             * normalInstanceLimit
+             * NormalInstanceLimit.
              */
             public Builder normalInstanceLimit(Integer normalInstanceLimit) {
                 this.normalInstanceLimit = normalInstanceLimit;
@@ -238,7 +238,7 @@ public class DescribeEciConfigResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleVirtualNode
+             * ScheduleVirtualNode.
              */
             public Builder scheduleVirtualNode(Boolean scheduleVirtualNode) {
                 this.scheduleVirtualNode = scheduleVirtualNode;

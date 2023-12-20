@@ -86,7 +86,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * CodeEnum
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -238,7 +238,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -254,7 +254,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码包描述
+             * PacketComment.
              */
             public Builder packetComment(String packetComment) {
                 this.packetComment = packetComment;
@@ -262,7 +262,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * 代码包id
+             * PacketId.
              */
             public Builder packetId(Long packetId) {
                 this.packetId = packetId;
@@ -270,7 +270,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * 指定代码包发布时，为代码包Url；纯镜像发布时，为镜像地址
+             * PacketUrl.
              */
             public Builder packetUrl(String packetUrl) {
                 this.packetUrl = packetUrl;
@@ -278,7 +278,7 @@ public class DescribeAppEnvDeployBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * 部署配置schema_id
+             * SchemaId.
              */
             public Builder schemaId(Long schemaId) {
                 this.schemaId = schemaId;

@@ -74,7 +74,7 @@ public class RestartAppInstanceResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class RestartAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * errMsg
+         * ErrMsg.
          */
         public Builder errMsg(String errMsg) {
             this.errMsg = errMsg;
@@ -90,7 +90,7 @@ public class RestartAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class RestartAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * result
+         * Result.
          */
         public Builder result(String result) {
             this.result = result;
