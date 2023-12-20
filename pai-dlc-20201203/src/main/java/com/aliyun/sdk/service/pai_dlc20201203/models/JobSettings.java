@@ -33,6 +33,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("EnableRDMA")
     private Boolean enableRDMA;
 
+    @NameInMap("EnableSanityCheck")
+    private Boolean enableSanityCheck;
+
     @NameInMap("EnableTideResource")
     private Boolean enableTideResource;
 
@@ -51,6 +54,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("PipelineId")
     private String pipelineId;
 
+    @NameInMap("SanityCheckArgs")
+    private String sanityCheckArgs;
+
     @NameInMap("Tags")
     private java.util.Map < String, String > tags;
 
@@ -62,12 +68,14 @@ public class JobSettings extends TeaModel {
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
         this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
+        this.enableSanityCheck = builder.enableSanityCheck;
         this.enableTideResource = builder.enableTideResource;
         this.errorMonitoringArgs = builder.errorMonitoringArgs;
         this.jobReservedMinutes = builder.jobReservedMinutes;
         this.jobReservedPolicy = builder.jobReservedPolicy;
         this.oversoldType = builder.oversoldType;
         this.pipelineId = builder.pipelineId;
+        this.sanityCheckArgs = builder.sanityCheckArgs;
         this.tags = builder.tags;
     }
 
@@ -129,6 +137,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return enableSanityCheck
+     */
+    public Boolean getEnableSanityCheck() {
+        return this.enableSanityCheck;
+    }
+
+    /**
      * @return enableTideResource
      */
     public Boolean getEnableTideResource() {
@@ -171,6 +186,13 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return sanityCheckArgs
+     */
+    public String getSanityCheckArgs() {
+        return this.sanityCheckArgs;
+    }
+
+    /**
      * @return tags
      */
     public java.util.Map < String, String > getTags() {
@@ -185,12 +207,14 @@ public class JobSettings extends TeaModel {
         private Boolean enableErrorMonitoringInAIMaster; 
         private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
+        private Boolean enableSanityCheck; 
         private Boolean enableTideResource; 
         private String errorMonitoringArgs; 
         private Integer jobReservedMinutes; 
         private String jobReservedPolicy; 
         private String oversoldType; 
         private String pipelineId; 
+        private String sanityCheckArgs; 
         private java.util.Map < String, String > tags; 
 
         /**
@@ -250,6 +274,14 @@ public class JobSettings extends TeaModel {
         }
 
         /**
+         * EnableSanityCheck.
+         */
+        public Builder enableSanityCheck(Boolean enableSanityCheck) {
+            this.enableSanityCheck = enableSanityCheck;
+            return this;
+        }
+
+        /**
          * EnableTideResource.
          */
         public Builder enableTideResource(Boolean enableTideResource) {
@@ -294,6 +326,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
+            return this;
+        }
+
+        /**
+         * SanityCheckArgs.
+         */
+        public Builder sanityCheckArgs(String sanityCheckArgs) {
+            this.sanityCheckArgs = sanityCheckArgs;
             return this;
         }
 
