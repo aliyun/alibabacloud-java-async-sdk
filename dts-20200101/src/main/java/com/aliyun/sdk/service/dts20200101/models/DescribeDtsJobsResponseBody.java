@@ -2527,6 +2527,208 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    public static class ReverseJobFullDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("Percent")
+        private String percent;
+
+        @NameInMap("Progress")
+        private String progress;
+
+        @NameInMap("Status")
+        private String status;
+
+        private ReverseJobFullDataCheckStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReverseJobFullDataCheckStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            /**
+             * The error message returned if incremental data synchronization failed.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The progress of incremental data synchronization. Unit: percentage.
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * The state of incremental data synchronization.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ReverseJobFullDataCheckStatus build() {
+                return new ReverseJobFullDataCheckStatus(this);
+            } 
+
+        } 
+
+    }
+    public static class ReverseJobIncDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("Percent")
+        private String percent;
+
+        @NameInMap("Progress")
+        private String progress;
+
+        @NameInMap("Status")
+        private String status;
+
+        private ReverseJobIncDataCheckStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReverseJobIncDataCheckStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            /**
+             * The error message returned if incremental data synchronization failed.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The progress of incremental data synchronization. Unit: percentage.
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * The state of incremental data synchronization.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ReverseJobIncDataCheckStatus build() {
+                return new ReverseJobIncDataCheckStatus(this);
+            } 
+
+        } 
+
+    }
     public static class ReverseJobMigrationMode extends TeaModel {
         @NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -2534,12 +2736,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
+        @NameInMap("FullDataCheck")
+        private Boolean fullDataCheck;
+
+        @NameInMap("IncDataCheck")
+        private Boolean incDataCheck;
+
         @NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private ReverseJobMigrationMode(Builder builder) {
             this.dataInitialization = builder.dataInitialization;
             this.dataSynchronization = builder.dataSynchronization;
+            this.fullDataCheck = builder.fullDataCheck;
+            this.incDataCheck = builder.incDataCheck;
             this.structureInitialization = builder.structureInitialization;
         }
 
@@ -2566,6 +2776,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullDataCheck
+         */
+        public Boolean getFullDataCheck() {
+            return this.fullDataCheck;
+        }
+
+        /**
+         * @return incDataCheck
+         */
+        public Boolean getIncDataCheck() {
+            return this.incDataCheck;
+        }
+
+        /**
          * @return structureInitialization
          */
         public Boolean getStructureInitialization() {
@@ -2575,6 +2799,8 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean dataInitialization; 
             private Boolean dataSynchronization; 
+            private Boolean fullDataCheck; 
+            private Boolean incDataCheck; 
             private Boolean structureInitialization; 
 
             /**
@@ -2597,6 +2823,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
+                return this;
+            }
+
+            /**
+             * Indicates whether full data verification is performed. Valid values:
+             * <p>
+             * -  **true**: yes
+             * -   **false**: no
+             */
+            public Builder fullDataCheck(Boolean fullDataCheck) {
+                this.fullDataCheck = fullDataCheck;
+                return this;
+            }
+
+            /**
+             * Indicates whether incremental data verification is performed. Valid values:
+             * <p>
+             * -  **true**: yes
+             * -   **false**: no
+             */
+            public Builder incDataCheck(Boolean incDataCheck) {
+                this.incDataCheck = incDataCheck;
                 return this;
             }
 
@@ -3307,6 +3555,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("FullDataCheckStatus")
+        private ReverseJobFullDataCheckStatus fullDataCheckStatus;
+
+        @NameInMap("IncDataCheckStatus")
+        private ReverseJobIncDataCheckStatus incDataCheckStatus;
+
         @NameInMap("MemUsage")
         private String memUsage;
 
@@ -3354,6 +3608,8 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.errorMessage = builder.errorMessage;
             this.etlSafeCheckpoint = builder.etlSafeCheckpoint;
             this.expireTime = builder.expireTime;
+            this.fullDataCheckStatus = builder.fullDataCheckStatus;
+            this.incDataCheckStatus = builder.incDataCheckStatus;
             this.memUsage = builder.memUsage;
             this.migrationMode = builder.migrationMode;
             this.payType = builder.payType;
@@ -3507,6 +3763,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullDataCheckStatus
+         */
+        public ReverseJobFullDataCheckStatus getFullDataCheckStatus() {
+            return this.fullDataCheckStatus;
+        }
+
+        /**
+         * @return incDataCheckStatus
+         */
+        public ReverseJobIncDataCheckStatus getIncDataCheckStatus() {
+            return this.incDataCheckStatus;
+        }
+
+        /**
          * @return memUsage
          */
         public String getMemUsage() {
@@ -3589,6 +3859,8 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String errorMessage; 
             private String etlSafeCheckpoint; 
             private String expireTime; 
+            private ReverseJobFullDataCheckStatus fullDataCheckStatus; 
+            private ReverseJobIncDataCheckStatus incDataCheckStatus; 
             private String memUsage; 
             private ReverseJobMigrationMode migrationMode; 
             private String payType; 
@@ -3754,6 +4026,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * FullDataCheckStatus.
+             */
+            public Builder fullDataCheckStatus(ReverseJobFullDataCheckStatus fullDataCheckStatus) {
+                this.fullDataCheckStatus = fullDataCheckStatus;
+                return this;
+            }
+
+            /**
+             * IncDataCheckStatus.
+             */
+            public Builder incDataCheckStatus(ReverseJobIncDataCheckStatus incDataCheckStatus) {
+                this.incDataCheckStatus = incDataCheckStatus;
                 return this;
             }
 
