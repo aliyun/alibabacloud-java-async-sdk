@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class EnableResourceDirectoryRequest extends Request {
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("EnableMode")
     @Validation(required = true)
     private String enableMode;
@@ -31,6 +35,7 @@ public class EnableResourceDirectoryRequest extends Request {
 
     private EnableResourceDirectoryRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.enableMode = builder.enableMode;
         this.MAName = builder.MAName;
         this.MASecureMobilePhone = builder.MASecureMobilePhone;
@@ -48,6 +53,13 @@ public class EnableResourceDirectoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -79,6 +91,7 @@ public class EnableResourceDirectoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EnableResourceDirectoryRequest, Builder> {
+        private Boolean dryRun; 
         private String enableMode; 
         private String MAName; 
         private String MASecureMobilePhone; 
@@ -90,11 +103,21 @@ public class EnableResourceDirectoryRequest extends Request {
 
         private Builder(EnableResourceDirectoryRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.enableMode = request.enableMode;
             this.MAName = request.MAName;
             this.MASecureMobilePhone = request.MASecureMobilePhone;
             this.verificationCode = request.verificationCode;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * The mode in which you enable a resource directory. Valid values:

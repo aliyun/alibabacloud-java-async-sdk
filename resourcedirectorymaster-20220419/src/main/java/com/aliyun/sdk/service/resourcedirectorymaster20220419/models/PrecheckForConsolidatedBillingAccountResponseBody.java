@@ -62,7 +62,7 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         private Boolean result; 
 
         /**
-         * Reasons.
+         * The cause of the check failure.
          */
         public Builder reasons(java.util.List < Reasons> reasons) {
             this.reasons = reasons;
@@ -70,7 +70,7 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
         }
 
         /**
-         * Result.
+         * Indicates whether the check was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -130,7 +134,7 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
             private String message; 
 
             /**
-             * Code.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -138,7 +142,7 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
             }
 
             /**
-             * Message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;

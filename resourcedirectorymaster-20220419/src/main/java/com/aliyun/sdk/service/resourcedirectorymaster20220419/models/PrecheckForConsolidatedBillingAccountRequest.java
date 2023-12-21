@@ -55,7 +55,7 @@ public class PrecheckForConsolidatedBillingAccountRequest extends Request {
         } 
 
         /**
-         * BillingAccountId.
+         * The ID of the management account or member to be used as a main financial account.
          */
         public Builder billingAccountId(String billingAccountId) {
             this.putQueryParameter("BillingAccountId", billingAccountId);
