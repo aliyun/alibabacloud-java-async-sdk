@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BackflowFeatureConsistencyCheckJobDataResponse> backflowFeatureConsistencyCheckJobData(BackflowFeatureConsistencyCheckJobDataRequest request);
 
+    CompletableFuture<CheckInstanceResourcesResponse> checkInstanceResources(CheckInstanceResourcesRequest request);
+
     CompletableFuture<CloneExperimentResponse> cloneExperiment(CloneExperimentRequest request);
 
     CompletableFuture<CloneExperimentGroupResponse> cloneExperimentGroup(CloneExperimentGroupRequest request);
@@ -27,6 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloneFeatureConsistencyCheckJobConfigResponse> cloneFeatureConsistencyCheckJobConfig(CloneFeatureConsistencyCheckJobConfigRequest request);
 
     CompletableFuture<CloneLaboratoryResponse> cloneLaboratory(CloneLaboratoryRequest request);
+
+    CompletableFuture<CreateABMetricResponse> createABMetric(CreateABMetricRequest request);
+
+    CompletableFuture<CreateABMetricGroupResponse> createABMetricGroup(CreateABMetricGroupRequest request);
+
+    CompletableFuture<CreateCalculationJobsResponse> createCalculationJobs(CreateCalculationJobsRequest request);
 
     CompletableFuture<CreateCrowdResponse> createCrowd(CreateCrowdRequest request);
 
@@ -38,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFeatureConsistencyCheckJobConfigResponse> createFeatureConsistencyCheckJobConfig(CreateFeatureConsistencyCheckJobConfigRequest request);
 
+    CompletableFuture<CreateInstanceResourceResponse> createInstanceResource(CreateInstanceResourceRequest request);
+
     CompletableFuture<CreateLaboratoryResponse> createLaboratory(CreateLaboratoryRequest request);
 
     CompletableFuture<CreateLayerResponse> createLayer(CreateLayerRequest request);
@@ -48,11 +58,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSubCrowdResponse> createSubCrowd(CreateSubCrowdRequest request);
 
+    CompletableFuture<CreateTableMetaResponse> createTableMeta(CreateTableMetaRequest request);
+
+    CompletableFuture<DeleteABMetricResponse> deleteABMetric(DeleteABMetricRequest request);
+
+    CompletableFuture<DeleteABMetricGroupResponse> deleteABMetricGroup(DeleteABMetricGroupRequest request);
+
     CompletableFuture<DeleteCrowdResponse> deleteCrowd(DeleteCrowdRequest request);
 
     CompletableFuture<DeleteExperimentResponse> deleteExperiment(DeleteExperimentRequest request);
 
     CompletableFuture<DeleteExperimentGroupResponse> deleteExperimentGroup(DeleteExperimentGroupRequest request);
+
+    CompletableFuture<DeleteInstanceResourceResponse> deleteInstanceResource(DeleteInstanceResourceRequest request);
 
     CompletableFuture<DeleteLaboratoryResponse> deleteLaboratory(DeleteLaboratoryRequest request);
 
@@ -64,6 +82,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSubCrowdResponse> deleteSubCrowd(DeleteSubCrowdRequest request);
 
+    CompletableFuture<DeleteTableMetaResponse> deleteTableMeta(DeleteTableMetaRequest request);
+
+    CompletableFuture<GetABMetricResponse> getABMetric(GetABMetricRequest request);
+
+    CompletableFuture<GetABMetricGroupResponse> getABMetricGroup(GetABMetricGroupRequest request);
+
+    CompletableFuture<GetCalculationJobResponse> getCalculationJob(GetCalculationJobRequest request);
+
     CompletableFuture<GetExperimentResponse> getExperiment(GetExperimentRequest request);
 
     CompletableFuture<GetExperimentGroupResponse> getExperimentGroup(GetExperimentGroupRequest request);
@@ -74,6 +100,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    CompletableFuture<GetInstanceResourceResponse> getInstanceResource(GetInstanceResourceRequest request);
+
+    CompletableFuture<GetInstanceResourceTableResponse> getInstanceResourceTable(GetInstanceResourceTableRequest request);
+
     CompletableFuture<GetLaboratoryResponse> getLaboratory(GetLaboratoryRequest request);
 
     CompletableFuture<GetLayerResponse> getLayer(GetLayerRequest request);
@@ -81,6 +111,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSceneResponse> getScene(GetSceneRequest request);
 
     CompletableFuture<GetSubCrowdResponse> getSubCrowd(GetSubCrowdRequest request);
+
+    CompletableFuture<GetTableMetaResponse> getTableMeta(GetTableMetaRequest request);
+
+    CompletableFuture<ListABMetricGroupsResponse> listABMetricGroups(ListABMetricGroupsRequest request);
+
+    CompletableFuture<ListABMetricsResponse> listABMetrics(ListABMetricsRequest request);
+
+    CompletableFuture<ListCalculationJobsResponse> listCalculationJobs(ListCalculationJobsRequest request);
 
     CompletableFuture<ListCrowdUsersResponse> listCrowdUsers(ListCrowdUsersRequest request);
 
@@ -98,6 +136,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFeatureConsistencyCheckJobsResponse> listFeatureConsistencyCheckJobs(ListFeatureConsistencyCheckJobsRequest request);
 
+    CompletableFuture<ListInstanceResourcesResponse> listInstanceResources(ListInstanceResourcesRequest request);
+
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     CompletableFuture<ListLaboratoriesResponse> listLaboratories(ListLaboratoriesRequest request);
@@ -109,6 +149,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScenesResponse> listScenes(ListScenesRequest request);
 
     CompletableFuture<ListSubCrowdsResponse> listSubCrowds(ListSubCrowdsRequest request);
+
+    CompletableFuture<ListTableMetasResponse> listTableMetas(ListTableMetasRequest request);
 
     CompletableFuture<OfflineExperimentResponse> offlineExperiment(OfflineExperimentRequest request);
 
@@ -124,9 +166,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PushAllExperimentResponse> pushAllExperiment(PushAllExperimentRequest request);
 
+    CompletableFuture<ReportABMetricGroupResponse> reportABMetricGroup(ReportABMetricGroupRequest request);
+
     CompletableFuture<SyncFeatureConsistencyCheckJobReplayLogResponse> syncFeatureConsistencyCheckJobReplayLog(SyncFeatureConsistencyCheckJobReplayLogRequest request);
 
     CompletableFuture<TerminateFeatureConsistencyCheckJobResponse> terminateFeatureConsistencyCheckJob(TerminateFeatureConsistencyCheckJobRequest request);
+
+    CompletableFuture<UpdateABMetricResponse> updateABMetric(UpdateABMetricRequest request);
+
+    CompletableFuture<UpdateABMetricGroupResponse> updateABMetricGroup(UpdateABMetricGroupRequest request);
 
     CompletableFuture<UpdateCrowdResponse> updateCrowd(UpdateCrowdRequest request);
 
@@ -136,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateFeatureConsistencyCheckJobConfigResponse> updateFeatureConsistencyCheckJobConfig(UpdateFeatureConsistencyCheckJobConfigRequest request);
 
+    CompletableFuture<UpdateInstanceResourceResponse> updateInstanceResource(UpdateInstanceResourceRequest request);
+
     CompletableFuture<UpdateLaboratoryResponse> updateLaboratory(UpdateLaboratoryRequest request);
 
     CompletableFuture<UpdateLayerResponse> updateLayer(UpdateLayerRequest request);
@@ -143,5 +193,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateParamResponse> updateParam(UpdateParamRequest request);
 
     CompletableFuture<UpdateSceneResponse> updateScene(UpdateSceneRequest request);
+
+    CompletableFuture<UpdateTableMetaResponse> updateTableMeta(UpdateTableMetaRequest request);
 
 }
