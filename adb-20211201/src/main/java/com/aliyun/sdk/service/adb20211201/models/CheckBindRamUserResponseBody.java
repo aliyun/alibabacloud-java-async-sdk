@@ -50,7 +50,7 @@ public class CheckBindRamUserResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class CheckBindRamUserResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result of the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: the database account is associated with a RAM user.
+         * *   **false**: the database account is not associated with a RAM user.
          */
         public Builder result(Boolean result) {
             this.result = result;

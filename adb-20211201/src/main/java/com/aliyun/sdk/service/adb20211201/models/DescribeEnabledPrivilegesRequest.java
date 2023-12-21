@@ -84,7 +84,9 @@ public class DescribeEnabledPrivilegesRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * 数据库账号名称。
+         * <p>
+         * > 您可以调用[DescribeAccounts](~~612430~~)接口查看指定集群的数据库账号信息，包括账号名称。
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

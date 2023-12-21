@@ -98,7 +98,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which data backup files are retained.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -106,7 +106,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackupLog.
+         * Indicates whether log backup is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disable**
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -114,7 +118,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which the log backup files are retained.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -122,7 +126,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The cycle based on which backups are performed. If more than one day of the week are specified, the days of the week are separated by commas (,). Valid value:
+         * <p>
+         * 
+         * *   Monday
+         * *   Tuesday
+         * *   Wednesday
+         * *   Thursday
+         * *   Friday
+         * *   Saturday
+         * *   Sunday
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -130,7 +143,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * The data backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -138,7 +151,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

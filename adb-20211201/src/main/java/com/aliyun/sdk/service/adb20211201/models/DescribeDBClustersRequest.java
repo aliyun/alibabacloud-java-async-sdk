@@ -157,7 +157,7 @@ public class DescribeDBClustersRequest extends Request {
          * <p>
          * 
          * *   The description cannot start with `http://` or `https://`.
-         * *   The description must be 2 to 256 characters in length.
+         * *   The description must be 2 to 256 characters in length
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -169,7 +169,7 @@ public class DescribeDBClustersRequest extends Request {
          * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          * <p>
          * 
-         * If you do not specify this parameter, the information of all clusters that reside in the specified region is returned.
+         * If you do not specify this parameter, the information about all clusters that reside in the region is returned.
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -181,15 +181,24 @@ public class DescribeDBClustersRequest extends Request {
          * The state of the cluster. Valid values:
          * <p>
          * 
-         * *   **Preparing**: The cluster is being prepared.
-         * *   **Creating**: The cluster is being created.
-         * *   **Running**: The cluster is running.
-         * *   **Deleting**: The cluster is being deleted.
-         * *   **Restoring**: The cluster is being restored from a backup.
-         * *   **ClassChanging**: The cluster specifications are being changed.
-         * *   **NetAddressCreating**: A network connection is being created.
-         * *   **NetAddressDeleting**: A network connection is being deleted.
-         * *   **NetAddressModifying**: A network connection is being modified.
+         * *   **Preparing**
+         * 
+         * <!---->
+         * 
+         * *   **Creating**
+         * *   **Running**
+         * *   **Deleting**
+         * 
+         * <!---->
+         * 
+         * *   **Restoring**
+         * 
+         * <!---->
+         * 
+         * *   **ClassChanging**
+         * *   **NetAddressCreating**
+         * *   **NetAddressDeleting**
+         * *   **NetAddressModifying**
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -198,7 +207,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,10 +216,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -233,10 +242,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
-         * <p>
-         * 
-         * If you do not specify this parameter, the information of all resource groups in the cluster is returned.
+         * The resource group ID. If you do not specify this parameter, the information about all resource groups in the cluster is returned.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -245,7 +251,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are added to the cluster.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -299,7 +305,7 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -307,7 +313,7 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

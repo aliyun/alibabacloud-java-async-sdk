@@ -19,7 +19,6 @@ public class GetTableRequest extends Request {
 
     @Query
     @NameInMap("DbName")
-    @Validation(required = true)
     private String dbName;
 
     @Query
@@ -29,7 +28,6 @@ public class GetTableRequest extends Request {
 
     @Query
     @NameInMap("TableName")
-    @Validation(required = true)
     private String tableName;
 
     private GetTableRequest(Builder builder) {

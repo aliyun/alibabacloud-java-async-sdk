@@ -50,7 +50,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The permission levels and specific permissions.
+         * The queried permission level and permissions.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the permissions.
+             * The queried permissions.
              */
             public Builder privileges(java.util.List < Privileges> privileges) {
                 this.privileges = privileges;

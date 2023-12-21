@@ -126,7 +126,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~~612397~~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +138,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time. The maximum time range that can be specified is two days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -144,7 +150,41 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metrics to be queried. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   CPU
+         * 
+         *     *   **AnalyticDB_CPU_Usage_Percentage**: the average CPU utilization.
+         * 
+         * *   Connections
+         * 
+         *     *   **AnalyticDB_Instance_Connection_Count**: the number of database connections.
+         * 
+         * *   Writes
+         * 
+         *     *   **AnalyticDB_TPS**: the write transactions per second (TPS).
+         *     *   **AnalyticDB_InsertRT**: the write response time.
+         *     *   **AnalyticDB_InsertBytes**: the write throughput.
+         * 
+         * *   Queries
+         * 
+         *     *   **AnalyticDB_QPS**: the queries per second (QPS).
+         *     *   **AnalyticDB_QueryRT**: the query response time.
+         *     *   **AnalyticDB_QueryWaitTime**: the query wait time.
+         * 
+         * *   Disks
+         * 
+         *     *   **AnalyticDB_Disk_IO_Avg_Usage_Percentage**: the average I/O utilization.
+         *     *   **AnalyticDB_Disk_IO_Avg_Waiting_Time**: the average I/O wait time.
+         *     *   **AnalyticDB_IO_Throughput**: the disk throughput.
+         *     *   **AnalyticDB_IOPS**: the disk IOPS.
+         *     *   **AnalyticDB_Disk_Usage**: the disk space that is used.
+         *     *   **AnalyticDB_Disk_Usage_Percentage**: the disk usage.
+         *     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
+         *     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by hot data.
+         * 
+         * > This parameter must be specified.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -153,7 +193,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +205,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * ResourcePools.
+         * The resource group ID.
          */
         public Builder resourcePools(String resourcePools) {
             this.putQueryParameter("ResourcePools", resourcePools);
@@ -171,7 +214,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

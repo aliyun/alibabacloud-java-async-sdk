@@ -55,7 +55,7 @@ public class DetachUserENIRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The instance ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

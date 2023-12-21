@@ -184,7 +184,10 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which to retain full backup files. Valid values: 7 to 730.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the default value 7 is used.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -193,7 +196,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -202,7 +205,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * Specifies whether to enable log backup. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disable**
+         * 
+         * >  If you do not specify this parameter, the default value Enable is used.
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -211,7 +220,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which to retain log backup files. Valid values: 7 to 730.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the default value 7 is used.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -238,7 +250,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The days of the week on which to perform a full backup. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
+         * 
+         * >  To ensure data security, we recommend that you specify at least two values.
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -247,7 +270,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The time range must be 1 hour.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

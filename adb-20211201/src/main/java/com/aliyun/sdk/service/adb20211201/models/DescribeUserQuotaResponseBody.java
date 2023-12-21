@@ -86,7 +86,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private String resourceGroupCount; 
 
         /**
-         * ElasticACU.
+         * The available elastic AnalyticDB compute units (ACUs).
          */
         public Builder elasticACU(String elasticACU) {
             this.elasticACU = elasticACU;
@@ -94,7 +94,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ReserverdCompteACU.
+         * The available reserved computing resources.
          */
         public Builder reserverdCompteACU(String reserverdCompteACU) {
             this.reserverdCompteACU = reserverdCompteACU;
@@ -110,7 +110,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ReserverdStorageACU.
+         * The available reserved storage resources.
          */
         public Builder reserverdStorageACU(String reserverdStorageACU) {
             this.reserverdStorageACU = reserverdStorageACU;
@@ -118,7 +118,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupCount.
+         * The number of available resource groups.
          */
         public Builder resourceGroupCount(String resourceGroupCount) {
             this.resourceGroupCount = resourceGroupCount;

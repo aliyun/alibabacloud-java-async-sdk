@@ -50,7 +50,7 @@ public class CheckSampleDataSetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,13 @@ public class CheckSampleDataSetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the built-in dataset. Valid values:
+         * <p>
+         * 
+         * *   **SUCCEED**: The dataset is loaded.
+         * *   **INIT**: The dataset is being loaded.
+         * *   **FAILED**: The dataset failed to be loaded.
+         * *   **UNINITIALIZED**: The dataset is not loaded.
          */
         public Builder status(String status) {
             this.status = status;

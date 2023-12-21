@@ -85,7 +85,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -94,7 +94,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the resource group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -103,7 +103,7 @@ public class BindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * GroupUser.
+         * The name of the database account. It can be a standard account or a privileged account.
          */
         public Builder groupUser(String groupUser) {
             this.putQueryParameter("GroupUser", groupUser);

@@ -51,6 +51,10 @@ public class ModifyDBResourceGroupRequest extends Request {
     @NameInMap("MinComputeResource")
     private String minComputeResource;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
         this.clusterMode = builder.clusterMode;
@@ -62,6 +66,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.maxComputeResource = builder.maxComputeResource;
         this.minClusterCount = builder.minClusterCount;
         this.minComputeResource = builder.minComputeResource;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -140,6 +145,13 @@ public class ModifyDBResourceGroupRequest extends Request {
         return this.minComputeResource;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
         private String clusterMode; 
         private String clusterSizeResource; 
@@ -150,6 +162,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String maxComputeResource; 
         private Integer minClusterCount; 
         private String minComputeResource; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -166,6 +179,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.maxComputeResource = request.maxComputeResource;
             this.minClusterCount = request.minClusterCount;
             this.minComputeResource = request.minComputeResource;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -263,6 +277,15 @@ public class ModifyDBResourceGroupRequest extends Request {
         public Builder minComputeResource(String minComputeResource) {
             this.putQueryParameter("MinComputeResource", minComputeResource);
             this.minComputeResource = minComputeResource;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

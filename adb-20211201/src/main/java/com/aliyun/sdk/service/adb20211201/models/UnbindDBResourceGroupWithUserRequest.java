@@ -83,7 +83,7 @@ public class UnbindDBResourceGroupWithUserRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -92,7 +92,7 @@ public class UnbindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the resource group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -101,7 +101,7 @@ public class UnbindDBResourceGroupWithUserRequest extends Request {
         }
 
         /**
-         * GroupUser.
+         * The name of the database account.
          */
         public Builder groupUser(String groupUser) {
             this.putQueryParameter("GroupUser", groupUser);
