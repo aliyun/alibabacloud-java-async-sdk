@@ -29,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateCustomerResponse> createCustomer(CreateCustomerRequest request);
 
+    CompletableFuture<CustomerQuotaRecordListResponse> customerQuotaRecordList(CustomerQuotaRecordListRequest request);
+
     CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request);
 
     CompletableFuture<EditEndUserStatusResponse> editEndUserStatus(EditEndUserStatusRequest request);
@@ -36,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EditNewBuyStatusResponse> editNewBuyStatus(EditNewBuyStatusRequest request);
 
     CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request);
+
+    CompletableFuture<ExportCustomerQuotaRecordResponse> exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request);
 
     CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
 
@@ -52,6 +56,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request);
 
     CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request);
+
+    CompletableFuture<QuotaListExportPagedResponse> quotaListExportPaged(QuotaListExportPagedRequest request);
 
     CompletableFuture<ResendEmailResponse> resendEmail(ResendEmailRequest request);
 
