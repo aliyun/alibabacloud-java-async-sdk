@@ -141,6 +141,9 @@ public class GetCreditInfoResponseBody extends TeaModel {
         @NameInMap("AvailableCredit")
         private String availableCredit;
 
+        @NameInMap("ConsumedUndeductedValue")
+        private String consumedUndeductedValue;
+
         @NameInMap("CreditLine")
         private String creditLine;
 
@@ -157,6 +160,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             this.accountStatus = builder.accountStatus;
             this.alarmThreshold = builder.alarmThreshold;
             this.availableCredit = builder.availableCredit;
+            this.consumedUndeductedValue = builder.consumedUndeductedValue;
             this.creditLine = builder.creditLine;
             this.outstandingBalance = builder.outstandingBalance;
             this.zeroCreditShutdownPolicy = builder.zeroCreditShutdownPolicy;
@@ -193,6 +197,13 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return consumedUndeductedValue
+         */
+        public String getConsumedUndeductedValue() {
+            return this.consumedUndeductedValue;
+        }
+
+        /**
          * @return creditLine
          */
         public String getCreditLine() {
@@ -224,6 +235,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             private String accountStatus; 
             private String alarmThreshold; 
             private String availableCredit; 
+            private String consumedUndeductedValue; 
             private String creditLine; 
             private String outstandingBalance; 
             private String zeroCreditShutdownPolicy; 
@@ -250,6 +262,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
              */
             public Builder availableCredit(String availableCredit) {
                 this.availableCredit = availableCredit;
+                return this;
+            }
+
+            /**
+             * ConsumedUndeductedValue.
+             */
+            public Builder consumedUndeductedValue(String consumedUndeductedValue) {
+                this.consumedUndeductedValue = consumedUndeductedValue;
                 return this;
             }
 

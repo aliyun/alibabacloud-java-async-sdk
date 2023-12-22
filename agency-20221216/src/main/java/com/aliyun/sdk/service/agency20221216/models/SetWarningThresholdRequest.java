@@ -70,7 +70,7 @@ public class SetWarningThresholdRequest extends Request {
         } 
 
         /**
-         * Uid.
+         * The UID of the partner‘s customer.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -79,7 +79,7 @@ public class SetWarningThresholdRequest extends Request {
         }
 
         /**
-         * WarningValue.
+         * Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.
          */
         public Builder warningValue(String warningValue) {
             this.putQueryParameter("WarningValue", warningValue);
