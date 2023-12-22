@@ -26,6 +26,10 @@ public class ChangeResourceGroupRequest extends Request {
     private String newResourceGroupId;
 
     @Query
+    @NameInMap("RegionCode")
+    private String regionCode;
+
+    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private String resourceId;
@@ -40,6 +44,7 @@ public class ChangeResourceGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.newResourceGroupId = builder.newResourceGroupId;
+        this.regionCode = builder.regionCode;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
     }
@@ -79,6 +84,13 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     /**
+     * @return regionCode
+     */
+    public String getRegionCode() {
+        return this.regionCode;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -96,6 +108,7 @@ public class ChangeResourceGroupRequest extends Request {
         private String regionId; 
         private String clientToken; 
         private String newResourceGroupId; 
+        private String regionCode; 
         private String resourceId; 
         private String resourceType; 
 
@@ -108,6 +121,7 @@ public class ChangeResourceGroupRequest extends Request {
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.newResourceGroupId = request.newResourceGroupId;
+            this.regionCode = request.regionCode;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
         } 
@@ -136,6 +150,15 @@ public class ChangeResourceGroupRequest extends Request {
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
             this.newResourceGroupId = newResourceGroupId;
+            return this;
+        }
+
+        /**
+         * RegionCode.
+         */
+        public Builder regionCode(String regionCode) {
+            this.putQueryParameter("RegionCode", regionCode);
+            this.regionCode = regionCode;
             return this;
         }
 

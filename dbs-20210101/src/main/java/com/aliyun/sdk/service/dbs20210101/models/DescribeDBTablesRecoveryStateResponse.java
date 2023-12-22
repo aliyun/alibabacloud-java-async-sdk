@@ -16,6 +16,10 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeDBTablesRecoveryStateResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
     private DescribeDBTablesRecoveryStateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeDBTablesRecoveryStateResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
     public interface Builder extends Response.Builder<DescribeDBTablesRecoveryStateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeDBTablesRecoveryStateResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
             extends Response.BuilderImpl<DescribeDBTablesRecoveryStateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeDBTablesRecoveryStateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
         private BuilderImpl(DescribeDBTablesRecoveryStateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeDBTablesRecoveryStateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 
