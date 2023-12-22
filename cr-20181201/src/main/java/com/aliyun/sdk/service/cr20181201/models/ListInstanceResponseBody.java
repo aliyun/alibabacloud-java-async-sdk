@@ -110,7 +110,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * The queried instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -126,7 +126,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -134,7 +134,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -294,7 +294,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * CreateTime.
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -302,7 +302,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -310,7 +310,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIssue.
+             * The issue occurs on the instance.
              */
             public Builder instanceIssue(String instanceIssue) {
                 this.instanceIssue = instanceIssue;
@@ -318,7 +318,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -326,7 +326,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpecification.
+             * The edition of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceSpecification(String instanceSpecification) {
                 this.instanceSpecification = instanceSpecification;
@@ -334,7 +334,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The status of the instance.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -342,7 +342,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the instance was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -350,7 +350,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -358,7 +358,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

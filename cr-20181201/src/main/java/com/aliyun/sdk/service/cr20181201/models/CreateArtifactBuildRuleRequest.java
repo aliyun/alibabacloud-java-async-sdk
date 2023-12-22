@@ -138,7 +138,10 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ArtifactType.
+         * The type of the artifact.
+         * <p>
+         * 
+         * *   `ACCELERATED_IMAGE`: accelerated images.
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -147,7 +150,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +159,7 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * Additional parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -166,7 +169,10 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ScopeId.
+         * The ID of the effective range of the rule.
+         * <p>
+         * 
+         * *   Set the value to the ID of the image repository.
          */
         public Builder scopeId(String scopeId) {
             this.putQueryParameter("ScopeId", scopeId);
@@ -175,7 +181,10 @@ public class CreateArtifactBuildRuleRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * The effective range of the rule. Valid values:
+         * <p>
+         * 
+         * *   `REPOSITORY`
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

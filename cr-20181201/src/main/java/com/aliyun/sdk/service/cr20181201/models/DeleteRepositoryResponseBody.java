@@ -62,7 +62,7 @@ public class DeleteRepositoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return value.
+         * Return values
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

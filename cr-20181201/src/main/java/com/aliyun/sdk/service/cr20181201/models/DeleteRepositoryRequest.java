@@ -139,7 +139,7 @@ public class DeleteRepositoryRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * The name of the repository.
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -148,7 +148,7 @@ public class DeleteRepositoryRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * The name of the namespace to which the repository belongs.
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);

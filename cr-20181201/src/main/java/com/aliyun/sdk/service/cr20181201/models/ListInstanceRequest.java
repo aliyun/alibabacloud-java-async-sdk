@@ -134,7 +134,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -143,7 +143,17 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   `PENDING`: The instance is being initialized.
+         * *   `INIT_ERROR`: The initialization of the instance fails.
+         * *   `STARTING`: The instance is being started.
+         * *   `RUNNING`: The instance is running.
+         * *   `STOPPING`: The instance is being stopped.
+         * *   `STOPPED`: The instance is stopped.
+         * *   `DELETING`: The instance is being deleted.
+         * *   `DELETED`: The instance is deleted.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -152,7 +162,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -161,7 +171,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +180,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

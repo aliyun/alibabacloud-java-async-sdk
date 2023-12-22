@@ -137,7 +137,13 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * EnableCreateDNSRecordInPvzt.
+         * Specifies whether to automatically create Alibaba Cloud DNS PrivateZone records. Valid values:
+         * <p>
+         * 
+         * >  If you enable automatic creation of PrivateZone records, a PrivateZone record is automatically created when you associate a VPC with the instance.
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder enableCreateDNSRecordInPvzt(Boolean enableCreateDNSRecordInPvzt) {
             this.putQueryParameter("EnableCreateDNSRecordInPvzt", enableCreateDNSRecordInPvzt);
@@ -146,7 +152,7 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +161,11 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * The name of the module that you want to access. Valid values:
+         * <p>
+         * 
+         * *   `Registry`: image repositories.
+         * *   `Chart`: Helm charts.
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
@@ -164,7 +174,7 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -173,7 +183,7 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * The ID of the vSwitch that is associated with the specified VPC.
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);

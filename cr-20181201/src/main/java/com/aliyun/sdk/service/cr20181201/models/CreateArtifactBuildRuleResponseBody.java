@@ -74,7 +74,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BuildRuleId.
+         * The ID of the accelerated image building rule.
          */
         public Builder buildRuleId(String buildRuleId) {
             this.buildRuleId = buildRuleId;
@@ -82,7 +82,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * Indicates whether the request is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -98,7 +98,7 @@ public class CreateArtifactBuildRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
