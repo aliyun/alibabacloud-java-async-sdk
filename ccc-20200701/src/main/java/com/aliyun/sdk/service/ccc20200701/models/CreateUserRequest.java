@@ -63,7 +63,6 @@ public class CreateUserRequest extends Request {
 
     @Query
     @NameInMap("WorkMode")
-    @Validation(required = true)
     private String workMode;
 
     private CreateUserRequest(Builder builder) {

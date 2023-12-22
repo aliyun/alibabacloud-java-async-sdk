@@ -52,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelAttendedTransferResponse> cancelAttendedTransfer(CancelAttendedTransferRequest request);
 
+    CompletableFuture<ChangeVisibilityResponse> changeVisibility(ChangeVisibilityRequest request);
+
     CompletableFuture<ChangeWorkModeResponse> changeWorkMode(ChangeWorkModeRequest request);
 
     CompletableFuture<CoachCallResponse> coachCall(CoachCallRequest request);
@@ -180,8 +182,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAgentStateLogsResponse> listAgentStateLogs(ListAgentStateLogsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListAgentStatesResponse> listAgentStates(ListAgentStatesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListAgentSummaryReportsSinceMidnightResponse> listAgentSummaryReportsSinceMidnight(ListAgentSummaryReportsSinceMidnightRequest request);
 
     CompletableFuture<ListAttemptsResponse> listAttempts(ListAttemptsRequest request);
@@ -266,8 +276,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListSkillGroupStatesResponse> listSkillGroupStates(ListSkillGroupStatesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListSkillGroupSummaryReportsSinceMidnightResponse> listSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request);
 
     CompletableFuture<ListSkillGroupsResponse> listSkillGroups(ListSkillGroupsRequest request);
