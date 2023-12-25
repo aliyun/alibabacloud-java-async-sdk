@@ -111,7 +111,151 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class Result extends TeaModel {
+        @NameInMap("AutoChapters")
+        private String autoChapters;
+
+        @NameInMap("MeetingAssistance")
+        private String meetingAssistance;
+
+        @NameInMap("PptExtraction")
+        private String pptExtraction;
+
+        @NameInMap("Summarization")
+        private String summarization;
+
+        @NameInMap("Transcription")
+        private String transcription;
+
+        @NameInMap("Translation")
+        private String translation;
+
+        private Result(Builder builder) {
+            this.autoChapters = builder.autoChapters;
+            this.meetingAssistance = builder.meetingAssistance;
+            this.pptExtraction = builder.pptExtraction;
+            this.summarization = builder.summarization;
+            this.transcription = builder.transcription;
+            this.translation = builder.translation;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoChapters
+         */
+        public String getAutoChapters() {
+            return this.autoChapters;
+        }
+
+        /**
+         * @return meetingAssistance
+         */
+        public String getMeetingAssistance() {
+            return this.meetingAssistance;
+        }
+
+        /**
+         * @return pptExtraction
+         */
+        public String getPptExtraction() {
+            return this.pptExtraction;
+        }
+
+        /**
+         * @return summarization
+         */
+        public String getSummarization() {
+            return this.summarization;
+        }
+
+        /**
+         * @return transcription
+         */
+        public String getTranscription() {
+            return this.transcription;
+        }
+
+        /**
+         * @return translation
+         */
+        public String getTranslation() {
+            return this.translation;
+        }
+
+        public static final class Builder {
+            private String autoChapters; 
+            private String meetingAssistance; 
+            private String pptExtraction; 
+            private String summarization; 
+            private String transcription; 
+            private String translation; 
+
+            /**
+             * AutoChapters.
+             */
+            public Builder autoChapters(String autoChapters) {
+                this.autoChapters = autoChapters;
+                return this;
+            }
+
+            /**
+             * MeetingAssistance.
+             */
+            public Builder meetingAssistance(String meetingAssistance) {
+                this.meetingAssistance = meetingAssistance;
+                return this;
+            }
+
+            /**
+             * PptExtraction.
+             */
+            public Builder pptExtraction(String pptExtraction) {
+                this.pptExtraction = pptExtraction;
+                return this;
+            }
+
+            /**
+             * Summarization.
+             */
+            public Builder summarization(String summarization) {
+                this.summarization = summarization;
+                return this;
+            }
+
+            /**
+             * Transcription.
+             */
+            public Builder transcription(String transcription) {
+                this.transcription = transcription;
+                return this;
+            }
+
+            /**
+             * Translation.
+             */
+            public Builder translation(String translation) {
+                this.translation = translation;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
+        @NameInMap("Result")
+        private Result result;
+
         @NameInMap("TaskId")
         private String taskId;
 
@@ -122,6 +266,7 @@ public class GetTaskInfoResponseBody extends TeaModel {
         private String taskStatus;
 
         private Data(Builder builder) {
+            this.result = builder.result;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
             this.taskStatus = builder.taskStatus;
@@ -133,6 +278,13 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return result
+         */
+        public Result getResult() {
+            return this.result;
         }
 
         /**
@@ -157,9 +309,18 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Result result; 
             private String taskId; 
             private String taskKey; 
             private String taskStatus; 
+
+            /**
+             * Result.
+             */
+            public Builder result(Result result) {
+                this.result = result;
+                return this;
+            }
 
             /**
              * TaskId.
