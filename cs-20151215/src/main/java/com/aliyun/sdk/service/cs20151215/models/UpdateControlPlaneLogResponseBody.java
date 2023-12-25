@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteClusterResponseBody} extends {@link TeaModel}
+ * {@link UpdateControlPlaneLogResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteClusterResponseBody</p>
+ * <p>UpdateControlPlaneLogResponseBody</p>
  */
-public class DeleteClusterResponseBody extends TeaModel {
+public class UpdateControlPlaneLogResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     private String clusterId;
 
@@ -21,7 +21,7 @@ public class DeleteClusterResponseBody extends TeaModel {
     @NameInMap("task_id")
     private String taskId;
 
-    private DeleteClusterResponseBody(Builder builder) {
+    private UpdateControlPlaneLogResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
@@ -31,7 +31,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteClusterResponseBody create() {
+    public static UpdateControlPlaneLogResponseBody create() {
         return builder().build();
     }
 
@@ -78,15 +78,15 @@ public class DeleteClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
 
-        public DeleteClusterResponseBody build() {
-            return new DeleteClusterResponseBody(this);
+        public UpdateControlPlaneLogResponseBody build() {
+            return new UpdateControlPlaneLogResponseBody(this);
         } 
 
     } 

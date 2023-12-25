@@ -23,6 +23,10 @@ public class RemoveNodePoolNodesRequest extends Request {
     private String nodepoolId;
 
     @Query
+    @NameInMap("concurrency")
+    private Boolean concurrency;
+
+    @Query
     @NameInMap("drain_node")
     private Boolean drainNode;
 
@@ -42,6 +46,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.concurrency = builder.concurrency;
         this.drainNode = builder.drainNode;
         this.instanceIds = builder.instanceIds;
         this.nodes = builder.nodes;
@@ -76,6 +81,13 @@ public class RemoveNodePoolNodesRequest extends Request {
     }
 
     /**
+     * @return concurrency
+     */
+    public Boolean getConcurrency() {
+        return this.concurrency;
+    }
+
+    /**
      * @return drainNode
      */
     public Boolean getDrainNode() {
@@ -106,6 +118,7 @@ public class RemoveNodePoolNodesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveNodePoolNodesRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean concurrency; 
         private Boolean drainNode; 
         private java.util.List < String > instanceIds; 
         private java.util.List < String > nodes; 
@@ -119,6 +132,7 @@ public class RemoveNodePoolNodesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.concurrency = request.concurrency;
             this.drainNode = request.drainNode;
             this.instanceIds = request.instanceIds;
             this.nodes = request.nodes;
@@ -140,6 +154,15 @@ public class RemoveNodePoolNodesRequest extends Request {
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * concurrency.
+         */
+        public Builder concurrency(Boolean concurrency) {
+            this.putQueryParameter("concurrency", concurrency);
+            this.concurrency = concurrency;
             return this;
         }
 

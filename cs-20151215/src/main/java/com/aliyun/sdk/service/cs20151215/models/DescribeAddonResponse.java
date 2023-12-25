@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateControlPlaneLogResponse} extends {@link TeaModel}
+ * {@link DescribeAddonResponse} extends {@link TeaModel}
  *
- * <p>UpdateControlPlaneLogResponse</p>
+ * <p>DescribeAddonResponse</p>
  */
-public class UpdateControlPlaneLogResponse extends Response {
+public class DescribeAddonResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class UpdateControlPlaneLogResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpdateControlPlaneLogResponseBody body;
+    private DescribeAddonResponseBody body;
 
-    private UpdateControlPlaneLogResponse(BuilderImpl builder) {
+    private DescribeAddonResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateControlPlaneLogResponse create() {
+    public static DescribeAddonResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class UpdateControlPlaneLogResponse extends Response {
     /**
      * @return body
      */
-    public UpdateControlPlaneLogResponseBody getBody() {
+    public DescribeAddonResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateControlPlaneLogResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeAddonResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateControlPlaneLogResponseBody body);
+        Builder body(DescribeAddonResponseBody body);
 
         @Override
-        UpdateControlPlaneLogResponse build();
+        DescribeAddonResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateControlPlaneLogResponse, Builder>
+            extends Response.BuilderImpl<DescribeAddonResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateControlPlaneLogResponseBody body; 
+        private DescribeAddonResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateControlPlaneLogResponse response) {
+        private BuilderImpl(DescribeAddonResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class UpdateControlPlaneLogResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateControlPlaneLogResponseBody body) {
+        public Builder body(DescribeAddonResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateControlPlaneLogResponse build() {
-            return new UpdateControlPlaneLogResponse(this);
+        public DescribeAddonResponse build() {
+            return new DescribeAddonResponse(this);
         } 
 
     } 

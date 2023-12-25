@@ -77,6 +77,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescirbeWorkflowResponse> descirbeWorkflow(DescirbeWorkflowRequest request);
 
+    CompletableFuture<DescribeAddonResponse> describeAddon(DescribeAddonRequest request);
+
     CompletableFuture<DescribeAddonsResponse> describeAddons(DescribeAddonsRequest request);
 
     CompletableFuture<DescribeClusterAddonInstanceResponse> describeClusterAddonInstance(DescribeClusterAddonInstanceRequest request);
@@ -217,6 +219,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterAddonInstancesResponse> listClusterAddonInstances(ListClusterAddonInstancesRequest request);
 
     CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
+
+    CompletableFuture<ListOperationPlansResponse> listOperationPlans(ListOperationPlansRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 

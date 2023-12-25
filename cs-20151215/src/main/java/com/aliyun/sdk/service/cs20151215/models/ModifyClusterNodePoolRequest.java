@@ -27,6 +27,10 @@ public class ModifyClusterNodePoolRequest extends Request {
     private AutoScaling autoScaling;
 
     @Body
+    @NameInMap("concurrency")
+    private Boolean concurrency;
+
+    @Body
     @NameInMap("kubernetes_config")
     private KubernetesConfig kubernetesConfig;
 
@@ -55,6 +59,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
         this.autoScaling = builder.autoScaling;
+        this.concurrency = builder.concurrency;
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.nodepoolInfo = builder.nodepoolInfo;
@@ -95,6 +100,13 @@ public class ModifyClusterNodePoolRequest extends Request {
      */
     public AutoScaling getAutoScaling() {
         return this.autoScaling;
+    }
+
+    /**
+     * @return concurrency
+     */
+    public Boolean getConcurrency() {
+        return this.concurrency;
     }
 
     /**
@@ -143,6 +155,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private AutoScaling autoScaling; 
+        private Boolean concurrency; 
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private NodepoolInfo nodepoolInfo; 
@@ -159,6 +172,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
             this.autoScaling = request.autoScaling;
+            this.concurrency = request.concurrency;
             this.kubernetesConfig = request.kubernetesConfig;
             this.management = request.management;
             this.nodepoolInfo = request.nodepoolInfo;
@@ -191,6 +205,15 @@ public class ModifyClusterNodePoolRequest extends Request {
         public Builder autoScaling(AutoScaling autoScaling) {
             this.putBodyParameter("auto_scaling", autoScaling);
             this.autoScaling = autoScaling;
+            return this;
+        }
+
+        /**
+         * concurrency.
+         */
+        public Builder concurrency(Boolean concurrency) {
+            this.putBodyParameter("concurrency", concurrency);
+            this.concurrency = concurrency;
             return this;
         }
 

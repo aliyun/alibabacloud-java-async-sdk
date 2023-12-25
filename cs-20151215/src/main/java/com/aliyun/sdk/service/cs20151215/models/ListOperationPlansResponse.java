@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateControlPlaneLogResponse} extends {@link TeaModel}
+ * {@link ListOperationPlansResponse} extends {@link TeaModel}
  *
- * <p>UpdateControlPlaneLogResponse</p>
+ * <p>ListOperationPlansResponse</p>
  */
-public class UpdateControlPlaneLogResponse extends Response {
+public class ListOperationPlansResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class UpdateControlPlaneLogResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private UpdateControlPlaneLogResponseBody body;
+    private ListOperationPlansResponseBody body;
 
-    private UpdateControlPlaneLogResponse(BuilderImpl builder) {
+    private ListOperationPlansResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateControlPlaneLogResponse create() {
+    public static ListOperationPlansResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class UpdateControlPlaneLogResponse extends Response {
     /**
      * @return body
      */
-    public UpdateControlPlaneLogResponseBody getBody() {
+    public ListOperationPlansResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateControlPlaneLogResponse, Builder> {
+    public interface Builder extends Response.Builder<ListOperationPlansResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateControlPlaneLogResponseBody body);
+        Builder body(ListOperationPlansResponseBody body);
 
         @Override
-        UpdateControlPlaneLogResponse build();
+        ListOperationPlansResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateControlPlaneLogResponse, Builder>
+            extends Response.BuilderImpl<ListOperationPlansResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateControlPlaneLogResponseBody body; 
+        private ListOperationPlansResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateControlPlaneLogResponse response) {
+        private BuilderImpl(ListOperationPlansResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class UpdateControlPlaneLogResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateControlPlaneLogResponseBody body) {
+        public Builder body(ListOperationPlansResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateControlPlaneLogResponse build() {
-            return new UpdateControlPlaneLogResponse(this);
+        public ListOperationPlansResponse build() {
+            return new ListOperationPlansResponse(this);
         } 
 
     } 
