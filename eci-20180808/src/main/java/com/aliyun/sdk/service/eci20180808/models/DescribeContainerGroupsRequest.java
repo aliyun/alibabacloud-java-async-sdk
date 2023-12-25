@@ -54,6 +54,10 @@ public class DescribeContainerGroupsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -85,6 +89,7 @@ public class DescribeContainerGroupsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -176,6 +181,13 @@ public class DescribeContainerGroupsRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -221,6 +233,7 @@ public class DescribeContainerGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityGroupId; 
         private String status; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
@@ -243,6 +256,7 @@ public class DescribeContainerGroupsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
             this.status = request.status;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -343,6 +357,15 @@ public class DescribeContainerGroupsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

@@ -4136,6 +4136,9 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ContainerGroups extends TeaModel {
+        @NameInMap("ComputeCategory")
+        private String computeCategory;
+
         @NameInMap("ContainerGroupId")
         private String containerGroupId;
 
@@ -4251,6 +4254,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String zoneId;
 
         private ContainerGroups(Builder builder) {
+            this.computeCategory = builder.computeCategory;
             this.containerGroupId = builder.containerGroupId;
             this.containerGroupName = builder.containerGroupName;
             this.containers = builder.containers;
@@ -4297,6 +4301,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
         public static ContainerGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return computeCategory
+         */
+        public String getComputeCategory() {
+            return this.computeCategory;
         }
 
         /**
@@ -4566,6 +4577,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String computeCategory; 
             private String containerGroupId; 
             private String containerGroupName; 
             private java.util.List < Containers> containers; 
@@ -4604,6 +4616,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < Volumes> volumes; 
             private String vpcId; 
             private String zoneId; 
+
+            /**
+             * ComputeCategory.
+             */
+            public Builder computeCategory(String computeCategory) {
+                this.computeCategory = computeCategory;
+                return this;
+            }
 
             /**
              * The instance ID.
