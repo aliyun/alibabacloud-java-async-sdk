@@ -143,7 +143,7 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The shared resource.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -152,7 +152,7 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The ID of a principal.
          */
         public Builder targets(java.util.List < String > targets) {
             this.putQueryParameter("Targets", targets);

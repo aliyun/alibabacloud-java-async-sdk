@@ -227,7 +227,7 @@ public class ListResourceShareAssociationsRequest extends Request {
         }
 
         /**
-         * ResourceShareIds.
+         * The IDs of the resource shares.
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);

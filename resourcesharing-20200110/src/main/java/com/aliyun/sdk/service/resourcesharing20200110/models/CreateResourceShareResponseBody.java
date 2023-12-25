@@ -50,7 +50,7 @@ public class CreateResourceShareResponseBody extends TeaModel {
         private ResourceShare resourceShare; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateResourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource share.
+         * The information about the resource share.
          */
         public Builder resourceShare(ResourceShare resourceShare) {
             this.resourceShare = resourceShare;
@@ -222,7 +222,7 @@ public class CreateResourceShareResponseBody extends TeaModel {
              * *   Deleting: The resource share is being deleted.
              * *   Deleted: The resource share is deleted.
              * 
-             * >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
+             * >  The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
              */
             public Builder resourceShareStatus(String resourceShareStatus) {
                 this.resourceShareStatus = resourceShareStatus;

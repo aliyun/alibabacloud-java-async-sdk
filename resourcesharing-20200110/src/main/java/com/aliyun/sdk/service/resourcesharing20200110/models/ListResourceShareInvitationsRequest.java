@@ -141,7 +141,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * ResourceShareIds.
+         * The IDs of the resource shares.
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
@@ -150,7 +150,7 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * ResourceShareInvitationIds.
+         * The IDs of the resource sharing invitations.
          */
         public Builder resourceShareInvitationIds(java.util.List < String > resourceShareInvitationIds) {
             this.putQueryParameter("ResourceShareInvitationIds", resourceShareInvitationIds);

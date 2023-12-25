@@ -138,7 +138,7 @@ public class CreateResourceShareRequest extends Request {
          * Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
          * <p>
          * 
-         * *   false: Resources in the resource share can be shared only with accounts in the resource directory. This is the default value.
+         * *   false (default): Resources in the resource share can be shared only with accounts in the resource directory.
          * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
          */
         public Builder allowExternalTargets(Boolean allowExternalTargets) {
@@ -148,7 +148,7 @@ public class CreateResourceShareRequest extends Request {
         }
 
         /**
-         * PermissionNames.
+         * The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).
          */
         public Builder permissionNames(java.util.List < String > permissionNames) {
             this.putQueryParameter("PermissionNames", permissionNames);
@@ -171,7 +171,7 @@ public class CreateResourceShareRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The information about the shared resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -180,7 +180,7 @@ public class CreateResourceShareRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The information about the principals.
          */
         public Builder targets(java.util.List < String > targets) {
             this.putQueryParameter("Targets", targets);

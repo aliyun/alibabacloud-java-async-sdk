@@ -50,7 +50,7 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         private java.util.List < ResourceShareAssociations> resourceShareAssociations; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the entities that are associated with the resource share.
+         * The information about the entities that are associated with the resource share.
          */
         public Builder resourceShareAssociations(java.util.List < ResourceShareAssociations> resourceShareAssociations) {
             this.resourceShareAssociations = resourceShareAssociations;

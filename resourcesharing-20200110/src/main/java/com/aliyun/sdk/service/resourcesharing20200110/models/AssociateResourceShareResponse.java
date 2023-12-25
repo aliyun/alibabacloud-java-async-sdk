@@ -16,6 +16,10 @@ public class AssociateResourceShareResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private AssociateResourceShareResponseBody body;
@@ -23,6 +27,7 @@ public class AssociateResourceShareResponse extends Response {
     private AssociateResourceShareResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class AssociateResourceShareResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public AssociateResourceShareResponseBody getBody() {
@@ -52,6 +64,8 @@ public class AssociateResourceShareResponse extends Response {
     public interface Builder extends Response.Builder<AssociateResourceShareResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(AssociateResourceShareResponseBody body);
 
@@ -64,6 +78,7 @@ public class AssociateResourceShareResponse extends Response {
             extends Response.BuilderImpl<AssociateResourceShareResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private AssociateResourceShareResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class AssociateResourceShareResponse extends Response {
         private BuilderImpl(AssociateResourceShareResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class AssociateResourceShareResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

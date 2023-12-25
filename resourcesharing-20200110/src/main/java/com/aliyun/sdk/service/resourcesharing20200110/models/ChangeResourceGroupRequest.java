@@ -85,7 +85,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * ResourceGroupId.
+         * The ID of the destination resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -94,7 +94,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource share.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceRegionId.
+         * The region ID of the resource share.
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);

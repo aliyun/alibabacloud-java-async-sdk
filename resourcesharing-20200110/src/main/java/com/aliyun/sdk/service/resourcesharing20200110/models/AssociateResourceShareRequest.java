@@ -121,7 +121,7 @@ public class AssociateResourceShareRequest extends Request {
         }
 
         /**
-         * PermissionNames.
+         * The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).
          */
         public Builder permissionNames(java.util.List < String > permissionNames) {
             this.putQueryParameter("PermissionNames", permissionNames);
@@ -139,7 +139,7 @@ public class AssociateResourceShareRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The information about the resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
@@ -148,7 +148,7 @@ public class AssociateResourceShareRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The information about the principals.
          */
         public Builder targets(java.util.List < String > targets) {
             this.putQueryParameter("Targets", targets);

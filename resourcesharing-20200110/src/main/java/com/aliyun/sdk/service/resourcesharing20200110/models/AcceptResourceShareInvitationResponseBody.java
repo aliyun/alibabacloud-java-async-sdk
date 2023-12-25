@@ -71,7 +71,131 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
 
     } 
 
+    public static class AcceptInvitationFailedDetails extends TeaModel {
+        @NameInMap("AssociateType")
+        private String associateType;
+
+        @NameInMap("ResourceId")
+        private String resourceId;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusMessage")
+        private String statusMessage;
+
+        private AcceptInvitationFailedDetails(Builder builder) {
+            this.associateType = builder.associateType;
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
+            this.status = builder.status;
+            this.statusMessage = builder.statusMessage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AcceptInvitationFailedDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return associateType
+         */
+        public String getAssociateType() {
+            return this.associateType;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusMessage
+         */
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
+        public static final class Builder {
+            private String associateType; 
+            private String resourceId; 
+            private String resourceType; 
+            private String status; 
+            private String statusMessage; 
+
+            /**
+             * AssociateType.
+             */
+            public Builder associateType(String associateType) {
+                this.associateType = associateType;
+                return this;
+            }
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMessage.
+             */
+            public Builder statusMessage(String statusMessage) {
+                this.statusMessage = statusMessage;
+                return this;
+            }
+
+            public AcceptInvitationFailedDetails build() {
+                return new AcceptInvitationFailedDetails(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceShareInvitation extends TeaModel {
+        @NameInMap("AcceptInvitationFailedDetails")
+        private java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails;
+
         @NameInMap("CreateTime")
         @Validation(required = true)
         private String createTime;
@@ -101,6 +225,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         private String status;
 
         private ResourceShareInvitation(Builder builder) {
+            this.acceptInvitationFailedDetails = builder.acceptInvitationFailedDetails;
             this.createTime = builder.createTime;
             this.receiverAccountId = builder.receiverAccountId;
             this.resourceShareId = builder.resourceShareId;
@@ -116,6 +241,13 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
 
         public static ResourceShareInvitation create() {
             return builder().build();
+        }
+
+        /**
+         * @return acceptInvitationFailedDetails
+         */
+        public java.util.List < AcceptInvitationFailedDetails> getAcceptInvitationFailedDetails() {
+            return this.acceptInvitationFailedDetails;
         }
 
         /**
@@ -168,6 +300,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails; 
             private String createTime; 
             private String receiverAccountId; 
             private String resourceShareId; 
@@ -175,6 +308,14 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String resourceShareName; 
             private String senderAccountId; 
             private String status; 
+
+            /**
+             * AcceptInvitationFailedDetails.
+             */
+            public Builder acceptInvitationFailedDetails(java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails) {
+                this.acceptInvitationFailedDetails = acceptInvitationFailedDetails;
+                return this;
+            }
 
             /**
              * The time when the invitation was created. The time is displayed in UTC.

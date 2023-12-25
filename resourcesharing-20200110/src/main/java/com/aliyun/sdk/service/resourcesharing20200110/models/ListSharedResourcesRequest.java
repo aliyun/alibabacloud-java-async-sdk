@@ -184,7 +184,7 @@ public class ListSharedResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The ID of a shared resource.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -206,7 +206,7 @@ public class ListSharedResourcesRequest extends Request {
         }
 
         /**
-         * ResourceShareIds.
+         * The ID of a resource share.
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);

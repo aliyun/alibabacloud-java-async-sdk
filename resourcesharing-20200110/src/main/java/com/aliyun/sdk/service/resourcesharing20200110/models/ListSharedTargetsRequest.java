@@ -206,7 +206,7 @@ public class ListSharedTargetsRequest extends Request {
         }
 
         /**
-         * ResourceShareIds.
+         * The ID of a resource share.
          */
         public Builder resourceShareIds(java.util.List < String > resourceShareIds) {
             this.putQueryParameter("ResourceShareIds", resourceShareIds);
@@ -227,7 +227,7 @@ public class ListSharedTargetsRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The ID of a principal.
          */
         public Builder targets(java.util.List < String > targets) {
             this.putQueryParameter("Targets", targets);

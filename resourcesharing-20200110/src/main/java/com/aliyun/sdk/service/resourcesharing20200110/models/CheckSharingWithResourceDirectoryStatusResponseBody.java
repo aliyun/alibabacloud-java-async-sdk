@@ -50,7 +50,11 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * EnableSharingWithRd.
+         * Indicates whether resource sharing within a resource directory is enabled. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder enableSharingWithRd(Boolean enableSharingWithRd) {
             this.enableSharingWithRd = enableSharingWithRd;
@@ -58,7 +62,7 @@ public class CheckSharingWithResourceDirectoryStatusResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
