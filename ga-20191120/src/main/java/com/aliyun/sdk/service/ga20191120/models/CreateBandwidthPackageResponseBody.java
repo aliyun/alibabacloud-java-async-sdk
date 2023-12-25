@@ -70,10 +70,12 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          * <p>
          * 
          * If bills are not automatically paid, you must go to the Order Center to complete the payments.
+         * 
+         * This parameter is returned only if ChargeType is set to PREPAY. If AutoPay is set to false, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

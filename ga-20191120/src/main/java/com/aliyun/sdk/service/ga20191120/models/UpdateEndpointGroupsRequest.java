@@ -140,7 +140,7 @@ public class UpdateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The configuration of the endpoint group.
+         * The configurations of the endpoint group.
          */
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
@@ -239,7 +239,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * The IP address, domain name, or instance ID based on the value of Type.
+             * Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -250,7 +250,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The private IP address of the ENI.
              * <p>
              * 
-             * > When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+             * >   If you set the endpoint type to ENI, you can specify this parameter. If you leave this parameter empty, the primary private IP address of the ENI is used.
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -261,17 +261,19 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The type of the endpoint. Valid values:
              * <p>
              * 
-             * *   **Domain**: a custom domain name
-             * *   **Ip**: a custom IP address
-             * *   **PublicIp**: a public IP address provided by Alibaba Cloud
-             * *   **ECS**: an Elastic Compute Service (ECS) instance
-             * *   **SLB**: a Server Load Balancer (SLB) instance
-             * *   **ALB**: an Application Load Balancer (ALB) instance
-             * *   **OSS**: an Object Storage Service (OSS) bucket
+             * *   **Domain:** a custom domain name.
+             * *   **Ip:** a custom IP address.
+             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
+             * *   **ECS:** an Elastic Compute Service (ECS) instance.
+             * *   **SLB:** a Server Load Balancer (SLB) instance.
+             * *   **ALB:** an Application Load Balancer (ALB) instance.
+             * *   **OSS:** an Object Storage Service (OSS) bucket.
+             * *   **ENI:** an elastic network interface (ENI).
+             * *   **NLB:** a Network Load Balancer (NLB) instance.
              * 
-             * >- If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role. 
-             * >- If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * >- If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
+             * > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.
+             * >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.
              * 
              * For more information, see [Service-linked roles](~~178360~~).
              */
@@ -355,8 +357,8 @@ public class UpdateEndpointGroupsRequest extends Request {
              * 
              * Valid values: **1** to **65499**.
              * 
-             * > * Only HTTP and HTTPS listeners support port mappings.
-             * > * The listener port in a port mapping must be the one used by the current listener.
+             * > *   Only HTTP and HTTPS listeners support port mappings.
+             * >*   The listener port in a port mapping must be the port that is used by the current listener.
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -578,7 +580,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:
+             * Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:
              * <p>
              * 
              * *   **true**
@@ -590,7 +592,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The configurations of the endpoints in the endpoint group.
+             * The configurations of endpoints in the endpoint group.
              */
             public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
@@ -620,7 +622,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The name of the endpoint group.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
@@ -634,8 +636,8 @@ public class UpdateEndpointGroupsRequest extends Request {
              * *   **HTTP**
              * *   **HTTPS**
              * 
-             * > * You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
-             * > * For an HTTP listener, the backend service protocol must be HTTP.
+             * > *   You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
+             * >*   The backend service protocol of an HTTP listener must be HTTP.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -663,7 +665,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The path to which health check requests are sent.
+             * The health check path.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -703,7 +705,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
+             * The number of failed consecutive health checks that must occur before a healthy endpoint group is considered unhealthy or the number of successful consecutive health checks that must occur before an unhealthy endpoint group is considered healthy.
              * <p>
              * 
              * Valid values: **2** to **10**.

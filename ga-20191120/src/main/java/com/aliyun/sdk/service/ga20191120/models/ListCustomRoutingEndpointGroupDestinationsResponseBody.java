@@ -86,7 +86,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         private Integer totalCount; 
 
         /**
-         * The details about the endpoint group mapping configurations.
+         * The details about the endpoint group mappings.
          */
         public Builder destinations(java.util.List < Destinations> destinations) {
             this.destinations = destinations;
@@ -198,18 +198,18 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * Listener
-             * IpSet
-             * EndpointGroup
-             * ForwardingRule
-             * Endpoint
-             * EndpointGroupDestination
-             * EndpointPolicy
+             * *   **Listener**: listener.
+             * *   **IpSet**: acceleration region.
+             * *   **EndpointGroup**: endpoint group.
+             * *   **ForwardingRule**: forwarding rule.
+             * *   **Endpoint**: endpoint.
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * > Only valid when the Action parameter is CreateChild.
+             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -217,12 +217,11 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed. Valid values:
              * <p>
              * 
-             * - **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -371,7 +370,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             private Integer toPort; 
 
             /**
-             * The ID of the GA instance.
+             * The GA instance ID.
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -379,7 +378,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The ID of the endpoint group mapping configuration.
+             * The ID of the endpoint group mapping.
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -387,7 +386,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The ID of the endpoint group.
+             * The endpoint group ID.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -395,7 +394,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The start port of the backend service port range of the endpoint group.
+             * The first port of the backend service port range.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -403,7 +402,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The ID of the listener.
+             * The listener ID.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -411,12 +410,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The backend service protocol of the endpoint group.
+             * The backend service protocols of the endpoint group. Valid values:
              * <p>
              * 
-             * *   **TCP**: TCP
-             * *   **UDP**: UDP
-             * *   **TCP,UDP**: TCP and UDP
+             * *   **TCP**
+             * *   **UDP**
+             * *   **TCP,UDP**
              */
             public Builder protocols(java.util.List < String > protocols) {
                 this.protocols = protocols;
@@ -424,10 +423,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The service ID to which the managed instance belongs.
+             * The ID of the service that manages the GA instance.
              * <p>
              * 
-             * >  Valid only when the ServiceManaged parameter is True.
+             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -435,12 +434,11 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * Is it a managed instance. Valid values:
+             * Indicates whether the GA instance is managed. Valid values:
              * <p>
              * 
-             * - **true**
-             * 
-             * - **false**
+             * *   true
+             * *   false
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -448,7 +446,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * A list of action policies that users can execute on this managed instance.
+             * The actions that you can perform on the managed instance.
+             * <p>
+             * 
+             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * 
+             * *   You can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -456,7 +459,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The end port of the backend service port range of the endpoint group.
+             * The last port of the backend service port range.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;

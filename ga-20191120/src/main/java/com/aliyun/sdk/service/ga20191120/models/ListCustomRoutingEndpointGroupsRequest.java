@@ -18,6 +18,10 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
     private String acceleratorId;
 
     @Query
+    @NameInMap("AccessLogSwitch")
+    private String accessLogSwitch;
+
+    @Query
     @NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
@@ -42,6 +46,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
     private ListCustomRoutingEndpointGroupsRequest(Builder builder) {
         super(builder);
         this.acceleratorId = builder.acceleratorId;
+        this.accessLogSwitch = builder.accessLogSwitch;
         this.endpointGroupId = builder.endpointGroupId;
         this.listenerId = builder.listenerId;
         this.pageNumber = builder.pageNumber;
@@ -67,6 +72,13 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
      */
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    /**
+     * @return accessLogSwitch
+     */
+    public String getAccessLogSwitch() {
+        return this.accessLogSwitch;
     }
 
     /**
@@ -106,6 +118,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCustomRoutingEndpointGroupsRequest, Builder> {
         private String acceleratorId; 
+        private String accessLogSwitch; 
         private String endpointGroupId; 
         private String listenerId; 
         private Integer pageNumber; 
@@ -119,6 +132,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         private Builder(ListCustomRoutingEndpointGroupsRequest request) {
             super(request);
             this.acceleratorId = request.acceleratorId;
+            this.accessLogSwitch = request.accessLogSwitch;
             this.endpointGroupId = request.endpointGroupId;
             this.listenerId = request.listenerId;
             this.pageNumber = request.pageNumber;
@@ -132,6 +146,15 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
             this.acceleratorId = acceleratorId;
+            return this;
+        }
+
+        /**
+         * AccessLogSwitch.
+         */
+        public Builder accessLogSwitch(String accessLogSwitch) {
+            this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
+            this.accessLogSwitch = accessLogSwitch;
             return this;
         }
 

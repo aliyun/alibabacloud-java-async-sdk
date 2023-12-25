@@ -83,7 +83,7 @@ public class ListIspTypesRequest extends Request {
         } 
 
         /**
-         * AcceleratorId.
+         * The ID of the GA instance that you want to query.
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);

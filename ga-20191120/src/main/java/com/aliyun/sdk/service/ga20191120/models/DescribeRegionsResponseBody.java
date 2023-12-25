@@ -118,7 +118,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The region ID. Only **cn-hangzhou** is returned.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

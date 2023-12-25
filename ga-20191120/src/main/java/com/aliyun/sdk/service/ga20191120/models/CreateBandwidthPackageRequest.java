@@ -396,8 +396,10 @@ public class CreateBandwidthPackageRequest extends Request {
          * The metering method that is used when you use the pay-as-you-go billing method. Valid values:
          * <p>
          * 
-         * *   **PayByTraffic** (default): pay-by-data-transfer
-         * *   **PayBY95**: pay-by-95th-percentile By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
+         * *   **PayByTraffic** (default)
+         * *   **PayBY95** By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
+         * 
+         * >  This parameter takes effect only if you set **ChargeType** to **POSTPAY**.
          */
         public Builder billingType(String billingType) {
             this.putQueryParameter("BillingType", billingType);

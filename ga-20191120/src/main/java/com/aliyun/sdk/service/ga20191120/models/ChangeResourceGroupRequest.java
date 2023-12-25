@@ -117,9 +117,9 @@ public class ChangeResourceGroupRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The client token can contain only ASCII characters.**
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -128,7 +128,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group that you want to use to replace the previous resource group.
+         * The ID of the new resource group.
+         * <p>
+         * 
+         * >  This parameter is required.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -149,10 +152,12 @@ public class ChangeResourceGroupRequest extends Request {
          * The ID of the GA resource.
          * <p>
          * 
-         * *   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-         * *   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-         * *   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-         * *   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an access control list (ACL).
+         * *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
+         * *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
+         * *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
+         * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).
+         * 
+         * >  This parameter is required.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -164,10 +169,12 @@ public class ChangeResourceGroupRequest extends Request {
          * The type of the GA resource. Valid values:
          * <p>
          * 
-         * *   **accelerator:** a standard GA instance.
-         * *   **basicaccelerator:** a basic GA instance.
-         * *   **bandwidthpackage:** a bandwidth plan.
-         * *   **acl:** an ACL.
+         * *   **accelerator**: a standard GA instance
+         * *   **basicaccelerator**: a basic GA instance
+         * *   **bandwidthpackage**: a bandwidth plan
+         * *   **acl**: an ACL
+         * 
+         * >  This parameter is required.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -102,7 +102,7 @@ public class DescribeAcceleratorServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,66 +110,13 @@ public class DescribeAcceleratorServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the GA instance.
+         * The status of the GA instance. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   Released
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instance was released due to overdue payments
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Expired
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instance expired due to overdue payments
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   NotOpened
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instance is not activated
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Normal
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instance is activated
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * *   Released: The instance was released due to overdue payments.
+         * *   Expired: The instance expired due to overdue payments.
+         * *   NotOpened: The instance is not activated.
+         * *   Normal: The instance is activated.
          */
         public Builder status(String status) {
             this.status = status;

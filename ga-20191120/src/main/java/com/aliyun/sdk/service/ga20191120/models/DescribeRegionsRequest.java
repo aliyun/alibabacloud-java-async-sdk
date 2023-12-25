@@ -55,7 +55,7 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The ID of the region to query.
+         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

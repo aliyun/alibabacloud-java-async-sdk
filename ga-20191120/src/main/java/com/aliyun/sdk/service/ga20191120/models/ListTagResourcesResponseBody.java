@@ -94,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array of information about the resources to which tags are added.
+         * The information about the resources to which tags are added.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -189,11 +189,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * The type of the resource.
              * <p>
              * 
-             * *   **accelerator:** a standard GA instance.
-             * *   **basicaccelerator:** a basic GA instance.
-             * *   **bandwidthpackage:** a bandwidth plan.
-             * *   **acl:** an ACL.
-             * *   **endpointgroup:** an EndpointGroup.
+             * *   **accelerator**: a standard GA instance
+             * *   **basicaccelerator**: a basic GA instance
+             * *   **bandwidthpackage**: a bandwidth plan
+             * *   **acl**: an ACL
+             * *   **endpointgroup**: an endpoint group
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -201,7 +201,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -209,7 +209,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

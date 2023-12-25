@@ -116,9 +116,9 @@ public class UpdateServiceManagedControlRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -145,10 +145,10 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The type of the resource whose control mode you want to change.
+         * The type of the resource whose control mode you want to change. Valid values:
          * <p>
          * 
-         * *   Set the value to **Accelerator**, which specifies a standard GA instance.
+         * **Accelerator**: standard GA instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -157,10 +157,10 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The control mode of the resource.
+         * The control mode of the resource. Valid values:
          * <p>
          * 
-         * *   Set the value to false, which changes the control mode of the resource from managed mode to unmanaged mode.
+         * **false**: changes the control mode of the resource from managed mode to unmanaged mode.
          * 
          * >  You can change the control mode only from managed mode to unmanaged mode.
          */

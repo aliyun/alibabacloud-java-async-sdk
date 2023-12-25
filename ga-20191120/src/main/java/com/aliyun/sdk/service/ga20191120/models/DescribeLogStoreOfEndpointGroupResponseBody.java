@@ -162,7 +162,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Log Service project.
+         * The name of the Simple Log Service project.
          */
         public Builder slsProjectName(String slsProjectName) {
             this.slsProjectName = slsProjectName;
@@ -170,7 +170,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the Log Service project.
+         * The ID of the region to which the Simple Log Service project belongs.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.slsRegionId = slsRegionId;
@@ -178,7 +178,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the log.
+         * Indicates whether the GA instance is associated with the project.
          */
         public Builder status(String status) {
             this.status = status;
