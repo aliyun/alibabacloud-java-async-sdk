@@ -86,7 +86,11 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         private String storageUsage; 
 
         /**
-         * ColdStorage.
+         * Indicates whether tiered storage of hot data and cold data is supported. Valid values:
+         * <p>
+         * 
+         * *   **true**: Tiered storage of hot data and cold data is supported.
+         * *   **false**: Tiered storage of hot data and cold data is not supported.
          */
         public Builder coldStorage(Boolean coldStorage) {
             this.coldStorage = coldStorage;
@@ -94,7 +98,7 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * The parameters for tiered storage of hot data and cold data.
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -102,7 +106,7 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,12 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The state of tiered storage of hot data and cold data. Valid values:
+         * <p>
+         * 
+         * *   **CREATING**: Tiered storage of hot data and cold data is being enabled.
+         * *   **DISABLE**: Tiered storage of hot data and cold data is not enabled.
+         * *   **ENABLE**: Tiered storage of hot data and cold data is enabled.
          */
         public Builder state(String state) {
             this.state = state;
@@ -118,7 +127,7 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         }
 
         /**
-         * StorageUsage.
+         * The space used for tiered storage of hot data and cold data. Unit: GB.
          */
         public Builder storageUsage(String storageUsage) {
             this.storageUsage = storageUsage;

@@ -74,7 +74,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * ErrorMsg.
+         * If -1 is returned for the **Status** parameter, the cause of the creation failure is returned.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -82,7 +82,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * RepeatedDbs.
+         * Duplicate tables in the synchronization task.
          */
         public Builder repeatedDbs(java.util.List < String > repeatedDbs) {
             this.repeatedDbs = repeatedDbs;
@@ -90,7 +90,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,12 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the synchronization task was created. Valid values:
+         * <p>
+         * 
+         * *   **1**: Created.
+         * *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
+         * *   **1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
          */
         public Builder status(Long status) {
             this.status = status;

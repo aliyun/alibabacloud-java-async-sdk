@@ -154,7 +154,7 @@ public class UpgradeMinorVersionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -199,7 +199,13 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeImmediately.
+         * Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:
+         * <p>
+         * 
+         * *   **true**: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.
+         * *   **false**: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.
+         * 
+         * >  If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, **UpgradeTime** is required.
          */
         public Builder upgradeImmediately(Boolean upgradeImmediately) {
             this.putQueryParameter("UpgradeImmediately", upgradeImmediately);
@@ -208,7 +214,10 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeTime.
+         * The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).
+         * <p>
+         * 
+         * >  If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);
@@ -217,7 +226,10 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * UpgradeVersion.
+         * The minor engine version to which you want to update.
+         * <p>
+         * 
+         * >  By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.
          */
         public Builder upgradeVersion(String upgradeVersion) {
             this.putQueryParameter("UpgradeVersion", upgradeVersion);

@@ -50,7 +50,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ProcessList.
+         * The queries.
          */
         public Builder processList(ProcessList processList) {
             this.processList = processList;
@@ -58,7 +58,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String queryStartTime; 
 
             /**
-             * InitialAddress.
+             * The IP address of the client that initiates the query.
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -166,7 +166,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InitialQueryId.
+             * The query ID.
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -174,7 +174,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InitialUser.
+             * The database account.
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -182,7 +182,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * The SQL statement that is executed in the query.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -190,7 +190,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * QueryDurationMs.
+             * The execution duration of the query. Unit: milliseconds.
              */
             public Builder queryDurationMs(String queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -198,7 +198,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -304,7 +304,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private Integer rowsRead; 
 
             /**
-             * BytesRead.
+             * The size of the data that was scanned. Unit: bytes.
              */
             public Builder bytesRead(Integer bytesRead) {
                 this.bytesRead = bytesRead;
@@ -312,7 +312,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * The average response time.
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -320,7 +320,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * RowsRead.
+             * The number of scanned rows.
              */
             public Builder rowsRead(Integer rowsRead) {
                 this.rowsRead = rowsRead;
@@ -373,7 +373,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The column name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,7 +381,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The column type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -511,7 +511,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private TableSchema tableSchema; 
 
             /**
-             * Data.
+             * The details of the query.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -519,7 +519,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * The number of rows returned for the query.
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -527,7 +527,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * RowsBeforeLimitAtLeast.
+             * The number of entries returned per page.
              */
             public Builder rowsBeforeLimitAtLeast(String rowsBeforeLimitAtLeast) {
                 this.rowsBeforeLimitAtLeast = rowsBeforeLimitAtLeast;
@@ -535,7 +535,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The statistics of the results.
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -543,7 +543,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * TableSchema.
+             * Details of the columns.
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;

@@ -141,7 +141,7 @@ public class DescribeColumnsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -186,7 +186,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The database name. You can call the [DescribeSchemas](~~350931~~) operation to query database names.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -195,7 +195,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The table name. You can call the [DescribeTables](~~350932~~) operation to query table names.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

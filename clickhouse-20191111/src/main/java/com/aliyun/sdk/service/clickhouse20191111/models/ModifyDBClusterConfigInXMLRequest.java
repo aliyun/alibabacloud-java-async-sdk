@@ -98,7 +98,10 @@ public class ModifyDBClusterConfigInXMLRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The configuration parameters whose settings you want to modify. You can call the [DescribeDBClusterConfigInXML](~~452210~~) operation to query configuration parameters, and modify the settings of the returned configuration parameters.
+         * <p>
+         * 
+         * >  You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -107,7 +110,7 @@ public class ModifyDBClusterConfigInXMLRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -116,7 +119,7 @@ public class ModifyDBClusterConfigInXMLRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason for the modification.
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -125,7 +128,7 @@ public class ModifyDBClusterConfigInXMLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

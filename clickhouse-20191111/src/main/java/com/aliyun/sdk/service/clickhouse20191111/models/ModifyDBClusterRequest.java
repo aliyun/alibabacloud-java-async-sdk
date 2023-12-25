@@ -171,7 +171,26 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterClass.
+         * The specifications of the cluster.
+         * <p>
+         * 
+         * *   Valid values when the cluster is of Single-replica Edition:
+         * 
+         *     *   **S4-NEW**
+         *     *   **S8**
+         *     *   **S16**
+         *     *   **S32**
+         *     *   **S64**
+         *     *   **S104**
+         * 
+         * *   Valid values when the cluster is of Double-replica Edition:
+         * 
+         *     *   **C4-NEW**
+         *     *   **C8**
+         *     *   **C16**
+         *     *   **C32**
+         *     *   **C64**
+         *     *   **C104**
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -180,7 +199,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -189,7 +208,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeGroupCount.
+         * The number of nodes in the cluster.
+         * <p>
+         * 
+         * *   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.
+         * *   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -198,7 +221,12 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeStorage.
+         * The storage capacity of a single node of the cluster. Unit: GB.
+         * <p>
+         * 
+         * Valid values: 100 to 32000.
+         * 
+         * >  This value is a multiple of 100.
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -225,7 +253,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

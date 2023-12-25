@@ -228,7 +228,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -237,7 +237,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDatabases.
+         * The databases to which you want to grant permissions. Separate databases with commas (,).
          */
         public Builder allowDatabases(String allowDatabases) {
             this.putQueryParameter("AllowDatabases", allowDatabases);
@@ -246,7 +246,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * AllowDictionaries.
+         * The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).
          */
         public Builder allowDictionaries(String allowDictionaries) {
             this.putQueryParameter("AllowDictionaries", allowDictionaries);
@@ -255,7 +255,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -264,7 +264,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DdlAuthority.
+         * Specifies whether to grant DDL permissions to the database account. Valid values:
+         * <p>
+         * 
+         * *   **true**: grants DDL permissions to the database account.
+         * *   **false**: does not grant DDL permissions to the database account.
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.putQueryParameter("DdlAuthority", ddlAuthority);
@@ -273,7 +277,11 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DmlAuthority.
+         * Specifies whether to grant DML permissions to the database account. Valid values:
+         * <p>
+         * 
+         * *   **all**
+         * *   **readonly,modify**
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.putQueryParameter("DmlAuthority", dmlAuthority);
@@ -300,7 +308,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +335,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * TotalDatabases.
+         * All databases. Separate databases with commas (,).
          */
         public Builder totalDatabases(String totalDatabases) {
             this.putQueryParameter("TotalDatabases", totalDatabases);
@@ -336,7 +344,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
-         * TotalDictionaries.
+         * All dictionaries. Separate dictionaries with commas (,).
          */
         public Builder totalDictionaries(String totalDictionaries) {
             this.putQueryParameter("TotalDictionaries", totalDictionaries);

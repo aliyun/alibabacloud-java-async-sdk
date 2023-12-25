@@ -209,7 +209,7 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * DBClusterDescription.
+         * The description of the cluster.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -218,7 +218,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the information about all clusters is queried.
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -227,7 +230,14 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * The state of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Preparing**: The cluster is being prepared.
+         * *   **Creating**: The cluster is being created.
+         * *   **Running**: The cluster is running.
+         * *   **Deleting**: The cluster is being deleted.
+         * *   **SCALING_OUT**: The storage capacity of the cluster is being expanded.
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -254,7 +264,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +273,12 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +287,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +296,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the cluster belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -308,7 +323,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -362,7 +377,7 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +385,7 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

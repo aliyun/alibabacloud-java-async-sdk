@@ -110,7 +110,11 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CheckCode.
+         * The check result. Valid values:
+         * <p>
+         * 
+         * *   **400**: The cluster failed the check.
+         * *   **200**: The cluster passed the check.
          */
         public Builder checkCode(String checkCode) {
             this.checkCode = checkCode;
@@ -118,7 +122,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The total number of returned pages.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +130,12 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +143,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +151,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TableDetails.
+         * The error information returned for a check failure.
          */
         public Builder tableDetails(TableDetails tableDetails) {
             this.tableDetails = tableDetails;
@@ -150,7 +159,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TimeDuration.
+         * The amount of time that is required for the migration and scale-out. Unit: minutes.
          */
         public Builder timeDuration(String timeDuration) {
             this.timeDuration = timeDuration;
@@ -158,7 +167,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -234,7 +243,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Cluster.
+             * The cluster. The value is fixed as **default**.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -242,7 +251,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The database name.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -250,7 +259,11 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * The error details. Valid values:
+             * <p>
+             * 
+             * *   **1**: The unique distributed table is missing.
+             * *   **2**: More than one distributed table exists for the local table.
              */
             public Builder detail(Integer detail) {
                 this.detail = detail;
@@ -258,7 +271,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the local table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

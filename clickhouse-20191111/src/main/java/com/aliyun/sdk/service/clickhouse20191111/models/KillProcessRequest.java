@@ -139,7 +139,7 @@ public class KillProcessRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -148,7 +148,10 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * InitialQueryId.
+         * The query statement or query statements that you want to stop executing. If you want to stop executing multiple query statements, separate the statements with commas (,).
+         * <p>
+         * 
+         * >  If you do not set this parameter, all query statements are stopped by default.
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -175,7 +178,7 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

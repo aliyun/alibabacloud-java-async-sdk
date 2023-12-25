@@ -62,7 +62,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NewConfigXML.
+         * The values of the configuration parameters after the values of the configuration parameters are changed.
          */
         public Builder newConfigXML(String newConfigXML) {
             this.newConfigXML = newConfigXML;
@@ -70,7 +70,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         }
 
         /**
-         * OldConfigXML.
+         * The values of the configuration parameters before the values of the configuration parameters are changed.
          */
         public Builder oldConfigXML(String oldConfigXML) {
             this.oldConfigXML = oldConfigXML;
@@ -78,7 +78,7 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

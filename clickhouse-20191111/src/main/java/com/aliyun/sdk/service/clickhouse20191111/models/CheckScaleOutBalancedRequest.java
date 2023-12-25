@@ -154,7 +154,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +181,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The total number of returned pages.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,12 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +204,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -155,7 +155,7 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * The retention period for the backup data. Valid values: 7 to 730. Unit: day.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -164,7 +164,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -191,7 +191,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -200,7 +209,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).
+         * <p>
+         * 
+         * For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

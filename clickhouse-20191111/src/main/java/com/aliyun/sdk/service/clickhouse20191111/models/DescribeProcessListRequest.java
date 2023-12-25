@@ -226,7 +226,7 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -235,7 +235,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialQueryId.
+         * The ID of the query statement.
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -244,7 +244,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialUser.
+         * The account that is used to log on to the database.
          */
         public Builder initialUser(String initialUser) {
             this.putQueryParameter("InitialUser", initialUser);
@@ -253,7 +253,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword that is used to query.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -262,7 +262,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Order.
+         * The column by which the query results are sorted.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -289,7 +289,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -298,7 +298,12 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +312,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * QueryDurationMs.
+         * The minimum query duration. The minimum value is **1000**, and the default value is **1000**. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.
          */
         public Builder queryDurationMs(Integer queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -316,7 +321,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

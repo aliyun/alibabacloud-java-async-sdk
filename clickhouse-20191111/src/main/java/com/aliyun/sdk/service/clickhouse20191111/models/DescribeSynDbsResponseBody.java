@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSynDbsResponseBody</p>
  */
 public class DescribeSynDbsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("SynDbs")
     private java.util.List < SynDbs> synDbs;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeSynDbsResponseBody(Builder builder) {
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.synDbs = builder.synDbs;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -29,6 +41,20 @@ public class DescribeSynDbsResponseBody extends TeaModel {
 
     public static DescribeSynDbsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -45,12 +71,38 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         return this.synDbs;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List < SynDbs> synDbs; 
+        private Integer totalCount; 
 
         /**
-         * RequestId.
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +110,18 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * SynDbs.
+         * The information about data synchronization between the ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.
          */
         public Builder synDbs(java.util.List < SynDbs> synDbs) {
             this.synDbs = synDbs;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -158,7 +218,9 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             private Boolean synStatus; 
 
             /**
-             * ErrorMsg.
+             * *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
+             * <p>
+             * *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -166,7 +228,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * RdsId.
+             * The ID of the ApsaraDB RDS for MySQL instance.
              */
             public Builder rdsId(String rdsId) {
                 this.rdsId = rdsId;
@@ -174,7 +236,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * RdsUserName.
+             * The account that is used to log on to the ApsaraDB RDS for MySQL database.
              */
             public Builder rdsUserName(String rdsUserName) {
                 this.rdsUserName = rdsUserName;
@@ -182,7 +244,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * RdsVpcUrl.
+             * The internal endpoint of the ApsaraDB RDS for MySQL instance.
              */
             public Builder rdsVpcUrl(String rdsVpcUrl) {
                 this.rdsVpcUrl = rdsVpcUrl;
@@ -190,7 +252,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * SynDb.
+             * The name of the database in the ApsaraDB RDS for MySQL instance.
              */
             public Builder synDb(String synDb) {
                 this.synDb = synDb;
@@ -198,7 +260,11 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * SynStatus.
+             * Indicates whether the data synchronization succeeded. Valid values:
+             * <p>
+             * 
+             * *   **true**: The data synchronization succeeded.
+             * *   **false**: The data synchronization failed.
              */
             public Builder synStatus(Boolean synStatus) {
                 this.synStatus = synStatus;

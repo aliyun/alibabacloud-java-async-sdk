@@ -50,7 +50,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterAccessWhiteList.
+         * The details about the IP address whitelist.
          */
         public Builder DBClusterAccessWhiteList(DBClusterAccessWhiteList DBClusterAccessWhiteList) {
             this.DBClusterAccessWhiteList = DBClusterAccessWhiteList;
@@ -58,7 +58,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * DBClusterIPArrayAttribute.
+             * The attribute of the IP address whitelist.
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -130,7 +130,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterIPArrayName.
+             * The name of the IP address whitelist.
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -138,7 +138,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * The IP addresses in the IP address whitelist.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

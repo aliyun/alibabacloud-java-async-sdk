@@ -170,7 +170,11 @@ public class CreateSQLAccountRequest extends Request {
         } 
 
         /**
-         * AccountDescription.
+         * The description of the database account.
+         * <p>
+         * 
+         * *   The description cannot start with http:// or https://.
+         * *   The description can be up to 256 characters in length or be an empty string.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -179,7 +183,13 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the database account.
+         * <p>
+         * 
+         * *   The name must be unique in the cluster.
+         * *   The name can contain lowercase letters, digits, or underscores (\_).
+         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
+         * *   The name must be 2 to 64 characters in length.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -188,7 +198,12 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the database account.
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   Special characters include ! @ # $ % ^ & \* ( ) \_ + - =
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -197,7 +212,11 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * The type of the database account. Valid values:
+         * <p>
+         * 
+         * *   **Super**: privileged account.
+         * *   **Normal**: standard account.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -206,7 +225,7 @@ public class CreateSQLAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

@@ -50,7 +50,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBCluster.
+         * The information about the cluster.
          */
         public Builder DBCluster(DBCluster DBCluster) {
             this.DBCluster = DBCluster;
@@ -58,7 +58,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * dbClusterId.
+             * The cluster ID.
              */
             public Builder dbClusterId(String dbClusterId) {
                 this.dbClusterId = dbClusterId;
@@ -118,7 +118,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
             }
 
             /**
-             * orderId.
+             * The order ID.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

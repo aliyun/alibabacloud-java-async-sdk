@@ -75,7 +75,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterNetworkType.
+         * The network type of the cluster. Only VPC is supported.
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -83,7 +83,11 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * EnableSLB.
+         * Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableSLB(Boolean enableSLB) {
             this.enableSLB = enableSLB;
@@ -91,7 +95,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * NetInfoItems.
+         * The network information about the cluster.
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -99,7 +103,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +239,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ConnectionString.
+             * The endpoint that is used to connect to the database.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -243,7 +247,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPort.
+             * The HTTP port number.
              */
             public Builder httpPort(String httpPort) {
                 this.httpPort = httpPort;
@@ -251,7 +255,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPort.
+             * The HTTPS port number.
              */
             public Builder httpsPort(String httpsPort) {
                 this.httpsPort = httpsPort;
@@ -259,7 +263,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -267,7 +271,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * JdbcPort.
+             * The port number that is used in Java Database Connectivity (JDBC).
              */
             public Builder jdbcPort(String jdbcPort) {
                 this.jdbcPort = jdbcPort;
@@ -275,7 +279,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * MySQLPort.
+             * The port of the MySQL instance.
              */
             public Builder mySQLPort(String mySQLPort) {
                 this.mySQLPort = mySQLPort;
@@ -283,7 +287,11 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   Public: public endpoint
+             * *   VPC: VPC
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -291,7 +299,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
+             * <p>
+             * 
+             * >  If the value of the NetType parameter is set to Public, an empty string is returned.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -299,7 +310,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID.
+             * <p>
+             * 
+             * >  If the value of the NetType parameter is set to Public, an empty string is returned.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

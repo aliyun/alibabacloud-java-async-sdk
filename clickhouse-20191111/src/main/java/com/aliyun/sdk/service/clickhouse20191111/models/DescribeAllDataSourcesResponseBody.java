@@ -74,7 +74,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
         private Tables tables; 
 
         /**
-         * Columns.
+         * Details of the columns.
          */
         public Builder columns(Columns columns) {
             this.columns = columns;
@@ -82,7 +82,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Schemas.
+         * The information about the databases.
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -98,7 +98,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * The information about the tables.
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -210,7 +210,11 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AutoIncrementColumn.
+             * Indicates whether the column is an auto-increment column. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder autoIncrementColumn(Boolean autoIncrementColumn) {
                 this.autoIncrementColumn = autoIncrementColumn;
@@ -218,7 +222,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * The column name.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -226,7 +230,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -234,7 +238,11 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * Indicates whether the column is the primary key of the table. Valid values:
+             * <p>
+             * 
+             * *   **true**: The column is the primary key of the table.
+             * *   **false**: The column is not the primary key of the table.
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -242,7 +250,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The database name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -250,7 +258,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -258,7 +266,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The column type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -352,7 +360,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -360,7 +368,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The database name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -466,7 +474,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -474,7 +482,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The database name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -482,7 +490,7 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

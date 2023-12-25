@@ -286,7 +286,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         } 
 
         /**
-         * CkPassword.
+         * The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
          */
         public Builder ckPassword(String ckPassword) {
             this.putQueryParameter("CkPassword", ckPassword);
@@ -295,7 +295,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * CkUserName.
+         * The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
          */
         public Builder ckUserName(String ckUserName) {
             this.putQueryParameter("CkUserName", ckUserName);
@@ -304,7 +304,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * ClickhousePort.
+         * The port number of the ApsaraDB for ClickHouse cluster.
          */
         public Builder clickhousePort(Long clickhousePort) {
             this.putQueryParameter("ClickhousePort", clickhousePort);
@@ -313,7 +313,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * DbClusterId.
+         * The ID of the ApsaraDB for ClickHouse cluster.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -322,7 +322,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * LimitUpper.
+         * The maximum number of rows that can be synchronized per second.
          */
         public Builder limitUpper(Long limitUpper) {
             this.putQueryParameter("LimitUpper", limitUpper);
@@ -349,7 +349,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsId.
+         * The ID of the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsId(String rdsId) {
             this.putQueryParameter("RdsId", rdsId);
@@ -358,7 +358,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsPassword.
+         * The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsPassword(String rdsPassword) {
             this.putQueryParameter("RdsPassword", rdsPassword);
@@ -367,7 +367,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsPort.
+         * The port number of the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsPort(Long rdsPort) {
             this.putQueryParameter("RdsPort", rdsPort);
@@ -376,7 +376,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsUserName.
+         * The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsUserName(String rdsUserName) {
             this.putQueryParameter("RdsUserName", rdsUserName);
@@ -385,7 +385,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsVpcId.
+         * The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.
          */
         public Builder rdsVpcId(String rdsVpcId) {
             this.putQueryParameter("RdsVpcId", rdsVpcId);
@@ -394,7 +394,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsVpcUrl.
+         * The private endpoint of the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsVpcUrl(String rdsVpcUrl) {
             this.putQueryParameter("RdsVpcUrl", rdsVpcUrl);
@@ -421,7 +421,11 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * SkipUnsupported.
+         * Specifies whether to ignore the table schemas that do not support synchronization. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder skipUnsupported(Boolean skipUnsupported) {
             this.putQueryParameter("SkipUnsupported", skipUnsupported);
@@ -430,7 +434,7 @@ public class CreateRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * SynDbTables.
+         * The tables whose data you want to synchronize.
          */
         public Builder synDbTables(String synDbTables) {
             this.putQueryParameter("SynDbTables", synDbTables);

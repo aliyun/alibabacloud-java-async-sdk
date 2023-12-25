@@ -287,7 +287,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         } 
 
         /**
-         * CkPassword.
+         * The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
          */
         public Builder ckPassword(String ckPassword) {
             this.putQueryParameter("CkPassword", ckPassword);
@@ -296,7 +296,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * CkUserName.
+         * The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.
          */
         public Builder ckUserName(String ckUserName) {
             this.putQueryParameter("CkUserName", ckUserName);
@@ -305,7 +305,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * ClickhousePort.
+         * The port number of the ApsaraDB for ClickHouse cluster.
          */
         public Builder clickhousePort(Long clickhousePort) {
             this.putQueryParameter("ClickhousePort", clickhousePort);
@@ -314,7 +314,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * DbClusterId.
+         * The ID of the ApsaraDB for ClickHouse cluster.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -323,7 +323,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * LimitUpper.
+         * The maximum number of rows that can be synchronized per second.
          */
         public Builder limitUpper(Long limitUpper) {
             this.putQueryParameter("LimitUpper", limitUpper);
@@ -350,7 +350,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsId.
+         * The ID of the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsId(String rdsId) {
             this.putQueryParameter("RdsId", rdsId);
@@ -359,7 +359,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsPassword.
+         * The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsPassword(String rdsPassword) {
             this.putQueryParameter("RdsPassword", rdsPassword);
@@ -368,7 +368,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsPort.
+         * The port number of the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsPort(Long rdsPort) {
             this.putQueryParameter("RdsPort", rdsPort);
@@ -377,7 +377,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsSynDb.
+         * The database in the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsSynDb(String rdsSynDb) {
             this.putQueryParameter("RdsSynDb", rdsSynDb);
@@ -386,7 +386,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsSynTables.
+         * The table in the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsSynTables(String rdsSynTables) {
             this.putQueryParameter("RdsSynTables", rdsSynTables);
@@ -395,7 +395,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsUserName.
+         * The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.
          */
         public Builder rdsUserName(String rdsUserName) {
             this.putQueryParameter("RdsUserName", rdsUserName);
@@ -404,7 +404,7 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * RdsVpcId.
+         * The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.
          */
         public Builder rdsVpcId(String rdsVpcId) {
             this.putQueryParameter("RdsVpcId", rdsVpcId);
@@ -431,7 +431,11 @@ public class ModifyRDSToClickhouseDbRequest extends Request {
         }
 
         /**
-         * SkipUnsupported.
+         * Specifies whether to ignore databases that do not support synchronization. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder skipUnsupported(Boolean skipUnsupported) {
             this.putQueryParameter("SkipUnsupported", skipUnsupported);

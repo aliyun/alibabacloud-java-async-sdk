@@ -50,7 +50,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HistoryDetails.
+         * The migration information.
          */
         public Builder historyDetails(HistoryDetails historyDetails) {
             this.historyDetails = historyDetails;
@@ -58,7 +58,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             private String targetDBCluster; 
 
             /**
-             * Progress.
+             * The progress of the data migration.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -142,7 +142,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDBCluster.
+             * The ID of the source cluster.
              */
             public Builder sourceDBCluster(String sourceDBCluster) {
                 this.sourceDBCluster = sourceDBCluster;
@@ -150,7 +150,11 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data migration task. Valid values:
+             * <p>
+             * 
+             * *   **Finished**: The data migration task is complete.
+             * *   **Processing**: The data migration task is in progress.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,7 +162,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDBCluster.
+             * The ID of the destination cluster.
              */
             public Builder targetDBCluster(String targetDBCluster) {
                 this.targetDBCluster = targetDBCluster;

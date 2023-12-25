@@ -50,7 +50,7 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         private java.util.List < String > tables; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSynDbTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * The queried tables.
          */
         public Builder tables(java.util.List < String > tables) {
             this.tables = tables;

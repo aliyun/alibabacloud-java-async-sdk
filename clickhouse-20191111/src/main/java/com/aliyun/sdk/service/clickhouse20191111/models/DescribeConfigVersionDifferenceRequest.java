@@ -70,7 +70,7 @@ public class DescribeConfigVersionDifferenceRequest extends Request {
         } 
 
         /**
-         * ChangeId.
+         * The ID of the change record. You can call the [DescribeConfigHistory](~~452209~~) operation to query the ID of the change record.
          */
         public Builder changeId(String changeId) {
             this.putQueryParameter("ChangeId", changeId);
@@ -79,7 +79,7 @@ public class DescribeConfigVersionDifferenceRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

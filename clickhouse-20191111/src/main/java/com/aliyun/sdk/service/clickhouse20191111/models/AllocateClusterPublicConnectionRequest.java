@@ -125,7 +125,7 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -134,7 +134,7 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

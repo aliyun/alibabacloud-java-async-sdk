@@ -50,7 +50,11 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NeedRestart.
+         * Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:
+         * <p>
+         * 
+         * *   **true**: The cluster was restarted.
+         * *   **false**: The cluster was not restarted.
          */
         public Builder needRestart(Boolean needRestart) {
             this.needRestart = needRestart;
@@ -58,7 +62,7 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

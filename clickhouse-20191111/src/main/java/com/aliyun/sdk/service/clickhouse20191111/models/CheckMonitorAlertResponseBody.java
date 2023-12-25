@@ -62,7 +62,7 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * Parameter.
+         * The parameters that are used to configure the monitoring and alerting feature.
          */
         public Builder parameter(String parameter) {
             this.parameter = parameter;
@@ -70,7 +70,7 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * Indicates whether the monitoring and alerting feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **enable**: The monitoring and alerting feature is enabled.
+         * *   **disable**: The monitoring and alerting feature is disabled.
          */
         public Builder state(String state) {
             this.state = state;

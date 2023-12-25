@@ -126,7 +126,7 @@ public class DeleteSyndbRequest extends Request {
         } 
 
         /**
-         * DbClusterId.
+         * The cluster ID.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -171,7 +171,7 @@ public class DeleteSyndbRequest extends Request {
         }
 
         /**
-         * SynDb.
+         * The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.
          */
         public Builder synDb(String synDb) {
             this.putQueryParameter("SynDb", synDb);

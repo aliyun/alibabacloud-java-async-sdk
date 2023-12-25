@@ -168,7 +168,7 @@ public class RestartInstanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -195,7 +195,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +204,12 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   30 (default)
+         * *   50
+         * *   100
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +218,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +245,10 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * RestartTime.
+         * The scheduled restart time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).
+         * <p>
+         * 
+         * >  If this parameter is left empty or the time specified by this parameter is earlier than the current time, the cluster is immediately restarted.
          */
         public Builder restartTime(String restartTime) {
             this.putQueryParameter("RestartTime", restartTime);

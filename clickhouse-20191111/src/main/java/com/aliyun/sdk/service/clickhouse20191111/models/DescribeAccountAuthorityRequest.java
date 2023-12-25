@@ -139,7 +139,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -148,7 +148,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -175,7 +175,7 @@ public class DescribeAccountAuthorityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

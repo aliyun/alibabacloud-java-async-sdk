@@ -126,7 +126,7 @@ public class DescribeSynDbTablesRequest extends Request {
         } 
 
         /**
-         * DbClusterId.
+         * The ID of the ApsaraDB for ClickHouse cluster.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -171,7 +171,7 @@ public class DescribeSynDbTablesRequest extends Request {
         }
 
         /**
-         * SynDb.
+         * The name of the ApsaraDB RDS for MySQL instance.
          */
         public Builder synDb(String synDb) {
             this.putQueryParameter("SynDb", synDb);

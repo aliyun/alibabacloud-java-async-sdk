@@ -229,7 +229,7 @@ public class TransferVersionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the source ApsaraDB for ClickHouse cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -256,7 +256,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,7 +265,12 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +279,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -301,7 +306,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourceAccount.
+         * The database account that is used to log on to the database in the source ApsaraDB for ClickHouse cluster.
          */
         public Builder sourceAccount(String sourceAccount) {
             this.putQueryParameter("SourceAccount", sourceAccount);
@@ -310,7 +315,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourcePassword.
+         * The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.
          */
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
@@ -319,7 +324,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetAccount.
+         * The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.
          */
         public Builder targetAccount(String targetAccount) {
             this.putQueryParameter("TargetAccount", targetAccount);
@@ -328,7 +333,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetDbClusterId.
+         * The ID of the destination ApsaraDB for ClickHouse cluster.
          */
         public Builder targetDbClusterId(String targetDbClusterId) {
             this.putQueryParameter("TargetDbClusterId", targetDbClusterId);
@@ -337,7 +342,7 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * TargetPassword.
+         * The password that corresponds to the database account for logging on to the database in the destination ApsaraDB for ClickHouse cluster.
          */
         public Builder targetPassword(String targetPassword) {
             this.putQueryParameter("TargetPassword", targetPassword);

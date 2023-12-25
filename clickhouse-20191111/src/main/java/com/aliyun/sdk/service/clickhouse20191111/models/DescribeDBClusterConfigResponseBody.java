@@ -50,7 +50,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * The information about the parameter settings of the cluster.
          */
         public Builder config(String config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

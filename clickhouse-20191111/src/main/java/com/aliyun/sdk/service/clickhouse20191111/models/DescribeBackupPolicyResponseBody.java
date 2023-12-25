@@ -98,7 +98,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String _switch; 
 
         /**
-         * BackupRetentionPeriod.
+         * The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -106,7 +106,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupSize.
+         * The size of the backup data. Unit: MB.
          */
         public Builder backupSize(String backupSize) {
             this.backupSize = backupSize;
@@ -114,7 +114,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The day of a week when the system regularly backs up data. Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -122,7 +131,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * The backup window. The time is displayed in Coordinated Universal Time (UTC).
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -130,7 +139,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Switch.
+         * Indicates whether the backup feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder _switch(String _switch) {
             this._switch = _switch;

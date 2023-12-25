@@ -50,7 +50,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The information about the tables.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -130,7 +130,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The database name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -138,7 +138,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

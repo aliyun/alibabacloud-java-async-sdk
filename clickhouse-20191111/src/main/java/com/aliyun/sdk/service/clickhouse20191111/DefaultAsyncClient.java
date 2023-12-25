@@ -112,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<CheckModifyConfigNeedRestartResponse> checkModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request) {
         try {
@@ -242,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateOSSStorageResponse> createOSSStorage(CreateOSSStorageRequest request) {
         try {
@@ -256,6 +264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+      *
+     */
     @Override
     public CompletableFuture<CreatePortsForClickHouseResponse> createPortsForClickHouse(CreatePortsForClickHouseRequest request) {
         try {
@@ -270,6 +282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+      *
+     */
     @Override
     public CompletableFuture<CreateRDSToClickhouseDbResponse> createRDSToClickhouseDb(CreateRDSToClickhouseDbRequest request) {
         try {
@@ -284,6 +300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+      *
+     */
     @Override
     public CompletableFuture<CreateSQLAccountResponse> createSQLAccount(CreateSQLAccountRequest request) {
         try {
@@ -312,6 +332,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
         try {
@@ -326,6 +350,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request) {
         try {
@@ -410,6 +439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -452,6 +485,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<DescribeConfigHistoryResponse> describeConfigHistory(DescribeConfigHistoryRequest request) {
         try {
@@ -466,6 +503,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<DescribeConfigVersionDifferenceResponse> describeConfigVersionDifference(DescribeConfigVersionDifferenceRequest request) {
         try {
@@ -522,6 +563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBClusterConfigInXMLResponse> describeDBClusterConfigInXML(DescribeDBClusterConfigInXMLRequest request) {
         try {
@@ -550,6 +595,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) {
         try {
@@ -704,6 +754,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+      *
+     */
     @Override
     public CompletableFuture<DescribeTransferHistoryResponse> describeTransferHistory(DescribeTransferHistoryRequest request) {
         try {
@@ -760,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -816,6 +874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBClusterConfigInXMLResponse> modifyDBClusterConfigInXML(ModifyDBClusterConfigInXMLRequest request) {
         try {
@@ -886,6 +948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+      *
+     */
     @Override
     public CompletableFuture<ModifyRDSToClickhouseDbResponse> modifyRDSToClickhouseDb(ModifyRDSToClickhouseDbRequest request) {
         try {
@@ -942,6 +1008,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Prerequisites
+      * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+      * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+      * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+      *
+     */
     @Override
     public CompletableFuture<TransferVersionResponse> transferVersion(TransferVersionRequest request) {
         try {
@@ -956,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+      *
+     */
     @Override
     public CompletableFuture<UpgradeMinorVersionResponse> upgradeMinorVersion(UpgradeMinorVersionRequest request) {
         try {

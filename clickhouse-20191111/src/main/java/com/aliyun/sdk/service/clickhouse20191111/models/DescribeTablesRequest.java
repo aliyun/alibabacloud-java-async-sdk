@@ -126,7 +126,7 @@ public class DescribeTablesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -171,7 +171,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The database name.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);

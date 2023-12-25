@@ -140,7 +140,7 @@ public class CreatePortsForClickHouseRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,7 +167,7 @@ public class CreatePortsForClickHouseRequest extends Request {
         }
 
         /**
-         * PortType.
+         * The port type. Set the value to mysql_port.
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -176,7 +176,7 @@ public class CreatePortsForClickHouseRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

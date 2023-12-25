@@ -200,7 +200,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -209,7 +209,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The specified time range that can be specified must be less than seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -236,7 +239,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -245,7 +248,12 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +262,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * QueryDurationMs.
+         * The minimum query duration. The minimum value is **1000**, and the default value is **1000**. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.
          */
         public Builder queryDurationMs(Integer queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -263,7 +271,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +298,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd hh:mm:ss format. The time must be in Coordinated Universal Time (UTC).
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -111,7 +111,7 @@ public class DeleteDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

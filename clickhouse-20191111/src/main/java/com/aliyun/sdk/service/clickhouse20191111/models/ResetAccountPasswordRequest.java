@@ -141,7 +141,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -150,7 +150,15 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The new password for the database account.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The password must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+         * 
+         * *   The password can contain the following special characters: ! @ # $ % ^ & \* ( ) \_ + - =
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -159,7 +167,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

@@ -86,7 +86,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +102,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Performances.
+         * The values of the queried performance metrics of the cluster.
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -110,7 +110,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -158,7 +158,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private java.util.List < String > point; 
 
             /**
-             * Point.
+             * The values of a metric.
              */
             public Builder point(java.util.List < String > point) {
                 this.point = point;
@@ -211,7 +211,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * Name.
+             * The name of the list of performance metric values.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +219,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the performance parameter. Each value of the performance parameter is collected at a point in time.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -296,7 +296,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Key.
+             * The name of the performance metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +304,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the performance metric value.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * The queried performance pamaters.
              */
             public Builder series(java.util.List < Series> series) {
                 this.series = series;
@@ -320,7 +320,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the performance metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

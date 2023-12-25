@@ -139,7 +139,7 @@ public class DescribeSynDbsRequest extends Request {
         } 
 
         /**
-         * DbClusterId.
+         * The ID of the ApsaraDB for ClickHouse cluster.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);

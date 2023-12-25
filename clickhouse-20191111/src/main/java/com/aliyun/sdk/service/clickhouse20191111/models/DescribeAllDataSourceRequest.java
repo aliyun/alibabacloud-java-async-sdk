@@ -139,7 +139,7 @@ public class DescribeAllDataSourceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -184,7 +184,7 @@ public class DescribeAllDataSourceRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * The database name.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -193,7 +193,7 @@ public class DescribeAllDataSourceRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The table name.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

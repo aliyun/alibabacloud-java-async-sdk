@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Regions.
+         * The queried regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * VpcEnabled.
+             * Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -118,7 +122,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -212,7 +216,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Zones zones; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -220,7 +224,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * The zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

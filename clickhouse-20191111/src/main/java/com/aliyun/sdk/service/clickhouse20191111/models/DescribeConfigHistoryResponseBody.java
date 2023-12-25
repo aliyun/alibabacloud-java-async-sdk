@@ -50,7 +50,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigHistoryItems.
+         * The change records of the configuration parameters.
          */
         public Builder configHistoryItems(java.util.List < ConfigHistoryItems> configHistoryItems) {
             this.configHistoryItems = configHistoryItems;
@@ -58,7 +58,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * ChangeId.
+             * The ID of the change record.
              */
             public Builder changeId(String changeId) {
                 this.changeId = changeId;
@@ -154,7 +154,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The user ID (UID) of the Alibaba Cloud account.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -162,7 +162,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the setting modification of the configuration parameters.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -170,7 +170,11 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the setting modification of the configuration parameters took effect. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -178,7 +182,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder time(String time) {
                 this.time = time;

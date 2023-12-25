@@ -126,7 +126,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +135,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

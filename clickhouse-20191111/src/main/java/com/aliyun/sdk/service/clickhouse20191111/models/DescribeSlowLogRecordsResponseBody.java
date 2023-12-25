@@ -50,7 +50,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private SlowLogRecords slowLogRecords; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * SlowLogRecords.
+         * The details about the slow query logs.
          */
         public Builder slowLogRecords(SlowLogRecords slowLogRecords) {
             this.slowLogRecords = slowLogRecords;
@@ -218,7 +218,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InitialAddress.
+             * The IP address of the client that initiated the query.
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -226,7 +226,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialQueryId.
+             * The query ID.
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -234,7 +234,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialUser.
+             * The username that is used to initiate the query.
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -242,7 +242,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryUsage.
+             * The peak memory usage for the query. Unit: bytes.
              */
             public Builder memoryUsage(String memoryUsage) {
                 this.memoryUsage = memoryUsage;
@@ -250,7 +250,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * The statement that was executed in the query.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -258,7 +258,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryDurationMs.
+             * The duration of the query. Unit: milliseconds.
              */
             public Builder queryDurationMs(String queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -266,7 +266,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -274,7 +274,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadBytes.
+             * The size of the data read by executing the statement. Unit: bytes.
              */
             public Builder readBytes(String readBytes) {
                 this.readBytes = readBytes;
@@ -282,7 +282,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadRows.
+             * The number of rows read by executing the statement.
              */
             public Builder readRows(String readRows) {
                 this.readRows = readRows;
@@ -290,7 +290,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultBytes.
+             * The size of the result data. Unit: bytes.
              */
             public Builder resultBytes(String resultBytes) {
                 this.resultBytes = resultBytes;
@@ -298,7 +298,11 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The query status. Valid values:
+             * <p>
+             * 
+             * *   **QueryFinish**: The query is complete.
+             * *   **Processing**: The query is running.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -404,7 +408,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Integer rowsRead; 
 
             /**
-             * BytesRead.
+             * The total size of data that were read. Unit: bytes.
              */
             public Builder bytesRead(Integer bytesRead) {
                 this.bytesRead = bytesRead;
@@ -412,7 +416,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ElapsedTime.
+             * The time consumed by the slow query. Unit: milliseconds.
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -420,7 +424,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RowsRead.
+             * The total number of rows that were read.
              */
             public Builder rowsRead(Integer rowsRead) {
                 this.rowsRead = rowsRead;
@@ -473,7 +477,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the column.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -481,7 +485,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the column.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -611,7 +615,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private TableSchema tableSchema; 
 
             /**
-             * Data.
+             * Details about the slow query logs.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -619,7 +623,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * The number of rows in the result set.
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -627,7 +631,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RowsBeforeLimitAtLeast.
+             * The number of entries per page.
              */
             public Builder rowsBeforeLimitAtLeast(String rowsBeforeLimitAtLeast) {
                 this.rowsBeforeLimitAtLeast = rowsBeforeLimitAtLeast;
@@ -635,7 +639,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The statistics of the results.
              */
             public Builder statistics(Statistics statistics) {
                 this.statistics = statistics;
@@ -643,7 +647,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableSchema.
+             * The schema of the table in the database.
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;

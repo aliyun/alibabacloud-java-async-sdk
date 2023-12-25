@@ -122,7 +122,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private java.util.List < String > totalDictionaries; 
 
         /**
-         * AccountName.
+         * The name of the database account.
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -130,7 +130,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * AllowDatabases.
+         * Databases to which permissions have been granted.
          */
         public Builder allowDatabases(java.util.List < String > allowDatabases) {
             this.allowDatabases = allowDatabases;
@@ -138,7 +138,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * AllowDictionaries.
+         * Dictionaries to which permissions have been granted.
          */
         public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
             this.allowDictionaries = allowDictionaries;
@@ -146,7 +146,11 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * DdlAuthority.
+         * Indicates whether the database account has DDL permissions. Valid values:
+         * <p>
+         * 
+         * *   **true**: has DDL permissions.
+         * *   **false**: does not have DDL permissions.
          */
         public Builder ddlAuthority(Boolean ddlAuthority) {
             this.ddlAuthority = ddlAuthority;
@@ -154,7 +158,11 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * DmlAuthority.
+         * Indicates whether the database account has DML permissions. Valid values:
+         * <p>
+         * 
+         * *   **all**
+         * *   **readOnly,modify**
          */
         public Builder dmlAuthority(String dmlAuthority) {
             this.dmlAuthority = dmlAuthority;
@@ -162,7 +170,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +178,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDatabases.
+         * All databases.
          */
         public Builder totalDatabases(java.util.List < String > totalDatabases) {
             this.totalDatabases = totalDatabases;
@@ -178,7 +186,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDictionaries.
+         * All dictionaries.
          */
         public Builder totalDictionaries(java.util.List < String > totalDictionaries) {
             this.totalDictionaries = totalDictionaries;

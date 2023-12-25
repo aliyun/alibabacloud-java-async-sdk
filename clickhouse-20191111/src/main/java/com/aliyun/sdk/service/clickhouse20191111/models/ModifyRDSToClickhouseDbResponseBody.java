@@ -74,7 +74,7 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         private Long status; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(Long errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,9 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * *   If the value **1** is returned for the **Status** parameter, the system does not return the ErrorMsg parameter.
+         * <p>
+         * *   If the value **0** is returned for the **Status** parameter, the ErrorMsg parameter returns the cause for the modification failure.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -90,7 +92,7 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +100,11 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the modification was successful. Valid values:
+         * <p>
+         * 
+         * *   **1**: The modification was successful.
+         * *   **0**: The modification failed.
          */
         public Builder status(Long status) {
             this.status = status;
