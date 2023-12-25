@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AttachInstancesRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("Entrusted")
     private Boolean entrusted;
 
@@ -55,6 +59,7 @@ public class AttachInstancesRequest extends Request {
 
     private AttachInstancesRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.entrusted = builder.entrusted;
         this.instanceIds = builder.instanceIds;
         this.lifecycleHook = builder.lifecycleHook;
@@ -78,6 +83,13 @@ public class AttachInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -151,6 +163,7 @@ public class AttachInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachInstancesRequest, Builder> {
+        private String clientToken; 
         private Boolean entrusted; 
         private java.util.List < String > instanceIds; 
         private Boolean lifecycleHook; 
@@ -168,6 +181,7 @@ public class AttachInstancesRequest extends Request {
 
         private Builder(AttachInstancesRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.entrusted = request.entrusted;
             this.instanceIds = request.instanceIds;
             this.lifecycleHook = request.lifecycleHook;
@@ -181,7 +195,24 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * Entrusted.
+         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Specifies whether the scaling group manages the lifecycles of instances that are manually added to the scaling group. Valid values:
+         * <p>
+         * 
+         * *   true: The scaling group manages the lifecycles of instances that are manually added in a similar manner in which the scaling group manages the lifecycles of automatically created instances. After Auto Scaling removes instances from the scaling group, Auto Scaling releases the instances. After you call the DetachInstances operation to remove instances from the scaling group, Auto Scaling does not release the instances.
+         * *   false: The scaling group does not manage the lifecycles of instances that are manually added. After Auto Scaling removes instances from the scaling group, Auto Scaling does not release the instances.
+         * 
+         * > You cannot specify this parameter for subscription instances.
+         * 
+         * Default value: false.
          */
         public Builder entrusted(Boolean entrusted) {
             this.putQueryParameter("Entrusted", entrusted);
@@ -190,7 +221,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the ECS instances or elastic container instances that you want to add.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -199,7 +230,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * LifecycleHook.
+         * Specifies whether to trigger a lifecycle hook for a scale-out activity. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder lifecycleHook(Boolean lifecycleHook) {
             this.putQueryParameter("LifecycleHook", lifecycleHook);
@@ -208,7 +245,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * LoadBalancerWeights.
+         * The weights of the ECS instances or elastic container instances as the backend servers of the associated Classic Load Balancer (CLB) instance.
          */
         public Builder loadBalancerWeights(java.util.List < Integer > loadBalancerWeights) {
             this.putQueryParameter("LoadBalancerWeights", loadBalancerWeights);
@@ -235,7 +272,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +299,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

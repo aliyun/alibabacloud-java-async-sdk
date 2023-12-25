@@ -182,6 +182,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("LoadBalancerWeight")
         private Integer loadBalancerWeight;
 
+        @NameInMap("PrivateIpAddress")
+        private String privateIpAddress;
+
         @NameInMap("ScalingActivityId")
         private String scalingActivityId;
 
@@ -190,6 +193,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
 
         @NameInMap("ScalingGroupId")
         private String scalingGroupId;
+
+        @NameInMap("ScalingInstanceId")
+        private String scalingInstanceId;
 
         @NameInMap("SpotStrategy")
         private String spotStrategy;
@@ -214,9 +220,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             this.launchTemplateVersion = builder.launchTemplateVersion;
             this.lifecycleState = builder.lifecycleState;
             this.loadBalancerWeight = builder.loadBalancerWeight;
+            this.privateIpAddress = builder.privateIpAddress;
             this.scalingActivityId = builder.scalingActivityId;
             this.scalingConfigurationId = builder.scalingConfigurationId;
             this.scalingGroupId = builder.scalingGroupId;
+            this.scalingInstanceId = builder.scalingInstanceId;
             this.spotStrategy = builder.spotStrategy;
             this.warmupState = builder.warmupState;
             this.weightedCapacity = builder.weightedCapacity;
@@ -302,6 +310,13 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateIpAddress
+         */
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        /**
          * @return scalingActivityId
          */
         public String getScalingActivityId() {
@@ -320,6 +335,13 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
          */
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        /**
+         * @return scalingInstanceId
+         */
+        public String getScalingInstanceId() {
+            return this.scalingInstanceId;
         }
 
         /**
@@ -361,9 +383,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             private String launchTemplateVersion; 
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
+            private String privateIpAddress; 
             private String scalingActivityId; 
             private String scalingConfigurationId; 
             private String scalingGroupId; 
+            private String scalingInstanceId; 
             private String spotStrategy; 
             private String warmupState; 
             private Integer weightedCapacity; 
@@ -450,6 +474,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * PrivateIpAddress.
+             */
+            public Builder privateIpAddress(String privateIpAddress) {
+                this.privateIpAddress = privateIpAddress;
+                return this;
+            }
+
+            /**
              * ScalingActivityId.
              */
             public Builder scalingActivityId(String scalingActivityId) {
@@ -470,6 +502,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
+                return this;
+            }
+
+            /**
+             * ScalingInstanceId.
+             */
+            public Builder scalingInstanceId(String scalingInstanceId) {
+                this.scalingInstanceId = scalingInstanceId;
                 return this;
             }
 

@@ -1695,11 +1695,15 @@ public class CreateScalingGroupRequest extends Request {
         @NameInMap("Key")
         private String key;
 
+        @NameInMap("Propagate")
+        private Boolean propagate;
+
         @NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
             this.key = builder.key;
+            this.propagate = builder.propagate;
             this.value = builder.value;
         }
 
@@ -1719,6 +1723,13 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
+         * @return propagate
+         */
+        public Boolean getPropagate() {
+            return this.propagate;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -1727,6 +1738,7 @@ public class CreateScalingGroupRequest extends Request {
 
         public static final class Builder {
             private String key; 
+            private Boolean propagate; 
             private String value; 
 
             /**
@@ -1734,6 +1746,14 @@ public class CreateScalingGroupRequest extends Request {
              */
             public Builder key(String key) {
                 this.key = key;
+                return this;
+            }
+
+            /**
+             * Propagate.
+             */
+            public Builder propagate(Boolean propagate) {
+                this.propagate = propagate;
                 return this;
             }
 

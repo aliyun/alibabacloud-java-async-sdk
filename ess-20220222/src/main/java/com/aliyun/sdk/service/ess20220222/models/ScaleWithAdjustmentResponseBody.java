@@ -62,7 +62,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * ActivityType.
+         * 伸缩活动的类型。
+         * <p>
+         * 
+         * 当ActivityType为CapacityChange时，表示返回值ScalingActivityId对应伸缩活动仅修改伸缩组期望实例数，没有立刻执行扩缩。适用范围：期望实例数类型伸缩组。
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
@@ -70,7 +73,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

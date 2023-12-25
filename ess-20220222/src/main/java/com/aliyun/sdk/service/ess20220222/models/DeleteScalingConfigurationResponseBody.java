@@ -38,7 +38,7 @@ public class DeleteScalingConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request. The request ID is returned regardless of whether the call is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

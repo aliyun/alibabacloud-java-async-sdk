@@ -38,7 +38,7 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 4454
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

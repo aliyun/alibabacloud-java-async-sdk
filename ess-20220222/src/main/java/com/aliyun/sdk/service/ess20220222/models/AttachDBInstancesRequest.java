@@ -140,7 +140,10 @@ public class AttachDBInstancesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +152,7 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstances.
+         * The ID of the ApsaraDB RDS instance.
          */
         public Builder DBInstances(java.util.List < String > DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -158,7 +161,13 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * ForceAttach.
+         * Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder forceAttach(Boolean forceAttach) {
             this.putQueryParameter("ForceAttach", forceAttach);
@@ -176,7 +185,7 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +203,7 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

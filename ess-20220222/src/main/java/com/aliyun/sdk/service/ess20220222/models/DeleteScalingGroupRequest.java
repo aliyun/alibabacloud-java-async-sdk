@@ -125,7 +125,16 @@ public class DeleteScalingGroupRequest extends Request {
         } 
 
         /**
-         * ForceDelete.
+         * Specifies whether to forcefully delete the VPC. Valid values:
+         * <p>
+         * 
+         * - **true**: yes
+         * - **false** (default): no
+         * 
+         * You can forcefully delete a VPC in the following scenarios:
+         * 
+         * - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
+         * - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putQueryParameter("ForceDelete", forceDelete);
@@ -152,7 +161,7 @@ public class DeleteScalingGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +179,7 @@ public class DeleteScalingGroupRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

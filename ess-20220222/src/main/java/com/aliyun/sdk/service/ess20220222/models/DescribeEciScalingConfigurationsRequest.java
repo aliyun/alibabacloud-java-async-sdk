@@ -200,10 +200,10 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
+         * The number of the page to return. Pages start from page 1.
          * <p>
          * 
-         * Default value: 10.
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +212,10 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,10 +224,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
-         * 
-         * Default value: 1.
+         * The region ID of the scaling group to which the scaling configuration belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -254,7 +254,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
          * The IDs of the scaling configurations that you want to query.
          * <p>
          * 
-         * The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the LifecycleState parameter.
+         * The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.
          */
         public Builder scalingConfigurationIds(java.util.List < String > scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
@@ -275,10 +275,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling configurations that you want to query.
-         * <p>
-         * 
-         * The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.
+         * The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

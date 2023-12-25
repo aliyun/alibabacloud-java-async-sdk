@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveInstancesRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("DecreaseDesiredCapacity")
     private Boolean decreaseDesiredCapacity;
 
@@ -52,6 +56,7 @@ public class RemoveInstancesRequest extends Request {
 
     private RemoveInstancesRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.decreaseDesiredCapacity = builder.decreaseDesiredCapacity;
         this.instanceIds = builder.instanceIds;
         this.ownerAccount = builder.ownerAccount;
@@ -74,6 +79,13 @@ public class RemoveInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -140,6 +152,7 @@ public class RemoveInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveInstancesRequest, Builder> {
+        private String clientToken; 
         private Boolean decreaseDesiredCapacity; 
         private java.util.List < String > instanceIds; 
         private String ownerAccount; 
@@ -156,6 +169,7 @@ public class RemoveInstancesRequest extends Request {
 
         private Builder(RemoveInstancesRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.decreaseDesiredCapacity = request.decreaseDesiredCapacity;
             this.instanceIds = request.instanceIds;
             this.ownerAccount = request.ownerAccount;
@@ -166,6 +180,15 @@ public class RemoveInstancesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.scalingGroupId = request.scalingGroupId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * DecreaseDesiredCapacity.

@@ -245,7 +245,7 @@ public class DescribeScalingRulesRequest extends Request {
          * The number of the page to return. Pages start from page 1.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -257,7 +257,7 @@ public class DescribeScalingRulesRequest extends Request {
          * The number of entries to return on each page. Maximum value: 50.
          * <p>
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,10 +266,7 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
-         * 
-         * Default value: 1.
+         * The region ID of the scaling group to which the scaling rules that you want to query belong.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -296,13 +293,7 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The type of the scaling rule. Valid values:
-         * <p>
-         * 
-         * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
-         * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
-         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -338,13 +329,13 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:
+         * The type of the scaling rule. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
+         * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
+         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
+         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
          */
         public Builder scalingRuleType(String scalingRuleType) {
             this.putQueryParameter("ScalingRuleType", scalingRuleType);
@@ -353,13 +344,13 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the event-triggered tasks that are associated with the scaling rules. Valid values:
+         * Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:
          * <p>
          * 
          * *   true
          * *   false
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder showAlarmRules(Boolean showAlarmRules) {
             this.putQueryParameter("ShowAlarmRules", showAlarmRules);

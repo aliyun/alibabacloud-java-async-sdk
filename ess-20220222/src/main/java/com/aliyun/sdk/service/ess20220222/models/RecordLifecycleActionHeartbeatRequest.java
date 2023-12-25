@@ -158,7 +158,7 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +176,12 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * heartbeatTimeout.
+         * The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.
+         * <p>
+         * 
+         * You can call this operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.
+         * 
+         * Default value: 600.
          */
         public Builder heartbeatTimeout(Integer heartbeatTimeout) {
             this.putQueryParameter("heartbeatTimeout", heartbeatTimeout);
@@ -185,7 +190,7 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * lifecycleActionToken.
+         * The token of the lifecycle hook. You can obtain this token by using a Message Service (MNS) queue or an MNS topic that is specified for the lifecycle hook.
          */
         public Builder lifecycleActionToken(String lifecycleActionToken) {
             this.putQueryParameter("lifecycleActionToken", lifecycleActionToken);
@@ -194,7 +199,7 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * lifecycleHookId.
+         * The ID of the lifecycle hook.
          */
         public Builder lifecycleHookId(String lifecycleHookId) {
             this.putQueryParameter("lifecycleHookId", lifecycleHookId);

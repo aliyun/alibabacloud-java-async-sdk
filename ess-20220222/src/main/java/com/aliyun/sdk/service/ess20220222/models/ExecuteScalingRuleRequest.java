@@ -167,7 +167,7 @@ public class ExecuteScalingRuleRequest extends Request {
         } 
 
         /**
-         * BreachThreshold.
+         * The threshold specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.
          */
         public Builder breachThreshold(Float breachThreshold) {
             this.putQueryParameter("BreachThreshold", breachThreshold);
@@ -176,7 +176,7 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +185,7 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * MetricValue.
+         * The metric value specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.
          */
         public Builder metricValue(Float metricValue) {
             this.putQueryParameter("MetricValue", metricValue);
@@ -212,7 +212,7 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +239,10 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleAri.
+         * The unique identifier of the scaling rule.
+         * <p>
+         * 
+         * > You can call the ExecuteScalingRule operation to execute only simple scaling rules and step scaling rules. To execute a step scaling rule, you must specify the BreachThreshold and MetricValue parameters.
          */
         public Builder scalingRuleAri(String scalingRuleAri) {
             this.putQueryParameter("ScalingRuleAri", scalingRuleAri);

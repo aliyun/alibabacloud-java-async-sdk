@@ -112,7 +112,11 @@ public class SetGroupDeletionProtectionRequest extends Request {
         } 
 
         /**
-         * GroupDeletionProtection.
+         * Specifies whether to enable deletion protection for the scaling group. Valid values:
+         * <p>
+         * 
+         * *   true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.
+         * *   false: disables deletion protection for the scaling group.
          */
         public Builder groupDeletionProtection(Boolean groupDeletionProtection) {
             this.putQueryParameter("GroupDeletionProtection", groupDeletionProtection);
@@ -130,7 +134,7 @@ public class SetGroupDeletionProtectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +152,7 @@ public class SetGroupDeletionProtectionRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetachInstancesRequest extends Request {
     @Query
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Query
     @NameInMap("DecreaseDesiredCapacity")
     private Boolean decreaseDesiredCapacity;
 
@@ -52,6 +56,7 @@ public class DetachInstancesRequest extends Request {
 
     private DetachInstancesRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.decreaseDesiredCapacity = builder.decreaseDesiredCapacity;
         this.detachOption = builder.detachOption;
         this.instanceIds = builder.instanceIds;
@@ -74,6 +79,13 @@ public class DetachInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -140,6 +152,7 @@ public class DetachInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DetachInstancesRequest, Builder> {
+        private String clientToken; 
         private Boolean decreaseDesiredCapacity; 
         private String detachOption; 
         private java.util.List < String > instanceIds; 
@@ -156,6 +169,7 @@ public class DetachInstancesRequest extends Request {
 
         private Builder(DetachInstancesRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.decreaseDesiredCapacity = request.decreaseDesiredCapacity;
             this.detachOption = request.detachOption;
             this.instanceIds = request.instanceIds;
@@ -168,7 +182,22 @@ public class DetachInstancesRequest extends Request {
         } 
 
         /**
-         * DecreaseDesiredCapacity.
+         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Specifies whether to adjust the expected number of instances in the scaling group. Valid values:
+         * <p>
+         * 
+         * *   true: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group decreases.
+         * *   false: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group remains unchanged.
+         * 
+         * Default value: true.
          */
         public Builder decreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
             this.putQueryParameter("DecreaseDesiredCapacity", decreaseDesiredCapacity);
@@ -177,7 +206,10 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * DetachOption.
+         * Specifies whether to remove the instances from the default server group and vServer groups of the Classic Load Balancer (CLB) instance that is associated with the scaling group, and whether to remove the IP addresses of the instances from the whitelist that manages access to the ApsaraDB RDS instance that is associated with the scaling group.
+         * <p>
+         * 
+         * If you set this parameter to both, the instances are removed from the default sever group and vServer groups of the associated CLB instance, and the IP addresses of the instances are removed from the whitelist that manages access to the associated ApsaraDB RDS instance.
          */
         public Builder detachOption(String detachOption) {
             this.putQueryParameter("DetachOption", detachOption);
@@ -186,7 +218,7 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the ECS instances or elastic container instances that you want to remove from the scaling group.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -195,7 +227,13 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * LifecycleHook.
+         * Specifies whether to trigger a lifecycle hook for a scale-in activity. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder lifecycleHook(Boolean lifecycleHook) {
             this.putQueryParameter("LifecycleHook", lifecycleHook);
@@ -240,7 +278,7 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

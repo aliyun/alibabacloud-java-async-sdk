@@ -124,7 +124,7 @@ public class DescribeScalingActivityDetailRequest extends Request {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.putQueryParameter("ScalingActivityId", scalingActivityId);

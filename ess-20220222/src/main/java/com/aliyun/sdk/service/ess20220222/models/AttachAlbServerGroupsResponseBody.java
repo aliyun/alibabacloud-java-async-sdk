@@ -50,7 +50,7 @@ public class AttachAlbServerGroupsResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AttachAlbServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity in which Auto Scaling associates the ALB server group with the scaling group and adds ECS instances in the scaling group to the ALB server group. This parameter is returned only if you set the `ForceAttach` parameter to `true`.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

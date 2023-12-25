@@ -129,7 +129,7 @@ public class DeleteEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class DeleteEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * ScalingConfigurationId.
+         * The ID of the scaling configuration that you want to delete.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

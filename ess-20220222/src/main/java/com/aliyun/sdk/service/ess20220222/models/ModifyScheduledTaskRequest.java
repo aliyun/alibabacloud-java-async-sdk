@@ -294,7 +294,7 @@ public class ModifyScheduledTaskRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the scheduled task. The description must be 2 to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -303,7 +303,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * DesiredCapacity.
+         * The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.
+         * <p>
+         * 
+         * > You must specify the `DesiredCapacity` parameter when you create a scaling group.
          */
         public Builder desiredCapacity(Integer desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
@@ -312,7 +315,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * LaunchExpirationTime.
+         * The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 1800.
+         * <p>
+         * 
+         * Default value: 600.
          */
         public Builder launchExpirationTime(Integer launchExpirationTime) {
             this.putQueryParameter("LaunchExpirationTime", launchExpirationTime);
@@ -321,7 +327,11 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * LaunchTime.
+         * The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a time point later than 90 days from the point in time at which the scheduled task is modified.
+         * <p>
+         * 
+         * *   If you specify the `RecurrenceType` parameter, the task is repeatedly executed at the time point that is specified by the LaunchTime parameter.
+         * *   If you do not specify the `RecurrenceType` parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.
          */
         public Builder launchTime(String launchTime) {
             this.putQueryParameter("LaunchTime", launchTime);
@@ -330,7 +340,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * MaxValue.
+         * The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.
          */
         public Builder maxValue(Integer maxValue) {
             this.putQueryParameter("MaxValue", maxValue);
@@ -339,7 +349,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * MinValue.
+         * The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.
          */
         public Builder minValue(Integer minValue) {
             this.putQueryParameter("MinValue", minValue);
@@ -366,7 +376,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * RecurrenceEndTime.
+         * The end time of the scheduled task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 365 days from the point in time at which the scheduled task is modified.
          */
         public Builder recurrenceEndTime(String recurrenceEndTime) {
             this.putQueryParameter("RecurrenceEndTime", recurrenceEndTime);
@@ -375,7 +385,15 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * RecurrenceType.
+         * The interval at which the scheduled task is repeated. Valid values:
+         * <p>
+         * 
+         * *   Daily: The scheduled task is executed once every specified number of days.
+         * *   Weekly: The scheduled task is executed on each specified day of the week.
+         * *   Monthly: The scheduled task is executed on each specified day of the month.
+         * *   Cron: The scheduled task is executed based on the specified cron expression.
+         * 
+         * After you modify the scheduled task, the values that you specify for the `RecurrenceType` and `RecurrenceValue` parameters must be valid at the same time.
          */
         public Builder recurrenceType(String recurrenceType) {
             this.putQueryParameter("RecurrenceType", recurrenceType);
@@ -384,7 +402,15 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * RecurrenceValue.
+         * The number of recurrences of the scheduled task.
+         * <p>
+         * 
+         * *   If you set the `RecurrenceType` parameter to `Daily`, you can specify only one value for this parameter. Valid values: 1 to 31.
+         * *   If you set the `RecurrenceType` parameter to `Weekly`, you can specify multiple values for this parameter. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.``
+         * *   If you set the `RecurrenceType` parameter to `Monthly`, you can specify two values in the `A-B` format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A.
+         * *   If you set the `RecurrenceType` parameter to `Cron`, you can specify a cron expression. A cron expression is written in UTC time and consists of the following fields: minute, hour, day, month, and week. The expression can contain the letters L and W and the following wildcard characters: commas (,), question marks (?), hyphens (-), asterisks (\*), number signs (#), and forward slashes (/).
+         * 
+         * After you modify the scheduled task, the values that you specify for the `RecurrenceType` and `RecurrenceValue` parameters must be valid at the same time.
          */
         public Builder recurrenceValue(String recurrenceValue) {
             this.putQueryParameter("RecurrenceValue", recurrenceValue);
@@ -411,7 +437,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group whose number of instances must be modified when the scheduled task is triggered. If you specify the `ScalingGroupId` parameter for a scheduled task, you must specify the minimum, maximum, or expected numbers of instances for a scaling group in the scheduled task. That is, you must specify at least one of the `MinValue`, `MaxValue`, and `DesiredCapacity` parameters.
+         * <p>
+         * 
+         * > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -420,7 +449,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * ScheduledAction.
+         * The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule. If you specify the `ScheduledAction` parameter, you must select an existing scaling rule for the scheduled task.
+         * <p>
+         * 
+         * > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
          */
         public Builder scheduledAction(String scheduledAction) {
             this.putQueryParameter("ScheduledAction", scheduledAction);
@@ -429,7 +461,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * ScheduledTaskId.
+         * The ID of the scheduled task.
          */
         public Builder scheduledTaskId(String scheduledTaskId) {
             this.putQueryParameter("ScheduledTaskId", scheduledTaskId);
@@ -438,7 +470,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * ScheduledTaskName.
+         * The name of the scheduled task. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of the scheduled task must be unique in the region and within the Alibaba Cloud account.
          */
         public Builder scheduledTaskName(String scheduledTaskName) {
             this.putQueryParameter("ScheduledTaskName", scheduledTaskName);
@@ -447,7 +479,13 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * TaskEnabled.
+         * Specifies whether to enable the scheduled task. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: true.
          */
         public Builder taskEnabled(Boolean taskEnabled) {
             this.putQueryParameter("TaskEnabled", taskEnabled);

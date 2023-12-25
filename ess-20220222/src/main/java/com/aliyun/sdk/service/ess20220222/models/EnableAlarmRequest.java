@@ -98,7 +98,7 @@ public class EnableAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmTaskId.
+         * The ID of the event-triggered task.
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.putQueryParameter("AlarmTaskId", alarmTaskId);
@@ -116,7 +116,7 @@ public class EnableAlarmRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

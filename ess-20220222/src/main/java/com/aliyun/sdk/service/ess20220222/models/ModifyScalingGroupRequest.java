@@ -42,6 +42,10 @@ public class ModifyScalingGroupRequest extends Request {
     private Integer desiredCapacity;
 
     @Query
+    @NameInMap("DisableDesiredCapacity")
+    private Boolean disableDesiredCapacity;
+
+    @Query
     @NameInMap("GroupDeletionProtection")
     private Boolean groupDeletionProtection;
 
@@ -139,6 +143,7 @@ public class ModifyScalingGroupRequest extends Request {
         this.customPolicyARN = builder.customPolicyARN;
         this.defaultCooldown = builder.defaultCooldown;
         this.desiredCapacity = builder.desiredCapacity;
+        this.disableDesiredCapacity = builder.disableDesiredCapacity;
         this.groupDeletionProtection = builder.groupDeletionProtection;
         this.healthCheckType = builder.healthCheckType;
         this.launchTemplateId = builder.launchTemplateId;
@@ -223,6 +228,13 @@ public class ModifyScalingGroupRequest extends Request {
      */
     public Integer getDesiredCapacity() {
         return this.desiredCapacity;
+    }
+
+    /**
+     * @return disableDesiredCapacity
+     */
+    public Boolean getDisableDesiredCapacity() {
+        return this.disableDesiredCapacity;
     }
 
     /**
@@ -387,6 +399,7 @@ public class ModifyScalingGroupRequest extends Request {
         private String customPolicyARN; 
         private Integer defaultCooldown; 
         private Integer desiredCapacity; 
+        private Boolean disableDesiredCapacity; 
         private Boolean groupDeletionProtection; 
         private String healthCheckType; 
         private String launchTemplateId; 
@@ -423,6 +436,7 @@ public class ModifyScalingGroupRequest extends Request {
             this.customPolicyARN = request.customPolicyARN;
             this.defaultCooldown = request.defaultCooldown;
             this.desiredCapacity = request.desiredCapacity;
+            this.disableDesiredCapacity = request.disableDesiredCapacity;
             this.groupDeletionProtection = request.groupDeletionProtection;
             this.healthCheckType = request.healthCheckType;
             this.launchTemplateId = request.launchTemplateId;
@@ -535,6 +549,15 @@ public class ModifyScalingGroupRequest extends Request {
         public Builder desiredCapacity(Integer desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
             this.desiredCapacity = desiredCapacity;
+            return this;
+        }
+
+        /**
+         * DisableDesiredCapacity.
+         */
+        public Builder disableDesiredCapacity(Boolean disableDesiredCapacity) {
+            this.putQueryParameter("DisableDesiredCapacity", disableDesiredCapacity);
+            this.disableDesiredCapacity = disableDesiredCapacity;
             return this;
         }
 

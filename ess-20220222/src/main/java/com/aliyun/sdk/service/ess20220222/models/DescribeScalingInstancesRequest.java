@@ -33,6 +33,10 @@ public class DescribeScalingInstancesRequest extends Request {
     private String lifecycleState;
 
     @Query
+    @NameInMap("LifecycleStates")
+    private java.util.List < String > lifecycleStates;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -81,6 +85,7 @@ public class DescribeScalingInstancesRequest extends Request {
         this.healthStatus = builder.healthStatus;
         this.instanceIds = builder.instanceIds;
         this.lifecycleState = builder.lifecycleState;
+        this.lifecycleStates = builder.lifecycleStates;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -139,6 +144,13 @@ public class DescribeScalingInstancesRequest extends Request {
      */
     public String getLifecycleState() {
         return this.lifecycleState;
+    }
+
+    /**
+     * @return lifecycleStates
+     */
+    public java.util.List < String > getLifecycleStates() {
+        return this.lifecycleStates;
     }
 
     /**
@@ -217,6 +229,7 @@ public class DescribeScalingInstancesRequest extends Request {
         private String healthStatus; 
         private java.util.List < String > instanceIds; 
         private String lifecycleState; 
+        private java.util.List < String > lifecycleStates; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -239,6 +252,7 @@ public class DescribeScalingInstancesRequest extends Request {
             this.healthStatus = request.healthStatus;
             this.instanceIds = request.instanceIds;
             this.lifecycleState = request.lifecycleState;
+            this.lifecycleStates = request.lifecycleStates;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -293,6 +307,15 @@ public class DescribeScalingInstancesRequest extends Request {
         public Builder lifecycleState(String lifecycleState) {
             this.putQueryParameter("LifecycleState", lifecycleState);
             this.lifecycleState = lifecycleState;
+            return this;
+        }
+
+        /**
+         * LifecycleStates.
+         */
+        public Builder lifecycleStates(java.util.List < String > lifecycleStates) {
+            this.putQueryParameter("LifecycleStates", lifecycleStates);
+            this.lifecycleStates = lifecycleStates;
             return this;
         }
 

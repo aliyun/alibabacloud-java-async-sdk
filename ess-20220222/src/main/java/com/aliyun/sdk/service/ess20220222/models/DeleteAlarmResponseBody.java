@@ -50,7 +50,7 @@ public class DeleteAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlarmTaskId.
+         * The ID of the event-triggered task.
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.alarmTaskId = alarmTaskId;
@@ -58,7 +58,7 @@ public class DeleteAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

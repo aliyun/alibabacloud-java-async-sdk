@@ -50,7 +50,7 @@ public class AttachLoadBalancersResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class AttachLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity.
+         * <p>
+         * 
+         * The value of this parameter is returned only after you set the Async parameter to true. You can call the DescribeScalingActivities operation to query all scaling activity IDs and use the scaling activity IDs to check the status of the scaling activities.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

@@ -126,7 +126,10 @@ public class ResumeProcessesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,7 +147,7 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * Processes.
+         * Details of the processes that you want to resume.
          */
         public Builder processes(java.util.List < String > processes) {
             this.putQueryParameter("Processes", processes);
@@ -153,7 +156,7 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

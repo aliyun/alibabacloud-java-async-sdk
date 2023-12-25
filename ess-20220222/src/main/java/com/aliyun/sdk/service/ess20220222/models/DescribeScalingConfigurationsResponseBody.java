@@ -964,6 +964,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         private String spotStrategy;
 
+        @NameInMap("StorageSetId")
+        private String storageSetId;
+
+        @NameInMap("StorageSetPartitionNumber")
+        private Integer storageSetPartitionNumber;
+
         @NameInMap("SystemDiskAutoSnapshotPolicyId")
         private String systemDiskAutoSnapshotPolicyId;
 
@@ -1062,6 +1068,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
             this.spotPriceLimits = builder.spotPriceLimits;
             this.spotStrategy = builder.spotStrategy;
+            this.storageSetId = builder.storageSetId;
+            this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
             this.systemDiskAutoSnapshotPolicyId = builder.systemDiskAutoSnapshotPolicyId;
             this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
             this.systemDiskCategories = builder.systemDiskCategories;
@@ -1412,6 +1420,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageSetId
+         */
+        public String getStorageSetId() {
+            return this.storageSetId;
+        }
+
+        /**
+         * @return storageSetPartitionNumber
+         */
+        public Integer getStorageSetPartitionNumber() {
+            return this.storageSetPartitionNumber;
+        }
+
+        /**
          * @return systemDiskAutoSnapshotPolicyId
          */
         public String getSystemDiskAutoSnapshotPolicyId() {
@@ -1577,6 +1599,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String spotInterruptionBehavior; 
             private java.util.List < SpotPriceLimits> spotPriceLimits; 
             private String spotStrategy; 
+            private String storageSetId; 
+            private Integer storageSetPartitionNumber; 
             private String systemDiskAutoSnapshotPolicyId; 
             private Boolean systemDiskBurstingEnabled; 
             private java.util.List < String > systemDiskCategories; 
@@ -2016,6 +2040,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * StorageSetId.
+             */
+            public Builder storageSetId(String storageSetId) {
+                this.storageSetId = storageSetId;
+                return this;
+            }
+
+            /**
+             * StorageSetPartitionNumber.
+             */
+            public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
+                this.storageSetPartitionNumber = storageSetPartitionNumber;
                 return this;
             }
 

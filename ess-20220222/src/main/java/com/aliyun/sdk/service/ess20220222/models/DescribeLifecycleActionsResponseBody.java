@@ -86,7 +86,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LifecycleActions.
+         * The lifecycle actions.
          */
         public Builder lifecycleActions(java.util.List < LifecycleActions> lifecycleActions) {
             this.lifecycleActions = lifecycleActions;
@@ -94,7 +94,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of the queried lifecycle actions.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             private String lifecycleHookId; 
 
             /**
-             * InstanceIds.
+             * The IDs of the ECS instances to which the lifecycle hook applies.
              */
             public Builder instanceIds(java.util.List < String > instanceIds) {
                 this.instanceIds = instanceIds;
@@ -214,7 +214,11 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleActionResult.
+             * The action that is performed after the lifecycle action triggered by the lifecycle hook is complete. Valid values:
+             * <p>
+             * 
+             * *   CONTINUE: Auto Scaling continues to add ECS instances to the scaling group, or continues to remove ECS instances from the scaling group.
+             * *   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.
              */
             public Builder lifecycleActionResult(String lifecycleActionResult) {
                 this.lifecycleActionResult = lifecycleActionResult;
@@ -222,7 +226,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleActionStatus.
+             * The status of the lifecycle action.
              */
             public Builder lifecycleActionStatus(String lifecycleActionStatus) {
                 this.lifecycleActionStatus = lifecycleActionStatus;
@@ -230,7 +234,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleActionToken.
+             * The token of the lifecycle action.
              */
             public Builder lifecycleActionToken(String lifecycleActionToken) {
                 this.lifecycleActionToken = lifecycleActionToken;
@@ -238,7 +242,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleHookId.
+             * The ID of the lifecycle hook.
              */
             public Builder lifecycleHookId(String lifecycleHookId) {
                 this.lifecycleHookId = lifecycleHookId;

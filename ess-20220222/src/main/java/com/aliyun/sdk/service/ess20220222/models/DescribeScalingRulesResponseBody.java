@@ -86,7 +86,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scaling rules.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The scaling rules.
+         * Details of the scaling rules.
          */
         public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
             this.scalingRules = scalingRules;
@@ -118,7 +118,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scaling rules.
+         * The total number of scaling rules.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -231,7 +231,11 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String dimensionValue; 
 
             /**
-             * The value of the dimension that is associated with the metric.
+             * The key of the dimension that is associated with the metric. Valid values:
+             * <p>
+             * 
+             * *   scaling_group: the ID of the scaling group
+             * *   userId: the ID of the Alibaba Cloud account
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -239,7 +243,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The step adjustments of the step scaling rule.
+             * The value of the dimension that is associated with the metric.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -376,13 +380,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * The comparison operator between the metric value and the threshold for the event-triggered task that is associated with the scaling rule. The comparison operator indicates the relationship between the metric value and the threshold that is required to meet the condition.
-             * <p>
-             * 
-             * *   Valid value if the metric value is greater than or equal to the threshold: >=.
-             * *   Valid value if the metric value is less than or equal to the threshold: <=.
-             * *   Valid value if the metric value is greater than the threshold: >.
-             * *   Valid value if the metric value is less than the threshold: <.
+             * The ID of the event-triggered task that is associated with the scaling rule.
              */
             public Builder alarmTaskId(String alarmTaskId) {
                 this.alarmTaskId = alarmTaskId;
@@ -390,11 +388,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event-triggered task that is associated with the scaling rule. Valid values:
-             * <p>
-             * 
-             * *   system: system monitoring event-triggered tasks
-             * *   custom: custom monitoring event-triggered tasks
+             * The name of the event-triggered task that is associated with the scaling rule.
              */
             public Builder alarmTaskName(String alarmTaskName) {
                 this.alarmTaskName = alarmTaskName;
@@ -402,7 +396,13 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric of the event-triggered task that is associated with the scaling rule.
+             * The comparison operator between the metric value and the threshold for the event-triggered task that is associated with the scaling rule. The comparison operator indicates the relationship between the metric value and the threshold that is required to meet the condition.
+             * <p>
+             * 
+             * *   Valid value if the metric value is greater than or equal to the threshold: >=.
+             * *   Valid value if the metric value is less than or equal to the threshold: <=.
+             * *   Valid value if the metric value is greater than the threshold: >.
+             * *   Valid value if the metric value is less than the threshold: <.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -418,7 +418,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event-triggered task that is associated with the scaling rule.
+             * The number of consecutive times for which the event-triggered task that is associated with the scaling rule meets the threshold expressions before an alert is triggered.
              */
             public Builder evaluationCount(Integer evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -426,7 +426,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consecutive times for which the event-triggered task that is associated with the scaling rule meets the threshold expressions before an alert is triggered.
+             * The name of the metric of the event-triggered task that is associated with the scaling rule.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -434,18 +434,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The alert threshold of the event-triggered task that is associated with the scaling rule.
+             * The type of the event-triggered task that is associated with the scaling rule. Valid values:
+             * <p>
+             * 
+             * *   system: system monitoring event-triggered tasks
+             * *   custom: custom monitoring event-triggered tasks
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
-                return this;
-            }
-
-            /**
-             * The dimensions of the event-triggered task that is associated with the scaling rule.
-             */
-            public Builder statistics(String statistics) {
-                this.statistics = statistics;
                 return this;
             }
 
@@ -456,6 +452,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
              * *   Average
              * *   Maximum
              * *   Minimum
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * The alert threshold of the event-triggered task that is associated with the scaling rule.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -520,7 +524,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private Integer scalingAdjustment; 
 
             /**
-             * auditing
+             * The lower limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.
              */
             public Builder metricIntervalLowerBound(Float metricIntervalLowerBound) {
                 this.metricIntervalLowerBound = metricIntervalLowerBound;
@@ -528,7 +532,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances that are scaled in a step adjustment.
+             * The upper limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.
              */
             public Builder metricIntervalUpperBound(Float metricIntervalUpperBound) {
                 this.metricIntervalUpperBound = metricIntervalUpperBound;
@@ -536,7 +540,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The lower limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.
+             * The number of ECS instances that are scaled in a step adjustment.
              */
             public Builder scalingAdjustment(Integer scalingAdjustment) {
                 this.scalingAdjustment = scalingAdjustment;
@@ -865,7 +869,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private Float targetValue; 
 
             /**
-             * The maximum number of ECS instances in the scaling group. You must specify the InitialMaxSize and PredictiveValueBehavior parameters.
+             * The scaling mode of the scaling rule. Valid values:
+             * <p>
+             * 
+             * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
+             * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
+             * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.
              */
             public Builder adjustmentType(String adjustmentType) {
                 this.adjustmentType = adjustmentType;
@@ -873,7 +882,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+             * The adjustment value that is specified in the scaling rule.
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
@@ -897,109 +906,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of ECS instances in the scaling group.
+             * The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.
              */
             public Builder cooldown(Integer cooldown) {
                 this.cooldown = cooldown;
-                return this;
-            }
-
-            /**
-             * The name of the scaling rule.
-             */
-            public Builder disableScaleIn(Boolean disableScaleIn) {
-                this.disableScaleIn = disableScaleIn;
-                return this;
-            }
-
-            /**
-             * The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
-             */
-            public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
-                this.estimatedInstanceWarmup = estimatedInstanceWarmup;
-                return this;
-            }
-
-            /**
-             * The warmup period of the ECS instance.
-             */
-            public Builder initialMaxSize(Integer initialMaxSize) {
-                this.initialMaxSize = initialMaxSize;
-                return this;
-            }
-
-            /**
-             * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
-             */
-            public Builder maxSize(Integer maxSize) {
-                this.maxSize = maxSize;
-                return this;
-            }
-
-            /**
-             * The scaling mode of the scaling rule. Valid values:
-             * <p>
-             * 
-             * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
-             * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
-             * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The unique identifier of the scaling rule.
-             */
-            public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
-                this.minAdjustmentMagnitude = minAdjustmentMagnitude;
-                return this;
-            }
-
-            /**
-             * The ID of the scaling group.
-             */
-            public Builder minSize(Integer minSize) {
-                this.minSize = minSize;
-                return this;
-            }
-
-            /**
-             * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
-             */
-            public Builder predictiveScalingMode(String predictiveScalingMode) {
-                this.predictiveScalingMode = predictiveScalingMode;
-                return this;
-            }
-
-            /**
-             * The minimum number of ECS instances in the scaling group.
-             */
-            public Builder predictiveTaskBufferTime(Integer predictiveTaskBufferTime) {
-                this.predictiveTaskBufferTime = predictiveTaskBufferTime;
-                return this;
-            }
-
-            /**
-             * The target value of the metric.
-             */
-            public Builder predictiveValueBehavior(String predictiveValueBehavior) {
-                this.predictiveValueBehavior = predictiveValueBehavior;
-                return this;
-            }
-
-            /**
-             * The type of the scaling rule. Valid values:
-             * <p>
-             * 
-             * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
-             * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
-             * *   StepScalingRule: scales ECS instances in steps based on specified thresholds and metric values.
-             * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
-             */
-            public Builder predictiveValueBuffer(Integer predictiveValueBuffer) {
-                this.predictiveValueBuffer = predictiveValueBuffer;
                 return this;
             }
 
@@ -1010,8 +920,56 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
              * *   true
              * *   false
              */
-            public Builder scaleInEvaluationCount(Integer scaleInEvaluationCount) {
-                this.scaleInEvaluationCount = scaleInEvaluationCount;
+            public Builder disableScaleIn(Boolean disableScaleIn) {
+                this.disableScaleIn = disableScaleIn;
+                return this;
+            }
+
+            /**
+             * The warmup period of the ECS instance.
+             */
+            public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
+                this.estimatedInstanceWarmup = estimatedInstanceWarmup;
+                return this;
+            }
+
+            /**
+             * The maximum number of ECS instances in the scaling group. You must specify the InitialMaxSize and PredictiveValueBehavior parameters.
+             */
+            public Builder initialMaxSize(Integer initialMaxSize) {
+                this.initialMaxSize = initialMaxSize;
+                return this;
+            }
+
+            /**
+             * The maximum number of ECS instances in the scaling group.
+             */
+            public Builder maxSize(Integer maxSize) {
+                this.maxSize = maxSize;
+                return this;
+            }
+
+            /**
+             * The name of the metric of the event-triggered task that is associated with the scaling rule.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
+             */
+            public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
+                this.minAdjustmentMagnitude = minAdjustmentMagnitude;
+                return this;
+            }
+
+            /**
+             * The minimum number of ECS instances in the scaling group.
+             */
+            public Builder minSize(Integer minSize) {
+                this.minSize = minSize;
                 return this;
             }
 
@@ -1022,8 +980,16 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
              * *   PredictAndScale: produces predictions and creates prediction tasks.
              * *   PredictOnly: produces predictions but does not create prediction tasks.
              */
-            public Builder scaleOutEvaluationCount(Integer scaleOutEvaluationCount) {
-                this.scaleOutEvaluationCount = scaleOutEvaluationCount;
+            public Builder predictiveScalingMode(String predictiveScalingMode) {
+                this.predictiveScalingMode = predictiveScalingMode;
+                return this;
+            }
+
+            /**
+             * The amount of buffer time before the prediction task is executed. By default, all scheduled tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify a buffer time for resource preparation before prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.
+             */
+            public Builder predictiveTaskBufferTime(Integer predictiveTaskBufferTime) {
+                this.predictiveTaskBufferTime = predictiveTaskBufferTime;
                 return this;
             }
 
@@ -1035,13 +1001,45 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
              * *   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.
              * *   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.
              */
+            public Builder predictiveValueBehavior(String predictiveValueBehavior) {
+                this.predictiveValueBehavior = predictiveValueBehavior;
+                return this;
+            }
+
+            /**
+             * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
+             */
+            public Builder predictiveValueBuffer(Integer predictiveValueBuffer) {
+                this.predictiveValueBuffer = predictiveValueBuffer;
+                return this;
+            }
+
+            /**
+             * The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+             */
+            public Builder scaleInEvaluationCount(Integer scaleInEvaluationCount) {
+                this.scaleInEvaluationCount = scaleInEvaluationCount;
+                return this;
+            }
+
+            /**
+             * The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+             */
+            public Builder scaleOutEvaluationCount(Integer scaleOutEvaluationCount) {
+                this.scaleOutEvaluationCount = scaleOutEvaluationCount;
+                return this;
+            }
+
+            /**
+             * The ID of the scaling group.
+             */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
                 return this;
             }
 
             /**
-             * The amount of buffer time before the prediction task is executed. By default, all scheduled tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify a buffer time for resource preparation before prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.
+             * The unique identifier of the scaling rule.
              */
             public Builder scalingRuleAri(String scalingRuleAri) {
                 this.scalingRuleAri = scalingRuleAri;
@@ -1049,7 +1047,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The event-triggered tasks that are associated with the scaling rule. Event-triggered tasks that are associated with the scaling rule are returned only if you set the ShowAlarmRules parameter to true. Otherwise, an empty list is returned.
+             * The ID of the scaling rule.
              */
             public Builder scalingRuleId(String scalingRuleId) {
                 this.scalingRuleId = scalingRuleId;
@@ -1057,7 +1055,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling rule.
+             * The name of the scaling rule.
              */
             public Builder scalingRuleName(String scalingRuleName) {
                 this.scalingRuleName = scalingRuleName;
@@ -1065,7 +1063,13 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The adjustment value that is specified in the scaling rule.
+             * The type of the scaling rule. Valid values:
+             * <p>
+             * 
+             * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
+             * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
+             * *   StepScalingRule: scales ECS instances in steps based on specified thresholds and metric values.
+             * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
              */
             public Builder scalingRuleType(String scalingRuleType) {
                 this.scalingRuleType = scalingRuleType;
@@ -1081,7 +1085,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.
+             * The target value of the metric.
              */
             public Builder targetValue(Float targetValue) {
                 this.targetValue = targetValue;

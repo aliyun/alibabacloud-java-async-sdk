@@ -50,7 +50,17 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NotificationTypes.
+         * The types of the notifications.
+         * <p>
+         * 
+         * *   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out activity succeeds.
+         * *   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in activity succeeds.
+         * *   AUTOSCALING:SCALE_OUT_ERROR: The scale-out activity fails.
+         * *   AUTOSCALING:SCALE_IN_ERROR: The scale-in activity fails.
+         * *   AUTOSCALING:SCALE_REJECT: The request for scaling activities is rejected.
+         * *   AUTOSCALING:SCALE_OUT_START: The scale-out activity starts.
+         * *   AUTOSCALING:SCALE_IN_START: The scale-in activity starts.
+         * *   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.
          */
         public Builder notificationTypes(java.util.List < String > notificationTypes) {
             this.notificationTypes = notificationTypes;
@@ -58,7 +68,7 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

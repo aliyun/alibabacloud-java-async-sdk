@@ -153,7 +153,13 @@ public class AttachLoadBalancersRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to attach the CLB instance to the scaling group in an asynchronous manner. If you attach the CLB instance from the scaling group in an asynchronous manner, the call is successful only after all operations are successful. If a specific operation fails, the call fails. We recommend that you set this parameter to true. Valid values:
+         * <p>
+         * 
+         * *   true: attaches the CLB instance to the scaling group in an asynchronous manner. In this case, the ID of the scaling activity is returned.
+         * *   false: does not attach the CLB instance to the scaling group in an asynchronous manner.
+         * 
+         * Default value: false.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -162,7 +168,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -171,7 +177,13 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * ForceAttach.
+         * Specifies whether to add all instances in the scaling group to the vServer groups of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder forceAttach(Boolean forceAttach) {
             this.putQueryParameter("ForceAttach", forceAttach);
@@ -180,7 +192,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerConfigs.
+         * 负载均衡配置列表。
          */
         public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
             this.putQueryParameter("LoadBalancerConfigs", loadBalancerConfigs);
@@ -189,7 +201,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancers.
+         * The IDs of the CLB instances.
          */
         public Builder loadBalancers(java.util.List < String > loadBalancers) {
             this.putQueryParameter("LoadBalancers", loadBalancers);
@@ -216,7 +228,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -270,7 +282,7 @@ public class AttachLoadBalancersRequest extends Request {
             private Integer weight; 
 
             /**
-             * LoadBalancerId.
+             * 负载均衡CLB（原SLB）实例的ID。
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -278,7 +290,7 @@ public class AttachLoadBalancersRequest extends Request {
             }
 
             /**
-             * Weight.
+             * 弹性伸缩将ECS实例添加到SLB服务器组后，ECS实例作为后端服务器的权重。权重越高，ECS实例将被分配到越多的访问请求。如果权重为0，则ECS实例不会收到访问请求。取值范围：0~100。
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

@@ -455,6 +455,87 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Propagate")
+        private Boolean propagate;
+
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.propagate = builder.propagate;
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return propagate
+         */
+        public Boolean getPropagate() {
+            return this.propagate;
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private Boolean propagate; 
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * Propagate.
+             */
+            public Builder propagate(Boolean propagate) {
+                this.propagate = propagate;
+                return this;
+            }
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class VServerGroupAttributes extends TeaModel {
         @NameInMap("Port")
         private Integer port;
@@ -751,6 +832,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("SystemSuspended")
         private Boolean systemSuspended;
 
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("TotalCapacity")
         private Integer totalCapacity;
 
@@ -821,6 +905,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.stoppedCapacity = builder.stoppedCapacity;
             this.suspendedProcesses = builder.suspendedProcesses;
             this.systemSuspended = builder.systemSuspended;
+            this.tags = builder.tags;
             this.totalCapacity = builder.totalCapacity;
             this.totalInstanceCount = builder.totalInstanceCount;
             this.vServerGroups = builder.vServerGroups;
@@ -1195,6 +1280,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return totalCapacity
          */
         public Integer getTotalCapacity() {
@@ -1288,6 +1380,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private Integer stoppedCapacity; 
             private java.util.List < String > suspendedProcesses; 
             private Boolean systemSuspended; 
+            private java.util.List < Tags> tags; 
             private Integer totalCapacity; 
             private Integer totalInstanceCount; 
             private java.util.List < VServerGroups> vServerGroups; 
@@ -1700,6 +1793,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder systemSuspended(Boolean systemSuspended) {
                 this.systemSuspended = systemSuspended;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

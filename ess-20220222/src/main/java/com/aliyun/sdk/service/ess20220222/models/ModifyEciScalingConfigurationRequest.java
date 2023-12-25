@@ -58,6 +58,22 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     private Integer cpuOptionsThreadsPerCore;
 
     @Query
+    @NameInMap("DataCacheBucket")
+    private String dataCacheBucket;
+
+    @Query
+    @NameInMap("DataCacheBurstingEnabled")
+    private Boolean dataCacheBurstingEnabled;
+
+    @Query
+    @NameInMap("DataCachePL")
+    private String dataCachePL;
+
+    @Query
+    @NameInMap("DataCacheProvisionedIops")
+    private Integer dataCacheProvisionedIops;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -124,6 +140,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     @Query
     @NameInMap("InstanceFamilyLevel")
     private String instanceFamilyLevel;
+
+    @Query
+    @NameInMap("InstanceTypes")
+    private java.util.List < String > instanceTypes;
 
     @Query
     @NameInMap("Ipv6AddressCount")
@@ -211,6 +231,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.cpu = builder.cpu;
         this.cpuOptionsCore = builder.cpuOptionsCore;
         this.cpuOptionsThreadsPerCore = builder.cpuOptionsThreadsPerCore;
+        this.dataCacheBucket = builder.dataCacheBucket;
+        this.dataCacheBurstingEnabled = builder.dataCacheBurstingEnabled;
+        this.dataCachePL = builder.dataCachePL;
+        this.dataCacheProvisionedIops = builder.dataCacheProvisionedIops;
         this.description = builder.description;
         this.dnsConfigNameServers = builder.dnsConfigNameServers;
         this.dnsConfigOptions = builder.dnsConfigOptions;
@@ -227,6 +251,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.ingressBandwidth = builder.ingressBandwidth;
         this.initContainers = builder.initContainers;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
+        this.instanceTypes = builder.instanceTypes;
         this.ipv6AddressCount = builder.ipv6AddressCount;
         this.loadBalancerWeight = builder.loadBalancerWeight;
         this.memory = builder.memory;
@@ -335,6 +360,34 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public Integer getCpuOptionsThreadsPerCore() {
         return this.cpuOptionsThreadsPerCore;
+    }
+
+    /**
+     * @return dataCacheBucket
+     */
+    public String getDataCacheBucket() {
+        return this.dataCacheBucket;
+    }
+
+    /**
+     * @return dataCacheBurstingEnabled
+     */
+    public Boolean getDataCacheBurstingEnabled() {
+        return this.dataCacheBurstingEnabled;
+    }
+
+    /**
+     * @return dataCachePL
+     */
+    public String getDataCachePL() {
+        return this.dataCachePL;
+    }
+
+    /**
+     * @return dataCacheProvisionedIops
+     */
+    public Integer getDataCacheProvisionedIops() {
+        return this.dataCacheProvisionedIops;
     }
 
     /**
@@ -447,6 +500,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public String getInstanceFamilyLevel() {
         return this.instanceFamilyLevel;
+    }
+
+    /**
+     * @return instanceTypes
+     */
+    public java.util.List < String > getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     /**
@@ -587,6 +647,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         private Float cpu; 
         private Integer cpuOptionsCore; 
         private Integer cpuOptionsThreadsPerCore; 
+        private String dataCacheBucket; 
+        private Boolean dataCacheBurstingEnabled; 
+        private String dataCachePL; 
+        private Integer dataCacheProvisionedIops; 
         private String description; 
         private java.util.List < String > dnsConfigNameServers; 
         private java.util.List < DnsConfigOptions> dnsConfigOptions; 
@@ -603,6 +667,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         private Long ingressBandwidth; 
         private java.util.List < InitContainers> initContainers; 
         private String instanceFamilyLevel; 
+        private java.util.List < String > instanceTypes; 
         private Integer ipv6AddressCount; 
         private Integer loadBalancerWeight; 
         private Float memory; 
@@ -639,6 +704,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.cpu = request.cpu;
             this.cpuOptionsCore = request.cpuOptionsCore;
             this.cpuOptionsThreadsPerCore = request.cpuOptionsThreadsPerCore;
+            this.dataCacheBucket = request.dataCacheBucket;
+            this.dataCacheBurstingEnabled = request.dataCacheBurstingEnabled;
+            this.dataCachePL = request.dataCachePL;
+            this.dataCacheProvisionedIops = request.dataCacheProvisionedIops;
             this.description = request.description;
             this.dnsConfigNameServers = request.dnsConfigNameServers;
             this.dnsConfigOptions = request.dnsConfigOptions;
@@ -655,6 +724,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.ingressBandwidth = request.ingressBandwidth;
             this.initContainers = request.initContainers;
             this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypes = request.instanceTypes;
             this.ipv6AddressCount = request.ipv6AddressCount;
             this.loadBalancerWeight = request.loadBalancerWeight;
             this.memory = request.memory;
@@ -784,6 +854,42 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
             this.putQueryParameter("CpuOptionsThreadsPerCore", cpuOptionsThreadsPerCore);
             this.cpuOptionsThreadsPerCore = cpuOptionsThreadsPerCore;
+            return this;
+        }
+
+        /**
+         * DataCacheBucket.
+         */
+        public Builder dataCacheBucket(String dataCacheBucket) {
+            this.putQueryParameter("DataCacheBucket", dataCacheBucket);
+            this.dataCacheBucket = dataCacheBucket;
+            return this;
+        }
+
+        /**
+         * DataCacheBurstingEnabled.
+         */
+        public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
+            this.putQueryParameter("DataCacheBurstingEnabled", dataCacheBurstingEnabled);
+            this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
+            return this;
+        }
+
+        /**
+         * DataCachePL.
+         */
+        public Builder dataCachePL(String dataCachePL) {
+            this.putQueryParameter("DataCachePL", dataCachePL);
+            this.dataCachePL = dataCachePL;
+            return this;
+        }
+
+        /**
+         * DataCacheProvisionedIops.
+         */
+        public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
+            this.putQueryParameter("DataCacheProvisionedIops", dataCacheProvisionedIops);
+            this.dataCacheProvisionedIops = dataCacheProvisionedIops;
             return this;
         }
 
@@ -940,6 +1046,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
             this.instanceFamilyLevel = instanceFamilyLevel;
+            return this;
+        }
+
+        /**
+         * InstanceTypes.
+         */
+        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            this.putQueryParameter("InstanceTypes", instanceTypes);
+            this.instanceTypes = instanceTypes;
             return this;
         }
 

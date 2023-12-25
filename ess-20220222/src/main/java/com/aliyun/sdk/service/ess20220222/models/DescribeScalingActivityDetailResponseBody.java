@@ -62,7 +62,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * Detail.
+         * The details about the event.
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -70,7 +70,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

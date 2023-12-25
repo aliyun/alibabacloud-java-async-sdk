@@ -124,7 +124,7 @@ public class DeleteScalingConfigurationRequest extends Request {
         }
 
         /**
-         * ScalingConfigurationId.
+         * The ID of the scaling configuration that you want to delete.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

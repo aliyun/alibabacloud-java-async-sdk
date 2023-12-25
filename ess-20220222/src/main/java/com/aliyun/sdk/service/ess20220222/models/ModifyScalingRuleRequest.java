@@ -363,12 +363,12 @@ public class ModifyScalingRuleRequest extends Request {
         } 
 
         /**
-         * The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.
+         * The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:
          * <p>
          * 
-         * *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
-         * *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
-         * *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
+         * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
+         * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
+         * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.
          */
         public Builder adjustmentType(String adjustmentType) {
             this.putQueryParameter("AdjustmentType", adjustmentType);
@@ -377,12 +377,12 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.
+         * The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.
          * <p>
          * 
-         * > Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.
-         * 
-         * Valid values: 0 to 86400. Unit: seconds.
+         * *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
+         * *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
+         * *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
          */
         public Builder adjustmentValue(Integer adjustmentValue) {
             this.putQueryParameter("AdjustmentValue", adjustmentValue);
@@ -400,7 +400,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
+         * The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.
+         * <p>
+         * 
+         * Valid values: 0 to 86400. Unit: seconds.
          */
         public Builder cooldown(Integer cooldown) {
             this.putQueryParameter("Cooldown", cooldown);
@@ -409,11 +412,34 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+         * Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
          */
         public Builder disableScaleIn(Boolean disableScaleIn) {
             this.putQueryParameter("DisableScaleIn", disableScaleIn);
             this.disableScaleIn = disableScaleIn;
+            return this;
+        }
+
+        /**
+         * The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.
+         * <p>
+         * 
+         * > Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.
+         * 
+         * Valid values: 0 to 86400. Unit: seconds.
+         */
+        public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
+            this.putQueryParameter("EstimatedInstanceWarmup", estimatedInstanceWarmup);
+            this.estimatedInstanceWarmup = estimatedInstanceWarmup;
+            return this;
+        }
+
+        /**
+         * The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.
+         */
+        public Builder initialMaxSize(Integer initialMaxSize) {
+            this.putQueryParameter("InitialMaxSize", initialMaxSize);
+            this.initialMaxSize = initialMaxSize;
             return this;
         }
 
@@ -437,24 +463,6 @@ public class ModifyScalingRuleRequest extends Request {
          * *   IntranetRx: the average inbound traffic over the internal network
          * *   IntranetTx: the average outbound traffic over the internal network
          */
-        public Builder estimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
-            this.putQueryParameter("EstimatedInstanceWarmup", estimatedInstanceWarmup);
-            this.estimatedInstanceWarmup = estimatedInstanceWarmup;
-            return this;
-        }
-
-        /**
-         * Details of the step adjustments.
-         */
-        public Builder initialMaxSize(Integer initialMaxSize) {
-            this.putQueryParameter("InitialMaxSize", initialMaxSize);
-            this.initialMaxSize = initialMaxSize;
-            return this;
-        }
-
-        /**
-         * The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.
-         */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
             this.metricName = metricName;
@@ -462,12 +470,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:
-         * <p>
-         * 
-         * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
-         * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
-         * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.
+         * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
          */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             this.putQueryParameter("MinAdjustmentMagnitude", minAdjustmentMagnitude);
@@ -494,12 +497,11 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:
+         * The mode of the predictive scaling rule. Valid values:
          * <p>
          * 
-         * *   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.
-         * *   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.
-         * *   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.
+         * *   PredictAndScale: produces predictions and creates prediction tasks.
+         * *   PredictOnly: produces predictions but does not create prediction tasks.
          */
         public Builder predictiveScalingMode(String predictiveScalingMode) {
             this.putQueryParameter("PredictiveScalingMode", predictiveScalingMode);
@@ -508,7 +510,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.
+         * The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.
          */
         public Builder predictiveTaskBufferTime(Integer predictiveTaskBufferTime) {
             this.putQueryParameter("PredictiveTaskBufferTime", predictiveTaskBufferTime);
@@ -517,7 +519,12 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
+         * Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:
+         * <p>
+         * 
+         * *   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.
+         * *   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.
+         * *   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.
          */
         public Builder predictiveValueBehavior(String predictiveValueBehavior) {
             this.putQueryParameter("PredictiveValueBehavior", predictiveValueBehavior);
@@ -526,7 +533,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.
+         * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
          */
         public Builder predictiveValueBuffer(Integer predictiveValueBuffer) {
             this.putQueryParameter("PredictiveValueBuffer", predictiveValueBuffer);
@@ -553,7 +560,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
+         * The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
          */
         public Builder scaleInEvaluationCount(Integer scaleInEvaluationCount) {
             this.putQueryParameter("ScaleInEvaluationCount", scaleInEvaluationCount);
@@ -562,11 +569,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The mode of the predictive scaling rule. Valid values:
-         * <p>
-         * 
-         * *   PredictAndScale: produces predictions and creates prediction tasks.
-         * *   PredictOnly: produces predictions but does not create prediction tasks.
+         * The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.
          */
         public Builder scaleOutEvaluationCount(Integer scaleOutEvaluationCount) {
             this.putQueryParameter("ScaleOutEvaluationCount", scaleOutEvaluationCount);
@@ -575,7 +578,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
+         * The ID of the scaling rule that you want to modify.
          */
         public Builder scalingRuleId(String scalingRuleId) {
             this.putQueryParameter("ScalingRuleId", scalingRuleId);
@@ -584,7 +587,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique within an Alibaba Cloud account in a region.
+         * The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -602,7 +605,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.
+         * The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.
          */
         public Builder targetValue(Float targetValue) {
             this.putQueryParameter("TargetValue", targetValue);
@@ -729,7 +732,7 @@ public class ModifyScalingRuleRequest extends Request {
             private Integer scalingAdjustment; 
 
             /**
-             * The ID of the request.
+             * The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
              */
             public Builder metricIntervalLowerBound(Float metricIntervalLowerBound) {
                 this.metricIntervalLowerBound = metricIntervalLowerBound;
@@ -737,7 +740,7 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.
+             * The upper limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
              */
             public Builder metricIntervalUpperBound(Float metricIntervalUpperBound) {
                 this.metricIntervalUpperBound = metricIntervalUpperBound;
@@ -745,7 +748,7 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.
+             * The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.
              */
             public Builder scalingAdjustment(Integer scalingAdjustment) {
                 this.scalingAdjustment = scalingAdjustment;

@@ -129,7 +129,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleId.
+         * The ID of the scaling rule that you want to delete.
          */
         public Builder scalingRuleId(String scalingRuleId) {
             this.putQueryParameter("ScalingRuleId", scalingRuleId);

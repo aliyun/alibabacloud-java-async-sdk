@@ -141,7 +141,7 @@ public class DetachAlbServerGroupsRequest extends Request {
         } 
 
         /**
-         * AlbServerGroups.
+         * Details of the ALB server groups.
          */
         public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
@@ -150,7 +150,10 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -159,7 +162,13 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * ForceDetach.
+         * Specifies whether to remove existing Elastic Compute Service (ECS) instances from the ALB server group that you want to disassociate from the scaling group. Valid values:
+         * <p>
+         * 
+         * *   true: removes existing ECS instances and returns the value of the `ScalingActivityId` parameter. You can use the scaling activity ID to check whether the ECS instances are removed.
+         * *   false: does not remove existing ECS instances.
+         * 
+         * Default value: false.
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -177,7 +186,7 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +204,7 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -251,7 +260,7 @@ public class DetachAlbServerGroupsRequest extends Request {
             private Integer port; 
 
             /**
-             * AlbServerGroupId.
+             * The ID of the ALB server group.
              */
             public Builder albServerGroupId(String albServerGroupId) {
                 this.albServerGroupId = albServerGroupId;
@@ -259,7 +268,7 @@ public class DetachAlbServerGroupsRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port number used by the ECS instances in the ALB server group.
              */
             public Builder port(Integer port) {
                 this.port = port;

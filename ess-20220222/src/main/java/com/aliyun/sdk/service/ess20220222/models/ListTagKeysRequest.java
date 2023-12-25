@@ -126,7 +126,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -144,7 +144,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +156,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Auto Scaling resource.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +174,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tags are added to scaling groups.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

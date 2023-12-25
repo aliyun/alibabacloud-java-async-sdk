@@ -86,7 +86,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scaling configurations.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scaling configurations.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the scaling configuration was created.
+         * Details of the scaling configurations.
          */
         public Builder scalingConfigurations(java.util.List < ScalingConfigurations> scalingConfigurations) {
             this.scalingConfigurations = scalingConfigurations;
@@ -118,7 +118,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scaling configurations.
+         * The total number of scaling configurations.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The IP addresses of the DNS servers.
+             * The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -202,7 +202,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Container Registry Enterprise Edition instance.
+             * The ID of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -210,7 +210,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * The name of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -218,7 +218,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * The region ID of the Container Registry Enterprise Edition instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -283,7 +283,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
+             * > This parameter is unavailable.
              */
             public Builder fieldRefFieldPath(String fieldRefFieldPath) {
                 this.fieldRefFieldPath = fieldRefFieldPath;
@@ -291,7 +291,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,7 +299,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -352,7 +352,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The volumes that are mounted on the container.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -360,7 +360,11 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The volumes that are mounted on the container.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   TCP
+             * *   UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -449,37 +453,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String subPath; 
 
             /**
-             * Details of the environment variables.
-             */
-            public Builder mountPath(String mountPath) {
-                this.mountPath = mountPath;
-                return this;
-            }
-
-            /**
-             * Details of the environment variables.
-             */
-            public Builder mountPropagation(String mountPropagation) {
-                this.mountPropagation = mountPropagation;
-                return this;
-            }
-
-            /**
              * The directory in which the container mounts the volume.
              * <p>
              * 
              * > Data in this directory is overwritten by the data on the volume.
              */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.
-             */
-            public Builder readOnly(Boolean readOnly) {
-                this.readOnly = readOnly;
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
                 return this;
             }
 
@@ -492,6 +472,33 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
              * 
              * Default value: None.
+             */
+            public Builder mountPropagation(String mountPropagation) {
+                this.mountPropagation = mountPropagation;
+                return this;
+            }
+
+            /**
+             * The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether the volume is read-only.
+             * <p>
+             * 
+             * Default value: false.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            /**
+             * The subdirectory of the volume.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -976,7 +983,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * The commands that are run in the container when you use the CLI to perform probes.
+             * The arguments that are passed to the container startup commands. You can specify up to 10 arguments.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -984,10 +991,63 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The commands that are run in the container when you use the CLI to perform probes.
+             * The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
+                return this;
+            }
+
+            /**
+             * The number of vCPUs that are allocated to the container.
+             */
+            public Builder cpu(Float cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Details of the environment variables.
+             */
+            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+                this.environmentVars = environmentVars;
+                return this;
+            }
+
+            /**
+             * The number of GPUs.
+             */
+            public Builder gpu(Integer gpu) {
+                this.gpu = gpu;
+                return this;
+            }
+
+            /**
+             * The image of the container.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * The image pulling policy. Valid values:
+             * <p>
+             * 
+             * *   Always: Image pulling is performed each time.
+             * *   IfNotPresent: Image pulling is performed only if on-premises images are unavailable. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
+             */
+            public Builder imagePullPolicy(String imagePullPolicy) {
+                this.imagePullPolicy = imagePullPolicy;
+                return this;
+            }
+
+            /**
+             * The commands that are run in the container when you use the CLI to perform probes.
+             */
+            public Builder livenessProbeExecCommands(java.util.List < String > livenessProbeExecCommands) {
+                this.livenessProbeExecCommands = livenessProbeExecCommands;
                 return this;
             }
 
@@ -997,24 +1057,24 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * 
              * Default value: 3.
              */
-            public Builder cpu(Float cpu) {
-                this.cpu = cpu;
+            public Builder livenessProbeFailureThreshold(Integer livenessProbeFailureThreshold) {
+                this.livenessProbeFailureThreshold = livenessProbeFailureThreshold;
                 return this;
             }
 
             /**
-             * The name of the environment variable.
+             * The path to which the system sends an HTTP GET request for a probe.
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
-                this.environmentVars = environmentVars;
+            public Builder livenessProbeHttpGetPath(String livenessProbeHttpGetPath) {
+                this.livenessProbeHttpGetPath = livenessProbeHttpGetPath;
                 return this;
             }
 
             /**
-             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur. Default value: false.
+             * The port to which HTTP GET requests were sent.
              */
-            public Builder gpu(Integer gpu) {
-                this.gpu = gpu;
+            public Builder livenessProbeHttpGetPort(Integer livenessProbeHttpGetPort) {
+                this.livenessProbeHttpGetPort = livenessProbeHttpGetPort;
                 return this;
             }
 
@@ -1025,48 +1085,205 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   HTTP
              * *   HTTPS
              */
-            public Builder image(String image) {
-                this.image = image;
-                return this;
-            }
-
-            /**
-             * The number of vCPUs that are allocated to the container.
-             */
-            public Builder imagePullPolicy(String imagePullPolicy) {
-                this.imagePullPolicy = imagePullPolicy;
-                return this;
-            }
-
-            /**
-             * The arguments that are passed to the container startup commands. You can specify up to 10 arguments.
-             */
-            public Builder livenessProbeExecCommands(java.util.List < String > livenessProbeExecCommands) {
-                this.livenessProbeExecCommands = livenessProbeExecCommands;
-                return this;
-            }
-
-            /**
-             * The exposed ports and protocols of the container.
-             */
-            public Builder livenessProbeFailureThreshold(Integer livenessProbeFailureThreshold) {
-                this.livenessProbeFailureThreshold = livenessProbeFailureThreshold;
-                return this;
-            }
-
-            /**
-             * The port number of TcpSocket.
-             */
-            public Builder livenessProbeHttpGetPath(String livenessProbeHttpGetPath) {
-                this.livenessProbeHttpGetPath = livenessProbeHttpGetPath;
+            public Builder livenessProbeHttpGetScheme(String livenessProbeHttpGetScheme) {
+                this.livenessProbeHttpGetScheme = livenessProbeHttpGetScheme;
                 return this;
             }
 
             /**
              * The number of seconds between the time when the startup of the container ends and the time when the probe starts.
              */
-            public Builder livenessProbeHttpGetPort(Integer livenessProbeHttpGetPort) {
-                this.livenessProbeHttpGetPort = livenessProbeHttpGetPort;
+            public Builder livenessProbeInitialDelaySeconds(Integer livenessProbeInitialDelaySeconds) {
+                this.livenessProbeInitialDelaySeconds = livenessProbeInitialDelaySeconds;
+                return this;
+            }
+
+            /**
+             * The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.
+             */
+            public Builder livenessProbePeriodSeconds(Integer livenessProbePeriodSeconds) {
+                this.livenessProbePeriodSeconds = livenessProbePeriodSeconds;
+                return this;
+            }
+
+            /**
+             * The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.
+             */
+            public Builder livenessProbeSuccessThreshold(Integer livenessProbeSuccessThreshold) {
+                this.livenessProbeSuccessThreshold = livenessProbeSuccessThreshold;
+                return this;
+            }
+
+            /**
+             * The port number of TcpSocket.
+             */
+            public Builder livenessProbeTcpSocketPort(Integer livenessProbeTcpSocketPort) {
+                this.livenessProbeTcpSocketPort = livenessProbeTcpSocketPort;
+                return this;
+            }
+
+            /**
+             * The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.
+             */
+            public Builder livenessProbeTimeoutSeconds(Integer livenessProbeTimeoutSeconds) {
+                this.livenessProbeTimeoutSeconds = livenessProbeTimeoutSeconds;
+                return this;
+            }
+
+            /**
+             * The memory size of the container.
+             */
+            public Builder memory(Float memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * The name of the container.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The exposed ports and protocols of the container.
+             */
+            public Builder ports(java.util.List < Ports> ports) {
+                this.ports = ports;
+                return this;
+            }
+
+            /**
+             * The commands that are run in the container when you use the CLI to perform probes.
+             */
+            public Builder readinessProbeExecCommands(java.util.List < String > readinessProbeExecCommands) {
+                this.readinessProbeExecCommands = readinessProbeExecCommands;
+                return this;
+            }
+
+            /**
+             * The minimum number of consecutive failures for a probe to be considered failed after having been successful.
+             * <p>
+             * 
+             * Default value: 3.
+             */
+            public Builder readinessProbeFailureThreshold(Integer readinessProbeFailureThreshold) {
+                this.readinessProbeFailureThreshold = readinessProbeFailureThreshold;
+                return this;
+            }
+
+            /**
+             * The path to which the system sends an HTTP GET request for a probe.
+             */
+            public Builder readinessProbeHttpGetPath(String readinessProbeHttpGetPath) {
+                this.readinessProbeHttpGetPath = readinessProbeHttpGetPath;
+                return this;
+            }
+
+            /**
+             * The path to which the system sends an HTTP GET request for a probe.
+             */
+            public Builder readinessProbeHttpGetPort(Integer readinessProbeHttpGetPort) {
+                this.readinessProbeHttpGetPort = readinessProbeHttpGetPort;
+                return this;
+            }
+
+            /**
+             * The protocol type of HTTP GET requests when you use HTTP requests to perform probes. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
+             */
+            public Builder readinessProbeHttpGetScheme(String readinessProbeHttpGetScheme) {
+                this.readinessProbeHttpGetScheme = readinessProbeHttpGetScheme;
+                return this;
+            }
+
+            /**
+             * The number of seconds between the time when the startup of the container ends and the time when the probe starts.
+             */
+            public Builder readinessProbeInitialDelaySeconds(Integer readinessProbeInitialDelaySeconds) {
+                this.readinessProbeInitialDelaySeconds = readinessProbeInitialDelaySeconds;
+                return this;
+            }
+
+            /**
+             * The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.
+             */
+            public Builder readinessProbePeriodSeconds(Integer readinessProbePeriodSeconds) {
+                this.readinessProbePeriodSeconds = readinessProbePeriodSeconds;
+                return this;
+            }
+
+            /**
+             * The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.
+             */
+            public Builder readinessProbeSuccessThreshold(Integer readinessProbeSuccessThreshold) {
+                this.readinessProbeSuccessThreshold = readinessProbeSuccessThreshold;
+                return this;
+            }
+
+            /**
+             * The port number of TcpSocket.
+             */
+            public Builder readinessProbeTcpSocketPort(Integer readinessProbeTcpSocketPort) {
+                this.readinessProbeTcpSocketPort = readinessProbeTcpSocketPort;
+                return this;
+            }
+
+            /**
+             * The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.
+             */
+            public Builder readinessProbeTimeoutSeconds(Integer readinessProbeTimeoutSeconds) {
+                this.readinessProbeTimeoutSeconds = readinessProbeTimeoutSeconds;
+                return this;
+            }
+
+            /**
+             * The permissions granted to processes in the container. Valid values: NET_ADMIN and NET_RAW.
+             * <p>
+             * 
+             * > To use NET_RAW, you need to submit a ticket.
+             */
+            public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
+                this.securityContextCapabilityAdds = securityContextCapabilityAdds;
+                return this;
+            }
+
+            /**
+             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
+             */
+            public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
+                this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
+                return this;
+            }
+
+            /**
+             * The user ID (UID) that is used to run the entry point of the container process.
+             */
+            public Builder securityContextRunAsUser(Long securityContextRunAsUser) {
+                this.securityContextRunAsUser = securityContextRunAsUser;
+                return this;
+            }
+
+            /**
+             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur. Default value: false.
+             */
+            public Builder stdin(Boolean stdin) {
+                this.stdin = stdin;
+                return this;
+            }
+
+            /**
+             * Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected during multiple sessions.
+             * <p>
+             * 
+             * If StdinOnce is set to true, standard input streams are connected after the container is started and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain in the disconnected state until the container is started again.
+             */
+            public Builder stdinOnce(Boolean stdinOnce) {
+                this.stdinOnce = stdinOnce;
                 return this;
             }
 
@@ -1081,226 +1298,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * 
              * Default value: false.
              */
-            public Builder livenessProbeHttpGetScheme(String livenessProbeHttpGetScheme) {
-                this.livenessProbeHttpGetScheme = livenessProbeHttpGetScheme;
-                return this;
-            }
-
-            /**
-             * The image pulling policy. Valid values:
-             * <p>
-             * 
-             * *   Always: Image pulling is performed each time.
-             * *   IfNotPresent: Image pulling is performed only if on-premises images are unavailable. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: On-premises images are always used. Image pulling is not performed.
-             */
-            public Builder livenessProbeInitialDelaySeconds(Integer livenessProbeInitialDelaySeconds) {
-                this.livenessProbeInitialDelaySeconds = livenessProbeInitialDelaySeconds;
-                return this;
-            }
-
-            /**
-             * The protocol type of HTTP GET requests when you use HTTP requests to perform probes. Valid values:
-             * <p>
-             * 
-             * *   HTTP
-             * *   HTTPS
-             */
-            public Builder livenessProbePeriodSeconds(Integer livenessProbePeriodSeconds) {
-                this.livenessProbePeriodSeconds = livenessProbePeriodSeconds;
-                return this;
-            }
-
-            /**
-             * The user ID (UID) that is used to run the entry point of the container process.
-             */
-            public Builder livenessProbeSuccessThreshold(Integer livenessProbeSuccessThreshold) {
-                this.livenessProbeSuccessThreshold = livenessProbeSuccessThreshold;
-                return this;
-            }
-
-            /**
-             * The working directory of the container.
-             */
-            public Builder livenessProbeTcpSocketPort(Integer livenessProbeTcpSocketPort) {
-                this.livenessProbeTcpSocketPort = livenessProbeTcpSocketPort;
-                return this;
-            }
-
-            /**
-             * The minimum number of consecutive failures for a probe to be considered failed after having been successful.
-             * <p>
-             * 
-             * Default value: 3.
-             */
-            public Builder livenessProbeTimeoutSeconds(Integer livenessProbeTimeoutSeconds) {
-                this.livenessProbeTimeoutSeconds = livenessProbeTimeoutSeconds;
-                return this;
-            }
-
-            /**
-             * Indicates whether the root file system is set to the read-only mode. The only valid value is true.
-             */
-            public Builder memory(Float memory) {
-                this.memory = memory;
-                return this;
-            }
-
-            /**
-             * The path to which the system sends an HTTP GET request for a probe.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The port number. Valid values: 1 to 65535.
-             */
-            public Builder ports(java.util.List < Ports> ports) {
-                this.ports = ports;
-                return this;
-            }
-
-            /**
-             * The permissions granted to processes in the container. Valid values: NET_ADMIN and NET_RAW.
-             * <p>
-             * 
-             * > To use NET_RAW, you need to submit a ticket.
-             */
-            public Builder readinessProbeExecCommands(java.util.List < String > readinessProbeExecCommands) {
-                this.readinessProbeExecCommands = readinessProbeExecCommands;
-                return this;
-            }
-
-            /**
-             * The exposed ports and protocols of the container.
-             */
-            public Builder readinessProbeFailureThreshold(Integer readinessProbeFailureThreshold) {
-                this.readinessProbeFailureThreshold = readinessProbeFailureThreshold;
-                return this;
-            }
-
-            /**
-             * The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.
-             */
-            public Builder readinessProbeHttpGetPath(String readinessProbeHttpGetPath) {
-                this.readinessProbeHttpGetPath = readinessProbeHttpGetPath;
-                return this;
-            }
-
-            /**
-             * The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.
-             */
-            public Builder readinessProbeHttpGetPort(Integer readinessProbeHttpGetPort) {
-                this.readinessProbeHttpGetPort = readinessProbeHttpGetPort;
-                return this;
-            }
-
-            /**
-             * The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.
-             */
-            public Builder readinessProbeHttpGetScheme(String readinessProbeHttpGetScheme) {
-                this.readinessProbeHttpGetScheme = readinessProbeHttpGetScheme;
-                return this;
-            }
-
-            /**
-             * The memory size of the container.
-             */
-            public Builder readinessProbeInitialDelaySeconds(Integer readinessProbeInitialDelaySeconds) {
-                this.readinessProbeInitialDelaySeconds = readinessProbeInitialDelaySeconds;
-                return this;
-            }
-
-            /**
-             * Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected during multiple sessions.
-             * <p>
-             * 
-             * If StdinOnce is set to true, standard input streams are connected after the container is started and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain in the disconnected state until the container is started again.
-             */
-            public Builder readinessProbePeriodSeconds(Integer readinessProbePeriodSeconds) {
-                this.readinessProbePeriodSeconds = readinessProbePeriodSeconds;
-                return this;
-            }
-
-            /**
-             * The port number of TcpSocket.
-             */
-            public Builder readinessProbeSuccessThreshold(Integer readinessProbeSuccessThreshold) {
-                this.readinessProbeSuccessThreshold = readinessProbeSuccessThreshold;
-                return this;
-            }
-
-            /**
-             * The path to which the system sends an HTTP GET request for a probe.
-             */
-            public Builder readinessProbeTcpSocketPort(Integer readinessProbeTcpSocketPort) {
-                this.readinessProbeTcpSocketPort = readinessProbeTcpSocketPort;
-                return this;
-            }
-
-            /**
-             * The number of seconds between the time when the startup of the container ends and the time when the probe starts.
-             */
-            public Builder readinessProbeTimeoutSeconds(Integer readinessProbeTimeoutSeconds) {
-                this.readinessProbeTimeoutSeconds = readinessProbeTimeoutSeconds;
-                return this;
-            }
-
-            /**
-             * The init containers.
-             */
-            public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
-                this.securityContextCapabilityAdds = securityContextCapabilityAdds;
-                return this;
-            }
-
-            /**
-             * The image of the container.
-             */
-            public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
-                this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
-                return this;
-            }
-
-            /**
-             * The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.
-             */
-            public Builder securityContextRunAsUser(Long securityContextRunAsUser) {
-                this.securityContextRunAsUser = securityContextRunAsUser;
-                return this;
-            }
-
-            /**
-             * The name of the container.
-             */
-            public Builder stdin(Boolean stdin) {
-                this.stdin = stdin;
-                return this;
-            }
-
-            /**
-             * The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.
-             */
-            public Builder stdinOnce(Boolean stdinOnce) {
-                this.stdinOnce = stdinOnce;
-                return this;
-            }
-
-            /**
-             * The number of GPUs.
-             */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
                 return this;
             }
 
             /**
-             * Indicates whether the volume is read-only.
-             * <p>
-             * 
-             * Default value: false.
+             * The volumes that are mounted on the container.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -1308,7 +1312,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The port to which HTTP GET requests were sent.
+             * The working directory of the container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -1361,7 +1365,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The hostname aliases of a container.
+             * The variable name of the option.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1369,7 +1373,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname aliases of a container.
+             * The variable value of the option.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1422,7 +1426,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * The system information of the security context in which the elastic container instance runs.
+             * The hostnames that are added.
              */
             public Builder hostnames(java.util.List < String > hostnames) {
                 this.hostnames = hostnames;
@@ -1430,7 +1434,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostnames that are added.
+             * The IP address that is added.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1495,7 +1499,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The username that is used to access the image repository.
+             * The password that is used to access the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1503,7 +1507,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The options. Each option is a name-value pair. The value in the name-value pair is optional.
+             * The domain name of the image repository.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -1511,7 +1515,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The options. Each option is a name-value pair. The value in the name-value pair is optional.
+             * The username that is used to access the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1576,7 +1580,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Details of the init container ports.
+             * > This parameter is unavailable.
              */
             public Builder fieldRefFieldPath(String fieldRefFieldPath) {
                 this.fieldRefFieldPath = fieldRefFieldPath;
@@ -1584,7 +1588,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1592,7 +1596,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the init container ports.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1645,7 +1649,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The volumes that are mounted on the container.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1653,7 +1657,11 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The volumes that are mounted on the container.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   TCP
+             * *   UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1742,40 +1750,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String subPath; 
 
             /**
-             * The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.
-             * <p>
-             * 
-             * > To use NET_RAW, you need to submit a ticket.
+             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
-                return this;
-            }
-
-            /**
-             * The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.
-             * <p>
-             * 
-             * > To use NET_RAW, you need to submit a ticket.
-             */
-            public Builder mountPropagation(String mountPropagation) {
-                this.mountPropagation = mountPropagation;
-                return this;
-            }
-
-            /**
-             * The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The name of the volume.
-             */
-            public Builder readOnly(Boolean readOnly) {
-                this.readOnly = readOnly;
                 return this;
             }
 
@@ -1788,6 +1766,33 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
              * 
              * Default value: None.
+             */
+            public Builder mountPropagation(String mountPropagation) {
+                this.mountPropagation = mountPropagation;
+                return this;
+            }
+
+            /**
+             * The name of the volume.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether the mount path is read-only.
+             * <p>
+             * 
+             * Default value: false.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            /**
+             * The subdirectory of the volume. The elastic container instance can mount different directories of the same volume to different subdirectories of containers.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -1996,7 +2001,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * The number of GPUs that are allocated to the container.
+             * The number of vCPUs.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2004,7 +2009,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory.
+             * The number of GPUs that are allocated to the container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -2012,7 +2017,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that runs the container.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2020,7 +2025,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * The image pulling policy.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -2028,7 +2033,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the elastic container instance. The tags are specified in the key-value pair format.
+             * The container startup arguments.
              */
             public Builder initContainerArgs(java.util.List < String > initContainerArgs) {
                 this.initContainerArgs = initContainerArgs;
@@ -2036,7 +2041,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The container startup arguments.
+             * The container startup commands.
              */
             public Builder initContainerCommands(java.util.List < String > initContainerCommands) {
                 this.initContainerCommands = initContainerCommands;
@@ -2044,7 +2049,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment variable.
+             * Details of the environment variables.
              */
             public Builder initContainerEnvironmentVars(java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars) {
                 this.initContainerEnvironmentVars = initContainerEnvironmentVars;
@@ -2052,7 +2057,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * Details of the init container ports.
              */
             public Builder initContainerPorts(java.util.List < InitContainerPorts> initContainerPorts) {
                 this.initContainerPorts = initContainerPorts;
@@ -2060,10 +2065,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the mount path is read-only.
-             * <p>
-             * 
-             * Default value: false.
+             * The volumes that are mounted on the container.
              */
             public Builder initContainerVolumeMounts(java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
@@ -2071,7 +2073,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the environment variables.
+             * The size of the memory.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2079,7 +2081,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the environment variables.
+             * The name of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2087,7 +2089,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The container startup commands.
+             * The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.
+             * <p>
+             * 
+             * > To use NET_RAW, you need to submit a ticket.
              */
             public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
                 this.securityContextCapabilityAdds = securityContextCapabilityAdds;
@@ -2095,7 +2100,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The working directory.
+             * Indicates whether the root file system is read-only. The only valid value is true.
              */
             public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
                 this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
@@ -2103,7 +2108,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * The ID of the user that runs the container.
              */
             public Builder securityContextRunAsUser(String securityContextRunAsUser) {
                 this.securityContextRunAsUser = securityContextRunAsUser;
@@ -2111,7 +2116,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The container image.
+             * The working directory.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2164,7 +2169,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Details of the Container Registry Enterprise Edition instances.
+             * The name of the security context in which the elastic container instance runs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2172,7 +2177,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the Container Registry Enterprise Edition instances.
+             * The variable value of the security context in which the elastic container instance runs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2225,7 +2230,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Details of the volumes.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2233,7 +2238,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the volumes.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2298,7 +2303,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * The information about the image repository.
+             * The content of the configuration file (32 KB).
              */
             public Builder content(String content) {
                 this.content = content;
@@ -2306,7 +2311,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image repository.
+             * The permissions on the ConfigFile volume.
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -2314,7 +2319,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the configuration file (32 KB).
+             * The relative path to the configuration file.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -2359,6 +2364,12 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("FlexVolumeOptions")
         private String flexVolumeOptions;
 
+        @NameInMap("HostPathVolumePath")
+        private String hostPathVolumePath;
+
+        @NameInMap("HostPathVolumeType")
+        private String hostPathVolumeType;
+
         @NameInMap("NFSVolumePath")
         private String NFSVolumePath;
 
@@ -2385,6 +2396,8 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             this.flexVolumeDriver = builder.flexVolumeDriver;
             this.flexVolumeFsType = builder.flexVolumeFsType;
             this.flexVolumeOptions = builder.flexVolumeOptions;
+            this.hostPathVolumePath = builder.hostPathVolumePath;
+            this.hostPathVolumeType = builder.hostPathVolumeType;
             this.NFSVolumePath = builder.NFSVolumePath;
             this.NFSVolumeReadOnly = builder.NFSVolumeReadOnly;
             this.NFSVolumeServer = builder.NFSVolumeServer;
@@ -2471,6 +2484,20 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hostPathVolumePath
+         */
+        public String getHostPathVolumePath() {
+            return this.hostPathVolumePath;
+        }
+
+        /**
+         * @return hostPathVolumeType
+         */
+        public String getHostPathVolumeType() {
+            return this.hostPathVolumeType;
+        }
+
+        /**
          * @return NFSVolumePath
          */
         public String getNFSVolumePath() {
@@ -2516,6 +2543,8 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String flexVolumeDriver; 
             private String flexVolumeFsType; 
             private String flexVolumeOptions; 
+            private String hostPathVolumePath; 
+            private String hostPathVolumeType; 
             private String NFSVolumePath; 
             private Boolean NFSVolumeReadOnly; 
             private String NFSVolumeServer; 
@@ -2523,10 +2552,74 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The relative path to the configuration file.
+             * The paths to configuration files.
              */
             public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
+                return this;
+            }
+
+            /**
+             * The default permissions on the ConfigFile volume.
+             */
+            public Builder configFileVolumeDefaultMode(Integer configFileVolumeDefaultMode) {
+                this.configFileVolumeDefaultMode = configFileVolumeDefaultMode;
+                return this;
+            }
+
+            /**
+             * The storage size of a disk volume. Unit: GiB.
+             */
+            public Builder diskVolumeDiskId(String diskVolumeDiskId) {
+                this.diskVolumeDiskId = diskVolumeDiskId;
+                return this;
+            }
+
+            /**
+             * The storage size of a disk volume. Unit: GiB.
+             */
+            public Builder diskVolumeDiskSize(Integer diskVolumeDiskSize) {
+                this.diskVolumeDiskSize = diskVolumeDiskSize;
+                return this;
+            }
+
+            /**
+             * The file system type of a disk volume.
+             */
+            public Builder diskVolumeFsType(String diskVolumeFsType) {
+                this.diskVolumeFsType = diskVolumeFsType;
+                return this;
+            }
+
+            /**
+             * The storage medium of EmptyDirVolume. If this parameter is left empty, the file system that backs the node is used as the storage medium. If this parameter is set to memory, the memory is used as the storage medium.
+             */
+            public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
+                this.emptyDirVolumeMedium = emptyDirVolumeMedium;
+                return this;
+            }
+
+            /**
+             * EmptyDir数据卷的大小。
+             */
+            public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
+                this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
+                return this;
+            }
+
+            /**
+             * The FlexVolume driver name of the volume.
+             */
+            public Builder flexVolumeDriver(String flexVolumeDriver) {
+                this.flexVolumeDriver = flexVolumeDriver;
+                return this;
+            }
+
+            /**
+             * The file system type of the volume. The default value is determined by the script of FlexVolume.
+             */
+            public Builder flexVolumeFsType(String flexVolumeFsType) {
+                this.flexVolumeFsType = flexVolumeFsType;
                 return this;
             }
 
@@ -2536,72 +2629,32 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * 
              * For example, when you use FlexVolume to mount a disk, the format of options is `{"volumeId":"d-2zehdahrwoa7srg****","performanceLevel": "PL2"}`.
              */
-            public Builder configFileVolumeDefaultMode(Integer configFileVolumeDefaultMode) {
-                this.configFileVolumeDefaultMode = configFileVolumeDefaultMode;
+            public Builder flexVolumeOptions(String flexVolumeOptions) {
+                this.flexVolumeOptions = flexVolumeOptions;
                 return this;
             }
 
             /**
-             * The storage medium of EmptyDirVolume. If this parameter is left empty, the file system that backs the node is used as the storage medium. If this parameter is set to memory, the memory is used as the storage medium.
+             * HostPath Volume在主机上的目录路径。
              */
-            public Builder diskVolumeDiskId(String diskVolumeDiskId) {
-                this.diskVolumeDiskId = diskVolumeDiskId;
+            public Builder hostPathVolumePath(String hostPathVolumePath) {
+                this.hostPathVolumePath = hostPathVolumePath;
                 return this;
             }
 
             /**
-             * The file system type of the volume. The default value is determined by the script of FlexVolume.
+             * HostPath Volume的类型。
              */
-            public Builder diskVolumeDiskSize(Integer diskVolumeDiskSize) {
-                this.diskVolumeDiskSize = diskVolumeDiskSize;
+            public Builder hostPathVolumeType(String hostPathVolumeType) {
+                this.hostPathVolumeType = hostPathVolumeType;
                 return this;
             }
 
             /**
              * The path to the Network File System (NFS) volume.
              */
-            public Builder diskVolumeFsType(String diskVolumeFsType) {
-                this.diskVolumeFsType = diskVolumeFsType;
-                return this;
-            }
-
-            /**
-             * The storage size of a disk volume. Unit: GiB.
-             */
-            public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
-                this.emptyDirVolumeMedium = emptyDirVolumeMedium;
-                return this;
-            }
-
-            /**
-             * EmptyDirVolumeSizeLimit.
-             */
-            public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
-                this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
-                return this;
-            }
-
-            /**
-             * The endpoint of the NFS server.
-             */
-            public Builder flexVolumeDriver(String flexVolumeDriver) {
-                this.flexVolumeDriver = flexVolumeDriver;
-                return this;
-            }
-
-            /**
-             * The FlexVolume driver name of the volume.
-             */
-            public Builder flexVolumeFsType(String flexVolumeFsType) {
-                this.flexVolumeFsType = flexVolumeFsType;
-                return this;
-            }
-
-            /**
-             * The name of the volume.
-             */
-            public Builder flexVolumeOptions(String flexVolumeOptions) {
-                this.flexVolumeOptions = flexVolumeOptions;
+            public Builder NFSVolumePath(String NFSVolumePath) {
+                this.NFSVolumePath = NFSVolumePath;
                 return this;
             }
 
@@ -2611,21 +2664,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * 
              * Default value: false.
              */
-            public Builder NFSVolumePath(String NFSVolumePath) {
-                this.NFSVolumePath = NFSVolumePath;
-                return this;
-            }
-
-            /**
-             * The default permissions on the ConfigFile volume.
-             */
             public Builder NFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
                 this.NFSVolumeReadOnly = NFSVolumeReadOnly;
                 return this;
             }
 
             /**
-             * The paths to configuration files.
+             * The endpoint of the NFS server.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -2633,7 +2678,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The paths to configuration files.
+             * The name of the volume.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2641,7 +2686,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The file system type of a disk volume.
+             * The type of the volume. Valid values:
+             * <p>
+             * 
+             * *   EmptyDirVolume
+             * *   NFSVolume
+             * *   ConfigFileVolume
+             * *   FlexVolume
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2689,6 +2740,18 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("DataCacheBucket")
+        private String dataCacheBucket;
+
+        @NameInMap("DataCacheBurstingEnabled")
+        private Boolean dataCacheBurstingEnabled;
+
+        @NameInMap("DataCachePL")
+        private String dataCachePL;
+
+        @NameInMap("DataCacheProvisionedIops")
+        private Integer dataCacheProvisionedIops;
+
         @NameInMap("Description")
         private String description;
 
@@ -2733,6 +2796,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
         @NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
+
+        @NameInMap("InstanceTypes")
+        private java.util.List < String > instanceTypes;
 
         @NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
@@ -2806,6 +2872,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             this.cpuOptionsCore = builder.cpuOptionsCore;
             this.cpuOptionsThreadsPerCore = builder.cpuOptionsThreadsPerCore;
             this.creationTime = builder.creationTime;
+            this.dataCacheBucket = builder.dataCacheBucket;
+            this.dataCacheBurstingEnabled = builder.dataCacheBurstingEnabled;
+            this.dataCachePL = builder.dataCachePL;
+            this.dataCacheProvisionedIops = builder.dataCacheProvisionedIops;
             this.description = builder.description;
             this.dnsConfigNameServers = builder.dnsConfigNameServers;
             this.dnsConfigOptions = builder.dnsConfigOptions;
@@ -2821,6 +2891,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             this.ingressBandwidth = builder.ingressBandwidth;
             this.initContainers = builder.initContainers;
             this.instanceFamilyLevel = builder.instanceFamilyLevel;
+            this.instanceTypes = builder.instanceTypes;
             this.ipv6AddressCount = builder.ipv6AddressCount;
             this.lifecycleState = builder.lifecycleState;
             this.loadBalancerWeight = builder.loadBalancerWeight;
@@ -2929,6 +3000,34 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataCacheBucket
+         */
+        public String getDataCacheBucket() {
+            return this.dataCacheBucket;
+        }
+
+        /**
+         * @return dataCacheBurstingEnabled
+         */
+        public Boolean getDataCacheBurstingEnabled() {
+            return this.dataCacheBurstingEnabled;
+        }
+
+        /**
+         * @return dataCachePL
+         */
+        public String getDataCachePL() {
+            return this.dataCachePL;
+        }
+
+        /**
+         * @return dataCacheProvisionedIops
+         */
+        public Integer getDataCacheProvisionedIops() {
+            return this.dataCacheProvisionedIops;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -3031,6 +3130,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          */
         public String getInstanceFamilyLevel() {
             return this.instanceFamilyLevel;
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List < String > getInstanceTypes() {
+            return this.instanceTypes;
         }
 
         /**
@@ -3185,6 +3291,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private Integer cpuOptionsCore; 
             private Integer cpuOptionsThreadsPerCore; 
             private String creationTime; 
+            private String dataCacheBucket; 
+            private Boolean dataCacheBurstingEnabled; 
+            private String dataCachePL; 
+            private Integer dataCacheProvisionedIops; 
             private String description; 
             private java.util.List < String > dnsConfigNameServers; 
             private java.util.List < DnsConfigOptions> dnsConfigOptions; 
@@ -3200,6 +3310,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private Long ingressBandwidth; 
             private java.util.List < InitContainers> initContainers; 
             private String instanceFamilyLevel; 
+            private java.util.List < String > instanceTypes; 
             private Integer ipv6AddressCount; 
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
@@ -3222,7 +3333,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             private java.util.List < Volumes> volumes; 
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * Details of the Container Registry Enterprise Edition instances.
              */
             public Builder acrRegistryInfos(java.util.List < AcrRegistryInfos> acrRegistryInfos) {
                 this.acrRegistryInfos = acrRegistryInfos;
@@ -3230,7 +3341,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an elastic IP address (EIP) is automatically created, and then bound to the elastic container instance.
+             * The validity period. Unit: seconds.
              */
             public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
                 this.activeDeadlineSeconds = activeDeadlineSeconds;
@@ -3238,7 +3349,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the temporary storage space. Unit: GiB.
+             * Indicates whether an elastic IP address (EIP) is automatically created, and then bound to the elastic container instance.
              */
             public Builder autoCreateEip(Boolean autoCreateEip) {
                 this.autoCreateEip = autoCreateEip;
@@ -3246,7 +3357,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the elastic container instance.
+             * Indicates whether the image cache is automatically matched. Default value: false.
              */
             public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
                 this.autoMatchImageCache = autoMatchImageCache;
@@ -3254,7 +3365,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical CPU cores. This parameter can be specified for only some instance types. For more information, see [Specify custom CPU options](~~197781~~).
+             * The name of the elastic container instance.
              */
             public Builder containerGroupName(String containerGroupName) {
                 this.containerGroupName = containerGroupName;
@@ -3262,7 +3373,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to which the system sends an HTTP GET request for a probe.
+             * The containers in the elastic container instance.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -3270,7 +3381,11 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * auditing
+             * Indicates whether the cost optimization feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder costOptimization(Boolean costOptimization) {
                 this.costOptimization = costOptimization;
@@ -3278,7 +3393,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The number of vCPUs of the elastic container instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -3286,7 +3401,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The containers in the elastic container instance.
+             * The number of physical CPU cores. This parameter can be specified for only some instance types. For more information, see [Specify custom CPU options](~~197781~~).
              */
             public Builder cpuOptionsCore(Integer cpuOptionsCore) {
                 this.cpuOptionsCore = cpuOptionsCore;
@@ -3294,7 +3409,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the elastic container instance as a backend server. Valid values: 1 to 100.
+             * The number of threads per core. This parameter can be specified for only some instance types. If you set this parameter to 1, Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
              */
             public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
                 this.cpuOptionsThreadsPerCore = cpuOptionsThreadsPerCore;
@@ -3302,7 +3417,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group with which the elastic container instance is associated. Elastic container instances that are associated with the same security group can access each other.
+             * The time when the scaling configuration was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -3310,7 +3425,55 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image cache snapshot.
+             * 数据缓存Bucket。
+             */
+            public Builder dataCacheBucket(String dataCacheBucket) {
+                this.dataCacheBucket = dataCacheBucket;
+                return this;
+            }
+
+            /**
+             * 数据缓存使用ESSD AutoPL云盘时，是否开启Burst（性能突发）。可能值：
+             * <p>
+             * 
+             * - true：开启。
+             * - false：未开启。
+             * >关于ESSD AutoPL云盘的更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。
+             */
+            public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
+                this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
+                return this;
+            }
+
+            /**
+             * 数据缓存使用的云盘的性能等级。建议优先使用ESSD云盘，该云盘的性能等级的可能值：
+             * <p>
+             * 
+             * - PL0：单盘最高随机读写IOPS 1万。
+             * - PL1：单盘最高随机读写IOPS 5万。
+             * - PL2：单盘最高随机读写IOPS 10万。
+             * - PL3：单盘最高随机读写IOPS 100万。
+             * 
+             * >关于ESSD云盘的更多信息，请参见[ESSD云盘](~~122389~~)。
+             */
+            public Builder dataCachePL(String dataCachePL) {
+                this.dataCachePL = dataCachePL;
+                return this;
+            }
+
+            /**
+             * 数据缓存使用ESSD AutoPL云盘时，ESSD AutoPL云盘预配置的读写IOPS。可能值：0~min{50000, 1000*容量-基准性能}，其中，基准性能=min{1800+50*容量, 50000}。
+             * <p>
+             * 
+             * >关于ESSD AutoPL云盘的更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。
+             */
+            public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
+                this.dataCacheProvisionedIops = dataCacheProvisionedIops;
+                return this;
+            }
+
+            /**
+             * > This parameter is unavailable.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3318,7 +3481,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS lookup domains.
+             * The IP addresses of the DNS servers.
              */
             public Builder dnsConfigNameServers(java.util.List < String > dnsConfigNameServers) {
                 this.dnsConfigNameServers = dnsConfigNameServers;
@@ -3326,7 +3489,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The variable name of the option.
+             * The options. Each option is a name-value pair. The value in the name-value pair is optional.
              */
             public Builder dnsConfigOptions(java.util.List < DnsConfigOptions> dnsConfigOptions) {
                 this.dnsConfigOptions = dnsConfigOptions;
@@ -3334,7 +3497,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names of the Network Time Protocol (NTP) servers.
+             * The DNS lookup domains.
              */
             public Builder dnsConfigSearches(java.util.List < String > dnsConfigSearches) {
                 this.dnsConfigSearches = dnsConfigSearches;
@@ -3342,7 +3505,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum outbound bandwidth. Unit: bytes.
+             * The Domain Name System (DNS) policy.
              */
             public Builder dnsPolicy(String dnsPolicy) {
                 this.dnsPolicy = dnsPolicy;
@@ -3350,7 +3513,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
+             * The maximum outbound bandwidth. Unit: bytes.
              */
             public Builder egressBandwidth(Long egressBandwidth) {
                 this.egressBandwidth = egressBandwidth;
@@ -3358,12 +3521,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the memory.
-             * <p>
-             * 
-             * You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.
-             * 
-             * > You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+             * The bandwidth of the EIP. Default value: 5 Mbit/s.
              */
             public Builder eipBandwidth(Integer eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -3371,7 +3529,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * The size of the temporary storage space. Unit: GiB.
              */
             public Builder ephemeralStorage(Integer ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -3379,7 +3537,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that is added.
+             * The hostname aliases of a container.
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
@@ -3387,7 +3545,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the elastic container instance.
+             * The hostname.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -3395,7 +3553,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The password that is used to access the image repository.
+             * The information about the image repository.
              */
             public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
                 this.imageRegistryCredentials = imageRegistryCredentials;
@@ -3403,12 +3561,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The restart policy of the elastic container instance. Valid values:
-             * <p>
-             * 
-             * *   Never: never restarts the elastic container instance.
-             * *   Always: always restarts the elastic container instance.
-             * *   OnFailure: restarts the elastic container instance upon failures.
+             * The ID of the image cache snapshot.
              */
             public Builder imageSnapshotId(String imageSnapshotId) {
                 this.imageSnapshotId = imageSnapshotId;
@@ -3416,7 +3569,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The buffer time in which the program handles operations before the program stops.
+             * The maximum inbound bandwidth. Unit: bit/s.
              */
             public Builder ingressBandwidth(Long ingressBandwidth) {
                 this.ingressBandwidth = ingressBandwidth;
@@ -3424,26 +3577,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the root file system is read-only. The only valid value is true.
+             * The init containers.
              */
             public Builder initContainers(java.util.List < InitContainers> initContainers) {
                 this.initContainers = initContainers;
-                return this;
-            }
-
-            /**
-             * 5292
-             */
-            public Builder instanceFamilyLevel(String instanceFamilyLevel) {
-                this.instanceFamilyLevel = instanceFamilyLevel;
-                return this;
-            }
-
-            /**
-             * The bandwidth of the EIP. Default value: 5 Mbit/s.
-             */
-            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
-                this.ipv6AddressCount = ipv6AddressCount;
                 return this;
             }
 
@@ -3455,27 +3592,24 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).
              * *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances.
              */
-            public Builder lifecycleState(String lifecycleState) {
-                this.lifecycleState = lifecycleState;
+            public Builder instanceFamilyLevel(String instanceFamilyLevel) {
+                this.instanceFamilyLevel = instanceFamilyLevel;
                 return this;
             }
 
             /**
-             * The hostname.
+             * 指定的ECS实例规格，支持多规格（最多支持5个）。
              */
-            public Builder loadBalancerWeight(Integer loadBalancerWeight) {
-                this.loadBalancerWeight = loadBalancerWeight;
+            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+                this.instanceTypes = instanceTypes;
                 return this;
             }
 
             /**
-             * The maximum hourly price for the preemptible instance.
-             * <p>
-             * 
-             * This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
+             * The number of IPv6 addresses.
              */
-            public Builder memory(Float memory) {
-                this.memory = memory;
+            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+                this.ipv6AddressCount = ipv6AddressCount;
                 return this;
             }
 
@@ -3486,13 +3620,42 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses active scaling configurations to automatically create ECS instances.
              * *   Inactive: The scaling configuration is inactive in the scaling group. Auto Scaling does not use inactive scaling configurations to automatically create ECS instances. Inactive scaling configurations are retained in the scaling group.
              */
+            public Builder lifecycleState(String lifecycleState) {
+                this.lifecycleState = lifecycleState;
+                return this;
+            }
+
+            /**
+             * The weight of the elastic container instance as a backend server. Valid values: 1 to 100.
+             */
+            public Builder loadBalancerWeight(Integer loadBalancerWeight) {
+                this.loadBalancerWeight = loadBalancerWeight;
+                return this;
+            }
+
+            /**
+             * The size of the memory.
+             * <p>
+             * 
+             * You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.
+             * 
+             * > You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+             */
+            public Builder memory(Float memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * The domain names of the Network Time Protocol (NTP) servers.
+             */
             public Builder ntpServers(java.util.List < String > ntpServers) {
                 this.ntpServers = ntpServers;
                 return this;
             }
 
             /**
-             * Indicates whether the image cache is automatically matched. Default value: false.
+             * The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -3500,7 +3663,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs of the elastic container instance.
+             * The region ID of the elastic container instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -3508,7 +3671,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling configuration.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -3516,7 +3679,12 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum inbound bandwidth. Unit: bit/s.
+             * The restart policy of the elastic container instance. Valid values:
+             * <p>
+             * 
+             * *   Never: never restarts the elastic container instance.
+             * *   Always: always restarts the elastic container instance.
+             * *   OnFailure: restarts the elastic container instance upon failures.
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -3524,7 +3692,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * The ID of the scaling configuration.
              */
             public Builder scalingConfigurationId(String scalingConfigurationId) {
                 this.scalingConfigurationId = scalingConfigurationId;
@@ -3532,7 +3700,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period. Unit: seconds.
+             * The name of the scaling configuration.
              */
             public Builder scalingConfigurationName(String scalingConfigurationName) {
                 this.scalingConfigurationName = scalingConfigurationName;
@@ -3540,7 +3708,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6 addresses.
+             * The scaling group ID of the scaling configuration.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -3548,10 +3716,37 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security context in which the elastic container instance runs.
+             * The system information of the security context in which the elastic container instance runs.
              */
             public Builder securityContextSysCtls(java.util.List < SecurityContextSysCtls> securityContextSysCtls) {
                 this.securityContextSysCtls = securityContextSysCtls;
+                return this;
+            }
+
+            /**
+             * The ID of the security group with which the elastic container instance is associated. Elastic container instances that are associated with the same security group can access each other.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * > This parameter is unavailable.
+             */
+            public Builder slsEnable(Boolean slsEnable) {
+                this.slsEnable = slsEnable;
+                return this;
+            }
+
+            /**
+             * The maximum hourly price for the preemptible instance.
+             * <p>
+             * 
+             * This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
+             */
+            public Builder spotPriceLimit(Float spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
                 return this;
             }
 
@@ -3563,37 +3758,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
              * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
              * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
-                return this;
-            }
-
-            /**
-             * The containers in the elastic container instance.
-             */
-            public Builder slsEnable(Boolean slsEnable) {
-                this.slsEnable = slsEnable;
-                return this;
-            }
-
-            /**
-             * The number of threads per core. This parameter can be specified for only some instance types. If you set this parameter to 1, Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
-             */
-            public Builder spotPriceLimit(Float spotPriceLimit) {
-                this.spotPriceLimit = spotPriceLimit;
-                return this;
-            }
-
-            /**
-             * The scaling group ID of the scaling configuration.
-             */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
                 return this;
             }
 
             /**
-             * The key of the tag.
+             * The tags of the elastic container instance. The tags are specified in the key-value pair format.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -3601,7 +3772,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Domain Name System (DNS) policy.
+             * The buffer time in which the program handles operations before the program stops.
              */
             public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
                 this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
@@ -3609,13 +3780,7 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the volume. Valid values:
-             * <p>
-             * 
-             * *   EmptyDirVolume
-             * *   NFSVolume
-             * *   ConfigFileVolume
-             * *   FlexVolume
+             * Details of the volumes.
              */
             public Builder volumes(java.util.List < Volumes> volumes) {
                 this.volumes = volumes;
