@@ -141,20 +141,20 @@ public class DescribeSnapshotsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSnapshotsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.snapshotIds = response.snapshotIds;
-            this.snapshotName = response.snapshotName;
-            this.snapshotType = response.snapshotType;
-            this.status = response.status;
+        private Builder(DescribeSnapshotsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.snapshotIds = request.snapshotIds;
+            this.snapshotName = request.snapshotName;
+            this.snapshotType = request.snapshotType;
+            this.status = request.status;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -163,7 +163,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid value: extreme, which indicates Extreme NAS file systems.
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -172,7 +175,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +187,12 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +201,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotIds.
+         * The snapshot IDs.
+         * <p>
+         * 
+         * You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
@@ -199,7 +213,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * The snapshot name.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -208,7 +222,14 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotType.
+         * The type of the snapshot.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   auto: auto snapshot
+         * *   user: manual snapshot
+         * *   all (default): all snapshot types
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -217,7 +238,15 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the snapshot.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   progressing: The snapshot is being created.
+         * *   accomplished: The snapshot is created.
+         * *   failed: The snapshot fails to be created.
+         * *   all (default): all snapshot states.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

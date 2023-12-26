@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeLDAPConfigResponse} extends {@link TeaModel}
+ * {@link DescribeProtocolServiceResponse} extends {@link TeaModel}
  *
- * <p>DescribeLDAPConfigResponse</p>
+ * <p>DescribeProtocolServiceResponse</p>
  */
-public class DescribeLDAPConfigResponse extends Response {
+public class DescribeProtocolServiceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeLDAPConfigResponseBody body;
+    private DescribeProtocolServiceResponseBody body;
 
-    private DescribeLDAPConfigResponse(BuilderImpl builder) {
+    private DescribeProtocolServiceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeLDAPConfigResponse create() {
+    public static DescribeProtocolServiceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class DescribeLDAPConfigResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeLDAPConfigResponseBody getBody() {
+    public DescribeProtocolServiceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeLDAPConfigResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeProtocolServiceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeLDAPConfigResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeProtocolServiceResponseBody body);
 
         @Override
-        DescribeLDAPConfigResponse build();
+        DescribeProtocolServiceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeLDAPConfigResponse, Builder>
+            extends Response.BuilderImpl<DescribeProtocolServiceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeLDAPConfigResponseBody body; 
+        private Integer statusCode; 
+        private DescribeProtocolServiceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeLDAPConfigResponse response) {
+        private BuilderImpl(DescribeProtocolServiceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class DescribeLDAPConfigResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeLDAPConfigResponseBody body) {
+        public Builder body(DescribeProtocolServiceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeLDAPConfigResponse build() {
-            return new DescribeLDAPConfigResponse(this);
+        public DescribeProtocolServiceResponse build() {
+            return new DescribeProtocolServiceResponse(this);
         } 
 
     } 

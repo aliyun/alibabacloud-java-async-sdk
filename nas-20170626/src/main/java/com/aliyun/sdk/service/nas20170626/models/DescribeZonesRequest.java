@@ -62,14 +62,23 @@ public class DescribeZonesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.fileSystemType = response.fileSystemType;
-            this.regionId = response.regionId;
+        private Builder(DescribeZonesRequest request) {
+            super(request);
+            this.fileSystemType = request.fileSystemType;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
+         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -78,7 +87,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to query zones.
+         * <p>
+         * 
+         * You can call the DescribeRegions operation to query the latest region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

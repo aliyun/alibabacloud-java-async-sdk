@@ -49,13 +49,13 @@ public class DescribeSmbAclRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSmbAclRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(DescribeSmbAclRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -128,19 +128,19 @@ public class CreateAccessRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccessRuleRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.fileSystemType = response.fileSystemType;
-            this.ipv6SourceCidrIp = response.ipv6SourceCidrIp;
-            this.priority = response.priority;
-            this.RWAccessType = response.RWAccessType;
-            this.sourceCidrIp = response.sourceCidrIp;
-            this.userAccessType = response.userAccessType;
+        private Builder(CreateAccessRuleRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.fileSystemType = request.fileSystemType;
+            this.ipv6SourceCidrIp = request.ipv6SourceCidrIp;
+            this.priority = request.priority;
+            this.RWAccessType = request.RWAccessType;
+            this.sourceCidrIp = request.sourceCidrIp;
+            this.userAccessType = request.userAccessType;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -149,7 +149,13 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -158,7 +164,14 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * Ipv6SourceCidrIp.
+         * The IPv6 address or CIDR block of the authorized object.
+         * <p>
+         * 
+         * You must set this parameter to an IPv6 address or CIDR block.
+         * 
+         * > *   Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you specify this parameter, you must enable IPv6 for the file system.
+         * >*   Only permission groups that reside in virtual private clouds (VPCs) support IPv6.
+         * >*   You cannot specify an IPv4 address and an IPv6 address at the same time.
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -167,7 +180,12 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the rule.
+         * <p>
+         * 
+         * The rule with the highest priority takes effect if multiple rules are attached to the authorized object.
+         * 
+         * Valid values: 1 to 100. The value 1 indicates the highest priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -176,7 +194,13 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * RWAccessType.
+         * The access permissions of the authorized object on the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RDWR (default): the read and write permissions
+         * *   RDONLY: the read-only permissions
          */
         public Builder RWAccessType(String RWAccessType) {
             this.putQueryParameter("RWAccessType", RWAccessType);
@@ -185,7 +209,12 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * SourceCidrIp.
+         * The IP address or CIDR block of the authorized object.
+         * <p>
+         * 
+         * You must set this parameter to an IP address or CIDR block.
+         * 
+         * > If the permission group resides in the classic network, you must set this parameter to an IP address.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -194,7 +223,16 @@ public class CreateAccessRuleRequest extends Request {
         }
 
         /**
-         * UserAccessType.
+         * The access permissions for different types of users in the authorized object.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   no_squash (default): grants root users the permissions to access the file system.
+         * *   root_squash: grants root users the least permissions as the nobody user.
+         * *   all_squash: grants all users the least permissions as the nobody user.
+         * 
+         * The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.
          */
         public Builder userAccessType(String userAccessType) {
             this.putQueryParameter("UserAccessType", userAccessType);

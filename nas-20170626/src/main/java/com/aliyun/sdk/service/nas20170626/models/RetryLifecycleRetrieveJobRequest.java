@@ -49,13 +49,13 @@ public class RetryLifecycleRetrieveJobRequest extends Request {
             super();
         } 
 
-        private Builder(RetryLifecycleRetrieveJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(RetryLifecycleRetrieveJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**
-         * JobId.
+         * The ID of the data retrieval task.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

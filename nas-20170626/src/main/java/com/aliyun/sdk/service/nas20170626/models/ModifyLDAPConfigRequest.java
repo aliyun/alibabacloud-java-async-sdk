@@ -90,12 +90,12 @@ public class ModifyLDAPConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLDAPConfigRequest response) {
-            super(response);
-            this.bindDN = response.bindDN;
-            this.fileSystemId = response.fileSystemId;
-            this.searchBase = response.searchBase;
-            this.URI = response.URI;
+        private Builder(ModifyLDAPConfigRequest request) {
+            super(request);
+            this.bindDN = request.bindDN;
+            this.fileSystemId = request.fileSystemId;
+            this.searchBase = request.searchBase;
+            this.URI = request.URI;
         } 
 
         /**

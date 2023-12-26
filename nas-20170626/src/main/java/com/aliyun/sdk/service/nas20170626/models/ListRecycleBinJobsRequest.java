@@ -102,17 +102,17 @@ public class ListRecycleBinJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListRecycleBinJobsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.jobId = response.jobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(ListRecycleBinJobsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.jobId = request.jobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -121,7 +121,7 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -130,7 +130,10 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +142,12 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +156,16 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the job. Valid values:
+         * <p>
+         * 
+         * *   Running: The job is running.
+         * *   Defragmenting: The job is defragmenting data.
+         * *   PartialSuccess: The job is partially completed.
+         * *   Success: The job is completed.
+         * *   Fail: The job failed.
+         * *   Cancelled: The job is canceled.
+         * *   All: all.Default value:All.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

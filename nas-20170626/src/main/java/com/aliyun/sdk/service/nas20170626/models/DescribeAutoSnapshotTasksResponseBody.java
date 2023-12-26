@@ -86,7 +86,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AutoSnapshotTasks.
+         * The queried automatic snapshot tasks.
          */
         public Builder autoSnapshotTasks(AutoSnapshotTasks autoSnapshotTasks) {
             this.autoSnapshotTasks = autoSnapshotTasks;
@@ -94,7 +94,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of automatic snapshot tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             private String sourceFileSystemId; 
 
             /**
-             * AutoSnapshotPolicyId.
+             * The ID of the automatic snapshot policy.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -178,7 +178,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFileSystemId.
+             * The ID of the file system.
              */
             public Builder sourceFileSystemId(String sourceFileSystemId) {
                 this.sourceFileSystemId = sourceFileSystemId;

@@ -63,14 +63,14 @@ public class EnableRecycleBinRequest extends Request {
             super();
         } 
 
-        private Builder(EnableRecycleBinRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.reservedDays = response.reservedDays;
+        private Builder(EnableRecycleBinRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.reservedDays = request.reservedDays;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system for which you want to enable the recycle bin feature.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,12 @@ public class EnableRecycleBinRequest extends Request {
         }
 
         /**
-         * ReservedDays.
+         * The retention period of the files in the recycle bin. Unit: days.
+         * <p>
+         * 
+         * Valid values: 1 to 180.
+         * 
+         * Default value: 3.
          */
         public Builder reservedDays(Long reservedDays) {
             this.putQueryParameter("ReservedDays", reservedDays);

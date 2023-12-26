@@ -63,14 +63,14 @@ public class ResetFileSystemRequest extends Request {
             super();
         } 
 
-        private Builder(ResetFileSystemRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.snapshotId = response.snapshotId;
+        private Builder(ResetFileSystemRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the advanced Extreme NAS file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,7 @@ public class ResetFileSystemRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The snapshot ID.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

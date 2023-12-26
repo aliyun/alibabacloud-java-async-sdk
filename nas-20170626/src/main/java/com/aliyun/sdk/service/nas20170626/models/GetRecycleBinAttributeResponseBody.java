@@ -50,7 +50,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RecycleBinAttribute.
+         * The description of the recycle bin.
          */
         public Builder recycleBinAttribute(RecycleBinAttribute recycleBinAttribute) {
             this.recycleBinAttribute = recycleBinAttribute;
@@ -58,7 +58,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,6 +78,9 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         @NameInMap("ReservedDays")
         private Long reservedDays;
 
+        @NameInMap("SecondarySize")
+        private Long secondarySize;
+
         @NameInMap("Size")
         private Long size;
 
@@ -87,6 +90,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         private RecycleBinAttribute(Builder builder) {
             this.enableTime = builder.enableTime;
             this.reservedDays = builder.reservedDays;
+            this.secondarySize = builder.secondarySize;
             this.size = builder.size;
             this.status = builder.status;
         }
@@ -114,6 +118,13 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondarySize
+         */
+        public Long getSecondarySize() {
+            return this.secondarySize;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -130,11 +141,12 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String enableTime; 
             private Long reservedDays; 
+            private Long secondarySize; 
             private Long size; 
             private String status; 
 
             /**
-             * EnableTime.
+             * The time at which the recycle bin was enabled.
              */
             public Builder enableTime(String enableTime) {
                 this.enableTime = enableTime;
@@ -142,7 +154,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedDays.
+             * The retention period of the files in the recycle bin. Unit: days.
+             * <p>
+             * 
+             * If the recycle bin is disabled, 0 is returned for this parameter.
              */
             public Builder reservedDays(Long reservedDays) {
                 this.reservedDays = reservedDays;
@@ -150,7 +165,15 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the cold data that is dumped to the recycle bin. Unit: bytes.
+             */
+            public Builder secondarySize(Long secondarySize) {
+                this.secondarySize = secondarySize;
+                return this;
+            }
+
+            /**
+             * The size of the files that are dumped to the recycle bin. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -158,7 +181,13 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the recycle bin.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Enable: The recycle bin is enabled.
+             * *   Disable: The recycle bin is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

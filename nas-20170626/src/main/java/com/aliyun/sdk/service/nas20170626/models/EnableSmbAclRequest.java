@@ -19,12 +19,10 @@ public class EnableSmbAclRequest extends Request {
 
     @Query
     @NameInMap("Keytab")
-    @Validation(required = true)
     private String keytab;
 
     @Query
     @NameInMap("KeytabMd5")
-    @Validation(required = true)
     private String keytabMd5;
 
     private EnableSmbAclRequest(Builder builder) {
@@ -77,15 +75,15 @@ public class EnableSmbAclRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSmbAclRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.keytab = response.keytab;
-            this.keytabMd5 = response.keytabMd5;
+        private Builder(EnableSmbAclRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.keytab = request.keytab;
+            this.keytabMd5 = request.keytabMd5;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -94,7 +92,7 @@ public class EnableSmbAclRequest extends Request {
         }
 
         /**
-         * Keytab.
+         * The string that is generated after the system encodes the keytab file by using Base64.
          */
         public Builder keytab(String keytab) {
             this.putQueryParameter("Keytab", keytab);
@@ -103,7 +101,7 @@ public class EnableSmbAclRequest extends Request {
         }
 
         /**
-         * KeytabMd5.
+         * The string that is generated after the system encodes the keytab file by using MD5.
          */
         public Builder keytabMd5(String keytabMd5) {
             this.putQueryParameter("KeytabMd5", keytabMd5);

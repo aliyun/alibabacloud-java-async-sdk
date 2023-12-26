@@ -86,7 +86,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LifecycleRetrieveJobs.
+         * The details about the data retrieval tasks.
          */
         public Builder lifecycleRetrieveJobs(java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs) {
             this.lifecycleRetrieveJobs = lifecycleRetrieveJobs;
@@ -94,7 +94,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of data retrieval tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the task was created.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -250,7 +253,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DiscoveredFileCount.
+             * The total number of files that are read in the data retrieval task.
              */
             public Builder discoveredFileCount(Long discoveredFileCount) {
                 this.discoveredFileCount = discoveredFileCount;
@@ -258,7 +261,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -266,7 +269,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the data retrieval task.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -282,7 +285,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RetrievedFileCount.
+             * The total number of files that are retrieved.
              */
             public Builder retrievedFileCount(Long retrievedFileCount) {
                 this.retrievedFileCount = retrievedFileCount;
@@ -290,7 +293,13 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data retrieval task. Valid values:
+             * <p>
+             * 
+             * *   active: The task is running.
+             * *   canceled: The task is canceled.
+             * *   completed: The task is completed.
+             * *   failed: The task has failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +307,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the task was updated.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

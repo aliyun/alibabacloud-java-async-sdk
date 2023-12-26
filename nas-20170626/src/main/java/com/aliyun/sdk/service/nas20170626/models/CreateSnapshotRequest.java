@@ -89,16 +89,23 @@ public class CreateSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSnapshotRequest response) {
-            super(response);
-            this.description = response.description;
-            this.fileSystemId = response.fileSystemId;
-            this.retentionDays = response.retentionDays;
-            this.snapshotName = response.snapshotName;
+        private Builder(CreateSnapshotRequest request) {
+            super(request);
+            this.description = request.description;
+            this.fileSystemId = request.fileSystemId;
+            this.retentionDays = request.retentionDays;
+            this.snapshotName = request.snapshotName;
         } 
 
         /**
-         * Description.
+         * The description of the snapshot.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The description must be 2 to 256 characters in length.
+         * *   The description cannot start with `http://` or `https://`.
+         * *   This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -107,7 +114,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the advanced Extreme NAS file system. The value must start with `extreme-`, for example, `extreme-01dd****`.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -116,7 +123,15 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * RetentionDays.
+         * The retention period of the snapshot.
+         * <p>
+         * 
+         * Unit: days.
+         * 
+         * Valid values:
+         * 
+         * *   \-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+         * *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -125,7 +140,14 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * The snapshot name.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * *   The name cannot start with auto because snapshots whose names start with auto are recognized as auto snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

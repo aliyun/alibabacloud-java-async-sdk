@@ -103,17 +103,17 @@ public class ModifyLifecyclePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyLifecyclePolicyRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.lifecyclePolicyName = response.lifecyclePolicyName;
-            this.lifecycleRuleName = response.lifecycleRuleName;
-            this.path = response.path;
-            this.storageType = response.storageType;
+        private Builder(ModifyLifecyclePolicyRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyName = request.lifecyclePolicyName;
+            this.lifecycleRuleName = request.lifecycleRuleName;
+            this.path = request.path;
+            this.storageType = request.storageType;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -122,7 +122,10 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyName.
+         * The name of the lifecycle policy.
+         * <p>
+         * 
+         * The name must be 3 to 64 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
@@ -131,7 +134,15 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecycleRuleName.
+         * The management rule that is associated with the lifecycle policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.
+         * *   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.
+         * *   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.
+         * *   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.
          */
         public Builder lifecycleRuleName(String lifecycleRuleName) {
             this.putQueryParameter("LifecycleRuleName", lifecycleRuleName);
@@ -140,7 +151,10 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * Path.
+         * The absolute path of a directory with which the lifecycle policy is associated.
+         * <p>
+         * 
+         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -149,7 +163,10 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type of the data that is dumped to the IA storage medium.
+         * <p>
+         * 
+         * Default value: InfrequentAccess (IA).
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

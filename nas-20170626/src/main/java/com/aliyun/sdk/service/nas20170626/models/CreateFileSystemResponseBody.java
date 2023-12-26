@@ -50,7 +50,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileSystemId.
+         * The ID of the file system that is created.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -58,7 +58,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

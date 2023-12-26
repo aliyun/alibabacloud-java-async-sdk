@@ -117,18 +117,24 @@ public class ListDirectoriesAndFilesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDirectoriesAndFilesRequest response) {
-            super(response);
-            this.directoryOnly = response.directoryOnly;
-            this.fileSystemId = response.fileSystemId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.path = response.path;
-            this.storageType = response.storageType;
+        private Builder(ListDirectoriesAndFilesRequest request) {
+            super(request);
+            this.directoryOnly = request.directoryOnly;
+            this.fileSystemId = request.fileSystemId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.path = request.path;
+            this.storageType = request.storageType;
         } 
 
         /**
-         * DirectoryOnly.
+         * Specifies whether to query only directories.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   false (default): queries both directories and files
+         * *   true: queries only directories
          */
         public Builder directoryOnly(Boolean directoryOnly) {
             this.putQueryParameter("DirectoryOnly", directoryOnly);
@@ -137,7 +143,7 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -146,7 +152,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of directories or files to include in the results of each query.
+         * <p>
+         * 
+         * Valid values: 10 to 128.
+         * 
+         * Default value: 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -155,7 +166,7 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -164,7 +175,10 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * Path.
+         * The absolute path of the directory.
+         * <p>
+         * 
+         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -173,7 +187,10 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type of the files.
+         * <p>
+         * 
+         * Default value: InfrequentAccess (IA).
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

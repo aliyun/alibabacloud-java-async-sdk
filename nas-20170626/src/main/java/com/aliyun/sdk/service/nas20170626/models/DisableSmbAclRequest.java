@@ -49,13 +49,13 @@ public class DisableSmbAclRequest extends Request {
             super();
         } 
 
-        private Builder(DisableSmbAclRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(DisableSmbAclRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -7,17 +7,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeLDAPConfigRequest} extends {@link RequestModel}
+ * {@link DescribeNfsAclRequest} extends {@link RequestModel}
  *
- * <p>DescribeLDAPConfigRequest</p>
+ * <p>DescribeNfsAclRequest</p>
  */
-public class DescribeLDAPConfigRequest extends Request {
+public class DescribeNfsAclRequest extends Request {
     @Query
     @NameInMap("FileSystemId")
     @Validation(required = true)
     private String fileSystemId;
 
-    private DescribeLDAPConfigRequest(Builder builder) {
+    private DescribeNfsAclRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
     }
@@ -26,7 +26,7 @@ public class DescribeLDAPConfigRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeLDAPConfigRequest create() {
+    public static DescribeNfsAclRequest create() {
         return builder().build();
     }
 
@@ -42,20 +42,20 @@ public class DescribeLDAPConfigRequest extends Request {
         return this.fileSystemId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeLDAPConfigRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeNfsAclRequest, Builder> {
         private String fileSystemId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLDAPConfigRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(DescribeNfsAclRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -64,8 +64,8 @@ public class DescribeLDAPConfigRequest extends Request {
         }
 
         @Override
-        public DescribeLDAPConfigRequest build() {
-            return new DescribeLDAPConfigRequest(this);
+        public DescribeNfsAclRequest build() {
+            return new DescribeNfsAclRequest(this);
         } 
 
     } 

@@ -86,7 +86,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Jobs.
+         * The information about the jobs of the recycle bin.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -94,7 +94,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of jobs returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of jobs.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CreateTime.
+             * The time when the job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -262,7 +262,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
+             * <p>
+             * 
+             * A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -270,7 +273,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
+             * <p>
+             * 
+             * A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -278,7 +284,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the file or directory in the job.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -286,7 +292,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the file or directory that is associated with the job.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -294,7 +300,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The job ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -302,7 +308,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the job.
+             * <p>
+             * 
+             * Valid values: 1 to 100.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -310,7 +319,15 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   Running: The job is running.
+             * *   Defragmenting: The job is defragmenting data.
+             * *   PartialSuccess: The job is partially completed.
+             * *   Success: The job is completed.
+             * *   Fail: The job failed.
+             * *   Cancelled: The job is canceled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +335,11 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the job. Valid values:
+             * <p>
+             * 
+             * *   Restore: a file restoration job
+             * *   Delete: a file deletion job
              */
             public Builder type(String type) {
                 this.type = type;

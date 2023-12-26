@@ -14,12 +14,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifySmbAclRequest extends Request {
     @Query
     @NameInMap("EnableAnonymousAccess")
-    @Validation(required = true)
     private Boolean enableAnonymousAccess;
 
     @Query
     @NameInMap("EncryptData")
-    @Validation(required = true)
     private Boolean encryptData;
 
     @Query
@@ -41,7 +39,6 @@ public class ModifySmbAclRequest extends Request {
 
     @Query
     @NameInMap("RejectUnencryptedAccess")
-    @Validation(required = true)
     private Boolean rejectUnencryptedAccess;
 
     @Query
@@ -143,20 +140,24 @@ public class ModifySmbAclRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySmbAclRequest response) {
-            super(response);
-            this.enableAnonymousAccess = response.enableAnonymousAccess;
-            this.encryptData = response.encryptData;
-            this.fileSystemId = response.fileSystemId;
-            this.homeDirPath = response.homeDirPath;
-            this.keytab = response.keytab;
-            this.keytabMd5 = response.keytabMd5;
-            this.rejectUnencryptedAccess = response.rejectUnencryptedAccess;
-            this.superAdminSid = response.superAdminSid;
+        private Builder(ModifySmbAclRequest request) {
+            super(request);
+            this.enableAnonymousAccess = request.enableAnonymousAccess;
+            this.encryptData = request.encryptData;
+            this.fileSystemId = request.fileSystemId;
+            this.homeDirPath = request.homeDirPath;
+            this.keytab = request.keytab;
+            this.keytabMd5 = request.keytabMd5;
+            this.rejectUnencryptedAccess = request.rejectUnencryptedAccess;
+            this.superAdminSid = request.superAdminSid;
         } 
 
         /**
-         * EnableAnonymousAccess.
+         * Specifies whether to allow anonymous access. Valid values:
+         * <p>
+         * 
+         * *   true: The file system allows anonymous access.
+         * *   false (default): The file system denies anonymous access.
          */
         public Builder enableAnonymousAccess(Boolean enableAnonymousAccess) {
             this.putQueryParameter("EnableAnonymousAccess", enableAnonymousAccess);
@@ -165,7 +166,11 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * EncryptData.
+         * Specifies whether to enable encryption in transit. Valid values:
+         * <p>
+         * 
+         * *   true: enables encryption in transit.
+         * *   false (default): disables encryption in transit.
          */
         public Builder encryptData(Boolean encryptData) {
             this.putQueryParameter("EncryptData", encryptData);
@@ -174,7 +179,7 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -183,7 +188,17 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * HomeDirPath.
+         * The home directory of each user. Each user-specific home directory must meet the following requirements:
+         * <p>
+         * 
+         * *   Each segment starts with a forward slash (/) or a backward slash (\\).
+         * *   Each segment does not contain the following special characters: `<>":|?*`.
+         * *   Each segment is 0 to 255 characters in length.
+         * *   The total length is 0 to 32,767 characters.
+         * 
+         * For example, if you create a user named A and the home directory is `/home`, the file system automatically creates a directory named `/home/A` when User A logs on to the file system. If the `/home/A` directory already exists, the file system does not create the directory.
+         * 
+         * > User A must have the permissions to create folders in the \home directory. Otherwise, the file system cannot create the `/home/A` directory when User A logs on to the file system.
          */
         public Builder homeDirPath(String homeDirPath) {
             this.putQueryParameter("HomeDirPath", homeDirPath);
@@ -192,7 +207,7 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * Keytab.
+         * The string that is generated after the system encodes the keytab file by using Base64.
          */
         public Builder keytab(String keytab) {
             this.putQueryParameter("Keytab", keytab);
@@ -201,7 +216,7 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * KeytabMd5.
+         * The string that is generated after the system encodes the keytab file by using MD5.
          */
         public Builder keytabMd5(String keytabMd5) {
             this.putQueryParameter("KeytabMd5", keytabMd5);
@@ -210,7 +225,11 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * RejectUnencryptedAccess.
+         * Specifies whether to deny access from non-encrypted clients. Valid values:
+         * <p>
+         * 
+         * *   true: The file system denies access from non-encrypted clients.
+         * *   false (default): The file system allows access from non-encrypted clients.
          */
         public Builder rejectUnencryptedAccess(Boolean rejectUnencryptedAccess) {
             this.putQueryParameter("RejectUnencryptedAccess", rejectUnencryptedAccess);
@@ -219,7 +238,13 @@ public class ModifySmbAclRequest extends Request {
         }
 
         /**
-         * SuperAdminSid.
+         * The ID of a super admin. The ID must meet the following requirements:
+         * <p>
+         * 
+         * *   The ID starts with `S` and does not contain letters except S.
+         * *   The ID contains at least three hyphens (-) as delimiters.
+         * 
+         * Examples: `S-1-5-22` and `S-1-5-22-23`.
          */
         public Builder superAdminSid(String superAdminSid) {
             this.putQueryParameter("SuperAdminSid", superAdminSid);

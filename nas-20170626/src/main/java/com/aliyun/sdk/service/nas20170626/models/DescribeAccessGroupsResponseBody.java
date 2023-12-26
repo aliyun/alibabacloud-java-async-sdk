@@ -86,7 +86,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessGroups.
+         * The queried permission groups.
          */
         public Builder accessGroups(AccessGroups accessGroups) {
             this.accessGroups = accessGroups;
@@ -94,7 +94,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of permission groups returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of permission groups.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,6 +138,9 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         @NameInMap("AccessGroupType")
         private String accessGroupType;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("Description")
         private String description;
 
@@ -150,6 +153,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         private AccessGroup(Builder builder) {
             this.accessGroupName = builder.accessGroupName;
             this.accessGroupType = builder.accessGroupType;
+            this.createTime = builder.createTime;
             this.description = builder.description;
             this.mountTargetCount = builder.mountTargetCount;
             this.ruleCount = builder.ruleCount;
@@ -178,6 +182,13 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -201,12 +212,13 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String accessGroupName; 
             private String accessGroupType; 
+            private String createTime; 
             private String description; 
             private Integer mountTargetCount; 
             private Integer ruleCount; 
 
             /**
-             * AccessGroupName.
+             * The name of the permission group.
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -214,7 +226,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessGroupType.
+             * The network type of the permission group. Valid value: **Vpc**.
              */
             public Builder accessGroupType(String accessGroupType) {
                 this.accessGroupType = accessGroupType;
@@ -222,7 +234,15 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The time when the permission group was created.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The description of the permission group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -230,7 +250,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetCount.
+             * The number of mount targets to which the permission group is attached.
              */
             public Builder mountTargetCount(Integer mountTargetCount) {
                 this.mountTargetCount = mountTargetCount;
@@ -238,7 +258,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The total number of rules in the permission group.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

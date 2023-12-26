@@ -63,14 +63,14 @@ public class GetDirectoryOrFilePropertiesRequest extends Request {
             super();
         } 
 
-        private Builder(GetDirectoryOrFilePropertiesRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.path = response.path;
+        private Builder(GetDirectoryOrFilePropertiesRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.path = request.path;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,10 @@ public class GetDirectoryOrFilePropertiesRequest extends Request {
         }
 
         /**
-         * Path.
+         * The absolute path of the directory.
+         * <p>
+         * 
+         * The path must start with a forward slash (/) and must be a path that exists in the mount target.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

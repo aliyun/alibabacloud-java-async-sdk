@@ -49,13 +49,13 @@ public class GetRecycleBinAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(GetRecycleBinAttributeRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(GetRecycleBinAttributeRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

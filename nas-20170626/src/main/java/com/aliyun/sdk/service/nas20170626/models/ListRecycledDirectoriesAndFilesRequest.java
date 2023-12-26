@@ -90,16 +90,19 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRecycledDirectoriesAndFilesRequest response) {
-            super(response);
-            this.fileId = response.fileId;
-            this.fileSystemId = response.fileSystemId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(ListRecycledDirectoriesAndFilesRequest request) {
+            super(request);
+            this.fileId = request.fileId;
+            this.fileSystemId = request.fileSystemId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * FileId.
+         * The ID of the directory that you want to query.
+         * <p>
+         * 
+         * You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -108,7 +111,7 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -117,7 +120,12 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of files or directories to return for each query.
+         * <p>
+         * 
+         * Valid values: 10 to 1000.
+         * 
+         * Default value: 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -126,7 +134,10 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
+         * <p>
+         * 
+         * If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

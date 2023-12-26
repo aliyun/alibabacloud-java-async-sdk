@@ -89,16 +89,16 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoSnapshotPoliciesRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeAutoSnapshotPoliciesRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -107,7 +107,10 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid value: extreme, which indicates Extreme NAS file systems.
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -116,7 +119,10 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +131,12 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

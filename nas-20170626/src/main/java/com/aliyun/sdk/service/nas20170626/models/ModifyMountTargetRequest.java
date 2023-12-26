@@ -101,17 +101,17 @@ public class ModifyMountTargetRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMountTargetRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.dualStackMountTargetDomain = response.dualStackMountTargetDomain;
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.status = response.status;
+        private Builder(ModifyMountTargetRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.dualStackMountTargetDomain = request.dualStackMountTargetDomain;
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.status = request.status;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group that is attached to the mount target.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -120,7 +120,10 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * DualStackMountTargetDomain.
+         * The dual-stack (IPv4 and IPv6) domain name of the mount target.
+         * <p>
+         * 
+         * >  Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -129,7 +132,11 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
+         * <p>
+         * 
+         * *   Sample ID of a General-purpose NAS file system: `31a8e4****`.
+         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, `extreme-0015****`.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -138,7 +145,7 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * The IPv4 domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -147,7 +154,13 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the mount target.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Active: The mount target is available.
+         * *   Inactive: The mount target is unavailable.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

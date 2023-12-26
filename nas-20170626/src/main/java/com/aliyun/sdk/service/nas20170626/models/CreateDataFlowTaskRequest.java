@@ -154,21 +154,26 @@ public class CreateDataFlowTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDataFlowTaskRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.dataFlowId = response.dataFlowId;
-            this.dataType = response.dataType;
-            this.directory = response.directory;
-            this.dryRun = response.dryRun;
-            this.entryList = response.entryList;
-            this.fileSystemId = response.fileSystemId;
-            this.srcTaskId = response.srcTaskId;
-            this.taskAction = response.taskAction;
+        private Builder(CreateDataFlowTaskRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dataFlowId = request.dataFlowId;
+            this.dataType = request.dataType;
+            this.directory = request.directory;
+            this.dryRun = request.dryRun;
+            this.entryList = request.entryList;
+            this.fileSystemId = request.fileSystemId;
+            this.srcTaskId = request.srcTaskId;
+            this.taskAction = request.taskAction;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +182,7 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * DataFlowId.
+         * The dataflow ID.
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -186,7 +191,14 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * DataType.
+         * The type of data on which operations are performed by the dataflow task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.
+         * *   Data: the data blocks of a file.
+         * *   MetaAndData: the metadata and data blocks of the file.
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -195,7 +207,16 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * Directory.
+         * The directory in which the dataflow task is executed.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The directory must be 2 to 1,024 characters in length.
+         * *   The directory must be encoded in UTF-8.
+         * *   The directory must start and end with a forward slash (/).
+         * *   Only one directory can be listed at a time.
+         * *   The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
          */
         public Builder directory(String directory) {
             this.putQueryParameter("Directory", directory);
@@ -204,7 +225,15 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run.
+         * <p>
+         * 
+         * During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
+         * 
+         * Valid values:
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
+         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -213,7 +242,14 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * EntryList.
+         * The list of files that are executed by the dataflow task.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The list must be encoded in UTF-8.
+         * *   The file list is in JSON format.
+         * *   If the source storage is Object Storage Service (OSS), the list name must comply with the naming conventions of OSS objects.
          */
         public Builder entryList(String entryList) {
             this.putQueryParameter("EntryList", entryList);
@@ -222,7 +258,7 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -231,7 +267,7 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * SrcTaskId.
+         * If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.
          */
         public Builder srcTaskId(String srcTaskId) {
             this.putQueryParameter("SrcTaskId", srcTaskId);
@@ -240,7 +276,15 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * TaskAction.
+         * The type of the dataflow task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Import: imports data stored in the source storage to a CPFS file system.
+         * *   Export: exports specified data from a CPFS file system to the source storage.
+         * *   Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.
+         * *   Inventory: obtains the inventory list managed by a dataflow from the CPFS file system, providing the cache status of inventories in the dataflow.
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);

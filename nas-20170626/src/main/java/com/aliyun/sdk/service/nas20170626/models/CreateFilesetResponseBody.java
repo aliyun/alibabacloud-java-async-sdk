@@ -50,7 +50,7 @@ public class CreateFilesetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FsetId.
+         * The fileset ID.
          */
         public Builder fsetId(String fsetId) {
             this.fsetId = fsetId;
@@ -58,7 +58,7 @@ public class CreateFilesetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

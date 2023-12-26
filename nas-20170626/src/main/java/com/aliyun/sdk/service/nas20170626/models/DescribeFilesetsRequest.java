@@ -89,16 +89,16 @@ public class DescribeFilesetsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFilesetsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.filters = response.filters;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(DescribeFilesetsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.filters = request.filters;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -107,7 +107,7 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * The filter that is used to query filesets.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -116,7 +116,10 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of results for each query.
+         * <p>
+         * 
+         * Valid values: 10 to 100. Default value: 20.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -125,7 +128,7 @@ public class DescribeFilesetsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -179,7 +182,12 @@ public class DescribeFilesetsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The filter name. Valid values:
+             * <p>
+             * 
+             * *   FsetIds: filters filesets by fileset ID.
+             * *   FileSystemPath: filters filesets based on the path of a fileset in a CPFS file system.
+             * *   Description: filters filesets based on the fileset description.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +195,12 @@ public class DescribeFilesetsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The filter value. This parameter does not support wildcards.
+             * <p>
+             * 
+             * *   If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: `fset-12345678` or `fset-12345678,fset-12345679`.
+             * *   If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value must be 2 to 1,024 characters in length. The value must be encoded in UTF-8.
+             * *   If Key is set to Description, set Value to a fileset description or a part of the fileset description.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTagsResponse} extends {@link TeaModel}
+ * {@link DeleteLogAnalysisResponse} extends {@link TeaModel}
  *
- * <p>DescribeTagsResponse</p>
+ * <p>DeleteLogAnalysisResponse</p>
  */
-public class DescribeTagsResponse extends Response {
+public class DeleteLogAnalysisResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeTagsResponseBody body;
+    private DeleteLogAnalysisResponseBody body;
 
-    private DescribeTagsResponse(BuilderImpl builder) {
+    private DeleteLogAnalysisResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeTagsResponse create() {
+    public static DeleteLogAnalysisResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class DescribeTagsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeTagsResponseBody getBody() {
+    public DeleteLogAnalysisResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeTagsResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteLogAnalysisResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeTagsResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DeleteLogAnalysisResponseBody body);
 
         @Override
-        DescribeTagsResponse build();
+        DeleteLogAnalysisResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeTagsResponse, Builder>
+            extends Response.BuilderImpl<DeleteLogAnalysisResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeTagsResponseBody body; 
+        private Integer statusCode; 
+        private DeleteLogAnalysisResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeTagsResponse response) {
+        private BuilderImpl(DeleteLogAnalysisResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class DescribeTagsResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeTagsResponseBody body) {
+        public Builder body(DeleteLogAnalysisResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeTagsResponse build() {
-            return new DescribeTagsResponse(this);
+        public DeleteLogAnalysisResponse build() {
+            return new DeleteLogAnalysisResponse(this);
         } 
 
     } 

@@ -63,14 +63,14 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
-            this.fileSystemIds = response.fileSystemIds;
+        private Builder(ApplyAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
+            this.fileSystemIds = request.fileSystemIds;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -79,7 +79,10 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * FileSystemIds.
+         * The IDs of advanced Extreme NAS file systems.
+         * <p>
+         * 
+         * You can specify a maximum of 100 file system IDs at a time. If you want to apply an automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);

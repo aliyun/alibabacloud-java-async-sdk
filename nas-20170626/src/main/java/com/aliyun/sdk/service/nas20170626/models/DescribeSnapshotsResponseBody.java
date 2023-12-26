@@ -86,7 +86,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * The details about snapshots.
          */
         public Builder snapshots(Snapshots snapshots) {
             this.snapshots = snapshots;
@@ -118,7 +118,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of snapshots returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the snapshot was created.
+             * <p>
+             * 
+             * The time follows the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in UTC. The time is displayed in the `yyyy-MM-ddThh:mmZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +301,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the snapshot.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +309,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * Indicates whether the snapshot is encrypted.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: The snapshot is not encrypted.
+             * *   1: The snapshot is encrypted.
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
@@ -314,7 +323,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the snapshot creation. The value of this parameter is expressed as a percentage.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -322,7 +331,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * The remaining time that is required to create the snapshot.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -330,7 +342,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RetentionDays.
+             * The retention period of the auto snapshot.
+             * <p>
+             * 
+             * Unit: days.
+             * 
+             * Valid values:
+             * 
+             * *   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+             * *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -338,7 +358,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -346,7 +366,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotName.
+             * The snapshot name.
+             * <p>
+             * 
+             * If you specify a name to create a snapshot, the name of the snapshot is returned. Otherwise, no value is returned for this parameter.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -354,7 +377,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFileSystemId.
+             * The ID of the source file system.
+             * <p>
+             * 
+             * This parameter is retained even if the source file system of the snapshot is deleted.
              */
             public Builder sourceFileSystemId(String sourceFileSystemId) {
                 this.sourceFileSystemId = sourceFileSystemId;
@@ -362,7 +388,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFileSystemSize.
+             * The capacity of the source file system.
+             * <p>
+             * 
+             * Unit: GiB.
              */
             public Builder sourceFileSystemSize(Long sourceFileSystemSize) {
                 this.sourceFileSystemSize = sourceFileSystemSize;
@@ -370,7 +399,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFileSystemVersion.
+             * The version of the source file system.
              */
             public Builder sourceFileSystemVersion(String sourceFileSystemVersion) {
                 this.sourceFileSystemVersion = sourceFileSystemVersion;
@@ -378,7 +407,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the snapshot.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   progressing: The snapshot is being created.
+             * *   accomplished: The snapshot is created.
+             * *   failed: The snapshot fails to be created.
              */
             public Builder status(String status) {
                 this.status = status;

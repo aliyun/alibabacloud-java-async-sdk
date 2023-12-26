@@ -90,16 +90,16 @@ public class CancelDirQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(CancelDirQuotaRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.path = response.path;
-            this.userId = response.userId;
-            this.userType = response.userType;
+        private Builder(CancelDirQuotaRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.path = request.path;
+            this.userId = request.userId;
+            this.userType = request.userType;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -108,7 +108,7 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * Path.
+         * The absolute path of a directory.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -117,7 +117,15 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The UID or GID of a user for whom you want to cancel the directory quota.
+         * <p>
+         * 
+         * This parameter is required and valid only if the UserType parameter is set to Uid or Gid.
+         * 
+         * Examples:
+         * 
+         * *   If you want to cancel a quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.
+         * *   If you want to cancel a quota for a group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -126,7 +134,14 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * UserType.
+         * The type of the user.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Uid: user ID
+         * *   Gid: user group ID
+         * *   AllUsers: all users
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

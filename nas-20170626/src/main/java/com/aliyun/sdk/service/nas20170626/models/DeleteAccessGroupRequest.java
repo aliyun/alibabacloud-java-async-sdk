@@ -62,14 +62,14 @@ public class DeleteAccessGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessGroupRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.fileSystemType = response.fileSystemType;
+        private Builder(DeleteAccessGroupRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.fileSystemType = request.fileSystemType;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group to be deleted.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -78,7 +78,13 @@ public class DeleteAccessGroupRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

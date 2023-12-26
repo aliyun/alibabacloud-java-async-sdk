@@ -62,7 +62,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataFlowInfo.
+         * The details about dataflows.
          */
         public Builder dataFlowInfo(DataFlowInfo dataFlowInfo) {
             this.dataFlowInfo = dataFlowInfo;
@@ -70,7 +70,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,16 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             private String refreshPath; 
 
             /**
-             * RefreshPath.
+             * The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The directory must be 2 to 1,024 characters in length.
+             * *   The directory must be encoded in UTF-8.
+             * *   The directory must start and end with a forward slash (/).
+             * 
+             * >  The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
              */
             public Builder refreshPath(String refreshPath) {
                 this.refreshPath = refreshPath;
@@ -380,7 +389,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AutoRefresh.
+             * The details about automatic update policies.
              */
             public Builder autoRefresh(DataFlowAutoRefresh autoRefresh) {
                 this.autoRefresh = autoRefresh;
@@ -388,7 +397,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRefreshInterval.
+             * The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.
+             * <p>
+             * 
+             * Valid values: 5 to 526600. Default value: 10.
              */
             public Builder autoRefreshInterval(Long autoRefreshInterval) {
                 this.autoRefreshInterval = autoRefreshInterval;
@@ -396,7 +408,11 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRefreshPolicy.
+             * The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:
+             * <p>
+             * 
+             * *   None: Updated data in the source storage is not automatically imported to the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
+             * *   ImportChanged: Updated data in the source storage is automatically imported to the CPFS file system.
              */
             public Builder autoRefreshPolicy(String autoRefreshPolicy) {
                 this.autoRefreshPolicy = autoRefreshPolicy;
@@ -404,7 +420,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the fileset was created.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -412,7 +431,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * DataFlowId.
+             * The dataflow ID.
              */
             public Builder dataFlowId(String dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -420,7 +439,14 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the dataflow.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The description must be 2 to 128 characters in length.
+             * *   The description must start with a letter but cannot start with `http://` or `https://`.
+             * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder description(String description) {
                 this.description = description;
@@ -428,7 +454,12 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned. Valid values:
+             * <p>
+             * 
+             * *   None (default): The dataflow status is normal.
+             * *   SourceStorageUnreachable: The access path of the source storage is not found.
+             * *   ThroughputTooLow: The dataflow throughput is low.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -436,7 +467,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -444,7 +475,15 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemPath.
+             * The directory of the fileset in the CPFS file system.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The directory must be 2 to 1,024 characters in length.
+             * *   The directory must be encoded in UTF-8.
+             * *   The directory must start and end with a forward slash (/).
+             * *   The directory must be a fileset directory in the CPFS file system.
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -452,7 +491,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FsetDescription.
+             * The description of the automatic update.
              */
             public Builder fsetDescription(String fsetDescription) {
                 this.fsetDescription = fsetDescription;
@@ -460,7 +499,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * FsetId.
+             * The fileset ID.
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -468,7 +507,11 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSecurityType.
+             * The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid values:
+             * <p>
+             * 
+             * *   None (default): The source storage can be accessed without a security mechanism.
+             * *   SSL: The source storage must be accessed with an SSL certificate.
              */
             public Builder sourceSecurityType(String sourceSecurityType) {
                 this.sourceSecurityType = sourceSecurityType;
@@ -476,7 +519,21 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceStorage.
+             * The access path of the source storage. Format:://.
+             * <p>
+             * 
+             * Parameters:
+             * 
+             * *   storage type: Only OSS is supported.
+             * 
+             * *   path: the name of the OSS bucket.
+             * 
+             *     *   The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.
+             *     *   The name must be 8 to 128 characters in length.
+             *     *   The name must be encoded in UTF-8.
+             *     *   The name cannot start with http:// or https://.
+             * 
+             * >  The OSS bucket must be an existing bucket in the region.
              */
             public Builder sourceStorage(String sourceStorage) {
                 this.sourceStorage = sourceStorage;
@@ -484,7 +541,16 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The dataflow status. Valid values:
+             * <p>
+             * 
+             * *   Starting: The dataflow is being created or enabled.
+             * *   Running: The dataflow has been created and is running properly.
+             * *   Updating: The dataflow is being modified. For example, the dataflow throughput is increased and the automatic update interval is modified.
+             * *   Deleting: The dataflow is being deleted.
+             * *   Stopping: The dataflow is being disabled.
+             * *   Stopped: The dataflow has been disabled.
+             * *   Misconfigured: The dataflow configuration is abnormal. For example, the source storage is inaccessible, and the automatic update cannot be completed due to low dataflow throughput.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -492,7 +558,14 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * Throughput.
+             * The maximum dataflow throughput. Unit: MB/s. Valid values:
+             * <p>
+             * 
+             * *   600
+             * *   1,200
+             * *   1,500
+             * 
+             * >  The dataflow throughput must be less than the I/O throughput of the file system.
              */
             public Builder throughput(Long throughput) {
                 this.throughput = throughput;
@@ -500,7 +573,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the fileset was last updated.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -49,13 +49,13 @@ public class CancelLifecycleRetrieveJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelLifecycleRetrieveJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(CancelLifecycleRetrieveJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**
-         * JobId.
+         * The ID of the data retrieval task.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

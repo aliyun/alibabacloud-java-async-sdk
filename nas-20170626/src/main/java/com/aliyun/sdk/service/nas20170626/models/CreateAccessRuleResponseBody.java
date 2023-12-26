@@ -50,7 +50,7 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessRuleId.
+         * The rule ID.
          */
         public Builder accessRuleId(String accessRuleId) {
             this.accessRuleId = accessRuleId;
@@ -58,7 +58,7 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

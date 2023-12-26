@@ -63,14 +63,14 @@ public class DeleteLifecyclePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLifecyclePolicyRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.lifecyclePolicyName = response.lifecyclePolicyName;
+        private Builder(DeleteLifecyclePolicyRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyName = request.lifecyclePolicyName;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,7 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyName.
+         * The name of the lifecycle policy.
          */
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);

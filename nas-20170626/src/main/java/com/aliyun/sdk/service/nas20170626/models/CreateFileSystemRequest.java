@@ -58,6 +58,10 @@ public class CreateFileSystemRequest extends Request {
     private String protocolType;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SnapshotId")
     private String snapshotId;
 
@@ -91,6 +95,7 @@ public class CreateFileSystemRequest extends Request {
         this.fileSystemType = builder.fileSystemType;
         this.kmsKeyId = builder.kmsKeyId;
         this.protocolType = builder.protocolType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.snapshotId = builder.snapshotId;
         this.storageType = builder.storageType;
         this.vSwitchId = builder.vSwitchId;
@@ -189,6 +194,13 @@ public class CreateFileSystemRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -235,6 +247,7 @@ public class CreateFileSystemRequest extends Request {
         private String fileSystemType; 
         private String kmsKeyId; 
         private String protocolType; 
+        private String resourceGroupId; 
         private String snapshotId; 
         private String storageType; 
         private String vSwitchId; 
@@ -245,28 +258,34 @@ public class CreateFileSystemRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFileSystemRequest response) {
-            super(response);
-            this.bandwidth = response.bandwidth;
-            this.capacity = response.capacity;
-            this.chargeType = response.chargeType;
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.dryRun = response.dryRun;
-            this.duration = response.duration;
-            this.encryptType = response.encryptType;
-            this.fileSystemType = response.fileSystemType;
-            this.kmsKeyId = response.kmsKeyId;
-            this.protocolType = response.protocolType;
-            this.snapshotId = response.snapshotId;
-            this.storageType = response.storageType;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(CreateFileSystemRequest request) {
+            super(request);
+            this.bandwidth = request.bandwidth;
+            this.capacity = request.capacity;
+            this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.dryRun = request.dryRun;
+            this.duration = request.duration;
+            this.encryptType = request.encryptType;
+            this.fileSystemType = request.fileSystemType;
+            this.kmsKeyId = request.kmsKeyId;
+            this.protocolType = request.protocolType;
+            this.resourceGroupId = request.resourceGroupId;
+            this.snapshotId = request.snapshotId;
+            this.storageType = request.storageType;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * Bandwidth.
+         * The maximum throughput of the file system.
+         * <p>
+         * 
+         * Unit: MB/s.
+         * 
+         * Specify a value based on the specifications on the buy page.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -275,7 +294,14 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * Capacity.
+         * The capacity of the file system. Unit: GiB.
+         * <p>
+         * 
+         * This parameter is valid and required if the FileSystemType parameter is set to extreme.
+         * 
+         * Specify a value based on the specifications on the following buy page:
+         * 
+         * [Extreme NAS file system (Pay-as-you-go)](https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy)
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -284,7 +310,13 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   PayAsYouGo (default): pay-as-you-go
+         * *   Subscription: subscription
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -293,7 +325,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
+         * <p>
+         * 
+         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -302,7 +337,14 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the file system.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The description must be 2 to 128 characters in length.
+         * *   The description must start with a letter and cannot start with `http://` or `https://`.
+         * *   The description can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -311,7 +353,15 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run.
+         * <p>
+         * 
+         * During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
+         * 
+         * Valid values:
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the precheck, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
+         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -320,7 +370,12 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration.
+         * <p>
+         * 
+         * This parameter is valid and required only if the ChargeType parameter is set to Subscription. Unit: months.
+         * 
+         * If you do not renew a subscription file system when the file system expires, the file system is automatically released.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -329,7 +384,18 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * Specifies whether to encrypt the data in the NAS file system.
+         * <p>
+         * 
+         * You can use a key that is managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.
+         * 
+         * Valid values:
+         * 
+         * *   0: The data in the file system is not encrypted.
+         * *   1: A NAS-managed key is used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.
+         * *   2: A KMS-managed key is used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.
+         * 
+         * > You can use KMS-managed keys only in the following regions: US (Silicon Valley), US (Virginia), UK (London), Australia (Sydney), Germany (Frankfurt), India (Mumbai), and Singapore.
          */
         public Builder encryptType(Integer encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -338,7 +404,16 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
+         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -347,7 +422,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * KmsKeyId.
+         * The ID of the KMS-managed key.
+         * <p>
+         * 
+         * This parameter is required only if the EncryptType parameter is set to 2.
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
@@ -356,7 +434,11 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The protocol type.
+         * <p>
+         * 
+         * *   If the FileSystemType parameter is set to standard, you can set the ProtocolType parameter to NFS or SMB.
+         * *   If the FileSystemType parameter is set to extreme, you can set the ProtocolType parameter to NFS.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -365,7 +447,21 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The snapshot ID.
+         * <p>
+         * 
+         * This parameter is available only for Extreme NAS file systems.
+         * 
+         * > You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -374,7 +470,11 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type.
+         * <p>
+         * 
+         * *   If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance or Capacity.
+         * *   If the FileSystemType parameter is set to extreme, you can set the StorageType parameter to standard or advance.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -383,7 +483,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * This parameter is reserved and does not take effect. You do not need to configure this parameter.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -392,7 +495,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC).
+         * <p>
+         * 
+         * This parameter is reserved and does not take effect. You do not need to configure this parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -401,7 +507,17 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
+         * <p>
+         * 
+         * Each region has multiple isolated locations known as zones. Each zone has its own independent power supply and networks.
+         * 
+         * This parameter is not required if the FileSystemType parameter is set to standard. By default, a random zone is selected based on the protocol type and storage type.
+         * 
+         * This parameter is required if the FileSystemType parameter is set to extreme.
+         * 
+         * > *   An Elastic Compute Service (ECS) instance and a NAS file system that reside in different zones of the same region can access each other.
+         * >*   We recommend that you select the zone where the ECS instance resides. This prevents cross-zone latency between the file system and the ECS instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

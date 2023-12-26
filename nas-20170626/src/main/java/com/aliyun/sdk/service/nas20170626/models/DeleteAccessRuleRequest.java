@@ -76,15 +76,15 @@ public class DeleteAccessRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccessRuleRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.accessRuleId = response.accessRuleId;
-            this.fileSystemType = response.fileSystemType;
+        private Builder(DeleteAccessRuleRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.accessRuleId = request.accessRuleId;
+            this.fileSystemType = request.fileSystemType;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -93,7 +93,7 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * AccessRuleId.
+         * The rule ID.
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -102,7 +102,13 @@ public class DeleteAccessRuleRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

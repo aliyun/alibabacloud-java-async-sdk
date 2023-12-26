@@ -89,12 +89,12 @@ public class DescribeDataFlowTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataFlowTasksRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.filters = response.filters;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(DescribeDataFlowTasksRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.filters = request.filters;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
@@ -179,7 +179,19 @@ public class DescribeDataFlowTasksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * *
+             * <p>
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
+             * *
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +199,19 @@ public class DescribeDataFlowTasksRequest extends Request {
             }
 
             /**
-             * Value.
+             * *   ````
+             * <p>
+             * *   ````
+             * *
+             * *
+             * *
+             * *
+             * *   ``
+             * *   ``
+             * *   ``
+             * *   ``
+             * *   ``
+             * *   ``
              */
             public Builder value(String value) {
                 this.value = value;

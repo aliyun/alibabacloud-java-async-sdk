@@ -62,7 +62,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entries.
+         * The details about the files or directories.
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -70,7 +70,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,6 +113,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Owner")
+        private String owner;
+
         @NameInMap("RetrieveTime")
         private String retrieveTime;
 
@@ -133,6 +136,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             this.inode = builder.inode;
             this.mtime = builder.mtime;
             this.name = builder.name;
+            this.owner = builder.owner;
             this.retrieveTime = builder.retrieveTime;
             this.size = builder.size;
             this.storageType = builder.storageType;
@@ -197,6 +201,13 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return retrieveTime
          */
         public String getRetrieveTime() {
@@ -232,13 +243,19 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             private String inode; 
             private String mtime; 
             private String name; 
+            private String owner; 
             private String retrieveTime; 
             private Long size; 
             private String storageType; 
             private String type; 
 
             /**
-             * Atime.
+             * The time when the file was queried.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
              */
             public Builder atime(String atime) {
                 this.atime = atime;
@@ -246,7 +263,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Ctime.
+             * The time when the raw data was modified.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
              */
             public Builder ctime(String ctime) {
                 this.ctime = ctime;
@@ -254,7 +276,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The ID of the directory or file.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -262,7 +284,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * HasInfrequentAccessFile.
+             * Indicates whether the directory contains files stored in the IA storage medium.
+             * <p>
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is Directory.
+             * 
+             * Valid values:
+             * 
+             * *   true: The directory contains files stored in the IA storage medium.
+             * *   false: The directory does not contain files stored in the IA storage medium.
              */
             public Builder hasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
                 this.hasInfrequentAccessFile = hasInfrequentAccessFile;
@@ -270,7 +300,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * The file or directory inode.
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -278,7 +308,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Mtime.
+             * The time when the file was modified.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
              */
             public Builder mtime(String mtime) {
                 this.mtime = mtime;
@@ -286,7 +321,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the file or directory.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +329,20 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RetrieveTime.
+             * The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
+                return this;
+            }
+
+            /**
+             * The time when the last data retrieval task was run.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
              */
             public Builder retrieveTime(String retrieveTime) {
                 this.retrieveTime = retrieveTime;
@@ -302,7 +350,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file.
+             * <p>
+             * 
+             * Unit: bytes.
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -310,7 +363,14 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the file.
+             * <p>
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is File.
+             * 
+             * Valid values:
+             * 
+             * *   InfrequentAccess: IA storage medium
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -318,7 +378,13 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the query result.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   File
+             * *   Directory
              */
             public Builder type(String type) {
                 this.type = type;

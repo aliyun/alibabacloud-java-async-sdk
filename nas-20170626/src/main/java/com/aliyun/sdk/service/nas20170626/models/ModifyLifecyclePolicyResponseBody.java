@@ -50,7 +50,7 @@ public class ModifyLifecyclePolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,13 @@ public class ModifyLifecyclePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

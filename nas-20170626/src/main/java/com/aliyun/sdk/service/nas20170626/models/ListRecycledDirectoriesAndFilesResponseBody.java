@@ -62,7 +62,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entries.
+         * The information about files or directories in the recycle bin.
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -70,7 +70,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * A pagination token.
+         * <p>
+         * 
+         * If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +81,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,10 +96,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
 
     public static class Entries extends TeaModel {
         @NameInMap("ATime")
-        private String ATime;
+        private String aTime;
 
         @NameInMap("CTime")
-        private String CTime;
+        private String cTime;
 
         @NameInMap("DeleteTime")
         private String deleteTime;
@@ -108,7 +111,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         private String inode;
 
         @NameInMap("MTime")
-        private String MTime;
+        private String mTime;
 
         @NameInMap("Name")
         private String name;
@@ -120,12 +123,12 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         private String type;
 
         private Entries(Builder builder) {
-            this.ATime = builder.ATime;
-            this.CTime = builder.CTime;
+            this.aTime = builder.aTime;
+            this.cTime = builder.cTime;
             this.deleteTime = builder.deleteTime;
             this.fileId = builder.fileId;
             this.inode = builder.inode;
-            this.MTime = builder.MTime;
+            this.mTime = builder.mTime;
             this.name = builder.name;
             this.size = builder.size;
             this.type = builder.type;
@@ -140,17 +143,17 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ATime
+         * @return aTime
          */
         public String getATime() {
-            return this.ATime;
+            return this.aTime;
         }
 
         /**
-         * @return CTime
+         * @return cTime
          */
         public String getCTime() {
-            return this.CTime;
+            return this.cTime;
         }
 
         /**
@@ -175,10 +178,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         /**
-         * @return MTime
+         * @return mTime
          */
         public String getMTime() {
-            return this.MTime;
+            return this.mTime;
         }
 
         /**
@@ -203,34 +206,34 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String ATime; 
-            private String CTime; 
+            private String aTime; 
+            private String cTime; 
             private String deleteTime; 
             private String fileId; 
             private String inode; 
-            private String MTime; 
+            private String mTime; 
             private String name; 
             private Long size; 
             private String type; 
 
             /**
-             * ATime.
+             * The time when the file or directory was last accessed.
              */
-            public Builder ATime(String ATime) {
-                this.ATime = ATime;
+            public Builder aTime(String aTime) {
+                this.aTime = aTime;
                 return this;
             }
 
             /**
-             * CTime.
+             * The time when the metadata was last modified.
              */
-            public Builder CTime(String CTime) {
-                this.CTime = CTime;
+            public Builder cTime(String cTime) {
+                this.cTime = cTime;
                 return this;
             }
 
             /**
-             * DeleteTime.
+             * The time when the file or directory was deleted.
              */
             public Builder deleteTime(String deleteTime) {
                 this.deleteTime = deleteTime;
@@ -238,7 +241,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The IDs of the files or directories.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -246,7 +249,7 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * The inode of the file or directory.
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -254,15 +257,15 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MTime.
+             * The time when the file or directory was last modified.
              */
-            public Builder MTime(String MTime) {
-                this.MTime = MTime;
+            public Builder mTime(String mTime) {
+                this.mTime = mTime;
                 return this;
             }
 
             /**
-             * Name.
+             * The name of the file or directory before it was deleted.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +273,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file. Unit: bytes.
+             * <p>
+             * 
+             * The value 0 is returned for this parameter if Directory is returned for the Type parameter.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -278,7 +284,11 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the returned object. Valid values:
+             * <p>
+             * 
+             * *   File
+             * *   Directory
              */
             public Builder type(String type) {
                 this.type = type;

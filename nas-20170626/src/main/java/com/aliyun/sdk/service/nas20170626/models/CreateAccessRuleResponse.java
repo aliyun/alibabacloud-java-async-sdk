@@ -16,6 +16,10 @@ public class CreateAccessRuleResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private CreateAccessRuleResponseBody body;
@@ -23,6 +27,7 @@ public class CreateAccessRuleResponse extends Response {
     private CreateAccessRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class CreateAccessRuleResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateAccessRuleResponseBody getBody() {
@@ -52,6 +64,8 @@ public class CreateAccessRuleResponse extends Response {
     public interface Builder extends Response.Builder<CreateAccessRuleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateAccessRuleResponseBody body);
 
@@ -64,6 +78,7 @@ public class CreateAccessRuleResponse extends Response {
             extends Response.BuilderImpl<CreateAccessRuleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateAccessRuleResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class CreateAccessRuleResponse extends Response {
         private BuilderImpl(CreateAccessRuleResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class CreateAccessRuleResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

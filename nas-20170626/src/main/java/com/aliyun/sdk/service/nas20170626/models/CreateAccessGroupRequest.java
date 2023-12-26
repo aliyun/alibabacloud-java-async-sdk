@@ -89,16 +89,25 @@ public class CreateAccessGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAccessGroupRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.accessGroupType = response.accessGroupType;
-            this.description = response.description;
-            this.fileSystemType = response.fileSystemType;
+        private Builder(CreateAccessGroupRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.accessGroupType = request.accessGroupType;
+            this.description = request.description;
+            this.fileSystemType = request.fileSystemType;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The name must be 3 to 64 characters in length.
+         * *   The name must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The name must be different from the name of the default permission group.
+         * 
+         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -107,7 +116,7 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * AccessGroupType.
+         * The network type of the permission group. Valid value: **Vpc**.
          */
         public Builder accessGroupType(String accessGroupType) {
             this.putQueryParameter("AccessGroupType", accessGroupType);
@@ -116,7 +125,14 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the permission group.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   By default, the description of a permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.
+         * *   The name must start with a letter and cannot start with `http://` or `https://`.
+         * *   The description can contain digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -125,7 +141,13 @@ public class CreateAccessGroupRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

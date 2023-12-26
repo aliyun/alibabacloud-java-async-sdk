@@ -49,13 +49,16 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.autoSnapshotPolicyId = response.autoSnapshotPolicyId;
+        private Builder(DeleteAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
         } 
 
         /**
-         * AutoSnapshotPolicyId.
+         * The ID of the automatic snapshot policy.
+         * <p>
+         * 
+         * You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);

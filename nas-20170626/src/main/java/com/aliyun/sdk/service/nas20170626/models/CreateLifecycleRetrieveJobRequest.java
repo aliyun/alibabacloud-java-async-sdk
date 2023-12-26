@@ -63,14 +63,14 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLifecycleRetrieveJobRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.paths = response.paths;
+        private Builder(CreateLifecycleRetrieveJobRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.paths = request.paths;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -79,7 +79,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * Paths.
+         * The directories or files that you want to retrieve. You can specify a maximum of 10 paths.
          */
         public Builder paths(java.util.List < String > paths) {
             this.putQueryParameter("Paths", paths);

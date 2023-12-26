@@ -49,13 +49,20 @@ public class DeleteFileSystemRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFileSystemRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(DeleteFileSystemRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system that you want to delete.
+         * <p>
+         * 
+         * *   Sample ID of a General-purpose NAS file system: 31a8e4\*\*\*\*.
+         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\*\*\*\*.
+         * *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-00cb6fa094ca\*\*\*\*.
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

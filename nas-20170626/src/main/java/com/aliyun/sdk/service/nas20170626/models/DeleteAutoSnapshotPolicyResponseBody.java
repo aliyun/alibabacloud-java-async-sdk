@@ -38,7 +38,10 @@ public class DeleteAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID.
+         * <p>
+         * 
+         * Every response returns a unique request ID regardless of whether the request is successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

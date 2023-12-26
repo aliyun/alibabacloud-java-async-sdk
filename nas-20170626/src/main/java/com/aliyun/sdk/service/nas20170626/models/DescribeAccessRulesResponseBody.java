@@ -86,7 +86,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessRules.
+         * The rules in the permission group.
          */
         public Builder accessRules(AccessRules accessRules) {
             this.accessRules = accessRules;
@@ -94,7 +94,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of rules.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             private String userAccess; 
 
             /**
-             * AccessRuleId.
+             * The ID of the rule.
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
@@ -226,7 +226,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6SourceCidrIp.
+             * The IPv6 address or CIDR block of the authorized object.
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -234,7 +234,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the rule.
+             * <p>
+             * 
+             * If multiple rules are attached to the authorized object, the rule with the highest priority takes effect.
+             * 
+             * Valid values: 1 to 100. The value 1 indicates the highest priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -242,7 +247,13 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RWAccess.
+             * The access permissions of the authorized object on the file system.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RDWR (default): the read and write permissions
+             * *   RDONLY: the read-only permissions
              */
             public Builder RWAccess(String RWAccess) {
                 this.RWAccess = RWAccess;
@@ -250,7 +261,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrIp.
+             * The IP address or CIDR block of the authorized object.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -258,7 +269,16 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccess.
+             * The access permissions for different types of users in the authorized object.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   no_squash: allows access from root users to the file system.
+             * *   root_squash: grants root users the least permissions as the nobody user.
+             * *   all_squash: grants all users the least permissions as the nobody user.
+             * 
+             * The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.
              */
             public Builder userAccess(String userAccess) {
                 this.userAccess = userAccess;

@@ -77,15 +77,15 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * ResourceId.
+         * The resource IDs. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -94,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to filesystem.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The details about the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -159,7 +159,16 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The tag key cannot be left empty.
+             * *   Valid values of N: 1 to 20.
+             * *   The tag key must be 1 to 128 characters in length.
+             * *   The tag key cannot start with `aliyun` or `acs:`.
+             * *   The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +176,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   The tag value must be 1 to 128 characters in length.
+             * *   The tag value cannot start with `aliyun` or `acs:`.
+             * *   The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

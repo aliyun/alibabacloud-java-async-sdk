@@ -50,7 +50,7 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.accessGroupName = accessGroupName;
@@ -58,7 +58,7 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

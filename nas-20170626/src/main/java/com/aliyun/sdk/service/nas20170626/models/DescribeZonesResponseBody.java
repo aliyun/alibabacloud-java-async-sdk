@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * The queried zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -151,7 +151,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * ProtocolType.
+             * The protocol type.
+             * <p>
+             * 
+             * *   If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.
+             * *   If the FileSystemType parameter is set to extreme, the protocol type is nfs.
+             * *   If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.
+             * 
+             * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -159,7 +166,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type.
+             * <p>
+             * 
+             * *   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.
+             * *   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.
+             * *   If the FileSystemType parameter is set to cpfs, the storage type is advance\_100 (100 MB/s/TiB baseline) or advance\_200 (200 MB/s/TiB baseline).
+             * 
+             * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -318,7 +332,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Capacity.
+             * This parameter is reserved. You can ignore this parameter.
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -326,7 +340,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypes.
+             * The details about file system types.
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -334,7 +348,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Performance.
+             * This parameter is reserved. You can ignore this parameter.
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -342,7 +356,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

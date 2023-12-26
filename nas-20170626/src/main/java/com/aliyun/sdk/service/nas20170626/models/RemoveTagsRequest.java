@@ -63,14 +63,14 @@ public class RemoveTagsRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveTagsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.tag = response.tag;
+        private Builder(RemoveTagsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.tag = request.tag;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -133,7 +133,7 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key (TagKey) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify 1 to 10 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +141,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value (TagValue) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify a maximum of 5 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

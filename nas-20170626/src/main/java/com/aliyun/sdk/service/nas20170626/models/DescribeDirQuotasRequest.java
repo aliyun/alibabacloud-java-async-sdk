@@ -89,16 +89,16 @@ public class DescribeDirQuotasRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDirQuotasRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.path = response.path;
+        private Builder(DescribeDirQuotasRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.path = request.path;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -107,7 +107,10 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +119,10 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +131,10 @@ public class DescribeDirQuotasRequest extends Request {
         }
 
         /**
-         * Path.
+         * The absolute path of a directory.
+         * <p>
+         * 
+         * If you do not specify this parameter, all directories for which quotas are created are returned.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

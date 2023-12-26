@@ -63,14 +63,14 @@ public class AddTagsRequest extends Request {
             super();
         } 
 
-        private Builder(AddTagsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.tag = response.tag;
+        private Builder(AddTagsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.tag = request.tag;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -133,7 +133,7 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +141,7 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
              */
             public Builder value(String value) {
                 this.value = value;

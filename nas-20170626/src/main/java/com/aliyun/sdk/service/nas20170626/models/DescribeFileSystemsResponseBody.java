@@ -86,7 +86,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FileSystems.
+         * The queried file systems.
          */
         public Builder fileSystems(FileSystems fileSystems) {
             this.fileSystems = fileSystems;
@@ -94,7 +94,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of file systems.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String URI; 
 
             /**
-             * BindDN.
+             * An LDAP entry.
              */
             public Builder bindDN(String bindDN) {
                 this.bindDN = bindDN;
@@ -190,7 +190,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * SearchBase.
+             * An LDAP search base.
              */
             public Builder searchBase(String searchBase) {
                 this.searchBase = searchBase;
@@ -198,7 +198,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * URI.
+             * An LDAP URI.
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -263,7 +263,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String ecsIp; 
 
             /**
-             * DefaultPasswd.
+             * The default logon password of the ECS instance on the client management node.
              */
             public Builder defaultPasswd(String defaultPasswd) {
                 this.defaultPasswd = defaultPasswd;
@@ -271,7 +271,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsId.
+             * The ID of the ECS instance on the client management node.
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -279,7 +279,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsIp.
+             * The IP address of the ECS instance on the client management node.
              */
             public Builder ecsIp(String ecsIp) {
                 this.ecsIp = ecsIp;
@@ -373,7 +373,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,7 +381,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -559,7 +559,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String vswId; 
 
             /**
-             * AccessGroupName.
+             * The name of the permission group that is attached to the mount target.
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -567,7 +567,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientMasterNodes.
+             * The information about client management nodes.
+             * <p>
+             * 
+             * This parameter is available only for CPFS file systems.
              */
             public Builder clientMasterNodes(ClientMasterNodes clientMasterNodes) {
                 this.clientMasterNodes = clientMasterNodes;
@@ -575,7 +578,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * DualStackMountTargetDomain.
+             * The dual-stack (IPv4 and IPv6) domain name of the mount target.
+             * <p>
+             * 
+             * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;
@@ -583,7 +589,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetDomain.
+             * The domain name of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -591,7 +597,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type. Valid value: vpc.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -599,7 +605,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the mount target.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Active: The mount target is available.
+             * *   Inactive: The mount target is unavailable.
+             * *   Pending: The mount target is being created or modified.
+             * *   Deleting: The mount target is being deleted.
+             * *   Hibernating: The mount target is being hibernated.
+             * *   Hibernated: The mount target is hibernated.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -607,7 +623,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are attached to the mount target.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -615,7 +631,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -623,7 +639,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VswId.
+             * The ID of the vSwitch.
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -753,7 +769,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * ExpiredTime.
+             * The end time of the validity period for the storage plan.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -761,7 +777,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * The ID of the storage plan.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -769,7 +785,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * The type of the storage plan.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ssd: the storage plan for Performance NAS file systems
+             * *   hybrid: the storage plan for Capacity NAS file systems
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -777,7 +799,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The capacity of the storage plan. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -785,7 +807,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the validity period for the storage plan.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -920,7 +942,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -928,7 +950,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -984,6 +1006,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
     public static class FileSystem extends TeaModel {
+        @NameInMap("AccessPointCount")
+        private String accessPointCount;
+
         @NameInMap("Bandwidth")
         private Long bandwidth;
 
@@ -1035,6 +1060,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Status")
         private String status;
 
@@ -1054,6 +1082,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private String zoneId;
 
         private FileSystem(Builder builder) {
+            this.accessPointCount = builder.accessPointCount;
             this.bandwidth = builder.bandwidth;
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
@@ -1071,6 +1100,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.packages = builder.packages;
             this.protocolType = builder.protocolType;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.storageType = builder.storageType;
             this.supportedFeatures = builder.supportedFeatures;
@@ -1085,6 +1115,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static FileSystem create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessPointCount
+         */
+        public String getAccessPointCount() {
+            return this.accessPointCount;
         }
 
         /**
@@ -1207,6 +1244,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1249,6 +1293,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessPointCount; 
             private Long bandwidth; 
             private Long capacity; 
             private String chargeType; 
@@ -1266,6 +1311,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Packages packages; 
             private String protocolType; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private String storageType; 
             private SupportedFeatures supportedFeatures; 
@@ -1274,7 +1320,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Bandwidth.
+             * AccessPointCount.
+             */
+            public Builder accessPointCount(String accessPointCount) {
+                this.accessPointCount = accessPointCount;
+                return this;
+            }
+
+            /**
+             * The bandwidth of the file system.
+             * <p>
+             * 
+             * Unit: MB/s. This parameter is unavailable for General-purpose NAS file systems.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1282,7 +1339,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The capacity of the file system.
+             * <p>
+             * 
+             * Unit: GiB.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -1290,7 +1350,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Subscription: The subscription billing method is used.
+             * *   PayAsYouGo: The pay-as-you-go billing method is used.
+             * *   Package: A storage plan is attached to the file system.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1298,7 +1365,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file system was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1306,7 +1373,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the file system.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1314,7 +1381,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * The encryption type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: The data in the file system is not encrypted.
+             * *   1: A NAS-managed key is used to encrypt the data in the file system.
+             * *   2: A KMS-managed key is used to encrypt the data in the file system.
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
@@ -1322,7 +1396,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the file system expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1330,7 +1404,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -1338,7 +1412,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard: General-purpose NAS file system
+             * *   extreme: Extreme NAS file system
+             * *   cpfs: CPFS file system
+             * 
+             * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -1346,7 +1429,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * KMSKeyId.
+             * The ID of the key that is managed by Key Management Service (KMS).
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1354,7 +1437,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Ldap.
+             * The Lightweight Directory Access Protocol (LDAP) configurations.
+             * <p>
+             * 
+             * This parameter is available only for CPFS file systems.
              */
             public Builder ldap(Ldap ldap) {
                 this.ldap = ldap;
@@ -1362,7 +1448,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredIASize.
+             * The storage usage of the Infrequent Access (IA) storage medium.
+             * <p>
+             * 
+             * Unit: bytes.
              */
             public Builder meteredIASize(Long meteredIASize) {
                 this.meteredIASize = meteredIASize;
@@ -1370,7 +1459,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredSize.
+             * The storage usage of the file system.
+             * <p>
+             * 
+             * The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -1378,7 +1470,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargets.
+             * The information about mount targets.
              */
             public Builder mountTargets(MountTargets mountTargets) {
                 this.mountTargets = mountTargets;
@@ -1386,7 +1478,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Packages.
+             * The information about storage plans.
              */
             public Builder packages(Packages packages) {
                 this.packages = packages;
@@ -1394,7 +1486,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The protocol type of the file system.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   NFS: Network File System (NFS)
+             * *   SMB: Server Message Block (SMB)
+             * *   cpfs: the protocol type supported by the CPFS file system
+             * 
+             * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1402,7 +1503,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1410,7 +1511,23 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The status of the file system. Valid values:
+             * <p>
+             * 
+             * *   Pending: The file system is being created or modified.
+             * *   Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
+             * *   Stopped: The file system is unavailable.
+             * *   Extending: The file system is being scaled up.
+             * *   Stopping: The file system is being stopped.
+             * *   Deleting: The file system is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1418,7 +1535,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Valid values for General-purpose NAS file systems: Capacity and Performance.
+             * *   Valid values for Extreme NAS file systems: standard and advance.
+             * *   Valid values for CPFS file systems: advance\_100 (100 MB/s/TiB baseline) and advance\_200 (200 MB/s/TiB baseline).
+             * 
+             * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1426,7 +1552,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedFeatures.
+             * The features that are supported by the file system.
              */
             public Builder supportedFeatures(SupportedFeatures supportedFeatures) {
                 this.supportedFeatures = supportedFeatures;
@@ -1434,7 +1560,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are attached to the file system.
              */
             public Builder tags(FileSystemTags tags) {
                 this.tags = tags;
@@ -1442,7 +1568,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the file system.
+             * <p>
+             * 
+             * This parameter is available only for Extreme NAS file systems.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1450,7 +1579,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the file system resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -116,14 +116,14 @@ public class ModifyDataFlowAutoRefreshRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDataFlowAutoRefreshRequest response) {
-            super(response);
-            this.autoRefreshInterval = response.autoRefreshInterval;
-            this.autoRefreshPolicy = response.autoRefreshPolicy;
-            this.clientToken = response.clientToken;
-            this.dataFlowId = response.dataFlowId;
-            this.dryRun = response.dryRun;
-            this.fileSystemId = response.fileSystemId;
+        private Builder(ModifyDataFlowAutoRefreshRequest request) {
+            super(request);
+            this.autoRefreshInterval = request.autoRefreshInterval;
+            this.autoRefreshPolicy = request.autoRefreshPolicy;
+            this.clientToken = request.clientToken;
+            this.dataFlowId = request.dataFlowId;
+            this.dryRun = request.dryRun;
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**

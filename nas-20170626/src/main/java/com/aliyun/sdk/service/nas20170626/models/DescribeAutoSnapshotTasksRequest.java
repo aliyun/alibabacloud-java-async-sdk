@@ -102,17 +102,20 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoSnapshotTasksRequest response) {
-            super(response);
-            this.autoSnapshotPolicyIds = response.autoSnapshotPolicyIds;
-            this.fileSystemIds = response.fileSystemIds;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeAutoSnapshotTasksRequest request) {
+            super(request);
+            this.autoSnapshotPolicyIds = request.autoSnapshotPolicyIds;
+            this.fileSystemIds = request.fileSystemIds;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * AutoSnapshotPolicyIds.
+         * The IDs of automatic snapshot policies.
+         * <p>
+         * 
+         * You can specify a maximum of 100 policy IDs. If you want to query the tasks of multiple automatic snapshot policies, you must separate the policy IDs with commas (,).
          */
         public Builder autoSnapshotPolicyIds(String autoSnapshotPolicyIds) {
             this.putQueryParameter("AutoSnapshotPolicyIds", autoSnapshotPolicyIds);
@@ -121,7 +124,10 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * FileSystemIds.
+         * The ID of the file system.
+         * <p>
+         * 
+         * You can specify a maximum of 100 file system IDs. If you want to query the snapshots of multiple file systems, you must separate the file system IDs with commas (,).
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);
@@ -130,7 +136,10 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid value: extreme, which indicates Extreme NAS file systems.
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -139,7 +148,12 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +162,10 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -88,16 +88,16 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
             super();
         } 
 
-        private Builder(ListLifecycleRetrieveJobsRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(ListLifecycleRetrieveJobsRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -106,7 +106,10 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +118,12 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +132,13 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the data retrieval task. Valid values:
+         * <p>
+         * 
+         * *   active: The task is running.
+         * *   canceled: The task is canceled.
+         * *   completed: The task is completed.
+         * *   failed: The task has failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

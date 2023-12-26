@@ -89,16 +89,24 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the file system.
+         * <p>
+         * 
+         * This parameter is valid only if the TagKey.N parameter is not specified.
+         * 
+         * Valid values:
+         * 
+         * *   true: All tags are removed from the file system. If the file system does not have tags, a success message is returned.
+         * *   false (default): No tags are removed from the file system and a success message is returned.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -107,7 +115,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -116,7 +124,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * Set the value to filesystem.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -125,7 +136,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag keys of the resources. Valid values of N: 1 to 20.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

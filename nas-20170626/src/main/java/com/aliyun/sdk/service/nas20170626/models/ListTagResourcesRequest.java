@@ -88,16 +88,16 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -106,7 +106,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -115,7 +115,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to filesystem.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -124,7 +124,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The details about the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -178,7 +178,16 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The tag key cannot be left empty.
+             * *   Valid values of N: 1 to 20.
+             * *   The tag key must be 1 to 128 characters in length.
+             * *   The tag key cannot start with `aliyun` or `acs:`.
+             * *   The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -186,7 +195,15 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   The tag value must be 1 to 128 characters in length.
+             * *   The tag value cannot start with `aliyun` or `acs:`.
+             * *   The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

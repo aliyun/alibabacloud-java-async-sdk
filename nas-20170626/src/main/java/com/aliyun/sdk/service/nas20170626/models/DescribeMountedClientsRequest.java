@@ -117,18 +117,22 @@ public class DescribeMountedClientsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMountedClientsRequest response) {
-            super(response);
-            this.clientIP = response.clientIP;
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeMountedClientsRequest request) {
+            super(request);
+            this.clientIP = request.clientIP;
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientIP.
+         * The IP address of the client.
+         * <p>
+         * 
+         * *   If you specify an IP address, the operation checks whether the client list includes this IP address. If the client list includes the IP address, the operation returns the IP address. If the client list does not include the IP address, the operation returns an empty list.
+         * *   If you do not specify an IP address, the operation returns the IP addresses of all clients that have accessed the specified NAS file system within the last minute.
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -137,7 +141,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -146,7 +150,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * The domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -155,7 +159,10 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -164,7 +171,12 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of IP addresses to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -173,7 +185,7 @@ public class DescribeMountedClientsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

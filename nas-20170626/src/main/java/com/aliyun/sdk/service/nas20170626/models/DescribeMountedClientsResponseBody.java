@@ -86,7 +86,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Clients.
+         * The queried clients.
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -94,7 +94,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of IP addresses returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of IP addresses.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
             private String clientIP; 
 
             /**
-             * ClientIP.
+             * The IP address of the client.
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;

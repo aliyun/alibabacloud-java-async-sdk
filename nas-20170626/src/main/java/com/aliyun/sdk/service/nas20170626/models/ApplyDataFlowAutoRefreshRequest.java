@@ -131,19 +131,22 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
             super();
         } 
 
-        private Builder(ApplyDataFlowAutoRefreshRequest response) {
-            super(response);
-            this.autoRefreshInterval = response.autoRefreshInterval;
-            this.autoRefreshPolicy = response.autoRefreshPolicy;
-            this.autoRefreshs = response.autoRefreshs;
-            this.clientToken = response.clientToken;
-            this.dataFlowId = response.dataFlowId;
-            this.dryRun = response.dryRun;
-            this.fileSystemId = response.fileSystemId;
+        private Builder(ApplyDataFlowAutoRefreshRequest request) {
+            super(request);
+            this.autoRefreshInterval = request.autoRefreshInterval;
+            this.autoRefreshPolicy = request.autoRefreshPolicy;
+            this.autoRefreshs = request.autoRefreshs;
+            this.clientToken = request.clientToken;
+            this.dataFlowId = request.dataFlowId;
+            this.dryRun = request.dryRun;
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * AutoRefreshInterval.
+         * The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.
+         * <p>
+         * 
+         * Valid values: 5 to 526600. Default value: 10.
          */
         public Builder autoRefreshInterval(Long autoRefreshInterval) {
             this.putQueryParameter("AutoRefreshInterval", autoRefreshInterval);
@@ -152,7 +155,11 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * AutoRefreshPolicy.
+         * The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:
+         * <p>
+         * 
+         * *   None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
+         * *   ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.
          */
         public Builder autoRefreshPolicy(String autoRefreshPolicy) {
             this.putQueryParameter("AutoRefreshPolicy", autoRefreshPolicy);
@@ -161,7 +168,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * AutoRefreshs.
+         * The automatic update configurations.
          */
         public Builder autoRefreshs(java.util.List < AutoRefreshs> autoRefreshs) {
             this.putQueryParameter("AutoRefreshs", autoRefreshs);
@@ -170,7 +177,12 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,7 +191,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * DataFlowId.
+         * The dataflow ID.
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -188,7 +200,15 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run.
+         * <p>
+         * 
+         * During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no file system is created and no fee is incurred.
+         * 
+         * Valid values:
+         * 
+         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FileSystemId parameter.
+         * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a file system is created.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -197,7 +217,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -214,7 +234,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
 
     public static class AutoRefreshs extends TeaModel {
         @NameInMap("RefreshPath")
-        @Validation(maxLength = 1024, minLength = 2)
+        @Validation(required = true, maxLength = 1024, minLength = 2)
         private String refreshPath;
 
         private AutoRefreshs(Builder builder) {
@@ -240,7 +260,16 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
             private String refreshPath; 
 
             /**
-             * RefreshPath.
+             * The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.
+             * <p>
+             * 
+             * Limits:
+             * 
+             * *   The directory must be 2 to 1,024 characters in length.
+             * *   The directory must be encoded in UTF-8.
+             * *   The directory must start and end with a forward slash (/).
+             * 
+             * >  The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
              */
             public Builder refreshPath(String refreshPath) {
                 this.refreshPath = refreshPath;

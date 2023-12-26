@@ -101,17 +101,23 @@ public class DescribeAccessGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccessGroupsRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.useUTCDateTime = response.useUTCDateTime;
+        private Builder(DescribeAccessGroupsRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.useUTCDateTime = request.useUTCDateTime;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
+         * <p>
+         * 
+         * Limits:
+         * 
+         * *   The name must be 3 to 64 characters in length.
+         * *   The name must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -120,7 +126,16 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
+         * *   cpfs: Cloud Parallel File Storage (CPFS) file system
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -129,7 +144,10 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +156,12 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +170,13 @@ public class DescribeAccessGroupsRequest extends Request {
         }
 
         /**
-         * UseUTCDateTime.
+         * Specifies whether to display the creation time of the permission group in UTC.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true (default): The time is displayed in UTC.
+         * *   false: The time is not displayed in UTC.
          */
         public Builder useUTCDateTime(Boolean useUTCDateTime) {
             this.putQueryParameter("UseUTCDateTime", useUTCDateTime);

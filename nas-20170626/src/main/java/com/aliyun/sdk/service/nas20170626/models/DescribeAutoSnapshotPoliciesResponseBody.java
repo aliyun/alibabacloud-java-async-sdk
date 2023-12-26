@@ -86,7 +86,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AutoSnapshotPolicies.
+         * The queried automatic snapshot policies.
          */
         public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
@@ -94,7 +94,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of automatic snapshot policies.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             private String timePoints; 
 
             /**
-             * AutoSnapshotPolicyId.
+             * The ID of the automatic snapshot policy.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -262,7 +262,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoSnapshotPolicyName.
+             * The name of the automatic snapshot policy.
              */
             public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
                 this.autoSnapshotPolicyName = autoSnapshotPolicyName;
@@ -270,7 +270,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the automatic snapshot policy was created.
+             * <p>
+             * 
+             * The time follows the [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -278,7 +281,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemNums.
+             * The number of file systems to which the automatic snapshot policy applies.
              */
             public Builder fileSystemNums(Integer fileSystemNums) {
                 this.fileSystemNums = fileSystemNums;
@@ -286,7 +289,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the automatic snapshot policy.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -294,7 +297,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatWeekdays.
+             * The days of a week on which auto snapshots are created.
+             * <p>
+             * 
+             * Auto snapshots are created on a weekly basis.
+             * 
+             * Valid values: 1 to 7. The values from 1 to 7 indicate 7 days in a week from Monday to Sunday.
              */
             public Builder repeatWeekdays(String repeatWeekdays) {
                 this.repeatWeekdays = repeatWeekdays;
@@ -302,7 +310,15 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RetentionDays.
+             * The retention period of auto snapshots.
+             * <p>
+             * 
+             * Unit: days.
+             * 
+             * Valid values:
+             * 
+             * *   \-1: Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.
+             * *   1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -310,7 +326,13 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the automatic snapshot policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating: The automatic snapshot policy is being created.
+             * *   Available: The automatic snapshot policy is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +340,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoints.
+             * The points in time at which auto snapshots are created.
+             * <p>
+             * 
+             * Unit: hours.
+             * 
+             * Valid values: `0 to 23`. The values from 0 to 23 indicate a total of 24 hours from `00:00 to 23:00`. For example, 1 indicates 01:00. A maximum of 24 points in time can be returned. Multiple points in time are separated with commas (,).
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;

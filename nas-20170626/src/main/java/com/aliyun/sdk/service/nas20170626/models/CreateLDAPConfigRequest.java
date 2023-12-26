@@ -90,16 +90,16 @@ public class CreateLDAPConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLDAPConfigRequest response) {
-            super(response);
-            this.bindDN = response.bindDN;
-            this.fileSystemId = response.fileSystemId;
-            this.searchBase = response.searchBase;
-            this.URI = response.URI;
+        private Builder(CreateLDAPConfigRequest request) {
+            super(request);
+            this.bindDN = request.bindDN;
+            this.fileSystemId = request.fileSystemId;
+            this.searchBase = request.searchBase;
+            this.URI = request.URI;
         } 
 
         /**
-         * BindDN.
+         * An LDAP entry.
          */
         public Builder bindDN(String bindDN) {
             this.putQueryParameter("BindDN", bindDN);
@@ -108,7 +108,7 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -117,7 +117,7 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * SearchBase.
+         * An LDAP search base.
          */
         public Builder searchBase(String searchBase) {
             this.putQueryParameter("SearchBase", searchBase);
@@ -126,7 +126,7 @@ public class CreateLDAPConfigRequest extends Request {
         }
 
         /**
-         * URI.
+         * An LDAP URI.
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

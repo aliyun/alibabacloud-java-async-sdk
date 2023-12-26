@@ -86,7 +86,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Packages.
+         * The list of storage plans.
          */
         public Builder packages(Packages packages) {
             this.packages = packages;
@@ -94,7 +94,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of storage plans returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of storage plans.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * ExpiredTime.
+             * The end time of the validity period for the storage plan.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -238,7 +238,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system that is bound to the storage plan.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -246,7 +246,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * The ID of the storage plan.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -254,7 +254,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The capacity of the storage plan.
+             * <p>
+             * 
+             * Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -262,7 +265,7 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the validity period for the storage plan.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -270,7 +273,13 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the storage plan.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   free: The storage plan is not bound to a file system. You can bind the storage plan to a file system of the same storage type.
+             * *   bound: The storage plan is bound to a file system.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +287,13 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The type of the storage plan.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Performance
+             * *   Capacity
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

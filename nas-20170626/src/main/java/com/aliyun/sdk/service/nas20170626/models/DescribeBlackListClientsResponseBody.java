@@ -50,7 +50,15 @@ public class DescribeBlackListClientsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clients.
+         * The IDs of clients and the status of each client. This parameter contains a JSON object, for example, {"client1": "EVICTING","client2":"EVICTED"}.
+         * <p>
+         * 
+         * Available client statuses include:
+         * 
+         * *   EVICTING indicates that a client is being removed
+         * *   EVICTED indicates that a client is removed
+         * *   ACCEPTING indicates that the write access to the file system is being granted to a client
+         * *   ACCEPTABLE indicates that the write access to the file system is granted to a client
          */
         public Builder clients(String clients) {
             this.clients = clients;
@@ -58,7 +66,7 @@ public class DescribeBlackListClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

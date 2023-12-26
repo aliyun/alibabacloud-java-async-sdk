@@ -90,16 +90,21 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRecycleBinRestoreJobRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.fileId = response.fileId;
-            this.fileSystemId = response.fileSystemId;
-            this.targetFileId = response.targetFileId;
+        private Builder(CreateRecycleBinRestoreJobRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.fileId = request.fileId;
+            this.fileSystemId = request.fileSystemId;
+            this.targetFileId = request.targetFileId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * 
+         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +113,10 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file or directory that you want to restore.
+         * <p>
+         * 
+         * You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -117,7 +125,7 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -126,7 +134,7 @@ public class CreateRecycleBinRestoreJobRequest extends Request {
         }
 
         /**
-         * TargetFileId.
+         * The ID of the directory to which the file is restored.
          */
         public Builder targetFileId(String targetFileId) {
             this.putQueryParameter("TargetFileId", targetFileId);

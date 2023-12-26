@@ -86,7 +86,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DirQuotaInfos.
+         * The queried directory quotas.
          */
         public Builder dirQuotaInfos(java.util.List < DirQuotaInfos> dirQuotaInfos) {
             this.dirQuotaInfos = dirQuotaInfos;
@@ -94,7 +94,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of directories.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * FileCountLimit.
+             * The maximum number of files that a user can create in the directory.
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -238,7 +238,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountReal.
+             * The total number of files that a user has created in the directory.
              */
             public Builder fileCountReal(Long fileCountReal) {
                 this.fileCountReal = fileCountReal;
@@ -246,7 +246,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaType.
+             * The type of the quota. Valid values: Accounting and Enforcement.
              */
             public Builder quotaType(String quotaType) {
                 this.quotaType = quotaType;
@@ -254,7 +254,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * The maximum size of files that a user can create in the directory. Unit: GiB.
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -262,7 +262,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * SizeReal.
+             * The total size of files that a user has created in the directory. Unit: GiB.
              */
             public Builder sizeReal(Long sizeReal) {
                 this.sizeReal = sizeReal;
@@ -270,7 +270,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -278,7 +278,11 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * The type of the user ID. Valid values: Uid, Gid, and AllUsers.
+             * <p>
+             * 
+             * *   If the parameter is set to Uid or Gid, the value of the UserId parameter is returned.
+             * *   If the parameter is set to AllUsers, the value of the UserID parameter is empty.
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -355,7 +359,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private java.util.List < UserQuotaInfos> userQuotaInfos; 
 
             /**
-             * DirInode.
+             * The inode number of the directory.
              */
             public Builder dirInode(String dirInode) {
                 this.dirInode = dirInode;
@@ -363,7 +367,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The absolute path of a directory.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -371,7 +375,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the quota created for the directory. Valid values: Initializing and Normal. The Initializing state indicates that the quota is being created. The Normal state indicates that the quota is created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +383,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * UserQuotaInfos.
+             * The information about quotas for all users.
              */
             public Builder userQuotaInfos(java.util.List < UserQuotaInfos> userQuotaInfos) {
                 this.userQuotaInfos = userQuotaInfos;

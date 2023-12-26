@@ -89,16 +89,19 @@ public class DescribeStoragePackagesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeStoragePackagesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.useUTCDateTime = response.useUTCDateTime;
+        private Builder(DescribeStoragePackagesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.useUTCDateTime = request.useUTCDateTime;
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -107,7 +110,12 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of storage plans to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +124,7 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +133,13 @@ public class DescribeStoragePackagesRequest extends Request {
         }
 
         /**
-         * UseUTCDateTime.
+         * Specifies whether the time to return is in UTC.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true (default): returns UTC time.
+         * *   false: returns UNIX timestamp.
          */
         public Builder useUTCDateTime(Boolean useUTCDateTime) {
             this.putQueryParameter("UseUTCDateTime", useUTCDateTime);

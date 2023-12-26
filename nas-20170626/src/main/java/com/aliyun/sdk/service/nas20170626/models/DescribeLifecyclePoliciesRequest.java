@@ -17,6 +17,10 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     private String fileSystemId;
 
     @Query
+    @NameInMap("LifecyclePolicyName")
+    private String lifecyclePolicyName;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -28,6 +32,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     private DescribeLifecyclePoliciesRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
+        this.lifecyclePolicyName = builder.lifecyclePolicyName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -53,6 +58,13 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     }
 
     /**
+     * @return lifecyclePolicyName
+     */
+    public String getLifecyclePolicyName() {
+        return this.lifecyclePolicyName;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -68,6 +80,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeLifecyclePoliciesRequest, Builder> {
         private String fileSystemId; 
+        private String lifecyclePolicyName; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -75,15 +88,16 @@ public class DescribeLifecyclePoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeLifecyclePoliciesRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeLifecyclePoliciesRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyName = request.lifecyclePolicyName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -92,7 +106,22 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The name of the lifecycle policy. The name must meet the following conventions:
+         * <p>
+         * 
+         * The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (\_), and hyphens (-).
+         */
+        public Builder lifecyclePolicyName(String lifecyclePolicyName) {
+            this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
+            this.lifecyclePolicyName = lifecyclePolicyName;
+            return this;
+        }
+
+        /**
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -101,7 +130,12 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -49,13 +49,16 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CancelAutoSnapshotPolicyRequest response) {
-            super(response);
-            this.fileSystemIds = response.fileSystemIds;
+        private Builder(CancelAutoSnapshotPolicyRequest request) {
+            super(request);
+            this.fileSystemIds = request.fileSystemIds;
         } 
 
         /**
-         * FileSystemIds.
+         * The IDs of file systems.
+         * <p>
+         * 
+         * You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).
          */
         public Builder fileSystemIds(String fileSystemIds) {
             this.putQueryParameter("FileSystemIds", fileSystemIds);

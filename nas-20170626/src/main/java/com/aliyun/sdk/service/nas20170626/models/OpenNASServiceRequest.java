@@ -35,8 +35,8 @@ public class OpenNASServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenNASServiceRequest response) {
-            super(response);
+        private Builder(OpenNASServiceRequest request) {
+            super(request);
         } 
 
         @Override

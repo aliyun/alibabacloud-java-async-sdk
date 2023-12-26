@@ -38,7 +38,7 @@ public class CancelRecycleBinJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

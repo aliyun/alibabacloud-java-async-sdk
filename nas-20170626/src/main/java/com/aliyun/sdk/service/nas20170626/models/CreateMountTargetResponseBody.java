@@ -62,7 +62,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MountTargetDomain.
+         * The IPv4 domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.mountTargetDomain = mountTargetDomain;
@@ -70,7 +70,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * MountTargetExtra.
+         * The information about the mount target.
          */
         public Builder mountTargetExtra(MountTargetExtra mountTargetExtra) {
             this.mountTargetExtra = mountTargetExtra;
@@ -78,7 +78,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
             private String dualStackMountTargetDomain; 
 
             /**
-             * DualStackMountTargetDomain.
+             * The dual-stack (IPv4 and IPv6) domain name of the mount target.
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;

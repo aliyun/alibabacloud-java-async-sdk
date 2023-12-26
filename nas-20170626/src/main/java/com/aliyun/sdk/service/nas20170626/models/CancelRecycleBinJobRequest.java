@@ -49,13 +49,13 @@ public class CancelRecycleBinJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelRecycleBinJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
+        private Builder(CancelRecycleBinJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
         } 
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -102,17 +102,20 @@ public class DescribeMountTargetsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMountTargetsRequest response) {
-            super(response);
-            this.dualStackMountTargetDomain = response.dualStackMountTargetDomain;
-            this.fileSystemId = response.fileSystemId;
-            this.mountTargetDomain = response.mountTargetDomain;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeMountTargetsRequest request) {
+            super(request);
+            this.dualStackMountTargetDomain = request.dualStackMountTargetDomain;
+            this.fileSystemId = request.fileSystemId;
+            this.mountTargetDomain = request.mountTargetDomain;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * DualStackMountTargetDomain.
+         * The dual-stack (IPv4 and IPv6) domain name of the mount target.
+         * <p>
+         * 
+         * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -121,7 +124,14 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
+         * <p>
+         * 
+         * *   Sample ID of a General-purpose NAS file system: 31a8e4\*\*\*\*.
+         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\*\*\*\*.
+         * *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\*\*\*\*.
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -130,7 +140,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * The domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -139,7 +149,10 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +161,12 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

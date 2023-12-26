@@ -62,7 +62,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entries.
+         * The information about the directories that are recently deleted.
          */
         public Builder entries(java.util.List < Entries> entries) {
             this.entries = entries;
@@ -70,7 +70,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * A pagination token.
+         * <p>
+         * 
+         * If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +81,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * FileId.
+             * The ID of the directory.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -162,7 +165,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * LastDeleteTime.
+             * The time when the directory was last deleted.
              */
             public Builder lastDeleteTime(String lastDeleteTime) {
                 this.lastDeleteTime = lastDeleteTime;
@@ -170,7 +173,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the directory.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +181,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The absolute path to the directory.
              */
             public Builder path(String path) {
                 this.path = path;

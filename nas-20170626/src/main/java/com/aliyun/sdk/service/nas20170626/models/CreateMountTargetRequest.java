@@ -141,20 +141,25 @@ public class CreateMountTargetRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMountTargetRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.dryRun = response.dryRun;
-            this.enableIpv6 = response.enableIpv6;
-            this.fileSystemId = response.fileSystemId;
-            this.networkType = response.networkType;
-            this.securityGroupId = response.securityGroupId;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
+        private Builder(CreateMountTargetRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.dryRun = request.dryRun;
+            this.enableIpv6 = request.enableIpv6;
+            this.fileSystemId = request.fileSystemId;
+            this.networkType = request.networkType;
+            this.securityGroupId = request.securityGroupId;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
+         * <p>
+         * 
+         * This parameter is required if you create a mount target for a General-purpose NAS file system or an Extreme NAS file system.
+         * 
+         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -163,7 +168,13 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run to check for existing mount targets. This parameter is valid only for CPFS file systems.
+         * <p>
+         * 
+         * If you set this parameter to true, the system checks whether the request parameters are valid and whether the requested resources are available. In this case, no mount target is created and no fee is incurred.
+         * 
+         * *   true: performs a dry run but does not create a mount target. In the dry run, the system checks the request format, service limits, available CPFS resources, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code `200` is returned. No value is returned for the `MountTargetDomain` parameter.
+         * *   false (default): sends the request. If the request passes the dry run, a mount target is created.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -172,7 +183,15 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * EnableIpv6.
+         * Specifies whether to create an IPv6 domain name for the mount target.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true: An IPv6 domain name is created for the mount target.
+         * *   false (default): No IPv6 domain name is created for the mount target.
+         * 
+         * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6. If you want to create an IPv6 domain name for the mount target, you must enable IPv6 for the file system.
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -181,7 +200,14 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
+         * <p>
+         * 
+         * *   Sample ID of a General-purpose NAS file system: 31a8e4\*\*\*\*.
+         * *   The IDs of Extreme NAS file systems must start with `extreme-`, for example, extreme-0015\*\*\*\*.
+         * *   The IDs of Cloud Parallel File Storage (CPFS) file systems must start with `cpfs-`, for example, cpfs-125487\*\*\*\*.
+         * 
+         * > CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -190,7 +216,7 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the mount target. Valid value: **Vpc**.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -199,7 +225,7 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -208,7 +234,10 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
+         * <p>
+         * 
+         * This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VSwitchId parameter.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -217,7 +246,10 @@ public class CreateMountTargetRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
+         * <p>
+         * 
+         * This parameter is valid and required if the mount target resides in a VPC. Example: If you set the NetworkType parameter to VPC, you must specify the VpcId parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

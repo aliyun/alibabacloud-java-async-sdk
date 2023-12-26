@@ -76,15 +76,20 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRecycleBinDeleteJobRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.fileId = response.fileId;
-            this.fileSystemId = response.fileSystemId;
+        private Builder(CreateRecycleBinDeleteJobRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.fileId = request.fileId;
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence?](~~25693~~)
+         * 
+         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +98,10 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
         }
 
         /**
-         * FileId.
+         * The ID of the file or directory that you want to permanently delete.
+         * <p>
+         * 
+         * You can call the [ListRecycledDirectoriesAndFiles](~~264193~~) operation to query the value of the FileId parameter.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -102,7 +110,7 @@ public class CreateRecycleBinDeleteJobRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

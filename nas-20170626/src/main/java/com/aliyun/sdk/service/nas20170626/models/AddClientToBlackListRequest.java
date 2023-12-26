@@ -91,16 +91,16 @@ public class AddClientToBlackListRequest extends Request {
             super();
         } 
 
-        private Builder(AddClientToBlackListRequest response) {
-            super(response);
-            this.clientIP = response.clientIP;
-            this.clientToken = response.clientToken;
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(AddClientToBlackListRequest request) {
+            super(request);
+            this.clientIP = request.clientIP;
+            this.clientToken = request.clientToken;
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientIP.
+         * The IP address of the client to add.
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -109,7 +109,10 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * This parameter ensures the idempotency of each request. A ClientToken is generated for each client. Make sure that each ClientToken is unique between different requests. The parameter can be a maximum of 64 characters in length and contain ASCII characters.
+         * <p>
+         * 
+         * For more information, see [How to ensure idempotence](https://www.alibabacloud.com/help/doc-detail/25693.htm).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -118,7 +121,7 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -127,7 +130,7 @@ public class AddClientToBlackListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the file system resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

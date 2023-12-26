@@ -102,17 +102,17 @@ public class DescribeAccessRulesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccessRulesRequest response) {
-            super(response);
-            this.accessGroupName = response.accessGroupName;
-            this.accessRuleId = response.accessRuleId;
-            this.fileSystemType = response.fileSystemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeAccessRulesRequest request) {
+            super(request);
+            this.accessGroupName = request.accessGroupName;
+            this.accessRuleId = request.accessRuleId;
+            this.fileSystemType = request.fileSystemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * AccessGroupName.
+         * The name of the permission group.
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -121,7 +121,7 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * AccessRuleId.
+         * The ID of the rule.
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);
@@ -130,7 +130,13 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard (default): General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);
@@ -139,7 +145,10 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +157,12 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

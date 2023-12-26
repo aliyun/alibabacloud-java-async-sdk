@@ -86,7 +86,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LifecyclePolicies.
+         * The queried lifecycle policies.
          */
         public Builder lifecyclePolicies(java.util.List < LifecyclePolicies> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
@@ -94,7 +94,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of lifecycle policies.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * CreateTime.
+             * The time when the lifecycle policy was created.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +241,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -246,7 +249,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * LifecyclePolicyName.
+             * The name of the lifecycle policy.
              */
             public Builder lifecyclePolicyName(String lifecyclePolicyName) {
                 this.lifecyclePolicyName = lifecyclePolicyName;
@@ -254,7 +257,15 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleRuleName.
+             * The management rule that is associated with the lifecycle policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   DEFAULT_ATIME\_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.
+             * *   DEFAULT_ATIME\_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.
+             * *   DEFAULT_ATIME\_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.
+             * *   DEFAULT_ATIME\_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.
              */
             public Builder lifecycleRuleName(String lifecycleRuleName) {
                 this.lifecycleRuleName = lifecycleRuleName;
@@ -262,7 +273,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The absolute path of a directory with which the lifecycle policy is associated.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -278,7 +289,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the data that is dumped to the IA storage medium.
+             * <p>
+             * 
+             * Default value: InfrequentAccess (IA).
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

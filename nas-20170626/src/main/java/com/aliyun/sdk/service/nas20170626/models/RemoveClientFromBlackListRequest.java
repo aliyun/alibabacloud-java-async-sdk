@@ -91,12 +91,12 @@ public class RemoveClientFromBlackListRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveClientFromBlackListRequest response) {
-            super(response);
-            this.clientIP = response.clientIP;
-            this.clientToken = response.clientToken;
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(RemoveClientFromBlackListRequest request) {
+            super(request);
+            this.clientIP = request.clientIP;
+            this.clientToken = request.clientToken;
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -127,7 +127,7 @@ public class RemoveClientFromBlackListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

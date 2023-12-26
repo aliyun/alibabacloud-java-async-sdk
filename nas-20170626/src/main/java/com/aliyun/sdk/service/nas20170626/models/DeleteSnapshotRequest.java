@@ -49,13 +49,13 @@ public class DeleteSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSnapshotRequest response) {
-            super(response);
-            this.snapshotId = response.snapshotId;
+        private Builder(DeleteSnapshotRequest request) {
+            super(request);
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * SnapshotId.
+         * The snapshot ID.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

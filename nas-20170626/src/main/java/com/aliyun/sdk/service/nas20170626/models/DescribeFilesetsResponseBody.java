@@ -74,7 +74,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entries.
+         * The fileset information.
          */
         public Builder entries(Entries entries) {
             this.entries = entries;
@@ -82,7 +82,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -90,7 +90,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,8 +127,8 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTiem")
-        private String updateTiem;
+        @NameInMap("UpdateTime")
+        private String updateTime;
 
         private Entrie(Builder builder) {
             this.createTime = builder.createTime;
@@ -136,7 +136,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             this.fileSystemPath = builder.fileSystemPath;
             this.fsetId = builder.fsetId;
             this.status = builder.status;
-            this.updateTiem = builder.updateTiem;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -183,10 +183,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return updateTiem
+         * @return updateTime
          */
-        public String getUpdateTiem() {
-            return this.updateTiem;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public static final class Builder {
@@ -195,10 +195,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private String fileSystemPath; 
             private String fsetId; 
             private String status; 
-            private String updateTiem; 
+            private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the fileset was created.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +209,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The fileset description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +217,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemPath.
+             * The fileset path.
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -222,7 +225,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * FsetId.
+             * The fileset ID.
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -230,7 +233,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The fileset status. Valid values:
+             * <p>
+             * 
+             * *   CREATING: The fileset is being created.
+             * *   CREATED: The fileset has been created and is running properly.
+             * *   RELEASING: The fileset is being released.
+             * *   RELEASED: The fileset has been deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,10 +247,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTiem.
+             * The time when the fileset was last updated.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
              */
-            public Builder updateTiem(String updateTiem) {
-                this.updateTiem = updateTiem;
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

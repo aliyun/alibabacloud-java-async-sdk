@@ -50,7 +50,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Entry.
+         * The details about the file or directory.
          */
         public Builder entry(Entry entry) {
             this.entry = entry;
@@ -58,7 +58,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,10 +73,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
 
     public static class Entry extends TeaModel {
         @NameInMap("ATime")
-        private String ATime;
+        private String aTime;
 
         @NameInMap("CTime")
-        private String CTime;
+        private String cTime;
 
         @NameInMap("HasInfrequentAccessFile")
         private Boolean hasInfrequentAccessFile;
@@ -85,7 +85,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private String inode;
 
         @NameInMap("MTime")
-        private String MTime;
+        private String mTime;
 
         @NameInMap("Name")
         private String name;
@@ -103,11 +103,11 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private String type;
 
         private Entry(Builder builder) {
-            this.ATime = builder.ATime;
-            this.CTime = builder.CTime;
+            this.aTime = builder.aTime;
+            this.cTime = builder.cTime;
             this.hasInfrequentAccessFile = builder.hasInfrequentAccessFile;
             this.inode = builder.inode;
-            this.MTime = builder.MTime;
+            this.mTime = builder.mTime;
             this.name = builder.name;
             this.retrieveTime = builder.retrieveTime;
             this.size = builder.size;
@@ -124,17 +124,17 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ATime
+         * @return aTime
          */
         public String getATime() {
-            return this.ATime;
+            return this.aTime;
         }
 
         /**
-         * @return CTime
+         * @return cTime
          */
         public String getCTime() {
-            return this.CTime;
+            return this.cTime;
         }
 
         /**
@@ -152,10 +152,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return MTime
+         * @return mTime
          */
         public String getMTime() {
-            return this.MTime;
+            return this.mTime;
         }
 
         /**
@@ -194,11 +194,11 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String ATime; 
-            private String CTime; 
+            private String aTime; 
+            private String cTime; 
             private Boolean hasInfrequentAccessFile; 
             private String inode; 
-            private String MTime; 
+            private String mTime; 
             private String name; 
             private String retrieveTime; 
             private Long size; 
@@ -206,23 +206,41 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ATime.
+             * The time when the file was queried.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
              */
-            public Builder ATime(String ATime) {
-                this.ATime = ATime;
+            public Builder aTime(String aTime) {
+                this.aTime = aTime;
                 return this;
             }
 
             /**
-             * CTime.
+             * The time when the raw data was modified.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
              */
-            public Builder CTime(String CTime) {
-                this.CTime = CTime;
+            public Builder cTime(String cTime) {
+                this.cTime = cTime;
                 return this;
             }
 
             /**
-             * HasInfrequentAccessFile.
+             * Indicates whether the directory contains files stored in the IA storage medium.
+             * <p>
+             * 
+             * This parameter is returned only if the value of the Type parameter is Directory.
+             * 
+             * Valid values:
+             * 
+             * *   true: The directory contains files stored in the IA storage medium.
+             * *   false: The directory does not contain files stored in the IA storage medium.
              */
             public Builder hasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
                 this.hasInfrequentAccessFile = hasInfrequentAccessFile;
@@ -230,7 +248,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * The file or directory inode.
              */
             public Builder inode(String inode) {
                 this.inode = inode;
@@ -238,15 +256,20 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * MTime.
+             * The time when the file was modified.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
              */
-            public Builder MTime(String MTime) {
-                this.MTime = MTime;
+            public Builder mTime(String mTime) {
+                this.mTime = mTime;
                 return this;
             }
 
             /**
-             * Name.
+             * The name of the file or directory.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +277,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * RetrieveTime.
+             * The time when the last data retrieval task was run.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
              */
             public Builder retrieveTime(String retrieveTime) {
                 this.retrieveTime = retrieveTime;
@@ -262,7 +290,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file.
+             * <p>
+             * 
+             * Unit: bytes.
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -270,7 +303,15 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the file.
+             * <p>
+             * 
+             * This parameter is returned only if the value of the Type parameter is File.
+             * 
+             * Valid values:
+             * 
+             * *   standard: General-purpose NAS file system
+             * *   InfrequentAccess: IA storage medium
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -278,7 +319,13 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the query result.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   File
+             * *   Directory
              */
             public Builder type(String type) {
                 this.type = type;

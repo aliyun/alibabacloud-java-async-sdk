@@ -76,15 +76,15 @@ public class DescribeBlackListClientsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBlackListClientsRequest response) {
-            super(response);
-            this.clientIP = response.clientIP;
-            this.fileSystemId = response.fileSystemId;
-            this.regionId = response.regionId;
+        private Builder(DescribeBlackListClientsRequest request) {
+            super(request);
+            this.clientIP = request.clientIP;
+            this.fileSystemId = request.fileSystemId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientIP.
+         * The IP address of the client.
          */
         public Builder clientIP(String clientIP) {
             this.putQueryParameter("ClientIP", clientIP);
@@ -93,7 +93,7 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -102,7 +102,7 @@ public class DescribeBlackListClientsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the file system resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

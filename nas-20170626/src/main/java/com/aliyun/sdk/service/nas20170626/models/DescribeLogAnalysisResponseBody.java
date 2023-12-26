@@ -98,7 +98,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Analyses.
+         * The collection of log dump information.
          */
         public Builder analyses(Analyses analyses) {
             this.analyses = analyses;
@@ -106,7 +106,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of log dump entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of log dump entries in the region.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Logstore.
+             * The name of the dedicated Logstore that is used to store NAS operation logs.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -222,7 +222,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the project where the dedicated Logstore resides.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -230,7 +230,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where the dedicated Logstore resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -238,7 +238,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The role that is used by NAS to access Simple Log Service.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -291,7 +291,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private MetaValue metaValue; 
 
             /**
-             * MetaKey.
+             * The ID of the file system.
              */
             public Builder metaKey(String metaKey) {
                 this.metaKey = metaKey;
@@ -299,7 +299,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * MetaValue.
+             * The log dump information of the file system.
              */
             public Builder metaValue(MetaValue metaValue) {
                 this.metaValue = metaValue;

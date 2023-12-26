@@ -49,13 +49,13 @@ public class DeleteLDAPConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLDAPConfigRequest response) {
-            super(response);
-            this.fileSystemId = response.fileSystemId;
+        private Builder(DeleteLDAPConfigRequest request) {
+            super(request);
+            this.fileSystemId = request.fileSystemId;
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

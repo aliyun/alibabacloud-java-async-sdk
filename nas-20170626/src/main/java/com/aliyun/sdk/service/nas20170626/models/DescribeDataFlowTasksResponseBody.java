@@ -286,7 +286,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -302,7 +302,12 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * null Valid values:
+             * <p>
+             * 
+             * *   null null
+             * *   null
+             * *   null
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -310,7 +315,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -318,7 +323,11 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemPath.
+             * *
+             * <p>
+             * *
+             * *
+             * *   null
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -334,7 +343,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FsPath.
+             * null
              */
             public Builder fsPath(String fsPath) {
                 this.fsPath = fsPath;
@@ -342,7 +351,11 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Originator.
+             * null Valid values:
+             * <p>
+             * 
+             * *   null
+             * *   null
              */
             public Builder originator(String originator) {
                 this.originator = originator;
@@ -350,7 +363,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * null null
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -358,7 +371,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReportPath.
+             * null
+             * <p>
+             * 
+             * null``
+             * 
+             * Limits:
+             * 
+             * *   null
+             * *   The name must be encoded in UTF-8.
              */
             public Builder reportPath(String reportPath) {
                 this.reportPath = reportPath;
@@ -366,7 +387,18 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceStorage.
+             * ://
+             * <p>
+             * 
+             * *
+             * *   *
+             *     *
+             *     *
+             *     *   [](http://https://。)
+             * 
+             * **
+             * 
+             * ****
              */
             public Builder sourceStorage(String sourceStorage) {
                 this.sourceStorage = sourceStorage;
@@ -374,7 +406,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * null
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -382,7 +414,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * null Valid values:
+             * <p>
+             * 
+             * *   null
+             * *   null
+             * *   null
+             * *   null
+             * *   null
+             * *   null
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +430,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * null Valid values:
+             * <p>
+             * 
+             * *   null
+             * *   null
+             * *   null null
+             * *   null
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;

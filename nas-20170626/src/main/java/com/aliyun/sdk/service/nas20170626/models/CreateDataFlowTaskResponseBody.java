@@ -50,7 +50,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the dataflow task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
