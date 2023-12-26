@@ -194,6 +194,9 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
+        @NameInMap("Line")
+        private String line;
+
         @NameInMap("Priority")
         private Integer priority;
 
@@ -216,6 +219,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         private Integer valueType;
 
         private Rules(Builder builder) {
+            this.line = builder.line;
             this.priority = builder.priority;
             this.regionId = builder.regionId;
             this.restoreDelay = builder.restoreDelay;
@@ -231,6 +235,13 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
         public static Rules create() {
             return builder().build();
+        }
+
+        /**
+         * @return line
+         */
+        public String getLine() {
+            return this.line;
         }
 
         /**
@@ -283,6 +294,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String line; 
             private Integer priority; 
             private String regionId; 
             private Integer restoreDelay; 
@@ -290,6 +302,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private String type; 
             private String value; 
             private Integer valueType; 
+
+            /**
+             * Line.
+             */
+            public Builder line(String line) {
+                this.line = line;
+                return this;
+            }
 
             /**
              * Priority.

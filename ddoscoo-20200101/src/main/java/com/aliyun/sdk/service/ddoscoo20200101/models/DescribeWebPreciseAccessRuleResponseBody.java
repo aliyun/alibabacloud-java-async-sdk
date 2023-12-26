@@ -75,6 +75,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         @NameInMap("Content")
         private String content;
 
+        @NameInMap("ContentList")
+        private java.util.List < String > contentList;
+
         @NameInMap("Field")
         private String field;
 
@@ -86,6 +89,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
         private ConditionList(Builder builder) {
             this.content = builder.content;
+            this.contentList = builder.contentList;
             this.field = builder.field;
             this.headerName = builder.headerName;
             this.matchMethod = builder.matchMethod;
@@ -104,6 +108,13 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return contentList
+         */
+        public java.util.List < String > getContentList() {
+            return this.contentList;
         }
 
         /**
@@ -129,6 +140,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+            private java.util.List < String > contentList; 
             private String field; 
             private String headerName; 
             private String matchMethod; 
@@ -138,6 +150,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * ContentList.
+             */
+            public Builder contentList(java.util.List < String > contentList) {
+                this.contentList = contentList;
                 return this;
             }
 

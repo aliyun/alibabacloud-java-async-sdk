@@ -90,6 +90,9 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         @NameInMap("CcEnable")
         private Integer ccEnable;
 
+        @NameInMap("CcGlobalSwitch")
+        private String ccGlobalSwitch;
+
         @NameInMap("CcTemplate")
         private String ccTemplate;
 
@@ -109,6 +112,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             this.blackWhiteListEnable = builder.blackWhiteListEnable;
             this.ccCustomRuleEnable = builder.ccCustomRuleEnable;
             this.ccEnable = builder.ccEnable;
+            this.ccGlobalSwitch = builder.ccGlobalSwitch;
             this.ccTemplate = builder.ccTemplate;
             this.domain = builder.domain;
             this.preciseRuleEnable = builder.preciseRuleEnable;
@@ -166,6 +170,13 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         }
 
         /**
+         * @return ccGlobalSwitch
+         */
+        public String getCcGlobalSwitch() {
+            return this.ccGlobalSwitch;
+        }
+
+        /**
          * @return ccTemplate
          */
         public String getCcTemplate() {
@@ -200,6 +211,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             private Integer blackWhiteListEnable; 
             private Integer ccCustomRuleEnable; 
             private Integer ccEnable; 
+            private String ccGlobalSwitch; 
             private String ccTemplate; 
             private String domain; 
             private Integer preciseRuleEnable; 
@@ -275,6 +287,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
              */
             public Builder ccEnable(Integer ccEnable) {
                 this.ccEnable = ccEnable;
+                return this;
+            }
+
+            /**
+             * CcGlobalSwitch.
+             */
+            public Builder ccGlobalSwitch(String ccGlobalSwitch) {
+                this.ccGlobalSwitch = ccGlobalSwitch;
                 return this;
             }
 
