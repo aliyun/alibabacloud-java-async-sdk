@@ -771,7 +771,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<RemoveImageLabelsResponse> removeImageLabels(RemoveImageLabelsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveImageLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/images/{ImageId}/labels/{LabelKeys}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveImageLabels").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/images/{ImageId}/labels/{LabelKey}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveImageLabelsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

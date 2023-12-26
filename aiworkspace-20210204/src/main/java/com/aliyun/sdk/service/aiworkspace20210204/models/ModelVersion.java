@@ -15,6 +15,12 @@ public class ModelVersion extends TeaModel {
     @NameInMap("ApprovalStatus")
     private String approvalStatus;
 
+    @NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
     @NameInMap("FormatType")
     private String formatType;
 
@@ -65,6 +71,8 @@ public class ModelVersion extends TeaModel {
 
     private ModelVersion(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
         this.frameworkType = builder.frameworkType;
         this.gmtCreateTime = builder.gmtCreateTime;
@@ -96,6 +104,20 @@ public class ModelVersion extends TeaModel {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -212,6 +234,8 @@ public class ModelVersion extends TeaModel {
 
     public static final class Builder {
         private String approvalStatus; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
         private String frameworkType; 
         private String gmtCreateTime; 
@@ -234,6 +258,22 @@ public class ModelVersion extends TeaModel {
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 

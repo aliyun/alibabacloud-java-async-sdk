@@ -15,8 +15,12 @@ public class UpdateWorkspaceResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceIds")
+    private java.util.List < String > resourceIds;
+
     private UpdateWorkspaceResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.resourceIds = builder.resourceIds;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class UpdateWorkspaceResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return resourceIds
+     */
+    public java.util.List < String > getResourceIds() {
+        return this.resourceIds;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private java.util.List < String > resourceIds; 
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(java.util.List < String > resourceIds) {
+            this.resourceIds = resourceIds;
             return this;
         }
 

@@ -22,6 +22,14 @@ public class CreateModelVersionRequest extends Request {
     private String approvalStatus;
 
     @Body
+    @NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @Body
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @Body
     @NameInMap("FormatType")
     private String formatType;
 
@@ -74,6 +82,8 @@ public class CreateModelVersionRequest extends Request {
         super(builder);
         this.modelId = builder.modelId;
         this.approvalStatus = builder.approvalStatus;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
         this.frameworkType = builder.frameworkType;
         this.inferenceSpec = builder.inferenceSpec;
@@ -113,6 +123,20 @@ public class CreateModelVersionRequest extends Request {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -202,6 +226,8 @@ public class CreateModelVersionRequest extends Request {
     public static final class Builder extends Request.Builder<CreateModelVersionRequest, Builder> {
         private String modelId; 
         private String approvalStatus; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
         private String frameworkType; 
         private java.util.Map < String, ? > inferenceSpec; 
@@ -223,6 +249,8 @@ public class CreateModelVersionRequest extends Request {
             super(request);
             this.modelId = request.modelId;
             this.approvalStatus = request.approvalStatus;
+            this.evaluationSpec = request.evaluationSpec;
+            this.extraInfo = request.extraInfo;
             this.formatType = request.formatType;
             this.frameworkType = request.frameworkType;
             this.inferenceSpec = request.inferenceSpec;
@@ -252,6 +280,24 @@ public class CreateModelVersionRequest extends Request {
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.putBodyParameter("EvaluationSpec", evaluationSpec);
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 

@@ -18,6 +18,9 @@ public class Model extends TeaModel {
     @NameInMap("Domain")
     private String domain;
 
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
     @NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -42,6 +45,9 @@ public class Model extends TeaModel {
     @NameInMap("ModelName")
     private String modelName;
 
+    @NameInMap("ModelType")
+    private String modelType;
+
     @NameInMap("OrderNumber")
     private Long orderNumber;
 
@@ -53,12 +59,6 @@ public class Model extends TeaModel {
 
     @NameInMap("Provider")
     private String provider;
-
-    @NameInMap("SourceId")
-    private String sourceId;
-
-    @NameInMap("SourceType")
-    private String sourceType;
 
     @NameInMap("Task")
     private String task;
@@ -72,6 +72,7 @@ public class Model extends TeaModel {
     private Model(Builder builder) {
         this.accessibility = builder.accessibility;
         this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
@@ -80,12 +81,11 @@ public class Model extends TeaModel {
         this.modelDoc = builder.modelDoc;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
         this.ownerId = builder.ownerId;
         this.provider = builder.provider;
-        this.sourceId = builder.sourceId;
-        this.sourceType = builder.sourceType;
         this.task = builder.task;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
@@ -111,6 +111,13 @@ public class Model extends TeaModel {
      */
     public String getDomain() {
         return this.domain;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -170,6 +177,13 @@ public class Model extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return orderNumber
      */
     public Long getOrderNumber() {
@@ -198,20 +212,6 @@ public class Model extends TeaModel {
     }
 
     /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    /**
-     * @return sourceType
-     */
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
-    /**
      * @return task
      */
     public String getTask() {
@@ -235,6 +235,7 @@ public class Model extends TeaModel {
     public static final class Builder {
         private String accessibility; 
         private String domain; 
+        private java.util.Map < String, ? > extraInfo; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List < Label > labels; 
@@ -243,12 +244,11 @@ public class Model extends TeaModel {
         private String modelDoc; 
         private String modelId; 
         private String modelName; 
+        private String modelType; 
         private Long orderNumber; 
         private String origin; 
         private String ownerId; 
         private String provider; 
-        private String sourceId; 
-        private String sourceType; 
         private String task; 
         private String userId; 
         private String workspaceId; 
@@ -266,6 +266,14 @@ public class Model extends TeaModel {
          */
         public Builder domain(String domain) {
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -334,6 +342,14 @@ public class Model extends TeaModel {
         }
 
         /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
          * OrderNumber.
          */
         public Builder orderNumber(Long orderNumber) {
@@ -362,22 +378,6 @@ public class Model extends TeaModel {
          */
         public Builder provider(String provider) {
             this.provider = provider;
-            return this;
-        }
-
-        /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.sourceId = sourceId;
-            return this;
-        }
-
-        /**
-         * SourceType.
-         */
-        public Builder sourceType(String sourceType) {
-            this.sourceType = sourceType;
             return this;
         }
 

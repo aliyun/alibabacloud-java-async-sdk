@@ -26,6 +26,10 @@ public class UpdateModelRequest extends Request {
     private String domain;
 
     @Body
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @Body
     @NameInMap("ModelDescription")
     private String modelDescription;
 
@@ -38,20 +42,16 @@ public class UpdateModelRequest extends Request {
     private String modelName;
 
     @Body
+    @NameInMap("ModelType")
+    private String modelType;
+
+    @Body
     @NameInMap("OrderNumber")
     private Long orderNumber;
 
     @Body
     @NameInMap("Origin")
     private String origin;
-
-    @Body
-    @NameInMap("SourceId")
-    private String sourceId;
-
-    @Body
-    @NameInMap("SourceType")
-    private String sourceType;
 
     @Body
     @NameInMap("Task")
@@ -62,13 +62,13 @@ public class UpdateModelRequest extends Request {
         this.modelId = builder.modelId;
         this.accessibility = builder.accessibility;
         this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.modelDescription = builder.modelDescription;
         this.modelDoc = builder.modelDoc;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
-        this.sourceId = builder.sourceId;
-        this.sourceType = builder.sourceType;
         this.task = builder.task;
     }
 
@@ -107,6 +107,13 @@ public class UpdateModelRequest extends Request {
     }
 
     /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    /**
      * @return modelDescription
      */
     public String getModelDescription() {
@@ -128,6 +135,13 @@ public class UpdateModelRequest extends Request {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return orderNumber
      */
     public Long getOrderNumber() {
@@ -142,20 +156,6 @@ public class UpdateModelRequest extends Request {
     }
 
     /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    /**
-     * @return sourceType
-     */
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
-    /**
      * @return task
      */
     public String getTask() {
@@ -166,13 +166,13 @@ public class UpdateModelRequest extends Request {
         private String modelId; 
         private String accessibility; 
         private String domain; 
+        private java.util.Map < String, ? > extraInfo; 
         private String modelDescription; 
         private String modelDoc; 
         private String modelName; 
+        private String modelType; 
         private Long orderNumber; 
         private String origin; 
-        private String sourceId; 
-        private String sourceType; 
         private String task; 
 
         private Builder() {
@@ -184,13 +184,13 @@ public class UpdateModelRequest extends Request {
             this.modelId = request.modelId;
             this.accessibility = request.accessibility;
             this.domain = request.domain;
+            this.extraInfo = request.extraInfo;
             this.modelDescription = request.modelDescription;
             this.modelDoc = request.modelDoc;
             this.modelName = request.modelName;
+            this.modelType = request.modelType;
             this.orderNumber = request.orderNumber;
             this.origin = request.origin;
-            this.sourceId = request.sourceId;
-            this.sourceType = request.sourceType;
             this.task = request.task;
         } 
 
@@ -222,6 +222,15 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
+            return this;
+        }
+
+        /**
          * ModelDescription.
          */
         public Builder modelDescription(String modelDescription) {
@@ -249,6 +258,15 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putBodyParameter("ModelType", modelType);
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
          * OrderNumber.
          */
         public Builder orderNumber(Long orderNumber) {
@@ -263,24 +281,6 @@ public class UpdateModelRequest extends Request {
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
             this.origin = origin;
-            return this;
-        }
-
-        /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.putBodyParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
-            return this;
-        }
-
-        /**
-         * SourceType.
-         */
-        public Builder sourceType(String sourceType) {
-            this.putBodyParameter("SourceType", sourceType);
-            this.sourceType = sourceType;
             return this;
         }
 

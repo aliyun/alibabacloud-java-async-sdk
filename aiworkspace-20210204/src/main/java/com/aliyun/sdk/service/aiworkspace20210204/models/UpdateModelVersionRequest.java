@@ -27,6 +27,14 @@ public class UpdateModelVersionRequest extends Request {
     private String approvalStatus;
 
     @Body
+    @NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @Body
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
+    @Body
     @NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
@@ -59,6 +67,8 @@ public class UpdateModelVersionRequest extends Request {
         this.modelId = builder.modelId;
         this.versionName = builder.versionName;
         this.approvalStatus = builder.approvalStatus;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.inferenceSpec = builder.inferenceSpec;
         this.metrics = builder.metrics;
         this.options = builder.options;
@@ -100,6 +110,20 @@ public class UpdateModelVersionRequest extends Request {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -155,6 +179,8 @@ public class UpdateModelVersionRequest extends Request {
         private String modelId; 
         private String versionName; 
         private String approvalStatus; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private java.util.Map < String, ? > inferenceSpec; 
         private java.util.Map < String, ? > metrics; 
         private String options; 
@@ -172,6 +198,8 @@ public class UpdateModelVersionRequest extends Request {
             this.modelId = request.modelId;
             this.versionName = request.versionName;
             this.approvalStatus = request.approvalStatus;
+            this.evaluationSpec = request.evaluationSpec;
+            this.extraInfo = request.extraInfo;
             this.inferenceSpec = request.inferenceSpec;
             this.metrics = request.metrics;
             this.options = request.options;
@@ -205,6 +233,24 @@ public class UpdateModelVersionRequest extends Request {
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.putBodyParameter("EvaluationSpec", evaluationSpec);
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.putBodyParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 

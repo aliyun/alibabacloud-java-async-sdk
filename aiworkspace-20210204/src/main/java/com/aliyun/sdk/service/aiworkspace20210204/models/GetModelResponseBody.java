@@ -18,6 +18,9 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("Domain")
     private String domain;
 
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
     @NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -41,6 +44,12 @@ public class GetModelResponseBody extends TeaModel {
 
     @NameInMap("ModelName")
     private String modelName;
+
+    @NameInMap("ModelType")
+    private String modelType;
+
+    @NameInMap("OrderNumber")
+    private Long orderNumber;
 
     @NameInMap("Origin")
     private String origin;
@@ -66,6 +75,7 @@ public class GetModelResponseBody extends TeaModel {
     private GetModelResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
         this.domain = builder.domain;
+        this.extraInfo = builder.extraInfo;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.labels = builder.labels;
@@ -74,6 +84,8 @@ public class GetModelResponseBody extends TeaModel {
         this.modelDoc = builder.modelDoc;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
+        this.orderNumber = builder.orderNumber;
         this.origin = builder.origin;
         this.ownerId = builder.ownerId;
         this.provider = builder.provider;
@@ -103,6 +115,13 @@ public class GetModelResponseBody extends TeaModel {
      */
     public String getDomain() {
         return this.domain;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -162,6 +181,20 @@ public class GetModelResponseBody extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
+     * @return orderNumber
+     */
+    public Long getOrderNumber() {
+        return this.orderNumber;
+    }
+
+    /**
      * @return origin
      */
     public String getOrigin() {
@@ -213,6 +246,7 @@ public class GetModelResponseBody extends TeaModel {
     public static final class Builder {
         private String accessibility; 
         private String domain; 
+        private java.util.Map < String, ? > extraInfo; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List < Label > labels; 
@@ -221,6 +255,8 @@ public class GetModelResponseBody extends TeaModel {
         private String modelDoc; 
         private String modelId; 
         private String modelName; 
+        private String modelType; 
+        private Long orderNumber; 
         private String origin; 
         private String ownerId; 
         private String provider; 
@@ -242,6 +278,14 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder domain(String domain) {
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -306,6 +350,22 @@ public class GetModelResponseBody extends TeaModel {
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+
+        /**
+         * OrderNumber.
+         */
+        public Builder orderNumber(Long orderNumber) {
+            this.orderNumber = orderNumber;
             return this;
         }
 

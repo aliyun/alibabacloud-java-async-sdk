@@ -15,6 +15,12 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("ApprovalStatus")
     private String approvalStatus;
 
+    @NameInMap("EvaluationSpec")
+    private java.util.Map < String, ? > evaluationSpec;
+
+    @NameInMap("ExtraInfo")
+    private java.util.Map < String, ? > extraInfo;
+
     @NameInMap("FormatType")
     private String formatType;
 
@@ -32,6 +38,9 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     @NameInMap("Labels")
     private java.util.List < Label > labels;
+
+    @NameInMap("Metrics")
+    private java.util.Map < String, ? > metrics;
 
     @NameInMap("Options")
     private String options;
@@ -65,12 +74,15 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     private GetModelVersionResponseBody(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
+        this.evaluationSpec = builder.evaluationSpec;
+        this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
         this.frameworkType = builder.frameworkType;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.inferenceSpec = builder.inferenceSpec;
         this.labels = builder.labels;
+        this.metrics = builder.metrics;
         this.options = builder.options;
         this.ownerId = builder.ownerId;
         this.requestId = builder.requestId;
@@ -96,6 +108,20 @@ public class GetModelVersionResponseBody extends TeaModel {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return evaluationSpec
+     */
+    public java.util.Map < String, ? > getEvaluationSpec() {
+        return this.evaluationSpec;
+    }
+
+    /**
+     * @return extraInfo
+     */
+    public java.util.Map < String, ? > getExtraInfo() {
+        return this.extraInfo;
     }
 
     /**
@@ -138,6 +164,13 @@ public class GetModelVersionResponseBody extends TeaModel {
      */
     public java.util.List < Label > getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return metrics
+     */
+    public java.util.Map < String, ? > getMetrics() {
+        return this.metrics;
     }
 
     /**
@@ -212,12 +245,15 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String approvalStatus; 
+        private java.util.Map < String, ? > evaluationSpec; 
+        private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
         private String frameworkType; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.Map < String, ? > inferenceSpec; 
         private java.util.List < Label > labels; 
+        private java.util.Map < String, ? > metrics; 
         private String options; 
         private String ownerId; 
         private String requestId; 
@@ -234,6 +270,22 @@ public class GetModelVersionResponseBody extends TeaModel {
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * EvaluationSpec.
+         */
+        public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            this.evaluationSpec = evaluationSpec;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            this.extraInfo = extraInfo;
             return this;
         }
 
@@ -282,6 +334,14 @@ public class GetModelVersionResponseBody extends TeaModel {
          */
         public Builder labels(java.util.List < Label > labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * Metrics.
+         */
+        public Builder metrics(java.util.Map < String, ? > metrics) {
+            this.metrics = metrics;
             return this;
         }
 

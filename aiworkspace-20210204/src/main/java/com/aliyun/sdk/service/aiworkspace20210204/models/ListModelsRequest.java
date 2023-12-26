@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListModelsRequest extends Request {
     @Query
+    @NameInMap("Collections")
+    private String collections;
+
+    @Query
     @NameInMap("Domain")
     private String domain;
 
@@ -23,6 +27,10 @@ public class ListModelsRequest extends Request {
     @Query
     @NameInMap("ModelName")
     private String modelName;
+
+    @Query
+    @NameInMap("ModelType")
+    private String modelType;
 
     @Query
     @NameInMap("Order")
@@ -53,14 +61,6 @@ public class ListModelsRequest extends Request {
     private String sortBy;
 
     @Query
-    @NameInMap("SouceType")
-    private String souceType;
-
-    @Query
-    @NameInMap("SourceId")
-    private String sourceId;
-
-    @Query
     @NameInMap("Task")
     private String task;
 
@@ -70,9 +70,11 @@ public class ListModelsRequest extends Request {
 
     private ListModelsRequest(Builder builder) {
         super(builder);
+        this.collections = builder.collections;
         this.domain = builder.domain;
         this.label = builder.label;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.order = builder.order;
         this.origin = builder.origin;
         this.pageNumber = builder.pageNumber;
@@ -80,8 +82,6 @@ public class ListModelsRequest extends Request {
         this.provider = builder.provider;
         this.query = builder.query;
         this.sortBy = builder.sortBy;
-        this.souceType = builder.souceType;
-        this.sourceId = builder.sourceId;
         this.task = builder.task;
         this.workspaceId = builder.workspaceId;
     }
@@ -97,6 +97,13 @@ public class ListModelsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return collections
+     */
+    public String getCollections() {
+        return this.collections;
     }
 
     /**
@@ -118,6 +125,13 @@ public class ListModelsRequest extends Request {
      */
     public String getModelName() {
         return this.modelName;
+    }
+
+    /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
     }
 
     /**
@@ -170,20 +184,6 @@ public class ListModelsRequest extends Request {
     }
 
     /**
-     * @return souceType
-     */
-    public String getSouceType() {
-        return this.souceType;
-    }
-
-    /**
-     * @return sourceId
-     */
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    /**
      * @return task
      */
     public String getTask() {
@@ -198,9 +198,11 @@ public class ListModelsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListModelsRequest, Builder> {
+        private String collections; 
         private String domain; 
         private String label; 
         private String modelName; 
+        private String modelType; 
         private String order; 
         private String origin; 
         private Integer pageNumber; 
@@ -208,8 +210,6 @@ public class ListModelsRequest extends Request {
         private String provider; 
         private String query; 
         private String sortBy; 
-        private String souceType; 
-        private String sourceId; 
         private String task; 
         private String workspaceId; 
 
@@ -219,9 +219,11 @@ public class ListModelsRequest extends Request {
 
         private Builder(ListModelsRequest request) {
             super(request);
+            this.collections = request.collections;
             this.domain = request.domain;
             this.label = request.label;
             this.modelName = request.modelName;
+            this.modelType = request.modelType;
             this.order = request.order;
             this.origin = request.origin;
             this.pageNumber = request.pageNumber;
@@ -229,11 +231,18 @@ public class ListModelsRequest extends Request {
             this.provider = request.provider;
             this.query = request.query;
             this.sortBy = request.sortBy;
-            this.souceType = request.souceType;
-            this.sourceId = request.sourceId;
             this.task = request.task;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Collections.
+         */
+        public Builder collections(String collections) {
+            this.putQueryParameter("Collections", collections);
+            this.collections = collections;
+            return this;
+        }
 
         /**
          * Domain.
@@ -259,6 +268,15 @@ public class ListModelsRequest extends Request {
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.putQueryParameter("ModelType", modelType);
+            this.modelType = modelType;
             return this;
         }
 
@@ -322,24 +340,6 @@ public class ListModelsRequest extends Request {
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
             this.sortBy = sortBy;
-            return this;
-        }
-
-        /**
-         * SouceType.
-         */
-        public Builder souceType(String souceType) {
-            this.putQueryParameter("SouceType", souceType);
-            this.souceType = souceType;
-            return this;
-        }
-
-        /**
-         * SourceId.
-         */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
             return this;
         }
 
