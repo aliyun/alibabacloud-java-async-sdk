@@ -386,7 +386,10 @@ public class GetTaskResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The custom tag key.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +397,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The custom tag value.
+             * <p>
+             * 
+             * The value must be 1 to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -638,7 +644,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The logs of the product instance.
+             * The logs of the instance.
              */
             public Builder log(Log log) {
                 this.log = log;
@@ -654,7 +660,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameters of the template.
+             * The parameters that are specified in the template.
              */
             public Builder parameters(java.util.List < Parameters> parameters) {
                 this.parameters = parameters;
@@ -750,7 +756,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTags.
+             * The custom tags.
              */
             public Builder taskTags(java.util.List < TaskTags> taskTags) {
                 this.taskTags = taskTags;

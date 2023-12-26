@@ -28,7 +28,6 @@ public class CreateProductRequest extends Request {
 
     @Body
     @NameInMap("ProductVersionParameters")
-    @Validation(required = true)
     private ProductVersionParameters productVersionParameters;
 
     @Body
@@ -189,15 +188,13 @@ public class CreateProductRequest extends Request {
         private String guidance;
 
         @NameInMap("ProductVersionName")
-        @Validation(required = true, maxLength = 100, minLength = 1)
+        @Validation(maxLength = 100, minLength = 1)
         private String productVersionName;
 
         @NameInMap("TemplateType")
-        @Validation(required = true)
         private String templateType;
 
         @NameInMap("TemplateUrl")
-        @Validation(required = true)
         private String templateUrl;
 
         private ProductVersionParameters(Builder builder) {
