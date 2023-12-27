@@ -50,7 +50,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         private RuleIds ruleIds; 
 
         /**
-         * Creates Web Application Firewall (WAF) protection rules.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleIds.
+         * The IDs of created rules.
          */
         public Builder ruleIds(RuleIds ruleIds) {
             this.ruleIds = ruleIds;

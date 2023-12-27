@@ -1,3 +1,6 @@
+2023-12-27 Version: 1.0.10
+- Generated java-async 2018-01-15 for dcdn.
+
 2023-11-07 Version: 1.0.9
 - Generated java-async 2018-01-15 for dcdn.
 

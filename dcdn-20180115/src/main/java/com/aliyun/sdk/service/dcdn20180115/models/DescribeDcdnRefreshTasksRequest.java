@@ -226,12 +226,11 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
+         * The type of the task.
          * <p>
          * 
          * *   **file**: URL-based refresh
          * *   **directory**: directory-based refresh
-         * *   **regex**: regular expression-based refresh
          * *   **preload**: URL-based prefetch
          * 
          * If you set **DomainName** or **Status**, you must also set this parameter.
@@ -288,7 +287,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
+         * The status of the task.
          * <p>
          * 
          * *   **Complete**: The task is complete.

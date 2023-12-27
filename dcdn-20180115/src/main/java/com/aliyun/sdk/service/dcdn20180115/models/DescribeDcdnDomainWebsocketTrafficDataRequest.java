@@ -153,7 +153,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataRequest extends Request {
          * The time granularity for a query. Unit: seconds.
          * <p>
          * 
-         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
+         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Operation Description**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);

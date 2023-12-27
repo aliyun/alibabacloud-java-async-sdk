@@ -133,6 +133,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     }
     public static class LogicalSymbol extends TeaModel {
+        @NameInMap("Attributes")
+        private Integer attributes;
+
         @NameInMap("Description")
         private String description;
 
@@ -152,6 +155,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         private String type;
 
         private LogicalSymbol(Builder builder) {
+            this.attributes = builder.attributes;
             this.description = builder.description;
             this.maxLength = builder.maxLength;
             this.regexp = builder.regexp;
@@ -166,6 +170,13 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
         public static LogicalSymbol create() {
             return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public Integer getAttributes() {
+            return this.attributes;
         }
 
         /**
@@ -211,12 +222,21 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer attributes; 
             private String description; 
             private Integer maxLength; 
             private Regexp regexp; 
             private String symbol; 
             private String tip; 
             private String type; 
+
+            /**
+             * Attributes.
+             */
+            public Builder attributes(Integer attributes) {
+                this.attributes = attributes;
+                return this;
+            }
 
             /**
              * The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.

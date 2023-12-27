@@ -172,7 +172,11 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * MatchType.
+         * The type of the search. Default value: exact_match. Valid values:
+         * <p>
+         * 
+         * *   fuzzy_match: fuzzy search.
+         * *   exact_match: exact search.
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);

@@ -7,37 +7,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDdosAllEventListRequest} extends {@link RequestModel}
+ * {@link DescribeDcdnDomainLogExTtlRequest} extends {@link RequestModel}
  *
- * <p>DescribeDdosAllEventListRequest</p>
+ * <p>DescribeDcdnDomainLogExTtlRequest</p>
  */
-public class DescribeDdosAllEventListRequest extends Request {
+public class DescribeDcdnDomainLogExTtlRequest extends Request {
+    @Query
+    @NameInMap("DomainName")
+    @Validation(required = true)
+    private String domainName;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
 
     @Query
-    @NameInMap("EventType")
-    private String eventType;
-
-    @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
-    private Integer pageNumber;
+    private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    private Integer pageSize;
+    @Validation(maximum = 1000)
+    private Long pageSize;
 
     @Query
     @NameInMap("StartTime")
-    @Validation(required = true)
     private String startTime;
 
-    private DescribeDdosAllEventListRequest(Builder builder) {
+    private DescribeDcdnDomainLogExTtlRequest(Builder builder) {
         super(builder);
+        this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.eventType = builder.eventType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -47,13 +47,20 @@ public class DescribeDdosAllEventListRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDdosAllEventListRequest create() {
+    public static DescribeDcdnDomainLogExTtlRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
     }
 
     /**
@@ -64,23 +71,16 @@ public class DescribeDdosAllEventListRequest extends Request {
     }
 
     /**
-     * @return eventType
-     */
-    public String getEventType() {
-        return this.eventType;
-    }
-
-    /**
      * @return pageNumber
      */
-    public Integer getPageNumber() {
+    public Long getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Integer getPageSize() {
+    public Long getPageSize() {
         return this.pageSize;
     }
 
@@ -91,25 +91,34 @@ public class DescribeDdosAllEventListRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDdosAllEventListRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDcdnDomainLogExTtlRequest, Builder> {
+        private String domainName; 
         private String endTime; 
-        private String eventType; 
-        private Integer pageNumber; 
-        private Integer pageSize; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDdosAllEventListRequest request) {
+        private Builder(DescribeDcdnDomainLogExTtlRequest request) {
             super(request);
+            this.domainName = request.domainName;
             this.endTime = request.endTime;
-            this.eventType = request.eventType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
+            return this;
+        }
 
         /**
          * EndTime.
@@ -121,34 +130,18 @@ public class DescribeDdosAllEventListRequest extends Request {
         }
 
         /**
-         * The type of the DDoS attack event that was queried. Valid values:
-         * <p>
-         * 
-         * *   *   **web-cc**: web resource exhaustion attacks
-         * *   *   **cc**: connection flood attacks
-         * *   *   **traffic**: volumetric attacks
-         * 
-         * If you do not configure this parameter, DDoS attack events of all types are queried.
-         */
-        public Builder eventType(String eventType) {
-            this.putQueryParameter("EventType", eventType);
-            this.eventType = eventType;
-            return this;
-        }
-
-        /**
          * PageNumber.
          */
-        public Builder pageNumber(Integer pageNumber) {
+        public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**. Valid values: 5, 10, and 20.
+         * PageSize.
          */
-        public Builder pageSize(Integer pageSize) {
+        public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
@@ -164,8 +157,8 @@ public class DescribeDdosAllEventListRequest extends Request {
         }
 
         @Override
-        public DescribeDdosAllEventListRequest build() {
-            return new DescribeDdosAllEventListRequest(this);
+        public DescribeDcdnDomainLogExTtlRequest build() {
+            return new DescribeDcdnDomainLogExTtlRequest(this);
         } 
 
     } 

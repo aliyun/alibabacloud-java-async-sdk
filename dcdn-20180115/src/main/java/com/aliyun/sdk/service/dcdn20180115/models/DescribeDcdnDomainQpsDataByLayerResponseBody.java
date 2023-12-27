@@ -110,7 +110,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The end of the time range during which data was queried.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the ISP. You can call the DescribeDcdnRegionAndIsp operation to query the ISP name. If you do not specify a value for this parameter, all ISPs are queried.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -126,10 +126,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The layers at which you want to query the QPS. The network layer supports IPv4 and IPv6. The application layer supports http, https, and quic. You can also set the value to all.
-         * <p>
-         * 
-         * Default value: all.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -137,7 +134,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeDcdnDomainQpsDataByLayer**.
+         * The layer at which the data was collected.
          */
         public Builder layer(String layer) {
             this.layer = layer;
@@ -145,7 +142,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the region. You can call the DescribeDcdnRegionAndIsp operation to query the region name. If you do not specify a value for this parameter, all regions are queried.
+         * The QPS returned at each time interval.
          */
         public Builder qpsDataInterval(QpsDataInterval qpsDataInterval) {
             this.qpsDataInterval = qpsDataInterval;
@@ -153,7 +150,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp of the data returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +158,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of requests.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -273,7 +270,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The number of requests outside the Chinese mainland.
+             * The number of requests in the Chinese mainland.
              */
             public Builder accDomesticValue(String accDomesticValue) {
                 this.accDomesticValue = accDomesticValue;
@@ -281,7 +278,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which data was queried.
+             * The number of requests outside the Chinese mainland.
              */
             public Builder accOverseasValue(String accOverseasValue) {
                 this.accOverseasValue = accOverseasValue;
@@ -289,7 +286,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queries per second in the Chinese mainland.
+             * The total number of requests.
              */
             public Builder accValue(String accValue) {
                 this.accValue = accValue;
@@ -297,7 +294,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval between the data entries returned. Unit: seconds.
+             * The number of queries per second in the Chinese mainland.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -305,7 +302,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of queries per second.
+             * The number of queries per second outside the Chinese mainland.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -313,10 +310,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval between the data entries to return. Unit: seconds.
-             * <p>
-             * 
-             * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -324,10 +318,7 @@ public class DescribeDcdnDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name. You can specify multiple domain names and separate them with commas (,). You can specify up to 500 domain names in each request. The query results of multiple domain names are aggregated.
-             * <p>
-             * 
-             * If you do not specify a domain name, data of all domain names is queried.
+             * The total number of queries per second.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -50,7 +50,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigList.
+         * 域名配置清单。
          */
         public Builder domainConfigList(DomainConfigList domainConfigList) {
             this.domainConfigList = domainConfigList;
@@ -122,7 +122,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * ConfigId.
+             * 配置ID，如果返回为0，则表示该条配置未配置成功，需要重新配置。
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -130,7 +130,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * 域名。
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +138,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * 功能名称。
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

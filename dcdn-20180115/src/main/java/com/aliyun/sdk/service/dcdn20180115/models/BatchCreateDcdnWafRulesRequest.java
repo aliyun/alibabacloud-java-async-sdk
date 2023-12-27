@@ -70,7 +70,7 @@ public class BatchCreateDcdnWafRulesRequest extends Request {
         } 
 
         /**
-         * The configurations of the protection rule.
+         * The ID of the protection policy.
          */
         public Builder policyId(Long policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -79,7 +79,7 @@ public class BatchCreateDcdnWafRulesRequest extends Request {
         }
 
         /**
-         * The configurations of the RuleConfigs.
+         * The configuration of the protection rule.
          */
         public Builder ruleConfigs(String ruleConfigs) {
             this.putBodyParameter("RuleConfigs", ruleConfigs);

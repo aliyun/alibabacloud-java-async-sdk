@@ -162,7 +162,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * >  You can call this operation up to 20 times per second per account.
       *
      */
     @Override
@@ -199,7 +199,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # Usage notes
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
       *
@@ -269,8 +268,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   You can specify up to 50 domain names in each request.
+      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
       * *   You can call this operation up to 30 times per second per account.
       *
      */
@@ -440,9 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-      * *   You can call this operation up to three times per second per account.
+      * **
+      * ****
+      * *
+      * *
       *
      */
     @Override
@@ -493,10 +492,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-      * *   You can only specify the production and staging environments when you call this operation.
-      * *   You can call this operation up to 100 times per second.
+      * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * >*   You can only specify the production and staging environments when you call this operation.
+      * >*   You can call this operation up to 100 times per second per account.
       *
      */
     @Override
@@ -977,8 +975,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
-      * **You can call this operation up to three times per second.
+      * >You can call this operation up to three times per second.
       *
      */
     @Override
@@ -1337,6 +1334,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDcdnDomainLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnDomainLogExTtlResponse> describeDcdnDomainLogExTtl(DescribeDcdnDomainLogExTtlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnDomainLogExTtl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnDomainLogExTtlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnDomainLogExTtlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2227,6 +2238,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<DescribeDcdnOriginSiteHealthStatusResponse> describeDcdnOriginSiteHealthStatus(DescribeDcdnOriginSiteHealthStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnOriginSiteHealthStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnOriginSiteHealthStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnOriginSiteHealthStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * >  You can call this API operation up to 100 times per second per account.
       *
@@ -2286,7 +2311,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
       * *   You can query the refresh or prefetch tasks by ID or URL.
       * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
       * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -2425,6 +2449,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDcdnSMCertificateListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnSSLCertificateListResponse> describeDcdnSSLCertificateList(DescribeDcdnSSLCertificateListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnSSLCertificateList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnSSLCertificateListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnSSLCertificateListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3730,16 +3768,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * #
       * *   DCDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
       * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. DCDN evaluates your application based on your workloads.
       * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
-      * *   You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
       * *   You can call this operation up to 30 times per second per account.
-      * # Precautions
-      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
-      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * #### [](#)Precautions
+      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than 5 minutes, you wait for it to expire instead of manually running a refresh task.
       * *   If you want to use RAM users to refresh or prefetch resources, you need to obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
       *
      */
@@ -3752,6 +3789,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RefreshDcdnObjectCachesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RefreshErObjectCachesResponse> refreshErObjectCaches(RefreshErObjectCachesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshErObjectCaches").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshErObjectCachesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshErObjectCachesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4016,7 +4067,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+      * > You can call this operation up to three times per second per account.
       *
      */
     @Override

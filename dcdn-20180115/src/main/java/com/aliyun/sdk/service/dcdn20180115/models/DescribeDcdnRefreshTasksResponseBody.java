@@ -86,7 +86,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of the returned page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The tasks.
+         * Details about tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -259,12 +259,11 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The type of the task.
              * <p>
              * 
              * *   **file**: URL-based refresh
              * *   **path**: directory-based refresh
-             * *   **regex**: regular expression-based refresh
              * *   **preload**: URL-based prefetch
              */
             public Builder objectType(String objectType) {
@@ -281,7 +280,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the auxiliary media asset.
+             * The status of the task.
              * <p>
              * 
              * *   **Complete**: The task is complete.
@@ -294,7 +293,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

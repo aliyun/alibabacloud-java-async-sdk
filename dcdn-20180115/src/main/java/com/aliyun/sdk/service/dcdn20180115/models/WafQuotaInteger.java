@@ -1,0 +1,134 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dcdn20180115.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link WafQuotaInteger} extends {@link TeaModel}
+ *
+ * <p>WafQuotaInteger</p>
+ */
+public class WafQuotaInteger extends TeaModel {
+    @NameInMap("Equal")
+    private Integer equal;
+
+    @NameInMap("GreaterThan")
+    private Integer greaterThan;
+
+    @NameInMap("GreaterThanOrEqual")
+    private Integer greaterThanOrEqual;
+
+    @NameInMap("LessThan")
+    private Integer lessThan;
+
+    @NameInMap("LessThanOrEqual")
+    private Integer lessThanOrEqual;
+
+    private WafQuotaInteger(Builder builder) {
+        this.equal = builder.equal;
+        this.greaterThan = builder.greaterThan;
+        this.greaterThanOrEqual = builder.greaterThanOrEqual;
+        this.lessThan = builder.lessThan;
+        this.lessThanOrEqual = builder.lessThanOrEqual;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static WafQuotaInteger create() {
+        return builder().build();
+    }
+
+    /**
+     * @return equal
+     */
+    public Integer getEqual() {
+        return this.equal;
+    }
+
+    /**
+     * @return greaterThan
+     */
+    public Integer getGreaterThan() {
+        return this.greaterThan;
+    }
+
+    /**
+     * @return greaterThanOrEqual
+     */
+    public Integer getGreaterThanOrEqual() {
+        return this.greaterThanOrEqual;
+    }
+
+    /**
+     * @return lessThan
+     */
+    public Integer getLessThan() {
+        return this.lessThan;
+    }
+
+    /**
+     * @return lessThanOrEqual
+     */
+    public Integer getLessThanOrEqual() {
+        return this.lessThanOrEqual;
+    }
+
+    public static final class Builder {
+        private Integer equal; 
+        private Integer greaterThan; 
+        private Integer greaterThanOrEqual; 
+        private Integer lessThan; 
+        private Integer lessThanOrEqual; 
+
+        /**
+         * Equal.
+         */
+        public Builder equal(Integer equal) {
+            this.equal = equal;
+            return this;
+        }
+
+        /**
+         * GreaterThan.
+         */
+        public Builder greaterThan(Integer greaterThan) {
+            this.greaterThan = greaterThan;
+            return this;
+        }
+
+        /**
+         * GreaterThanOrEqual.
+         */
+        public Builder greaterThanOrEqual(Integer greaterThanOrEqual) {
+            this.greaterThanOrEqual = greaterThanOrEqual;
+            return this;
+        }
+
+        /**
+         * LessThan.
+         */
+        public Builder lessThan(Integer lessThan) {
+            this.lessThan = lessThan;
+            return this;
+        }
+
+        /**
+         * LessThanOrEqual.
+         */
+        public Builder lessThanOrEqual(Integer lessThanOrEqual) {
+            this.lessThanOrEqual = lessThanOrEqual;
+            return this;
+        }
+
+        public WafQuotaInteger build() {
+            return new WafQuotaInteger(this);
+        } 
+
+    } 
+
+}

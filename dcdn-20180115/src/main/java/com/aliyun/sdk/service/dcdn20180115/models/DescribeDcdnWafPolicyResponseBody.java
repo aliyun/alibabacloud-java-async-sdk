@@ -263,7 +263,7 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The protection rule configurations that are defined in the protection policy. The configurations only support bot management. For more information, see [Configure protection rules](~~423350~~).
+             * The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).
              */
             public Builder ruleConfigs(String ruleConfigs) {
                 this.ruleConfigs = ruleConfigs;

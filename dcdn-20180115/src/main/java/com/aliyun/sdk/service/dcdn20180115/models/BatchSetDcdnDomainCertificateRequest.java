@@ -232,7 +232,7 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
          * Specifies whether to enable the HTTPS certificate. Valid values:
          * <p>
          * 
-         * *   \*\*on\*\*: enables the HTTPS certificate.
+         * *   **on**: enables the HTTPS certificate.
          * *   **off**: does not enable the HTTPS certificate.
          * 
          * This is the default value.

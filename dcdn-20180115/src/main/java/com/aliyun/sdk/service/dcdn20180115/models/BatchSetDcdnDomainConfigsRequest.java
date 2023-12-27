@@ -124,29 +124,27 @@ public class BatchSetDcdnDomainConfigsRequest extends Request {
          * The features that you want to configure. Format:
          * <p>
          * 
-         * > 
-         * 
          * *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~410622~~).
          * 
          * *   **argName**: The feature parameters for **functionName**.
-         * 
          * *   **argValue**: The parameter values set for **functionName**.
          * 
-         *         [
-         *          {
-         *            "functionArgs": [
-         *             {
-         *              "argName": "Parameter A", 
-         *              "argValue": "Parameter value"
-         *             }, 
-         *           {
-         *             "argName": "Parameter B", 
-         *             "argValue": "Parameter value"
-         *              }
-         *          ], 
-         *          "functionName": "Feature name"
-         *             }
-         *         ]
+         * ````[
+         *  {
+         *    "functionArgs": [
+         *     {
+         *      "argName": "Parameter A", 
+         *      "argValue": Value of parameter A"
+         *     }, 
+         *   {
+         *     "argName": "Parameter B", 
+         *     "argValue": "Value of Parameter B"
+         *      }
+         *  ], 
+         *  "functionName": "Feature name"
+         *     }
+         * ]```
+         * ````
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

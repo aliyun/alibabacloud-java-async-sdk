@@ -125,7 +125,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The method that is used to send operations reports. Operations reports are sent to you only by email. The settings need to be escaped in JSON.
          */
         public Builder deliver(String deliver) {
             this.putBodyParameter("Deliver", deliver);
@@ -134,7 +134,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * Domain Subscription
+         * The ID of the tracking task that you want to update.
          */
         public Builder deliverId(Long deliverId) {
             this.putBodyParameter("DeliverId", deliverId);
@@ -143,7 +143,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * {"schedName":"subscription task name","description":"description","crontab":"000**?","frequency":"d","status":"enable","effectiveFrom": "2020-09-17T00:00:00Z","effectiveEnd":"2020-11-17T00:00:00Z"}
+         * The domain names from which the tracking task collects data. Separate domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -161,7 +161,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The operations reports that are tracked by the task. The data must be escaped in JSON.
+         * The operations reports that are tracked by the task. The data needs to be escaped in JSON.
          */
         public Builder reports(String reports) {
             this.putBodyParameter("Reports", reports);
@@ -170,7 +170,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.
+         * The parameters that specify the time interval at which the tracking task sends operations reports. The settings need to be escaped in JSON.
          */
         public Builder schedule(String schedule) {
             this.putBodyParameter("Schedule", schedule);
