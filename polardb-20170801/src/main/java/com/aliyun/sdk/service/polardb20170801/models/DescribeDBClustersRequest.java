@@ -41,6 +41,10 @@ public class DescribeDBClustersRequest extends Request {
     private String DBVersion;
 
     @Query
+    @NameInMap("DescribeType")
+    private String describeType;
+
+    @Query
     @NameInMap("Expired")
     private Boolean expired;
 
@@ -102,6 +106,7 @@ public class DescribeDBClustersRequest extends Request {
         this.DBNodeIds = builder.DBNodeIds;
         this.DBType = builder.DBType;
         this.DBVersion = builder.DBVersion;
+        this.describeType = builder.describeType;
         this.expired = builder.expired;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -177,6 +182,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public String getDBVersion() {
         return this.DBVersion;
+    }
+
+    /**
+     * @return describeType
+     */
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     /**
@@ -278,6 +290,7 @@ public class DescribeDBClustersRequest extends Request {
         private String DBNodeIds; 
         private String DBType; 
         private String DBVersion; 
+        private String describeType; 
         private Boolean expired; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -305,6 +318,7 @@ public class DescribeDBClustersRequest extends Request {
             this.DBNodeIds = request.DBNodeIds;
             this.DBType = request.DBType;
             this.DBVersion = request.DBVersion;
+            this.describeType = request.describeType;
             this.expired = request.expired;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -385,6 +399,15 @@ public class DescribeDBClustersRequest extends Request {
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
             this.DBVersion = DBVersion;
+            return this;
+        }
+
+        /**
+         * 查询方式，当取值为Simple时，将返回简略版参数
+         */
+        public Builder describeType(String describeType) {
+            this.putQueryParameter("DescribeType", describeType);
+            this.describeType = describeType;
             return this;
         }
 

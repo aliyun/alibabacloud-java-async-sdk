@@ -30,6 +30,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("CompressStorageMode")
     private String compressStorageMode;
 
+    @NameInMap("CompressStorageUsed")
+    private Long compressStorageUsed;
+
     @NameInMap("CreationTime")
     private String creationTime;
 
@@ -178,6 +181,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.blktagUsed = builder.blktagUsed;
         this.category = builder.category;
         this.compressStorageMode = builder.compressStorageMode;
+        this.compressStorageUsed = builder.compressStorageUsed;
         this.creationTime = builder.creationTime;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
@@ -275,6 +279,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getCompressStorageMode() {
         return this.compressStorageMode;
+    }
+
+    /**
+     * @return compressStorageUsed
+     */
+    public Long getCompressStorageUsed() {
+        return this.compressStorageUsed;
     }
 
     /**
@@ -613,6 +624,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Long blktagUsed; 
         private String category; 
         private String compressStorageMode; 
+        private Long compressStorageUsed; 
         private String creationTime; 
         private String DBClusterDescription; 
         private String DBClusterId; 
@@ -721,6 +733,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder compressStorageMode(String compressStorageMode) {
             this.compressStorageMode = compressStorageMode;
+            return this;
+        }
+
+        /**
+         * CompressStorageUsed.
+         */
+        public Builder compressStorageUsed(Long compressStorageUsed) {
+            this.compressStorageUsed = compressStorageUsed;
             return this;
         }
 
@@ -1224,6 +1244,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ServerlessType")
         private String serverlessType;
 
+        @NameInMap("SubCluster")
+        private String subCluster;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
@@ -1245,6 +1268,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.sccMode = builder.sccMode;
             this.serverWeight = builder.serverWeight;
             this.serverlessType = builder.serverlessType;
+            this.subCluster = builder.subCluster;
             this.zoneId = builder.zoneId;
         }
 
@@ -1376,6 +1400,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return subCluster
+         */
+        public String getSubCluster() {
+            return this.subCluster;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1400,6 +1431,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String sccMode; 
             private String serverWeight; 
             private String serverlessType; 
+            private String subCluster; 
             private String zoneId; 
 
             /**
@@ -1569,6 +1601,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
+                return this;
+            }
+
+            /**
+             * SubCluster.
+             */
+            public Builder subCluster(String subCluster) {
+                this.subCluster = subCluster;
                 return this;
             }
 

@@ -261,6 +261,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDBProxyPerformanceResponse> describeDBProxyPerformance(DescribeDBProxyPerformanceRequest request);
 
+    CompletableFuture<DescribeDasConfigResponse> describeDasConfig(DescribeDasConfigRequest request);
+
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
 
     /**

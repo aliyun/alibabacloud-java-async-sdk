@@ -224,7 +224,6 @@ public class TempModifyDBNodeRequest extends Request {
          * The type of operation performed on the cluster. Valid values:
          * <p>
          * 
-         * *   **Add**: add one or more nodes to the cluster.
          * *   **Modify**: temporarily upgrade the configuration of the cluster.
          */
         public Builder operationType(String operationType) {

@@ -516,10 +516,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         private String endpointType;
 
+        @NameInMap("ReadWriteMode")
+        private String readWriteMode;
+
         private DBClusterEndpointList(Builder builder) {
             this.addressItems = builder.addressItems;
             this.DBEndpointId = builder.DBEndpointId;
             this.endpointType = builder.endpointType;
+            this.readWriteMode = builder.readWriteMode;
         }
 
         public static Builder builder() {
@@ -551,10 +555,18 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             return this.endpointType;
         }
 
+        /**
+         * @return readWriteMode
+         */
+        public String getReadWriteMode() {
+            return this.readWriteMode;
+        }
+
         public static final class Builder {
             private java.util.List < AddressItems> addressItems; 
             private String DBEndpointId; 
             private String endpointType; 
+            private String readWriteMode; 
 
             /**
              * Details about the endpoints.
@@ -582,6 +594,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
+                return this;
+            }
+
+            /**
+             * ReadWriteMode.
+             */
+            public Builder readWriteMode(String readWriteMode) {
+                this.readWriteMode = readWriteMode;
                 return this;
             }
 
@@ -766,6 +786,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("AddressItems")
         private java.util.List < RdsEndpointListAddressItems> addressItems;
 
+        @NameInMap("CustinsType")
+        private String custinsType;
+
         @NameInMap("DBEndpointId")
         private String DBEndpointId;
 
@@ -774,6 +797,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
         private RdsEndpointList(Builder builder) {
             this.addressItems = builder.addressItems;
+            this.custinsType = builder.custinsType;
             this.DBEndpointId = builder.DBEndpointId;
             this.endpointType = builder.endpointType;
         }
@@ -794,6 +818,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
+         * @return custinsType
+         */
+        public String getCustinsType() {
+            return this.custinsType;
+        }
+
+        /**
          * @return DBEndpointId
          */
         public String getDBEndpointId() {
@@ -809,6 +840,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < RdsEndpointListAddressItems> addressItems; 
+            private String custinsType; 
             private String DBEndpointId; 
             private String endpointType; 
 
@@ -817,6 +849,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
              */
             public Builder addressItems(java.util.List < RdsEndpointListAddressItems> addressItems) {
                 this.addressItems = addressItems;
+                return this;
+            }
+
+            /**
+             * CustinsType.
+             */
+            public Builder custinsType(String custinsType) {
+                this.custinsType = custinsType;
                 return this;
             }
 

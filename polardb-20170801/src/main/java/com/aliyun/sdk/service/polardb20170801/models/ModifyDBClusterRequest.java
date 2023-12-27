@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterRequest extends Request {
     @Query
+    @NameInMap("CompressStorage")
+    private String compressStorage;
+
+    @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
@@ -56,6 +60,7 @@ public class ModifyDBClusterRequest extends Request {
 
     private ModifyDBClusterRequest(Builder builder) {
         super(builder);
+        this.compressStorage = builder.compressStorage;
         this.DBClusterId = builder.DBClusterId;
         this.dataSyncMode = builder.dataSyncMode;
         this.faultSimulateMode = builder.faultSimulateMode;
@@ -79,6 +84,13 @@ public class ModifyDBClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return compressStorage
+     */
+    public String getCompressStorage() {
+        return this.compressStorage;
     }
 
     /**
@@ -152,6 +164,7 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
+        private String compressStorage; 
         private String DBClusterId; 
         private String dataSyncMode; 
         private String faultSimulateMode; 
@@ -169,6 +182,7 @@ public class ModifyDBClusterRequest extends Request {
 
         private Builder(ModifyDBClusterRequest request) {
             super(request);
+            this.compressStorage = request.compressStorage;
             this.DBClusterId = request.DBClusterId;
             this.dataSyncMode = request.dataSyncMode;
             this.faultSimulateMode = request.faultSimulateMode;
@@ -180,6 +194,15 @@ public class ModifyDBClusterRequest extends Request {
             this.storageAutoScale = request.storageAutoScale;
             this.storageUpperBound = request.storageUpperBound;
         } 
+
+        /**
+         * CompressStorage.
+         */
+        public Builder compressStorage(String compressStorage) {
+            this.putQueryParameter("CompressStorage", compressStorage);
+            this.compressStorage = compressStorage;
+            return this;
+        }
 
         /**
          * DBClusterId.
