@@ -439,6 +439,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<PutProjectPolicyResponse> putProjectPolicy(PutProjectPolicyRequest request);
 
+    CompletableFuture<PutProjectTransferAccelerationResponse> putProjectTransferAcceleration(PutProjectTransferAccelerationRequest request);
+
     CompletableFuture<PutWebtrackingResponse> putWebtracking(PutWebtrackingRequest request);
 
     /**

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-sls20201230</artifactId>
-  <version>4.0.3</version>
+  <version>4.0.4</version>
   <packaging>jar</packaging>
   <name>alibabacloud-sls20201230</name>
   <description>Alibaba Cloud Sls (20201230) Async SDK for Java
