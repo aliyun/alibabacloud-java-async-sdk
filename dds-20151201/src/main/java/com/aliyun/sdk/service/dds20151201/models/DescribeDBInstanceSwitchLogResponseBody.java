@@ -98,7 +98,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +106,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * LogItems.
+         * The primary/secondary switchover logs.
          */
         public Builder logItems(java.util.List < LogItems> logItems) {
             this.logItems = logItems;
@@ -114,7 +114,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number returned.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of primary/secondary switching entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             private String switchTime; 
 
             /**
-             * NodeId.
+             * The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -222,7 +222,15 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchCode.
+             * The code that indicates the reason of a primary/secondary switchover. Valid values:
+             * <p>
+             * 
+             * *   USER_CONSOLE_OPERATION: The switchover is manually performed.
+             * *   OPERATION_AND_MAINTENANCE: Potential risks exist.
+             * *   MACHINE_DOWNTIME: The host is offline.
+             * *   PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.
+             * *   SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.
+             * *   MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.
              */
             public Builder switchCode(String switchCode) {
                 this.switchCode = switchCode;
@@ -230,7 +238,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStatus.
+             * The switchover status. Valid values: **1** and **0**. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.
              */
             public Builder switchStatus(String switchStatus) {
                 this.switchStatus = switchStatus;
@@ -238,7 +246,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;

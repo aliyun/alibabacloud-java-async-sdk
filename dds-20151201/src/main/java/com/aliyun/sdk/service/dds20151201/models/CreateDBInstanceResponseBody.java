@@ -62,7 +62,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.dbInstanceId
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;

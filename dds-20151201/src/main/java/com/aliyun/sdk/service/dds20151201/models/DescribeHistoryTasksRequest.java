@@ -240,7 +240,7 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * FromExecTime.
+         * The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -249,7 +249,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * FromStartTime.
+         * The start time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
          */
         public Builder fromStartTime(String fromStartTime) {
             this.putQueryParameter("FromStartTime", fromStartTime);
@@ -258,7 +258,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that tasks of all instances are queried.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,7 +267,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the instance. Set the value to Instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -276,7 +276,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be a positive integer. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -285,7 +285,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 10 to 100. Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +294,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the pending event. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -321,7 +321,18 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The task status. Valid values:
+         * <p>
+         * 
+         * *   Scheduled: The task is waiting to be executed.
+         * *   Running: The task is running.
+         * *   Succeed: The task is successful.
+         * *   Failed: The task failed.
+         * *   Cancelling: The task is being terminated.
+         * *   Canceled: The task has been terminated.
+         * *   Waiting: The task is waiting for scheduled time.
+         * 
+         * Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -330,7 +341,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs. This parameter is empty by default, which indicates that all tasks are queried.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -339,7 +350,32 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The task type. This parameter is left empty by default, which indicates that all types of tasks are queried. Valid values:
+         * <p>
+         * 
+         * *   CreateIns: Create an instance.
+         * *   DeleteIns: Delete an instance.
+         * *   ChangeVariable: Modify parameter settings for an instance.
+         * *   ModifyInsConfig: Change the configurations of an instance.
+         * *   RestartIns: Restart an instance.
+         * *   HaSwitch: Perform a primary/secondary switchover on an instance.
+         * *   CloneIns: Clone an instance.
+         * *   KernelVersionUpgrade: Update the minor version of an instance.
+         * *   ProxyVersionUpgrade: Upgrade the agent version of an instance.
+         * *   ModifyAccount: Change the account of an instance.
+         * *   ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.
+         * *   CreateReadIns: Create a read-only instance.
+         * *   StartIns: Start an instance.
+         * *   StopIns: Stop an instance.
+         * *   ModifyNetwork: Modify the network type for an instance.
+         * *   LockIns: Lock an instance.
+         * *   UnlockIns: Unlock an instance.
+         * *   DiskOnlineExpansion: Scale out the disks of an instance online.
+         * *   StorageOnlineExpansion: Expend the storage capacity of an instance online.
+         * *   AddInsNode: Add a node to an instance.
+         * *   DeleteInsNode: Delete a node from an instance.
+         * *   ManualBackupIns: Manually back up an instance.
+         * *   ModifyInsStorageType: Modify the storage type for an instance.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -348,7 +384,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ToExecTime.
+         * The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed for the query.
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -357,7 +393,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ToStartTime.
+         * The end time of the O\&M task to perform. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. You can query data within the last 30 days.
          */
         public Builder toStartTime(String toStartTime) {
             this.putQueryParameter("ToStartTime", toStartTime);

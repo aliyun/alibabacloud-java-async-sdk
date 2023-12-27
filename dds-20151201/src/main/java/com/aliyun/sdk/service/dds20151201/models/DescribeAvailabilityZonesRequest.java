@@ -279,7 +279,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         } 
 
         /**
-         * Specifies the language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
+         * The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese.
@@ -292,7 +292,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * The instance type of the instance.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -314,7 +314,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -323,7 +323,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * ExcludeSecondaryZoneId.
+         * The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.
          */
         public Builder excludeSecondaryZoneId(String excludeSecondaryZoneId) {
             this.putQueryParameter("ExcludeSecondaryZoneId", excludeSecondaryZoneId);
@@ -332,7 +332,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * ExcludeZoneId.
+         * The ID of the zone that you want to exclude from the query results.
          */
         public Builder excludeZoneId(String excludeZoneId) {
             this.putQueryParameter("ExcludeZoneId", excludeZoneId);
@@ -434,11 +434,8 @@ public class DescribeAvailabilityZonesRequest extends Request {
          * *   **cloud_essd3**: PL3 ESSD.
          * *   **local_ssd**: local SSD.
          * 
-         * > 
-         * 
-         * *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-         * 
-         * *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         * > *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+         * > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

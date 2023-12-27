@@ -38,11 +38,7 @@ public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Specifies whether to enable authentication to allow access within a VPC. Valid values:
-         * <p>
-         * 
-         * *   **Open**: enables password-free access.
-         * *   **Close**: disables password-free access.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

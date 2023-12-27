@@ -86,7 +86,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * The settings of parameters that are being configured.
+         * The parameter settings in the configuration template.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -420,12 +420,12 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The role of the instance. Valid values:
+             * 实例的角色类型，取值说明：
              * <p>
              * 
-             * *   **db**: a shard node.
-             * *   **cs**: a Configserver node.
-             * *   **mongos**: a mongos node.
+             * - **db**：shard角色。
+             * - **cs**：config server角色。
+             * - **mongos**：mongos角色。
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;

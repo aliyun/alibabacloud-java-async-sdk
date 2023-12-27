@@ -163,7 +163,7 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,7 @@ public class ModifyAuditLogFilterRequest extends Request {
         }
 
         /**
-         * The type of the audit log entries to be collected. Valid values:
+         * The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:
          * <p>
          * 
          * *   **admin**: O\&M and management operations

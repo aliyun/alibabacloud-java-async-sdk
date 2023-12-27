@@ -304,11 +304,11 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment.
+         * *   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. In this case, you must manually pay for the instance.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -353,10 +353,10 @@ public class ModifyNodeSpecRequest extends Request {
         }
 
         /**
-         * The time when the changed configurations take effect. Default value: Immediately. Valid values:
+         * The time when the changed configurations take effect. Valid values:
          * <p>
          * 
-         * *   **Immediately**: The new configurations immediately take effect.
+         * *   **Immediately** (default): The new configurations immediately take effect
          * *   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.
          */
         public Builder effectiveTime(String effectiveTime) {

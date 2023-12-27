@@ -151,7 +151,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+      * This operation is applicable to replica set instances or sharded cluster instances.
+      * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
       *
      */
     @Override
@@ -168,6 +169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+      *
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -686,6 +691,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance uses local physical disks to store data.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceSwitchLogResponse> describeDBInstanceSwitchLog(DescribeDBInstanceSwitchLogRequest request) {
         try {
@@ -866,6 +877,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Queried keys are available only for disk encryption.
+      *
+     */
     @Override
     public CompletableFuture<DescribeKmsKeysResponse> describeKmsKeys(DescribeKmsKeysRequest request) {
         try {
@@ -1256,7 +1271,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   The instance must be in the running state when you call this operation.
-      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
       * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
      */
@@ -1537,7 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+      * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
       *
      */
     @Override
@@ -1593,7 +1611,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Precautions
+      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *
@@ -1662,6 +1680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+      *
+     */
     @Override
     public CompletableFuture<ModifyTaskInfoResponse> modifyTaskInfo(ModifyTaskInfoRequest request) {
         try {

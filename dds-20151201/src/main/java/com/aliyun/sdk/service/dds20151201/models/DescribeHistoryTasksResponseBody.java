@@ -86,7 +86,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * The task objects.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks that meet these conditions without taking pagination into account.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +386,35 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * ActionInfo.
+             * A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:
+             * <p>
+             * 
+             *        "steps": [
+             *         {
+             *           "step_name": "exec_task", // The name of the step, which matches the value of CurrentStepName.
+             *           "action_info": {    // The actions supported for this step.
+             *             "Waiting": [      // The status, which matches the value of Status.
+             *               "modifySwitchTime" // The action. Multiple actions are supported.
+             *             ]
+             *           }
+             *         },
+             *         {
+             *           "step_name": "init_task", // The name of the step.
+             *           "action_info": {    // The actions supported for this step.
+             *             "Running": [      // The status.
+             *               "cancel",       // The action.
+             *               "pause"
+             *             ]
+             *           }
+             *         }
+             *       ]
+             *     }
+             * 
+             * The system may support the following actions:
+             * 
+             * *   retry: makes another attempt.
+             * *   cancel: makes a cancellation.
+             * *   modifySwitchTime: changes the switching or restoration time.
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -394,7 +422,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerSource.
+             * The request source. Valid values: System and User.
              */
             public Builder callerSource(String callerSource) {
                 this.callerSource = callerSource;
@@ -402,7 +430,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CallerUid.
+             * The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.
              */
             public Builder callerUid(String callerUid) {
                 this.callerUid = callerUid;
@@ -410,7 +438,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepName.
+             * The name of the current step. If this parameter is left empty, the task is not started.
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -418,7 +446,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The database type. The value is fixed to mongodb.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -426,7 +454,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the performed O\&M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -434,7 +462,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -442,7 +470,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -450,7 +478,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the instance. The value is fixed to Instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -458,7 +486,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The product. The value is fixed to dds.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -466,7 +494,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The current progress of the task. The valid values range from 0 to 100.
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -474,7 +502,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * The reason why the current task was initiated.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -482,7 +510,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -490,7 +518,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * The estimated remaining execution time. Unit: seconds. The value 0 indicates that the task is completed.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -498,7 +526,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the performed O\&M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -506,7 +534,16 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task status. Valid values:
+             * <p>
+             * 
+             * *   Scheduled: The task is waiting to be executed.
+             * *   Running: The task is running.
+             * *   Succeed: The task is successful.
+             * *   Failed: The task failed.
+             * *   Cancelling: The task is being terminated.
+             * *   Canceled: The task has been terminated.
+             * *   Waiting: The task is waiting for scheduled time.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -514,7 +551,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDetail.
+             * The details of the task. The task details vary based on the value of the taskType parameter.
              */
             public Builder taskDetail(String taskDetail) {
                 this.taskDetail = taskDetail;
@@ -522,7 +559,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -530,7 +567,32 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The task type.
+             * <p>
+             * 
+             * *   CreateIns: Create an instance.
+             * *   DeleteIns: Delete an instance.
+             * *   ChangeVariable: Modify parameter settings for an instance.
+             * *   ModifyInsConfig: Change the configurations of an instance.
+             * *   RestartIns: Restart an instance.
+             * *   HaSwitch: Perform a primary/secondary switchover on an instance.
+             * *   CloneIns: Clone an instance.
+             * *   KernelVersionUpgrade: Update the minor version of an instance.
+             * *   ProxyVersionUpgrade: Upgrade the agent version of an instance.
+             * *   ModifyAccount: Change the account of an instance.
+             * *   ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.
+             * *   CreateReadIns: Create a read-only instance.
+             * *   StartIns: Start an instance.
+             * *   StopIns: Stop an instance.
+             * *   ModifyNetwork: Modify the network type for an instance.
+             * *   LockIns: Lock an instance.
+             * *   UnlockIns: Unlock an instance.
+             * *   DiskOnlineExpansion: Scale out the disks of an instance online.
+             * *   StorageOnlineExpansion: Expend the storage capacity of an instance online.
+             * *   AddInsNode: Add a node to an instance.
+             * *   DeleteInsNode: Delete a node from an instance.
+             * *   ManualBackupIns: Manually back up an instance.
+             * *   ModifyInsStorageType: Modify the storage type for an instance.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -538,7 +600,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The ID of the user to which the resource belongs.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

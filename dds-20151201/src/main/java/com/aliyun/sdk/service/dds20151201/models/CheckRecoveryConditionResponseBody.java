@@ -62,7 +62,7 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +70,11 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * Indicates whether the recovery conditions are met. Valid values:
+         * <p>
+         * 
+         * *   **true**: The recovery conditions are met.
+         * *   **false**: The recovery conditions are not met.
          */
         public Builder isValid(Boolean isValid) {
             this.isValid = isValid;
@@ -78,7 +82,7 @@ public class CheckRecoveryConditionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

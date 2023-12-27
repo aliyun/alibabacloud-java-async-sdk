@@ -557,7 +557,7 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   **PostPaid** (default): pay-as-you-go
          * *   **PrePaid**: subscription
          * 
-         * > **Period** is required if you set the value of this parameter to **PrePaid**.
+         * >  If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -598,13 +598,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the disk. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * Specifies whether to enable disk encryption.
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -641,11 +635,8 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   **4.0**
          * *   **3.4**
          * 
-         * > 
-         * 
-         * *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
-         * 
-         * *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
+         * > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+         * > *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -654,7 +645,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * 实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。
+         * The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
@@ -685,13 +676,9 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   **eu-central-1b**: Frankfurt Zone B
          * *   **eu-central-1c**: Frankfurt Zone C
          * 
-         * > 
-         * 
-         * *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-         * 
-         * *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
-         * 
-         * *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+         * > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
+         * > *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.
+         * > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
          */
         public Builder hiddenZoneId(String hiddenZoneId) {
             this.putQueryParameter("HiddenZoneId", hiddenZoneId);
@@ -710,9 +697,6 @@ public class CreateShardingDBInstanceRequest extends Request {
 
         /**
          * The network type of the instance. Set the value to VPC.
-         * <p>
-         * 
-         * ****
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -739,12 +723,12 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: month.
+         * The subscription period of the instance. Unit: months.
          * <p>
          * 
-         * Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, and 60************************
+         * Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
          * 
-         * > This parameter is available and required if you set the value of **ChargeType** to **PrePaid**.
+         * > When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -766,7 +750,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * The provisioned IOPS. Valid values: 0 to 50000.
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -784,7 +768,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The shard nodes of the instance.
+         * The information of the shard node.
          */
         public Builder replicaSet(java.util.List < ReplicaSet> replicaSet) {
             this.putQueryParameter("ReplicaSet", replicaSet);
@@ -854,12 +838,9 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   **eu-central-1b**: Frankfurt Zone B
          * *   **eu-central-1c**: Frankfurt Zone C
          * 
-         * > 
-         * 
-         * *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
-         * 
-         * *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
-         * *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
+         * > *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.
+         * > *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.
+         * > *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -875,11 +856,8 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   IP addresses, such as 10.23.12.24.
          * *   CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
          * 
-         * > 
-         * 
-         * *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
-         * 
-         * *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
+         * > *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.
+         * > *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -903,11 +881,8 @@ public class CreateShardingDBInstanceRequest extends Request {
          * The storage engine of the instance. Set the value to **WiredTiger**.
          * <p>
          * 
-         * > 
-         * 
-         * *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
-         * 
-         * *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+         * > *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.
+         * > *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
          */
         public Builder storageEngine(String storageEngine) {
             this.putQueryParameter("StorageEngine", storageEngine);
@@ -924,11 +899,8 @@ public class CreateShardingDBInstanceRequest extends Request {
          * *   **cloud_essd3**: ESSD PL3
          * *   **local_ssd**: local SSD
          * 
-         * > 
-         * 
-         * *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-         * 
-         * *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         * > *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+         * > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -937,7 +909,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The custom tags added to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -946,7 +918,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * The vSwitch ID of the instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -955,7 +927,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1080,11 +1052,8 @@ public class CreateShardingDBInstanceRequest extends Request {
              * The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).
              * <p>
              * 
-             * > 
-             * 
-             * *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
-             * 
-             * *   Valid values for **N**: **2** to **32**.
+             * > *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.
+             * > *   Valid values for **N**: **2** to **32**.
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -1155,11 +1124,8 @@ public class CreateShardingDBInstanceRequest extends Request {
              * The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).
              * <p>
              * 
-             * > 
-             * 
-             * *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
-             * 
-             * *   Valid values for **N**: **2** to **32**.
+             * > *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.
+             * > *   Valid values for **N**: **2** to **32**.
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -1170,9 +1136,9 @@ public class CreateShardingDBInstanceRequest extends Request {
              * The number of read-only nodes in shard node N.
              * <p>
              * 
-             * Valid values: **0** to **5**. Default value: **0**.
+             * Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.
              * 
-             * > **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.
+             * >  **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.
              */
             public Builder readonlyReplicas(Integer readonlyReplicas) {
                 this.readonlyReplicas = readonlyReplicas;
@@ -1183,11 +1149,8 @@ public class CreateShardingDBInstanceRequest extends Request {
              * The storage space of the shard node. Unit: GB.
              * <p>
              * 
-             * > 
-             * 
-             * *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
-             * 
-             * *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
+             * > *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).
+             * > *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -1240,7 +1203,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * > **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1248,7 +1214,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
              */
             public Builder value(String value) {
                 this.value = value;

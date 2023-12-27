@@ -582,7 +582,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was modified. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
+             * The time when the task was modified. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -614,7 +614,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the task. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.
+             * The start time of the task. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -638,7 +638,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in Coordinated Universal Time (UTC).
+             * The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;

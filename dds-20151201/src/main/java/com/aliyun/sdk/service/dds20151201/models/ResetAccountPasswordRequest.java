@@ -178,7 +178,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ResetAccountPassword**.
+         * The account for which you want to reset the password. Set the value to **root**.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,7 +187,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The new password.
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -196,11 +200,12 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The type of the database account. Valid values:
+         * The role of the instance. Valid values:
          * <p>
          * 
-         * *   mongos: an account that can be used to log on to mongos
-         * *   shard: an account that can be used to log on to shards
+         * *   db: a shard node.
+         * *   cs: a Configserver node.
+         * *   mongos: a mongos node.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -209,7 +214,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * com.aliyun.abs.dds.service.v20151201.domain.ResetDdsAccountPasswordRequest
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

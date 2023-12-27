@@ -140,7 +140,7 @@ public class ModifyTaskInfoRequest extends Request {
         } 
 
         /**
-         * ActionParams.
+         * The action-related parameters. Such parameters can be added based on your business requirements. The ActionParams parameter value varies based on the taskAction parameter value.
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -149,7 +149,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +176,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * StepName.
+         * The name of the step visible to the user.
          */
         public Builder stepName(String stepName) {
             this.putQueryParameter("StepName", stepName);
@@ -185,7 +185,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskAction.
+         * The name of the action to perform. Specify the value of this parameter as the action name corresponding to the current state of the task. The action name can be obtained from the actionInfo parameter returned by the [DescribeHistoryTasks](~~2639186~~) operation.
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -194,7 +194,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

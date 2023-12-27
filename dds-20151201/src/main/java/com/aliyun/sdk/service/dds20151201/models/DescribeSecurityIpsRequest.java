@@ -37,6 +37,10 @@ public class DescribeSecurityIpsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("ShowHDMIps")
+    private Boolean showHDMIps;
+
     private DescribeSecurityIpsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -45,6 +49,7 @@ public class DescribeSecurityIpsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.showHDMIps = builder.showHDMIps;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class DescribeSecurityIpsRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return showHDMIps
+     */
+    public Boolean getShowHDMIps() {
+        return this.showHDMIps;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSecurityIpsRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -109,6 +121,7 @@ public class DescribeSecurityIpsRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean showHDMIps; 
 
         private Builder() {
             super();
@@ -122,6 +135,7 @@ public class DescribeSecurityIpsRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.showHDMIps = request.showHDMIps;
         } 
 
         /**
@@ -175,6 +189,15 @@ public class DescribeSecurityIpsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ShowHDMIps.
+         */
+        public Builder showHDMIps(Boolean showHDMIps) {
+            this.putQueryParameter("ShowHDMIps", showHDMIps);
+            this.showHDMIps = showHDMIps;
             return this;
         }
 

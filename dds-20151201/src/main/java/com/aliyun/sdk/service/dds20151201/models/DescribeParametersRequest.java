@@ -214,7 +214,7 @@ public class DescribeParametersRequest extends Request {
          * The ID of the mongos or shard node in the specified sharded cluster instance.
          * <p>
          * 
-         * >  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * >  This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

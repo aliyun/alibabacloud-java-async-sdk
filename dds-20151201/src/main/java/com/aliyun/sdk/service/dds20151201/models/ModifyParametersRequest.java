@@ -171,10 +171,9 @@ public class ModifyParametersRequest extends Request {
          * The role of the instance. Valid values:
          * <p>
          * 
-         * *   **db**: a shard node
-         * *   **cs**: a Configserver node
-         * *   **mongos**: a mongos node
-         * *   **logic**: a sharded cluster instance
+         * *   **db**: a shard node.
+         * *   **cs**: a Configserver node.
+         * *   **mongos**: a mongos node.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -183,7 +182,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.

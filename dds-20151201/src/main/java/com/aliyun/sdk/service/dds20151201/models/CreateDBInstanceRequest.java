@@ -591,28 +591,16 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * The network type of the instance. Set the value to VPC.
+         * The password of the root account. The password must meet the following requirements:
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   Special characters include ! # $ % ^ & \* ( ) \_ + - =
+         * *   The password of the account must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
             this.accountPassword = accountPassword;
-            return this;
-        }
-
-        /**
-         * The storage engine of the instance. Default value: WiredTiger. Valid values:
-         * <p>
-         * 
-         * *   **WiredTiger**
-         * *   **RocksDB**
-         * *   **TerarkDB**
-         * 
-         * >  *   When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.
-         * >  *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
-         */
-        public Builder autoRenew(String autoRenew) {
-            this.putQueryParameter("AutoRenew", autoRenew);
-            this.autoRenew = autoRenew;
             return this;
         }
 
@@ -625,6 +613,18 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * > This parameter is valid and optional when the **ChargeType** parameter is set to **PrePaid**.
          */
+        public Builder autoRenew(String autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
+         * <p>
+         * 
+         * > When you call this operation to clone an instance based on the backup set, this parameter is required. The **SrcDBInstanceId** parameter is also required.
+         */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
@@ -632,7 +632,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -641,11 +641,118 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PostPaid**: pay-as-you-go. This is the default value.
+         * *   **PrePaid**: subscription.
+         * 
+         * > If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The ID of the dedicated cluster to which the instance belongs.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         */
+        public Builder couponNo(String couponNo) {
+            this.putQueryParameter("CouponNo", couponNo);
+            this.couponNo = couponNo;
+            return this;
+        }
+
+        /**
+         * The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to query the instance type.
+         */
+        public Builder DBInstanceClass(String DBInstanceClass) {
+            this.putQueryParameter("DBInstanceClass", DBInstanceClass);
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+
+        /**
+         * The name of the instance. The name of the instance must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must start with a letter.
+         * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
+         * *   The name must be 2 to 256 characters in length.
+         */
+        public Builder DBInstanceDescription(String DBInstanceDescription) {
+            this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+
+        /**
+         * The storage capacity of the instance. Unit: GB.
+         * <p>
+         * 
+         * The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
+         */
+        public Builder DBInstanceStorage(Integer DBInstanceStorage) {
+            this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
+            this.DBInstanceStorage = DBInstanceStorage;
+            return this;
+        }
+
+        /**
+         * The name of the database.
+         * <p>
+         * 
+         * > When you call this operation to clone an instance, you can set this parameter to specify the database to clone. Otherwise, all databases of the instance are cloned.
+         */
+        public Builder databaseNames(String databaseNames) {
+            this.putQueryParameter("DatabaseNames", databaseNames);
+            this.databaseNames = databaseNames;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable disk encryption.
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * The ID of the custom key.
+         */
+        public Builder encryptionKey(String encryptionKey) {
+            this.putQueryParameter("EncryptionKey", encryptionKey);
+            this.encryptionKey = encryptionKey;
+            return this;
+        }
+
+        /**
+         * The database engine of the instance. The value is fixed as **MongoDB**.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 
@@ -661,128 +768,6 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * > When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the engine version of the source instance.
          */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * cn
-         */
-        public Builder clusterId(String clusterId) {
-            this.putQueryParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.
-         */
-        public Builder couponNo(String couponNo) {
-            this.putQueryParameter("CouponNo", couponNo);
-            this.couponNo = couponNo;
-            return this;
-        }
-
-        /**
-         * The IP addresses in an IP address whitelist. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:
-         * <p>
-         * 
-         * *   0.0.0.0/0
-         * *   IP addresses, such as 10.23.12.24.
-         * *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
-         * 
-         * > *   A maximum of 1,000 IP addresses or CIDR blocks can be configured for each instance.
-         * > *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
-         */
-        public Builder DBInstanceClass(String DBInstanceClass) {
-            this.putQueryParameter("DBInstanceClass", DBInstanceClass);
-            this.DBInstanceClass = DBInstanceClass;
-            return this;
-        }
-
-        /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   **PostPaid**: pay-as-you-go. This is the default value.
-         * *   **PrePaid**: subscription.
-         * 
-         * > If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.
-         */
-        public Builder DBInstanceDescription(String DBInstanceDescription) {
-            this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
-            this.DBInstanceDescription = DBInstanceDescription;
-            return this;
-        }
-
-        /**
-         * The password of the root account. The password must meet the following requirements:
-         * <p>
-         * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   Special characters include ! # $ % ^ & \* ( ) \_ + - =
-         * *   The password of the account must be 8 to 32 characters in length.
-         */
-        public Builder DBInstanceStorage(Integer DBInstanceStorage) {
-            this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
-            this.DBInstanceStorage = DBInstanceStorage;
-            return this;
-        }
-
-        /**
-         * The number of **nodes** in the replica set instance. Default value: 3. Valid values:
-         * <p>
-         * 
-         * *   **3**
-         * *   **5**
-         * *   **7**
-         */
-        public Builder databaseNames(String databaseNames) {
-            this.putQueryParameter("DatabaseNames", databaseNames);
-            this.databaseNames = databaseNames;
-            return this;
-        }
-
-        /**
-         * Encrypted.
-         */
-        public Builder encrypted(Boolean encrypted) {
-            this.putQueryParameter("Encrypted", encrypted);
-            this.encrypted = encrypted;
-            return this;
-        }
-
-        /**
-         * EncryptionKey.
-         */
-        public Builder encryptionKey(String encryptionKey) {
-            this.putQueryParameter("EncryptionKey", encryptionKey);
-            this.encryptionKey = encryptionKey;
-            return this;
-        }
-
-        /**
-         * The storage capacity of the instance. Unit: GB.
-         * <p>
-         * 
-         * The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).
-         */
-        public Builder engine(String engine) {
-            this.putQueryParameter("Engine", engine);
-            this.engine = engine;
-            return this;
-        }
-
-        /**
-         * The name of the instance. The name of the instance must meet the following requirements:
-         * <p>
-         * 
-         * *   The name must start with a letter.
-         * *   The name can contain digits, letters, underscores (\_), and hyphens (-).
-         * *   The name must be 2 to 256 characters in length.
-         */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
@@ -790,204 +775,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The global IP address whitelist template name of the instance. Multiple IP address whitelist template names are separated by commas (,) and each template name must be unique. (The template feature is available only in canary release.)
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
             this.globalSecurityGroupIds = globalSecurityGroupIds;
-            return this;
-        }
-
-        /**
-         * Template for global IP whitelist of the instance, multiple IP whitelist templates should be separated by a comma (,) in English and cannot be repeated. (In function gray scale).
-         */
-        public Builder hiddenZoneId(String hiddenZoneId) {
-            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
-            this.hiddenZoneId = hiddenZoneId;
-            return this;
-        }
-
-        /**
-         * The ID of the source instance.
-         * <p>
-         * 
-         * > When you call this operation to clone an instance, this parameter is required. The **BackupId** or **RestoreTime** parameter is also required. When you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** or **RestoreTime** parameter is not required.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch to which the instance is connected.
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * ProvisionedIops.
-         */
-        public Builder provisionedIops(Long provisionedIops) {
-            this.putQueryParameter("ProvisionedIops", provisionedIops);
-            this.provisionedIops = provisionedIops;
-            return this;
-        }
-
-        /**
-         * The storage type of the instance. Valid values:
-         * <p>
-         * 
-         * *   **cloud_essd1** :ESSD PL1.
-         * *   **cloud_essd2**: ESSD PL2.
-         * *   **cloud_essd3**: ESSD PL3.
-         * *   **local_ssd**: local SSD.
-         */
-        public Builder readonlyReplicas(String readonlyReplicas) {
-            this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
-            this.readonlyReplicas = readonlyReplicas;
-            return this;
-        }
-
-        /**
-         * The database engine of the instance. The value is fixed as **MongoDB**.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the dedicated cluster to which the instance belongs.
-         */
-        public Builder replicationFactor(String replicationFactor) {
-            this.putQueryParameter("ReplicationFactor", replicationFactor);
-            this.replicationFactor = replicationFactor;
-            return this;
-        }
-
-        /**
-         * The zone where the secondary node resides for multi-zone deployment. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou-g**: Hangzhou Zone G.
-         * *   **cn-hangzhou-h**: Hangzhou Zone H.
-         * *   **cn-hangzhou-i**: Hangzhou Zone I.
-         * *   **cn-hongkong-b**: Hongkong Zone B.
-         * *   **cn-hongkong-c**: Hongkong Zone C.
-         * *   **cn-hongkong-d**: Hongkong Zone D.
-         * *   **cn-wulanchabu-a**: Ulanqab Zone A.
-         * *   **cn-wulanchabu-b**: Ulanqab Zone B.
-         * *   **cn-wulanchabu-c**: Ulanqab Zone C.
-         * *   **ap-southeast-1a**: Singapore Zone A.
-         * *   **ap-southeast-1b**: Singapore Zone B.
-         * *   **ap-southeast-1c**: Singapore Zone C.
-         * *   **ap-southeast-5a**: Jakarta Zone A.
-         * *   **ap-southeast-5b**: Jakarta Zone B.
-         * *   **ap-southeast-5c**: Jakarta Zone C.
-         * *   **eu-central-1a**: Frankfurt Zone A.
-         * *   **eu-central-1b**: Frankfurt Zone B.
-         * *   **eu-central-1c**: Frankfurt Zone C.
-         * 
-         * >  *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
-         * >  *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The name of the database.
-         * <p>
-         * 
-         * > When you call this operation to clone an instance, you can set this parameter to specify the database to clone. Otherwise, all databases of the instance are cloned.
-         */
-        public Builder restoreTime(String restoreTime) {
-            this.putQueryParameter("RestoreTime", restoreTime);
-            this.restoreTime = restoreTime;
-            return this;
-        }
-
-        /**
-         * cn
-         */
-        public Builder secondaryZoneId(String secondaryZoneId) {
-            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
-            this.secondaryZoneId = secondaryZoneId;
-            return this;
-        }
-
-        /**
-         * The subscription period of the instance. Unit: months.
-         * <p>
-         * 
-         * Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
-         * 
-         * > When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.
-         */
-        public Builder securityIPList(String securityIPList) {
-            this.putQueryParameter("SecurityIPList", securityIPList);
-            this.securityIPList = securityIPList;
-            return this;
-        }
-
-        /**
-         * The business information. This is an additional parameter.
-         */
-        public Builder srcDBInstanceId(String srcDBInstanceId) {
-            this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
-            this.srcDBInstanceId = srcDBInstanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the instance belongs.
-         */
-        public Builder storageEngine(String storageEngine) {
-            this.putQueryParameter("StorageEngine", storageEngine);
-            this.storageEngine = storageEngine;
             return this;
         }
 
@@ -1017,18 +809,118 @@ public class CreateDBInstanceRequest extends Request {
          * >  *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
          * >  *   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.
          */
-        public Builder storageType(String storageType) {
-            this.putQueryParameter("StorageType", storageType);
-            this.storageType = storageType;
+        public Builder hiddenZoneId(String hiddenZoneId) {
+            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
+            this.hiddenZoneId = hiddenZoneId;
             return this;
         }
 
         /**
-         * Tag.
+         * The network type of the instance. Set the value to VPC.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The subscription period of the instance. Unit: months.
+         * <p>
+         * 
+         * Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.
+         * 
+         * > When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.
+         */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * The provisioned IOPS. Valid values: 0 to 50000.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+
+        /**
+         * The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.
+         */
+        public Builder readonlyReplicas(String readonlyReplicas) {
+            this.putQueryParameter("ReadonlyReplicas", readonlyReplicas);
+            this.readonlyReplicas = readonlyReplicas;
+            return this;
+        }
+
+        /**
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The number of **nodes** in the replica set instance. Default value: 3. Valid values:
+         * <p>
+         * 
+         * *   **3**
+         * *   **5**
+         * *   **7**
+         */
+        public Builder replicationFactor(String replicationFactor) {
+            this.putQueryParameter("ReplicationFactor", replicationFactor);
+            this.replicationFactor = replicationFactor;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
@@ -1038,6 +930,117 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * > When you call this operation to restore an instance to the specified time, this parameter is required. The **SrcDBInstanceId** parameter is also required.
          */
+        public Builder restoreTime(String restoreTime) {
+            this.putQueryParameter("RestoreTime", restoreTime);
+            this.restoreTime = restoreTime;
+            return this;
+        }
+
+        /**
+         * The zone where the secondary node resides for multi-zone deployment. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou-g**: Hangzhou Zone G.
+         * *   **cn-hangzhou-h**: Hangzhou Zone H.
+         * *   **cn-hangzhou-i**: Hangzhou Zone I.
+         * *   **cn-hongkong-b**: Hongkong Zone B.
+         * *   **cn-hongkong-c**: Hongkong Zone C.
+         * *   **cn-hongkong-d**: Hongkong Zone D.
+         * *   **cn-wulanchabu-a**: Ulanqab Zone A.
+         * *   **cn-wulanchabu-b**: Ulanqab Zone B.
+         * *   **cn-wulanchabu-c**: Ulanqab Zone C.
+         * *   **ap-southeast-1a**: Singapore Zone A.
+         * *   **ap-southeast-1b**: Singapore Zone B.
+         * *   **ap-southeast-1c**: Singapore Zone C.
+         * *   **ap-southeast-5a**: Jakarta Zone A.
+         * *   **ap-southeast-5b**: Jakarta Zone B.
+         * *   **ap-southeast-5c**: Jakarta Zone C.
+         * *   **eu-central-1a**: Frankfurt Zone A.
+         * *   **eu-central-1b**: Frankfurt Zone B.
+         * *   **eu-central-1c**: Frankfurt Zone C.
+         * 
+         * >  *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.
+         * >  *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+
+        /**
+         * The IP addresses in an IP address whitelist. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:
+         * <p>
+         * 
+         * *   0.0.0.0/0
+         * *   IP addresses, such as 10.23.12.24.
+         * *   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.
+         * 
+         * > *   A maximum of 1,000 IP addresses or CIDR blocks can be configured for each instance.
+         * > *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.
+         */
+        public Builder securityIPList(String securityIPList) {
+            this.putQueryParameter("SecurityIPList", securityIPList);
+            this.securityIPList = securityIPList;
+            return this;
+        }
+
+        /**
+         * The ID of the source instance.
+         * <p>
+         * 
+         * > When you call this operation to clone an instance, this parameter is required. The **BackupId** or **RestoreTime** parameter is also required. When you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** or **RestoreTime** parameter is not required.
+         */
+        public Builder srcDBInstanceId(String srcDBInstanceId) {
+            this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
+            this.srcDBInstanceId = srcDBInstanceId;
+            return this;
+        }
+
+        /**
+         * The storage engine of the instance. Default value: WiredTiger. Valid values:
+         * <p>
+         * 
+         * *   **WiredTiger**
+         * *   **RocksDB**
+         * *   **TerarkDB**
+         * 
+         * >  *   When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.
+         * >  *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).
+         */
+        public Builder storageEngine(String storageEngine) {
+            this.putQueryParameter("StorageEngine", storageEngine);
+            this.storageEngine = storageEngine;
+            return this;
+        }
+
+        /**
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cloud_essd1** :ESSD PL1.
+         * *   **cloud_essd2**: ESSD PL2.
+         * *   **cloud_essd3**: ESSD PL3.
+         * *   **local_ssd**: local SSD.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
+            return this;
+        }
+
+        /**
+         * The custom tags added to the instance.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch to which the instance is connected.
+         */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
@@ -1045,10 +1048,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
-         * <p>
-         * 
-         * > When you call this operation to clone an instance based on the backup set, this parameter is required. The **SrcDBInstanceId** parameter is also required.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1057,7 +1057,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to query the instance type.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1111,7 +1111,10 @@ public class CreateDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
+             * <p>
+             * 
+             * > **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1119,7 +1122,10 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
              */
             public Builder value(String value) {
                 this.value = value;
