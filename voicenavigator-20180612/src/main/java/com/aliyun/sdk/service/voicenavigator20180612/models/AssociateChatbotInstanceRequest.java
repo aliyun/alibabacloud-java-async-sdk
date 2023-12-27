@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AssociateChatbotInstanceRequest extends Request {
     @Query
     @NameInMap("ChatbotInstanceId")
-    @Validation(required = true)
     private String chatbotInstanceId;
 
     @Query
@@ -31,6 +30,10 @@ public class AssociateChatbotInstanceRequest extends Request {
     private String nluServiceParamsJson;
 
     @Query
+    @NameInMap("NluServiceType")
+    private String nluServiceType;
+
+    @Query
     @NameInMap("UnionSource")
     private String unionSource;
 
@@ -40,6 +43,7 @@ public class AssociateChatbotInstanceRequest extends Request {
         this.chatbotName = builder.chatbotName;
         this.instanceId = builder.instanceId;
         this.nluServiceParamsJson = builder.nluServiceParamsJson;
+        this.nluServiceType = builder.nluServiceType;
         this.unionSource = builder.unionSource;
     }
 
@@ -85,6 +89,13 @@ public class AssociateChatbotInstanceRequest extends Request {
     }
 
     /**
+     * @return nluServiceType
+     */
+    public String getNluServiceType() {
+        return this.nluServiceType;
+    }
+
+    /**
      * @return unionSource
      */
     public String getUnionSource() {
@@ -96,6 +107,7 @@ public class AssociateChatbotInstanceRequest extends Request {
         private String chatbotName; 
         private String instanceId; 
         private String nluServiceParamsJson; 
+        private String nluServiceType; 
         private String unionSource; 
 
         private Builder() {
@@ -108,6 +120,7 @@ public class AssociateChatbotInstanceRequest extends Request {
             this.chatbotName = request.chatbotName;
             this.instanceId = request.instanceId;
             this.nluServiceParamsJson = request.nluServiceParamsJson;
+            this.nluServiceType = request.nluServiceType;
             this.unionSource = request.unionSource;
         } 
 
@@ -144,6 +157,15 @@ public class AssociateChatbotInstanceRequest extends Request {
         public Builder nluServiceParamsJson(String nluServiceParamsJson) {
             this.putQueryParameter("NluServiceParamsJson", nluServiceParamsJson);
             this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+
+        /**
+         * NluServiceType.
+         */
+        public Builder nluServiceType(String nluServiceType) {
+            this.putQueryParameter("NluServiceType", nluServiceType);
+            this.nluServiceType = nluServiceType;
             return this;
         }
 
