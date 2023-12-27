@@ -101,13 +101,13 @@ public class DescribeRecordTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordTemplatesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.templateIds = response.templateIds;
+        private Builder(DescribeRecordTemplatesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.templateIds = request.templateIds;
         } 
 
         /**
@@ -120,7 +120,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * 1
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

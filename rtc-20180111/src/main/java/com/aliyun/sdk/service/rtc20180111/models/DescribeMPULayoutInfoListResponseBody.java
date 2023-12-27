@@ -131,7 +131,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Panes(Builder builder) {
             this.height = builder.height;
@@ -140,7 +140,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -194,10 +194,10 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -207,7 +207,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Height.
@@ -260,8 +260,8 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

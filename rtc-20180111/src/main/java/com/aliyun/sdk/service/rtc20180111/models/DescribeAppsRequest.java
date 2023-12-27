@@ -113,14 +113,14 @@ public class DescribeAppsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
+        private Builder(DescribeAppsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
 
         /**

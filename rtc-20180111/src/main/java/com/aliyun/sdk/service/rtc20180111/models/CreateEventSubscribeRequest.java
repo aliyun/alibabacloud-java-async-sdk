@@ -45,6 +45,10 @@ public class CreateEventSubscribeRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Role")
+    private Long role;
+
+    @Query
     @NameInMap("Users")
     private java.util.List < String > users;
 
@@ -57,6 +61,7 @@ public class CreateEventSubscribeRequest extends Request {
         this.events = builder.events;
         this.needCallbackAuth = builder.needCallbackAuth;
         this.ownerId = builder.ownerId;
+        this.role = builder.role;
         this.users = builder.users;
     }
 
@@ -123,6 +128,13 @@ public class CreateEventSubscribeRequest extends Request {
     }
 
     /**
+     * @return role
+     */
+    public Long getRole() {
+        return this.role;
+    }
+
+    /**
      * @return users
      */
     public java.util.List < String > getUsers() {
@@ -137,22 +149,24 @@ public class CreateEventSubscribeRequest extends Request {
         private java.util.List < String > events; 
         private Boolean needCallbackAuth; 
         private Long ownerId; 
+        private Long role; 
         private java.util.List < String > users; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateEventSubscribeRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.callbackUrl = response.callbackUrl;
-            this.channelId = response.channelId;
-            this.clientToken = response.clientToken;
-            this.events = response.events;
-            this.needCallbackAuth = response.needCallbackAuth;
-            this.ownerId = response.ownerId;
-            this.users = response.users;
+        private Builder(CreateEventSubscribeRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.callbackUrl = request.callbackUrl;
+            this.channelId = request.channelId;
+            this.clientToken = request.clientToken;
+            this.events = request.events;
+            this.needCallbackAuth = request.needCallbackAuth;
+            this.ownerId = request.ownerId;
+            this.role = request.role;
+            this.users = request.users;
         } 
 
         /**
@@ -215,6 +229,15 @@ public class CreateEventSubscribeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Role.
+         */
+        public Builder role(Long role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
             return this;
         }
 

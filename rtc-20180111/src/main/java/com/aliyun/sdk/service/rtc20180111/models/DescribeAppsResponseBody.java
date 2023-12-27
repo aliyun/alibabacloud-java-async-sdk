@@ -168,6 +168,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("Region")
+        private String region;
+
         @NameInMap("ServiceAreas")
         private ServiceAreas serviceAreas;
 
@@ -180,6 +183,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.appType = builder.appType;
             this.billType = builder.billType;
             this.createTime = builder.createTime;
+            this.region = builder.region;
             this.serviceAreas = builder.serviceAreas;
             this.status = builder.status;
         }
@@ -228,6 +232,13 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
          * @return serviceAreas
          */
         public ServiceAreas getServiceAreas() {
@@ -247,6 +258,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String appType; 
             private String billType; 
             private String createTime; 
+            private String region; 
             private ServiceAreas serviceAreas; 
             private Integer status; 
 
@@ -287,6 +299,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
                 return this;
             }
 

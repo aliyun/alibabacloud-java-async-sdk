@@ -103,13 +103,13 @@ public class CreateMPULayoutRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMPULayoutRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.audioMixCount = response.audioMixCount;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.panes = response.panes;
+        private Builder(CreateMPULayoutRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.audioMixCount = request.audioMixCount;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.panes = request.panes;
         } 
 
         /**
@@ -184,7 +184,7 @@ public class CreateMPULayoutRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Panes(Builder builder) {
             this.height = builder.height;
@@ -193,7 +193,7 @@ public class CreateMPULayoutRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -247,10 +247,10 @@ public class CreateMPULayoutRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -260,7 +260,7 @@ public class CreateMPULayoutRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Height.
@@ -313,8 +313,8 @@ public class CreateMPULayoutRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

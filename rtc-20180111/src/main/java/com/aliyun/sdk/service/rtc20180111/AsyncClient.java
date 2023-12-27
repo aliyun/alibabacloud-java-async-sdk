@@ -36,9 +36,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRecordTemplateResponse> deleteRecordTemplate(DeleteRecordTemplateRequest request);
 
+    CompletableFuture<DescribeAppKeyResponse> describeAppKey(DescribeAppKeyRequest request);
+
     CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request);
 
     CompletableFuture<DescribeAutoLiveStreamRuleResponse> describeAutoLiveStreamRule(DescribeAutoLiveStreamRuleRequest request);
+
+    CompletableFuture<DescribeCallListResponse> describeCallList(DescribeCallListRequest request);
 
     CompletableFuture<DescribeChannelParticipantsResponse> describeChannelParticipants(DescribeChannelParticipantsRequest request);
 
@@ -49,6 +53,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRecordFilesResponse> describeRecordFiles(DescribeRecordFilesRequest request);
 
     CompletableFuture<DescribeRecordTemplatesResponse> describeRecordTemplates(DescribeRecordTemplatesRequest request);
+
+    CompletableFuture<DescribeRtcChannelListResponse> describeRtcChannelList(DescribeRtcChannelListRequest request);
+
+    CompletableFuture<DescribeRtcChannelMetricResponse> describeRtcChannelMetric(DescribeRtcChannelMetricRequest request);
+
+    CompletableFuture<DescribeRtcDurationDataResponse> describeRtcDurationData(DescribeRtcDurationDataRequest request);
+
+    CompletableFuture<DescribeRtcPeakChannelCntDataResponse> describeRtcPeakChannelCntData(DescribeRtcPeakChannelCntDataRequest request);
+
+    CompletableFuture<DescribeRtcUserCntDataResponse> describeRtcUserCntData(DescribeRtcUserCntDataRequest request);
 
     CompletableFuture<DescribeUserInfoInChannelResponse> describeUserInfoInChannel(DescribeUserInfoInChannelRequest request);
 

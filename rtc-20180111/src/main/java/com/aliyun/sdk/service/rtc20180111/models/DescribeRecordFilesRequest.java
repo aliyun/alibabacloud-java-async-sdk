@@ -141,16 +141,16 @@ public class DescribeRecordFilesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRecordFilesRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.taskIds = response.taskIds;
+        private Builder(DescribeRecordFilesRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.taskIds = request.taskIds;
         } 
 
         /**

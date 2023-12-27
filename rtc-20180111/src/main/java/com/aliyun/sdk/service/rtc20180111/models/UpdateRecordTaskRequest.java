@@ -23,8 +23,16 @@ public class UpdateRecordTaskRequest extends Request {
     private String channelId;
 
     @Query
+    @NameInMap("CropMode")
+    private Long cropMode;
+
+    @Query
     @NameInMap("LayoutIds")
     private java.util.List < Long > layoutIds;
+
+    @Query
+    @NameInMap("MediaEncode")
+    private Long mediaEncode;
 
     @Query
     @NameInMap("OwnerId")
@@ -52,6 +60,10 @@ public class UpdateRecordTaskRequest extends Request {
     private String taskId;
 
     @Query
+    @NameInMap("TaskProfile")
+    private String taskProfile;
+
+    @Query
     @NameInMap("TemplateId")
     @Validation(required = true)
     private String templateId;
@@ -76,13 +88,16 @@ public class UpdateRecordTaskRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.channelId = builder.channelId;
+        this.cropMode = builder.cropMode;
         this.layoutIds = builder.layoutIds;
+        this.mediaEncode = builder.mediaEncode;
         this.ownerId = builder.ownerId;
         this.subSpecAudioUsers = builder.subSpecAudioUsers;
         this.subSpecCameraUsers = builder.subSpecCameraUsers;
         this.subSpecShareScreenUsers = builder.subSpecShareScreenUsers;
         this.subSpecUsers = builder.subSpecUsers;
         this.taskId = builder.taskId;
+        this.taskProfile = builder.taskProfile;
         this.templateId = builder.templateId;
         this.unsubSpecAudioUsers = builder.unsubSpecAudioUsers;
         this.unsubSpecCameraUsers = builder.unsubSpecCameraUsers;
@@ -118,10 +133,24 @@ public class UpdateRecordTaskRequest extends Request {
     }
 
     /**
+     * @return cropMode
+     */
+    public Long getCropMode() {
+        return this.cropMode;
+    }
+
+    /**
      * @return layoutIds
      */
     public java.util.List < Long > getLayoutIds() {
         return this.layoutIds;
+    }
+
+    /**
+     * @return mediaEncode
+     */
+    public Long getMediaEncode() {
+        return this.mediaEncode;
     }
 
     /**
@@ -167,6 +196,13 @@ public class UpdateRecordTaskRequest extends Request {
     }
 
     /**
+     * @return taskProfile
+     */
+    public String getTaskProfile() {
+        return this.taskProfile;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -204,13 +240,16 @@ public class UpdateRecordTaskRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateRecordTaskRequest, Builder> {
         private String appId; 
         private String channelId; 
+        private Long cropMode; 
         private java.util.List < Long > layoutIds; 
+        private Long mediaEncode; 
         private Long ownerId; 
         private java.util.List < String > subSpecAudioUsers; 
         private java.util.List < String > subSpecCameraUsers; 
         private java.util.List < String > subSpecShareScreenUsers; 
         private java.util.List < String > subSpecUsers; 
         private String taskId; 
+        private String taskProfile; 
         private String templateId; 
         private java.util.List < String > unsubSpecAudioUsers; 
         private java.util.List < String > unsubSpecCameraUsers; 
@@ -221,22 +260,25 @@ public class UpdateRecordTaskRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRecordTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.layoutIds = response.layoutIds;
-            this.ownerId = response.ownerId;
-            this.subSpecAudioUsers = response.subSpecAudioUsers;
-            this.subSpecCameraUsers = response.subSpecCameraUsers;
-            this.subSpecShareScreenUsers = response.subSpecShareScreenUsers;
-            this.subSpecUsers = response.subSpecUsers;
-            this.taskId = response.taskId;
-            this.templateId = response.templateId;
-            this.unsubSpecAudioUsers = response.unsubSpecAudioUsers;
-            this.unsubSpecCameraUsers = response.unsubSpecCameraUsers;
-            this.unsubSpecShareScreenUsers = response.unsubSpecShareScreenUsers;
-            this.userPanes = response.userPanes;
+        private Builder(UpdateRecordTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.cropMode = request.cropMode;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.ownerId = request.ownerId;
+            this.subSpecAudioUsers = request.subSpecAudioUsers;
+            this.subSpecCameraUsers = request.subSpecCameraUsers;
+            this.subSpecShareScreenUsers = request.subSpecShareScreenUsers;
+            this.subSpecUsers = request.subSpecUsers;
+            this.taskId = request.taskId;
+            this.taskProfile = request.taskProfile;
+            this.templateId = request.templateId;
+            this.unsubSpecAudioUsers = request.unsubSpecAudioUsers;
+            this.unsubSpecCameraUsers = request.unsubSpecCameraUsers;
+            this.unsubSpecShareScreenUsers = request.unsubSpecShareScreenUsers;
+            this.userPanes = request.userPanes;
         } 
 
         /**
@@ -258,11 +300,29 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
+         * CropMode.
+         */
+        public Builder cropMode(Long cropMode) {
+            this.putQueryParameter("CropMode", cropMode);
+            this.cropMode = cropMode;
+            return this;
+        }
+
+        /**
          * LayoutIds.
          */
         public Builder layoutIds(java.util.List < Long > layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
             this.layoutIds = layoutIds;
+            return this;
+        }
+
+        /**
+         * MediaEncode.
+         */
+        public Builder mediaEncode(Long mediaEncode) {
+            this.putQueryParameter("MediaEncode", mediaEncode);
+            this.mediaEncode = mediaEncode;
             return this;
         }
 
@@ -317,6 +377,15 @@ public class UpdateRecordTaskRequest extends Request {
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TaskProfile.
+         */
+        public Builder taskProfile(String taskProfile) {
+            this.putQueryParameter("TaskProfile", taskProfile);
+            this.taskProfile = taskProfile;
             return this;
         }
 
@@ -392,7 +461,7 @@ public class UpdateRecordTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Images(Builder builder) {
             this.display = builder.display;
@@ -401,7 +470,7 @@ public class UpdateRecordTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -455,10 +524,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -468,7 +537,7 @@ public class UpdateRecordTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -521,8 +590,8 @@ public class UpdateRecordTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -553,7 +622,7 @@ public class UpdateRecordTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Texts(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -562,7 +631,7 @@ public class UpdateRecordTaskRequest extends Request {
             this.text = builder.text;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -616,10 +685,10 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -629,7 +698,7 @@ public class UpdateRecordTaskRequest extends Request {
             private String text; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -682,8 +751,8 @@ public class UpdateRecordTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

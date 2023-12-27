@@ -76,11 +76,11 @@ public class StopMPUTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StopMPUTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(StopMPUTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.taskId = request.taskId;
         } 
 
         /**

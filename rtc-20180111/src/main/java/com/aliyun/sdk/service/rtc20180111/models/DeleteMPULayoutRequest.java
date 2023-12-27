@@ -76,11 +76,11 @@ public class DeleteMPULayoutRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMPULayoutRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.layoutId = response.layoutId;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteMPULayoutRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.layoutId = request.layoutId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

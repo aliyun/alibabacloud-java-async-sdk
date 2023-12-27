@@ -76,11 +76,11 @@ public class StopRecordTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StopRecordTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(StopRecordTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.taskId = request.taskId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class ModifyAppRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAppRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.appName = response.appName;
-            this.ownerId = response.ownerId;
+        private Builder(ModifyAppRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.appName = request.appName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

@@ -77,6 +77,10 @@ public class UpdateRecordTemplateRequest extends Request {
     private String ossBucket;
 
     @Query
+    @NameInMap("OssEndpoint")
+    private String ossEndpoint;
+
+    @Query
     @NameInMap("OssFilePrefix")
     @Validation(required = true)
     private String ossFilePrefix;
@@ -115,6 +119,7 @@ public class UpdateRecordTemplateRequest extends Request {
         this.mnsQueue = builder.mnsQueue;
         this.name = builder.name;
         this.ossBucket = builder.ossBucket;
+        this.ossEndpoint = builder.ossEndpoint;
         this.ossFilePrefix = builder.ossFilePrefix;
         this.ownerId = builder.ownerId;
         this.taskProfile = builder.taskProfile;
@@ -234,6 +239,13 @@ public class UpdateRecordTemplateRequest extends Request {
     }
 
     /**
+     * @return ossEndpoint
+     */
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
+    }
+
+    /**
      * @return ossFilePrefix
      */
     public String getOssFilePrefix() {
@@ -283,6 +295,7 @@ public class UpdateRecordTemplateRequest extends Request {
         private String mnsQueue; 
         private String name; 
         private String ossBucket; 
+        private String ossEndpoint; 
         private String ossFilePrefix; 
         private Long ownerId; 
         private String taskProfile; 
@@ -293,27 +306,28 @@ public class UpdateRecordTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRecordTemplateRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.backgroundColor = response.backgroundColor;
-            this.backgrounds = response.backgrounds;
-            this.clockWidgets = response.clockWidgets;
-            this.delayStopTime = response.delayStopTime;
-            this.enableM3u8DateTime = response.enableM3u8DateTime;
-            this.fileSplitInterval = response.fileSplitInterval;
-            this.formats = response.formats;
-            this.httpCallbackUrl = response.httpCallbackUrl;
-            this.layoutIds = response.layoutIds;
-            this.mediaEncode = response.mediaEncode;
-            this.mnsQueue = response.mnsQueue;
-            this.name = response.name;
-            this.ossBucket = response.ossBucket;
-            this.ossFilePrefix = response.ossFilePrefix;
-            this.ownerId = response.ownerId;
-            this.taskProfile = response.taskProfile;
-            this.templateId = response.templateId;
-            this.watermarks = response.watermarks;
+        private Builder(UpdateRecordTemplateRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.backgroundColor = request.backgroundColor;
+            this.backgrounds = request.backgrounds;
+            this.clockWidgets = request.clockWidgets;
+            this.delayStopTime = request.delayStopTime;
+            this.enableM3u8DateTime = request.enableM3u8DateTime;
+            this.fileSplitInterval = request.fileSplitInterval;
+            this.formats = request.formats;
+            this.httpCallbackUrl = request.httpCallbackUrl;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.mnsQueue = request.mnsQueue;
+            this.name = request.name;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
+            this.ossFilePrefix = request.ossFilePrefix;
+            this.ownerId = request.ownerId;
+            this.taskProfile = request.taskProfile;
+            this.templateId = request.templateId;
+            this.watermarks = request.watermarks;
         } 
 
         /**
@@ -443,6 +457,15 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
+         * OssEndpoint.
+         */
+        public Builder ossEndpoint(String ossEndpoint) {
+            this.putQueryParameter("OssEndpoint", ossEndpoint);
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+
+        /**
          * OssFilePrefix.
          */
         public Builder ossFilePrefix(String ossFilePrefix) {
@@ -514,7 +537,7 @@ public class UpdateRecordTemplateRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -523,7 +546,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -577,10 +600,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -590,7 +613,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -643,8 +666,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -672,7 +695,7 @@ public class UpdateRecordTemplateRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -680,7 +703,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -727,10 +750,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -739,7 +762,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -784,8 +807,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -819,7 +842,7 @@ public class UpdateRecordTemplateRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -829,7 +852,7 @@ public class UpdateRecordTemplateRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -890,10 +913,10 @@ public class UpdateRecordTemplateRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -904,7 +927,7 @@ public class UpdateRecordTemplateRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -965,8 +988,8 @@ public class UpdateRecordTemplateRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

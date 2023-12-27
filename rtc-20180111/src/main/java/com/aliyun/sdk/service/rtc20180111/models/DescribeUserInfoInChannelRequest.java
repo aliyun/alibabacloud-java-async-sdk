@@ -90,12 +90,12 @@ public class DescribeUserInfoInChannelRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserInfoInChannelRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.ownerId = response.ownerId;
-            this.userId = response.userId;
+        private Builder(DescribeUserInfoInChannelRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.ownerId = request.ownerId;
+            this.userId = request.userId;
         } 
 
         /**

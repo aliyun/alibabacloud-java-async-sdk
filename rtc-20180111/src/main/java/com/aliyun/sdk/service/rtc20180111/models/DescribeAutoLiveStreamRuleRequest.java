@@ -62,10 +62,10 @@ public class DescribeAutoLiveStreamRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAutoLiveStreamRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeAutoLiveStreamRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

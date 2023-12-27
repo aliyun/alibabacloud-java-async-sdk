@@ -115,14 +115,14 @@ public class ModifyMPULayoutRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyMPULayoutRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.audioMixCount = response.audioMixCount;
-            this.layoutId = response.layoutId;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.panes = response.panes;
+        private Builder(ModifyMPULayoutRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.audioMixCount = request.audioMixCount;
+            this.layoutId = request.layoutId;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.panes = request.panes;
         } 
 
         /**
@@ -206,7 +206,7 @@ public class ModifyMPULayoutRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Panes(Builder builder) {
             this.height = builder.height;
@@ -215,7 +215,7 @@ public class ModifyMPULayoutRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -269,10 +269,10 @@ public class ModifyMPULayoutRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -282,7 +282,7 @@ public class ModifyMPULayoutRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Height.
@@ -335,8 +335,8 @@ public class ModifyMPULayoutRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

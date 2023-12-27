@@ -114,14 +114,14 @@ public class DescribeMPULayoutInfoListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMPULayoutInfoListRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.layoutId = response.layoutId;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeMPULayoutInfoListRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.layoutId = request.layoutId;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

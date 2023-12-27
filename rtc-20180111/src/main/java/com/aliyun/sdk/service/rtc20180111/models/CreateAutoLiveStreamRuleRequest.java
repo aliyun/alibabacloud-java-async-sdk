@@ -141,16 +141,16 @@ public class CreateAutoLiveStreamRuleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAutoLiveStreamRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.callBack = response.callBack;
-            this.channelIdPrefixes = response.channelIdPrefixes;
-            this.channelIds = response.channelIds;
-            this.mediaEncode = response.mediaEncode;
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
-            this.ruleName = response.ruleName;
+        private Builder(CreateAutoLiveStreamRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.callBack = request.callBack;
+            this.channelIdPrefixes = request.channelIdPrefixes;
+            this.channelIds = request.channelIds;
+            this.mediaEncode = request.mediaEncode;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
+            this.ruleName = request.ruleName;
         } 
 
         /**

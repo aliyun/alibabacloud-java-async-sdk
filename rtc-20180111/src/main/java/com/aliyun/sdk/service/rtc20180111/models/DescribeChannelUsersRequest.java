@@ -76,11 +76,11 @@ public class DescribeChannelUsersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeChannelUsersRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeChannelUsersRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

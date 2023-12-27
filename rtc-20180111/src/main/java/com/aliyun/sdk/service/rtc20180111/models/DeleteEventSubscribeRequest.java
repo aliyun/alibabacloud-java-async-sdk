@@ -76,11 +76,11 @@ public class DeleteEventSubscribeRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEventSubscribeRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.subscribeId = response.subscribeId;
+        private Builder(DeleteEventSubscribeRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.subscribeId = request.subscribeId;
         } 
 
         /**

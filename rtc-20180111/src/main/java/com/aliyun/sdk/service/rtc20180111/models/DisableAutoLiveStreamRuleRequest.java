@@ -76,11 +76,11 @@ public class DisableAutoLiveStreamRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DisableAutoLiveStreamRuleRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.ruleId = response.ruleId;
+        private Builder(DisableAutoLiveStreamRuleRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.ruleId = request.ruleId;
         } 
 
         /**

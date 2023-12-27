@@ -76,11 +76,11 @@ public class DeleteRecordTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRecordTemplateRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.templateId = response.templateId;
+        private Builder(DeleteRecordTemplateRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.templateId = request.templateId;
         } 
 
         /**
@@ -93,7 +93,7 @@ public class DeleteRecordTemplateRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * 1
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);

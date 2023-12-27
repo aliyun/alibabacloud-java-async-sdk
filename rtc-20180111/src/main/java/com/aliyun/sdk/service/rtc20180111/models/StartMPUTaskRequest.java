@@ -429,38 +429,38 @@ public class StartMPUTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartMPUTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.backgroundColor = response.backgroundColor;
-            this.backgrounds = response.backgrounds;
-            this.channelId = response.channelId;
-            this.clockWidgets = response.clockWidgets;
-            this.cropMode = response.cropMode;
-            this.enhancedParam = response.enhancedParam;
-            this.layoutIds = response.layoutIds;
-            this.mediaEncode = response.mediaEncode;
-            this.mixMode = response.mixMode;
-            this.ownerId = response.ownerId;
-            this.payloadType = response.payloadType;
-            this.reportVad = response.reportVad;
-            this.rtpExtInfo = response.rtpExtInfo;
-            this.sourceType = response.sourceType;
-            this.streamType = response.streamType;
-            this.streamURL = response.streamURL;
-            this.subSpecAudioUsers = response.subSpecAudioUsers;
-            this.subSpecCameraUsers = response.subSpecCameraUsers;
-            this.subSpecShareScreenUsers = response.subSpecShareScreenUsers;
-            this.subSpecUsers = response.subSpecUsers;
-            this.taskId = response.taskId;
-            this.taskType = response.taskType;
-            this.timeStampRef = response.timeStampRef;
-            this.unsubSpecAudioUsers = response.unsubSpecAudioUsers;
-            this.unsubSpecCameraUsers = response.unsubSpecCameraUsers;
-            this.unsubSpecShareScreenUsers = response.unsubSpecShareScreenUsers;
-            this.userPanes = response.userPanes;
-            this.vadInterval = response.vadInterval;
-            this.watermarks = response.watermarks;
+        private Builder(StartMPUTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.backgroundColor = request.backgroundColor;
+            this.backgrounds = request.backgrounds;
+            this.channelId = request.channelId;
+            this.clockWidgets = request.clockWidgets;
+            this.cropMode = request.cropMode;
+            this.enhancedParam = request.enhancedParam;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.mixMode = request.mixMode;
+            this.ownerId = request.ownerId;
+            this.payloadType = request.payloadType;
+            this.reportVad = request.reportVad;
+            this.rtpExtInfo = request.rtpExtInfo;
+            this.sourceType = request.sourceType;
+            this.streamType = request.streamType;
+            this.streamURL = request.streamURL;
+            this.subSpecAudioUsers = request.subSpecAudioUsers;
+            this.subSpecCameraUsers = request.subSpecCameraUsers;
+            this.subSpecShareScreenUsers = request.subSpecShareScreenUsers;
+            this.subSpecUsers = request.subSpecUsers;
+            this.taskId = request.taskId;
+            this.taskType = request.taskType;
+            this.timeStampRef = request.timeStampRef;
+            this.unsubSpecAudioUsers = request.unsubSpecAudioUsers;
+            this.unsubSpecCameraUsers = request.unsubSpecCameraUsers;
+            this.unsubSpecShareScreenUsers = request.unsubSpecShareScreenUsers;
+            this.userPanes = request.userPanes;
+            this.vadInterval = request.vadInterval;
+            this.watermarks = request.watermarks;
         } 
 
         /**
@@ -760,7 +760,7 @@ public class StartMPUTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -769,7 +769,7 @@ public class StartMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -823,10 +823,10 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -836,7 +836,7 @@ public class StartMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -889,8 +889,8 @@ public class StartMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -902,6 +902,24 @@ public class StartMPUTaskRequest extends Request {
 
     }
     public static class ClockWidgets extends TeaModel {
+        @NameInMap("Alpha")
+        private Float alpha;
+
+        @NameInMap("BorderColor")
+        private Long borderColor;
+
+        @NameInMap("BorderWidth")
+        private Integer borderWidth;
+
+        @NameInMap("Box")
+        private Boolean box;
+
+        @NameInMap("BoxBorderWidth")
+        private Integer boxBorderWidth;
+
+        @NameInMap("BoxColor")
+        private Long boxColor;
+
         @NameInMap("FontColor")
         private Integer fontColor;
 
@@ -918,15 +936,21 @@ public class StartMPUTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
+            this.alpha = builder.alpha;
+            this.borderColor = builder.borderColor;
+            this.borderWidth = builder.borderWidth;
+            this.box = builder.box;
+            this.boxBorderWidth = builder.boxBorderWidth;
+            this.boxColor = builder.boxColor;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -935,6 +959,48 @@ public class StartMPUTaskRequest extends Request {
 
         public static ClockWidgets create() {
             return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return borderColor
+         */
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        /**
+         * @return borderWidth
+         */
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        /**
+         * @return box
+         */
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        /**
+         * @return boxBorderWidth
+         */
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         /**
@@ -973,19 +1039,73 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
+            private Float alpha; 
+            private Long borderColor; 
+            private Integer borderWidth; 
+            private Boolean box; 
+            private Integer boxBorderWidth; 
+            private Long boxColor; 
             private Integer fontColor; 
             private Integer fontSize; 
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Float alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BorderColor.
+             */
+            public Builder borderColor(Long borderColor) {
+                this.borderColor = borderColor;
+                return this;
+            }
+
+            /**
+             * BorderWidth.
+             */
+            public Builder borderWidth(Integer borderWidth) {
+                this.borderWidth = borderWidth;
+                return this;
+            }
+
+            /**
+             * Box.
+             */
+            public Builder box(Boolean box) {
+                this.box = box;
+                return this;
+            }
+
+            /**
+             * BoxBorderWidth.
+             */
+            public Builder boxBorderWidth(Integer boxBorderWidth) {
+                this.boxBorderWidth = boxBorderWidth;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(Long boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
 
             /**
              * FontColor.
@@ -1030,8 +1150,8 @@ public class StartMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -1103,7 +1223,7 @@ public class StartMPUTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Images(Builder builder) {
             this.display = builder.display;
@@ -1112,7 +1232,7 @@ public class StartMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -1166,10 +1286,10 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -1179,7 +1299,7 @@ public class StartMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -1232,8 +1352,8 @@ public class StartMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -1245,6 +1365,24 @@ public class StartMPUTaskRequest extends Request {
 
     }
     public static class Texts extends TeaModel {
+        @NameInMap("Alpha")
+        private Float alpha;
+
+        @NameInMap("BorderColor")
+        private Long borderColor;
+
+        @NameInMap("BorderWidth")
+        private Integer borderWidth;
+
+        @NameInMap("Box")
+        private Boolean box;
+
+        @NameInMap("BoxBorderWidth")
+        private Integer boxBorderWidth;
+
+        @NameInMap("BoxColor")
+        private Long boxColor;
+
         @NameInMap("FontColor")
         private Integer fontColor;
 
@@ -1264,16 +1402,22 @@ public class StartMPUTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Texts(Builder builder) {
+            this.alpha = builder.alpha;
+            this.borderColor = builder.borderColor;
+            this.borderWidth = builder.borderWidth;
+            this.box = builder.box;
+            this.boxBorderWidth = builder.boxBorderWidth;
+            this.boxColor = builder.boxColor;
             this.fontColor = builder.fontColor;
             this.fontSize = builder.fontSize;
             this.fontType = builder.fontType;
             this.text = builder.text;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -1282,6 +1426,48 @@ public class StartMPUTaskRequest extends Request {
 
         public static Texts create() {
             return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return borderColor
+         */
+        public Long getBorderColor() {
+            return this.borderColor;
+        }
+
+        /**
+         * @return borderWidth
+         */
+        public Integer getBorderWidth() {
+            return this.borderWidth;
+        }
+
+        /**
+         * @return box
+         */
+        public Boolean getBox() {
+            return this.box;
+        }
+
+        /**
+         * @return boxBorderWidth
+         */
+        public Integer getBoxBorderWidth() {
+            return this.boxBorderWidth;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public Long getBoxColor() {
+            return this.boxColor;
         }
 
         /**
@@ -1327,20 +1513,74 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
+            private Float alpha; 
+            private Long borderColor; 
+            private Integer borderWidth; 
+            private Boolean box; 
+            private Integer boxBorderWidth; 
+            private Long boxColor; 
             private Integer fontColor; 
             private Integer fontSize; 
             private Integer fontType; 
             private String text; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Float alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BorderColor.
+             */
+            public Builder borderColor(Long borderColor) {
+                this.borderColor = borderColor;
+                return this;
+            }
+
+            /**
+             * BorderWidth.
+             */
+            public Builder borderWidth(Integer borderWidth) {
+                this.borderWidth = borderWidth;
+                return this;
+            }
+
+            /**
+             * Box.
+             */
+            public Builder box(Boolean box) {
+                this.box = box;
+                return this;
+            }
+
+            /**
+             * BoxBorderWidth.
+             */
+            public Builder boxBorderWidth(Integer boxBorderWidth) {
+                this.boxBorderWidth = boxBorderWidth;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(Long boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
 
             /**
              * FontColor.
@@ -1393,8 +1633,8 @@ public class StartMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -1569,7 +1809,7 @@ public class StartMPUTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -1579,7 +1819,7 @@ public class StartMPUTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -1640,10 +1880,10 @@ public class StartMPUTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -1654,7 +1894,7 @@ public class StartMPUTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -1715,8 +1955,8 @@ public class StartMPUTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

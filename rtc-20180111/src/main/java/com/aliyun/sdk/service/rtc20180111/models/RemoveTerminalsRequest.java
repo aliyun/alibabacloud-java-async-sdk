@@ -90,12 +90,12 @@ public class RemoveTerminalsRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveTerminalsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.ownerId = response.ownerId;
-            this.terminalIds = response.terminalIds;
+        private Builder(RemoveTerminalsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.ownerId = request.ownerId;
+            this.terminalIds = request.terminalIds;
         } 
 
         /**

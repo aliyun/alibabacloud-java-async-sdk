@@ -115,14 +115,14 @@ public class DescribeChannelParticipantsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeChannelParticipantsRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.order = response.order;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeChannelParticipantsRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.order = request.order;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
         } 
 
         /**

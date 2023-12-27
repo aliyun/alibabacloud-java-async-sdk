@@ -299,28 +299,28 @@ public class StartRecordTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartRecordTaskRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.cropMode = response.cropMode;
-            this.layoutIds = response.layoutIds;
-            this.mediaEncode = response.mediaEncode;
-            this.mixMode = response.mixMode;
-            this.ownerId = response.ownerId;
-            this.sourceType = response.sourceType;
-            this.streamType = response.streamType;
-            this.subSpecAudioUsers = response.subSpecAudioUsers;
-            this.subSpecCameraUsers = response.subSpecCameraUsers;
-            this.subSpecShareScreenUsers = response.subSpecShareScreenUsers;
-            this.subSpecUsers = response.subSpecUsers;
-            this.taskId = response.taskId;
-            this.taskProfile = response.taskProfile;
-            this.templateId = response.templateId;
-            this.unsubSpecAudioUsers = response.unsubSpecAudioUsers;
-            this.unsubSpecCameraUsers = response.unsubSpecCameraUsers;
-            this.unsubSpecShareScreenUsers = response.unsubSpecShareScreenUsers;
-            this.userPanes = response.userPanes;
+        private Builder(StartRecordTaskRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.cropMode = request.cropMode;
+            this.layoutIds = request.layoutIds;
+            this.mediaEncode = request.mediaEncode;
+            this.mixMode = request.mixMode;
+            this.ownerId = request.ownerId;
+            this.sourceType = request.sourceType;
+            this.streamType = request.streamType;
+            this.subSpecAudioUsers = request.subSpecAudioUsers;
+            this.subSpecCameraUsers = request.subSpecCameraUsers;
+            this.subSpecShareScreenUsers = request.subSpecShareScreenUsers;
+            this.subSpecUsers = request.subSpecUsers;
+            this.taskId = request.taskId;
+            this.taskProfile = request.taskProfile;
+            this.templateId = request.templateId;
+            this.unsubSpecAudioUsers = request.unsubSpecAudioUsers;
+            this.unsubSpecCameraUsers = request.unsubSpecCameraUsers;
+            this.unsubSpecShareScreenUsers = request.unsubSpecShareScreenUsers;
+            this.userPanes = request.userPanes;
         } 
 
         /**
@@ -530,7 +530,7 @@ public class StartRecordTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Images(Builder builder) {
             this.display = builder.display;
@@ -539,7 +539,7 @@ public class StartRecordTaskRequest extends Request {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -593,10 +593,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -606,7 +606,7 @@ public class StartRecordTaskRequest extends Request {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -659,8 +659,8 @@ public class StartRecordTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -691,7 +691,7 @@ public class StartRecordTaskRequest extends Request {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Texts(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -700,7 +700,7 @@ public class StartRecordTaskRequest extends Request {
             this.text = builder.text;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -754,10 +754,10 @@ public class StartRecordTaskRequest extends Request {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -767,7 +767,7 @@ public class StartRecordTaskRequest extends Request {
             private String text; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -820,8 +820,8 @@ public class StartRecordTaskRequest extends Request {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

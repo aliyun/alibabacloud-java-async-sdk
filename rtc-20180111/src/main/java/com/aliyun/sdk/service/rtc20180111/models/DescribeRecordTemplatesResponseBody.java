@@ -131,7 +131,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Backgrounds(Builder builder) {
             this.display = builder.display;
@@ -140,7 +140,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -194,10 +194,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -207,7 +207,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Display.
@@ -260,8 +260,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -289,7 +289,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
             this.fontColor = builder.fontColor;
@@ -297,7 +297,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.fontType = builder.fontType;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -344,10 +344,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -356,7 +356,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Integer fontType; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * FontColor.
@@ -401,8 +401,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 
@@ -436,7 +436,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         private Float y;
 
         @NameInMap("ZOrder")
-        private Integer ZOrder;
+        private Integer zOrder;
 
         private Watermarks(Builder builder) {
             this.alpha = builder.alpha;
@@ -446,7 +446,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             this.width = builder.width;
             this.x = builder.x;
             this.y = builder.y;
-            this.ZOrder = builder.ZOrder;
+            this.zOrder = builder.zOrder;
         }
 
         public static Builder builder() {
@@ -507,10 +507,10 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ZOrder
+         * @return zOrder
          */
         public Integer getZOrder() {
-            return this.ZOrder;
+            return this.zOrder;
         }
 
         public static final class Builder {
@@ -521,7 +521,7 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             private Float width; 
             private Float x; 
             private Float y; 
-            private Integer ZOrder; 
+            private Integer zOrder; 
 
             /**
              * Alpha.
@@ -582,8 +582,8 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
             /**
              * ZOrder.
              */
-            public Builder ZOrder(Integer ZOrder) {
-                this.ZOrder = ZOrder;
+            public Builder zOrder(Integer zOrder) {
+                this.zOrder = zOrder;
                 return this;
             }
 

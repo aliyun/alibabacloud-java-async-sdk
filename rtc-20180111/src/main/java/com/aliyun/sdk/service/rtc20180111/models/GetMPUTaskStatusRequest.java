@@ -76,11 +76,11 @@ public class GetMPUTaskStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetMPUTaskStatusRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(GetMPUTaskStatusRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.ownerId = request.ownerId;
+            this.taskId = request.taskId;
         } 
 
         /**

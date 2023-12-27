@@ -76,11 +76,11 @@ public class DeleteChannelRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteChannelRequest response) {
-            super(response);
-            this.appId = response.appId;
-            this.channelId = response.channelId;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteChannelRequest request) {
+            super(request);
+            this.appId = request.appId;
+            this.channelId = request.channelId;
+            this.ownerId = request.ownerId;
         } 
 
         /**
