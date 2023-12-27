@@ -406,6 +406,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAppMetadataResponse> queryAppMetadata(QueryAppMetadataRequest request);
 
+    CompletableFuture<QueryAppTopologyResponse> queryAppTopology(QueryAppTopologyRequest request);
+
     CompletableFuture<QueryCommercialUsageResponse> queryCommercialUsage(QueryCommercialUsageRequest request);
 
     CompletableFuture<QueryMetricByPageResponse> queryMetricByPage(QueryMetricByPageRequest request);

@@ -26,7 +26,6 @@ public class GetAlertRulesRequest extends Request {
 
     @Query
     @NameInMap("AlertType")
-    @Validation(required = true)
     private String alertType;
 
     @Query

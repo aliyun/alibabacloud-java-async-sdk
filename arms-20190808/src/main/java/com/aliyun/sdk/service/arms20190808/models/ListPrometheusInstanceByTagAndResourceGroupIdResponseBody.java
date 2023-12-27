@@ -463,7 +463,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String vpcId; 
 
             /**
-             * AuthToken.
+             * Auth Token string.
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -510,7 +510,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HttpApiInterUrl.
+             * HTTP Api internet url.
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -518,7 +518,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HttpApiIntraUrl.
+             * HTTP Api intranet url.
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -538,7 +538,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * PushGatewayInterUrl.
+             * Push Gateway internet url.
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -546,7 +546,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * PushGatewayIntraUrl.
+             * Push Gateway intranet url.
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -562,7 +562,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteReadInterUrl.
+             * Remote Read internet url.
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -570,7 +570,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteReadIntraUrl.
+             * Remote Read intranet url.
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -578,7 +578,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteWriteInterUrl.
+             * Remote Write internet url.
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -586,7 +586,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RemoteWriteIntraUrl.
+             * Remote Write intranet url.
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;
@@ -602,7 +602,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * 资源类型
+             * Resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

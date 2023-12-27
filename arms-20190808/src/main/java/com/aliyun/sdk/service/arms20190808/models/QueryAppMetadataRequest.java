@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QueryAppMetadataRequest extends Request {
     @Query
     @NameInMap("MetaIds")
+    @Validation(required = true)
     private String metaIds;
 
     @Query
     @NameInMap("MetaType")
+    @Validation(required = true)
     private String metaType;
 
     @Query
     @NameInMap("Pid")
+    @Validation(required = true)
     private String pid;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     private QueryAppMetadataRequest(Builder builder) {

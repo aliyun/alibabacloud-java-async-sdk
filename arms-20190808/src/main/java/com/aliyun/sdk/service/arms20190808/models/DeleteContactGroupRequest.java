@@ -55,7 +55,7 @@ public class DeleteContactGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupId.
+         * The ID of the alert contact group.
          */
         public Builder contactGroupId(Long contactGroupId) {
             this.putQueryParameter("ContactGroupId", contactGroupId);

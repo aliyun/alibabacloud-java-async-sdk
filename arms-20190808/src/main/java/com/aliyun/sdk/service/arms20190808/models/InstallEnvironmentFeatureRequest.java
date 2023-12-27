@@ -141,7 +141,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * Language,the default language is Chinese.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -150,7 +150,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Config information of Feature.
+         * The metadata of the feature.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -159,7 +159,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -168,7 +168,26 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Name of Feature.
+         * The name of the feature.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   app-agent-pilot
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   metric-agent
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -177,7 +196,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Version of Feature.
+         * The version of the feature.
          */
         public Builder featureVersion(String featureVersion) {
             this.putQueryParameter("FeatureVersion", featureVersion);
@@ -186,7 +205,7 @@ public class InstallEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Region of Feature.
+         * The region ID of the feature.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InstallEnvironmentFeatureResponseBody} extends {@link TeaModel}
+ * {@link QueryAppTopologyResponseBody} extends {@link TeaModel}
  *
- * <p>InstallEnvironmentFeatureResponseBody</p>
+ * <p>QueryAppTopologyResponseBody</p>
  */
-public class InstallEnvironmentFeatureResponseBody extends TeaModel {
+public class QueryAppTopologyResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private Long code;
 
     @NameInMap("Data")
-    private String data;
+    private Object data;
 
     @NameInMap("Message")
     private String message;
@@ -27,7 +27,7 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private InstallEnvironmentFeatureResponseBody(Builder builder) {
+    private QueryAppTopologyResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,21 +39,21 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InstallEnvironmentFeatureResponseBody create() {
+    public static QueryAppTopologyResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -79,24 +79,24 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
-        private String data; 
+        private Long code; 
+        private Object data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
-        public Builder code(Integer code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The release ID.
+         * The returned struct.
          */
-        public Builder data(String data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
@@ -118,19 +118,19 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   true: The call was successful.
+         * *   false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public InstallEnvironmentFeatureResponseBody build() {
-            return new InstallEnvironmentFeatureResponseBody(this);
+        public QueryAppTopologyResponseBody build() {
+            return new QueryAppTopologyResponseBody(this);
         } 
 
     } 

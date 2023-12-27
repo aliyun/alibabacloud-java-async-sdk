@@ -50,7 +50,11 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the alert contact group was deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class DeleteContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

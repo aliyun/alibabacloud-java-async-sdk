@@ -27,6 +27,7 @@ public class GetMultipleTraceRequest extends Request {
 
     @Query
     @NameInMap("TraceIDs")
+    @Validation(required = true)
     private java.util.List < String > traceIDs;
 
     private GetMultipleTraceRequest(Builder builder) {
