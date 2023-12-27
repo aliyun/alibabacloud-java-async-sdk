@@ -30,6 +30,9 @@ public class Logstore extends TeaModel {
     @NameInMap("hot_ttl")
     private Integer hotTtl;
 
+    @NameInMap("infrequentAccessTTL")
+    private Integer infrequentAccessTTL;
+
     @NameInMap("lastModifyTime")
     private Integer lastModifyTime;
 
@@ -64,6 +67,7 @@ public class Logstore extends TeaModel {
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
         this.hotTtl = builder.hotTtl;
+        this.infrequentAccessTTL = builder.infrequentAccessTTL;
         this.lastModifyTime = builder.lastModifyTime;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
@@ -122,6 +126,13 @@ public class Logstore extends TeaModel {
      */
     public Integer getHotTtl() {
         return this.hotTtl;
+    }
+
+    /**
+     * @return infrequentAccessTTL
+     */
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     /**
@@ -187,6 +198,7 @@ public class Logstore extends TeaModel {
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
         private Integer hotTtl; 
+        private Integer infrequentAccessTTL; 
         private Integer lastModifyTime; 
         private String logstoreName; 
         private Integer maxSplitShard; 
@@ -241,6 +253,14 @@ public class Logstore extends TeaModel {
          */
         public Builder hotTtl(Integer hotTtl) {
             this.hotTtl = hotTtl;
+            return this;
+        }
+
+        /**
+         * infrequentAccessTTL.
+         */
+        public Builder infrequentAccessTTL(Integer infrequentAccessTTL) {
+            this.infrequentAccessTTL = infrequentAccessTTL;
             return this;
         }
 

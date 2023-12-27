@@ -38,6 +38,10 @@ public class CreateLogStoreRequest extends Request {
     private Integer hotTtl;
 
     @Body
+    @NameInMap("infrequentAccessTTL")
+    private Integer infrequentAccessTTL;
+
+    @Body
     @NameInMap("logstoreName")
     @Validation(required = true)
     private String logstoreName;
@@ -72,6 +76,7 @@ public class CreateLogStoreRequest extends Request {
         this.enableTracking = builder.enableTracking;
         this.encryptConf = builder.encryptConf;
         this.hotTtl = builder.hotTtl;
+        this.infrequentAccessTTL = builder.infrequentAccessTTL;
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.mode = builder.mode;
@@ -136,6 +141,13 @@ public class CreateLogStoreRequest extends Request {
     }
 
     /**
+     * @return infrequentAccessTTL
+     */
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
+    }
+
+    /**
      * @return logstoreName
      */
     public String getLogstoreName() {
@@ -184,6 +196,7 @@ public class CreateLogStoreRequest extends Request {
         private Boolean enableTracking; 
         private EncryptConf encryptConf; 
         private Integer hotTtl; 
+        private Integer infrequentAccessTTL; 
         private String logstoreName; 
         private Integer maxSplitShard; 
         private String mode; 
@@ -203,6 +216,7 @@ public class CreateLogStoreRequest extends Request {
             this.enableTracking = request.enableTracking;
             this.encryptConf = request.encryptConf;
             this.hotTtl = request.hotTtl;
+            this.infrequentAccessTTL = request.infrequentAccessTTL;
             this.logstoreName = request.logstoreName;
             this.maxSplitShard = request.maxSplitShard;
             this.mode = request.mode;
@@ -277,6 +291,15 @@ public class CreateLogStoreRequest extends Request {
         public Builder hotTtl(Integer hotTtl) {
             this.putBodyParameter("hot_ttl", hotTtl);
             this.hotTtl = hotTtl;
+            return this;
+        }
+
+        /**
+         * infrequentAccessTTL.
+         */
+        public Builder infrequentAccessTTL(Integer infrequentAccessTTL) {
+            this.putBodyParameter("infrequentAccessTTL", infrequentAccessTTL);
+            this.infrequentAccessTTL = infrequentAccessTTL;
             return this;
         }
 
