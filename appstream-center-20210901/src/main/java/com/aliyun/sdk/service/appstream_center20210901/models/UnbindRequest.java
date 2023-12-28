@@ -22,6 +22,10 @@ public class UnbindRequest extends Request {
     private String appInstanceId;
 
     @Body
+    @NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @Body
     @NameInMap("EndUserId")
     @Validation(required = true)
     private String endUserId;
@@ -35,6 +39,7 @@ public class UnbindRequest extends Request {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.endUserId = builder.endUserId;
         this.productType = builder.productType;
     }
@@ -67,6 +72,13 @@ public class UnbindRequest extends Request {
     }
 
     /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
+    }
+
+    /**
      * @return endUserId
      */
     public String getEndUserId() {
@@ -83,6 +95,7 @@ public class UnbindRequest extends Request {
     public static final class Builder extends Request.Builder<UnbindRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String endUserId; 
         private String productType; 
 
@@ -94,6 +107,7 @@ public class UnbindRequest extends Request {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
+            this.appInstancePersistentId = request.appInstancePersistentId;
             this.endUserId = request.endUserId;
             this.productType = request.productType;
         } 
@@ -113,6 +127,15 @@ public class UnbindRequest extends Request {
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppInstancePersistentId.
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
+            this.appInstancePersistentId = appInstancePersistentId;
             return this;
         }
 

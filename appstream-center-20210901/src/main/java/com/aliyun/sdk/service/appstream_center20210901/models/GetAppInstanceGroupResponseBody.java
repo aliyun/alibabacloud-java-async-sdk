@@ -72,15 +72,27 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     } 
 
     public static class Apps extends TeaModel {
+        @NameInMap("AppIcon")
+        private String appIcon;
+
         @NameInMap("AppId")
         private String appId;
 
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("AppVersion")
+        private String appVersion;
+
+        @NameInMap("AppVersionName")
+        private String appVersionName;
+
         private Apps(Builder builder) {
+            this.appIcon = builder.appIcon;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appVersion = builder.appVersion;
+            this.appVersionName = builder.appVersionName;
         }
 
         public static Builder builder() {
@@ -89,6 +101,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         public static Apps create() {
             return builder().build();
+        }
+
+        /**
+         * @return appIcon
+         */
+        public String getAppIcon() {
+            return this.appIcon;
         }
 
         /**
@@ -105,9 +124,34 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.appName;
         }
 
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
+        }
+
+        /**
+         * @return appVersionName
+         */
+        public String getAppVersionName() {
+            return this.appVersionName;
+        }
+
         public static final class Builder {
+            private String appIcon; 
             private String appId; 
             private String appName; 
+            private String appVersion; 
+            private String appVersionName; 
+
+            /**
+             * AppIcon.
+             */
+            public Builder appIcon(String appIcon) {
+                this.appIcon = appIcon;
+                return this;
+            }
 
             /**
              * AppId.
@@ -122,6 +166,22 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppVersion.
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
+             * AppVersionName.
+             */
+            public Builder appVersionName(String appVersionName) {
+                this.appVersionName = appVersionName;
                 return this;
             }
 

@@ -18,6 +18,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstanceId")
     private String appInstanceId;
 
+    @NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
     @NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -42,6 +45,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     private GetConnectionTicketResponseBody(Builder builder) {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.bizRegionId = builder.bizRegionId;
         this.osType = builder.osType;
         this.requestId = builder.requestId;
@@ -71,6 +75,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     /**
@@ -125,6 +136,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public static final class Builder {
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String bizRegionId; 
         private String osType; 
         private String requestId; 
@@ -146,6 +158,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder appInstanceId(String appInstanceId) {
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppInstancePersistentId.
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.appInstancePersistentId = appInstancePersistentId;
             return this;
         }
 

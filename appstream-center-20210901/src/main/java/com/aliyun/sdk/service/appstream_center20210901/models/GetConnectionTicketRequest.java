@@ -25,6 +25,10 @@ public class GetConnectionTicketRequest extends Request {
     private String appInstanceId;
 
     @Body
+    @NameInMap("AppInstancePersistentId")
+    private String appInstancePersistentId;
+
+    @Body
     @NameInMap("AppStartParam")
     private String appStartParam;
 
@@ -55,6 +59,7 @@ public class GetConnectionTicketRequest extends Request {
         this.appId = builder.appId;
         this.appInstanceGroupIdList = builder.appInstanceGroupIdList;
         this.appInstanceId = builder.appInstanceId;
+        this.appInstancePersistentId = builder.appInstancePersistentId;
         this.appStartParam = builder.appStartParam;
         this.appVersion = builder.appVersion;
         this.bizRegionId = builder.bizRegionId;
@@ -95,6 +100,13 @@ public class GetConnectionTicketRequest extends Request {
      */
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    /**
+     * @return appInstancePersistentId
+     */
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     /**
@@ -143,6 +155,7 @@ public class GetConnectionTicketRequest extends Request {
         private String appId; 
         private java.util.List < String > appInstanceGroupIdList; 
         private String appInstanceId; 
+        private String appInstancePersistentId; 
         private String appStartParam; 
         private String appVersion; 
         private String bizRegionId; 
@@ -159,6 +172,7 @@ public class GetConnectionTicketRequest extends Request {
             this.appId = request.appId;
             this.appInstanceGroupIdList = request.appInstanceGroupIdList;
             this.appInstanceId = request.appInstanceId;
+            this.appInstancePersistentId = request.appInstancePersistentId;
             this.appStartParam = request.appStartParam;
             this.appVersion = request.appVersion;
             this.bizRegionId = request.bizRegionId;
@@ -191,6 +205,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppInstancePersistentId.
+         */
+        public Builder appInstancePersistentId(String appInstancePersistentId) {
+            this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
+            this.appInstancePersistentId = appInstancePersistentId;
             return this;
         }
 
