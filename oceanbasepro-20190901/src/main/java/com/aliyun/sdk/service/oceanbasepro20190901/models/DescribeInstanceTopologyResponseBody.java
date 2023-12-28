@@ -84,6 +84,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeId")
         private String nodeId;
 
+        @NameInMap("ReplicaType")
+        private String replicaType;
+
         @NameInMap("UnitCpu")
         private Float unitCpu;
 
@@ -104,6 +107,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             this.enableMigrateUnit = builder.enableMigrateUnit;
             this.manualMigrate = builder.manualMigrate;
             this.nodeId = builder.nodeId;
+            this.replicaType = builder.replicaType;
             this.unitCpu = builder.unitCpu;
             this.unitDataSize = builder.unitDataSize;
             this.unitId = builder.unitId;
@@ -148,6 +152,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicaType
+         */
+        public String getReplicaType() {
+            return this.replicaType;
+        }
+
+        /**
          * @return unitCpu
          */
         public Float getUnitCpu() {
@@ -187,6 +198,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Boolean enableMigrateUnit; 
             private Boolean manualMigrate; 
             private String nodeId; 
+            private String replicaType; 
             private Float unitCpu; 
             private Long unitDataSize; 
             private String unitId; 
@@ -224,6 +236,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * ReplicaType.
+             */
+            public Builder replicaType(String replicaType) {
+                this.replicaType = replicaType;
                 return this;
             }
 
@@ -876,6 +896,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
+        @NameInMap("FullCopyId")
+        private Long fullCopyId;
+
         @NameInMap("NodeCopyId")
         private Long nodeCopyId;
 
@@ -888,11 +911,20 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeStatus")
         private String nodeStatus;
 
+        @NameInMap("ReadOnlyCopyId")
+        private Long readOnlyCopyId;
+
+        @NameInMap("ReplicaType")
+        private String replicaType;
+
         private Nodes(Builder builder) {
+            this.fullCopyId = builder.fullCopyId;
             this.nodeCopyId = builder.nodeCopyId;
             this.nodeId = builder.nodeId;
             this.nodeResource = builder.nodeResource;
             this.nodeStatus = builder.nodeStatus;
+            this.readOnlyCopyId = builder.readOnlyCopyId;
+            this.replicaType = builder.replicaType;
         }
 
         public static Builder builder() {
@@ -901,6 +933,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static Nodes create() {
             return builder().build();
+        }
+
+        /**
+         * @return fullCopyId
+         */
+        public Long getFullCopyId() {
+            return this.fullCopyId;
         }
 
         /**
@@ -931,11 +970,36 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.nodeStatus;
         }
 
+        /**
+         * @return readOnlyCopyId
+         */
+        public Long getReadOnlyCopyId() {
+            return this.readOnlyCopyId;
+        }
+
+        /**
+         * @return replicaType
+         */
+        public String getReplicaType() {
+            return this.replicaType;
+        }
+
         public static final class Builder {
+            private Long fullCopyId; 
             private Long nodeCopyId; 
             private String nodeId; 
             private java.util.List < NodeResource> nodeResource; 
             private String nodeStatus; 
+            private Long readOnlyCopyId; 
+            private String replicaType; 
+
+            /**
+             * FullCopyId.
+             */
+            public Builder fullCopyId(Long fullCopyId) {
+                this.fullCopyId = fullCopyId;
+                return this;
+            }
 
             /**
              * The information of zones.
@@ -966,6 +1030,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
+                return this;
+            }
+
+            /**
+             * ReadOnlyCopyId.
+             */
+            public Builder readOnlyCopyId(Long readOnlyCopyId) {
+                this.readOnlyCopyId = readOnlyCopyId;
+                return this;
+            }
+
+            /**
+             * ReplicaType.
+             */
+            public Builder replicaType(String replicaType) {
+                this.replicaType = replicaType;
                 return this;
             }
 

@@ -384,10 +384,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The series of the OceanBase cluster. Valid values:   
-             * <p>
-             * - NORMAL: the high availability edition.   
-             * - BASIC: the basic edition.
+             * TotalCpu.
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -395,10 +392,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage disk where the cluster is deployed. 
-             * <p>
-             * 
-             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
+             * UnitCpu.
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -406,7 +400,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic upgrade of the OBServer version is enabled.
+             * UsedCpu.
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -461,6 +455,738 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static DiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataUsedSize
+         */
+        public Double getDataUsedSize() {
+            return this.dataUsedSize;
+        }
+
+        /**
+         * @return maxDiskSize
+         */
+        public Double getMaxDiskSize() {
+            return this.maxDiskSize;
+        }
+
+        /**
+         * @return maxDiskUsedObServer
+         */
+        public java.util.List < String > getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        /**
+         * @return maxDiskUsedPercent
+         */
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
+        }
+
+        /**
+         * @return originalTotalDiskSize
+         */
+        public Long getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return unitDiskSize
+         */
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        /**
+         * @return usedDiskSize
+         */
+        public Long getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+        public static final class Builder {
+            private Double dataUsedSize; 
+            private Double maxDiskSize; 
+            private java.util.List < String > maxDiskUsedObServer; 
+            private Double maxDiskUsedPercent; 
+            private Long originalTotalDiskSize; 
+            private Long totalDiskSize; 
+            private Long unitDiskSize; 
+            private Long usedDiskSize; 
+
+            /**
+             * DataUsedSize.
+             */
+            public Builder dataUsedSize(Double dataUsedSize) {
+                this.dataUsedSize = dataUsedSize;
+                return this;
+            }
+
+            /**
+             * MaxDiskSize.
+             */
+            public Builder maxDiskSize(Double maxDiskSize) {
+                this.maxDiskSize = maxDiskSize;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedObServer.
+             */
+            public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
+                this.maxDiskUsedObServer = maxDiskUsedObServer;
+                return this;
+            }
+
+            /**
+             * MaxDiskUsedPercent.
+             */
+            public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
+                this.maxDiskUsedPercent = maxDiskUsedPercent;
+                return this;
+            }
+
+            /**
+             * OriginalTotalDiskSize.
+             */
+            public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
+                this.originalTotalDiskSize = originalTotalDiskSize;
+                return this;
+            }
+
+            /**
+             * TotalDiskSize.
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * UnitDiskSize.
+             */
+            public Builder unitDiskSize(Long unitDiskSize) {
+                this.unitDiskSize = unitDiskSize;
+                return this;
+            }
+
+            /**
+             * UsedDiskSize.
+             */
+            public Builder usedDiskSize(Long usedDiskSize) {
+                this.usedDiskSize = usedDiskSize;
+                return this;
+            }
+
+            public DiskSize build() {
+                return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDiskSize extends TeaModel {
+        @NameInMap("LogAssignedSize")
+        private String logAssignedSize;
+
+        @NameInMap("MaxLogAssignedObServer")
+        private java.util.List < String > maxLogAssignedObServer;
+
+        @NameInMap("MaxLogAssignedPercent")
+        private String maxLogAssignedPercent;
+
+        @NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        private Long unitDiskSize;
+
+        private LogDiskSize(Builder builder) {
+            this.logAssignedSize = builder.logAssignedSize;
+            this.maxLogAssignedObServer = builder.maxLogAssignedObServer;
+            this.maxLogAssignedPercent = builder.maxLogAssignedPercent;
+            this.totalDiskSize = builder.totalDiskSize;
+            this.unitDiskSize = builder.unitDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logAssignedSize
+         */
+        public String getLogAssignedSize() {
+            return this.logAssignedSize;
+        }
+
+        /**
+         * @return maxLogAssignedObServer
+         */
+        public java.util.List < String > getMaxLogAssignedObServer() {
+            return this.maxLogAssignedObServer;
+        }
+
+        /**
+         * @return maxLogAssignedPercent
+         */
+        public String getMaxLogAssignedPercent() {
+            return this.maxLogAssignedPercent;
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return unitDiskSize
+         */
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        public static final class Builder {
+            private String logAssignedSize; 
+            private java.util.List < String > maxLogAssignedObServer; 
+            private String maxLogAssignedPercent; 
+            private Long totalDiskSize; 
+            private Long unitDiskSize; 
+
+            /**
+             * LogAssignedSize.
+             */
+            public Builder logAssignedSize(String logAssignedSize) {
+                this.logAssignedSize = logAssignedSize;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedObServer.
+             */
+            public Builder maxLogAssignedObServer(java.util.List < String > maxLogAssignedObServer) {
+                this.maxLogAssignedObServer = maxLogAssignedObServer;
+                return this;
+            }
+
+            /**
+             * MaxLogAssignedPercent.
+             */
+            public Builder maxLogAssignedPercent(String maxLogAssignedPercent) {
+                this.maxLogAssignedPercent = maxLogAssignedPercent;
+                return this;
+            }
+
+            /**
+             * TotalDiskSize.
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * UnitDiskSize.
+             */
+            public Builder unitDiskSize(Long unitDiskSize) {
+                this.unitDiskSize = unitDiskSize;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class Memory extends TeaModel {
+        @NameInMap("OriginalTotalMemory")
+        private Long originalTotalMemory;
+
+        @NameInMap("TotalMemory")
+        private Long totalMemory;
+
+        @NameInMap("UnitMemory")
+        private Long unitMemory;
+
+        @NameInMap("UsedMemory")
+        private Long usedMemory;
+
+        private Memory(Builder builder) {
+            this.originalTotalMemory = builder.originalTotalMemory;
+            this.totalMemory = builder.totalMemory;
+            this.unitMemory = builder.unitMemory;
+            this.usedMemory = builder.usedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return originalTotalMemory
+         */
+        public Long getOriginalTotalMemory() {
+            return this.originalTotalMemory;
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Long getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return unitMemory
+         */
+        public Long getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        /**
+         * @return usedMemory
+         */
+        public Long getUsedMemory() {
+            return this.usedMemory;
+        }
+
+        public static final class Builder {
+            private Long originalTotalMemory; 
+            private Long totalMemory; 
+            private Long unitMemory; 
+            private Long usedMemory; 
+
+            /**
+             * OriginalTotalMemory.
+             */
+            public Builder originalTotalMemory(Long originalTotalMemory) {
+                this.originalTotalMemory = originalTotalMemory;
+                return this;
+            }
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Long totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * UnitMemory.
+             */
+            public Builder unitMemory(Long unitMemory) {
+                this.unitMemory = unitMemory;
+                return this;
+            }
+
+            /**
+             * UsedMemory.
+             */
+            public Builder usedMemory(Long usedMemory) {
+                this.usedMemory = usedMemory;
+                return this;
+            }
+
+            public Memory build() {
+                return new Memory(this);
+            } 
+
+        } 
+
+    }
+    public static class ReadOnlyResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
+        @NameInMap("Cpu")
+        private Cpu cpu;
+
+        @NameInMap("DiskSize")
+        private DiskSize diskSize;
+
+        @NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
+        @NameInMap("Memory")
+        private Memory memory;
+
+        @NameInMap("UnitCount")
+        private Long unitCount;
+
+        private ReadOnlyResource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
+            this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
+            this.memory = builder.memory;
+            this.unitCount = builder.unitCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReadOnlyResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Cpu getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public DiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
+         * @return memory
+         */
+        public Memory getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return unitCount
+         */
+        public Long getUnitCount() {
+            return this.unitCount;
+        }
+
+        public static final class Builder {
+            private CapacityUnit capacityUnit; 
+            private Cpu cpu; 
+            private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
+            private Memory memory; 
+            private Long unitCount; 
+
+            /**
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Cpu cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(DiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * LogDiskSize.
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Memory memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * UnitCount.
+             */
+            public Builder unitCount(Long unitCount) {
+                this.unitCount = unitCount;
+                return this;
+            }
+
+            public ReadOnlyResource build() {
+                return new ReadOnlyResource(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceCapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacityUnit")
+        private String usedCapacityUnit;
+
+        private ResourceCapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacityUnit = builder.usedCapacityUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceCapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacityUnit
+         */
+        public String getUsedCapacityUnit() {
+            return this.usedCapacityUnit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private String usedCapacityUnit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacityUnit.
+             */
+            public Builder usedCapacityUnit(String usedCapacityUnit) {
+                this.usedCapacityUnit = usedCapacityUnit;
+                return this;
+            }
+
+            public ResourceCapacityUnit build() {
+                return new ResourceCapacityUnit(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceCpu extends TeaModel {
+        @NameInMap("OriginalTotalCpu")
+        private Long originalTotalCpu;
+
+        @NameInMap("TotalCpu")
+        private Long totalCpu;
+
+        @NameInMap("UnitCpu")
+        private Long unitCpu;
+
+        @NameInMap("UsedCpu")
+        private Long usedCpu;
+
+        private ResourceCpu(Builder builder) {
+            this.originalTotalCpu = builder.originalTotalCpu;
+            this.totalCpu = builder.totalCpu;
+            this.unitCpu = builder.unitCpu;
+            this.usedCpu = builder.usedCpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceCpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return originalTotalCpu
+         */
+        public Long getOriginalTotalCpu() {
+            return this.originalTotalCpu;
+        }
+
+        /**
+         * @return totalCpu
+         */
+        public Long getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        /**
+         * @return unitCpu
+         */
+        public Long getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        /**
+         * @return usedCpu
+         */
+        public Long getUsedCpu() {
+            return this.usedCpu;
+        }
+
+        public static final class Builder {
+            private Long originalTotalCpu; 
+            private Long totalCpu; 
+            private Long unitCpu; 
+            private Long usedCpu; 
+
+            /**
+             * OriginalTotalCpu.
+             */
+            public Builder originalTotalCpu(Long originalTotalCpu) {
+                this.originalTotalCpu = originalTotalCpu;
+                return this;
+            }
+
+            /**
+             * The series of the OceanBase cluster. Valid values:   
+             * <p>
+             * - NORMAL: the high availability edition.   
+             * - BASIC: the basic edition.
+             */
+            public Builder totalCpu(Long totalCpu) {
+                this.totalCpu = totalCpu;
+                return this;
+            }
+
+            /**
+             * The type of the storage disk where the cluster is deployed. 
+             * <p>
+             * 
+             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
+             */
+            public Builder unitCpu(Long unitCpu) {
+                this.unitCpu = unitCpu;
+                return this;
+            }
+
+            /**
+             * Indicates whether automatic upgrade of the OBServer version is enabled.
+             */
+            public Builder usedCpu(Long usedCpu) {
+                this.usedCpu = usedCpu;
+                return this;
+            }
+
+            public ResourceCpu build() {
+                return new ResourceCpu(this);
+            } 
+
+        } 
+
+    }
+    public static class ResourceDiskSize extends TeaModel {
+        @NameInMap("DataUsedSize")
+        private Double dataUsedSize;
+
+        @NameInMap("MaxDiskSize")
+        private Double maxDiskSize;
+
+        @NameInMap("MaxDiskUsedObServer")
+        private java.util.List < String > maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        private Double maxDiskUsedPercent;
+
+        @NameInMap("OriginalTotalDiskSize")
+        private Long originalTotalDiskSize;
+
+        @NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        private Long unitDiskSize;
+
+        @NameInMap("UsedDiskSize")
+        private Long usedDiskSize;
+
+        private ResourceDiskSize(Builder builder) {
+            this.dataUsedSize = builder.dataUsedSize;
+            this.maxDiskSize = builder.maxDiskSize;
+            this.maxDiskUsedObServer = builder.maxDiskUsedObServer;
+            this.maxDiskUsedPercent = builder.maxDiskUsedPercent;
+            this.originalTotalDiskSize = builder.originalTotalDiskSize;
+            this.totalDiskSize = builder.totalDiskSize;
+            this.unitDiskSize = builder.unitDiskSize;
+            this.usedDiskSize = builder.usedDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceDiskSize create() {
             return builder().build();
         }
 
@@ -605,14 +1331,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public DiskSize build() {
-                return new DiskSize(this);
+            public ResourceDiskSize build() {
+                return new ResourceDiskSize(this);
             } 
 
         } 
 
     }
-    public static class LogDiskSize extends TeaModel {
+    public static class ResourceLogDiskSize extends TeaModel {
         @NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
@@ -622,16 +1348,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
 
+        @NameInMap("OriginalTotalDiskSize")
+        private Integer originalTotalDiskSize;
+
         @NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
         @NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
-        private LogDiskSize(Builder builder) {
+        private ResourceLogDiskSize(Builder builder) {
             this.logAssignedSize = builder.logAssignedSize;
             this.maxLogAssignedObServer = builder.maxLogAssignedObServer;
             this.maxLogAssignedPercent = builder.maxLogAssignedPercent;
+            this.originalTotalDiskSize = builder.originalTotalDiskSize;
             this.totalDiskSize = builder.totalDiskSize;
             this.unitDiskSize = builder.unitDiskSize;
         }
@@ -640,7 +1370,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static LogDiskSize create() {
+        public static ResourceLogDiskSize create() {
             return builder().build();
         }
 
@@ -666,6 +1396,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalTotalDiskSize
+         */
+        public Integer getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
+        }
+
+        /**
          * @return totalDiskSize
          */
         public Long getTotalDiskSize() {
@@ -683,6 +1420,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String logAssignedSize; 
             private java.util.List < String > maxLogAssignedObServer; 
             private String maxLogAssignedPercent; 
+            private Integer originalTotalDiskSize; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
 
@@ -711,6 +1449,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * OriginalTotalDiskSize.
+             */
+            public Builder originalTotalDiskSize(Integer originalTotalDiskSize) {
+                this.originalTotalDiskSize = originalTotalDiskSize;
+                return this;
+            }
+
+            /**
              * The ID of the region.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
@@ -726,14 +1472,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public LogDiskSize build() {
-                return new LogDiskSize(this);
+            public ResourceLogDiskSize build() {
+                return new ResourceLogDiskSize(this);
             } 
 
         } 
 
     }
-    public static class Memory extends TeaModel {
+    public static class ResourceMemory extends TeaModel {
         @NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
 
@@ -746,7 +1492,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("UsedMemory")
         private Long usedMemory;
 
-        private Memory(Builder builder) {
+        private ResourceMemory(Builder builder) {
             this.originalTotalMemory = builder.originalTotalMemory;
             this.totalMemory = builder.totalMemory;
             this.unitMemory = builder.unitMemory;
@@ -757,7 +1503,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Memory create() {
+        public static ResourceMemory create() {
             return builder().build();
         }
 
@@ -827,8 +1573,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 return this;
             }
 
-            public Memory build() {
-                return new Memory(this);
+            public ResourceMemory build() {
+                return new ResourceMemory(this);
             } 
 
         } 
@@ -836,19 +1582,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public static class Resource extends TeaModel {
         @NameInMap("CapacityUnit")
-        private CapacityUnit capacityUnit;
+        private ResourceCapacityUnit capacityUnit;
 
         @NameInMap("Cpu")
-        private Cpu cpu;
+        private ResourceCpu cpu;
 
         @NameInMap("DiskSize")
-        private DiskSize diskSize;
+        private ResourceDiskSize diskSize;
 
         @NameInMap("LogDiskSize")
-        private LogDiskSize logDiskSize;
+        private ResourceLogDiskSize logDiskSize;
 
         @NameInMap("Memory")
-        private Memory memory;
+        private ResourceMemory memory;
 
         @NameInMap("UnitCount")
         private Long unitCount;
@@ -873,35 +1619,35 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return capacityUnit
          */
-        public CapacityUnit getCapacityUnit() {
+        public ResourceCapacityUnit getCapacityUnit() {
             return this.capacityUnit;
         }
 
         /**
          * @return cpu
          */
-        public Cpu getCpu() {
+        public ResourceCpu getCpu() {
             return this.cpu;
         }
 
         /**
          * @return diskSize
          */
-        public DiskSize getDiskSize() {
+        public ResourceDiskSize getDiskSize() {
             return this.diskSize;
         }
 
         /**
          * @return logDiskSize
          */
-        public LogDiskSize getLogDiskSize() {
+        public ResourceLogDiskSize getLogDiskSize() {
             return this.logDiskSize;
         }
 
         /**
          * @return memory
          */
-        public Memory getMemory() {
+        public ResourceMemory getMemory() {
             return this.memory;
         }
 
@@ -913,17 +1659,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private CapacityUnit capacityUnit; 
-            private Cpu cpu; 
-            private DiskSize diskSize; 
-            private LogDiskSize logDiskSize; 
-            private Memory memory; 
+            private ResourceCapacityUnit capacityUnit; 
+            private ResourceCpu cpu; 
+            private ResourceDiskSize diskSize; 
+            private ResourceLogDiskSize logDiskSize; 
+            private ResourceMemory memory; 
             private Long unitCount; 
 
             /**
              * CapacityUnit.
              */
-            public Builder capacityUnit(CapacityUnit capacityUnit) {
+            public Builder capacityUnit(ResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
                 return this;
             }
@@ -931,7 +1677,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The information of the OceanBase cluster.
              */
-            public Builder cpu(Cpu cpu) {
+            public Builder cpu(ResourceCpu cpu) {
                 this.cpu = cpu;
                 return this;
             }
@@ -942,7 +1688,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
              * - Start value: 1  
              * - Default value: 1
              */
-            public Builder diskSize(DiskSize diskSize) {
+            public Builder diskSize(ResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
                 return this;
             }
@@ -950,7 +1696,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The server with the highest disk usage.
              */
-            public Builder logDiskSize(LogDiskSize logDiskSize) {
+            public Builder logDiskSize(ResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
                 return this;
             }
@@ -958,7 +1704,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             /**
              * The name of the OceanBase cluster.
              */
-            public Builder memory(Memory memory) {
+            public Builder memory(ResourceMemory memory) {
                 this.memory = memory;
                 return this;
             }
@@ -1127,6 +1873,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("ProxyServiceStatus")
         private String proxyServiceStatus;
 
+        @NameInMap("ReadOnlyResource")
+        private ReadOnlyResource readOnlyResource;
+
         @NameInMap("ReplicaMode")
         private String replicaMode;
 
@@ -1178,6 +1927,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.proxyClusterId = builder.proxyClusterId;
             this.proxyServiceStatus = builder.proxyServiceStatus;
+            this.readOnlyResource = builder.readOnlyResource;
             this.replicaMode = builder.replicaMode;
             this.resource = builder.resource;
             this.series = builder.series;
@@ -1399,6 +2149,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyResource
+         */
+        public ReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
+        }
+
+        /**
          * @return replicaMode
          */
         public String getReplicaMode() {
@@ -1477,6 +2234,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String payType; 
             private String proxyClusterId; 
             private String proxyServiceStatus; 
+            private ReadOnlyResource readOnlyResource; 
             private String replicaMode; 
             private Resource resource; 
             private String series; 
@@ -1714,6 +2472,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder proxyServiceStatus(String proxyServiceStatus) {
                 this.proxyServiceStatus = proxyServiceStatus;
+                return this;
+            }
+
+            /**
+             * ReadOnlyResource.
+             */
+            public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
+                this.readOnlyResource = readOnlyResource;
                 return this;
             }
 

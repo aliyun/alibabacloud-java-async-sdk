@@ -237,6 +237,9 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         @NameInMap("DiskSizeRange")
         private DiskSizeRange diskSizeRange;
 
+        @NameInMap("DiskTypes")
+        private java.util.List < String > diskTypes;
+
         @NameInMap("InstanceClass")
         private String instanceClass;
 
@@ -251,6 +254,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
         private AvailableSpecifications(Builder builder) {
             this.diskSizeRange = builder.diskSizeRange;
+            this.diskTypes = builder.diskTypes;
             this.instanceClass = builder.instanceClass;
             this.logDiskSizeRange = builder.logDiskSizeRange;
             this.nodeNum = builder.nodeNum;
@@ -270,6 +274,13 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
          */
         public DiskSizeRange getDiskSizeRange() {
             return this.diskSizeRange;
+        }
+
+        /**
+         * @return diskTypes
+         */
+        public java.util.List < String > getDiskTypes() {
+            return this.diskTypes;
         }
 
         /**
@@ -302,6 +313,7 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
 
         public static final class Builder {
             private DiskSizeRange diskSizeRange; 
+            private java.util.List < String > diskTypes; 
             private String instanceClass; 
             private LogDiskSizeRange logDiskSizeRange; 
             private java.util.List < Integer > nodeNum; 
@@ -312,6 +324,14 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
              */
             public Builder diskSizeRange(DiskSizeRange diskSizeRange) {
                 this.diskSizeRange = diskSizeRange;
+                return this;
+            }
+
+            /**
+             * DiskTypes.
+             */
+            public Builder diskTypes(java.util.List < String > diskTypes) {
+                this.diskTypes = diskTypes;
                 return this;
             }
 

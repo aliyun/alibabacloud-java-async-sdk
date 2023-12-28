@@ -46,6 +46,10 @@ public class DescribeMetricsDataRequest extends Request {
     @Validation(required = true)
     private String metrics;
 
+    @Body
+    @NameInMap("ReplicaType")
+    private String replicaType;
+
     @Query
     @NameInMap("SortMetricKey")
     private String sortMetricKey;
@@ -68,6 +72,7 @@ public class DescribeMetricsDataRequest extends Request {
         this.labels = builder.labels;
         this.limit = builder.limit;
         this.metrics = builder.metrics;
+        this.replicaType = builder.replicaType;
         this.sortMetricKey = builder.sortMetricKey;
         this.sortOrder = builder.sortOrder;
         this.startTime = builder.startTime;
@@ -136,6 +141,13 @@ public class DescribeMetricsDataRequest extends Request {
     }
 
     /**
+     * @return replicaType
+     */
+    public String getReplicaType() {
+        return this.replicaType;
+    }
+
+    /**
      * @return sortMetricKey
      */
     public String getSortMetricKey() {
@@ -164,6 +176,7 @@ public class DescribeMetricsDataRequest extends Request {
         private String labels; 
         private String limit; 
         private String metrics; 
+        private String replicaType; 
         private String sortMetricKey; 
         private String sortOrder; 
         private String startTime; 
@@ -181,6 +194,7 @@ public class DescribeMetricsDataRequest extends Request {
             this.labels = request.labels;
             this.limit = request.limit;
             this.metrics = request.metrics;
+            this.replicaType = request.replicaType;
             this.sortMetricKey = request.sortMetricKey;
             this.sortOrder = request.sortOrder;
             this.startTime = request.startTime;
@@ -246,6 +260,15 @@ public class DescribeMetricsDataRequest extends Request {
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);
             this.metrics = metrics;
+            return this;
+        }
+
+        /**
+         * ReplicaType.
+         */
+        public Builder replicaType(String replicaType) {
+            this.putBodyParameter("ReplicaType", replicaType);
+            this.replicaType = replicaType;
             return this;
         }
 

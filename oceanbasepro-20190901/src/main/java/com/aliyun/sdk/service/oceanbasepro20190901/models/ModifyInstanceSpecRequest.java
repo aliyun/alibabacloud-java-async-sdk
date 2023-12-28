@@ -22,6 +22,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private Long diskSize;
 
     @Body
+    @NameInMap("DiskType")
+    private String diskType;
+
+    @Body
     @NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -38,6 +42,7 @@ public class ModifyInstanceSpecRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.diskSize = builder.diskSize;
+        this.diskType = builder.diskType;
         this.dryRun = builder.dryRun;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
@@ -71,6 +76,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -94,6 +106,7 @@ public class ModifyInstanceSpecRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
         private String regionId; 
         private Long diskSize; 
+        private String diskType; 
         private Boolean dryRun; 
         private String instanceClass; 
         private String instanceId; 
@@ -106,6 +119,7 @@ public class ModifyInstanceSpecRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
             this.dryRun = request.dryRun;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
@@ -126,6 +140,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putBodyParameter("DiskType", diskType);
+            this.diskType = diskType;
             return this;
         }
 

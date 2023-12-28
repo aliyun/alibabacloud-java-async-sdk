@@ -71,9 +71,498 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     } 
 
+    public static class CapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacit")
+        private Integer usedCapacit;
+
+        private CapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacit = builder.usedCapacit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacit
+         */
+        public Integer getUsedCapacit() {
+            return this.usedCapacit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private Integer usedCapacit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacit.
+             */
+            public Builder usedCapacit(Integer usedCapacit) {
+                this.usedCapacit = usedCapacit;
+                return this;
+            }
+
+            public CapacityUnit build() {
+                return new CapacityUnit(this);
+            } 
+
+        } 
+
+    }
+    public static class Cpu extends TeaModel {
+        @NameInMap("TotalCpu")
+        private Float totalCpu;
+
+        @NameInMap("UnitCpu")
+        private Float unitCpu;
+
+        @NameInMap("UsedCpu")
+        private Float usedCpu;
+
+        private Cpu(Builder builder) {
+            this.totalCpu = builder.totalCpu;
+            this.unitCpu = builder.unitCpu;
+            this.usedCpu = builder.usedCpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Cpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalCpu
+         */
+        public Float getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        /**
+         * @return unitCpu
+         */
+        public Float getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        /**
+         * @return usedCpu
+         */
+        public Float getUsedCpu() {
+            return this.usedCpu;
+        }
+
+        public static final class Builder {
+            private Float totalCpu; 
+            private Float unitCpu; 
+            private Float usedCpu; 
+
+            /**
+             * TotalCpu.
+             */
+            public Builder totalCpu(Float totalCpu) {
+                this.totalCpu = totalCpu;
+                return this;
+            }
+
+            /**
+             * UnitCpu.
+             */
+            public Builder unitCpu(Float unitCpu) {
+                this.unitCpu = unitCpu;
+                return this;
+            }
+
+            /**
+             * UsedCpu.
+             */
+            public Builder usedCpu(Float usedCpu) {
+                this.usedCpu = usedCpu;
+                return this;
+            }
+
+            public Cpu build() {
+                return new Cpu(this);
+            } 
+
+        } 
+
+    }
+    public static class DiskSize extends TeaModel {
+        @NameInMap("UsedDiskSize")
+        private Float usedDiskSize;
+
+        private DiskSize(Builder builder) {
+            this.usedDiskSize = builder.usedDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return usedDiskSize
+         */
+        public Float getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+        public static final class Builder {
+            private Float usedDiskSize; 
+
+            /**
+             * UsedDiskSize.
+             */
+            public Builder usedDiskSize(Float usedDiskSize) {
+                this.usedDiskSize = usedDiskSize;
+                return this;
+            }
+
+            public DiskSize build() {
+                return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDiskSize extends TeaModel {
+        @NameInMap("TotalLogDisk")
+        private Integer totalLogDisk;
+
+        @NameInMap("UnitLogDisk")
+        private Integer unitLogDisk;
+
+        private LogDiskSize(Builder builder) {
+            this.totalLogDisk = builder.totalLogDisk;
+            this.unitLogDisk = builder.unitLogDisk;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalLogDisk
+         */
+        public Integer getTotalLogDisk() {
+            return this.totalLogDisk;
+        }
+
+        /**
+         * @return unitLogDisk
+         */
+        public Integer getUnitLogDisk() {
+            return this.unitLogDisk;
+        }
+
+        public static final class Builder {
+            private Integer totalLogDisk; 
+            private Integer unitLogDisk; 
+
+            /**
+             * TotalLogDisk.
+             */
+            public Builder totalLogDisk(Integer totalLogDisk) {
+                this.totalLogDisk = totalLogDisk;
+                return this;
+            }
+
+            /**
+             * UnitLogDisk.
+             */
+            public Builder unitLogDisk(Integer unitLogDisk) {
+                this.unitLogDisk = unitLogDisk;
+                return this;
+            }
+
+            public LogDiskSize build() {
+                return new LogDiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class Memory extends TeaModel {
+        @NameInMap("TotalMemory")
+        private Float totalMemory;
+
+        @NameInMap("UnitMemory")
+        private Float unitMemory;
+
+        @NameInMap("UsedMemory")
+        private Float usedMemory;
+
+        private Memory(Builder builder) {
+            this.totalMemory = builder.totalMemory;
+            this.unitMemory = builder.unitMemory;
+            this.usedMemory = builder.usedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Float getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return unitMemory
+         */
+        public Float getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        /**
+         * @return usedMemory
+         */
+        public Float getUsedMemory() {
+            return this.usedMemory;
+        }
+
+        public static final class Builder {
+            private Float totalMemory; 
+            private Float unitMemory; 
+            private Float usedMemory; 
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Float totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * UnitMemory.
+             */
+            public Builder unitMemory(Float unitMemory) {
+                this.unitMemory = unitMemory;
+                return this;
+            }
+
+            /**
+             * UsedMemory.
+             */
+            public Builder usedMemory(Float usedMemory) {
+                this.usedMemory = usedMemory;
+                return this;
+            }
+
+            public Memory build() {
+                return new Memory(this);
+            } 
+
+        } 
+
+    }
+    public static class ReadOnlyResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
+        @NameInMap("Cpu")
+        private Cpu cpu;
+
+        @NameInMap("DiskSize")
+        private DiskSize diskSize;
+
+        @NameInMap("LogDiskSize")
+        private LogDiskSize logDiskSize;
+
+        @NameInMap("Memory")
+        private Memory memory;
+
+        @NameInMap("UnitNum")
+        private Integer unitNum;
+
+        private ReadOnlyResource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
+            this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
+            this.logDiskSize = builder.logDiskSize;
+            this.memory = builder.memory;
+            this.unitNum = builder.unitNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReadOnlyResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Cpu getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public DiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return logDiskSize
+         */
+        public LogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        /**
+         * @return memory
+         */
+        public Memory getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return unitNum
+         */
+        public Integer getUnitNum() {
+            return this.unitNum;
+        }
+
+        public static final class Builder {
+            private CapacityUnit capacityUnit; 
+            private Cpu cpu; 
+            private DiskSize diskSize; 
+            private LogDiskSize logDiskSize; 
+            private Memory memory; 
+            private Integer unitNum; 
+
+            /**
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Cpu cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(DiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * LogDiskSize.
+             */
+            public Builder logDiskSize(LogDiskSize logDiskSize) {
+                this.logDiskSize = logDiskSize;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Memory memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * UnitNum.
+             */
+            public Builder unitNum(Integer unitNum) {
+                this.unitNum = unitNum;
+                return this;
+            }
+
+            public ReadOnlyResource build() {
+                return new ReadOnlyResource(this);
+            } 
+
+        } 
+
+    }
     public static class TenantConnections extends TeaModel {
         @NameInMap("AddressType")
         private String addressType;
+
+        @NameInMap("ConnectionReplicaType")
+        private String connectionReplicaType;
 
         @NameInMap("ConnectionZones")
         private java.util.List < String > connectionZones;
@@ -125,6 +614,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         private TenantConnections(Builder builder) {
             this.addressType = builder.addressType;
+            this.connectionReplicaType = builder.connectionReplicaType;
             this.connectionZones = builder.connectionZones;
             this.enableTransactionSplit = builder.enableTransactionSplit;
             this.internetAddress = builder.internetAddress;
@@ -156,6 +646,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getAddressType() {
             return this.addressType;
+        }
+
+        /**
+         * @return connectionReplicaType
+         */
+        public String getConnectionReplicaType() {
+            return this.connectionReplicaType;
         }
 
         /**
@@ -272,6 +769,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressType; 
+            private String connectionReplicaType; 
             private java.util.List < String > connectionZones; 
             private Boolean enableTransactionSplit; 
             private String internetAddress; 
@@ -294,6 +792,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
+                return this;
+            }
+
+            /**
+             * ConnectionReplicaType.
+             */
+            public Builder connectionReplicaType(String connectionReplicaType) {
+                this.connectionReplicaType = connectionReplicaType;
                 return this;
             }
 
@@ -440,7 +946,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
-    public static class CapacityUnit extends TeaModel {
+    public static class TenantResourceCapacityUnit extends TeaModel {
         @NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
@@ -450,7 +956,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("UsedCapacit")
         private Integer usedCapacit;
 
-        private CapacityUnit(Builder builder) {
+        private TenantResourceCapacityUnit(Builder builder) {
             this.maxCapacityUnit = builder.maxCapacityUnit;
             this.minCapacityUnit = builder.minCapacityUnit;
             this.usedCapacit = builder.usedCapacit;
@@ -460,7 +966,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static CapacityUnit create() {
+        public static TenantResourceCapacityUnit create() {
             return builder().build();
         }
 
@@ -514,14 +1020,14 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public CapacityUnit build() {
-                return new CapacityUnit(this);
+            public TenantResourceCapacityUnit build() {
+                return new TenantResourceCapacityUnit(this);
             } 
 
         } 
 
     }
-    public static class Cpu extends TeaModel {
+    public static class TenantResourceCpu extends TeaModel {
         @NameInMap("TotalCpu")
         private Float totalCpu;
 
@@ -531,7 +1037,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("UsedCpu")
         private Float usedCpu;
 
-        private Cpu(Builder builder) {
+        private TenantResourceCpu(Builder builder) {
             this.totalCpu = builder.totalCpu;
             this.unitCpu = builder.unitCpu;
             this.usedCpu = builder.usedCpu;
@@ -541,7 +1047,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Cpu create() {
+        public static TenantResourceCpu create() {
             return builder().build();
         }
 
@@ -605,18 +1111,18 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public Cpu build() {
-                return new Cpu(this);
+            public TenantResourceCpu build() {
+                return new TenantResourceCpu(this);
             } 
 
         } 
 
     }
-    public static class DiskSize extends TeaModel {
+    public static class TenantResourceDiskSize extends TeaModel {
         @NameInMap("UsedDiskSize")
         private Float usedDiskSize;
 
-        private DiskSize(Builder builder) {
+        private TenantResourceDiskSize(Builder builder) {
             this.usedDiskSize = builder.usedDiskSize;
         }
 
@@ -624,7 +1130,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DiskSize create() {
+        public static TenantResourceDiskSize create() {
             return builder().build();
         }
 
@@ -646,21 +1152,21 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public DiskSize build() {
-                return new DiskSize(this);
+            public TenantResourceDiskSize build() {
+                return new TenantResourceDiskSize(this);
             } 
 
         } 
 
     }
-    public static class LogDiskSize extends TeaModel {
+    public static class TenantResourceLogDiskSize extends TeaModel {
         @NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
 
         @NameInMap("UnitLogDisk")
         private Integer unitLogDisk;
 
-        private LogDiskSize(Builder builder) {
+        private TenantResourceLogDiskSize(Builder builder) {
             this.totalLogDisk = builder.totalLogDisk;
             this.unitLogDisk = builder.unitLogDisk;
         }
@@ -669,7 +1175,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static LogDiskSize create() {
+        public static TenantResourceLogDiskSize create() {
             return builder().build();
         }
 
@@ -707,14 +1213,14 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public LogDiskSize build() {
-                return new LogDiskSize(this);
+            public TenantResourceLogDiskSize build() {
+                return new TenantResourceLogDiskSize(this);
             } 
 
         } 
 
     }
-    public static class Memory extends TeaModel {
+    public static class TenantResourceMemory extends TeaModel {
         @NameInMap("TotalMemory")
         private Float totalMemory;
 
@@ -724,7 +1230,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("UsedMemory")
         private Float usedMemory;
 
-        private Memory(Builder builder) {
+        private TenantResourceMemory(Builder builder) {
             this.totalMemory = builder.totalMemory;
             this.unitMemory = builder.unitMemory;
             this.usedMemory = builder.usedMemory;
@@ -734,7 +1240,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Memory create() {
+        public static TenantResourceMemory create() {
             return builder().build();
         }
 
@@ -793,8 +1299,8 @@ public class DescribeTenantResponseBody extends TeaModel {
                 return this;
             }
 
-            public Memory build() {
-                return new Memory(this);
+            public TenantResourceMemory build() {
+                return new TenantResourceMemory(this);
             } 
 
         } 
@@ -802,19 +1308,19 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
     public static class TenantResource extends TeaModel {
         @NameInMap("CapacityUnit")
-        private CapacityUnit capacityUnit;
+        private TenantResourceCapacityUnit capacityUnit;
 
         @NameInMap("Cpu")
-        private Cpu cpu;
+        private TenantResourceCpu cpu;
 
         @NameInMap("DiskSize")
-        private DiskSize diskSize;
+        private TenantResourceDiskSize diskSize;
 
         @NameInMap("LogDiskSize")
-        private LogDiskSize logDiskSize;
+        private TenantResourceLogDiskSize logDiskSize;
 
         @NameInMap("Memory")
-        private Memory memory;
+        private TenantResourceMemory memory;
 
         @NameInMap("UnitNum")
         private Integer unitNum;
@@ -839,35 +1345,35 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return capacityUnit
          */
-        public CapacityUnit getCapacityUnit() {
+        public TenantResourceCapacityUnit getCapacityUnit() {
             return this.capacityUnit;
         }
 
         /**
          * @return cpu
          */
-        public Cpu getCpu() {
+        public TenantResourceCpu getCpu() {
             return this.cpu;
         }
 
         /**
          * @return diskSize
          */
-        public DiskSize getDiskSize() {
+        public TenantResourceDiskSize getDiskSize() {
             return this.diskSize;
         }
 
         /**
          * @return logDiskSize
          */
-        public LogDiskSize getLogDiskSize() {
+        public TenantResourceLogDiskSize getLogDiskSize() {
             return this.logDiskSize;
         }
 
         /**
          * @return memory
          */
-        public Memory getMemory() {
+        public TenantResourceMemory getMemory() {
             return this.memory;
         }
 
@@ -879,17 +1385,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private CapacityUnit capacityUnit; 
-            private Cpu cpu; 
-            private DiskSize diskSize; 
-            private LogDiskSize logDiskSize; 
-            private Memory memory; 
+            private TenantResourceCapacityUnit capacityUnit; 
+            private TenantResourceCpu cpu; 
+            private TenantResourceDiskSize diskSize; 
+            private TenantResourceLogDiskSize logDiskSize; 
+            private TenantResourceMemory memory; 
             private Integer unitNum; 
 
             /**
              * CapacityUnit.
              */
-            public Builder capacityUnit(CapacityUnit capacityUnit) {
+            public Builder capacityUnit(TenantResourceCapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
                 return this;
             }
@@ -900,7 +1406,7 @@ public class DescribeTenantResponseBody extends TeaModel {
              * CLOSED: The Clog service is disabled.  
              * - ONLINE: The Clog service is running.
              */
-            public Builder cpu(Cpu cpu) {
+            public Builder cpu(TenantResourceCpu cpu) {
                 this.cpu = cpu;
                 return this;
             }
@@ -910,7 +1416,7 @@ public class DescribeTenantResponseBody extends TeaModel {
              * <p>
              * The value ONLINE indicates that the address is in service.
              */
-            public Builder diskSize(DiskSize diskSize) {
+            public Builder diskSize(TenantResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
                 return this;
             }
@@ -918,7 +1424,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * LogDiskSize.
              */
-            public Builder logDiskSize(LogDiskSize logDiskSize) {
+            public Builder logDiskSize(TenantResourceLogDiskSize logDiskSize) {
                 this.logDiskSize = logDiskSize;
                 return this;
             }
@@ -926,7 +1432,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * The description of the tenant.
              */
-            public Builder memory(Memory memory) {
+            public Builder memory(TenantResourceMemory memory) {
                 this.memory = memory;
                 return this;
             }
@@ -946,6 +1452,147 @@ public class DescribeTenantResponseBody extends TeaModel {
         } 
 
     }
+    public static class TenantZoneReplicas extends TeaModel {
+        @NameInMap("FullCopyId")
+        private Integer fullCopyId;
+
+        @NameInMap("LogicZoneName")
+        private String logicZoneName;
+
+        @NameInMap("ReadOnlyCopyId")
+        private String readOnlyCopyId;
+
+        @NameInMap("ZoneCopyId")
+        private Integer zoneCopyId;
+
+        @NameInMap("ZoneNodes")
+        private String zoneNodes;
+
+        @NameInMap("ZoneReplicaType")
+        private String zoneReplicaType;
+
+        private TenantZoneReplicas(Builder builder) {
+            this.fullCopyId = builder.fullCopyId;
+            this.logicZoneName = builder.logicZoneName;
+            this.readOnlyCopyId = builder.readOnlyCopyId;
+            this.zoneCopyId = builder.zoneCopyId;
+            this.zoneNodes = builder.zoneNodes;
+            this.zoneReplicaType = builder.zoneReplicaType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TenantZoneReplicas create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fullCopyId
+         */
+        public Integer getFullCopyId() {
+            return this.fullCopyId;
+        }
+
+        /**
+         * @return logicZoneName
+         */
+        public String getLogicZoneName() {
+            return this.logicZoneName;
+        }
+
+        /**
+         * @return readOnlyCopyId
+         */
+        public String getReadOnlyCopyId() {
+            return this.readOnlyCopyId;
+        }
+
+        /**
+         * @return zoneCopyId
+         */
+        public Integer getZoneCopyId() {
+            return this.zoneCopyId;
+        }
+
+        /**
+         * @return zoneNodes
+         */
+        public String getZoneNodes() {
+            return this.zoneNodes;
+        }
+
+        /**
+         * @return zoneReplicaType
+         */
+        public String getZoneReplicaType() {
+            return this.zoneReplicaType;
+        }
+
+        public static final class Builder {
+            private Integer fullCopyId; 
+            private String logicZoneName; 
+            private String readOnlyCopyId; 
+            private Integer zoneCopyId; 
+            private String zoneNodes; 
+            private String zoneReplicaType; 
+
+            /**
+             * FullCopyId.
+             */
+            public Builder fullCopyId(Integer fullCopyId) {
+                this.fullCopyId = fullCopyId;
+                return this;
+            }
+
+            /**
+             * LogicZoneName.
+             */
+            public Builder logicZoneName(String logicZoneName) {
+                this.logicZoneName = logicZoneName;
+                return this;
+            }
+
+            /**
+             * ReadOnlyCopyId.
+             */
+            public Builder readOnlyCopyId(String readOnlyCopyId) {
+                this.readOnlyCopyId = readOnlyCopyId;
+                return this;
+            }
+
+            /**
+             * ZoneCopyId.
+             */
+            public Builder zoneCopyId(Integer zoneCopyId) {
+                this.zoneCopyId = zoneCopyId;
+                return this;
+            }
+
+            /**
+             * ZoneNodes.
+             */
+            public Builder zoneNodes(String zoneNodes) {
+                this.zoneNodes = zoneNodes;
+                return this;
+            }
+
+            /**
+             * ZoneReplicaType.
+             */
+            public Builder zoneReplicaType(String zoneReplicaType) {
+                this.zoneReplicaType = zoneReplicaType;
+                return this;
+            }
+
+            public TenantZoneReplicas build() {
+                return new TenantZoneReplicas(this);
+            } 
+
+        } 
+
+    }
     public static class TenantZones extends TeaModel {
         @NameInMap("Region")
         private String region;
@@ -953,12 +1600,16 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("TenantZoneId")
         private String tenantZoneId;
 
+        @NameInMap("TenantZoneReplicas")
+        private java.util.List < TenantZoneReplicas> tenantZoneReplicas;
+
         @NameInMap("TenantZoneRole")
         private String tenantZoneRole;
 
         private TenantZones(Builder builder) {
             this.region = builder.region;
             this.tenantZoneId = builder.tenantZoneId;
+            this.tenantZoneReplicas = builder.tenantZoneReplicas;
             this.tenantZoneRole = builder.tenantZoneRole;
         }
 
@@ -985,6 +1636,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantZoneReplicas
+         */
+        public java.util.List < TenantZoneReplicas> getTenantZoneReplicas() {
+            return this.tenantZoneReplicas;
+        }
+
+        /**
          * @return tenantZoneRole
          */
         public String getTenantZoneRole() {
@@ -994,6 +1652,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static final class Builder {
             private String region; 
             private String tenantZoneId; 
+            private java.util.List < TenantZoneReplicas> tenantZoneReplicas; 
             private String tenantZoneRole; 
 
             /**
@@ -1009,6 +1668,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
+                return this;
+            }
+
+            /**
+             * TenantZoneReplicas.
+             */
+            public Builder tenantZoneReplicas(java.util.List < TenantZoneReplicas> tenantZoneReplicas) {
+                this.tenantZoneReplicas = tenantZoneReplicas;
                 return this;
             }
 
@@ -1042,6 +1709,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         @NameInMap("CreateTime")
         private String createTime;
+
+        @NameInMap("DataMergeTime")
+        private String dataMergeTime;
 
         @NameInMap("DeployMode")
         private String deployMode;
@@ -1088,6 +1758,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
 
+        @NameInMap("ReadOnlyResource")
+        private ReadOnlyResource readOnlyResource;
+
         @NameInMap("Series")
         private String series;
 
@@ -1124,6 +1797,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.clogServiceStatus = builder.clogServiceStatus;
             this.collation = builder.collation;
             this.createTime = builder.createTime;
+            this.dataMergeTime = builder.dataMergeTime;
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
@@ -1139,6 +1813,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
+            this.readOnlyResource = builder.readOnlyResource;
             this.series = builder.series;
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
@@ -1192,6 +1867,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dataMergeTime
+         */
+        public String getDataMergeTime() {
+            return this.dataMergeTime;
         }
 
         /**
@@ -1300,6 +1982,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return readOnlyResource
+         */
+        public ReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
+        }
+
+        /**
          * @return series
          */
         public String getSeries() {
@@ -1375,6 +2064,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String clogServiceStatus; 
             private String collation; 
             private String createTime; 
+            private String dataMergeTime; 
             private String deployMode; 
             private String deployType; 
             private String description; 
@@ -1390,6 +2080,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
+            private ReadOnlyResource readOnlyResource; 
             private String series; 
             private String status; 
             private java.util.List < TenantConnections> tenantConnections; 
@@ -1438,6 +2129,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DataMergeTime.
+             */
+            public Builder dataMergeTime(String dataMergeTime) {
+                this.dataMergeTime = dataMergeTime;
                 return this;
             }
 
@@ -1621,6 +2320,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
+                return this;
+            }
+
+            /**
+             * ReadOnlyResource.
+             */
+            public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
+                this.readOnlyResource = readOnlyResource;
                 return this;
             }
 

@@ -69,6 +69,14 @@ public class CreateInstanceRequest extends Request {
     private String periodUnit;
 
     @Body
+    @NameInMap("PrimaryInstance")
+    private String primaryInstance;
+
+    @Body
+    @NameInMap("PrimaryRegion")
+    private String primaryRegion;
+
+    @Body
     @NameInMap("ReplicaMode")
     private String replicaMode;
 
@@ -101,6 +109,8 @@ public class CreateInstanceRequest extends Request {
         this.obVersion = builder.obVersion;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.primaryInstance = builder.primaryInstance;
+        this.primaryRegion = builder.primaryRegion;
         this.replicaMode = builder.replicaMode;
         this.resourceGroupId = builder.resourceGroupId;
         this.series = builder.series;
@@ -212,6 +222,20 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return primaryInstance
+     */
+    public String getPrimaryInstance() {
+        return this.primaryInstance;
+    }
+
+    /**
+     * @return primaryRegion
+     */
+    public String getPrimaryRegion() {
+        return this.primaryRegion;
+    }
+
+    /**
      * @return replicaMode
      */
     public String getReplicaMode() {
@@ -253,6 +277,8 @@ public class CreateInstanceRequest extends Request {
         private String obVersion; 
         private Long period; 
         private String periodUnit; 
+        private String primaryInstance; 
+        private String primaryRegion; 
         private String replicaMode; 
         private String resourceGroupId; 
         private String series; 
@@ -277,6 +303,8 @@ public class CreateInstanceRequest extends Request {
             this.obVersion = request.obVersion;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.primaryInstance = request.primaryInstance;
+            this.primaryRegion = request.primaryRegion;
             this.replicaMode = request.replicaMode;
             this.resourceGroupId = request.resourceGroupId;
             this.series = request.series;
@@ -431,6 +459,24 @@ public class CreateInstanceRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PrimaryInstance.
+         */
+        public Builder primaryInstance(String primaryInstance) {
+            this.putBodyParameter("PrimaryInstance", primaryInstance);
+            this.primaryInstance = primaryInstance;
+            return this;
+        }
+
+        /**
+         * PrimaryRegion.
+         */
+        public Builder primaryRegion(String primaryRegion) {
+            this.putBodyParameter("PrimaryRegion", primaryRegion);
+            this.primaryRegion = primaryRegion;
             return this;
         }
 

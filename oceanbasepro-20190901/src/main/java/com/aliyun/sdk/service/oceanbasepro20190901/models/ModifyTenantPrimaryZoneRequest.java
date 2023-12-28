@@ -31,6 +31,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     private String primaryZone;
 
     @Body
+    @NameInMap("TenantEndpointDirectId")
+    private String tenantEndpointDirectId;
+
+    @Body
     @NameInMap("TenantEndpointId")
     private String tenantEndpointId;
 
@@ -38,6 +42,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     @NameInMap("TenantId")
     @Validation(required = true)
     private String tenantId;
+
+    @Body
+    @NameInMap("UserDirectVSwitchId")
+    private String userDirectVSwitchId;
 
     @Body
     @NameInMap("UserVSwitchId")
@@ -49,8 +57,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         this.instanceId = builder.instanceId;
         this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
         this.primaryZone = builder.primaryZone;
+        this.tenantEndpointDirectId = builder.tenantEndpointDirectId;
         this.tenantEndpointId = builder.tenantEndpointId;
         this.tenantId = builder.tenantId;
+        this.userDirectVSwitchId = builder.userDirectVSwitchId;
         this.userVSwitchId = builder.userVSwitchId;
     }
 
@@ -96,6 +106,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return tenantEndpointDirectId
+     */
+    public String getTenantEndpointDirectId() {
+        return this.tenantEndpointDirectId;
+    }
+
+    /**
      * @return tenantEndpointId
      */
     public String getTenantEndpointId() {
@@ -110,6 +127,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return userDirectVSwitchId
+     */
+    public String getUserDirectVSwitchId() {
+        return this.userDirectVSwitchId;
+    }
+
+    /**
      * @return userVSwitchId
      */
     public String getUserVSwitchId() {
@@ -121,8 +145,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         private String instanceId; 
         private String masterIntranetAddressZone; 
         private String primaryZone; 
+        private String tenantEndpointDirectId; 
         private String tenantEndpointId; 
         private String tenantId; 
+        private String userDirectVSwitchId; 
         private String userVSwitchId; 
 
         private Builder() {
@@ -135,8 +161,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
             this.instanceId = request.instanceId;
             this.masterIntranetAddressZone = request.masterIntranetAddressZone;
             this.primaryZone = request.primaryZone;
+            this.tenantEndpointDirectId = request.tenantEndpointDirectId;
             this.tenantEndpointId = request.tenantEndpointId;
             this.tenantId = request.tenantId;
+            this.userDirectVSwitchId = request.userDirectVSwitchId;
             this.userVSwitchId = request.userVSwitchId;
         } 
 
@@ -186,6 +214,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
+         * TenantEndpointDirectId.
+         */
+        public Builder tenantEndpointDirectId(String tenantEndpointDirectId) {
+            this.putBodyParameter("TenantEndpointDirectId", tenantEndpointDirectId);
+            this.tenantEndpointDirectId = tenantEndpointDirectId;
+            return this;
+        }
+
+        /**
          * TenantEndpointId.
          */
         public Builder tenantEndpointId(String tenantEndpointId) {
@@ -200,6 +237,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * UserDirectVSwitchId.
+         */
+        public Builder userDirectVSwitchId(String userDirectVSwitchId) {
+            this.putBodyParameter("UserDirectVSwitchId", userDirectVSwitchId);
+            this.userDirectVSwitchId = userDirectVSwitchId;
             return this;
         }
 
