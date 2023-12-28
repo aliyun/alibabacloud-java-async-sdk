@@ -5105,6 +5105,87 @@ public class GetEventStreamingResponseBody extends TeaModel {
         } 
 
     }
+    public static class SourcePrometheusParameters extends TeaModel {
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("DataType")
+        private String dataType;
+
+        @NameInMap("Labels")
+        private String labels;
+
+        private SourcePrometheusParameters(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.dataType = builder.dataType;
+            this.labels = builder.labels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourcePrometheusParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
+         * @return labels
+         */
+        public String getLabels() {
+            return this.labels;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String dataType; 
+            private String labels; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(String labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            public SourcePrometheusParameters build() {
+                return new SourcePrometheusParameters(this);
+            } 
+
+        } 
+
+    }
     public static class SourceRabbitMQParameters extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
@@ -5681,6 +5762,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         private SourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourcePrometheusParameters")
+        private SourcePrometheusParameters sourcePrometheusParameters;
+
         @NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
@@ -5695,6 +5779,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
             this.sourceMQTTParameters = builder.sourceMQTTParameters;
+            this.sourcePrometheusParameters = builder.sourcePrometheusParameters;
             this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
             this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
             this.sourceSLSParameters = builder.sourceSLSParameters;
@@ -5737,6 +5822,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePrometheusParameters
+         */
+        public SourcePrometheusParameters getSourcePrometheusParameters() {
+            return this.sourcePrometheusParameters;
+        }
+
+        /**
          * @return sourceRabbitMQParameters
          */
         public SourceRabbitMQParameters getSourceRabbitMQParameters() {
@@ -5762,6 +5854,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
             private SourceMQTTParameters sourceMQTTParameters; 
+            private SourcePrometheusParameters sourcePrometheusParameters; 
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQParameters sourceRocketMQParameters; 
             private SourceSLSParameters sourceSLSParameters; 
@@ -5795,6 +5888,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
+                return this;
+            }
+
+            /**
+             * SourcePrometheusParameters.
+             */
+            public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
+                this.sourcePrometheusParameters = sourcePrometheusParameters;
                 return this;
             }
 

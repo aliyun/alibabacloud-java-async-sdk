@@ -269,7 +269,7 @@ public class CreateEventSourceRequest extends Request {
         }
 
         /**
-         * The parameters that are configured if the event source is scheduled events.
+         * The parameters that are configured if you specify scheduled events as the event source.
          */
         public Builder sourceScheduledEventParameters(SourceScheduledEventParameters sourceScheduledEventParameters) {
             String sourceScheduledEventParametersShrink = shrink(sourceScheduledEventParameters, "SourceScheduledEventParameters", "json");

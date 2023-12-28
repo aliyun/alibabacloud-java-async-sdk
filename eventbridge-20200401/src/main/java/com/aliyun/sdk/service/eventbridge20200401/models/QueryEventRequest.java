@@ -102,7 +102,7 @@ public class QueryEventRequest extends Request {
         }
 
         /**
-         * EventSource.
+         * EventSource is required for querying default bus events.
          */
         public Builder eventSource(String eventSource) {
             this.putQueryParameter("EventSource", eventSource);
