@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteResourceResponse> deleteResource(DeleteResourceRequest request);
 
+    CompletableFuture<GetPriceResponse> getPrice(GetPriceRequest request);
+
     CompletableFuture<GetResourceTypeResponse> getResourceType(GetResourceTypeRequest request);
 
     CompletableFuture<GetResourcesResponse> getResources(GetResourcesRequest request);

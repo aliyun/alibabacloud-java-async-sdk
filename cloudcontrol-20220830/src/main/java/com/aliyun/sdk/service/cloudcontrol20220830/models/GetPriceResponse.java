@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetResourcesResponse} extends {@link TeaModel}
+ * {@link GetPriceResponse} extends {@link TeaModel}
  *
- * <p>GetResourcesResponse</p>
+ * <p>GetPriceResponse</p>
  */
-public class GetResourcesResponse extends Response {
+public class GetPriceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class GetResourcesResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetResourcesResponseBody body;
+    private GetPriceResponseBody body;
 
-    private GetResourcesResponse(BuilderImpl builder) {
+    private GetPriceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetResourcesResponse create() {
+    public static GetPriceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class GetResourcesResponse extends Response {
     /**
      * @return body
      */
-    public GetResourcesResponseBody getBody() {
+    public GetPriceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetPriceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetResourcesResponseBody body);
+        Builder body(GetPriceResponseBody body);
 
         @Override
-        GetResourcesResponse build();
+        GetPriceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetResourcesResponse, Builder>
+            extends Response.BuilderImpl<GetPriceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetResourcesResponseBody body; 
+        private GetPriceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetResourcesResponse response) {
+        private BuilderImpl(GetPriceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class GetResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetResourcesResponseBody body) {
+        public Builder body(GetPriceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetResourcesResponse build() {
-            return new GetResourcesResponse(this);
+        public GetPriceResponse build() {
+            return new GetPriceResponse(this);
         } 
 
     } 
