@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAuthorizationUrlResponseBody} extends {@link TeaModel}
+ * {@link JyQueryAppInfoBySceneCodeResponseBody} extends {@link TeaModel}
  *
- * <p>GetAuthorizationUrlResponseBody</p>
+ * <p>JyQueryAppInfoBySceneCodeResponseBody</p>
  */
-public class GetAuthorizationUrlResponseBody extends TeaModel {
+public class JyQueryAppInfoBySceneCodeResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -24,7 +24,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetAuthorizationUrlResponseBody(Builder builder) {
+    private JyQueryAppInfoBySceneCodeResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetAuthorizationUrlResponseBody create() {
+    public static JyQueryAppInfoBySceneCodeResponseBody create() {
         return builder().build();
     }
 
@@ -74,11 +74,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
-         * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +82,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +90,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,25 +98,37 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetAuthorizationUrlResponseBody build() {
-            return new GetAuthorizationUrlResponseBody(this);
+        public JyQueryAppInfoBySceneCodeResponseBody build() {
+            return new JyQueryAppInfoBySceneCodeResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AuthorizationUrl")
-        private String authorizationUrl;
+        @NameInMap("CmAppId")
+        private String cmAppId;
+
+        @NameInMap("CmAppKey")
+        private String cmAppKey;
+
+        @NameInMap("CtAppId")
+        private String ctAppId;
+
+        @NameInMap("CtAppKey")
+        private String ctAppKey;
 
         private Data(Builder builder) {
-            this.authorizationUrl = builder.authorizationUrl;
+            this.cmAppId = builder.cmAppId;
+            this.cmAppKey = builder.cmAppKey;
+            this.ctAppId = builder.ctAppId;
+            this.ctAppKey = builder.ctAppKey;
         }
 
         public static Builder builder() {
@@ -132,20 +140,68 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * @return authorizationUrl
+         * @return cmAppId
          */
-        public String getAuthorizationUrl() {
-            return this.authorizationUrl;
+        public String getCmAppId() {
+            return this.cmAppId;
+        }
+
+        /**
+         * @return cmAppKey
+         */
+        public String getCmAppKey() {
+            return this.cmAppKey;
+        }
+
+        /**
+         * @return ctAppId
+         */
+        public String getCtAppId() {
+            return this.ctAppId;
+        }
+
+        /**
+         * @return ctAppKey
+         */
+        public String getCtAppKey() {
+            return this.ctAppKey;
         }
 
         public static final class Builder {
-            private String authorizationUrl; 
+            private String cmAppId; 
+            private String cmAppKey; 
+            private String ctAppId; 
+            private String ctAppKey; 
 
             /**
-             * The authorization URL.
+             * CmAppId.
              */
-            public Builder authorizationUrl(String authorizationUrl) {
-                this.authorizationUrl = authorizationUrl;
+            public Builder cmAppId(String cmAppId) {
+                this.cmAppId = cmAppId;
+                return this;
+            }
+
+            /**
+             * CmAppKey.
+             */
+            public Builder cmAppKey(String cmAppKey) {
+                this.cmAppKey = cmAppKey;
+                return this;
+            }
+
+            /**
+             * CtAppId.
+             */
+            public Builder ctAppId(String ctAppId) {
+                this.ctAppId = ctAppId;
+                return this;
+            }
+
+            /**
+             * CtAppKey.
+             */
+            public Builder ctAppKey(String ctAppKey) {
+                this.ctAppKey = ctAppKey;
                 return this;
             }
 

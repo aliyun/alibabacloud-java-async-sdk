@@ -198,7 +198,7 @@ public class GetSmsAuthTokensRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * The ID of the iOS application. This parameter is required if OsType is set to **iOS**.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -207,7 +207,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * Expire.
+         * The validity period of the token. Unit: seconds. Valid values: 900 to 43200.
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -216,7 +216,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The type of the operating system. Valid values: **Android** and **iOS**.
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -234,7 +234,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * PackageName.
+         * The package name. This parameter is required if OsType is set to **Android**.
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -261,7 +261,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * The service code.
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -270,7 +270,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * SignName.
+         * The signature. This parameter is required if OsType is set to **Android**.
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -279,7 +279,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * SmsCodeExpire.
+         * The validity period of the SMS verification code. Unit: seconds. Default value: 180.
          */
         public Builder smsCodeExpire(Integer smsCodeExpire) {
             this.putQueryParameter("SmsCodeExpire", smsCodeExpire);
@@ -288,7 +288,7 @@ public class GetSmsAuthTokensRequest extends Request {
         }
 
         /**
-         * SmsTemplateCode.
+         * The code of the text message template.
          */
         public Builder smsTemplateCode(String smsTemplateCode) {
             this.putQueryParameter("SmsTemplateCode", smsTemplateCode);

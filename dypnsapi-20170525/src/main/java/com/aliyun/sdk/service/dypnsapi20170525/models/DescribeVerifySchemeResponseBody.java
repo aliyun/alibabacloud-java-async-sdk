@@ -74,7 +74,7 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         private SchemeQueryResultDTO schemeQueryResultDTO; 
 
         /**
-         * Code.
+         * The response code. OK indicates that the request is successful. For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * SchemeQueryResultDTO.
+         * The response parameters.
          */
         public Builder schemeQueryResultDTO(SchemeQueryResultDTO schemeQueryResultDTO) {
             this.schemeQueryResultDTO = schemeQueryResultDTO;
@@ -138,7 +138,7 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
             private String appEncryptInfo; 
 
             /**
-             * AppEncryptInfo.
+             * The key generated when you create a service in the console.
              */
             public Builder appEncryptInfo(String appEncryptInfo) {
                 this.appEncryptInfo = appEncryptInfo;

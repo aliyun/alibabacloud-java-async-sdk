@@ -86,7 +86,11 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11186623.0.0.5c3a662fbgeAuk).
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +98,7 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +106,7 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned results.
          */
         public Builder model(Model model) {
             this.model = model;
@@ -110,7 +114,7 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,11 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +166,7 @@ public class CreateSchemeConfigResponseBody extends TeaModel {
             private String schemeCode; 
 
             /**
-             * SchemeCode.
+             * The service code.
              */
             public Builder schemeCode(String schemeCode) {
                 this.schemeCode = schemeCode;

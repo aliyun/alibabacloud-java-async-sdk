@@ -1,3 +1,6 @@
+2023-12-29 Version: 1.0.5
+- Generated java-async 2017-05-25 for Dypnsapi.
+
 2023-09-26 Version: 1.0.4
 - Generated java-async 2017-05-25 for Dypnsapi.
 

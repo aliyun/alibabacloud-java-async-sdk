@@ -98,7 +98,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +106,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.419277.0.i11).
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned data.
          */
         public Builder model(java.util.List < Model> model) {
             this.model = model;
@@ -130,7 +133,11 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +145,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries in the list.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +269,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * Content.
+             * The content of the text message.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -270,7 +277,11 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrCode.
+             * The status code returned by the carrier.
+             * <p>
+             * 
+             * *   If the text message was delivered, "DELIVERED" is returned.
+             * *   If the text message failed to be sent, see [Error codes](https://help.aliyun.com/document_detail/101347.html?spm=a2c4g.419277.0.i8) for more information.
              */
             public Builder errCode(String errCode) {
                 this.errCode = errCode;
@@ -278,7 +289,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OutId.
+             * The extension field.
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -286,7 +297,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNum.
+             * The phone number.
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -294,7 +305,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiveDate.
+             * The date and time when the text message was received.
              */
             public Builder receiveDate(String receiveDate) {
                 this.receiveDate = receiveDate;
@@ -302,7 +313,10 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SendDate.
+             * The date when the text message was sent. You can query text messages that were sent within the last 30 days.
+             * <p>
+             * 
+             * The date is in the yyyyMMdd format. Example: 20181225.
              */
             public Builder sendDate(String sendDate) {
                 this.sendDate = sendDate;
@@ -310,7 +324,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SendStatus.
+             * The delivery status of the text message.
+             * <p>
+             * 
+             * *   1: A delivery receipt is to be sent.
+             * *   2: The text message failed to be sent.
+             * *   3: The text message was sent.
              */
             public Builder sendStatus(Long sendStatus) {
                 this.sendStatus = sendStatus;
@@ -318,7 +337,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * The code of the text message template.
+             * <p>
+             * 
+             * Log on to the SMS console. In the left-side navigation pane, click **Go China** or **Go Globe**. You can view the text message template code in the **Template Code** column on the **Message Templates** tab.
+             * 
+             * >  The text message templates must be created on the Go Globe page and approved.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

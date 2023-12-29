@@ -7,19 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateVerifySchemeRequest} extends {@link RequestModel}
+ * {@link JyCreateVerifySchemeRequest} extends {@link RequestModel}
  *
- * <p>CreateVerifySchemeRequest</p>
+ * <p>JyCreateVerifySchemeRequest</p>
  */
-public class CreateVerifySchemeRequest extends Request {
+public class JyCreateVerifySchemeRequest extends Request {
     @Query
     @NameInMap("AppName")
     @Validation(required = true)
     private String appName;
-
-    @Query
-    @NameInMap("AuthType")
-    private String authType;
 
     @Query
     @NameInMap("BundleId")
@@ -36,18 +32,6 @@ public class CreateVerifySchemeRequest extends Request {
     @Query
     @NameInMap("CuApiCode")
     private Long cuApiCode;
-
-    @Query
-    @NameInMap("Email")
-    private String email;
-
-    @Query
-    @NameInMap("IpWhiteList")
-    private String ipWhiteList;
-
-    @Query
-    @NameInMap("Origin")
-    private String origin;
 
     @Query
     @NameInMap("OsType")
@@ -75,50 +59,31 @@ public class CreateVerifySchemeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SceneType")
-    private String sceneType;
-
-    @Query
     @NameInMap("SchemeName")
     @Validation(required = true)
     private String schemeName;
 
-    @Query
-    @NameInMap("SmsSignName")
-    private String smsSignName;
-
-    @Query
-    @NameInMap("Url")
-    private String url;
-
-    private CreateVerifySchemeRequest(Builder builder) {
+    private JyCreateVerifySchemeRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
-        this.authType = builder.authType;
         this.bundleId = builder.bundleId;
         this.cmApiCode = builder.cmApiCode;
         this.ctApiCode = builder.ctApiCode;
         this.cuApiCode = builder.cuApiCode;
-        this.email = builder.email;
-        this.ipWhiteList = builder.ipWhiteList;
-        this.origin = builder.origin;
         this.osType = builder.osType;
         this.ownerId = builder.ownerId;
         this.packName = builder.packName;
         this.packSign = builder.packSign;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sceneType = builder.sceneType;
         this.schemeName = builder.schemeName;
-        this.smsSignName = builder.smsSignName;
-        this.url = builder.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateVerifySchemeRequest create() {
+    public static JyCreateVerifySchemeRequest create() {
         return builder().build();
     }
 
@@ -132,13 +97,6 @@ public class CreateVerifySchemeRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
-    }
-
-    /**
-     * @return authType
-     */
-    public String getAuthType() {
-        return this.authType;
     }
 
     /**
@@ -167,27 +125,6 @@ public class CreateVerifySchemeRequest extends Request {
      */
     public Long getCuApiCode() {
         return this.cuApiCode;
-    }
-
-    /**
-     * @return email
-     */
-    public String getEmail() {
-        return this.email;
-    }
-
-    /**
-     * @return ipWhiteList
-     */
-    public String getIpWhiteList() {
-        return this.ipWhiteList;
-    }
-
-    /**
-     * @return origin
-     */
-    public String getOrigin() {
-        return this.origin;
     }
 
     /**
@@ -233,83 +170,48 @@ public class CreateVerifySchemeRequest extends Request {
     }
 
     /**
-     * @return sceneType
-     */
-    public String getSceneType() {
-        return this.sceneType;
-    }
-
-    /**
      * @return schemeName
      */
     public String getSchemeName() {
         return this.schemeName;
     }
 
-    /**
-     * @return smsSignName
-     */
-    public String getSmsSignName() {
-        return this.smsSignName;
-    }
-
-    /**
-     * @return url
-     */
-    public String getUrl() {
-        return this.url;
-    }
-
-    public static final class Builder extends Request.Builder<CreateVerifySchemeRequest, Builder> {
+    public static final class Builder extends Request.Builder<JyCreateVerifySchemeRequest, Builder> {
         private String appName; 
-        private String authType; 
         private String bundleId; 
         private Long cmApiCode; 
         private Long ctApiCode; 
         private Long cuApiCode; 
-        private String email; 
-        private String ipWhiteList; 
-        private String origin; 
         private String osType; 
         private Long ownerId; 
         private String packName; 
         private String packSign; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sceneType; 
         private String schemeName; 
-        private String smsSignName; 
-        private String url; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateVerifySchemeRequest request) {
+        private Builder(JyCreateVerifySchemeRequest request) {
             super(request);
             this.appName = request.appName;
-            this.authType = request.authType;
             this.bundleId = request.bundleId;
             this.cmApiCode = request.cmApiCode;
             this.ctApiCode = request.ctApiCode;
             this.cuApiCode = request.cuApiCode;
-            this.email = request.email;
-            this.ipWhiteList = request.ipWhiteList;
-            this.origin = request.origin;
             this.osType = request.osType;
             this.ownerId = request.ownerId;
             this.packName = request.packName;
             this.packSign = request.packSign;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.sceneType = request.sceneType;
             this.schemeName = request.schemeName;
-            this.smsSignName = request.smsSignName;
-            this.url = request.url;
         } 
 
         /**
-         * The app name.
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -318,20 +220,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The verification type. You can select multiple types only when the phone number verification is supported. Separate multiple types with commas (,).
-         * <p>
-         * 
-         * *   **1**: phone number verification
-         * *   **2**: SMS verification
-         */
-        public Builder authType(String authType) {
-            this.putQueryParameter("AuthType", authType);
-            this.authType = authType;
-            return this;
-        }
-
-        /**
-         * The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
+         * BundleId.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -340,7 +229,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Mobile.
+         * CmApiCode.
          */
         public Builder cmApiCode(Long cmApiCode) {
             this.putQueryParameter("CmApiCode", cmApiCode);
@@ -349,7 +238,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Telecom.
+         * CtApiCode.
          */
         public Builder ctApiCode(Long ctApiCode) {
             this.putQueryParameter("CtApiCode", ctApiCode);
@@ -358,7 +247,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The channel code of China Unicom.
+         * CuApiCode.
          */
         public Builder cuApiCode(Long cuApiCode) {
             this.putQueryParameter("CuApiCode", cuApiCode);
@@ -367,34 +256,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The email address that receives the key.
-         */
-        public Builder email(String email) {
-            this.putQueryParameter("Email", email);
-            this.email = email;
-            return this;
-        }
-
-        /**
-         * The IP address whitelist.
-         */
-        public Builder ipWhiteList(String ipWhiteList) {
-            this.putQueryParameter("IpWhiteList", ipWhiteList);
-            this.ipWhiteList = ipWhiteList;
-            return this;
-        }
-
-        /**
-         * The source URL of the HTML5 app page. We recommend that you specify this parameter as a domain name.
-         */
-        public Builder origin(String origin) {
-            this.putQueryParameter("Origin", origin);
-            this.origin = origin;
-            return this;
-        }
-
-        /**
-         * The type of the operating system for the terminal. Valid values: iOS and Android.
+         * OsType.
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -412,7 +274,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The package name. This parameter is required when OsType is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
+         * PackName.
          */
         public Builder packName(String packName) {
             this.putQueryParameter("PackName", packName);
@@ -421,7 +283,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The package signature. This parameter is required when OsType is set to Android. The signature must be 32 characters in length and can contain digits and letters.
+         * PackSign.
          */
         public Builder packSign(String packSign) {
             this.putQueryParameter("PackSign", packSign);
@@ -448,16 +310,7 @@ public class CreateVerifySchemeRequest extends Request {
         }
 
         /**
-         * The service type.
-         */
-        public Builder sceneType(String sceneType) {
-            this.putQueryParameter("SceneType", sceneType);
-            this.sceneType = sceneType;
-            return this;
-        }
-
-        /**
-         * The service name.
+         * SchemeName.
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);
@@ -465,27 +318,9 @@ public class CreateVerifySchemeRequest extends Request {
             return this;
         }
 
-        /**
-         * The bound SMS signature. This parameter is valid only when AuthType is set to 2. The signature must be approved.
-         */
-        public Builder smsSignName(String smsSignName) {
-            this.putQueryParameter("SmsSignName", smsSignName);
-            this.smsSignName = smsSignName;
-            return this;
-        }
-
-        /**
-         * The URL of the HTML5 app page.
-         */
-        public Builder url(String url) {
-            this.putQueryParameter("Url", url);
-            this.url = url;
-            return this;
-        }
-
         @Override
-        public CreateVerifySchemeRequest build() {
-            return new CreateVerifySchemeRequest(this);
+        public JyCreateVerifySchemeRequest build() {
+            return new JyCreateVerifySchemeRequest(this);
         } 
 
     } 

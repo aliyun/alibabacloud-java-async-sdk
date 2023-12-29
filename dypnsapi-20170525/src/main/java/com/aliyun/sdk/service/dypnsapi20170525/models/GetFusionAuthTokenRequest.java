@@ -169,7 +169,7 @@ public class GetFusionAuthTokenRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * The bundle ID of the app. This parameter is required when Platform is set to iOS.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -178,7 +178,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * DurationSeconds.
+         * The validity period of the token. Unit: seconds. Valid values: 900 to 43200.
          */
         public Builder durationSeconds(Long durationSeconds) {
             this.putQueryParameter("DurationSeconds", durationSeconds);
@@ -196,7 +196,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * PackageName.
+         * The package name of the app. This parameter is required when Platform is set to Android.
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -205,7 +205,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * PackageSign.
+         * The package signature of the app. This parameter is required when Platform is set to Android.
          */
         public Builder packageSign(String packageSign) {
             this.putQueryParameter("PackageSign", packageSign);
@@ -214,7 +214,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The platform type. Valid values: Android and iOS.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -241,7 +241,7 @@ public class GetFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * SchemeCode.
+         * The service code.
          */
         public Builder schemeCode(String schemeCode) {
             this.putQueryParameter("SchemeCode", schemeCode);

@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAuthorizationUrlResponseBody} extends {@link TeaModel}
+ * {@link JyCreateVerifySchemeResponseBody} extends {@link TeaModel}
  *
- * <p>GetAuthorizationUrlResponseBody</p>
+ * <p>JyCreateVerifySchemeResponseBody</p>
  */
-public class GetAuthorizationUrlResponseBody extends TeaModel {
+public class JyCreateVerifySchemeResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private Data data;
+    @NameInMap("GateVerifySchemeData")
+    private GateVerifySchemeData gateVerifySchemeData;
 
     @NameInMap("Message")
     private String message;
@@ -24,9 +24,9 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetAuthorizationUrlResponseBody(Builder builder) {
+    private JyCreateVerifySchemeResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
+        this.gateVerifySchemeData = builder.gateVerifySchemeData;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -35,7 +35,7 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetAuthorizationUrlResponseBody create() {
+    public static JyCreateVerifySchemeResponseBody create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
+     * @return gateVerifySchemeData
      */
-    public Data getData() {
-        return this.data;
+    public GateVerifySchemeData getGateVerifySchemeData() {
+        return this.gateVerifySchemeData;
     }
 
     /**
@@ -69,16 +69,12 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Data data; 
+        private GateVerifySchemeData gateVerifySchemeData; 
         private String message; 
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
-         * 
-         * *   If OK is returned, the request is successful.
-         * *   For more information about other error codes, see [API response codes](~~85198~~).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,15 +82,15 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * GateVerifySchemeData.
          */
-        public Builder data(Data data) {
-            this.data = data;
+        public Builder gateVerifySchemeData(GateVerifySchemeData gateVerifySchemeData) {
+            this.gateVerifySchemeData = gateVerifySchemeData;
             return this;
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,55 +98,55 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetAuthorizationUrlResponseBody build() {
-            return new GetAuthorizationUrlResponseBody(this);
+        public JyCreateVerifySchemeResponseBody build() {
+            return new JyCreateVerifySchemeResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("AuthorizationUrl")
-        private String authorizationUrl;
+    public static class GateVerifySchemeData extends TeaModel {
+        @NameInMap("SchemeCode")
+        private String schemeCode;
 
-        private Data(Builder builder) {
-            this.authorizationUrl = builder.authorizationUrl;
+        private GateVerifySchemeData(Builder builder) {
+            this.schemeCode = builder.schemeCode;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Data create() {
+        public static GateVerifySchemeData create() {
             return builder().build();
         }
 
         /**
-         * @return authorizationUrl
+         * @return schemeCode
          */
-        public String getAuthorizationUrl() {
-            return this.authorizationUrl;
+        public String getSchemeCode() {
+            return this.schemeCode;
         }
 
         public static final class Builder {
-            private String authorizationUrl; 
+            private String schemeCode; 
 
             /**
-             * The authorization URL.
+             * SchemeCode.
              */
-            public Builder authorizationUrl(String authorizationUrl) {
-                this.authorizationUrl = authorizationUrl;
+            public Builder schemeCode(String schemeCode) {
+                this.schemeCode = schemeCode;
                 return this;
             }
 
-            public Data build() {
-                return new Data(this);
+            public GateVerifySchemeData build() {
+                return new GateVerifySchemeData(this);
             } 
 
         } 

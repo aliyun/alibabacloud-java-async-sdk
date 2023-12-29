@@ -156,7 +156,7 @@ public class QuerySendDetailsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * The unique ID of the business, which is provided by Alibaba Cloud.
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -165,7 +165,7 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page on which you are reading the text message. Pages start from page 1. The value of this parameter cannot exceed the maximum page number.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -183,7 +183,7 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -219,7 +219,10 @@ public class QuerySendDetailsRequest extends Request {
         }
 
         /**
-         * SendDate.
+         * The date when the text message was sent. You can query text messages that were sent within the last 30 days.
+         * <p>
+         * 
+         * Specify the date in the yyyyMMdd format. Example: 20181225.
          */
         public Builder sendDate(String sendDate) {
             this.putQueryParameter("SendDate", sendDate);

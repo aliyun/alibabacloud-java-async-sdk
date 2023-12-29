@@ -86,7 +86,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +94,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code. If OK is returned, the request is successful. For more information, see [Response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa).
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned data.
          */
         public Builder model(Model model) {
             this.model = model;
@@ -118,7 +118,11 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
             private String verifyCode; 
 
             /**
-             * BizId.
+             * The business ID.
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -202,7 +206,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * OutId.
+             * The external ID.
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -210,7 +214,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The request ID.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -218,7 +222,7 @@ public class SendSmsVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyCode.
+             * The verification code.
              */
             public Builder verifyCode(String verifyCode) {
                 this.verifyCode = verifyCode;

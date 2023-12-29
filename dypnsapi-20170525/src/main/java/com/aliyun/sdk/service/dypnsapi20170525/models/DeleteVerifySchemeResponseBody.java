@@ -74,7 +74,7 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * Code.
+         * The request is successful. For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: The verification service is deleted.
+         * *   **false**: The verification service failed to be deleted.
          */
         public Builder result(Boolean result) {
             this.result = result;

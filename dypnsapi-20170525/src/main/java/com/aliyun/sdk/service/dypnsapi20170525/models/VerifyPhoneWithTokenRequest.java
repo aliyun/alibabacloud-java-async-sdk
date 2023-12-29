@@ -121,7 +121,7 @@ public class VerifyPhoneWithTokenRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -148,7 +148,7 @@ public class VerifyPhoneWithTokenRequest extends Request {
         }
 
         /**
-         * SpToken.
+         * The token for phone number verification that is obtained by the JavaScript SDK.
          */
         public Builder spToken(String spToken) {
             this.putQueryParameter("SpToken", spToken);

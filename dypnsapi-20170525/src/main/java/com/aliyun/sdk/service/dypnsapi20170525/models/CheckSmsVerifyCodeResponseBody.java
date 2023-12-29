@@ -86,7 +86,7 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -94,7 +94,11 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [Response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa).
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +106,7 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned data.
          */
         public Builder model(Model model) {
             this.model = model;
@@ -118,7 +122,11 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +178,7 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * OutId.
+             * The external ID.
              */
             public Builder outId(String outId) {
                 this.outId = outId;
@@ -178,7 +186,11 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyResult.
+             * The verification results. Valid values:
+             * <p>
+             * 
+             * *   PASS: The verification is successful.
+             * *   UNKNOWN: The verification failed.
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

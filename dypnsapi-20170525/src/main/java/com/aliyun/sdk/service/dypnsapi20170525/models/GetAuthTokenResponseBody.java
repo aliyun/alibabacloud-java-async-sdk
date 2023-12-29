@@ -74,7 +74,11 @@ public class GetAuthTokenResponseBody extends TeaModel {
         private TokenInfo tokenInfo; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TokenInfo.
+         * The response parameters.
          */
         public Builder tokenInfo(TokenInfo tokenInfo) {
             this.tokenInfo = tokenInfo;
@@ -150,7 +154,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
             private String jwtToken; 
 
             /**
-             * AccessToken.
+             * The business authentication token.
+             * <p>
+             * 
+             * >  AccessToken is valid for 10 minutes and can be used repeatedly within its validity period.
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -158,7 +165,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * JwtToken.
+             * The API authentication token.
+             * <p>
+             * 
+             * >  JwtToken is valid for 1 hour and can be used repeatedly within its validity period.
              */
             public Builder jwtToken(String jwtToken) {
                 this.jwtToken = jwtToken;

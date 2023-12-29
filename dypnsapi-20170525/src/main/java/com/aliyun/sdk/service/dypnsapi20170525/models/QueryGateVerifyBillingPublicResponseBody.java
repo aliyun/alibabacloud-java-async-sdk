@@ -74,7 +74,11 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code. Valid values:
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The billing information about each verification service.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +214,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             private String singlePrice; 
 
             /**
-             * Add.
+             * The billable items.
              */
             public Builder add(String add) {
                 this.add = add;
@@ -218,7 +222,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * Amount.
+             * The fees generated for the verification service. Unitrogen: CNY.
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -226,7 +230,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -234,7 +238,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * The verification method.
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -242,7 +246,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * SceneCode.
+             * The service code.
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -250,7 +254,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * The service name.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -258,7 +262,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * SinglePrice.
+             * The unit price. Unit: CNY.
              */
             public Builder singlePrice(String singlePrice) {
                 this.singlePrice = singlePrice;
@@ -311,7 +315,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             private java.util.List < SceneBillingList> sceneBillingList; 
 
             /**
-             * AmountSum.
+             * The fees generated for all verification services. Unitrogen: CNY.
              */
             public Builder amountSum(String amountSum) {
                 this.amountSum = amountSum;
@@ -319,7 +323,7 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
             }
 
             /**
-             * SceneBillingList.
+             * The details of fees.
              */
             public Builder sceneBillingList(java.util.List < SceneBillingList> sceneBillingList) {
                 this.sceneBillingList = sceneBillingList;

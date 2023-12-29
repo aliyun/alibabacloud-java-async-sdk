@@ -30,6 +30,10 @@ public class GetAuthTokenRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SceneCode")
+    private String sceneCode;
+
+    @Query
     @NameInMap("Url")
     @Validation(required = true)
     private String url;
@@ -40,6 +44,7 @@ public class GetAuthTokenRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sceneCode = builder.sceneCode;
         this.url = builder.url;
     }
 
@@ -85,6 +90,13 @@ public class GetAuthTokenRequest extends Request {
     }
 
     /**
+     * @return sceneCode
+     */
+    public String getSceneCode() {
+        return this.sceneCode;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -96,6 +108,7 @@ public class GetAuthTokenRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String sceneCode; 
         private String url; 
 
         private Builder() {
@@ -108,11 +121,12 @@ public class GetAuthTokenRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sceneCode = request.sceneCode;
             this.url = request.url;
         } 
 
         /**
-         * Origin.
+         * The requested domain name.
          */
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
@@ -148,7 +162,16 @@ public class GetAuthTokenRequest extends Request {
         }
 
         /**
-         * Url.
+         * SceneCode.
+         */
+        public Builder sceneCode(String sceneCode) {
+            this.putQueryParameter("SceneCode", sceneCode);
+            this.sceneCode = sceneCode;
+            return this;
+        }
+
+        /**
+         * The URL of the requested web page.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

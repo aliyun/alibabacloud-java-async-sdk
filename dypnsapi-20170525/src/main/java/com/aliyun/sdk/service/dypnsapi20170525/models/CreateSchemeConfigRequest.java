@@ -196,7 +196,7 @@ public class CreateSchemeConfigRequest extends Request {
         } 
 
         /**
-         * AndroidPackageName.
+         * The package name. This parameter is required when Platform is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
          */
         public Builder androidPackageName(String androidPackageName) {
             this.putQueryParameter("AndroidPackageName", androidPackageName);
@@ -205,7 +205,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * AndroidPackageSign.
+         * The package signature. This parameter is required when Platform is set to Android. The signature must be 32 characters in length and can contain digits and letters.
          */
         public Builder androidPackageSign(String androidPackageSign) {
             this.putQueryParameter("AndroidPackageSign", androidPackageSign);
@@ -214,7 +214,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The app name, which can be up to 20 characters in length and can contain letters.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -223,7 +223,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * H5Origin.
+         * The reserved field. HTML5 apps are not supported.
          */
         public Builder h5Origin(String h5Origin) {
             this.putQueryParameter("H5Origin", h5Origin);
@@ -232,7 +232,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * H5Url.
+         * The reserved field. HTML5 apps are not supported.
          */
         public Builder h5Url(String h5Url) {
             this.putQueryParameter("H5Url", h5Url);
@@ -241,7 +241,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * IosBundleId.
+         * The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).
          */
         public Builder iosBundleId(String iosBundleId) {
             this.putQueryParameter("IosBundleId", iosBundleId);
@@ -259,7 +259,13 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The app platform.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Android
+         * *   iOS
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -286,7 +292,7 @@ public class CreateSchemeConfigRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * The service name, which can be up to 10 characters in length and can contain letters.
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);

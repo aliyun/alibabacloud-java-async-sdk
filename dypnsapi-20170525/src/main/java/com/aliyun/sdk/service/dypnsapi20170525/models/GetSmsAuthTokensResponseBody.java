@@ -74,7 +74,11 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +190,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             private String stsToken; 
 
             /**
-             * BizToken.
+             * The business token.
              */
             public Builder bizToken(String bizToken) {
                 this.bizToken = bizToken;
@@ -194,7 +198,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the token expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -202,7 +206,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * StsAccessKeyId.
+             * The AccessKey ID.
              */
             public Builder stsAccessKeyId(String stsAccessKeyId) {
                 this.stsAccessKeyId = stsAccessKeyId;
@@ -210,7 +214,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * StsAccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder stsAccessKeySecret(String stsAccessKeySecret) {
                 this.stsAccessKeySecret = stsAccessKeySecret;
@@ -218,7 +222,7 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * StsToken.
+             * The security token.
              */
             public Builder stsToken(String stsToken) {
                 this.stsToken = stsToken;

@@ -85,7 +85,7 @@ public class VerifySmsCodeRequest extends Request {
         } 
 
         /**
-         * PhoneNumber.
+         * The phone number, which is used to receive SMS verification codes.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -94,7 +94,7 @@ public class VerifySmsCodeRequest extends Request {
         }
 
         /**
-         * SmsCode.
+         * The SMS verification code.
          */
         public Builder smsCode(String smsCode) {
             this.putQueryParameter("SmsCode", smsCode);
@@ -103,7 +103,7 @@ public class VerifySmsCodeRequest extends Request {
         }
 
         /**
-         * SmsToken.
+         * The text message verification code. After you successfully call the corresponding API operation to send the SMS verification code, the end users receive the SMS verification code. SmsToken is returned by the SDK for SMS verification for you to verify the text message verification code. For an Android client, sendVerifyCode is called to send the verification code. For an iOS client, sendVerifyCodeWithTimeout is called to send the verification code. For more information, see [Overview](~~400434~~).
          */
         public Builder smsToken(String smsToken) {
             this.putQueryParameter("SmsToken", smsToken);

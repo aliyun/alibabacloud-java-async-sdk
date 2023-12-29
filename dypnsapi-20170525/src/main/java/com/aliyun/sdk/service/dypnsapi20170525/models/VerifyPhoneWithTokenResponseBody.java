@@ -74,7 +74,11 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         }
 
         /**
-         * GateVerify.
+         * The response parameters.
          */
         public Builder gateVerify(GateVerify gateVerify) {
             this.gateVerify = gateVerify;
@@ -90,7 +94,7 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * VerifyId.
+             * The external ID.
              */
             public Builder verifyId(String verifyId) {
                 this.verifyId = verifyId;
@@ -158,7 +162,12 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyResult.
+             * The verification results. Valid values:
+             * <p>
+             * 
+             * *   PASS: The input phone number is consistent with the phone number used in HTML5 pages.
+             * *   REJECT: The input phone number is different from the phone number used in HTML5 pages.
+             * *   UNKNOWN: The system cannot judge whether the input phone number is consistent with the phone number used in HTML5 pages.
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

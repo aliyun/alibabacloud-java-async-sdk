@@ -111,7 +111,7 @@ public class GetMobileRequest extends Request {
         } 
 
         /**
-         * AccessToken.
+         * The logon token obtained by the SDK for your app.
          */
         public Builder accessToken(String accessToken) {
             this.putQueryParameter("AccessToken", accessToken);
@@ -120,7 +120,7 @@ public class GetMobileRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The external ID.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);

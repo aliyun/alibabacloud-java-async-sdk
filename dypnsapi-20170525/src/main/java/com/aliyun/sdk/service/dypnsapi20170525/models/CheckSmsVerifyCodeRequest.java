@@ -168,7 +168,11 @@ public class CheckSmsVerifyCodeRequest extends Request {
         } 
 
         /**
-         * CaseAuthPolicy.
+         * The verification policy for uppercase and lowercase letters of the verification code. Valid values:
+         * <p>
+         * 
+         * *   1: The verification policy does not distinguish uppercase and lowercase letters.
+         * *   2: The verification policy distinguishes uppercase and lowercase letters.
          */
         public Builder caseAuthPolicy(Long caseAuthPolicy) {
             this.putQueryParameter("CaseAuthPolicy", caseAuthPolicy);
@@ -177,7 +181,7 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * The country code of the phone number. Default value: 86.
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -186,7 +190,7 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The external ID.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -204,7 +208,7 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -231,7 +235,7 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * SchemeName.
+         * The verification service name. If this parameter is not specified, the default service is used. The name can be up to 20 characters in length.
          */
         public Builder schemeName(String schemeName) {
             this.putQueryParameter("SchemeName", schemeName);
@@ -240,7 +244,7 @@ public class CheckSmsVerifyCodeRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * The verification code.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

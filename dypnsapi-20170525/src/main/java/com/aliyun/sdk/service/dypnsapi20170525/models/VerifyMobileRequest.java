@@ -126,7 +126,7 @@ public class VerifyMobileRequest extends Request {
         } 
 
         /**
-         * AccessCode.
+         * The token obtained by the SDK for your app.
          */
         public Builder accessCode(String accessCode) {
             this.putQueryParameter("AccessCode", accessCode);
@@ -135,7 +135,7 @@ public class VerifyMobileRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The external ID.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -153,7 +153,7 @@ public class VerifyMobileRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

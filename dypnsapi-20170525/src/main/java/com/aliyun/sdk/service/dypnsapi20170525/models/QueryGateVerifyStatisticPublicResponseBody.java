@@ -74,7 +74,11 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code. Valid values:
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the calls of Phone Number Verification Service, including the total calls, the successful calls, failed calls, unknown calls, and daily calls within the statistical date range.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +178,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             private Long totalUnknown; 
 
             /**
-             * StatisticDateStr.
+             * The date. This field is accurate to the day. The value of this field is in the YYYYMMDD format. Example: 20220103.
              */
             public Builder statisticDateStr(String statisticDateStr) {
                 this.statisticDateStr = statisticDateStr;
@@ -182,7 +186,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFail.
+             * The failed calls on the day.
              */
             public Builder totalFail(Long totalFail) {
                 this.totalFail = totalFail;
@@ -190,7 +194,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSuccess.
+             * The successful calls on the day.
              */
             public Builder totalSuccess(Long totalSuccess) {
                 this.totalSuccess = totalSuccess;
@@ -198,7 +202,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUnknown.
+             * The unknown calls on the day.
              */
             public Builder totalUnknown(Long totalUnknown) {
                 this.totalUnknown = totalUnknown;
@@ -287,7 +291,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             private Long totalUnknown; 
 
             /**
-             * DayStatistic.
+             * The information about the daily calls.
              */
             public Builder dayStatistic(java.util.List < DayStatistic> dayStatistic) {
                 this.dayStatistic = dayStatistic;
@@ -295,7 +299,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total calls.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -303,7 +307,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFail.
+             * The failed calls.
              */
             public Builder totalFail(Long totalFail) {
                 this.totalFail = totalFail;
@@ -311,7 +315,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSuccess.
+             * The successful calls.
              */
             public Builder totalSuccess(Long totalSuccess) {
                 this.totalSuccess = totalSuccess;
@@ -319,7 +323,7 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUnknown.
+             * The unknown calls.
              */
             public Builder totalUnknown(Long totalUnknown) {
                 this.totalUnknown = totalUnknown;

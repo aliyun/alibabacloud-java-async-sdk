@@ -86,7 +86,7 @@ public class GetFusionAuthTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class GetFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The authentication code. The value of this parameter is a string.
          */
         public Builder model(String model) {
             this.model = model;
@@ -110,7 +110,7 @@ public class GetFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true false
          */
         public Builder success(Boolean success) {
             this.success = success;

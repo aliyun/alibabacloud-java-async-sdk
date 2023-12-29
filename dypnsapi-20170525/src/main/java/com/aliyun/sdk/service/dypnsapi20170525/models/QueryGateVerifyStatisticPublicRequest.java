@@ -141,7 +141,13 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         } 
 
         /**
-         * AuthenticationType.
+         * The verification method. Valid values:
+         * <p>
+         * 
+         * *   **1**: one-click logon
+         * *   **2**: phone number verification, including the verification of the phone number used in HTML5 pages
+         * *   **3**: SMS verification
+         * *   **4**: facial recognition
          */
         public Builder authenticationType(Integer authenticationType) {
             this.putQueryParameter("AuthenticationType", authenticationType);
@@ -150,7 +156,7 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -159,7 +165,11 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The type of the operating system. Valid values:
+         * <p>
+         * 
+         * *   **Android**
+         * *   **iOS**
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -186,7 +196,7 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * The service code.
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -195,7 +205,7 @@ public class QueryGateVerifyStatisticPublicRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

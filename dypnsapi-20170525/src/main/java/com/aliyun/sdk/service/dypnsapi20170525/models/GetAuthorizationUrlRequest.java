@@ -126,7 +126,7 @@ public class GetAuthorizationUrlRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -144,7 +144,7 @@ public class GetAuthorizationUrlRequest extends Request {
         }
 
         /**
-         * PhoneNo.
+         * The phone number.
          */
         public Builder phoneNo(String phoneNo) {
             this.putQueryParameter("PhoneNo", phoneNo);
@@ -171,7 +171,7 @@ public class GetAuthorizationUrlRequest extends Request {
         }
 
         /**
-         * SchemeId.
+         * The ID of the authorization scenario. You can view the ID of the authorization scenario on the **Authorization Scenario Management** page in the **Phone Number Verification Service console**.
          */
         public Builder schemeId(Long schemeId) {
             this.putQueryParameter("SchemeId", schemeId);

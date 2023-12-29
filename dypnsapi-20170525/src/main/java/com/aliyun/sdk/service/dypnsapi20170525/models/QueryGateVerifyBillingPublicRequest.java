@@ -98,7 +98,14 @@ public class QueryGateVerifyBillingPublicRequest extends Request {
         } 
 
         /**
-         * AuthenticationType.
+         * The verification method. Valid values:
+         * <p>
+         * 
+         * *   **0**: phone number verification
+         * *   **1**: one-click logon
+         * *   **2**: all
+         * *   **3**: facial recognition
+         * *   **4**: SMS verification
          */
         public Builder authenticationType(Integer authenticationType) {
             this.putQueryParameter("AuthenticationType", authenticationType);
@@ -107,7 +114,7 @@ public class QueryGateVerifyBillingPublicRequest extends Request {
         }
 
         /**
-         * Month.
+         * The month in which the bill is generated. Specify this parameter in the YYYYMM format. Example: 202111.
          */
         public Builder month(String month) {
             this.putQueryParameter("Month", month);

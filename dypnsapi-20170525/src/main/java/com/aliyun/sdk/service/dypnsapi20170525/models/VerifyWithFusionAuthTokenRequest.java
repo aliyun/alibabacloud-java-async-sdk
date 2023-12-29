@@ -124,7 +124,7 @@ public class VerifyWithFusionAuthTokenRequest extends Request {
         }
 
         /**
-         * VerifyToken.
+         * The unified verification token that is returned by the client SDKs.
          */
         public Builder verifyToken(String verifyToken) {
             this.putQueryParameter("VerifyToken", verifyToken);

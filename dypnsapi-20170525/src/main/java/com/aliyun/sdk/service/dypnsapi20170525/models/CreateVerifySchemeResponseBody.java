@@ -98,7 +98,11 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   For more information about other error codes, see [API response codes](~~85198~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +110,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * GateVerifySchemeDTO.
+         * The response parameters.
          */
         public Builder gateVerifySchemeDTO(GateVerifySchemeDTO gateVerifySchemeDTO) {
             this.gateVerifySchemeDTO = gateVerifySchemeDTO;
@@ -114,7 +118,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +126,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +186,7 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
             private String schemeCode; 
 
             /**
-             * SchemeCode.
+             * The service code.
              */
             public Builder schemeCode(String schemeCode) {
                 this.schemeCode = schemeCode;

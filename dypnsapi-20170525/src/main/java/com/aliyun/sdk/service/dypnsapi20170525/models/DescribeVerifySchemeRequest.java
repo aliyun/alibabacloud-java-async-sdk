@@ -111,7 +111,7 @@ public class DescribeVerifySchemeRequest extends Request {
         } 
 
         /**
-         * CustomerId.
+         * The user ID.
          */
         public Builder customerId(Long customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -147,7 +147,7 @@ public class DescribeVerifySchemeRequest extends Request {
         }
 
         /**
-         * SchemeCode.
+         * The service code.
          */
         public Builder schemeCode(String schemeCode) {
             this.putQueryParameter("SchemeCode", schemeCode);

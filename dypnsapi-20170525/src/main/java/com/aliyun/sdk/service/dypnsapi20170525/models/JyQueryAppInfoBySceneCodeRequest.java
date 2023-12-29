@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPhoneWithTokenRequest} extends {@link RequestModel}
+ * {@link JyQueryAppInfoBySceneCodeRequest} extends {@link RequestModel}
  *
- * <p>GetPhoneWithTokenRequest</p>
+ * <p>JyQueryAppInfoBySceneCodeRequest</p>
  */
-public class GetPhoneWithTokenRequest extends Request {
+public class JyQueryAppInfoBySceneCodeRequest extends Request {
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -25,23 +25,23 @@ public class GetPhoneWithTokenRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SpToken")
+    @NameInMap("SceneCode")
     @Validation(required = true)
-    private String spToken;
+    private String sceneCode;
 
-    private GetPhoneWithTokenRequest(Builder builder) {
+    private JyQueryAppInfoBySceneCodeRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.spToken = builder.spToken;
+        this.sceneCode = builder.sceneCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetPhoneWithTokenRequest create() {
+    public static JyQueryAppInfoBySceneCodeRequest create() {
         return builder().build();
     }
 
@@ -72,28 +72,28 @@ public class GetPhoneWithTokenRequest extends Request {
     }
 
     /**
-     * @return spToken
+     * @return sceneCode
      */
-    public String getSpToken() {
-        return this.spToken;
+    public String getSceneCode() {
+        return this.sceneCode;
     }
 
-    public static final class Builder extends Request.Builder<GetPhoneWithTokenRequest, Builder> {
+    public static final class Builder extends Request.Builder<JyQueryAppInfoBySceneCodeRequest, Builder> {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String spToken; 
+        private String sceneCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetPhoneWithTokenRequest request) {
+        private Builder(JyQueryAppInfoBySceneCodeRequest request) {
             super(request);
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.spToken = request.spToken;
+            this.sceneCode = request.sceneCode;
         } 
 
         /**
@@ -124,17 +124,17 @@ public class GetPhoneWithTokenRequest extends Request {
         }
 
         /**
-         * The token for phone number verification that is obtained by the JavaScript SDK. The validity period of the token is 10 minutes for China Telecom, 30 minutes for China Unicom, and 2 minutes for China Mobile. The token can be used only once.
+         * SceneCode.
          */
-        public Builder spToken(String spToken) {
-            this.putQueryParameter("SpToken", spToken);
-            this.spToken = spToken;
+        public Builder sceneCode(String sceneCode) {
+            this.putQueryParameter("SceneCode", sceneCode);
+            this.sceneCode = sceneCode;
             return this;
         }
 
         @Override
-        public GetPhoneWithTokenRequest build() {
-            return new GetPhoneWithTokenRequest(this);
+        public JyQueryAppInfoBySceneCodeRequest build() {
+            return new JyQueryAppInfoBySceneCodeRequest(this);
         } 
 
     } 

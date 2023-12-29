@@ -86,7 +86,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * The returned data.
          */
         public Builder model(Model model) {
             this.model = model;
@@ -110,7 +110,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * PhoneNumber.
+             * The phone number, which is returned when the verification is successful.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -190,7 +190,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneScore.
+             * The phone number score, which is generated only after the phone number scoring node is enabled and the verification is successful. The higher the score, the more risky the phone number. Valid values: 0 to 100.
              */
             public Builder phoneScore(Long phoneScore) {
                 this.phoneScore = phoneScore;
@@ -198,7 +198,7 @@ public class VerifyWithFusionAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyResult.
+             * The verification result. Valid values: PASS and UNKNOWN.
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;
