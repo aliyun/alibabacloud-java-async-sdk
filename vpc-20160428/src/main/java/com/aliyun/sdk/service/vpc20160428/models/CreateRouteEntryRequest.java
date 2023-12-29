@@ -272,7 +272,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopList.
+         * The next hop list.
          */
         public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);

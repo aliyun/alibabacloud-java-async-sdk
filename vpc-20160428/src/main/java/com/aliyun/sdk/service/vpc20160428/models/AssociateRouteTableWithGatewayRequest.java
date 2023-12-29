@@ -222,7 +222,7 @@ public class AssociateRouteTableWithGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * The type of a gateway to be associated with a route table.
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);

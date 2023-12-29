@@ -219,7 +219,7 @@ public class DissociateRouteTableFromGatewayRequest extends Request {
         }
 
         /**
-         * GatewayType.
+         * The type of a gateway to be disassociated from a route table.
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("GatewayType", gatewayType);

@@ -202,7 +202,7 @@ public class DeleteRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopList.
+         * The list of the next hop of the ECMP route.
          */
         public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);

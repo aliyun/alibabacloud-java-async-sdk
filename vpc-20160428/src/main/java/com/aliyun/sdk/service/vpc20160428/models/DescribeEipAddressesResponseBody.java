@@ -911,7 +911,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
+             * The bandwidth type. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
@@ -931,7 +931,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The service state of the EIP. Valid values:
+             * The service status of the EIP. Valid values:
              * <p>
              * 
              * *   **Normal**
@@ -1018,8 +1018,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The line type. Valid values:
              * <p>
              * 
-             * *   **BGP**: BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+             * *   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
              * 
              * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
              * 
@@ -1060,7 +1060,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **EcsInstance**: an ECS instance in a VPC.
-             * *   **SlbInstance**: an SLB instance in a VPC.
+             * *   **SlbInstance**: a CLB instance in a VPC.
              * *   **Nat**: a NAT gateway.
              * *   **HaVip**: an HAVIP.
              * *   **NetworkInterface**: a secondary ENI.
@@ -1075,8 +1075,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The metering method of the EIP. Valid values:
              * <p>
              * 
-             * *   **PayByBandwidth**: pay-by-bandwidth.
-             * *   **PayByTraffic**: pay-by-traffic.
+             * *   **PayByBandwidth**
+             * *   **PayByTraffic**
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1084,7 +1084,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The EIP.
+             * The IP address of the EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1092,7 +1092,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The association mode. Valid values:
+             * <p>
+             * 
+             * *   **NAT**: NAT mode
+             * *   **MULTI_BINDED**: multi-EIP-to-ENI mode
+             * *   **BINDED**: cut-through mode
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1124,7 +1129,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address of the secondary ENI with which the EIP is associated.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -1167,8 +1172,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The metering method that is used after the renewal takes effect. Valid values:
              * <p>
              * 
-             * *   **PayByBandwidth**: pay-by-bandwidth.
-             * *   **PayByTraffic**: pay-by-traffic.
+             * *   **PayByBandwidth**
+             * *   **PayByTraffic**
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -1189,7 +1194,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1221,7 +1226,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contiguous EIP group.
+             * The IDs of contiguous EIPs.
              * <p>
              * 
              * This value is returned only when you query contiguous EIPs.
@@ -1235,8 +1240,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * Indicates whether the resource is created by the service account. Valid values:
              * <p>
              * 
-             * *   **0**: The resource is not created by the service account.
-             * *   **1**: The resource is created by the service account.
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -1244,7 +1249,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the EIP. Valid values:
+             * The status of the EIP. Valid values:
              * <p>
              * 
              * *   **Associating**

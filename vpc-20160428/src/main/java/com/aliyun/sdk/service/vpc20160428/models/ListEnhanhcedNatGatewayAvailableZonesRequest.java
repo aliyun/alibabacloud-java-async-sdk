@@ -17,6 +17,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("Filter")
+    private java.util.List < Filter> filter;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -40,6 +44,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
     private ListEnhanhcedNatGatewayAvailableZonesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.filter = builder.filter;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -65,6 +70,13 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return filter
+     */
+    public java.util.List < Filter> getFilter() {
+        return this.filter;
     }
 
     /**
@@ -104,6 +116,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEnhanhcedNatGatewayAvailableZonesRequest, Builder> {
         private String acceptLanguage; 
+        private java.util.List < Filter> filter; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -117,6 +130,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         private Builder(ListEnhanhcedNatGatewayAvailableZonesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.filter = request.filter;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -134,6 +148,15 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * Filter.
+         */
+        public Builder filter(java.util.List < Filter> filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
             return this;
         }
 
@@ -194,4 +217,65 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
 
     } 
 
+    public static class Filter extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Filter(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Filter build() {
+                return new Filter(this);
+            } 
+
+        } 
+
+    }
 }

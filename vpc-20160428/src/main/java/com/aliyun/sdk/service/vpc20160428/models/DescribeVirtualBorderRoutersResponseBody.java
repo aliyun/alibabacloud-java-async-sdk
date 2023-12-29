@@ -792,6 +792,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("EccId")
         private String eccId;
 
+        @NameInMap("EcrAttatchStatus")
+        private String ecrAttatchStatus;
+
+        @NameInMap("EcrId")
+        private String ecrId;
+
         @NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
@@ -849,6 +855,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         private String routeTableId;
 
+        @NameInMap("SitelinkEnable")
+        private Boolean sitelinkEnable;
+
         @NameInMap("Status")
         private String status;
 
@@ -882,6 +891,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.description = builder.description;
             this.detectMultiplier = builder.detectMultiplier;
             this.eccId = builder.eccId;
+            this.ecrAttatchStatus = builder.ecrAttatchStatus;
+            this.ecrId = builder.ecrId;
             this.enableIpv6 = builder.enableIpv6;
             this.localGatewayIp = builder.localGatewayIp;
             this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
@@ -901,6 +912,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.recoveryTime = builder.recoveryTime;
             this.resourceGroupId = builder.resourceGroupId;
             this.routeTableId = builder.routeTableId;
+            this.sitelinkEnable = builder.sitelinkEnable;
             this.status = builder.status;
             this.tags = builder.tags;
             this.terminationTime = builder.terminationTime;
@@ -993,6 +1005,20 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public String getEccId() {
             return this.eccId;
+        }
+
+        /**
+         * @return ecrAttatchStatus
+         */
+        public String getEcrAttatchStatus() {
+            return this.ecrAttatchStatus;
+        }
+
+        /**
+         * @return ecrId
+         */
+        public String getEcrId() {
+            return this.ecrId;
         }
 
         /**
@@ -1129,6 +1155,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
+         * @return sitelinkEnable
+         */
+        public Boolean getSitelinkEnable() {
+            return this.sitelinkEnable;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1189,6 +1222,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String description; 
             private Long detectMultiplier; 
             private String eccId; 
+            private String ecrAttatchStatus; 
+            private String ecrId; 
             private Boolean enableIpv6; 
             private String localGatewayIp; 
             private String localIpv6GatewayIp; 
@@ -1208,6 +1243,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String recoveryTime; 
             private String resourceGroupId; 
             private String routeTableId; 
+            private Boolean sitelinkEnable; 
             private String status; 
             private VirtualBorderRouterTypeTags tags; 
             private String terminationTime; 
@@ -1306,6 +1342,22 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
+                return this;
+            }
+
+            /**
+             * EcrAttatchStatus.
+             */
+            public Builder ecrAttatchStatus(String ecrAttatchStatus) {
+                this.ecrAttatchStatus = ecrAttatchStatus;
+                return this;
+            }
+
+            /**
+             * EcrId.
+             */
+            public Builder ecrId(String ecrId) {
+                this.ecrId = ecrId;
                 return this;
             }
 
@@ -1482,6 +1534,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
+                return this;
+            }
+
+            /**
+             * SitelinkEnable.
+             */
+            public Builder sitelinkEnable(Boolean sitelinkEnable) {
+                this.sitelinkEnable = sitelinkEnable;
                 return this;
             }
 

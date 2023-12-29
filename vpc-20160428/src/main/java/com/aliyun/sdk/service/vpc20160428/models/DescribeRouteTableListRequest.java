@@ -344,7 +344,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * RouteTableType.
+         * The type of the route table. Valid values:
+         * <p>
+         * - **System**
+         * - **Custom**
          */
         public Builder routeTableType(String routeTableType) {
             this.putQueryParameter("RouteTableType", routeTableType);

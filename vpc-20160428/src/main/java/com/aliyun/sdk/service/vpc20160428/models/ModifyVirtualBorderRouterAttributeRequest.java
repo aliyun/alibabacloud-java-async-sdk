@@ -98,6 +98,10 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SitelinkEnable")
+    private Boolean sitelinkEnable;
+
+    @Query
     @NameInMap("VbrId")
     @Validation(required = true)
     private String vbrId;
@@ -129,6 +133,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sitelinkEnable = builder.sitelinkEnable;
         this.vbrId = builder.vbrId;
         this.vlanId = builder.vlanId;
     }
@@ -294,6 +299,13 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
     }
 
     /**
+     * @return sitelinkEnable
+     */
+    public Boolean getSitelinkEnable() {
+        return this.sitelinkEnable;
+    }
+
+    /**
      * @return vbrId
      */
     public String getVbrId() {
@@ -329,6 +341,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean sitelinkEnable; 
         private String vbrId; 
         private Integer vlanId; 
 
@@ -359,6 +372,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sitelinkEnable = request.sitelinkEnable;
             this.vbrId = request.vbrId;
             this.vlanId = request.vlanId;
         } 
@@ -596,6 +610,15 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SitelinkEnable.
+         */
+        public Builder sitelinkEnable(Boolean sitelinkEnable) {
+            this.putQueryParameter("SitelinkEnable", sitelinkEnable);
+            this.sitelinkEnable = sitelinkEnable;
             return this;
         }
 

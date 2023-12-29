@@ -41,6 +41,14 @@ public class ListFullNatEntriesRequest extends Request {
     private String natGatewayId;
 
     @Query
+    @NameInMap("NatIp")
+    private String natIp;
+
+    @Query
+    @NameInMap("NatIpPort")
+    private String natIpPort;
+
+    @Query
     @NameInMap("NetworkInterfaceIds")
     private java.util.List < String > networkInterfaceIds;
 
@@ -78,6 +86,8 @@ public class ListFullNatEntriesRequest extends Request {
         this.ipProtocol = builder.ipProtocol;
         this.maxResults = builder.maxResults;
         this.natGatewayId = builder.natGatewayId;
+        this.natIp = builder.natIp;
+        this.natIpPort = builder.natIpPort;
         this.networkInterfaceIds = builder.networkInterfaceIds;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -150,6 +160,20 @@ public class ListFullNatEntriesRequest extends Request {
     }
 
     /**
+     * @return natIp
+     */
+    public String getNatIp() {
+        return this.natIp;
+    }
+
+    /**
+     * @return natIpPort
+     */
+    public String getNatIpPort() {
+        return this.natIpPort;
+    }
+
+    /**
      * @return networkInterfaceIds
      */
     public java.util.List < String > getNetworkInterfaceIds() {
@@ -206,6 +230,8 @@ public class ListFullNatEntriesRequest extends Request {
         private String ipProtocol; 
         private Long maxResults; 
         private String natGatewayId; 
+        private String natIp; 
+        private String natIpPort; 
         private java.util.List < String > networkInterfaceIds; 
         private String nextToken; 
         private String ownerAccount; 
@@ -227,6 +253,8 @@ public class ListFullNatEntriesRequest extends Request {
             this.ipProtocol = request.ipProtocol;
             this.maxResults = request.maxResults;
             this.natGatewayId = request.natGatewayId;
+            this.natIp = request.natIp;
+            this.natIpPort = request.natIpPort;
             this.networkInterfaceIds = request.networkInterfaceIds;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -314,6 +342,24 @@ public class ListFullNatEntriesRequest extends Request {
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * The NAT IP address that provides address translation in FULLNAT entries.
+         */
+        public Builder natIp(String natIp) {
+            this.putQueryParameter("NatIp", natIp);
+            this.natIp = natIp;
+            return this;
+        }
+
+        /**
+         * The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.
+         */
+        public Builder natIpPort(String natIpPort) {
+            this.putQueryParameter("NatIpPort", natIpPort);
+            this.natIpPort = natIpPort;
             return this;
         }
 

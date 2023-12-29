@@ -336,7 +336,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -432,7 +432,10 @@ public class CreateVSwitchRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -440,7 +443,10 @@ public class CreateVSwitchRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;
