@@ -99,7 +99,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         private Integer timeoutSeconds; 
 
         /**
-         * 健康检查失败次数阈值，达到该值后系统认为检查失败
+         * failureThreshold.
          */
         public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
@@ -107,7 +107,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * 容器自定义健康检查URL地址
+         * httpGetUrl.
          */
         public Builder httpGetUrl(String httpGetUrl) {
             this.httpGetUrl = httpGetUrl;
@@ -115,7 +115,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * 容器启动到发起健康检查的延迟
+         * initialDelaySeconds.
          */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
@@ -123,7 +123,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * 健康检查周期
+         * periodSeconds.
          */
         public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
@@ -131,7 +131,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * 健康检查成功次数阈值，达到该值后系统认为检查成功
+         * successThreshold.
          */
         public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
@@ -139,7 +139,7 @@ public class CustomHealthCheckConfig extends TeaModel {
         }
 
         /**
-         * 健康检查超时时间
+         * timeoutSeconds.
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;

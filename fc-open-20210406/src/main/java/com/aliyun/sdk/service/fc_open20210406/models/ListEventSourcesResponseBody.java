@@ -38,7 +38,7 @@ public class ListEventSourcesResponseBody extends TeaModel {
         private java.util.List < EventSources> eventSources; 
 
         /**
-         * Queries all the event sources of a function.
+         * The information about event sources.
          */
         public Builder eventSources(java.util.List < EventSources> eventSources) {
             this.eventSources = eventSources;
@@ -90,7 +90,7 @@ public class ListEventSourcesResponseBody extends TeaModel {
             private String sourceArn; 
 
             /**
-             * 创建时间
+             * The time when the event source was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -98,7 +98,7 @@ public class ListEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Jianyi
+             * The ARN of the event source.
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;

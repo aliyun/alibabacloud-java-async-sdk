@@ -64,7 +64,7 @@ public class TLSConfig extends TeaModel {
         private String minVersion; 
 
         /**
-         * TLS加密套件列表
+         * cipherSuites.
          */
         public Builder cipherSuites(java.util.List < String > cipherSuites) {
             this.cipherSuites = cipherSuites;
@@ -72,7 +72,7 @@ public class TLSConfig extends TeaModel {
         }
 
         /**
-         * TLS最大版本号
+         * maxVersion.
          */
         public Builder maxVersion(String maxVersion) {
             this.maxVersion = maxVersion;
@@ -80,7 +80,7 @@ public class TLSConfig extends TeaModel {
         }
 
         /**
-         * TLS最小版本号
+         * minVersion.
          */
         public Builder minVersion(String minVersion) {
             this.minVersion = minVersion;

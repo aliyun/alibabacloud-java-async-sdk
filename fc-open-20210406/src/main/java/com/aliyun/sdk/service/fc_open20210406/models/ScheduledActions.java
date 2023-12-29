@@ -86,7 +86,7 @@ public class ScheduledActions extends TeaModel {
         private Long target; 
 
         /**
-         * endTime
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -94,7 +94,7 @@ public class ScheduledActions extends TeaModel {
         }
 
         /**
-         * name
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -102,7 +102,7 @@ public class ScheduledActions extends TeaModel {
         }
 
         /**
-         * scheduleExpression
+         * scheduleExpression.
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
@@ -110,7 +110,7 @@ public class ScheduledActions extends TeaModel {
         }
 
         /**
-         * startTime
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -118,7 +118,7 @@ public class ScheduledActions extends TeaModel {
         }
 
         /**
-         * target
+         * target.
          */
         public Builder target(Long target) {
             this.target = target;

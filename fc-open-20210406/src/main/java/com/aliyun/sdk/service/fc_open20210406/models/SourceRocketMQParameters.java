@@ -12,13 +12,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SourceRocketMQParameters</p>
  */
 public class SourceRocketMQParameters extends TeaModel {
+    @NameInMap("AuthType")
+    private String authType;
+
+    @NameInMap("FilterSql")
+    private String filterSql;
+
+    @NameInMap("FilterType")
+    private String filterType;
+
     @NameInMap("GroupID")
     @Validation(required = true)
     private String groupID;
 
+    @NameInMap("InstanceEndpoint")
+    private String instanceEndpoint;
+
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @NameInMap("InstanceNetwork")
+    private String instanceNetwork;
+
+    @NameInMap("InstancePassword")
+    private String instancePassword;
+
+    @NameInMap("InstanceSecurityGroupId")
+    private String instanceSecurityGroupId;
+
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @NameInMap("InstanceUsername")
+    private String instanceUsername;
+
+    @NameInMap("InstanceVSwitchIds")
+    private String instanceVSwitchIds;
+
+    @NameInMap("InstanceVpcId")
+    private String instanceVpcId;
 
     @NameInMap("Offset")
     private String offset;
@@ -37,8 +70,19 @@ public class SourceRocketMQParameters extends TeaModel {
     private String topic;
 
     private SourceRocketMQParameters(Builder builder) {
+        this.authType = builder.authType;
+        this.filterSql = builder.filterSql;
+        this.filterType = builder.filterType;
         this.groupID = builder.groupID;
+        this.instanceEndpoint = builder.instanceEndpoint;
         this.instanceId = builder.instanceId;
+        this.instanceNetwork = builder.instanceNetwork;
+        this.instancePassword = builder.instancePassword;
+        this.instanceSecurityGroupId = builder.instanceSecurityGroupId;
+        this.instanceType = builder.instanceType;
+        this.instanceUsername = builder.instanceUsername;
+        this.instanceVSwitchIds = builder.instanceVSwitchIds;
+        this.instanceVpcId = builder.instanceVpcId;
         this.offset = builder.offset;
         this.regionId = builder.regionId;
         this.tag = builder.tag;
@@ -55,6 +99,27 @@ public class SourceRocketMQParameters extends TeaModel {
     }
 
     /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
+    }
+
+    /**
+     * @return filterSql
+     */
+    public String getFilterSql() {
+        return this.filterSql;
+    }
+
+    /**
+     * @return filterType
+     */
+    public String getFilterType() {
+        return this.filterType;
+    }
+
+    /**
      * @return groupID
      */
     public String getGroupID() {
@@ -62,10 +127,66 @@ public class SourceRocketMQParameters extends TeaModel {
     }
 
     /**
+     * @return instanceEndpoint
+     */
+    public String getInstanceEndpoint() {
+        return this.instanceEndpoint;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceNetwork
+     */
+    public String getInstanceNetwork() {
+        return this.instanceNetwork;
+    }
+
+    /**
+     * @return instancePassword
+     */
+    public String getInstancePassword() {
+        return this.instancePassword;
+    }
+
+    /**
+     * @return instanceSecurityGroupId
+     */
+    public String getInstanceSecurityGroupId() {
+        return this.instanceSecurityGroupId;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
+     * @return instanceUsername
+     */
+    public String getInstanceUsername() {
+        return this.instanceUsername;
+    }
+
+    /**
+     * @return instanceVSwitchIds
+     */
+    public String getInstanceVSwitchIds() {
+        return this.instanceVSwitchIds;
+    }
+
+    /**
+     * @return instanceVpcId
+     */
+    public String getInstanceVpcId() {
+        return this.instanceVpcId;
     }
 
     /**
@@ -104,8 +225,19 @@ public class SourceRocketMQParameters extends TeaModel {
     }
 
     public static final class Builder {
+        private String authType; 
+        private String filterSql; 
+        private String filterType; 
         private String groupID; 
+        private String instanceEndpoint; 
         private String instanceId; 
+        private String instanceNetwork; 
+        private String instancePassword; 
+        private String instanceSecurityGroupId; 
+        private String instanceType; 
+        private String instanceUsername; 
+        private String instanceVSwitchIds; 
+        private String instanceVpcId; 
         private String offset; 
         private String regionId; 
         private String tag; 
@@ -113,7 +245,31 @@ public class SourceRocketMQParameters extends TeaModel {
         private String topic; 
 
         /**
-         * GroupID
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+
+        /**
+         * FilterSql.
+         */
+        public Builder filterSql(String filterSql) {
+            this.filterSql = filterSql;
+            return this;
+        }
+
+        /**
+         * FilterType.
+         */
+        public Builder filterType(String filterType) {
+            this.filterType = filterType;
+            return this;
+        }
+
+        /**
+         * GroupID.
          */
         public Builder groupID(String groupID) {
             this.groupID = groupID;
@@ -121,7 +277,15 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * InstanceId
+         * InstanceEndpoint.
+         */
+        public Builder instanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
+            return this;
+        }
+
+        /**
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -129,7 +293,63 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * Offset
+         * InstanceNetwork.
+         */
+        public Builder instanceNetwork(String instanceNetwork) {
+            this.instanceNetwork = instanceNetwork;
+            return this;
+        }
+
+        /**
+         * InstancePassword.
+         */
+        public Builder instancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
+            return this;
+        }
+
+        /**
+         * InstanceSecurityGroupId.
+         */
+        public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
+            this.instanceSecurityGroupId = instanceSecurityGroupId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * InstanceUsername.
+         */
+        public Builder instanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+
+        /**
+         * InstanceVSwitchIds.
+         */
+        public Builder instanceVSwitchIds(String instanceVSwitchIds) {
+            this.instanceVSwitchIds = instanceVSwitchIds;
+            return this;
+        }
+
+        /**
+         * InstanceVpcId.
+         */
+        public Builder instanceVpcId(String instanceVpcId) {
+            this.instanceVpcId = instanceVpcId;
+            return this;
+        }
+
+        /**
+         * Offset.
          */
         public Builder offset(String offset) {
             this.offset = offset;
@@ -137,7 +357,7 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -145,7 +365,7 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * Tag
+         * Tag.
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -153,7 +373,7 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * Timestamp
+         * Timestamp.
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -161,7 +381,7 @@ public class SourceRocketMQParameters extends TeaModel {
         }
 
         /**
-         * Topic
+         * Topic.
          */
         public Builder topic(String topic) {
             this.topic = topic;

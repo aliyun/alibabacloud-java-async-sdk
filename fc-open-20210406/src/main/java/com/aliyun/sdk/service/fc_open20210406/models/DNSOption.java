@@ -51,7 +51,7 @@ public class DNSOption extends TeaModel {
         private String value; 
 
         /**
-         * DNS option 名称
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -59,7 +59,7 @@ public class DNSOption extends TeaModel {
         }
 
         /**
-         * DNS option 值
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

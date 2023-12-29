@@ -110,7 +110,7 @@ public class TargetTrackingPolicies extends TeaModel {
         private String startTime; 
 
         /**
-         * endTime
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -118,7 +118,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * maxCapacity
+         * maxCapacity.
          */
         public Builder maxCapacity(Long maxCapacity) {
             this.maxCapacity = maxCapacity;
@@ -126,7 +126,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * metricTarget
+         * metricTarget.
          */
         public Builder metricTarget(Double metricTarget) {
             this.metricTarget = metricTarget;
@@ -134,7 +134,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * metricType
+         * metricType.
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -142,7 +142,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * minCapacity
+         * minCapacity.
          */
         public Builder minCapacity(Long minCapacity) {
             this.minCapacity = minCapacity;
@@ -150,7 +150,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * name
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -158,7 +158,7 @@ public class TargetTrackingPolicies extends TeaModel {
         }
 
         /**
-         * startTime
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -50,7 +50,7 @@ public class GetFunctionCodeResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * function code包的CRC64值
+         * The CRC-64 value of the function code package.
          */
         public Builder checksum(String checksum) {
             this.checksum = checksum;
@@ -58,7 +58,7 @@ public class GetFunctionCodeResponseBody extends TeaModel {
         }
 
         /**
-         * 获取function代码的URL
+         * The URL of the function code package.
          */
         public Builder url(String url) {
             this.url = url;

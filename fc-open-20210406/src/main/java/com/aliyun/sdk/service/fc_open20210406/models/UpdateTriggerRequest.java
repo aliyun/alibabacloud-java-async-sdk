@@ -197,7 +197,7 @@ public class UpdateTriggerRequest extends Request {
         } 
 
         /**
-         * The name of the function.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -206,7 +206,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -215,7 +215,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The definition of the trigger.
+         * The name of the trigger.
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);
@@ -224,7 +224,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of [CreateTrigger](~~190054~~), [GetTrigger](~~190056~~), and [UpdateTrigger](~~190055~~) operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -233,7 +233,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -242,7 +242,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -251,7 +251,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The ETag that is used to modify the trigger. This parameter is used to ensure that the modified trigger is consistent with the trigger to be modified.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -260,7 +260,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The description of the trigger.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -269,7 +269,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The version or alias of the service.
+         * The role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see [Overview](~~53102~~).
          */
         public Builder invocationRole(String invocationRole) {
             this.putBodyParameter("invocationRole", invocationRole);
@@ -278,16 +278,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
-         * <p>
-         * 
-         * *   OSS trigger: [OSSTriggerConfig](~~struct:OSSTriggerConfig~~).
-         * *   Log Service trigger: [LogTriggerConfig](~~struct:LogTriggerConfig~~).
-         * *   Time trigger: [TimeTriggerConfig](~~struct:TimeTriggerConfig~~).
-         * *   HTTP trigger: [HTTPTriggerConfig](~~struct:HTTPTriggerConfig~~).
-         * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-         * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).
-         * *   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putBodyParameter("qualifier", qualifier);
@@ -296,7 +287,17 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * The description of the trigger.
+         * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
+         * <p>
+         * 
+         * *   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).
+         * *   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).
+         * *   Time trigger: [TimeTriggerConfig](~~415712~~).
+         * *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
+         * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
+         * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).
+         * *   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).
+         * *   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).
          */
         public Builder triggerConfig(String triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);

@@ -50,7 +50,7 @@ public class LayerCode extends TeaModel {
         private String repositoryType; 
 
         /**
-         * 层代码位置
+         * location.
          */
         public Builder location(String location) {
             this.location = location;
@@ -58,7 +58,7 @@ public class LayerCode extends TeaModel {
         }
 
         /**
-         * 层代码类型
+         * repositoryType.
          */
         public Builder repositoryType(String repositoryType) {
             this.repositoryType = repositoryType;

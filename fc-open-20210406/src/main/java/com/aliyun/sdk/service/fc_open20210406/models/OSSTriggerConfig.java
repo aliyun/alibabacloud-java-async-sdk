@@ -50,7 +50,7 @@ public class OSSTriggerConfig extends TeaModel {
         private OSSTriggerFilter filter; 
 
         /**
-         * events
+         * events.
          */
         public Builder events(java.util.List < String > events) {
             this.events = events;

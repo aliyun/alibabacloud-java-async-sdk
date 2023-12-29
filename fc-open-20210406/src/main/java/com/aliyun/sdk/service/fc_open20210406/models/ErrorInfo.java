@@ -50,7 +50,7 @@ public class ErrorInfo extends TeaModel {
         private String stackTrace; 
 
         /**
-         * 错误信息
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -58,7 +58,7 @@ public class ErrorInfo extends TeaModel {
         }
 
         /**
-         * 错误堆栈
+         * stackTrace.
          */
         public Builder stackTrace(String stackTrace) {
             this.stackTrace = stackTrace;

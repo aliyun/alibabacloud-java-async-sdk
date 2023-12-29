@@ -168,7 +168,7 @@ public class ListTriggersRequest extends Request {
         } 
 
         /**
-         * The name of the function.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -177,7 +177,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -186,7 +186,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -195,7 +195,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -204,7 +204,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The returned data.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -213,7 +213,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The token required to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
+         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -222,7 +222,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The prefix that the names of returned resources must contain.
+         * The token required to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -231,7 +231,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
+         * The prefix that the names of returned resources must contain.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -240,7 +240,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.
          */
         public Builder startKey(String startKey) {
             this.putQueryParameter("startKey", startKey);

@@ -50,7 +50,7 @@ public class OnDemandConfig extends TeaModel {
         private String resource; 
 
         /**
-         * todo
+         * maximumInstanceCount.
          */
         public Builder maximumInstanceCount(Long maximumInstanceCount) {
             this.maximumInstanceCount = maximumInstanceCount;
@@ -58,7 +58,7 @@ public class OnDemandConfig extends TeaModel {
         }
 
         /**
-         * 函数详情
+         * resource.
          */
         public Builder resource(String resource) {
             this.resource = resource;

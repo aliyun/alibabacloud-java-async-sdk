@@ -19,9 +19,15 @@ public class EventBridgeTriggerConfig extends TeaModel {
     @Validation(required = true)
     private String eventRuleFilterPattern;
 
+    @NameInMap("eventSinkConfig")
+    private EventSinkConfig eventSinkConfig;
+
     @NameInMap("eventSourceConfig")
     @Validation(required = true)
     private EventSourceConfig eventSourceConfig;
+
+    @NameInMap("runOptions")
+    private RunOptions runOptions;
 
     @NameInMap("triggerEnable")
     private Boolean triggerEnable;
@@ -29,7 +35,9 @@ public class EventBridgeTriggerConfig extends TeaModel {
     private EventBridgeTriggerConfig(Builder builder) {
         this.asyncInvocationType = builder.asyncInvocationType;
         this.eventRuleFilterPattern = builder.eventRuleFilterPattern;
+        this.eventSinkConfig = builder.eventSinkConfig;
         this.eventSourceConfig = builder.eventSourceConfig;
+        this.runOptions = builder.runOptions;
         this.triggerEnable = builder.triggerEnable;
     }
 
@@ -56,10 +64,24 @@ public class EventBridgeTriggerConfig extends TeaModel {
     }
 
     /**
+     * @return eventSinkConfig
+     */
+    public EventSinkConfig getEventSinkConfig() {
+        return this.eventSinkConfig;
+    }
+
+    /**
      * @return eventSourceConfig
      */
     public EventSourceConfig getEventSourceConfig() {
         return this.eventSourceConfig;
+    }
+
+    /**
+     * @return runOptions
+     */
+    public RunOptions getRunOptions() {
+        return this.runOptions;
     }
 
     /**
@@ -72,11 +94,13 @@ public class EventBridgeTriggerConfig extends TeaModel {
     public static final class Builder {
         private Boolean asyncInvocationType; 
         private String eventRuleFilterPattern; 
+        private EventSinkConfig eventSinkConfig; 
         private EventSourceConfig eventSourceConfig; 
+        private RunOptions runOptions; 
         private Boolean triggerEnable; 
 
         /**
-         * asyncInvocationType
+         * asyncInvocationType.
          */
         public Builder asyncInvocationType(Boolean asyncInvocationType) {
             this.asyncInvocationType = asyncInvocationType;
@@ -84,10 +108,18 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * eventRuleFilterPattern
+         * eventRuleFilterPattern.
          */
         public Builder eventRuleFilterPattern(String eventRuleFilterPattern) {
             this.eventRuleFilterPattern = eventRuleFilterPattern;
+            return this;
+        }
+
+        /**
+         * eventSinkConfig.
+         */
+        public Builder eventSinkConfig(EventSinkConfig eventSinkConfig) {
+            this.eventSinkConfig = eventSinkConfig;
             return this;
         }
 
@@ -100,7 +132,15 @@ public class EventBridgeTriggerConfig extends TeaModel {
         }
 
         /**
-         * triggerEnable
+         * runOptions.
+         */
+        public Builder runOptions(RunOptions runOptions) {
+            this.runOptions = runOptions;
+            return this;
+        }
+
+        /**
+         * triggerEnable.
          */
         public Builder triggerEnable(Boolean triggerEnable) {
             this.triggerEnable = triggerEnable;

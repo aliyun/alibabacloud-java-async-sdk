@@ -146,7 +146,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         private Integer version; 
 
         /**
-         * Creates a layer version.
+         * The access mode of the layer. Digit 0 specifies that the layer is private and digit 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.
          */
         public Builder acl(Integer acl) {
             this.acl = acl;
@@ -154,7 +154,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * arn.
+         * The Alibaba Cloud Resource Name (ARN) of the layer.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -162,7 +162,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The access mode of the layer.
+         * The information about the layer code package.
          */
         public Builder code(OutputCodeLocation code) {
             this.code = code;
@@ -170,7 +170,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Example 1
+         * The CRC-64 value of the layer code package. The value is calculated based on the **ECMA-182 **standard.
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -178,7 +178,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the layer code package. Unit: Byte.
+         * The size of the layer code package. Unit: bytes.
          */
         public Builder codesize(Long codesize) {
             this.codesize = codesize;
@@ -186,7 +186,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Luoni
+         * The runtimes that are supported by the layer.
          */
         public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
@@ -194,7 +194,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Creates a layer version.
+         * The time when the layer version was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -202,7 +202,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the layer.
+         * The description of the layer version.
          */
         public Builder description(String description) {
             this.description = description;
@@ -210,7 +210,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of runtime environments that are supported by the layer.
+         * The layer name.
          */
         public Builder layerName(String layerName) {
             this.layerName = layerName;
@@ -218,7 +218,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * The layer version.
          */
         public Builder version(Integer version) {
             this.version = version;

@@ -38,7 +38,7 @@ public class SourceConfig extends TeaModel {
         private String logstore; 
 
         /**
-         * logstore
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;

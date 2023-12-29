@@ -112,7 +112,7 @@ public class DeleteLayerVersionRequest extends Request {
         } 
 
         /**
-         * Example 1
+         * The name of the layer.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -121,7 +121,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * Deletes a layer configuration.
+         * The version of the layer.
          */
         public Builder version(String version) {
             this.putPathParameter("version", version);
@@ -130,7 +130,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * 320124
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -139,7 +139,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * Luoni
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -148,7 +148,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

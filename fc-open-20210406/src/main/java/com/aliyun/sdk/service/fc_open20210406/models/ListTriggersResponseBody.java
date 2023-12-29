@@ -50,7 +50,7 @@ public class ListTriggersResponseBody extends TeaModel {
         private java.util.List < Triggers> triggers; 
 
         /**
-         * The information about triggers.
+         * The token used to obtain more results. If this parameter is left empty, all the results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -58,7 +58,7 @@ public class ListTriggersResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the trigger.
+         * The information about triggers.
          */
         public Builder triggers(java.util.List < Triggers> triggers) {
             this.triggers = triggers;
@@ -242,7 +242,7 @@ public class ListTriggersResponseBody extends TeaModel {
             private String urlIntranet; 
 
             /**
-             * The ARN of the RAM role that is used by the event source to invoke the function.
+             * The time when the trigger was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -250,7 +250,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the trigger.
+             * The description of the trigger.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -258,7 +258,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
+             * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. Example: `{domainName}.cn-shanghai.fc.aliyuncs.com`.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -266,7 +266,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the trigger was last modified.
+             * The Alibaba Cloud Resource Name (ARN) of the RAM role that is used by the event source to invoke the function.
              */
             public Builder invocationRole(String invocationRole) {
                 this.invocationRole = invocationRole;
@@ -274,7 +274,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The version or alias of the service.
+             * The time when the trigger was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -282,7 +282,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the event source.
+             * The version or alias of the service.
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
@@ -290,16 +290,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
-             * <p>
-             * 
-             * *   OSS trigger: [OSSTriggerConfig](~~struct:OSSTriggerConfig~~).
-             * *   Log Service trigger: [LogTriggerConfig](~~struct:LogTriggerConfig~~).
-             * *   Time trigger: [TimeTriggerConfig](~~struct:TimeTriggerConfig~~).
-             * *   HTTP trigger: [HTTPTriggerConfig](~~struct:HTTPTriggerConfig~~).
-             * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~struct:CDNEventsTriggerConfig~~).
-             * *   MNS topic trigger: [MnsTopicTriggerConfig](~~struct:MnsTopicTriggerConfig~~).
+             * The ARN of the event source.
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
@@ -307,7 +298,17 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the trigger.
+             * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
+             * <p>
+             * 
+             * *   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).
+             * *   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).
+             * *   Time trigger: [TimeTriggerConfig](~~415712~~).
+             * *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
+             * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
+             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
+             * *   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).
+             * *   EventBridge triggers: [EventBridgeTriggerConfig](javascript:void\(0\)).
              */
             public Builder triggerConfig(String triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -315,7 +316,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
+             * The unique ID of the trigger.
              */
             public Builder triggerId(String triggerId) {
                 this.triggerId = triggerId;
@@ -323,7 +324,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn\_events**, and **mns\_topic**.
+             * The name of the trigger.
              */
             public Builder triggerName(String triggerName) {
                 this.triggerName = triggerName;
@@ -331,7 +332,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the trigger.
+             * The trigger type. Valid values: **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, **mns_topic**, and **eventbridge**.
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -339,7 +340,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
+             * The public endpoint. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
              */
             public Builder urlInternet(String urlInternet) {
                 this.urlInternet = urlInternet;
@@ -347,7 +348,7 @@ public class ListTriggersResponseBody extends TeaModel {
             }
 
             /**
-             * 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+             * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
              */
             public Builder urlIntranet(String urlIntranet) {
                 this.urlIntranet = urlIntranet;

@@ -38,7 +38,7 @@ public class JaegerConfig extends TeaModel {
         private String endpoint; 
 
         /**
-         * endpoint
+         * endpoint.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;

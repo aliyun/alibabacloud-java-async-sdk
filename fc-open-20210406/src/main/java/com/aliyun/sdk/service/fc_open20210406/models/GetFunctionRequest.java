@@ -126,7 +126,7 @@ public class GetFunctionRequest extends Request {
         } 
 
         /**
-         * The name of the function.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +144,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -153,7 +153,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * The value that is used to ensure that the modified function is consistent with the function that is expected to be modified.
+         * The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -162,7 +162,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * The definition of the function.
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -171,7 +171,7 @@ public class GetFunctionRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -86,7 +86,7 @@ public class LogConfig extends TeaModel {
         private String project; 
 
         /**
-         * 开启实例级别指标
+         * enableInstanceMetrics.
          */
         public Builder enableInstanceMetrics(Boolean enableInstanceMetrics) {
             this.enableInstanceMetrics = enableInstanceMetrics;
@@ -94,7 +94,7 @@ public class LogConfig extends TeaModel {
         }
 
         /**
-         * 开启请求级别指标
+         * enableRequestMetrics.
          */
         public Builder enableRequestMetrics(Boolean enableRequestMetrics) {
             this.enableRequestMetrics = enableRequestMetrics;
@@ -102,7 +102,7 @@ public class LogConfig extends TeaModel {
         }
 
         /**
-         * 日志切分规则
+         * logBeginRule.
          */
         public Builder logBeginRule(String logBeginRule) {
             this.logBeginRule = logBeginRule;
@@ -110,7 +110,7 @@ public class LogConfig extends TeaModel {
         }
 
         /**
-         * 日志库
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -118,7 +118,7 @@ public class LogConfig extends TeaModel {
         }
 
         /**
-         * 日志项目
+         * project.
          */
         public Builder project(String project) {
             this.project = project;

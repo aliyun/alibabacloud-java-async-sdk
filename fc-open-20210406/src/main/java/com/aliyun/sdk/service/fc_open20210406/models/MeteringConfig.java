@@ -62,7 +62,7 @@ public class MeteringConfig extends TeaModel {
         private String role; 
 
         /**
-         * 日志仓库
+         * logConfig.
          */
         public Builder logConfig(LogConfig logConfig) {
             this.logConfig = logConfig;
@@ -70,7 +70,7 @@ public class MeteringConfig extends TeaModel {
         }
 
         /**
-         * 支付用户
+         * payerId.
          */
         public Builder payerId(String payerId) {
             this.payerId = payerId;
@@ -78,7 +78,7 @@ public class MeteringConfig extends TeaModel {
         }
 
         /**
-         * 权限
+         * role.
          */
         public Builder role(String role) {
             this.role = role;

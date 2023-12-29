@@ -362,14 +362,7 @@ public class GetFunctionResponseBody extends TeaModel {
         private Integer timeout; 
 
         /**
-         * The list of layers (ARN V1 version).
-         * <p>
-         * 
-         * > If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file with the same name in the layer with a larger subscript. >
-         * 
-         * **
-         * 
-         * **Warning:** This parameter is to be deprecated. Use layersArnV2.
+         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
          */
         public Builder caPort(Integer caPort) {
             this.caPort = caPort;
@@ -377,7 +370,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the function was created.
+         * The CRC-64 value of the function code package.
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -385,7 +378,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the function.
+         * The size of the function code package. Unit: byte.
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
@@ -393,7 +386,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The GPU memory capacity for the function. Unit: MB. The memory capacity must be a multiple of 1024 MB.
+         * The number of vCPUs of the function. The value must be a multiple of 0.05.
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -401,7 +394,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The environment variables that are configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Environment variables](~~69777~~).
+         * The time when the function was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -409,7 +402,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the layer resource (ARN V1 version).
+         * The configurations of the custom container runtime. After you configure the custom container runtime, Function Compute can execute the function in a container created from a custom image.
          */
         public Builder customContainerConfig(CustomContainerConfigInfo customContainerConfig) {
             this.customContainerConfig = customContainerConfig;
@@ -417,7 +410,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
+         * The custom DNS configurations of the function.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.customDNS = customDNS;
@@ -425,7 +418,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the layer resource (ARN V2 version).
+         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
@@ -433,10 +426,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of layers (ARN V2 version).
-         * <p>
-         * 
-         * > If multiple layers exist, the layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name and a larger subscript in the layer.
+         * The configurations of the custom runtime.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.customRuntimeConfig = customRuntimeConfig;
@@ -444,7 +434,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The environment variables that you configured for the function.
+         * The description of the function.
          */
         public Builder description(String description) {
             this.description = description;
@@ -452,7 +442,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的磁盘规格，单位为MB，可选值为512MB或10240MB
+         * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -460,7 +450,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID that is generated by the system for the function. Each function ID is unique in Function Compute.
+         * The environment variables that are configured for the function. You can obtain the values of the environment variables from the function. For more information, see [Environment variables](~~69777~~).
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -468,7 +458,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The handler of the function. For more information, see [Function handler](~~157704~~).
+         * The ID that is generated by the system for the function. Each function ID is unique in Function Compute.
          */
         public Builder functionId(String functionId) {
             this.functionId = functionId;
@@ -476,7 +466,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the function was last modified.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -484,7 +474,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * function的GPU显存规格，单位为MB，为1024MB的倍数
+         * The GPU memory capacity for the function. Unit: MB. The value is a multiple of 1,024.
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.gpuMemorySize = gpuMemorySize;
@@ -492,7 +482,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The memory size for the function. Unit: MB. The memory size must be a multiple of 64 MB. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
+         * The handler of the function. For more information, see [Function handler](~~157704~~).
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -500,7 +490,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
+         * The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period ends, the execution of the Initializer hook is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.initializationTimeout = initializationTimeout;
@@ -508,10 +498,37 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the custom container runtime. After you configure the custom container runtime, Function Compute can execute the function in a container created from a custom image.
+         * The handler of the Initializer hook. The format of the value is determined by the programming language that you use. For more information, see [Initializer hook](~~157704~~).
          */
         public Builder initializer(String initializer) {
             this.initializer = initializer;
+            return this;
+        }
+
+        /**
+         * The number of requests that can be concurrently processed by a single instance.
+         */
+        public Builder instanceConcurrency(Integer instanceConcurrency) {
+            this.instanceConcurrency = instanceConcurrency;
+            return this;
+        }
+
+        /**
+         * The lifecycle configurations of the instance.
+         */
+        public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
+            this.instanceLifecycleConfig = instanceLifecycleConfig;
+            return this;
+        }
+
+        /**
+         * The soft concurrency of the instance. You can use this parameter to implement graceful scale-up of instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * <p>
+         * 
+         * The value must be less than or equal to that of the **instanceConcurrency** parameter.
+         */
+        public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
+            this.instanceSoftConcurrency = instanceSoftConcurrency;
             return this;
         }
 
@@ -521,33 +538,9 @@ public class GetFunctionResponseBody extends TeaModel {
          * 
          * *   **e1**: elastic instance
          * *   **c1**: performance instance
-         * *   **fc.gpu.tesla.1**: GPU-accelerated instances (Tesla T4)
-         * *   **fc.gpu.ampere.1**: GPU-accelerated instances (Ampere A10)
-         * *   **g1**: same fc.gpu.tesla.1
-         */
-        public Builder instanceConcurrency(Integer instanceConcurrency) {
-            this.instanceConcurrency = instanceConcurrency;
-            return this;
-        }
-
-        /**
-         * The configurations of the custom runtime.
-         */
-        public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
-            this.instanceLifecycleConfig = instanceLifecycleConfig;
-            return this;
-        }
-
-        /**
-         * The lifecycle configurations of the instance.
-         */
-        public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
-            this.instanceSoftConcurrency = instanceSoftConcurrency;
-            return this;
-        }
-
-        /**
-         * The custom DNS configurations of the function.
+         * *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
+         * *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
+         * *   **g1**: same as fc.gpu.tesla.1
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -555,7 +548,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom**, and **custom-container**.
+         * The time when the function was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -563,7 +556,14 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of requests that can be concurrently processed by a single instance.
+         * The layers (ARN V1 version).
+         * <p>
+         * 
+         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+         * 
+         * **
+         * 
+         * **Warning** This parameter is to be deprecated. Use layersArnV2.
          */
         public Builder layers(java.util.List < String > layers) {
             this.layers = layers;
@@ -571,7 +571,10 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vCPUs of the function. The value must be a multiple of 0.05.
+         * The list of layers (ARN V2 version).
+         * <p>
+         * 
+         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
          */
         public Builder layersArnV2(java.util.List < String > layersArnV2) {
             this.layersArnV2 = layersArnV2;
@@ -579,7 +582,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period for the execution of the function. Unit: seconds. Default value: 60. Valid values: 1 to 600. When this period expires, the execution of the function is terminated.
+         * The memory size for the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see [Instance types](~~179379~~).
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -587,7 +590,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period for the execution of the initializer function. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period ends, the execution of the initializer function is terminated.
+         * The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore2.1**, **custom**, and **custom-container**.
          */
         public Builder runtime(String runtime) {
             this.runtime = runtime;
@@ -595,7 +598,7 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The handler of the initializer function. The format of the value is determined by the programming language that you use. For more information, see [Initializer function](~~157704~~).
+         * The timeout period for the execution of the function. Unit: seconds. Default value: 60. Valid values: 1 to 600. When this period expires, the execution of the function is terminated.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

@@ -127,7 +127,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * The instances that are queried.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -136,7 +136,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -145,7 +145,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Queries the available instances of a function.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -154,7 +154,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The name of the service.
+         * The IDs of the instance.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
@@ -163,7 +163,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * The maximum number of resources to return. Valid values: \[0,1000].
+         * <p>
+         * 
+         * The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -172,7 +175,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The version or alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

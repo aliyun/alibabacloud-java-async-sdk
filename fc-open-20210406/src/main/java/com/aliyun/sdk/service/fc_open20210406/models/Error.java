@@ -50,7 +50,7 @@ public class Error extends TeaModel {
         private String errorMessage; 
 
         /**
-         * 错误码
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -58,7 +58,7 @@ public class Error extends TeaModel {
         }
 
         /**
-         * 错误信息描述
+         * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

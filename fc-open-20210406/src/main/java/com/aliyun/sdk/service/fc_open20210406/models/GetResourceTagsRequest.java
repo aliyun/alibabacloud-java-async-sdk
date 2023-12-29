@@ -97,9 +97,7 @@ public class GetResourceTagsRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the resource. 
-         * <p>
-         * > **Note:** You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -108,10 +106,7 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * The tag dictionary. Valid values:
-         * <p>
-         * - **key**: the key of the tag. 
-         * - **value**: the value of the tag.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -120,7 +115,7 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * Example 1
+         * The custom request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -129,9 +124,10 @@ public class GetResourceTagsRequest extends Request {
         }
 
         /**
-         * The ARN of the resource. 
+         * The Alibaba Cloud Resource Name (ARN) of the resource. 
          * <p>
-         * > **Note:** You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource.
+         * 
+         * > You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.
          */
         public Builder resourceArn(String resourceArn) {
             this.putQueryParameter("resourceArn", resourceArn);

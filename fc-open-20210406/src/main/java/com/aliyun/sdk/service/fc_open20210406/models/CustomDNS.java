@@ -62,7 +62,7 @@ public class CustomDNS extends TeaModel {
         private java.util.List < String > searches; 
 
         /**
-         * DNS resolver 配置参数列表
+         * dnsOptions.
          */
         public Builder dnsOptions(java.util.List < DNSOption > dnsOptions) {
             this.dnsOptions = dnsOptions;
@@ -70,7 +70,7 @@ public class CustomDNS extends TeaModel {
         }
 
         /**
-         * DNS 服务器的 IP 地址列表
+         * nameServers.
          */
         public Builder nameServers(java.util.List < String > nameServers) {
             this.nameServers = nameServers;
@@ -78,7 +78,7 @@ public class CustomDNS extends TeaModel {
         }
 
         /**
-         * DNS 搜索域的列表
+         * searches.
          */
         public Builder searches(java.util.List < String > searches) {
             this.searches = searches;

@@ -303,7 +303,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The system disk space of the GPU rendering instance.
+         * The system disk space of the GPU rendering instance. Unit: GB.
          */
         public Builder diskSizeGigabytes(String diskSizeGigabytes) {
             this.putBodyParameter("diskSizeGigabytes", diskSizeGigabytes);
@@ -312,7 +312,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The image ID of the GPU-rendered instance.
+         * The image ID of the GPU rendering instance.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("imageId", imageId);
@@ -348,7 +348,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The role of the user.
+         * The user role.
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -357,7 +357,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * The security group ID.
          */
         public Builder sgId(String sgId) {
             this.putBodyParameter("sgId", sgId);
@@ -402,7 +402,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The vSwitch ID of the instance.
          */
         public Builder vswId(String vswId) {
             this.putBodyParameter("vswId", vswId);

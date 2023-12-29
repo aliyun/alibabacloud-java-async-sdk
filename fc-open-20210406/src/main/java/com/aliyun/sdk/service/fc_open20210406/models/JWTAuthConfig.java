@@ -86,7 +86,7 @@ public class JWTAuthConfig extends TeaModel {
         private java.util.List < String > whiteList; 
 
         /**
-         * 黑名单
+         * blackList.
          */
         public Builder blackList(String blackList) {
             this.blackList = blackList;
@@ -94,7 +94,7 @@ public class JWTAuthConfig extends TeaModel {
         }
 
         /**
-         * JWT Claim 转换
+         * claimPassBy.
          */
         public Builder claimPassBy(java.util.List < String > claimPassBy) {
             this.claimPassBy = claimPassBy;
@@ -102,7 +102,7 @@ public class JWTAuthConfig extends TeaModel {
         }
 
         /**
-         * jwks
+         * jwks.
          */
         public Builder jwks(String jwks) {
             this.jwks = jwks;
@@ -110,7 +110,7 @@ public class JWTAuthConfig extends TeaModel {
         }
 
         /**
-         * JWT Token 配置
+         * tokenLookup.
          */
         public Builder tokenLookup(java.util.List < String > tokenLookup) {
             this.tokenLookup = tokenLookup;
@@ -118,7 +118,7 @@ public class JWTAuthConfig extends TeaModel {
         }
 
         /**
-         * 白名单
+         * whiteList.
          */
         public Builder whiteList(java.util.List < String > whiteList) {
             this.whiteList = whiteList;

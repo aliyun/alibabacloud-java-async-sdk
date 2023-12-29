@@ -125,7 +125,7 @@ public class ListLayerVersionsRequest extends Request {
         } 
 
         /**
-         * The name of the layer.
+         * The layer name. You can query only custom layer versions. You cannot query versions of official public layers.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -143,7 +143,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the operation is called. The format is: **EEE,d MMM yyyy HH:mm:ss GMT**.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -161,7 +161,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The maximum number of resources to return. Default value: 20. The value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);

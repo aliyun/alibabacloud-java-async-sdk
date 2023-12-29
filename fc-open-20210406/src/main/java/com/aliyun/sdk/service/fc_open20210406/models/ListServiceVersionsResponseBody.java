@@ -62,7 +62,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * The information about the version.
+         * The order in which the returned versions are sorted. Valid values:
+         * <p>
+         *   - **FORWARD**: in ascending order. 
+         *   - **BACKWARD**: in descending order. This is the default value.
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -70,7 +73,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[9].schema.description
+         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +81,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * $.parameters[9].schema.enumValueTitles
+         * The list of versions.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -154,7 +157,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * $.parameters[10].schema.enumValueTitles
+             * The time when the service version was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -162,7 +165,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries all the versions of a service.
+             * The description of the service version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +173,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Xiaoqi
+             * The time when the service version was last modified.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -178,7 +181,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * 版本ID
+             * The version of the service.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

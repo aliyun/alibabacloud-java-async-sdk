@@ -12,8 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EventSourceParameters</p>
  */
 public class EventSourceParameters extends TeaModel {
+    @NameInMap("sourceDTSParameters")
+    private SourceDTSParameters sourceDTSParameters;
+
+    @NameInMap("sourceKafkaParameters")
+    private SourceKafkaParameters sourceKafkaParameters;
+
     @NameInMap("sourceMNSParameters")
     private SourceMNSParameters sourceMNSParameters;
+
+    @NameInMap("sourceMQTTParameters")
+    private SourceMQTTParameters sourceMQTTParameters;
 
     @NameInMap("sourceRabbitMQParameters")
     private SourceRabbitMQParameters sourceRabbitMQParameters;
@@ -22,7 +31,10 @@ public class EventSourceParameters extends TeaModel {
     private SourceRocketMQParameters sourceRocketMQParameters;
 
     private EventSourceParameters(Builder builder) {
+        this.sourceDTSParameters = builder.sourceDTSParameters;
+        this.sourceKafkaParameters = builder.sourceKafkaParameters;
         this.sourceMNSParameters = builder.sourceMNSParameters;
+        this.sourceMQTTParameters = builder.sourceMQTTParameters;
         this.sourceRabbitMQParameters = builder.sourceRabbitMQParameters;
         this.sourceRocketMQParameters = builder.sourceRocketMQParameters;
     }
@@ -36,10 +48,31 @@ public class EventSourceParameters extends TeaModel {
     }
 
     /**
+     * @return sourceDTSParameters
+     */
+    public SourceDTSParameters getSourceDTSParameters() {
+        return this.sourceDTSParameters;
+    }
+
+    /**
+     * @return sourceKafkaParameters
+     */
+    public SourceKafkaParameters getSourceKafkaParameters() {
+        return this.sourceKafkaParameters;
+    }
+
+    /**
      * @return sourceMNSParameters
      */
     public SourceMNSParameters getSourceMNSParameters() {
         return this.sourceMNSParameters;
+    }
+
+    /**
+     * @return sourceMQTTParameters
+     */
+    public SourceMQTTParameters getSourceMQTTParameters() {
+        return this.sourceMQTTParameters;
     }
 
     /**
@@ -57,15 +90,42 @@ public class EventSourceParameters extends TeaModel {
     }
 
     public static final class Builder {
+        private SourceDTSParameters sourceDTSParameters; 
+        private SourceKafkaParameters sourceKafkaParameters; 
         private SourceMNSParameters sourceMNSParameters; 
+        private SourceMQTTParameters sourceMQTTParameters; 
         private SourceRabbitMQParameters sourceRabbitMQParameters; 
         private SourceRocketMQParameters sourceRocketMQParameters; 
+
+        /**
+         * sourceDTSParameters.
+         */
+        public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
+            this.sourceDTSParameters = sourceDTSParameters;
+            return this;
+        }
+
+        /**
+         * sourceKafkaParameters.
+         */
+        public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
+            this.sourceKafkaParameters = sourceKafkaParameters;
+            return this;
+        }
 
         /**
          * sourceMNSParameters.
          */
         public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
             this.sourceMNSParameters = sourceMNSParameters;
+            return this;
+        }
+
+        /**
+         * sourceMQTTParameters.
+         */
+        public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
+            this.sourceMQTTParameters = sourceMQTTParameters;
             return this;
         }
 

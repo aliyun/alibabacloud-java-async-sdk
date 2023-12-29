@@ -232,11 +232,13 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * The method used to invoke the function. Valid values:
+         * The invocation method. Valid values:
          * <p>
          * 
-         * *   **Sync**: synchronous
-         * *   **Async**: asynchronous
+         * *   **Sync**: synchronous invocations
+         * *   **Async**: asynchronous invocations
+         * 
+         * Default value: Sync
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("X-Fc-Invocation-Type", xFcInvocationType);
@@ -258,7 +260,15 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * X-Fc-Stateful-Async-Invocation-Enable.
+         * Specifies whether to enable the asynchronous task mode for requests. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * > 
+         * 
+         * *   This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.
          */
         public Builder xFcStatefulAsyncInvocationEnable(String xFcStatefulAsyncInvocationEnable) {
             this.putHeaderParameter("X-Fc-Stateful-Async-Invocation-Enable", xFcStatefulAsyncInvocationEnable);

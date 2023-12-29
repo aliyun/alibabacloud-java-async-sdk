@@ -62,7 +62,7 @@ public class NASConfig extends TeaModel {
         private Integer userId; 
 
         /**
-         * groupID
+         * groupId.
          */
         public Builder groupId(Integer groupId) {
             this.groupId = groupId;
@@ -70,7 +70,7 @@ public class NASConfig extends TeaModel {
         }
 
         /**
-         * 挂载点
+         * mountPoints.
          */
         public Builder mountPoints(java.util.List < MountPoints> mountPoints) {
             this.mountPoints = mountPoints;
@@ -78,7 +78,7 @@ public class NASConfig extends TeaModel {
         }
 
         /**
-         * userID
+         * userId.
          */
         public Builder userId(Integer userId) {
             this.userId = userId;
@@ -142,7 +142,7 @@ public class NASConfig extends TeaModel {
             private String serverAddr; 
 
             /**
-             * 使用传输加密方式挂载
+             * enableTLS.
              */
             public Builder enableTLS(Boolean enableTLS) {
                 this.enableTLS = enableTLS;
@@ -150,7 +150,7 @@ public class NASConfig extends TeaModel {
             }
 
             /**
-             * 本地挂载目录
+             * mountDir.
              */
             public Builder mountDir(String mountDir) {
                 this.mountDir = mountDir;
@@ -158,7 +158,7 @@ public class NASConfig extends TeaModel {
             }
 
             /**
-             * NAS服务器地址
+             * serverAddr.
              */
             public Builder serverAddr(String serverAddr) {
                 this.serverAddr = serverAddr;

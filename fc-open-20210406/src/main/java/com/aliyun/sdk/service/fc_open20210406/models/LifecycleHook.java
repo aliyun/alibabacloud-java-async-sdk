@@ -50,7 +50,7 @@ public class LifecycleHook extends TeaModel {
         private Integer timeout; 
 
         /**
-         * handler name
+         * handler.
          */
         public Builder handler(String handler) {
             this.handler = handler;
@@ -58,7 +58,7 @@ public class LifecycleHook extends TeaModel {
         }
 
         /**
-         * timeout in second
+         * timeout.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

@@ -170,7 +170,7 @@ public class Layer extends TeaModel {
         private Integer version; 
 
         /**
-         * 层访问类型
+         * acl.
          */
         public Builder acl(Integer acl) {
             this.acl = acl;
@@ -178,7 +178,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * arn
+         * arn.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -186,7 +186,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * arnV2
+         * arnV2.
          */
         public Builder arnV2(String arnV2) {
             this.arnV2 = arnV2;
@@ -194,7 +194,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层代码
+         * code.
          */
         public Builder code(LayerCode code) {
             this.code = code;
@@ -202,7 +202,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层Checksum
+         * codeChecksum.
          */
         public Builder codeChecksum(String codeChecksum) {
             this.codeChecksum = codeChecksum;
@@ -210,7 +210,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层代码大小
+         * codeSize.
          */
         public Builder codeSize(Long codeSize) {
             this.codeSize = codeSize;
@@ -218,7 +218,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * compatibleRuntime
+         * compatibleRuntime.
          */
         public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
@@ -226,7 +226,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层创建时间
+         * createTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -234,7 +234,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层描述
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +242,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层名称
+         * layerName.
          */
         public Builder layerName(String layerName) {
             this.layerName = layerName;
@@ -250,7 +250,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 许可协议
+         * license.
          */
         public Builder license(String license) {
             this.license = license;
@@ -258,7 +258,7 @@ public class Layer extends TeaModel {
         }
 
         /**
-         * 层版本
+         * version.
          */
         public Builder version(Integer version) {
             this.version = version;

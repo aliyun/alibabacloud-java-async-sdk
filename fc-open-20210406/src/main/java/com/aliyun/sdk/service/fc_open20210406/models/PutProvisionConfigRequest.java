@@ -193,7 +193,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -211,7 +211,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value follows the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -247,7 +247,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The number of provisioned instances. Value range: [1,100000].
+         * The number of target provisioned instances. Valid values: \[0,10000].
          */
         public Builder target(Long target) {
             this.putBodyParameter("target", target);
@@ -265,7 +265,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * The name of the alias.
+         * The service alias or latest version. Other versions are not supported.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

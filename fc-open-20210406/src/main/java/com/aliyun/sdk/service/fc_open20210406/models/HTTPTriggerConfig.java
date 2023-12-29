@@ -74,7 +74,7 @@ public class HTTPTriggerConfig extends TeaModel {
         private java.util.List < String > methods; 
 
         /**
-         * 鉴权配置
+         * authConfig.
          */
         public Builder authConfig(String authConfig) {
             this.authConfig = authConfig;
@@ -82,7 +82,7 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * 认证类型
+         * authType.
          */
         public Builder authType(String authType) {
             this.authType = authType;
@@ -98,7 +98,7 @@ public class HTTPTriggerConfig extends TeaModel {
         }
 
         /**
-         * 允许的HTTP方法列表
+         * methods.
          */
         public Builder methods(java.util.List < String > methods) {
             this.methods = methods;

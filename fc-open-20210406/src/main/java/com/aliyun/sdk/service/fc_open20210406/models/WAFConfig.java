@@ -38,7 +38,7 @@ public class WAFConfig extends TeaModel {
         private Boolean enableWAF; 
 
         /**
-         * 是否开启Web应用防火墙
+         * enableWAF.
          */
         public Builder enableWAF(Boolean enableWAF) {
             this.enableWAF = enableWAF;

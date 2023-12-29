@@ -182,7 +182,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         private String urlIntranet; 
 
         /**
-         * The ARN of the RAM role that is used by the event source to invoke the function.
+         * The time when the trigger was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -190,7 +190,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the trigger.
+         * The description of the trigger.
          */
         public Builder description(String description) {
             this.description = description;
@@ -198,7 +198,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
+         * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -206,7 +206,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the trigger was last modified.
+         * The ARN of the RAM role that is used by the event source to invoke the function.
          */
         public Builder invocationRole(String invocationRole) {
             this.invocationRole = invocationRole;
@@ -214,7 +214,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the service.
+         * The time when the trigger was last modified.
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
@@ -222,7 +222,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the event source.
+         * The version of the service.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -230,7 +230,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the trigger. The configurations vary based on the trigger type.
+         * The ARN of the event source.
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;
@@ -238,7 +238,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+         * The configurations of the trigger. The configurations vary based on the trigger type.
          */
         public Builder triggerConfig(String triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -246,7 +246,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.
+         * The unique ID of the trigger.
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -254,7 +254,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.
+         * The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
          */
         public Builder triggerName(String triggerName) {
             this.triggerName = triggerName;
@@ -262,7 +262,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the trigger.
+         * The trigger type. Valid values: **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, **mns_topic**, and **eventbridge**.
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
@@ -270,7 +270,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
+         * The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.
          */
         public Builder urlInternet(String urlInternet) {
             this.urlInternet = urlInternet;
@@ -278,7 +278,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 私网域名地址。在VPC可以通过HTTP协议或者HTTPS协议访问HTTP Trigger。
+         * The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.
          */
         public Builder urlIntranet(String urlIntranet) {
             this.urlIntranet = urlIntranet;

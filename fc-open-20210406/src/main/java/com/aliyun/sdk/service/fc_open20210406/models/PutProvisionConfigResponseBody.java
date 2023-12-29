@@ -130,7 +130,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The expected number of provisioned instances.
+         * The number of target provisioned instances.
          */
         public Builder target(Long target) {
             this.target = target;

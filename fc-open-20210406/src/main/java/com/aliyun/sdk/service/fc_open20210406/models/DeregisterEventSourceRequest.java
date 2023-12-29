@@ -141,7 +141,7 @@ public class DeregisterEventSourceRequest extends Request {
         } 
 
         /**
-         * Deregisters an event source.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -150,7 +150,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * Jianyi
+         * The name of the function.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -159,7 +159,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * 事件源资源标识符
+         * The ARN of the event source.
          */
         public Builder sourceArn(String sourceArn) {
             this.putPathParameter("sourceArn", sourceArn);
@@ -168,7 +168,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Account-Id.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -177,7 +177,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Date.
+         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -186,7 +186,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * X-Fc-Trace-Id.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -195,7 +195,7 @@ public class DeregisterEventSourceRequest extends Request {
         }
 
         /**
-         * 别名或版本
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

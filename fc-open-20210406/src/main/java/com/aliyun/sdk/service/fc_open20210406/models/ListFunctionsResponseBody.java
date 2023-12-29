@@ -90,8 +90,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("customContainerConfig")
         private CustomContainerConfig customContainerConfig;
 
+        @NameInMap("customDNS")
+        private CustomDNS customDNS;
+
         @NameInMap("customHealthCheckConfig")
         private CustomHealthCheckConfig customHealthCheckConfig;
+
+        @NameInMap("customRuntimeConfig")
+        private CustomRuntimeConfig customRuntimeConfig;
 
         @NameInMap("description")
         private String description;
@@ -138,6 +144,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("layers")
         private java.util.List < String > layers;
 
+        @NameInMap("layersArnV2")
+        private java.util.List < String > layersArnV2;
+
         @NameInMap("memorySize")
         private Integer memorySize;
 
@@ -154,7 +163,9 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.createdTime = builder.createdTime;
             this.customContainerConfig = builder.customContainerConfig;
+            this.customDNS = builder.customDNS;
             this.customHealthCheckConfig = builder.customHealthCheckConfig;
+            this.customRuntimeConfig = builder.customRuntimeConfig;
             this.description = builder.description;
             this.diskSize = builder.diskSize;
             this.environmentVariables = builder.environmentVariables;
@@ -170,6 +181,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.layers = builder.layers;
+            this.layersArnV2 = builder.layersArnV2;
             this.memorySize = builder.memorySize;
             this.runtime = builder.runtime;
             this.timeout = builder.timeout;
@@ -226,10 +238,24 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return customDNS
+         */
+        public CustomDNS getCustomDNS() {
+            return this.customDNS;
+        }
+
+        /**
          * @return customHealthCheckConfig
          */
         public CustomHealthCheckConfig getCustomHealthCheckConfig() {
             return this.customHealthCheckConfig;
+        }
+
+        /**
+         * @return customRuntimeConfig
+         */
+        public CustomRuntimeConfig getCustomRuntimeConfig() {
+            return this.customRuntimeConfig;
         }
 
         /**
@@ -338,6 +364,13 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return layersArnV2
+         */
+        public java.util.List < String > getLayersArnV2() {
+            return this.layersArnV2;
+        }
+
+        /**
          * @return memorySize
          */
         public Integer getMemorySize() {
@@ -365,7 +398,9 @@ public class ListFunctionsResponseBody extends TeaModel {
             private Float cpu; 
             private String createdTime; 
             private CustomContainerConfig customContainerConfig; 
+            private CustomDNS customDNS; 
             private CustomHealthCheckConfig customHealthCheckConfig; 
+            private CustomRuntimeConfig customRuntimeConfig; 
             private String description; 
             private Integer diskSize; 
             private java.util.Map < String, String > environmentVariables; 
@@ -381,6 +416,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String instanceType; 
             private String lastModifiedTime; 
             private java.util.List < String > layers; 
+            private java.util.List < String > layersArnV2; 
             private Integer memorySize; 
             private String runtime; 
             private Integer timeout; 
@@ -434,10 +470,26 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
+             * customDNS.
+             */
+            public Builder customDNS(CustomDNS customDNS) {
+                this.customDNS = customDNS;
+                return this;
+            }
+
+            /**
              * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
              */
             public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
                 this.customHealthCheckConfig = customHealthCheckConfig;
+                return this;
+            }
+
+            /**
+             * customRuntimeConfig.
+             */
+            public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
+                this.customRuntimeConfig = customRuntimeConfig;
                 return this;
             }
 
@@ -571,6 +623,14 @@ public class ListFunctionsResponseBody extends TeaModel {
              */
             public Builder layers(java.util.List < String > layers) {
                 this.layers = layers;
+                return this;
+            }
+
+            /**
+             * layersArnV2.
+             */
+            public Builder layersArnV2(java.util.List < String > layersArnV2) {
+                this.layersArnV2 = layersArnV2;
                 return this;
             }
 

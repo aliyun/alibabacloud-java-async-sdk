@@ -62,7 +62,7 @@ public class AsyncConfigMeta extends TeaModel {
         private String serviceName; 
 
         /**
-         * 异步配置所属函数名称。
+         * functionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -70,7 +70,7 @@ public class AsyncConfigMeta extends TeaModel {
         }
 
         /**
-         * 异步配置所属服务版本/别名。
+         * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
@@ -78,7 +78,7 @@ public class AsyncConfigMeta extends TeaModel {
         }
 
         /**
-         * 异步配置所属服务名称。
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

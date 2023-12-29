@@ -140,7 +140,7 @@ public class CreateLayerVersionRequest extends Request {
         } 
 
         /**
-         * The name of the runtime. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **php7.2**, **go1**, **dotnetcore2.1** and **custom**.
+         * The layer name. The name can be up to 128 character in length.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -149,7 +149,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The description of the layer.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -158,7 +158,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The checksum of the layer code package.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -167,7 +167,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The information about the layer code package.
+         * The trace ID of the invocation request of Function Compute.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -176,7 +176,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The name of the layer.
+         * The layer code.
          */
         public Builder code(Code code) {
             this.putBodyParameter("Code", code);
@@ -185,7 +185,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The name of the runtime. Valid values: **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **php7.2**, **go1**, **dotnetcore2.1** and **custom**.
+         * The runtimes that are supported by the layer.
          */
         public Builder compatibleRuntime(java.util.List < String > compatibleRuntime) {
             this.putBodyParameter("compatibleRuntime", compatibleRuntime);
@@ -194,7 +194,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * The name of the layer.
+         * The layer description. The description can be up to 256 characters in length.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
