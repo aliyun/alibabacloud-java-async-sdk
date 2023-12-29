@@ -35,6 +35,10 @@ public class UAIDVerificationRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("Province")
+    private String province;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -58,6 +62,7 @@ public class UAIDVerificationRequest extends Request {
         this.ip = builder.ip;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
+        this.province = builder.province;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.token = builder.token;
@@ -113,6 +118,13 @@ public class UAIDVerificationRequest extends Request {
     }
 
     /**
+     * @return province
+     */
+    public String getProvince() {
+        return this.province;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -146,6 +158,7 @@ public class UAIDVerificationRequest extends Request {
         private String ip; 
         private String outId; 
         private Long ownerId; 
+        private String province; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String token; 
@@ -162,6 +175,7 @@ public class UAIDVerificationRequest extends Request {
             this.ip = request.ip;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
+            this.province = request.province;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.token = request.token;
@@ -210,6 +224,15 @@ public class UAIDVerificationRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Province.
+         */
+        public Builder province(String province) {
+            this.putQueryParameter("Province", province);
+            this.province = province;
             return this;
         }
 
