@@ -18,18 +18,22 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
 
     @Body
     @NameInMap("BeginTime")
+    @Validation(required = true)
     private Long beginTime;
 
     @Body
     @NameInMap("EndTime")
+    @Validation(required = true)
     private Long endTime;
 
     @Body
     @NameInMap("MaxPointNum")
+    @Validation(required = true)
     private Long maxPointNum;
 
     @Body
     @NameInMap("Metric")
+    @Validation(required = true)
     private String metric;
 
     @Body
@@ -42,6 +46,7 @@ public class SearchOmsOpenAPIMonitorMetricRequest extends Request {
 
     @Body
     @NameInMap("ProjectId")
+    @Validation(required = true)
     private String projectId;
 
     @Body

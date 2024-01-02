@@ -22,6 +22,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
 
     @Body
     @NameInMap("DestConfig")
+    @Validation(required = true)
     private DestConfig destConfig;
 
     @Body
@@ -38,22 +39,27 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
 
     @Body
     @NameInMap("ProjectName")
+    @Validation(required = true)
     private String projectName;
 
     @Body
     @NameInMap("SourceConfig")
+    @Validation(required = true)
     private SourceConfig sourceConfig;
 
     @Body
     @NameInMap("TransferMapping")
+    @Validation(required = true)
     private TransferMapping transferMapping;
 
     @Body
     @NameInMap("TransferStepConfig")
+    @Validation(required = true)
     private TransferStepConfig transferStepConfig;
 
     @Body
     @NameInMap("WorkerGradeId")
+    @Validation(required = true)
     private String workerGradeId;
 
     private CreateOmsOpenAPIProjectRequest(Builder builder) {

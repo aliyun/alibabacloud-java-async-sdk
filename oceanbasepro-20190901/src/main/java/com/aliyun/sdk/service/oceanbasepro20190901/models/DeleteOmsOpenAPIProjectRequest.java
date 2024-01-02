@@ -26,6 +26,7 @@ public class DeleteOmsOpenAPIProjectRequest extends Request {
 
     @Body
     @NameInMap("ProjectId")
+    @Validation(required = true)
     private String projectId;
 
     @Body
