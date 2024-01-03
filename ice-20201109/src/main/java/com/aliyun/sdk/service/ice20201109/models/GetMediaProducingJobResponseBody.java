@@ -114,6 +114,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Timeline")
         private String timeline;
 
+        @NameInMap("UserData")
+        private String userData;
+
         @NameInMap("VodMediaId")
         private String vodMediaId;
 
@@ -132,6 +135,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             this.status = builder.status;
             this.templateId = builder.templateId;
             this.timeline = builder.timeline;
+            this.userData = builder.userData;
             this.vodMediaId = builder.vodMediaId;
         }
 
@@ -242,6 +246,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
+        /**
          * @return vodMediaId
          */
         public String getVodMediaId() {
@@ -263,6 +274,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             private String status; 
             private String templateId; 
             private String timeline; 
+            private String userData; 
             private String vodMediaId; 
 
             /**
@@ -374,6 +386,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
              */
             public Builder timeline(String timeline) {
                 this.timeline = timeline;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 
