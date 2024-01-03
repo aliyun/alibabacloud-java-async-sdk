@@ -18,6 +18,12 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ApprovalType")
     private String approvalType;
 
+    @NameInMap("BillEntityMappings")
+    private BillEntityMappings billEntityMappings;
+
+    @NameInMap("Categories")
+    private String categories;
+
     @NameInMap("CommodityCode")
     private String commodityCode;
 
@@ -41,6 +47,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("Duration")
     private Long duration;
+
+    @NameInMap("EntitySource")
+    private java.util.Map < String, String > entitySource;
 
     @NameInMap("IsSupportOperated")
     private Boolean isSupportOperated;
@@ -84,6 +93,12 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @NameInMap("ServiceAuditDocumentUrl")
+    private String serviceAuditDocumentUrl;
+
+    @NameInMap("ServiceDiscoverable")
+    private String serviceDiscoverable;
+
     @NameInMap("ServiceDocUrl")
     private String serviceDocUrl;
 
@@ -101,6 +116,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("ShareType")
     private String shareType;
+
+    @NameInMap("ShareTypeStatus")
+    private String shareTypeStatus;
 
     @NameInMap("SourceServiceId")
     private String sourceServiceId;
@@ -159,6 +177,8 @@ public class GetServiceResponseBody extends TeaModel {
     private GetServiceResponseBody(Builder builder) {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
+        this.billEntityMappings = builder.billEntityMappings;
+        this.categories = builder.categories;
         this.commodityCode = builder.commodityCode;
         this.commodityEntities = builder.commodityEntities;
         this.commoditySpecifications = builder.commoditySpecifications;
@@ -167,6 +187,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
         this.duration = builder.duration;
+        this.entitySource = builder.entitySource;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
         this.logMetadata = builder.logMetadata;
@@ -181,12 +202,15 @@ public class GetServiceResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resellable = builder.resellable;
         this.resourceGroupId = builder.resourceGroupId;
+        this.serviceAuditDocumentUrl = builder.serviceAuditDocumentUrl;
+        this.serviceDiscoverable = builder.serviceDiscoverable;
         this.serviceDocUrl = builder.serviceDocUrl;
         this.serviceId = builder.serviceId;
         this.serviceInfos = builder.serviceInfos;
         this.serviceProductUrl = builder.serviceProductUrl;
         this.serviceType = builder.serviceType;
         this.shareType = builder.shareType;
+        this.shareTypeStatus = builder.shareTypeStatus;
         this.sourceServiceId = builder.sourceServiceId;
         this.sourceServiceVersion = builder.sourceServiceVersion;
         this.sourceSupplierName = builder.sourceSupplierName;
@@ -227,6 +251,20 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    /**
+     * @return billEntityMappings
+     */
+    public BillEntityMappings getBillEntityMappings() {
+        return this.billEntityMappings;
+    }
+
+    /**
+     * @return categories
+     */
+    public String getCategories() {
+        return this.categories;
     }
 
     /**
@@ -283,6 +321,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public Long getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return entitySource
+     */
+    public java.util.Map < String, String > getEntitySource() {
+        return this.entitySource;
     }
 
     /**
@@ -384,6 +429,20 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceAuditDocumentUrl
+     */
+    public String getServiceAuditDocumentUrl() {
+        return this.serviceAuditDocumentUrl;
+    }
+
+    /**
+     * @return serviceDiscoverable
+     */
+    public String getServiceDiscoverable() {
+        return this.serviceDiscoverable;
+    }
+
+    /**
      * @return serviceDocUrl
      */
     public String getServiceDocUrl() {
@@ -423,6 +482,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getShareType() {
         return this.shareType;
+    }
+
+    /**
+     * @return shareTypeStatus
+     */
+    public String getShareTypeStatus() {
+        return this.shareTypeStatus;
     }
 
     /**
@@ -554,6 +620,8 @@ public class GetServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String alarmMetadata; 
         private String approvalType; 
+        private BillEntityMappings billEntityMappings; 
+        private String categories; 
         private String commodityCode; 
         private java.util.List < CommodityEntities> commodityEntities; 
         private java.util.List < CommoditySpecifications> commoditySpecifications; 
@@ -562,6 +630,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String deployMetadata; 
         private String deployType; 
         private Long duration; 
+        private java.util.Map < String, String > entitySource; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
         private String logMetadata; 
@@ -576,12 +645,15 @@ public class GetServiceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean resellable; 
         private String resourceGroupId; 
+        private String serviceAuditDocumentUrl; 
+        private String serviceDiscoverable; 
         private String serviceDocUrl; 
         private String serviceId; 
         private java.util.List < ServiceInfos> serviceInfos; 
         private String serviceProductUrl; 
         private String serviceType; 
         private String shareType; 
+        private String shareTypeStatus; 
         private String sourceServiceId; 
         private String sourceServiceVersion; 
         private String sourceSupplierName; 
@@ -614,6 +686,22 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder approvalType(String approvalType) {
             this.approvalType = approvalType;
+            return this;
+        }
+
+        /**
+         * BillEntityMappings.
+         */
+        public Builder billEntityMappings(BillEntityMappings billEntityMappings) {
+            this.billEntityMappings = billEntityMappings;
+            return this;
+        }
+
+        /**
+         * Categories.
+         */
+        public Builder categories(String categories) {
+            this.categories = categories;
             return this;
         }
 
@@ -678,6 +766,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder duration(Long duration) {
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EntitySource.
+         */
+        public Builder entitySource(java.util.Map < String, String > entitySource) {
+            this.entitySource = entitySource;
             return this;
         }
 
@@ -794,6 +890,22 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * ServiceAuditDocumentUrl.
+         */
+        public Builder serviceAuditDocumentUrl(String serviceAuditDocumentUrl) {
+            this.serviceAuditDocumentUrl = serviceAuditDocumentUrl;
+            return this;
+        }
+
+        /**
+         * ServiceDiscoverable.
+         */
+        public Builder serviceDiscoverable(String serviceDiscoverable) {
+            this.serviceDiscoverable = serviceDiscoverable;
+            return this;
+        }
+
+        /**
          * ServiceDocUrl.
          */
         public Builder serviceDocUrl(String serviceDocUrl) {
@@ -838,6 +950,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
+            return this;
+        }
+
+        /**
+         * ShareTypeStatus.
+         */
+        public Builder shareTypeStatus(String shareTypeStatus) {
+            this.shareTypeStatus = shareTypeStatus;
             return this;
         }
 
@@ -991,6 +1111,229 @@ public class GetServiceResponseBody extends TeaModel {
 
     } 
 
+    public static class Mappings extends TeaModel {
+        @NameInMap("BillCode")
+        private String billCode;
+
+        @NameInMap("Entity")
+        private String entity;
+
+        @NameInMap("MeteringAssist")
+        private String meteringAssist;
+
+        private Mappings(Builder builder) {
+            this.billCode = builder.billCode;
+            this.entity = builder.entity;
+            this.meteringAssist = builder.meteringAssist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Mappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return billCode
+         */
+        public String getBillCode() {
+            return this.billCode;
+        }
+
+        /**
+         * @return entity
+         */
+        public String getEntity() {
+            return this.entity;
+        }
+
+        /**
+         * @return meteringAssist
+         */
+        public String getMeteringAssist() {
+            return this.meteringAssist;
+        }
+
+        public static final class Builder {
+            private String billCode; 
+            private String entity; 
+            private String meteringAssist; 
+
+            /**
+             * BillCode.
+             */
+            public Builder billCode(String billCode) {
+                this.billCode = billCode;
+                return this;
+            }
+
+            /**
+             * Entity.
+             */
+            public Builder entity(String entity) {
+                this.entity = entity;
+                return this;
+            }
+
+            /**
+             * MeteringAssist.
+             */
+            public Builder meteringAssist(String meteringAssist) {
+                this.meteringAssist = meteringAssist;
+                return this;
+            }
+
+            public Mappings build() {
+                return new Mappings(this);
+            } 
+
+        } 
+
+    }
+    public static class MappingConfig extends TeaModel {
+        @NameInMap("Mappings")
+        private java.util.List < Mappings> mappings;
+
+        @NameInMap("PredefinedParameters")
+        private String predefinedParameters;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        private MappingConfig(Builder builder) {
+            this.mappings = builder.mappings;
+            this.predefinedParameters = builder.predefinedParameters;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MappingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mappings
+         */
+        public java.util.List < Mappings> getMappings() {
+            return this.mappings;
+        }
+
+        /**
+         * @return predefinedParameters
+         */
+        public String getPredefinedParameters() {
+            return this.predefinedParameters;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private java.util.List < Mappings> mappings; 
+            private String predefinedParameters; 
+            private String templateName; 
+
+            /**
+             * Mappings.
+             */
+            public Builder mappings(java.util.List < Mappings> mappings) {
+                this.mappings = mappings;
+                return this;
+            }
+
+            /**
+             * PredefinedParameters.
+             */
+            public Builder predefinedParameters(String predefinedParameters) {
+                this.predefinedParameters = predefinedParameters;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public MappingConfig build() {
+                return new MappingConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class BillEntityMappings extends TeaModel {
+        @NameInMap("MappingConfig")
+        private java.util.List < MappingConfig> mappingConfig;
+
+        @NameInMap("Type")
+        private String type;
+
+        private BillEntityMappings(Builder builder) {
+            this.mappingConfig = builder.mappingConfig;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BillEntityMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mappingConfig
+         */
+        public java.util.List < MappingConfig> getMappingConfig() {
+            return this.mappingConfig;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List < MappingConfig> mappingConfig; 
+            private String type; 
+
+            /**
+             * MappingConfig.
+             */
+            public Builder mappingConfig(java.util.List < MappingConfig> mappingConfig) {
+                this.mappingConfig = mappingConfig;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public BillEntityMappings build() {
+                return new BillEntityMappings(this);
+            } 
+
+        } 
+
+    }
     public static class CommodityEntities extends TeaModel {
         @NameInMap("EntityIds")
         private java.util.List < String > entityIds;

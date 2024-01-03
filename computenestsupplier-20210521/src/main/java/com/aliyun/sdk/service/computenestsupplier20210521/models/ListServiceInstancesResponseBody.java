@@ -575,6 +575,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
 
     }
     public static class ServiceInstances extends TeaModel {
+        @NameInMap("BizStatus")
+        private String bizStatus;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -642,6 +645,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private Long userId;
 
         private ServiceInstances(Builder builder) {
+            this.bizStatus = builder.bizStatus;
             this.createTime = builder.createTime;
             this.enableInstanceOps = builder.enableInstanceOps;
             this.endTime = builder.endTime;
@@ -672,6 +676,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
 
         public static ServiceInstances create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizStatus
+         */
+        public String getBizStatus() {
+            return this.bizStatus;
         }
 
         /**
@@ -829,6 +840,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizStatus; 
             private String createTime; 
             private Boolean enableInstanceOps; 
             private String endTime; 
@@ -851,6 +863,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String templateName; 
             private String updateTime; 
             private Long userId; 
+
+            /**
+             * BizStatus.
+             */
+            public Builder bizStatus(String bizStatus) {
+                this.bizStatus = bizStatus;
+                return this;
+            }
 
             /**
              * CreateTime.

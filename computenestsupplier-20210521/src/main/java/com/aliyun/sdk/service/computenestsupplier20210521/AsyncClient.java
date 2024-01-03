@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddServiceSharedAccountsResponse> addServiceSharedAccounts(AddServiceSharedAccountsRequest request);
+
     CompletableFuture<ContinueDeployServiceInstanceResponse> continueDeployServiceInstance(ContinueDeployServiceInstanceRequest request);
 
     CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
@@ -43,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceEstimateCostResponse> getServiceEstimateCost(GetServiceEstimateCostRequest request);
 
     CompletableFuture<GetServiceInstanceResponse> getServiceInstance(GetServiceInstanceRequest request);
+
+    CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request);
 
     CompletableFuture<GetUploadCredentialsResponse> getUploadCredentials(GetUploadCredentialsRequest request);
 
@@ -71,5 +75,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateArtifactResponse> updateArtifact(UpdateArtifactRequest request);
 
     CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
+
+    CompletableFuture<UpdateServiceInstanceAttributeResponse> updateServiceInstanceAttribute(UpdateServiceInstanceAttributeRequest request);
+
+    CompletableFuture<UpgradeServiceInstanceResponse> upgradeServiceInstance(UpgradeServiceInstanceRequest request);
 
 }

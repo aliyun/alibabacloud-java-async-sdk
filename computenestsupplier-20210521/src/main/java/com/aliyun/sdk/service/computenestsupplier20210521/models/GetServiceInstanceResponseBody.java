@@ -22,7 +22,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     private Boolean enableInstanceOps;
 
     @NameInMap("EnableUserPrometheus")
-    private String enableUserPrometheus;
+    private Boolean enableUserPrometheus;
 
     @NameInMap("EndTime")
     private String endTime;
@@ -175,7 +175,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     /**
      * @return enableUserPrometheus
      */
-    public String getEnableUserPrometheus() {
+    public Boolean getEnableUserPrometheus() {
         return this.enableUserPrometheus;
     }
 
@@ -379,7 +379,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String bizStatus; 
         private String createTime; 
         private Boolean enableInstanceOps; 
-        private String enableUserPrometheus; 
+        private Boolean enableUserPrometheus; 
         private String endTime; 
         private Boolean isOperated; 
         private String licenseMetadata; 
@@ -436,7 +436,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * EnableUserPrometheus.
          */
-        public Builder enableUserPrometheus(String enableUserPrometheus) {
+        public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.enableUserPrometheus = enableUserPrometheus;
             return this;
         }

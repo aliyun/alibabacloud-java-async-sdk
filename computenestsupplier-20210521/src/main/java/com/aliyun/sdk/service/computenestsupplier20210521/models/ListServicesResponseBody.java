@@ -303,6 +303,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ArtifactVersion")
         private String artifactVersion;
 
+        @NameInMap("Categories")
+        private String categories;
+
         @NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -314,6 +317,12 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("DeployType")
         private String deployType;
+
+        @NameInMap("HasBeta")
+        private Boolean hasBeta;
+
+        @NameInMap("HasDraft")
+        private Boolean hasDraft;
 
         @NameInMap("LatestResellSourceServiceVersion")
         private String latestResellSourceServiceVersion;
@@ -332,6 +341,9 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @NameInMap("ServiceDiscoverable")
+        private String serviceDiscoverable;
 
         @NameInMap("ServiceId")
         private String serviceId;
@@ -391,16 +403,20 @@ public class ListServicesResponseBody extends TeaModel {
             this.approvalType = builder.approvalType;
             this.artifactId = builder.artifactId;
             this.artifactVersion = builder.artifactVersion;
+            this.categories = builder.categories;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.defaultVersion = builder.defaultVersion;
             this.deployType = builder.deployType;
+            this.hasBeta = builder.hasBeta;
+            this.hasDraft = builder.hasDraft;
             this.latestResellSourceServiceVersion = builder.latestResellSourceServiceVersion;
             this.publishTime = builder.publishTime;
             this.relationType = builder.relationType;
             this.resellApplyStatus = builder.resellApplyStatus;
             this.resellServiceId = builder.resellServiceId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.serviceDiscoverable = builder.serviceDiscoverable;
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
             this.serviceType = builder.serviceType;
@@ -451,6 +467,13 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return categories
+         */
+        public String getCategories() {
+            return this.categories;
+        }
+
+        /**
          * @return commodityCode
          */
         public String getCommodityCode() {
@@ -476,6 +499,20 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getDeployType() {
             return this.deployType;
+        }
+
+        /**
+         * @return hasBeta
+         */
+        public Boolean getHasBeta() {
+            return this.hasBeta;
+        }
+
+        /**
+         * @return hasDraft
+         */
+        public Boolean getHasDraft() {
+            return this.hasDraft;
         }
 
         /**
@@ -518,6 +555,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return serviceDiscoverable
+         */
+        public String getServiceDiscoverable() {
+            return this.serviceDiscoverable;
         }
 
         /**
@@ -650,16 +694,20 @@ public class ListServicesResponseBody extends TeaModel {
             private String approvalType; 
             private String artifactId; 
             private String artifactVersion; 
+            private String categories; 
             private String commodityCode; 
             private String createTime; 
             private Boolean defaultVersion; 
             private String deployType; 
+            private Boolean hasBeta; 
+            private Boolean hasDraft; 
             private String latestResellSourceServiceVersion; 
             private String publishTime; 
             private String relationType; 
             private String resellApplyStatus; 
             private String resellServiceId; 
             private String resourceGroupId; 
+            private String serviceDiscoverable; 
             private String serviceId; 
             private java.util.List < ServiceInfos> serviceInfos; 
             private String serviceType; 
@@ -704,6 +752,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
+             * Categories.
+             */
+            public Builder categories(String categories) {
+                this.categories = categories;
+                return this;
+            }
+
+            /**
              * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
@@ -732,6 +788,22 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
+                return this;
+            }
+
+            /**
+             * HasBeta.
+             */
+            public Builder hasBeta(Boolean hasBeta) {
+                this.hasBeta = hasBeta;
+                return this;
+            }
+
+            /**
+             * HasDraft.
+             */
+            public Builder hasDraft(Boolean hasDraft) {
+                this.hasDraft = hasDraft;
                 return this;
             }
 
@@ -780,6 +852,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ServiceDiscoverable.
+             */
+            public Builder serviceDiscoverable(String serviceDiscoverable) {
+                this.serviceDiscoverable = serviceDiscoverable;
                 return this;
             }
 

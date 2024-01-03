@@ -18,8 +18,8 @@ public class ListArtifactVersionsRequest extends Request {
     private String artifactId;
 
     @Query
-    @NameInMap("MaxResult")
-    private Integer maxResult;
+    @NameInMap("MaxResults")
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -28,7 +28,7 @@ public class ListArtifactVersionsRequest extends Request {
     private ListArtifactVersionsRequest(Builder builder) {
         super(builder);
         this.artifactId = builder.artifactId;
-        this.maxResult = builder.maxResult;
+        this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
     }
 
@@ -53,10 +53,10 @@ public class ListArtifactVersionsRequest extends Request {
     }
 
     /**
-     * @return maxResult
+     * @return maxResults
      */
-    public Integer getMaxResult() {
-        return this.maxResult;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -68,7 +68,7 @@ public class ListArtifactVersionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListArtifactVersionsRequest, Builder> {
         private String artifactId; 
-        private Integer maxResult; 
+        private Integer maxResults; 
         private String nextToken; 
 
         private Builder() {
@@ -78,7 +78,7 @@ public class ListArtifactVersionsRequest extends Request {
         private Builder(ListArtifactVersionsRequest request) {
             super(request);
             this.artifactId = request.artifactId;
-            this.maxResult = request.maxResult;
+            this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
 
@@ -92,11 +92,11 @@ public class ListArtifactVersionsRequest extends Request {
         }
 
         /**
-         * MaxResult.
+         * MaxResults.
          */
-        public Builder maxResult(Integer maxResult) {
-            this.putQueryParameter("MaxResult", maxResult);
-            this.maxResult = maxResult;
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 

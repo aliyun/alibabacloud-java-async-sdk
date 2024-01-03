@@ -21,6 +21,10 @@ public class CreateServiceInstanceRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
     @NameInMap("Name")
     private String name;
 
@@ -66,6 +70,7 @@ public class CreateServiceInstanceRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.endTime = builder.endTime;
         this.name = builder.name;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
@@ -103,6 +108,13 @@ public class CreateServiceInstanceRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreateServiceInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateServiceInstanceRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private String endTime; 
         private String name; 
         private java.util.Map < String, ? > parameters; 
         private String regionId; 
@@ -197,6 +210,7 @@ public class CreateServiceInstanceRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.endTime = request.endTime;
             this.name = request.name;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
@@ -224,6 +238,15 @@ public class CreateServiceInstanceRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 

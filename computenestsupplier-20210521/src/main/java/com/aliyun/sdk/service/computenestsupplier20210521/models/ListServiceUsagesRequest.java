@@ -24,11 +24,16 @@ public class ListServiceUsagesRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Query
+    @NameInMap("SupplierRole")
+    private String supplierRole;
+
     private ListServiceUsagesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.supplierRole = builder.supplierRole;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class ListServiceUsagesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return supplierRole
+     */
+    public String getSupplierRole() {
+        return this.supplierRole;
+    }
+
     public static final class Builder extends Request.Builder<ListServiceUsagesRequest, Builder> {
         private java.util.List < Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
+        private String supplierRole; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class ListServiceUsagesRequest extends Request {
             this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.supplierRole = request.supplierRole;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class ListServiceUsagesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * SupplierRole.
+         */
+        public Builder supplierRole(String supplierRole) {
+            this.putQueryParameter("SupplierRole", supplierRole);
+            this.supplierRole = supplierRole;
             return this;
         }
 

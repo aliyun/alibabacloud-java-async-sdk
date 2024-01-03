@@ -21,6 +21,10 @@ public class CreateServiceRequest extends Request {
     private String approvalType;
 
     @Query
+    @NameInMap("BuildParameters")
+    private String buildParameters;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -118,6 +122,7 @@ public class CreateServiceRequest extends Request {
         super(builder);
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
+        this.buildParameters = builder.buildParameters;
         this.clientToken = builder.clientToken;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
@@ -168,6 +173,13 @@ public class CreateServiceRequest extends Request {
      */
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    /**
+     * @return buildParameters
+     */
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     /**
@@ -334,6 +346,7 @@ public class CreateServiceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
         private String alarmMetadata; 
         private String approvalType; 
+        private String buildParameters; 
         private String clientToken; 
         private String deployMetadata; 
         private String deployType; 
@@ -366,6 +379,7 @@ public class CreateServiceRequest extends Request {
             super(request);
             this.alarmMetadata = request.alarmMetadata;
             this.approvalType = request.approvalType;
+            this.buildParameters = request.buildParameters;
             this.clientToken = request.clientToken;
             this.deployMetadata = request.deployMetadata;
             this.deployType = request.deployType;
@@ -406,6 +420,15 @@ public class CreateServiceRequest extends Request {
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
             this.approvalType = approvalType;
+            return this;
+        }
+
+        /**
+         * BuildParameters.
+         */
+        public Builder buildParameters(String buildParameters) {
+            this.putQueryParameter("BuildParameters", buildParameters);
+            this.buildParameters = buildParameters;
             return this;
         }
 
