@@ -485,7 +485,7 @@ public class RegisterInstanceRequest extends Request {
         }
 
         /**
-         * DbaUidByString.
+         * The ID of the user who assumes the DBA role of the database instance. If the user ID is a non-numeric value such as a role or an account, you can use this parameter to replace DbaUid.
          */
         public Builder dbaUidByString(String dbaUidByString) {
             this.putQueryParameter("DbaUidByString", dbaUidByString);

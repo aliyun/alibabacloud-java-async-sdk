@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateStandardGroupResponseBody} extends {@link TeaModel}
+ * {@link GetStandardGroupResponseBody} extends {@link TeaModel}
  *
- * <p>CreateStandardGroupResponseBody</p>
+ * <p>GetStandardGroupResponseBody</p>
  */
-public class CreateStandardGroupResponseBody extends TeaModel {
+public class GetStandardGroupResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -27,7 +27,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private CreateStandardGroupResponseBody(Builder builder) {
+    private GetStandardGroupResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.requestId = builder.requestId;
@@ -39,7 +39,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateStandardGroupResponseBody create() {
+    public static GetStandardGroupResponseBody create() {
         return builder().build();
     }
 
@@ -86,7 +86,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request fails.
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The created security rule set.
+         * StandardGroup.
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -118,19 +118,15 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateStandardGroupResponseBody build() {
-            return new CreateStandardGroupResponseBody(this);
+        public GetStandardGroupResponseBody build() {
+            return new GetStandardGroupResponseBody(this);
         } 
 
     } 
@@ -222,7 +218,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * The type of the database engine. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
+             * DbType.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -230,7 +226,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security rule set.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,12 +242,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The control mode. Valid values:
-             * <p>
-             * 
-             * *   **NONE_CONTROL**: Flexible Management
-             * *   **STABLE**: Stable Change
-             * *   **COMMON**: Security Collaboration
+             * GroupMode.
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -259,7 +250,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security rule set.
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -267,7 +258,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the security rule set.
+             * LastMenderId.
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;

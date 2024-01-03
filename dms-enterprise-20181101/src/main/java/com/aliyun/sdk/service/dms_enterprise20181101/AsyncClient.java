@@ -209,6 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request);
 
+    CompletableFuture<DeleteStandardGroupResponse> deleteStandardGroup(DeleteStandardGroupRequest request);
+
     CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
 
     CompletableFuture<DeleteTaskFlowResponse> deleteTaskFlow(DeleteTaskFlowRequest request);
@@ -396,6 +398,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GetSQLReviewOptimizeDetailResponse> getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request);
+
+    CompletableFuture<GetStandardGroupResponse> getStandardGroup(GetStandardGroupRequest request);
 
     CompletableFuture<GetStructSyncExecSqlDetailResponse> getStructSyncExecSqlDetail(GetStructSyncExecSqlDetailRequest request);
 
@@ -675,6 +679,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSLARulesResponse> updateSLARules(UpdateSLARulesRequest request);
 
     CompletableFuture<UpdateScenarioResponse> updateScenario(UpdateScenarioRequest request);
+
+    CompletableFuture<UpdateStandardGroupResponse> updateStandardGroup(UpdateStandardGroupRequest request);
 
     /**
       * You can call this operation to configure a failed task or rerun a task.
