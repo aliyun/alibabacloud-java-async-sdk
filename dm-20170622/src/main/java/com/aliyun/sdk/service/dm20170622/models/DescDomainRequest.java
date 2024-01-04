@@ -22,6 +22,10 @@ public class DescDomainRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RequireRealTimeDnsRecords")
+    private Boolean requireRealTimeDnsRecords;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -33,6 +37,7 @@ public class DescDomainRequest extends Request {
         super(builder);
         this.domainId = builder.domainId;
         this.ownerId = builder.ownerId;
+        this.requireRealTimeDnsRecords = builder.requireRealTimeDnsRecords;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -65,6 +70,13 @@ public class DescDomainRequest extends Request {
     }
 
     /**
+     * @return requireRealTimeDnsRecords
+     */
+    public Boolean getRequireRealTimeDnsRecords() {
+        return this.requireRealTimeDnsRecords;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -81,6 +93,7 @@ public class DescDomainRequest extends Request {
     public static final class Builder extends Request.Builder<DescDomainRequest, Builder> {
         private Integer domainId; 
         private Long ownerId; 
+        private Boolean requireRealTimeDnsRecords; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -92,6 +105,7 @@ public class DescDomainRequest extends Request {
             super(request);
             this.domainId = request.domainId;
             this.ownerId = request.ownerId;
+            this.requireRealTimeDnsRecords = request.requireRealTimeDnsRecords;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -111,6 +125,15 @@ public class DescDomainRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RequireRealTimeDnsRecords.
+         */
+        public Builder requireRealTimeDnsRecords(Boolean requireRealTimeDnsRecords) {
+            this.putQueryParameter("RequireRealTimeDnsRecords", requireRealTimeDnsRecords);
+            this.requireRealTimeDnsRecords = requireRealTimeDnsRecords;
             return this;
         }
 

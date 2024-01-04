@@ -132,6 +132,9 @@ public class QueryTagByParamResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
+        @NameInMap("TagDescription")
+        private String tagDescription;
+
         @NameInMap("TagId")
         private String tagId;
 
@@ -139,6 +142,7 @@ public class QueryTagByParamResponseBody extends TeaModel {
         private String tagName;
 
         private Tag(Builder builder) {
+            this.tagDescription = builder.tagDescription;
             this.tagId = builder.tagId;
             this.tagName = builder.tagName;
         }
@@ -149,6 +153,13 @@ public class QueryTagByParamResponseBody extends TeaModel {
 
         public static Tag create() {
             return builder().build();
+        }
+
+        /**
+         * @return tagDescription
+         */
+        public String getTagDescription() {
+            return this.tagDescription;
         }
 
         /**
@@ -166,8 +177,17 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String tagDescription; 
             private String tagId; 
             private String tagName; 
+
+            /**
+             * TagDescription.
+             */
+            public Builder tagDescription(String tagDescription) {
+                this.tagDescription = tagDescription;
+                return this;
+            }
 
             /**
              * TagId.

@@ -25,6 +25,10 @@ public class ModifyTagRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("TagDescription")
+    private String tagDescription;
+
+    @Query
     @NameInMap("TagId")
     @Validation(required = true)
     private Integer tagId;
@@ -39,6 +43,7 @@ public class ModifyTagRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tagDescription = builder.tagDescription;
         this.tagId = builder.tagId;
         this.tagName = builder.tagName;
     }
@@ -78,6 +83,13 @@ public class ModifyTagRequest extends Request {
     }
 
     /**
+     * @return tagDescription
+     */
+    public String getTagDescription() {
+        return this.tagDescription;
+    }
+
+    /**
      * @return tagId
      */
     public Integer getTagId() {
@@ -95,6 +107,7 @@ public class ModifyTagRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String tagDescription; 
         private Integer tagId; 
         private String tagName; 
 
@@ -107,6 +120,7 @@ public class ModifyTagRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tagDescription = request.tagDescription;
             this.tagId = request.tagId;
             this.tagName = request.tagName;
         } 
@@ -135,6 +149,15 @@ public class ModifyTagRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * TagDescription.
+         */
+        public Builder tagDescription(String tagDescription) {
+            this.putQueryParameter("TagDescription", tagDescription);
+            this.tagDescription = tagDescription;
             return this;
         }
 

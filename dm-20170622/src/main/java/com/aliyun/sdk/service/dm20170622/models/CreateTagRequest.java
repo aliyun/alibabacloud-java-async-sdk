@@ -25,6 +25,10 @@ public class CreateTagRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("TagDescription")
+    private String tagDescription;
+
+    @Query
     @NameInMap("TagName")
     @Validation(required = true)
     private String tagName;
@@ -34,6 +38,7 @@ public class CreateTagRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tagDescription = builder.tagDescription;
         this.tagName = builder.tagName;
     }
 
@@ -72,6 +77,13 @@ public class CreateTagRequest extends Request {
     }
 
     /**
+     * @return tagDescription
+     */
+    public String getTagDescription() {
+        return this.tagDescription;
+    }
+
+    /**
      * @return tagName
      */
     public String getTagName() {
@@ -82,6 +94,7 @@ public class CreateTagRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String tagDescription; 
         private String tagName; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class CreateTagRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tagDescription = request.tagDescription;
             this.tagName = request.tagName;
         } 
 
@@ -120,6 +134,15 @@ public class CreateTagRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * TagDescription.
+         */
+        public Builder tagDescription(String tagDescription) {
+            this.putQueryParameter("TagDescription", tagDescription);
+            this.tagDescription = tagDescription;
             return this;
         }
 
