@@ -3561,11 +3561,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheckStatus")
         private ReverseJobIncDataCheckStatus incDataCheckStatus;
 
+        @NameInMap("MaxDu")
+        private Double maxDu;
+
         @NameInMap("MemUsage")
         private String memUsage;
 
         @NameInMap("MigrationMode")
         private ReverseJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        private Double minDu;
 
         @NameInMap("PayType")
         private String payType;
@@ -3610,8 +3616,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.fullDataCheckStatus = builder.fullDataCheckStatus;
             this.incDataCheckStatus = builder.incDataCheckStatus;
+            this.maxDu = builder.maxDu;
             this.memUsage = builder.memUsage;
             this.migrationMode = builder.migrationMode;
+            this.minDu = builder.minDu;
             this.payType = builder.payType;
             this.performance = builder.performance;
             this.precheckStatus = builder.precheckStatus;
@@ -3777,6 +3785,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxDu
+         */
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
+        /**
          * @return memUsage
          */
         public String getMemUsage() {
@@ -3788,6 +3803,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         public ReverseJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        /**
+         * @return minDu
+         */
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         /**
@@ -3861,8 +3883,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String expireTime; 
             private ReverseJobFullDataCheckStatus fullDataCheckStatus; 
             private ReverseJobIncDataCheckStatus incDataCheckStatus; 
+            private Double maxDu; 
             private String memUsage; 
             private ReverseJobMigrationMode migrationMode; 
+            private Double minDu; 
             private String payType; 
             private ReverseJobPerformance performance; 
             private ReverseJobPrecheckStatus precheckStatus; 
@@ -4046,6 +4070,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
+             * MaxDu.
+             */
+            public Builder maxDu(Double maxDu) {
+                this.maxDu = maxDu;
+                return this;
+            }
+
+            /**
              * The memory that has been used. Unit: MB.
              */
             public Builder memUsage(String memUsage) {
@@ -4058,6 +4090,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder migrationMode(ReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
+                return this;
+            }
+
+            /**
+             * MinDu.
+             */
+            public Builder minDu(Double minDu) {
+                this.minDu = minDu;
                 return this;
             }
 
@@ -4617,6 +4657,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("JobType")
         private String jobType;
 
+        @NameInMap("MaxDu")
+        private Double maxDu;
+
         @NameInMap("MemUsage")
         private String memUsage;
 
@@ -4640,6 +4683,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         @NameInMap("MigrationMode")
         private MigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        private Double minDu;
 
         @NameInMap("OriginType")
         private String originType;
@@ -4711,6 +4757,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.fullDataCheckStatus = builder.fullDataCheckStatus;
             this.incDataCheckStatus = builder.incDataCheckStatus;
             this.jobType = builder.jobType;
+            this.maxDu = builder.maxDu;
             this.memUsage = builder.memUsage;
             this.migrationErrCode = builder.migrationErrCode;
             this.migrationErrHelpDocId = builder.migrationErrHelpDocId;
@@ -4719,6 +4766,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.migrationErrType = builder.migrationErrType;
             this.migrationErrWorkaround = builder.migrationErrWorkaround;
             this.migrationMode = builder.migrationMode;
+            this.minDu = builder.minDu;
             this.originType = builder.originType;
             this.payType = builder.payType;
             this.performance = builder.performance;
@@ -4953,6 +5001,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxDu
+         */
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
+        /**
          * @return memUsage
          */
         public String getMemUsage() {
@@ -5006,6 +5061,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         public MigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        /**
+         * @return minDu
+         */
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         /**
@@ -5130,6 +5192,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private FullDataCheckStatus fullDataCheckStatus; 
             private IncDataCheckStatus incDataCheckStatus; 
             private String jobType; 
+            private Double maxDu; 
             private String memUsage; 
             private String migrationErrCode; 
             private String migrationErrHelpDocId; 
@@ -5138,6 +5201,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String migrationErrType; 
             private String migrationErrWorkaround; 
             private MigrationMode migrationMode; 
+            private Double minDu; 
             private String originType; 
             private String payType; 
             private Performance performance; 
@@ -5410,6 +5474,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
+             * MaxDu.
+             */
+            public Builder maxDu(Double maxDu) {
+                this.maxDu = maxDu;
+                return this;
+            }
+
+            /**
              * The memory that has been used. Unit: MB.
              */
             public Builder memUsage(String memUsage) {
@@ -5470,6 +5542,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder migrationMode(MigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
+                return this;
+            }
+
+            /**
+             * MinDu.
+             */
+            public Builder minDu(Double minDu) {
+                this.minDu = minDu;
                 return this;
             }
 

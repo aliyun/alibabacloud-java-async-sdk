@@ -126,8 +126,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("LastUpdateTime")
     private String lastUpdateTime;
 
+    @NameInMap("MaxDu")
+    private Double maxDu;
+
     @NameInMap("MigrationMode")
     private MigrationMode migrationMode;
+
+    @NameInMap("MinDu")
+    private Double minDu;
 
     @NameInMap("PayType")
     private String payType;
@@ -216,7 +222,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         this.httpStatusCode = builder.httpStatusCode;
         this.jobType = builder.jobType;
         this.lastUpdateTime = builder.lastUpdateTime;
+        this.maxDu = builder.maxDu;
         this.migrationMode = builder.migrationMode;
+        this.minDu = builder.minDu;
         this.payType = builder.payType;
         this.requestId = builder.requestId;
         this.reserved = builder.reserved;
@@ -510,10 +518,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxDu
+     */
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    /**
      * @return migrationMode
      */
     public MigrationMode getMigrationMode() {
         return this.migrationMode;
+    }
+
+    /**
+     * @return minDu
+     */
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     /**
@@ -667,7 +689,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String jobType; 
         private String lastUpdateTime; 
+        private Double maxDu; 
         private MigrationMode migrationMode; 
+        private Double minDu; 
         private String payType; 
         private String requestId; 
         private String reserved; 
@@ -1041,10 +1065,26 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * MaxDu.
+         */
+        public Builder maxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+
+        /**
          * The type of the destination instance.
          */
         public Builder migrationMode(MigrationMode migrationMode) {
             this.migrationMode = migrationMode;
+            return this;
+        }
+
+        /**
+         * MinDu.
+         */
+        public Builder minDu(Double minDu) {
+            this.minDu = minDu;
             return this;
         }
 
@@ -5604,8 +5644,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         private String jobType;
 
+        @NameInMap("MaxDu")
+        private Double maxDu;
+
         @NameInMap("MigrationMode")
         private ReverseJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        private Double minDu;
 
         @NameInMap("OriginType")
         private String originType;
@@ -5683,7 +5729,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.isDemoJob = builder.isDemoJob;
             this.jobType = builder.jobType;
+            this.maxDu = builder.maxDu;
             this.migrationMode = builder.migrationMode;
+            this.minDu = builder.minDu;
             this.originType = builder.originType;
             this.payType = builder.payType;
             this.performance = builder.performance;
@@ -5900,10 +5948,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxDu
+         */
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
+        /**
          * @return migrationMode
          */
         public ReverseJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        /**
+         * @return minDu
+         */
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         /**
@@ -6046,7 +6108,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String groupId; 
             private Boolean isDemoJob; 
             private String jobType; 
+            private Double maxDu; 
             private ReverseJobMigrationMode migrationMode; 
+            private Double minDu; 
             private String originType; 
             private String payType; 
             private ReverseJobPerformance performance; 
@@ -6323,10 +6387,26 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
+             * MaxDu.
+             */
+            public Builder maxDu(Double maxDu) {
+                this.maxDu = maxDu;
+                return this;
+            }
+
+            /**
              * The type of the destination instance.
              */
             public Builder migrationMode(ReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
+                return this;
+            }
+
+            /**
+             * MinDu.
+             */
+            public Builder minDu(Double minDu) {
+                this.minDu = minDu;
                 return this;
             }
 
@@ -7375,8 +7455,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         private String jobType;
 
+        @NameInMap("MaxDu")
+        private Double maxDu;
+
         @NameInMap("MigrationMode")
         private SubDistributedJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        private Double minDu;
 
         @NameInMap("OriginType")
         private String originType;
@@ -7457,7 +7543,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.isDemoJob = builder.isDemoJob;
             this.jobType = builder.jobType;
+            this.maxDu = builder.maxDu;
             this.migrationMode = builder.migrationMode;
+            this.minDu = builder.minDu;
             this.originType = builder.originType;
             this.payType = builder.payType;
             this.performance = builder.performance;
@@ -7675,10 +7763,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxDu
+         */
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
+        /**
          * @return migrationMode
          */
         public SubDistributedJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        /**
+         * @return minDu
+         */
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         /**
@@ -7828,7 +7930,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String groupId; 
             private Boolean isDemoJob; 
             private String jobType; 
+            private Double maxDu; 
             private SubDistributedJobMigrationMode migrationMode; 
+            private Double minDu; 
             private String originType; 
             private String payType; 
             private Performance performance; 
@@ -8106,10 +8210,26 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
+             * MaxDu.
+             */
+            public Builder maxDu(Double maxDu) {
+                this.maxDu = maxDu;
+                return this;
+            }
+
+            /**
              * The type of the destination instance.
              */
             public Builder migrationMode(SubDistributedJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
+                return this;
+            }
+
+            /**
+             * MinDu.
+             */
+            public Builder minDu(Double minDu) {
+                this.minDu = minDu;
                 return this;
             }
 
@@ -13361,8 +13481,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         private String jobType;
 
+        @NameInMap("MaxDu")
+        private Double maxDu;
+
         @NameInMap("MigrationMode")
         private SubSyncJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        private Double minDu;
 
         @NameInMap("OriginType")
         private String originType;
@@ -13443,7 +13569,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.isDemoJob = builder.isDemoJob;
             this.jobType = builder.jobType;
+            this.maxDu = builder.maxDu;
             this.migrationMode = builder.migrationMode;
+            this.minDu = builder.minDu;
             this.originType = builder.originType;
             this.payType = builder.payType;
             this.performance = builder.performance;
@@ -13661,10 +13789,24 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxDu
+         */
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
+        /**
          * @return migrationMode
          */
         public SubSyncJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        /**
+         * @return minDu
+         */
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         /**
@@ -13814,7 +13956,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String groupId; 
             private Boolean isDemoJob; 
             private String jobType; 
+            private Double maxDu; 
             private SubSyncJobMigrationMode migrationMode; 
+            private Double minDu; 
             private String originType; 
             private String payType; 
             private SubSyncJobPerformance performance; 
@@ -14092,10 +14236,26 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
+             * MaxDu.
+             */
+            public Builder maxDu(Double maxDu) {
+                this.maxDu = maxDu;
+                return this;
+            }
+
+            /**
              * The type of the destination instance.
              */
             public Builder migrationMode(SubSyncJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
+                return this;
+            }
+
+            /**
+             * MinDu.
+             */
+            public Builder minDu(Double minDu) {
+                this.minDu = minDu;
                 return this;
             }
 

@@ -55,6 +55,14 @@ public class CreateDtsInstanceRequest extends Request {
     private String jobId;
 
     @Query
+    @NameInMap("MaxDu")
+    private Double maxDu;
+
+    @Query
+    @NameInMap("MinDu")
+    private Double minDu;
+
+    @Query
     @NameInMap("PayType")
     private String payType;
 
@@ -108,6 +116,8 @@ public class CreateDtsInstanceRequest extends Request {
         this.feeType = builder.feeType;
         this.instanceClass = builder.instanceClass;
         this.jobId = builder.jobId;
+        this.maxDu = builder.maxDu;
+        this.minDu = builder.minDu;
         this.payType = builder.payType;
         this.period = builder.period;
         this.quantity = builder.quantity;
@@ -204,6 +214,20 @@ public class CreateDtsInstanceRequest extends Request {
     }
 
     /**
+     * @return maxDu
+     */
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    /**
+     * @return minDu
+     */
+    public Double getMinDu() {
+        return this.minDu;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -284,6 +308,8 @@ public class CreateDtsInstanceRequest extends Request {
         private String feeType; 
         private String instanceClass; 
         private String jobId; 
+        private Double maxDu; 
+        private Double minDu; 
         private String payType; 
         private String period; 
         private Integer quantity; 
@@ -311,6 +337,8 @@ public class CreateDtsInstanceRequest extends Request {
             this.feeType = request.feeType;
             this.instanceClass = request.instanceClass;
             this.jobId = request.jobId;
+            this.maxDu = request.maxDu;
+            this.minDu = request.minDu;
             this.payType = request.payType;
             this.period = request.period;
             this.quantity = request.quantity;
@@ -464,6 +492,24 @@ public class CreateDtsInstanceRequest extends Request {
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * MaxDu.
+         */
+        public Builder maxDu(Double maxDu) {
+            this.putQueryParameter("MaxDu", maxDu);
+            this.maxDu = maxDu;
+            return this;
+        }
+
+        /**
+         * MinDu.
+         */
+        public Builder minDu(Double minDu) {
+            this.putQueryParameter("MinDu", minDu);
+            this.minDu = minDu;
             return this;
         }
 

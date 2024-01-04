@@ -63,6 +63,14 @@ public class ConfigureSubscriptionRequest extends Request {
     private String errorPhone;
 
     @Query
+    @NameInMap("MaxDu")
+    private Double maxDu;
+
+    @Query
+    @NameInMap("MinDu")
+    private Double minDu;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -154,6 +162,8 @@ public class ConfigureSubscriptionRequest extends Request {
         this.dtsJobName = builder.dtsJobName;
         this.errorNotice = builder.errorNotice;
         this.errorPhone = builder.errorPhone;
+        this.maxDu = builder.maxDu;
+        this.minDu = builder.minDu;
         this.regionId = builder.regionId;
         this.reserve = builder.reserve;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
@@ -270,6 +280,20 @@ public class ConfigureSubscriptionRequest extends Request {
      */
     public String getErrorPhone() {
         return this.errorPhone;
+    }
+
+    /**
+     * @return maxDu
+     */
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    /**
+     * @return minDu
+     */
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     /**
@@ -418,6 +442,8 @@ public class ConfigureSubscriptionRequest extends Request {
         private String dtsJobName; 
         private Boolean errorNotice; 
         private String errorPhone; 
+        private Double maxDu; 
+        private Double minDu; 
         private String regionId; 
         private String reserve; 
         private String sourceEndpointDatabaseName; 
@@ -456,6 +482,8 @@ public class ConfigureSubscriptionRequest extends Request {
             this.dtsJobName = request.dtsJobName;
             this.errorNotice = request.errorNotice;
             this.errorPhone = request.errorPhone;
+            this.maxDu = request.maxDu;
+            this.minDu = request.minDu;
             this.regionId = request.regionId;
             this.reserve = request.reserve;
             this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
@@ -609,6 +637,24 @@ public class ConfigureSubscriptionRequest extends Request {
         public Builder errorPhone(String errorPhone) {
             this.putQueryParameter("ErrorPhone", errorPhone);
             this.errorPhone = errorPhone;
+            return this;
+        }
+
+        /**
+         * MaxDu.
+         */
+        public Builder maxDu(Double maxDu) {
+            this.putQueryParameter("MaxDu", maxDu);
+            this.maxDu = maxDu;
+            return this;
+        }
+
+        /**
+         * MinDu.
+         */
+        public Builder minDu(Double minDu) {
+            this.putQueryParameter("MinDu", minDu);
+            this.minDu = minDu;
             return this;
         }
 
