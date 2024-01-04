@@ -58,6 +58,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ReplicationFactor")
+    private String replicationFactor;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -94,6 +98,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.replicationFactor = builder.replicationFactor;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -193,6 +198,13 @@ public class DescribeAvailabilityZonesRequest extends Request {
     }
 
     /**
+     * @return replicationFactor
+     */
+    public String getReplicationFactor() {
+        return this.replicationFactor;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -246,6 +258,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private String replicationFactor; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -270,6 +283,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.replicationFactor = request.replicationFactor;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -279,10 +293,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         } 
 
         /**
-         * The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
+         * The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese.
+         * *   **zh** (default): Chinese
          * *   **en**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
@@ -301,7 +315,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The database engine type of the instance. Valid values:
+         * The architecture of the instance. Valid values:
          * <p>
          * 
          * *   **normal**: replica set instance
@@ -323,7 +337,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.
+         * The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.
          */
         public Builder excludeSecondaryZoneId(String excludeSecondaryZoneId) {
             this.putQueryParameter("ExcludeSecondaryZoneId", excludeSecondaryZoneId);
@@ -332,7 +346,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The ID of the zone that you want to exclude from the query results.
+         * The zone ID that is excluded from the query results.
          */
         public Builder excludeZoneId(String excludeZoneId) {
             this.putQueryParameter("ExcludeZoneId", excludeZoneId);
@@ -341,10 +355,10 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Default value: PrePaid. Valid values:
+         * The billing method. Valid values:
          * <p>
          * 
-         * *   **PrePaid**: subscription
+         * *   **PrePaid** (default): subscription
          * *   **PostPaid**: pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
@@ -354,7 +368,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The edition of the ApsaraDB for MongoDB instance. The instance can be of a high-availability edition or beta edition.
+         * The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.
          */
         public Builder mongoType(String mongoType) {
             this.putQueryParameter("MongoType", mongoType);
@@ -390,6 +404,15 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
+         * 节点数，只适用于副本集。
+         */
+        public Builder replicationFactor(String replicationFactor) {
+            this.putQueryParameter("ReplicationFactor", replicationFactor);
+            this.replicationFactor = replicationFactor;
+            return this;
+        }
+
+        /**
          * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
@@ -417,7 +440,7 @@ public class DescribeAvailabilityZonesRequest extends Request {
         }
 
         /**
-         * The zones to be displayed. The values include the zones in which you can create an instance that uses cloud disks, the zones in which you can create an instance that uses local disks, and the zones in which you can create an instance that uses cloud disks and local disks.
+         * The storage type of the instance. cloud: The system displays only zones in which cloud disk-based instances can be deployed. local: The system displays only zones in which local disk-based instances can be deployed. default or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.
          */
         public Builder storageSupport(String storageSupport) {
             this.putQueryParameter("StorageSupport", storageSupport);
@@ -429,13 +452,16 @@ public class DescribeAvailabilityZonesRequest extends Request {
          * The storage type of the instance. Valid values:
          * <p>
          * 
-         * *   **cloud_essd1**: PL1.enhanced SSD (ESSD)
-         * *   **cloud_essd2**: PL2 ESSD.
-         * *   **cloud_essd3**: PL3 ESSD.
-         * *   **local_ssd**: local SSD.
+         * *   **cloud_essd1**: PL1 enhanced SSD (ESSD)
+         * *   **cloud_essd2**: PL2 ESSD
+         * *   **cloud_essd3**: PL3 ESSD
+         * *   **local_ssd**: Local SSD
          * 
-         * > *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
-         * > *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         * > 
+         * 
+         * *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+         * 
+         * *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

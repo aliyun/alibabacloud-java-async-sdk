@@ -193,7 +193,7 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * ShowHDMIps.
+         * Whether to display DAS whitelist information.
          */
         public Builder showHDMIps(Boolean showHDMIps) {
             this.putQueryParameter("ShowHDMIps", showHDMIps);

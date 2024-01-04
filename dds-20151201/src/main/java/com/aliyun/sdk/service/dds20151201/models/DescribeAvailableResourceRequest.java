@@ -42,6 +42,10 @@ public class DescribeAvailableResourceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ReplicationFactor")
+    private String replicationFactor;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -70,6 +74,7 @@ public class DescribeAvailableResourceRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.replicationFactor = builder.replicationFactor;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -140,6 +145,13 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return replicationFactor
+     */
+    public String getReplicationFactor() {
+        return this.replicationFactor;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -182,6 +194,7 @@ public class DescribeAvailableResourceRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private String replicationFactor; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -201,6 +214,7 @@ public class DescribeAvailableResourceRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.replicationFactor = request.replicationFactor;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -276,6 +290,15 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The number of nodes, only applicable to replica sets.
+         */
+        public Builder replicationFactor(String replicationFactor) {
+            this.putQueryParameter("ReplicationFactor", replicationFactor);
+            this.replicationFactor = replicationFactor;
             return this;
         }
 

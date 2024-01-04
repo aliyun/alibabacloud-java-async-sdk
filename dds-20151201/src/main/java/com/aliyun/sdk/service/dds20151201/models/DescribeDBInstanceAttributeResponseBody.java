@@ -827,6 +827,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxConnections")
         private Integer maxConnections;
 
+        @NameInMap("MaxDiskMbps")
+        private String maxDiskMbps;
+
         @NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
@@ -854,6 +857,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private ShardAttribute(Builder builder) {
             this.connectString = builder.connectString;
             this.maxConnections = builder.maxConnections;
+            this.maxDiskMbps = builder.maxDiskMbps;
             this.maxIOPS = builder.maxIOPS;
             this.nodeClass = builder.nodeClass;
             this.nodeDescription = builder.nodeDescription;
@@ -884,6 +888,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getMaxConnections() {
             return this.maxConnections;
+        }
+
+        /**
+         * @return maxDiskMbps
+         */
+        public String getMaxDiskMbps() {
+            return this.maxDiskMbps;
         }
 
         /**
@@ -945,6 +956,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String connectString; 
             private Integer maxConnections; 
+            private String maxDiskMbps; 
             private Integer maxIOPS; 
             private String nodeClass; 
             private String nodeDescription; 
@@ -967,6 +979,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
+                return this;
+            }
+
+            /**
+             * The maximum  MBPS of the shard node, Unit: MB/s.
+             */
+            public Builder maxDiskMbps(String maxDiskMbps) {
+                this.maxDiskMbps = maxDiskMbps;
                 return this;
             }
 
@@ -1269,6 +1289,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
+        @NameInMap("MaxMBPS")
+        private Integer maxMBPS;
+
         @NameInMap("MongosList")
         private MongosList mongosList;
 
@@ -1367,6 +1390,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.maintainStartTime = builder.maintainStartTime;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
+            this.maxMBPS = builder.maxMBPS;
             this.mongosList = builder.mongosList;
             this.networkType = builder.networkType;
             this.protocolType = builder.protocolType;
@@ -1597,6 +1621,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxMBPS
+         */
+        public Integer getMaxMBPS() {
+            return this.maxMBPS;
+        }
+
+        /**
          * @return mongosList
          */
         public MongosList getMongosList() {
@@ -1786,6 +1817,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String maintainStartTime; 
             private Integer maxConnections; 
             private Integer maxIOPS; 
+            private Integer maxMBPS; 
             private MongosList mongosList; 
             private String networkType; 
             private String protocolType; 
@@ -2102,6 +2134,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
+                return this;
+            }
+
+            /**
+             * The maximum MBPS of the instance, Unit: MB/s.
+             */
+            public Builder maxMBPS(Integer maxMBPS) {
+                this.maxMBPS = maxMBPS;
                 return this;
             }
 

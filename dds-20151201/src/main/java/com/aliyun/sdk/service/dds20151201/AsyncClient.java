@@ -140,7 +140,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAuditRecordsResponse> describeAuditRecords(DescribeAuditRecordsRequest request);
 
     /**
-      * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+      * Queries the zones in which an ApsaraDB for MongoDB instance can be deployed under specified purchase conditions. The region ID is required in the purchase condition.
       *
      */
     CompletableFuture<DescribeAvailabilityZonesResponse> describeAvailabilityZones(DescribeAvailabilityZonesRequest request);
