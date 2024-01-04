@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CloseMergeRequestResponse> closeMergeRequest(CloseMergeRequestRequest request);
 
+    CompletableFuture<CreateAppMembersResponse> createAppMembers(CreateAppMembersRequest request);
+
     CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
 
     CompletableFuture<CreateCommitStatusResponse> createCommitStatus(CreateCommitStatusRequest request);
@@ -92,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
+    CompletableFuture<DeleteAppMemberResponse> deleteAppMember(DeleteAppMemberRequest request);
+
     CompletableFuture<DeleteBranchResponse> deleteBranch(DeleteBranchRequest request);
 
     CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
@@ -141,6 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableDeployKeyResponse> enableDeployKey(EnableDeployKeyRequest request);
 
     CompletableFuture<FrozenWorkspaceResponse> frozenWorkspace(FrozenWorkspaceRequest request);
+
+    CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
     CompletableFuture<GetBranchInfoResponse> getBranchInfo(GetBranchInfoRequest request);
 
@@ -223,6 +229,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
     CompletableFuture<JoinPipelineGroupResponse> joinPipelineGroup(JoinPipelineGroupRequest request);
+
+    CompletableFuture<ListApplicationMembersResponse> listApplicationMembers(ListApplicationMembersRequest request);
+
+    CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
     CompletableFuture<ListCommitStatusesResponse> listCommitStatuses(ListCommitStatusesRequest request);
 
@@ -367,6 +377,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TransferRepositoryResponse> transferRepository(TransferRepositoryRequest request);
 
     CompletableFuture<TriggerRepositoryMirrorSyncResponse> triggerRepositoryMirrorSync(TriggerRepositoryMirrorSyncRequest request);
+
+    CompletableFuture<UpdateAppMemberResponse> updateAppMember(UpdateAppMemberRequest request);
+
+    CompletableFuture<UpdateApplicationResponse> updateApplication(UpdateApplicationRequest request);
 
     CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request);
 
