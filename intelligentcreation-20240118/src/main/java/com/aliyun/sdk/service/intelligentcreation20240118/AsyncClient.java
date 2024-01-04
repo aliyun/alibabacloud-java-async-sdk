@@ -18,4 +18,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ActualDeductResourceResponse> actualDeductResource(ActualDeductResourceRequest request);
+
+    CompletableFuture<DirectDeductResourceResponse> directDeductResource(DirectDeductResourceRequest request);
+
+    CompletableFuture<ExpectDeductResourceResponse> expectDeductResource(ExpectDeductResourceRequest request);
+
 }
