@@ -420,9 +420,9 @@ public class DescribePriceRequest extends Request {
          * 
          * *   **local_ssd**: local SSD
          * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSD of PL2
-         * *   **cloud_essd3**: ESSD of PL3
+         * *   **cloud_essd**: PL1 ESSD
+         * *   **cloud_essd2**: PL2 ESSD
+         * *   **cloud_essd3**: PL3 ESSD
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);

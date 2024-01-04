@@ -83,12 +83,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          * <p>
          * 
-         * **
-         * 
-         * **Warning**: Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.
+         * ><notice>Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.></notice>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

@@ -249,6 +249,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("Category")
         private String category;
 
+        @NameInMap("ColdDataEnabled")
+        private Boolean coldDataEnabled;
+
         @NameInMap("ConnectionMode")
         private String connectionMode;
 
@@ -336,6 +339,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
+        @NameInMap("IoAccelerationEnabled")
+        private String ioAccelerationEnabled;
+
         @NameInMap("LockMode")
         private String lockMode;
 
@@ -391,6 +397,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.bpeEnabled = builder.bpeEnabled;
             this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
+            this.coldDataEnabled = builder.coldDataEnabled;
             this.connectionMode = builder.connectionMode;
             this.connectionString = builder.connectionString;
             this.createTime = builder.createTime;
@@ -420,6 +427,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.generalGroupName = builder.generalGroupName;
             this.guardDBInstanceId = builder.guardDBInstanceId;
             this.instanceNetworkType = builder.instanceNetworkType;
+            this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.masterInstanceId = builder.masterInstanceId;
@@ -466,6 +474,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return coldDataEnabled
+         */
+        public Boolean getColdDataEnabled() {
+            return this.coldDataEnabled;
         }
 
         /**
@@ -672,6 +687,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ioAccelerationEnabled
+         */
+        public String getIoAccelerationEnabled() {
+            return this.ioAccelerationEnabled;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -794,6 +816,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String bpeEnabled; 
             private Boolean burstingEnabled; 
             private String category; 
+            private Boolean coldDataEnabled; 
             private String connectionMode; 
             private String connectionString; 
             private String createTime; 
@@ -823,6 +846,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String generalGroupName; 
             private String guardDBInstanceId; 
             private String instanceNetworkType; 
+            private String ioAccelerationEnabled; 
             private String lockMode; 
             private String lockReason; 
             private String masterInstanceId; 
@@ -877,6 +901,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * ColdDataEnabled.
+             */
+            public Builder coldDataEnabled(Boolean coldDataEnabled) {
+                this.coldDataEnabled = coldDataEnabled;
                 return this;
             }
 
@@ -1134,6 +1166,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
+                return this;
+            }
+
+            /**
+             * IoAccelerationEnabled.
+             */
+            public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+                this.ioAccelerationEnabled = ioAccelerationEnabled;
                 return this;
             }
 

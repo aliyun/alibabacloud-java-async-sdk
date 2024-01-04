@@ -142,11 +142,8 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
          * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          * <p>
          * 
-         * > 
-         * 
-         * *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance uses local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.
-         * 
-         * *   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.
+         * > *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance uses local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the minor engine version of the instance to the latest version during the restart.
+         * > *   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

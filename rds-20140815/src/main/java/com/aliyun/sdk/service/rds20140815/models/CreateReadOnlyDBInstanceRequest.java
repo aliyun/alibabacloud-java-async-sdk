@@ -85,6 +85,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     private String instructionSetArch;
 
     @Query
+    @NameInMap("IoAccelerationEnabled")
+    private String ioAccelerationEnabled;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -174,6 +178,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         this.gdnInstanceName = builder.gdnInstanceName;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.instructionSetArch = builder.instructionSetArch;
+        this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
@@ -326,6 +331,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     /**
+     * @return ioAccelerationEnabled
+     */
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -462,6 +474,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         private String gdnInstanceName; 
         private String instanceNetworkType; 
         private String instructionSetArch; 
+        private String ioAccelerationEnabled; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
@@ -503,6 +516,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.gdnInstanceName = request.gdnInstanceName;
             this.instanceNetworkType = request.instanceNetworkType;
             this.instructionSetArch = request.instructionSetArch;
+            this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
@@ -597,7 +611,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the read-only instance. For more information, see [Read-only ApsaraDB RDS instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
+         * The instance type of the read-only instance. For more information, see [Read-only instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -618,7 +632,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.
+         * The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -627,7 +641,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the read-only instance. For more information, see the **Storage space** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5 GB. Unit: GB.
+         * The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5. Unit: GB.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -728,6 +742,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
+         * IoAccelerationEnabled.
+         */
+        public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+            this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -793,7 +816,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
+         * The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -893,7 +916,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
+         * The zone ID. You can call the DescribeRegions operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

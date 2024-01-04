@@ -545,9 +545,9 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
              * The RDS edition of the instance. Valid values:
              * <p>
              * 
-             * *   **Basic**: RDS Basic Edition
-             * *   **HighAvailability**: RDS High-availability Edition
-             * *   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).
+             * *   **Basic**: RDS Basic Edition.
+             * *   **HighAvailability**: RDS High-availability Edition.
+             * *   **Finance**: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -614,9 +614,9 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
              * The storage type. Valid values:
              * <p>
              * 
-             * *   **local_ssd**: local SSD. This is the recommended storage type.
+             * *   **local_ssd**: local SSDs. This is the recommended storage type.
              * *   **cloud_ssd**: standard SSD.
-             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * *   **cloud_essd**: enhanced SSD (ESSD).
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -632,7 +632,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -640,7 +640,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
+             * The instance ID. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -648,7 +648,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the regions to which the cross-region data backup file can be restored.
+             * The regions to which the cross-region data backup file can be restored.
              */
             public Builder restoreRegions(RestoreRegions restoreRegions) {
                 this.restoreRegions = restoreRegions;

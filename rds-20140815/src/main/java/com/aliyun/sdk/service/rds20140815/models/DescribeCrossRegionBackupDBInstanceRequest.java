@@ -139,7 +139,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).
+         * The instance ID. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

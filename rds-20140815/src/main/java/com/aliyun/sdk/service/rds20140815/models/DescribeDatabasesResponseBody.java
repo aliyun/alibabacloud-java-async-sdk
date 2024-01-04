@@ -50,7 +50,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about databases.
+         * The information about the database.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -122,7 +122,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String accountPrivilegeDetail; 
 
             /**
-             * The username of the account.
+             * The account username.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -144,7 +144,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the permissions that the account has on the database.
+             * The permission that the account has on the database.
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -553,7 +553,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * An array that consists of the details of the accounts. Each account has specific permissions on the database.
+             * The information about the account. Each account has specific permissions on the database.
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -564,7 +564,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The advanced information about the database.
              * <p>
              * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder advancedInfo(AdvancedInfo advancedInfo) {
                 this.advancedInfo = advancedInfo;
@@ -572,10 +572,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The basic information of the database.
+             * The basic information about the database.
              * <p>
              * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder basicInfo(BasicInfo basicInfo) {
                 this.basicInfo = basicInfo;
@@ -594,7 +594,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The collation of the character set. The example value C stands for localization.
              * <p>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -605,7 +605,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.
              * <p>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder connLimit(String connLimit) {
                 this.connLimit = connLimit;
@@ -616,7 +616,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The type of the character set.
              * <p>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -640,7 +640,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -648,7 +648,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database. Valid values:
+             * The database status. Valid values:
              * <p>
              * 
              * *   **Creating**
@@ -669,7 +669,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -677,7 +677,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -685,7 +685,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -693,10 +693,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The running of the database.
+             * The runtime information about the database.
              * <p>
              * 
-             * > This parameter is returned only for instances that run SQL Server.
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder runtimeInfo(RuntimeInfo runtimeInfo) {
                 this.runtimeInfo = runtimeInfo;
@@ -704,10 +704,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The tablespace of the database.
+             * The database tablespace.
              * <p>
              * 
-             * > This parameter is returned only for instances that run PostgreSQL.
+             * >  This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder tablespace(String tablespace) {
                 this.tablespace = tablespace;
@@ -716,6 +716,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
             /**
              * The total number of entries returned.
+             * <p>
+             * 
+             * >  This parameter is returned only for instances that run SQL Server.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

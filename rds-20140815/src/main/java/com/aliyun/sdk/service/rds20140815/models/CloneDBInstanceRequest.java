@@ -70,6 +70,10 @@ public class CloneDBInstanceRequest extends Request {
     private String instanceNetworkType;
 
     @Query
+    @NameInMap("IoAccelerationEnabled")
+    private String ioAccelerationEnabled;
+
+    @Query
     @NameInMap("PayType")
     @Validation(required = true)
     private String payType;
@@ -146,6 +150,7 @@ public class CloneDBInstanceRequest extends Request {
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
         this.deletionProtection = builder.deletionProtection;
         this.instanceNetworkType = builder.instanceNetworkType;
+        this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.payType = builder.payType;
         this.period = builder.period;
         this.privateIpAddress = builder.privateIpAddress;
@@ -275,6 +280,13 @@ public class CloneDBInstanceRequest extends Request {
     }
 
     /**
+     * @return ioAccelerationEnabled
+     */
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -394,6 +406,7 @@ public class CloneDBInstanceRequest extends Request {
         private String dedicatedHostGroupId; 
         private Boolean deletionProtection; 
         private String instanceNetworkType; 
+        private String ioAccelerationEnabled; 
         private String payType; 
         private String period; 
         private String privateIpAddress; 
@@ -430,6 +443,7 @@ public class CloneDBInstanceRequest extends Request {
             this.dedicatedHostGroupId = request.dedicatedHostGroupId;
             this.deletionProtection = request.deletionProtection;
             this.instanceNetworkType = request.instanceNetworkType;
+            this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.payType = request.payType;
             this.period = request.period;
             this.privateIpAddress = request.privateIpAddress;
@@ -625,6 +639,15 @@ public class CloneDBInstanceRequest extends Request {
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
             this.instanceNetworkType = instanceNetworkType;
+            return this;
+        }
+
+        /**
+         * IoAccelerationEnabled.
+         */
+        public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+            this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
             return this;
         }
 

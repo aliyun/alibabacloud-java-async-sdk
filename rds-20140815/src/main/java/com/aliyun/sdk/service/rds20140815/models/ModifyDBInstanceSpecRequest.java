@@ -25,6 +25,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String category;
 
     @Query
+    @NameInMap("ColdDataEnabled")
+    private Boolean coldDataEnabled;
+
+    @Query
     @NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -57,6 +61,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Query
     @NameInMap("EngineVersion")
     private String engineVersion;
+
+    @Query
+    @NameInMap("IoAccelerationEnabled")
+    private String ioAccelerationEnabled;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -111,6 +119,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.autoUseCoupon = builder.autoUseCoupon;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
+        this.coldDataEnabled = builder.coldDataEnabled;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -119,6 +128,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.direction = builder.direction;
         this.effectiveTime = builder.effectiveTime;
         this.engineVersion = builder.engineVersion;
+        this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
@@ -165,6 +175,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return coldDataEnabled
+     */
+    public Boolean getColdDataEnabled() {
+        return this.coldDataEnabled;
     }
 
     /**
@@ -221,6 +238,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return ioAccelerationEnabled
+     */
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     /**
@@ -311,6 +335,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private Boolean autoUseCoupon; 
         private Boolean burstingEnabled; 
         private String category; 
+        private Boolean coldDataEnabled; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
@@ -319,6 +344,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String direction; 
         private String effectiveTime; 
         private String engineVersion; 
+        private String ioAccelerationEnabled; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
@@ -341,6 +367,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.autoUseCoupon = request.autoUseCoupon;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
+            this.coldDataEnabled = request.coldDataEnabled;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
@@ -349,6 +376,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.direction = request.direction;
             this.effectiveTime = request.effectiveTime;
             this.engineVersion = request.engineVersion;
+            this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
@@ -411,11 +439,20 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableClasses](~~610393~~) operation to query the instance types that are supported by an instance.
+         * ColdDataEnabled.
+         */
+        public Builder coldDataEnabled(Boolean coldDataEnabled) {
+            this.putQueryParameter("ColdDataEnabled", coldDataEnabled);
+            this.coldDataEnabled = coldDataEnabled;
+            return this;
+        }
+
+        /**
+         * The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.
          * <p>
          * 
-         * - You must specify at least one of DBInstanceClass and **DBInstanceStorage**.
-         * - You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current instance type of the instance.
+         * > *   You must specify at least one of DBInstanceClass and **DBInstanceStorage**.
+         * > *   You can call the DescribeDBInstanceAttribute operation to query the current instance type of the instance.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -424,7 +461,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -433,11 +470,11 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableClasses](~~610393~~) operation to query the storage capacity range that is supported by the new instance type.
+         * The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is that is supported by the new instance type.
          * <p>
          * 
-         * *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
-         * *   You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current storage capacity of the instance.
+         * > *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.
+         * > *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -496,7 +533,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * <p>
          * 
          * *   **Immediate**: This is the default value.
-         * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
+         * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -526,6 +563,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * IoAccelerationEnabled.
+         */
+        public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+            this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
             return this;
         }
 

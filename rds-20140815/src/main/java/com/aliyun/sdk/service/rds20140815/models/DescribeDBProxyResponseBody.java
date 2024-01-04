@@ -581,7 +581,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the proxy instance.
+             * The proxy instance ID.
              */
             public Builder DBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
                 this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
@@ -715,7 +715,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the proxy terminal.
+             * The proxy terminal ID.
              */
             public Builder dbProxyEndpointName(String dbProxyEndpointName) {
                 this.dbProxyEndpointName = dbProxyEndpointName;
@@ -723,7 +723,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the proxy terminal.
+             * The proxy terminal type. Valid values:
              * <p>
              * 
              * *   Custom: custom proxy terminal
@@ -735,7 +735,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The read and write attributes of the proxy terminal.
+             * The read and write attributes of the proxy terminal. Valid values:
              * <p>
              * 
              * *   ReadOnly: The proxy terminal supports only read requests.

@@ -125,7 +125,7 @@ public class SwitchGuardToMasterInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the disaster recovery instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * The ID of the disaster recovery instance. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -152,7 +152,7 @@ public class SwitchGuardToMasterInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

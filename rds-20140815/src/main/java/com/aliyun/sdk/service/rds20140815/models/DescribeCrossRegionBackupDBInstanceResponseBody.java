@@ -110,7 +110,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         private Integer totalRecords; 
 
         /**
-         * An array that consists of instances and their cross-region backup settings.
+         * The cross-region backup settings.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -126,7 +126,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.
@@ -137,7 +137,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 30.
+         * The number of entries per page. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -145,7 +145,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -153,7 +153,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalRecords(Integer totalRecords) {
             this.totalRecords = totalRecords;
@@ -377,7 +377,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cross-region data backup file is stored.
+             * The ID of the destination region within which the cross-region backup file is stored.
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -393,10 +393,10 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.
              * <p>
              * 
-             * > The value cannot start with http:// or https://.
+             * >  The value cannot start with http:// or https://.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -404,7 +404,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -412,7 +412,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. For more information, see [Instance states](~~26315~~).
+             * The instance status. For more information, see [Instance statuses](~~26315~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -428,7 +428,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -463,7 +463,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the cross-region log backup feature was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logBackupEnabledTime(String logBackupEnabledTime) {
                 this.logBackupEnabledTime = logBackupEnabledTime;

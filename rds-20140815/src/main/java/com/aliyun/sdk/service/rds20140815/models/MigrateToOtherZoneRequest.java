@@ -34,6 +34,10 @@ public class MigrateToOtherZoneRequest extends Request {
     private String effectiveTime;
 
     @Query
+    @NameInMap("IoAccelerationEnabled")
+    private String ioAccelerationEnabled;
+
+    @Query
     @NameInMap("IsModifySpec")
     private String isModifySpec;
 
@@ -85,6 +89,7 @@ public class MigrateToOtherZoneRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
         this.effectiveTime = builder.effectiveTime;
+        this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.isModifySpec = builder.isModifySpec;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -144,6 +149,13 @@ public class MigrateToOtherZoneRequest extends Request {
      */
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    /**
+     * @return ioAccelerationEnabled
+     */
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     /**
@@ -229,6 +241,7 @@ public class MigrateToOtherZoneRequest extends Request {
         private String DBInstanceId; 
         private Long DBInstanceStorage; 
         private String effectiveTime; 
+        private String ioAccelerationEnabled; 
         private String isModifySpec; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -252,6 +265,7 @@ public class MigrateToOtherZoneRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
             this.effectiveTime = request.effectiveTime;
+            this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.isModifySpec = request.isModifySpec;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -327,6 +341,15 @@ public class MigrateToOtherZoneRequest extends Request {
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
             this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * IoAccelerationEnabled.
+         */
+        public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
+            this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
             return this;
         }
 
