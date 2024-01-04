@@ -36,6 +36,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     private String nodes;
 
     @Query
+    @NameInMap("ResourceGroupName")
+    private String resourceGroupName;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -47,6 +51,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         this.key = builder.key;
         this.nodeType = builder.nodeType;
         this.nodes = builder.nodes;
+        this.resourceGroupName = builder.resourceGroupName;
         this.startTime = builder.startTime;
     }
 
@@ -99,6 +104,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -111,6 +123,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         private String key; 
         private String nodeType; 
         private String nodes; 
+        private String resourceGroupName; 
         private String startTime; 
 
         private Builder() {
@@ -124,6 +137,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             this.key = request.key;
             this.nodeType = request.nodeType;
             this.nodes = request.nodes;
+            this.resourceGroupName = request.resourceGroupName;
             this.startTime = request.startTime;
         } 
 
@@ -189,6 +203,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
             this.nodes = nodes;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 

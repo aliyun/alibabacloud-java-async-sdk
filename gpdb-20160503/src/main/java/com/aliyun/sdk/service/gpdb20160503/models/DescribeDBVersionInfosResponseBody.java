@@ -50,7 +50,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
         private VersionDetails versionDetails; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
         }
 
         /**
-         * VersionDetails.
+         * The queried minor versions.
          */
         public Builder versionDetails(VersionDetails versionDetails) {
             this.versionDetails = versionDetails;
@@ -110,7 +110,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
             private Object storageElastic; 
 
             /**
-             * Serverless.
+             * The queried minor version information about the instance in Serverless mode.
              */
             public Builder serverless(Object serverless) {
                 this.serverless = serverless;
@@ -118,7 +118,7 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * StorageElastic.
+             * The queried minor version information about the instance in elastic storage mode.
              */
             public Builder storageElastic(Object storageElastic) {
                 this.storageElastic = storageElastic;

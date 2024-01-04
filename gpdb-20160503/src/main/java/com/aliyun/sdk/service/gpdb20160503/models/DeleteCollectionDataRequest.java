@@ -156,7 +156,7 @@ public class DeleteCollectionDataRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the collection.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -165,7 +165,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * CollectionData.
+         * The data that you want to delete.
          */
         public Builder collectionData(String collectionData) {
             this.putQueryParameter("CollectionData", collectionData);
@@ -174,7 +174,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * CollectionDataFilter.
+         * The data filter to delete.
          */
         public Builder collectionDataFilter(String collectionDataFilter) {
             this.putQueryParameter("CollectionDataFilter", collectionDataFilter);
@@ -183,7 +183,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +195,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -201,7 +204,7 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -219,7 +222,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

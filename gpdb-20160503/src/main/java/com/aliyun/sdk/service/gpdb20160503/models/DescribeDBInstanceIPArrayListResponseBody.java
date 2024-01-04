@@ -50,7 +50,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
+         * The queried IP address whitelists.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -122,7 +122,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
+             * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute is not displayed in the console.
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -138,7 +138,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:
+             * The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:
              * <p>
              * 
              * *   0.0.0.0/0

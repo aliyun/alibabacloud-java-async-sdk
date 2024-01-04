@@ -209,7 +209,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * This parameter is no longer used.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

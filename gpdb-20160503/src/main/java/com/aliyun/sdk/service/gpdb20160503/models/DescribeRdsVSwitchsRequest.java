@@ -196,7 +196,7 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * This parameter is no longer used.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -232,11 +232,14 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * The ID of virtual private cloud (VPC).
+         * The virtual private cloud (VPC) ID of the instance.
          * <p>
          * 
-         * > *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPCs.
-         * > *   This parameter is required.
+         * > 
+         * 
+         * *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPC IDs.
+         * 
+         * *   This parameter must be specified.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

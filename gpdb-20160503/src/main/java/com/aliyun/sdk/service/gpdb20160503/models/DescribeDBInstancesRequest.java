@@ -65,6 +65,10 @@ public class DescribeDBInstancesRequest extends Request {
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
+
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
         this.DBInstanceCategories = builder.DBInstanceCategories;
@@ -80,6 +84,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -186,6 +191,13 @@ public class DescribeDBInstancesRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
         private java.util.List < String > DBInstanceCategories; 
         private String DBInstanceDescription; 
@@ -200,6 +212,7 @@ public class DescribeDBInstancesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tag> tag; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -220,6 +233,7 @@ public class DescribeDBInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -356,6 +370,15 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

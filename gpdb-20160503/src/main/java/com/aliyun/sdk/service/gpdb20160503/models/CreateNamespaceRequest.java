@@ -143,7 +143,10 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -152,7 +155,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * ManagerAccount.
+         * The name of the manager account that has the rds_superuser permission.
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -161,7 +164,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * ManagerAccountPassword.
+         * The password of the manager account.
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -170,7 +173,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -179,7 +182,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -197,7 +200,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -74,7 +74,7 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * AppliedRows.
+         * The number of rows that are affected by the request.
          */
         public Builder appliedRows(Long appliedRows) {
             this.appliedRows = appliedRows;
@@ -82,7 +82,7 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class DeleteCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

@@ -46,6 +46,10 @@ public class CreateDBInstanceRequest extends Request {
     private String DBInstanceMode;
 
     @Query
+    @NameInMap("EnableSSL")
+    private Boolean enableSSL;
+
+    @Query
     @NameInMap("EncryptionKey")
     private String encryptionKey;
 
@@ -98,6 +102,10 @@ public class CreateDBInstanceRequest extends Request {
     @Query
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
+
+    @Query
+    @NameInMap("ProdType")
+    private String prodType;
 
     @Query
     @NameInMap("RegionId")
@@ -180,6 +188,7 @@ public class CreateDBInstanceRequest extends Request {
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceGroupCount = builder.DBInstanceGroupCount;
         this.DBInstanceMode = builder.DBInstanceMode;
+        this.enableSSL = builder.enableSSL;
         this.encryptionKey = builder.encryptionKey;
         this.encryptionType = builder.encryptionType;
         this.engine = builder.engine;
@@ -193,6 +202,7 @@ public class CreateDBInstanceRequest extends Request {
         this.payType = builder.payType;
         this.period = builder.period;
         this.privateIpAddress = builder.privateIpAddress;
+        this.prodType = builder.prodType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityIPList = builder.securityIPList;
@@ -279,6 +289,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getDBInstanceMode() {
         return this.DBInstanceMode;
+    }
+
+    /**
+     * @return enableSSL
+     */
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
     }
 
     /**
@@ -370,6 +387,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    /**
+     * @return prodType
+     */
+    public String getProdType() {
+        return this.prodType;
     }
 
     /**
@@ -500,6 +524,7 @@ public class CreateDBInstanceRequest extends Request {
         private String DBInstanceDescription; 
         private String DBInstanceGroupCount; 
         private String DBInstanceMode; 
+        private Boolean enableSSL; 
         private String encryptionKey; 
         private String encryptionType; 
         private String engine; 
@@ -513,6 +538,7 @@ public class CreateDBInstanceRequest extends Request {
         private String payType; 
         private String period; 
         private String privateIpAddress; 
+        private String prodType; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityIPList; 
@@ -545,6 +571,7 @@ public class CreateDBInstanceRequest extends Request {
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceGroupCount = request.DBInstanceGroupCount;
             this.DBInstanceMode = request.DBInstanceMode;
+            this.enableSSL = request.enableSSL;
             this.encryptionKey = request.encryptionKey;
             this.encryptionType = request.encryptionType;
             this.engine = request.engine;
@@ -558,6 +585,7 @@ public class CreateDBInstanceRequest extends Request {
             this.payType = request.payType;
             this.period = request.period;
             this.privateIpAddress = request.privateIpAddress;
+            this.prodType = request.prodType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityIPList = request.securityIPList;
@@ -674,6 +702,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
             this.DBInstanceMode = DBInstanceMode;
+            return this;
+        }
+
+        /**
+         * EnableSSL.
+         */
+        public Builder enableSSL(Boolean enableSSL) {
+            this.putQueryParameter("EnableSSL", enableSSL);
+            this.enableSSL = enableSSL;
             return this;
         }
 
@@ -803,10 +840,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of coordinator nodes. Valid values: 1 and 2.
-         * <p>
-         * 
-         * > If you do not specify this parameter, 1 is used.
+         * This parameter is no longer used.
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);
@@ -862,6 +896,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+
+        /**
+         * ProdType.
+         */
+        public Builder prodType(String prodType) {
+            this.putQueryParameter("ProdType", prodType);
+            this.prodType = prodType;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class UpsertCollectionDataResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -70,7 +70,7 @@ public class UpsertCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class UpsertCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

@@ -58,7 +58,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the tags.
+         * The queried tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

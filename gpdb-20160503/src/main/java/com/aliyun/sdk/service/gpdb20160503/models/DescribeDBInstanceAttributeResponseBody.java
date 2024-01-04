@@ -297,6 +297,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         private String port;
 
+        @NameInMap("ProdType")
+        private String prodType;
+
         @NameInMap("ReadDelayTime")
         private String readDelayTime;
 
@@ -402,6 +405,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.minorVersion = builder.minorVersion;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.prodType = builder.prodType;
             this.readDelayTime = builder.readDelayTime;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -721,6 +725,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return prodType
+         */
+        public String getProdType() {
+            return this.prodType;
+        }
+
+        /**
          * @return readDelayTime
          */
         public String getReadDelayTime() {
@@ -909,6 +920,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String minorVersion; 
             private String payType; 
             private String port; 
+            private String prodType; 
             private String readDelayTime; 
             private String regionId; 
             private String resourceGroupId; 
@@ -1106,12 +1118,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network interface card (NIC) that is used by the instance. Valid values:
-             * <p>
-             * 
-             * *   **0**: Internet.
-             * *   **1**: internal network.
-             * *   **2**: VPC.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -1350,6 +1357,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ProdType.
+             */
+            public Builder prodType(String prodType) {
+                this.prodType = prodType;
+                return this;
+            }
+
+            /**
              * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder readDelayTime(String readDelayTime) {
@@ -1382,7 +1397,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist of the instance.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1493,7 +1508,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **TB SSD**
              * *   **GB HDD**
              * 
-             * >  This parameter is returned only for instances in reserved storage mode or Serverless mode.
+             * >  This parameter is returned only for instances in reserved storage mode.
              */
             public Builder storageUnit(String storageUnit) {
                 this.storageUnit = storageUnit;
@@ -1501,7 +1516,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance supports backup and restoration.
+             * Indicates whether the instance supports backup and restoration. Valid values:
              * <p>
              * 
              * *   **true**

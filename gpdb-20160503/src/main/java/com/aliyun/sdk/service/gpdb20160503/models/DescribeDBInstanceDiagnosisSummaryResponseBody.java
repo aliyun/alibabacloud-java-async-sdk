@@ -314,7 +314,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node group.
+             * The node group ID.
              */
             public Builder nodeCID(String nodeCID) {
                 this.nodeCID = nodeCID;
@@ -322,7 +322,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeID(String nodeID) {
                 this.nodeID = nodeID;
@@ -349,10 +349,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
              * The initial role of the node. Valid values:
              * <p>
              * 
-             * *   **primary**: primary node
-             * *   **mirror**: secondary node
+             * *   **primary**: primary node.
+             * *   **mirror**: secondary node.
              * 
-             * If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is not the same as that of **NodeRole**, a primary/secondary switchover occurs.
+             * If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is different from that of **NodeRole**, a primary/secondary switchover occurs.
              */
             public Builder nodePreferredRole(String nodePreferredRole) {
                 this.nodePreferredRole = nodePreferredRole;
@@ -376,8 +376,8 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
              * The current role of the node. Valid values:
              * <p>
              * 
-             * *   **primary**: primary node
-             * *   **mirror**: secondary node
+             * *   **primary**: primary node.
+             * *   **mirror**: secondary node.
              */
             public Builder nodeRole(String nodeRole) {
                 this.nodeRole = nodeRole;
@@ -400,9 +400,9 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
              * The type of the node. Valid values:
              * <p>
              * 
-             * *   **master**: primary coordinator node
-             * *   **slave**: standby coordinator node
-             * *   **segment**: compute node
+             * *   **master**: primary coordinator node.
+             * *   **slave**: standby coordinator node.
+             * *   **segment**: compute node.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

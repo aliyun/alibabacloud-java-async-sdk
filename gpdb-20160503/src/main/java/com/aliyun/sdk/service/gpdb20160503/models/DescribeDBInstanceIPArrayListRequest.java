@@ -83,7 +83,10 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         } 
 
         /**
-         * DBInstanceIPArrayName.
+         * The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.
+         * <p>
+         * 
+         * >  Each instance supports up to 50 IP address whitelists.
          */
         public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
             this.putQueryParameter("DBInstanceIPArrayName", DBInstanceIPArrayName);

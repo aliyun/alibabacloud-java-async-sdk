@@ -198,7 +198,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The row IDs of the data that you want to update. You must specify one of the Ids and Filter parameters.
          */
         public Builder ids(java.util.List < String > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -208,7 +208,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Metadata.
+         * The data that you want to update, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
          */
         public Builder metadata(java.util.Map < String, ? > metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
@@ -245,7 +245,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

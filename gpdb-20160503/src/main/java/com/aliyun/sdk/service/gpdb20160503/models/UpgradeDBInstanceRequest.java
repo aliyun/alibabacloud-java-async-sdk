@@ -279,10 +279,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of coordinator nodes. Valid values: 1 and 2.
-         * <p>
-         * 
-         * > This parameter is available only for China site (aliyun.com).
+         * This parameter is no longer used.
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);

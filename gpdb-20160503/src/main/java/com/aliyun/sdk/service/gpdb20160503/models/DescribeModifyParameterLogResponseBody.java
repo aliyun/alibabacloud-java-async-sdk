@@ -50,7 +50,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the modification takes effect.
+         * The queried parameter modification logs.
          */
         public Builder changelogs(java.util.List < Changelogs> changelogs) {
             this.changelogs = changelogs;
@@ -146,7 +146,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String parameterValueBefore; 
 
             /**
-             * The time when the configuration change takes effect.
+             * The effective time.
              */
             public Builder effectTime(String effectTime) {
                 this.effectTime = effectTime;
@@ -162,7 +162,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration change takes effect.
+             * Indicates whether the modification takes effect.
              */
             public Builder parameterValid(String parameterValid) {
                 this.parameterValid = parameterValid;

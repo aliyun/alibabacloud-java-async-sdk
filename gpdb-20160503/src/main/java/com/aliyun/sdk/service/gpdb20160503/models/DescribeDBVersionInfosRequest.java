@@ -111,7 +111,11 @@ public class DescribeDBVersionInfosRequest extends Request {
         } 
 
         /**
-         * DBInstanceMode.
+         * The resource type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **StorageElastic**: elastic storage mode.
+         * *   **Serverless**: Serverless mode.
          */
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
@@ -120,7 +124,7 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * The minor version number that does not include the prefix.
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -138,7 +142,10 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +154,7 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
