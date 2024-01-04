@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageModerationResultResponseBody extends TeaModel {
     @NameInMap("Code")
-    private String code;
+    private Integer code;
 
     @NameInMap("Data")
     private Data data;
@@ -42,7 +42,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -68,7 +68,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
+        private Integer code; 
         private Data data; 
         private String msg; 
         private String requestId; 
@@ -76,7 +76,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         /**
          * Code.
          */
-        public Builder code(String code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }

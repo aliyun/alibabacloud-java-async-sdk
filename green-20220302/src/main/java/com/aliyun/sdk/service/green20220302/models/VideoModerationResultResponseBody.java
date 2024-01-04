@@ -111,6 +111,67 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     } 
 
+    public static class AudioSummarys extends TeaModel {
+        @NameInMap("Label")
+        private String label;
+
+        @NameInMap("LabelSum")
+        private Integer labelSum;
+
+        private AudioSummarys(Builder builder) {
+            this.label = builder.label;
+            this.labelSum = builder.labelSum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AudioSummarys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return labelSum
+         */
+        public Integer getLabelSum() {
+            return this.labelSum;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private Integer labelSum; 
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * LabelSum.
+             */
+            public Builder labelSum(Integer labelSum) {
+                this.labelSum = labelSum;
+                return this;
+            }
+
+            public AudioSummarys build() {
+                return new AudioSummarys(this);
+            } 
+
+        } 
+
+    }
     public static class SliceDetails extends TeaModel {
         @NameInMap("EndTime")
         private Long endTime;
@@ -353,10 +414,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class AudioResult extends TeaModel {
+        @NameInMap("AudioSummarys")
+        private java.util.List < AudioSummarys> audioSummarys;
+
         @NameInMap("SliceDetails")
         private java.util.List < SliceDetails> sliceDetails;
 
         private AudioResult(Builder builder) {
+            this.audioSummarys = builder.audioSummarys;
             this.sliceDetails = builder.sliceDetails;
         }
 
@@ -369,6 +434,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return audioSummarys
+         */
+        public java.util.List < AudioSummarys> getAudioSummarys() {
+            return this.audioSummarys;
+        }
+
+        /**
          * @return sliceDetails
          */
         public java.util.List < SliceDetails> getSliceDetails() {
@@ -376,7 +448,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < AudioSummarys> audioSummarys; 
             private java.util.List < SliceDetails> sliceDetails; 
+
+            /**
+             * AudioSummarys.
+             */
+            public Builder audioSummarys(java.util.List < AudioSummarys> audioSummarys) {
+                this.audioSummarys = audioSummarys;
+                return this;
+            }
 
             /**
              * SliceDetails.
@@ -388,6 +469,67 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
             public AudioResult build() {
                 return new AudioResult(this);
+            } 
+
+        } 
+
+    }
+    public static class FrameSummarys extends TeaModel {
+        @NameInMap("Label")
+        private String label;
+
+        @NameInMap("LabelSum")
+        private Integer labelSum;
+
+        private FrameSummarys(Builder builder) {
+            this.label = builder.label;
+            this.labelSum = builder.labelSum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FrameSummarys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return labelSum
+         */
+        public Integer getLabelSum() {
+            return this.labelSum;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private Integer labelSum; 
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * LabelSum.
+             */
+            public Builder labelSum(Integer labelSum) {
+                this.labelSum = labelSum;
+                return this;
+            }
+
+            public FrameSummarys build() {
+                return new FrameSummarys(this);
             } 
 
         } 
@@ -525,10 +667,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("TempUrl")
         private String tempUrl;
 
+        @NameInMap("Timestamp")
+        private Long timestamp;
+
         private Frames(Builder builder) {
             this.offset = builder.offset;
             this.results = builder.results;
             this.tempUrl = builder.tempUrl;
+            this.timestamp = builder.timestamp;
         }
 
         public static Builder builder() {
@@ -560,10 +706,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.tempUrl;
         }
 
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public static final class Builder {
             private Float offset; 
             private java.util.List < Results> results; 
             private String tempUrl; 
+            private Long timestamp; 
 
             /**
              * Offset.
@@ -589,6 +743,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
             public Frames build() {
                 return new Frames(this);
             } 
@@ -600,11 +762,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("FrameNum")
         private Integer frameNum;
 
+        @NameInMap("FrameSummarys")
+        private java.util.List < FrameSummarys> frameSummarys;
+
         @NameInMap("Frames")
         private java.util.List < Frames> frames;
 
         private FrameResult(Builder builder) {
             this.frameNum = builder.frameNum;
+            this.frameSummarys = builder.frameSummarys;
             this.frames = builder.frames;
         }
 
@@ -624,6 +790,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return frameSummarys
+         */
+        public java.util.List < FrameSummarys> getFrameSummarys() {
+            return this.frameSummarys;
+        }
+
+        /**
          * @return frames
          */
         public java.util.List < Frames> getFrames() {
@@ -632,6 +805,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer frameNum; 
+            private java.util.List < FrameSummarys> frameSummarys; 
             private java.util.List < Frames> frames; 
 
             /**
@@ -639,6 +813,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
+                return this;
+            }
+
+            /**
+             * FrameSummarys.
+             */
+            public Builder frameSummarys(java.util.List < FrameSummarys> frameSummarys) {
+                this.frameSummarys = frameSummarys;
                 return this;
             }
 
