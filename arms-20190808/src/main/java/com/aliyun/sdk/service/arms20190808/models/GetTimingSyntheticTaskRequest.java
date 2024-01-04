@@ -68,7 +68,7 @@ public class GetTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +77,7 @@ public class GetTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the synthetic monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

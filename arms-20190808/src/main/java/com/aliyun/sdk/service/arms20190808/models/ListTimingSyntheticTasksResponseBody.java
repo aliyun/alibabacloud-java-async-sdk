@@ -74,7 +74,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +158,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -343,7 +343,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Frequency.
+             * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
              */
             public Builder frequency(String frequency) {
                 this.frequency = frequency;
@@ -351,7 +351,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the task was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -359,7 +359,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the task was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -367,7 +367,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorCategory.
+             * The detection point type. 1: PC. 2: mobile device.
              */
             public Builder monitorCategory(Integer monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -375,7 +375,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorNum.
+             * The number of detection points.
              */
             public Builder monitorNum(String monitorNum) {
                 this.monitorNum = monitorNum;
@@ -383,7 +383,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The task name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -391,7 +391,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -399,7 +399,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -407,7 +407,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -415,7 +415,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -423,7 +423,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the synthetic monitoring task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -431,7 +431,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -439,7 +442,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL for synthetic monitoring.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -516,7 +519,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Items.
+             * The queried tasks.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -524,7 +527,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -532,7 +535,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -540,7 +543,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of tasks.
              */
             public Builder total(Integer total) {
                 this.total = total;

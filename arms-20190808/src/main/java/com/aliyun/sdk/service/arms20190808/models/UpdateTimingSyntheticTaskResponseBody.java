@@ -86,7 +86,7 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

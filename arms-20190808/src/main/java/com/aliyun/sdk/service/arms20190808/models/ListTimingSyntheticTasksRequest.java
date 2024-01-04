@@ -96,7 +96,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -105,7 +105,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -114,7 +114,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * Search.
+         * The search keyword.
          */
         public Builder search(Search search) {
             String searchShrink = shrink(search, "Search", "json");
@@ -124,7 +124,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -251,7 +251,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private java.util.List < Integer > taskTypes; 
 
             /**
-             * Name.
+             * The task name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +259,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Order.
+             * The order by which tasks are sorted. 1: ascending order. -1: descending order.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -267,7 +267,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * OrderField.
+             * The condition by which tasks are sorted. You can sort tasks by gmtCreate, gmtModified, status, or monitorCount.
              */
             public Builder orderField(String orderField) {
                 this.orderField = orderField;
@@ -275,7 +275,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Page.
+             * The page number. This parameter is required.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -283,7 +283,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. This parameter is required.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -291,7 +291,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Status.
+             * The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -299,7 +299,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * TaskIds.
+             * The task IDs.
              */
             public Builder taskIds(java.util.List < String > taskIds) {
                 this.taskIds = taskIds;
@@ -307,7 +307,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * TaskTypes.
+             * The task types.
              */
             public Builder taskTypes(java.util.List < Integer > taskTypes) {
                 this.taskTypes = taskTypes;
@@ -360,7 +360,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -368,7 +368,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

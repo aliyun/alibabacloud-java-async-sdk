@@ -69,7 +69,7 @@ public class GetSyntheticMonitorsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The query conditions.
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -79,7 +79,7 @@ public class GetSyntheticMonitorsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class GetSyntheticMonitorsRequest extends Request {
             private Integer taskType; 
 
             /**
-             * MonitorCategory.
+             * The type of the monitoring point. Valid values: 1: PC. 2: mobile device.
              */
             public Builder monitorCategory(Integer monitorCategory) {
                 this.monitorCategory = monitorCategory;
@@ -156,7 +156,7 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * Network.
+             * The network type. Valid values: 1: private network. 2: Internet.
              */
             public Builder network(Integer network) {
                 this.network = network;
@@ -164,7 +164,10 @@ public class GetSyntheticMonitorsRequest extends Request {
             }
 
             /**
-             * TaskType.
+             * The type of the monitoring task. Valid values:
+             * <p>
+             * 
+             * 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

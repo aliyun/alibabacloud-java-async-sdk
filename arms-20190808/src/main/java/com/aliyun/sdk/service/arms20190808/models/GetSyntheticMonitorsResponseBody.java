@@ -74,7 +74,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of monitoring points.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Available.
+             * Indicates whether the monitoring point is available. Valid values: true and false.
              */
             public Builder available(String available) {
                 this.available = available;
@@ -254,7 +254,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeSelected.
+             * Indicates whether the monitoring point is selected. Valid values: true and false.
              */
             public Builder canBeSelected(Boolean canBeSelected) {
                 this.canBeSelected = canBeSelected;
@@ -262,7 +262,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * The city.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -270,7 +270,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * CityCode.
+             * The city code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -278,7 +278,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -286,7 +286,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * The country.
              */
             public Builder country(String country) {
                 this.country = country;
@@ -294,7 +294,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6.
+             * Indicates whether IPv6 is supported. Valid values: 0: IPv6 is not supported. 1: IPv6 is supported.
              */
             public Builder ipv6(Integer ipv6) {
                 this.ipv6 = ipv6;
@@ -302,7 +302,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The carrier.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -310,7 +310,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCode.
+             * The carrier code.
              */
             public Builder operatorCode(String operatorCode) {
                 this.operatorCode = operatorCode;
@@ -318,7 +318,7 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region.
              */
             public Builder region(String region) {
                 this.region = region;
