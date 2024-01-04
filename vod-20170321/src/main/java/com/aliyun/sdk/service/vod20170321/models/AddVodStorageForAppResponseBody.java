@@ -50,7 +50,7 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
         private String storageLocation; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AddVodStorageForAppResponseBody extends TeaModel {
         }
 
         /**
-         * StorageLocation.
+         * The address of the VOD bucket.
          */
         public Builder storageLocation(String storageLocation) {
             this.storageLocation = storageLocation;

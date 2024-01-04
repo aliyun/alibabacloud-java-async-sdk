@@ -83,7 +83,7 @@ public class AddVodStorageForAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. You can obtain the application ID from the response to the [CreateAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-createappinfo) or [ListAppInfo](https://help.aliyun.com/zh/vod/developer-reference/api-vod-2017-03-21-listappinfo) operation.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -92,7 +92,7 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * StorageLocation.
+         * The address of an Object Storage Service (OSS) bucket. This parameter does not take effect. You can call this operation to add only VOD buckets.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -101,7 +101,7 @@ public class AddVodStorageForAppRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage type. Default value: vod_oss_bucket.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
