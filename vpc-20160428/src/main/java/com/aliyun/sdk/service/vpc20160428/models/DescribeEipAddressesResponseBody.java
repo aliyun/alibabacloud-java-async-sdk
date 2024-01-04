@@ -911,7 +911,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth type. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
+             * The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
@@ -931,7 +931,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the EIP. Valid values:
+             * The service state of the EIP. Valid values:
              * <p>
              * 
              * *   **Normal**
@@ -1018,8 +1018,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * The line type. Valid values:
              * <p>
              * 
-             * *   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
+             * *   **BGP**: BGP (Multi-ISP). The BGP (Multi-ISP) line is supported in all regions.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.
              * 
              * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.
              * 
@@ -1084,7 +1084,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the EIP.
+             * The EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -1094,10 +1094,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             /**
              * The association mode. Valid values:
              * <p>
-             * 
-             * *   **NAT**: NAT mode
-             * *   **MULTI_BINDED**: multi-EIP-to-ENI mode
-             * *   **BINDED**: cut-through mode
+             * - **NAT**: NAT mode
+             * - **MULTI_BINDED**: multi-EIP-to-ENI mode
+             * - **BINDED**: cut-through mode
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1226,7 +1225,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of contiguous EIPs.
+             * The ID of the contiguous EIP group.
              * <p>
              * 
              * This value is returned only when you query contiguous EIPs.
@@ -1240,8 +1239,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * Indicates whether the resource is created by the service account. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**
+             * *   **1**
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;

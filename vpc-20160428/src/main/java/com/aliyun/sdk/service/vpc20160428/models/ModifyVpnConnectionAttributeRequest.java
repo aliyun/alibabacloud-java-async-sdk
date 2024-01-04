@@ -349,24 +349,28 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * You can specify this parameter if you modify the configuration of a single-tunnel IPsec-VPN connection.
+         * This parameter is supported by single-tunnel IPsec-VPN connections.
          * <p>
          * 
-         * The Border Gateway Protocol (BGP) configuration:
+         * The Border Gateway Protocol (BGP) configurations:
          * 
          * *   **BgpConfig.EnableBgp:** specifies whether to enable BGP. Valid values: **true** and **false**.
          * 
-         * *   **BgpConfig.LocalAsn**: the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**.
+         * *   **BgpConfig.LocalAsn:** the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**.
          * 
-         * *   **BgpConfig.TunnelCidr:** the CIDR block of the IPsec tunnel. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
+         *     You can enter the ASN in two segments. Separate the first 16 bits of the ASN from the remaining 16 bits with a period (.). Enter the number in each segment in decimal format.
          * 
-         *     >The CIDR block of the IPsec tunnel of each IPsec-VPN connection must be unique on a VPN gateway.
+         *     For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.
          * 
-         * *   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block of the IPsec tunnel.
+         * *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
          * 
-         * > *   This parameter is required when the VPN gateway has dynamic BGP enabled.
-         * >*   Before you configure BGP, we recommend that you learn how BGP dynamic routing works and the limits of using BGP dynamic routing. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
-         * >*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
+         *     > The CIDR block of the IPsec tunnel of each IPsec-VPN connection must be unique on a VPN gateway.
+         * 
+         * *   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.
+         * 
+         * > - This parameter is required when the VPN gateway has dynamic BGP enabled.
+         * > - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [BGP dynamic routing ](~~170235~~).
+         * > - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
          */
         public Builder bgpConfig(String bgpConfig) {
             this.putQueryParameter("BgpConfig", bgpConfig);
@@ -716,12 +720,12 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String tunnelCidr; 
 
             /**
-             * The ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
+             * The ASN of the tunnel on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
              * <p>
              * 
-             * > *   You can specify or modify this parameter if BGP is enabled for the IPsec-VPN connection (**EnableTunnelsBgp** is set to **true**).
-             * > *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
-             * > *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
+             * > - You can specify or modify this parameter if BGP is enabled for the IPsec-VPN connection (**EnableTunnelsBgp** is set to **true**).
+             * > - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
+             * > - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -729,7 +733,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * The BGP address on the Alibaba Cloud side. The address is an IP address that falls within the BGP CIDR block range.
+             * The BGP IP address of the tunnel on the Alibaba Cloud side. The address is an IP address that falls within the BGP CIDR block range.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -907,7 +911,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * The negotiation mode of IKE. Valid values:
+             * The IKE negotiation mode. Valid values:
              * <p>
              * 
              * *   **main**: This mode offers higher security during negotiations.
@@ -930,7 +934,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
              * The version of the IKE protocol. Valid values: **ikev1** and **ikev2**.
              * <p>
              * 
-             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+             * Compared with IKEv1, IKEv2 simplifies the security association (SA) negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -952,7 +956,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
              * The pre-shared key, which is used for identity authentication between the tunnel and the tunnel peer.
              * <p>
              * 
-             * *   It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``
+             * *   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``
              * *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.
              * 
              * >  The tunnel and the tunnel peer must use the same pre-shared key. Otherwise, the tunnel cannot be established.
@@ -1239,8 +1243,8 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
              * The tunnel role. Valid values:
              * <p>
              * 
-             * - **master**: The tunnel is an active tunnel.
-             * - **slave**: The tunnel is a standby tunnel.
+             * *   **master**: The tunnel is an active tunnel.
+             * *   **slave**: The tunnel is a standby tunnel.
              */
             public Builder role(String role) {
                 this.role = role;

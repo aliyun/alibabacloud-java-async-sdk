@@ -410,17 +410,17 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The type of the cloud resource with which you want to associate the elastic IP address (EIP). Valid values:
+         * The type of the cloud resource with which you want to associate the EIP. Valid values:
          * <p>
          * 
          * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
-         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC.
+         * *   **SlbInstance**: a CLB instance in a VPC.
          * *   **Nat**: a NAT gateway.
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-         * *   **NetworkInterface**: a secondary elastic network interface (ENI).
+         * *   **HaVip**: an HAVIP.
+         * *   **NetworkInterface**: a secondary ENI.
          * *   **IpAddress**: an IP address.
          * 
-         * >  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [EIP overview](~~72125~~).
+         * >  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](~~72125~~).
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -617,7 +617,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * Specifies whether Anti-DDoS Pro/Premium is activated. Valid value:
+         * Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:
          * <p>
          * 
          * *   **false**

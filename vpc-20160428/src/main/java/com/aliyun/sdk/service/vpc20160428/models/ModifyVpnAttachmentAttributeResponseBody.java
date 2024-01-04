@@ -437,7 +437,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
          * The ID of the resource group to which the IPsec-VPN connection belongs.
          * <p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+         * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

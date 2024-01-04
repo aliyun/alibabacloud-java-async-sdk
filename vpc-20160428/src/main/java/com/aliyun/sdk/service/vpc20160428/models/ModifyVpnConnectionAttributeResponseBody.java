@@ -395,9 +395,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
          * The ID of the resource group to which the IPsec-VPN connection belongs.
          * <p>
          * 
-         * The IPsec-VPN connection has the same resource group as its associated VPN gateway instance. 
-         * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+         * The IPsec-VPN connection and the VPN gateway associated with the IPsec-VPN connection belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -1042,7 +1040,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
              * The IKE negotiation mode.
              * <p>
              * 
-             * *   **main**: This mode offers higher security during negotiations.
+             * *   **main:** This mode offers higher security during negotiations.
              * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {

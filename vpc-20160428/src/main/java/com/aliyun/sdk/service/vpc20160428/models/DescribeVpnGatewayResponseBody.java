@@ -516,7 +516,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          * The ID of the resource group to which the VPN gateway belongs.
          * <p>
          * 
-         * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+         * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -879,7 +879,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -887,7 +887,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
