@@ -14,22 +14,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateDBClusterRequest extends Request {
     @Query
     @NameInMap("CacheSize")
+    @Validation(required = true)
     private String cacheSize;
 
     @Query
     @NameInMap("ChargeType")
+    @Validation(required = true)
     private String chargeType;
 
     @Query
     @NameInMap("DBClusterClass")
+    @Validation(required = true)
     private String DBClusterClass;
 
     @Query
     @NameInMap("DBClusterDescription")
+    @Validation(required = true)
     private String DBClusterDescription;
 
     @Body
     @NameInMap("DBInstanceId")
+    @Validation(required = true)
     private String DBInstanceId;
 
     @Query
@@ -38,6 +43,7 @@ public class CreateDBClusterRequest extends Request {
 
     @Query
     @NameInMap("EngineVersion")
+    @Validation(required = true)
     private String engineVersion;
 
     @Query
@@ -46,6 +52,7 @@ public class CreateDBClusterRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -57,23 +64,22 @@ public class CreateDBClusterRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("StorageSize")
-    private String storageSize;
-
-    @Query
     @NameInMap("UsedTime")
     private String usedTime;
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
     @Query
     @NameInMap("VpcId")
+    @Validation(required = true)
     private String vpcId;
 
     @Query
     @NameInMap("ZoneId")
+    @Validation(required = true)
     private String zoneId;
 
     private CreateDBClusterRequest(Builder builder) {
@@ -89,7 +95,6 @@ public class CreateDBClusterRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.storageSize = builder.storageSize;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -187,13 +192,6 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
-     * @return storageSize
-     */
-    public String getStorageSize() {
-        return this.storageSize;
-    }
-
-    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -233,7 +231,6 @@ public class CreateDBClusterRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
-        private String storageSize; 
         private String usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -256,7 +253,6 @@ public class CreateDBClusterRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.storageSize = request.storageSize;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -359,15 +355,6 @@ public class CreateDBClusterRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * StorageSize.
-         */
-        public Builder storageSize(String storageSize) {
-            this.putQueryParameter("StorageSize", storageSize);
-            this.storageSize = storageSize;
             return this;
         }
 

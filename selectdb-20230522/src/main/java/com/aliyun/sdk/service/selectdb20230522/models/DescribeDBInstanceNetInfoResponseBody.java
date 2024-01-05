@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
+    @NameInMap("DBClustersNetInfos")
+    private java.util.List < DBClustersNetInfos> DBClustersNetInfos;
+
     @NameInMap("DBInstanceNetInfos")
     private java.util.List < DBInstanceNetInfos> DBInstanceNetInfos;
 
@@ -19,6 +22,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDBInstanceNetInfoResponseBody(Builder builder) {
+        this.DBClustersNetInfos = builder.DBClustersNetInfos;
         this.DBInstanceNetInfos = builder.DBInstanceNetInfos;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static DescribeDBInstanceNetInfoResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBClustersNetInfos
+     */
+    public java.util.List < DBClustersNetInfos> getDBClustersNetInfos() {
+        return this.DBClustersNetInfos;
     }
 
     /**
@@ -46,8 +57,17 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < DBClustersNetInfos> DBClustersNetInfos; 
         private java.util.List < DBInstanceNetInfos> DBInstanceNetInfos; 
         private String requestId; 
+
+        /**
+         * DBClustersNetInfos.
+         */
+        public Builder DBClustersNetInfos(java.util.List < DBClustersNetInfos> DBClustersNetInfos) {
+            this.DBClustersNetInfos = DBClustersNetInfos;
+            return this;
+        }
 
         /**
          * DBInstanceNetInfos.
@@ -132,7 +152,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         } 
 
     }
-    public static class DBInstanceNetInfos extends TeaModel {
+    public static class DBClustersNetInfos extends TeaModel {
+        @NameInMap("ClusterId")
+        private String clusterId;
+
         @NameInMap("ConnectionString")
         private String connectionString;
 
@@ -157,7 +180,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("VswitchId")
         private String vswitchId;
 
-        private DBInstanceNetInfos(Builder builder) {
+        private DBClustersNetInfos(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.connectionString = builder.connectionString;
             this.ip = builder.ip;
             this.netType = builder.netType;
@@ -172,8 +196,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DBInstanceNetInfos create() {
+        public static DBClustersNetInfos create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -233,6 +264,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterId; 
             private String connectionString; 
             private String ip; 
             private String netType; 
@@ -241,6 +273,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcInstanceId; 
             private String vswitchId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * ConnectionString.
@@ -270,6 +310,268 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              * PortList.
              */
             public Builder portList(java.util.List < PortList> portList) {
+                this.portList = portList;
+                return this;
+            }
+
+            /**
+             * UserVisible.
+             */
+            public Builder userVisible(Boolean userVisible) {
+                this.userVisible = userVisible;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcInstanceId.
+             */
+            public Builder vpcInstanceId(String vpcInstanceId) {
+                this.vpcInstanceId = vpcInstanceId;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            public DBClustersNetInfos build() {
+                return new DBClustersNetInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class DBInstanceNetInfosPortList extends TeaModel {
+        @NameInMap("Port")
+        private Integer port;
+
+        @NameInMap("Protocol")
+        private String protocol;
+
+        private DBInstanceNetInfosPortList(Builder builder) {
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceNetInfosPortList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private Integer port; 
+            private String protocol; 
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public DBInstanceNetInfosPortList build() {
+                return new DBInstanceNetInfosPortList(this);
+            } 
+
+        } 
+
+    }
+    public static class DBInstanceNetInfos extends TeaModel {
+        @NameInMap("ClusterId")
+        private String clusterId;
+
+        @NameInMap("ConnectionString")
+        private String connectionString;
+
+        @NameInMap("Ip")
+        private String ip;
+
+        @NameInMap("NetType")
+        private String netType;
+
+        @NameInMap("PortList")
+        private java.util.List < DBInstanceNetInfosPortList> portList;
+
+        @NameInMap("UserVisible")
+        private Boolean userVisible;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        @NameInMap("VpcInstanceId")
+        private String vpcInstanceId;
+
+        @NameInMap("VswitchId")
+        private String vswitchId;
+
+        private DBInstanceNetInfos(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.connectionString = builder.connectionString;
+            this.ip = builder.ip;
+            this.netType = builder.netType;
+            this.portList = builder.portList;
+            this.userVisible = builder.userVisible;
+            this.vpcId = builder.vpcId;
+            this.vpcInstanceId = builder.vpcInstanceId;
+            this.vswitchId = builder.vswitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceNetInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return connectionString
+         */
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        /**
+         * @return netType
+         */
+        public String getNetType() {
+            return this.netType;
+        }
+
+        /**
+         * @return portList
+         */
+        public java.util.List < DBInstanceNetInfosPortList> getPortList() {
+            return this.portList;
+        }
+
+        /**
+         * @return userVisible
+         */
+        public Boolean getUserVisible() {
+            return this.userVisible;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vpcInstanceId
+         */
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String connectionString; 
+            private String ip; 
+            private String netType; 
+            private java.util.List < DBInstanceNetInfosPortList> portList; 
+            private Boolean userVisible; 
+            private String vpcId; 
+            private String vpcInstanceId; 
+            private String vswitchId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ConnectionString.
+             */
+            public Builder connectionString(String connectionString) {
+                this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * Ip.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            /**
+             * NetType.
+             */
+            public Builder netType(String netType) {
+                this.netType = netType;
+                return this;
+            }
+
+            /**
+             * PortList.
+             */
+            public Builder portList(java.util.List < DBInstanceNetInfosPortList> portList) {
                 this.portList = portList;
                 return this;
             }

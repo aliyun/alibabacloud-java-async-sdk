@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDBInstanceAttributeRequest extends Request {
     @Query
     @NameInMap("DBInstanceId")
+    @Validation(required = true)
     private String DBInstanceId;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query

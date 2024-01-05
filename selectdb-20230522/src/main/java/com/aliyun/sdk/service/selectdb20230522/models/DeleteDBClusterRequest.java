@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteDBClusterRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
+    @Validation(required = true)
     private String DBClusterId;
 
     @Body
     @NameInMap("DBInstanceId")
+    @Validation(required = true)
     private String DBInstanceId;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Body

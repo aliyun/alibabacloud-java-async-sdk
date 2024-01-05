@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckCreateDBInstanceRequest extends Request {
     @Query
     @NameInMap("CacheSize")
+    @Validation(required = true)
     private Integer cacheSize;
 
     @Query
     @NameInMap("ChargeType")
+    @Validation(required = true)
     private String chargeType;
 
     @Query
@@ -30,6 +32,7 @@ public class CheckCreateDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("DBInstanceClass")
+    @Validation(required = true)
     private String DBInstanceClass;
 
     @Query
@@ -42,6 +45,7 @@ public class CheckCreateDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("EngineVersion")
+    @Validation(required = true)
     private String engineVersion;
 
     @Query
@@ -64,10 +68,6 @@ public class CheckCreateDBInstanceRequest extends Request {
     @Query
     @NameInMap("SecurityIPList")
     private String securityIPList;
-
-    @Query
-    @NameInMap("StorageSize")
-    private String storageSize;
 
     @Query
     @NameInMap("UsedTime")
@@ -103,7 +103,6 @@ public class CheckCreateDBInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityIPList = builder.securityIPList;
-        this.storageSize = builder.storageSize;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -215,13 +214,6 @@ public class CheckCreateDBInstanceRequest extends Request {
     }
 
     /**
-     * @return storageSize
-     */
-    public String getStorageSize() {
-        return this.storageSize;
-    }
-
-    /**
      * @return usedTime
      */
     public Integer getUsedTime() {
@@ -263,7 +255,6 @@ public class CheckCreateDBInstanceRequest extends Request {
         private String resourceGroupId; 
         private Long resourceOwnerId; 
         private String securityIPList; 
-        private String storageSize; 
         private Integer usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -288,7 +279,6 @@ public class CheckCreateDBInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityIPList = request.securityIPList;
-            this.storageSize = request.storageSize;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -409,15 +399,6 @@ public class CheckCreateDBInstanceRequest extends Request {
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
             this.securityIPList = securityIPList;
-            return this;
-        }
-
-        /**
-         * StorageSize.
-         */
-        public Builder storageSize(String storageSize) {
-            this.putQueryParameter("StorageSize", storageSize);
-            this.storageSize = storageSize;
             return this;
         }
 

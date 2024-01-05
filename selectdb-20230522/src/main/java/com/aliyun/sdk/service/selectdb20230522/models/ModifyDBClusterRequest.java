@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyDBClusterRequest extends Request {
     @Query
     @NameInMap("DBClusterClass")
+    @Validation(required = true)
     private String DBClusterClass;
 
     @Query
     @NameInMap("DBClusterId")
+    @Validation(required = true)
     private String DBClusterId;
 
     @Query
@@ -31,6 +33,7 @@ public class ModifyDBClusterRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query

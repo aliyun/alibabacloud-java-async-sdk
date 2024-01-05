@@ -455,9 +455,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CacheStorageSizeGB")
         private String cacheStorageSizeGB;
 
-        @NameInMap("CacheStorageSizeGiB")
-        private Long cacheStorageSizeGiB;
-
         @NameInMap("CacheStorageType")
         private String cacheStorageType;
 
@@ -485,9 +482,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("ObjectStoreSizeGiB")
-        private Long objectStoreSizeGiB;
-
         @NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -499,7 +493,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         private DBClusterList(Builder builder) {
             this.cacheStorageSizeGB = builder.cacheStorageSizeGB;
-            this.cacheStorageSizeGiB = builder.cacheStorageSizeGiB;
             this.cacheStorageType = builder.cacheStorageType;
             this.chargeType = builder.chargeType;
             this.cpuCores = builder.cpuCores;
@@ -509,7 +502,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.dbClusterName = builder.dbClusterName;
             this.dbInstanceName = builder.dbInstanceName;
             this.memory = builder.memory;
-            this.objectStoreSizeGiB = builder.objectStoreSizeGiB;
             this.performanceLevel = builder.performanceLevel;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -528,13 +520,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCacheStorageSizeGB() {
             return this.cacheStorageSizeGB;
-        }
-
-        /**
-         * @return cacheStorageSizeGiB
-         */
-        public Long getCacheStorageSizeGiB() {
-            return this.cacheStorageSizeGiB;
         }
 
         /**
@@ -601,13 +586,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return objectStoreSizeGiB
-         */
-        public Long getObjectStoreSizeGiB() {
-            return this.objectStoreSizeGiB;
-        }
-
-        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -630,7 +608,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cacheStorageSizeGB; 
-            private Long cacheStorageSizeGiB; 
             private String cacheStorageType; 
             private String chargeType; 
             private Long cpuCores; 
@@ -640,7 +617,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String dbClusterName; 
             private String dbInstanceName; 
             private Long memory; 
-            private Long objectStoreSizeGiB; 
             private String performanceLevel; 
             private String startTime; 
             private String status; 
@@ -650,14 +626,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder cacheStorageSizeGB(String cacheStorageSizeGB) {
                 this.cacheStorageSizeGB = cacheStorageSizeGB;
-                return this;
-            }
-
-            /**
-             * CacheStorageSizeGiB.
-             */
-            public Builder cacheStorageSizeGiB(Long cacheStorageSizeGiB) {
-                this.cacheStorageSizeGiB = cacheStorageSizeGiB;
                 return this;
             }
 
@@ -730,14 +698,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
-                return this;
-            }
-
-            /**
-             * ObjectStoreSizeGiB.
-             */
-            public Builder objectStoreSizeGiB(Long objectStoreSizeGiB) {
-                this.objectStoreSizeGiB = objectStoreSizeGiB;
                 return this;
             }
 

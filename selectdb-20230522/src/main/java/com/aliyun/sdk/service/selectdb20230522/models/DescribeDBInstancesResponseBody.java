@@ -131,267 +131,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     } 
 
-    public static class DBClusterList extends TeaModel {
-        @NameInMap("CacheStorageSizeGiB")
-        private Long cacheStorageSizeGiB;
-
-        @NameInMap("CacheStorageType")
-        private String cacheStorageType;
-
-        @NameInMap("CpuCores")
-        private Long cpuCores;
-
-        @NameInMap("CreatedTime")
-        private String createdTime;
-
-        @NameInMap("DBInstanceId")
-        private String DBInstanceId;
-
-        @NameInMap("DbClusterClass")
-        private String dbClusterClass;
-
-        @NameInMap("DbClusterId")
-        private String dbClusterId;
-
-        @NameInMap("DbClusterName")
-        private String dbClusterName;
-
-        @NameInMap("Memory")
-        private Long memory;
-
-        @NameInMap("PerformanceLevel")
-        private String performanceLevel;
-
-        @NameInMap("Status")
-        private String status;
-
-        @NameInMap("objectStoreSizeGiB")
-        private Long objectStoreSizeGiB;
-
-        private DBClusterList(Builder builder) {
-            this.cacheStorageSizeGiB = builder.cacheStorageSizeGiB;
-            this.cacheStorageType = builder.cacheStorageType;
-            this.cpuCores = builder.cpuCores;
-            this.createdTime = builder.createdTime;
-            this.DBInstanceId = builder.DBInstanceId;
-            this.dbClusterClass = builder.dbClusterClass;
-            this.dbClusterId = builder.dbClusterId;
-            this.dbClusterName = builder.dbClusterName;
-            this.memory = builder.memory;
-            this.performanceLevel = builder.performanceLevel;
-            this.status = builder.status;
-            this.objectStoreSizeGiB = builder.objectStoreSizeGiB;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DBClusterList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return cacheStorageSizeGiB
-         */
-        public Long getCacheStorageSizeGiB() {
-            return this.cacheStorageSizeGiB;
-        }
-
-        /**
-         * @return cacheStorageType
-         */
-        public String getCacheStorageType() {
-            return this.cacheStorageType;
-        }
-
-        /**
-         * @return cpuCores
-         */
-        public Long getCpuCores() {
-            return this.cpuCores;
-        }
-
-        /**
-         * @return createdTime
-         */
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        /**
-         * @return DBInstanceId
-         */
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        /**
-         * @return dbClusterClass
-         */
-        public String getDbClusterClass() {
-            return this.dbClusterClass;
-        }
-
-        /**
-         * @return dbClusterId
-         */
-        public String getDbClusterId() {
-            return this.dbClusterId;
-        }
-
-        /**
-         * @return dbClusterName
-         */
-        public String getDbClusterName() {
-            return this.dbClusterName;
-        }
-
-        /**
-         * @return memory
-         */
-        public Long getMemory() {
-            return this.memory;
-        }
-
-        /**
-         * @return performanceLevel
-         */
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
-         * @return objectStoreSizeGiB
-         */
-        public Long getObjectStoreSizeGiB() {
-            return this.objectStoreSizeGiB;
-        }
-
-        public static final class Builder {
-            private Long cacheStorageSizeGiB; 
-            private String cacheStorageType; 
-            private Long cpuCores; 
-            private String createdTime; 
-            private String DBInstanceId; 
-            private String dbClusterClass; 
-            private String dbClusterId; 
-            private String dbClusterName; 
-            private Long memory; 
-            private String performanceLevel; 
-            private String status; 
-            private Long objectStoreSizeGiB; 
-
-            /**
-             * CacheStorageSizeGiB.
-             */
-            public Builder cacheStorageSizeGiB(Long cacheStorageSizeGiB) {
-                this.cacheStorageSizeGiB = cacheStorageSizeGiB;
-                return this;
-            }
-
-            /**
-             * CacheStorageType.
-             */
-            public Builder cacheStorageType(String cacheStorageType) {
-                this.cacheStorageType = cacheStorageType;
-                return this;
-            }
-
-            /**
-             * CpuCores.
-             */
-            public Builder cpuCores(Long cpuCores) {
-                this.cpuCores = cpuCores;
-                return this;
-            }
-
-            /**
-             * CreatedTime.
-             */
-            public Builder createdTime(String createdTime) {
-                this.createdTime = createdTime;
-                return this;
-            }
-
-            /**
-             * DBInstanceId.
-             */
-            public Builder DBInstanceId(String DBInstanceId) {
-                this.DBInstanceId = DBInstanceId;
-                return this;
-            }
-
-            /**
-             * DbClusterClass.
-             */
-            public Builder dbClusterClass(String dbClusterClass) {
-                this.dbClusterClass = dbClusterClass;
-                return this;
-            }
-
-            /**
-             * DbClusterId.
-             */
-            public Builder dbClusterId(String dbClusterId) {
-                this.dbClusterId = dbClusterId;
-                return this;
-            }
-
-            /**
-             * DbClusterName.
-             */
-            public Builder dbClusterName(String dbClusterName) {
-                this.dbClusterName = dbClusterName;
-                return this;
-            }
-
-            /**
-             * Memory.
-             */
-            public Builder memory(Long memory) {
-                this.memory = memory;
-                return this;
-            }
-
-            /**
-             * PerformanceLevel.
-             */
-            public Builder performanceLevel(String performanceLevel) {
-                this.performanceLevel = performanceLevel;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * objectStoreSizeGiB.
-             */
-            public Builder objectStoreSizeGiB(Long objectStoreSizeGiB) {
-                this.objectStoreSizeGiB = objectStoreSizeGiB;
-                return this;
-            }
-
-            public DBClusterList build() {
-                return new DBClusterList(this);
-            } 
-
-        } 
-
-    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -463,12 +202,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterCount")
         private Integer clusterCount;
 
-        @NameInMap("CreateTime")
-        private String createTime;
-
-        @NameInMap("DBClusterList")
-        private java.util.List < DBClusterList> DBClusterList;
-
         @NameInMap("DBInstanceId")
         private String DBInstanceId;
 
@@ -489,9 +222,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("GmtModified")
         private String gmtModified;
-
-        @NameInMap("InstanceClass")
-        private String instanceClass;
 
         @NameInMap("InstanceUsedType")
         private String instanceUsedType;
@@ -581,8 +311,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.category = builder.category;
             this.chargeType = builder.chargeType;
             this.clusterCount = builder.clusterCount;
-            this.createTime = builder.createTime;
-            this.DBClusterList = builder.DBClusterList;
             this.DBInstanceId = builder.DBInstanceId;
             this.description = builder.description;
             this.engine = builder.engine;
@@ -590,7 +318,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
-            this.instanceClass = builder.instanceClass;
             this.instanceUsedType = builder.instanceUsedType;
             this.isDeleted = builder.isDeleted;
             this.lockMode = builder.lockMode;
@@ -651,20 +378,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return createTime
-         */
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        /**
-         * @return DBClusterList
-         */
-        public java.util.List < DBClusterList> getDBClusterList() {
-            return this.DBClusterList;
-        }
-
-        /**
          * @return DBInstanceId
          */
         public String getDBInstanceId() {
@@ -711,13 +424,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
-        }
-
-        /**
-         * @return instanceClass
-         */
-        public String getInstanceClass() {
-            return this.instanceClass;
         }
 
         /**
@@ -920,8 +626,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String category; 
             private String chargeType; 
             private Integer clusterCount; 
-            private String createTime; 
-            private java.util.List < DBClusterList> DBClusterList; 
             private String DBInstanceId; 
             private String description; 
             private String engine; 
@@ -929,7 +633,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String expireTime; 
             private String gmtCreated; 
             private String gmtModified; 
-            private String instanceClass; 
             private String instanceUsedType; 
             private Boolean isDeleted; 
             private Long lockMode; 
@@ -980,22 +683,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
-                return this;
-            }
-
-            /**
-             * CreateTime.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * DBClusterList.
-             */
-            public Builder DBClusterList(java.util.List < DBClusterList> DBClusterList) {
-                this.DBClusterList = DBClusterList;
                 return this;
             }
 
@@ -1052,14 +739,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * InstanceClass.
-             */
-            public Builder instanceClass(String instanceClass) {
-                this.instanceClass = instanceClass;
                 return this;
             }
 
