@@ -56,6 +56,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPromptResponse> getPrompt(GetPromptRequest request);
 
+    CompletableFuture<GetText2ImageJobResponse> getText2ImageJob(GetText2ImageJobRequest request);
+
     CompletableFuture<ImportEnterpriseDocumentResponse> importEnterpriseDocument(ImportEnterpriseDocumentRequest request);
 
     CompletableFuture<ImportUserDocumentResponse> importUserDocument(ImportUserDocumentRequest request);
@@ -73,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryUserDocumentResponse> queryUserDocument(QueryUserDocumentRequest request);
 
     CompletableFuture<SearchEnterpriseDataResponse> searchEnterpriseData(SearchEnterpriseDataRequest request);
+
+    CompletableFuture<SubmitText2ImageJobResponse> submitText2ImageJob(SubmitText2ImageJobRequest request);
 
     CompletableFuture<UpdateEnterpriseDataInfoResponse> updateEnterpriseDataInfo(UpdateEnterpriseDataInfoRequest request);
 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryEnterpriseDataTagResponse} extends {@link TeaModel}
+ * {@link SubmitText2ImageJobResponse} extends {@link TeaModel}
  *
- * <p>QueryEnterpriseDataTagResponse</p>
+ * <p>SubmitText2ImageJobResponse</p>
  */
-public class QueryEnterpriseDataTagResponse extends Response {
+public class SubmitText2ImageJobResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class QueryEnterpriseDataTagResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private QueryEnterpriseDataTagResponseBody body;
+    private SubmitText2ImageJobResponseBody body;
 
-    private QueryEnterpriseDataTagResponse(BuilderImpl builder) {
+    private SubmitText2ImageJobResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryEnterpriseDataTagResponse create() {
+    public static SubmitText2ImageJobResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class QueryEnterpriseDataTagResponse extends Response {
     /**
      * @return body
      */
-    public QueryEnterpriseDataTagResponseBody getBody() {
+    public SubmitText2ImageJobResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryEnterpriseDataTagResponse, Builder> {
+    public interface Builder extends Response.Builder<SubmitText2ImageJobResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryEnterpriseDataTagResponseBody body);
+        Builder body(SubmitText2ImageJobResponseBody body);
 
         @Override
-        QueryEnterpriseDataTagResponse build();
+        SubmitText2ImageJobResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryEnterpriseDataTagResponse, Builder>
+            extends Response.BuilderImpl<SubmitText2ImageJobResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryEnterpriseDataTagResponseBody body; 
+        private SubmitText2ImageJobResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryEnterpriseDataTagResponse response) {
+        private BuilderImpl(SubmitText2ImageJobResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class QueryEnterpriseDataTagResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryEnterpriseDataTagResponseBody body) {
+        public Builder body(SubmitText2ImageJobResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryEnterpriseDataTagResponse build() {
-            return new QueryEnterpriseDataTagResponse(this);
+        public SubmitText2ImageJobResponse build() {
+            return new SubmitText2ImageJobResponse(this);
         } 
 
     } 
