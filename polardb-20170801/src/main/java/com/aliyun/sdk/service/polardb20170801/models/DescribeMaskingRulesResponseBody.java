@@ -142,8 +142,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         @NameInMap("RuleList")
         private java.util.List < String > ruleList;
 
+        @NameInMap("RuleVersion")
+        private String ruleVersion;
+
         private Data(Builder builder) {
             this.ruleList = builder.ruleList;
+            this.ruleVersion = builder.ruleVersion;
         }
 
         public static Builder builder() {
@@ -161,14 +165,30 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             return this.ruleList;
         }
 
+        /**
+         * @return ruleVersion
+         */
+        public String getRuleVersion() {
+            return this.ruleVersion;
+        }
+
         public static final class Builder {
             private java.util.List < String > ruleList; 
+            private String ruleVersion; 
 
             /**
              * Details about the masking rules.
              */
             public Builder ruleList(java.util.List < String > ruleList) {
                 this.ruleList = ruleList;
+                return this;
+            }
+
+            /**
+             * RuleVersion.
+             */
+            public Builder ruleVersion(String ruleVersion) {
+                this.ruleVersion = ruleVersion;
                 return this;
             }
 

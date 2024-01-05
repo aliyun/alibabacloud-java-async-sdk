@@ -33,6 +33,10 @@ public class ModifyMaskingRulesRequest extends Request {
     @NameInMap("RuleNameList")
     private String ruleNameList;
 
+    @Query
+    @NameInMap("RuleVersion")
+    private String ruleVersion;
+
     private ModifyMaskingRulesRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -40,6 +44,7 @@ public class ModifyMaskingRulesRequest extends Request {
         this.ruleConfig = builder.ruleConfig;
         this.ruleName = builder.ruleName;
         this.ruleNameList = builder.ruleNameList;
+        this.ruleVersion = builder.ruleVersion;
     }
 
     public static Builder builder() {
@@ -90,12 +95,20 @@ public class ModifyMaskingRulesRequest extends Request {
         return this.ruleNameList;
     }
 
+    /**
+     * @return ruleVersion
+     */
+    public String getRuleVersion() {
+        return this.ruleVersion;
+    }
+
     public static final class Builder extends Request.Builder<ModifyMaskingRulesRequest, Builder> {
         private String DBClusterId; 
         private String enable; 
         private String ruleConfig; 
         private String ruleName; 
         private String ruleNameList; 
+        private String ruleVersion; 
 
         private Builder() {
             super();
@@ -108,6 +121,7 @@ public class ModifyMaskingRulesRequest extends Request {
             this.ruleConfig = request.ruleConfig;
             this.ruleName = request.ruleName;
             this.ruleNameList = request.ruleNameList;
+            this.ruleVersion = request.ruleVersion;
         } 
 
         /**
@@ -181,6 +195,15 @@ public class ModifyMaskingRulesRequest extends Request {
         public Builder ruleNameList(String ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);
             this.ruleNameList = ruleNameList;
+            return this;
+        }
+
+        /**
+         * RuleVersion.
+         */
+        public Builder ruleVersion(String ruleVersion) {
+            this.putQueryParameter("RuleVersion", ruleVersion);
+            this.ruleVersion = ruleVersion;
             return this;
         }
 
