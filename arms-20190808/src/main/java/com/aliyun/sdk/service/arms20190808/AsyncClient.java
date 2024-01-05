@@ -36,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddRecordingRuleResponse> addRecordingRule(AddRecordingRuleRequest request);
 
+    CompletableFuture<AddTagToFlinkClusterResponse> addTagToFlinkCluster(AddTagToFlinkClusterRequest request);
+
     CompletableFuture<AppendInstancesToPrometheusGlobalViewResponse> appendInstancesToPrometheusGlobalView(AppendInstancesToPrometheusGlobalViewRequest request);
 
     CompletableFuture<ApplyScenarioResponse> applyScenario(ApplyScenarioRequest request);
