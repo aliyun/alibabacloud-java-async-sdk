@@ -72,6 +72,9 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
     } 
 
     public static class Template extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("CreatedBy")
         private String createdBy;
 
@@ -109,6 +112,7 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
         private String updatedDate;
 
         private Template(Builder builder) {
+            this.category = builder.category;
             this.createdBy = builder.createdBy;
             this.createdDate = builder.createdDate;
             this.description = builder.description;
@@ -129,6 +133,13 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
 
         public static Template create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -216,6 +227,7 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String createdBy; 
             private String createdDate; 
             private String description; 
@@ -228,6 +240,14 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
             private String templateVersion; 
             private String updatedBy; 
             private String updatedDate; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * CreatedBy.

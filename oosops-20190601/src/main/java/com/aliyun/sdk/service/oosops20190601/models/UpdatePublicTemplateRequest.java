@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdatePublicTemplateRequest extends Request {
     @Query
+    @NameInMap("Category")
+    private String category;
+
+    @Query
     @NameInMap("Content")
     @Validation(required = true)
     private String content;
@@ -36,6 +40,7 @@ public class UpdatePublicTemplateRequest extends Request {
 
     private UpdatePublicTemplateRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.content = builder.content;
         this.popularity = builder.popularity;
         this.publisher = builder.publisher;
@@ -54,6 +59,13 @@ public class UpdatePublicTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -92,6 +104,7 @@ public class UpdatePublicTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePublicTemplateRequest, Builder> {
+        private String category; 
         private String content; 
         private Integer popularity; 
         private String publisher; 
@@ -104,12 +117,22 @@ public class UpdatePublicTemplateRequest extends Request {
 
         private Builder(UpdatePublicTemplateRequest request) {
             super(request);
+            this.category = request.category;
             this.content = request.content;
             this.popularity = request.popularity;
             this.publisher = request.publisher;
             this.regionId = request.regionId;
             this.templateName = request.templateName;
         } 
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
 
         /**
          * Content.
