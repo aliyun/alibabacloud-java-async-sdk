@@ -749,6 +749,9 @@ public class CreateTaskRequest extends Request {
         @NameInMap("SummarizationEnabled")
         private Boolean summarizationEnabled;
 
+        @NameInMap("TextPolishEnabled")
+        private Boolean textPolishEnabled;
+
         @NameInMap("Transcoding")
         private Transcoding transcoding;
 
@@ -768,6 +771,7 @@ public class CreateTaskRequest extends Request {
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
             this.summarization = builder.summarization;
             this.summarizationEnabled = builder.summarizationEnabled;
+            this.textPolishEnabled = builder.textPolishEnabled;
             this.transcoding = builder.transcoding;
             this.transcription = builder.transcription;
             this.translation = builder.translation;
@@ -825,6 +829,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return textPolishEnabled
+         */
+        public Boolean getTextPolishEnabled() {
+            return this.textPolishEnabled;
+        }
+
+        /**
          * @return transcoding
          */
         public Transcoding getTranscoding() {
@@ -859,6 +870,7 @@ public class CreateTaskRequest extends Request {
             private Boolean pptExtractionEnabled; 
             private Summarization summarization; 
             private Boolean summarizationEnabled; 
+            private Boolean textPolishEnabled; 
             private Transcoding transcoding; 
             private Transcription transcription; 
             private Translation translation; 
@@ -909,6 +921,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder summarizationEnabled(Boolean summarizationEnabled) {
                 this.summarizationEnabled = summarizationEnabled;
+                return this;
+            }
+
+            /**
+             * TextPolishEnabled.
+             */
+            public Builder textPolishEnabled(Boolean textPolishEnabled) {
+                this.textPolishEnabled = textPolishEnabled;
                 return this;
             }
 
