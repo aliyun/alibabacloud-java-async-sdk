@@ -104,6 +104,9 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         @NameInMap("TargetId")
         private String targetId;
 
+        @NameInMap("TargetProperty")
+        private String targetProperty;
+
         @NameInMap("UpdateTime")
         private String updateTime;
 
@@ -112,6 +115,7 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             this.external = builder.external;
             this.resourceShareId = builder.resourceShareId;
             this.targetId = builder.targetId;
+            this.targetProperty = builder.targetProperty;
             this.updateTime = builder.updateTime;
         }
 
@@ -152,6 +156,13 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetProperty
+         */
+        public String getTargetProperty() {
+            return this.targetProperty;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -163,6 +174,7 @@ public class ListSharedTargetsResponseBody extends TeaModel {
             private Boolean external; 
             private String resourceShareId; 
             private String targetId; 
+            private String targetProperty; 
             private String updateTime; 
 
             /**
@@ -202,6 +214,14 @@ public class ListSharedTargetsResponseBody extends TeaModel {
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetProperty.
+             */
+            public Builder targetProperty(String targetProperty) {
+                this.targetProperty = targetProperty;
                 return this;
             }
 

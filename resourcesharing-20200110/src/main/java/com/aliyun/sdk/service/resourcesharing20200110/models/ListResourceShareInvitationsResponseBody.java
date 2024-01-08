@@ -62,7 +62,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         private java.util.List < ResourceShareInvitations> resourceShareInvitations; 
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource sharing invitations.
+         * The information about the resource sharing invitations.
          */
         public Builder resourceShareInvitations(java.util.List < ResourceShareInvitations> resourceShareInvitations) {
             this.resourceShareInvitations = resourceShareInvitations;
@@ -166,7 +166,11 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * AssociateType.
+             * The type of the sharing operation. Valid values:
+             * <p>
+             * 
+             * *   Associate
+             * *   Disassociate
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -174,7 +178,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the shared resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -182,7 +186,10 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the shared resource.
+             * <p>
+             * 
+             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -190,7 +197,14 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The failure status. Valid values:
+             * <p>
+             * 
+             * *   Unavailable: The resource cannot be shared.
+             * *   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.
+             * *   ZonalResourceInaccessible: The resource is unavailable in this region.
+             * *   UnsupportedOperation: The operation is not allowed because another association exists.
+             * *   InternalError: An internal error occurred during the check.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +212,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The failure cause.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -331,7 +345,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * InvitationFailedDetails.
+             * The information about the failure.
              */
             public Builder invitationFailedDetails(java.util.List < InvitationFailedDetails> invitationFailedDetails) {
                 this.invitationFailedDetails = invitationFailedDetails;
@@ -382,11 +396,12 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
              * The status of the invitation. Valid values:
              * <p>
              * 
-             * *   Pending: The invitation is waiting for confirmation.
-             * *   Accepted: The invitation is accepted.
-             * *   Cancelled: The invitation is canceled.
-             * *   Rejected: The invitation is rejected.
-             * *   Expired: The invitation has expired.
+             * *   Pending
+             * *   Accepted
+             * *   Cancelled
+             * *   Rejected
+             * *   Expired
+             * *   AcceptFailed
              */
             public Builder status(String status) {
                 this.status = status;

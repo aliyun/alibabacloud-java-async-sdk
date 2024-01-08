@@ -50,7 +50,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         private ResourceShareInvitation resourceShareInvitation; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the resource sharing invitation.
+         * The information about the resource sharing invitation.
          */
         public Builder resourceShareInvitation(ResourceShareInvitation resourceShareInvitation) {
             this.resourceShareInvitation = resourceShareInvitation;
@@ -146,7 +146,10 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * AssociateType.
+             * The type of the sharing operation. Valid values:
+             * <p>
+             * 
+             * *   Associate
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
@@ -154,7 +157,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the shared resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +165,10 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the shared resource.
+             * <p>
+             * 
+             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +176,13 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The failure status. Valid values:
+             * <p>
+             * 
+             * *   Unavailable: The resource cannot be shared.
+             * *   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.
+             * *   ZonalResourceInaccessible: The resource is unavailable in this region.
+             * *   InternalError: An internal error occurred during the check.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +190,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The failure cause.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -310,7 +322,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AcceptInvitationFailedDetails.
+             * The information about the failure.
              */
             public Builder acceptInvitationFailedDetails(java.util.List < AcceptInvitationFailedDetails> acceptInvitationFailedDetails) {
                 this.acceptInvitationFailedDetails = acceptInvitationFailedDetails;
@@ -342,7 +354,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * The ID of the resource sharing invitation.
              */
             public Builder resourceShareInvitationId(String resourceShareInvitationId) {
                 this.resourceShareInvitationId = resourceShareInvitationId;
@@ -369,11 +381,12 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
              * The status of the invitation. Valid values:
              * <p>
              * 
-             * *   Pending: The invitation is waiting for confirmation.
-             * *   Accepted: The invitation is accepted.
-             * *   Cancelled: The invitation is canceled.
-             * *   Rejected: The invitation is rejected.
-             * *   Expired: The invitation has expired.
+             * *   Pending
+             * *   Accepted
+             * *   Cancelled
+             * *   Rejected
+             * *   Expired
+             * *   AcceptFailed
              */
             public Builder status(String status) {
                 this.status = status;

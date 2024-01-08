@@ -91,7 +91,131 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
 
     } 
 
+    public static class AssociationFailedDetails extends TeaModel {
+        @NameInMap("AssociateType")
+        private String associateType;
+
+        @NameInMap("EntityId")
+        private String entityId;
+
+        @NameInMap("EntityType")
+        private String entityType;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("StatusMessage")
+        private String statusMessage;
+
+        private AssociationFailedDetails(Builder builder) {
+            this.associateType = builder.associateType;
+            this.entityId = builder.entityId;
+            this.entityType = builder.entityType;
+            this.status = builder.status;
+            this.statusMessage = builder.statusMessage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssociationFailedDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return associateType
+         */
+        public String getAssociateType() {
+            return this.associateType;
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return entityType
+         */
+        public String getEntityType() {
+            return this.entityType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusMessage
+         */
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
+        public static final class Builder {
+            private String associateType; 
+            private String entityId; 
+            private String entityType; 
+            private String status; 
+            private String statusMessage; 
+
+            /**
+             * AssociateType.
+             */
+            public Builder associateType(String associateType) {
+                this.associateType = associateType;
+                return this;
+            }
+
+            /**
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * EntityType.
+             */
+            public Builder entityType(String entityType) {
+                this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMessage.
+             */
+            public Builder statusMessage(String statusMessage) {
+                this.statusMessage = statusMessage;
+                return this;
+            }
+
+            public AssociationFailedDetails build() {
+                return new AssociationFailedDetails(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceShareAssociations extends TeaModel {
+        @NameInMap("AssociationFailedDetails")
+        private java.util.List < AssociationFailedDetails> associationFailedDetails;
+
         @NameInMap("AssociationStatus")
         private String associationStatus;
 
@@ -119,10 +243,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @NameInMap("ResourceShareName")
         private String resourceShareName;
 
+        @NameInMap("TargetProperty")
+        private String targetProperty;
+
         @NameInMap("UpdateTime")
         private String updateTime;
 
         private ResourceShareAssociations(Builder builder) {
+            this.associationFailedDetails = builder.associationFailedDetails;
             this.associationStatus = builder.associationStatus;
             this.associationStatusMessage = builder.associationStatusMessage;
             this.associationType = builder.associationType;
@@ -132,6 +260,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             this.external = builder.external;
             this.resourceShareId = builder.resourceShareId;
             this.resourceShareName = builder.resourceShareName;
+            this.targetProperty = builder.targetProperty;
             this.updateTime = builder.updateTime;
         }
 
@@ -141,6 +270,13 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
 
         public static ResourceShareAssociations create() {
             return builder().build();
+        }
+
+        /**
+         * @return associationFailedDetails
+         */
+        public java.util.List < AssociationFailedDetails> getAssociationFailedDetails() {
+            return this.associationFailedDetails;
         }
 
         /**
@@ -207,6 +343,13 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetProperty
+         */
+        public String getTargetProperty() {
+            return this.targetProperty;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -214,6 +357,7 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < AssociationFailedDetails> associationFailedDetails; 
             private String associationStatus; 
             private String associationStatusMessage; 
             private String associationType; 
@@ -223,7 +367,16 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private Boolean external; 
             private String resourceShareId; 
             private String resourceShareName; 
+            private String targetProperty; 
             private String updateTime; 
+
+            /**
+             * AssociationFailedDetails.
+             */
+            public Builder associationFailedDetails(java.util.List < AssociationFailedDetails> associationFailedDetails) {
+                this.associationFailedDetails = associationFailedDetails;
+                return this;
+            }
 
             /**
              * The association status. Valid values:
@@ -323,6 +476,14 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
+                return this;
+            }
+
+            /**
+             * TargetProperty.
+             */
+            public Builder targetProperty(String targetProperty) {
+                this.targetProperty = targetProperty;
                 return this;
             }
 

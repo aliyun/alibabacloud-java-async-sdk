@@ -96,6 +96,9 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         @NameInMap("ResourceShareName")
         private String resourceShareName;
 
+        @NameInMap("TargetProperty")
+        private String targetProperty;
+
         @NameInMap("UpdateTime")
         private String updateTime;
 
@@ -108,6 +111,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
             this.entityType = builder.entityType;
             this.resourceShareId = builder.resourceShareId;
             this.resourceShareName = builder.resourceShareName;
+            this.targetProperty = builder.targetProperty;
             this.updateTime = builder.updateTime;
         }
 
@@ -176,6 +180,13 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetProperty
+         */
+        public String getTargetProperty() {
+            return this.targetProperty;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -191,6 +202,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
             private String entityType; 
             private String resourceShareId; 
             private String resourceShareName; 
+            private String targetProperty; 
             private String updateTime; 
 
             /**
@@ -279,6 +291,14 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
+                return this;
+            }
+
+            /**
+             * TargetProperty.
+             */
+            public Builder targetProperty(String targetProperty) {
+                this.targetProperty = targetProperty;
                 return this;
             }
 
