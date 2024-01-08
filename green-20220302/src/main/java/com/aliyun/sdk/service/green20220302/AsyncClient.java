@@ -34,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TextModerationResponse> textModeration(TextModerationRequest request);
 
+    CompletableFuture<TextModerationPlusResponse> textModerationPlus(TextModerationPlusRequest request);
+
     CompletableFuture<VideoModerationResponse> videoModeration(VideoModerationRequest request);
 
     CompletableFuture<VideoModerationCancelResponse> videoModerationCancel(VideoModerationCancelRequest request);
