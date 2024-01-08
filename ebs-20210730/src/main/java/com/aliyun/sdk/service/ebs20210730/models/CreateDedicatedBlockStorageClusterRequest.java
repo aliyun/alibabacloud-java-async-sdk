@@ -207,7 +207,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * DbscId.
+         * This parameter is no longer used.
          */
         public Builder dbscId(String dbscId) {
             this.putQueryParameter("DbscId", dbscId);
@@ -225,7 +225,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * The specific number of PeriodUnit.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -234,7 +234,11 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration for the dedicated block storage cluster,
+         * <p>
+         * Valid values:
+         * 
+         * *   **Month**
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -252,7 +256,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which to assign the dedicated block storage cluster.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,7 +265,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The resource tags. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -334,7 +338,14 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N used for exact search of EBS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * The `Tag.N` parameter pair (Tag.N.Key and Tag.N.Value) is used for exact search of EBS resources that have specified tags added. Each tag is a key-value pair.
+             * 
+             * *   If you specify only `Tag.N.Key`, all EBS resources whose tags contain the specified tag key are returned.
+             * *   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error is returned.
+             * *   If you specify multiple tag key-value pairs at the same time, only EBS resources that match all tag key-value pairs are returned.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -342,7 +353,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

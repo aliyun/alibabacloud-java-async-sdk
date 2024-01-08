@@ -140,7 +140,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The bandwidth value. Unit: Kbit/s.
+         * <p>
+         * 
+         * >  This parameter is not publicly available.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -149,7 +152,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,7 +161,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The description of the replication pair.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -167,7 +170,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.
+         * The name of the replication pair.
          */
         public Builder pairName(String pairName) {
             this.putQueryParameter("PairName", pairName);
@@ -176,7 +179,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * RPO.
+         * The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.
          */
         public Builder RPO(Long RPO) {
             this.putQueryParameter("RPO", RPO);
@@ -185,7 +188,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+         * The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,15 +197,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The bandwidth used to asynchronously replicate data between the primary and secondary disks. Unit: Kbit/s. Valid values:
-         * <p>
-         * 
-         * *   10240: equal to 10 Mbit/s
-         * *   20480: equal to 20 Mbit/s
-         * *   51200: equal to 50 Mbit/s
-         * *   102400: equal to 100 Mbit/s
-         * 
-         * Default value: 10240.
+         * The ID of the replication pair.
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);

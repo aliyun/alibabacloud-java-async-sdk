@@ -84,7 +84,7 @@ public class StartPairDrillRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +93,7 @@ public class StartPairDrillRequest extends Request {
         }
 
         /**
-         * PairId.
+         * The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query a list of replication pairs, including replication pair IDs.
          */
         public Builder pairId(String pairId) {
             this.putQueryParameter("PairId", pairId);
@@ -102,7 +102,10 @@ public class StartPairDrillRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the secondary disk in the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query the region in which the secondary disk of the replication pair resides.
+         * <p>
+         * 
+         * >  You must enable the disaster recovery drill feature in the region in which the secondary site resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

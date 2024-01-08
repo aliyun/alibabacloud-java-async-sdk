@@ -98,7 +98,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Drills.
+         * The information of disaster recovery drills that were performed on the replication pair.
          */
         public Builder drills(java.util.List < Drills> drills) {
             this.drills = drills;
@@ -106,7 +106,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -250,7 +250,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * DrillDiskId.
+             * The ID of the drill disk.
              */
             public Builder drillDiskId(String drillDiskId) {
                 this.drillDiskId = drillDiskId;
@@ -258,7 +258,15 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * DrillDiskStatus.
+             * The status of the drill disk. Valid values:
+             * <p>
+             * 
+             * *   created
+             * *   deleted
+             * *   creating
+             * *   deleting
+             * 
+             * >  This parameter can also display error code details if your drill disk fails to be created or deleted.
              */
             public Builder drillDiskStatus(String drillDiskStatus) {
                 this.drillDiskStatus = drillDiskStatus;
@@ -266,7 +274,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * DrillId.
+             * The ID of the drill.
              */
             public Builder drillId(String drillId) {
                 this.drillId = drillId;
@@ -274,7 +282,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverPoint.
+             * The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder recoverPoint(Long recoverPoint) {
                 this.recoverPoint = recoverPoint;
@@ -282,7 +290,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StartAt.
+             * The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder startAt(Long startAt) {
                 this.startAt = startAt;
@@ -290,7 +298,14 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the drill. Valid values:
+             * <p>
+             * 
+             * *   execute_failed
+             * *   executed
+             * *   executing
+             * *   clear_failed
+             * *   clearing
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +313,7 @@ public class DescribePairDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The error message that was displayed if the drill failed to be executed.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

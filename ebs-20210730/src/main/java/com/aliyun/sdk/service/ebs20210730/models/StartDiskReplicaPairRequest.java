@@ -98,7 +98,7 @@ public class StartDiskReplicaPairRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +107,13 @@ public class StartDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * OneShot.
+         * Specifies whether to immediately synchronize data. Valid values:
+         * <p>
+         * 
+         * *   true: immediately synchronizes data.
+         * *   false: synchronizes data based on the recovery point objective (RPO).
+         * 
+         * Default value: false.
          */
         public Builder oneShot(Boolean oneShot) {
             this.putQueryParameter("OneShot", oneShot);
@@ -116,7 +122,7 @@ public class StartDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query the region information of replication pairs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +131,7 @@ public class StartDiskReplicaPairRequest extends Request {
         }
 
         /**
-         * ReplicaPairId.
+         * The ID of the replication pair.
          */
         public Builder replicaPairId(String replicaPairId) {
             this.putQueryParameter("ReplicaPairId", replicaPairId);

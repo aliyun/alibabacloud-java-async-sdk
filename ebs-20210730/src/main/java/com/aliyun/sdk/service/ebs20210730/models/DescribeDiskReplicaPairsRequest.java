@@ -181,7 +181,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return on each page.
+         * The maximum number of entries per page. You can use this parameter together with NextToken.
          * <p>
          * 
          * Valid values: 1 to 500.
@@ -195,7 +195,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaPairs operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -204,7 +204,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,10 +213,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +225,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
          * The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: `pair-cn-dsa****,pair-cn-asd****`.
          * <p>
          * 
-         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
+         * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried. You can specify a maximum of 100 replication pair IDs.
          */
         public Builder pairIds(String pairIds) {
             this.putQueryParameter("PairIds", pairIds);
@@ -246,12 +243,12 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs that are added to this group. Example: `pg-****`.
+         * The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs in the group. Example: `pg-****`.
          * <p>
          * 
          * This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.
          * 
-         * >  If you set this parameter to `-`, replication pairs that are not added to replication pair-consistent groups are queried.
+         * >  If this parameter is set to`-`, replication pairs that are not added to any replication pair-consistent groups are returned.
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
@@ -269,7 +266,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The type of the site from which the information of replication pairs is retrieved. Valid values:
+         * The type of the site from which the information of replication pairs is retrieved. Valid value:
          * <p>
          * 
          * *   production: primary site
@@ -284,7 +281,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         }
 
         /**
-         * The resource tags. You can specify up to 20 tags.
+         * The tags. Up to 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -338,7 +335,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the replication pair.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,7 +343,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the replication pair.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

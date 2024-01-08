@@ -98,7 +98,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Drills.
+         * The information of disaster recovery drills that were performed on the replication pair-consistent group.
          */
         public Builder drills(java.util.List < Drills> drills) {
             this.drills = drills;
@@ -106,7 +106,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             private String pairId; 
 
             /**
-             * DrillDiskId.
+             * The ID of the drill disk.
              */
             public Builder drillDiskId(String drillDiskId) {
                 this.drillDiskId = drillDiskId;
@@ -210,7 +210,15 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * DrillDiskStatus.
+             * The status of the drill disk. Valid values:
+             * <p>
+             * 
+             * *   created
+             * *   deleted
+             * *   creating
+             * *   deleting
+             * 
+             * >  This parameter can also display error code details if your drill disk fails to be created or deleted.
              */
             public Builder drillDiskStatus(String drillDiskStatus) {
                 this.drillDiskStatus = drillDiskStatus;
@@ -218,7 +226,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * PairId.
+             * The ID of the replication pair.
              */
             public Builder pairId(String pairId) {
                 this.pairId = pairId;
@@ -331,7 +339,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * DrillId.
+             * The ID of the drill.
              */
             public Builder drillId(String drillId) {
                 this.drillId = drillId;
@@ -339,7 +347,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the replication pair-consistent group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -347,7 +355,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * PairsInfo.
+             * The information of replication pairs.
              */
             public Builder pairsInfo(java.util.List < PairsInfo> pairsInfo) {
                 this.pairsInfo = pairsInfo;
@@ -355,7 +363,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverPoint.
+             * The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder recoverPoint(Long recoverPoint) {
                 this.recoverPoint = recoverPoint;
@@ -363,7 +371,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StartAt.
+             * The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.
              */
             public Builder startAt(Long startAt) {
                 this.startAt = startAt;
@@ -371,7 +379,14 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the drill. Valid values:
+             * <p>
+             * 
+             * *   execute_failed
+             * *   executed
+             * *   executing
+             * *   clear_failed
+             * *   clearing
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +394,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusMessage.
+             * The error message that appears if the drill fails to be executed.
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

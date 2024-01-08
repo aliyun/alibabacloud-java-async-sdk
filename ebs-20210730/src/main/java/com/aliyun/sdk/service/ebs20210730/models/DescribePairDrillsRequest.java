@@ -140,7 +140,7 @@ public class DescribePairDrillsRequest extends Request {
         } 
 
         /**
-         * DrillId.
+         * The ID of the drill.
          */
         public Builder drillId(String drillId) {
             this.putQueryParameter("DrillId", drillId);
@@ -149,7 +149,12 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to be returned. You can use this parameter together with NextToken.
+         * <p>
+         * 
+         * Valid values: 1 to 500.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -158,7 +163,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaPairs operation. Leave this parameter empty the first time you call this operation. When you specify NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -167,7 +172,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +181,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +190,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * PairId.
+         * The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query a list of asynchronous replication pairs, including replication pair IDs.
          */
         public Builder pairId(String pairId) {
             this.putQueryParameter("PairId", pairId);
@@ -194,7 +199,7 @@ public class DescribePairDrillsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the primary or secondary disk in the async replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

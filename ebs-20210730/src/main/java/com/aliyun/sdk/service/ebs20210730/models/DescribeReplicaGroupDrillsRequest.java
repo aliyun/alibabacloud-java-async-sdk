@@ -140,7 +140,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         } 
 
         /**
-         * DrillId.
+         * The ID of the drill.
          */
         public Builder drillId(String drillId) {
             this.putQueryParameter("DrillId", drillId);
@@ -149,7 +149,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query a list of async replication pair-consistent groups, including group IDs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -158,7 +158,12 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to be returned. You can use this parameter together with NextToken.
+         * <p>
+         * 
+         * Valid values: 1 to 500.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -167,7 +172,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. When you specify NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -176,7 +181,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,7 +190,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +199,7 @@ public class DescribeReplicaGroupDrillsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the primary or secondary disk in the async replication pair-consistent group. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

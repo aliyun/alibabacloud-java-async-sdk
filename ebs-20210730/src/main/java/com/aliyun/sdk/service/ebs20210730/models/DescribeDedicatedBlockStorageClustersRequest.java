@@ -266,7 +266,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -275,7 +275,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -293,7 +293,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the dedicated block storage cluster belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -302,7 +302,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * Status.
+         * The states of dedicated block storage clusters. Valid values:
+         * <p>
+         * 
+         * *   Preparing
+         * *   Running
+         * *   Expired
+         * *   Offline
+         * 
+         * Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.
          */
         public Builder status(java.util.List < String > status) {
             this.putBodyParameter("Status", status);
@@ -311,7 +319,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags. Up to 20 tags are supported.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -365,7 +373,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the dedicated block storage cluster.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +381,7 @@ public class DescribeDedicatedBlockStorageClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value of the dedicated block storage cluster.
              */
             public Builder value(String value) {
                 this.value = value;

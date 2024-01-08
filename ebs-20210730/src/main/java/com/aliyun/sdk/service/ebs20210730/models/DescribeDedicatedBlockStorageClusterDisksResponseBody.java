@@ -591,7 +591,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * BurstingEnabled.
+             * Whether the ESSD AutoPL disk is enabled burst IOPS / BPS. This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -781,7 +781,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * ProvisionedIops.
+             * The provisioned read/write IOPS of the ESSD AutoPL disk. 
+             * <p>
+             * >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -864,7 +866,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             }
 
             /**
-             * Throughput.
+             * The maximum number of BPS.
              */
             public Builder throughput(Long throughput) {
                 this.throughput = throughput;

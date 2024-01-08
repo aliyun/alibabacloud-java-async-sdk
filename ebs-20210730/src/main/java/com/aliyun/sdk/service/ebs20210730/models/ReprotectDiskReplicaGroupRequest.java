@@ -98,7 +98,7 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -116,7 +116,7 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query the IDs of replication pair-consistent groups.
          */
         public Builder replicaGroupId(String replicaGroupId) {
             this.putQueryParameter("ReplicaGroupId", replicaGroupId);
@@ -125,7 +125,7 @@ public class ReprotectDiskReplicaGroupRequest extends Request {
         }
 
         /**
-         * ReverseReplicate.
+         * Specifies whether to enable the reverse replication sub-feature. Valid values: true and false. Default value: true.
          */
         public Builder reverseReplicate(Boolean reverseReplicate) {
             this.putQueryParameter("ReverseReplicate", reverseReplicate);

@@ -85,7 +85,7 @@ public class ClearReplicaGroupDrillRequest extends Request {
         } 
 
         /**
-         * DrillId.
+         * The ID of the drill. You can call the [DescribeReplicaGroupDrills](~~2584481~~) operation to query disaster recovery drills that were performed on replication pairs in a specific region.
          */
         public Builder drillId(String drillId) {
             this.putQueryParameter("DrillId", drillId);
@@ -94,7 +94,7 @@ public class ClearReplicaGroupDrillRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the replication pair-consistent group. You can call the [DescribeDiskReplicaGroups](~~426614~~) operation to query the most recent list of replication pair-consistent groups, including group IDs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -103,7 +103,7 @@ public class ClearReplicaGroupDrillRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

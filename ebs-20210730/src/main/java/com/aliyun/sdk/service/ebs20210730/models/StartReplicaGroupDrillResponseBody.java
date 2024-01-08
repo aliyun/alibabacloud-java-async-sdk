@@ -50,7 +50,7 @@ public class StartReplicaGroupDrillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DrillId.
+         * The drill ID.
          */
         public Builder drillId(String drillId) {
             this.drillId = drillId;
@@ -58,7 +58,7 @@ public class StartReplicaGroupDrillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
