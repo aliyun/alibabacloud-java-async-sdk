@@ -127,15 +127,15 @@ public class TriggerRecordRequest extends Request {
             super();
         } 
 
-        private Builder(TriggerRecordRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.preRecordDuration = response.preRecordDuration;
-            this.productKey = response.productKey;
-            this.recordDuration = response.recordDuration;
-            this.streamType = response.streamType;
+        private Builder(TriggerRecordRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.preRecordDuration = request.preRecordDuration;
+            this.productKey = request.productKey;
+            this.recordDuration = request.recordDuration;
+            this.streamType = request.streamType;
         } 
 
         /**

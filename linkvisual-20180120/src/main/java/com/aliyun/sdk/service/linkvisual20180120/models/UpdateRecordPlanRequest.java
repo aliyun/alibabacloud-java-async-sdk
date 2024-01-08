@@ -77,11 +77,11 @@ public class UpdateRecordPlanRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRecordPlanRequest response) {
-            super(response);
-            this.name = response.name;
-            this.planId = response.planId;
-            this.templateId = response.templateId;
+        private Builder(UpdateRecordPlanRequest request) {
+            super(request);
+            this.name = request.name;
+            this.planId = request.planId;
+            this.templateId = request.templateId;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class QueryLocalFileUploadJobRequest extends Request {
             super();
         } 
 
-        private Builder(QueryLocalFileUploadJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.jobId = response.jobId;
+        private Builder(QueryLocalFileUploadJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

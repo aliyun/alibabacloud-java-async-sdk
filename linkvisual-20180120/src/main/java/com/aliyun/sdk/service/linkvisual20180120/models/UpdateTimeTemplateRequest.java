@@ -89,12 +89,12 @@ public class UpdateTimeTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateTimeTemplateRequest response) {
-            super(response);
-            this.allDay = response.allDay;
-            this.name = response.name;
-            this.templateId = response.templateId;
-            this.timeSections = response.timeSections;
+        private Builder(UpdateTimeTemplateRequest request) {
+            super(request);
+            this.allDay = request.allDay;
+            this.name = request.name;
+            this.templateId = request.templateId;
+            this.timeSections = request.timeSections;
         } 
 
         /**

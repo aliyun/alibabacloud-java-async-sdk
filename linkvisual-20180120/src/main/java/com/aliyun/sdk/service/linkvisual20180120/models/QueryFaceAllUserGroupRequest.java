@@ -77,11 +77,11 @@ public class QueryFaceAllUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceAllUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(QueryFaceAllUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

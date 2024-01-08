@@ -76,11 +76,11 @@ public class CreateTimeTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTimeTemplateRequest response) {
-            super(response);
-            this.allDay = response.allDay;
-            this.name = response.name;
-            this.timeSections = response.timeSections;
+        private Builder(CreateTimeTemplateRequest request) {
+            super(request);
+            this.allDay = request.allDay;
+            this.name = request.name;
+            this.timeSections = request.timeSections;
         } 
 
         /**

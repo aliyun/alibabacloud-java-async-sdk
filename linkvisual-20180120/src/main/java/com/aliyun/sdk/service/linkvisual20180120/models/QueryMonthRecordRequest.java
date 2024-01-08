@@ -101,13 +101,13 @@ public class QueryMonthRecordRequest extends Request {
             super();
         } 
 
-        private Builder(QueryMonthRecordRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.month = response.month;
-            this.productKey = response.productKey;
+        private Builder(QueryMonthRecordRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.month = request.month;
+            this.productKey = request.productKey;
         } 
 
         /**

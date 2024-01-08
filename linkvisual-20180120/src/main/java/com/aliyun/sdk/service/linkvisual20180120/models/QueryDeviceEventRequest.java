@@ -154,17 +154,17 @@ public class QueryDeviceEventRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceEventRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.endTime = response.endTime;
-            this.eventType = response.eventType;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceEventRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.endTime = request.endTime;
+            this.eventType = request.eventType;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.productKey = request.productKey;
         } 
 
         /**

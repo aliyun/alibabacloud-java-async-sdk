@@ -61,10 +61,10 @@ public class QueryEventRecordPlansRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEventRecordPlansRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.pageSize = response.pageSize;
+        private Builder(QueryEventRecordPlansRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.pageSize = request.pageSize;
         } 
 
         /**

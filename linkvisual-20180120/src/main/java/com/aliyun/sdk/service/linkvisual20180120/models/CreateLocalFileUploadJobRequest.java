@@ -61,10 +61,10 @@ public class CreateLocalFileUploadJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLocalFileUploadJobRequest response) {
-            super(response);
-            this.iotInstanceId = response.iotInstanceId;
-            this.timeSlot = response.timeSlot;
+        private Builder(CreateLocalFileUploadJobRequest request) {
+            super(request);
+            this.iotInstanceId = request.iotInstanceId;
+            this.timeSlot = request.timeSlot;
         } 
 
         /**

@@ -104,13 +104,13 @@ public class AddFaceUserGroupAndDeviceGroupRelationRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceUserGroupAndDeviceGroupRelationRequest response) {
-            super(response);
-            this.deviceGroupId = response.deviceGroupId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.isolationId = response.isolationId;
-            this.relation = response.relation;
-            this.userGroupId = response.userGroupId;
+        private Builder(AddFaceUserGroupAndDeviceGroupRelationRequest request) {
+            super(request);
+            this.deviceGroupId = request.deviceGroupId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.isolationId = request.isolationId;
+            this.relation = request.relation;
+            this.userGroupId = request.userGroupId;
         } 
 
         /**

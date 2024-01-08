@@ -103,13 +103,13 @@ public class QueryFaceUserByNameRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceUserByNameRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.name = response.name;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.params = response.params;
+        private Builder(QueryFaceUserByNameRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.name = request.name;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.params = request.params;
         } 
 
         /**

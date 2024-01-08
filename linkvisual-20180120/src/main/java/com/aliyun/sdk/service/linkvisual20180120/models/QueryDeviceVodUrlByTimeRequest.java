@@ -22,6 +22,10 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
     private String deviceName;
 
     @Query
+    @NameInMap("EnableStun")
+    private Boolean enableStun;
+
+    @Query
     @NameInMap("EncryptType")
     @Validation(maximum = 2147483648D)
     private Integer encryptType;
@@ -68,6 +72,7 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
         super(builder);
         this.beginTime = builder.beginTime;
         this.deviceName = builder.deviceName;
+        this.enableStun = builder.enableStun;
         this.encryptType = builder.encryptType;
         this.endTime = builder.endTime;
         this.iotId = builder.iotId;
@@ -105,6 +110,13 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
      */
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    /**
+     * @return enableStun
+     */
+    public Boolean getEnableStun() {
+        return this.enableStun;
     }
 
     /**
@@ -180,6 +192,7 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
     public static final class Builder extends Request.Builder<QueryDeviceVodUrlByTimeRequest, Builder> {
         private Integer beginTime; 
         private String deviceName; 
+        private Boolean enableStun; 
         private Integer encryptType; 
         private Integer endTime; 
         private String iotId; 
@@ -195,20 +208,21 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceVodUrlByTimeRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.deviceName = response.deviceName;
-            this.encryptType = response.encryptType;
-            this.endTime = response.endTime;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.playUnLimited = response.playUnLimited;
-            this.productKey = response.productKey;
-            this.scheme = response.scheme;
-            this.seekTime = response.seekTime;
-            this.shouldEncrypt = response.shouldEncrypt;
-            this.urlValidDuration = response.urlValidDuration;
+        private Builder(QueryDeviceVodUrlByTimeRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.deviceName = request.deviceName;
+            this.enableStun = request.enableStun;
+            this.encryptType = request.encryptType;
+            this.endTime = request.endTime;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.playUnLimited = request.playUnLimited;
+            this.productKey = request.productKey;
+            this.scheme = request.scheme;
+            this.seekTime = request.seekTime;
+            this.shouldEncrypt = request.shouldEncrypt;
+            this.urlValidDuration = request.urlValidDuration;
         } 
 
         /**
@@ -226,6 +240,15 @@ public class QueryDeviceVodUrlByTimeRequest extends Request {
         public Builder deviceName(String deviceName) {
             this.putQueryParameter("DeviceName", deviceName);
             this.deviceName = deviceName;
+            return this;
+        }
+
+        /**
+         * EnableStun.
+         */
+        public Builder enableStun(Boolean enableStun) {
+            this.putQueryParameter("EnableStun", enableStun);
+            this.enableStun = enableStun;
             return this;
         }
 

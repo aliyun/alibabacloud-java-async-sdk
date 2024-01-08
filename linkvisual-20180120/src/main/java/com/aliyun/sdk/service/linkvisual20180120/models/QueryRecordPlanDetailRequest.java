@@ -49,9 +49,9 @@ public class QueryRecordPlanDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordPlanDetailRequest response) {
-            super(response);
-            this.planId = response.planId;
+        private Builder(QueryRecordPlanDetailRequest request) {
+            super(request);
+            this.planId = request.planId;
         } 
 
         /**

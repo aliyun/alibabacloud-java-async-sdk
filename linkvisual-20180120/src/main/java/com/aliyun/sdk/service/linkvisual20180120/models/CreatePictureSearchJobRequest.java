@@ -133,15 +133,15 @@ public class CreatePictureSearchJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePictureSearchJobRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.bodyThreshold = response.bodyThreshold;
-            this.endTime = response.endTime;
-            this.pictureSearchType = response.pictureSearchType;
-            this.searchPicUrl = response.searchPicUrl;
-            this.startTime = response.startTime;
-            this.threshold = response.threshold;
+        private Builder(CreatePictureSearchJobRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.bodyThreshold = request.bodyThreshold;
+            this.endTime = request.endTime;
+            this.pictureSearchType = request.pictureSearchType;
+            this.searchPicUrl = request.searchPicUrl;
+            this.startTime = request.startTime;
+            this.threshold = request.threshold;
         } 
 
         /**

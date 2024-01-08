@@ -63,10 +63,10 @@ public class GetPictureSearchJobStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetPictureSearchJobStatusRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.jobId = response.jobId;
+        private Builder(GetPictureSearchJobStatusRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.jobId = request.jobId;
         } 
 
         /**

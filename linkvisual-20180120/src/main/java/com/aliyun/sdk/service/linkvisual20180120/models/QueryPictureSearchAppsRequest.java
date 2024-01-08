@@ -76,11 +76,11 @@ public class QueryPictureSearchAppsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPictureSearchAppsRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
+        private Builder(QueryPictureSearchAppsRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
         } 
 
         /**

@@ -77,11 +77,11 @@ public class QueryFaceAllUserGroupAndDeviceGroupRelationRequest extends Request 
             super();
         } 
 
-        private Builder(QueryFaceAllUserGroupAndDeviceGroupRelationRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
+        private Builder(QueryFaceAllUserGroupAndDeviceGroupRelationRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
         } 
 
         /**

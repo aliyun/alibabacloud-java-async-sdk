@@ -36,7 +36,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddRecordPlanDeviceResponse> addRecordPlanDevice(AddRecordPlanDeviceRequest request);
 
-    CompletableFuture<BindAIPlanWithDevicesResponse> bindAIPlanWithDevices(BindAIPlanWithDevicesRequest request);
+    CompletableFuture<BatchQueryVisionDeviceInfoResponse> batchQueryVisionDeviceInfo(BatchQueryVisionDeviceInfoRequest request);
 
     CompletableFuture<BindPictureSearchAppWithDevicesResponse> bindPictureSearchAppWithDevices(BindPictureSearchAppWithDevicesRequest request);
 
@@ -44,35 +44,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ClearFaceDeviceDBResponse> clearFaceDeviceDB(ClearFaceDeviceDBRequest request);
 
-    CompletableFuture<ConfigAIActionResponse> configAIAction(ConfigAIActionRequest request);
-
-    CompletableFuture<CreateAIAppResponse> createAIApp(CreateAIAppRequest request);
-
-    CompletableFuture<CreateAIPlanResponse> createAIPlan(CreateAIPlanRequest request);
-
-    CompletableFuture<CreateAlgorithmResponse> createAlgorithm(CreateAlgorithmRequest request);
-
-    CompletableFuture<CreateDevicePurifyJobResponse> createDevicePurifyJob(CreateDevicePurifyJobRequest request);
-
-    CompletableFuture<CreateDevicePurifyJobByPlanIdResponse> createDevicePurifyJobByPlanId(CreateDevicePurifyJobByPlanIdRequest request);
-
-    CompletableFuture<CreateDevicePurifyPlanResponse> createDevicePurifyPlan(CreateDevicePurifyPlanRequest request);
-
     CompletableFuture<CreateEventRecordPlanResponse> createEventRecordPlan(CreateEventRecordPlanRequest request);
+
+    CompletableFuture<CreateGbDeviceResponse> createGbDevice(CreateGbDeviceRequest request);
 
     CompletableFuture<CreateLocalFileUploadJobResponse> createLocalFileUploadJob(CreateLocalFileUploadJobRequest request);
 
-    CompletableFuture<CreateModelResponse> createModel(CreateModelRequest request);
+    CompletableFuture<CreateLocalRecordDownloadByTimeJobResponse> createLocalRecordDownloadByTimeJob(CreateLocalRecordDownloadByTimeJobRequest request);
 
     CompletableFuture<CreatePictureSearchAppResponse> createPictureSearchApp(CreatePictureSearchAppRequest request);
 
     CompletableFuture<CreatePictureSearchJobResponse> createPictureSearchJob(CreatePictureSearchJobRequest request);
 
+    CompletableFuture<CreateRecordDownloadByTimeJobResponse> createRecordDownloadByTimeJob(CreateRecordDownloadByTimeJobRequest request);
+
     CompletableFuture<CreateRecordPlanResponse> createRecordPlan(CreateRecordPlanRequest request);
 
-    CompletableFuture<CreateTimeTemplateResponse> createTimeTemplate(CreateTimeTemplateRequest request);
+    CompletableFuture<CreateRtmpDeviceResponse> createRtmpDevice(CreateRtmpDeviceRequest request);
 
-    CompletableFuture<DeleteAlgorithmResponse> deleteAlgorithm(DeleteAlgorithmRequest request);
+    CompletableFuture<CreateTimeTemplateResponse> createTimeTemplate(CreateTimeTemplateRequest request);
 
     CompletableFuture<DeleteEventRecordPlanResponse> deleteEventRecordPlan(DeleteEventRecordPlanRequest request);
 
@@ -90,7 +80,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteLocalFileUploadJobResponse> deleteLocalFileUploadJob(DeleteLocalFileUploadJobRequest request);
 
-    CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request);
+    CompletableFuture<DeletePictureResponse> deletePicture(DeletePictureRequest request);
 
     CompletableFuture<DeleteRecordResponse> deleteRecord(DeleteRecordRequest request);
 
@@ -98,61 +88,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRecordPlanDeviceResponse> deleteRecordPlanDevice(DeleteRecordPlanDeviceRequest request);
 
-    CompletableFuture<DeleteTimeTemplateResponse> deleteTimeTemplate(DeleteTimeTemplateRequest request);
+    CompletableFuture<DeleteRtmpDeviceResponse> deleteRtmpDevice(DeleteRtmpDeviceRequest request);
 
-    CompletableFuture<DeployModelBatchResponse> deployModelBatch(DeployModelBatchRequest request);
+    CompletableFuture<DeleteRtmpKeyResponse> deleteRtmpKey(DeleteRtmpKeyRequest request);
+
+    CompletableFuture<DeleteTimeTemplateResponse> deleteTimeTemplate(DeleteTimeTemplateRequest request);
 
     CompletableFuture<DetectUserFaceByUrlResponse> detectUserFaceByUrl(DetectUserFaceByUrlRequest request);
 
-    CompletableFuture<GetAIActionResponse> getAIAction(GetAIActionRequest request);
-
-    CompletableFuture<GetAIActionConfigResponse> getAIActionConfig(GetAIActionConfigRequest request);
-
-    CompletableFuture<GetAIAppResponse> getAIApp(GetAIAppRequest request);
-
-    CompletableFuture<GetAIJobResponse> getAIJob(GetAIJobRequest request);
-
-    CompletableFuture<GetAIPlanResponse> getAIPlan(GetAIPlanRequest request);
-
-    CompletableFuture<GetAlgorithmDetailByIdResponse> getAlgorithmDetailById(GetAlgorithmDetailByIdRequest request);
-
-    CompletableFuture<GetAlgorithmDetailByNameResponse> getAlgorithmDetailByName(GetAlgorithmDetailByNameRequest request);
-
-    CompletableFuture<GetDevicePurifyJobByJobIdResponse> getDevicePurifyJobByJobId(GetDevicePurifyJobByJobIdRequest request);
-
-    CompletableFuture<GetModelDetailResponse> getModelDetail(GetModelDetailRequest request);
-
-    CompletableFuture<GetModelDetailByIdResponse> getModelDetailById(GetModelDetailByIdRequest request);
-
-    CompletableFuture<GetModelOssPolicyResponse> getModelOssPolicy(GetModelOssPolicyRequest request);
-
-    CompletableFuture<GetPictureInfoWithVectorIdsResponse> getPictureInfoWithVectorIds(GetPictureInfoWithVectorIdsRequest request);
-
     CompletableFuture<GetPictureSearchJobStatusResponse> getPictureSearchJobStatus(GetPictureSearchJobStatusRequest request);
 
-    CompletableFuture<GetPictureWithVectorIdResponse> getPictureWithVectorId(GetPictureWithVectorIdRequest request);
-
-    CompletableFuture<ListAlgorithmsByPageResponse> listAlgorithmsByPage(ListAlgorithmsByPageRequest request);
-
-    CompletableFuture<ListDeployTaskByModelIdAndDevicesResponse> listDeployTaskByModelIdAndDevices(ListDeployTaskByModelIdAndDevicesRequest request);
-
-    CompletableFuture<ListDeployTaskByPageResponse> listDeployTaskByPage(ListDeployTaskByPageRequest request);
-
-    CompletableFuture<ListModelVersionsByPageResponse> listModelVersionsByPage(ListModelVersionsByPageRequest request);
-
-    CompletableFuture<ListModelsByPageResponse> listModelsByPage(ListModelsByPageRequest request);
-
     CompletableFuture<PictureSearchPictureResponse> pictureSearchPicture(PictureSearchPictureRequest request);
-
-    CompletableFuture<QueryAIActionResponse> queryAIAction(QueryAIActionRequest request);
-
-    CompletableFuture<QueryAIAppResponse> queryAIApp(QueryAIAppRequest request);
-
-    CompletableFuture<QueryAIJobsResponse> queryAIJobs(QueryAIJobsRequest request);
-
-    CompletableFuture<QueryAIPlanResponse> queryAIPlan(QueryAIPlanRequest request);
-
-    CompletableFuture<QueryAIPlanTemplatesResponse> queryAIPlanTemplates(QueryAIPlanTemplatesRequest request);
 
     CompletableFuture<QueryCarProcessEventsResponse> queryCarProcessEvents(QueryCarProcessEventsRequest request);
 
@@ -162,19 +108,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryDeviceEventRecordResponse> queryDeviceEventRecord(QueryDeviceEventRecordRequest request);
 
-    CompletableFuture<QueryDeviceFileVodResponse> queryDeviceFileVod(QueryDeviceFileVodRequest request);
-
     CompletableFuture<QueryDevicePictureByListResponse> queryDevicePictureByList(QueryDevicePictureByListRequest request);
 
     CompletableFuture<QueryDevicePictureFileResponse> queryDevicePictureFile(QueryDevicePictureFileRequest request);
 
     CompletableFuture<QueryDevicePictureLifeCycleResponse> queryDevicePictureLifeCycle(QueryDevicePictureLifeCycleRequest request);
-
-    CompletableFuture<QueryDevicePurifyJobsResponse> queryDevicePurifyJobs(QueryDevicePurifyJobsRequest request);
-
-    CompletableFuture<QueryDevicePurifyPlanByPlanIdResponse> queryDevicePurifyPlanByPlanId(QueryDevicePurifyPlanByPlanIdRequest request);
-
-    CompletableFuture<QueryDevicePurifyPlansResponse> queryDevicePurifyPlans(QueryDevicePurifyPlansRequest request);
 
     CompletableFuture<QueryDeviceRecordLifeCycleResponse> queryDeviceRecordLifeCycle(QueryDeviceRecordLifeCycleRequest request);
 
@@ -214,8 +152,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryFaceUserIdByCustomUserIdResponse> queryFaceUserIdByCustomUserId(QueryFaceUserIdByCustomUserIdRequest request);
 
-    CompletableFuture<QueryIotIdsByAIPlanResponse> queryIotIdsByAIPlan(QueryIotIdsByAIPlanRequest request);
-
     CompletableFuture<QueryLiveStreamingResponse> queryLiveStreaming(QueryLiveStreamingRequest request);
 
     CompletableFuture<QueryLocalFileUploadJobResponse> queryLocalFileUploadJob(QueryLocalFileUploadJobRequest request);
@@ -225,8 +161,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryPictureFilesResponse> queryPictureFiles(QueryPictureFilesRequest request);
 
     CompletableFuture<QueryPictureSearchAiboxesResponse> queryPictureSearchAiboxes(QueryPictureSearchAiboxesRequest request);
-
-    CompletableFuture<QueryPictureSearchAppResponse> queryPictureSearchApp(QueryPictureSearchAppRequest request);
 
     CompletableFuture<QueryPictureSearchAppsResponse> queryPictureSearchApps(QueryPictureSearchAppsRequest request);
 
@@ -239,6 +173,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryRecordResponse> queryRecord(QueryRecordRequest request);
 
     CompletableFuture<QueryRecordByRecordIdResponse> queryRecordByRecordId(QueryRecordByRecordIdRequest request);
+
+    CompletableFuture<QueryRecordDownloadJobByIdResponse> queryRecordDownloadJobById(QueryRecordDownloadJobByIdRequest request);
+
+    CompletableFuture<QueryRecordDownloadJobListResponse> queryRecordDownloadJobList(QueryRecordDownloadJobListRequest request);
 
     CompletableFuture<QueryRecordDownloadUrlResponse> queryRecordDownloadUrl(QueryRecordDownloadUrlRequest request);
 
@@ -254,19 +192,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryRecordUrlByTimeResponse> queryRecordUrlByTime(QueryRecordUrlByTimeRequest request);
 
-    CompletableFuture<QueryStandardAIAppTemplatesResponse> queryStandardAIAppTemplates(QueryStandardAIAppTemplatesRequest request);
+    CompletableFuture<QueryRtmpKeyResponse> queryRtmpKey(QueryRtmpKeyRequest request);
 
     CompletableFuture<QueryTimeTemplateResponse> queryTimeTemplate(QueryTimeTemplateRequest request);
 
     CompletableFuture<QueryTimeTemplateDetailResponse> queryTimeTemplateDetail(QueryTimeTemplateDetailRequest request);
 
+    CompletableFuture<QueryVisionDeviceInfoResponse> queryVisionDeviceInfo(QueryVisionDeviceInfoRequest request);
+
     CompletableFuture<QueryVoiceIntercomResponse> queryVoiceIntercom(QueryVoiceIntercomRequest request);
-
-    CompletableFuture<RemoveAIAppResponse> removeAIApp(RemoveAIAppRequest request);
-
-    CompletableFuture<RemoveAIPlanResponse> removeAIPlan(RemoveAIPlanRequest request);
-
-    CompletableFuture<RemoveDevicePurifyPlanResponse> removeDevicePurifyPlan(RemoveDevicePurifyPlanRequest request);
 
     CompletableFuture<RemoveFaceDeviceFromDeviceGroupResponse> removeFaceDeviceFromDeviceGroup(RemoveFaceDeviceFromDeviceGroupRequest request);
 
@@ -286,15 +220,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TriggerRecordResponse> triggerRecord(TriggerRecordRequest request);
 
-    CompletableFuture<UnbindAIPlanWithDevicesResponse> unbindAIPlanWithDevices(UnbindAIPlanWithDevicesRequest request);
-
     CompletableFuture<UnbindPictureSearchAppWithDevicesResponse> unbindPictureSearchAppWithDevices(UnbindPictureSearchAppWithDevicesRequest request);
-
-    CompletableFuture<UpdateAIAppResponse> updateAIApp(UpdateAIAppRequest request);
-
-    CompletableFuture<UpdateAIPlanResponse> updateAIPlan(UpdateAIPlanRequest request);
-
-    CompletableFuture<UpdateDevicePurifyPlanResponse> updateDevicePurifyPlan(UpdateDevicePurifyPlanRequest request);
 
     CompletableFuture<UpdateEventRecordPlanResponse> updateEventRecordPlan(UpdateEventRecordPlanRequest request);
 
@@ -302,11 +228,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateFaceUserGroupAndDeviceGroupRelationResponse> updateFaceUserGroupAndDeviceGroupRelation(UpdateFaceUserGroupAndDeviceGroupRelationRequest request);
 
-    CompletableFuture<UpdateModelResponse> updateModel(UpdateModelRequest request);
+    CompletableFuture<UpdateInstanceInternetProtocolResponse> updateInstanceInternetProtocol(UpdateInstanceInternetProtocolRequest request);
 
     CompletableFuture<UpdatePictureSearchAppResponse> updatePictureSearchApp(UpdatePictureSearchAppRequest request);
 
     CompletableFuture<UpdateRecordPlanResponse> updateRecordPlan(UpdateRecordPlanRequest request);
+
+    CompletableFuture<UpdateRtmpKeyResponse> updateRtmpKey(UpdateRtmpKeyRequest request);
 
     CompletableFuture<UpdateTimeTemplateResponse> updateTimeTemplate(UpdateTimeTemplateRequest request);
 

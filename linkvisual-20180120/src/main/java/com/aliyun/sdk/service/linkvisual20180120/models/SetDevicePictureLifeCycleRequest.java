@@ -101,13 +101,13 @@ public class SetDevicePictureLifeCycleRequest extends Request {
             super();
         } 
 
-        private Builder(SetDevicePictureLifeCycleRequest response) {
-            super(response);
-            this.day = response.day;
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(SetDevicePictureLifeCycleRequest request) {
+            super(request);
+            this.day = request.day;
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

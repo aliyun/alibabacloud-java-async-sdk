@@ -161,17 +161,17 @@ public class PictureSearchPictureRequest extends Request {
             super();
         } 
 
-        private Builder(PictureSearchPictureRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.containPicUrl = response.containPicUrl;
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.pageSize = response.pageSize;
-            this.pictureSearchType = response.pictureSearchType;
-            this.searchPicUrl = response.searchPicUrl;
-            this.startTime = response.startTime;
-            this.threshold = response.threshold;
+        private Builder(PictureSearchPictureRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.containPicUrl = request.containPicUrl;
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.pageSize = request.pageSize;
+            this.pictureSearchType = request.pictureSearchType;
+            this.searchPicUrl = request.searchPicUrl;
+            this.startTime = request.startTime;
+            this.threshold = request.threshold;
         } 
 
         /**

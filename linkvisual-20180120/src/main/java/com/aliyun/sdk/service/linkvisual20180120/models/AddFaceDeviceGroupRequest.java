@@ -63,10 +63,10 @@ public class AddFaceDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceDeviceGroupRequest response) {
-            super(response);
-            this.deviceGroupName = response.deviceGroupName;
-            this.isolationId = response.isolationId;
+        private Builder(AddFaceDeviceGroupRequest request) {
+            super(request);
+            this.deviceGroupName = request.deviceGroupName;
+            this.isolationId = request.isolationId;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class QueryRecordDownloadUrlRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordDownloadUrlRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.fileName = response.fileName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryRecordDownloadUrlRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.fileName = request.fileName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

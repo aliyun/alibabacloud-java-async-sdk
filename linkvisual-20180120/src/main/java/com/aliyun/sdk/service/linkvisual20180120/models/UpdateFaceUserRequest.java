@@ -115,14 +115,14 @@ public class UpdateFaceUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFaceUserRequest response) {
-            super(response);
-            this.customUserId = response.customUserId;
-            this.facePicUrl = response.facePicUrl;
-            this.isolationId = response.isolationId;
-            this.name = response.name;
-            this.params = response.params;
-            this.userId = response.userId;
+        private Builder(UpdateFaceUserRequest request) {
+            super(request);
+            this.customUserId = request.customUserId;
+            this.facePicUrl = request.facePicUrl;
+            this.isolationId = request.isolationId;
+            this.name = request.name;
+            this.params = request.params;
+            this.userId = request.userId;
         } 
 
         /**

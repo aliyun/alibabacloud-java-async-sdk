@@ -91,12 +91,12 @@ public class QueryFaceUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.userId = response.userId;
+        private Builder(QueryFaceUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.userId = request.userId;
         } 
 
         /**

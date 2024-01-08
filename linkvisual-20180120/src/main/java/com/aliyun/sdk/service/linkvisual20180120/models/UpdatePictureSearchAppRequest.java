@@ -77,11 +77,11 @@ public class UpdatePictureSearchAppRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePictureSearchAppRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.description = response.description;
-            this.name = response.name;
+        private Builder(UpdatePictureSearchAppRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.description = request.description;
+            this.name = request.name;
         } 
 
         /**

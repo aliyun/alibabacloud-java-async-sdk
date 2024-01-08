@@ -101,13 +101,13 @@ public class QueryDeviceEventPictureRequest extends Request {
             super();
         } 
 
-        private Builder(QueryDeviceEventPictureRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.eventId = response.eventId;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(QueryDeviceEventPictureRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.eventId = request.eventId;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

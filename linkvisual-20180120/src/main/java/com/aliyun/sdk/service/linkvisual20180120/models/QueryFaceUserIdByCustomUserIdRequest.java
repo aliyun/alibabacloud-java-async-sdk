@@ -63,10 +63,10 @@ public class QueryFaceUserIdByCustomUserIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryFaceUserIdByCustomUserIdRequest response) {
-            super(response);
-            this.customUserId = response.customUserId;
-            this.isolationId = response.isolationId;
+        private Builder(QueryFaceUserIdByCustomUserIdRequest request) {
+            super(request);
+            this.customUserId = request.customUserId;
+            this.isolationId = request.isolationId;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DeleteFaceDeviceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFaceDeviceGroupRequest response) {
-            super(response);
-            this.deviceGroupId = response.deviceGroupId;
-            this.isolationId = response.isolationId;
+        private Builder(DeleteFaceDeviceGroupRequest request) {
+            super(request);
+            this.deviceGroupId = request.deviceGroupId;
+            this.isolationId = request.isolationId;
         } 
 
         /**

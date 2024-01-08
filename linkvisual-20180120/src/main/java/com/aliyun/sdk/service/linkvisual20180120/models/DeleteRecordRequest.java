@@ -101,13 +101,13 @@ public class DeleteRecordRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRecordRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.fileNameList = response.fileNameList;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
+        private Builder(DeleteRecordRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.fileNameList = request.fileNameList;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
         } 
 
         /**

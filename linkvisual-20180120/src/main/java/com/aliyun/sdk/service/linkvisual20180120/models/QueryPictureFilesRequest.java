@@ -167,18 +167,18 @@ public class QueryPictureFilesRequest extends Request {
             super();
         } 
 
-        private Builder(QueryPictureFilesRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.currentPage = response.currentPage;
-            this.deviceName = response.deviceName;
-            this.endTime = response.endTime;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.pageSize = response.pageSize;
-            this.pictureSource = response.pictureSource;
-            this.pictureType = response.pictureType;
-            this.productKey = response.productKey;
+        private Builder(QueryPictureFilesRequest request) {
+            super(request);
+            this.beginTime = request.beginTime;
+            this.currentPage = request.currentPage;
+            this.deviceName = request.deviceName;
+            this.endTime = request.endTime;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.pageSize = request.pageSize;
+            this.pictureSource = request.pictureSource;
+            this.pictureType = request.pictureType;
+            this.productKey = request.productKey;
         } 
 
         /**

@@ -101,13 +101,13 @@ public class QueryRecordByRecordIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRecordByRecordIdRequest response) {
-            super(response);
-            this.deviceName = response.deviceName;
-            this.iotId = response.iotId;
-            this.iotInstanceId = response.iotInstanceId;
-            this.productKey = response.productKey;
-            this.recordId = response.recordId;
+        private Builder(QueryRecordByRecordIdRequest request) {
+            super(request);
+            this.deviceName = request.deviceName;
+            this.iotId = request.iotId;
+            this.iotInstanceId = request.iotInstanceId;
+            this.productKey = request.productKey;
+            this.recordId = request.recordId;
         } 
 
         /**

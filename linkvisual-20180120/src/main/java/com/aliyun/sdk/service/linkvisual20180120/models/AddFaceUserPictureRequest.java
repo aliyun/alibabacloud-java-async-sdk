@@ -77,11 +77,11 @@ public class AddFaceUserPictureRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceUserPictureRequest response) {
-            super(response);
-            this.facePicUrl = response.facePicUrl;
-            this.isolationId = response.isolationId;
-            this.userId = response.userId;
+        private Builder(AddFaceUserPictureRequest request) {
+            super(request);
+            this.facePicUrl = request.facePicUrl;
+            this.isolationId = request.isolationId;
+            this.userId = request.userId;
         } 
 
         /**

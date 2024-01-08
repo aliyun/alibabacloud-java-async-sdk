@@ -117,14 +117,14 @@ public class UpdateEventRecordPlanRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEventRecordPlanRequest response) {
-            super(response);
-            this.eventTypes = response.eventTypes;
-            this.name = response.name;
-            this.planId = response.planId;
-            this.preRecordDuration = response.preRecordDuration;
-            this.recordDuration = response.recordDuration;
-            this.templateId = response.templateId;
+        private Builder(UpdateEventRecordPlanRequest request) {
+            super(request);
+            this.eventTypes = request.eventTypes;
+            this.name = request.name;
+            this.planId = request.planId;
+            this.preRecordDuration = request.preRecordDuration;
+            this.recordDuration = request.recordDuration;
+            this.templateId = request.templateId;
         } 
 
         /**

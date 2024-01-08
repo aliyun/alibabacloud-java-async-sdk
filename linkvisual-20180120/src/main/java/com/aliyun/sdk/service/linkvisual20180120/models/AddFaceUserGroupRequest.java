@@ -63,10 +63,10 @@ public class AddFaceUserGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddFaceUserGroupRequest response) {
-            super(response);
-            this.isolationId = response.isolationId;
-            this.userGroupName = response.userGroupName;
+        private Builder(AddFaceUserGroupRequest request) {
+            super(request);
+            this.isolationId = request.isolationId;
+            this.userGroupName = request.userGroupName;
         } 
 
         /**

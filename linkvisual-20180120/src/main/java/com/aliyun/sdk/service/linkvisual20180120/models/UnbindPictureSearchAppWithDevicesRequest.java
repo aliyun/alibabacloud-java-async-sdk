@@ -76,11 +76,11 @@ public class UnbindPictureSearchAppWithDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindPictureSearchAppWithDevicesRequest response) {
-            super(response);
-            this.appInstanceId = response.appInstanceId;
-            this.deviceIotIds = response.deviceIotIds;
-            this.iotInstanceId = response.iotInstanceId;
+        private Builder(UnbindPictureSearchAppWithDevicesRequest request) {
+            super(request);
+            this.appInstanceId = request.appInstanceId;
+            this.deviceIotIds = request.deviceIotIds;
+            this.iotInstanceId = request.iotInstanceId;
         } 
 
         /**

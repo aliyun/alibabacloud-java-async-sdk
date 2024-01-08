@@ -77,11 +77,11 @@ public class UpdateFaceUserGroupAndDeviceGroupRelationRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFaceUserGroupAndDeviceGroupRelationRequest response) {
-            super(response);
-            this.controlId = response.controlId;
-            this.isolationId = response.isolationId;
-            this.relation = response.relation;
+        private Builder(UpdateFaceUserGroupAndDeviceGroupRelationRequest request) {
+            super(request);
+            this.controlId = request.controlId;
+            this.isolationId = request.isolationId;
+            this.relation = request.relation;
         } 
 
         /**
