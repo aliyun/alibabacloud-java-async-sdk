@@ -22,6 +22,10 @@ public class UpdateInstanceRequest extends Request {
     private String accessibility;
 
     @Body
+    @NameInMap("CloudDisks")
+    private java.util.List < CloudDisks> cloudDisks;
+
+    @Body
     @NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
@@ -30,8 +34,20 @@ public class UpdateInstanceRequest extends Request {
     private Boolean disassociateDatasets;
 
     @Body
+    @NameInMap("DisassociateDriver")
+    private Boolean disassociateDriver;
+
+    @Body
+    @NameInMap("DisassociateForwardInfos")
+    private Boolean disassociateForwardInfos;
+
+    @Body
     @NameInMap("DisassociateVpc")
     private Boolean disassociateVpc;
+
+    @Body
+    @NameInMap("Driver")
+    private String driver;
 
     @Body
     @NameInMap("EcsSpec")
@@ -48,6 +64,10 @@ public class UpdateInstanceRequest extends Request {
     @Body
     @NameInMap("InstanceName")
     private String instanceName;
+
+    @Body
+    @NameInMap("Priority")
+    private Long priority;
 
     @Body
     @NameInMap("RequestedResource")
@@ -69,13 +89,18 @@ public class UpdateInstanceRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.accessibility = builder.accessibility;
+        this.cloudDisks = builder.cloudDisks;
         this.datasets = builder.datasets;
         this.disassociateDatasets = builder.disassociateDatasets;
+        this.disassociateDriver = builder.disassociateDriver;
+        this.disassociateForwardInfos = builder.disassociateForwardInfos;
         this.disassociateVpc = builder.disassociateVpc;
+        this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
+        this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
@@ -110,6 +135,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return cloudDisks
+     */
+    public java.util.List < CloudDisks> getCloudDisks() {
+        return this.cloudDisks;
+    }
+
+    /**
      * @return datasets
      */
     public java.util.List < Datasets> getDatasets() {
@@ -124,10 +156,31 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return disassociateDriver
+     */
+    public Boolean getDisassociateDriver() {
+        return this.disassociateDriver;
+    }
+
+    /**
+     * @return disassociateForwardInfos
+     */
+    public Boolean getDisassociateForwardInfos() {
+        return this.disassociateForwardInfos;
+    }
+
+    /**
      * @return disassociateVpc
      */
     public Boolean getDisassociateVpc() {
         return this.disassociateVpc;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -156,6 +209,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return priority
+     */
+    public Long getPriority() {
+        return this.priority;
     }
 
     /**
@@ -189,13 +249,18 @@ public class UpdateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
         private String accessibility; 
+        private java.util.List < CloudDisks> cloudDisks; 
         private java.util.List < Datasets> datasets; 
         private Boolean disassociateDatasets; 
+        private Boolean disassociateDriver; 
+        private Boolean disassociateForwardInfos; 
         private Boolean disassociateVpc; 
+        private String driver; 
         private String ecsSpec; 
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
+        private Long priority; 
         private RequestedResource requestedResource; 
         private String userId; 
         private UserVpc userVpc; 
@@ -209,13 +274,18 @@ public class UpdateInstanceRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.accessibility = request.accessibility;
+            this.cloudDisks = request.cloudDisks;
             this.datasets = request.datasets;
             this.disassociateDatasets = request.disassociateDatasets;
+            this.disassociateDriver = request.disassociateDriver;
+            this.disassociateForwardInfos = request.disassociateForwardInfos;
             this.disassociateVpc = request.disassociateVpc;
+            this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
+            this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
@@ -241,6 +311,15 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * CloudDisks.
+         */
+        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+            this.putBodyParameter("CloudDisks", cloudDisks);
+            this.cloudDisks = cloudDisks;
+            return this;
+        }
+
+        /**
          * Datasets.
          */
         public Builder datasets(java.util.List < Datasets> datasets) {
@@ -259,11 +338,38 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * DisassociateDriver.
+         */
+        public Builder disassociateDriver(Boolean disassociateDriver) {
+            this.putBodyParameter("DisassociateDriver", disassociateDriver);
+            this.disassociateDriver = disassociateDriver;
+            return this;
+        }
+
+        /**
+         * DisassociateForwardInfos.
+         */
+        public Builder disassociateForwardInfos(Boolean disassociateForwardInfos) {
+            this.putBodyParameter("DisassociateForwardInfos", disassociateForwardInfos);
+            this.disassociateForwardInfos = disassociateForwardInfos;
+            return this;
+        }
+
+        /**
          * DisassociateVpc.
          */
         public Builder disassociateVpc(Boolean disassociateVpc) {
             this.putBodyParameter("DisassociateVpc", disassociateVpc);
             this.disassociateVpc = disassociateVpc;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.putBodyParameter("Driver", driver);
+            this.driver = driver;
             return this;
         }
 
@@ -300,6 +406,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Long priority) {
+            this.putBodyParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
@@ -346,6 +461,67 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    public static class CloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        private String capacity;
+
+        @NameInMap("SubType")
+        private String subType;
+
+        private CloudDisks(Builder builder) {
+            this.capacity = builder.capacity;
+            this.subType = builder.subType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudDisks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacity
+         */
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return subType
+         */
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public static final class Builder {
+            private String capacity; 
+            private String subType; 
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(String capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * SubType.
+             */
+            public Builder subType(String subType) {
+                this.subType = subType;
+                return this;
+            }
+
+            public CloudDisks build() {
+                return new CloudDisks(this);
+            } 
+
+        } 
+
+    }
     public static class Datasets extends TeaModel {
         @NameInMap("DatasetId")
         private String datasetId;
@@ -535,6 +711,9 @@ public class UpdateInstanceRequest extends Request {
         @NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        private java.util.List < ForwardInfo > forwardInfos;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -547,6 +726,7 @@ public class UpdateInstanceRequest extends Request {
         private UserVpc(Builder builder) {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
+            this.forwardInfos = builder.forwardInfos;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -575,6 +755,13 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * @return forwardInfos
+         */
+        public java.util.List < ForwardInfo > getForwardInfos() {
+            return this.forwardInfos;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -598,6 +785,7 @@ public class UpdateInstanceRequest extends Request {
         public static final class Builder {
             private String defaultRoute; 
             private java.util.List < String > extendedCIDRs; 
+            private java.util.List < ForwardInfo > forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -615,6 +803,14 @@ public class UpdateInstanceRequest extends Request {
              */
             public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * ForwardInfos.
+             */
+            public Builder forwardInfos(java.util.List < ForwardInfo > forwardInfos) {
+                this.forwardInfos = forwardInfos;
                 return this;
             }
 

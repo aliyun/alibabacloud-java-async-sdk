@@ -233,6 +233,9 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
     }
     public static class Snapshots extends TeaModel {
+        @NameInMap("ExcludePaths")
+        private java.util.List < String > excludePaths;
+
         @NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
@@ -267,6 +270,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         private String status;
 
         private Snapshots(Builder builder) {
+            this.excludePaths = builder.excludePaths;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.imageId = builder.imageId;
@@ -286,6 +290,13 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
         public static Snapshots create() {
             return builder().build();
+        }
+
+        /**
+         * @return excludePaths
+         */
+        public java.util.List < String > getExcludePaths() {
+            return this.excludePaths;
         }
 
         /**
@@ -366,6 +377,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > excludePaths; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String imageId; 
@@ -377,6 +389,14 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             private String snapshotId; 
             private String snapshotName; 
             private String status; 
+
+            /**
+             * ExcludePaths.
+             */
+            public Builder excludePaths(java.util.List < String > excludePaths) {
+                this.excludePaths = excludePaths;
+                return this;
+            }
 
             /**
              * GmtCreateTime.

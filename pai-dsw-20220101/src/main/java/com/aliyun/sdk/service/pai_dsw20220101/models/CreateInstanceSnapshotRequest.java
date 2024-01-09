@@ -18,12 +18,20 @@ public class CreateInstanceSnapshotRequest extends Request {
     private String instanceId;
 
     @Body
+    @NameInMap("ExcludePaths")
+    private java.util.List < String > excludePaths;
+
+    @Body
     @NameInMap("ImageUrl")
     private String imageUrl;
 
     @Body
     @NameInMap("Labels")
     private java.util.List < Labels> labels;
+
+    @Body
+    @NameInMap("Overwrite")
+    private Boolean overwrite;
 
     @Body
     @NameInMap("SnapshotDescription")
@@ -36,8 +44,10 @@ public class CreateInstanceSnapshotRequest extends Request {
     private CreateInstanceSnapshotRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.excludePaths = builder.excludePaths;
         this.imageUrl = builder.imageUrl;
         this.labels = builder.labels;
+        this.overwrite = builder.overwrite;
         this.snapshotDescription = builder.snapshotDescription;
         this.snapshotName = builder.snapshotName;
     }
@@ -63,6 +73,13 @@ public class CreateInstanceSnapshotRequest extends Request {
     }
 
     /**
+     * @return excludePaths
+     */
+    public java.util.List < String > getExcludePaths() {
+        return this.excludePaths;
+    }
+
+    /**
      * @return imageUrl
      */
     public String getImageUrl() {
@@ -74,6 +91,13 @@ public class CreateInstanceSnapshotRequest extends Request {
      */
     public java.util.List < Labels> getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return overwrite
+     */
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
     /**
@@ -92,8 +116,10 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceSnapshotRequest, Builder> {
         private String instanceId; 
+        private java.util.List < String > excludePaths; 
         private String imageUrl; 
         private java.util.List < Labels> labels; 
+        private Boolean overwrite; 
         private String snapshotDescription; 
         private String snapshotName; 
 
@@ -104,8 +130,10 @@ public class CreateInstanceSnapshotRequest extends Request {
         private Builder(CreateInstanceSnapshotRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.excludePaths = request.excludePaths;
             this.imageUrl = request.imageUrl;
             this.labels = request.labels;
+            this.overwrite = request.overwrite;
             this.snapshotDescription = request.snapshotDescription;
             this.snapshotName = request.snapshotName;
         } 
@@ -116,6 +144,15 @@ public class CreateInstanceSnapshotRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ExcludePaths.
+         */
+        public Builder excludePaths(java.util.List < String > excludePaths) {
+            this.putBodyParameter("ExcludePaths", excludePaths);
+            this.excludePaths = excludePaths;
             return this;
         }
 
@@ -134,6 +171,15 @@ public class CreateInstanceSnapshotRequest extends Request {
         public Builder labels(java.util.List < Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * Overwrite.
+         */
+        public Builder overwrite(Boolean overwrite) {
+            this.putBodyParameter("Overwrite", overwrite);
+            this.overwrite = overwrite;
             return this;
         }
 

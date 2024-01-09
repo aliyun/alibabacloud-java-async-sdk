@@ -25,6 +25,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.List < Datasets> datasets;
 
     @Body
+    @NameInMap("Driver")
+    private String driver;
+
+    @Body
     @NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -81,6 +85,7 @@ public class CreateInstanceRequest extends Request {
         this.accessibility = builder.accessibility;
         this.cloudDisks = builder.cloudDisks;
         this.datasets = builder.datasets;
+        this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
         this.imageId = builder.imageId;
@@ -128,6 +133,13 @@ public class CreateInstanceRequest extends Request {
      */
     public java.util.List < Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -225,6 +237,7 @@ public class CreateInstanceRequest extends Request {
         private String accessibility; 
         private java.util.List < CloudDisks> cloudDisks; 
         private java.util.List < Datasets> datasets; 
+        private String driver; 
         private String ecsSpec; 
         private java.util.Map < String, String > environmentVariables; 
         private String imageId; 
@@ -248,6 +261,7 @@ public class CreateInstanceRequest extends Request {
             this.accessibility = request.accessibility;
             this.cloudDisks = request.cloudDisks;
             this.datasets = request.datasets;
+            this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
             this.environmentVariables = request.environmentVariables;
             this.imageId = request.imageId;
@@ -287,6 +301,15 @@ public class CreateInstanceRequest extends Request {
         public Builder datasets(java.util.List < Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.putBodyParameter("Driver", driver);
+            this.driver = driver;
             return this;
         }
 
@@ -414,6 +437,87 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    public static class Status extends TeaModel {
+        @NameInMap("Available")
+        private Long available;
+
+        @NameInMap("Capacity")
+        private Long capacity;
+
+        @NameInMap("Usage")
+        private Long usage;
+
+        private Status(Builder builder) {
+            this.available = builder.available;
+            this.capacity = builder.capacity;
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Status create() {
+            return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Long getAvailable() {
+            return this.available;
+        }
+
+        /**
+         * @return capacity
+         */
+        public Long getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return usage
+         */
+        public Long getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private Long available; 
+            private Long capacity; 
+            private Long usage; 
+
+            /**
+             * Available.
+             */
+            public Builder available(Long available) {
+                this.available = available;
+                return this;
+            }
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(Long capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(Long usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public Status build() {
+                return new Status(this);
+            } 
+
+        } 
+
+    }
     public static class CloudDisks extends TeaModel {
         @NameInMap("Capacity")
         private String capacity;
@@ -424,6 +528,9 @@ public class CreateInstanceRequest extends Request {
         @NameInMap("Path")
         private String path;
 
+        @NameInMap("Status")
+        private Status status;
+
         @NameInMap("SubType")
         private String subType;
 
@@ -431,6 +538,7 @@ public class CreateInstanceRequest extends Request {
             this.capacity = builder.capacity;
             this.mountPath = builder.mountPath;
             this.path = builder.path;
+            this.status = builder.status;
             this.subType = builder.subType;
         }
 
@@ -464,6 +572,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return status
+         */
+        public Status getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return subType
          */
         public String getSubType() {
@@ -474,6 +589,7 @@ public class CreateInstanceRequest extends Request {
             private String capacity; 
             private String mountPath; 
             private String path; 
+            private Status status; 
             private String subType; 
 
             /**
@@ -497,6 +613,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder path(String path) {
                 this.path = path;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Status status) {
+                this.status = status;
                 return this;
             }
 
@@ -765,6 +889,9 @@ public class CreateInstanceRequest extends Request {
         @NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        private java.util.List < ForwardInfo > forwardInfos;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -777,6 +904,7 @@ public class CreateInstanceRequest extends Request {
         private UserVpc(Builder builder) {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
+            this.forwardInfos = builder.forwardInfos;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -805,6 +933,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return forwardInfos
+         */
+        public java.util.List < ForwardInfo > getForwardInfos() {
+            return this.forwardInfos;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -828,6 +963,7 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String defaultRoute; 
             private java.util.List < String > extendedCIDRs; 
+            private java.util.List < ForwardInfo > forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -845,6 +981,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * ForwardInfos.
+             */
+            public Builder forwardInfos(java.util.List < ForwardInfo > forwardInfos) {
+                this.forwardInfos = forwardInfos;
                 return this;
             }
 

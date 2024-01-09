@@ -1166,6 +1166,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        private java.util.List < ForwardInfoResponse > forwardInfos;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -1178,6 +1181,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private UserVpc(Builder builder) {
             this.defaultRoute = builder.defaultRoute;
             this.extendedCIDRs = builder.extendedCIDRs;
+            this.forwardInfos = builder.forwardInfos;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -1206,6 +1210,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return forwardInfos
+         */
+        public java.util.List < ForwardInfoResponse > getForwardInfos() {
+            return this.forwardInfos;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -1229,6 +1240,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String defaultRoute; 
             private java.util.List < String > extendedCIDRs; 
+            private java.util.List < ForwardInfoResponse > forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -1246,6 +1258,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * ForwardInfos.
+             */
+            public Builder forwardInfos(java.util.List < ForwardInfoResponse > forwardInfos) {
+                this.forwardInfos = forwardInfos;
                 return this;
             }
 
@@ -1295,6 +1315,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("Datasets")
         private java.util.List < Datasets> datasets;
+
+        @NameInMap("Driver")
+        private String driver;
 
         @NameInMap("EcsSpec")
         private String ecsSpec;
@@ -1398,6 +1421,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
             this.cloudDisks = builder.cloudDisks;
             this.datasets = builder.datasets;
+            this.driver = builder.driver;
             this.ecsSpec = builder.ecsSpec;
             this.environmentVariables = builder.environmentVariables;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -1473,6 +1497,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public java.util.List < Datasets> getDatasets() {
             return this.datasets;
+        }
+
+        /**
+         * @return driver
+         */
+        public String getDriver() {
+            return this.driver;
         }
 
         /**
@@ -1705,6 +1736,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long accumulatedRunningTimeInMs; 
             private java.util.List < CloudDisks> cloudDisks; 
             private java.util.List < Datasets> datasets; 
+            private String driver; 
             private String ecsSpec; 
             private java.util.Map < String, String > environmentVariables; 
             private String gmtCreateTime; 
@@ -1775,6 +1807,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder datasets(java.util.List < Datasets> datasets) {
                 this.datasets = datasets;
+                return this;
+            }
+
+            /**
+             * Driver.
+             */
+            public Builder driver(String driver) {
+                this.driver = driver;
                 return this;
             }
 
