@@ -21,6 +21,10 @@ public class RecognizeAllTextRequest extends Request {
     private IdCardConfig idCardConfig;
 
     @Query
+    @NameInMap("InternationalBusinessLicenseConfig")
+    private InternationalBusinessLicenseConfig internationalBusinessLicenseConfig;
+
+    @Query
     @NameInMap("InternationalIdCardConfig")
     private InternationalIdCardConfig internationalIdCardConfig;
 
@@ -61,6 +65,10 @@ public class RecognizeAllTextRequest extends Request {
     private Integer pageNo;
 
     @Query
+    @NameInMap("TableConfig")
+    private TableConfig tableConfig;
+
+    @Query
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
@@ -78,6 +86,7 @@ public class RecognizeAllTextRequest extends Request {
         super(builder);
         this.advancedConfig = builder.advancedConfig;
         this.idCardConfig = builder.idCardConfig;
+        this.internationalBusinessLicenseConfig = builder.internationalBusinessLicenseConfig;
         this.internationalIdCardConfig = builder.internationalIdCardConfig;
         this.multiLanConfig = builder.multiLanConfig;
         this.outputBarCode = builder.outputBarCode;
@@ -88,6 +97,7 @@ public class RecognizeAllTextRequest extends Request {
         this.outputQrcode = builder.outputQrcode;
         this.outputStamp = builder.outputStamp;
         this.pageNo = builder.pageNo;
+        this.tableConfig = builder.tableConfig;
         this.type = builder.type;
         this.url = builder.url;
         this.body = builder.body;
@@ -118,6 +128,13 @@ public class RecognizeAllTextRequest extends Request {
      */
     public IdCardConfig getIdCardConfig() {
         return this.idCardConfig;
+    }
+
+    /**
+     * @return internationalBusinessLicenseConfig
+     */
+    public InternationalBusinessLicenseConfig getInternationalBusinessLicenseConfig() {
+        return this.internationalBusinessLicenseConfig;
     }
 
     /**
@@ -191,6 +208,13 @@ public class RecognizeAllTextRequest extends Request {
     }
 
     /**
+     * @return tableConfig
+     */
+    public TableConfig getTableConfig() {
+        return this.tableConfig;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -214,6 +238,7 @@ public class RecognizeAllTextRequest extends Request {
     public static final class Builder extends Request.Builder<RecognizeAllTextRequest, Builder> {
         private AdvancedConfig advancedConfig; 
         private IdCardConfig idCardConfig; 
+        private InternationalBusinessLicenseConfig internationalBusinessLicenseConfig; 
         private InternationalIdCardConfig internationalIdCardConfig; 
         private MultiLanConfig multiLanConfig; 
         private Boolean outputBarCode; 
@@ -224,6 +249,7 @@ public class RecognizeAllTextRequest extends Request {
         private Boolean outputQrcode; 
         private Boolean outputStamp; 
         private Integer pageNo; 
+        private TableConfig tableConfig; 
         private String type; 
         private String url; 
         private java.io.InputStream body; 
@@ -236,6 +262,7 @@ public class RecognizeAllTextRequest extends Request {
             super(request);
             this.advancedConfig = request.advancedConfig;
             this.idCardConfig = request.idCardConfig;
+            this.internationalBusinessLicenseConfig = request.internationalBusinessLicenseConfig;
             this.internationalIdCardConfig = request.internationalIdCardConfig;
             this.multiLanConfig = request.multiLanConfig;
             this.outputBarCode = request.outputBarCode;
@@ -246,6 +273,7 @@ public class RecognizeAllTextRequest extends Request {
             this.outputQrcode = request.outputQrcode;
             this.outputStamp = request.outputStamp;
             this.pageNo = request.pageNo;
+            this.tableConfig = request.tableConfig;
             this.type = request.type;
             this.url = request.url;
             this.body = request.body;
@@ -268,6 +296,16 @@ public class RecognizeAllTextRequest extends Request {
             String idCardConfigShrink = shrink(idCardConfig, "IdCardConfig", "json");
             this.putQueryParameter("IdCardConfig", idCardConfigShrink);
             this.idCardConfig = idCardConfig;
+            return this;
+        }
+
+        /**
+         * InternationalBusinessLicenseConfig.
+         */
+        public Builder internationalBusinessLicenseConfig(InternationalBusinessLicenseConfig internationalBusinessLicenseConfig) {
+            String internationalBusinessLicenseConfigShrink = shrink(internationalBusinessLicenseConfig, "InternationalBusinessLicenseConfig", "json");
+            this.putQueryParameter("InternationalBusinessLicenseConfig", internationalBusinessLicenseConfigShrink);
+            this.internationalBusinessLicenseConfig = internationalBusinessLicenseConfig;
             return this;
         }
 
@@ -360,6 +398,16 @@ public class RecognizeAllTextRequest extends Request {
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
             this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * TableConfig.
+         */
+        public Builder tableConfig(TableConfig tableConfig) {
+            String tableConfigShrink = shrink(tableConfig, "TableConfig", "json");
+            this.putQueryParameter("TableConfig", tableConfigShrink);
+            this.tableConfig = tableConfig;
             return this;
         }
 
@@ -619,6 +667,47 @@ public class RecognizeAllTextRequest extends Request {
         } 
 
     }
+    public static class InternationalBusinessLicenseConfig extends TeaModel {
+        @NameInMap("Country")
+        private String country;
+
+        private InternationalBusinessLicenseConfig(Builder builder) {
+            this.country = builder.country;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InternationalBusinessLicenseConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return country
+         */
+        public String getCountry() {
+            return this.country;
+        }
+
+        public static final class Builder {
+            private String country; 
+
+            /**
+             * Country.
+             */
+            public Builder country(String country) {
+                this.country = country;
+                return this;
+            }
+
+            public InternationalBusinessLicenseConfig build() {
+                return new InternationalBusinessLicenseConfig(this);
+            } 
+
+        } 
+
+    }
     public static class InternationalIdCardConfig extends TeaModel {
         @NameInMap("Country")
         private String country;
@@ -696,6 +785,107 @@ public class RecognizeAllTextRequest extends Request {
 
             public MultiLanConfig build() {
                 return new MultiLanConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class TableConfig extends TeaModel {
+        @NameInMap("IsHandWritingTable")
+        private Boolean isHandWritingTable;
+
+        @NameInMap("IsLineLessTable")
+        private Boolean isLineLessTable;
+
+        @NameInMap("OutputTableExcel")
+        private Boolean outputTableExcel;
+
+        @NameInMap("OutputTableHtml")
+        private Boolean outputTableHtml;
+
+        private TableConfig(Builder builder) {
+            this.isHandWritingTable = builder.isHandWritingTable;
+            this.isLineLessTable = builder.isLineLessTable;
+            this.outputTableExcel = builder.outputTableExcel;
+            this.outputTableHtml = builder.outputTableHtml;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TableConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isHandWritingTable
+         */
+        public Boolean getIsHandWritingTable() {
+            return this.isHandWritingTable;
+        }
+
+        /**
+         * @return isLineLessTable
+         */
+        public Boolean getIsLineLessTable() {
+            return this.isLineLessTable;
+        }
+
+        /**
+         * @return outputTableExcel
+         */
+        public Boolean getOutputTableExcel() {
+            return this.outputTableExcel;
+        }
+
+        /**
+         * @return outputTableHtml
+         */
+        public Boolean getOutputTableHtml() {
+            return this.outputTableHtml;
+        }
+
+        public static final class Builder {
+            private Boolean isHandWritingTable; 
+            private Boolean isLineLessTable; 
+            private Boolean outputTableExcel; 
+            private Boolean outputTableHtml; 
+
+            /**
+             * IsHandWritingTable.
+             */
+            public Builder isHandWritingTable(Boolean isHandWritingTable) {
+                this.isHandWritingTable = isHandWritingTable;
+                return this;
+            }
+
+            /**
+             * IsLineLessTable.
+             */
+            public Builder isLineLessTable(Boolean isLineLessTable) {
+                this.isLineLessTable = isLineLessTable;
+                return this;
+            }
+
+            /**
+             * OutputTableExcel.
+             */
+            public Builder outputTableExcel(Boolean outputTableExcel) {
+                this.outputTableExcel = outputTableExcel;
+                return this;
+            }
+
+            /**
+             * OutputTableHtml.
+             */
+            public Builder outputTableHtml(Boolean outputTableHtml) {
+                this.outputTableHtml = outputTableHtml;
+                return this;
+            }
+
+            public TableConfig build() {
+                return new TableConfig(this);
             } 
 
         } 
