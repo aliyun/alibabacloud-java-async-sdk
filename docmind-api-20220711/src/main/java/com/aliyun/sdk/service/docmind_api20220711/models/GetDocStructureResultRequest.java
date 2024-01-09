@@ -16,9 +16,19 @@ public class GetDocStructureResultRequest extends Request {
     @NameInMap("Id")
     private String id;
 
+    @Query
+    @NameInMap("ImageStrategy")
+    private String imageStrategy;
+
+    @Query
+    @NameInMap("RevealMarkdown")
+    private Boolean revealMarkdown;
+
     private GetDocStructureResultRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
+        this.imageStrategy = builder.imageStrategy;
+        this.revealMarkdown = builder.revealMarkdown;
     }
 
     public static Builder builder() {
@@ -41,8 +51,24 @@ public class GetDocStructureResultRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return imageStrategy
+     */
+    public String getImageStrategy() {
+        return this.imageStrategy;
+    }
+
+    /**
+     * @return revealMarkdown
+     */
+    public Boolean getRevealMarkdown() {
+        return this.revealMarkdown;
+    }
+
     public static final class Builder extends Request.Builder<GetDocStructureResultRequest, Builder> {
         private String id; 
+        private String imageStrategy; 
+        private Boolean revealMarkdown; 
 
         private Builder() {
             super();
@@ -51,6 +77,8 @@ public class GetDocStructureResultRequest extends Request {
         private Builder(GetDocStructureResultRequest request) {
             super(request);
             this.id = request.id;
+            this.imageStrategy = request.imageStrategy;
+            this.revealMarkdown = request.revealMarkdown;
         } 
 
         /**
@@ -59,6 +87,24 @@ public class GetDocStructureResultRequest extends Request {
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * ImageStrategy.
+         */
+        public Builder imageStrategy(String imageStrategy) {
+            this.putQueryParameter("ImageStrategy", imageStrategy);
+            this.imageStrategy = imageStrategy;
+            return this;
+        }
+
+        /**
+         * RevealMarkdown.
+         */
+        public Builder revealMarkdown(Boolean revealMarkdown) {
+            this.putQueryParameter("RevealMarkdown", revealMarkdown);
+            this.revealMarkdown = revealMarkdown;
             return this;
         }
 
