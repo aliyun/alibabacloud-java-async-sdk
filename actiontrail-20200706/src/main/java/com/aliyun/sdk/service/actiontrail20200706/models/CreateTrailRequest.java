@@ -21,6 +21,14 @@ public class CreateTrailRequest extends Request {
     private Boolean isOrganizationTrail;
 
     @Query
+    @NameInMap("MaxComputeProjectArn")
+    private String maxComputeProjectArn;
+
+    @Query
+    @NameInMap("MaxComputeWriteRoleArn")
+    private String maxComputeWriteRoleArn;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -53,6 +61,8 @@ public class CreateTrailRequest extends Request {
         super(builder);
         this.eventRW = builder.eventRW;
         this.isOrganizationTrail = builder.isOrganizationTrail;
+        this.maxComputeProjectArn = builder.maxComputeProjectArn;
+        this.maxComputeWriteRoleArn = builder.maxComputeWriteRoleArn;
         this.name = builder.name;
         this.ossBucketName = builder.ossBucketName;
         this.ossKeyPrefix = builder.ossKeyPrefix;
@@ -87,6 +97,20 @@ public class CreateTrailRequest extends Request {
      */
     public Boolean getIsOrganizationTrail() {
         return this.isOrganizationTrail;
+    }
+
+    /**
+     * @return maxComputeProjectArn
+     */
+    public String getMaxComputeProjectArn() {
+        return this.maxComputeProjectArn;
+    }
+
+    /**
+     * @return maxComputeWriteRoleArn
+     */
+    public String getMaxComputeWriteRoleArn() {
+        return this.maxComputeWriteRoleArn;
     }
 
     /**
@@ -141,6 +165,8 @@ public class CreateTrailRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTrailRequest, Builder> {
         private String eventRW; 
         private Boolean isOrganizationTrail; 
+        private String maxComputeProjectArn; 
+        private String maxComputeWriteRoleArn; 
         private String name; 
         private String ossBucketName; 
         private String ossKeyPrefix; 
@@ -157,6 +183,8 @@ public class CreateTrailRequest extends Request {
             super(request);
             this.eventRW = request.eventRW;
             this.isOrganizationTrail = request.isOrganizationTrail;
+            this.maxComputeProjectArn = request.maxComputeProjectArn;
+            this.maxComputeWriteRoleArn = request.maxComputeWriteRoleArn;
             this.name = request.name;
             this.ossBucketName = request.ossBucketName;
             this.ossKeyPrefix = request.ossKeyPrefix;
@@ -190,6 +218,24 @@ public class CreateTrailRequest extends Request {
         public Builder isOrganizationTrail(Boolean isOrganizationTrail) {
             this.putQueryParameter("IsOrganizationTrail", isOrganizationTrail);
             this.isOrganizationTrail = isOrganizationTrail;
+            return this;
+        }
+
+        /**
+         * MaxComputeProjectArn.
+         */
+        public Builder maxComputeProjectArn(String maxComputeProjectArn) {
+            this.putQueryParameter("MaxComputeProjectArn", maxComputeProjectArn);
+            this.maxComputeProjectArn = maxComputeProjectArn;
+            return this;
+        }
+
+        /**
+         * MaxComputeWriteRoleArn.
+         */
+        public Builder maxComputeWriteRoleArn(String maxComputeWriteRoleArn) {
+            this.putQueryParameter("MaxComputeWriteRoleArn", maxComputeWriteRoleArn);
+            this.maxComputeWriteRoleArn = maxComputeWriteRoleArn;
             return this;
         }
 
