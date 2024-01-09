@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ActualDeductResourceResult</p>
  */
 public class ActualDeductResourceResult extends TeaModel {
+    @NameInMap("errorCode")
+    private String errorCode;
+
     @NameInMap("errorMessage")
     private String errorMessage;
-
-    @NameInMap("errorcode")
-    private String errorcode;
 
     @NameInMap("requestId")
     private String requestId;
@@ -25,8 +25,8 @@ public class ActualDeductResourceResult extends TeaModel {
     private Boolean success;
 
     private ActualDeductResourceResult(Builder builder) {
+        this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
-        this.errorcode = builder.errorcode;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -40,17 +40,17 @@ public class ActualDeductResourceResult extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
      * @return errorMessage
      */
     public String getErrorMessage() {
         return this.errorMessage;
-    }
-
-    /**
-     * @return errorcode
-     */
-    public String getErrorcode() {
-        return this.errorcode;
     }
 
     /**
@@ -68,24 +68,24 @@ public class ActualDeductResourceResult extends TeaModel {
     }
 
     public static final class Builder {
+        private String errorCode; 
         private String errorMessage; 
-        private String errorcode; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * errorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
 
         /**
          * errorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * errorcode.
-         */
-        public Builder errorcode(String errorcode) {
-            this.errorcode = errorcode;
             return this;
         }
 
