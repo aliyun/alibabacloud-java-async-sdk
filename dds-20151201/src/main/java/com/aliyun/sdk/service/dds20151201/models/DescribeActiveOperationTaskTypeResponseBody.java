@@ -50,7 +50,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         private java.util.List < TypeList> typeList; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tasks.
+         * The O\&M tasks.
          */
         public Builder typeList(java.util.List < TypeList> typeList) {
             this.typeList = typeList;
@@ -145,8 +145,8 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
              * The type of the task. Valid values:
              * <p>
              * 
-             * *   **rds\_apsaradb\_transfer**: instance migration
-             * *   **rds\_apsaradb\_upgrade**: minor version update
+             * *   \*\*rds_apsaradb_transfer\*\*: data migration
+             * *   \*\*rds_apsaradb_upgrade\*\*: minor version update
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -154,7 +154,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The task type (English).
+             * The task type in English.
              */
             public Builder taskTypeInfoEn(String taskTypeInfoEn) {
                 this.taskTypeInfoEn = taskTypeInfoEn;
@@ -162,7 +162,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The task type (Chinese).
+             * The task type in Chinese.
              */
             public Builder taskTypeInfoZh(String taskTypeInfoZh) {
                 this.taskTypeInfoZh = taskTypeInfoZh;

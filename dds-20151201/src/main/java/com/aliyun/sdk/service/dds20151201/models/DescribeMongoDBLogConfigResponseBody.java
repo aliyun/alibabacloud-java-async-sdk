@@ -170,11 +170,11 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         private String userProjectName; 
 
         /**
-         * Indicates whether to enable the audit log feature is enabled.
+         * Indicates whether the audit log feature is enabled. Valid values:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
+         * *   **true**: The audit log feature is enabled.
+         * *   **false**: The audit log feature is disabled.
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.enableAudit = enableAudit;
@@ -194,11 +194,11 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether a Log Service project exists in the current region. Valid values:
+         * Indicates whether a project exists in the current region. Valid values:
          * <p>
          * 
-         * *   **1**: A Log Service project exists in the current region.
-         * *   **0** or **null**: A Log Service project does not exist in the current region.
+         * *   **1**: A logging project exists in the current region.
+         * *   **0** or **null**: A logging project does not exist in the current region.
          */
         public Builder isUserProjectLogstoreExist(Integer isUserProjectLogstoreExist) {
             this.isUserProjectLogstoreExist = isUserProjectLogstoreExist;
@@ -206,7 +206,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage space for the formal edition of the audit log feature. If the value is **-1**, no maximum is set.
+         * The maximum storage capacity for the formal edition of the audit log feature. If the value is -1, no maximum storage capacity is set.
          */
         public Builder preserveStorageForStandard(Long preserveStorageForStandard) {
             this.preserveStorageForStandard = preserveStorageForStandard;
@@ -214,7 +214,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum storage space for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum up to 107,374,182,400 bytes.
+         * The maximum storage capacity for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum storage capacity to 107,374,182,400 bytes.
          */
         public Builder preserveStorageForTrail(Long preserveStorageForTrail) {
             this.preserveStorageForTrail = preserveStorageForTrail;
@@ -222,7 +222,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period for the official edition of the audit log feature. Valid values: 1 to 365 days.
+         * The retention period for the official edition of the audit log feature. Valid values: 1 to 365. Unit: day.
          */
         public Builder ttlForStandard(Long ttlForStandard) {
             this.ttlForStandard = ttlForStandard;
@@ -258,7 +258,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The used storage space for the formal edition of the audit log feature. Unit: bytes.
+         * The used storage capacity for the formal edition of the audit log feature. Unit: bytes.
          */
         public Builder usedStorageForStandard(Long usedStorageForStandard) {
             this.usedStorageForStandard = usedStorageForStandard;
@@ -266,7 +266,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The used storage space for the free trial edition of the audit log feature. Unit: bytes.
+         * The used storage capacity for the free trial edition of the audit log feature. Unit: bytes.
          */
         public Builder usedStorageForTrail(Long usedStorageForTrail) {
             this.usedStorageForTrail = usedStorageForTrail;
@@ -274,7 +274,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the Log Service project.
+         * The name of the project.
          */
         public Builder userProjectName(String userProjectName) {
             this.userProjectName = userProjectName;

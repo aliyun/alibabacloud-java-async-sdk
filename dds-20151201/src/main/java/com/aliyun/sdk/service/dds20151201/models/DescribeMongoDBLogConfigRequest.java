@@ -134,7 +134,7 @@ public class DescribeMongoDBLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

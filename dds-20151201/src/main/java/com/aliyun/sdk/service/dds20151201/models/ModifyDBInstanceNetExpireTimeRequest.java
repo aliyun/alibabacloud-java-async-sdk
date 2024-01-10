@@ -163,7 +163,7 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.
+         * The retention period of the classic network endpoint of the instance. Valid values: **14**, **30**, **60**, and **120**. Unit: day.
          */
         public Builder classicExpendExpiredDays(Integer classicExpendExpiredDays) {
             this.putQueryParameter("ClassicExpendExpiredDays", classicExpendExpiredDays);
@@ -172,7 +172,7 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The connection string of the instance
+         * The endpoint of the instance.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -181,7 +181,7 @@ public class ModifyDBInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

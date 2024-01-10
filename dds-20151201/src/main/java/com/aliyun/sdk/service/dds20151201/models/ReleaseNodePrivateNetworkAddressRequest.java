@@ -175,8 +175,8 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
          * The network type of the internal endpoint. Valid values:
          * <p>
          * 
-         * *   **VPC**
-         * *   **Classic**
+         * *   **VPC**: virtual private cloud (VPC).
+         * *   **Classic**: classic network.
          * 
          * >  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.
          */

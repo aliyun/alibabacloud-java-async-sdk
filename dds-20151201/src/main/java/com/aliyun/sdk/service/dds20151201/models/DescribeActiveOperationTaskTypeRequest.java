@@ -147,13 +147,11 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to return all O\&M tasks. Valid values:
+         * Specifies whether to return historical O\&M tasks. Valid values:
          * <p>
          * 
-         * *   **0**: returns only pending tasks.
-         * *   **1**: returns all tasks.
-         * 
-         * Default value: **0**.
+         * *   **0** (default): The system returns only pending O\&M tasks.
+         * *   **1**: The system returns historical O\&M tasks.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -180,7 +178,7 @@ public class DescribeActiveOperationTaskTypeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID. You can call the [DescribeSecurityGroupConfiguration](~~146130~~) operation to query the resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

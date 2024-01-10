@@ -162,7 +162,7 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -171,7 +171,7 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node in the specified sharded cluster instance.
+         * The ID of the mongos node in the sharded cluster instance.
          * <p>
          * 
          * >  This parameter can be used only when the instance type is sharded cluster.
@@ -219,11 +219,7 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable authentication to allow access within a VPC. Valid values:
-         * <p>
-         * 
-         * *   **Open**: enables password-free access.
-         * *   **Close**: disables password-free access.
+         * Specify whether to disable password-free access over VPC. Set the value to **Close**.
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

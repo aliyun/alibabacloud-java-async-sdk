@@ -161,7 +161,7 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of an instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

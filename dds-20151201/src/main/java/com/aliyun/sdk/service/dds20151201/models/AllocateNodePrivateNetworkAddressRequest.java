@@ -191,12 +191,16 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The name of the account.
+         * The username of the account.
          * <p>
          * 
-         * > * The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter.
-         * > * You need to set the account name and password only when you apply for an endpoint for a shard or Configserver node for the first time. In this case, the account name and password are used for all shard and Configserver nodes.
-         * > * The permissions of this account are fixed to read-only.
+         * > 
+         * 
+         * *   The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). The username must start with a lowercase letter.
+         * 
+         * *   You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.
+         * 
+         * *   The permissions of this account are fixed to read-only.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -205,10 +209,10 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The password of the account.
+         * The password for the account.
          * <p>
          * 
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!#$%^&*()_+-=`
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`
          * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
@@ -275,7 +279,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * The ID of the zone to which the instance belongs.
          * <p>
          * 
          * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the zone ID of the instance.

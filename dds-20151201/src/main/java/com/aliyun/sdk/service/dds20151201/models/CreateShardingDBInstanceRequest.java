@@ -750,7 +750,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The provisioned IOPS. Valid values: 0 to 50000.
+         * The provisioned IOPS of the instance:
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -909,7 +909,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
-         * The custom tags added to the instance.
+         * The custom tags that you want to add to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1203,10 +1203,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              * <p>
              * 
-             * > **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
+             * >  **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1214,10 +1214,10 @@ public class CreateShardingDBInstanceRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              * <p>
              * 
-             * > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
+             * >  **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.
              */
             public Builder value(String value) {
                 this.value = value;

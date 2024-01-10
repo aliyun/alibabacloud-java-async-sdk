@@ -182,7 +182,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The type of the mongos node.
+             * The instance type of the mongos node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -328,7 +328,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer readonlyReplicas; 
 
             /**
-             * The type of the shard node.
+             * The instance type of the shard node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -871,7 +871,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The read and write throughput consumed by the instance.
              * <p>
              * 
-             * > This parameter is returned when the instance is a serverless instance.
+             * >  This parameter is returned when the instance is a serverless instance.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -882,8 +882,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription
-             * *   **PostPaid**: pay-as-you-go
+             * *   **PrePaid**: subscription.
+             * *   **PostPaid**: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -891,7 +891,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -899,7 +899,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -915,7 +915,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The instance ID
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -942,8 +942,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The architecture of the instance. Valid values:
              * <p>
              * 
-             * *   **sharding**: sharded cluster instance
-             * *   **replicate**: replica set or standalone instance
+             * *   **sharding**: sharded cluster instance.
+             * *   **replicate**: replica set or standalone instance.
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -951,14 +951,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the instance data was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > 
-             * 
-             * *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
-             * 
-             * *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+             * > *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
+             * > *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -974,7 +971,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance. Valid values:
+             * The database engine version of the instance.
              * <p>
              * 
              * *   **5.0**
@@ -989,7 +986,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1000,30 +997,27 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The ID of the secondary zone 2 of the instance. Valid values:
              * <p>
              * 
-             * *   **cn-hangzhou-g**: Hangzhou Zone G
-             * *   **cn-hangzhou-h**: Hangzhou Zone H
-             * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hongkong Zone B
-             * *   **cn-hongkong-c**: Hongkong Zone C
-             * *   **cn-hongkong-d**: Hongkong Zone D
-             * *   **cn-wulanchabu-a**: Ulanqab Zone A
-             * *   **cn-wulanchabu-b**: Ulanqab Zone B
-             * *   **cn-wulanchabu-c**: Ulanqab Zone C
-             * *   **ap-southeast-1a**: Singapore Zone A
-             * *   **ap-southeast-1b**: Singapore Zone B
-             * *   **ap-southeast-1c**: Singapore Zone C
-             * *   **ap-southeast-5a**: Jakarta Zone A
-             * *   **ap-southeast-5b**: Jakarta Zone B
-             * *   **ap-southeast-5c**: Jakarta Zone C
-             * *   **eu-central-1a**: Frankfurt Zone A
-             * *   **eu-central-1b**: Frankfurt Zone B
-             * *   **eu-central-1c**: Frankfurt Zone C
+             * *   **cn-hangzhou-g**: Hangzhou Zone G.
+             * *   **cn-hangzhou-h**: Hangzhou Zone H.
+             * *   **cn-hangzhou-i**: Hangzhou Zone I.
+             * *   **cn-hongkong-b**: Hong Kong Zone B.
+             * *   **cn-hongkong-c**: Hong Kong Zone C.
+             * *   **cn-hongkong-d**: Hong Kong Zone D.
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A.
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B.
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C.
+             * *   **ap-southeast-1a**: Singapore Zone A.
+             * *   **ap-southeast-1b**: Singapore Zone B.
+             * *   **ap-southeast-1c**: Singapore Zone C.
+             * *   **ap-southeast-5a**: Jakarta Zone A.
+             * *   **ap-southeast-5b**: Jakarta Zone B.
+             * *   **ap-southeast-5c**: Jakarta Zone C.
+             * *   **eu-central-1a**: Frankfurt Zone A.
+             * *   **eu-central-1b**: Frankfurt Zone B.
+             * *   **eu-central-1c**: Frankfurt Zone C.
              * 
-             * > 
-             * 
-             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * 
-             * *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * > *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -1034,10 +1028,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The kind code of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: physical machine
-             * *   **1**: ECS instance
-             * *   **2**: Docker cluster
-             * *   **18**: Kubernetes cluster
+             * *   **0**: physical machine.
+             * *   **1**: Elastic Compute Service (ECS) instance.
+             * *   **2**: Docker cluster.
+             * *   **18**: Kubernetes cluster.
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;
@@ -1053,14 +1047,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The lock state of the instance. Valid values:
+             * The lock status of the instance. Valid values:
              * <p>
              * 
-             * *   **Unlock**: The cluster is not locked.
+             * *   **Unlock**: The instance is not locked.
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
+             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
+             * *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
              * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
              */
             public Builder lockMode(String lockMode) {
@@ -1069,10 +1063,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the mongos nodes.
+             * The details of the mongos node.
              * <p>
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder mongosList(MongosList mongosList) {
                 this.mongosList = mongosList;
@@ -1083,8 +1077,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**
-             * *   **VPC**
+             * *   **Classic**: classic network.
+             * *   **VPC**: VPC.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1103,7 +1097,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The number of nodes in the instance.
              * <p>
              * 
-             * > This parameter is returned if the instance is a replica set instance.
+             * >  This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -1111,7 +1105,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1122,30 +1116,27 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The ID of the secondary zone 1 of the instance. Valid values:
              * <p>
              * 
-             * *   **cn-hangzhou-g**: Hangzhou Zone G
-             * *   **cn-hangzhou-h**: Hangzhou Zone H
-             * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hongkong Zone B
-             * *   **cn-hongkong-c**: Hongkong Zone C
-             * *   **cn-hongkong-d**: Hongkong Zone D
-             * *   **cn-wulanchabu-a**: Ulanqab Zone A
-             * *   **cn-wulanchabu-b**: Ulanqab Zone B
-             * *   **cn-wulanchabu-c**: Ulanqab Zone C
-             * *   **ap-southeast-1a**: Singapore Zone A
-             * *   **ap-southeast-1b**: Singapore Zone B
-             * *   **ap-southeast-1c**: Singapore Zone C
-             * *   **ap-southeast-5a**: Jakarta Zone A
-             * *   **ap-southeast-5b**: Jakarta Zone B
-             * *   **ap-southeast-5c**: Jakarta Zone C
-             * *   **eu-central-1a**: Frankfurt Zone A
-             * *   **eu-central-1b**: Frankfurt Zone B
-             * *   **eu-central-1c**: Frankfurt Zone C
+             * *   **cn-hangzhou-g**: Hangzhou Zone G.
+             * *   **cn-hangzhou-h**: Hangzhou Zone H.
+             * *   **cn-hangzhou-i**: Hangzhou Zone I.
+             * *   **cn-hongkong-b**: Hong Kong Zone B.
+             * *   **cn-hongkong-c**: Hong Kong Zone C.
+             * *   **cn-hongkong-d**: Hong Kong Zone D.
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A.
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B.
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C.
+             * *   **ap-southeast-1a**: Singapore Zone A.
+             * *   **ap-southeast-1b**: Singapore Zone B.
+             * *   **ap-southeast-1c**: Singapore Zone C.
+             * *   **ap-southeast-5a**: Jakarta Zone A.
+             * *   **ap-southeast-5b**: Jakarta Zone B.
+             * *   **ap-southeast-5c**: Jakarta Zone C.
+             * *   **eu-central-1a**: Frankfurt Zone A.
+             * *   **eu-central-1b**: Frankfurt Zone B.
+             * *   **eu-central-1c**: Frankfurt Zone C.
              * 
-             * > 
-             * 
-             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * 
-             * *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * > *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -1153,10 +1144,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the shard nodes.
+             * The details of the shard node.
              * <p>
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
@@ -1167,8 +1158,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * *   **cloud_essd**: enhanced SSD (ESSD)
-             * *   **local_ssd**: local SSD
+             * *   **cloud_essd**: enhanced SSD (ESSD).
+             * *   **local_ssd**: local SSD.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1184,11 +1175,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether password-free access within a VPC is enabled. Valid values:
+             * Indicates whether password-free access within a virtual private cloud (VPC) is enabled. Valid values:
              * <p>
              * 
-             * *   **Open**: Password-free access is enabled.
-             * *   **Close**: Password-free access is disabled.
+             * *   **Open**
+             * *   **Close**
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -1196,7 +1187,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The ID of the zone in which the instance resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

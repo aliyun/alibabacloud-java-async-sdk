@@ -503,9 +503,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values:
+         * The database engine version of the instance.
          * <p>
          * 
+         * *   **6.0**
          * *   **5.0**
          * *   **4.4**
          * *   **4.2**

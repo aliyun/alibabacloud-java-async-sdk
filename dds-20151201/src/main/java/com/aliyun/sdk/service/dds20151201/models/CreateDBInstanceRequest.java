@@ -816,7 +816,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Set the value to VPC.
+         * The network type of the instance. Valid value:
+         * <p>
+         * 
+         * **VPC**: Virtual Private Cloud (VPC)
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);

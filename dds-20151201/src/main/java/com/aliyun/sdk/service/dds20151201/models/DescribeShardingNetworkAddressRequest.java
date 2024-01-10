@@ -148,7 +148,7 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * The ID of an instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,10 +157,10 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * A sharded cluster instance consists of three components: mongos, shard, and Configserver.
+         * The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
          * <p>
          * 
-         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserverr node.
+         * >  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

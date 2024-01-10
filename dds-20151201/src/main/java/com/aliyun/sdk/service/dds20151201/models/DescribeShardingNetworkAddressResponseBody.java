@@ -62,7 +62,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the endpoints of DynamoDB instances.
+         * The endpoints of DynamoDB-compatible instances.
          */
         public Builder compatibleConnections(CompatibleConnections compatibleConnections) {
             this.compatibleConnections = compatibleConnections;
@@ -70,7 +70,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the endpoints of ApsaraDB for MongoDB instances.
+         * The endpoints of ApsaraDB for MongoDB instances.
          */
         public Builder networkAddresses(NetworkAddresses networkAddresses) {
             this.networkAddresses = networkAddresses;
@@ -78,7 +78,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The remaining duration of the classic network address. Unit: seconds.
+             * The remaining duration of the classic network endpoint. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -214,12 +214,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
+             * The network type of the instance.
              * <p>
              * 
-             * *   **VPC**
-             * *   **Classic**
-             * *   **Public**: pubic endpoint
+             * *   **VPC**: virtual private cloud
+             * *   **Classic**: classic network
+             * *   **Public**: the Internet
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -227,7 +227,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * The port that is used to connect to the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -235,7 +235,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID of the instance.
              * <p>
              * 
              * >  This parameter is returned when the network type is **VPC**.
@@ -246,7 +246,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the VPC.
+             * The ID of the vSwitch in the Virtual Private Cloud (VPC).
              * <p>
              * 
              * >  This parameter is returned when the network type is **VPC**.
@@ -439,7 +439,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * The remaining duration of the classic network address. Unit: seconds.
+             * The remaining duration of the classic network endpoint. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -455,7 +455,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * The connection string of the instance.
              */
             public Builder networkAddress(String networkAddress) {
                 this.networkAddress = networkAddress;
@@ -463,12 +463,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
+             * The network type of the instance.
              * <p>
              * 
-             * - **VPC**
-             * - **Classic**
-             * - **Public**: pubic endpoint
+             * *   **VPC**: virtual private cloud
+             * *   **Classic**: classic network
+             * *   **Public**: the Internet
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -476,7 +476,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the mongos.
+             * The ID of the mongos node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -487,9 +487,9 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
              * The type of the node. Valid values:
              * <p>
              * 
-             * - **mongos**
-             * - **shard**
-             * - **configserver**
+             * *   **mongos**: mongos node
+             * *   **shard**: shard node
+             * *   **configserver**: Configserver node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -497,7 +497,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * The port that is used to connect to the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -508,8 +508,8 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
              * The role of the node. Valid values:
              * <p>
              * 
-             * - Primary
-             * - Secondary
+             * *   Primary
+             * *   Secondary
              */
             public Builder role(String role) {
                 this.role = role;
@@ -517,7 +517,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID of the instance.
              * <p>
              * 
              * >  This parameter is returned when the network type is **VPC**.
@@ -528,7 +528,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the VPC.
+             * The ID of the vSwitch in the VPC.
              * <p>
              * 
              * >  This parameter is returned when the network type is **VPC**.
@@ -572,7 +572,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
             private java.util.List < NetworkAddress> networkAddress; 
 
             /**
-             * The endpoint of the instance.
+             * The connection string of the instance.
              */
             public Builder networkAddress(java.util.List < NetworkAddress> networkAddress) {
                 this.networkAddress = networkAddress;
