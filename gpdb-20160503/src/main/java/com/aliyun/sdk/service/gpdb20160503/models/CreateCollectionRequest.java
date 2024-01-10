@@ -27,6 +27,10 @@ public class CreateCollectionRequest extends Request {
     private Long dimension;
 
     @Query
+    @NameInMap("ExternalStorage")
+    private Integer externalStorage;
+
+    @Query
     @NameInMap("FullTextRetrievalFields")
     private String fullTextRetrievalFields;
 
@@ -80,6 +84,7 @@ public class CreateCollectionRequest extends Request {
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
+        this.externalStorage = builder.externalStorage;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
         this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
@@ -125,6 +130,13 @@ public class CreateCollectionRequest extends Request {
      */
     public Long getDimension() {
         return this.dimension;
+    }
+
+    /**
+     * @return externalStorage
+     */
+    public Integer getExternalStorage() {
+        return this.externalStorage;
     }
 
     /**
@@ -208,6 +220,7 @@ public class CreateCollectionRequest extends Request {
         private String collection; 
         private String DBInstanceId; 
         private Long dimension; 
+        private Integer externalStorage; 
         private String fullTextRetrievalFields; 
         private Integer hnswM; 
         private String managerAccount; 
@@ -229,6 +242,7 @@ public class CreateCollectionRequest extends Request {
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
+            this.externalStorage = request.externalStorage;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
             this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
@@ -266,6 +280,15 @@ public class CreateCollectionRequest extends Request {
         public Builder dimension(Long dimension) {
             this.putQueryParameter("Dimension", dimension);
             this.dimension = dimension;
+            return this;
+        }
+
+        /**
+         * ExternalStorage.
+         */
+        public Builder externalStorage(Integer externalStorage) {
+            this.putQueryParameter("ExternalStorage", externalStorage);
+            this.externalStorage = externalStorage;
             return this;
         }
 

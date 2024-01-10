@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
 
+    CompletableFuture<CancelUpsertCollectionDataJobResponse> cancelUpsertCollectionDataJob(CancelUpsertCollectionDataJobRequest request);
+
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
@@ -113,6 +115,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
+
+    CompletableFuture<DescribeActiveSQLRecordsResponse> describeActiveSQLRecords(DescribeActiveSQLRecordsRequest request);
 
     /**
       * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
@@ -396,6 +400,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DownloadDiagnosisRecordsResponse> downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request);
 
     CompletableFuture<DownloadSQLLogsRecordsResponse> downloadSQLLogsRecords(DownloadSQLLogsRecordsRequest request);
+
+    CompletableFuture<GetUpsertCollectionDataJobResponse> getUpsertCollectionDataJob(GetUpsertCollectionDataJobRequest request);
 
     CompletableFuture<GrantCollectionResponse> grantCollection(GrantCollectionRequest request);
 

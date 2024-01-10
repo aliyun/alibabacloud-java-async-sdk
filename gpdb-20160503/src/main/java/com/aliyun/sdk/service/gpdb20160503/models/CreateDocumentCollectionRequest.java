@@ -27,11 +27,16 @@ public class CreateDocumentCollectionRequest extends Request {
     private String embeddingModel;
 
     @Query
+    @NameInMap("ExternalStorage")
+    private Integer externalStorage;
+
+    @Query
     @NameInMap("FullTextRetrievalFields")
     private String fullTextRetrievalFields;
 
     @Query
     @NameInMap("HnswM")
+    @Validation(maximum = 1000)
     private Integer hnswM;
 
     @Query
@@ -78,6 +83,7 @@ public class CreateDocumentCollectionRequest extends Request {
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.embeddingModel = builder.embeddingModel;
+        this.externalStorage = builder.externalStorage;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
         this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
@@ -123,6 +129,13 @@ public class CreateDocumentCollectionRequest extends Request {
      */
     public String getEmbeddingModel() {
         return this.embeddingModel;
+    }
+
+    /**
+     * @return externalStorage
+     */
+    public Integer getExternalStorage() {
+        return this.externalStorage;
     }
 
     /**
@@ -206,6 +219,7 @@ public class CreateDocumentCollectionRequest extends Request {
         private String collection; 
         private String DBInstanceId; 
         private String embeddingModel; 
+        private Integer externalStorage; 
         private String fullTextRetrievalFields; 
         private Integer hnswM; 
         private String managerAccount; 
@@ -227,6 +241,7 @@ public class CreateDocumentCollectionRequest extends Request {
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.embeddingModel = request.embeddingModel;
+            this.externalStorage = request.externalStorage;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
             this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
@@ -264,6 +279,15 @@ public class CreateDocumentCollectionRequest extends Request {
         public Builder embeddingModel(String embeddingModel) {
             this.putQueryParameter("EmbeddingModel", embeddingModel);
             this.embeddingModel = embeddingModel;
+            return this;
+        }
+
+        /**
+         * ExternalStorage.
+         */
+        public Builder externalStorage(Integer externalStorage) {
+            this.putQueryParameter("ExternalStorage", externalStorage);
+            this.externalStorage = externalStorage;
             return this;
         }
 
