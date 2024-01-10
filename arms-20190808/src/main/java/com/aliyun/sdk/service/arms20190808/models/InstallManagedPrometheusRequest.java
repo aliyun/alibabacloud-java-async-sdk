@@ -202,7 +202,42 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The type of the monitoring object. Valid values: ask and ecs.
+         * The cluster type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ecs
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   one
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ask
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   pro
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

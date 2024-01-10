@@ -50,7 +50,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The description of the event.
+         * The event details.
          */
         public Builder insightsEvents(java.util.List < InsightsEvents> insightsEvents) {
             this.insightsEvents = insightsEvents;
@@ -170,7 +170,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time at which the event occurred. The value is a timestamp.
+             * The time when the event occurred. The value is a timestamp.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -178,7 +178,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application associated with the event.
+             * The description of the event.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -186,7 +186,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the abnormal Insights events within a specified period of time.
+             * The severity of the event.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -194,7 +194,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * auditing
+             * The ID of the application associated with the event.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -202,7 +202,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemId.
+             * Problem identification.
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;
@@ -210,7 +210,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]
+             * The title of the event.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -218,7 +218,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the event occurred. The value is a timestamp.
+             * The type of the event.
              */
             public Builder type(String type) {
                 this.type = type;

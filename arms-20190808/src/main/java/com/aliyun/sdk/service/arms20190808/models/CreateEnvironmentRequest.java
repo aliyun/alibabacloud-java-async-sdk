@@ -167,6 +167,8 @@ public class CreateEnvironmentRequest extends Request {
 
         /**
          * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
+         * <p>
+         * For Cloud type environments, the current field value is RegionId.
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -188,7 +190,7 @@ public class CreateEnvironmentRequest extends Request {
          * <p>
          * 
          * *   CS: Container Service for Kubernetes (ACK)
-         * *   ECS: ECS
+         * *   ECS: Elastic Compute Service (ECS)
          * *   Cloud: cloud service
          */
         public Builder environmentSubType(String environmentSubType) {

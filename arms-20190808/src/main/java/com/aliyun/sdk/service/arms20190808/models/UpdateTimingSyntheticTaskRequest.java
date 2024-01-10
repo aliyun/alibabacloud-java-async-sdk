@@ -29,10 +29,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     private String frequency;
 
     @Query
-    @NameInMap("MonitorCategory")
-    private Integer monitorCategory;
-
-    @Query
     @NameInMap("MonitorConf")
     private MonitorConf monitorConf;
 
@@ -60,17 +56,12 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     @NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskType")
-    private Integer taskType;
-
     private UpdateTimingSyntheticTaskRequest(Builder builder) {
         super(builder);
         this.availableAssertions = builder.availableAssertions;
         this.commonSetting = builder.commonSetting;
         this.customPeriod = builder.customPeriod;
         this.frequency = builder.frequency;
-        this.monitorCategory = builder.monitorCategory;
         this.monitorConf = builder.monitorConf;
         this.monitors = builder.monitors;
         this.name = builder.name;
@@ -78,7 +69,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.taskId = builder.taskId;
-        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
@@ -120,13 +110,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
      */
     public String getFrequency() {
         return this.frequency;
-    }
-
-    /**
-     * @return monitorCategory
-     */
-    public Integer getMonitorCategory() {
-        return this.monitorCategory;
     }
 
     /**
@@ -178,19 +161,11 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         return this.taskId;
     }
 
-    /**
-     * @return taskType
-     */
-    public Integer getTaskType() {
-        return this.taskType;
-    }
-
     public static final class Builder extends Request.Builder<UpdateTimingSyntheticTaskRequest, Builder> {
         private java.util.List < AvailableAssertions> availableAssertions; 
         private CommonSetting commonSetting; 
         private CustomPeriod customPeriod; 
         private String frequency; 
-        private Integer monitorCategory; 
         private MonitorConf monitorConf; 
         private java.util.List < Monitors> monitors; 
         private String name; 
@@ -198,7 +173,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private String resourceGroupId; 
         private java.util.List < Tags> tags; 
         private String taskId; 
-        private Integer taskType; 
 
         private Builder() {
             super();
@@ -210,7 +184,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.commonSetting = request.commonSetting;
             this.customPeriod = request.customPeriod;
             this.frequency = request.frequency;
-            this.monitorCategory = request.monitorCategory;
             this.monitorConf = request.monitorConf;
             this.monitors = request.monitors;
             this.name = request.name;
@@ -218,7 +191,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
             this.taskId = request.taskId;
-            this.taskType = request.taskType;
         } 
 
         /**
@@ -257,15 +229,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
             this.frequency = frequency;
-            return this;
-        }
-
-        /**
-         * The detection point type. 1: PC. 2: mobile device.
-         */
-        public Builder monitorCategory(Integer monitorCategory) {
-            this.putQueryParameter("MonitorCategory", monitorCategory);
-            this.monitorCategory = monitorCategory;
             return this;
         }
 
@@ -332,18 +295,6 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
-            return this;
-        }
-
-        /**
-         * The type of the task. Valid values:
-         * <p>
-         * 
-         * 1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.
-         */
-        public Builder taskType(Integer taskType) {
-            this.putQueryParameter("TaskType", taskType);
-            this.taskType = taskType;
             return this;
         }
 

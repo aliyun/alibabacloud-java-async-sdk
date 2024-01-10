@@ -50,6 +50,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    /**
+      * You can call this operation to check whether ARMS is available for commercial use in a region.
+      *
+     */
     CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request);
 
     CompletableFuture<CheckServiceStatusResponse> checkServiceStatus(CheckServiceStatusRequest request);

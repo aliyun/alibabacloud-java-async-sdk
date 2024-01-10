@@ -68,7 +68,7 @@ public class CheckCommercialStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +77,12 @@ public class CheckCommercialStatusRequest extends Request {
         }
 
         /**
-         * Service.
+         * Sub-services:
+         * <p>
+         * - apm: Application Monitoring
+         * - rum: Real User Monitoring
+         * - prometheus: Managed Service for Prometheus
+         * - xtrace: Managed Service for OpenTelemetry
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

@@ -128,7 +128,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of Application Monitoring tasks.
+         * The queried application monitoring tasks.
          */
         public Builder traceApps(java.util.List < TraceApps> traceApps) {
             this.traceApps = traceApps;
@@ -449,7 +449,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -465,7 +465,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The labels of the application.
+             * The tags of the application.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -473,7 +473,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -481,7 +481,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -525,7 +525,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The application source.
+             * The source of the application.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -569,7 +569,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadKind.
+             * The type of the workload.
              */
             public Builder workloadKind(String workloadKind) {
                 this.workloadKind = workloadKind;
@@ -577,7 +577,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadName.
+             * The name of the workload.
              */
             public Builder workloadName(String workloadName) {
                 this.workloadName = workloadName;

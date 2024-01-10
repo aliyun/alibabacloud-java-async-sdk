@@ -50,7 +50,7 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CheckCommercialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

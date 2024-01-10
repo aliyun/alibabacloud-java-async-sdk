@@ -297,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to check whether ARMS is available for commercial use in a region.
+      *
+     */
     @Override
     public CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request) {
         try {
