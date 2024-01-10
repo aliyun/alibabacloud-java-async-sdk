@@ -100,6 +100,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
 
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
     CompletableFuture<DeleteAnnotationDataResponse> deleteAnnotationData(DeleteAnnotationDataRequest request);
 
     CompletableFuture<DeleteAnnotationDataSetResponse> deleteAnnotationDataSet(DeleteAnnotationDataSetRequest request);
