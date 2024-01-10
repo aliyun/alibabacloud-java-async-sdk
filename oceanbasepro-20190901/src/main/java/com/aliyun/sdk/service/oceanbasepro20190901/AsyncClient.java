@@ -18,6 +18,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CancelProjectModifyRecordResponse> cancelProjectModifyRecord(CancelProjectModifyRecordRequest request);
+
+    CompletableFuture<CreateBackupSetDownloadLinkResponse> createBackupSetDownloadLink(CreateBackupSetDownloadLinkRequest request);
+
     CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
@@ -38,6 +42,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
+    CompletableFuture<CreateProjectModifyRecordsResponse> createProjectModifyRecords(CreateProjectModifyRecordsRequest request);
+
+    CompletableFuture<CreateRdsPostgreSQLDataSourceResponse> createRdsPostgreSQLDataSource(CreateRdsPostgreSQLDataSourceRequest request);
+
     CompletableFuture<CreateSecurityIpGroupResponse> createSecurityIpGroup(CreateSecurityIpGroupRequest request);
 
     CompletableFuture<CreateTenantResponse> createTenant(CreateTenantRequest request);
@@ -47,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTenantSecurityIpGroupResponse> createTenantSecurityIpGroup(CreateTenantSecurityIpGroupRequest request);
 
     CompletableFuture<CreateTenantUserResponse> createTenantUser(CreateTenantUserRequest request);
+
+    CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
 
     CompletableFuture<DeleteDatabasesResponse> deleteDatabases(DeleteDatabasesRequest request);
 
@@ -79,6 +89,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableZoneResponse> describeAvailableZone(DescribeAvailableZoneRequest request);
 
     CompletableFuture<DescribeCharsetResponse> describeCharset(DescribeCharsetRequest request);
+
+    CompletableFuture<DescribeDataBackupSetResponse> describeDataBackupSet(DescribeDataBackupSetRequest request);
 
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);
 
@@ -186,6 +198,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectFullVerifyResultResponse> listProjectFullVerifyResult(ListProjectFullVerifyResultRequest request);
 
+    CompletableFuture<ListProjectModifyRecordsResponse> listProjectModifyRecords(ListProjectModifyRecordsRequest request);
+
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     CompletableFuture<ListWorkerInstancesResponse> listWorkerInstances(ListWorkerInstancesRequest request);
@@ -230,11 +244,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReleaseProjectResponse> releaseProject(ReleaseProjectRequest request);
 
+    CompletableFuture<ReleaseWorkerInstanceResponse> releaseWorkerInstance(ReleaseWorkerInstanceRequest request);
+
     CompletableFuture<ResetOmsOpenAPIProjectResponse> resetOmsOpenAPIProject(ResetOmsOpenAPIProjectRequest request);
 
     CompletableFuture<ResumeOmsOpenAPIProjectResponse> resumeOmsOpenAPIProject(ResumeOmsOpenAPIProjectRequest request);
 
     CompletableFuture<ResumeProjectResponse> resumeProject(ResumeProjectRequest request);
+
+    CompletableFuture<RetryProjectModifyRecordsResponse> retryProjectModifyRecords(RetryProjectModifyRecordsRequest request);
 
     CompletableFuture<SearchOmsOpenAPIMonitorMetricResponse> searchOmsOpenAPIMonitorMetric(SearchOmsOpenAPIMonitorMetricRequest request);
 
@@ -249,6 +267,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopOmsOpenAPIProjectResponse> stopOmsOpenAPIProject(StopOmsOpenAPIProjectRequest request);
 
     CompletableFuture<StopProjectResponse> stopProject(StopProjectRequest request);
+
+    CompletableFuture<StopProjectModifyRecordsResponse> stopProjectModifyRecords(StopProjectModifyRecordsRequest request);
 
     CompletableFuture<StopProjectsByLabelResponse> stopProjectsByLabel(StopProjectsByLabelRequest request);
 

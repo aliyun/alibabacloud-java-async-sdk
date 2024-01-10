@@ -54,6 +54,7 @@ public class CreateProjectRequest extends Request {
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
@@ -62,10 +63,12 @@ public class CreateProjectRequest extends Request {
 
     @Body
     @NameInMap("SinkEndpointId")
+    @Validation(required = true)
     private String sinkEndpointId;
 
     @Body
     @NameInMap("SourceEndpointId")
+    @Validation(required = true)
     private String sourceEndpointId;
 
     @Body
@@ -74,10 +77,12 @@ public class CreateProjectRequest extends Request {
 
     @Body
     @NameInMap("TransferMapping")
+    @Validation(required = true)
     private TransferMapping transferMapping;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     @Body
@@ -86,6 +91,7 @@ public class CreateProjectRequest extends Request {
 
     @Body
     @NameInMap("WorkerGradeId")
+    @Validation(required = true)
     private String workerGradeId;
 
     private CreateProjectRequest(Builder builder) {
@@ -489,9 +495,73 @@ public class CreateProjectRequest extends Request {
 
     } 
 
+    public static class CustomColumns extends TeaModel {
+        @NameInMap("ColumnName")
+        private String columnName;
+
+        @NameInMap("Expression")
+        private String expression;
+
+        private CustomColumns(Builder builder) {
+            this.columnName = builder.columnName;
+            this.expression = builder.expression;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomColumns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnName
+         */
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public static final class Builder {
+            private String columnName; 
+            private String expression; 
+
+            /**
+             * ColumnName.
+             */
+            public Builder columnName(String columnName) {
+                this.columnName = columnName;
+                return this;
+            }
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            public CustomColumns build() {
+                return new CustomColumns(this);
+            } 
+
+        } 
+
+    }
     public static class CommonTransferConfig extends TeaModel {
         @NameInMap("ActiveActive")
         private Boolean activeActive;
+
+        @NameInMap("CustomColumns")
+        private java.util.List < CustomColumns> customColumns;
 
         @NameInMap("DataWorksBusinessName")
         private String dataWorksBusinessName;
@@ -520,11 +590,18 @@ public class CreateProjectRequest extends Request {
         @NameInMap("RocketMqSendMsgTimeout")
         private Long rocketMqSendMsgTimeout;
 
+        @NameInMap("SyncSchema")
+        private Boolean syncSchema;
+
+        @NameInMap("SyncSchemaColumnName")
+        private String syncSchemaColumnName;
+
         @NameInMap("TableCategory")
         private String tableCategory;
 
         private CommonTransferConfig(Builder builder) {
             this.activeActive = builder.activeActive;
+            this.customColumns = builder.customColumns;
             this.dataWorksBusinessName = builder.dataWorksBusinessName;
             this.datahubTopicType = builder.datahubTopicType;
             this.mqPartition = builder.mqPartition;
@@ -534,6 +611,8 @@ public class CreateProjectRequest extends Request {
             this.rocketMqMsgTags = builder.rocketMqMsgTags;
             this.rocketMqProducerGroup = builder.rocketMqProducerGroup;
             this.rocketMqSendMsgTimeout = builder.rocketMqSendMsgTimeout;
+            this.syncSchema = builder.syncSchema;
+            this.syncSchemaColumnName = builder.syncSchemaColumnName;
             this.tableCategory = builder.tableCategory;
         }
 
@@ -550,6 +629,13 @@ public class CreateProjectRequest extends Request {
          */
         public Boolean getActiveActive() {
             return this.activeActive;
+        }
+
+        /**
+         * @return customColumns
+         */
+        public java.util.List < CustomColumns> getCustomColumns() {
+            return this.customColumns;
         }
 
         /**
@@ -616,6 +702,20 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * @return syncSchema
+         */
+        public Boolean getSyncSchema() {
+            return this.syncSchema;
+        }
+
+        /**
+         * @return syncSchemaColumnName
+         */
+        public String getSyncSchemaColumnName() {
+            return this.syncSchemaColumnName;
+        }
+
+        /**
          * @return tableCategory
          */
         public String getTableCategory() {
@@ -624,6 +724,7 @@ public class CreateProjectRequest extends Request {
 
         public static final class Builder {
             private Boolean activeActive; 
+            private java.util.List < CustomColumns> customColumns; 
             private String dataWorksBusinessName; 
             private String datahubTopicType; 
             private Integer mqPartition; 
@@ -633,6 +734,8 @@ public class CreateProjectRequest extends Request {
             private String rocketMqMsgTags; 
             private String rocketMqProducerGroup; 
             private Long rocketMqSendMsgTimeout; 
+            private Boolean syncSchema; 
+            private String syncSchemaColumnName; 
             private String tableCategory; 
 
             /**
@@ -640,6 +743,14 @@ public class CreateProjectRequest extends Request {
              */
             public Builder activeActive(Boolean activeActive) {
                 this.activeActive = activeActive;
+                return this;
+            }
+
+            /**
+             * CustomColumns.
+             */
+            public Builder customColumns(java.util.List < CustomColumns> customColumns) {
+                this.customColumns = customColumns;
                 return this;
             }
 
@@ -712,6 +823,22 @@ public class CreateProjectRequest extends Request {
              */
             public Builder rocketMqSendMsgTimeout(Long rocketMqSendMsgTimeout) {
                 this.rocketMqSendMsgTimeout = rocketMqSendMsgTimeout;
+                return this;
+            }
+
+            /**
+             * SyncSchema.
+             */
+            public Builder syncSchema(Boolean syncSchema) {
+                this.syncSchema = syncSchema;
+                return this;
+            }
+
+            /**
+             * SyncSchemaColumnName.
+             */
+            public Builder syncSchemaColumnName(String syncSchemaColumnName) {
+                this.syncSchemaColumnName = syncSchemaColumnName;
                 return this;
             }
 
