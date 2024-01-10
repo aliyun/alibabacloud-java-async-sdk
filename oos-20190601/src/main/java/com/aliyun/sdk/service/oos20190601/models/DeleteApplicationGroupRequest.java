@@ -125,7 +125,10 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * RetainResource.
+         * Specifies whether to retain resources created by application manager when deleting the application. Valid values:
+         * <p>
+         * - true
+         * - false
          */
         public Builder retainResource(Boolean retainResource) {
             this.putQueryParameter("RetainResource", retainResource);

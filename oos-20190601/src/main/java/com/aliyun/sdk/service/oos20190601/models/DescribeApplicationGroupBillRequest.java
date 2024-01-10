@@ -143,7 +143,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The application name.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -152,7 +152,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle, in the YYYY-MM format.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -161,7 +161,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -170,7 +170,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * Name.
+         * The application group name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -179,7 +179,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -188,7 +188,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +197,7 @@ public class DescribeApplicationGroupBillRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the cloud resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

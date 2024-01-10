@@ -386,7 +386,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Constraints.
+             * The constraints of template
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -434,7 +434,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsFavorite.
+             * The template is favorite or not.
              */
             public Builder isFavorite(Boolean isFavorite) {
                 this.isFavorite = isFavorite;
@@ -453,7 +453,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Publisher.
+             * The publisher of template.
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;

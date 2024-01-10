@@ -261,7 +261,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * The data type of the parameter. Set the value to Secret.
+         * The type of the parameter. Set the value to Secret.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

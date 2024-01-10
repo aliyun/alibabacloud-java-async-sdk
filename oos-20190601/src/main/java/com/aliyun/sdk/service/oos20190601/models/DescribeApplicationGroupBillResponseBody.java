@@ -74,7 +74,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationGroupConsume.
+         * The consume of application group.
          */
         public Builder applicationGroupConsume(java.util.List < ApplicationGroupConsume> applicationGroupConsume) {
             this.applicationGroupConsume = applicationGroupConsume;
@@ -82,7 +82,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Amount.
+             * The amount consumed by the instance.
              */
             public Builder amount(Float amount) {
                 this.amount = amount;
@@ -254,7 +254,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -262,7 +262,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency unit.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -270,7 +270,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -278,7 +278,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -286,7 +286,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -294,7 +294,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * Optimization.
+             * Optimization suggestions.
              */
             public Builder optimization(String optimization) {
                 this.optimization = optimization;
@@ -302,7 +302,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * PeakType.
+             * The peak type.
              */
             public Builder peakType(String peakType) {
                 this.peakType = peakType;
@@ -310,7 +310,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * Performance.
+             * The performance of the data synchronization instance.
              */
             public Builder performance(String performance) {
                 this.performance = performance;
@@ -318,7 +318,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of instance.
              */
             public Builder status(String status) {
                 this.status = status;

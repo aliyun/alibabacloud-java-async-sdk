@@ -84,9 +84,6 @@ public class GetOpsItemResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DedupString")
-        private String dedupString;
-
         @NameInMap("Description")
         private String description;
 
@@ -131,7 +128,6 @@ public class GetOpsItemResponseBody extends TeaModel {
             this.category = builder.category;
             this.createBy = builder.createBy;
             this.createDate = builder.createDate;
-            this.dedupString = builder.dedupString;
             this.description = builder.description;
             this.lastModifiedBy = builder.lastModifiedBy;
             this.opsItemId = builder.opsItemId;
@@ -181,13 +177,6 @@ public class GetOpsItemResponseBody extends TeaModel {
          */
         public String getCreateDate() {
             return this.createDate;
-        }
-
-        /**
-         * @return dedupString
-         */
-        public String getDedupString() {
-            return this.dedupString;
         }
 
         /**
@@ -286,7 +275,6 @@ public class GetOpsItemResponseBody extends TeaModel {
             private String category; 
             private String createBy; 
             private String createDate; 
-            private String dedupString; 
             private String description; 
             private String lastModifiedBy; 
             private String opsItemId; 
@@ -330,14 +318,6 @@ public class GetOpsItemResponseBody extends TeaModel {
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
-                return this;
-            }
-
-            /**
-             * The duplicated string.
-             */
-            public Builder dedupString(String dedupString) {
-                this.dedupString = dedupString;
                 return this;
             }
 

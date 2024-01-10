@@ -333,7 +333,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * IsFavorite.
+         * The template is favorite or not.
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.putQueryParameter("IsFavorite", isFavorite);
@@ -391,14 +391,14 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the templates to be returned. Valid values:
+         * The field that is used to sort the templates to be queried. Valid values:
          * <p>
          * 
-         * *   **TotalExecutionCounts**: The system sorts the returned templates based on the total number of execution times of the template. This is the default value.
-         * *   **Popularity**: The system sorts the returned templates based on the popularity of the template.
-         * *   **TemplateName**: The system sorts the returned templates based on the name of the template.
-         * *   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.
-         * *   **UpdateDate**: The system sorts the returned templates based on the update time of the template.
+         * *   **TotalExecutionCount** (default): The system sorts the returned templates based on the total number of times that the templates are used.
+         * *   **Popularity**: The system sorts the returned templates based on the popularity of the templates.
+         * *   **TemplateName**: The system sorts the returned templates based on the names of the templates.
+         * *   **CreatedDate**: The system sorts the returned templates based on the points in time when the templates are created.
+         * *   **UpdatedDate**: The system sorts the returned templates based on the points in time when the templates are updated.
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -452,34 +452,12 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the template.
+         * The type of the template. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   Automation
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   State
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Package
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   Automation: the template for automated tasks.
+         * *   State: the template for configuration inventories.
+         * *   Package: the template for software packages.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
