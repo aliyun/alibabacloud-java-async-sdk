@@ -82,7 +82,7 @@ public class QueryTraceExtractResponseBody extends TeaModel {
         }
 
         /**
-         * 返回信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class QueryTraceExtractResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -138,7 +138,7 @@ public class QueryTraceExtractResponseBody extends TeaModel {
             private String trace; 
 
             /**
-             * 溯源水印信息
+             * Trace.
              */
             public Builder trace(String trace) {
                 this.trace = trace;

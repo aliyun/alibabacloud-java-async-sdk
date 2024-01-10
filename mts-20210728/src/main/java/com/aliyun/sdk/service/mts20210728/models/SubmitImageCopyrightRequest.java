@@ -97,7 +97,7 @@ public class SubmitImageCopyrightRequest extends Request {
         } 
 
         /**
-         * 水印强度
+         * Level.
          */
         public Builder level(Long level) {
             this.putBodyParameter("Level", level);
@@ -106,7 +106,7 @@ public class SubmitImageCopyrightRequest extends Request {
         }
 
         /**
-         * 水印信息
+         * Message.
          */
         public Builder message(String message) {
             this.putBodyParameter("Message", message);
@@ -115,7 +115,7 @@ public class SubmitImageCopyrightRequest extends Request {
         }
 
         /**
-         * 水印图片输出oss地址
+         * Output.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
@@ -124,7 +124,7 @@ public class SubmitImageCopyrightRequest extends Request {
         }
 
         /**
-         * 参数
+         * Params.
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);

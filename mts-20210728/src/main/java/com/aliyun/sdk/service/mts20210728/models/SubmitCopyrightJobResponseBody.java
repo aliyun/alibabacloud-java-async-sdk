@@ -74,7 +74,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         private Long statusCode; 
 
         /**
-         * 返回数据
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * 返回信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestID.
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -98,7 +98,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -138,7 +138,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * 任务id
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;

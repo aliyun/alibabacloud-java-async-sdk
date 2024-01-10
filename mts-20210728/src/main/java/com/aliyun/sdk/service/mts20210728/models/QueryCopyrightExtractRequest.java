@@ -55,7 +55,7 @@ public class QueryCopyrightExtractRequest extends Request {
         } 
 
         /**
-         * 任务id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);

@@ -168,7 +168,7 @@ public class SubmitTraceAbRequest extends Request {
         } 
 
         /**
-         * 任务结果回调
+         * CallBack.
          */
         public Builder callBack(String callBack) {
             this.putBodyParameter("CallBack", callBack);
@@ -177,7 +177,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 密钥base64串
+         * CipherBase64ed.
          */
         public Builder cipherBase64ed(String cipherBase64ed) {
             this.putBodyParameter("CipherBase64ed", cipherBase64ed);
@@ -186,7 +186,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 溯源水印ab流处理视频输入
+         * Input.
          */
         public Builder input(String input) {
             this.putBodyParameter("Input", input);
@@ -195,7 +195,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 水印强度
+         * Level.
          */
         public Builder level(Long level) {
             this.putBodyParameter("Level", level);
@@ -204,7 +204,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 溯源水印ab流处理输出
+         * Output.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
@@ -213,7 +213,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 嵌入水印开始时间
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -222,7 +222,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 嵌入水印总时长
+         * TotalTime.
          */
         public Builder totalTime(Long totalTime) {
             this.putBodyParameter("TotalTime", totalTime);
@@ -231,7 +231,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 外部url链接(Input和url二选一)
+         * Url.
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);
@@ -240,7 +240,7 @@ public class SubmitTraceAbRequest extends Request {
         }
 
         /**
-         * 用户自定义数据，最大长度1024个字节
+         * UserData.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);

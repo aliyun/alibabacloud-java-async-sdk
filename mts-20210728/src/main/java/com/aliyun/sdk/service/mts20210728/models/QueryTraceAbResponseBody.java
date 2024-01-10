@@ -74,7 +74,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         private Long statusCode; 
 
         /**
-         * 返回结构
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         }
 
         /**
-         * 返回信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestID.
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -98,7 +98,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -270,7 +270,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * 任务结果回调
+             * Callback.
              */
             public Builder callback(String callback) {
                 this.callback = callback;
@@ -278,7 +278,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -286,7 +286,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 最后修改时间
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -294,7 +294,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 输入oss地址
+             * Input.
              */
             public Builder input(String input) {
                 this.input = input;
@@ -302,7 +302,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -310,7 +310,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 水印强度
+             * Level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -318,7 +318,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 媒体id
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -326,7 +326,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 输出地址
+             * Output.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -334,7 +334,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 任务结果
+             * Result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -342,7 +342,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +350,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * 用户数据
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -358,7 +358,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
             }
 
             /**
-             * uid
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

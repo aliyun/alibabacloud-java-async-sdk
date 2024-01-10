@@ -74,7 +74,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
         private Long statusCode; 
 
         /**
-         * 返回数据结构
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
         }
 
         /**
-         * 返回信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestID.
          */
         public Builder requestID(String requestID) {
             this.requestID = requestID;
@@ -98,7 +98,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -246,7 +246,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -254,7 +254,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 最后修改时间
+             * GmtModified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -262,7 +262,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -270,7 +270,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 媒体id
+             * MediaId.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -278,7 +278,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 输出oss地址
+             * Output.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -286,7 +286,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -294,7 +294,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 溯源水印信息
+             * Trace.
              */
             public Builder trace(String trace) {
                 this.trace = trace;
@@ -302,7 +302,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 溯源水印信息id
+             * TraceId.
              */
             public Builder traceId(Long traceId) {
                 this.traceId = traceId;
@@ -310,7 +310,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * 用户自定义数据
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -318,7 +318,7 @@ public class QueryTraceMuResponseBody extends TeaModel {
             }
 
             /**
-             * uid
+             * UserId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

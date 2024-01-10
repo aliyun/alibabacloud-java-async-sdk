@@ -68,7 +68,7 @@ public class QueryTraceAbRequest extends Request {
         } 
 
         /**
-         * 任务id
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -77,7 +77,7 @@ public class QueryTraceAbRequest extends Request {
         }
 
         /**
-         * 媒体id
+         * MediaId.
          */
         public Builder mediaId(String mediaId) {
             this.putBodyParameter("MediaId", mediaId);

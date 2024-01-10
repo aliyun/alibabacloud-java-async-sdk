@@ -82,7 +82,7 @@ public class SubmitCopyrightExtractResponseBody extends TeaModel {
         }
 
         /**
-         * 返回消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class SubmitCopyrightExtractResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * StatusCode.
          */
         public Builder statusCode(Long statusCode) {
             this.statusCode = statusCode;
@@ -138,7 +138,7 @@ public class SubmitCopyrightExtractResponseBody extends TeaModel {
             private String jobId; 
 
             /**
-             * 任务id
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
