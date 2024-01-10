@@ -126,7 +126,7 @@ public class ValuateTemplateRequest extends Request {
         } 
 
         /**
-         * AreaId.
+         * The region ID.
          */
         public Builder areaId(String areaId) {
             this.putBodyParameter("AreaId", areaId);
@@ -135,7 +135,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -144,7 +144,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * Instances.
+         * The instances to be replaced.
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -154,7 +154,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the application belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -163,7 +163,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The template ID.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -172,7 +172,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * Variables.
+         * The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.
          */
         public Builder variables(java.util.Map < String, String > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
@@ -239,7 +239,7 @@ public class ValuateTemplateRequest extends Request {
             private String nodeType; 
 
             /**
-             * Id.
+             * The instance ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -247,7 +247,7 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * NodeName.
+             * The name of the application instance that is displayed on the diagram.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -255,7 +255,7 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * The instance type.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

@@ -74,7 +74,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The result of the inquiry.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +234,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DiscountAmount.
+             * The discount amount.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -242,7 +242,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message that is returned.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -250,7 +250,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The resource type.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -258,7 +258,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -266,7 +266,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * The pricing unit.
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -274,7 +274,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * The discount information.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -282,7 +282,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -290,7 +290,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The price at which the transaction is made.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -298,7 +298,11 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Indicates whether the instance is newly created. Valid values:\
+             * <p>
+             * 1: The instance is newly created.\
+             * 2: The instance already exists.\
+             * 0: The price of the instance is not included.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -423,7 +427,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private Double tradePrice; 
 
             /**
-             * DiscountAmount.
+             * The discount amount.
              */
             public Builder discountAmount(Double discountAmount) {
                 this.discountAmount = discountAmount;
@@ -431,7 +435,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message that is returned.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -439,7 +443,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The resource type.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -447,7 +451,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
@@ -455,7 +459,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceList.
+             * The information about the price.
              */
             public Builder priceList(java.util.List < PriceList> priceList) {
                 this.priceList = priceList;
@@ -463,7 +467,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * The pricing unit.
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -471,7 +475,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * The discount information.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -479,7 +483,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The price at which the transaction is made.
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -520,7 +524,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private java.util.List < ResourceList> resourceList; 
 
             /**
-             * ResourceList.
+             * The result set of the inquiry.
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;

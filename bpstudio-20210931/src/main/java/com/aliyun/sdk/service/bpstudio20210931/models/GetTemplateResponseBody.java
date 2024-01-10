@@ -74,7 +74,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The interface returns information
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private String variable; 
 
             /**
-             * Attribute.
+             * The name of the variable.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -182,7 +182,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The type of the variable.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -190,7 +190,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The default value of the variable.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -198,7 +198,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Variable.
+             * The value of the variable.
              */
             public Builder variable(String variable) {
                 this.variable = variable;
@@ -311,7 +311,7 @@ public class GetTemplateResponseBody extends TeaModel {
             private java.util.List < Variables> variables; 
 
             /**
-             * CreateTime.
+             * The time when the template was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -319,7 +319,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Template DescriptionD
              */
             public Builder description(String description) {
                 this.description = description;
@@ -327,7 +327,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ImageURL.
+             * The path to the template schema image file
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -335,7 +335,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the template
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +343,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -351,7 +351,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * Template ID
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -359,7 +359,7 @@ public class GetTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * The details of the template variables.
              */
             public Builder variables(java.util.List < Variables> variables) {
                 this.variables = variables;

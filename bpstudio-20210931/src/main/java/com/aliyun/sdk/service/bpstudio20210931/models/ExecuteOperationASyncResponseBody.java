@@ -74,7 +74,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Result code, 200 for success; Other representatives fail.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Error message
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

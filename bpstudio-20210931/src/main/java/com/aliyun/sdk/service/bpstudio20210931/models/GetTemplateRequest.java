@@ -83,7 +83,7 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * Region.
+         * Template Area
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -92,7 +92,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * ResourceGroup ID
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,7 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * Template ID
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

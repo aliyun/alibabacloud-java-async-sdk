@@ -127,7 +127,7 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * Keywords in the app name
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -154,7 +154,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * 1 update time,<br>2 creation time
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -163,7 +163,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

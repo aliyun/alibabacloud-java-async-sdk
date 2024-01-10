@@ -98,7 +98,7 @@ public class ListApplicationResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the applications.
+         * App listing information
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The interface returns information
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token returned in this call.
          */
         public Builder nextToken(Integer nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the application.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,7 @@ public class ListApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApplicationId.
+             * The application ID.
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -246,7 +246,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -254,7 +254,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ImageURL.
+             * The URL of the application architecture image.
              */
             public Builder imageURL(String imageURL) {
                 this.imageURL = imageURL;
@@ -262,7 +262,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +270,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the application belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

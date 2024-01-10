@@ -103,7 +103,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * The type of the resource for which you want to change the resource group. Valid values: APPLICATION and TEMPLATE.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

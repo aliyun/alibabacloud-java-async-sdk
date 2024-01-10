@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateApplicationResponse} extends {@link TeaModel}
+ * {@link ListFoCreatedAppsResponse} extends {@link TeaModel}
  *
- * <p>CreateApplicationResponse</p>
+ * <p>ListFoCreatedAppsResponse</p>
  */
-public class CreateApplicationResponse extends Response {
+public class ListFoCreatedAppsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class CreateApplicationResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateApplicationResponseBody body;
+    private ListFoCreatedAppsResponseBody body;
 
-    private CreateApplicationResponse(BuilderImpl builder) {
+    private ListFoCreatedAppsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateApplicationResponse create() {
+    public static ListFoCreatedAppsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class CreateApplicationResponse extends Response {
     /**
      * @return body
      */
-    public CreateApplicationResponseBody getBody() {
+    public ListFoCreatedAppsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateApplicationResponse, Builder> {
+    public interface Builder extends Response.Builder<ListFoCreatedAppsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateApplicationResponseBody body);
+        Builder body(ListFoCreatedAppsResponseBody body);
 
         @Override
-        CreateApplicationResponse build();
+        ListFoCreatedAppsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateApplicationResponse, Builder>
+            extends Response.BuilderImpl<ListFoCreatedAppsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateApplicationResponseBody body; 
+        private ListFoCreatedAppsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateApplicationResponse response) {
+        private BuilderImpl(ListFoCreatedAppsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class CreateApplicationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateApplicationResponseBody body) {
+        public Builder body(ListFoCreatedAppsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateApplicationResponse build() {
-            return new CreateApplicationResponse(this);
+        public ListFoCreatedAppsResponse build() {
+            return new ListFoCreatedAppsResponse(this);
         } 
 
     } 

@@ -74,7 +74,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The deployment result.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -236,7 +236,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String specification; 
 
             /**
-             * The message returned for verification.
+             * The resource tag.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -244,7 +244,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification results returned.
+             * The region in which the instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -252,7 +252,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The message returned for verification.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -260,7 +260,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when a price query fails.
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -268,7 +268,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ECS instance sold out
+             * The name of the instance.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -276,7 +276,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The verification result.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -284,7 +284,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result.
+             * The resource specifications.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -303,7 +303,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String chargeType;
 
         @NameInMap("Count")
-        private Long count;
+        private Integer count;
 
         @NameInMap("InstanceName")
         private String instanceName;
@@ -312,16 +312,16 @@ public class GetApplicationResponseBody extends TeaModel {
         private String lifecycle;
 
         @NameInMap("OnePrice")
-        private Float onePrice;
+        private Double onePrice;
 
         @NameInMap("OriginalPrice")
-        private Float originalPrice;
+        private Double originalPrice;
 
         @NameInMap("Period")
-        private Float period;
+        private Integer period;
 
         @NameInMap("Price")
-        private Float price;
+        private Double price;
 
         @NameInMap("PriceUnit")
         private String priceUnit;
@@ -376,7 +376,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return count
          */
-        public Long getCount() {
+        public Integer getCount() {
             return this.count;
         }
 
@@ -397,28 +397,28 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return onePrice
          */
-        public Float getOnePrice() {
+        public Double getOnePrice() {
             return this.onePrice;
         }
 
         /**
          * @return originalPrice
          */
-        public Float getOriginalPrice() {
+        public Double getOriginalPrice() {
             return this.originalPrice;
         }
 
         /**
          * @return period
          */
-        public Float getPeriod() {
+        public Integer getPeriod() {
             return this.period;
         }
 
         /**
          * @return price
          */
-        public Float getPrice() {
+        public Double getPrice() {
             return this.price;
         }
 
@@ -466,13 +466,13 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeType; 
-            private Long count; 
+            private Integer count; 
             private String instanceName; 
             private String lifecycle; 
-            private Float onePrice; 
-            private Float originalPrice; 
-            private Float period; 
-            private Float price; 
+            private Double onePrice; 
+            private Double originalPrice; 
+            private Integer period; 
+            private Double price; 
             private String priceUnit; 
             private String region; 
             private String remark; 
@@ -481,7 +481,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The price unit.
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -489,15 +489,15 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * The quantity.
              */
-            public Builder count(Long count) {
+            public Builder count(Integer count) {
                 this.count = count;
                 return this;
             }
 
             /**
-             * The ID of the resource group to which the application belongs.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -505,7 +505,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * Resource Fill Labels.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -513,39 +513,39 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The unit price of the instance.
              */
-            public Builder onePrice(Float onePrice) {
+            public Builder onePrice(Double onePrice) {
                 this.onePrice = onePrice;
                 return this;
             }
 
             /**
-             * The billing results.
+             * The original price of the instance.
              */
-            public Builder originalPrice(Float originalPrice) {
+            public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
                 return this;
             }
 
             /**
-             * The name of the instance.
+             * The service duration.
              */
-            public Builder period(Float period) {
+            public Builder period(Integer period) {
                 this.period = period;
                 return this;
             }
 
             /**
-             * The quantity.
+             * The total price.
              */
-            public Builder price(Float price) {
+            public Builder price(Double price) {
                 this.price = price;
                 return this;
             }
 
             /**
-             * The unit price.
+             * Unit: USD per hour
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -553,7 +553,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * USD/Hour
+             * The region in which the instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -561,7 +561,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The error message that is returned when a price query fails.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -569,7 +569,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -577,7 +577,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a virtual private cloud (VPC), ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.
+             * The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a Virtual Private Cloud (VPC) instance, ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -585,10 +585,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 创建类型：
+             * The creation mode. Valid values:\
              * <p>
-             * </br>新建-1
-             * </br>导入-2
+             * 1: creates a new instance.\
+             * 2: imports an instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -713,7 +713,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The service code.
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -721,7 +721,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method.
+             * The resource tag.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -729,7 +729,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The deployment result.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -737,7 +737,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * The service code.
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -745,7 +745,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource deployment result.
+             * The instance ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -753,7 +753,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resources.
+             * The name of the instance.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -761,7 +761,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -769,7 +769,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tag.
+             * The resource deployment result.
              */
             public Builder status(String status) {
                 this.status = status;

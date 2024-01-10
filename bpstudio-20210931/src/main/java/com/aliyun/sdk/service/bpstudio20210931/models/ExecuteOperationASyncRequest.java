@@ -13,8 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExecuteOperationASyncRequest extends Request {
     @Body
+    @NameInMap("ApplicationId")
+    private String applicationId;
+
+    @Body
     @NameInMap("Attributes")
-    private java.util.Map < String, String > attributes;
+    private java.util.Map < String, ? > attributes;
 
     @Body
     @NameInMap("Operation")
@@ -32,6 +36,7 @@ public class ExecuteOperationASyncRequest extends Request {
 
     private ExecuteOperationASyncRequest(Builder builder) {
         super(builder);
+        this.applicationId = builder.applicationId;
         this.attributes = builder.attributes;
         this.operation = builder.operation;
         this.resourceGroupId = builder.resourceGroupId;
@@ -52,9 +57,16 @@ public class ExecuteOperationASyncRequest extends Request {
     }
 
     /**
+     * @return applicationId
+     */
+    public String getApplicationId() {
+        return this.applicationId;
+    }
+
+    /**
      * @return attributes
      */
-    public java.util.Map < String, String > getAttributes() {
+    public java.util.Map < String, ? > getAttributes() {
         return this.attributes;
     }
 
@@ -80,7 +92,8 @@ public class ExecuteOperationASyncRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExecuteOperationASyncRequest, Builder> {
-        private java.util.Map < String, String > attributes; 
+        private String applicationId; 
+        private java.util.Map < String, ? > attributes; 
         private String operation; 
         private String resourceGroupId; 
         private String serviceType; 
@@ -91,6 +104,7 @@ public class ExecuteOperationASyncRequest extends Request {
 
         private Builder(ExecuteOperationASyncRequest request) {
             super(request);
+            this.applicationId = request.applicationId;
             this.attributes = request.attributes;
             this.operation = request.operation;
             this.resourceGroupId = request.resourceGroupId;
@@ -98,9 +112,39 @@ public class ExecuteOperationASyncRequest extends Request {
         } 
 
         /**
-         * Attributes.
+         * The ID of the Cloud Architect Design Tools (CADT) application.
          */
-        public Builder attributes(java.util.Map < String, String > attributes) {
+        public Builder applicationId(String applicationId) {
+            this.putBodyParameter("ApplicationId", applicationId);
+            this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * The parameters related to the action. Specify the parameters based on the value of Operation. The parameters are passed in the map format. The following examples show how to specify the parameters if you want to change the specifications of an Elastic Compute Service (ECS) instance:
+         * <p>
+         * 
+         * *   The following common parameters are required: change_type, regionId, instanceId, appId
+         * *   Example values for changing the instance type of the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_instance_type","instance_type":"ecs.hfr7.2xlarge","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * *   Example values for stopping the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Stopped","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * *   Example values for starting the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Running","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * *   Example values for restarting the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Restart","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * 
+         * Example of enumerating more than one set of parameters:
+         * 
+         * *   { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
+         * 
+         *     <!-- -->
+         */
+        public Builder attributes(java.util.Map < String, ? > attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
             this.putBodyParameter("Attributes", attributesShrink);
             this.attributes = attributes;
@@ -108,7 +152,16 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * Operation.
+         * This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:
+         * <p>
+         * - The name of the ECS: rename
+         * - Specificationof ecs: modifyInstanceType
+         * - Startup of ecs: modifyInstanceType
+         * - Stop of ecs: modifyInstanceType
+         * - Restart of ecs: modifyInstanceType
+         * - Ecs Tag: addTags
+         * - Deletion of ecs: ecsDelete
+         * - Paid type for ecs: modifyPayType
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -117,7 +170,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * Resource group ID, which is used to verify the permissions of the resource group
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
