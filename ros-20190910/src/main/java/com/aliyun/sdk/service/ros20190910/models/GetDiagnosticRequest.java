@@ -54,7 +54,7 @@ public class GetDiagnosticRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * The ID of the diagnostic report.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

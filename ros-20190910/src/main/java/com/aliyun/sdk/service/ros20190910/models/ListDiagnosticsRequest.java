@@ -110,7 +110,7 @@ public class ListDiagnosticsRequest extends Request {
         } 
 
         /**
-         * DiagnosticKey.
+         * The keyword in the diagnosis.
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.putQueryParameter("DiagnosticKey", diagnosticKey);
@@ -119,7 +119,7 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * DiagnosticProduct.
+         * The product that is diagnosed.
          */
         public Builder diagnosticProduct(String diagnosticProduct) {
             this.putQueryParameter("DiagnosticProduct", diagnosticProduct);
@@ -128,7 +128,12 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of results to be returned in a single call when NextToken is used for the query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 50.
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -137,7 +142,7 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -146,7 +151,7 @@ public class ListDiagnosticsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The diagnosis status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

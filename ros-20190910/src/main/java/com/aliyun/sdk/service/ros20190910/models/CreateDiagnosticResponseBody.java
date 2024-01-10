@@ -110,7 +110,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticType.
+         * The type of the item that is diagnosed.
          */
         public Builder diagnosticType(String diagnosticType) {
             this.diagnosticType = diagnosticType;
@@ -126,7 +126,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * The ID of the diagnostic report.
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -150,7 +150,7 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class CreateDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

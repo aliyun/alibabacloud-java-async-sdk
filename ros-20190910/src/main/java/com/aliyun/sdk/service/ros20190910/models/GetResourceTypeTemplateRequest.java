@@ -69,7 +69,7 @@ public class GetResourceTypeTemplateRequest extends Request {
         } 
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

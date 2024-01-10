@@ -98,7 +98,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Diagnostics.
+         * The items that are diagnosed.
          */
         public Builder diagnostics(java.util.List < Diagnostics> diagnostics) {
             this.diagnostics = diagnostics;
@@ -106,7 +106,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. The value 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +114,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListDiagnosticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -226,7 +230,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the diagnostic report was generated.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -234,7 +238,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnosticKey.
+             * The keyword in the diagnosis.
              */
             public Builder diagnosticKey(String diagnosticKey) {
                 this.diagnosticKey = diagnosticKey;
@@ -242,7 +246,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnosticProduct.
+             * The product that is diagnosed.
              */
             public Builder diagnosticProduct(String diagnosticProduct) {
                 this.diagnosticProduct = diagnosticProduct;
@@ -250,7 +254,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * The ID of the diagnostic report.
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -258,7 +262,7 @@ public class ListDiagnosticsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The diagnosis status.
              */
             public Builder status(String status) {
                 this.status = status;

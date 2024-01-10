@@ -282,7 +282,7 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -538,10 +538,7 @@ public class CreateTemplateScratchRequest extends Request {
             private String resourceType; 
 
             /**
-             * The region ID of the scenario.
-             * <p>
-             * 
-             * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

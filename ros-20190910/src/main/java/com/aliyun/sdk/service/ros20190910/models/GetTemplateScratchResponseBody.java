@@ -58,7 +58,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The scenario.
+         * The resource scenario.
          */
         public Builder templateScratch(TemplateScratch templateScratch) {
             this.templateScratch = templateScratch;
@@ -110,7 +110,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The key of the parameter.
+             * The parameter name.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -118,7 +118,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * The parameter value.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -232,7 +232,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -240,7 +240,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -443,7 +443,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stack.
+             * The stack ID.
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -739,7 +739,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source resource group.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

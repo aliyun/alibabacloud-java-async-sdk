@@ -54,7 +54,7 @@ public class DeleteDiagnosticRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * The report ID. You can troubleshoot issues based on the report.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

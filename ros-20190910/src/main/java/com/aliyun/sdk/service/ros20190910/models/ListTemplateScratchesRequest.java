@@ -193,7 +193,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,8 +237,10 @@ public class ListTemplateScratchesRequest extends Request {
          * The type of the scenario. Valid values:
          * <p>
          * 
-         * *   ResourceImport: resource management
          * *   ArchitectureReplication: resource replication
+         * *   ArchitectureDetection: resource detection
+         * *   ResourceImport: resource management
+         * *   ResourceMigration: resource migration
          */
         public Builder templateScratchType(String templateScratchType) {
             this.putQueryParameter("TemplateScratchType", templateScratchType);

@@ -323,10 +323,14 @@ public class DeleteStackInstancesRequest extends Request {
     } 
 
     public static class DeploymentTargets extends TeaModel {
+        @NameInMap("AccountIds")
+        private java.util.List < String > accountIds;
+
         @NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
+            this.accountIds = builder.accountIds;
             this.rdFolderIds = builder.rdFolderIds;
         }
 
@@ -339,6 +343,13 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         /**
+         * @return accountIds
+         */
+        public java.util.List < String > getAccountIds() {
+            return this.accountIds;
+        }
+
+        /**
          * @return rdFolderIds
          */
         public java.util.List < String > getRdFolderIds() {
@@ -346,7 +357,16 @@ public class DeleteStackInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > accountIds; 
             private java.util.List < String > rdFolderIds; 
+
+            /**
+             * The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
+             */
+            public Builder accountIds(java.util.List < String > accountIds) {
+                this.accountIds = accountIds;
+                return this;
+            }
 
             /**
              * The IDs of the folders in the resource directory. You can add up to five folder IDs.

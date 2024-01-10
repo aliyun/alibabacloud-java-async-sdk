@@ -315,7 +315,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * StackId.
+         * The ID of the stack.
          */
         public Builder stackId(String stackId) {
             this.stackId = stackId;
@@ -323,7 +323,7 @@ public class GetStackResourceResponseBody extends TeaModel {
         }
 
         /**
-         * StackName.
+         * The name of the stack.
          */
         public Builder stackName(String stackName) {
             this.stackName = stackName;

@@ -62,7 +62,7 @@ public class GetResourceTypeTemplateResponseBody extends TeaModel {
         private String templateContent; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

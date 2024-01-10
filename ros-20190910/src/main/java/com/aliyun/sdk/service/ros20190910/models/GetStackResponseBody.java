@@ -577,7 +577,7 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
-         * OrderIds.
+         * The ID of the order. This parameter is returned only if you set the ChargeType parameter to PrePaid.
          */
         public Builder orderIds(java.util.List < String > orderIds) {
             this.orderIds = orderIds;

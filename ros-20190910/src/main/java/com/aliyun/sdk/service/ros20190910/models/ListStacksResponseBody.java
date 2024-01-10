@@ -115,7 +115,7 @@ public class ListStacksResponseBody extends TeaModel {
         }
 
         /**
-         * The stacks.
+         * Details of the stacks.
          */
         public Builder stacks(java.util.List < Stacks> stacks) {
             this.stacks = stacks;
@@ -316,7 +316,7 @@ public class ListStacksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key of the stack.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +324,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value of the stack.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -589,7 +589,13 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * Indicates whether deletion protection is enabled for the stack. Valid values:
+             * <p>
+             * 
+             * *   Enabled: Deletion protection is enabled for the stack.
+             * *   Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the [DeleteStack](~~610812~~) operation.
+             * 
+             * >  Deletion protection of a nested stack is the same as that of its root stack.
              */
             public Builder deletionProtection(String deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -617,10 +623,10 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The supplementary information that is returned when an error occurs on a stack operation.
+             * The supplementary information that is returned if an error occurs on a stack operation.
              * <p>
              * 
-             * > This parameter is returned only if an error occurs on a stack operation. The system returns at least one sub-property. For example, an error occurred when an API operation of another Alibaba Cloud service was called.
+             * >  This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.
              */
             public Builder operationInfo(OperationInfo operationInfo) {
                 this.operationInfo = operationInfo;
@@ -704,7 +710,7 @@ public class ListStacksResponseBody extends TeaModel {
              * The stack type. Valid values:
              * <p>
              * 
-             * *   ROS: Resource Orchestration Service (ROS) stack. The stack is created by using a ROS template.
+             * *   ROS: ROS stack. The stack is created by using a ROS template.
              * *   Terraform: Terraform stack. The stack is created by using a Terraform template.
              */
             public Builder stackType(String stackType) {
@@ -737,7 +743,7 @@ public class ListStacksResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period that is allowed to create the stack. Unit: minutes.
+             * The timeout period for creating the stack. Unit: minutes.
              */
             public Builder timeoutInMinutes(Integer timeoutInMinutes) {
                 this.timeoutInMinutes = timeoutInMinutes;

@@ -82,7 +82,7 @@ public class CreateDiagnosticRequest extends Request {
         } 
 
         /**
-         * DiagnosticKey.
+         * The keyword in the diagnosis.
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.putQueryParameter("DiagnosticKey", diagnosticKey);
@@ -91,7 +91,7 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * DiagnosticType.
+         * The type of the item that is diagnosed. Set the value to Stack, which specifies that the stack is diagnosed.
          */
         public Builder diagnosticType(String diagnosticType) {
             this.putQueryParameter("DiagnosticType", diagnosticType);
@@ -100,7 +100,7 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * Product.
+         * The name of the product that is diagonosed.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

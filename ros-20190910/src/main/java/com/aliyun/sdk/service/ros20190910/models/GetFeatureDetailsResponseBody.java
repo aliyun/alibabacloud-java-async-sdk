@@ -110,7 +110,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         private Terraform terraform; 
 
         /**
-         * DriftDetection.
+         * Details of the drift detection feature.
          */
         public Builder driftDetection(DriftDetection driftDetection) {
             this.driftDetection = driftDetection;
@@ -134,7 +134,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceImport.
+         * Details of the resource import feature.
          */
         public Builder resourceImport(ResourceImport resourceImport) {
             this.resourceImport = resourceImport;
@@ -198,7 +198,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedResourceTypes; 
 
             /**
-             * SupportedResourceTypes.
+             * The resource types that are supported by the drift detection feature.
              */
             public Builder supportedResourceTypes(java.util.List < String > supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -263,7 +263,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < String > supportedFilters; 
 
             /**
-             * The resource type that can be cleaned up.
+             * The resource type that supports the resource cleaner feature.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -271,7 +271,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.
+             * The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.
              */
             public Builder sideEffects(java.util.List < String > sideEffects) {
                 this.sideEffects = sideEffects;
@@ -279,15 +279,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The filters that are used to filter resources. Valid values:
-             * <p>
-             * 
-             * *   RegionId: the ID of the region.
-             * *   ResourceId: the ID of the resource.
-             * *   ResourceName: the name of the resource.
-             * *   Tags: the tags of the resource.
-             * *   ResourceGroupId: the ID of the resource group.
-             * *   DeletionProtection: the deletion protection feature.
+             * The names of the filters that are supported by the resource type.
              */
             public Builder supportedFilters(java.util.List < String > supportedFilters) {
                 this.supportedFilters = supportedFilters;
@@ -381,7 +373,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ResourceIdentifiers.
+             * The resource identifiers.
              */
             public Builder resourceIdentifiers(java.util.List < String > resourceIdentifiers) {
                 this.resourceIdentifiers = resourceIdentifiers;
@@ -389,7 +381,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type that can be cleaned up.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -430,7 +422,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that can be cleaned up.
+             * The resource types that are supported by the resource import feature.
              */
             public Builder supportedResourceTypes(java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -641,11 +633,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource group. Valid values:
+             * Indicates whether the resource scope can be specified by source resource group. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              */
             public Builder sourceResourceGroupSupported(Boolean sourceResourceGroupSupported) {
                 this.sourceResourceGroupSupported = sourceResourceGroupSupported;
@@ -653,11 +645,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:
+             * Indicates whether the resource scope can be specified by source resource. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              */
             public Builder sourceResourcesSupported(Boolean sourceResourcesSupported) {
                 this.sourceResourcesSupported = sourceResourcesSupported;
@@ -665,11 +657,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by resource. Valid values:
+             * Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              */
             public Builder sourceSupported(Boolean sourceSupported) {
                 this.sourceSupported = sourceSupported;
@@ -677,11 +669,11 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource scope can be specified by tag. Valid values:
+             * Indicates whether the resource scope can be specified by source tag. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              */
             public Builder sourceTagSupported(Boolean sourceTagSupported) {
                 this.sourceTagSupported = sourceTagSupported;
@@ -689,7 +681,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedTemplateScratchTypes.
+             * The scenario types that are supported.
              */
             public Builder supportedTemplateScratchTypes(java.util.List < String > supportedTemplateScratchTypes) {
                 this.supportedTemplateScratchTypes = supportedTemplateScratchTypes;
@@ -730,7 +722,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes; 
 
             /**
-             * The resource types that support the scenario feature.
+             * The resource types that are supported by the scenario feature.
              */
             public Builder supportedResourceTypes(java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes) {
                 this.supportedResourceTypes = supportedResourceTypes;
@@ -953,7 +945,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions of the provider.
+             * The provider versions.
              */
             public Builder supportedVersions(java.util.List < String > supportedVersions) {
                 this.supportedVersions = supportedVersions;
@@ -1054,7 +1046,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The versions to which Terraform can be updated in ROS.
+             * The Terraform versions that can be updated in ROS.
              */
             public Builder updateAllowedTransforms(java.util.List < String > updateAllowedTransforms) {
                 this.updateAllowedTransforms = updateAllowedTransforms;

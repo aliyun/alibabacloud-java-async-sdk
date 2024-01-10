@@ -194,7 +194,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The error code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -202,7 +202,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticKey.
+         * The keyword in the diagnosis.
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.diagnosticKey = diagnosticKey;
@@ -210,7 +210,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticProduct.
+         * The name of the diagnostic item.
          */
         public Builder diagnosticProduct(String diagnosticProduct) {
             this.diagnosticProduct = diagnosticProduct;
@@ -218,7 +218,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticResult.
+         * The diagnosis result.
          */
         public Builder diagnosticResult(DiagnosticResult diagnosticResult) {
             this.diagnosticResult = diagnosticResult;
@@ -226,7 +226,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosticTime.
+         * The time when the diagnosis was performed.
          */
         public Builder diagnosticTime(String diagnosticTime) {
             this.diagnosticTime = diagnosticTime;
@@ -234,7 +234,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -242,7 +242,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -250,7 +250,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -258,7 +258,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Recommends.
+         * The suggestion for the diagnosis.
          */
         public Builder recommends(java.util.Map < String, ? > recommends) {
             this.recommends = recommends;
@@ -266,7 +266,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * The ID of the diagnostic report.
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -274,7 +274,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +282,12 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The diagnosis status. Valid values:
+         * <p>
+         * 
+         * *   Running: The diagnosis is in progress.
+         * *   Complete: The diagnosis is complete.
+         * *   Failed: The diagnosis failed.
          */
         public Builder status(String status) {
             this.status = status;
@@ -290,7 +295,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * StatusReason.
+         * The reason for the diagnosis status.
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -298,7 +303,11 @@ public class GetDiagnosticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -362,7 +371,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             private java.util.Map < String, ? > stackMessages; 
 
             /**
-             * FailedResources.
+             * The resources that failed to be diagnosed.
              */
             public Builder failedResources(java.util.Map < String, ? > failedResources) {
                 this.failedResources = failedResources;
@@ -370,7 +379,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * RosActionMessages.
+             * The information about Resource Orchestration Service (ROS) calling.
              */
             public Builder rosActionMessages(java.util.Map < String, ? > rosActionMessages) {
                 this.rosActionMessages = rosActionMessages;
@@ -378,7 +387,7 @@ public class GetDiagnosticResponseBody extends TeaModel {
             }
 
             /**
-             * StackMessages.
+             * The stack information.
              */
             public Builder stackMessages(java.util.Map < String, ? > stackMessages) {
                 this.stackMessages = stackMessages;
