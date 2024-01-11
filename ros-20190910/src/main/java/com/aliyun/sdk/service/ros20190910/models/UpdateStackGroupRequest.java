@@ -74,7 +74,7 @@ public class UpdateStackGroupRequest extends Request {
     @Validation(required = true)
     private String stackGroupName;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -490,13 +490,10 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * The name of the RAM role to be assumed by the administrator account in ROS. This parameter is required if you want to grant self-managed permissions to the stack group. If you do not specify a value for this parameter, the default value AliyunROSStackGroupAdministrationRole is used. You can use the administrator role in ROS to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks that correspond to stack instances in the stack group.
-         * <p>
-         * 
-         * The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }
