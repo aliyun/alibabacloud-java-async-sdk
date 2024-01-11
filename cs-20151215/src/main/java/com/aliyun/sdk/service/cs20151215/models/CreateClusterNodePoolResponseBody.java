@@ -58,7 +58,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

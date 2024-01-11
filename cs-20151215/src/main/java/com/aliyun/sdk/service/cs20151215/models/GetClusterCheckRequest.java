@@ -70,7 +70,7 @@ public class GetClusterCheckRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -79,7 +79,7 @@ public class GetClusterCheckRequest extends Request {
         }
 
         /**
-         * check_id.
+         * The ID of the cluster check task.
          */
         public Builder checkId(String checkId) {
             this.putPathParameter("check_id", checkId);

@@ -50,7 +50,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         private Boolean vulsFixServicePurchased; 
 
         /**
-         * vul_records.
+         * The node pool vulnerabilities.
          */
         public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -134,7 +134,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private String necessity; 
 
             /**
-             * alias_name.
+             * The alias of the vulnerability.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -142,7 +142,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * cve_list.
+             * A list of CVE names corresponding to the vulnerabilities.
              */
             public Builder cveList(java.util.List < String > cveList) {
                 this.cveList = cveList;
@@ -150,7 +150,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,52 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * necessity.
+             * The severity level of the vulnerability.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   nntf
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     You can ignore the vulnerability
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   later
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     You can fix the vulnerability later
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   asap
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     You need to fix the vulnerability at the earliest opportunity
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -223,7 +268,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private java.util.List < VulList> vulList; 
 
             /**
-             * instance_id.
+             * The node ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -231,7 +276,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * node_name.
+             * The node name. This name is the identifier of the node in the cluster.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -239,7 +284,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * vul_list.
+             * A list of vulnerabilities.
              */
             public Builder vulList(java.util.List < VulList> vulList) {
                 this.vulList = vulList;

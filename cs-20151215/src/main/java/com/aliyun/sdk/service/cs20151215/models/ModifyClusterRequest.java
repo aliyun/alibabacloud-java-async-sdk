@@ -58,6 +58,10 @@ public class ModifyClusterRequest extends Request {
     private MaintenanceWindow maintenanceWindow;
 
     @Body
+    @NameInMap("operation_policy")
+    private OperationPolicy operationPolicy;
+
+    @Body
     @NameInMap("resource_group_id")
     private String resourceGroupId;
 
@@ -78,6 +82,7 @@ public class ModifyClusterRequest extends Request {
         this.ingressLoadbalancerId = builder.ingressLoadbalancerId;
         this.instanceDeletionProtection = builder.instanceDeletionProtection;
         this.maintenanceWindow = builder.maintenanceWindow;
+        this.operationPolicy = builder.operationPolicy;
         this.resourceGroupId = builder.resourceGroupId;
         this.systemEventsLogging = builder.systemEventsLogging;
     }
@@ -173,6 +178,13 @@ public class ModifyClusterRequest extends Request {
     }
 
     /**
+     * @return operationPolicy
+     */
+    public OperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -198,6 +210,7 @@ public class ModifyClusterRequest extends Request {
         private String ingressLoadbalancerId; 
         private Boolean instanceDeletionProtection; 
         private MaintenanceWindow maintenanceWindow; 
+        private OperationPolicy operationPolicy; 
         private String resourceGroupId; 
         private SystemEventsLogging systemEventsLogging; 
 
@@ -218,6 +231,7 @@ public class ModifyClusterRequest extends Request {
             this.ingressLoadbalancerId = request.ingressLoadbalancerId;
             this.instanceDeletionProtection = request.instanceDeletionProtection;
             this.maintenanceWindow = request.maintenanceWindow;
+            this.operationPolicy = request.operationPolicy;
             this.resourceGroupId = request.resourceGroupId;
             this.systemEventsLogging = request.systemEventsLogging;
         } 
@@ -232,7 +246,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 注册集群 API Server SLB 访问控制列表。
+         * The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -263,7 +277,10 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * cluster_name.
+         * The cluster name.
+         * <p>
+         * 
+         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
@@ -348,6 +365,15 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
+         * operation_policy.
+         */
+        public Builder operationPolicy(OperationPolicy operationPolicy) {
+            this.putBodyParameter("operation_policy", operationPolicy);
+            this.operationPolicy = operationPolicy;
+            return this;
+        }
+
+        /**
          * The ID of the resource group to which the cluster belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
@@ -357,7 +383,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * system_events_logging.
+         * 系统事件存储配置。
          */
         public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
             this.putBodyParameter("system_events_logging", systemEventsLogging);
@@ -372,6 +398,108 @@ public class ModifyClusterRequest extends Request {
 
     } 
 
+    public static class ClusterAutoUpgrade extends TeaModel {
+        @NameInMap("channel")
+        private String channel;
+
+        @NameInMap("enabled")
+        private Boolean enabled;
+
+        private ClusterAutoUpgrade(Builder builder) {
+            this.channel = builder.channel;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterAutoUpgrade create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String channel; 
+            private Boolean enabled; 
+
+            /**
+             * channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public ClusterAutoUpgrade build() {
+                return new ClusterAutoUpgrade(this);
+            } 
+
+        } 
+
+    }
+    public static class OperationPolicy extends TeaModel {
+        @NameInMap("cluster_auto_upgrade")
+        private ClusterAutoUpgrade clusterAutoUpgrade;
+
+        private OperationPolicy(Builder builder) {
+            this.clusterAutoUpgrade = builder.clusterAutoUpgrade;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterAutoUpgrade
+         */
+        public ClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
+        public static final class Builder {
+            private ClusterAutoUpgrade clusterAutoUpgrade; 
+
+            /**
+             * cluster_auto_upgrade.
+             */
+            public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
+                this.clusterAutoUpgrade = clusterAutoUpgrade;
+                return this;
+            }
+
+            public OperationPolicy build() {
+                return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
     public static class SystemEventsLogging extends TeaModel {
         @NameInMap("enabled")
         private Boolean enabled;
@@ -411,7 +539,7 @@ public class ModifyClusterRequest extends Request {
             private String loggingProject; 
 
             /**
-             * enabled.
+             * 是否开启系统事件存储。
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -419,7 +547,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * logging_project.
+             * 系统事件存储的LogProject名称。
              */
             public Builder loggingProject(String loggingProject) {
                 this.loggingProject = loggingProject;

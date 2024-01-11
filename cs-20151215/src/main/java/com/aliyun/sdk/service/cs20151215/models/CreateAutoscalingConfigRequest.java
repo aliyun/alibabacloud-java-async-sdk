@@ -260,7 +260,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The cooldown period. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.
+         * The waiting time before the auto scaling feature performs a scale-in activity. Only if the resource usage on a node remains below the scale-in threshold within the waiting time, the node is removed after the waiting time ends. Unit: minutes.
          */
         public Builder coolDownDuration(String coolDownDuration) {
             this.putBodyParameter("cool_down_duration", coolDownDuration);
@@ -363,7 +363,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods mounted with local storage (such as EmptyDir volumes or HostPath volumes). Valid values:
+         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods mounted with local storage, such as EmptyDir volumes or HostPath volumes. Valid values:
          * <p>
          * 
          * *   `true`: does not allow the cluster autoscaler to scale in these nodes.
@@ -389,7 +389,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The waiting time before the auto scaling feature performs a scale-in activity. Only if the resource usage on a node remains below the scale-in threshold within the waiting time, the node is removed after the waiting time ends. Unit: minutes.
+         * The cooldown period. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.
          */
         public Builder unneededDuration(String unneededDuration) {
             this.putBodyParameter("unneeded_duration", unneededDuration);

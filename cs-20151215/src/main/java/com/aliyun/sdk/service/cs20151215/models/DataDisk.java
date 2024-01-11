@@ -24,6 +24,12 @@ public class DataDisk extends TeaModel {
     @NameInMap("category")
     private String category;
 
+    @NameInMap("device")
+    private String device;
+
+    @NameInMap("disk_name")
+    private String diskName;
+
     @NameInMap("encrypted")
     private String encrypted;
 
@@ -45,11 +51,16 @@ public class DataDisk extends TeaModel {
     @NameInMap("size")
     private Long size;
 
+    @NameInMap("snapshot_id")
+    private String snapshotId;
+
     private DataDisk(Builder builder) {
         this.autoFormat = builder.autoFormat;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
+        this.device = builder.device;
+        this.diskName = builder.diskName;
         this.encrypted = builder.encrypted;
         this.fileSystem = builder.fileSystem;
         this.kmsKeyId = builder.kmsKeyId;
@@ -57,6 +68,7 @@ public class DataDisk extends TeaModel {
         this.performanceLevel = builder.performanceLevel;
         this.provisionedIops = builder.provisionedIops;
         this.size = builder.size;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -93,6 +105,20 @@ public class DataDisk extends TeaModel {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return device
+     */
+    public String getDevice() {
+        return this.device;
+    }
+
+    /**
+     * @return diskName
+     */
+    public String getDiskName() {
+        return this.diskName;
     }
 
     /**
@@ -144,11 +170,20 @@ public class DataDisk extends TeaModel {
         return this.size;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder {
         private Boolean autoFormat; 
         private String autoSnapshotPolicyId; 
         private Boolean burstingEnabled; 
         private String category; 
+        private String device; 
+        private String diskName; 
         private String encrypted; 
         private String fileSystem; 
         private String kmsKeyId; 
@@ -156,6 +191,7 @@ public class DataDisk extends TeaModel {
         private String performanceLevel; 
         private Long provisionedIops; 
         private Long size; 
+        private String snapshotId; 
 
         /**
          * auto_format.
@@ -186,6 +222,22 @@ public class DataDisk extends TeaModel {
          */
         public Builder category(String category) {
             this.category = category;
+            return this;
+        }
+
+        /**
+         * device.
+         */
+        public Builder device(String device) {
+            this.device = device;
+            return this;
+        }
+
+        /**
+         * disk_name.
+         */
+        public Builder diskName(String diskName) {
+            this.diskName = diskName;
             return this;
         }
 
@@ -242,6 +294,14 @@ public class DataDisk extends TeaModel {
          */
         public Builder size(Long size) {
             this.size = size;
+            return this;
+        }
+
+        /**
+         * snapshot_id.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
             return this;
         }
 

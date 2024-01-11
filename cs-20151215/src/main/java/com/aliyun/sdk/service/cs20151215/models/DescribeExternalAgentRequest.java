@@ -92,7 +92,10 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * The agent mode.
+         * The permission mode of the agent. Valid values:
+         * <p>
+         * 
+         * admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.
          */
         public Builder agentMode(String agentMode) {
             this.putQueryParameter("AgentMode", agentMode);

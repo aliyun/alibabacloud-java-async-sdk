@@ -504,7 +504,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.
+             * The ID of the Server Load Balancer (SLB) instance that is used by the Ingress of the cluster.
              * <p>
              * 
              * The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.
@@ -518,7 +518,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
              * <p>
              * 
-             * You can create clusters of the latest two Kubernetes versions in the ACK console. You can call a specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+             * You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -550,10 +550,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              * <p>
              * 
-             * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+             * The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -567,7 +567,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * *   `classic`: classic network
              * *   `vpc`: virtual private cloud (VPC)
              * *   `overlay`: overlay network
-             * *   `calico`: network powered by Calico
+             * *   `calico`: network powered by Calico.
              */
             public Builder networkMode(String networkMode) {
                 this.networkMode = networkMode;
@@ -598,8 +598,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * The cluster identifier. Valid values:
              * <p>
              * 
-             * *   `Edge`: ACK Edge cluster
-             * *   `Default`: non-ACK Edge cluster
+             * *   `Edge`: The cluster is an ACK Edge cluster.
+             * *   `Default`: The cluster is not an ACK Edge cluster.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -607,7 +607,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the associated cluster.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -623,7 +623,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the cluster belongs.
+             * The ID of the security group to which the instances of the cluster belong.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -676,7 +676,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The labels of the cluster.
+             * The resource labels of the cluster.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -708,7 +708,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.
              */
             public Builder workerRamRoleName(String workerRamRoleName) {
                 this.workerRamRoleName = workerRamRoleName;

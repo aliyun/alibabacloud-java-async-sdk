@@ -38,7 +38,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
         private java.util.List < Checks> checks; 
 
         /**
-         * checks.
+         * The list of check items.
          */
         public Builder checks(java.util.List < Checks> checks) {
             this.checks = checks;
@@ -138,7 +138,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * check_id.
+             * The ID of the cluster check task.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -146,7 +146,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * created_at.
+             * The time when the cluster check task was created.
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -154,7 +154,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * finished_at.
+             * The time when the cluster check task was completed.
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -162,7 +162,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The message that indicates the status of the cluster check task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -170,7 +170,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the cluster check.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +178,7 @@ public class ListClusterChecksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The check method.
              */
             public Builder type(String type) {
                 this.type = type;

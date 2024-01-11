@@ -59,7 +59,6 @@ public class OpenAckServiceRequest extends Request {
          * 
          * *   `propayasgo`: ACK Pro
          * *   `edgepayasgo`: ACK Edge
-         * *   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

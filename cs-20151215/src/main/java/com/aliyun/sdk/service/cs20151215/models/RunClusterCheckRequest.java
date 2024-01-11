@@ -83,7 +83,7 @@ public class RunClusterCheckRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +92,7 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * options.
+         * The cluster check items.
          */
         public Builder options(java.util.Map < String, String > options) {
             this.putBodyParameter("options", options);
@@ -101,7 +101,7 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * type.
+         * The check method.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

@@ -36,6 +36,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request);
 
+    /**
+      * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+      * *   [Create an ACK managed cluster](~~90776~~)
+      * *   [Create an ACK dedicated cluster](~~197620~~)
+      * *   [Create an ACK Serverless cluster](~~144246~~)
+      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      *
+     */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     CompletableFuture<CreateClusterNodePoolResponse> createClusterNodePool(CreateClusterNodePoolRequest request);
@@ -113,6 +123,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClusterTasksResponse> describeClusterTasks(DescribeClusterTasksRequest request);
 
+    /**
+      * **
+      * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+      *
+     */
     CompletableFuture<DescribeClusterUserKubeconfigResponse> describeClusterUserKubeconfig(DescribeClusterUserKubeconfigRequest request);
 
     /**
@@ -244,7 +259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyClusterTagsResponse> modifyClusterTags(ModifyClusterTagsRequest request);
 
     /**
-      * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+      * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
       *
      */
     CompletableFuture<ModifyNodePoolNodeConfigResponse> modifyNodePoolNodeConfig(ModifyNodePoolNodeConfigRequest request);

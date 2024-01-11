@@ -50,7 +50,7 @@ public class RunClusterCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * check_id.
+         * The ID of the cluster check task.
          */
         public Builder checkId(String checkId) {
             this.checkId = checkId;

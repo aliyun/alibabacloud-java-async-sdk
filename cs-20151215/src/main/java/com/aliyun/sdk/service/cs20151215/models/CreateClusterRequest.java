@@ -1437,7 +1437,7 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.
          * 
-         * For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).
+         * For more information, see [Overview of ACK Pro clusters](~~173290~~).
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("cluster_spec", clusterSpec);
@@ -1446,13 +1446,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster type. Valid values:
+         * The cluster type. Valid value: ManagedKubernetes. 
          * <p>
-         * 
-         * *   `Kubernetes`: ACK dedicated cluster.
-         * *   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.
-         * *   `Ask`: ACK Serverless Basic cluster.
-         * *   `ExternalKubernetes`: external cluster that is registered to ACK.
+         * You can create ACK managed clusters, ACK Serverless clusters, and ACK Edge clusters.
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("cluster_type", clusterType);

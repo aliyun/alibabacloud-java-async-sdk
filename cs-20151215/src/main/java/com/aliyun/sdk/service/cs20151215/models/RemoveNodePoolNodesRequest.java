@@ -158,7 +158,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * concurrency.
+         * 是否并发移除。
          */
         public Builder concurrency(Boolean concurrency) {
             this.putQueryParameter("concurrency", concurrency);

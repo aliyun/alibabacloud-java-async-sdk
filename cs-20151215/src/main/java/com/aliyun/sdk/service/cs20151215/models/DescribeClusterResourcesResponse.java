@@ -318,7 +318,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private java.util.List < Dependencies> dependencies; 
 
             /**
-             * The ID of the cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -334,7 +334,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -350,7 +350,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The type of resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -358,7 +358,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The status of the resource. Valid values:
+             * The resource status. Valid values:
              * <p>
              * 
              * *   `CREATE_COMPLETE`: The resource is created.

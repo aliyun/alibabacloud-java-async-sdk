@@ -102,7 +102,12 @@ public class DescribeNodePoolVulsRequest extends Request {
         }
 
         /**
-         * necessity.
+         * The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:
+         * <p>
+         * 
+         * *   `asap`: high
+         * *   `later`: medium
+         * *   `nntf`: low
          */
         public Builder necessity(String necessity) {
             this.putQueryParameter("necessity", necessity);

@@ -118,7 +118,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * check_items.
+         * The list of check items.
          */
         public Builder checkItems(java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems) {
             this.checkItems = checkItems;
@@ -126,7 +126,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * created_at.
+         * The time when the cluster check task was created.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -134,7 +134,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * finished_at.
+         * The time when the cluster check task was completed.
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -142,7 +142,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The message that indicates the status of the cluster check task.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * The status of the cluster check.
          */
         public Builder status(String status) {
             this.status = status;
@@ -158,7 +158,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * The check method.
          */
         public Builder type(String type) {
             this.type = type;

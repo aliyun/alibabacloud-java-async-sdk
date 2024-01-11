@@ -19,6 +19,7 @@ public class DeleteClusterRequest extends Request {
 
     @Query
     @NameInMap("keep_slb")
+    @Deprecated
     private Boolean keepSlb;
 
     @Query
