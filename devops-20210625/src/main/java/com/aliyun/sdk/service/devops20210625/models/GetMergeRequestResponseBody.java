@@ -291,6 +291,9 @@ public class GetMergeRequestResponseBody extends TeaModel {
         @NameInMap("reviewOpinionStatus")
         private String reviewOpinionStatus;
 
+        @NameInMap("reviewTime")
+        private String reviewTime;
+
         @NameInMap("state")
         private String state;
 
@@ -304,6 +307,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.reviewOpinionStatus = builder.reviewOpinionStatus;
+            this.reviewTime = builder.reviewTime;
             this.state = builder.state;
             this.username = builder.username;
         }
@@ -359,6 +363,13 @@ public class GetMergeRequestResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewTime
+         */
+        public String getReviewTime() {
+            return this.reviewTime;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -379,6 +390,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String reviewOpinionStatus; 
+            private String reviewTime; 
             private String state; 
             private String username; 
 
@@ -427,6 +439,14 @@ public class GetMergeRequestResponseBody extends TeaModel {
              */
             public Builder reviewOpinionStatus(String reviewOpinionStatus) {
                 this.reviewOpinionStatus = reviewOpinionStatus;
+                return this;
+            }
+
+            /**
+             * reviewTime.
+             */
+            public Builder reviewTime(String reviewTime) {
+                this.reviewTime = reviewTime;
                 return this;
             }
 

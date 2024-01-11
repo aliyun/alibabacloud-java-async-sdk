@@ -305,6 +305,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
+        @NameInMap("reviewTime")
+        private String reviewTime;
+
         @NameInMap("state")
         private String state;
 
@@ -319,6 +322,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             this.email = builder.email;
             this.id = builder.id;
             this.name = builder.name;
+            this.reviewTime = builder.reviewTime;
             this.state = builder.state;
             this.status = builder.status;
             this.username = builder.username;
@@ -361,6 +365,13 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewTime
+         */
+        public String getReviewTime() {
+            return this.reviewTime;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -386,6 +397,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             private String email; 
             private Long id; 
             private String name; 
+            private String reviewTime; 
             private String state; 
             private String status; 
             private String username; 
@@ -419,6 +431,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * reviewTime.
+             */
+            public Builder reviewTime(String reviewTime) {
+                this.reviewTime = reviewTime;
                 return this;
             }
 
