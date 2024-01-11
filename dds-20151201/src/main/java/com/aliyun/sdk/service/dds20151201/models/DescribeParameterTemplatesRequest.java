@@ -42,6 +42,10 @@ public class DescribeParameterTemplatesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("Role")
+    private String role;
+
     private DescribeParameterTemplatesRequest(Builder builder) {
         super(builder);
         this.engine = builder.engine;
@@ -51,6 +55,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.role = builder.role;
     }
 
     public static Builder builder() {
@@ -115,6 +120,13 @@ public class DescribeParameterTemplatesRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
     public static final class Builder extends Request.Builder<DescribeParameterTemplatesRequest, Builder> {
         private String engine; 
         private String engineVersion; 
@@ -123,6 +135,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String role; 
 
         private Builder() {
             super();
@@ -137,6 +150,7 @@ public class DescribeParameterTemplatesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.role = request.role;
         } 
 
         /**
@@ -206,6 +220,28 @@ public class DescribeParameterTemplatesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * The role of the instance. Valid values:
+         * <p>
+         * 
+         * 1. db:  a shard node.
+         * 
+         * 1. cs:  a Configserver node.
+         * 
+         * 1. mongos:  a mongos node.
+         * 
+         * 1. normal: a replica set node.
+         * 
+         * 1. physical: a standalone node.
+         * 
+         * default: normal
+         */
+        public Builder role(String role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
             return this;
         }
 
