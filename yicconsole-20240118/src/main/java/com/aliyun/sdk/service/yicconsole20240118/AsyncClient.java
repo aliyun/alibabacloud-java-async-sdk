@@ -18,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<BillingProcessMessageResponse> billingProcessMessage(BillingProcessMessageRequest request);
+
     CompletableFuture<CheckPayOrderResponse> checkPayOrder(CheckPayOrderRequest request);
 
     CompletableFuture<CheckRefundResponse> checkRefund(CheckRefundRequest request);

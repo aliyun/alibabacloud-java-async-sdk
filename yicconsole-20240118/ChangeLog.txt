@@ -1,3 +1,6 @@
+2024-01-11 Version: 1.0.1
+- Generated java-async 2024-01-18 for YicConsole.
+
 2023-12-28 Version: 1.0.0
 - Generated java-async 2024-01-18 for YicConsole.
 
