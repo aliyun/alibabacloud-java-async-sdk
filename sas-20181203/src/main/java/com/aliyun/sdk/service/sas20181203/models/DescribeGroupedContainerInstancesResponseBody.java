@@ -164,6 +164,12 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         @NameInMap("RiskStatus")
         private String riskStatus;
 
+        @NameInMap("SyncOpen")
+        private Integer syncOpen;
+
+        @NameInMap("SyncStatus")
+        private Integer syncStatus;
+
         @NameInMap("VulCount")
         private Integer vulCount;
 
@@ -192,6 +198,8 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             this.riskInstanceCount = builder.riskInstanceCount;
             this.riskLevel = builder.riskLevel;
             this.riskStatus = builder.riskStatus;
+            this.syncOpen = builder.syncOpen;
+            this.syncStatus = builder.syncStatus;
             this.vulCount = builder.vulCount;
         }
 
@@ -372,6 +380,20 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return syncOpen
+         */
+        public Integer getSyncOpen() {
+            return this.syncOpen;
+        }
+
+        /**
+         * @return syncStatus
+         */
+        public Integer getSyncStatus() {
+            return this.syncStatus;
+        }
+
+        /**
          * @return vulCount
          */
         public Integer getVulCount() {
@@ -403,6 +425,8 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer riskInstanceCount; 
             private String riskLevel; 
             private String riskStatus; 
+            private Integer syncOpen; 
+            private Integer syncStatus; 
             private Integer vulCount; 
 
             /**
@@ -615,6 +639,22 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
+                return this;
+            }
+
+            /**
+             * SyncOpen.
+             */
+            public Builder syncOpen(Integer syncOpen) {
+                this.syncOpen = syncOpen;
+                return this;
+            }
+
+            /**
+             * SyncStatus.
+             */
+            public Builder syncStatus(Integer syncStatus) {
+                this.syncStatus = syncStatus;
                 return this;
             }
 

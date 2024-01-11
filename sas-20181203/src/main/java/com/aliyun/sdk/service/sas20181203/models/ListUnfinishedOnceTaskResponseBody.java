@@ -50,7 +50,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OnceTasks.
+         * The details of the tasks.
          */
         public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -58,7 +58,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -274,7 +274,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -282,7 +282,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -290,7 +290,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * The image digest.
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -298,7 +298,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -306,7 +306,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceId.
+             * The instance ID of the node.
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
@@ -314,7 +314,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeIp.
+             * The IP address of the node.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -322,7 +322,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -330,7 +330,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Pod.
+             * The pod of the image.
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -338,7 +338,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the server image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +346,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -354,7 +354,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -362,7 +362,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespace.
+             * The namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -370,7 +370,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoRegionId.
+             * The region ID of the image repository.
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -378,7 +378,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The image tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -599,7 +599,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * EndTime.
+             * The time when the task ends.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -607,7 +607,11 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Finish.
+             * Indicates whether the task is complete. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder finish(Integer finish) {
                 this.finish = finish;
@@ -615,7 +619,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * The number of assets on which the task is complete.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -623,7 +627,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress percentage of the task.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -631,7 +635,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RealRunTime.
+             * The execution duration of the task.
              */
             public Builder realRunTime(Long realRunTime) {
                 this.realRunTime = realRunTime;
@@ -639,7 +643,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResultInfo.
+             * The execution result of the task.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -647,7 +651,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task is started.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -655,7 +659,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -663,7 +667,13 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StatusText.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is not started.
+             * *   **START**: The task is started.
+             * *   **SUCCESS**: The task is complete.
+             * *   **TIMEOUT**: The task timed out.
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -671,7 +681,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The objective of the task.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -679,7 +689,11 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the assets that are scanned. Valid values:
+             * <p>
+             * 
+             * *   **IMAGE_REPO**: image repository
+             * *   **IMAGE**: image
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -687,7 +701,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -695,7 +709,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskImageInfo.
+             * The information about the image scan task.
              */
             public Builder taskImageInfo(TaskImageInfo taskImageInfo) {
                 this.taskImageInfo = taskImageInfo;
@@ -703,7 +717,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -711,7 +725,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -719,7 +733,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

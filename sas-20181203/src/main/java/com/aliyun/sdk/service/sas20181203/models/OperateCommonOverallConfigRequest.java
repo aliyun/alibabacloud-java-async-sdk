@@ -18,6 +18,10 @@ public class OperateCommonOverallConfigRequest extends Request {
     private String config;
 
     @Query
+    @NameInMap("NoTargetAsOn")
+    private Boolean noTargetAsOn;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
@@ -29,6 +33,7 @@ public class OperateCommonOverallConfigRequest extends Request {
     private OperateCommonOverallConfigRequest(Builder builder) {
         super(builder);
         this.config = builder.config;
+        this.noTargetAsOn = builder.noTargetAsOn;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
@@ -54,6 +59,13 @@ public class OperateCommonOverallConfigRequest extends Request {
     }
 
     /**
+     * @return noTargetAsOn
+     */
+    public Boolean getNoTargetAsOn() {
+        return this.noTargetAsOn;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -69,6 +81,7 @@ public class OperateCommonOverallConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateCommonOverallConfigRequest, Builder> {
         private String config; 
+        private Boolean noTargetAsOn; 
         private String sourceIp; 
         private String type; 
 
@@ -79,6 +92,7 @@ public class OperateCommonOverallConfigRequest extends Request {
         private Builder(OperateCommonOverallConfigRequest request) {
             super(request);
             this.config = request.config;
+            this.noTargetAsOn = request.noTargetAsOn;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
@@ -93,6 +107,21 @@ public class OperateCommonOverallConfigRequest extends Request {
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         * 
+         * >  This parameter takes effect only when you set **Config** to **on**.
+         */
+        public Builder noTargetAsOn(Boolean noTargetAsOn) {
+            this.putQueryParameter("NoTargetAsOn", noTargetAsOn);
+            this.noTargetAsOn = noTargetAsOn;
             return this;
         }
 

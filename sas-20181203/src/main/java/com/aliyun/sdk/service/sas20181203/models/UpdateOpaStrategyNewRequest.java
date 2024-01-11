@@ -236,7 +236,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * The risks that you want to detect by using the rule on images.
+         * The rule configuration.
          */
         public Builder alarmDetail(AlarmDetail alarmDetail) {
             String alarmDetailShrink = shrink(alarmDetail, "AlarmDetail", "json");
@@ -246,10 +246,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * > This parameter is deprecated. We recommend that you use the Scopes parameter to specify the clusters in which the rule takes effect.
+         * > This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -258,7 +258,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * The cluster name.
          * <p>
          * 
          * > This parameter is deprecated.
@@ -270,7 +270,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * The rule description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -279,7 +279,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The names of the images in the rule.
+         * The image names.
          */
         public Builder imageName(java.util.List < String > imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -288,7 +288,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The tags that are added to the images in the rule.
+         * The image tags.
          */
         public Builder label(java.util.List < String > label) {
             this.putQueryParameter("Label", label);
@@ -313,7 +313,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
          * The action that is performed when the rule is hit. Valid values:
          * <p>
          * 
-         * *   **1**: trigger alerts
+         * *   **1**: alert
          * *   **2**: block
          * *   **3**: allow
          */
@@ -324,7 +324,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The effective scope of the rule.
+         * The application scope.
          */
         public Builder scopes(java.util.List < Scopes> scopes) {
             this.putQueryParameter("Scopes", scopes);
@@ -333,10 +333,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The rule ID.
          * <p>
          * 
-         * >  You can call the \[ListOpaClusterStrategyNew]\(~~2623574~~) operation to query the IDs of rules.
+         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -345,7 +345,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * The rule name.
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -357,7 +357,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
          * The ID of the rule template.
          * <p>
          * 
-         * >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.
+         * >  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.
          */
         public Builder strategyTemplateId(Long strategyTemplateId) {
             this.putQueryParameter("StrategyTemplateId", strategyTemplateId);
@@ -379,7 +379,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The whitelist.
+         * The whitelists.
          */
         public Builder whiteList(java.util.List < String > whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
@@ -436,7 +436,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The ID of the baseline check item.
              * <p>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the IDs of check items.
+             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -447,7 +447,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The name of the baseline check item.
              * <p>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the names of check items.
+             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -500,7 +500,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The baseline check items.
+             * The baseline check configuration.
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -517,6 +517,134 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
             public Baseline build() {
                 return new Baseline(this);
+            } 
+
+        } 
+
+    }
+    public static class BuildRiskItem extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private BuildRiskItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRiskItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the image build risk.
+             * <p>
+             * 
+             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the image build risk.
+             * <p>
+             * 
+             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public BuildRiskItem build() {
+                return new BuildRiskItem(this);
+            } 
+
+        } 
+
+    }
+    public static class BuildRisk extends TeaModel {
+        @NameInMap("Item")
+        private java.util.List < BuildRiskItem> item;
+
+        @NameInMap("RiskLevel")
+        private java.util.List < String > riskLevel;
+
+        private BuildRisk(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List < BuildRiskItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List < String > getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List < BuildRiskItem> item; 
+            private java.util.List < String > riskLevel; 
+
+            /**
+             * The configuration of image build risk.
+             */
+            public Builder item(java.util.List < BuildRiskItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * The risk levels.
+             */
+            public Builder riskLevel(java.util.List < String > riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public BuildRisk build() {
+                return new BuildRisk(this);
             } 
 
         } 
@@ -564,7 +692,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The ID of the malicious sample.
              * <p>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the IDs of malicious samples.
+             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID of the malicious sample.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -575,7 +703,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The name of the malicious sample.
              * <p>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the names of malicious samples.
+             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name of the malicious sample.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -628,7 +756,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The malicious samples.
+             * The configuration of malicious samples.
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -645,6 +773,134 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
             public MaliciousFile build() {
                 return new MaliciousFile(this);
+            } 
+
+        } 
+
+    }
+    public static class SensitiveFileItem extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private SensitiveFileItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFileItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the sensitive files.
+             * <p>
+             * 
+             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the sensitive files.
+             * <p>
+             * 
+             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SensitiveFileItem build() {
+                return new SensitiveFileItem(this);
+            } 
+
+        } 
+
+    }
+    public static class SensitiveFile extends TeaModel {
+        @NameInMap("Item")
+        private java.util.List < SensitiveFileItem> item;
+
+        @NameInMap("RiskLevel")
+        private java.util.List < String > riskLevel;
+
+        private SensitiveFile(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List < SensitiveFileItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List < String > getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List < SensitiveFileItem> item; 
+            private java.util.List < String > riskLevel; 
+
+            /**
+             * The configuration of sensitive file.
+             */
+            public Builder item(java.util.List < SensitiveFileItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * The risk levels.
+             */
+            public Builder riskLevel(java.util.List < String > riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public SensitiveFile build() {
+                return new SensitiveFile(this);
             } 
 
         } 
@@ -689,10 +945,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the vulnerability.
+             * The vulnerability ID.
              * <p>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the IDs of vulnerabilities.
+             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -700,10 +956,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The name of the vulnerability.
+             * The vulnerability name.
              * <p>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the names of vulnerabilities.
+             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -717,15 +973,88 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
     }
+    public static class RiskClass extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private RiskClass(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskClass create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the vulnerability types. Valid values:
+             * <p>
+             * 
+             * *   **cve**: system vulnerability
+             * *   **app**: application vulnerability
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **system vulnerability**
+             * *   **application vulnerability**
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public RiskClass build() {
+                return new RiskClass(this);
+            } 
+
+        } 
+
+    }
     public static class Vul extends TeaModel {
         @NameInMap("Item")
         private java.util.List < VulItem> item;
+
+        @NameInMap("RiskClass")
+        private java.util.List < RiskClass> riskClass;
 
         @NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Vul(Builder builder) {
             this.item = builder.item;
+            this.riskClass = builder.riskClass;
             this.riskLevel = builder.riskLevel;
         }
 
@@ -745,6 +1074,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
+         * @return riskClass
+         */
+        public java.util.List < RiskClass> getRiskClass() {
+            return this.riskClass;
+        }
+
+        /**
          * @return riskLevel
          */
         public java.util.List < String > getRiskLevel() {
@@ -753,13 +1089,22 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
         public static final class Builder {
             private java.util.List < VulItem> item; 
+            private java.util.List < RiskClass> riskClass; 
             private java.util.List < String > riskLevel; 
 
             /**
-             * The vulnerabilities.
+             * The information about the vulnerability.
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
+                return this;
+            }
+
+            /**
+             * Risk type of vulnerability.
+             */
+            public Builder riskClass(java.util.List < RiskClass> riskClass) {
+                this.riskClass = riskClass;
                 return this;
             }
 
@@ -782,15 +1127,23 @@ public class UpdateOpaStrategyNewRequest extends Request {
         @NameInMap("Baseline")
         private Baseline baseline;
 
+        @NameInMap("BuildRisk")
+        private BuildRisk buildRisk;
+
         @NameInMap("MaliciousFile")
         private MaliciousFile maliciousFile;
+
+        @NameInMap("SensitiveFile")
+        private SensitiveFile sensitiveFile;
 
         @NameInMap("Vul")
         private Vul vul;
 
         private AlarmDetail(Builder builder) {
             this.baseline = builder.baseline;
+            this.buildRisk = builder.buildRisk;
             this.maliciousFile = builder.maliciousFile;
+            this.sensitiveFile = builder.sensitiveFile;
             this.vul = builder.vul;
         }
 
@@ -810,10 +1163,24 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
+         * @return buildRisk
+         */
+        public BuildRisk getBuildRisk() {
+            return this.buildRisk;
+        }
+
+        /**
          * @return maliciousFile
          */
         public MaliciousFile getMaliciousFile() {
             return this.maliciousFile;
+        }
+
+        /**
+         * @return sensitiveFile
+         */
+        public SensitiveFile getSensitiveFile() {
+            return this.sensitiveFile;
         }
 
         /**
@@ -825,11 +1192,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
         public static final class Builder {
             private Baseline baseline; 
+            private BuildRisk buildRisk; 
             private MaliciousFile maliciousFile; 
+            private SensitiveFile sensitiveFile; 
             private Vul vul; 
 
             /**
-             * The baseline risks.
+             * The baseline check configuration.
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -837,7 +1206,15 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The malicious sample risks.
+             * The configuration of image build risk.
+             */
+            public Builder buildRisk(BuildRisk buildRisk) {
+                this.buildRisk = buildRisk;
+                return this;
+            }
+
+            /**
+             * The configuration of malicious samples.
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -845,7 +1222,15 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The vulnerability risks.
+             * The configuration of sensitive file.
+             */
+            public Builder sensitiveFile(SensitiveFile sensitiveFile) {
+                this.sensitiveFile = sensitiveFile;
+                return this;
+            }
+
+            /**
+             * The vulnerability configuration.
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -922,10 +1307,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > namespaceList; 
 
             /**
-             * The instance ID of the rule in the cluster.
+             * The ID of the cluster node to which the rule is applied.
              * <p>
              * 
-             * >  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the instance IDs of rules.
+             * >  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the ID of the cluster node to which the rule is applied.
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -933,11 +1318,11 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * Specifies whether to include all namespaces.
+             * Specifies whether all namespaces are included. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: Not all namespaces are included.
+             * *   **1**: All namespaces are included.
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -945,10 +1330,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The ID of the container cluster.
+             * The cluster ID.
              * <p>
              * 
-             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -959,7 +1344,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The namespaces.
              * <p>
              * 
-             * > This parameter is valid only when AllNamespace is set to 0.
+             * > This parameter is valid only when the AllNamespace parameter is set to 0.
              */
             public Builder namespaceList(java.util.List < String > namespaceList) {
                 this.namespaceList = namespaceList;

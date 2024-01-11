@@ -532,7 +532,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * FixStatus.
+             * Whether the repair is supported. Valid values:
+             * <p>
+             * *   **0**: Supported
+             * *   **1**: Not Supported
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -572,7 +575,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * LastHandleTime.
+             * The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.
              */
             public Builder lastHandleTime(Long lastHandleTime) {
                 this.lastHandleTime = lastHandleTime;

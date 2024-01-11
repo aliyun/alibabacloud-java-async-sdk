@@ -62,7 +62,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
         private TracingDetail tracingDetail; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +82,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TracingDetail.
+         * The information about the provenance graph.
          */
         public Builder tracingDetail(TracingDetail tracingDetail) {
             this.tracingDetail = tracingDetail;
@@ -310,7 +314,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliUid
+             * The ID of the Alibaba Cloud account to which the current edge belongs.
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -318,7 +322,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndId.
+             * The ID of the end node for the current edge.
              */
             public Builder endId(String endId) {
                 this.endId = endId;
@@ -326,7 +330,14 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndType.
+             * The type of the end node for the current edge. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -334,7 +345,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the current edge.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +353,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Origin
+             * The origin vertex ID of the current edge.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -350,7 +361,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The text that contains the properties of the current edge.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -358,7 +369,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * The property of the current edge.
              */
             public Builder property(java.util.Map < String, ? > property) {
                 this.property = property;
@@ -366,7 +377,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule based on which the current edge is generated.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -374,7 +385,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * The display type of the current edge.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -382,7 +393,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartId.
+             * The ID of the start node for the current edge.
              */
             public Builder startId(String startId) {
                 this.startId = startId;
@@ -390,7 +401,14 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartType.
+             * The type of the start node for the current edge. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**:
+             * *   **ip**
+             * *   **domain**
              */
             public Builder startType(String startType) {
                 this.startType = startType;
@@ -398,7 +416,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the current edge was created.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -406,7 +424,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The UNIX timestamp when the current edge was created. Unit: milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -414,7 +432,12 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the current edge. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process_exec_file**: The relationship indicates an executable file that is run by a process.
+             * *   **process_connect_ip**: The relationship indicates an IP address that is connected by a process.
+             * *   **domain_trgger_alert**: The relationship indicates an alert that is triggered for a domain name.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -422,7 +445,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * The type of the current edge.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -430,7 +453,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the current edge was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -438,7 +461,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * The UUID of the current edge. The SIEM system generates UUIDs for nodes and edges in the provenance graph to help you locate the nodes or edges.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -623,7 +646,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private Integer traceSuccessFlag; 
 
             /**
-             * CurrentVersionId.
+             * The version ID of the current entity.
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -631,7 +654,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The display color of the current entity.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -639,7 +662,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * The display icon of the current entity.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -647,7 +670,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayOrder.
+             * The display sequence of the current entity.
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -655,7 +678,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the current entity.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -663,7 +686,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the current entity was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -671,7 +694,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the current entity was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -679,7 +702,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the current entity.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -687,7 +710,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualNode.
+             * Indicates whether the entity is a virtual node. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder isVirtualNode(Integer isVirtualNode) {
                 this.isVirtualNode = isVirtualNode;
@@ -695,7 +722,14 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The type of the current entity. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder name(String name) {
                 this.name = name;
@@ -703,7 +737,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * namespace
+             * The namespace of the current entity.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -711,7 +745,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SyncId
+             * The synchronization ID of the current entity.
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -719,7 +753,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TraceSuccessFlag.
+             * The tag that indicates whether tracing was successful. Valid values:
+             * <p>
+             * 
+             * *   **1**: successful
+             * *   **0**: failed
              */
             public Builder traceSuccessFlag(Integer traceSuccessFlag) {
                 this.traceSuccessFlag = traceSuccessFlag;
@@ -892,7 +930,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private Integer syncId; 
 
             /**
-             * CurrentVersionId.
+             * The version ID of the current relationship.
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -900,7 +938,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Directed.
+             * The direction of the current relationship. Valid values:
+             * <p>
+             * 
+             * *   **1**: forward
+             * *   **0**: reverse
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -908,7 +950,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The display color of the current relationship.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -916,7 +958,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ICON
+             * The display icon of the current relationship.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -924,7 +966,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the current relationship.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -932,7 +974,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the current relationship was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -940,7 +982,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the current relationship was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -948,7 +990,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the current relationship.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -956,7 +998,12 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The type of the current relationship. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process_exec_file**: The relationship indicates an executable file that is run by a process.
+             * *   **process_connect_ip**: The relationship indicates an IP address that is connected by a process.
+             * *   **domain_trgger_alert**: The relationship indicates an alert that is triggered for a domain name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -964,7 +1011,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * namespace
+             * The namespace of the current relationship.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -972,7 +1019,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * The display type of the current relationship.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -980,7 +1027,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SyncID
+             * The synchronization ID of the current relationship.
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -1033,7 +1080,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the property that needs to be displayed for the current node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1041,7 +1088,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the property that needs to be displayed for the current node.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1106,7 +1153,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of nodes.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1114,7 +1161,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * Indicates whether more nodes are adjacent to the current node. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -1122,7 +1173,14 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the node. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1319,7 +1377,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * aliuid
+             * The ID of the Alibaba Cloud account to which the current node belongs.
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -1327,7 +1385,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayInfo.
+             * The display information of the current node.
              */
             public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
@@ -1335,7 +1393,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the current node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1343,7 +1401,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The rendering language of the current node.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1351,7 +1409,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the current node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1359,7 +1417,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NeighborList.
+             * The nodes that are adjacent to the current node.
              */
             public Builder neighborList(java.util.List < NeighborList> neighborList) {
                 this.neighborList = neighborList;
@@ -1367,7 +1425,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The text that contains the properties of the current node.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -1375,7 +1433,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * The property of the current node.
              */
             public Builder property(java.util.Map < String, ? > property) {
                 this.property = property;
@@ -1383,7 +1441,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule based on which the current node is generated.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1391,7 +1449,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the current node was created.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -1399,7 +1457,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The UNIX timestamp when the current node was created. Unit: milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1407,7 +1465,14 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the current node. Valid values include the following values:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1415,7 +1480,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the current node was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1423,7 +1488,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * The UUID of the current node. The security information and event management (SIEM) system generates UUIDs for nodes and edges in the provenance graph to help you locate the nodes or edges.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1512,7 +1577,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             private java.util.List < VertexList> vertexList; 
 
             /**
-             * EdgeList.
+             * The edges.
              */
             public Builder edgeList(java.util.List < EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -1520,7 +1585,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EntityTypeList.
+             * The entities.
              */
             public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -1528,7 +1593,11 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The rendering language of the returned result. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1536,7 +1605,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeList.
+             * The relationships.
              */
             public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
@@ -1544,7 +1613,7 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VertexList.
+             * The nodes.
              */
             public Builder vertexList(java.util.List < VertexList> vertexList) {
                 this.vertexList = vertexList;

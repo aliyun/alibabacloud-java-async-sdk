@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckSummaryResponseBody</p>
  */
 public class GetCheckSummaryResponseBody extends TeaModel {
+    @NameInMap("OverallStatistic")
+    private OverallStatistic overallStatistic;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     private java.util.List < Summarys> summarys;
 
     private GetCheckSummaryResponseBody(Builder builder) {
+        this.overallStatistic = builder.overallStatistic;
         this.requestId = builder.requestId;
         this.summarys = builder.summarys;
     }
@@ -29,6 +33,13 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     public static GetCheckSummaryResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return overallStatistic
+     */
+    public OverallStatistic getOverallStatistic() {
+        return this.overallStatistic;
     }
 
     /**
@@ -46,8 +57,17 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private OverallStatistic overallStatistic; 
         private String requestId; 
         private java.util.List < Summarys> summarys; 
+
+        /**
+         * overall risk statistics of check items.
+         */
+        public Builder overallStatistic(OverallStatistic overallStatistic) {
+            this.overallStatistic = overallStatistic;
+            return this;
+        }
 
         /**
          * The ID of the request, which is used to locate and troubleshoot issues.
@@ -71,6 +91,528 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     } 
 
+    public static class OverallStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        private Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        private Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        private Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        private Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        private Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        private Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        private Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        private Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        private Integer passCount;
+
+        @NameInMap("PassHighCount")
+        private Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        private Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        private Integer passMediumCount;
+
+        private OverallStatistic(Builder builder) {
+            this.notCheckCount = builder.notCheckCount;
+            this.notCheckHighCount = builder.notCheckHighCount;
+            this.notCheckLowCount = builder.notCheckLowCount;
+            this.notCheckMediumCount = builder.notCheckMediumCount;
+            this.notPassCount = builder.notPassCount;
+            this.notPassHighCount = builder.notPassHighCount;
+            this.notPassLowCount = builder.notPassLowCount;
+            this.notPassMediumCount = builder.notPassMediumCount;
+            this.passCount = builder.passCount;
+            this.passHighCount = builder.passHighCount;
+            this.passLowCount = builder.passLowCount;
+            this.passMediumCount = builder.passMediumCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OverallStatistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return notCheckCount
+         */
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        /**
+         * @return notCheckHighCount
+         */
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        /**
+         * @return notCheckLowCount
+         */
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        /**
+         * @return notCheckMediumCount
+         */
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        /**
+         * @return notPassCount
+         */
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        /**
+         * @return notPassHighCount
+         */
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        /**
+         * @return notPassLowCount
+         */
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        /**
+         * @return notPassMediumCount
+         */
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        /**
+         * @return passCount
+         */
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        /**
+         * @return passHighCount
+         */
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        /**
+         * @return passLowCount
+         */
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        /**
+         * @return passMediumCount
+         */
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
+        public static final class Builder {
+            private Integer notCheckCount; 
+            private Integer notCheckHighCount; 
+            private Integer notCheckLowCount; 
+            private Integer notCheckMediumCount; 
+            private Integer notPassCount; 
+            private Integer notPassHighCount; 
+            private Integer notPassLowCount; 
+            private Integer notPassMediumCount; 
+            private Integer passCount; 
+            private Integer passHighCount; 
+            private Integer passLowCount; 
+            private Integer passMediumCount; 
+
+            /**
+             * The number of unchecked check items.
+             */
+            public Builder notCheckCount(Integer notCheckCount) {
+                this.notCheckCount = notCheckCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked high-risk check items.
+             */
+            public Builder notCheckHighCount(Integer notCheckHighCount) {
+                this.notCheckHighCount = notCheckHighCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked low-risk check items.
+             */
+            public Builder notCheckLowCount(Integer notCheckLowCount) {
+                this.notCheckLowCount = notCheckLowCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked medium-risk check items.
+             */
+            public Builder notCheckMediumCount(Integer notCheckMediumCount) {
+                this.notCheckMediumCount = notCheckMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that failed to pass the check.
+             */
+            public Builder notPassCount(Integer notPassCount) {
+                this.notPassCount = notPassCount;
+                return this;
+            }
+
+            /**
+             * The number of high-risk check items that failed to pass the check.
+             */
+            public Builder notPassHighCount(Integer notPassHighCount) {
+                this.notPassHighCount = notPassHighCount;
+                return this;
+            }
+
+            /**
+             * The number of low-risk check items that failed to pass the check.
+             */
+            public Builder notPassLowCount(Integer notPassLowCount) {
+                this.notPassLowCount = notPassLowCount;
+                return this;
+            }
+
+            /**
+             * The number of low-risk check items that failed to pass the check.
+             */
+            public Builder notPassMediumCount(Integer notPassMediumCount) {
+                this.notPassMediumCount = notPassMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that passed the check.
+             */
+            public Builder passCount(Integer passCount) {
+                this.passCount = passCount;
+                return this;
+            }
+
+            /**
+             * The number off high-risk check items that passed the check.
+             */
+            public Builder passHighCount(Integer passHighCount) {
+                this.passHighCount = passHighCount;
+                return this;
+            }
+
+            /**
+             * The number off low-risk check items that passed the check.
+             */
+            public Builder passLowCount(Integer passLowCount) {
+                this.passLowCount = passLowCount;
+                return this;
+            }
+
+            /**
+             * The number off medium-risk check items that passed the check.
+             */
+            public Builder passMediumCount(Integer passMediumCount) {
+                this.passMediumCount = passMediumCount;
+                return this;
+            }
+
+            public OverallStatistic build() {
+                return new OverallStatistic(this);
+            } 
+
+        } 
+
+    }
+    public static class StandardStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        private Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        private Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        private Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        private Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        private Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        private Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        private Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        private Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        private Integer passCount;
+
+        @NameInMap("PassHighCount")
+        private Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        private Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        private Integer passMediumCount;
+
+        private StandardStatistic(Builder builder) {
+            this.notCheckCount = builder.notCheckCount;
+            this.notCheckHighCount = builder.notCheckHighCount;
+            this.notCheckLowCount = builder.notCheckLowCount;
+            this.notCheckMediumCount = builder.notCheckMediumCount;
+            this.notPassCount = builder.notPassCount;
+            this.notPassHighCount = builder.notPassHighCount;
+            this.notPassLowCount = builder.notPassLowCount;
+            this.notPassMediumCount = builder.notPassMediumCount;
+            this.passCount = builder.passCount;
+            this.passHighCount = builder.passHighCount;
+            this.passLowCount = builder.passLowCount;
+            this.passMediumCount = builder.passMediumCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StandardStatistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return notCheckCount
+         */
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        /**
+         * @return notCheckHighCount
+         */
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        /**
+         * @return notCheckLowCount
+         */
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        /**
+         * @return notCheckMediumCount
+         */
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        /**
+         * @return notPassCount
+         */
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        /**
+         * @return notPassHighCount
+         */
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        /**
+         * @return notPassLowCount
+         */
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        /**
+         * @return notPassMediumCount
+         */
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        /**
+         * @return passCount
+         */
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        /**
+         * @return passHighCount
+         */
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        /**
+         * @return passLowCount
+         */
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        /**
+         * @return passMediumCount
+         */
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
+        public static final class Builder {
+            private Integer notCheckCount; 
+            private Integer notCheckHighCount; 
+            private Integer notCheckLowCount; 
+            private Integer notCheckMediumCount; 
+            private Integer notPassCount; 
+            private Integer notPassHighCount; 
+            private Integer notPassLowCount; 
+            private Integer notPassMediumCount; 
+            private Integer passCount; 
+            private Integer passHighCount; 
+            private Integer passLowCount; 
+            private Integer passMediumCount; 
+
+            /**
+             * The number of unchecked check items.
+             */
+            public Builder notCheckCount(Integer notCheckCount) {
+                this.notCheckCount = notCheckCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked high-risk check items.
+             */
+            public Builder notCheckHighCount(Integer notCheckHighCount) {
+                this.notCheckHighCount = notCheckHighCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked low-risk check items.
+             */
+            public Builder notCheckLowCount(Integer notCheckLowCount) {
+                this.notCheckLowCount = notCheckLowCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked medium-risk check items.
+             */
+            public Builder notCheckMediumCount(Integer notCheckMediumCount) {
+                this.notCheckMediumCount = notCheckMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that failed to pass the check.
+             */
+            public Builder notPassCount(Integer notPassCount) {
+                this.notPassCount = notPassCount;
+                return this;
+            }
+
+            /**
+             * The number of high-risk check items that failed to pass the check.
+             */
+            public Builder notPassHighCount(Integer notPassHighCount) {
+                this.notPassHighCount = notPassHighCount;
+                return this;
+            }
+
+            /**
+             * The number of low-risk check items that failed to pass the check.
+             */
+            public Builder notPassLowCount(Integer notPassLowCount) {
+                this.notPassLowCount = notPassLowCount;
+                return this;
+            }
+
+            /**
+             * The number of medium-risk check items that failed to pass the check.
+             */
+            public Builder notPassMediumCount(Integer notPassMediumCount) {
+                this.notPassMediumCount = notPassMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that passed the check.
+             */
+            public Builder passCount(Integer passCount) {
+                this.passCount = passCount;
+                return this;
+            }
+
+            /**
+             * The number off high-risk check items that passed the check.
+             */
+            public Builder passHighCount(Integer passHighCount) {
+                this.passHighCount = passHighCount;
+                return this;
+            }
+
+            /**
+             * The number off low-risk check items that passed the check.
+             */
+            public Builder passLowCount(Integer passLowCount) {
+                this.passLowCount = passLowCount;
+                return this;
+            }
+
+            /**
+             * The number off medium-risk check items that passed the check.
+             */
+            public Builder passMediumCount(Integer passMediumCount) {
+                this.passMediumCount = passMediumCount;
+                return this;
+            }
+
+            public StandardStatistic build() {
+                return new StandardStatistic(this);
+            } 
+
+        } 
+
+    }
     public static class Standards extends TeaModel {
         @NameInMap("FailCount")
         private Integer failCount;
@@ -93,6 +635,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         @NameInMap("ShowName")
         private String showName;
 
+        @NameInMap("StandardStatistic")
+        private StandardStatistic standardStatistic;
+
         private Standards(Builder builder) {
             this.failCount = builder.failCount;
             this.id = builder.id;
@@ -101,6 +646,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             this.riskLevelLowCount = builder.riskLevelLowCount;
             this.riskLevelMediumCount = builder.riskLevelMediumCount;
             this.showName = builder.showName;
+            this.standardStatistic = builder.standardStatistic;
         }
 
         public static Builder builder() {
@@ -160,6 +706,13 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             return this.showName;
         }
 
+        /**
+         * @return standardStatistic
+         */
+        public StandardStatistic getStandardStatistic() {
+            return this.standardStatistic;
+        }
+
         public static final class Builder {
             private Integer failCount; 
             private Long id; 
@@ -168,6 +721,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer riskLevelLowCount; 
             private Integer riskLevelMediumCount; 
             private String showName; 
+            private StandardStatistic standardStatistic; 
 
             /**
              * The number of risk items.
@@ -225,8 +779,277 @@ public class GetCheckSummaryResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Risk statistics of check items within the same standard.
+             */
+            public Builder standardStatistic(StandardStatistic standardStatistic) {
+                this.standardStatistic = standardStatistic;
+                return this;
+            }
+
             public Standards build() {
                 return new Standards(this);
+            } 
+
+        } 
+
+    }
+    public static class TypeStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        private Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        private Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        private Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        private Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        private Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        private Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        private Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        private Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        private Integer passCount;
+
+        @NameInMap("PassHighCount")
+        private Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        private Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        private Integer passMediumCount;
+
+        private TypeStatistic(Builder builder) {
+            this.notCheckCount = builder.notCheckCount;
+            this.notCheckHighCount = builder.notCheckHighCount;
+            this.notCheckLowCount = builder.notCheckLowCount;
+            this.notCheckMediumCount = builder.notCheckMediumCount;
+            this.notPassCount = builder.notPassCount;
+            this.notPassHighCount = builder.notPassHighCount;
+            this.notPassLowCount = builder.notPassLowCount;
+            this.notPassMediumCount = builder.notPassMediumCount;
+            this.passCount = builder.passCount;
+            this.passHighCount = builder.passHighCount;
+            this.passLowCount = builder.passLowCount;
+            this.passMediumCount = builder.passMediumCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TypeStatistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return notCheckCount
+         */
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        /**
+         * @return notCheckHighCount
+         */
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        /**
+         * @return notCheckLowCount
+         */
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        /**
+         * @return notCheckMediumCount
+         */
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        /**
+         * @return notPassCount
+         */
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        /**
+         * @return notPassHighCount
+         */
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        /**
+         * @return notPassLowCount
+         */
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        /**
+         * @return notPassMediumCount
+         */
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        /**
+         * @return passCount
+         */
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        /**
+         * @return passHighCount
+         */
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        /**
+         * @return passLowCount
+         */
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        /**
+         * @return passMediumCount
+         */
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
+        public static final class Builder {
+            private Integer notCheckCount; 
+            private Integer notCheckHighCount; 
+            private Integer notCheckLowCount; 
+            private Integer notCheckMediumCount; 
+            private Integer notPassCount; 
+            private Integer notPassHighCount; 
+            private Integer notPassLowCount; 
+            private Integer notPassMediumCount; 
+            private Integer passCount; 
+            private Integer passHighCount; 
+            private Integer passLowCount; 
+            private Integer passMediumCount; 
+
+            /**
+             * The number of unchecked check items.
+             */
+            public Builder notCheckCount(Integer notCheckCount) {
+                this.notCheckCount = notCheckCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked high-risk check items.
+             */
+            public Builder notCheckHighCount(Integer notCheckHighCount) {
+                this.notCheckHighCount = notCheckHighCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked low-risk check items.
+             */
+            public Builder notCheckLowCount(Integer notCheckLowCount) {
+                this.notCheckLowCount = notCheckLowCount;
+                return this;
+            }
+
+            /**
+             * The number of unchecked medium-risk check items.
+             */
+            public Builder notCheckMediumCount(Integer notCheckMediumCount) {
+                this.notCheckMediumCount = notCheckMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that failed to pass the check.
+             */
+            public Builder notPassCount(Integer notPassCount) {
+                this.notPassCount = notPassCount;
+                return this;
+            }
+
+            /**
+             * The number of high-risk check items that failed to pass the check.
+             */
+            public Builder notPassHighCount(Integer notPassHighCount) {
+                this.notPassHighCount = notPassHighCount;
+                return this;
+            }
+
+            /**
+             * The number of low-risk check items that failed to pass the check.
+             */
+            public Builder notPassLowCount(Integer notPassLowCount) {
+                this.notPassLowCount = notPassLowCount;
+                return this;
+            }
+
+            /**
+             * The number of medium-risk check items that failed to pass the check.
+             */
+            public Builder notPassMediumCount(Integer notPassMediumCount) {
+                this.notPassMediumCount = notPassMediumCount;
+                return this;
+            }
+
+            /**
+             * The number of check items that passed the check.
+             */
+            public Builder passCount(Integer passCount) {
+                this.passCount = passCount;
+                return this;
+            }
+
+            /**
+             * The number off high-risk check items that passed the check.
+             */
+            public Builder passHighCount(Integer passHighCount) {
+                this.passHighCount = passHighCount;
+                return this;
+            }
+
+            /**
+             * The number off low-risk check items that passed the check.
+             */
+            public Builder passLowCount(Integer passLowCount) {
+                this.passLowCount = passLowCount;
+                return this;
+            }
+
+            /**
+             * The number off medium-risk check items that passed the check.
+             */
+            public Builder passMediumCount(Integer passMediumCount) {
+                this.passMediumCount = passMediumCount;
+                return this;
+            }
+
+            public TypeStatistic build() {
+                return new TypeStatistic(this);
             } 
 
         } 
@@ -245,11 +1068,15 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("TypeStatistic")
+        private TypeStatistic typeStatistic;
+
         private Summarys(Builder builder) {
             this.failCount = builder.failCount;
             this.passCount = builder.passCount;
             this.standards = builder.standards;
             this.type = builder.type;
+            this.typeStatistic = builder.typeStatistic;
         }
 
         public static Builder builder() {
@@ -288,11 +1115,19 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return typeStatistic
+         */
+        public TypeStatistic getTypeStatistic() {
+            return this.typeStatistic;
+        }
+
         public static final class Builder {
             private Integer failCount; 
             private Long passCount; 
             private java.util.List < Standards> standards; 
             private String type; 
+            private TypeStatistic typeStatistic; 
 
             /**
              * The number of detected risk items.
@@ -328,6 +1163,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * Risk statistics of check items within the same type.
+             */
+            public Builder typeStatistic(TypeStatistic typeStatistic) {
+                this.typeStatistic = typeStatistic;
                 return this;
             }
 

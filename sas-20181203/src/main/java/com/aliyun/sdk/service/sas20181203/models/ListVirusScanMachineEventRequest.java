@@ -18,6 +18,10 @@ public class ListVirusScanMachineEventRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("OperateTaskId")
     private String operateTaskId;
 
@@ -33,6 +37,7 @@ public class ListVirusScanMachineEventRequest extends Request {
     private ListVirusScanMachineEventRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.lang = builder.lang;
         this.operateTaskId = builder.operateTaskId;
         this.pageSize = builder.pageSize;
         this.uuid = builder.uuid;
@@ -59,6 +64,13 @@ public class ListVirusScanMachineEventRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return operateTaskId
      */
     public String getOperateTaskId() {
@@ -81,6 +93,7 @@ public class ListVirusScanMachineEventRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListVirusScanMachineEventRequest, Builder> {
         private Integer currentPage; 
+        private String lang; 
         private String operateTaskId; 
         private Integer pageSize; 
         private String uuid; 
@@ -92,6 +105,7 @@ public class ListVirusScanMachineEventRequest extends Request {
         private Builder(ListVirusScanMachineEventRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.lang = request.lang;
             this.operateTaskId = request.operateTaskId;
             this.pageSize = request.pageSize;
             this.uuid = request.uuid;
@@ -103,6 +117,19 @@ public class ListVirusScanMachineEventRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

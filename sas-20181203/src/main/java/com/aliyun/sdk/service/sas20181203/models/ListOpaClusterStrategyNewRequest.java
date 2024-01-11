@@ -110,7 +110,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +119,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The image names.
          */
         public Builder imageName(java.util.List < String > imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -128,7 +128,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * Label.
+         * The tags that are added to the container.
          */
         public Builder label(java.util.List < String > label) {
             this.putQueryParameter("Label", label);
@@ -137,7 +137,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +146,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * The rule names.
          */
         public Builder strategyName(java.util.List < String > strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

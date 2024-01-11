@@ -110,7 +110,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -126,7 +126,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +142,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,11 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -234,7 +238,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private String checkItem; 
 
             /**
-             * AffiliatedRiskTypes.
+             * The list of the baseline categories of attribution.
              */
             public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
@@ -242,7 +246,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * AffiliatedRisks.
+             * The list of baselines attribution.
              */
             public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
@@ -250,7 +254,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckId.
+             * The ID of the check item.
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -258,7 +262,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckItem.
+             * The description of the check item.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -323,7 +327,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private String checkTypeDisName; 
 
             /**
-             * CheckDetails.
+             * The detail of check items.
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -331,7 +335,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * The type of the check item.
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -339,7 +343,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTypeDisName.
+             * The display name of the check item type.
              */
             public Builder checkTypeDisName(String checkTypeDisName) {
                 this.checkTypeDisName = checkTypeDisName;

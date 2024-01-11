@@ -110,7 +110,11 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Code.
+         * The response code. Valid values:
+         * <p>
+         * 
+         * *   **200**: The request was successful.
+         * *   **400**: The request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +130,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * InfoList.
+         * The information about the entities and edges.
          */
         public Builder infoList(InfoList infoList) {
             this.infoList = infoList;
@@ -134,7 +138,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +146,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,11 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +166,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * The consumed time of the request. Unit: seconds.
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -318,7 +326,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             private String traceSuccessFlag; 
 
             /**
-             * DisplayColor.
+             * The display color of the entity.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -326,7 +334,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * The icon that corresponds to the entity.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -334,7 +342,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayOrder.
+             * The display sequence of the entity.
              */
             public Builder displayOrder(String displayOrder) {
                 this.displayOrder = displayOrder;
@@ -342,7 +350,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the entity.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -350,7 +358,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the entity was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -358,7 +366,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the entity was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -366,7 +374,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the entity.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -374,7 +382,11 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualNode.
+             * Indicates whether the entity is a virtual node. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder isVirtualNode(String isVirtualNode) {
                 this.isVirtualNode = isVirtualNode;
@@ -382,7 +394,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the entity.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +402,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the entity.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -398,7 +410,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * TraceSuccessFlag.
+             * The tag that indicates whether tracing was successful.
              */
             public Builder traceSuccessFlag(String traceSuccessFlag) {
                 this.traceSuccessFlag = traceSuccessFlag;
@@ -547,7 +559,11 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             private String showType; 
 
             /**
-             * Directed.
+             * The direction of the edge. Valid values:
+             * <p>
+             * 
+             * *   **1**: forward
+             * *   **0**: reverse
              */
             public Builder directed(String directed) {
                 this.directed = directed;
@@ -555,7 +571,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The display color of the edge.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -563,7 +579,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * The icon that corresponds to the edge.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -571,7 +587,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the edge.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -579,7 +595,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the edge was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -587,7 +603,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the edge was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -595,7 +611,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the edge.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -603,7 +619,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the edge.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -611,7 +627,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the edge.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -619,7 +635,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * The display type of the edge.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -672,7 +688,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             private java.util.List < RelationTypeList> relationTypeList; 
 
             /**
-             * EntityTypeList.
+             * The information about the entities.
              */
             public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -680,7 +696,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeList.
+             * The information about the edges.
              */
             public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;

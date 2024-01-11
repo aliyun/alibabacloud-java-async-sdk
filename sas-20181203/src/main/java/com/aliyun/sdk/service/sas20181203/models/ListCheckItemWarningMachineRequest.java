@@ -333,7 +333,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUID array of the servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

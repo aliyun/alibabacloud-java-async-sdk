@@ -62,7 +62,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private VertexNodes vertexNodes; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +82,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         }
 
         /**
-         * VertexNodes.
+         * The results that are returned.
          */
         public Builder vertexNodes(VertexNodes vertexNodes) {
             this.vertexNodes = vertexNodes;
@@ -310,7 +314,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Aliuid
+             * The ID of the Alibaba Cloud account to which the edge belongs.
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -318,7 +322,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EndId.
+             * The ID of the end node for the edge.
              */
             public Builder endId(String endId) {
                 this.endId = endId;
@@ -326,7 +330,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EndType.
+             * The type of the end node for the edge. Valid values include but are not limited to:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -334,7 +345,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the edge.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +353,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Origin
+             * The original name of the edge.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -350,7 +361,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The edge properties. The value is in the text format.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -358,7 +369,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * The property of the edge.
              */
             public Builder property(java.util.Map < String, ? > property) {
                 this.property = property;
@@ -366,7 +377,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule for which the edge was created.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -374,7 +385,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * The display type of the edge.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -382,7 +393,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StartId.
+             * The ID of the start node for the edge.
              */
             public Builder startId(String startId) {
                 this.startId = startId;
@@ -390,7 +401,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * StartType.
+             * The type of the start node for the edge. Valid values include but are not limited to:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder startType(String startType) {
                 this.startType = startType;
@@ -398,7 +416,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the edge was created.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -406,7 +424,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The UNIX timestamp when the edge was created. Unit: milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -414,7 +432,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the edge.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -422,7 +440,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * The type name of the edge.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -430,7 +448,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the edge was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -438,7 +456,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * The UUID of the edge.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -623,7 +641,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer traceSuccessFlag; 
 
             /**
-             * CurrentVersionId.
+             * The version of the entity.
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -631,7 +649,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The display color of the entity.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -639,7 +657,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayIcon.
+             * The display icon of the entity.
              */
             public Builder displayIcon(String displayIcon) {
                 this.displayIcon = displayIcon;
@@ -647,7 +665,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayOrder.
+             * The display order of the entity.
              */
             public Builder displayOrder(Integer displayOrder) {
                 this.displayOrder = displayOrder;
@@ -655,7 +673,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the entity.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -663,7 +681,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the entity was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -671,7 +689,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the entity was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -679,7 +697,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * The ID of the entity.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -687,7 +705,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IsVirtualNode.
+             * Indicates whether the entity is a virtual node.
              */
             public Builder isVirtualNode(Integer isVirtualNode) {
                 this.isVirtualNode = isVirtualNode;
@@ -695,7 +713,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the entity.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -703,7 +721,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the entity.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -711,7 +729,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncId
+             * The synchronization ID of the entity.
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -719,7 +737,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceSuccessFlag.
+             * Indicates whether the entity is traced. Valid values:
+             * <p>
+             * 
+             * *   **1**: The entity is traced.
+             * *   **0**: The entity fails to be traced.
              */
             public Builder traceSuccessFlag(Integer traceSuccessFlag) {
                 this.traceSuccessFlag = traceSuccessFlag;
@@ -892,7 +914,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private Integer syncId; 
 
             /**
-             * CurrentVersionId.
+             * The version of the relationship.
              */
             public Builder currentVersionId(String currentVersionId) {
                 this.currentVersionId = currentVersionId;
@@ -900,7 +922,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ICON
+             * The display icon of the relationship.
              */
             public Builder dIsplayIcon(String dIsplayIcon) {
                 this.dIsplayIcon = dIsplayIcon;
@@ -908,7 +930,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Directed.
+             * The direction of the relationship. Valid values:
+             * <p>
+             * 
+             * *   **1**: forward
+             * *   **0**: reverse
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -916,7 +942,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayColor.
+             * The display color of the relationship.
              */
             public Builder displayColor(String displayColor) {
                 this.displayColor = displayColor;
@@ -924,7 +950,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayTemplate.
+             * The display template of the relationship.
              */
             public Builder displayTemplate(String displayTemplate) {
                 this.displayTemplate = displayTemplate;
@@ -932,7 +958,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the relationship was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -940,7 +966,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the relationship was updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -948,7 +974,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * The ID of the relationship.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -956,7 +982,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the relationship.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -964,7 +990,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the relationship.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -972,7 +998,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ShowType.
+             * The display type of the relationship.
              */
             public Builder showType(String showType) {
                 this.showType = showType;
@@ -980,7 +1006,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncId
+             * The synchronization ID of the relationship.
              */
             public Builder syncId(Integer syncId) {
                 this.syncId = syncId;
@@ -1033,7 +1059,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The display name of the property.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1041,7 +1067,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The display value of the property.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1106,7 +1132,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Count.
+             * The number of neighboring nodes.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1114,7 +1140,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * HasMore.
+             * Indicates whether more neighboring nodes exist. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -1122,7 +1152,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the neighboring node. Valid values include but are not limited to:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1319,7 +1356,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliUid
+             * The ID of the Alibaba Cloud account to which the node belongs.
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -1327,7 +1364,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayInfo.
+             * The display information about the node.
              */
             public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
@@ -1335,7 +1372,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * The node ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1343,7 +1380,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The display language of the neighboring node. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1351,7 +1392,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The node name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1359,7 +1400,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NeighborList.
+             * The neighboring nodes of the node.
              */
             public Builder neighborList(java.util.List < NeighborList> neighborList) {
                 this.neighborList = neighborList;
@@ -1367,7 +1408,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The node properties. The value is in the text format.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -1375,7 +1416,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Property.
+             * The node property.
              */
             public Builder property(java.util.Map < String, ? > property) {
                 this.property = property;
@@ -1383,7 +1424,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule for which the node was created.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1391,7 +1432,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the node was created.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -1399,7 +1440,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The UNIX timestamp when the node was created. Unit: milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1407,7 +1448,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The node type. Valid values include but are not limited to:
+             * <p>
+             * 
+             * *   **process**
+             * *   **file**
+             * *   **alert**
+             * *   **ip**
+             * *   **domain**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1415,7 +1463,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the node was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1423,7 +1471,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID
+             * The node UUID.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1512,7 +1560,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private java.util.List < VertexList> vertexList; 
 
             /**
-             * EdgeList.
+             * The edges that are returned.
              */
             public Builder edgeList(java.util.List < EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -1520,7 +1568,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityTypeList.
+             * The entities that are returned.
              */
             public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
@@ -1528,7 +1576,11 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language of the content within the request. Valid values:
+             * <p>
+             * 
+             * *   **zh**: Chinese
+             * *   **en**: English
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1536,7 +1588,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeList.
+             * The relationships that are returned.
              */
             public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
@@ -1544,7 +1596,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * VertexList.
+             * The detailed information about the node.
              */
             public Builder vertexList(java.util.List < VertexList> vertexList) {
                 this.vertexList = vertexList;

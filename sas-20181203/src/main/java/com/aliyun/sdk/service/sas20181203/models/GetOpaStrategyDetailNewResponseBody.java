@@ -255,7 +255,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The baseline information.
+             * The information about the baseline check item.
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -272,6 +272,134 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
             public Baseline build() {
                 return new Baseline(this);
+            } 
+
+        } 
+
+    }
+    public static class BuildRiskItem extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private BuildRiskItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRiskItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the image build risk.
+             * <p>
+             * 
+             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the image build risk.
+             * <p>
+             * 
+             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public BuildRiskItem build() {
+                return new BuildRiskItem(this);
+            } 
+
+        } 
+
+    }
+    public static class BuildRisk extends TeaModel {
+        @NameInMap("Item")
+        private java.util.List < BuildRiskItem> item;
+
+        @NameInMap("RiskLevel")
+        private java.util.List < String > riskLevel;
+
+        private BuildRisk(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BuildRisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List < BuildRiskItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List < String > getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List < BuildRiskItem> item; 
+            private java.util.List < String > riskLevel; 
+
+            /**
+             * The configuration of image build risk.
+             */
+            public Builder item(java.util.List < BuildRiskItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * The risk levels.
+             */
+            public Builder riskLevel(java.util.List < String > riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public BuildRisk build() {
+                return new BuildRisk(this);
             } 
 
         } 
@@ -377,7 +505,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The information about the malicious samples.
+             * The information about the malicious sample.
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -394,6 +522,134 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
             public MaliciousFile build() {
                 return new MaliciousFile(this);
+            } 
+
+        } 
+
+    }
+    public static class SensitiveFileItem extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private SensitiveFileItem(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFileItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the sensitive files.
+             * <p>
+             * 
+             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the sensitive files.
+             * <p>
+             * 
+             * >  You can call the [GetSensitiveDefineRuleConfig](~~4576877~~) operation to query the ID of the malicious sample.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SensitiveFileItem build() {
+                return new SensitiveFileItem(this);
+            } 
+
+        } 
+
+    }
+    public static class SensitiveFile extends TeaModel {
+        @NameInMap("Item")
+        private java.util.List < SensitiveFileItem> item;
+
+        @NameInMap("RiskLevel")
+        private java.util.List < String > riskLevel;
+
+        private SensitiveFile(Builder builder) {
+            this.item = builder.item;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SensitiveFile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return item
+         */
+        public java.util.List < SensitiveFileItem> getItem() {
+            return this.item;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public java.util.List < String > getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List < SensitiveFileItem> item; 
+            private java.util.List < String > riskLevel; 
+
+            /**
+             * The configuration of sensitive file.
+             */
+            public Builder item(java.util.List < SensitiveFileItem> item) {
+                this.item = item;
+                return this;
+            }
+
+            /**
+             * The risk levels.
+             */
+            public Builder riskLevel(java.util.List < String > riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public SensitiveFile build() {
+                return new SensitiveFile(this);
             } 
 
         } 
@@ -460,15 +716,88 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    public static class RiskClass extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private RiskClass(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskClass create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * The ID of the vulnerability types. Valid values:
+             * <p>
+             * 
+             * *   **cve**: system vulnerability
+             * *   **app**: application vulnerability
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The name of the vulnerability. Valid values:
+             * <p>
+             * 
+             * *   **system vulnerability**
+             * *   **application vulnerability**
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public RiskClass build() {
+                return new RiskClass(this);
+            } 
+
+        } 
+
+    }
     public static class Vul extends TeaModel {
         @NameInMap("Item")
         private java.util.List < VulItem> item;
+
+        @NameInMap("RiskClass")
+        private java.util.List < RiskClass> riskClass;
 
         @NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Vul(Builder builder) {
             this.item = builder.item;
+            this.riskClass = builder.riskClass;
             this.riskLevel = builder.riskLevel;
         }
 
@@ -488,6 +817,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskClass
+         */
+        public java.util.List < RiskClass> getRiskClass() {
+            return this.riskClass;
+        }
+
+        /**
          * @return riskLevel
          */
         public java.util.List < String > getRiskLevel() {
@@ -496,13 +832,22 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < VulItem> item; 
+            private java.util.List < RiskClass> riskClass; 
             private java.util.List < String > riskLevel; 
 
             /**
-             * The vulnerability information.
+             * The information about the vulnerability.
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
+                return this;
+            }
+
+            /**
+             * Risk type of vulnerability.
+             */
+            public Builder riskClass(java.util.List < RiskClass> riskClass) {
+                this.riskClass = riskClass;
                 return this;
             }
 
@@ -525,15 +870,23 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         @NameInMap("Baseline")
         private Baseline baseline;
 
+        @NameInMap("BuildRisk")
+        private BuildRisk buildRisk;
+
         @NameInMap("MaliciousFile")
         private MaliciousFile maliciousFile;
+
+        @NameInMap("SensitiveFile")
+        private SensitiveFile sensitiveFile;
 
         @NameInMap("Vul")
         private Vul vul;
 
         private AlarmDetail(Builder builder) {
             this.baseline = builder.baseline;
+            this.buildRisk = builder.buildRisk;
             this.maliciousFile = builder.maliciousFile;
+            this.sensitiveFile = builder.sensitiveFile;
             this.vul = builder.vul;
         }
 
@@ -553,10 +906,24 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
+         * @return buildRisk
+         */
+        public BuildRisk getBuildRisk() {
+            return this.buildRisk;
+        }
+
+        /**
          * @return maliciousFile
          */
         public MaliciousFile getMaliciousFile() {
             return this.maliciousFile;
+        }
+
+        /**
+         * @return sensitiveFile
+         */
+        public SensitiveFile getSensitiveFile() {
+            return this.sensitiveFile;
         }
 
         /**
@@ -568,11 +935,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
         public static final class Builder {
             private Baseline baseline; 
+            private BuildRisk buildRisk; 
             private MaliciousFile maliciousFile; 
+            private SensitiveFile sensitiveFile; 
             private Vul vul; 
 
             /**
-             * The baseline configuration information.
+             * The baseline check configuration.
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -580,7 +949,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information about the malicious sample.
+             * The configuration of image build risk.
+             */
+            public Builder buildRisk(BuildRisk buildRisk) {
+                this.buildRisk = buildRisk;
+                return this;
+            }
+
+            /**
+             * The configuration of malicious samples.
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -588,7 +965,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability configuration information.
+             * The configuration of sensitive file.
+             */
+            public Builder sensitiveFile(SensitiveFile sensitiveFile) {
+                this.sensitiveFile = sensitiveFile;
+                return this;
+            }
+
+            /**
+             * The vulnerability configuration.
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -665,7 +1050,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > namespaceList; 
 
             /**
-             * The ID of the rule in the cluster.
+             * The ID of the cluster node to which the rule is applied.
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -673,7 +1058,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether all namespaces are included. Valid values:
+             * Indicates whether all namespaces are included. Valid values:
              * <p>
              * 
              * *   **1**: All namespaces are included.
@@ -926,7 +1311,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * The rule configuration information.
+             * The rule configuration.
              */
             public Builder alarmDetail(AlarmDetail alarmDetail) {
                 this.alarmDetail = alarmDetail;
@@ -958,7 +1343,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The rule description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -994,7 +1379,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule applies to malicious Internet images. Valid values:
+             * Indicates whether the rule supports malicious Internet images. Valid values:
              * <p>
              * 
              * *   **true**
@@ -1027,7 +1412,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The scope.
+             * The application scope.
              */
             public Builder scopes(java.util.List < Scopes> scopes) {
                 this.scopes = scopes;
@@ -1059,7 +1444,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule applies to unscanned images. Valid values:
+             * Indicates whether the rule supports unscanned images. Valid values:
              * <p>
              * 
              * *   **true**

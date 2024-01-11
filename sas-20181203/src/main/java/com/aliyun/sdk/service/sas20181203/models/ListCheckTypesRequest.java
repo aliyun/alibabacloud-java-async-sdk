@@ -138,7 +138,7 @@ public class ListCheckTypesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,11 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +160,10 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +172,10 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * The ID of the baseline.
+         * <p>
+         * 
+         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -174,7 +184,11 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * ShowChecks.
+         * Whether to query the check item list. The default value is false. Valid values:
+         * <p>
+         * 
+         * - **false**: Not Query
+         * - **true**: Query
          */
         public Builder showChecks(Boolean showChecks) {
             this.putQueryParameter("ShowChecks", showChecks);
@@ -183,7 +197,11 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * Source.
+         * The data source. Default value: **default**. Valid values:
+         * <p>
+         * 
+         * *   **agentless**: The check items of baselines for agentless detection.
+         * *   **default**: The check items of baselines for hosts.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -192,7 +210,10 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

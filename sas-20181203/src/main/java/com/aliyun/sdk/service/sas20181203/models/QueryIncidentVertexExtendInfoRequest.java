@@ -113,7 +113,7 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         } 
 
         /**
-         * Offset.
+         * The page number. Valid values start from 1.
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -122,7 +122,12 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * RelationType.
+         * The type of the edge that you want to query. Valid values include but are not limited to:
+         * <p>
+         * 
+         * *   **process_exec_file:** A process executes a file.
+         * *   **process_connect_ip:** A process connects to an IP address.
+         * *   **domain_trgger_alert:** A domain name triggers an alert.
          */
         public Builder relationType(String relationType) {
             this.putBodyParameter("RelationType", relationType);
@@ -131,7 +136,7 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of entries per page. Valid values start from 1.
          */
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
@@ -140,7 +145,10 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * VertexId.
+         * The ID of the node that you want to query.
+         * <p>
+         * 
+         * >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
          */
         public Builder vertexId(String vertexId) {
             this.putBodyParameter("VertexId", vertexId);
@@ -149,7 +157,14 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * VertexLabel.
+         * The node label. Valid values include but are not limited to:
+         * <p>
+         * 
+         * *   **process**
+         * *   **file**
+         * *   **alert**
+         * *   **ip**
+         * *   **domain**
          */
         public Builder vertexLabel(String vertexLabel) {
             this.putBodyParameter("VertexLabel", vertexLabel);

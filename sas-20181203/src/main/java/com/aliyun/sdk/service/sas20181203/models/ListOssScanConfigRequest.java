@@ -82,7 +82,7 @@ public class ListOssScanConfigRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +91,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the config.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +100,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

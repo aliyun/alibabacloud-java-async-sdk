@@ -50,7 +50,7 @@ public class CreateOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(Long id) {
             this.id = id;

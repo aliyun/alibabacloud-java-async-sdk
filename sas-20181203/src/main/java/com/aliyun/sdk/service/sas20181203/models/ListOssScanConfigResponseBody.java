@@ -62,7 +62,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * AllKeyPrefix.
+             * Whether to match all file prefixes.
              */
             public Builder allKeyPrefix(Boolean allKeyPrefix) {
                 this.allKeyPrefix = allKeyPrefix;
@@ -258,7 +258,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BucketCount.
+             * The number of the buckets.
              */
             public Builder bucketCount(Integer bucketCount) {
                 this.bucketCount = bucketCount;
@@ -266,7 +266,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BucketNameList.
+             * The name of the bucket.
              */
             public Builder bucketNameList(java.util.List < String > bucketNameList) {
                 this.bucketNameList = bucketNameList;
@@ -274,7 +274,11 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the check policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled.
+             * *   **0**: disabled.
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -282,7 +286,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the check. The time is in the HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -290,7 +294,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -298,7 +302,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPrefixList.
+             * The prefix of the object that you want to check.
              */
             public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
                 this.keyPrefixList = keyPrefixList;
@@ -306,7 +310,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * KeySuffixList.
+             * The suffix of the object that is checked.
              */
             public Builder keySuffixList(java.util.List < String > keySuffixList) {
                 this.keySuffixList = keySuffixList;
@@ -314,7 +318,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LastUpdateTime.
+             * The time when the policy last update.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -322,7 +326,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +334,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ScanDayList.
+             * The day when the check is performed. The value indicates the day of the week.
              */
             public Builder scanDayList(java.util.List < Integer > scanDayList) {
                 this.scanDayList = scanDayList;
@@ -338,7 +342,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the check. The time is in the HH:mm:ss format.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -403,7 +407,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -411,7 +415,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -419,7 +423,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

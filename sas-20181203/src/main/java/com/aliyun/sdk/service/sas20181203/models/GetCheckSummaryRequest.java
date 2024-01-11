@@ -20,10 +20,15 @@ public class GetCheckSummaryRequest extends Request {
     @NameInMap("ResourceDirectoryAccountId")
     private String resourceDirectoryAccountId;
 
+    @Query
+    @NameInMap("Vendors")
+    private java.util.List < String > vendors;
+
     private GetCheckSummaryRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.vendors = builder.vendors;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class GetCheckSummaryRequest extends Request {
         return this.resourceDirectoryAccountId;
     }
 
+    /**
+     * @return vendors
+     */
+    public java.util.List < String > getVendors() {
+        return this.vendors;
+    }
+
     public static final class Builder extends Request.Builder<GetCheckSummaryRequest, Builder> {
         private String lang; 
         private String resourceDirectoryAccountId; 
+        private java.util.List < String > vendors; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class GetCheckSummaryRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.vendors = request.vendors;
         } 
 
         /**
@@ -86,6 +100,15 @@ public class GetCheckSummaryRequest extends Request {
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * The service provider (SP) of the cloud asset.
+         */
+        public Builder vendors(java.util.List < String > vendors) {
+            this.putQueryParameter("Vendors", vendors);
+            this.vendors = vendors;
             return this;
         }
 

@@ -173,6 +173,9 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("Item")
         private String item;
 
+        @NameInMap("LastHandleTime")
+        private Long lastHandleTime;
+
         @NameInMap("Level")
         private String level;
 
@@ -196,6 +199,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             this.execErrorMessage = builder.execErrorMessage;
             this.fixStatus = builder.fixStatus;
             this.item = builder.item;
+            this.lastHandleTime = builder.lastHandleTime;
             this.level = builder.level;
             this.reason = builder.reason;
             this.status = builder.status;
@@ -261,6 +265,13 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastHandleTime
+         */
+        public Long getLastHandleTime() {
+            return this.lastHandleTime;
+        }
+
+        /**
          * @return level
          */
         public String getLevel() {
@@ -303,6 +314,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private String execErrorMessage; 
             private Integer fixStatus; 
             private String item; 
+            private Long lastHandleTime; 
             private String level; 
             private String reason; 
             private Integer status; 
@@ -326,7 +338,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -334,7 +346,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -366,6 +378,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
              */
             public Builder item(String item) {
                 this.item = item;
+                return this;
+            }
+
+            /**
+             * LastHandleTime.
+             */
+            public Builder lastHandleTime(Long lastHandleTime) {
+                this.lastHandleTime = lastHandleTime;
                 return this;
             }
 

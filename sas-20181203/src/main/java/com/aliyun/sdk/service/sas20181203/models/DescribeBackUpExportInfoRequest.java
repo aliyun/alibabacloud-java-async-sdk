@@ -97,7 +97,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The number of the page to return. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -131,7 +131,7 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * The number of entries to return on each page. Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

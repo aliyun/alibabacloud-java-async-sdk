@@ -551,6 +551,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMachineCanRebootResponse> describeMachineCanReboot(DescribeMachineCanRebootRequest request);
 
+    CompletableFuture<DescribeMatchedMaliciousNamesResponse> describeMatchedMaliciousNames(DescribeMatchedMaliciousNamesRequest request);
+
     CompletableFuture<DescribeModuleConfigResponse> describeModuleConfig(DescribeModuleConfigRequest request);
 
     CompletableFuture<DescribeMonitorAccountsResponse> describeMonitorAccounts(DescribeMonitorAccountsRequest request);
@@ -1126,6 +1128,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHoneypotProbeResponse> listHoneypotProbe(ListHoneypotProbeRequest request);
 
     CompletableFuture<ListHoneypotProbeUuidResponse> listHoneypotProbeUuid(ListHoneypotProbeUuidRequest request);
+
+    CompletableFuture<ListImageBuildRiskItemResponse> listImageBuildRiskItem(ListImageBuildRiskItemRequest request);
 
     CompletableFuture<ListImageRegistryRegionResponse> listImageRegistryRegion(ListImageRegistryRegionRequest request);
 

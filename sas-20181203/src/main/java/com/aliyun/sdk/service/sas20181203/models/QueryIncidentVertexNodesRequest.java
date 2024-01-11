@@ -112,7 +112,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
         } 
 
         /**
-         * EdgeLabelList.
+         * The types of the edges that you want to query.
          */
         public Builder edgeLabelList(java.util.List < String > edgeLabelList) {
             String edgeLabelListShrink = shrink(edgeLabelList, "EdgeLabelList", "simple");
@@ -122,7 +122,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
         }
 
         /**
-         * Offset.
+         * The page number. Valid values start from 1.
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -131,7 +131,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of entries per page. Valid values start from 1.
          */
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
@@ -140,7 +140,10 @@ public class QueryIncidentVertexNodesRequest extends Request {
         }
 
         /**
-         * VertexId.
+         * The ID of the node that you want to query.
+         * <p>
+         * 
+         * >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
          */
         public Builder vertexId(String vertexId) {
             this.putBodyParameter("VertexId", vertexId);
@@ -149,7 +152,14 @@ public class QueryIncidentVertexNodesRequest extends Request {
         }
 
         /**
-         * VertexLabel.
+         * The node label. Valid values include but are not limited to:
+         * <p>
+         * 
+         * *   **process**
+         * *   **file**
+         * *   **alert**
+         * *   **ip**
+         * *   **domain**
          */
         public Builder vertexLabel(String vertexLabel) {
             this.putBodyParameter("VertexLabel", vertexLabel);

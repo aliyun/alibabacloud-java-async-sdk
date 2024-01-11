@@ -275,10 +275,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the risk item.
+         * The ID of the risk item. This parameter is required.
          * <p>
          * 
-         * >  To query the information about the risk items and check items of a server, you must provide the IDs of risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+         * >  To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);

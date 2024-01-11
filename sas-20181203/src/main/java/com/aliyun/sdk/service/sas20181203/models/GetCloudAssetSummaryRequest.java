@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudAssetSummaryRequest</p>
  */
 public class GetCloudAssetSummaryRequest extends Request {
+    @Query
+    @NameInMap("Vendors")
+    private java.util.List < Integer > vendors;
+
     private GetCloudAssetSummaryRequest(Builder builder) {
         super(builder);
+        this.vendors = builder.vendors;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class GetCloudAssetSummaryRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return vendors
+     */
+    public java.util.List < Integer > getVendors() {
+        return this.vendors;
+    }
+
     public static final class Builder extends Request.Builder<GetCloudAssetSummaryRequest, Builder> {
+        private java.util.List < Integer > vendors; 
 
         private Builder() {
             super();
@@ -37,7 +50,17 @@ public class GetCloudAssetSummaryRequest extends Request {
 
         private Builder(GetCloudAssetSummaryRequest request) {
             super(request);
+            this.vendors = request.vendors;
         } 
+
+        /**
+         * The asset type by service provider.
+         */
+        public Builder vendors(java.util.List < Integer > vendors) {
+            this.putQueryParameter("Vendors", vendors);
+            this.vendors = vendors;
+            return this;
+        }
 
         @Override
         public GetCloudAssetSummaryRequest build() {

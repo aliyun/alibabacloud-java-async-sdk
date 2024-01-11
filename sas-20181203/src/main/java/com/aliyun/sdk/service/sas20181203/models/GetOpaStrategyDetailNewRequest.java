@@ -57,7 +57,7 @@ public class GetOpaStrategyDetailNewRequest extends Request {
          * The rule ID.
          * <p>
          * 
-         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to obtain the rule ID.
+         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
