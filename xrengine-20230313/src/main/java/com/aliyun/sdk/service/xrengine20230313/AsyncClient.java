@@ -22,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BatchQueryMotionShopTaskStatusResponse> batchQueryMotionShopTaskStatus(BatchQueryMotionShopTaskStatusRequest request);
 
+    CompletableFuture<CreateAvatarTalkProjectResponse> createAvatarTalkProject(CreateAvatarTalkProjectRequest request);
+
     CompletableFuture<CreateDigitalHumanProjectResponse> createDigitalHumanProject(CreateDigitalHumanProjectRequest request);
 
     CompletableFuture<CreateLivePortraitProjectResponse> createLivePortraitProject(CreateLivePortraitProjectRequest request);

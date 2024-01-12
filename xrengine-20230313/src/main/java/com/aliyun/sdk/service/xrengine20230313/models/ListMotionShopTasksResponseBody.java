@@ -211,6 +211,87 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
 
     } 
 
+    public static class Material extends TeaModel {
+        @NameInMap("AvatarId")
+        private String avatarId;
+
+        @NameInMap("Box")
+        private java.util.List < Double > box;
+
+        @NameInMap("CoverUrl")
+        private String coverUrl;
+
+        private Material(Builder builder) {
+            this.avatarId = builder.avatarId;
+            this.box = builder.box;
+            this.coverUrl = builder.coverUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Material create() {
+            return builder().build();
+        }
+
+        /**
+         * @return avatarId
+         */
+        public String getAvatarId() {
+            return this.avatarId;
+        }
+
+        /**
+         * @return box
+         */
+        public java.util.List < Double > getBox() {
+            return this.box;
+        }
+
+        /**
+         * @return coverUrl
+         */
+        public String getCoverUrl() {
+            return this.coverUrl;
+        }
+
+        public static final class Builder {
+            private String avatarId; 
+            private java.util.List < Double > box; 
+            private String coverUrl; 
+
+            /**
+             * AvatarId.
+             */
+            public Builder avatarId(String avatarId) {
+                this.avatarId = avatarId;
+                return this;
+            }
+
+            /**
+             * Box.
+             */
+            public Builder box(java.util.List < Double > box) {
+                this.box = box;
+                return this;
+            }
+
+            /**
+             * CoverUrl.
+             */
+            public Builder coverUrl(String coverUrl) {
+                this.coverUrl = coverUrl;
+                return this;
+            }
+
+            public Material build() {
+                return new Material(this);
+            } 
+
+        } 
+
+    }
     public static class Result extends TeaModel {
         @NameInMap("CoverUrl")
         private String coverUrl;
@@ -293,6 +374,9 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("Material")
+        private Material material;
+
         @NameInMap("Result")
         private Result result;
 
@@ -303,6 +387,7 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         private String taskId;
 
         private Data(Builder builder) {
+            this.material = builder.material;
             this.result = builder.result;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -314,6 +399,13 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return material
+         */
+        public Material getMaterial() {
+            return this.material;
         }
 
         /**
@@ -338,9 +430,18 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Material material; 
             private Result result; 
             private String status; 
             private String taskId; 
+
+            /**
+             * Material.
+             */
+            public Builder material(Material material) {
+                this.material = material;
+                return this;
+            }
 
             /**
              * Result.
