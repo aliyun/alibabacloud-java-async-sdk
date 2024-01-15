@@ -44,6 +44,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTaskAssignRuleResponse> createTaskAssignRule(CreateTaskAssignRuleRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
     CompletableFuture<CreateWarningConfigResponse> createWarningConfig(CreateWarningConfigRequest request);
@@ -80,6 +84,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteTaskAssignRuleResponse> deleteTaskAssignRule(DeleteTaskAssignRuleRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
     CompletableFuture<DeleteWarningConfigResponse> deleteWarningConfig(DeleteWarningConfigRequest request);
@@ -104,6 +112,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetResultResponse> getResult(GetResultRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetResultCallbackResponse> getResultCallback(GetResultCallbackRequest request);
 
     CompletableFuture<GetResultToReviewResponse> getResultToReview(GetResultToReviewRequest request);

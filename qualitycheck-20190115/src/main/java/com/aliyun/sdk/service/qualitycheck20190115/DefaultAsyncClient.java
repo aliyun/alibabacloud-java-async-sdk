@@ -221,6 +221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -473,6 +477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -641,6 +649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<GetResultCallbackResponse> getResultCallback(GetResultCallbackRequest request) {
         try {
