@@ -12,31 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityIPListResponseBody</p>
  */
 public class DescribeSecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
     @NameInMap("DBInstanceName")
     private String DBInstanceName;
 
     @NameInMap("GroupItems")
     private java.util.List < GroupItems> groupItems;
 
-    @NameInMap("Message")
-    private String message;
-
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     private DescribeSecurityIPListResponseBody(Builder builder) {
-        this.code = builder.code;
         this.DBInstanceName = builder.DBInstanceName;
         this.groupItems = builder.groupItems;
-        this.message = builder.message;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -45,13 +33,6 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static DescribeSecurityIPListResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
     }
 
     /**
@@ -69,41 +50,16 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     }
 
     /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
-        private String code; 
         private String DBInstanceName; 
         private java.util.List < GroupItems> groupItems; 
-        private String message; 
         private String requestId; 
-        private Boolean success; 
-
-        /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * DBInstanceName.
@@ -122,26 +78,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 

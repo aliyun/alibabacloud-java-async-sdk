@@ -12,9 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityIPListResponseBody</p>
  */
 public class ModifySecurityIPListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
     @NameInMap("DBInstanceName")
     private String DBInstanceName;
 
@@ -23,9 +20,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
 
     @NameInMap("GroupTag")
     private String groupTag;
-
-    @NameInMap("Message")
-    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -36,9 +30,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     @NameInMap("SecurityIPType")
     private String securityIPType;
 
-    @NameInMap("Success")
-    private Boolean success;
-
     @NameInMap("TaskId")
     private Long taskId;
 
@@ -46,15 +37,12 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     private String whitelistNetType;
 
     private ModifySecurityIPListResponseBody(Builder builder) {
-        this.code = builder.code;
         this.DBInstanceName = builder.DBInstanceName;
         this.groupName = builder.groupName;
         this.groupTag = builder.groupTag;
-        this.message = builder.message;
         this.requestId = builder.requestId;
         this.securityIPList = builder.securityIPList;
         this.securityIPType = builder.securityIPType;
-        this.success = builder.success;
         this.taskId = builder.taskId;
         this.whitelistNetType = builder.whitelistNetType;
     }
@@ -65,13 +53,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
 
     public static ModifySecurityIPListResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
     }
 
     /**
@@ -96,13 +77,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     }
 
     /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -124,13 +98,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     }
 
     /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -145,25 +112,14 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
         private String DBInstanceName; 
         private String groupName; 
         private String groupTag; 
-        private String message; 
         private String requestId; 
         private String securityIPList; 
         private String securityIPType; 
-        private Boolean success; 
         private Long taskId; 
         private String whitelistNetType; 
-
-        /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * DBInstanceName.
@@ -190,14 +146,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -218,14 +166,6 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
          */
         public Builder securityIPType(String securityIPType) {
             this.securityIPType = securityIPType;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
             return this;
         }
 

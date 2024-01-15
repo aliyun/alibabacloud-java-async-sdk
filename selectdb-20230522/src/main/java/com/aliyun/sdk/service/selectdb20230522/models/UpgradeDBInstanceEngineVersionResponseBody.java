@@ -12,18 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeDBInstanceEngineVersionResponseBody</p>
  */
 public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private String code;
-
-    @NameInMap("Message")
-    private String message;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private UpgradeDBInstanceEngineVersionResponseBody(Builder builder) {
-        this.code = builder.code;
-        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -36,20 +28,6 @@ public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -57,25 +35,7 @@ public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
-        private String message; 
         private String requestId; 
-
-        /**
-         * Code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
 
         /**
          * RequestId.
