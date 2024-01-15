@@ -52,6 +52,10 @@ public class CreateCdsFileShareLinkRequest extends Request {
     private java.util.List < String > fileIds;
 
     @Query
+    @NameInMap("GroupId")
+    private String groupId;
+
+    @Query
     @NameInMap("PreviewLimit")
     @Validation(maximum = 99999)
     private Long previewLimit;
@@ -82,6 +86,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         this.endUserId = builder.endUserId;
         this.expiration = builder.expiration;
         this.fileIds = builder.fileIds;
+        this.groupId = builder.groupId;
         this.previewLimit = builder.previewLimit;
         this.saveLimit = builder.saveLimit;
         this.shareName = builder.shareName;
@@ -165,6 +170,13 @@ public class CreateCdsFileShareLinkRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return previewLimit
      */
     public Long getPreviewLimit() {
@@ -202,6 +214,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         private String endUserId; 
         private String expiration; 
         private java.util.List < String > fileIds; 
+        private String groupId; 
         private Long previewLimit; 
         private Long saveLimit; 
         private String shareName; 
@@ -222,6 +235,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
             this.endUserId = request.endUserId;
             this.expiration = request.expiration;
             this.fileIds = request.fileIds;
+            this.groupId = request.groupId;
             this.previewLimit = request.previewLimit;
             this.saveLimit = request.saveLimit;
             this.shareName = request.shareName;
@@ -399,6 +413,15 @@ public class CreateCdsFileShareLinkRequest extends Request {
         public Builder fileIds(java.util.List < String > fileIds) {
             this.putQueryParameter("FileIds", fileIds);
             this.fileIds = fileIds;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

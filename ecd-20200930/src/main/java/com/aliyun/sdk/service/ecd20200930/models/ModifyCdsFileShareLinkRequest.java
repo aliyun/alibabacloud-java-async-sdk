@@ -316,6 +316,25 @@ public class ModifyCdsFileShareLinkRequest extends Request {
 
         /**
          * Specifies whether to prohibit the download of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.putQueryParameter("DisableDownload", disableDownload);
@@ -325,6 +344,25 @@ public class ModifyCdsFileShareLinkRequest extends Request {
 
         /**
          * Specifies whether to prohibit the preview of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.putQueryParameter("DisablePreview", disablePreview);
@@ -334,6 +372,25 @@ public class ModifyCdsFileShareLinkRequest extends Request {
 
         /**
          * Specifies whether to prohibit the dump of the files that are being shared.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder disableSave(Boolean disableSave) {
             this.putQueryParameter("DisableSave", disableSave);
@@ -378,7 +435,7 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.
+         * The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
          */
         public Builder previewLimit(Long previewLimit) {
             this.putQueryParameter("PreviewLimit", previewLimit);
@@ -405,7 +462,7 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be dumped.
+         * The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.
          */
         public Builder saveLimit(Long saveLimit) {
             this.putQueryParameter("SaveLimit", saveLimit);
@@ -423,7 +480,10 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The name of the file sharing task. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.
+         * The name of the file sharing task. If you do not configure this parameter, the sharing task name is the first ID that is returned in the file_id_list value.
+         * <p>
+         * 
+         * >  The sharing task name must be 0 to 128 characters in length.
          */
         public Builder shareName(String shareName) {
             this.putQueryParameter("ShareName", shareName);
@@ -441,7 +501,26 @@ public class ModifyCdsFileShareLinkRequest extends Request {
         }
 
         /**
-         * The status of the file sharing link. Valid values: ● disabled: The file sharing link is canceled. ● enabled: The file sharing link is available.
+         * The sharing status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   disabled: The sharing task is canceled.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   enabled: The sharing task is valid.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

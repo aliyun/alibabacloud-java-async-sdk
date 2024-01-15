@@ -85,11 +85,11 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable cross-desktop access for a workspace.
+         * Specifies whether to enable the cross-desktop access feature for the workspace.
          * <p>
          * 
-         * *   true: enables cross-desktop access.
-         * *   false: disables cross-desktop access.
+         * *   true: enable
+         * *   false: disable
          */
         public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
             this.putQueryParameter("EnableCrossDesktopAccess", enableCrossDesktopAccess);
@@ -98,7 +98,7 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -107,7 +107,7 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

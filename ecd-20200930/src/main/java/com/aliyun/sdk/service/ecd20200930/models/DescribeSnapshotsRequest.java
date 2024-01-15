@@ -210,7 +210,7 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
-         * Creator.
+         * The user who creates the snapshot.
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);

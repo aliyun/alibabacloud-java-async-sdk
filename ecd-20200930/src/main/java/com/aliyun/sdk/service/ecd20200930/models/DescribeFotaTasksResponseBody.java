@@ -12,14 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFotaTasksResponseBody</p>
  */
 public class DescribeFotaTasksResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
     @NameInMap("FotaTasks")
     private java.util.List < FotaTasks> fotaTasks;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @NameInMap("RequestId")
     private String requestId;
 
     private DescribeFotaTasksResponseBody(Builder builder) {
+        this.code = builder.code;
         this.fotaTasks = builder.fotaTasks;
+        this.message = builder.message;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
     }
 
@@ -32,10 +44,31 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
      * @return fotaTasks
      */
     public java.util.List < FotaTasks> getFotaTasks() {
         return this.fotaTasks;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -46,14 +79,45 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
         private java.util.List < FotaTasks> fotaTasks; 
+        private String message; 
+        private String nextToken; 
         private String requestId; 
+
+        /**
+         * The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * Details about the image update task.
          */
         public Builder fotaTasks(java.util.List < FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
+            return this;
+        }
+
+        /**
+         * The returned error message. This parameter is not returned if the value of Code is `success`.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -194,7 +258,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private String taskUid; 
 
             /**
-             * The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
+             * The version of the image. You can call the [DescribeImages](~~188895~~) operation to obtain this parameter.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -218,7 +282,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops for which the images can be updated to this version.
+             * The number of cloud desktops for which images can be updated to this version.
              */
             public Builder pendingDesktopCount(Integer pendingDesktopCount) {
                 this.pendingDesktopCount = pendingDesktopCount;
@@ -226,7 +290,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image version available for update was published.
+             * The time when the image version is available for update was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -234,7 +298,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image version available for update.
+             * The description of the image version that is available for update.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -250,7 +314,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an end user can update the image of the cloud desktop.
+             * Indicates whether an end user can update the image.
              * <p>
              * 
              * Valid values:
@@ -263,7 +327,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     The end user can update the image of the cloud desktop.
+             *     The end user can update the image.
              * 
              *     <!-- -->
              * 
@@ -275,7 +339,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     The end user cannot update the image of the cloud desktop.
+             *     The end user cannot update the image.
              * 
              *     <!-- -->
              */

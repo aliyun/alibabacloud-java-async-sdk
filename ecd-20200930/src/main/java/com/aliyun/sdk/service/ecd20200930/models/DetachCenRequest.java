@@ -70,7 +70,7 @@ public class DetachCenRequest extends Request {
         } 
 
         /**
-         * OfficeSiteId.
+         * The workspace ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -79,7 +79,7 @@ public class DetachCenRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

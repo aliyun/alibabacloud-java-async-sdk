@@ -1,3 +1,6 @@
+2024-01-15 Version: 3.0.0
+- Generated java-async 2020-09-30 for ecd.
+
 2023-07-19 Version: 2.0.24
 - Add CommonDesktopSetting.
 

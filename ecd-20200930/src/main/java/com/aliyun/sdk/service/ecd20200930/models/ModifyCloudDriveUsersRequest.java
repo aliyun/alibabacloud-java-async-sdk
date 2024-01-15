@@ -140,7 +140,34 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of Cloud Drive Service users.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   disabled
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     unavailable
+         * 
+         *     <!-- -->
+         * 
+         * *   enabled
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     available
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -149,7 +176,7 @@ public class ModifyCloudDriveUsersRequest extends Request {
         }
 
         /**
-         * UserMaxSize.
+         * The maximum storage space of a user. Unit: bytes.
          */
         public Builder userMaxSize(Long userMaxSize) {
             this.putQueryParameter("UserMaxSize", userMaxSize);

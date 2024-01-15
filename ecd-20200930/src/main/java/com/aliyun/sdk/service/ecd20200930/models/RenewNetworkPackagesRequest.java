@@ -126,7 +126,13 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
+         * *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+         * 
+         * Default value: true.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -135,7 +141,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * NetworkPackageId.
+         * The IDs of Internet access packages.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -144,7 +150,12 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the `PeriodUnit` parameter. This parameter takes effect only when the `ChargeType` parameter is set to `PrePaid`.
+         * <p>
+         * 
+         * *   If the `PeriodUnit` parameter is set to `Week`, the valid value of the Period parameter is 1.
+         * *   If the `PeriodUnit` parameter is set to `Month`, the valid values of the Period parameter are 1, 2, 3, and 6.
+         * *   If the `PeriodUnit` parameter is set to `Year`, the valid values of the Period parameter are 1, 2, 3, 4, and 5.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -153,7 +164,13 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal duration specified by the Period parameter. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Month.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -162,7 +179,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the promotion. You can call the `GetResourcePrice` operation to obtain the ID of the promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -171,7 +188,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

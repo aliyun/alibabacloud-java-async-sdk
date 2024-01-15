@@ -62,7 +62,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FileSystems.
+         * Details about the NAS file systems.
          */
         public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -70,7 +70,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. This parameter is empty if no additional results exist.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String desktopGroupName; 
 
             /**
-             * DesktopGroupId.
+             * The ID of the desktop group.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -138,7 +138,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupName.
+             * The name of the desktop group.
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -395,7 +395,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Capacity.
+             * The total capacity of the NAS file system. Unit: GiB.
+             * <p>
+             * 
+             * *   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.
+             * *   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -403,7 +407,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the NAS file system was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -411,7 +415,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the NAS file system.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -419,7 +423,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroups.
+             * The desktop groups that are associated with the NAS file systems that support the UPM feature.
              */
             public Builder desktopGroups(java.util.List < DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
@@ -427,7 +431,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionEnabled.
+             * Indicates whether disk encryption is enabled.
              */
             public Builder encryptionEnabled(Boolean encryptionEnabled) {
                 this.encryptionEnabled = encryptionEnabled;
@@ -435,7 +439,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the NAS file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -443,7 +447,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemName.
+             * The name of the NAS file system.
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -451,7 +455,15 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemStatus.
+             * The status of the NAS file system. The possible values include:
+             * <p>
+             * 
+             * *   Pending: The NAS file system is being created.
+             * *   Running: The NAS file system is running.
+             * *   Stopped: The NAS file system is stopped.
+             * *   Deleting: The NAS file system is being deleted.
+             * *   Deleted: The NAS file system is deleted.
+             * *   Invalid: The NAS file system is invalid.
              */
             public Builder fileSystemStatus(String fileSystemStatus) {
                 this.fileSystemStatus = fileSystemStatus;
@@ -459,7 +471,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -467,7 +479,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredSize.
+             * The used storage of the NAS file system. Unit: byte.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -475,7 +487,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetDomain.
+             * The domain name of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -483,7 +495,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetStatus.
+             * The status of the mount target. The possible values include:
+             * <p>
+             * 
+             * *   Pending: The mount target is being created.
+             * *   Active: The mount target is enabled.
+             * *   Inactive: The mount target is disabled.
+             * *   Deleting: The mount target is being deleted.
+             * *   Invalid: The mount target is invalid.
              */
             public Builder mountTargetStatus(String mountTargetStatus) {
                 this.mountTargetStatus = mountTargetStatus;
@@ -491,7 +510,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * The ID of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -499,7 +518,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * The name of the workspace.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -507,7 +526,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProfileCompatible.
+             * Indicates whether the User Profile Management (UPM) feature is supported.
              */
             public Builder profileCompatible(Boolean profileCompatible) {
                 this.profileCompatible = profileCompatible;
@@ -515,7 +534,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -523,7 +542,11 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type of the NAS file system. Valid values:
+             * <p>
+             * 
+             * *   Capacity
+             * *   Performance
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -531,7 +554,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAcl.
+             * Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.
              */
             public Builder supportAcl(Boolean supportAcl) {
                 this.supportAcl = supportAcl;
@@ -539,7 +562,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the NAS file system resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

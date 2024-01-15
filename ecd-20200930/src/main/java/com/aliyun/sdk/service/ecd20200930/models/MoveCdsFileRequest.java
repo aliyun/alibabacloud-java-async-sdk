@@ -29,6 +29,10 @@ public class MoveCdsFileRequest extends Request {
     private String fileId;
 
     @Query
+    @NameInMap("GroupId")
+    private String groupId;
+
+    @Query
     @NameInMap("ParentFolderId")
     private String parentFolderId;
 
@@ -43,6 +47,7 @@ public class MoveCdsFileRequest extends Request {
         this.conflictPolicy = builder.conflictPolicy;
         this.endUserId = builder.endUserId;
         this.fileId = builder.fileId;
+        this.groupId = builder.groupId;
         this.parentFolderId = builder.parentFolderId;
         this.regionId = builder.regionId;
     }
@@ -89,6 +94,13 @@ public class MoveCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return parentFolderId
      */
     public String getParentFolderId() {
@@ -107,6 +119,7 @@ public class MoveCdsFileRequest extends Request {
         private String conflictPolicy; 
         private String endUserId; 
         private String fileId; 
+        private String groupId; 
         private String parentFolderId; 
         private String regionId; 
 
@@ -120,6 +133,7 @@ public class MoveCdsFileRequest extends Request {
             this.conflictPolicy = request.conflictPolicy;
             this.endUserId = request.endUserId;
             this.fileId = request.fileId;
+            this.groupId = request.groupId;
             this.parentFolderId = request.parentFolderId;
             this.regionId = request.regionId;
         } 
@@ -200,6 +214,15 @@ public class MoveCdsFileRequest extends Request {
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
             this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * The group ID.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

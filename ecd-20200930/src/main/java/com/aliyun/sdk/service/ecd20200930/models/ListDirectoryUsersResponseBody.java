@@ -62,7 +62,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * NextToken.
+         * The token used to start the next query. If the value of this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -130,7 +130,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * DisplayName.
+             * The display name.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -138,7 +138,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUser.
+             * The name of the user.
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;

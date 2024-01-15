@@ -158,7 +158,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * 是否为使用云桌面的用户赋予本地管理员权限。
+         * Specifies whether to grant the local administrator permissions to end users.
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);

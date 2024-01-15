@@ -70,7 +70,7 @@ public class RebootDesktopsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The cloud desktop ID. You can specify one or more desktop IDs. Valid values of N: 1 to 100.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -79,7 +79,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * RebootDesktops
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

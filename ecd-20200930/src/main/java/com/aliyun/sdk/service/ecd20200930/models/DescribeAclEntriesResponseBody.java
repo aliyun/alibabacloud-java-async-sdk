@@ -62,7 +62,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclEntries.
+         * The ACL entry.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -70,7 +70,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to start the next query. If the value of this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,11 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * Policy.
+             * The ACL policy.
+             * <p>
+             * 
+             * *   **allow**: allows access.
+             * *   **drop**: denies access.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -150,7 +154,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * The ID of the instance corresponding to the ACL.
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -158,7 +162,11 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The object on which the ACL takes effect.
+             * <p>
+             * 
+             * *   **vpc**: workspace.
+             * *   **desktop**: cloud desktop.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

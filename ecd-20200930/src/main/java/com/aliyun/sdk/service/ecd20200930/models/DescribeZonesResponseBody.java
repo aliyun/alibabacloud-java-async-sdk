@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * DescribeZones
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * Details of zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -98,7 +98,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

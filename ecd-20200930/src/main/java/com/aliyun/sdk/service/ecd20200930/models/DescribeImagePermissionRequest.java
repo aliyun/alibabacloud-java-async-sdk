@@ -70,7 +70,7 @@ public class DescribeImagePermissionRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -79,7 +79,7 @@ public class DescribeImagePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -126,7 +126,30 @@ public class RenewDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * Specifies whether to enable the automatic payment feature.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true (default): enables the auto-payment feature.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+         * 
+         *     <!-- -->
+         * 
+         * *   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     You can log on to the EDS console and complete the payment based on the order number.
+         * 
+         *     <!-- -->
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -135,7 +158,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to RenewDesktops.
+         * The cloud desktop ID. Only subscription cloud desktops can be renewed.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -144,13 +167,13 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
+         * The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.
          * <p>
          * 
-         * *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-         * *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+         * *   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6
+         * *   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6
          * 
-         * Default value: true.
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -159,10 +182,26 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of cloud desktop N.
+         * The unit of the renewal duration that is specified by the Period parameter.
          * <p>
          * 
-         * Only subscription cloud desktops can be renewed by calling this operation.
+         * Valid values:
+         * 
+         * *   Month (default)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Year
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -171,7 +210,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the sales promotion.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -180,13 +219,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration specified by the Period parameter. Valid values:
-         * <p>
-         * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Month.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

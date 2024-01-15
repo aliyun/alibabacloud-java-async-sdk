@@ -128,7 +128,18 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         } 
 
         /**
-         * CoordinatePolicyType.
+         * The coordination policy.
+         * <p>
+         * 
+         * Set the value to FULL_CONTROL.
+         * 
+         * *   The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder coordinatePolicyType(String coordinatePolicyType) {
             this.putQueryParameter("CoordinatePolicyType", coordinatePolicyType);
@@ -137,7 +148,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -146,7 +157,18 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * InitiatorType.
+         * The type of the initiator.
+         * <p>
+         * 
+         * Set the value to ADMIN_INITIATE.
+         * 
+         * *   The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder initiatorType(String initiatorType) {
             this.putQueryParameter("InitiatorType", initiatorType);
@@ -155,7 +177,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +186,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * ResourceCandidates.
+         * The list of cloud desktops that run the collaboration task at the same time.
          */
         public Builder resourceCandidates(java.util.List < ResourceCandidates> resourceCandidates) {
             this.putQueryParameter("ResourceCandidates", resourceCandidates);
@@ -173,7 +195,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The universally unique identifier (UUID) of the device.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -292,7 +314,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             private String resourceType; 
 
             /**
-             * OwnerAliUid.
+             * The ID of the Alibaba Cloud account to which the current cloud desktop belongs.
              */
             public Builder ownerAliUid(Long ownerAliUid) {
                 this.ownerAliUid = ownerAliUid;
@@ -300,7 +322,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * OwnerEndUserId.
+             * The ID of the current end user.
              */
             public Builder ownerEndUserId(String ownerEndUserId) {
                 this.ownerEndUserId = ownerEndUserId;
@@ -308,7 +330,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * The ID of the cloud desktop.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -316,7 +338,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceName.
+             * The name of the cloud desktop.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -324,7 +346,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceProperties.
+             * The properties of the cloud desktop.
              */
             public Builder resourceProperties(String resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -332,7 +354,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceRegionId.
+             * The region where the resource resides.
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -340,7 +362,18 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The resource type.
+             * <p>
+             * 
+             * Set the value to CLOUD_DESKTOP.
+             * 
+             * *   The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

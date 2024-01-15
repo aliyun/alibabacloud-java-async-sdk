@@ -108,7 +108,38 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * RdsLicenseDomain.
+         * Specifies whether to configure the trust password for the RDS license domain of the AD workspace.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     configures the trust password
+         * 
+         *     <!-- -->
+         * 
+         *     for the RDS license domain of the AD workspace.
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     configures the trust password
+         * 
+         *     <!-- -->
+         * 
+         *     for common AD workspaces.
          */
         public Builder rdsLicenseDomain(Boolean rdsLicenseDomain) {
             this.putQueryParameter("RdsLicenseDomain", rdsLicenseDomain);

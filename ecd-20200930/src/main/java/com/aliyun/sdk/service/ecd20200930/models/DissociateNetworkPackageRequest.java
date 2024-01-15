@@ -70,7 +70,7 @@ public class DissociateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * NetworkPackageId.
+         * The ID of the Internet access package. You can call the [DescribeNetworkPackages](~~216079~~) operation to query the ID of the Internet access package.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -79,7 +79,7 @@ public class DissociateNetworkPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

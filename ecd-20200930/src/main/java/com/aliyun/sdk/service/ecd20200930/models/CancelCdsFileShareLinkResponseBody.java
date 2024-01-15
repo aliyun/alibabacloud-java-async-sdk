@@ -118,11 +118,26 @@ public class CancelCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the call was successful.
          * <p>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request failed.
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;

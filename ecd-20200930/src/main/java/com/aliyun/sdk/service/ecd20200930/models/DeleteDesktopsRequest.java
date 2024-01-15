@@ -70,7 +70,7 @@ public class DeleteDesktopsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The IDs of the cloud desktops that you want to release. You can configure up to 100 desktop IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -79,7 +79,7 @@ public class DeleteDesktopsRequest extends Request {
         }
 
         /**
-         * DeleteDesktops
+         * The ID of the region where the cloud desktops to release are located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

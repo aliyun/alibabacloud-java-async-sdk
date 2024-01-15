@@ -98,7 +98,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         } 
 
         /**
-         * CdsId.
+         * The ID of the cloud disk in Cloud Drive Service.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -107,7 +107,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * DownloadEndUserIds.
+         * The IDs of the users who have the download permissions.
          */
         public Builder downloadEndUserIds(java.util.List < String > downloadEndUserIds) {
             this.putQueryParameter("DownloadEndUserIds", downloadEndUserIds);
@@ -116,7 +116,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * DownloadUploadEndUserIds.
+         * The IDs of the users who have the upload and download permissions.
          */
         public Builder downloadUploadEndUserIds(java.util.List < String > downloadUploadEndUserIds) {
             this.putQueryParameter("DownloadUploadEndUserIds", downloadUploadEndUserIds);
@@ -125,7 +125,7 @@ public class ModifyCloudDrivePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

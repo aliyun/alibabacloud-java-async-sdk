@@ -198,7 +198,7 @@ public class UploadImageRequest extends Request {
         } 
 
         /**
-         * DataDiskSize.
+         * The size of the data disk. Valid values: 80 to 500. Unit: GiB.
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.putQueryParameter("DataDiskSize", dataDiskSize);
@@ -207,7 +207,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -216,7 +216,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * EnableSecurityCheck.
+         * Specifies whether to enable security check.
          */
         public Builder enableSecurityCheck(Boolean enableSecurityCheck) {
             this.putQueryParameter("EnableSecurityCheck", enableSecurityCheck);
@@ -225,7 +225,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * GpuCategory.
+         * Specifies whether the image is a GPU-accelerated image.
          */
         public Builder gpuCategory(Boolean gpuCategory) {
             this.putQueryParameter("GpuCategory", gpuCategory);
@@ -234,7 +234,12 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * GpuDriverType.
+         * The type of the pre-installed GPU driver. Valid values:
+         * <p>
+         * 
+         * *   gpu_grid9: This value is applicable to a Graphics cloud desktop that uses 4 vCores, 23 GB memory, and 4 GB GPU memory and a Graphics cloud desktop that uses 10 vCores, 46 GB memory, and 8 GB GPU memory
+         * *   gpu_grid12: This value is applicable to a cloud desktop other than a Graphics cloud desktop that uses 4 vCores, 23 GB memory, and 4 GB GPU memory and a Graphics cloud desktop that uses 10 vCores, 46 GB memory, and 8 GB GPU memory.
+         * *   gpu_custom: You can install a driver later.
          */
         public Builder gpuDriverType(String gpuDriverType) {
             this.putQueryParameter("GpuDriverType", gpuDriverType);
@@ -243,7 +248,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the custom image. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -252,7 +257,16 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * LicenseType.
+         * The type of the license that you want to use to activate the OS after the image is imported. Valid values:
+         * <p>
+         * 
+         * *   Auto: Elastic Desktop Service (EDS) checks the source OS of the image and allocates a license to the OS. EDS first checks whether the OS distribution that is specified by `Platform` has a license allocated by using an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license of the source OS is used.
+         * *   Aliyun: The license allocated by using an official Alibaba Cloud channel is used for the OS distribution that is specified by `Platform`.
+         * *   BYOL: The license of the source OS is used. In this case, make sure that your license key can be used in Alibaba Cloud.
+         * 
+         * Default value: Auto.
+         * 
+         * > Windows 10 cannot be activated by using a license that is allocated by using an official Alibaba Cloud channel. In this case, you must set `LicenseType` to BYOL.
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -261,7 +275,11 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The type of the OS. Valid values:
+         * <p>
+         * 
+         * *   Windows
+         * *   Linux
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -270,7 +288,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * OssObjectPath.
+         * The URL of the image object that you want to upload in Object Storage Service (OSS).
          */
         public Builder ossObjectPath(String ossObjectPath) {
             this.putQueryParameter("OssObjectPath", ossObjectPath);
@@ -279,7 +297,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * The type of the protocol. Valid value: ASP.
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -288,7 +306,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

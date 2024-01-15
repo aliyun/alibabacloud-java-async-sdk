@@ -261,7 +261,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * FotaVersion.
+         * The image version.
          */
         public Builder fotaVersion(String fotaVersion) {
             this.putQueryParameter("FotaVersion", fotaVersion);
@@ -297,7 +297,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The image name.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

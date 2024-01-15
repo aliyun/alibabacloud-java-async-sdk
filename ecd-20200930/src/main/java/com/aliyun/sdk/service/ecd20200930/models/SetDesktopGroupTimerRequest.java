@@ -172,7 +172,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * The type of the scheduled task. Valid values:
+         * The type of the scheduled task.
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

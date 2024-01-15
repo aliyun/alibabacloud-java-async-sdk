@@ -84,7 +84,11 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         } 
 
         /**
-         * Enabled.
+         * Specifies whether to restore or disable Internet access for the cloud desktop. Valid values:
+         * <p>
+         * 
+         * *   true: restores Internet access.
+         * *   false: disables Internet access.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -102,7 +106,7 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyNetworkPackageEnabled.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

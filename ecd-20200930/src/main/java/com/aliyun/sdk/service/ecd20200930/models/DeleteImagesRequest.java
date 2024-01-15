@@ -84,7 +84,7 @@ public class DeleteImagesRequest extends Request {
         } 
 
         /**
-         * DeleteCascadedBundle.
+         * Specifies whether to delete the associated template.
          */
         public Builder deleteCascadedBundle(Boolean deleteCascadedBundle) {
             this.putQueryParameter("DeleteCascadedBundle", deleteCascadedBundle);
@@ -93,7 +93,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The image IDs. You can specify 1 to 100 image IDs.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -102,7 +102,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to DeleteImages.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

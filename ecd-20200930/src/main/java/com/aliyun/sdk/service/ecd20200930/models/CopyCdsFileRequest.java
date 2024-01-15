@@ -23,7 +23,6 @@ public class CopyCdsFileRequest extends Request {
 
     @Query
     @NameInMap("EndUserId")
-    @Validation(required = true)
     private String endUserId;
 
     @Query
@@ -38,6 +37,10 @@ public class CopyCdsFileRequest extends Request {
     @Query
     @NameInMap("FileReceiverType")
     private String fileReceiverType;
+
+    @Query
+    @NameInMap("GroupId")
+    private String groupId;
 
     @Query
     @NameInMap("ParentFolderId")
@@ -57,6 +60,7 @@ public class CopyCdsFileRequest extends Request {
         this.fileId = builder.fileId;
         this.fileReceiverId = builder.fileReceiverId;
         this.fileReceiverType = builder.fileReceiverType;
+        this.groupId = builder.groupId;
         this.parentFolderId = builder.parentFolderId;
         this.regionId = builder.regionId;
     }
@@ -117,6 +121,13 @@ public class CopyCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return parentFolderId
      */
     public String getParentFolderId() {
@@ -137,6 +148,7 @@ public class CopyCdsFileRequest extends Request {
         private String fileId; 
         private String fileReceiverId; 
         private String fileReceiverType; 
+        private String groupId; 
         private String parentFolderId; 
         private String regionId; 
 
@@ -152,6 +164,7 @@ public class CopyCdsFileRequest extends Request {
             this.fileId = request.fileId;
             this.fileReceiverId = request.fileReceiverId;
             this.fileReceiverType = request.fileReceiverType;
+            this.groupId = request.groupId;
             this.parentFolderId = request.parentFolderId;
             this.regionId = request.regionId;
         } 
@@ -229,6 +242,15 @@ public class CopyCdsFileRequest extends Request {
         public Builder fileReceiverType(String fileReceiverType) {
             this.putQueryParameter("FileReceiverType", fileReceiverType);
             this.fileReceiverType = fileReceiverType;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

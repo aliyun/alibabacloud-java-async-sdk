@@ -146,7 +146,10 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the desktop users. Default value: true.
+         * The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder directoryName(String directoryName) {
             this.putQueryParameter("DirectoryName", directoryName);
@@ -155,7 +158,10 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to CreateRAMDirectory.
+         * Specifies whether to grant the permissions of the local administrator to the desktop users.
+         * <p>
+         * 
+         * Default value: true.
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -164,7 +170,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to enable the Internet access feature.
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -173,7 +179,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Internet access feature.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +188,7 @@ public class CreateRAMDirectoryRequest extends Request {
         }
 
         /**
-         * CreateRAMDirectory
+         * The IDs of vSwitches. You can configure only one vSwitch.
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

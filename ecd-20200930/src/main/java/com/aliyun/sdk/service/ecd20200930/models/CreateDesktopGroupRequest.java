@@ -618,7 +618,26 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * 是否自动续费。
+         * Specifies whether to enable auto-renewal.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -744,7 +763,7 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
-         * 桌面组版本。
+         * The desktop group version.
          */
         public Builder groupVersion(Integer groupVersion) {
             this.putQueryParameter("GroupVersion", groupVersion);

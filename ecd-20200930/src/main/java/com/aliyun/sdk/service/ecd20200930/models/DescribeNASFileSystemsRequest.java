@@ -126,7 +126,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The IDs of the NAS file system.
          */
         public Builder fileSystemId(java.util.List < String > fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -135,7 +135,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * MatchCompatibleProfile.
+         * Specifies whether to filter NAS file systems that only support the user profile management (UPM) feature.
          */
         public Builder matchCompatibleProfile(Boolean matchCompatibleProfile) {
             this.putQueryParameter("MatchCompatibleProfile", matchCompatibleProfile);
@@ -144,7 +144,12 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -153,7 +158,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +167,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -171,7 +176,7 @@ public class DescribeNASFileSystemsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

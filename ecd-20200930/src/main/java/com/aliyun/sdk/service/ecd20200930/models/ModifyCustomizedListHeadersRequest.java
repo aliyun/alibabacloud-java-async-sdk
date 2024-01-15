@@ -83,7 +83,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         } 
 
         /**
-         * Headers.
+         * The header of the response.
          */
         public Builder headers(java.util.List < Headers> headers) {
             this.putQueryParameter("Headers", headers);
@@ -92,7 +92,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * ListType.
+         * The type of the list.
          */
         public Builder listType(String listType) {
             this.putQueryParameter("ListType", listType);
@@ -101,7 +101,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +155,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
             private String headerKey; 
 
             /**
-             * DisplayType.
+             * The display type of the header. You can call the `ModifyCustomizedListHeaders` operation to modify the display type of the header.
              */
             public Builder displayType(String displayType) {
                 this.displayType = displayType;
@@ -163,7 +163,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
             }
 
             /**
-             * HeaderKey.
+             * The key of the header.
              */
             public Builder headerKey(String headerKey) {
                 this.headerKey = headerKey;

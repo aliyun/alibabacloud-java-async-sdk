@@ -70,10 +70,7 @@ public class LockVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * The serial number of the virtual MFA device, which is a unique identifier.
-         * <p>
-         * 
-         * You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound by AD users.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +79,10 @@ public class LockVirtualMFADeviceRequest extends Request {
         }
 
         /**
-         * SerialNumber.
+         * The serial number of the virtual MFA device, which is a unique identifier.
+         * <p>
+         * 
+         * You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound by AD users.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

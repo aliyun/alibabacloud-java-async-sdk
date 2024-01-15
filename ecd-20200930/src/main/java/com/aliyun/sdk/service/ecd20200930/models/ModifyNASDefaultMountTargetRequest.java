@@ -94,7 +94,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetDomain.
+         * The domain name of the mount target.
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);
@@ -103,7 +103,7 @@ public class ModifyNASDefaultMountTargetRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyNASDefaultMountTarget.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

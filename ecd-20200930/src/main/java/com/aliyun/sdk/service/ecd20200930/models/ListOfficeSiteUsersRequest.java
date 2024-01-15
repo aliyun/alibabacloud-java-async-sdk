@@ -126,7 +126,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         } 
 
         /**
-         * The ID of the workspace. Only workspaces of the enterprise AD account type are supported.
+         * The query string for fuzzy query.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -135,7 +135,11 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The organizational unit (OU) in the specified AD domain.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -144,12 +148,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 100
-         * 
-         * Default value: 10
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,7 +157,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The organizational unit (OU) of the specified AD domain.
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -167,7 +166,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ListOfficeSiteUsers.
+         * The workspace ID. Only workspaces of the enterprise AD account type are supported.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -176,7 +175,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The character string for fuzzy search.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

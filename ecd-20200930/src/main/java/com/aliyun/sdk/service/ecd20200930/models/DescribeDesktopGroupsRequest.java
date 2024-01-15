@@ -265,7 +265,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * The IDs of the desktop templates.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -310,7 +310,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The IDs of the images.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);

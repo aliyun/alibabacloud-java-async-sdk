@@ -50,7 +50,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CoordinateFlowModels.
+         * The list of stream collaboration models.
          */
         public Builder coordinateFlowModels(java.util.List < CoordinateFlowModels> coordinateFlowModels) {
             this.coordinateFlowModels = coordinateFlowModels;
@@ -58,7 +58,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             private String resourceName; 
 
             /**
-             * CoId.
+             * The ID of the stream collaboration.
              */
             public Builder coId(String coId) {
                 this.coId = coId;
@@ -178,7 +178,66 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * CoordinateStatus.
+             * The current status of the collaboration task.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   COORDINATING
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The collaboration task is being executed
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   TERMINATING
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The collaboration task is being terminated
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   TERMINATED
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The collaboration task is terminated
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   PENDING
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The collaboration task is pending to be executed
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder coordinateStatus(String coordinateStatus) {
                 this.coordinateStatus = coordinateStatus;
@@ -186,7 +245,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * CoordinateTicket.
+             * The ticket that is used to establish the Adaptive Streaming Protocol (ASP)-based connection.
              */
             public Builder coordinateTicket(String coordinateTicket) {
                 this.coordinateTicket = coordinateTicket;
@@ -194,7 +253,52 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * InitiatorType.
+             * The type of the initiator.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ADMIN_INITIATE_FORCE
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The administrator forcibly initiates the collaboration request
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   ADMIN_INITIATE
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The administrator initiates the collaboration request
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   COORDINATOR_INITIATE_FORCE
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The coordinator forcibly initiates the collaboration request
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder initiatorType(String initiatorType) {
                 this.initiatorType = initiatorType;
@@ -202,7 +306,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * The ID of the Alibaba Cloud account of the end user.
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -210,7 +314,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the cloud desktop.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -218,7 +322,7 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * The name of the cloud desktop.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;

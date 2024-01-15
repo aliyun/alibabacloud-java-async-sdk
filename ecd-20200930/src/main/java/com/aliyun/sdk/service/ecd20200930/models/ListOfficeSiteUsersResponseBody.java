@@ -62,7 +62,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The token that specifies the start point of the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,10 +70,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The usernames of AD users.
-         * <p>
-         * 
-         * This parameter is empty if the AD users include only Administrator and Guest.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +78,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the details about Active Directory (AD) users in an AD workspace after the workspace is connected to an AD domain.
+         * The usernames of AD users.\
+         * <p>
+         * If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -133,7 +132,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -141,7 +140,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUser.
+             * The name of the AD user.
              */
             public Builder endUser(String endUser) {
                 this.endUser = endUser;

@@ -950,6 +950,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class DescribePolicyGroups extends TeaModel {
+        @NameInMap("AdminAccess")
+        private String adminAccess;
+
         @NameInMap("AppContentProtection")
         private String appContentProtection;
 
@@ -1133,6 +1136,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkRowAmount")
         private Integer watermarkRowAmount;
 
+        @NameInMap("WatermarkSecurity")
+        private String watermarkSecurity;
+
         @NameInMap("WatermarkTransparency")
         private String watermarkTransparency;
 
@@ -1143,6 +1149,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String watermarkType;
 
         private DescribePolicyGroups(Builder builder) {
+            this.adminAccess = builder.adminAccess;
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
@@ -1204,6 +1211,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.watermarkFontSize = builder.watermarkFontSize;
             this.watermarkFontStyle = builder.watermarkFontStyle;
             this.watermarkRowAmount = builder.watermarkRowAmount;
+            this.watermarkSecurity = builder.watermarkSecurity;
             this.watermarkTransparency = builder.watermarkTransparency;
             this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
@@ -1215,6 +1223,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         public static DescribePolicyGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return adminAccess
+         */
+        public String getAdminAccess() {
+            return this.adminAccess;
         }
 
         /**
@@ -1645,6 +1660,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkSecurity
+         */
+        public String getWatermarkSecurity() {
+            return this.watermarkSecurity;
+        }
+
+        /**
          * @return watermarkTransparency
          */
         public String getWatermarkTransparency() {
@@ -1666,6 +1688,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String adminAccess; 
             private String appContentProtection; 
             private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
@@ -1727,9 +1750,18 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer watermarkFontSize; 
             private String watermarkFontStyle; 
             private Integer watermarkRowAmount; 
+            private String watermarkSecurity; 
             private String watermarkTransparency; 
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
+
+            /**
+             * AdminAccess.
+             */
+            public Builder adminAccess(String adminAccess) {
+                this.adminAccess = adminAccess;
+                return this;
+            }
 
             /**
              * Indicates whether the anti-screenshot feature is enabled. Valid values:
@@ -2627,6 +2659,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder watermarkRowAmount(Integer watermarkRowAmount) {
                 this.watermarkRowAmount = watermarkRowAmount;
+                return this;
+            }
+
+            /**
+             * WatermarkSecurity.
+             */
+            public Builder watermarkSecurity(String watermarkSecurity) {
+                this.watermarkSecurity = watermarkSecurity;
                 return this;
             }
 

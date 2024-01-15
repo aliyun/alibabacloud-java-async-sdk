@@ -74,6 +74,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
+    @Validation(maximum = 1000, minimum = 1)
     private Integer maxResults;
 
     @Query
@@ -442,7 +443,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``
+         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -451,7 +452,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 100 IDs of cloud desktops.
+         * The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -469,7 +470,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The state of the cloud desktop.
+         * The status of the cloud desktop.
          */
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
@@ -478,7 +479,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopStatusList.
+         * The list of desktop status.
          */
         public Builder desktopStatusList(java.util.List < String > desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -487,7 +488,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The new desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.
+         * The new desktop type. You can call the [DescribeDesktopTypes](~~DescribeDesktopTypes~~) operation to query the IDs of supported desktop types.
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -496,7 +497,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the directory. The ID is the same as the workspace ID.
+         * The ID of the directory, The ID is the same as the workspace ID.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -505,10 +506,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.
+         * The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
          * <p>
          * 
-         * > Only one user can use the cloud desktop at a time.
+         * > Only one end user can use the cloud desktop at a time.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -517,7 +518,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the users that are excluded from the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.
+         * The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.
          */
         public Builder excludedEndUserId(java.util.List < String > excludedEndUserId) {
             this.putQueryParameter("ExcludedEndUserId", excludedEndUserId);
@@ -545,6 +546,9 @@ public class DescribeDesktopsRequest extends Request {
 
         /**
          * The ID of the desktop group.
+         * <p>
+         * 
+         * > The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -553,7 +557,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * 镜像ID列表。
+         * The IDs of the images.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -562,7 +566,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The flag that is used for management.
+         * The flag that is used to manage the cloud desktops.
          */
         public Builder managementFlag(String managementFlag) {
             this.putQueryParameter("ManagementFlag", managementFlag);
@@ -571,11 +575,11 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * *   Maximum value: 100
-         * *   Default value: 10
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -611,7 +615,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query cloud desktops in the desktop group.
+         * The progress when the cloud desktop was created.
          */
         public Builder onlyDesktopGroup(Boolean onlyDesktopGroup) {
             this.putQueryParameter("OnlyDesktopGroup", onlyDesktopGroup);
@@ -647,7 +651,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the information about image version of the cloud desktop.
+         * Specifies whether to query the information about image update of the cloud desktop.
          */
         public Builder queryFotaUpdate(Boolean queryFotaUpdate) {
             this.putQueryParameter("QueryFotaUpdate", queryFotaUpdate);
@@ -656,7 +660,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -665,7 +669,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy.
+         * The ID of the snapshot policy.
          */
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
@@ -674,7 +678,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The tags that you want to add. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
+         * The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -683,7 +687,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * The name of the end user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

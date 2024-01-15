@@ -85,7 +85,7 @@ public class ApproveFotaUpdateRequest extends Request {
         } 
 
         /**
-         * AppVersion.
+         * Mirror version.
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -94,7 +94,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -103,7 +103,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

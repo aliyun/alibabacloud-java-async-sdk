@@ -85,7 +85,7 @@ public class ClonePolicyGroupRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -94,7 +94,7 @@ public class ClonePolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy that you want to clone.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -103,7 +103,7 @@ public class ClonePolicyGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -23,7 +23,6 @@ public class ModifyCdsFileRequest extends Request {
 
     @Query
     @NameInMap("EndUserId")
-    @Validation(required = true)
     private String endUserId;
 
     @Query
@@ -37,6 +36,10 @@ public class ModifyCdsFileRequest extends Request {
     private String fileName;
 
     @Query
+    @NameInMap("GroupId")
+    private String groupId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -48,6 +51,7 @@ public class ModifyCdsFileRequest extends Request {
         this.endUserId = builder.endUserId;
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
+        this.groupId = builder.groupId;
         this.regionId = builder.regionId;
     }
 
@@ -100,6 +104,13 @@ public class ModifyCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -112,6 +123,7 @@ public class ModifyCdsFileRequest extends Request {
         private String endUserId; 
         private String fileId; 
         private String fileName; 
+        private String groupId; 
         private String regionId; 
 
         private Builder() {
@@ -125,11 +137,12 @@ public class ModifyCdsFileRequest extends Request {
             this.endUserId = request.endUserId;
             this.fileId = request.fileId;
             this.fileName = request.fileName;
+            this.groupId = request.groupId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the cloud disk.
+         * The cloud disk ID.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);
@@ -138,7 +151,46 @@ public class ModifyCdsFileRequest extends Request {
         }
 
         /**
-         * The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values: ignore: allows you to create the file by using the same name as an existing file in the cloud. auto_rename: automatically renames the file that you want to create if a file that has the same name exists in the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405. refuse: denies creating the file if a file that has the same name exists in the cloud. Default value: refuse.
+         * The processing mode of files that have the same name.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   refuse
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     refuses to create a file that has the same name as the file in the cloud.
+         * 
+         *     <!-- -->
+         * 
+         * *   auto_rename
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102\_150405.
+         * 
+         *     <!-- -->
+         * 
+         * *   ignore
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     allows files with the same name.
+         * 
+         *     <!-- -->
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
@@ -170,6 +222,15 @@ public class ModifyCdsFileRequest extends Request {
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * The group ID.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

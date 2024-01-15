@@ -97,7 +97,7 @@ public class ModifyUserEntitlementRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The IDs of the cloud desktops on which you want to grant permissions to users.
          */
         public Builder authorizeDesktopId(java.util.List < String > authorizeDesktopId) {
             this.putQueryParameter("AuthorizeDesktopId", authorizeDesktopId);
@@ -106,7 +106,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The ID of cloud desktop.
+         * The ID of the users.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -115,7 +115,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The IDs of cloud desktops which you want to revoke permissions from regular users.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * ModifyUserEntitlement
+         * The IDs of the cloud desktops on which you want to revoke permissions from users.
          */
         public Builder revokeDesktopId(java.util.List < String > revokeDesktopId) {
             this.putQueryParameter("RevokeDesktopId", revokeDesktopId);

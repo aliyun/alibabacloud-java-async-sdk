@@ -113,7 +113,13 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to automatically complete the payment. Valid values:
+         * <p>
+         * 
+         * *   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.
+         * *   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.
+         * 
+         * Default value: `true`.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -122,7 +128,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The bandwidth of the network packet. Unit: Mbps. Value range: 10 to 1000.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -131,7 +137,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
         }
 
         /**
-         * NetworkPackageId.
+         * The ID of the Internet access package.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -140,7 +146,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * The ID of the promotion. You can call the `GetResourcePrice` operation to query the promotion ID.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -149,7 +155,7 @@ public class ModifyNetworkPackageBandwidthRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

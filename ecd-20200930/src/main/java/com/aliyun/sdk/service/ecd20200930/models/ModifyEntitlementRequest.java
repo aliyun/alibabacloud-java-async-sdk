@@ -84,7 +84,7 @@ public class ModifyEntitlementRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * The cloud desktop ID.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,7 @@ public class ModifyEntitlementRequest extends Request {
         }
 
         /**
-         * The usernames of users. You can specify up to 100 usernames.
+         * The usernames. You can specify 1 to 100 usernames.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -102,7 +102,7 @@ public class ModifyEntitlementRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -23,7 +23,6 @@ public class CreateCdsFileRequest extends Request {
 
     @Query
     @NameInMap("EndUserId")
-    @Validation(required = true)
     private String endUserId;
 
     @Query
@@ -46,6 +45,10 @@ public class CreateCdsFileRequest extends Request {
     private String fileType;
 
     @Query
+    @NameInMap("GroupId")
+    private String groupId;
+
+    @Query
     @NameInMap("ParentFileId")
     @Validation(required = true)
     private String parentFileId;
@@ -64,6 +67,7 @@ public class CreateCdsFileRequest extends Request {
         this.fileLength = builder.fileLength;
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
+        this.groupId = builder.groupId;
         this.parentFileId = builder.parentFileId;
         this.regionId = builder.regionId;
     }
@@ -131,6 +135,13 @@ public class CreateCdsFileRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return parentFileId
      */
     public String getParentFileId() {
@@ -152,6 +163,7 @@ public class CreateCdsFileRequest extends Request {
         private Long fileLength; 
         private String fileName; 
         private String fileType; 
+        private String groupId; 
         private String parentFileId; 
         private String regionId; 
 
@@ -168,6 +180,7 @@ public class CreateCdsFileRequest extends Request {
             this.fileLength = request.fileLength;
             this.fileName = request.fileName;
             this.fileType = request.fileType;
+            this.groupId = request.groupId;
             this.parentFileId = request.parentFileId;
             this.regionId = request.regionId;
         } 
@@ -310,6 +323,15 @@ public class CreateCdsFileRequest extends Request {
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
             this.fileType = fileType;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

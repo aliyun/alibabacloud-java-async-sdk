@@ -62,7 +62,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about desktop groups.
+         * Details of the desktop groups.
          */
         public Builder desktopGroups(java.util.List < DesktopGroups> desktopGroups) {
             this.desktopGroups = desktopGroups;
@@ -91,6 +91,67 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
     } 
 
+    public static class CountPerStatus extends TeaModel {
+        @NameInMap("Count")
+        private Integer count;
+
+        @NameInMap("Status")
+        private String status;
+
+        private CountPerStatus(Builder builder) {
+            this.count = builder.count;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CountPerStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Integer count; 
+            private String status; 
+
+            /**
+             * Count.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public CountPerStatus build() {
+                return new CountPerStatus(this);
+            } 
+
+        } 
+
+    }
     public static class DesktopGroups extends TeaModel {
         @NameInMap("BindAmount")
         private Long bindAmount;
@@ -103,6 +164,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("ConnectDuration")
         private Long connectDuration;
+
+        @NameInMap("CountPerStatus")
+        private java.util.List < CountPerStatus> countPerStatus;
 
         @NameInMap("Cpu")
         private Integer cpu;
@@ -119,11 +183,17 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("DataDiskSize")
         private String dataDiskSize;
 
+        @NameInMap("DesktopCount")
+        private Integer desktopCount;
+
         @NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
         @NameInMap("DesktopGroupName")
         private String desktopGroupName;
+
+        @NameInMap("DesktopType")
+        private String desktopType;
 
         @NameInMap("EndUserCount")
         private Integer endUserCount;
@@ -133,6 +203,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
 
         @NameInMap("GpuCount")
         private Float gpuCount;
+
+        @NameInMap("GpuDriverVersion")
+        private String gpuDriverVersion;
 
         @NameInMap("GpuSpec")
         private String gpuSpec;
@@ -203,6 +276,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("StopDuration")
         private Long stopDuration;
 
+        @NameInMap("SubnetId")
+        private String subnetId;
+
         @NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
@@ -223,16 +299,20 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.buyDesktopsCount = builder.buyDesktopsCount;
             this.comments = builder.comments;
             this.connectDuration = builder.connectDuration;
+            this.countPerStatus = builder.countPerStatus;
             this.cpu = builder.cpu;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.dataDiskCategory = builder.dataDiskCategory;
             this.dataDiskSize = builder.dataDiskSize;
+            this.desktopCount = builder.desktopCount;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopGroupName = builder.desktopGroupName;
+            this.desktopType = builder.desktopType;
             this.endUserCount = builder.endUserCount;
             this.expiredTime = builder.expiredTime;
             this.gpuCount = builder.gpuCount;
+            this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
             this.idleDisconnectDuration = builder.idleDisconnectDuration;
             this.imageId = builder.imageId;
@@ -256,6 +336,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.resetType = builder.resetType;
             this.status = builder.status;
             this.stopDuration = builder.stopDuration;
+            this.subnetId = builder.subnetId;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.version = builder.version;
@@ -300,6 +381,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return countPerStatus
+         */
+        public java.util.List < CountPerStatus> getCountPerStatus() {
+            return this.countPerStatus;
+        }
+
+        /**
          * @return cpu
          */
         public Integer getCpu() {
@@ -335,6 +423,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return desktopCount
+         */
+        public Integer getDesktopCount() {
+            return this.desktopCount;
+        }
+
+        /**
          * @return desktopGroupId
          */
         public String getDesktopGroupId() {
@@ -346,6 +441,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getDesktopGroupName() {
             return this.desktopGroupName;
+        }
+
+        /**
+         * @return desktopType
+         */
+        public String getDesktopType() {
+            return this.desktopType;
         }
 
         /**
@@ -367,6 +469,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public Float getGpuCount() {
             return this.gpuCount;
+        }
+
+        /**
+         * @return gpuDriverVersion
+         */
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         /**
@@ -531,6 +640,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return subnetId
+         */
+        public String getSubnetId() {
+            return this.subnetId;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -570,16 +686,20 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Integer buyDesktopsCount; 
             private String comments; 
             private Long connectDuration; 
+            private java.util.List < CountPerStatus> countPerStatus; 
             private Integer cpu; 
             private String createTime; 
             private String creator; 
             private String dataDiskCategory; 
             private String dataDiskSize; 
+            private Integer desktopCount; 
             private String desktopGroupId; 
             private String desktopGroupName; 
+            private String desktopType; 
             private Integer endUserCount; 
             private String expiredTime; 
             private Float gpuCount; 
+            private String gpuDriverVersion; 
             private String gpuSpec; 
             private Long idleDisconnectDuration; 
             private String imageId; 
@@ -603,6 +723,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Long resetType; 
             private Integer status; 
             private Long stopDuration; 
+            private String subnetId; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private Integer version; 
@@ -626,7 +747,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The remarks of the desktop group.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -638,6 +759,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder connectDuration(Long connectDuration) {
                 this.connectDuration = connectDuration;
+                return this;
+            }
+
+            /**
+             * CountPerStatus.
+             */
+            public Builder countPerStatus(java.util.List < CountPerStatus> countPerStatus) {
+                this.countPerStatus = countPerStatus;
                 return this;
             }
 
@@ -703,7 +832,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     ehhanced SSD (ESSD)
+             *     ESSD
              * 
              *     <!-- -->
              */
@@ -721,7 +850,15 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop group ID.
+             * DesktopCount.
+             */
+            public Builder desktopCount(Integer desktopCount) {
+                this.desktopCount = desktopCount;
+                return this;
+            }
+
+            /**
+             * The ID of the desktop group.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -729,7 +866,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop group name.
+             * The name of the desktop group.
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -737,7 +874,15 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of users that are authorized to use the desktop group.
+             * DesktopType.
+             */
+            public Builder desktopType(String desktopType) {
+                this.desktopType = desktopType;
+                return this;
+            }
+
+            /**
+             * The number of end users that are authorized to use the desktop group.
              */
             public Builder endUserCount(Integer endUserCount) {
                 this.endUserCount = endUserCount;
@@ -761,6 +906,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * GpuDriverVersion.
+             */
+            public Builder gpuDriverVersion(String gpuDriverVersion) {
+                this.gpuDriverVersion = gpuDriverVersion;
+                return this;
+            }
+
+            /**
              * The GPU memory.
              */
             public Builder gpuSpec(String gpuSpec) {
@@ -777,7 +930,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -785,7 +938,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The keep-alive duration of the cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.
+             * The retention period of the cloud desktop after the end user is disconnected from the cloud desktop. Unit: milliseconds.
              */
             public Builder keepDuration(Long keepDuration) {
                 this.keepDuration = keepDuration;
@@ -852,7 +1005,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * The ID of the workspace.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -860,7 +1013,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace name.
+             * The name of the workspace.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -868,7 +1021,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the workspace.
+             * The account type of the workspace. Possible values: -simple: convenience account type. -ad_connector: enterprise Active Directory (AD) account.
              * <p>
              * 
              * Valid values:
@@ -907,7 +1060,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     workspace of the enterprise AD account type
+             *     enterprise AD account type
              * 
              *     <!-- -->
              * 
@@ -943,7 +1096,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop template ID.
+             * The ID of the desktop template.
              */
             public Builder ownBundleId(String ownBundleId) {
                 this.ownBundleId = ownBundleId;
@@ -951,7 +1104,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop template name.
+             * The name of the desktop template.
              */
             public Builder ownBundleName(String ownBundleName) {
                 this.ownBundleName = ownBundleName;
@@ -959,7 +1112,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop group type.
+             * The type of the desktop group.
              * <p>
              * 
              * Valid values:
@@ -1011,6 +1164,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
+             *     .
+             * 
              * *   PrePaid
              * 
              *     <!-- -->
@@ -1022,6 +1177,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              *     subscription
              * 
              *     <!-- -->
+             * 
+             *     .
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1029,7 +1186,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy ID.
+             * The ID of the policy.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1037,7 +1194,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy name.
+             * The name of the policy.
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -1045,7 +1202,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
+             * The type of the protocol. Valid values:
              * <p>
              * 
              * *   ASP
@@ -1175,6 +1332,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder stopDuration(Long stopDuration) {
                 this.stopDuration = stopDuration;
+                return this;
+            }
+
+            /**
+             * SubnetId.
+             */
+            public Builder subnetId(String subnetId) {
+                this.subnetId = subnetId;
                 return this;
             }
 

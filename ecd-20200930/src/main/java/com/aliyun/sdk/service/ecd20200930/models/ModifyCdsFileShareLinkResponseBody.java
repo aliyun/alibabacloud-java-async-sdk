@@ -118,13 +118,26 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The request status.
          * <p>
          * 
          * Valid values:
          * 
-         * *   true
-         * *   false
+         * *   true: The request is successful.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false: The request fails.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;

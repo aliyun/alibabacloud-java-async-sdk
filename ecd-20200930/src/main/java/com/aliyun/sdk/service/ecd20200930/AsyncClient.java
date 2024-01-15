@@ -18,7 +18,13 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+      *
+     */
     CompletableFuture<ActivateOfficeSiteResponse> activateOfficeSite(ActivateOfficeSiteRequest request);
+
+    CompletableFuture<AddDesktopOversoldUserGroupResponse> addDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request);
 
     /**
       * You can add only one device to a tenant.
@@ -33,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFilePermissionResponse> addFilePermission(AddFilePermissionRequest request);
 
     CompletableFuture<AddUserToDesktopGroupResponse> addUserToDesktopGroup(AddUserToDesktopGroupRequest request);
+
+    CompletableFuture<AddUserToDesktopOversoldUserGroupResponse> addUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request);
 
     /**
       * You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups > Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More > Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
@@ -50,7 +58,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateNetworkPackageResponse> associateNetworkPackage(AssociateNetworkPackageRequest request);
 
     /**
-      * The ID of the CEN instance.
+      * Prerequisites
+      * *   A CEN instance is created.
+      * *   A workspace of the convenience account type is created.
+      * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
       *
      */
     CompletableFuture<AttachCenResponse> attachCen(AttachCenRequest request);
@@ -78,7 +89,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyImageResponse> copyImage(CopyImageRequest request);
 
     /**
-      * The ID of the vSwitch.
+      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
       *
      */
     CompletableFuture<CreateADConnectorDirectoryResponse> createADConnectorDirectory(CreateADConnectorDirectoryRequest request);
@@ -102,12 +113,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAutoSnapshotPolicyResponse> createAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest request);
 
     /**
-      * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
-      * *   PL0
-      * *   PL1
-      * *   PL2
-      * *   PL3
-      * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+      * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
       *
      */
     CompletableFuture<CreateBundleResponse> createBundle(CreateBundleRequest request);
@@ -120,6 +126,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateCdsFileShareLinkResponse> createCdsFileShareLink(CreateCdsFileShareLinkRequest request);
 
+    CompletableFuture<CreateCloudDriveServiceResponse> createCloudDriveService(CreateCloudDriveServiceRequest request);
+
     CompletableFuture<CreateCloudDriveUsersResponse> createCloudDriveUsers(CreateCloudDriveUsersRequest request);
 
     /**
@@ -130,6 +138,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateDesktopGroupResponse> createDesktopGroup(CreateDesktopGroupRequest request);
+
+    CompletableFuture<CreateDesktopOversoldGroupResponse> createDesktopOversoldGroup(CreateDesktopOversoldGroupRequest request);
 
     /**
       * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
@@ -158,8 +168,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     /**
-      * The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
-      * This parameter is empty by default.
+      * Before you create a RAM directory, make sure that you have completed the following operations:
+      * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
+      * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
       *
      */
     CompletableFuture<CreateRAMDirectoryResponse> createRAMDirectory(CreateRAMDirectoryRequest request);
@@ -193,7 +204,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDevicesResponse> deleteDevices(DeleteDevicesRequest request);
 
     /**
-      * The ID of directory N. You can specify one or more directory IDs.
+      * You cannot delete directories that are in use by cloud desktops.
       *
      */
     CompletableFuture<DeleteDirectoriesResponse> deleteDirectories(DeleteDirectoriesRequest request);
@@ -201,7 +212,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEduRoomResponse> deleteEduRoom(DeleteEduRoomRequest request);
 
     /**
-      * The IDs of the images that you want to delete. You can configure one or more image IDs. Valid values of N: 1 to 100.
+      * *   Images include system images and custom images. System images cannot be deleted.
+      * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
       *
      */
     CompletableFuture<DeleteImagesResponse> deleteImages(DeleteImagesRequest request);
@@ -235,14 +247,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
 
     /**
-      * The ID of the request.
+      * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
       *
      */
     CompletableFuture<DeleteVirtualMFADeviceResponse> deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest request);
 
     CompletableFuture<DescribeAclEntriesResponse> describeAclEntries(DescribeAclEntriesRequest request);
-
-    CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request);
 
     /**
       * You can view an automatic snapshot policy that is associated with a cloud desktop in the Elastic Desktop Service (EDS) console. To view the automatic snapshot policy, you can go to the EDS console, choose Deployment > Snapshots in the left-side navigation pane, and then view an automatic snapshot policy on the Snapshots page.
@@ -272,8 +282,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDesktopGroupsResponse> describeDesktopGroups(DescribeDesktopGroupsRequest request);
 
-    CompletableFuture<DescribeDesktopIdsByVulNamesResponse> describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request);
+    CompletableFuture<DescribeDesktopInfoResponse> describeDesktopInfo(DescribeDesktopInfoRequest request);
 
+    CompletableFuture<DescribeDesktopOversoldGroupResponse> describeDesktopOversoldGroup(DescribeDesktopOversoldGroupRequest request);
+
+    CompletableFuture<DescribeDesktopOversoldUserResponse> describeDesktopOversoldUser(DescribeDesktopOversoldUserRequest request);
+
+    CompletableFuture<DescribeDesktopOversoldUserGroupResponse> describeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request);
+
+    /**
+      * You can query data within the last 30 days.
+      *
+     */
+    CompletableFuture<DescribeDesktopSessionsResponse> describeDesktopSessions(DescribeDesktopSessionsRequest request);
+
+    /**
+      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+      *
+     */
     CompletableFuture<DescribeDesktopTypesResponse> describeDesktopTypes(DescribeDesktopTypesRequest request);
 
     CompletableFuture<DescribeDesktopsResponse> describeDesktops(DescribeDesktopsRequest request);
@@ -296,36 +322,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFotaTasksResponse> describeFotaTasks(DescribeFotaTasksRequest request);
 
-    CompletableFuture<DescribeFrontVulPatchListResponse> describeFrontVulPatchList(DescribeFrontVulPatchListRequest request);
-
-    /**
-      * The number of vulnerabilities processed.
-      *
-     */
-    CompletableFuture<DescribeGroupedVulResponse> describeGroupedVul(DescribeGroupedVulRequest request);
+    CompletableFuture<DescribeGuestApplicationsResponse> describeGuestApplications(DescribeGuestApplicationsRequest request);
 
     CompletableFuture<DescribeImageModifiedRecordsResponse> describeImageModifiedRecords(DescribeImageModifiedRecordsRequest request);
 
+    /**
+      * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+      *
+     */
     CompletableFuture<DescribeImagePermissionResponse> describeImagePermission(DescribeImagePermissionRequest request);
 
     CompletableFuture<DescribeImagesResponse> describeImages(DescribeImagesRequest request);
 
     /**
-      * The error message that is returned if the command failed to be sent or run.
-      * *   If null is returned, the command is run normally.
-      * *   If "the specified instance does not exist" is returned, the specified cloud desktop does not exist or is released.
-      * *   If "the instance has released when create task" is returned, the specified cloud desktop is released during the command execution.
-      * *   If "the instance is not running when create task" is returned, the specified cloud desktop is not in the Running state when the execution is created.
-      * *   If "the command is not applicable" is returned, the command cannot be run on the specified cloud desktop.
-      * *   If "the aliyun service is not running on the instance" is returned, Cloud Assistant is not running.
-      * *   If "the aliyun service in the instance does not response" is returned, Cloud Assistant does not respond to your request.
-      * *   If "the aliyun service in the instance is upgrading now" is returned, Cloud Assistant is being upgraded.
-      * *   If "the aliyun service in the instance need upgrade" is returned, you must upgrade Cloud Assistant.
-      * *   If "the command delivery has been timeout" is returned, the operation to send the command times out.
-      * *   If "the command execution has been timeout" is returned, the command execution times out.
-      * *   If "the command execution got an exception" is returned, an exception occurs during the command execution.
-      * *   If "the command execution has been interrupted" is returned, the command execution is interrupted.
-      * *   If "the command execution exit code is not zero" is returned, the command execution is complete, but the exit code is not 0.
+      * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+      * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
       *
      */
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
@@ -351,25 +362,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
 
+    CompletableFuture<DescribePriceForCreateDesktopOversoldGroupResponse> describePriceForCreateDesktopOversoldGroup(DescribePriceForCreateDesktopOversoldGroupRequest request);
+
+    CompletableFuture<DescribePriceForModifyDesktopOversoldGroupSaleResponse> describePriceForModifyDesktopOversoldGroupSale(DescribePriceForModifyDesktopOversoldGroupSaleRequest request);
+
+    CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
-    CompletableFuture<DescribeScanTaskProgressResponse> describeScanTaskProgress(DescribeScanTaskProgressRequest request);
-
-    CompletableFuture<DescribeSecurityEventOperationStatusResponse> describeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request);
-
-    CompletableFuture<DescribeSecurityEventOperationsResponse> describeSecurityEventOperations(DescribeSecurityEventOperationsRequest request);
+    /**
+      * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+      * *   You can query session statistics for the past hour.
+      *
+     */
+    CompletableFuture<DescribeSessionStatisticResponse> describeSessionStatistic(DescribeSessionStatisticRequest request);
 
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
 
-    CompletableFuture<DescribeSuspEventOverviewResponse> describeSuspEventOverview(DescribeSuspEventOverviewRequest request);
-
-    /**
-      * The path where the quarantined file is stored on the cloud desktop.
-      *
-     */
-    CompletableFuture<DescribeSuspEventQuaraFilesResponse> describeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request);
-
-    CompletableFuture<DescribeSuspEventsResponse> describeSuspEvents(DescribeSuspEventsRequest request);
+    CompletableFuture<DescribeUserConnectTimeResponse> describeUserConnectTime(DescribeUserConnectTimeRequest request);
 
     CompletableFuture<DescribeUserConnectionRecordsResponse> describeUserConnectionRecords(DescribeUserConnectionRecordsRequest request);
 
@@ -380,12 +390,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUsersPasswordResponse> describeUsersPassword(DescribeUsersPasswordRequest request);
 
     CompletableFuture<DescribeVirtualMFADevicesResponse> describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request);
-
-    CompletableFuture<DescribeVulDetailsResponse> describeVulDetails(DescribeVulDetailsRequest request);
-
-    CompletableFuture<DescribeVulListResponse> describeVulList(DescribeVulListRequest request);
-
-    CompletableFuture<DescribeVulOverviewResponse> describeVulOverview(DescribeVulOverviewRequest request);
 
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
@@ -401,11 +405,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportDesktopGroupInfoResponse> exportDesktopGroupInfo(ExportDesktopGroupInfoRequest request);
 
+    /**
+      * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+      *
+     */
     CompletableFuture<ExportDesktopListInfoResponse> exportDesktopListInfo(ExportDesktopListInfoRequest request);
 
     CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request);
 
     CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request);
+
+    CompletableFuture<GetCoordinateTicketResponse> getCoordinateTicket(GetCoordinateTicketRequest request);
 
     CompletableFuture<GetDesktopGroupDetailResponse> getDesktopGroupDetail(GetDesktopGroupDetailRequest request);
 
@@ -417,12 +427,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetSpMetadataResponse> getSpMetadata(GetSpMetadataRequest request);
 
-    CompletableFuture<HandleSecurityEventsResponse> handleSecurityEvents(HandleSecurityEventsRequest request);
-
+    /**
+      * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+      *
+     */
     CompletableFuture<HibernateDesktopsResponse> hibernateDesktops(HibernateDesktopsRequest request);
 
     CompletableFuture<ListCdsFilesResponse> listCdsFiles(ListCdsFilesRequest request);
 
+    /**
+      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+      *
+     */
     CompletableFuture<ListDirectoryUsersResponse> listDirectoryUsers(ListDirectoryUsersRequest request);
 
     CompletableFuture<ListFilePermissionResponse> listFilePermission(ListFilePermissionRequest request);
@@ -432,7 +448,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOfficeSiteUsersResponse> listOfficeSiteUsers(ListOfficeSiteUsersRequest request);
 
     /**
-      * The tag key of the resource.
+      * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
       *
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
@@ -440,12 +456,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserAdOrganizationUnitsResponse> listUserAdOrganizationUnits(ListUserAdOrganizationUnitsRequest request);
 
     /**
-      * The ID of the request.
+      * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
       *
      */
     CompletableFuture<LockVirtualMFADeviceResponse> lockVirtualMFADevice(LockVirtualMFADeviceRequest request);
 
     CompletableFuture<MigrateDesktopsResponse> migrateDesktops(MigrateDesktopsRequest request);
+
+    CompletableFuture<MigrateImageProtocolResponse> migrateImageProtocol(MigrateImageProtocolRequest request);
 
     CompletableFuture<ModifyADConnectorDirectoryResponse> modifyADConnectorDirectory(ModifyADConnectorDirectoryRequest request);
 
@@ -456,7 +474,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request);
 
     /**
-      * The ID of the desktop template.
+      * Only custom desktop templates can be modified.
       *
      */
     CompletableFuture<ModifyBundleResponse> modifyBundle(ModifyBundleRequest request);
@@ -474,7 +492,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCustomizedListHeadersResponse> modifyCustomizedListHeaders(ModifyCustomizedListHeadersRequest request);
 
     /**
-      * The new billing method that you want to use for the desktop group.
+      * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+      * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
+      * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
       *
      */
     CompletableFuture<ModifyDesktopChargeTypeResponse> modifyDesktopChargeType(ModifyDesktopChargeTypeRequest request);
@@ -490,12 +510,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDesktopGroupResponse> modifyDesktopGroup(ModifyDesktopGroupRequest request);
 
     /**
-      * The ID of the region.
+      * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
       *
      */
     CompletableFuture<ModifyDesktopHostNameResponse> modifyDesktopHostName(ModifyDesktopHostNameRequest request);
 
     CompletableFuture<ModifyDesktopNameResponse> modifyDesktopName(ModifyDesktopNameRequest request);
+
+    CompletableFuture<ModifyDesktopOversoldGroupResponse> modifyDesktopOversoldGroup(ModifyDesktopOversoldGroupRequest request);
+
+    CompletableFuture<ModifyDesktopOversoldGroupSaleResponse> modifyDesktopOversoldGroupSale(ModifyDesktopOversoldGroupSaleRequest request);
+
+    CompletableFuture<ModifyDesktopOversoldUserGroupResponse> modifyDesktopOversoldUserGroup(ModifyDesktopOversoldUserGroupRequest request);
 
     /**
       * You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.
@@ -514,6 +540,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDesktopTimerResponse> modifyDesktopTimer(ModifyDesktopTimerRequest request);
 
+    /**
+      * The cloud desktop must be in the Running (Running) state.
+      *
+     */
     CompletableFuture<ModifyDesktopsPolicyGroupResponse> modifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request);
 
     /**
@@ -532,13 +562,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDiskSpecResponse> modifyDiskSpec(ModifyDiskSpecRequest request);
 
     /**
-      * The cloud desktop must be in the Running state.
+      * The cloud desktops to which you want to assign users must be in the Running state.
       *
      */
     CompletableFuture<ModifyEntitlementResponse> modifyEntitlement(ModifyEntitlementRequest request);
 
     /**
-      * The ID of the image.
+      * You can call this operation to modify the attributes of only custom images that are in the Available state.
       *
      */
     CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request);
@@ -546,7 +576,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyImagePermissionResponse> modifyImagePermission(ModifyImagePermissionRequest request);
 
     /**
-      * The ID of the region.
+      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
       *
      */
     CompletableFuture<ModifyNASDefaultMountTargetResponse> modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request);
@@ -554,7 +584,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNetworkPackageBandwidthResponse> modifyNetworkPackageBandwidth(ModifyNetworkPackageBandwidthRequest request);
 
     /**
-      * The ID of the region.
+      * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
       *
      */
     CompletableFuture<ModifyNetworkPackageEnabledResponse> modifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request);
@@ -565,12 +595,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyOfficeSiteMfaEnabledResponse> modifyOfficeSiteMfaEnabled(ModifyOfficeSiteMfaEnabledRequest request);
 
-    CompletableFuture<ModifyOperateVulResponse> modifyOperateVul(ModifyOperateVulRequest request);
-
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
 
     /**
-      * The IDs of regular users.
+      * You can modify user permissions on cloud desktops that are only in the Running state.
       *
      */
     CompletableFuture<ModifyUserEntitlementResponse> modifyUserEntitlement(ModifyUserEntitlementRequest request);
@@ -579,16 +607,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<MoveCdsFileResponse> moveCdsFile(MoveCdsFileRequest request);
 
-    CompletableFuture<OperateVulsResponse> operateVuls(OperateVulsRequest request);
-
     /**
-      * The ID of the request.
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
       *
      */
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
 
     /**
-      * The error message. This parameter is not returned if the value of Code is success.
+      * Before you change the image of a cloud desktop, take note of the following limits:
+      * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+      * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+      * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
+      * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+      * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
       *
      */
     CompletableFuture<RebuildDesktopsResponse> rebuildDesktops(RebuildDesktopsRequest request);
@@ -596,6 +627,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveFilePermissionResponse> removeFilePermission(RemoveFilePermissionRequest request);
 
     CompletableFuture<RemoveUserFromDesktopGroupResponse> removeUserFromDesktopGroup(RemoveUserFromDesktopGroupRequest request);
+
+    CompletableFuture<RemoveUserFromDesktopOversoldUserGroupResponse> removeUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request);
+
+    CompletableFuture<RenewDesktopOversoldGroupResponse> renewDesktopOversoldGroup(RenewDesktopOversoldGroupRequest request);
 
     CompletableFuture<RenewDesktopsResponse> renewDesktops(RenewDesktopsRequest request);
 
@@ -608,7 +643,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetDesktopsResponse> resetDesktops(ResetDesktopsRequest request);
 
     /**
-      * The ID of the request.
+      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
       *
      */
     CompletableFuture<ResetNASDefaultMountTargetResponse> resetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request);
@@ -626,11 +661,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeCoordinatePrivilegeResponse> revokeCoordinatePrivilege(RevokeCoordinatePrivilegeRequest request);
 
     /**
-      * The ID of the region.
+      * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
       *
      */
-    CompletableFuture<RollbackSuspEventQuaraFileResponse> rollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request);
-
     CompletableFuture<RunCommandResponse> runCommand(RunCommandRequest request);
 
     /**
@@ -663,18 +696,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetUserProfilePathRulesResponse> setUserProfilePathRules(SetUserProfilePathRulesRequest request);
 
     /**
-      * The ID of the request.
+      * The cloud desktop that you want to start must be in the Stopped state.
       *
      */
     CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request);
 
-    CompletableFuture<StartVirusScanTaskResponse> startVirusScanTask(StartVirusScanTaskRequest request);
-
     /**
-      * The billing mode after you stop the cloud desktop.
-      * *   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.
-      * *   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.
-      * Default value: StopCharging
+      * The cloud desktops that you want to stop must be in the Running state.
       *
      */
     CompletableFuture<StopDesktopsResponse> stopDesktops(StopDesktopsRequest request);
@@ -697,6 +725,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateFotaTaskResponse> updateFotaTask(UpdateFotaTaskRequest request);
 
+    /**
+      * > You can call this operation to upload custom Windows images.
+      *
+     */
     CompletableFuture<UploadImageResponse> uploadImage(UploadImageRequest request);
 
     CompletableFuture<VerifyCenResponse> verifyCen(VerifyCenRequest request);

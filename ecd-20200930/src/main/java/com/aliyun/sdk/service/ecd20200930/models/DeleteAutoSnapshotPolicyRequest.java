@@ -71,9 +71,6 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
 
         /**
          * The ID of the policy template that you want to manage.
-         * <p>
-         * 
-         * > You can call the [ListDefensePolicies](~~195814~~) operation to query the IDs of all policy templates.
          */
         public Builder policyId(java.util.List < String > policyId) {
             this.putQueryParameter("PolicyId", policyId);

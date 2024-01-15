@@ -203,13 +203,10 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The language of the OS. This parameter is available only for system images. Valid values:
+         * The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.
          * <p>
          * 
-         * *   zh-CN: Simplified Chinese
-         * *   zh-HK: Traditional Chinese (Hong Kong)
-         * *   en-US: English
-         * *   ja-JP: Japanese
+         * >  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -218,14 +215,35 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.
-         * <p>
-         * 
-         * >  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * The language of the OS. This parameter is available only for system images. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Simplified Chinese
+         * *   zh-HK: Traditional Chinese (Hong Kong)
+         * *   en-US: English
+         * *   ja-JP: Japanese
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -240,23 +258,9 @@ public class CreateBundleRequest extends Request {
          * 
          * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
          */
-        public Builder language(String language) {
-            this.putQueryParameter("Language", language);
-            this.language = language;
-            return this;
-        }
-
-        /**
-         * The size of data disk N. You can configure only one data disk. Unit: GiB.
-         * <p>
-         * 
-         * The value of this parameter must be consistent with the data disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).
-         * 
-         * >  The value of the UserDiskSizeGib parameter in the template must be greater than that of the DataDiskSize parameter in the image.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
+            this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
+            this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
             return this;
         }
 
@@ -266,15 +270,6 @@ public class CreateBundleRequest extends Request {
          * 
          * The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).
          */
-        public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
-            this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
-            this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
-            return this;
-        }
-
-        /**
-         * The operation that you want to perform. Set the value to **CreateBundle**.
-         */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
             this.rootDiskSizeGib = rootDiskSizeGib;
@@ -282,7 +277,15 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
+         * <p>
+         * 
+         * *   PL0
+         * *   PL1
+         * *   PL2
+         * *   PL3
+         * 
+         * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);

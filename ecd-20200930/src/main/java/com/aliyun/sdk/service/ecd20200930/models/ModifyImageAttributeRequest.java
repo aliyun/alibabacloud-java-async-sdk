@@ -98,7 +98,7 @@ public class ModifyImageAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The image description. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -107,7 +107,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +116,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to ModifyImageAttribute.
+         * The name of the image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +125,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The description of the image.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

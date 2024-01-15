@@ -112,7 +112,10 @@ public class DescribeAclEntriesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Maximum value: 1600.
+         * <p>
+         * 
+         * Default value: 1600.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +124,7 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. If this parameter is empty, all results have been returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +133,7 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +142,7 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * The ID of the instance corresponding to the ACL.
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -148,7 +151,11 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The object on which the ACL takes effect.
+         * <p>
+         * 
+         * *   **vpc**: workspace.
+         * *   **desktop**: cloud desktop.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

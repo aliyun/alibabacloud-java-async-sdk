@@ -19,12 +19,15 @@ public class ListCdsFilesRequest extends Request {
 
     @Query
     @NameInMap("EndUserId")
-    @Validation(required = true)
     private String endUserId;
 
     @Query
     @NameInMap("FileIds")
     private java.util.List < String > fileIds;
+
+    @Query
+    @NameInMap("GroupId")
+    private String groupId;
 
     @Query
     @NameInMap("MaxResults")
@@ -44,7 +47,6 @@ public class ListCdsFilesRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -56,6 +58,7 @@ public class ListCdsFilesRequest extends Request {
         this.cdsId = builder.cdsId;
         this.endUserId = builder.endUserId;
         this.fileIds = builder.fileIds;
+        this.groupId = builder.groupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderType = builder.orderType;
@@ -96,6 +99,13 @@ public class ListCdsFilesRequest extends Request {
      */
     public java.util.List < String > getFileIds() {
         return this.fileIds;
+    }
+
+    /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -144,6 +154,7 @@ public class ListCdsFilesRequest extends Request {
         private String cdsId; 
         private String endUserId; 
         private java.util.List < String > fileIds; 
+        private String groupId; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderType; 
@@ -160,6 +171,7 @@ public class ListCdsFilesRequest extends Request {
             this.cdsId = request.cdsId;
             this.endUserId = request.endUserId;
             this.fileIds = request.fileIds;
+            this.groupId = request.groupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderType = request.orderType;
@@ -193,6 +205,15 @@ public class ListCdsFilesRequest extends Request {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
             this.putQueryParameter("FileIds", fileIdsShrink);
             this.fileIds = fileIds;
+            return this;
+        }
+
+        /**
+         * GroupId.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

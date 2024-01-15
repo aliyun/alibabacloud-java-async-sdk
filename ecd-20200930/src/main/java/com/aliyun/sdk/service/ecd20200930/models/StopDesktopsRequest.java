@@ -84,7 +84,7 @@ public class StopDesktopsRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The cloud desktop IDs. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to StopDesktops.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,13 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * StopDesktops
+         * The billing mode after you stop the cloud desktop.
+         * <p>
+         * 
+         * *   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.
+         * *   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.
+         * 
+         * Default value: StopCharging
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

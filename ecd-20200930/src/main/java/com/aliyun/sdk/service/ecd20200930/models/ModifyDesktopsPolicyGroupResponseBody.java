@@ -50,7 +50,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ModifyResults.
+         * The change results.
          */
         public Builder modifyResults(java.util.List < ModifyResults> modifyResults) {
             this.modifyResults = modifyResults;
@@ -58,7 +58,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The change result. A value of success indicates that the policy is changed. If the policy is not changed, an error message is returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +130,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -138,7 +138,7 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message. This parameter is empty if the Code value is success.
              */
             public Builder message(String message) {
                 this.message = message;

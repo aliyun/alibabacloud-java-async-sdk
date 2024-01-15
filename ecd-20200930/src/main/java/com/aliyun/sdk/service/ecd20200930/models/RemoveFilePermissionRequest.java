@@ -19,13 +19,16 @@ public class RemoveFilePermissionRequest extends Request {
 
     @Query
     @NameInMap("EndUserId")
-    @Validation(required = true)
     private String endUserId;
 
     @Query
     @NameInMap("FileId")
     @Validation(required = true)
     private String fileId;
+
+    @Query
+    @NameInMap("GroupId")
+    private String groupId;
 
     @Query
     @NameInMap("MemberList")
@@ -42,6 +45,7 @@ public class RemoveFilePermissionRequest extends Request {
         this.cdsId = builder.cdsId;
         this.endUserId = builder.endUserId;
         this.fileId = builder.fileId;
+        this.groupId = builder.groupId;
         this.memberList = builder.memberList;
         this.regionId = builder.regionId;
     }
@@ -81,6 +85,13 @@ public class RemoveFilePermissionRequest extends Request {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return memberList
      */
     public java.util.List < MemberList> getMemberList() {
@@ -98,6 +109,7 @@ public class RemoveFilePermissionRequest extends Request {
         private String cdsId; 
         private String endUserId; 
         private String fileId; 
+        private String groupId; 
         private java.util.List < MemberList> memberList; 
         private String regionId; 
 
@@ -110,6 +122,7 @@ public class RemoveFilePermissionRequest extends Request {
             this.cdsId = request.cdsId;
             this.endUserId = request.endUserId;
             this.fileId = request.fileId;
+            this.groupId = request.groupId;
             this.memberList = request.memberList;
             this.regionId = request.regionId;
         } 
@@ -138,6 +151,15 @@ public class RemoveFilePermissionRequest extends Request {
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);
             this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * The group ID.
+         */
+        public Builder groupId(String groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

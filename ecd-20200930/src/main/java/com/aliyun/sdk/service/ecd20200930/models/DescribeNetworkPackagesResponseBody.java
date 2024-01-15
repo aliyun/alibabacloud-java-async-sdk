@@ -95,6 +95,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("Bandwidth")
         private Integer bandwidth;
 
+        @NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -136,6 +139,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
         private NetworkPackages(Builder builder) {
             this.bandwidth = builder.bandwidth;
+            this.businessStatus = builder.businessStatus;
             this.createTime = builder.createTime;
             this.eipAddresses = builder.eipAddresses;
             this.expiredTime = builder.expiredTime;
@@ -164,6 +168,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
          */
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -259,6 +270,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer bandwidth; 
+            private String businessStatus; 
             private String createTime; 
             private java.util.List < String > eipAddresses; 
             private String expiredTime; 
@@ -278,6 +290,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
                 return this;
             }
 

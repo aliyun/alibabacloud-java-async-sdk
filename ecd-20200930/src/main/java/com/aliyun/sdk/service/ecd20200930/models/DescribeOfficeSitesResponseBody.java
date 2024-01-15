@@ -70,7 +70,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the workspaces.
+         * Details about the workspaces.
          */
         public Builder officeSites(java.util.List < OfficeSites> officeSites) {
             this.officeSites = officeSites;
@@ -187,6 +187,55 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
             /**
              * The state of the AD connector.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   CONNECT_ERROR: A connection error occurs.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RUNNING: The AD connector is running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   CONNECTING: The AD connector is being connected.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     The AD domain for the connector needs to be configured.
+             * 
+             *     <!-- -->
+             * 
+             * *   EXPIRED: The AD connector expired due to overdue payments.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CREATING: The consumer group is being created
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -202,7 +251,26 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the AD connector.
+             * The AD connector type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   1: General
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   2: Advanced
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -296,6 +364,33 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
             /**
              * The log level.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ERROR: errors
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   INFO: information
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   WARN: warnings
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder level(String level) {
                 this.level = level;
@@ -888,7 +983,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String vpcType; 
 
             /**
-             * Details of the AD connectors.
+             * Details about AD connectors.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
@@ -896,7 +991,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.
+             * The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
@@ -904,7 +999,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum public bandwidth of the Internet access package. Valid values: 0 to 1000.\
+             * The maximum public bandwidth value. Valid values: 0 to 1000.\
              * <p>
              * If the value of this parameter is 0, Internet access is disabled.
              */
@@ -938,7 +1033,26 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the workspace is created for cloud desktops on a cloud box.
+             * Specifies whether the workspace is a cloud box-based workspace.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   True: a cloud box-based workspace
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   False: an Internet-based workspace
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
                 this.cloudBoxOfficeSite = cloudBoxOfficeSite;
@@ -962,7 +1076,36 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to connect the Alibaba Cloud Workspace client to cloud desktops.
+             * The method that is used to connect an Alibaba Cloud Workspace client to cloud desktops.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   INTERNET: allows clients to connect to cloud desktops only over the Internet.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   VPC: allows only clients in VPCs to connect to a cloud desktop.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ANY: connects the client to cloud desktops over the Internet or a VPC.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     Configure the Connection Method parameter based on your business requirements.
+             * 
+             *     <!-- -->
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -994,7 +1137,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the DNS account.
+             * The username of the Domain Name System (DNS) user.
              */
             public Builder dnsUserName(String dnsUserName) {
                 this.dnsUserName = dnsUserName;
@@ -1026,7 +1169,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the permissions of the desktop administrator are granted to the user of the cloud desktop.
+             * Indicates whether the Local Administrator permissions are granted for users of the cloud desktop.
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -1034,7 +1177,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.
+             * Indicates whether the cross-desktop access feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.
              */
             public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
                 this.enableCrossDesktopAccess = enableCrossDesktopAccess;
@@ -1058,7 +1201,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the registration logs.
+             * Details about registration logs.
              */
             public Builder logs(java.util.List < Logs> logs) {
                 this.logs = logs;
@@ -1066,7 +1209,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether multi-factor authentication (MFA) is enabled.
+             * Specifies whether to enable multi-factor authentication (MFA).
              */
             public Builder mfaEnabled(Boolean mfaEnabled) {
                 this.mfaEnabled = mfaEnabled;
@@ -1082,7 +1225,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
+             * Indicates whether two-step verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
              * <p>
              * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
              */
@@ -1092,7 +1235,26 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether trusted device verification is enabled.
+             * Specifies whether to enable trusted device verification.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: enables device verification.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false: disables device verification.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder needVerifyZeroDevice(Boolean needVerifyZeroDevice) {
                 this.needVerifyZeroDevice = needVerifyZeroDevice;
@@ -1108,7 +1270,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1117,6 +1279,25 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
             /**
              * The account type of the workspace.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SIMPLE: the convenience account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   AD_CONNECTOR: the enterprise AD account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -1132,7 +1313,26 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * The workspace protocol.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   HDX: the third-party protocol
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ASP: the protocol developed by Alibaba Cloud
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1181,6 +1381,81 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
             /**
              * The state of the workspace.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   REGISTERING: The workspace is being registered.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DEREGISTERING: The workspace is being deregistered.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   REGISTERED: The workspace is registered.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NEEDCONFIGTRUST: A trust relationship needs to be configured.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DEREGISTERED: The workspace is deregistered.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ERROR: The configurations of the workspace are invalid.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CONFIGTRUSTING: A trust relationship is being configured.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NEEDCONFIGUSER: Users need to be configured.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1245,6 +1520,33 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
             /**
              * The VPC type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Basic
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Customized
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Standard
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;

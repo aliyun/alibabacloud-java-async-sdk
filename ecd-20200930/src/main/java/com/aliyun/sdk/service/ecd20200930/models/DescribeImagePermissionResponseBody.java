@@ -50,7 +50,7 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AliUids.
+         * The IDs of the recipient Alibaba Cloud accounts. You can share an image with up to 50 Alibaba Cloud accounts.
          */
         public Builder aliUids(java.util.List < String > aliUids) {
             this.aliUids = aliUids;
@@ -58,7 +58,7 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

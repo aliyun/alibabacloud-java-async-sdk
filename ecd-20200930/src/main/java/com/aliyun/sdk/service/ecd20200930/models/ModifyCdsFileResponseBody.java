@@ -94,7 +94,28 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * The value true returned if the request is successful.
+         * Specifies whether data is returned.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   false: Data fails to be returned.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     : Data is returned.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder data(String data) {
             this.data = data;
@@ -118,7 +139,26 @@ public class ModifyCdsFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true: The request is successful. false: The request failed.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true: The request is successful.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false: The request fails.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder success(Boolean success) {
             this.success = success;

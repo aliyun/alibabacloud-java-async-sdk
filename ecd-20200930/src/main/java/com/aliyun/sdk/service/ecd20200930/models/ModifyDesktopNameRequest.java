@@ -85,7 +85,7 @@ public class ModifyDesktopNameRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The cloud computer ID.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -98,8 +98,8 @@ public class ModifyDesktopNameRequest extends Request {
          * <p>
          * 
          * *   The name must be 1 to 64 characters in length.
-         * *   The name must start with a letter and cannot start with `http://` or `https://`.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * *   The name must start with a letter but cannot start with `http://` or `https://`.
+         * *   It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder newDesktopName(String newDesktopName) {
             this.putQueryParameter("NewDesktopName", newDesktopName);
@@ -108,7 +108,7 @@ public class ModifyDesktopNameRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyDesktopName**.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

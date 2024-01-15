@@ -50,7 +50,7 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -58,7 +58,7 @@ public class CreateSimpleOfficeSiteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

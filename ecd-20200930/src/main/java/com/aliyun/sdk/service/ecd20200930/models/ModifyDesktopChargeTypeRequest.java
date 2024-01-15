@@ -222,7 +222,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
         }
 
         /**
-         * UseDuration.
+         * >  This parameter is in invitational preview and not available to the public.
          */
         public Builder useDuration(Integer useDuration) {
             this.putQueryParameter("UseDuration", useDuration);

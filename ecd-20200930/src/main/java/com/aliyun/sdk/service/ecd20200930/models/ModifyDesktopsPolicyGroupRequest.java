@@ -98,7 +98,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         } 
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,7 +107,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -116,7 +116,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupIds.
+         * The IDs of policy groups.
          */
         public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
@@ -125,7 +125,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cloud desktop.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

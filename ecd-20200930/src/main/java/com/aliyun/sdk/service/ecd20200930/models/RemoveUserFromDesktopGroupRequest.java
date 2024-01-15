@@ -98,7 +98,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         } 
 
         /**
-         * DesktopGroupId.
+         * The ID of the desktop group.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -107,7 +107,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * DesktopGroupIds.
+         * The IDs of the desktop groups.
          */
         public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -116,7 +116,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * EndUserIds.
+         * The authorized user to be removed.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -125,7 +125,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

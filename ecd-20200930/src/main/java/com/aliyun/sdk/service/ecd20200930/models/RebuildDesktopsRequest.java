@@ -98,7 +98,7 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of cloud desktop N. You can specify one or more cloud desktop IDs. Valid values of N: 1 to 20.
+         * The IDs of the cloud desktops.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,7 +107,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RebuildDesktops**.
+         * The ID of the new image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +116,25 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * The operation type on the data disk.
+         * <p>
+         * 
+         * > For cloud desktops that do not have data disks, when you call this operation, you do not need to configure this parameter.
+         * 
+         * *   Cloud desktops do not have data disks\
+         *     The values that you configured have no impacts.
+         * 
+         * *   Cloud desktops have data disks
+         * 
+         *     1.  If the OS of the cloud desktop is the same as the OS of a destination image:
+         * 
+         *         *   The value replace indicates that the data disk of the cloud desktop is replaced.
+         *         *   If you do not specify this parameter, the data disk of the cloud desktop is retained.
+         * 
+         *     2.  If the OS of the cloud desktop is the different from the OS of a destination image:
+         * 
+         *         *   The value replace indicates that the data disk of the cloud desktop is replaced.
+         *         *   If you do not specify this parameter, the data disk of the cloud desktop is cleared.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -125,7 +143,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the new image.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

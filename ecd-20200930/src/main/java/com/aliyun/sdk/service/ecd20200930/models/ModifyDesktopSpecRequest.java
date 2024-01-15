@@ -23,6 +23,7 @@ public class ModifyDesktopSpecRequest extends Request {
 
     @Query
     @NameInMap("DesktopType")
+    @Validation(required = true)
     private String desktopType;
 
     @Query

@@ -50,7 +50,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DesktopTypes.
+         * Details of cloud desktop types.
          */
         public Builder desktopTypes(java.util.List < DesktopTypes> desktopTypes) {
             this.desktopTypes = desktopTypes;
@@ -58,7 +58,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String systemDiskSize; 
 
             /**
-             * CpuCount.
+             * The number of vCPUs.
              */
             public Builder cpuCount(String cpuCount) {
                 this.cpuCount = cpuCount;
@@ -202,7 +202,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskSize.
+             * The size of the data disk. Unit: GiB.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -210,7 +210,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopTypeId.
+             * The ID of the cloud desktop type.
              */
             public Builder desktopTypeId(String desktopTypeId) {
                 this.desktopTypeId = desktopTypeId;
@@ -218,7 +218,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopTypeStatus.
+             * The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.
              */
             public Builder desktopTypeStatus(String desktopTypeStatus) {
                 this.desktopTypeStatus = desktopTypeStatus;
@@ -226,7 +226,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuCount.
+             * The number of GPUs.
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -234,7 +234,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * The GPU memory.
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -242,7 +242,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The family of the cloud desktop type.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -250,7 +250,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size. Unit: MiB.
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -258,7 +258,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The size of the system disk. Unit: GiB.
              */
             public Builder systemDiskSize(String systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

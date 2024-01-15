@@ -252,7 +252,13 @@ public class ExportDesktopListInfoRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * The billing method of the cloud desktop. Valid values:
+         * <p>
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
+         * 
+         * Default value: PostPaid.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -261,7 +267,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The ID of the cloud desktop.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -270,7 +276,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopName.
+         * The name of the cloud desktop.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -279,7 +285,17 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * DesktopStatus.
+         * The status of the cloud desktop. Valid values:
+         * <p>
+         * 
+         * *   Pending
+         * *   Starting
+         * *   Running
+         * *   Stopping
+         * *   Rebuilding
+         * *   Stopped
+         * *   Expired
+         * *   Deleted
          */
         public Builder desktopStatus(String desktopStatus) {
             this.putQueryParameter("DesktopStatus", desktopStatus);
@@ -297,7 +313,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the subscription cloud desktop expires.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -306,7 +322,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the group to which the cloud desktop belongs.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -315,7 +331,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * LangType.
+         * The language that you want to use.
          */
         public Builder langType(String langType) {
             this.putQueryParameter("LangType", langType);
@@ -324,7 +340,12 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -333,7 +354,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -342,7 +363,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The ID of the workspace.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -351,7 +372,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * The ID of the policy that is associated with the cloud desktop.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -360,7 +381,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -369,7 +390,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that you want to add to the cloud desktop.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -378,7 +399,7 @@ public class ExportDesktopListInfoRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the current user of the cloud desktop.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -432,7 +453,7 @@ public class ExportDesktopListInfoRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify 1 to 20 keys for a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -440,7 +461,7 @@ public class ExportDesktopListInfoRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. You can specify 1 to 20 values for a tag.
              */
             public Builder value(String value) {
                 this.value = value;

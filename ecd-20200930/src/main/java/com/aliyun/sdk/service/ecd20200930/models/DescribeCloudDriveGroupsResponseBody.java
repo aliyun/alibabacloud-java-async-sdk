@@ -131,9 +131,73 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
     } 
 
+    public static class AdminUserInfos extends TeaModel {
+        @NameInMap("EndUserId")
+        private String endUserId;
+
+        @NameInMap("NickName")
+        private String nickName;
+
+        private AdminUserInfos(Builder builder) {
+            this.endUserId = builder.endUserId;
+            this.nickName = builder.nickName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdminUserInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endUserId
+         */
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        public static final class Builder {
+            private String endUserId; 
+            private String nickName; 
+
+            /**
+             * EndUserId.
+             */
+            public Builder endUserId(String endUserId) {
+                this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
+                return this;
+            }
+
+            public AdminUserInfos build() {
+                return new AdminUserInfos(this);
+            } 
+
+        } 
+
+    }
     public static class CloudDriveGroups extends TeaModel {
         @NameInMap("AdminUserIds")
         private String adminUserIds;
+
+        @NameInMap("AdminUserInfos")
+        private java.util.List < AdminUserInfos> adminUserInfos;
 
         @NameInMap("CreateTime")
         private String createTime;
@@ -164,6 +228,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
         private CloudDriveGroups(Builder builder) {
             this.adminUserIds = builder.adminUserIds;
+            this.adminUserInfos = builder.adminUserInfos;
             this.createTime = builder.createTime;
             this.directoryId = builder.directoryId;
             this.driveId = builder.driveId;
@@ -188,6 +253,13 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
          */
         public String getAdminUserIds() {
             return this.adminUserIds;
+        }
+
+        /**
+         * @return adminUserInfos
+         */
+        public java.util.List < AdminUserInfos> getAdminUserInfos() {
+            return this.adminUserInfos;
         }
 
         /**
@@ -255,6 +327,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String adminUserIds; 
+            private java.util.List < AdminUserInfos> adminUserInfos; 
             private String createTime; 
             private String directoryId; 
             private String driveId; 
@@ -270,6 +343,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
              */
             public Builder adminUserIds(String adminUserIds) {
                 this.adminUserIds = adminUserIds;
+                return this;
+            }
+
+            /**
+             * AdminUserInfos.
+             */
+            public Builder adminUserInfos(java.util.List < AdminUserInfos> adminUserInfos) {
+                this.adminUserInfos = adminUserInfos;
                 return this;
             }
 

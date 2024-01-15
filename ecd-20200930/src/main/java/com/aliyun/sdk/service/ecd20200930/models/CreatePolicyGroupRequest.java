@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePolicyGroupRequest extends Request {
     @Query
+    @NameInMap("AdminAccess")
+    private String adminAccess;
+
+    @Query
     @NameInMap("AppContentProtection")
     private String appContentProtection;
 
@@ -39,6 +43,14 @@ public class CreatePolicyGroupRequest extends Request {
     @Query
     @NameInMap("DomainList")
     private String domainList;
+
+    @Query
+    @NameInMap("DomainResolveRule")
+    private java.util.List < DomainResolveRule> domainResolveRule;
+
+    @Query
+    @NameInMap("DomainResolveRuleType")
+    private String domainResolveRuleType;
 
     @Query
     @NameInMap("EndUserApplyAdminCoordinate")
@@ -182,6 +194,10 @@ public class CreatePolicyGroupRequest extends Request {
     private Integer watermarkRowAmount;
 
     @Query
+    @NameInMap("WatermarkSecurity")
+    private String watermarkSecurity;
+
+    @Query
     @NameInMap("WatermarkTransparency")
     private String watermarkTransparency;
 
@@ -195,6 +211,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     private CreatePolicyGroupRequest(Builder builder) {
         super(builder);
+        this.adminAccess = builder.adminAccess;
         this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
@@ -202,6 +219,8 @@ public class CreatePolicyGroupRequest extends Request {
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
         this.domainList = builder.domainList;
+        this.domainResolveRule = builder.domainResolveRule;
+        this.domainResolveRuleType = builder.domainResolveRuleType;
         this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
         this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
         this.gpuAcceleration = builder.gpuAcceleration;
@@ -237,6 +256,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.watermarkFontSize = builder.watermarkFontSize;
         this.watermarkFontStyle = builder.watermarkFontStyle;
         this.watermarkRowAmount = builder.watermarkRowAmount;
+        this.watermarkSecurity = builder.watermarkSecurity;
         this.watermarkTransparency = builder.watermarkTransparency;
         this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
         this.watermarkType = builder.watermarkType;
@@ -253,6 +273,13 @@ public class CreatePolicyGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adminAccess
+     */
+    public String getAdminAccess() {
+        return this.adminAccess;
     }
 
     /**
@@ -302,6 +329,20 @@ public class CreatePolicyGroupRequest extends Request {
      */
     public String getDomainList() {
         return this.domainList;
+    }
+
+    /**
+     * @return domainResolveRule
+     */
+    public java.util.List < DomainResolveRule> getDomainResolveRule() {
+        return this.domainResolveRule;
+    }
+
+    /**
+     * @return domainResolveRuleType
+     */
+    public String getDomainResolveRuleType() {
+        return this.domainResolveRuleType;
     }
 
     /**
@@ -550,6 +591,13 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return watermarkSecurity
+     */
+    public String getWatermarkSecurity() {
+        return this.watermarkSecurity;
+    }
+
+    /**
      * @return watermarkTransparency
      */
     public String getWatermarkTransparency() {
@@ -571,6 +619,7 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePolicyGroupRequest, Builder> {
+        private String adminAccess; 
         private String appContentProtection; 
         private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
@@ -578,6 +627,8 @@ public class CreatePolicyGroupRequest extends Request {
         private java.util.List < ClientType> clientType; 
         private String clipboard; 
         private String domainList; 
+        private java.util.List < DomainResolveRule> domainResolveRule; 
+        private String domainResolveRuleType; 
         private String endUserApplyAdminCoordinate; 
         private String endUserGroupCoordinate; 
         private String gpuAcceleration; 
@@ -613,6 +664,7 @@ public class CreatePolicyGroupRequest extends Request {
         private Integer watermarkFontSize; 
         private String watermarkFontStyle; 
         private Integer watermarkRowAmount; 
+        private String watermarkSecurity; 
         private String watermarkTransparency; 
         private Integer watermarkTransparencyValue; 
         private String watermarkType; 
@@ -623,6 +675,7 @@ public class CreatePolicyGroupRequest extends Request {
 
         private Builder(CreatePolicyGroupRequest request) {
             super(request);
+            this.adminAccess = request.adminAccess;
             this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
@@ -630,6 +683,8 @@ public class CreatePolicyGroupRequest extends Request {
             this.clientType = request.clientType;
             this.clipboard = request.clipboard;
             this.domainList = request.domainList;
+            this.domainResolveRule = request.domainResolveRule;
+            this.domainResolveRuleType = request.domainResolveRuleType;
             this.endUserApplyAdminCoordinate = request.endUserApplyAdminCoordinate;
             this.endUserGroupCoordinate = request.endUserGroupCoordinate;
             this.gpuAcceleration = request.gpuAcceleration;
@@ -665,10 +720,20 @@ public class CreatePolicyGroupRequest extends Request {
             this.watermarkFontSize = request.watermarkFontSize;
             this.watermarkFontStyle = request.watermarkFontStyle;
             this.watermarkRowAmount = request.watermarkRowAmount;
+            this.watermarkSecurity = request.watermarkSecurity;
             this.watermarkTransparency = request.watermarkTransparency;
             this.watermarkTransparencyValue = request.watermarkTransparencyValue;
             this.watermarkType = request.watermarkType;
         } 
+
+        /**
+         * AdminAccess.
+         */
+        public Builder adminAccess(String adminAccess) {
+            this.putQueryParameter("AdminAccess", adminAccess);
+            this.adminAccess = adminAccess;
+            return this;
+        }
 
         /**
          * Specifies whether to enable the anti-screenshot feature.
@@ -805,6 +870,43 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder domainList(String domainList) {
             this.putQueryParameter("DomainList", domainList);
             this.domainList = domainList;
+            return this;
+        }
+
+        /**
+         * The details of the domain name resolution policy.
+         */
+        public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
+            this.putQueryParameter("DomainResolveRule", domainResolveRule);
+            this.domainResolveRule = domainResolveRule;
+            return this;
+        }
+
+        /**
+         * The type of the domain name resolution policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   OFF
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ON
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         */
+        public Builder domainResolveRuleType(String domainResolveRuleType) {
+            this.putQueryParameter("DomainResolveRuleType", domainResolveRuleType);
+            this.domainResolveRuleType = domainResolveRuleType;
             return this;
         }
 
@@ -992,9 +1094,11 @@ public class CreatePolicyGroupRequest extends Request {
          * Specifies whether to enable the network redirection feature.
          * <p>
          * 
+         * > This feature is in invitational preview and is not available to the public.
+         * 
          * Valid values:
          * 
-         * *   off: Network redirection is disabled. This value is the default value.
+         * *   off (default): The network redirection feature is disabled.
          * 
          *     <!-- -->
          * 
@@ -1002,7 +1106,7 @@ public class CreatePolicyGroupRequest extends Request {
          * 
          *     <!-- -->
          * 
-         * *   on: Network redirection is enabled.
+         * *   on: The network redirection feature is enabled.
          * 
          *     <!-- -->
          * 
@@ -1449,6 +1553,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder watermarkRowAmount(Integer watermarkRowAmount) {
             this.putQueryParameter("WatermarkRowAmount", watermarkRowAmount);
             this.watermarkRowAmount = watermarkRowAmount;
+            return this;
+        }
+
+        /**
+         * The security priority for invisible watermarks. Valid values: on and off.
+         */
+        public Builder watermarkSecurity(String watermarkSecurity) {
+            this.putQueryParameter("WatermarkSecurity", watermarkSecurity);
+            this.watermarkSecurity = watermarkSecurity;
             return this;
         }
 
@@ -1980,6 +2093,106 @@ public class CreatePolicyGroupRequest extends Request {
 
             public ClientType build() {
                 return new ClientType(this);
+            } 
+
+        } 
+
+    }
+    public static class DomainResolveRule extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("Policy")
+        private String policy;
+
+        private DomainResolveRule(Builder builder) {
+            this.description = builder.description;
+            this.domain = builder.domain;
+            this.policy = builder.policy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainResolveRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String domain; 
+            private String policy; 
+
+            /**
+             * The description of the policy.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The domain name.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * Specifies whether to allow the policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   allow
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   block
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            public DomainResolveRule build() {
+                return new DomainResolveRule(this);
             } 
 
         } 

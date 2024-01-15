@@ -238,7 +238,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * StoppedPrePaidDesktopsCount.
+         * The number of subscription cloud desktops that are stopped.
          */
         public Builder stoppedPrePaidDesktopsCount(Integer stoppedPrePaidDesktopsCount) {
             this.stoppedPrePaidDesktopsCount = stoppedPrePaidDesktopsCount;
@@ -518,7 +518,34 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection status of the cloud desktop.
+             * The connection state.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Unknown
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Connected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Disconnected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -543,6 +570,73 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The state of the cloud desktop.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Stopped
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Starting
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Rebuilding
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Stopping
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Expired
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Deleted
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Pending
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -551,6 +645,31 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The disk type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SYSTEM
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the system disk
+             * 
+             *     <!-- -->
+             * 
+             * *   DATA:
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     the data disk
+             * 
+             *     <!-- -->
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -582,7 +701,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The names of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -623,6 +742,25 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The flag that is used for management.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Updating: The configurations of the cloud desktop are being changed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NoFlag: No flags are available.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -646,7 +784,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type.
+             * The OS.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Linux
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -662,7 +819,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
              * *   ASP
@@ -999,7 +1156,34 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection status of the cloud desktop.
+             * The connection state.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Unknown
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Connected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Disconnected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1015,7 +1199,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop was created.
+             * The time when the auxiliary media asset was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1040,6 +1224,73 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The state of the cloud desktop.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Stopped
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Starting
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Rebuilding
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Stopping
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Expired
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Deleted
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Pending
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -1048,6 +1299,31 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The disk type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SYSTEM
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     the system disk
+             * 
+             *     <!-- -->
+             * 
+             * *   DATA:
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     the data disk
+             * 
+             *     <!-- -->
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1079,7 +1355,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The names of users that are connected to cloud desktops. If no users are connected, null is returned.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -1120,6 +1396,25 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
             /**
              * The flag that is used for management.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Updating: The configurations of the cloud desktop are being changed.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NoFlag: No flags are available.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1143,7 +1438,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type.
+             * The OS.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Linux
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1159,7 +1473,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
              * *   ASP

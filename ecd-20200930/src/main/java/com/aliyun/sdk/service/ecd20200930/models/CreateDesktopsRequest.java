@@ -38,6 +38,10 @@ public class CreateDesktopsRequest extends Request {
     private String chargeType;
 
     @Query
+    @NameInMap("DesktopMemberIp")
+    private String desktopMemberIp;
+
+    @Query
     @NameInMap("DesktopName")
     private String desktopName;
 
@@ -127,6 +131,7 @@ public class CreateDesktopsRequest extends Request {
         this.bundleId = builder.bundleId;
         this.bundleModels = builder.bundleModels;
         this.chargeType = builder.chargeType;
+        this.desktopMemberIp = builder.desktopMemberIp;
         this.desktopName = builder.desktopName;
         this.desktopNameSuffix = builder.desktopNameSuffix;
         this.desktopTimers = builder.desktopTimers;
@@ -202,6 +207,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return desktopMemberIp
+     */
+    public String getDesktopMemberIp() {
+        return this.desktopMemberIp;
     }
 
     /**
@@ -351,6 +363,7 @@ public class CreateDesktopsRequest extends Request {
         private String bundleId; 
         private java.util.List < BundleModels> bundleModels; 
         private String chargeType; 
+        private String desktopMemberIp; 
         private String desktopName; 
         private Boolean desktopNameSuffix; 
         private java.util.List < DesktopTimers> desktopTimers; 
@@ -384,6 +397,7 @@ public class CreateDesktopsRequest extends Request {
             this.bundleId = request.bundleId;
             this.bundleModels = request.bundleModels;
             this.chargeType = request.chargeType;
+            this.desktopMemberIp = request.desktopMemberIp;
             this.desktopName = request.desktopName;
             this.desktopNameSuffix = request.desktopNameSuffix;
             this.desktopTimers = request.desktopTimers;
@@ -457,6 +471,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * DesktopMemberIp.
+         */
+        public Builder desktopMemberIp(String desktopMemberIp) {
+            this.putQueryParameter("DesktopMemberIp", desktopMemberIp);
+            this.desktopMemberIp = desktopMemberIp;
             return this;
         }
 
@@ -1134,7 +1157,7 @@ public class CreateDesktopsRequest extends Request {
             private String contentType; 
 
             /**
-             * The content of the command.
+             * The command content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1143,6 +1166,25 @@ public class CreateDesktopsRequest extends Request {
 
             /**
              * The encoding mode of the command content (CommandContent).
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Base64: encodes the command content in Base64.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PlainText: does not encode the command content.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder contentEncoding(String contentEncoding) {
                 this.contentEncoding = contentEncoding;
@@ -1150,7 +1192,34 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The language type of the command.
+             * The command language.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RunPowerShellScript: PowerShell command (applicable to Windows cloud desktops).
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RunShellScript: shell command (applicable to Linux cloud desktops).
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RunBatScript: batch command (applicable to Windows cloud desktops).
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;

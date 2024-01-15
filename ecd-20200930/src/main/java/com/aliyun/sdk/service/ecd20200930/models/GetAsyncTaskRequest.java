@@ -70,7 +70,7 @@ public class GetAsyncTaskRequest extends Request {
         } 
 
         /**
-         * AsyncTaskId.
+         * The asynchronous task ID. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and information about an asynchronous task.
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.putQueryParameter("AsyncTaskId", asyncTaskId);
@@ -79,7 +79,7 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * CdsId.
+         * The ID of the cloud disk.
          */
         public Builder cdsId(String cdsId) {
             this.putQueryParameter("CdsId", cdsId);

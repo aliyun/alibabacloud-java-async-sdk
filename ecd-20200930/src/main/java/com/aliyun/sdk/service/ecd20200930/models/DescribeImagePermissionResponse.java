@@ -16,6 +16,10 @@ public class DescribeImagePermissionResponse extends Response {
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     private DescribeImagePermissionResponseBody body;
@@ -23,6 +27,7 @@ public class DescribeImagePermissionResponse extends Response {
     private DescribeImagePermissionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +48,13 @@ public class DescribeImagePermissionResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeImagePermissionResponseBody getBody() {
@@ -52,6 +64,8 @@ public class DescribeImagePermissionResponse extends Response {
     public interface Builder extends Response.Builder<DescribeImagePermissionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeImagePermissionResponseBody body);
 
@@ -64,6 +78,7 @@ public class DescribeImagePermissionResponse extends Response {
             extends Response.BuilderImpl<DescribeImagePermissionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeImagePermissionResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +88,7 @@ public class DescribeImagePermissionResponse extends Response {
         private BuilderImpl(DescribeImagePermissionResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +98,15 @@ public class DescribeImagePermissionResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

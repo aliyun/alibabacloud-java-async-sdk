@@ -126,7 +126,7 @@ public class ListDirectoryUsersRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the AD directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -135,7 +135,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -144,7 +144,12 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -153,7 +158,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token used to start the next query. If the value of this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +167,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * OUPath.
+         * The organizational unit (OU) in the specified AD domain.
          */
         public Builder OUPath(String OUPath) {
             this.putQueryParameter("OUPath", OUPath);
@@ -171,7 +176,7 @@ public class ListDirectoryUsersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

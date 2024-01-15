@@ -69,7 +69,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeZones**.
+         * The zone type. Default value: **AvailabilityZone**. This value specifies Alibaba Cloud zones.
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

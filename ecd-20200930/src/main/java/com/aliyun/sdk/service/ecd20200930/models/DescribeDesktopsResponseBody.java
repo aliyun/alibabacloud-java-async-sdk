@@ -82,7 +82,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. If this parameter is empty, all results are returned.
+         * The token that is used for the next query. If this parameter is left empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -111,147 +111,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     } 
 
-    public static class DesktopDurationList extends TeaModel {
-        @NameInMap("PackageCreationTime")
-        private String packageCreationTime;
-
-        @NameInMap("PackageExpiredTime")
-        private String packageExpiredTime;
-
-        @NameInMap("PackageId")
-        private String packageId;
-
-        @NameInMap("PackageStatus")
-        private String packageStatus;
-
-        @NameInMap("TotalDuration")
-        private Long totalDuration;
-
-        @NameInMap("UsedDuration")
-        private Long usedDuration;
-
-        private DesktopDurationList(Builder builder) {
-            this.packageCreationTime = builder.packageCreationTime;
-            this.packageExpiredTime = builder.packageExpiredTime;
-            this.packageId = builder.packageId;
-            this.packageStatus = builder.packageStatus;
-            this.totalDuration = builder.totalDuration;
-            this.usedDuration = builder.usedDuration;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DesktopDurationList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return packageCreationTime
-         */
-        public String getPackageCreationTime() {
-            return this.packageCreationTime;
-        }
-
-        /**
-         * @return packageExpiredTime
-         */
-        public String getPackageExpiredTime() {
-            return this.packageExpiredTime;
-        }
-
-        /**
-         * @return packageId
-         */
-        public String getPackageId() {
-            return this.packageId;
-        }
-
-        /**
-         * @return packageStatus
-         */
-        public String getPackageStatus() {
-            return this.packageStatus;
-        }
-
-        /**
-         * @return totalDuration
-         */
-        public Long getTotalDuration() {
-            return this.totalDuration;
-        }
-
-        /**
-         * @return usedDuration
-         */
-        public Long getUsedDuration() {
-            return this.usedDuration;
-        }
-
-        public static final class Builder {
-            private String packageCreationTime; 
-            private String packageExpiredTime; 
-            private String packageId; 
-            private String packageStatus; 
-            private Long totalDuration; 
-            private Long usedDuration; 
-
-            /**
-             * PackageCreationTime.
-             */
-            public Builder packageCreationTime(String packageCreationTime) {
-                this.packageCreationTime = packageCreationTime;
-                return this;
-            }
-
-            /**
-             * PackageExpiredTime.
-             */
-            public Builder packageExpiredTime(String packageExpiredTime) {
-                this.packageExpiredTime = packageExpiredTime;
-                return this;
-            }
-
-            /**
-             * PackageId.
-             */
-            public Builder packageId(String packageId) {
-                this.packageId = packageId;
-                return this;
-            }
-
-            /**
-             * PackageStatus.
-             */
-            public Builder packageStatus(String packageStatus) {
-                this.packageStatus = packageStatus;
-                return this;
-            }
-
-            /**
-             * TotalDuration.
-             */
-            public Builder totalDuration(Long totalDuration) {
-                this.totalDuration = totalDuration;
-                return this;
-            }
-
-            /**
-             * UsedDuration.
-             */
-            public Builder usedDuration(Long usedDuration) {
-                this.usedDuration = usedDuration;
-                return this;
-            }
-
-            public DesktopDurationList build() {
-                return new DesktopDurationList(this);
-            } 
-
-        } 
-
-    }
     public static class Disks extends TeaModel {
         @NameInMap("DiskId")
         private String diskId;
@@ -472,7 +331,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * The description of the version that can be upgraded in English.
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -480,7 +339,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteJp.
+             * The description of the version that can be upgraded in Japanese.
              */
             public Builder releaseNoteJp(String releaseNoteJp) {
                 this.releaseNoteJp = releaseNoteJp;
@@ -553,7 +412,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String externalUserName; 
 
             /**
-             * The ID of the user that logged on to the cloud desktop.
+             * The ID of the end user that logged on to the cloud desktop.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -671,9 +530,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @NameInMap("DataDiskSize")
         private String dataDiskSize;
-
-        @NameInMap("DesktopDurationList")
-        private java.util.List < DesktopDurationList> desktopDurationList;
 
         @NameInMap("DesktopGroupId")
         private String desktopGroupId;
@@ -835,7 +691,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.dataDiskCategory = builder.dataDiskCategory;
             this.dataDiskSize = builder.dataDiskSize;
-            this.desktopDurationList = builder.desktopDurationList;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
@@ -957,13 +812,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public String getDataDiskSize() {
             return this.dataDiskSize;
-        }
-
-        /**
-         * @return desktopDurationList
-         */
-        public java.util.List < DesktopDurationList> getDesktopDurationList() {
-            return this.desktopDurationList;
         }
 
         /**
@@ -1326,7 +1174,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String creationTime; 
             private String dataDiskCategory; 
             private String dataDiskSize; 
-            private java.util.List < DesktopDurationList> desktopDurationList; 
             private String desktopGroupId; 
             private String desktopId; 
             private String desktopName; 
@@ -1411,7 +1258,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection status of the user.
+             * The connection status of the end user.
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1435,7 +1282,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -1443,7 +1290,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -1451,15 +1298,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopDurationList.
-             */
-            public Builder desktopDurationList(java.util.List < DesktopDurationList> desktopDurationList) {
-                this.desktopDurationList = desktopDurationList;
-                return this;
-            }
-
-            /**
-             * The ID of the group to which the cloud desktop belongs. Default value: null.
+             * The ID of the desktop group. Default value: null.
+             * <p>
+             * 
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -1483,7 +1325,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud desktop.
+             * The status of the cloud desktop.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -1499,7 +1341,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID is the same as the workspace ID that is indicated by the value of the OfficeSiteId parameter.
+             * The ID of the directory. The ID is the same as the workspace ID that is indicated by the OfficeSiteId parameter.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -1507,7 +1349,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is in invitational preview and unavailable for general users.
+             * This parameter is in invitational preview and is unavailable.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -1531,7 +1373,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the cloud desktop is downgraded.
+             * The number of times for which the cloud desktop has been downgraded.
              */
             public Builder downgradedTimes(Long downgradedTimes) {
                 this.downgradedTimes = downgradedTimes;
@@ -1539,7 +1381,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the users that have the permissions to connect to the cloud desktops.
+             * The IDs of the end users that have the permissions to connect to the cloud desktops.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1547,7 +1389,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription cloud desktop expires.
+             * The time when the subscription cloud desktop expired.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1587,7 +1429,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU model.
+             * The GPU specifications.
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1595,7 +1437,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * HibernationBeta.
+             * > This parameter is in invitational preview and is not available for use.
              */
             public Builder hibernationBeta(Boolean hibernationBeta) {
                 this.hibernationBeta = hibernationBeta;
@@ -1603,7 +1445,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * > This parameter is in invitational preview and is not available for use.
              */
             public Builder hibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
                 this.hibernationOptionsConfigured = hibernationOptionsConfigured;
@@ -1627,7 +1469,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used for management.
+             * The flag that is used to manage the cloud desktops.
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1635,7 +1477,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlags.
+             * The flag that is used to manage the cloud desktops.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1730,7 +1572,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the policies.
+             * The policies IDs.
              */
             public Builder policyGroupIdList(java.util.List < String > policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
@@ -1746,7 +1588,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the policies.
+             * The policy names.
              */
             public Builder policyGroupNameList(java.util.List < String > policyGroupNameList) {
                 this.policyGroupNameList = policyGroupNameList;
@@ -1770,7 +1612,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the session.
+             * The session type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * * **SINGLE_SESSION**
+             * 
+             * * **MULTIPLE_SESSION**
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1778,7 +1627,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the desktop sessions that users hold.
+             * Details of the desktop sessions that end users hold.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -1818,7 +1667,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1826,7 +1675,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable to the public.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

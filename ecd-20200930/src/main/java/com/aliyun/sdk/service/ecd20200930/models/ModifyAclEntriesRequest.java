@@ -100,7 +100,26 @@ public class ModifyAclEntriesRequest extends Request {
         } 
 
         /**
-         * Policy.
+         * The ACL policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   allow
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   deny
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -109,7 +128,7 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,7 +137,7 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * The IDs of instances that correspond to the ACL granularity.
          */
         public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -127,7 +146,34 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The network granularity that corresponds to the access control list (ACL) policy.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   desktop
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     cloud desktop
+         * 
+         *     <!-- -->
+         * 
+         * *   vpc
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     workspace
+         * 
+         *     <!-- -->
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

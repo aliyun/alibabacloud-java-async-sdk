@@ -17,6 +17,10 @@ public class DescribeFotaTasksRequest extends Request {
     private String fotaStatus;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("MaxResults")
     @Validation(maximum = 500)
     private Integer maxResults;
@@ -41,6 +45,7 @@ public class DescribeFotaTasksRequest extends Request {
     private DescribeFotaTasksRequest(Builder builder) {
         super(builder);
         this.fotaStatus = builder.fotaStatus;
+        this.lang = builder.lang;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -66,6 +71,13 @@ public class DescribeFotaTasksRequest extends Request {
      */
     public String getFotaStatus() {
         return this.fotaStatus;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -105,6 +117,7 @@ public class DescribeFotaTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeFotaTasksRequest, Builder> {
         private String fotaStatus; 
+        private String lang; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -118,6 +131,7 @@ public class DescribeFotaTasksRequest extends Request {
         private Builder(DescribeFotaTasksRequest request) {
             super(request);
             this.fotaStatus = request.fotaStatus;
+            this.lang = request.lang;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
@@ -131,6 +145,19 @@ public class DescribeFotaTasksRequest extends Request {
         public Builder fotaStatus(String fotaStatus) {
             this.putQueryParameter("FotaStatus", fotaStatus);
             this.fotaStatus = fotaStatus;
+            return this;
+        }
+
+        /**
+         * The language of the image version to update. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

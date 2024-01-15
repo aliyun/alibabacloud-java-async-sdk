@@ -27,6 +27,10 @@ public class DescribePriceRequest extends Request {
     private java.util.List < BundleModels> bundleModels;
 
     @Query
+    @NameInMap("EduCdsEnable")
+    private String eduCdsEnable;
+
+    @Query
     @NameInMap("EduCdsSize")
     private Integer eduCdsSize;
 
@@ -77,6 +81,10 @@ public class DescribePriceRequest extends Request {
     @Query
     @NameInMap("InternetChargeType")
     private String internetChargeType;
+
+    @Query
+    @NameInMap("NetworkType")
+    private String networkType;
 
     @Query
     @NameInMap("OsType")
@@ -142,6 +150,7 @@ public class DescribePriceRequest extends Request {
         this.amount = builder.amount;
         this.bandwidth = builder.bandwidth;
         this.bundleModels = builder.bundleModels;
+        this.eduCdsEnable = builder.eduCdsEnable;
         this.eduCdsSize = builder.eduCdsSize;
         this.eduCommittedTime = builder.eduCommittedTime;
         this.eduDesktopBundleId = builder.eduDesktopBundleId;
@@ -155,6 +164,7 @@ public class DescribePriceRequest extends Request {
         this.hardwareVersion = builder.hardwareVersion;
         this.instanceType = builder.instanceType;
         this.internetChargeType = builder.internetChargeType;
+        this.networkType = builder.networkType;
         this.osType = builder.osType;
         this.packageSize = builder.packageSize;
         this.period = builder.period;
@@ -203,6 +213,13 @@ public class DescribePriceRequest extends Request {
      */
     public java.util.List < BundleModels> getBundleModels() {
         return this.bundleModels;
+    }
+
+    /**
+     * @return eduCdsEnable
+     */
+    public String getEduCdsEnable() {
+        return this.eduCdsEnable;
     }
 
     /**
@@ -294,6 +311,13 @@ public class DescribePriceRequest extends Request {
      */
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     /**
@@ -398,6 +422,7 @@ public class DescribePriceRequest extends Request {
         private Integer amount; 
         private Integer bandwidth; 
         private java.util.List < BundleModels> bundleModels; 
+        private String eduCdsEnable; 
         private Integer eduCdsSize; 
         private Integer eduCommittedTime; 
         private String eduDesktopBundleId; 
@@ -411,6 +436,7 @@ public class DescribePriceRequest extends Request {
         private String hardwareVersion; 
         private String instanceType; 
         private String internetChargeType; 
+        private String networkType; 
         private String osType; 
         private Integer packageSize; 
         private Integer period; 
@@ -435,6 +461,7 @@ public class DescribePriceRequest extends Request {
             this.amount = request.amount;
             this.bandwidth = request.bandwidth;
             this.bundleModels = request.bundleModels;
+            this.eduCdsEnable = request.eduCdsEnable;
             this.eduCdsSize = request.eduCdsSize;
             this.eduCommittedTime = request.eduCommittedTime;
             this.eduDesktopBundleId = request.eduDesktopBundleId;
@@ -448,6 +475,7 @@ public class DescribePriceRequest extends Request {
             this.hardwareVersion = request.hardwareVersion;
             this.instanceType = request.instanceType;
             this.internetChargeType = request.internetChargeType;
+            this.networkType = request.networkType;
             this.osType = request.osType;
             this.packageSize = request.packageSize;
             this.period = request.period;
@@ -492,6 +520,15 @@ public class DescribePriceRequest extends Request {
         public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
             this.bundleModels = bundleModels;
+            return this;
+        }
+
+        /**
+         * EduCdsEnable.
+         */
+        public Builder eduCdsEnable(String eduCdsEnable) {
+            this.putQueryParameter("EduCdsEnable", eduCdsEnable);
+            this.eduCdsEnable = eduCdsEnable;
             return this;
         }
 
@@ -639,6 +676,15 @@ public class DescribePriceRequest extends Request {
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
             this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 
