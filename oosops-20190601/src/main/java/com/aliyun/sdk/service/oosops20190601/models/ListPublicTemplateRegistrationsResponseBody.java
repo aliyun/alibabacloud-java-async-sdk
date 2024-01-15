@@ -115,11 +115,17 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         @NameInMap("Comment")
         private String comment;
 
+        @NameInMap("CreatedDate")
+        private String createdDate;
+
         @NameInMap("Detail")
         private String detail;
 
         @NameInMap("RegistrationId")
         private String registrationId;
+
+        @NameInMap("ShowPages")
+        private String showPages;
 
         @NameInMap("Status")
         private String status;
@@ -133,14 +139,20 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         private String templateVersion;
 
+        @NameInMap("UpdatedDate")
+        private String updatedDate;
+
         private Registrations(Builder builder) {
             this.comment = builder.comment;
+            this.createdDate = builder.createdDate;
             this.detail = builder.detail;
             this.registrationId = builder.registrationId;
+            this.showPages = builder.showPages;
             this.status = builder.status;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
             this.templateVersion = builder.templateVersion;
+            this.updatedDate = builder.updatedDate;
         }
 
         public static Builder builder() {
@@ -159,6 +171,13 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createdDate
+         */
+        public String getCreatedDate() {
+            return this.createdDate;
+        }
+
+        /**
          * @return detail
          */
         public String getDetail() {
@@ -170,6 +189,13 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
          */
         public String getRegistrationId() {
             return this.registrationId;
+        }
+
+        /**
+         * @return showPages
+         */
+        public String getShowPages() {
+            return this.showPages;
         }
 
         /**
@@ -200,20 +226,38 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
             return this.templateVersion;
         }
 
+        /**
+         * @return updatedDate
+         */
+        public String getUpdatedDate() {
+            return this.updatedDate;
+        }
+
         public static final class Builder {
             private String comment; 
+            private String createdDate; 
             private String detail; 
             private String registrationId; 
+            private String showPages; 
             private String status; 
             private String templateId; 
             private String templateName; 
             private String templateVersion; 
+            private String updatedDate; 
 
             /**
              * Comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
+                return this;
+            }
+
+            /**
+             * CreatedDate.
+             */
+            public Builder createdDate(String createdDate) {
+                this.createdDate = createdDate;
                 return this;
             }
 
@@ -230,6 +274,14 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
              */
             public Builder registrationId(String registrationId) {
                 this.registrationId = registrationId;
+                return this;
+            }
+
+            /**
+             * ShowPages.
+             */
+            public Builder showPages(String showPages) {
+                this.showPages = showPages;
                 return this;
             }
 
@@ -262,6 +314,14 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
+                return this;
+            }
+
+            /**
+             * UpdatedDate.
+             */
+            public Builder updatedDate(String updatedDate) {
+                this.updatedDate = updatedDate;
                 return this;
             }
 
