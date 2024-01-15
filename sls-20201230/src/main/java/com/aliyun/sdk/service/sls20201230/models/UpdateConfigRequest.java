@@ -84,7 +84,7 @@ public class UpdateConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -93,7 +93,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the Logtail configuration.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -102,7 +102,7 @@ public class UpdateConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * The body of the request.
          */
         public Builder body(LogtailConfig body) {
             this.putBodyParameter("body", body);

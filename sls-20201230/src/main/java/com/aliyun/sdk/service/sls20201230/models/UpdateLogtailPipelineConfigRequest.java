@@ -157,7 +157,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -166,7 +166,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the Logtail pipeline configuration.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -176,7 +176,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * aggregators.
+         * The aggregation plug-ins.
          */
         public Builder aggregators(java.util.List < java.util.Map<String, ?>> aggregators) {
             this.putBodyParameter("aggregators", aggregators);
@@ -185,7 +185,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * flushers.
+         * The data output plug-ins.
          */
         public Builder flushers(java.util.List < java.util.Map<String, ?>> flushers) {
             this.putBodyParameter("flushers", flushers);
@@ -194,7 +194,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * global.
+         * The global configuration.
          */
         public Builder global(java.util.Map < String, ? > global) {
             this.putBodyParameter("global", global);
@@ -203,7 +203,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * inputs.
+         * The data source plug-ins.
          */
         public Builder inputs(java.util.List < java.util.Map<String, ?>> inputs) {
             this.putBodyParameter("inputs", inputs);
@@ -212,7 +212,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * logSample.
+         * The sample log.
          */
         public Builder logSample(String logSample) {
             this.putBodyParameter("logSample", logSample);
@@ -221,7 +221,7 @@ public class UpdateLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * processors.
+         * The processing plug-ins.
          */
         public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
             this.putBodyParameter("processors", processors);

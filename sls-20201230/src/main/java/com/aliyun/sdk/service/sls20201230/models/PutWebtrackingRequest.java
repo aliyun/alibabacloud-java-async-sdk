@@ -128,7 +128,7 @@ public class PutWebtrackingRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +137,7 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * logstoreName.
+         * The name of the Logstore.
          */
         public Builder logstoreName(String logstoreName) {
             this.putPathParameter("logstoreName", logstoreName);
@@ -146,7 +146,10 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __logs__.
+         * The logs. Each element is a JSON object that indicates a log.
+         * <p>
+         * 
+         * >  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the \__time\_\_ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.
          */
         public Builder logs(java.util.List < java.util.Map<String, String>> logs) {
             this.putBodyParameter("__logs__", logs);
@@ -155,7 +158,7 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __source__.
+         * The source of the logs.
          */
         public Builder source(String source) {
             this.putBodyParameter("__source__", source);
@@ -164,7 +167,7 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __tags__.
+         * The tags of the logs.
          */
         public Builder tags(java.util.Map < String, String > tags) {
             this.putBodyParameter("__tags__", tags);
@@ -173,7 +176,7 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * __topic__.
+         * The topic of the logs.
          */
         public Builder topic(String topic) {
             this.putBodyParameter("__topic__", topic);

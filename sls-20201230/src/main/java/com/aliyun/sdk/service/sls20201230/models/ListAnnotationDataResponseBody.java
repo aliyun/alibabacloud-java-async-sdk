@@ -50,7 +50,7 @@ public class ListAnnotationDataResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(java.util.List < MLDataParam > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListAnnotationDataResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -68,7 +68,7 @@ public class ListAnnotationLabelsRequest extends Request {
         } 
 
         /**
-         * offset.
+         * The line from which the query starts.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -77,7 +77,7 @@ public class ListAnnotationLabelsRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

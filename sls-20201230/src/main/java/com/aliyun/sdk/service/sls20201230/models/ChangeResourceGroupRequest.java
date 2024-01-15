@@ -98,7 +98,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * project.
+         * The project to which the resource belongs.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -107,7 +107,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -116,7 +116,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -125,7 +125,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource. Only PROJECT is supported. Set the value to PROJECT.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

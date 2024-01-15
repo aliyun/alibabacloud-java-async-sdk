@@ -50,7 +50,7 @@ public class ListDashboardResponseBody extends TeaModel {
         private java.util.List < String > dashboards; 
 
         /**
-         * dashboardItems.
+         * The details of the dashboard.
          */
         public Builder dashboardItems(java.util.List < DashboardItems> dashboardItems) {
             this.dashboardItems = dashboardItems;
@@ -58,7 +58,7 @@ public class ListDashboardResponseBody extends TeaModel {
         }
 
         /**
-         * dashboards.
+         * The queried dashboards. Each dashboard in the array is specified by dashboardName.
          */
         public Builder dashboards(java.util.List < String > dashboards) {
             this.dashboards = dashboards;
@@ -110,7 +110,7 @@ public class ListDashboardResponseBody extends TeaModel {
             private String displayName; 
 
             /**
-             * dashboardName.
+             * The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.
              */
             public Builder dashboardName(String dashboardName) {
                 this.dashboardName = dashboardName;
@@ -118,7 +118,7 @@ public class ListDashboardResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * The display name of the dashboard.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;

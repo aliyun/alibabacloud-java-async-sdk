@@ -100,7 +100,7 @@ public class CreateOssExternalStoreRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * A short description of struct
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -322,7 +322,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated fields.
+             * The fields that are associated to the external store.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -330,7 +330,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The OSS endpoint.
+             * The Object Storage Service (OSS) endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -338,7 +338,7 @@ public class CreateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated objects.
+             * The names of the OSS objects that are associated to the external store.
              */
             public Builder objects(java.util.List < String > objects) {
                 this.objects = objects;

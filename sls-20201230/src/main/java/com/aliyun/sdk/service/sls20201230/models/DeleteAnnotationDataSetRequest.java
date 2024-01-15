@@ -54,7 +54,7 @@ public class DeleteAnnotationDataSetRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * The unique identifier of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);

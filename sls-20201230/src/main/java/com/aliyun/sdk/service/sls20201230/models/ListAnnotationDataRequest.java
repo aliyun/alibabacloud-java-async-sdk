@@ -82,7 +82,7 @@ public class ListAnnotationDataRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * The unique identifier of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -91,7 +91,7 @@ public class ListAnnotationDataRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -100,7 +100,7 @@ public class ListAnnotationDataRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

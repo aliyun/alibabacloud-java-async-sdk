@@ -70,7 +70,7 @@ public class CreateDashboardRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class CreateDashboardRequest extends Request {
         }
 
         /**
-         * body.
+         * The data structure of the dashboard.
          */
         public Builder body(Dashboard body) {
             this.putBodyParameter("body", body);

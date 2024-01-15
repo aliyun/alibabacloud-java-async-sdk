@@ -54,7 +54,7 @@ public class DeleteAnnotationLabelRequest extends Request {
         } 
 
         /**
-         * labelId.
+         * The tag ID.
          */
         public Builder labelId(String labelId) {
             this.putPathParameter("labelId", labelId);

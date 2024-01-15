@@ -185,7 +185,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             private String type; 
 
             /**
-             * The key of the field.
+             * The name of the field.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -324,7 +324,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated fields.
+             * The fields that are associated to the external store.
              */
             public Builder columns(java.util.List < Columns> columns) {
                 this.columns = columns;
@@ -332,7 +332,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The OSS endpoint.
+             * The Object Storage Service (OSS) endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -340,7 +340,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * The associated objects.
+             * The names of the OSS objects that are associated to the external store.
              */
             public Builder objects(java.util.List < String > objects) {
                 this.objects = objects;

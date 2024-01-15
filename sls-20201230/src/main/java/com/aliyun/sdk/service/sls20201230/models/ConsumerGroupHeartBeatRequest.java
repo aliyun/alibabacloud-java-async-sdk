@@ -124,7 +124,7 @@ public class ConsumerGroupHeartBeatRequest extends Request {
         }
 
         /**
-         * logstore.
+         * The name of the Logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -133,7 +133,7 @@ public class ConsumerGroupHeartBeatRequest extends Request {
         }
 
         /**
-         * consumerGroup.
+         * The name of the consumer group. The name must be unique in a project.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
@@ -142,7 +142,7 @@ public class ConsumerGroupHeartBeatRequest extends Request {
         }
 
         /**
-         * body.
+         * The IDs of shards whose data is being consumed.
          */
         public Builder body(java.util.List < Integer > body) {
             this.putBodyParameter("body", body);
@@ -151,7 +151,7 @@ public class ConsumerGroupHeartBeatRequest extends Request {
         }
 
         /**
-         * consumer.
+         * The consumer.
          */
         public Builder consumer(String consumer) {
             this.putQueryParameter("consumer", consumer);

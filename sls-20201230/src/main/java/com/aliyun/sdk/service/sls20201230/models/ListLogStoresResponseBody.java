@@ -62,7 +62,7 @@ public class ListLogStoresResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The number of entries that are returned on the current page.
+         * The number of entries returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;

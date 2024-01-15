@@ -68,7 +68,7 @@ public class UpdateAnnotationDataSetRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * The unique identifier of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -77,7 +77,7 @@ public class UpdateAnnotationDataSetRequest extends Request {
         }
 
         /**
-         * body.
+         * The data structure of the request.
          */
         public Builder body(MLDataSetParam body) {
             this.putBodyParameter("body", body);

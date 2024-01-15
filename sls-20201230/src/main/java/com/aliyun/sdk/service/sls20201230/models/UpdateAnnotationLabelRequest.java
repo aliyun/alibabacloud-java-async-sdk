@@ -54,7 +54,7 @@ public class UpdateAnnotationLabelRequest extends Request {
         } 
 
         /**
-         * body.
+         * The data structure of the request.
          */
         public Builder body(MLLabelParam body) {
             this.putBodyParameter("body", body);

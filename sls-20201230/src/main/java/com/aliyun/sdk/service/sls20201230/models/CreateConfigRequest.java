@@ -69,7 +69,7 @@ public class CreateConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -78,7 +78,7 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * The body of the request.
          */
         public Builder body(LogtailConfig body) {
             this.putBodyParameter("body", body);

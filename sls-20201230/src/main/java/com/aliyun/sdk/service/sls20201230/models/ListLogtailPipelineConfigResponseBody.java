@@ -62,7 +62,7 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * configs.
+         * The Logtail pipeline configurations that are returned on the current page.
          */
         public Builder configs(java.util.List < String > configs) {
             this.configs = configs;
@@ -70,7 +70,7 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * count.
+         * The number of Logtail pipeline configurations that are returned on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -78,7 +78,7 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of Logtail pipeline configurations in the current project.
          */
         public Builder total(Integer total) {
             this.total = total;

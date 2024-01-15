@@ -96,7 +96,7 @@ public class PutAnnotationDataRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * The unique identifier of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -105,7 +105,7 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * annotationdataId.
+         * The unique identifier of the data.
          */
         public Builder annotationdataId(String annotationdataId) {
             this.putQueryParameter("annotationdataId", annotationdataId);
@@ -114,7 +114,7 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * mlDataParam.
+         * The data structure of the request.
          */
         public Builder mlDataParam(MLDataParam mlDataParam) {
             this.putBodyParameter("mlDataParam", mlDataParam);
@@ -123,7 +123,7 @@ public class PutAnnotationDataRequest extends Request {
         }
 
         /**
-         * rawLog.
+         * The raw log data.
          */
         public Builder rawLog(java.util.List < java.util.Map<String, String>> rawLog) {
             this.putBodyParameter("rawLog", rawLog);

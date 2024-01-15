@@ -114,7 +114,7 @@ public class ListConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -123,7 +123,7 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the Logtail configuration.
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -132,7 +132,7 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * logstoreName.
+         * The name of the Logstore.
          */
         public Builder logstoreName(String logstoreName) {
             this.putQueryParameter("logstoreName", logstoreName);
@@ -141,7 +141,7 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts. Default value: 0.
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("offset", offset);
@@ -150,7 +150,7 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of entries per page. Maximum value: 500.
          */
         public Builder size(Long size) {
             this.putQueryParameter("size", size);

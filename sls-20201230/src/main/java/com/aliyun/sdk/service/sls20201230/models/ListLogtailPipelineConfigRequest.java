@@ -112,7 +112,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -121,7 +121,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the Logtail pipeline configuration.
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -130,7 +130,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * logstoreName.
+         * The name of the Logstore.
          */
         public Builder logstoreName(String logstoreName) {
             this.putQueryParameter("logstoreName", logstoreName);
@@ -139,7 +139,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * offset.
+         * The line from which the query starts.
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("offset", offset);
@@ -148,7 +148,7 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * size.
+         * The number of Logtail pipeline configurations per page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("size", size);

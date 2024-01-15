@@ -71,6 +71,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Usage notes
+      * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<ConsumerGroupHeartBeatResponse> consumerGroupHeartBeat(ConsumerGroupHeartBeatRequest request) {
         try {
@@ -80,6 +86,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ConsumerGroupHeartBeatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<CreateAlertResponse> createAlert(CreateAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlert").setMethod(HttpMethod.POST).setPathRegex("/alerts").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -113,6 +133,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+      * *   You can create up to 100 Logtail configurations in a project.
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateConfigResponse> createConfig(CreateConfigRequest request) {
         try {
@@ -148,6 +178,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateDashboardResponse> createDashboard(CreateDashboardRequest request) {
         try {
@@ -235,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+     */
     @Override
     public CompletableFuture<CreateLogtailPipelineConfigResponse> createLogtailPipelineConfig(CreateLogtailPipelineConfigRequest request) {
         try {
@@ -269,6 +311,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
      */
@@ -352,6 +395,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DeleteAlertResponse> deleteAlert(DeleteAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlert").setMethod(HttpMethod.DELETE).setPathRegex("/alerts/{alertName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DeleteAnnotationDataResponse> deleteAnnotationData(DeleteAnnotationDataRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -365,6 +422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can delete a dataset only if no data exists in the dataset.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAnnotationDataSetResponse> deleteAnnotationDataSet(DeleteAnnotationDataSetRequest request) {
         try {
@@ -379,6 +440,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only non-built-in tags can be deleted.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAnnotationLabelResponse> deleteAnnotationLabel(DeleteAnnotationLabelRequest request) {
         try {
@@ -407,6 +472,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+     */
     @Override
     public CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request) {
         try {
@@ -439,6 +514,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+     */
     @Override
     public CompletableFuture<DeleteDashboardResponse> deleteDashboard(DeleteDashboardRequest request) {
         try {
@@ -541,6 +624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+     */
     @Override
     public CompletableFuture<DeleteLogtailPipelineConfigResponse> deleteLogtailPipelineConfig(DeleteLogtailPipelineConfigRequest request) {
         try {
@@ -639,6 +726,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteShipperResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DisableAlertResponse> disableAlert(DisableAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableAlert").setMethod(HttpMethod.PUT).setPathRegex("/alerts/{alertName}?action=disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableAlertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<EnableAlertResponse> enableAlert(EnableAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableAlert").setMethod(HttpMethod.PUT).setPathRegex("/alerts/{alertName}?action=enable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableAlertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetAlertResponse> getAlert(GetAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAlert").setMethod(HttpMethod.GET).setPathRegex("/alerts/{alertName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAlertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -754,6 +883,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+     */
     @Override
     public CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request) {
         try {
@@ -824,6 +962,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+     */
     @Override
     public CompletableFuture<GetDashboardResponse> getDashboard(GetDashboardRequest request) {
         try {
@@ -1003,6 +1149,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+     */
     @Override
     public CompletableFuture<GetLogtailPipelineConfigResponse> getLogtailPipelineConfig(GetLogtailPipelineConfigRequest request) {
         try {
@@ -1148,6 +1298,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlerts").setMethod(HttpMethod.GET).setPathRegex("/alerts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListAnnotationDataResponse> listAnnotationData(ListAnnotationDataRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1203,6 +1367,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+     */
     @Override
     public CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request) {
         try {
@@ -1236,6 +1408,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+     */
     @Override
     public CompletableFuture<ListDashboardResponse> listDashboard(ListDashboardRequest request) {
         try {
@@ -1289,7 +1469,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Usage notes
-      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * ### Authentication resources
+      * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+      * |Action|Resource|
+      * |:---|:---|
+      * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
       *
      */
     @Override
@@ -1306,6 +1494,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+     */
     @Override
     public CompletableFuture<ListLogtailPipelineConfigResponse> listLogtailPipelineConfig(ListLogtailPipelineConfigRequest request) {
         try {
@@ -1357,7 +1549,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Usage notes
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
      */
@@ -1496,6 +1688,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+      * *   You can call this operation to collect logs from web pages or clients.
+      * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+      * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+      * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+      *
+     */
     @Override
     public CompletableFuture<PutWebtrackingResponse> putWebtracking(PutWebtrackingRequest request) {
         try {
@@ -1605,6 +1808,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<UpdateAlertResponse> updateAlert(UpdateAlertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlert").setMethod(HttpMethod.PUT).setPathRegex("/alerts/{alertName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<UpdateAnnotationDataSetResponse> updateAnnotationDataSet(UpdateAnnotationDataSetRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1618,6 +1835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can update only the names of the tags in a tag set.
+      *
+     */
     @Override
     public CompletableFuture<UpdateAnnotationLabelResponse> updateAnnotationLabel(UpdateAnnotationLabelRequest request) {
         try {
@@ -1632,6 +1853,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+     */
     @Override
     public CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request) {
         try {
@@ -1665,6 +1896,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDashboardResponse> updateDashboard(UpdateDashboardRequest request) {
         try {
@@ -1750,6 +1986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+     */
     @Override
     public CompletableFuture<UpdateLogtailPipelineConfigResponse> updateLogtailPipelineConfig(UpdateLogtailPipelineConfigRequest request) {
         try {
@@ -1801,6 +2041,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
      */

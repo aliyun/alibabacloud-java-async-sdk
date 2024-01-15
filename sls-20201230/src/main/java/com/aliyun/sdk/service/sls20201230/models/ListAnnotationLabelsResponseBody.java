@@ -50,7 +50,7 @@ public class ListAnnotationLabelsResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(java.util.List < MLLabelParam > data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListAnnotationLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * The total number of tags that meet the query conditions.
          */
         public Builder total(Integer total) {
             this.total = total;

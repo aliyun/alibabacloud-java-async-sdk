@@ -68,7 +68,7 @@ public class DeleteAnnotationDataRequest extends Request {
         } 
 
         /**
-         * datasetId.
+         * The unique identifier of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -77,7 +77,7 @@ public class DeleteAnnotationDataRequest extends Request {
         }
 
         /**
-         * annotationdataId.
+         * The unique identifier of the data.
          */
         public Builder annotationdataId(String annotationdataId) {
             this.putPathParameter("annotationdataId", annotationdataId);

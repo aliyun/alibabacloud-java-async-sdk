@@ -70,7 +70,7 @@ public class GetConfigRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class GetConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the Logtail configuration.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);

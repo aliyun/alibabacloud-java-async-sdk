@@ -129,7 +129,7 @@ public class UpdateDashboardRequest extends Request {
         } 
 
         /**
-         * project.
+         * The name of the project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +138,7 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * dashboardName.
+         * The name of the dashboard.
          */
         public Builder dashboardName(String dashboardName) {
             this.putPathParameter("dashboardName", dashboardName);
@@ -148,7 +148,7 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * attribute.
+         * The attributes of the dashboard.
          */
         public Builder attribute(java.util.Map < String, String > attribute) {
             this.putBodyParameter("attribute", attribute);
@@ -157,7 +157,7 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * charts.
+         * The charts on the dashboard.
          */
         public Builder charts(java.util.List < Chart > charts) {
             this.putBodyParameter("charts", charts);
@@ -166,7 +166,7 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the dashboard.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -175,7 +175,7 @@ public class UpdateDashboardRequest extends Request {
         }
 
         /**
-         * displayName.
+         * The display name of the dashboard.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
