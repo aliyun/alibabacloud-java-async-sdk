@@ -22,6 +22,10 @@ public class PopSubmitAITryOnJobRequest extends Request {
     private String clothingType;
 
     @Query
+    @NameInMap("GeneratePictureNum")
+    private Integer generatePictureNum;
+
+    @Query
     @NameInMap("JwtToken")
     private String jwtToken;
 
@@ -46,6 +50,7 @@ public class PopSubmitAITryOnJobRequest extends Request {
         super(builder);
         this.bottomsId = builder.bottomsId;
         this.clothingType = builder.clothingType;
+        this.generatePictureNum = builder.generatePictureNum;
         this.jwtToken = builder.jwtToken;
         this.modelId = builder.modelId;
         this.shoeType = builder.shoeType;
@@ -78,6 +83,13 @@ public class PopSubmitAITryOnJobRequest extends Request {
      */
     public String getClothingType() {
         return this.clothingType;
+    }
+
+    /**
+     * @return generatePictureNum
+     */
+    public Integer getGeneratePictureNum() {
+        return this.generatePictureNum;
     }
 
     /**
@@ -118,6 +130,7 @@ public class PopSubmitAITryOnJobRequest extends Request {
     public static final class Builder extends Request.Builder<PopSubmitAITryOnJobRequest, Builder> {
         private String bottomsId; 
         private String clothingType; 
+        private Integer generatePictureNum; 
         private String jwtToken; 
         private String modelId; 
         private String shoeType; 
@@ -132,6 +145,7 @@ public class PopSubmitAITryOnJobRequest extends Request {
             super(request);
             this.bottomsId = request.bottomsId;
             this.clothingType = request.clothingType;
+            this.generatePictureNum = request.generatePictureNum;
             this.jwtToken = request.jwtToken;
             this.modelId = request.modelId;
             this.shoeType = request.shoeType;
@@ -154,6 +168,15 @@ public class PopSubmitAITryOnJobRequest extends Request {
         public Builder clothingType(String clothingType) {
             this.putQueryParameter("ClothingType", clothingType);
             this.clothingType = clothingType;
+            return this;
+        }
+
+        /**
+         * GeneratePictureNum.
+         */
+        public Builder generatePictureNum(Integer generatePictureNum) {
+            this.putQueryParameter("GeneratePictureNum", generatePictureNum);
+            this.generatePictureNum = generatePictureNum;
             return this;
         }
 
