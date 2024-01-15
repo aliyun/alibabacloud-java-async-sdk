@@ -222,6 +222,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetWorkitemCommentListResponse> getWorkitemCommentList(GetWorkitemCommentListRequest request);
 
+    CompletableFuture<GetWorkitemFileResponse> getWorkitemFile(GetWorkitemFileRequest request);
+
     CompletableFuture<GetWorkitemRelationsResponse> getWorkitemRelations(GetWorkitemRelationsRequest request);
 
     CompletableFuture<GetWorkitemTimeTypeListResponse> getWorkitemTimeTypeList(GetWorkitemTimeTypeListRequest request);
