@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckDomainResponse> checkDomain(CheckDomainRequest request);
 
+    CompletableFuture<CheckDomainDnsResponse> checkDomainDns(CheckDomainDnsRequest request);
+
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
     CompletableFuture<CreateMailAddressResponse> createMailAddress(CreateMailAddressRequest request);
