@@ -70,7 +70,11 @@ public class TriggerProcessTaskRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * The type of the action. Valid values:
+         * <p>
+         * 
+         * *   **remove**: cancels blocking or isolation.
+         * *   **retry**: submits the task again.
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -79,7 +83,10 @@ public class TriggerProcessTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the handling task.
+         * <p>
+         * 
+         * >  You can call the [DescribeProcessTasks](~~DescribeProcessTasks~~) operation to query the IDs of handling tasks.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

@@ -84,7 +84,11 @@ public class DescribeNodeParamTagsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,7 +97,7 @@ public class DescribeNodeParamTagsRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * The name of the node.
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -102,7 +106,10 @@ public class DescribeNodeParamTagsRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

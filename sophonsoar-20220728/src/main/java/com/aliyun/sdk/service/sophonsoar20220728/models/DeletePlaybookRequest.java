@@ -69,7 +69,11 @@ public class DeletePlaybookRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -78,7 +82,10 @@ public class DeletePlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

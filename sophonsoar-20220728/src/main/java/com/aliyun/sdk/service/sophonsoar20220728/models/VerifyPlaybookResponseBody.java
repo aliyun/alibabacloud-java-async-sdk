@@ -50,7 +50,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CheckTaskInfos.
+         * The result of the verification.
          */
         public Builder checkTaskInfos(java.util.List < CheckTaskInfos> checkTaskInfos) {
             this.checkTaskInfos = checkTaskInfos;
@@ -58,7 +58,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * Detail.
+             * The error message returned when the playbook does not pass the check.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -130,7 +130,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node in the playbook.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -138,7 +138,12 @@ public class VerifyPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The severity level of the verification information. Valid values:
+             * <p>
+             * 
+             * *   warn: An issue may occur during playbook running.
+             * *   error: The playbook cannot be compiled.
+             * *   remind: The publishing and running of the playbook are not affected. We recommend that you optimize the playbook format.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

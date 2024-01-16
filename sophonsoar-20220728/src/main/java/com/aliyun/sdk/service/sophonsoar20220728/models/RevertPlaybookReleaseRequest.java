@@ -84,7 +84,11 @@ public class RevertPlaybookReleaseRequest extends Request {
         } 
 
         /**
-         * IsPublish.
+         * Specifies whether to directly publish the new playbook after the rollback.
+         * <p>
+         * 
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder isPublish(Boolean isPublish) {
             this.putBodyParameter("IsPublish", isPublish);
@@ -93,7 +97,10 @@ public class RevertPlaybookReleaseRequest extends Request {
         }
 
         /**
-         * PlayReleaseId.
+         * The version of the playbook that you want to publish.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybookReleases](~~DescribePlaybookReleases~~) operation to query the playbook version.
          */
         public Builder playReleaseId(Integer playReleaseId) {
             this.putBodyParameter("PlayReleaseId", playReleaseId);
@@ -102,7 +109,10 @@ public class RevertPlaybookReleaseRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

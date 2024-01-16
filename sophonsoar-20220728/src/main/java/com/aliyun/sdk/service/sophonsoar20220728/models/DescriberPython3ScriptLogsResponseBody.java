@@ -50,7 +50,7 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         private String runResult; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescriberPython3ScriptLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RunResult.
+         * The operational logs of the Python3 script.
          */
         public Builder runResult(String runResult) {
             this.runResult = runResult;

@@ -69,7 +69,11 @@ public class DescribeFieldRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +82,10 @@ public class DescribeFieldRequest extends Request {
         }
 
         /**
-         * QueryKey.
+         * The key of the global configuration. Valid values:
+         * <p>
+         * 
+         * *   **soar_filed_tags**: queries the input template of the playbook.
          */
         public Builder queryKey(String queryKey) {
             this.putQueryParameter("QueryKey", queryKey);

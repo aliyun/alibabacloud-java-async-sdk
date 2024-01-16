@@ -96,7 +96,11 @@ public class DescribeExecutePlaybooksRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +109,13 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * The input parameter type of the playbook.
+         * <p>
+         * 
+         * *   **template-ip**
+         * *   **template-file**
+         * *   **template-process**
+         * *   **custom**
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -114,7 +124,7 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookName.
+         * The playbook name. Fuzzy search is supported.
          */
         public Builder playbookName(String playbookName) {
             this.putQueryParameter("PlaybookName", playbookName);
@@ -123,7 +133,10 @@ public class DescribeExecutePlaybooksRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

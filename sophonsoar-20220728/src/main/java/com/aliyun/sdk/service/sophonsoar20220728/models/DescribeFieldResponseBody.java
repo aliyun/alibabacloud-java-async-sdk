@@ -62,7 +62,7 @@ public class DescribeFieldResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Fields.
+         * The configuration content.
          */
         public Builder fields(String fields) {
             this.fields = fields;
@@ -70,7 +70,7 @@ public class DescribeFieldResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the global configuration.
          */
         public Builder name(String name) {
             this.name = name;
@@ -78,7 +78,7 @@ public class DescribeFieldResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

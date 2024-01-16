@@ -84,7 +84,7 @@ public class DescribePopApiVersionListRequest extends Request {
         } 
 
         /**
-         * Env.
+         * The environment in which the API operation parameters are used. Set the value to **online**.
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -93,7 +93,11 @@ public class DescribePopApiVersionListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +106,10 @@ public class DescribePopApiVersionListRequest extends Request {
         }
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
+         * <p>
+         * 
+         * >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

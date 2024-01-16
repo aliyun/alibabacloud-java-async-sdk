@@ -113,7 +113,7 @@ public class DescribePopApiItemListRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * The API operation name of the Alibaba Cloud service. Fuzzy match is supported.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -122,7 +122,10 @@ public class DescribePopApiItemListRequest extends Request {
         }
 
         /**
-         * ApiVersion.
+         * The version number of the API.
+         * <p>
+         * 
+         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the version number.
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -131,7 +134,7 @@ public class DescribePopApiItemListRequest extends Request {
         }
 
         /**
-         * Env.
+         * The environment in which the API operation parameters are used. Set the value to online.
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -140,7 +143,11 @@ public class DescribePopApiItemListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -149,7 +156,10 @@ public class DescribePopApiItemListRequest extends Request {
         }
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
+         * <p>
+         * 
+         * >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

@@ -50,7 +50,7 @@ public class DescribeSoarRecordInOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InOutputInfo.
+         * The execution result of the component action.
          */
         public Builder inOutputInfo(String inOutputInfo) {
             this.inOutputInfo = inOutputInfo;
@@ -58,7 +58,7 @@ public class DescribeSoarRecordInOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

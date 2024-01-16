@@ -84,7 +84,11 @@ public class BatchModifyInstanceStatusRequest extends Request {
         } 
 
         /**
-         * Active.
+         * Specifies whether to start or stop the playbook.
+         * <p>
+         * 
+         * *   **0**: stops the playbook.
+         * *   **1**: starts the playbook.
          */
         public Builder active(Integer active) {
             this.putBodyParameter("Active", active);
@@ -93,7 +97,11 @@ public class BatchModifyInstanceStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +110,10 @@ public class BatchModifyInstanceStatusRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID. If you want to specify multiple playbooks, separate the playbook UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

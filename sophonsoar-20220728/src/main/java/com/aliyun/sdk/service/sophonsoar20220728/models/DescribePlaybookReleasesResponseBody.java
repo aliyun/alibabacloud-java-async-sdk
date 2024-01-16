@@ -62,7 +62,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -70,7 +70,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * Records.
+         * The information about the playbook version.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -78,7 +78,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +150,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -259,7 +259,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             private String taskflowMd5; 
 
             /**
-             * Creator.
+             * The ID of the Alibaba Cloud account that is used to publish the version.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -267,7 +267,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the layer version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +275,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the version was created. The value is a 13-digit timestamp.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -283,7 +283,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the version was modified. The value is a 13-digit timestamp.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -291,7 +291,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The record ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -299,7 +299,7 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * The MD5 value configured for the published version of the playbook.
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;

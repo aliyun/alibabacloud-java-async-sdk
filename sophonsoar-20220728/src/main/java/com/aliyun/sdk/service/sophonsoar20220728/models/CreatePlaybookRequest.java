@@ -83,7 +83,7 @@ public class CreatePlaybookRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the playbook.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -92,7 +92,7 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The name of the playbook.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -101,7 +101,11 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);

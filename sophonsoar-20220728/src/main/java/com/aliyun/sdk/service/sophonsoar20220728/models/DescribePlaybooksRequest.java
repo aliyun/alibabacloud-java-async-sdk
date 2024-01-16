@@ -166,7 +166,11 @@ public class DescribePlaybooksRequest extends Request {
         } 
 
         /**
-         * Active.
+         * The status of the playbook. Valid values:
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **0**: disabled
          */
         public Builder active(Integer active) {
             this.putQueryParameter("Active", active);
@@ -175,7 +179,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * EndMillis.
+         * The end of the time range to query. The value is a 13-digit timestamp.
          */
         public Builder endMillis(Long endMillis) {
             this.putQueryParameter("EndMillis", endMillis);
@@ -184,7 +188,11 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +201,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the playbook.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +210,11 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * OwnType.
+         * The type of the playbook. Valid values:
+         * <p>
+         * 
+         * *   **preset**: predefined playbook
+         * *   **user**: custom playbook
          */
         public Builder ownType(String ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -211,7 +223,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Pages start from page 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +232,10 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +244,12 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can use the UUID to query the information about a specific playbook.
+         * 
+         * *   You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -238,7 +258,7 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
-         * StartMillis.
+         * The beginning of the time range to query. The value is a 13-digit timestamp.
          */
         public Builder startMillis(Long startMillis) {
             this.putQueryParameter("StartMillis", startMillis);

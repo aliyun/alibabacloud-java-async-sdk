@@ -50,7 +50,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * The version information.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             private String taskflowMd5; 
 
             /**
-             * Description.
+             * The version description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * The MD5 value of the playbook XML configuration.
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;

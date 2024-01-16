@@ -50,7 +50,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Metrics.
+         * The details of the playbook.
          */
         public Builder metrics(Metrics metrics) {
             this.metrics = metrics;
@@ -58,7 +58,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,11 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             private Integer succNum; 
 
             /**
-             * Active.
+             * The status of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **1**: enabled
+             * *   **0**: disabled
              */
             public Builder active(Integer active) {
                 this.active = active;
@@ -214,7 +218,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the playbook.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +226,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The name of the playbook.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -230,7 +234,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * FailNum.
+             * The number of the tasks that are created for the playbook and failed to run.
              */
             public Builder failNum(Integer failNum) {
                 this.failNum = failNum;
@@ -238,7 +242,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the playbook was created. The value is a 13-digit timestamp.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -246,7 +250,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryMd5.
+             * The number of historical versions of the playbook.
              */
             public Builder historyMd5(Integer historyMd5) {
                 this.historyMd5 = historyMd5;
@@ -254,7 +258,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRuntime.
+             * The time when the playbook was last run. The value is a 13-digit timestamp.
              */
             public Builder lastRuntime(Long lastRuntime) {
                 this.lastRuntime = lastRuntime;
@@ -262,7 +266,11 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnType.
+             * The type of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **preset**: predefined playbook
+             * *   **user**: custom playbook
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -270,7 +278,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -278,7 +286,7 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccNum.
+             * The number of the tasks that are created for the playbook and were successfully run.
              */
             public Builder succNum(Integer succNum) {
                 this.succNum = succNum;

@@ -99,7 +99,11 @@ public class ComparePlaybooksRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +112,10 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * NewPlaybookReleaseId.
+         * The UUID of the second version.
+         * <p>
+         * 
+         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
          */
         public Builder newPlaybookReleaseId(Integer newPlaybookReleaseId) {
             this.putQueryParameter("NewPlaybookReleaseId", newPlaybookReleaseId);
@@ -117,7 +124,10 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * OldPlaybookReleaseId.
+         * The UUID of the first version.
+         * <p>
+         * 
+         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the UUIDs of versions.
          */
         public Builder oldPlaybookReleaseId(Integer oldPlaybookReleaseId) {
             this.putQueryParameter("OldPlaybookReleaseId", oldPlaybookReleaseId);
@@ -126,7 +136,10 @@ public class ComparePlaybooksRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

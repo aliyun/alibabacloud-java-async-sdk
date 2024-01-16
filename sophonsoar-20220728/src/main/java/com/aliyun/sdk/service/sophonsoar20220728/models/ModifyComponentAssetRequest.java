@@ -69,7 +69,7 @@ public class ModifyComponentAssetRequest extends Request {
         } 
 
         /**
-         * AssetConfig.
+         * The configuration of the asset. The value is a JSON object.
          */
         public Builder assetConfig(String assetConfig) {
             this.putQueryParameter("AssetConfig", assetConfig);
@@ -78,7 +78,11 @@ public class ModifyComponentAssetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response.
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

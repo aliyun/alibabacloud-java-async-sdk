@@ -69,7 +69,7 @@ public class DescribeComponentAssetsRequest extends Request {
         } 
 
         /**
-         * ComponentName.
+         * The name of the component.
          */
         public Builder componentName(String componentName) {
             this.putQueryParameter("ComponentName", componentName);
@@ -78,7 +78,11 @@ public class DescribeComponentAssetsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

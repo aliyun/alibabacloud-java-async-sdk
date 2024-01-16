@@ -50,7 +50,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Playbook.
+         * The configuration of the playbook.
          */
         public Builder playbook(Playbook playbook) {
             this.playbook = playbook;
@@ -58,7 +58,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             private String taskflow; 
 
             /**
-             * Creator.
+             * The ID of the Alibaba Cloud account that is used to create the playbook.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -274,7 +274,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the playbook.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -282,7 +282,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the playbook.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -290,7 +290,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * FailExeNum.
+             * The number of times that the playbook failed to be run.
              */
             public Builder failExeNum(Integer failExeNum) {
                 this.failExeNum = failExeNum;
@@ -298,7 +298,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time of the playbook. The value is a 13-digit timestamp.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -306,7 +306,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time of the playbook. The value is a 13-digit timestamp.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -314,7 +314,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * InputParams.
+             * The input parameter configuration of the playbook. The value is a JSON array.
+             * <p>
+             * 
+             * >  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -322,7 +325,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * LastExeTime.
+             * The time when the playbook was last run. The value is a 13-digit timestamp.
              */
             public Builder lastExeTime(Long lastExeTime) {
                 this.lastExeTime = lastExeTime;
@@ -330,7 +333,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The ID of the Alibaba Cloud account that is used to modify the playbook.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -338,7 +341,11 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineActive.
+             * The status of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder onlineActive(Boolean onlineActive) {
                 this.onlineActive = onlineActive;
@@ -346,7 +353,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineReleaseTaskflowMd5.
+             * The MD5 hash value in the latest published version of the playbook.
              */
             public Builder onlineReleaseTaskflowMd5(String onlineReleaseTaskflowMd5) {
                 this.onlineReleaseTaskflowMd5 = onlineReleaseTaskflowMd5;
@@ -354,7 +361,11 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * OwnType.
+             * The type of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **preset**: predefined playbook
+             * *   **user**: custom playbook
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -362,7 +373,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
@@ -370,7 +381,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessExeNum.
+             * The number of times that the playbook was successfully run.
              */
             public Builder successExeNum(Integer successExeNum) {
                 this.successExeNum = successExeNum;
@@ -378,7 +389,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * Taskflow.
+             * The XML configuration of the playbook.
              */
             public Builder taskflow(String taskflow) {
                 this.taskflow = taskflow;

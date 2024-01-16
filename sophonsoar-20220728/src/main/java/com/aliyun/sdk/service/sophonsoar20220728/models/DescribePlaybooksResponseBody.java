@@ -62,7 +62,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -70,7 +70,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * Playbooks.
+         * The list of playbooks.
          */
         public Builder playbooks(java.util.List < Playbooks> playbooks) {
             this.playbooks = playbooks;
@@ -78,7 +78,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +150,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -259,7 +259,11 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * Active.
+             * The playbook status. Valid values:
+             * <p>
+             * 
+             * *   **1**: The playbook is started.
+             * *   **0**: The playbook is stopped.
              */
             public Builder active(Integer active) {
                 this.active = active;
@@ -267,7 +271,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the playbook.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -275,7 +279,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the playbook was created. The value is a 13-digit timestamp.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -283,7 +287,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * LastRuntime.
+             * The time when the playbook was last run. The value is a 13-digit timestamp.
              */
             public Builder lastRuntime(Long lastRuntime) {
                 this.lastRuntime = lastRuntime;
@@ -291,7 +295,11 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * OwnType.
+             * The type of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **preset**: predefined playbook
+             * *   **user**: custom playbook
              */
             public Builder ownType(String ownType) {
                 this.ownType = ownType;
@@ -299,7 +307,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

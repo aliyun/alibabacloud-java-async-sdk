@@ -106,12 +106,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RevertPlaybookReleaseResponse> revertPlaybookRelease(RevertPlaybookReleaseRequest request);
 
+    /**
+      * Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+     */
     CompletableFuture<RunPython3ScriptResponse> runPython3Script(RunPython3ScriptRequest request);
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+     */
     CompletableFuture<TriggerPlaybookResponse> triggerPlaybook(TriggerPlaybookRequest request);
 
     CompletableFuture<TriggerProcessTaskResponse> triggerProcessTask(TriggerProcessTaskRequest request);
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see [Pricing](https://www.aliyun.com/price/product#/sas/detail/sas).
+      *
+     */
     CompletableFuture<TriggerSophonPlaybookResponse> triggerSophonPlaybook(TriggerSophonPlaybookRequest request);
 
     CompletableFuture<VerifyPlaybookResponse> verifyPlaybook(VerifyPlaybookRequest request);

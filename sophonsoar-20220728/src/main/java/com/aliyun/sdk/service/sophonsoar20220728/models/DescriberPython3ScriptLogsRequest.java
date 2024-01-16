@@ -69,7 +69,11 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -78,7 +82,10 @@ public class DescriberPython3ScriptLogsRequest extends Request {
         }
 
         /**
-         * RequestUuid.
+         * The UUID that is returned when the Python3 script is run.
+         * <p>
+         * 
+         * >  You can call the [RunPython3Script](~~RunPython3Script~~) operation to query the UUID.
          */
         public Builder requestUuid(String requestUuid) {
             this.putQueryParameter("RequestUuid", requestUuid);

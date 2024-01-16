@@ -50,7 +50,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Playbooks.
+         * The information about the predefined components.
          */
         public Builder playbooks(java.util.List < Playbooks> playbooks) {
             this.playbooks = playbooks;
@@ -58,7 +58,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
             private String inputParams; 
 
             /**
-             * Description.
+             * The description of the predefined component.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The name of the predefined component.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -138,7 +138,10 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * InputParams.
+             * The input parameter configuration of the playbook. The value is a JSON array.
+             * <p>
+             * 
+             * >  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;

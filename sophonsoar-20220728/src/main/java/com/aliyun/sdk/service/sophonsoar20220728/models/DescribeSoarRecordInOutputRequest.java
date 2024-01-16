@@ -69,7 +69,10 @@ public class DescribeSoarRecordInOutputRequest extends Request {
         } 
 
         /**
-         * ActionUuid.
+         * The UUID of the component action.
+         * <p>
+         * 
+         * >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUIDs of component actions.
          */
         public Builder actionUuid(String actionUuid) {
             this.putQueryParameter("ActionUuid", actionUuid);
@@ -78,7 +81,11 @@ public class DescribeSoarRecordInOutputRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

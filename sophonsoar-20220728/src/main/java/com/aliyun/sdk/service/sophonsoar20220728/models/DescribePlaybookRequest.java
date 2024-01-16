@@ -97,7 +97,11 @@ public class DescribePlaybookRequest extends Request {
         } 
 
         /**
-         * DebugFlag.
+         * The flag that indicates whether the playbook is of the debugging or published version. Valid values:
+         * <p>
+         * 
+         * *   **1**: playbook of the debugging version
+         * *   **0**: playbook of the published version
          */
         public Builder debugFlag(Integer debugFlag) {
             this.putQueryParameter("DebugFlag", debugFlag);
@@ -106,7 +110,11 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +123,10 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -124,7 +135,7 @@ public class DescribePlaybookRequest extends Request {
         }
 
         /**
-         * TaskflowMd5.
+         * The MD5 hash value of the playbook.
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);

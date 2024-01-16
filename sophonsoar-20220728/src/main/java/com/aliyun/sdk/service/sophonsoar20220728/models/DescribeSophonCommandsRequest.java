@@ -54,7 +54,7 @@ public class DescribeSophonCommandsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the command. Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

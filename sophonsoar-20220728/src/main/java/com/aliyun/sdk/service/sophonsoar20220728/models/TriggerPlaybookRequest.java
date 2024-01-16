@@ -70,7 +70,7 @@ public class TriggerPlaybookRequest extends Request {
         } 
 
         /**
-         * InputParam.
+         * The input parameters of the playbook.
          */
         public Builder inputParam(String inputParam) {
             this.putBodyParameter("InputParam", inputParam);
@@ -79,7 +79,10 @@ public class TriggerPlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

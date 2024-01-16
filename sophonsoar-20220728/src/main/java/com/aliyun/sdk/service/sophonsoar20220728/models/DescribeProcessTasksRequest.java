@@ -292,7 +292,11 @@ public class DescribeProcessTasksRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The sort order. Valid values:
+         * <p>
+         * 
+         * *   **desc** (default)
+         * *   **asc**
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -301,7 +305,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EntityName.
+         * The name of the handling entity.
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -310,7 +314,12 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The type of the handling entity. Valid values:
+         * <p>
+         * 
+         * *   **ip**
+         * *   **file**
+         * *   **process**
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -319,7 +328,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * The field that you use to sort the result.
+         * <p>
+         * 
+         * >  You can obtain the field from the response result.
          */
         public Builder orderField(String orderField) {
             this.putQueryParameter("OrderField", orderField);
@@ -328,7 +340,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Pages start from page 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -337,7 +349,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -346,7 +361,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ParamContent.
+         * The handling entity, handling scenario, or handling parameter that is used for fuzzy match.
          */
         public Builder paramContent(String paramContent) {
             this.putQueryParameter("ParamContent", paramContent);
@@ -355,7 +370,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessActionEnd.
+         * The end of the time range for a handling task. The value is a 13-digit timestamp.
          */
         public Builder processActionEnd(Long processActionEnd) {
             this.putQueryParameter("ProcessActionEnd", processActionEnd);
@@ -364,7 +379,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessActionStart.
+         * The beginning of the time range for a handling task. The value is a 13-digit timestamp.
          */
         public Builder processActionStart(Long processActionStart) {
             this.putQueryParameter("ProcessActionStart", processActionStart);
@@ -373,7 +388,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessRemoveEnd.
+         * The end of the time range for an unblocking task. The value is a 13-digit timestamp.
          */
         public Builder processRemoveEnd(Long processRemoveEnd) {
             this.putQueryParameter("ProcessRemoveEnd", processRemoveEnd);
@@ -382,7 +397,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessRemoveStart.
+         * The beginning of the time range for an unblocking task. The value is a 13-digit timestamp.
          */
         public Builder processRemoveStart(Long processRemoveStart) {
             this.putQueryParameter("ProcessRemoveStart", processRemoveStart);
@@ -391,7 +406,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * ProcessStrategyUuid.
+         * The UUID of the handling policy.
+         * <p>
+         * 
+         * >  You can call the [ListDisposeStrategy](~~2584440~~) operation to query the UUID of the handling policy.
          */
         public Builder processStrategyUuid(String processStrategyUuid) {
             this.putQueryParameter("ProcessStrategyUuid", processStrategyUuid);
@@ -400,7 +418,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * The scenario code of the handling task.
+         * <p>
+         * 
+         * >  You can call the [DescribeEnumItems](~~DescribeEnumItems~~) operation to query the scenario code of the handling task. This parameter is available when you set **EnumType** to **process**.
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -409,7 +430,7 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The ID of the Alibaba Cloud account that is specified in the handling task.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -418,7 +439,14 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * Source.
+         * The triggering source of the handling task. The value is a string array. Valid values:
+         * <p>
+         * 
+         * *   **system**: triggered when you manually handle an event
+         * *   **custom**: triggered by an event based on an automatic response rule
+         * *   **custom_alert**: triggered by an alert based on an automatic response rule
+         * *   **soar-manual**: triggered when you use SOAR to manually run a playbook
+         * *   **soar-mdr**: triggered by Managed Security Service
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -427,7 +455,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique identifier of the handling task.
+         * <p>
+         * 
+         * >  This parameter is used to query a specific task. You can obtain the value from the response result.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -436,7 +467,18 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * The status of the handling task. The value is a string. Valid values:
+         * <p>
+         * 
+         * *   **11**: being handled
+         * *   **21**: being blocked
+         * *   **22**: being quarantined
+         * *   **23**: completed
+         * *   **24**: added to the whitelist
+         * *   **20**: successful
+         * *   **90**: failed
+         * *   **91**: unblocking failed
+         * *   **92**: restoring quarantined files failed
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -445,7 +487,12 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * YunCode.
+         * The cloud service that is associated with the handling task. The value is a string. Valid values:
+         * <p>
+         * 
+         * *   **WAF**: Web Application Firewall (WAF)
+         * *   **CFW**: Cloud Firewall
+         * *   **Aegis**: Security Center
          */
         public Builder yunCode(String yunCode) {
             this.putQueryParameter("YunCode", yunCode);

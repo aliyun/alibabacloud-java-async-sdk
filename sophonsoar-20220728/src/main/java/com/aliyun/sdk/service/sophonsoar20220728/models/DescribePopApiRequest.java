@@ -100,7 +100,7 @@ public class DescribePopApiRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * The operation name of the Alibaba Cloud service.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -109,7 +109,10 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * ApiVersion.
+         * The version number of the API.
+         * <p>
+         * 
+         * >  You can call the [DescribePopApiVersionList](~~DescribePopApiVersionList~~) operation to query the version number.
          */
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
@@ -118,7 +121,7 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * Env.
+         * The environment in which the API operation parameter is used. Set the value to online.
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -127,7 +130,10 @@ public class DescribePopApiRequest extends Request {
         }
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
+         * <p>
+         * 
+         * >  You can call the [DescribeApiList](~~DescribeApiList~~) operation to query the POP code.
          */
         public Builder popCode(String popCode) {
             this.putQueryParameter("PopCode", popCode);

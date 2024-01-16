@@ -50,7 +50,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ComponentAssets.
+         * The information about the assets.
          */
         public Builder componentAssets(java.util.List < ComponentAssets> componentAssets) {
             this.componentAssets = componentAssets;
@@ -58,7 +58,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             private String params; 
 
             /**
-             * AssetUuid.
+             * The UUID of the asset.
              */
             public Builder assetUuid(String assetUuid) {
                 this.assetUuid = assetUuid;
@@ -178,7 +178,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Componentname.
+             * The name of the component to which the asset belongs.
              */
             public Builder componentname(String componentname) {
                 this.componentname = componentname;
@@ -186,7 +186,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -194,7 +194,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -202,7 +202,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The UUID of the asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -210,7 +210,7 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the asset.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,10 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * The configurations of the asset in the JSON string format. DescribeComponentAssetForm
+             * <p>
+             * 
+             * >  For more information, see [DescribeComponentAssetForm](~~DescribeComponentAssetForm~~).
              */
             public Builder params(String params) {
                 this.params = params;

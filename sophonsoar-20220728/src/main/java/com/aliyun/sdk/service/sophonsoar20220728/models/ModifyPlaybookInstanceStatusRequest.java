@@ -84,7 +84,11 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         } 
 
         /**
-         * Active.
+         * The playbook status. Valid values:
+         * <p>
+         * 
+         * *   **1**: starts the playbook.
+         * *   **0**: stops the playbook.
          */
         public Builder active(Integer active) {
             this.putBodyParameter("Active", active);
@@ -93,7 +97,11 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +110,10 @@ public class ModifyPlaybookInstanceStatusRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

@@ -70,7 +70,10 @@ public class VerifyPlaybookRequest extends Request {
         } 
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -79,7 +82,7 @@ public class VerifyPlaybookRequest extends Request {
         }
 
         /**
-         * TaskFlow.
+         * The XML configuration of the playbook.
          */
         public Builder taskFlow(String taskFlow) {
             this.putBodyParameter("TaskFlow", taskFlow);

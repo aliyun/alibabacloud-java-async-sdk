@@ -167,7 +167,7 @@ public class DescribeSoarRecordsRequest extends Request {
         } 
 
         /**
-         * EndMillis.
+         * The end of the time range to query. The value is a 13-digit timestamp.
          */
         public Builder endMillis(Long endMillis) {
             this.putQueryParameter("EndMillis", endMillis);
@@ -176,7 +176,11 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -185,7 +189,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +198,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +210,10 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -212,7 +222,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * StartMillis.
+         * The beginning of the time range to query. The value is a 13-byte timestamp.
          */
         public Builder startMillis(Long startMillis) {
             this.putQueryParameter("StartMillis", startMillis);
@@ -221,7 +231,12 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **failed**
+         * *   **inprogress**
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -230,7 +245,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TaskflowMd5.
+         * The MD5 value of the playbook.
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);
@@ -239,7 +254,7 @@ public class DescribeSoarRecordsRequest extends Request {
         }
 
         /**
-         * TriggerUser.
+         * The ID of the Alibaba Cloud account that is used to execute the task.
          */
         public Builder triggerUser(String triggerUser) {
             this.putQueryParameter("TriggerUser", triggerUser);

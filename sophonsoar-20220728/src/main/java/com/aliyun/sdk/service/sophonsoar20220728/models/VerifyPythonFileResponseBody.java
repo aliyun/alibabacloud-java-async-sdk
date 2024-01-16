@@ -50,7 +50,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         private java.util.List < Syntax> syntax; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
         }
 
         /**
-         * Syntax.
+         * The verification result. If the parameter is left empty, the syntax of the code snippet is correct.
          */
         public Builder syntax(java.util.List < Syntax> syntax) {
             this.syntax = syntax;
@@ -158,7 +158,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             private Integer startLineNumber; 
 
             /**
-             * EndColumn.
+             * The number that indicates the end column of the error code.
              */
             public Builder endColumn(Integer endColumn) {
                 this.endColumn = endColumn;
@@ -166,7 +166,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * EndLineNumber.
+             * The number that indicates the end line of the error code.
              */
             public Builder endLineNumber(Integer endLineNumber) {
                 this.endLineNumber = endLineNumber;
@@ -174,7 +174,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message for the error code.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -182,7 +182,11 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the error code. Valid values:
+             * <p>
+             * 
+             * *   4: moderate
+             * *   8: serious
              */
             public Builder severity(Integer severity) {
                 this.severity = severity;
@@ -190,7 +194,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartColumn.
+             * The number that indicates the start column of the error code.
              */
             public Builder startColumn(Integer startColumn) {
                 this.startColumn = startColumn;
@@ -198,7 +202,7 @@ public class VerifyPythonFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartLineNumber.
+             * The number that indicates the start line of the error code.
              */
             public Builder startLineNumber(Integer startLineNumber) {
                 this.startLineNumber = startLineNumber;

@@ -50,7 +50,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ParamReferredPaths.
+         * The configuration of the recommended path.
          */
         public Builder paramReferredPaths(java.util.List < ParamReferredPaths> paramReferredPaths) {
             this.paramReferredPaths = paramReferredPaths;
@@ -58,7 +58,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             private java.util.List < String > referredPath; 
 
             /**
-             * ParamName.
+             * The name of the upstream node.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -118,7 +118,7 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferredPath.
+             * The paths.
              */
             public Builder referredPath(java.util.List < String > referredPath) {
                 this.referredPath = referredPath;

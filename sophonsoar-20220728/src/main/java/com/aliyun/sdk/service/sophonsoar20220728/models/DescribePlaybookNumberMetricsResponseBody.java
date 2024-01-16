@@ -50,7 +50,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Metrics.
+         * The statistics.
          */
         public Builder metrics(Metrics metrics) {
             this.metrics = metrics;
@@ -58,7 +58,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
             private Integer totalNum; 
 
             /**
-             * StartUpNum.
+             * The number of enabled playbooks.
              */
             public Builder startUpNum(Integer startUpNum) {
                 this.startUpNum = startUpNum;
@@ -118,7 +118,7 @@ public class DescribePlaybookNumberMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * The total number of playbooks.
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

@@ -70,7 +70,7 @@ public class PublishPlaybookRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the released version.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -79,7 +79,10 @@ public class PublishPlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

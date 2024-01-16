@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPlaybookInputOutputRequest extends Request {
     @Body
+    @NameInMap("ExeConfig")
+    private String exeConfig;
+
+    @Body
     @NameInMap("InputParams")
     @Validation(required = true)
     private String inputParams;
@@ -37,6 +41,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
 
     private ModifyPlaybookInputOutputRequest(Builder builder) {
         super(builder);
+        this.exeConfig = builder.exeConfig;
         this.inputParams = builder.inputParams;
         this.lang = builder.lang;
         this.outputParams = builder.outputParams;
@@ -55,6 +60,13 @@ public class ModifyPlaybookInputOutputRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return exeConfig
+     */
+    public String getExeConfig() {
+        return this.exeConfig;
     }
 
     /**
@@ -93,6 +105,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPlaybookInputOutputRequest, Builder> {
+        private String exeConfig; 
         private String inputParams; 
         private String lang; 
         private String outputParams; 
@@ -105,6 +118,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
 
         private Builder(ModifyPlaybookInputOutputRequest request) {
             super(request);
+            this.exeConfig = request.exeConfig;
             this.inputParams = request.inputParams;
             this.lang = request.lang;
             this.outputParams = request.outputParams;
@@ -113,7 +127,16 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         } 
 
         /**
-         * InputParams.
+         * ExeConfig.
+         */
+        public Builder exeConfig(String exeConfig) {
+            this.putBodyParameter("ExeConfig", exeConfig);
+            this.exeConfig = exeConfig;
+            return this;
+        }
+
+        /**
+         * The configuration of the input parameters. The value is a JSON array.
          */
         public Builder inputParams(String inputParams) {
             this.putBodyParameter("InputParams", inputParams);
@@ -122,7 +145,11 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response.
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -131,7 +158,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * OutputParams.
+         * The configuration of the output parameters. This parameter is unavailable. Leave it empty.
          */
         public Builder outputParams(String outputParams) {
             this.putBodyParameter("OutputParams", outputParams);
@@ -140,7 +167,13 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * The input parameter type.
+         * <p>
+         * 
+         * *   **template-ip**
+         * *   **template-file**
+         * *   **template-process**
+         * *   **custom**
          */
         public Builder paramType(String paramType) {
             this.putBodyParameter("ParamType", paramType);
@@ -149,7 +182,10 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);

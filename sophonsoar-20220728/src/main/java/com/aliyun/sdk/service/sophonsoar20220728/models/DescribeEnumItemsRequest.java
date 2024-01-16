@@ -69,7 +69,10 @@ public class DescribeEnumItemsRequest extends Request {
         } 
 
         /**
-         * EnumType.
+         * The type of the enumeration item. Valid values:
+         * <p>
+         * 
+         * *   **process**: scenarios
          */
         public Builder enumType(String enumType) {
             this.putQueryParameter("EnumType", enumType);
@@ -78,7 +81,11 @@ public class DescribeEnumItemsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Simplified Chinese (default)
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

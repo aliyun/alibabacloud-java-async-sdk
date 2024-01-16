@@ -50,7 +50,7 @@ public class DescribeComponentListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Components.
+         * The information about the components. The value is a JSON array.
          */
         public Builder components(String components) {
             this.components = components;
@@ -58,7 +58,7 @@ public class DescribeComponentListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CompareResult.
+         * The comparison result.
          */
         public Builder compareResult(CompareResult compareResult) {
             this.compareResult = compareResult;
@@ -58,7 +58,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             private Boolean same; 
 
             /**
-             * Description.
+             * The description of the comparison result.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,11 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * New.
+             * Indicates whether the second version provides more information than the first version. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder _new(Boolean _new) {
                 this._new = _new;
@@ -138,7 +142,7 @@ public class ComparePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * Same.
+             * Indicates whether the configurations of the two versions are the same. Valid values: **true** and **false**.
              */
             public Builder same(Boolean same) {
                 this.same = same;

@@ -86,7 +86,10 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ActionOutputs.
+         * The data that is returned when the component action is performed. The value is a JSON array.
+         * <p>
+         * 
+         * >  The format of the output data is determined by the component that is configured when the playbook is written.
          */
         public Builder actionOutputs(String actionOutputs) {
             this.actionOutputs = actionOutputs;
@@ -94,7 +97,7 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,7 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +113,7 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,7 @@ public class DescribeSoarRecordActionOutputListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of pages returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

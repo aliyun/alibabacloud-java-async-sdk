@@ -50,7 +50,7 @@ public class DescribeComponentsJsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ComponentsJs.
+         * The configuration of the JavaScript file for the component.
          */
         public Builder componentsJs(String componentsJs) {
             this.componentsJs = componentsJs;
@@ -58,7 +58,7 @@ public class DescribeComponentsJsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

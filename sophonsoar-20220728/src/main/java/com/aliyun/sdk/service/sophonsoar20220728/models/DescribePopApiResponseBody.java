@@ -86,7 +86,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * ApiName.
+         * The name of the API.
          */
         public Builder apiName(String apiName) {
             this.apiName = apiName;
@@ -94,7 +94,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * OpenApiMetaList.
+         * The information about the API.
          */
         public Builder openApiMetaList(java.util.List < OpenApiMetaList> openApiMetaList) {
             this.openApiMetaList = openApiMetaList;
@@ -102,7 +102,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -110,7 +110,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version of the API.
          */
         public Builder version(String version) {
             this.version = version;
@@ -206,7 +206,7 @@ public class DescribePopApiResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * ExampleValue.
+             * The example value.
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -222,7 +222,7 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The parameter name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,7 +230,11 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the parameter is required.
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -238,7 +242,13 @@ public class DescribePopApiResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the parameter field. Valid values:
+             * <p>
+             * 
+             * *   **string**
+             * *   **boolean**
+             * *   **integer**
+             * *   **long**
              */
             public Builder type(String type) {
                 this.type = type;

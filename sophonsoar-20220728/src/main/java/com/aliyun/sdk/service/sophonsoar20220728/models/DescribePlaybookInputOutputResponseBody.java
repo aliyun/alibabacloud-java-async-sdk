@@ -50,7 +50,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * The configurations.
          */
         public Builder config(Config config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,6 +72,9 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
+        @NameInMap("ExeConfig")
+        private String exeConfig;
+
         @NameInMap("InputParams")
         private String inputParams;
 
@@ -85,6 +88,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         private String playbookUuid;
 
         private Config(Builder builder) {
+            this.exeConfig = builder.exeConfig;
             this.inputParams = builder.inputParams;
             this.outputParams = builder.outputParams;
             this.paramType = builder.paramType;
@@ -97,6 +101,13 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
 
         public static Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return exeConfig
+         */
+        public String getExeConfig() {
+            return this.exeConfig;
         }
 
         /**
@@ -128,13 +139,22 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String exeConfig; 
             private String inputParams; 
             private String outputParams; 
             private String paramType; 
             private String playbookUuid; 
 
             /**
-             * InputParams.
+             * ExeConfig.
+             */
+            public Builder exeConfig(String exeConfig) {
+                this.exeConfig = exeConfig;
+                return this;
+            }
+
+            /**
+             * The input parameter configuration of the playbook. The value is a JSON array.
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -142,7 +162,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * OutputParams.
+             * The output parameter configuration. This parameter is unavailable and is always left empty.
              */
             public Builder outputParams(String outputParams) {
                 this.outputParams = outputParams;
@@ -150,7 +170,13 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * The input parameter type of the playbook. Valid values:
+             * <p>
+             * 
+             * *   **template-ip**
+             * *   **template-file**
+             * *   **template-process**
+             * *   **custom**
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -158,7 +184,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             }
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

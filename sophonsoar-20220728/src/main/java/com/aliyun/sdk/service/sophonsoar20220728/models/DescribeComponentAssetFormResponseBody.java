@@ -50,7 +50,13 @@ public class DescribeComponentAssetFormResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ComponentAssetForm.
+         * The metadata of the asset in the component. The value is a JSON array and contains the following fields:
+         * <p>
+         * 
+         * *   **name**: the parameter name.
+         * *   **defaultValue**: the default parameter value.
+         * *   **description**: the parameter description.
+         * *   **required**: indicates whether the parameter is required. Valid values: **true** and **false**.
          */
         public Builder componentAssetForm(String componentAssetForm) {
             this.componentAssetForm = componentAssetForm;
@@ -58,7 +64,7 @@ public class DescribeComponentAssetFormResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

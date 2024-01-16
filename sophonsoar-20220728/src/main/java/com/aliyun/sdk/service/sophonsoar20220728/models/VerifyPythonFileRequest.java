@@ -55,7 +55,7 @@ public class VerifyPythonFileRequest extends Request {
         } 
 
         /**
-         * Content.
+         * The Python code snippet.
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);

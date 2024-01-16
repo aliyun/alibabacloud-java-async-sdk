@@ -97,7 +97,11 @@ public class DescribePlaybookReleasesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +110,7 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +119,10 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +131,7 @@ public class DescribePlaybookReleasesRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

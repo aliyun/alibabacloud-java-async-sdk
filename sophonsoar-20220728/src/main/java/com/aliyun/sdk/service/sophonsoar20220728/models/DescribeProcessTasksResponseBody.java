@@ -62,7 +62,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -70,7 +70,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessTasks.
+         * The handling tasks.
          */
         public Builder processTasks(java.util.List < ProcessTasks> processTasks) {
             this.processTasks = processTasks;
@@ -78,7 +78,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +150,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -379,7 +379,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private String yunCode; 
 
             /**
-             * Creator.
+             * The ID of the Alibaba Cloud account that is used to submit the handling task.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -387,7 +387,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * The name of the handling entity.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -395,7 +395,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * The type of the handling entity.
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -403,7 +403,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateMillis.
+             * The creation time of the handling task. The value is a 13-digit timestamp.
              */
             public Builder gmtCreateMillis(Long gmtCreateMillis) {
                 this.gmtCreateMillis = gmtCreateMillis;
@@ -411,7 +411,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedMillis.
+             * The modification time of the handling task. The value is a 13-digit timestamp.
              */
             public Builder gmtModifiedMillis(Long gmtModifiedMillis) {
                 this.gmtModifiedMillis = gmtModifiedMillis;
@@ -419,7 +419,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InputParams.
+             * The input parameter of the handling task.
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -427,7 +427,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStrategyUuid.
+             * The ID of the associated policy.
              */
             public Builder processStrategyUuid(String processStrategyUuid) {
                 this.processStrategyUuid = processStrategyUuid;
@@ -435,7 +435,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessTime.
+             * The delivery time of the handling task. The value is a 13-digit timestamp.
              */
             public Builder processTime(Long processTime) {
                 this.processTime = processTime;
@@ -443,7 +443,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RemoveTime.
+             * The unblocking time of the handling task. The value is a 13-digit timestamp.
              */
             public Builder removeTime(Long removeTime) {
                 this.removeTime = removeTime;
@@ -451,7 +451,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SceneCode.
+             * The scenario code of the handling task.
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -459,7 +459,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * The scenario name of the handling task.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -467,7 +467,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The ID of the Alibaba Cloud account that is specified in the handling task.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -475,7 +475,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The submission source of the handling task.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -483,7 +483,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The unique identifier of the handling task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -491,7 +491,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the handling task.
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -499,7 +499,7 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             }
 
             /**
-             * YunCode.
+             * The code of the cloud service that is associated with the handling task.
              */
             public Builder yunCode(String yunCode) {
                 this.yunCode = yunCode;

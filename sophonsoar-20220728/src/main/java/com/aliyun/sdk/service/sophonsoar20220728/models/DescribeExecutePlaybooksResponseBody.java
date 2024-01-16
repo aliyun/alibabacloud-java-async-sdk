@@ -50,7 +50,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PlaybookMetrics.
+         * The playbook.
          */
         public Builder playbookMetrics(java.util.List < PlaybookMetrics> playbookMetrics) {
             this.playbookMetrics = playbookMetrics;
@@ -58,7 +58,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Description.
+             * The playbook description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +154,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The playbook name.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -162,7 +162,10 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * ParamConfig.
+             * The configuration of the input parameter. The value is a JSON array.
+             * <p>
+             * 
+             * >  For more information, see [DescribePlaybookInputOutput](~~DescribePlaybookInputOutput~~).
              */
             public Builder paramConfig(String paramConfig) {
                 this.paramConfig = paramConfig;
@@ -170,7 +173,13 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * The input parameter type of the playbook.
+             * <p>
+             * 
+             * *   **template-ip**
+             * *   **template-file**
+             * *   **template-process**
+             * *   **custom**
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -178,7 +187,7 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The playbook UUID.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

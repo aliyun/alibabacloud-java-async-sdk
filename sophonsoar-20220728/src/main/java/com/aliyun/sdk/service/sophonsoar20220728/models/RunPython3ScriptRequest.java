@@ -96,7 +96,7 @@ public class RunPython3ScriptRequest extends Request {
         } 
 
         /**
-         * NodeName.
+         * The name of the node in the playbook.
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -105,7 +105,7 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * Params.
+         * The input parameters of the Python3 script.
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -114,7 +114,10 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~) operation to query the UUIDs of playbooks.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -123,7 +126,7 @@ public class RunPython3ScriptRequest extends Request {
         }
 
         /**
-         * PythonScript.
+         * The Python3 script.
          */
         public Builder pythonScript(String pythonScript) {
             this.putBodyParameter("PythonScript", pythonScript);

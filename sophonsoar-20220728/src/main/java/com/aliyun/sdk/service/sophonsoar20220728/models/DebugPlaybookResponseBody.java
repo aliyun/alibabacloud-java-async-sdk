@@ -50,7 +50,7 @@ public class DebugPlaybookResponseBody extends TeaModel {
         private String requestUuid; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DebugPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestUuid.
+         * The UUID of the debugging task. You can use the UUID to query the result and other details of the debugging task.
          */
         public Builder requestUuid(String requestUuid) {
             this.requestUuid = requestUuid;

@@ -112,7 +112,7 @@ public class ModifyPlaybookRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the playbook.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -121,7 +121,7 @@ public class ModifyPlaybookRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the playbook.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -130,7 +130,11 @@ public class ModifyPlaybookRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -139,7 +143,10 @@ public class ModifyPlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -148,7 +155,7 @@ public class ModifyPlaybookRequest extends Request {
         }
 
         /**
-         * Taskflow.
+         * The XML configuration of the playbook.
          */
         public Builder taskflow(String taskflow) {
             this.putBodyParameter("Taskflow", taskflow);

@@ -68,7 +68,11 @@ public class DescribeSoarTaskAndActionsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response.
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class DescribeSoarTaskAndActionsRequest extends Request {
         }
 
         /**
-         * RequestUuid.
+         * The playbook UUID.
          */
         public Builder requestUuid(String requestUuid) {
             this.putQueryParameter("RequestUuid", requestUuid);

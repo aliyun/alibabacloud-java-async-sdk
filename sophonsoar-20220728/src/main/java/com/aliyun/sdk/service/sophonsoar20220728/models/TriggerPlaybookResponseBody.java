@@ -50,7 +50,7 @@ public class TriggerPlaybookResponseBody extends TeaModel {
         private String triggerUuid; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class TriggerPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * TriggerUuid.
+         * The running UUID of the playbook. This parameter is used to query the running result of the playbook.
          */
         public Builder triggerUuid(String triggerUuid) {
             this.triggerUuid = triggerUuid;

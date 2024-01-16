@@ -50,7 +50,7 @@ public class CreatePlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreatePlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreatePlaybookResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * PlaybookUuid.
+             * The UUID of the playbook.
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;

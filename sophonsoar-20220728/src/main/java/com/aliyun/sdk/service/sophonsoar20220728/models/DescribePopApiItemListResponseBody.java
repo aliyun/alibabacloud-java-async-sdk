@@ -86,7 +86,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * Names.
+         * The names of API operations.
          */
         public Builder names(java.util.List < String > names) {
             this.names = names;
@@ -94,7 +94,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -102,7 +102,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -118,7 +118,7 @@ public class DescribePopApiItemListResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version number of the API for the Alibaba Cloud service.
          */
         public Builder version(String version) {
             this.version = version;

@@ -50,7 +50,7 @@ public class QueryTreeDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Playbooks.
+         * The returned information about the playbook. The value is a JSON string.
          */
         public Builder playbooks(String playbooks) {
             this.playbooks = playbooks;
@@ -58,7 +58,7 @@ public class QueryTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

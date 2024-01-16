@@ -50,7 +50,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PlaybookNodeSchema.
+         * The output structure information of the playbook.
          */
         public Builder playbookNodeSchema(PlaybookNodeSchema playbookNodeSchema) {
             this.playbookNodeSchema = playbookNodeSchema;
@@ -58,7 +58,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             private java.util.List < String > outputFields; 
 
             /**
-             * ActionName.
+             * The action name of the component.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -142,7 +142,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentName.
+             * The name of the component.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -150,7 +150,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -158,7 +158,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFields.
+             * The output fields.
              */
             public Builder outputFields(java.util.List < String > outputFields) {
                 this.outputFields = outputFields;
@@ -199,7 +199,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
             private java.util.List < NodeSchema> nodeSchema; 
 
             /**
-             * NodeSchema.
+             * The structure information.
              */
             public Builder nodeSchema(java.util.List < NodeSchema> nodeSchema) {
                 this.nodeSchema = nodeSchema;

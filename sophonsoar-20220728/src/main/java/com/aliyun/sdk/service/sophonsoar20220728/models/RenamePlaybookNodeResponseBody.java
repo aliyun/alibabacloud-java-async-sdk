@@ -50,7 +50,7 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RenameResult.
+         * The returned new name of the node.
          */
         public Builder renameResult(String renameResult) {
             this.renameResult = renameResult;
@@ -58,7 +58,7 @@ public class RenamePlaybookNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

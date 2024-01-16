@@ -50,7 +50,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The commands.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * CheckField.
+             * The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.
              */
             public Builder checkField(String checkField) {
                 this.checkField = checkField;
@@ -142,7 +142,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Field.
+             * The name of the parameter.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -150,7 +150,11 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Necessary.
+             * Indicates whether the parameter is required. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder necessary(Boolean necessary) {
                 this.necessary = necessary;
@@ -158,7 +162,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -235,7 +239,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             private java.util.List < ParamConfig> paramConfig; 
 
             /**
-             * Description.
+             * The description of the command.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +247,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the command.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -251,7 +255,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the command.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +263,7 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamConfig.
+             * The parameter configurations.
              */
             public Builder paramConfig(java.util.List < ParamConfig> paramConfig) {
                 this.paramConfig = paramConfig;

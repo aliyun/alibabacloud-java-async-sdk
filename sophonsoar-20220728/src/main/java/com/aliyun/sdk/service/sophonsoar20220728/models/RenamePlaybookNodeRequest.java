@@ -99,7 +99,11 @@ public class RenamePlaybookNodeRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +112,7 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * NewNodeName.
+         * The new name of the node.
          */
         public Builder newNodeName(String newNodeName) {
             this.putQueryParameter("NewNodeName", newNodeName);
@@ -117,7 +121,7 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * OldNodeName.
+         * The original name of the node.
          */
         public Builder oldNodeName(String oldNodeName) {
             this.putQueryParameter("OldNodeName", oldNodeName);
@@ -126,7 +130,10 @@ public class RenamePlaybookNodeRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The UUID of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the UUIDs of playbooks.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);

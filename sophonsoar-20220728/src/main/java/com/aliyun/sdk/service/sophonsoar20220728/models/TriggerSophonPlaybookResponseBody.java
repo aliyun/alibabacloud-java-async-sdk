@@ -50,7 +50,7 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details that is returned after the command or playbook is triggered.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class TriggerSophonPlaybookResponseBody extends TeaModel {
             private String sophonTaskId; 
 
             /**
-             * SophonTaskId.
+             * The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.
              */
             public Builder sophonTaskId(String sophonTaskId) {
                 this.sophonTaskId = sophonTaskId;

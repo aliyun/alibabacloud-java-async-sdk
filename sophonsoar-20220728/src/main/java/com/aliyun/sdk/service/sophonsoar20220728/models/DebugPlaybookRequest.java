@@ -98,7 +98,11 @@ public class DebugPlaybookRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -107,7 +111,10 @@ public class DebugPlaybookRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -116,7 +123,7 @@ public class DebugPlaybookRequest extends Request {
         }
 
         /**
-         * Record.
+         * The input parameters that you use to debug the playbook. You can define the parameters based on your business requirements.
          */
         public Builder record(String record) {
             this.putBodyParameter("Record", record);
@@ -125,7 +132,10 @@ public class DebugPlaybookRequest extends Request {
         }
 
         /**
-         * Taskflow.
+         * The XML configuration of the playbook.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybook](~~DescribePlaybook~~) operation to query the XML configuration of the playbook.
          */
         public Builder taskflow(String taskflow) {
             this.putBodyParameter("Taskflow", taskflow);

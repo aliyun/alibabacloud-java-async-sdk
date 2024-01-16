@@ -50,7 +50,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PlaybookNodesOutput.
+         * The output data of the component node.
          */
         public Builder playbookNodesOutput(PlaybookNodesOutput playbookNodesOutput) {
             this.playbookNodesOutput = playbookNodesOutput;
@@ -58,7 +58,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
             private String nodeOutput; 
 
             /**
-             * NodeName.
+             * The name of the component node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -118,7 +118,7 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOutput.
+             * The historical output data of the component node. The value is in the JSON string format. If no data is found, the parameter is left empty.
              */
             public Builder nodeOutput(String nodeOutput) {
                 this.nodeOutput = nodeOutput;

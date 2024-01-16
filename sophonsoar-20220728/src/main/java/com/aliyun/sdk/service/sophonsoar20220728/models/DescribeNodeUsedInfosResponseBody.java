@@ -50,7 +50,13 @@ public class DescribeNodeUsedInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodeUsedInfos.
+         * The node reference information. The value is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **action**: the referencing action. This field contains the following information:
+         * 
+         *     *   **name**: the name of the referencing node.
+         *     *   **inputParams**: the parameter settings of the referencing node.
          */
         public Builder nodeUsedInfos(String nodeUsedInfos) {
             this.nodeUsedInfos = nodeUsedInfos;
@@ -58,7 +64,7 @@ public class DescribeNodeUsedInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

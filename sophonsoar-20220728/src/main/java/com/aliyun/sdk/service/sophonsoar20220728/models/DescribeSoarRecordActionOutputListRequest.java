@@ -99,7 +99,10 @@ public class DescribeSoarRecordActionOutputListRequest extends Request {
         } 
 
         /**
-         * ActionUuid.
+         * The UUID of the component action.
+         * <p>
+         * 
+         * >  You can call the [DescribeSoarTaskAndActions](~~DescribeSoarTaskAndActions~~) operation to query the UUID.
          */
         public Builder actionUuid(String actionUuid) {
             this.putQueryParameter("ActionUuid", actionUuid);
@@ -108,7 +111,11 @@ public class DescribeSoarRecordActionOutputListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +124,7 @@ public class DescribeSoarRecordActionOutputListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -126,7 +133,10 @@ public class DescribeSoarRecordActionOutputListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
+         * <p>
+         * 
+         * >  We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

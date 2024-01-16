@@ -74,7 +74,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         private java.util.List < VersionList> versionList; 
 
         /**
-         * PopCode.
+         * The POP code of the Alibaba Cloud service.
          */
         public Builder popCode(String popCode) {
             this.popCode = popCode;
@@ -82,7 +82,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -98,7 +98,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
         }
 
         /**
-         * VersionList.
+         * The information about the versions of API operations.
          */
         public Builder versionList(java.util.List < VersionList> versionList) {
             this.versionList = versionList;
@@ -162,7 +162,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * ApiName.
+             * The name of the API operation.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -170,7 +170,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * PopCode.
+             * The POP code of the Alibaba Cloud service.
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -178,7 +178,7 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the API for the Alibaba Cloud service.
              */
             public Builder version(String version) {
                 this.version = version;

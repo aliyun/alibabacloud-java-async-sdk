@@ -63,7 +63,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         private java.util.List < SoarExecuteRecords> soarExecuteRecords; 
 
         /**
-         * Page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -71,7 +71,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +79,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * SoarExecuteRecords.
+         * The execution records.
          */
         public Builder soarExecuteRecords(java.util.List < SoarExecuteRecords> soarExecuteRecords) {
             this.soarExecuteRecords = soarExecuteRecords;
@@ -143,7 +143,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -151,7 +151,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -159,7 +159,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -332,7 +332,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             private String triggerUser; 
 
             /**
-             * EndTime.
+             * The end of the time range to query. The value is a 13-digit timestamp.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -340,7 +340,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message of the task. If the task is successful, this field is empty.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -348,7 +348,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RawEventReq.
+             * The request parameters of the task.
              */
             public Builder rawEventReq(String rawEventReq) {
                 this.rawEventReq = rawEventReq;
@@ -356,7 +356,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestUuid.
+             * The request ID of the task. The value is unique.
              */
             public Builder requestUuid(String requestUuid) {
                 this.requestUuid = requestUuid;
@@ -364,7 +364,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultMessage.
+             * The returned information about the playbook. You can define the value in the playbook.
              */
             public Builder resultMessage(String resultMessage) {
                 this.resultMessage = resultMessage;
@@ -372,7 +372,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range to query. The value is a 13-byte timestamp.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -380,7 +380,12 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **fail**
+             * *   **running**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -388,7 +393,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task. The value is the same as the playbook UUID.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -396,7 +401,11 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **general**: a common task
+             * *   **standard**: a component task
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -404,7 +413,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowMd5.
+             * The MD5 value of the playbook.
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;
@@ -412,7 +421,12 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **debug**: a debugging task
+             * *   **manual**: a manual task
+             * *   **siem**: a task that is triggered by an event or alert
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -420,7 +434,7 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerUser.
+             * The ID of the Alibaba Cloud account that is used to execute the task.
              */
             public Builder triggerUser(String triggerUser) {
                 this.triggerUser = triggerUser;

@@ -50,7 +50,7 @@ public class DescribeApiListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiList.
+         * The information about the service.
          */
         public Builder apiList(java.util.List < ApiList> apiList) {
             this.apiList = apiList;
@@ -58,7 +58,7 @@ public class DescribeApiListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeApiListResponseBody extends TeaModel {
             private String productName; 
 
             /**
-             * DocUrl.
+             * The link to the API references of the Alibaba Cloud service.
              */
             public Builder docUrl(String docUrl) {
                 this.docUrl = docUrl;
@@ -130,7 +130,7 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * PopCode.
+             * The POP code of the Alibaba Cloud service.
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -138,7 +138,7 @@ public class DescribeApiListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the Alibaba Cloud service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;

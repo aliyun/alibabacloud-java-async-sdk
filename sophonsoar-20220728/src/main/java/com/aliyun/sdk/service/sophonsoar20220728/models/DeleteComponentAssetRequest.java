@@ -69,7 +69,10 @@ public class DeleteComponentAssetRequest extends Request {
         } 
 
         /**
-         * AssetId.
+         * The ID of the asset.
+         * <p>
+         * 
+         * >  You can call the [DescribeComponentAssets](~~DescribeComponentAssets~~) operation to query the ID.
          */
         public Builder assetId(Long assetId) {
             this.putQueryParameter("AssetId", assetId);
@@ -78,7 +81,11 @@ public class DeleteComponentAssetRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

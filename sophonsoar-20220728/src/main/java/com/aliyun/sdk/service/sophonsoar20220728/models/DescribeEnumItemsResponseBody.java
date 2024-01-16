@@ -50,7 +50,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The information about the enumeration item.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the enumeration item.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class DescribeEnumItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the enumeration item.
              */
             public Builder value(String value) {
                 this.value = value;

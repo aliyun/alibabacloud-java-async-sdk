@@ -83,7 +83,11 @@ public class DescribeDistinctReleasesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,10 @@ public class DescribeDistinctReleasesRequest extends Request {
         }
 
         /**
-         * PlaybookUuid.
+         * The playbook UUID.
+         * <p>
+         * 
+         * >  You can call the [DescribePlaybooks](~~DescribePlaybooks~~)operation to query the playbook UUID.
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
@@ -101,7 +108,7 @@ public class DescribeDistinctReleasesRequest extends Request {
         }
 
         /**
-         * TaskflowMd5.
+         * The MD5 value of the playbook XML configuration.
          */
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);
