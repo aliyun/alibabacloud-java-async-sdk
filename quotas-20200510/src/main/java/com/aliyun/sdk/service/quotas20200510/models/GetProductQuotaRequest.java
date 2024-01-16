@@ -162,11 +162,8 @@ public class GetProductQuotaRequest extends Request {
              * The key of the dimension.
              * <p>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.
+             * >- The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * >- If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,11 +174,8 @@ public class GetProductQuotaRequest extends Request {
              * The value of the dimension.
              * <p>
              * 
-             * > 
-             * 
-             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-             * 
-             * *   If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.
+             * > - The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * > - If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.
              */
             public Builder value(String value) {
                 this.value = value;

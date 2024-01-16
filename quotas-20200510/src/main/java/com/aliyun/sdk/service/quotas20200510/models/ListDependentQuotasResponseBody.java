@@ -122,7 +122,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             private java.util.List < String > dimensionValues; 
 
             /**
-             * DependentDimension.
+             * The dimensions of the quotas on which the specified quota depends.
              */
             public Builder dependentDimension(java.util.List < String > dependentDimension) {
                 this.dependentDimension = dependentDimension;
@@ -138,7 +138,7 @@ public class ListDependentQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValues.
+             * The dimension values.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;

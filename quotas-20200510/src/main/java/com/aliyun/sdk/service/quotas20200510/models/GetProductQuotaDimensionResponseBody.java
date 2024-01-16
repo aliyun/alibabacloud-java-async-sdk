@@ -110,7 +110,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the quota dimension value.
+             * The name of the quota dimension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimension value.
+             * The value of the quota dimension.
              */
             public Builder value(String value) {
                 this.value = value;

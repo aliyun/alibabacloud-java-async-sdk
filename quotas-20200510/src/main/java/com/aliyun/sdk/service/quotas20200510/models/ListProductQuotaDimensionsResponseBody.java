@@ -102,7 +102,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about quota dimensions.
+         * The quota dimensions.
          */
         public Builder quotaDimensions(java.util.List < QuotaDimensions> quotaDimensions) {
             this.quotaDimensions = quotaDimensions;
@@ -170,7 +170,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the quota dimension value.
+             * The name of the quota dimension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimension value.
+             * The value of the quota dimension.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -279,7 +279,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private Boolean requisite; 
 
             /**
-             * DependentDimensions.
+             * The quota dimensions on which the quota dimension that you want to query is dependent.
              */
             public Builder dependentDimensions(java.util.List < String > dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
@@ -301,7 +301,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the quota dimension value.
+             * The details about the dimension value.
              */
             public Builder dimensionValueDetail(java.util.List < DimensionValueDetail> dimensionValueDetail) {
                 this.dimensionValueDetail = dimensionValueDetail;
@@ -309,7 +309,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValues.
+             * The dimension values.
              */
             public Builder dimensionValues(java.util.List < String > dimensionValues) {
                 this.dimensionValues = dimensionValues;

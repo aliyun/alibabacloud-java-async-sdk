@@ -50,7 +50,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The percentage of the alert threshold.
+         * The details of the quota alert rule.
          */
         public Builder quotaAlarm(QuotaAlarm quotaAlarm) {
             this.quotaAlarm = quotaAlarm;
@@ -278,7 +278,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The alert notification methods.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -294,7 +294,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The abbreviation of the Alibaba Cloud service name.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -362,7 +362,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
             }
 
             /**
-             * Webhook.
+             * The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;

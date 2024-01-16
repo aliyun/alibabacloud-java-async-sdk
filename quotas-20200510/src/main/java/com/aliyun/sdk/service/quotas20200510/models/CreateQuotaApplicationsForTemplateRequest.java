@@ -200,7 +200,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         } 
 
         /**
-         * AliyunUids.
+         * The Alibaba Cloud accounts that correspond to the resource directory member accounts for which the quotas are applied.
+         * <p>
+         * 
+         * >  You can apply for a quota increase for up to 50 member accounts in each request. For more information about the member accounts in a resource directory, see [ListAccounts](~~604207~~).
          */
         public Builder aliyunUids(java.util.List < String > aliyunUids) {
             this.putBodyParameter("AliyunUids", aliyunUids);
@@ -209,7 +212,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * DesireValue.
+         * The requested value of the quota.
+         * <p>
+         * 
+         * >  Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit the application.
          */
         public Builder desireValue(Double desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -218,7 +224,7 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * The quota dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putBodyParameter("Dimensions", dimensions);
@@ -227,7 +233,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * >  If you do not specify a start time, the value is the time when the quota application is submitted.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -236,7 +245,11 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * EnvLanguage.
+         * The language of the notification about the application result. Valid values:
+         * <p>
+         * 
+         * *   zh (default): Chinese
+         * *   en: English
          */
         public Builder envLanguage(String envLanguage) {
             this.putBodyParameter("EnvLanguage", envLanguage);
@@ -245,7 +258,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
+         * <p>
+         * 
+         * >  If you do not specify an end time, the value is 99 years after the start time of the validity period.
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -254,7 +270,11 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * NoticeType.
+         * Specifies whether to send a notification about the application result. Valid values:
+         * <p>
+         * 
+         * *   0 (default): no
+         * *   3: yes
          */
         public Builder noticeType(Integer noticeType) {
             this.putBodyParameter("NoticeType", noticeType);
@@ -263,7 +283,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -272,7 +295,7 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The quota ID.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -281,7 +304,12 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The quota type. Valid values:
+         * <p>
+         * 
+         * *   CommonQuota (default): general quota
+         * *   FlowControl: API rate limit
+         * *   WhiteListLabel: privilege
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);
@@ -290,7 +318,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * Reason.
+         * The reason for the quota application.
+         * <p>
+         * 
+         * >  Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit the application.
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);
@@ -344,7 +375,12 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the quota dimension.
+             * <p>
+             * 
+             * The value range of N varies based on the number of dimensions that are supported by the Alibaba Cloud service.
+             * 
+             * >  This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -352,7 +388,10 @@ public class CreateQuotaApplicationsForTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the quota dimension.
+             * <p>
+             * 
+             * >  The value range of N varies based on the number of dimensions that are supported by the Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

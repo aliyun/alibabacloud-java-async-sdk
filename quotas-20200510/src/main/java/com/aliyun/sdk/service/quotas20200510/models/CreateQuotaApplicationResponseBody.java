@@ -309,8 +309,8 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
          * Indicates whether Quota Center sends a notification about the application result. Valid values:
          * <p>
          * 
-         * *   0: Quota Center sends a notification.
-         * *   3: Quota Center does not send a notification.
+         * *   0: Quota Center does not send a notification.
+         * *   3: Quota Center sends a notification.
          */
         public Builder noticeType(Long noticeType) {
             this.noticeType = noticeType;

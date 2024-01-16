@@ -105,7 +105,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned quota templates.
+         * The queried quota templates.
          */
         public Builder quotaApplicationTemplates(java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates) {
             this.quotaApplicationTemplates = quotaApplicationTemplates;
@@ -397,7 +397,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             private String quotaName; 
 
             /**
-             * N/A
+             * None
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -508,10 +508,11 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the quota.
+             * The type of the quota. Valid values:
              * <p>
              * 
              * *   CommonQuota: general quota
+             * *   FlowControl: API rate limit
              * *   WhiteListLabel: privilege
              */
             public Builder quotaCategory(String quotaCategory) {

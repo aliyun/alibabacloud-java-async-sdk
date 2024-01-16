@@ -365,7 +365,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The alert notification methods.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;

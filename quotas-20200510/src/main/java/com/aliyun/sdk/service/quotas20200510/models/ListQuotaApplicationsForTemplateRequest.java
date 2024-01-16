@@ -152,7 +152,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         } 
 
         /**
-         * ApplyEndTime.
+         * The UTC time when the quota application ends.
          */
         public Builder applyEndTime(String applyEndTime) {
             this.putBodyParameter("ApplyEndTime", applyEndTime);
@@ -161,7 +161,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ApplyStartTime.
+         * The UTC time when the quota application starts.
          */
         public Builder applyStartTime(String applyStartTime) {
             this.putBodyParameter("ApplyStartTime", applyStartTime);
@@ -170,7 +170,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * BatchQuotaApplicationId.
+         * The ID of the quota application batch.
          */
         public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
             this.putBodyParameter("BatchQuotaApplicationId", batchQuotaApplicationId);
@@ -179,7 +179,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 30.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -188,7 +191,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the position from which you want to start the query.
+         * <p>
+         * 
+         * >  An empty value indicates that the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -197,7 +203,10 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
+         * <p>
+         * 
+         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -206,7 +215,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaActionCode.
+         * The quota ID.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -215,7 +224,12 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
         }
 
         /**
-         * QuotaCategory.
+         * The quota type. Valid values:
+         * <p>
+         * 
+         * *   CommonQuota: general quota
+         * *   FlowControl: API rate limit
+         * *   WhiteListLabel: privilege
          */
         public Builder quotaCategory(String quotaCategory) {
             this.putBodyParameter("QuotaCategory", quotaCategory);

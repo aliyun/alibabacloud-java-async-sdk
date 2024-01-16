@@ -102,7 +102,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the quotas.
+         * The queried quotas.
          */
         public Builder quotas(java.util.List < Quotas> quotas) {
             this.quotas = quotas;
@@ -262,7 +262,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * The value of the quota.
+             * The quota value.
              */
             public Builder quota(String quota) {
                 this.quota = quota;
@@ -270,12 +270,10 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the new quota value.
+             * The unit of the quota.
              * <p>
              * 
-             * **
-             * 
-             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -295,7 +293,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The used quota.
+             * The quota usage.
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -333,6 +331,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
         @NameInMap("ExpireTime")
         private String expireTime;
+
+        @NameInMap("GlobalQuota")
+        private Boolean globalQuota;
 
         @NameInMap("Period")
         private Period period;
@@ -385,6 +386,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             this.dimensions = builder.dimensions;
             this.effectiveTime = builder.effectiveTime;
             this.expireTime = builder.expireTime;
+            this.globalQuota = builder.globalQuota;
             this.period = builder.period;
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
@@ -463,6 +465,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return globalQuota
+         */
+        public Boolean getGlobalQuota() {
+            return this.globalQuota;
         }
 
         /**
@@ -572,6 +581,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             private java.util.Map < String, ? > dimensions; 
             private String effectiveTime; 
             private String expireTime; 
+            private Boolean globalQuota; 
             private Period period; 
             private String productCode; 
             private String quotaActionCode; 
@@ -600,7 +610,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * None.
              */
             public Builder applicableRange(java.util.List < Float > applicableRange) {
                 this.applicableRange = applicableRange;
@@ -620,7 +630,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyReasonTips.
+             * The reason for submitting a quota increase request.
              */
             public Builder applyReasonTips(String applyReasonTips) {
                 this.applyReasonTips = applyReasonTips;
@@ -640,7 +650,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota dimension. Format: `{"regionId":"Region"}`.
+             * The quota dimensions. Format: `{"regionId":"Region"}`.
              */
             public Builder dimensions(java.util.Map < String, ? > dimensions) {
                 this.dimensions = dimensions;
@@ -648,7 +658,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the validity period of the quota. Specify the value in UTC.
+             * The start time of the validity period of the quota. The value is displayed in UTC.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -656,10 +666,22 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the validity period of the quota. Specify the value in UTC.
+             * The end time of the validity period of the quota. The value is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether the quota is a global quota. Valid values:
+             * <p>
+             * 
+             * *   true: The quota is shared in all regions.
+             * *   false: The quota is independently used in a region.
+             */
+            public Builder globalQuota(Boolean globalQuota) {
+                this.globalQuota = globalQuota;
                 return this;
             }
 
@@ -680,7 +702,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * The quota ID.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -696,12 +718,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the quota.
+             * The type of the quota. Valid values:
              * <p>
              * 
              * *   CommonQuota: general quota
              * *   FlowControl: API rate limit
-             * *   WhiteListLabel: whitelist quota
+             * *   WhiteListLabel: privilege
              */
             public Builder quotaCategory(String quotaCategory) {
                 this.quotaCategory = quotaCategory;
@@ -717,7 +739,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the quotas.
+             * The details of the quota.
              */
             public Builder quotaItems(java.util.List < QuotaItems> quotaItems) {
                 this.quotaItems = quotaItems;
@@ -725,7 +747,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota.
+             * The quota name.
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -745,12 +767,10 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the new quota value.
+             * The unit of the quota.
              * <p>
              * 
-             * **
-             * 
-             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -758,7 +778,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * None.
              */
             public Builder supportedRange(java.util.List < Float > supportedRange) {
                 this.supportedRange = supportedRange;
@@ -766,7 +786,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the quota.
+             * The quota value.
              */
             public Builder totalQuota(Float totalQuota) {
                 this.totalQuota = totalQuota;
@@ -774,7 +794,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The used quota.
+             * The quota usage.
              */
             public Builder totalUsage(Float totalUsage) {
                 this.totalUsage = totalUsage;

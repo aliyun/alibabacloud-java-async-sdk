@@ -134,7 +134,7 @@ public class ListQuotaAlarmsRequest extends Request {
         }
 
         /**
-         * The maximum number of records that can be returned for the query.
+         * The maximum number of records that you want to return for the query.
          * <p>
          * 
          * Valid values: 1 to 200. Default value: 30.

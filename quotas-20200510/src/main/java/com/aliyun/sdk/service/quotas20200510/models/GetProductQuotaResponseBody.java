@@ -50,7 +50,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the quotas.
+         * The details of the quota.
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -210,12 +210,10 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the new quota value.
+             * The unit of the quota.
              * <p>
              * 
-             * **
-             * 
-             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;
@@ -226,8 +224,8 @@ public class GetProductQuotaResponseBody extends TeaModel {
              * The category of the quota. Valid values:
              * <p>
              * 
-             * *   BaseQuota: base quota
-             * *   ReservedQuota: reserved quota
+             * *   BaseQuota: base quota.
+             * *   ReservedQuota: reserved quota.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -273,6 +271,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
 
         @NameInMap("ExpireTime")
         private String expireTime;
+
+        @NameInMap("GlobalQuota")
+        private Boolean globalQuota;
 
         @NameInMap("Period")
         private Period period;
@@ -325,6 +326,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             this.dimensions = builder.dimensions;
             this.effectiveTime = builder.effectiveTime;
             this.expireTime = builder.expireTime;
+            this.globalQuota = builder.globalQuota;
             this.period = builder.period;
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
@@ -403,6 +405,13 @@ public class GetProductQuotaResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return globalQuota
+         */
+        public Boolean getGlobalQuota() {
+            return this.globalQuota;
         }
 
         /**
@@ -512,6 +521,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             private java.util.Map < String, ? > dimensions; 
             private String effectiveTime; 
             private String expireTime; 
+            private Boolean globalQuota; 
             private Period period; 
             private String productCode; 
             private String quotaActionCode; 
@@ -560,7 +570,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyReasonTips.
+             * The reason for submitting a quota increase request.
              */
             public Builder applyReasonTips(String applyReasonTips) {
                 this.applyReasonTips = applyReasonTips;
@@ -600,6 +610,18 @@ public class GetProductQuotaResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether the quota is a global quota. Valid values:
+             * <p>
+             * 
+             * *   true: The quota is shared in all regions.
+             * *   false: The quota is independently used in a region.
+             */
+            public Builder globalQuota(Boolean globalQuota) {
+                this.globalQuota = globalQuota;
                 return this;
             }
 
@@ -688,9 +710,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
              * The unit of the new quota value.
              * <p>
              * 
-             * **
-             * 
-             * **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+             * > The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
              */
             public Builder quotaUnit(String quotaUnit) {
                 this.quotaUnit = quotaUnit;

@@ -86,7 +86,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the alert records.
+         * The details of the quota alert records.
          */
         public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
             this.alarmHistories = alarmHistories;
@@ -262,7 +262,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota alert was created.
+             * The time when the quota alert rule was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyChannels.
+             * The notification methods of the quota alert.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -278,7 +278,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact.
+             * The quota alert contact.
              */
             public Builder notifyTarget(String notifyTarget) {
                 this.notifyTarget = notifyTarget;
@@ -294,7 +294,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the quota.
+             * The quota ID.
              */
             public Builder quotaActionCode(String quotaActionCode) {
                 this.quotaActionCode = quotaActionCode;
@@ -310,7 +310,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The numeric value of the alert threshold.
+             * The threshold to trigger quota alerts.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -318,7 +318,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the alert threshold.
+             * The percentage of the quota alert threshold.
              */
             public Builder thresholdPercent(Float thresholdPercent) {
                 this.thresholdPercent = thresholdPercent;

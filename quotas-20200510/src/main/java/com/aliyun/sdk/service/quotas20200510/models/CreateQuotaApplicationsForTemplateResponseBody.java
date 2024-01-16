@@ -18,12 +18,16 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     @NameInMap("BatchQuotaApplicationId")
     private String batchQuotaApplicationId;
 
+    @NameInMap("FailResults")
+    private java.util.List < FailResults> failResults;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private CreateQuotaApplicationsForTemplateResponseBody(Builder builder) {
         this.aliyunUids = builder.aliyunUids;
         this.batchQuotaApplicationId = builder.batchQuotaApplicationId;
+        this.failResults = builder.failResults;
         this.requestId = builder.requestId;
     }
 
@@ -50,6 +54,13 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return failResults
+     */
+    public java.util.List < FailResults> getFailResults() {
+        return this.failResults;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -59,10 +70,11 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List < String > aliyunUids; 
         private String batchQuotaApplicationId; 
+        private java.util.List < FailResults> failResults; 
         private String requestId; 
 
         /**
-         * AliyunUids.
+         * The Alibaba Cloud accounts for which the quotas are applied.
          */
         public Builder aliyunUids(java.util.List < String > aliyunUids) {
             this.aliyunUids = aliyunUids;
@@ -70,7 +82,7 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * BatchQuotaApplicationId.
+         * The ID of the quota application batch.
          */
         public Builder batchQuotaApplicationId(String batchQuotaApplicationId) {
             this.batchQuotaApplicationId = batchQuotaApplicationId;
@@ -78,7 +90,15 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The Alibaba Cloud accounts of the members in a resource directory whose quota increase request is rejected, and the reason for the rejection.
+         */
+        public Builder failResults(java.util.List < FailResults> failResults) {
+            this.failResults = failResults;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,4 +111,65 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     } 
 
+    public static class FailResults extends TeaModel {
+        @NameInMap("AliyunUid")
+        private String aliyunUid;
+
+        @NameInMap("Reason")
+        private String reason;
+
+        private FailResults(Builder builder) {
+            this.aliyunUid = builder.aliyunUid;
+            this.reason = builder.reason;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FailResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aliyunUid
+         */
+        public String getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        public static final class Builder {
+            private String aliyunUid; 
+            private String reason; 
+
+            /**
+             * The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.
+             */
+            public Builder aliyunUid(String aliyunUid) {
+                this.aliyunUid = aliyunUid;
+                return this;
+            }
+
+            /**
+             * The reason for the rejection.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            public FailResults build() {
+                return new FailResults(this);
+            } 
+
+        } 
+
+    }
 }
