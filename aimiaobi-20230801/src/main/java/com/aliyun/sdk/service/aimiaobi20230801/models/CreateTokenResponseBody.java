@@ -19,7 +19,7 @@ public class CreateTokenResponseBody extends TeaModel {
     private Data data;
 
     @NameInMap("HttpStatusCode")
-    private String httpStatusCode;
+    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -64,7 +64,7 @@ public class CreateTokenResponseBody extends TeaModel {
     /**
      * @return httpStatusCode
      */
-    public String getHttpStatusCode() {
+    public Integer getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
@@ -92,7 +92,7 @@ public class CreateTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Data data; 
-        private String httpStatusCode; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -116,7 +116,7 @@ public class CreateTokenResponseBody extends TeaModel {
         /**
          * HttpStatusCode.
          */
-        public Builder httpStatusCode(String httpStatusCode) {
+        public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
             return this;
         }

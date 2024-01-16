@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateTokenRequest extends Request {
     @Query
     @NameInMap("AgentKey")
+    @Validation(required = true)
     private String agentKey;
 
     private CreateTokenRequest(Builder builder) {
