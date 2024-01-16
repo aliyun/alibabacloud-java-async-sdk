@@ -118,18 +118,23 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCertificateWithCsrRequestRequest response) {
-            super(response);
-            this.csr = response.csr;
-            this.email = response.email;
-            this.phone = response.phone;
-            this.productCode = response.productCode;
-            this.username = response.username;
-            this.validateType = response.validateType;
+        private Builder(CreateCertificateWithCsrRequestRequest request) {
+            super(request);
+            this.csr = request.csr;
+            this.email = request.email;
+            this.phone = request.phone;
+            this.productCode = request.productCode;
+            this.username = request.username;
+            this.validateType = request.validateType;
         } 
 
         /**
-         * Csr.
+         * The content of the existing CSR file.\
+         * <p>
+         * The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see [How do I create a CSR file?](~~42218~~) You can also create a CSR in the [Certificate Management Service console](https://yundunnext.console.aliyun.com/?\&p=cas). For more information, see [Create a CSR](~~313297~~).\
+         * A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
+         * 
+         * >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -138,7 +143,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * Email.
+         * The contact email address of the applicant.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -147,7 +152,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * Phone.
+         * The phone number of the applicant.
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);
@@ -156,7 +161,16 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The specifications of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **digicert-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial. This is the default value.
+         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.
+         * *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
+         * *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
+         * *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.
+         * *   **globalsign-dv-1-personal**: GlobalSign single-domain DV certificate.
+         * *   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -165,7 +179,7 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * Username.
+         * The name of the applicant.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -174,7 +188,13 @@ public class CreateCertificateWithCsrRequestRequest extends Request {
         }
 
         /**
-         * ValidateType.
+         * The method to verify the ownership of a domain name. Valid values:
+         * <p>
+         * 
+         * *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.
+         * *   **FILE**: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.
+         * 
+         * For more information about the verification methods, see [Verify the ownership of a domain name](~~48016~~).
          */
         public Builder validateType(String validateType) {
             this.putQueryParameter("ValidateType", validateType);

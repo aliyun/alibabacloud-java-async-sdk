@@ -49,9 +49,9 @@ public class CancelCertificateForPackageRequestRequest extends Request {
             super();
         } 
 
-        private Builder(CancelCertificateForPackageRequestRequest response) {
-            super(response);
-            this.orderId = response.orderId;
+        private Builder(CancelCertificateForPackageRequestRequest request) {
+            super(request);
+            this.orderId = request.orderId;
         } 
 
         /**

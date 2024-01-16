@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cas20200407.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link EncryptResponseBody} extends {@link TeaModel}
+ *
+ * <p>EncryptResponseBody</p>
+ */
+public class EncryptResponseBody extends TeaModel {
+    @NameInMap("CertIdentifier")
+    private String certIdentifier;
+
+    @NameInMap("CiphertextBlob")
+    private String ciphertextBlob;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    private EncryptResponseBody(Builder builder) {
+        this.certIdentifier = builder.certIdentifier;
+        this.ciphertextBlob = builder.ciphertextBlob;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static EncryptResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return certIdentifier
+     */
+    public String getCertIdentifier() {
+        return this.certIdentifier;
+    }
+
+    /**
+     * @return ciphertextBlob
+     */
+    public String getCiphertextBlob() {
+        return this.ciphertextBlob;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String certIdentifier; 
+        private String ciphertextBlob; 
+        private String requestId; 
+
+        /**
+         * CertIdentifier.
+         */
+        public Builder certIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * CiphertextBlob.
+         */
+        public Builder ciphertextBlob(String ciphertextBlob) {
+            this.ciphertextBlob = ciphertextBlob;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public EncryptResponseBody build() {
+            return new EncryptResponseBody(this);
+        } 
+
+    } 
+
+}

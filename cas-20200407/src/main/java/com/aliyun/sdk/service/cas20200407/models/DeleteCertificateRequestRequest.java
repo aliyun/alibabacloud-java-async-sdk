@@ -49,13 +49,16 @@ public class DeleteCertificateRequestRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteCertificateRequestRequest response) {
-            super(response);
-            this.orderId = response.orderId;
+        private Builder(DeleteCertificateRequestRequest request) {
+            super(request);
+            this.orderId = request.orderId;
         } 
 
         /**
-         * OrderId.
+         * The ID of the certificate application order that you want to delete.
+         * <p>
+         * 
+         * >  After you call the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

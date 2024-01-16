@@ -50,7 +50,10 @@ public class CreateCertificateWithCsrRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The ID of the certificate application order.
+         * <p>
+         * 
+         * >  You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~164111~~).
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -58,7 +61,7 @@ public class CreateCertificateWithCsrRequestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
