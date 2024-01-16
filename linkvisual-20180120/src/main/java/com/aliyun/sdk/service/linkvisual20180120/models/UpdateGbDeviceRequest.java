@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateGbDeviceRequest} extends {@link RequestModel}
+ * {@link UpdateGbDeviceRequest} extends {@link RequestModel}
  *
- * <p>CreateGbDeviceRequest</p>
+ * <p>UpdateGbDeviceRequest</p>
  */
-public class CreateGbDeviceRequest extends Request {
+public class UpdateGbDeviceRequest extends Request {
     @Query
     @NameInMap("Description")
     private String description;
@@ -21,13 +21,12 @@ public class CreateGbDeviceRequest extends Request {
     private String deviceName;
 
     @Query
-    @NameInMap("DeviceType")
-    private Integer deviceType;
+    @NameInMap("GbId")
+    private String gbId;
 
     @Query
-    @NameInMap("GbId")
-    @Validation(required = true)
-    private String gbId;
+    @NameInMap("IotId")
+    private String iotId;
 
     @Query
     @NameInMap("IotInstanceId")
@@ -35,41 +34,29 @@ public class CreateGbDeviceRequest extends Request {
     private String iotInstanceId;
 
     @Query
-    @NameInMap("MediaNetProtocol")
-    private String mediaNetProtocol;
-
-    @Query
     @NameInMap("Password")
-    @Validation(required = true)
     private String password;
 
     @Query
     @NameInMap("ProductKey")
-    @Validation(required = true)
     private String productKey;
 
-    @Query
-    @NameInMap("SubProductKey")
-    private String subProductKey;
-
-    private CreateGbDeviceRequest(Builder builder) {
+    private UpdateGbDeviceRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.deviceName = builder.deviceName;
-        this.deviceType = builder.deviceType;
         this.gbId = builder.gbId;
+        this.iotId = builder.iotId;
         this.iotInstanceId = builder.iotInstanceId;
-        this.mediaNetProtocol = builder.mediaNetProtocol;
         this.password = builder.password;
         this.productKey = builder.productKey;
-        this.subProductKey = builder.subProductKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateGbDeviceRequest create() {
+    public static UpdateGbDeviceRequest create() {
         return builder().build();
     }
 
@@ -93,13 +80,6 @@ public class CreateGbDeviceRequest extends Request {
     }
 
     /**
-     * @return deviceType
-     */
-    public Integer getDeviceType() {
-        return this.deviceType;
-    }
-
-    /**
      * @return gbId
      */
     public String getGbId() {
@@ -107,17 +87,17 @@ public class CreateGbDeviceRequest extends Request {
     }
 
     /**
+     * @return iotId
+     */
+    public String getIotId() {
+        return this.iotId;
+    }
+
+    /**
      * @return iotInstanceId
      */
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    /**
-     * @return mediaNetProtocol
-     */
-    public String getMediaNetProtocol() {
-        return this.mediaNetProtocol;
     }
 
     /**
@@ -134,39 +114,28 @@ public class CreateGbDeviceRequest extends Request {
         return this.productKey;
     }
 
-    /**
-     * @return subProductKey
-     */
-    public String getSubProductKey() {
-        return this.subProductKey;
-    }
-
-    public static final class Builder extends Request.Builder<CreateGbDeviceRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateGbDeviceRequest, Builder> {
         private String description; 
         private String deviceName; 
-        private Integer deviceType; 
         private String gbId; 
+        private String iotId; 
         private String iotInstanceId; 
-        private String mediaNetProtocol; 
         private String password; 
         private String productKey; 
-        private String subProductKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateGbDeviceRequest request) {
+        private Builder(UpdateGbDeviceRequest request) {
             super(request);
             this.description = request.description;
             this.deviceName = request.deviceName;
-            this.deviceType = request.deviceType;
             this.gbId = request.gbId;
+            this.iotId = request.iotId;
             this.iotInstanceId = request.iotInstanceId;
-            this.mediaNetProtocol = request.mediaNetProtocol;
             this.password = request.password;
             this.productKey = request.productKey;
-            this.subProductKey = request.subProductKey;
         } 
 
         /**
@@ -188,15 +157,6 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
-         * DeviceType.
-         */
-        public Builder deviceType(Integer deviceType) {
-            this.putQueryParameter("DeviceType", deviceType);
-            this.deviceType = deviceType;
-            return this;
-        }
-
-        /**
          * GbId.
          */
         public Builder gbId(String gbId) {
@@ -206,20 +166,20 @@ public class CreateGbDeviceRequest extends Request {
         }
 
         /**
+         * IotId.
+         */
+        public Builder iotId(String iotId) {
+            this.putQueryParameter("IotId", iotId);
+            this.iotId = iotId;
+            return this;
+        }
+
+        /**
          * IotInstanceId.
          */
         public Builder iotInstanceId(String iotInstanceId) {
             this.putQueryParameter("IotInstanceId", iotInstanceId);
             this.iotInstanceId = iotInstanceId;
-            return this;
-        }
-
-        /**
-         * MediaNetProtocol.
-         */
-        public Builder mediaNetProtocol(String mediaNetProtocol) {
-            this.putQueryParameter("MediaNetProtocol", mediaNetProtocol);
-            this.mediaNetProtocol = mediaNetProtocol;
             return this;
         }
 
@@ -241,18 +201,9 @@ public class CreateGbDeviceRequest extends Request {
             return this;
         }
 
-        /**
-         * SubProductKey.
-         */
-        public Builder subProductKey(String subProductKey) {
-            this.putQueryParameter("SubProductKey", subProductKey);
-            this.subProductKey = subProductKey;
-            return this;
-        }
-
         @Override
-        public CreateGbDeviceRequest build() {
-            return new CreateGbDeviceRequest(this);
+        public UpdateGbDeviceRequest build() {
+            return new UpdateGbDeviceRequest(this);
         } 
 
     } 

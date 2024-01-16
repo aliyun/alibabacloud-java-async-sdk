@@ -78,6 +78,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFaceUserPictureResponse> deleteFaceUserPicture(DeleteFaceUserPictureRequest request);
 
+    CompletableFuture<DeleteGbDeviceResponse> deleteGbDevice(DeleteGbDeviceRequest request);
+
     CompletableFuture<DeleteLocalFileUploadJobResponse> deleteLocalFileUploadJob(DeleteLocalFileUploadJobRequest request);
 
     CompletableFuture<DeletePictureResponse> deletePicture(DeletePictureRequest request);
@@ -95,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTimeTemplateResponse> deleteTimeTemplate(DeleteTimeTemplateRequest request);
 
     CompletableFuture<DetectUserFaceByUrlResponse> detectUserFaceByUrl(DetectUserFaceByUrlRequest request);
+
+    CompletableFuture<EnableGbSubDeviceResponse> enableGbSubDevice(EnableGbSubDeviceRequest request);
 
     CompletableFuture<GetPictureSearchJobStatusResponse> getPictureSearchJobStatus(GetPictureSearchJobStatusRequest request);
 
@@ -152,6 +156,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryFaceUserIdByCustomUserIdResponse> queryFaceUserIdByCustomUserId(QueryFaceUserIdByCustomUserIdRequest request);
 
+    CompletableFuture<QueryGbSubDeviceListResponse> queryGbSubDeviceList(QueryGbSubDeviceListRequest request);
+
     CompletableFuture<QueryLiveStreamingResponse> queryLiveStreaming(QueryLiveStreamingRequest request);
 
     CompletableFuture<QueryLocalFileUploadJobResponse> queryLocalFileUploadJob(QueryLocalFileUploadJobRequest request);
@@ -202,6 +208,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryVoiceIntercomResponse> queryVoiceIntercom(QueryVoiceIntercomRequest request);
 
+    CompletableFuture<RefreshGbSubDeviceListResponse> refreshGbSubDeviceList(RefreshGbSubDeviceListRequest request);
+
     CompletableFuture<RemoveFaceDeviceFromDeviceGroupResponse> removeFaceDeviceFromDeviceGroup(RemoveFaceDeviceFromDeviceGroupRequest request);
 
     CompletableFuture<RemoveFaceUserFromUserGroupResponse> removeFaceUserFromUserGroup(RemoveFaceUserFromUserGroupRequest request);
@@ -227,6 +235,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFaceUserResponse> updateFaceUser(UpdateFaceUserRequest request);
 
     CompletableFuture<UpdateFaceUserGroupAndDeviceGroupRelationResponse> updateFaceUserGroupAndDeviceGroupRelation(UpdateFaceUserGroupAndDeviceGroupRelationRequest request);
+
+    CompletableFuture<UpdateGbDeviceResponse> updateGbDevice(UpdateGbDeviceRequest request);
 
     CompletableFuture<UpdateInstanceInternetProtocolResponse> updateInstanceInternetProtocol(UpdateInstanceInternetProtocolRequest request);
 
