@@ -212,11 +212,11 @@ public class CreateDeliveryPlanRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        private String accountId;
+        @NameInMap("userToken")
+        private String userToken;
 
         private AccountContext(Builder builder) {
-            this.accountId = builder.accountId;
+            this.userToken = builder.userToken;
         }
 
         public static Builder builder() {
@@ -228,20 +228,20 @@ public class CreateDeliveryPlanRequest extends Request {
         }
 
         /**
-         * @return accountId
+         * @return userToken
          */
-        public String getAccountId() {
-            return this.accountId;
+        public String getUserToken() {
+            return this.userToken;
         }
 
         public static final class Builder {
-            private String accountId; 
+            private String userToken; 
 
             /**
-             * accountId.
+             * userToken.
              */
-            public Builder accountId(String accountId) {
-                this.accountId = accountId;
+            public Builder userToken(String userToken) {
+                this.userToken = userToken;
                 return this;
             }
 

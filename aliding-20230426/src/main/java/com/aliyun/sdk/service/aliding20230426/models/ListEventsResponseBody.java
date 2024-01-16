@@ -24,11 +24,19 @@ public class ListEventsResponseBody extends TeaModel {
     @NameInMap("syncToken")
     private String syncToken;
 
+    @NameInMap("vendorRequestId")
+    private String vendorRequestId;
+
+    @NameInMap("vendorType")
+    private String vendorType;
+
     private ListEventsResponseBody(Builder builder) {
         this.events = builder.events;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.syncToken = builder.syncToken;
+        this.vendorRequestId = builder.vendorRequestId;
+        this.vendorType = builder.vendorType;
     }
 
     public static Builder builder() {
@@ -67,11 +75,27 @@ public class ListEventsResponseBody extends TeaModel {
         return this.syncToken;
     }
 
+    /**
+     * @return vendorRequestId
+     */
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    /**
+     * @return vendorType
+     */
+    public String getVendorType() {
+        return this.vendorType;
+    }
+
     public static final class Builder {
         private java.util.List < Events> events; 
         private String nextToken; 
         private String requestId; 
         private String syncToken; 
+        private String vendorRequestId; 
+        private String vendorType; 
 
         /**
          * events.
@@ -102,6 +126,22 @@ public class ListEventsResponseBody extends TeaModel {
          */
         public Builder syncToken(String syncToken) {
             this.syncToken = syncToken;
+            return this;
+        }
+
+        /**
+         * vendorRequestId.
+         */
+        public Builder vendorRequestId(String vendorRequestId) {
+            this.vendorRequestId = vendorRequestId;
+            return this;
+        }
+
+        /**
+         * vendorType.
+         */
+        public Builder vendorType(String vendorType) {
+            this.vendorType = vendorType;
             return this;
         }
 
