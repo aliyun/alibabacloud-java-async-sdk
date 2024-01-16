@@ -81,6 +81,9 @@ public class CreateUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("RealNickName")
+        private String realNickName;
+
         @NameInMap("Remark")
         private String remark;
 
@@ -88,6 +91,7 @@ public class CreateUsersResponseBody extends TeaModel {
             this.email = builder.email;
             this.endUserId = builder.endUserId;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
         }
 
@@ -121,6 +125,13 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -131,6 +142,7 @@ public class CreateUsersResponseBody extends TeaModel {
             private String email; 
             private String endUserId; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
 
             /**
@@ -154,6 +166,14 @@ public class CreateUsersResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RealNickName.
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
                 return this;
             }
 

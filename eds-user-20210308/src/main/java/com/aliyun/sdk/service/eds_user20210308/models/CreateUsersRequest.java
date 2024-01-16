@@ -137,6 +137,9 @@ public class CreateUsersRequest extends Request {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("RealNickName")
+        private String realNickName;
+
         @NameInMap("Remark")
         private String remark;
 
@@ -147,6 +150,7 @@ public class CreateUsersRequest extends Request {
             this.ownerType = builder.ownerType;
             this.password = builder.password;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
         }
 
@@ -201,6 +205,13 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -214,6 +225,7 @@ public class CreateUsersRequest extends Request {
             private String ownerType; 
             private String password; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
 
             /**
@@ -261,6 +273,14 @@ public class CreateUsersRequest extends Request {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RealNickName.
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
                 return this;
             }
 
