@@ -138,7 +138,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * DstType.
+         * The service to which the data to be de-identified belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder dstType(Integer dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -156,7 +156,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +165,11 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -174,7 +178,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +187,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword used to query the de-identification tasks, which can be the task name or ID.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -192,7 +196,7 @@ public class DescribeDataMaskingTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

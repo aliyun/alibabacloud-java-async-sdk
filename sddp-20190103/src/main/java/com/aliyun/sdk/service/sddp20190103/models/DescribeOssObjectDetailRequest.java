@@ -69,7 +69,10 @@ public class DescribeOssObjectDetailRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the OSS object.
+         * <p>
+         * 
+         * >  You can call the [DescribeOssObjects](~~410152~~) operation to obtain the ID of the OSS object.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +81,11 @@ public class DescribeOssObjectDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

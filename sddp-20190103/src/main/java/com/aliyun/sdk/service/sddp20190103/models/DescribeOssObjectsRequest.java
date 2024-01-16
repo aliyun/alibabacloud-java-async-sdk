@@ -17,6 +17,10 @@ public class DescribeOssObjectsRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("FileCategoryCode")
+    private Long fileCategoryCode;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -52,9 +56,14 @@ public class DescribeOssObjectsRequest extends Request {
     @NameInMap("ServiceRegionId")
     private String serviceRegionId;
 
+    @Query
+    @NameInMap("TemplateId")
+    private Long templateId;
+
     private DescribeOssObjectsRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.fileCategoryCode = builder.fileCategoryCode;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
         this.lastScanTimeEnd = builder.lastScanTimeEnd;
@@ -64,6 +73,7 @@ public class DescribeOssObjectsRequest extends Request {
         this.riskLevelId = builder.riskLevelId;
         this.ruleId = builder.ruleId;
         this.serviceRegionId = builder.serviceRegionId;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -84,6 +94,13 @@ public class DescribeOssObjectsRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return fileCategoryCode
+     */
+    public Long getFileCategoryCode() {
+        return this.fileCategoryCode;
     }
 
     /**
@@ -149,8 +166,16 @@ public class DescribeOssObjectsRequest extends Request {
         return this.serviceRegionId;
     }
 
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeOssObjectsRequest, Builder> {
         private Integer currentPage; 
+        private Long fileCategoryCode; 
         private String instanceId; 
         private String lang; 
         private Long lastScanTimeEnd; 
@@ -160,6 +185,7 @@ public class DescribeOssObjectsRequest extends Request {
         private Integer riskLevelId; 
         private Long ruleId; 
         private String serviceRegionId; 
+        private Long templateId; 
 
         private Builder() {
             super();
@@ -168,6 +194,7 @@ public class DescribeOssObjectsRequest extends Request {
         private Builder(DescribeOssObjectsRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.fileCategoryCode = request.fileCategoryCode;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
             this.lastScanTimeEnd = request.lastScanTimeEnd;
@@ -177,10 +204,11 @@ public class DescribeOssObjectsRequest extends Request {
             this.riskLevelId = request.riskLevelId;
             this.ruleId = request.ruleId;
             this.serviceRegionId = request.serviceRegionId;
+            this.templateId = request.templateId;
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +217,19 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The code of the file type.
+         */
+        public Builder fileCategoryCode(Long fileCategoryCode) {
+            this.putQueryParameter("FileCategoryCode", fileCategoryCode);
+            this.fileCategoryCode = fileCategoryCode;
+            return this;
+        }
+
+        /**
+         * The ID of the instance to which the OSS object belongs.
+         * <p>
+         * 
+         * > You can call the **DescribeInstances** operation to query the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -198,7 +238,11 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -207,7 +251,7 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * LastScanTimeEnd.
+         * The end time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder lastScanTimeEnd(Long lastScanTimeEnd) {
             this.putQueryParameter("LastScanTimeEnd", lastScanTimeEnd);
@@ -216,7 +260,7 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * LastScanTimeStart.
+         * The start time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder lastScanTimeStart(Long lastScanTimeStart) {
             this.putQueryParameter("LastScanTimeStart", lastScanTimeStart);
@@ -225,7 +269,7 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The search keyword. Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -234,7 +278,7 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +287,14 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the OSS object. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A, which indicates that no sensitive data is detected.
+         * *   **2**: S1, which indicates the low sensitivity level.
+         * *   **3**: S2, which indicates the medium sensitivity level.
+         * *   **4**: S3, which indicates the high sensitivity level.
+         * *   **5**: S4, which indicates the highest sensitivity level.
          */
         public Builder riskLevelId(Integer riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -252,7 +303,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the sensitive data detection rule that the OSS object hits.
+         * <p>
+         * 
+         * > You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -261,11 +315,20 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * The region in which the data asset resides.
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
             this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * The ID of the industry-specific rule template.
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

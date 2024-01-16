@@ -25,6 +25,10 @@ public class ModifyDataLimitRequest extends Request {
     private String engineType;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Id")
     @Validation(required = true)
     private Long id;
@@ -55,6 +59,14 @@ public class ModifyDataLimitRequest extends Request {
     private Integer resourceType;
 
     @Query
+    @NameInMap("SamplingSize")
+    private Integer samplingSize;
+
+    @Query
+    @NameInMap("SecurityGroupIdList")
+    private java.util.List < String > securityGroupIdList;
+
+    @Query
     @NameInMap("ServiceRegionId")
     private String serviceRegionId;
 
@@ -62,11 +74,20 @@ public class ModifyDataLimitRequest extends Request {
     @NameInMap("UserName")
     private String userName;
 
+    @Query
+    @NameInMap("VSwitchIdList")
+    private java.util.List < String > vSwitchIdList;
+
+    @Query
+    @NameInMap("VpcId")
+    private String vpcId;
+
     private ModifyDataLimitRequest(Builder builder) {
         super(builder);
         this.auditStatus = builder.auditStatus;
         this.autoScan = builder.autoScan;
         this.engineType = builder.engineType;
+        this.featureType = builder.featureType;
         this.id = builder.id;
         this.lang = builder.lang;
         this.logStoreDay = builder.logStoreDay;
@@ -74,8 +95,12 @@ public class ModifyDataLimitRequest extends Request {
         this.password = builder.password;
         this.port = builder.port;
         this.resourceType = builder.resourceType;
+        this.samplingSize = builder.samplingSize;
+        this.securityGroupIdList = builder.securityGroupIdList;
         this.serviceRegionId = builder.serviceRegionId;
         this.userName = builder.userName;
+        this.vSwitchIdList = builder.vSwitchIdList;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -110,6 +135,13 @@ public class ModifyDataLimitRequest extends Request {
      */
     public String getEngineType() {
         return this.engineType;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -162,6 +194,20 @@ public class ModifyDataLimitRequest extends Request {
     }
 
     /**
+     * @return samplingSize
+     */
+    public Integer getSamplingSize() {
+        return this.samplingSize;
+    }
+
+    /**
+     * @return securityGroupIdList
+     */
+    public java.util.List < String > getSecurityGroupIdList() {
+        return this.securityGroupIdList;
+    }
+
+    /**
      * @return serviceRegionId
      */
     public String getServiceRegionId() {
@@ -175,10 +221,25 @@ public class ModifyDataLimitRequest extends Request {
         return this.userName;
     }
 
+    /**
+     * @return vSwitchIdList
+     */
+    public java.util.List < String > getVSwitchIdList() {
+        return this.vSwitchIdList;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDataLimitRequest, Builder> {
         private Integer auditStatus; 
         private Integer autoScan; 
         private String engineType; 
+        private Integer featureType; 
         private Long id; 
         private String lang; 
         private Integer logStoreDay; 
@@ -186,8 +247,12 @@ public class ModifyDataLimitRequest extends Request {
         private String password; 
         private Integer port; 
         private Integer resourceType; 
+        private Integer samplingSize; 
+        private java.util.List < String > securityGroupIdList; 
         private String serviceRegionId; 
         private String userName; 
+        private java.util.List < String > vSwitchIdList; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -198,6 +263,7 @@ public class ModifyDataLimitRequest extends Request {
             this.auditStatus = request.auditStatus;
             this.autoScan = request.autoScan;
             this.engineType = request.engineType;
+            this.featureType = request.featureType;
             this.id = request.id;
             this.lang = request.lang;
             this.logStoreDay = request.logStoreDay;
@@ -205,12 +271,20 @@ public class ModifyDataLimitRequest extends Request {
             this.password = request.password;
             this.port = request.port;
             this.resourceType = request.resourceType;
+            this.samplingSize = request.samplingSize;
+            this.securityGroupIdList = request.securityGroupIdList;
             this.serviceRegionId = request.serviceRegionId;
             this.userName = request.userName;
+            this.vSwitchIdList = request.vSwitchIdList;
+            this.vpcId = request.vpcId;
         } 
 
         /**
-         * AuditStatus.
+         * Specifies whether to enable the security audit feature. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -219,7 +293,13 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * AutoScan.
+         * Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
+         * 
+         * > When a re-scan is triggered, DSC scans all data in your data asset.
          */
         public Builder autoScan(Integer autoScan) {
             this.putQueryParameter("AutoScan", autoScan);
@@ -228,7 +308,11 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * The database engine that is run by the instance. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **SQLServer**
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -237,7 +321,19 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Id.
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The unique ID of the data asset for which you want to modify configuration items.
+         * <p>
+         * 
+         * > You can call the [DescribeDataLimits](~~DescribeDataLimits~~) operation to query the ID of the data asset.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -246,7 +342,11 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -255,7 +355,13 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * LogStoreDay.
+         * The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **90**
+         * *   **180**
+         * *   **365**
          */
         public Builder logStoreDay(Integer logStoreDay) {
             this.putQueryParameter("LogStoreDay", logStoreDay);
@@ -264,7 +370,11 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * ModifyPassword.
+         * Specifies whether to change the username and password that are used to log on to the ApsaraDB RDS database. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder modifyPassword(Boolean modifyPassword) {
             this.putQueryParameter("ModifyPassword", modifyPassword);
@@ -273,7 +383,7 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password used to log on to the ApsaraDB RDS database that you authorize DSC to access.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -282,7 +392,7 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is used to connect to the database.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -291,7 +401,14 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The name of the service to which the data asset belongs. Valid values:
+         * <p>
+         * 
+         * *   **1**: MaxCompute
+         * *   **2**: Object Storage Service (OSS)
+         * *   **3**: AnalyticDB for MySQL
+         * *   **4**: Tablestore
+         * *   **5**: ApsaraDB RDS
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -300,7 +417,39 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * The number of sensitive data samples tht are collected after sensitive data detection is enabled. Valid values:
+         * <p>
+         * 
+         * *   **0**
+         * *   **5**
+         * *   **10**
+         */
+        public Builder samplingSize(Integer samplingSize) {
+            this.putQueryParameter("SamplingSize", samplingSize);
+            this.samplingSize = samplingSize;
+            return this;
+        }
+
+        /**
+         * The security group that is used by PrivateLink when you install the DSC agent.
+         */
+        public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
+            this.putQueryParameter("SecurityGroupIdList", securityGroupIdList);
+            this.securityGroupIdList = securityGroupIdList;
+            return this;
+        }
+
+        /**
+         * The region in which the data asset resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-huhehaote**: China (Hohhot)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -309,11 +458,29 @@ public class ModifyDataLimitRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username used to log on to the ApsaraDB RDS database that you authorize DSC to access.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
             this.userName = userName;
+            return this;
+        }
+
+        /**
+         * The vSwitch that is used by PrivateLink when you install the DSC agent.
+         */
+        public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
+            this.putQueryParameter("VSwitchIdList", vSwitchIdList);
+            this.vSwitchIdList = vSwitchIdList;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC) to which the data asset belongs.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

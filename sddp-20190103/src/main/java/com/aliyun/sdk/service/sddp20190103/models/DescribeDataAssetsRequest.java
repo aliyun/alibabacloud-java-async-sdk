@@ -138,7 +138,7 @@ public class DescribeDataAssetsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,11 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Simplified Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +160,7 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The keyword that is used to search for data assets. Fuzzy search is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -165,7 +169,7 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +178,28 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * RangeId.
+         * The type of the data asset that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **1**: MaxCompute project
+         * *   **2**: MaxCompute table
+         * *   **3**: MaxCompute package
+         * *   **11**: AnalyticDB for MySQL database
+         * *   **12**: AnalyticDB for MySQL table
+         * *   **21**: Object Storage Service (OSS) bucket
+         * *   **22**: OSS object
+         * *   **31**: Tablestore instance
+         * *   **32**: Tablestore table
+         * *   **51**: ApsaraDB RDS database
+         * *   **52**: ApsaraDB RDS table
+         * *   **61**: self-managed database hosted on an Elastic Compute Service (ECS) instance
+         * *   **62**: self-managed table hosted on an ECS instance
+         * *   **71**: PolarDB-X database
+         * *   **72**: PolarDB-X table
+         * *   **81**: PolarDB database
+         * *   **82**: PolarDB table
+         * *   **91**: AnalyticDB for PostgreSQL database
+         * *   **92**: AnalyticDB for PostgreSQL table
          */
         public Builder rangeId(Integer rangeId) {
             this.putQueryParameter("RangeId", rangeId);
@@ -183,7 +208,13 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * RiskLevels.
+         * The sensitivity level of the data asset. Separate multiple sensitivity levels with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **2**: S1, indicating the low sensitivity level
+         * *   **3**: S2, indicating the medium sensitivity level
+         * *   **4**: S3, indicating the high sensitivity level
+         * *   **5**: S4, indicating the highest sensitivity level
          */
         public Builder riskLevels(String riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -192,7 +223,10 @@ public class DescribeDataAssetsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The unique ID of the sensitive data detection rule that the data assets to be queried hit.
+         * <p>
+         * 
+         * > If you query sensitive data detection results based on the sensitive data detection rule that the data assets hit, you can call the [DescribeRules](~~DescribeRules~~) operation to query the ID of the sensitive data detection rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

@@ -17,6 +17,10 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -35,6 +39,7 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
     private DescribeCategoryTemplateRuleListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskLevelId = builder.riskLevelId;
@@ -59,6 +64,13 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -91,6 +103,7 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCategoryTemplateRuleListRequest, Builder> {
         private Integer currentPage; 
+        private Integer featureType; 
         private String lang; 
         private Integer pageSize; 
         private Long riskLevelId; 
@@ -103,6 +116,7 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         private Builder(DescribeCategoryTemplateRuleListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskLevelId = request.riskLevelId;
@@ -110,7 +124,7 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +133,20 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Simplified Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +155,7 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +164,21 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the data that is not compliant with the rule. Valid values: **1** to **11**. Default value: **null**.
+         * <p>
+         * 
+         * *   **1**: No sensitive data is detected.
+         * *   **2**: specifies the S1 sensitivity level.
+         * *   **3**: specifies the S2 sensitivity level.
+         * *   **4**: specifies the S3 sensitivity level.
+         * *   **5**: specifies the S4 sensitivity level.
+         * *   **6**: specifies the S5 sensitivity level.
+         * *   **7**: specifies the S6 sensitivity level.
+         * *   **8**: specifies the S7 sensitivity level.
+         * *   **9**: specifies the S8 sensitivity level.
+         * *   **10**: specifies the S9 sensitivity level.
+         * *   **11**: specifies the S10 sensitivity level.
+         * *   **null**: specifies all preceding sensitivity levels.
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -146,7 +187,12 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the rule. Default value: **null**. Valid values:
+         * <p>
+         * 
+         * *   **0**: disabled
+         * *   **1**: enabled
+         * *   **null**: all states
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

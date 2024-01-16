@@ -50,7 +50,7 @@ public class CreateDataLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the data asset.
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -58,7 +58,7 @@ public class CreateDataLimitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

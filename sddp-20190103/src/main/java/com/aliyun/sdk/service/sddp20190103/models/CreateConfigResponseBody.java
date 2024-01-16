@@ -50,7 +50,7 @@ public class CreateConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the common alert configuration.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +58,7 @@ public class CreateConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

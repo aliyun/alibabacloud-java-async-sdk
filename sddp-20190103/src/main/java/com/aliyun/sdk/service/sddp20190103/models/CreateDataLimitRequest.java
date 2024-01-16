@@ -21,12 +21,24 @@ public class CreateDataLimitRequest extends Request {
     private Integer autoScan;
 
     @Query
+    @NameInMap("CertificatePermission")
+    private String certificatePermission;
+
+    @Query
+    @NameInMap("Enable")
+    private Integer enable;
+
+    @Query
     @NameInMap("EngineType")
     private String engineType;
 
     @Query
     @NameInMap("EventStatus")
     private Integer eventStatus;
+
+    @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
 
     @Query
     @NameInMap("Lang")
@@ -58,8 +70,16 @@ public class CreateDataLimitRequest extends Request {
     private Integer resourceType;
 
     @Query
+    @NameInMap("SamplingSize")
+    private Integer samplingSize;
+
+    @Query
     @NameInMap("ServiceRegionId")
     private String serviceRegionId;
+
+    @Query
+    @NameInMap("SourceIp")
+    private String sourceIp;
 
     @Query
     @NameInMap("UserName")
@@ -69,8 +89,11 @@ public class CreateDataLimitRequest extends Request {
         super(builder);
         this.auditStatus = builder.auditStatus;
         this.autoScan = builder.autoScan;
+        this.certificatePermission = builder.certificatePermission;
+        this.enable = builder.enable;
         this.engineType = builder.engineType;
         this.eventStatus = builder.eventStatus;
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.logStoreDay = builder.logStoreDay;
         this.ocrStatus = builder.ocrStatus;
@@ -78,7 +101,9 @@ public class CreateDataLimitRequest extends Request {
         this.password = builder.password;
         this.port = builder.port;
         this.resourceType = builder.resourceType;
+        this.samplingSize = builder.samplingSize;
         this.serviceRegionId = builder.serviceRegionId;
+        this.sourceIp = builder.sourceIp;
         this.userName = builder.userName;
     }
 
@@ -110,6 +135,20 @@ public class CreateDataLimitRequest extends Request {
     }
 
     /**
+     * @return certificatePermission
+     */
+    public String getCertificatePermission() {
+        return this.certificatePermission;
+    }
+
+    /**
+     * @return enable
+     */
+    public Integer getEnable() {
+        return this.enable;
+    }
+
+    /**
      * @return engineType
      */
     public String getEngineType() {
@@ -121,6 +160,13 @@ public class CreateDataLimitRequest extends Request {
      */
     public Integer getEventStatus() {
         return this.eventStatus;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -173,10 +219,24 @@ public class CreateDataLimitRequest extends Request {
     }
 
     /**
+     * @return samplingSize
+     */
+    public Integer getSamplingSize() {
+        return this.samplingSize;
+    }
+
+    /**
      * @return serviceRegionId
      */
     public String getServiceRegionId() {
         return this.serviceRegionId;
+    }
+
+    /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     /**
@@ -189,8 +249,11 @@ public class CreateDataLimitRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDataLimitRequest, Builder> {
         private Integer auditStatus; 
         private Integer autoScan; 
+        private String certificatePermission; 
+        private Integer enable; 
         private String engineType; 
         private Integer eventStatus; 
+        private Integer featureType; 
         private String lang; 
         private Integer logStoreDay; 
         private Integer ocrStatus; 
@@ -198,7 +261,9 @@ public class CreateDataLimitRequest extends Request {
         private String password; 
         private Integer port; 
         private Integer resourceType; 
+        private Integer samplingSize; 
         private String serviceRegionId; 
+        private String sourceIp; 
         private String userName; 
 
         private Builder() {
@@ -209,8 +274,11 @@ public class CreateDataLimitRequest extends Request {
             super(request);
             this.auditStatus = request.auditStatus;
             this.autoScan = request.autoScan;
+            this.certificatePermission = request.certificatePermission;
+            this.enable = request.enable;
             this.engineType = request.engineType;
             this.eventStatus = request.eventStatus;
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.logStoreDay = request.logStoreDay;
             this.ocrStatus = request.ocrStatus;
@@ -218,12 +286,18 @@ public class CreateDataLimitRequest extends Request {
             this.password = request.password;
             this.port = request.port;
             this.resourceType = request.resourceType;
+            this.samplingSize = request.samplingSize;
             this.serviceRegionId = request.serviceRegionId;
+            this.sourceIp = request.sourceIp;
             this.userName = request.userName;
         } 
 
         /**
-         * AuditStatus.
+         * Specifies whether to enable the security audit feature. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -232,7 +306,13 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * AutoScan.
+         * Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
+         * 
+         * > When a re-scan is triggered, DSC scans all data in your data asset.
          */
         public Builder autoScan(Integer autoScan) {
             this.putQueryParameter("AutoScan", autoScan);
@@ -241,7 +321,39 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * The permissions. Valid values:
+         * <p>
+         * 
+         * *   **ReadOnly**: read-only permissions
+         * *   **ReadWrite**: read and write permissions
+         */
+        public Builder certificatePermission(String certificatePermission) {
+            this.putQueryParameter("CertificatePermission", certificatePermission);
+            this.certificatePermission = certificatePermission;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable sensitive data detection. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
+         * 
+         * > If this is your first time to authorize DSC to access the data asset, the default value is 1. If this is not your first time to authorize DSC to access the data asset, the default value is the same as that used in the last authorization operation. Both 1 and 0 are possible.
+         */
+        public Builder enable(Integer enable) {
+            this.putQueryParameter("Enable", enable);
+            this.enable = enable;
+            return this;
+        }
+
+        /**
+         * The database engine that is run by the instance. Valid values:
+         * <p>
+         * 
+         * *   **MySQL**
+         * *   **SQLServer**
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -250,7 +362,11 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * EventStatus.
+         * Specifies whether to enable anomalous event detection. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes (default)
          */
         public Builder eventStatus(Integer eventStatus) {
             this.putQueryParameter("EventStatus", eventStatus);
@@ -259,7 +375,20 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * Lang.
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -268,7 +397,13 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * LogStoreDay.
+         * The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **90**
+         * *   **180**
+         * *   **365**
          */
         public Builder logStoreDay(Integer logStoreDay) {
             this.putQueryParameter("LogStoreDay", logStoreDay);
@@ -277,7 +412,11 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * OcrStatus.
+         * Specifies whether to enable optical character recognition (OCR). Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder ocrStatus(Integer ocrStatus) {
             this.putQueryParameter("OcrStatus", ocrStatus);
@@ -286,7 +425,7 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * The name of the data asset.
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -295,7 +434,7 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that is used to access the database.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -304,7 +443,7 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port that is used to connect to the database.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -313,7 +452,14 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of service to which the data asset belongs. Valid values:
+         * <p>
+         * 
+         * *   **1** :MaxCompute
+         * *   **2**: Object Storage Service (OSS)
+         * *   **3**: AnalyticDB for MySQL
+         * *   **4** :Tablestore
+         * *   **5**: ApsaraDB RDS
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -322,7 +468,30 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * The number of sensitive data samples that are collected after sensitive data detection is enabled. Valid values:
+         * <p>
+         * 
+         * *   **0**
+         * *   **5**
+         * *   **10**
+         */
+        public Builder samplingSize(Integer samplingSize) {
+            this.putQueryParameter("SamplingSize", samplingSize);
+            this.samplingSize = samplingSize;
+            return this;
+        }
+
+        /**
+         * The region in which the data asset resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing).
+         * *   **cn-zhangjiakou**: China (Zhangjiakou)
+         * *   **cn-huhehaote**: China (Hohhot)
+         * *   **cn-hangzhou**: China (Hangzhou)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **cn-hongkong**: China (Hong Kong)
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
@@ -331,7 +500,16 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * UserName.
+         * SourceIp.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * The username that is used to access the database.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

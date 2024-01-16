@@ -50,7 +50,11 @@ public class CreateSlrRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HasPermission.
+         * Indicates whether the service-linked role was created. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder hasPermission(Boolean hasPermission) {
             this.hasPermission = hasPermission;
@@ -58,7 +62,7 @@ public class CreateSlrRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

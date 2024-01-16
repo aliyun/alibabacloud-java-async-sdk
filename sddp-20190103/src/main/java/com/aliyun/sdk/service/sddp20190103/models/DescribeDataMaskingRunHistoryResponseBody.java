@@ -86,7 +86,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The execution information about the de-identification task.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -374,7 +374,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * ConflictCount.
+             * The number of rows that are in conflict with the data to be de-identified in the destination table to which the data to be de-identified is moved.
              */
             public Builder conflictCount(Long conflictCount) {
                 this.conflictCount = conflictCount;
@@ -382,7 +382,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DstType.
+             * The type of the service to which the de-identified data belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
              */
             public Builder dstType(Integer dstType) {
                 this.dstType = dstType;
@@ -390,7 +390,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DstTypeCode.
+             * The service that stores the de-identified data. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder dstTypeCode(String dstTypeCode) {
                 this.dstTypeCode = dstTypeCode;
@@ -398,7 +398,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the de-identification task.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -406,7 +406,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * FailCode.
+             * The error code that is returned when the de-identification task fails.
              */
             public Builder failCode(String failCode) {
                 this.failCode = failCode;
@@ -414,7 +414,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * FailMsg.
+             * The reason why the de-identification task fails.
              */
             public Builder failMsg(String failMsg) {
                 this.failMsg = failMsg;
@@ -422,7 +422,11 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * HasDownloadFile.
+             * Indicates whether a file is available for download.
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder hasDownloadFile(Integer hasDownloadFile) {
                 this.hasDownloadFile = hasDownloadFile;
@@ -430,7 +434,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * HasSubProcess.
+             * The number of created subtasks.
              */
             public Builder hasSubProcess(Integer hasSubProcess) {
                 this.hasSubProcess = hasSubProcess;
@@ -438,7 +442,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task execution record.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -446,7 +450,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingCount.
+             * The number of rows that are de-identified.
              */
             public Builder maskingCount(Long maskingCount) {
                 this.maskingCount = maskingCount;
@@ -454,7 +458,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * The progress of the de-identification task.
              */
             public Builder percentage(Integer percentage) {
                 this.percentage = percentage;
@@ -462,7 +466,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * RunIndex.
+             * The number of times that the de-identification task is executed.
              */
             public Builder runIndex(Integer runIndex) {
                 this.runIndex = runIndex;
@@ -470,7 +474,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTableName.
+             * The name of the source table.
              */
             public Builder srcTableName(String srcTableName) {
                 this.srcTableName = srcTableName;
@@ -478,7 +482,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcType.
+             * The type of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
              */
             public Builder srcType(Integer srcType) {
                 this.srcType = srcType;
@@ -486,7 +490,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTypeCode.
+             * The service to which the data to be de-identified belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder srcTypeCode(String srcTypeCode) {
                 this.srcTypeCode = srcTypeCode;
@@ -494,7 +498,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the de-identification task was executed. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -502,7 +506,15 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the de-identification task. Valid values:
+             * <p>
+             * 
+             * *   **-1**: waiting
+             * *   **0**: being executed
+             * *   **1**: executed
+             * *   **2**: failed to be executed
+             * *   **3**: terminated
+             * *   **4**: partially failed
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -510,7 +522,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the identification task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -518,7 +530,11 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The mode in which the de-identification task is executed. Valid values:
+             * <p>
+             * 
+             * *   **1**: manual
+             * *   **2**: scheduled
              */
             public Builder type(Integer type) {
                 this.type = type;

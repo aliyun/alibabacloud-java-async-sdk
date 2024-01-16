@@ -56,6 +56,10 @@ public class DescribeTablesRequest extends Request {
     @NameInMap("ServiceRegionId")
     private String serviceRegionId;
 
+    @Query
+    @NameInMap("TemplateId")
+    private Long templateId;
+
     private DescribeTablesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -69,6 +73,7 @@ public class DescribeTablesRequest extends Request {
         this.riskLevelId = builder.riskLevelId;
         this.ruleId = builder.ruleId;
         this.serviceRegionId = builder.serviceRegionId;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -161,6 +166,13 @@ public class DescribeTablesRequest extends Request {
         return this.serviceRegionId;
     }
 
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTablesRequest, Builder> {
         private Integer currentPage; 
         private Long instanceId; 
@@ -173,6 +185,7 @@ public class DescribeTablesRequest extends Request {
         private Long riskLevelId; 
         private Long ruleId; 
         private String serviceRegionId; 
+        private Long templateId; 
 
         private Builder() {
             super();
@@ -191,10 +204,11 @@ public class DescribeTablesRequest extends Request {
             this.riskLevelId = request.riskLevelId;
             this.ruleId = request.ruleId;
             this.serviceRegionId = request.serviceRegionId;
+            this.templateId = request.templateId;
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -203,7 +217,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the data asset to which the table belongs. You can call the [DescribeInstances](~~DescribeInstances~~) operation to obtain the ID of the data asset.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +226,11 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -221,7 +239,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -230,7 +248,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * PackageId.
+         * The ID of the package to which the table belongs. You can call the [DescribePackages](~~DescribePackages~~) operation to obtain the ID of the package.
          */
         public Builder packageId(Long packageId) {
             this.putQueryParameter("PackageId", packageId);
@@ -239,7 +257,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +266,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see [Supported data assets](~~212906~~).
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -257,7 +275,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * The ID of the service to which the table belongs. You can call the [DescribeDataAssets](~~DescribeDataAssets~~) operation to obtain the ID of the service.
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -266,7 +284,14 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A, which indicates that no sensitive data is detected.
+         * *   **2**: S1, which indicates the low sensitivity level.
+         * *   **3**: S2, which indicates the medium sensitivity level.
+         * *   **4**: S3, which indicates the high sensitivity level.
+         * *   **5**: S4, which indicates the highest sensitivity level.
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -275,7 +300,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the sensitive data detection rule that the table hits. You can call the [DescribeRules](~~DescribeRules~~) operation to obtain the ID of the sensitive data detection rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -284,11 +309,20 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * ServiceRegionId.
+         * The region in which DSC is activated. For more information, see [Supported regions](~~214257~~).
          */
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
             this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * The ID of the industry-specific rule template.
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

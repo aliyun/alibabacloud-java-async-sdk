@@ -50,7 +50,12 @@ public class ExecDatamaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The de-identified data, which is described in a JSON string. The JSON string contains the following parameters:
+         * <p>
+         * 
+         * *   **dataHeaderList**: the names of columns that contain the de-identified data.
+         * *   **dataList**: the de-identified data. The column order of the de-identified data is the same as that indicated by the dataHeaderList parameter.
+         * *   **ruleList**: the IDs of sensitive data detection rules.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +63,7 @@ public class ExecDatamaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

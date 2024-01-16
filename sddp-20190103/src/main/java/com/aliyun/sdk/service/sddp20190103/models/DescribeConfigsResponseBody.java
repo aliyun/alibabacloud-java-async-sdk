@@ -50,7 +50,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigList.
+         * An array that consists of common configuration items for alerts.
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -58,7 +58,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Code.
+             * The code of the common configuration item.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +154,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The description of the default value for the common configuration item.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -162,7 +162,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the common configuration item.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The unique ID of the common configuration item.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +178,7 @@ public class DescribeConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the common configuration item.
              */
             public Builder value(String value) {
                 this.value = value;

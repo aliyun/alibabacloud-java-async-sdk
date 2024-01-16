@@ -86,7 +86,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the anomalous events.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +386,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private Integer warnLevel; 
 
             /**
-             * AlertTime.
+             * The time when an alert was triggered for the anomalous event. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -394,7 +394,11 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Backed.
+             * Indicates whether the detection of anomalous events is enhanced. If the detection of anomalous events is enhanced, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder backed(Boolean backed) {
                 this.backed = backed;
@@ -402,7 +406,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealDisplayName.
+             * The display name of the account that is used to handle the anomalous event.
              */
             public Builder dealDisplayName(String dealDisplayName) {
                 this.dealDisplayName = dealDisplayName;
@@ -410,7 +414,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealLoginName.
+             * The username of the account that is used to handle the anomalous event.
              */
             public Builder dealLoginName(String dealLoginName) {
                 this.dealLoginName = dealLoginName;
@@ -418,7 +422,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealTime.
+             * The time when the anomalous event was handled. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder dealTime(Long dealTime) {
                 this.dealTime = dealTime;
@@ -426,7 +430,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DealUserId.
+             * The ID of the account that is used to handle the anomalous event.
              */
             public Builder dealUserId(Long dealUserId) {
                 this.dealUserId = dealUserId;
@@ -434,7 +438,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the account that triggered the anomalous event.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -442,7 +446,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * The time when the anomalous event occurred. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder eventTime(Long eventTime) {
                 this.eventTime = eventTime;
@@ -450,7 +454,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the anomalous event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -458,7 +462,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * The username of the account that triggered the anomalous event.
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -466,7 +470,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The name of the service in which the anomalous event was detected.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -474,7 +478,12 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The handling status for the anomalous event. Valid values:
+             * <p>
+             * 
+             * *   0: unhandled
+             * *   1: confirmed
+             * *   2: marked as false positive
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -482,7 +491,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusName.
+             * The name of the handling status for the anomalous event.
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -490,7 +499,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeCode.
+             * The code of the anomalous event subtype.
              */
             public Builder subTypeCode(String subTypeCode) {
                 this.subTypeCode = subTypeCode;
@@ -498,7 +507,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeName.
+             * The name of the anomalous event subtype.
              */
             public Builder subTypeName(String subTypeName) {
                 this.subTypeName = subTypeName;
@@ -506,7 +515,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetProductCode.
+             * The name of the destination service in an anomalous data flow.
              */
             public Builder targetProductCode(String targetProductCode) {
                 this.targetProductCode = targetProductCode;
@@ -514,7 +523,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeCode.
+             * The code of the anomalous event type.
              */
             public Builder typeCode(String typeCode) {
                 this.typeCode = typeCode;
@@ -522,7 +531,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * The name of the anomalous event type.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -530,7 +539,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account that triggered the anomalous event.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -538,7 +547,12 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnLevel.
+             * The severity of the anomalous event.
+             * <p>
+             * 
+             * *   **1**: low
+             * *   **2**: medium
+             * *   **3**: high
              */
             public Builder warnLevel(Integer warnLevel) {
                 this.warnLevel = warnLevel;

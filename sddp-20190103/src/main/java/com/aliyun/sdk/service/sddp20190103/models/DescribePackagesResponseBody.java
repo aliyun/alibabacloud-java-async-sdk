@@ -86,7 +86,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the information about the packages.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CreationTime.
+             * The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +274,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the package.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -282,7 +282,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the package belongs.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -290,7 +290,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the package.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +298,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The account of the user that owns the package.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -306,7 +306,14 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The sensitivity level of the package. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A, which indicates that no sensitive data is detected.
+             * *   **2**: S1, which indicates the low sensitivity level.
+             * *   **3**: S2, which indicates the medium sensitivity level.
+             * *   **4**: S3, which indicates the high sensitivity level.
+             * *   **5**: S4, which indicates the highest sensitivity level.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -314,7 +321,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The name of the sensitivity level for the package.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -322,7 +329,11 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * Indicates whether the package contains sensitive data. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -330,7 +341,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * The total volume of sensitive data in the package. For example, the value can be the total number of sensitive tables in the MaxCompute package.
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -338,7 +349,7 @@ public class DescribePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total volume of data in the package. For example, the value can be the total number of tables in the MaxCompute package.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

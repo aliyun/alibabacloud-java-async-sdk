@@ -50,7 +50,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OssObjectDetail.
+         * The details of the OSS object.
          */
         public Builder ossObjectDetail(OssObjectDetail ossObjectDetail) {
             this.ossObjectDetail = ossObjectDetail;
@@ -58,7 +58,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,12 +71,86 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class ModelTags extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private ModelTags(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * The tag ID.
+             * <p>
+             * 
+             * *   **101**: sensitive personal information
+             * *   **102**: personal information
+             * *   **103**: important information
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The tag name.
+             * <p>
+             * 
+             * *   Sensitive personal information
+             * *   Personal information
+             * *   Important information
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ModelTags build() {
+                return new ModelTags(this);
+            } 
+
+        } 
+
+    }
     public static class RuleList extends TeaModel {
         @NameInMap("CategoryName")
         private String categoryName;
 
         @NameInMap("Count")
         private Long count;
+
+        @NameInMap("ModelTags")
+        private java.util.List < ModelTags> modelTags;
 
         @NameInMap("RiskLevelId")
         private Long riskLevelId;
@@ -90,6 +164,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private RuleList(Builder builder) {
             this.categoryName = builder.categoryName;
             this.count = builder.count;
+            this.modelTags = builder.modelTags;
             this.riskLevelId = builder.riskLevelId;
             this.riskLevelName = builder.riskLevelName;
             this.ruleName = builder.ruleName;
@@ -118,6 +193,13 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelTags
+         */
+        public java.util.List < ModelTags> getModelTags() {
+            return this.modelTags;
+        }
+
+        /**
          * @return riskLevelId
          */
         public Long getRiskLevelId() {
@@ -141,12 +223,13 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String categoryName; 
             private Long count; 
+            private java.util.List < ModelTags> modelTags; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private String ruleName; 
 
             /**
-             * CategoryName.
+             * The type of the OSS object.
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -154,7 +237,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of times that the OSS object hits the sensitive data detection rule.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -162,7 +245,22 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * A list of tags for data that hits the recognition model.
+             */
+            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+                this.modelTags = modelTags;
+                return this;
+            }
+
+            /**
+             * The ID of the sensitivity level of the OSS object.
+             * <p>
+             * 
+             * *   **1**: No sensitive data is detected.
+             * *   **2**: indicates the low sensitivity level.
+             * *   **3**: indicates the medium sensitivity level.
+             * *   **4**: indicates the high sensitivity level.
+             * *   **5**: indicates the highest sensitivity level.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -170,7 +268,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The name of the sensitivity level for the OSS object.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -178,7 +276,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the sensitive data detection rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -279,7 +377,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private java.util.List < RuleList> ruleList; 
 
             /**
-             * BucketName.
+             * The name of the OSS bucket to which the OSS object belongs.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -287,7 +385,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * The type of the OSS object.
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -295,7 +393,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the OSS object.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,7 +401,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the OSS object.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -311,7 +409,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The name of the sensitivity level for the OSS object.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -319,7 +417,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * A list of the sensitive data detection rules that the OSS object hits.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;

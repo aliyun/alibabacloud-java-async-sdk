@@ -86,7 +86,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * A list of columns.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,6 +131,77 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     } 
 
+    public static class ModelTags extends TeaModel {
+        @NameInMap("Id")
+        private Long id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private ModelTags(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * The tag ID.
+             * <p>
+             * 
+             * *   **101**: sensitive personal information
+             * *   **102**: personal information
+             * *   **103**: important information
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * The tag name.
+             * <p>
+             * 
+             * *   Sensitive personal information
+             * *   Personal information
+             * *   Important information
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ModelTags build() {
+                return new ModelTags(this);
+            } 
+
+        } 
+
+    }
     public static class Items extends TeaModel {
         @NameInMap("CreationTime")
         private Long creationTime;
@@ -146,6 +217,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
         @NameInMap("InstanceName")
         private String instanceName;
+
+        @NameInMap("ModelTags")
+        private java.util.List < ModelTags> modelTags;
 
         @NameInMap("Name")
         private String name;
@@ -195,6 +269,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.modelTags = builder.modelTags;
             this.name = builder.name;
             this.odpsRiskLevelName = builder.odpsRiskLevelName;
             this.odpsRiskLevelValue = builder.odpsRiskLevelValue;
@@ -252,6 +327,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        /**
+         * @return modelTags
+         */
+        public java.util.List < ModelTags> getModelTags() {
+            return this.modelTags;
         }
 
         /**
@@ -358,6 +440,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String id; 
             private Long instanceId; 
             private String instanceName; 
+            private java.util.List < ModelTags> modelTags; 
             private String name; 
             private String odpsRiskLevelName; 
             private Integer odpsRiskLevelValue; 
@@ -374,7 +457,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * CreationTime.
+             * The time when the data in the column of the table is created. Unit: milliseconds.
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -382,7 +465,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The type of data in the column of the table.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -390,7 +473,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the column of the table.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -398,7 +481,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which data in the column of the table belongs.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -406,7 +489,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance to which data in the column of the table belongs.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -414,7 +497,15 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * A list of tags for data that hits the recognition model.
+             */
+            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+                this.modelTags = modelTags;
+                return this;
+            }
+
+            /**
+             * The name of the column of the table.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +513,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * OdpsRiskLevelName.
+             * The name of the sensitivity level for asset. Valid values:
+             * <p>
+             * 
+             * *   **N/A**: indicates that no sensitive data is detected.
+             * *   **S1**: indicates the low sensitivity level.
+             * *   **S2**: indicates the medium sensitivity level.
+             * *   **S3**: indicates the high sensitivity level.
+             * *   **S4**: indicates the highest sensitivity level.
              */
             public Builder odpsRiskLevelName(String odpsRiskLevelName) {
                 this.odpsRiskLevelName = odpsRiskLevelName;
@@ -430,7 +528,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * OdpsRiskLevelValue.
+             * The ID of the sensitivity level of the asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A
+             * *   **2**: S1
+             * *   **3**: S2
+             * *   **4**: S3
+             * *   **5**: S4
              */
             public Builder odpsRiskLevelValue(Integer odpsRiskLevelValue) {
                 this.odpsRiskLevelValue = odpsRiskLevelValue;
@@ -438,7 +543,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -446,7 +551,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionId.
+             * The ID of the revision record.
              */
             public Builder revisionId(Long revisionId) {
                 this.revisionId = revisionId;
@@ -454,7 +559,11 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionStatus.
+             * Indicates whether the column is revised. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder revisionStatus(Long revisionStatus) {
                 this.revisionStatus = revisionStatus;
@@ -462,7 +571,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The ID of the sensitivity level of data in the column of the table. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A
+             * *   **2**: S1
+             * *   **3**: S2
+             * *   **4**: S3
+             * *   **5**: S4
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -470,7 +586,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The name of the sensitivity level for data in the column of the table. Valid values:
+             * <p>
+             * 
+             * *   **N/A**: indicates that no sensitive data is detected.
+             * *   **S1**: indicates the low sensitivity level.
+             * *   **S2**: indicates the medium sensitivity level.
+             * *   **S3**: indicates the high sensitivity level.
+             * *   **S4**: indicates the highest sensitivity level.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -478,7 +601,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the sensitive data detection rule that data in the column of the table hits.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -486,7 +609,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the sensitive data detection rule that data in the column of the table hits.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -494,7 +617,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SensLevelName.
+             * The name of the sensitivity level. Valid values:
+             * <p>
+             * 
+             * *   **N/A**: indicates that no sensitive data is detected.
+             * *   **S1**: indicates the low sensitivity level.
+             * *   **S2**: indicates the medium sensitivity level.
+             * *   **S3**: indicates the high sensitivity level.
+             * *   **S4**: indicates the highest sensitivity level.
              */
             public Builder sensLevelName(String sensLevelName) {
                 this.sensLevelName = sensLevelName;
@@ -502,7 +632,11 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitive.
+             * Indicates whether the column contains sensitive data. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -510,7 +644,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * The ID of the table.
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -518,7 +652,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table to which the revised column belongs.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -82,7 +82,14 @@ public class ModifyDefaultLevelRequest extends Request {
         } 
 
         /**
-         * DefaultId.
+         * The default sensitivity level of data that Data Security Center (DSC) cannot classify as sensitive or insensitive. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A
+         * *   **2**: S1
+         * *   **3**: S2
+         * *   **4**: S3
+         * *   **5**: S4
          */
         public Builder defaultId(Long defaultId) {
             this.putQueryParameter("DefaultId", defaultId);
@@ -91,7 +98,11 @@ public class ModifyDefaultLevelRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +111,14 @@ public class ModifyDefaultLevelRequest extends Request {
         }
 
         /**
-         * SensitiveIds.
+         * The sensitivity level ID of data that DSC classifies as sensitive. Separate multiple IDs with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A
+         * *   **2**: S1
+         * *   **3**: S2
+         * *   **4**: S3
+         * *   **5**: S4
          */
         public Builder sensitiveIds(String sensitiveIds) {
             this.putQueryParameter("SensitiveIds", sensitiveIds);

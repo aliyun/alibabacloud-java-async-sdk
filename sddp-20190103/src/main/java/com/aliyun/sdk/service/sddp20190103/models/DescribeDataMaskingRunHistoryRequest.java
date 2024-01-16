@@ -194,7 +194,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -203,7 +203,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * DstType.
+         * The type of the service to which the de-identified data belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder dstType(Integer dstType) {
             this.putQueryParameter("DstType", dstType);
@@ -212,7 +212,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -221,7 +221,11 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -230,7 +234,10 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * MainProcessId.
+         * The ID of the task.
+         * <p>
+         * 
+         * > If a task has one or more subtasks, the value of the parameter must be the ID of the task. Otherwise, leave this parameter empty.
          */
         public Builder mainProcessId(Long mainProcessId) {
             this.putQueryParameter("MainProcessId", mainProcessId);
@@ -239,7 +246,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +255,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * SrcTableName.
+         * The name of the source table.
          */
         public Builder srcTableName(String srcTableName) {
             this.putQueryParameter("SrcTableName", srcTableName);
@@ -257,7 +264,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * SrcType.
+         * The type of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder srcType(Integer srcType) {
             this.putQueryParameter("SrcType", srcType);
@@ -266,7 +273,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -275,7 +282,15 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the de-identification task. Valid values:
+         * <p>
+         * 
+         * *   **-1**: waiting
+         * *   **0**: being executed
+         * *   **1**: executed
+         * *   **2**: failed to be executed
+         * *   **3**: terminated
+         * *   **4**: partially failed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -284,7 +299,7 @@ public class DescribeDataMaskingRunHistoryRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the de-identification task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

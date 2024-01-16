@@ -152,7 +152,7 @@ public class DescribePackagesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -161,7 +161,10 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which the package belongs.
+         * <p>
+         * 
+         * > You can call the **DescribeInstances** operation to query the ID of the instance.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +173,11 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +186,7 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The search keyword. Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -188,7 +195,7 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +204,10 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * The ID of the service to which the package belongs.
+         * <p>
+         * 
+         * > You can call the **DescribeDataAssets** operation to query the ID of the service.
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -206,7 +216,14 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the package. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A, which indicates that no sensitive data is detected.
+         * *   **2**: S1, which indicates the low sensitivity level.
+         * *   **3**: S2, which indicates the medium sensitivity level.
+         * *   **4**: S3, which indicates the high sensitivity level.
+         * *   **5**: S4, which indicates the highest sensitivity level.
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -215,7 +232,10 @@ public class DescribePackagesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the sensitive data detection rule that the package hits.
+         * <p>
+         * 
+         * > You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

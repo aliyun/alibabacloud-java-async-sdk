@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEventTypesRequest extends Request {
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -30,6 +34,7 @@ public class DescribeEventTypesRequest extends Request {
 
     private DescribeEventTypesRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.parentTypeId = builder.parentTypeId;
         this.resourceId = builder.resourceId;
@@ -47,6 +52,13 @@ public class DescribeEventTypesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -78,6 +90,7 @@ public class DescribeEventTypesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEventTypesRequest, Builder> {
+        private Integer featureType; 
         private String lang; 
         private Long parentTypeId; 
         private Integer resourceId; 
@@ -89,6 +102,7 @@ public class DescribeEventTypesRequest extends Request {
 
         private Builder(DescribeEventTypesRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.parentTypeId = request.parentTypeId;
             this.resourceId = request.resourceId;
@@ -96,7 +110,20 @@ public class DescribeEventTypesRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +132,12 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * ParentTypeId.
+         * The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:
+         * <p>
+         * 
+         * *   **01**: anomalous permission usage
+         * *   **02**: anomalous data flow
+         * *   **03**: anomalous data operation
          */
         public Builder parentTypeId(Long parentTypeId) {
             this.putQueryParameter("ParentTypeId", parentTypeId);
@@ -114,7 +146,7 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The type of the resource. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder resourceId(Integer resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -123,7 +155,11 @@ public class DescribeEventTypesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the anomalous event. Valid values:
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **2**: disabled
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

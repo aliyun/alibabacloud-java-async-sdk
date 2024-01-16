@@ -86,7 +86,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The list of rules.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of rules in the template.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The unique ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -246,7 +246,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * IdentificationRuleIds.
+             * The IDs of sensitive data types. Multiple IDs are separated by commas (,).
              */
             public Builder identificationRuleIds(String identificationRuleIds) {
                 this.identificationRuleIds = identificationRuleIds;
@@ -254,7 +254,16 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * IdentificationScope.
+             * The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:
+             * <p>
+             * 
+             * *   **Asset**: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.
+             * 
+             * *   **Content**: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:
+             * 
+             *     *   **Range**: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.
+             *     *   **Operator**: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.
+             *     *   **Value**: the matching content. The value is of the STRING type.
              */
             public Builder identificationScope(String identificationScope) {
                 this.identificationScope = identificationScope;
@@ -262,7 +271,7 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +279,21 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The sensitivity level of the data that is not compliant with the rule. Valid values: **1** to **11**.
+             * <p>
+             * 
+             * *   **1**: No sensitive data is detected.
+             * *   **2**: indicates the S1 sensitivity level.
+             * *   **3**: indicates the S2 sensitivity level.
+             * *   **4**: indicates the S3 sensitivity level.
+             * *   **5**: indicates the S4 sensitivity level.
+             * *   **6**: indicates the S5 sensitivity level.
+             * *   **7**: indicates the S6 sensitivity level.
+             * *   **8**: indicates the S7 sensitivity level.
+             * *   **9**: indicates the S8 sensitivity level.
+             * *   **10**: indicates the S9 sensitivity level.
+             * *   **11**: indicates the S10 sensitivity level.
+             * *   **null**: indicates all preceding sensitivity levels.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -278,7 +301,12 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
+             * *   **null**: all states
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -86,7 +86,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the sensitive data detection rules.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -174,6 +174,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("MajorKey")
         private String majorKey;
 
+        @NameInMap("MatchType")
+        private Integer matchType;
+
         @NameInMap("Name")
         private String name;
 
@@ -194,6 +197,9 @@ public class DescribeRulesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("SupportForm")
+        private Integer supportForm;
 
         @NameInMap("Target")
         private String target;
@@ -219,6 +225,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             this.id = builder.id;
             this.loginName = builder.loginName;
             this.majorKey = builder.majorKey;
+            this.matchType = builder.matchType;
             this.name = builder.name;
             this.productCode = builder.productCode;
             this.productId = builder.productId;
@@ -226,6 +233,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             this.riskLevelName = builder.riskLevelName;
             this.statExpress = builder.statExpress;
             this.status = builder.status;
+            this.supportForm = builder.supportForm;
             this.target = builder.target;
             this.userId = builder.userId;
             this.warnLevel = builder.warnLevel;
@@ -338,6 +346,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return matchType
+         */
+        public Integer getMatchType() {
+            return this.matchType;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -387,6 +402,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportForm
+         */
+        public Integer getSupportForm() {
+            return this.supportForm;
+        }
+
+        /**
          * @return target
          */
         public String getTarget() {
@@ -422,6 +444,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             private Long id; 
             private String loginName; 
             private String majorKey; 
+            private Integer matchType; 
             private String name; 
             private String productCode; 
             private Long productId; 
@@ -429,12 +452,17 @@ public class DescribeRulesResponseBody extends TeaModel {
             private String riskLevelName; 
             private String statExpress; 
             private Integer status; 
+            private Integer supportForm; 
             private String target; 
             private Long userId; 
             private Integer warnLevel; 
 
             /**
-             * Category.
+             * The content type of the sensitive data detection rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: keyword
+             * *   **2**: regular expression
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -442,7 +470,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * The name of the content type of the sensitive data detection rule.
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -450,7 +478,10 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content in the sensitive data detection rule.
+             * <p>
+             * 
+             * >  A built-in detection rule whose CustomType is 0 does not return the content of the rule.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -458,7 +489,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ContentCategory.
+             * The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.
              */
             public Builder contentCategory(String contentCategory) {
                 this.contentCategory = contentCategory;
@@ -466,7 +497,11 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomType.
+             * The type of the sensitive data detection rule.
+             * <p>
+             * 
+             * *   0: built-in rule
+             * *   1: custom rule
              */
             public Builder customType(Integer customType) {
                 this.customType = customType;
@@ -474,7 +509,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the sensitive data detection rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -482,7 +517,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the account that is used to create the sensitive data detection rule.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -490,7 +525,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -498,7 +533,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -506,7 +541,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The parent group type of the rule.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -514,7 +549,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HitTotalCount.
+             * The number of times that the sensitive data detection rule is hit.
              */
             public Builder hitTotalCount(Integer hitTotalCount) {
                 this.hitTotalCount = hitTotalCount;
@@ -522,7 +557,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the sensitive data detection rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -530,7 +565,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LoginName.
+             * The username of the account that is used to create the sensitive data detection rule.
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -538,7 +573,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MajorKey.
+             * The key of the primary dimension.
              */
             public Builder majorKey(String majorKey) {
                 this.majorKey = majorKey;
@@ -546,7 +581,19 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The match type. Valid values:
+             * <p>
+             * 
+             * *   **1**: rule-based match
+             * *   **2**: dictionary-based match
+             */
+            public Builder matchType(Integer matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * The name of the sensitive data detection rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -554,7 +601,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -562,7 +609,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -570,7 +617,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A, which indicates that no sensitive data is detected.
+             * *   **2**: S1, which indicates the low sensitivity level.
+             * *   **3**: S2, which indicates the medium sensitivity level.
+             * *   **4**: S3, which indicates the high sensitivity level.
+             * *   **5**: S4, which indicates the highest sensitivity level.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -578,7 +632,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The sensitivity level of data that hits the sensitive data detection rule. Valid values:
+             * <p>
+             * 
+             * *   **N/A**: indicates that no sensitive data is detected.
+             * *   **S1**: indicates the low sensitivity level.
+             * *   **S2**: indicates the medium sensitivity level.
+             * *   **S3**: indicates the high sensitivity level.
+             * *   **S4**: indicates the highest sensitivity level.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -586,7 +647,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StatExpress.
+             * The statistical expression.
              */
             public Builder statExpress(String statExpress) {
                 this.statExpress = statExpress;
@@ -594,7 +655,11 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the sensitive data detection rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -602,7 +667,20 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The data asset type that is supported by the sensitive data detection rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: all data assets
+             * *   **1**: structured data assets
+             * *   **2**: unstructured data assets
+             */
+            public Builder supportForm(Integer supportForm) {
+                this.supportForm = supportForm;
+                return this;
+            }
+
+            /**
+             * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -610,7 +688,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the account that is used to create the sensitive data detection rule.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -618,7 +696,12 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * WarnLevel.
+             * The severity level. Valid values:
+             * <p>
+             * 
+             * *   **1**: low
+             * *   **2**: medium
+             * *   **3**: high
              */
             public Builder warnLevel(Integer warnLevel) {
                 this.warnLevel = warnLevel;

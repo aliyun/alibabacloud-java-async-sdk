@@ -69,7 +69,7 @@ public class StopMaskingProcessRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The unique ID of the de-identification task. You can query the task ID by calling the [DescribeDataMaskingTasks](~~DescribeDataMaskingTasks~~) operation.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +78,11 @@ public class StopMaskingProcessRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Simplified Chinese (default)
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

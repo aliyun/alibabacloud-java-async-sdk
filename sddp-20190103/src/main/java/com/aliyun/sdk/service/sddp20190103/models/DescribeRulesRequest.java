@@ -29,6 +29,10 @@ public class DescribeRulesRequest extends Request {
     private Integer customType;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("GroupId")
     private String groupId;
 
@@ -39,6 +43,10 @@ public class DescribeRulesRequest extends Request {
     @Query
     @NameInMap("Lang")
     private String lang;
+
+    @Query
+    @NameInMap("MatchType")
+    private Integer matchType;
 
     @Query
     @NameInMap("Name")
@@ -69,6 +77,10 @@ public class DescribeRulesRequest extends Request {
     private Integer status;
 
     @Query
+    @NameInMap("SupportForm")
+    private Integer supportForm;
+
+    @Query
     @NameInMap("WarnLevel")
     private Integer warnLevel;
 
@@ -78,9 +90,11 @@ public class DescribeRulesRequest extends Request {
         this.contentCategory = builder.contentCategory;
         this.currentPage = builder.currentPage;
         this.customType = builder.customType;
+        this.featureType = builder.featureType;
         this.groupId = builder.groupId;
         this.keywordCompatible = builder.keywordCompatible;
         this.lang = builder.lang;
+        this.matchType = builder.matchType;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.productCode = builder.productCode;
@@ -88,6 +102,7 @@ public class DescribeRulesRequest extends Request {
         this.riskLevelId = builder.riskLevelId;
         this.ruleType = builder.ruleType;
         this.status = builder.status;
+        this.supportForm = builder.supportForm;
         this.warnLevel = builder.warnLevel;
     }
 
@@ -133,6 +148,13 @@ public class DescribeRulesRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -151,6 +173,13 @@ public class DescribeRulesRequest extends Request {
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return matchType
+     */
+    public Integer getMatchType() {
+        return this.matchType;
     }
 
     /**
@@ -203,6 +232,13 @@ public class DescribeRulesRequest extends Request {
     }
 
     /**
+     * @return supportForm
+     */
+    public Integer getSupportForm() {
+        return this.supportForm;
+    }
+
+    /**
      * @return warnLevel
      */
     public Integer getWarnLevel() {
@@ -214,9 +250,11 @@ public class DescribeRulesRequest extends Request {
         private Integer contentCategory; 
         private Integer currentPage; 
         private Integer customType; 
+        private Integer featureType; 
         private String groupId; 
         private Boolean keywordCompatible; 
         private String lang; 
+        private Integer matchType; 
         private String name; 
         private Integer pageSize; 
         private Integer productCode; 
@@ -224,6 +262,7 @@ public class DescribeRulesRequest extends Request {
         private Long riskLevelId; 
         private Integer ruleType; 
         private Integer status; 
+        private Integer supportForm; 
         private Integer warnLevel; 
 
         private Builder() {
@@ -236,9 +275,11 @@ public class DescribeRulesRequest extends Request {
             this.contentCategory = request.contentCategory;
             this.currentPage = request.currentPage;
             this.customType = request.customType;
+            this.featureType = request.featureType;
             this.groupId = request.groupId;
             this.keywordCompatible = request.keywordCompatible;
             this.lang = request.lang;
+            this.matchType = request.matchType;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.productCode = request.productCode;
@@ -246,11 +287,16 @@ public class DescribeRulesRequest extends Request {
             this.riskLevelId = request.riskLevelId;
             this.ruleType = request.ruleType;
             this.status = request.status;
+            this.supportForm = request.supportForm;
             this.warnLevel = request.warnLevel;
         } 
 
         /**
-         * Category.
+         * The content type of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: keyword
+         * *   **2**: regular expression
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -259,7 +305,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * ContentCategory.
+         * The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.
          */
         public Builder contentCategory(Integer contentCategory) {
             this.putQueryParameter("ContentCategory", contentCategory);
@@ -268,7 +314,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -277,7 +323,11 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * CustomType.
+         * The type of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: built-in rule
+         * *   **1**: custom rule
          */
         public Builder customType(Integer customType) {
             this.putQueryParameter("CustomType", customType);
@@ -286,7 +336,16 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * This parameter is deprecated.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The parent group type of the rule.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -295,7 +354,13 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * KeywordCompatible.
+         * Specifies whether to allow earlier versions of request parameters to support keywords that are supported in later versions of request parameters. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         * 
+         * > To specify keywords as the content type of the sensitive data detection rule, you can set the Category parameter to 0 for earlier versions of request parameters and set the Category parameter to 5 for later versions of request parameters. You can specify the KeywordCompatible parameter based on your business requirements.
          */
         public Builder keywordCompatible(Boolean keywordCompatible) {
             this.putQueryParameter("KeywordCompatible", keywordCompatible);
@@ -304,7 +369,11 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -313,7 +382,20 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The match type. Valid values:
+         * <p>
+         * 
+         * *   1: rule-based match
+         * *   2: dictionary-based match
+         */
+        public Builder matchType(Integer matchType) {
+            this.putQueryParameter("MatchType", matchType);
+            this.matchType = matchType;
+            return this;
+        }
+
+        /**
+         * The name of the sensitive data detection rule. Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -322,7 +404,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +413,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
          */
         public Builder productCode(Integer productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -340,7 +422,7 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -349,7 +431,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A, which indicates that no sensitive data is detected.
+         * *   **2**: S1, which indicates the low sensitivity level.
+         * *   **3**: S2, which indicates the medium sensitivity level.
+         * *   **4**: S3, which indicates the high sensitivity level.
+         * *   **5**: S4, which indicates the highest sensitivity level.
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -358,7 +447,13 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: sensitive data detection rule
+         * *   **2**: audit rule
+         * *   **3**: anomalous event detection rule
+         * *   **99**: custom rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -367,7 +462,11 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **0**: disabled
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -376,7 +475,28 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * WarnLevel.
+         * The type of the data asset. Valid values:
+         * <p>
+         * 
+         * *   **0**: all data assets
+         * *   **1**: structured data asset
+         * *   **2**: unstructured data asset
+         * 
+         * > If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.
+         */
+        public Builder supportForm(Integer supportForm) {
+            this.putQueryParameter("SupportForm", supportForm);
+            this.supportForm = supportForm;
+            return this;
+        }
+
+        /**
+         * The severity level of the alert. Valid values:
+         * <p>
+         * 
+         * *   **1**: low
+         * *   **2**: medium
+         * *   **3**: high
          */
         public Builder warnLevel(Integer warnLevel) {
             this.putQueryParameter("WarnLevel", warnLevel);

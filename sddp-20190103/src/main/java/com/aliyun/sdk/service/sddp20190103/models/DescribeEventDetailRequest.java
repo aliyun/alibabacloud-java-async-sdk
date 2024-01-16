@@ -69,7 +69,10 @@ public class DescribeEventDetailRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the anomalous event.
+         * <p>
+         * 
+         * > You can call the **DescribeEvents** operation to query the ID of the anomalous event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +81,11 @@ public class DescribeEventDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

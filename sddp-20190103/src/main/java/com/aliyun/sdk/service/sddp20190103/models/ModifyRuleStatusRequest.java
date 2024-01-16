@@ -97,7 +97,10 @@ public class ModifyRuleStatusRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the sensitive data detection rule.
+         * <p>
+         * 
+         * > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -106,7 +109,10 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -115,7 +121,11 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +134,11 @@ public class ModifyRuleStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable or disable the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: disables the sensitive data detection rule.
+         * *   **1**: enables the sensitive data detection rule.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

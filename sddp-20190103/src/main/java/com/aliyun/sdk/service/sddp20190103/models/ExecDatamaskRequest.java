@@ -18,6 +18,10 @@ public class ExecDatamaskRequest extends Request {
     private String data;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -29,6 +33,7 @@ public class ExecDatamaskRequest extends Request {
     private ExecDatamaskRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.templateId = builder.templateId;
     }
@@ -54,6 +59,13 @@ public class ExecDatamaskRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -69,6 +81,7 @@ public class ExecDatamaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExecDatamaskRequest, Builder> {
         private String data; 
+        private Integer featureType; 
         private String lang; 
         private Long templateId; 
 
@@ -79,12 +92,18 @@ public class ExecDatamaskRequest extends Request {
         private Builder(ExecDatamaskRequest request) {
             super(request);
             this.data = request.data;
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.templateId = request.templateId;
         } 
 
         /**
-         * Data.
+         * The sensitive data to be de-identified. The value is a JSON string that contains the following parameters:
+         * <p>
+         * 
+         * *   **dataHeaderList**: the names of the columns in which data needs to be de-identified. Specify the column names in accordance with the order of data that needs to be de-identified.
+         * *   **dataList**: the data that needs to be de-identified.
+         * *   **ruleList**: the IDs of sensitive data detection rules used to detect data that needs to be de-identified. Specify the rule IDs in accordance with the order of data that needs to be de-identified. Each ID identifies a sensitive data detection rule that is used to detect a type of sensitive data. You can call the [DescribeRules](~~DescribeRules~~) operation to query the IDs of sensitive data detection rules.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -93,7 +112,20 @@ public class ExecDatamaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Simplified Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +134,11 @@ public class ExecDatamaskRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the de-identification template. The ID is generated after you create the de-identification template in the [Data Security Center (DSC) console](https://yundun.console.aliyun.com/?\&p=sddpnext#/sddp/dm/template). You can choose **Data desensitization** > **Desensitization Template** in the left-side navigation pane and obtain the ID of the de-identification template from the **Desensitization Template** page.
+         * <p>
+         * 
+         * *   If you select **Field name** as the matching mode of the template, DSC matches data based on the columns specified by the **dataHeaderList** parameter in the **Data** parameter.
+         * *   If you select **Sensitive type** as the matching mode of the template, DSC matches data based on the sensitive data detection rules specified by the **ruleList** parameter in the **Data** parameter.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

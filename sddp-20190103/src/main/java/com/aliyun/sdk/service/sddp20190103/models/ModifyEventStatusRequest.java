@@ -112,7 +112,11 @@ public class ModifyEventStatusRequest extends Request {
         } 
 
         /**
-         * Backed.
+         * Specifies whether to enhance the detection of anomalous events. If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder backed(Boolean backed) {
             this.putQueryParameter("Backed", backed);
@@ -121,7 +125,7 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * DealReason.
+         * The reason why the anomalous event is handled.
          */
         public Builder dealReason(String dealReason) {
             this.putQueryParameter("DealReason", dealReason);
@@ -130,7 +134,10 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the anomalous event.
+         * <p>
+         * 
+         * > You can call the **DescribeEvents** operation to query the ID of the anomalous event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -139,7 +146,11 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +159,11 @@ public class ModifyEventStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The method to handle the anomalous event. Valid values:
+         * <p>
+         * 
+         * *   **1**: marks the anomalous event as a false positive.
+         * *   **2**: confirms and handles the anomalous event.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

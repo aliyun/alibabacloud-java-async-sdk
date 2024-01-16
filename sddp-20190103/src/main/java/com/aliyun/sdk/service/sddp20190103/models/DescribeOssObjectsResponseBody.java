@@ -86,7 +86,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * A list of OSS objects.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private Long riskLevelId; 
 
             /**
-             * Count.
+             * The number of times that the rule is hit.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -190,7 +190,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The search keyword. Fuzzy match is supported.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +198,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The ID of the sensitivity level of the OSS object. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A, which indicates that no sensitive data is detected.
+             * *   **2**: S1, which indicates the low sensitivity level.
+             * *   **3**: S2, which indicates the medium sensitivity level.
+             * *   **4**: S3, which indicates the high sensitivity level.
+             * *   **5**: S4, which indicates the highest sensitivity level.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -221,6 +228,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
         @NameInMap("CategoryName")
         private String categoryName;
+
+        @NameInMap("FileCategoryCode")
+        private Long fileCategoryCode;
+
+        @NameInMap("FileCategoryName")
+        private String fileCategoryName;
 
         @NameInMap("FileId")
         private String fileId;
@@ -259,6 +272,8 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             this.bucketName = builder.bucketName;
             this.category = builder.category;
             this.categoryName = builder.categoryName;
+            this.fileCategoryCode = builder.fileCategoryCode;
+            this.fileCategoryName = builder.fileCategoryName;
             this.fileId = builder.fileId;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
@@ -299,6 +314,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
          */
         public String getCategoryName() {
             return this.categoryName;
+        }
+
+        /**
+         * @return fileCategoryCode
+         */
+        public Long getFileCategoryCode() {
+            return this.fileCategoryCode;
+        }
+
+        /**
+         * @return fileCategoryName
+         */
+        public String getFileCategoryName() {
+            return this.fileCategoryName;
         }
 
         /**
@@ -382,6 +411,8 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private String bucketName; 
             private Long category; 
             private String categoryName; 
+            private Long fileCategoryCode; 
+            private String fileCategoryName; 
             private String fileId; 
             private String id; 
             private Long instanceId; 
@@ -395,7 +426,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * BucketName.
+             * The name of the bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -403,7 +434,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * The type of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.
              */
             public Builder category(Long category) {
                 this.category = category;
@@ -411,7 +442,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * The name of the file type.
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -419,7 +450,23 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The code of the file type.
+             */
+            public Builder fileCategoryCode(Long fileCategoryCode) {
+                this.fileCategoryCode = fileCategoryCode;
+                return this;
+            }
+
+            /**
+             * The name of the file type.
+             */
+            public Builder fileCategoryName(String fileCategoryName) {
+                this.fileCategoryName = fileCategoryName;
+                return this;
+            }
+
+            /**
+             * The file ID of the OSS object.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -427,7 +474,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the OSS object.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -435,7 +482,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the OSS object belongs.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -443,7 +490,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the OSS object.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -451,7 +498,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the OSS object.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -459,7 +506,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelId.
+             * The ID of the sensitivity level of the OSS object. Valid values:
+             * <p>
+             * 
+             * *   **1**: N/A, which indicates that no sensitive data is detected.
+             * *   **2**: S1, which indicates the low sensitivity level.
+             * *   **3**: S2, which indicates the medium sensitivity level.
+             * *   **4**: S3, which indicates the high sensitivity level.
+             * *   **5**: S4, which indicates the highest sensitivity level.
              */
             public Builder riskLevelId(Long riskLevelId) {
                 this.riskLevelId = riskLevelId;
@@ -467,7 +521,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevelName.
+             * The name of the sensitivity level for the OSS object.
              */
             public Builder riskLevelName(String riskLevelName) {
                 this.riskLevelName = riskLevelName;
@@ -475,7 +529,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The number of rules that are hit.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -483,7 +537,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * A list of rules.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -491,7 +545,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveCount.
+             * The number of fields that are hit.
              */
             public Builder sensitiveCount(Integer sensitiveCount) {
                 this.sensitiveCount = sensitiveCount;
@@ -499,7 +553,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;

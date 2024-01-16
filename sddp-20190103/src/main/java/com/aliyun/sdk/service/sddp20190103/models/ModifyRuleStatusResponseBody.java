@@ -50,7 +50,7 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedIds.
+         * The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).
          */
         public Builder failedIds(String failedIds) {
             this.failedIds = failedIds;
@@ -58,7 +58,7 @@ public class ModifyRuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

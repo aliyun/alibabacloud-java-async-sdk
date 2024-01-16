@@ -50,7 +50,10 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EventTypeList.
+         * An array that consists of the types of anomalous events.
+         * <p>
+         * 
+         * > If you leave the ParentTypeId parameter empty, anomalous event types are returned. If you set the ParentTypeId parameter, anomalous event subtypes under the specified anomalous event type are returned.
          */
         public Builder eventTypeList(java.util.List < EventTypeList> eventTypeList) {
             this.eventTypeList = eventTypeList;
@@ -58,7 +61,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +221,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AdaptedProduct.
+             * The service to which the anomalous event detection rule applies. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder adaptedProduct(String adaptedProduct) {
                 this.adaptedProduct = adaptedProduct;
@@ -226,7 +229,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The code of the anomalous event subtype.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -234,7 +237,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigCode.
+             * The code of the configuration.
              */
             public Builder configCode(String configCode) {
                 this.configCode = configCode;
@@ -242,7 +245,11 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigContentType.
+             * The content format of anomalous event detection rule. Valid values:
+             * <p>
+             * 
+             * *   **0**: numeric values such as thresholds
+             * *   **1**: text such as IP addresses
              */
             public Builder configContentType(Integer configContentType) {
                 this.configContentType = configContentType;
@@ -250,7 +257,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigDescription.
+             * The description of the configuration.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -258,7 +265,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigValue.
+             * The value of the configuration.
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
@@ -266,7 +273,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the anomalous event subtype.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +281,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * EventHitCount.
+             * The number of times that the anomalous event hits the anomalous event detection rule.
              */
             public Builder eventHitCount(Integer eventHitCount) {
                 this.eventHitCount = eventHitCount;
@@ -282,7 +289,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the anomalous event subtype.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -290,7 +297,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the anomalous event subtype.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +305,11 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether detection is enabled for the anomalous event subtype. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -387,7 +398,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             private java.util.List < SubTypeList> subTypeList; 
 
             /**
-             * Code.
+             * The code of the anomalous event type.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -395,7 +406,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the anomalous event type.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +414,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the anomalous event type.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -411,7 +422,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the anomalous event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -419,7 +430,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SubTypeList.
+             * An array that consists of anomalous event subtypes.
              */
             public Builder subTypeList(java.util.List < SubTypeList> subTypeList) {
                 this.subTypeList = subTypeList;

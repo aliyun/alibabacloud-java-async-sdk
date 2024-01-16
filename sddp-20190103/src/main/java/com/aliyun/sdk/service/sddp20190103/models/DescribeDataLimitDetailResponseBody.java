@@ -50,7 +50,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataLimit.
+         * The details of the data asset.
          */
         public Builder dataLimit(DataLimit dataLimit) {
             this.dataLimit = dataLimit;
@@ -58,7 +58,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,12 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CheckStatus.
+             * The status of the connectivity test between the data asset and DSC. Valid values:
+             * <p>
+             * 
+             * *   **2**: indicates that the data asset was being connected.
+             * *   **3**: indicates that the data asset was connected to DSC.
+             * *   **4**: indicates that the data asset failed to be connected.
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -226,7 +231,12 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatusName.
+             * The result that indicates the status of the connectivity test between the data asset and DSC. Valid values:
+             * <p>
+             * 
+             * *   **Passed**
+             * *   **Failed**
+             * *   **Testing**
              */
             public Builder checkStatusName(String checkStatusName) {
                 this.checkStatusName = checkStatusName;
@@ -234,7 +244,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data asset was connected to DSC. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -242,7 +252,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -250,7 +260,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The region in which the data asset resides.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -258,7 +268,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The ID and name of the data asset in the service to which the data asset belongs.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -266,7 +276,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the database.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -274,7 +284,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the data asset resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -282,7 +292,14 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **1**: MaxCompute
+             * *   **2**: OSS
+             * *   **3**: AnalyticDB for MySQL
+             * *   **4**: Tablestore
+             * *   **5**: ApsaraDB RDS
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -290,7 +307,14 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * The service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **MaxCompute**
+             * *   **OSS**
+             * *   **ADS**
+             * *   **OTS**
+             * *   **RDS**
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -298,7 +322,7 @@ public class DescribeDataLimitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The account of the user who manages the data asset.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -86,7 +86,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the data assets.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -216,6 +216,9 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @NameInMap("SamplingSize")
         private Integer samplingSize;
 
+        @NameInMap("SecurityGroupIdList")
+        private java.util.List < String > securityGroupIdList;
+
         @NameInMap("SupportAudit")
         private Boolean supportAudit;
 
@@ -239,6 +242,12 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
 
         @NameInMap("UserName")
         private String userName;
+
+        @NameInMap("VSwitchIdList")
+        private java.util.List < String > vSwitchIdList;
+
+        @NameInMap("VpcId")
+        private String vpcId;
 
         private Items(Builder builder) {
             this.auditStatus = builder.auditStatus;
@@ -269,6 +278,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.resourceType = builder.resourceType;
             this.resourceTypeCode = builder.resourceTypeCode;
             this.samplingSize = builder.samplingSize;
+            this.securityGroupIdList = builder.securityGroupIdList;
             this.supportAudit = builder.supportAudit;
             this.supportDatamask = builder.supportDatamask;
             this.supportEvent = builder.supportEvent;
@@ -277,6 +287,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.tenantName = builder.tenantName;
             this.totalCount = builder.totalCount;
             this.userName = builder.userName;
+            this.vSwitchIdList = builder.vSwitchIdList;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -484,6 +496,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupIdList
+         */
+        public java.util.List < String > getSecurityGroupIdList() {
+            return this.securityGroupIdList;
+        }
+
+        /**
          * @return supportAudit
          */
         public Boolean getSupportAudit() {
@@ -539,6 +558,20 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             return this.userName;
         }
 
+        /**
+         * @return vSwitchIdList
+         */
+        public java.util.List < String > getVSwitchIdList() {
+            return this.vSwitchIdList;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Integer auditStatus; 
             private Integer autoScan; 
@@ -568,6 +601,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer samplingSize; 
+            private java.util.List < String > securityGroupIdList; 
             private Boolean supportAudit; 
             private Boolean supportDatamask; 
             private Boolean supportEvent; 
@@ -576,9 +610,15 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String tenantName; 
             private Integer totalCount; 
             private String userName; 
+            private java.util.List < String > vSwitchIdList; 
+            private String vpcId; 
 
             /**
-             * AuditStatus.
+             * Indicates whether the security audit feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -586,7 +626,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScan.
+             * Indicates whether the data asset can be automatically scanned. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder autoScan(Integer autoScan) {
                 this.autoScan = autoScan;
@@ -594,7 +638,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * The data detection status. Valid values:
+             * <p>
+             * 
+             * *   **0**: The data detection is ready.
+             * *   **1**: The data detection is running.
+             * *   **2**: The connectivity test is in progress.
+             * *   **3**: The connectivity test passed.
+             * *   **4**: The connectivity test failed.
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -602,7 +653,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatusName.
+             * The name of the data detection status.
              */
             public Builder checkStatusName(String checkStatusName) {
                 this.checkStatusName = checkStatusName;
@@ -610,7 +661,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * DatamaskStatus.
+             * Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder datamaskStatus(Integer datamaskStatus) {
                 this.datamaskStatus = datamaskStatus;
@@ -618,7 +673,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * The database engine version of the instance.
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -626,7 +681,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether DSC has the data detection permissions on the data asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -634,7 +693,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * The type of the database engine. Valid values include **MySQL**, **SQLServer**, **Oracle**, **PostgreSQL**, and **MongoDB**.
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -642,7 +701,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code that is returned.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -650,7 +709,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The reason for the failure.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -658,7 +717,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * Indicates whether the data leak prevention feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes (default value)
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -666,7 +729,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -674,7 +737,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -682,7 +745,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * The description of the instance.
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -690,7 +753,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance to which the table belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -698,7 +761,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LastFinishedTime.
+             * The time when the last scan was finished.
+             * <p>
+             * 
+             * *   The value is a UNIX timestamp.
+             * *   Unit: milliseconds.
              */
             public Builder lastFinishedTime(Long lastFinishedTime) {
                 this.lastFinishedTime = lastFinishedTime;
@@ -706,7 +773,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The region in which the data asset resides.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -714,7 +781,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreDay.
+             * The retention period of raw logs. Unit: days.
              */
             public Builder logStoreDay(Integer logStoreDay) {
                 this.logStoreDay = logStoreDay;
@@ -722,7 +789,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * NextStartTime.
+             * The next time when the data asset is scanned. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder nextStartTime(Long nextStartTime) {
                 this.nextStartTime = nextStartTime;
@@ -730,7 +797,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * OcrStatus.
+             * Indicates whether the optical character recognition (OCR) feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder ocrStatus(Integer ocrStatus) {
                 this.ocrStatus = ocrStatus;
@@ -738,7 +809,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The parent ID of the data asset. Valid values include **bucket, db, and project**.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -746,7 +817,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the self-managed database.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -754,7 +825,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessStatus.
+             * The status of the data asset scan. Valid values:
+             * <p>
+             * 
+             * *   **-1**: invalid
+             * *   **0**: waiting
+             * *   **1**: being scanned
+             * *   **2**: suspended
+             * *   **3**: completed
              */
             public Builder processStatus(Integer processStatus) {
                 this.processStatus = processStatus;
@@ -762,7 +840,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessTotalCount.
+             * The total number of data tables or files.
              */
             public Builder processTotalCount(Integer processTotalCount) {
                 this.processTotalCount = processTotalCount;
@@ -770,7 +848,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the data asset resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -778,7 +856,15 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **1**: MaxCompute
+             * *   **2**: OSS
+             * *   **3**: AnalyticDB for MySQL
+             * *   **4**: Tablestore
+             * *   **5**: ApsaraDB RDS
+             * *   **6**: self-managed database
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -786,7 +872,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * The code of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -794,7 +880,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingSize.
+             * The number of sensitive data samples. Valid values: **0**, **5**, and **10**. Unit: data entries.
              */
             public Builder samplingSize(Integer samplingSize) {
                 this.samplingSize = samplingSize;
@@ -802,7 +888,19 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAudit.
+             * The array consisting of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.
+             */
+            public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
+                this.securityGroupIdList = securityGroupIdList;
+                return this;
+            }
+
+            /**
+             * Indicates whether the security audit feature is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder supportAudit(Boolean supportAudit) {
                 this.supportAudit = supportAudit;
@@ -810,7 +908,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDatamask.
+             * Indicates whether data de-identification is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder supportDatamask(Boolean supportDatamask) {
                 this.supportDatamask = supportDatamask;
@@ -818,7 +920,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEvent.
+             * Indicates whether anomalous event detection is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder supportEvent(Boolean supportEvent) {
                 this.supportEvent = supportEvent;
@@ -826,7 +932,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOcr.
+             * Indicates whether OCR is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder supportOcr(Boolean supportOcr) {
                 this.supportOcr = supportOcr;
@@ -834,7 +944,11 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportScan.
+             * Indicates whether the data asset scan feature is supported. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder supportScan(Boolean supportScan) {
                 this.supportScan = supportScan;
@@ -842,7 +956,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * The alias of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -850,7 +964,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of fields in the table.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -858,10 +972,26 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username that is used to access the data asset.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
+                return this;
+            }
+
+            /**
+             * The array consisting of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.
+             */
+            public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
+                this.vSwitchIdList = vSwitchIdList;
+                return this;
+            }
+
+            /**
+             * The ID of the virtual private cloud (VPC) to which the data asset belongs.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

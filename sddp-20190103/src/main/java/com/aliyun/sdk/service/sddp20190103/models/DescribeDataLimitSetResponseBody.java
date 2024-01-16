@@ -50,7 +50,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataLimitSet.
+         * The information about the data asset.
          */
         public Builder dataLimitSet(DataLimitSet dataLimitSet) {
             this.dataLimitSet = dataLimitSet;
@@ -58,7 +58,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,12 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CheckStatus.
+             * Indicates whether the test of connectivity between DSC and the data asset is passed.
+             * <p>
+             * 
+             * *   **2**: The connectivity test is in progress.
+             * *   **3**: The connectivity test is passed.
+             * *   **4**: The connectivity test failed.
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -226,7 +231,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatusName.
+             * The name of the data detection status.
              */
             public Builder checkStatusName(String checkStatusName) {
                 this.checkStatusName = checkStatusName;
@@ -234,7 +239,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * Connector.
+             * The connection string that is used to access the data asset.
              */
             public Builder connector(String connector) {
                 this.connector = connector;
@@ -242,7 +247,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data asset was created. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +255,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -258,7 +263,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The region in which the data asset resides.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -266,7 +271,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The parent asset ID of the data asset.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -274,7 +279,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region in which the data asset resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -282,7 +287,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **1**: MaxCompute
+             * *   **2**: OSS
+             * *   **3**: AnalyticDB for MySQL
+             * *   **4**: Tablestore
+             * *   **5**: ApsaraDB RDS
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -290,7 +302,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * The code of the service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **ODPS**
+             * *   **OSS**
+             * *   **ADS**
+             * *   **OTS**
+             * *   **RDS**
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -298,7 +317,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username that is used to access the data asset.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -351,7 +370,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * BucketName.
+             * The name of the OSS bucket to which the OSS object belongs.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -359,7 +378,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the OSS object.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -412,7 +431,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -420,7 +439,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -521,7 +540,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataLimitList.
+             * An array that consists of data assets that DSC is authorized to scan.
              */
             public Builder dataLimitList(java.util.List < DataLimitList> dataLimitList) {
                 this.dataLimitList = dataLimitList;
@@ -529,7 +548,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucketList.
+             * An array consisting of the OSS objects that DSC is authorized to scan.
              */
             public Builder ossBucketList(java.util.List < OssBucketList> ossBucketList) {
                 this.ossBucketList = ossBucketList;
@@ -537,7 +556,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * RegionList.
+             * An array consisting of the regions in which the data assets can be scanned.
              */
             public Builder regionList(java.util.List < RegionList> regionList) {
                 this.regionList = regionList;
@@ -545,7 +564,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **1**: MaxCompute
+             * *   **2**: OSS
+             * *   **3**: AnalyticDB for MySQL
+             * *   **4**: Tablestore
+             * *   **5**: ApsaraDB RDS
              */
             public Builder resourceType(Long resourceType) {
                 this.resourceType = resourceType;
@@ -553,7 +579,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypeCode.
+             * The service to which the data asset belongs. Valid values:
+             * <p>
+             * 
+             * *   **ODPS**
+             * *   **OSS**
+             * *   **ADS**
+             * *   **OTS**
+             * *   **RDS**
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -561,7 +594,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of data objects in the data assets.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -86,7 +86,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * An array that consists of the queried data assets.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -102,7 +102,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -446,7 +446,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AuditStatus.
+             * Indicates whether the security audit feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -454,7 +458,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoScan.
+             * Indicates whether the automatic scan feature is enabled to detect sensitive data. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder autoScan(Integer autoScan) {
                 this.autoScan = autoScan;
@@ -462,7 +470,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CanModifyUserName.
+             * Indicates whether the username and password can be changed. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder canModifyUserName(Boolean canModifyUserName) {
                 this.canModifyUserName = canModifyUserName;
@@ -470,7 +482,14 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CheckStatus.
+             * The data detection status. Valid values:
+             * <p>
+             * 
+             * *   **0**: The data detection is ready.
+             * *   **1**: The data detection is running.
+             * *   **2**: The connectivity test is in progress.
+             * *   **3**: The connectivity test passed.
+             * *   **4**: The connectivity test failed.
              */
             public Builder checkStatus(Integer checkStatus) {
                 this.checkStatus = checkStatus;
@@ -478,7 +497,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatamaskStatus.
+             * Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder datamaskStatus(Integer datamaskStatus) {
                 this.datamaskStatus = datamaskStatus;
@@ -486,7 +509,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The name of the database to which the data asset belongs.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -494,7 +517,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether sensitive data detection is enabled for the data asset. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -502,7 +529,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineType.
+             * The type of the database engine. Valid values: **MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer**.
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -510,7 +537,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The reason for the failure.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -518,7 +545,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -526,7 +553,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The unique ID of the data asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -534,7 +561,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * The description of the instance.
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -542,7 +569,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -550,7 +577,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSize.
+             * The storage space size of the instance. This parameter is valid only if the value of the ProductId parameter is 2. Unit: bytes.
              */
             public Builder instanceSize(Long instanceSize) {
                 this.instanceSize = instanceSize;
@@ -558,7 +585,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the data asset was last modified. Unit: milliseconds.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -566,7 +593,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyUserId.
+             * The ID of the account that is last used to modify the data asset.
              */
             public Builder lastModifyUserId(String lastModifyUserId) {
                 this.lastModifyUserId = lastModifyUserId;
@@ -574,7 +601,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreDay.
+             * The retention period of raw logs. Unit: days.
              */
             public Builder logStoreDay(Integer logStoreDay) {
                 this.logStoreDay = logStoreDay;
@@ -582,7 +609,11 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordStatus.
+             * Indicates whether the password is used. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder passwordStatus(Integer passwordStatus) {
                 this.passwordStatus = passwordStatus;
@@ -590,7 +621,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * The ID of the service to which the data asset belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -598,7 +629,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region where the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -606,7 +637,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -614,7 +645,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingSize.
+             * The number of sensitive data samples. Valid values: **0**, **5**, and **10**. Unit: data entries.
              */
             public Builder samplingSize(Integer samplingSize) {
                 this.samplingSize = samplingSize;
@@ -622,7 +653,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -630,7 +661,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -638,7 +669,7 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

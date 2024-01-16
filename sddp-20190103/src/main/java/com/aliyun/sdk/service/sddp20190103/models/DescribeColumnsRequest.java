@@ -222,7 +222,7 @@ public class DescribeColumnsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -231,7 +231,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to which data in the column of the table belongs.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~DescribeRules~~) operation to query the IDs of instances.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -240,7 +243,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance to which data in the column of the table belongs.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -249,7 +252,11 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -258,7 +265,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The search keyword. Fuzzy match is supported.
+         * <p>
+         * 
+         * For example, if you enter **test**, all columns whose names contain **test** are retrieved.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -267,7 +277,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,7 +286,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -285,7 +295,14 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A
+         * *   **2**: S1
+         * *   **3**: S2
+         * *   **4**: S3
+         * *   **5**: S4
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -294,7 +311,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the sensitive data detection rule that data in the column of the table hits.
+         * <p>
+         * 
+         * > You can call the [DescribeRules](~~DescribeRules~~) operation to query the IDs of sensitive data detection rules.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -303,7 +323,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the sensitive data detection rule that data in the column of the table hits.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -312,7 +332,14 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * SensLevelName.
+         * The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **N/A**: No sensitive data is detected.
+         * *   **S1**: indicates the low sensitivity level.
+         * *   **S2**: indicates the medium sensitivity level.
+         * *   **S3**: indicates the high sensitivity level.
+         * *   **S4**: indicates the highest sensitivity level.
          */
         public Builder sensLevelName(String sensLevelName) {
             this.putQueryParameter("SensLevelName", sensLevelName);
@@ -321,7 +348,10 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * TableId.
+         * The ID of the table to which the column belongs.
+         * <p>
+         * 
+         * > You can call the [DescribeTables](~~DescribeTables~~) operation to query the IDs of tables.
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("TableId", tableId);
@@ -330,7 +360,7 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -34,6 +34,10 @@ public class CreateRuleRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("MatchType")
+    private Integer matchType;
+
+    @Query
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -55,12 +59,20 @@ public class CreateRuleRequest extends Request {
     private Integer ruleType;
 
     @Query
+    @NameInMap("SourceIp")
+    private String sourceIp;
+
+    @Query
     @NameInMap("StatExpress")
     private String statExpress;
 
     @Query
     @NameInMap("Status")
     private Integer status;
+
+    @Query
+    @NameInMap("SupportForm")
+    private Integer supportForm;
 
     @Query
     @NameInMap("Target")
@@ -77,13 +89,16 @@ public class CreateRuleRequest extends Request {
         this.contentCategory = builder.contentCategory;
         this.description = builder.description;
         this.lang = builder.lang;
+        this.matchType = builder.matchType;
         this.name = builder.name;
         this.productCode = builder.productCode;
         this.productId = builder.productId;
         this.riskLevelId = builder.riskLevelId;
         this.ruleType = builder.ruleType;
+        this.sourceIp = builder.sourceIp;
         this.statExpress = builder.statExpress;
         this.status = builder.status;
+        this.supportForm = builder.supportForm;
         this.target = builder.target;
         this.warnLevel = builder.warnLevel;
     }
@@ -137,6 +152,13 @@ public class CreateRuleRequest extends Request {
     }
 
     /**
+     * @return matchType
+     */
+    public Integer getMatchType() {
+        return this.matchType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -172,6 +194,13 @@ public class CreateRuleRequest extends Request {
     }
 
     /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    /**
      * @return statExpress
      */
     public String getStatExpress() {
@@ -183,6 +212,13 @@ public class CreateRuleRequest extends Request {
      */
     public Integer getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return supportForm
+     */
+    public Integer getSupportForm() {
+        return this.supportForm;
     }
 
     /**
@@ -205,13 +241,16 @@ public class CreateRuleRequest extends Request {
         private Integer contentCategory; 
         private String description; 
         private String lang; 
+        private Integer matchType; 
         private String name; 
         private String productCode; 
         private Long productId; 
         private Long riskLevelId; 
         private Integer ruleType; 
+        private String sourceIp; 
         private String statExpress; 
         private Integer status; 
+        private Integer supportForm; 
         private String target; 
         private Integer warnLevel; 
 
@@ -226,19 +265,26 @@ public class CreateRuleRequest extends Request {
             this.contentCategory = request.contentCategory;
             this.description = request.description;
             this.lang = request.lang;
+            this.matchType = request.matchType;
             this.name = request.name;
             this.productCode = request.productCode;
             this.productId = request.productId;
             this.riskLevelId = request.riskLevelId;
             this.ruleType = request.ruleType;
+            this.sourceIp = request.sourceIp;
             this.statExpress = request.statExpress;
             this.status = request.status;
+            this.supportForm = request.supportForm;
             this.target = request.target;
             this.warnLevel = request.warnLevel;
         } 
 
         /**
-         * Category.
+         * The content type of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **0**: keyword
+         * *   **2**: regular expression
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -247,7 +293,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the sensitive data detection rule. You can specify a regular expression or keywords that are used to match sensitive fields or text.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -256,7 +302,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * ContentCategory.
+         * The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.
          */
         public Builder contentCategory(Integer contentCategory) {
             this.putQueryParameter("ContentCategory", contentCategory);
@@ -265,7 +311,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the rule.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -274,7 +320,11 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -283,7 +333,20 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * The match type. Valid values:
+         * <p>
+         * 
+         * *   **1**: rule-based match
+         * *   **2**: dictionary-based match
+         */
+        public Builder matchType(Integer matchType) {
+            this.putQueryParameter("MatchType", matchType);
+            this.matchType = matchType;
+            return this;
+        }
+
+        /**
+         * The name of the sensitive data detection rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -292,7 +355,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute**, **OSS**, **ADS**, **OTS**, and **RDS**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -301,7 +364,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * The ID of the service to which the data asset belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -310,7 +373,14 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * RiskLevelId.
+         * The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: N/A, which indicates that no sensitive data is detected.
+         * *   **2**: S1, which indicates the low sensitivity level.
+         * *   **3**: S2, which indicates the medium sensitivity level.
+         * *   **4**: S3, which indicates the high sensitivity level.
+         * *   **5**: S4, which indicates the highest sensitivity level.
          */
         public Builder riskLevelId(Long riskLevelId) {
             this.putQueryParameter("RiskLevelId", riskLevelId);
@@ -319,7 +389,13 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * The type of the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: sensitive data detection rule
+         * *   **2**: audit rule
+         * *   **3**: anomalous event detection rule
+         * *   **99**: custom rule
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -328,7 +404,16 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * StatExpress.
+         * SourceIp.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
+            return this;
+        }
+
+        /**
+         * The statistical expression.
          */
         public Builder statExpress(String statExpress) {
             this.putQueryParameter("StatExpress", statExpress);
@@ -337,7 +422,11 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether to enable the sensitive data detection rule. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -346,7 +435,23 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * Target.
+         * The type of the data asset. Valid values:
+         * <p>
+         * 
+         * *   **0**: all data assets
+         * *   **1**: structured data asset
+         * *   **2**: unstructured data asset
+         * 
+         * > If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.
+         */
+        public Builder supportForm(Integer supportForm) {
+            this.putQueryParameter("SupportForm", supportForm);
+            this.supportForm = supportForm;
+            return this;
+        }
+
+        /**
+         * The code of the service to which the sensitive data detection rule is applied. Valid values include **MaxCompute**, **OSS**, **ADS**, **OTS**, and **RDS**.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -355,7 +460,12 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * WarnLevel.
+         * The risk level of the alert that is triggered. Valid values:
+         * <p>
+         * 
+         * *   **1**: low
+         * *   **2**: medium
+         * *   **3**: high
          */
         public Builder warnLevel(Integer warnLevel) {
             this.putQueryParameter("WarnLevel", warnLevel);

@@ -72,6 +72,10 @@ public class DescribeEventsRequest extends Request {
     @NameInMap("UserName")
     private String userName;
 
+    @Query
+    @NameInMap("WarnLevel")
+    private Integer warnLevel;
+
     private DescribeEventsRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -89,6 +93,7 @@ public class DescribeEventsRequest extends Request {
         this.typeCode = builder.typeCode;
         this.userId = builder.userId;
         this.userName = builder.userName;
+        this.warnLevel = builder.warnLevel;
     }
 
     public static Builder builder() {
@@ -209,6 +214,13 @@ public class DescribeEventsRequest extends Request {
         return this.userName;
     }
 
+    /**
+     * @return warnLevel
+     */
+    public Integer getWarnLevel() {
+        return this.warnLevel;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEventsRequest, Builder> {
         private Integer currentPage; 
         private String dealUserId; 
@@ -225,6 +237,7 @@ public class DescribeEventsRequest extends Request {
         private String typeCode; 
         private Long userId; 
         private String userName; 
+        private Integer warnLevel; 
 
         private Builder() {
             super();
@@ -247,10 +260,11 @@ public class DescribeEventsRequest extends Request {
             this.typeCode = request.typeCode;
             this.userId = request.userId;
             this.userName = request.userName;
+            this.warnLevel = request.warnLevel;
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +273,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * DealUserId.
+         * The ID of the account that handles the anomalous event.
          */
         public Builder dealUserId(String dealUserId) {
             this.putQueryParameter("DealUserId", dealUserId);
@@ -268,7 +282,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -277,7 +291,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * Id.
+         * The unique ID of the anomalous event.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -286,7 +300,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the data asset.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -295,7 +309,11 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
+         * <p>
+         * 
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -304,7 +322,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -313,7 +331,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -322,7 +340,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -331,7 +349,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The handling status of the anomalous event. Valid values:
+         * <p>
+         * 
+         * *   0: unhandled
+         * *   1: confirmed
+         * *   2: marked as false positive
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -340,7 +363,10 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * SubTypeCode.
+         * The name of the anomalous event subtype.
+         * <p>
+         * 
+         * > You can call the **DescribeEventTypes** operation to query the name of the anomalous event subtype.
          */
         public Builder subTypeCode(String subTypeCode) {
             this.putQueryParameter("SubTypeCode", subTypeCode);
@@ -349,7 +375,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * TargetProductCode.
+         * The name of the destination service in an anomalous data flow. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**
          */
         public Builder targetProductCode(String targetProductCode) {
             this.putQueryParameter("TargetProductCode", targetProductCode);
@@ -358,7 +384,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * TypeCode.
+         * The name of the anomalous event type. Valid values:
+         * <p>
+         * 
+         * *   01: anomalous permission usage
+         * *   02: anomalous data flow
+         * *   03: anomalous data operation
          */
         public Builder typeCode(String typeCode) {
             this.putQueryParameter("TypeCode", typeCode);
@@ -367,7 +398,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the account that triggered the anomalous event.
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);
@@ -376,11 +407,20 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the RAM user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
             this.userName = userName;
+            return this;
+        }
+
+        /**
+         * WarnLevel.
+         */
+        public Builder warnLevel(Integer warnLevel) {
+            this.putQueryParameter("WarnLevel", warnLevel);
+            this.warnLevel = warnLevel;
             return this;
         }
 

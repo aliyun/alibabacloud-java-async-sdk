@@ -69,7 +69,10 @@ public class ManualTriggerMaskingProcessRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the de-identification task.
+         * <p>
+         * 
+         * The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +81,11 @@ public class ManualTriggerMaskingProcessRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
