@@ -7,34 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InitEnvironmentRequest} extends {@link RequestModel}
+ * {@link UpdateGrafanaWorkspaceVersionRequest} extends {@link RequestModel}
  *
- * <p>InitEnvironmentRequest</p>
+ * <p>UpdateGrafanaWorkspaceVersionRequest</p>
  */
-public class InitEnvironmentRequest extends Request {
+public class UpdateGrafanaWorkspaceVersionRequest extends Request {
     @Query
     @NameInMap("AliyunLang")
     private String aliyunLang;
 
     @Query
-    @NameInMap("EnvironmentId")
+    @NameInMap("GrafanaVersion")
     @Validation(required = true)
-    private String environmentId;
+    private String grafanaVersion;
 
     @Query
-    @NameInMap("ManagedType")
-    private String managedType;
+    @NameInMap("GrafanaWorkspaceId")
+    @Validation(required = true)
+    private String grafanaWorkspaceId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private InitEnvironmentRequest(Builder builder) {
+    private UpdateGrafanaWorkspaceVersionRequest(Builder builder) {
         super(builder);
         this.aliyunLang = builder.aliyunLang;
-        this.environmentId = builder.environmentId;
-        this.managedType = builder.managedType;
+        this.grafanaVersion = builder.grafanaVersion;
+        this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
         this.regionId = builder.regionId;
     }
 
@@ -42,7 +43,7 @@ public class InitEnvironmentRequest extends Request {
         return new Builder();
     }
 
-    public static InitEnvironmentRequest create() {
+    public static UpdateGrafanaWorkspaceVersionRequest create() {
         return builder().build();
     }
 
@@ -59,17 +60,17 @@ public class InitEnvironmentRequest extends Request {
     }
 
     /**
-     * @return environmentId
+     * @return grafanaVersion
      */
-    public String getEnvironmentId() {
-        return this.environmentId;
+    public String getGrafanaVersion() {
+        return this.grafanaVersion;
     }
 
     /**
-     * @return managedType
+     * @return grafanaWorkspaceId
      */
-    public String getManagedType() {
-        return this.managedType;
+    public String getGrafanaWorkspaceId() {
+        return this.grafanaWorkspaceId;
     }
 
     /**
@@ -79,26 +80,26 @@ public class InitEnvironmentRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<InitEnvironmentRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateGrafanaWorkspaceVersionRequest, Builder> {
         private String aliyunLang; 
-        private String environmentId; 
-        private String managedType; 
+        private String grafanaVersion; 
+        private String grafanaWorkspaceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InitEnvironmentRequest request) {
+        private Builder(UpdateGrafanaWorkspaceVersionRequest request) {
             super(request);
             this.aliyunLang = request.aliyunLang;
-            this.environmentId = request.environmentId;
-            this.managedType = request.managedType;
+            this.grafanaVersion = request.grafanaVersion;
+            this.grafanaWorkspaceId = request.grafanaWorkspaceId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * Locale, the default is Chinese zh.
+         * AliyunLang.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -107,25 +108,25 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * GrafanaVersion.
          */
-        public Builder environmentId(String environmentId) {
-            this.putQueryParameter("EnvironmentId", environmentId);
-            this.environmentId = environmentId;
+        public Builder grafanaVersion(String grafanaVersion) {
+            this.putQueryParameter("GrafanaVersion", grafanaVersion);
+            this.grafanaVersion = grafanaVersion;
             return this;
         }
 
         /**
-         * ManagedType.
+         * GrafanaWorkspaceId.
          */
-        public Builder managedType(String managedType) {
-            this.putQueryParameter("ManagedType", managedType);
-            this.managedType = managedType;
+        public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
+            this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
+            this.grafanaWorkspaceId = grafanaWorkspaceId;
             return this;
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,8 +135,8 @@ public class InitEnvironmentRequest extends Request {
         }
 
         @Override
-        public InitEnvironmentRequest build() {
-            return new InitEnvironmentRequest(this);
+        public UpdateGrafanaWorkspaceVersionRequest build() {
+            return new UpdateGrafanaWorkspaceVersionRequest(this);
         } 
 
     } 

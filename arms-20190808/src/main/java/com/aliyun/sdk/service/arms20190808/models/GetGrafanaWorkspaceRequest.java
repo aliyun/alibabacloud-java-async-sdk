@@ -7,34 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InitEnvironmentRequest} extends {@link RequestModel}
+ * {@link GetGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
- * <p>InitEnvironmentRequest</p>
+ * <p>GetGrafanaWorkspaceRequest</p>
  */
-public class InitEnvironmentRequest extends Request {
+public class GetGrafanaWorkspaceRequest extends Request {
     @Query
     @NameInMap("AliyunLang")
     private String aliyunLang;
 
     @Query
-    @NameInMap("EnvironmentId")
+    @NameInMap("GrafanaWorkspaceId")
     @Validation(required = true)
-    private String environmentId;
-
-    @Query
-    @NameInMap("ManagedType")
-    private String managedType;
+    private String grafanaWorkspaceId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private InitEnvironmentRequest(Builder builder) {
+    private GetGrafanaWorkspaceRequest(Builder builder) {
         super(builder);
         this.aliyunLang = builder.aliyunLang;
-        this.environmentId = builder.environmentId;
-        this.managedType = builder.managedType;
+        this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
         this.regionId = builder.regionId;
     }
 
@@ -42,7 +37,7 @@ public class InitEnvironmentRequest extends Request {
         return new Builder();
     }
 
-    public static InitEnvironmentRequest create() {
+    public static GetGrafanaWorkspaceRequest create() {
         return builder().build();
     }
 
@@ -59,17 +54,10 @@ public class InitEnvironmentRequest extends Request {
     }
 
     /**
-     * @return environmentId
+     * @return grafanaWorkspaceId
      */
-    public String getEnvironmentId() {
-        return this.environmentId;
-    }
-
-    /**
-     * @return managedType
-     */
-    public String getManagedType() {
-        return this.managedType;
+    public String getGrafanaWorkspaceId() {
+        return this.grafanaWorkspaceId;
     }
 
     /**
@@ -79,26 +67,24 @@ public class InitEnvironmentRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<InitEnvironmentRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetGrafanaWorkspaceRequest, Builder> {
         private String aliyunLang; 
-        private String environmentId; 
-        private String managedType; 
+        private String grafanaWorkspaceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InitEnvironmentRequest request) {
+        private Builder(GetGrafanaWorkspaceRequest request) {
             super(request);
             this.aliyunLang = request.aliyunLang;
-            this.environmentId = request.environmentId;
-            this.managedType = request.managedType;
+            this.grafanaWorkspaceId = request.grafanaWorkspaceId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * Locale, the default is Chinese zh.
+         * AliyunLang.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -107,25 +93,16 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * GrafanaWorkspaceId.
          */
-        public Builder environmentId(String environmentId) {
-            this.putQueryParameter("EnvironmentId", environmentId);
-            this.environmentId = environmentId;
+        public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
+            this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
+            this.grafanaWorkspaceId = grafanaWorkspaceId;
             return this;
         }
 
         /**
-         * ManagedType.
-         */
-        public Builder managedType(String managedType) {
-            this.putQueryParameter("ManagedType", managedType);
-            this.managedType = managedType;
-            return this;
-        }
-
-        /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -134,8 +111,8 @@ public class InitEnvironmentRequest extends Request {
         }
 
         @Override
-        public InitEnvironmentRequest build() {
-            return new InitEnvironmentRequest(this);
+        public GetGrafanaWorkspaceRequest build() {
+            return new GetGrafanaWorkspaceRequest(this);
         } 
 
     } 

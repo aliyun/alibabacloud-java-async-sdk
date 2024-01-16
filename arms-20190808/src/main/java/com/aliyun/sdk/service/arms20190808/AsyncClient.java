@@ -86,6 +86,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
+    CompletableFuture<CreateGrafanaWorkspaceResponse> createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request);
+
     CompletableFuture<CreateIntegrationResponse> createIntegration(CreateIntegrationRequest request);
 
     CompletableFuture<CreateOrUpdateAlertRuleResponse> createOrUpdateAlertRule(CreateOrUpdateAlertRuleRequest request);
@@ -157,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEventBridgeIntegrationResponse> deleteEventBridgeIntegration(DeleteEventBridgeIntegrationRequest request);
 
     CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request);
+
+    CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request);
 
     CompletableFuture<DeleteIMRobotResponse> deleteIMRobot(DeleteIMRobotRequest request);
 
@@ -237,6 +241,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCommercialStatusResponse> getCommercialStatus(GetCommercialStatusRequest request);
 
     CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request);
+
+    CompletableFuture<GetGrafanaWorkspaceResponse> getGrafanaWorkspace(GetGrafanaWorkspaceRequest request);
 
     CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request);
 
@@ -525,6 +531,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEnvServiceMonitorResponse> updateEnvServiceMonitor(UpdateEnvServiceMonitorRequest request);
 
     CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
+
+    CompletableFuture<UpdateGrafanaWorkspaceResponse> updateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request);
+
+    CompletableFuture<UpdateGrafanaWorkspaceVersionResponse> updateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request);
 
     CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request);
 

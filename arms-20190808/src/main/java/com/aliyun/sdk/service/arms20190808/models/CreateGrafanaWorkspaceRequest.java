@@ -7,38 +7,38 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEnvironmentRequest} extends {@link RequestModel}
+ * {@link CreateGrafanaWorkspaceRequest} extends {@link RequestModel}
  *
- * <p>CreateEnvironmentRequest</p>
+ * <p>CreateGrafanaWorkspaceRequest</p>
  */
-public class CreateEnvironmentRequest extends Request {
+public class CreateGrafanaWorkspaceRequest extends Request {
     @Query
     @NameInMap("AliyunLang")
     private String aliyunLang;
 
     @Query
-    @NameInMap("BindResourceId")
-    @Validation(required = true)
-    private String bindResourceId;
+    @NameInMap("Description")
+    private String description;
 
     @Query
-    @NameInMap("EnvironmentName")
+    @NameInMap("GrafanaVersion")
     @Validation(required = true)
-    private String environmentName;
+    private String grafanaVersion;
 
     @Query
-    @NameInMap("EnvironmentSubType")
+    @NameInMap("GrafanaWorkspaceEdition")
     @Validation(required = true)
-    private String environmentSubType;
+    private String grafanaWorkspaceEdition;
 
     @Query
-    @NameInMap("EnvironmentType")
+    @NameInMap("GrafanaWorkspaceName")
     @Validation(required = true)
-    private String environmentType;
+    private String grafanaWorkspaceName;
 
     @Query
-    @NameInMap("ManagedType")
-    private String managedType;
+    @NameInMap("Password")
+    @Validation(required = true)
+    private String password;
 
     @Query
     @NameInMap("RegionId")
@@ -53,14 +53,14 @@ public class CreateEnvironmentRequest extends Request {
     @NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    private CreateEnvironmentRequest(Builder builder) {
+    private CreateGrafanaWorkspaceRequest(Builder builder) {
         super(builder);
         this.aliyunLang = builder.aliyunLang;
-        this.bindResourceId = builder.bindResourceId;
-        this.environmentName = builder.environmentName;
-        this.environmentSubType = builder.environmentSubType;
-        this.environmentType = builder.environmentType;
-        this.managedType = builder.managedType;
+        this.description = builder.description;
+        this.grafanaVersion = builder.grafanaVersion;
+        this.grafanaWorkspaceEdition = builder.grafanaWorkspaceEdition;
+        this.grafanaWorkspaceName = builder.grafanaWorkspaceName;
+        this.password = builder.password;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
@@ -70,7 +70,7 @@ public class CreateEnvironmentRequest extends Request {
         return new Builder();
     }
 
-    public static CreateEnvironmentRequest create() {
+    public static CreateGrafanaWorkspaceRequest create() {
         return builder().build();
     }
 
@@ -87,38 +87,38 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
-     * @return bindResourceId
+     * @return description
      */
-    public String getBindResourceId() {
-        return this.bindResourceId;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
-     * @return environmentName
+     * @return grafanaVersion
      */
-    public String getEnvironmentName() {
-        return this.environmentName;
+    public String getGrafanaVersion() {
+        return this.grafanaVersion;
     }
 
     /**
-     * @return environmentSubType
+     * @return grafanaWorkspaceEdition
      */
-    public String getEnvironmentSubType() {
-        return this.environmentSubType;
+    public String getGrafanaWorkspaceEdition() {
+        return this.grafanaWorkspaceEdition;
     }
 
     /**
-     * @return environmentType
+     * @return grafanaWorkspaceName
      */
-    public String getEnvironmentType() {
-        return this.environmentType;
+    public String getGrafanaWorkspaceName() {
+        return this.grafanaWorkspaceName;
     }
 
     /**
-     * @return managedType
+     * @return password
      */
-    public String getManagedType() {
-        return this.managedType;
+    public String getPassword() {
+        return this.password;
     }
 
     /**
@@ -142,13 +142,13 @@ public class CreateEnvironmentRequest extends Request {
         return this.tags;
     }
 
-    public static final class Builder extends Request.Builder<CreateEnvironmentRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateGrafanaWorkspaceRequest, Builder> {
         private String aliyunLang; 
-        private String bindResourceId; 
-        private String environmentName; 
-        private String environmentSubType; 
-        private String environmentType; 
-        private String managedType; 
+        private String description; 
+        private String grafanaVersion; 
+        private String grafanaWorkspaceEdition; 
+        private String grafanaWorkspaceName; 
+        private String password; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tags> tags; 
@@ -157,21 +157,21 @@ public class CreateEnvironmentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEnvironmentRequest request) {
+        private Builder(CreateGrafanaWorkspaceRequest request) {
             super(request);
             this.aliyunLang = request.aliyunLang;
-            this.bindResourceId = request.bindResourceId;
-            this.environmentName = request.environmentName;
-            this.environmentSubType = request.environmentSubType;
-            this.environmentType = request.environmentType;
-            this.managedType = request.managedType;
+            this.description = request.description;
+            this.grafanaVersion = request.grafanaVersion;
+            this.grafanaWorkspaceEdition = request.grafanaWorkspaceEdition;
+            this.grafanaWorkspaceName = request.grafanaWorkspaceName;
+            this.password = request.password;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * AliyunLang.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -180,68 +180,52 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
-         * <p>
-         * For Cloud type environments, the current field value is RegionId.
+         * Description.
          */
-        public Builder bindResourceId(String bindResourceId) {
-            this.putQueryParameter("BindResourceId", bindResourceId);
-            this.bindResourceId = bindResourceId;
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
         /**
-         * The name of the environment.
+         * GrafanaVersion.
          */
-        public Builder environmentName(String environmentName) {
-            this.putQueryParameter("EnvironmentName", environmentName);
-            this.environmentName = environmentName;
+        public Builder grafanaVersion(String grafanaVersion) {
+            this.putQueryParameter("GrafanaVersion", grafanaVersion);
+            this.grafanaVersion = grafanaVersion;
             return this;
         }
 
         /**
-         * The subtype of the environment. Valid values:
-         * <p>
-         * 
-         * *   CS: Container Service for Kubernetes (ACK)
-         * *   ECS: Elastic Compute Service (ECS)
-         * *   Cloud: cloud service
+         * GrafanaWorkspaceEdition.
          */
-        public Builder environmentSubType(String environmentSubType) {
-            this.putQueryParameter("EnvironmentSubType", environmentSubType);
-            this.environmentSubType = environmentSubType;
+        public Builder grafanaWorkspaceEdition(String grafanaWorkspaceEdition) {
+            this.putQueryParameter("GrafanaWorkspaceEdition", grafanaWorkspaceEdition);
+            this.grafanaWorkspaceEdition = grafanaWorkspaceEdition;
             return this;
         }
 
         /**
-         * The type of the environment. Valid values:
-         * <p>
-         * 
-         * *   CS: Container Service
-         * *   ECS: Elastic Compute Service
-         * *   Cloud: cloud service
+         * GrafanaWorkspaceName.
          */
-        public Builder environmentType(String environmentType) {
-            this.putQueryParameter("EnvironmentType", environmentType);
-            this.environmentType = environmentType;
+        public Builder grafanaWorkspaceName(String grafanaWorkspaceName) {
+            this.putQueryParameter("GrafanaWorkspaceName", grafanaWorkspaceName);
+            this.grafanaWorkspaceName = grafanaWorkspaceName;
             return this;
         }
 
         /**
-         * type of managed：
-         * <p>
-         * - none： not managed. default value of prometheus for ACK.
-         * - agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.
-         * - agent-exproter： maanged agent and exporter. default of prometheus for Cloud.
+         * Password.
          */
-        public Builder managedType(String managedType) {
-            this.putQueryParameter("ManagedType", managedType);
-            this.managedType = managedType;
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
             return this;
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,7 +234,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -259,17 +243,18 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance.
+         * Tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }
 
         @Override
-        public CreateEnvironmentRequest build() {
-            return new CreateEnvironmentRequest(this);
+        public CreateGrafanaWorkspaceRequest build() {
+            return new CreateGrafanaWorkspaceRequest(this);
         } 
 
     } 
@@ -313,7 +298,7 @@ public class CreateEnvironmentRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -321,7 +306,7 @@ public class CreateEnvironmentRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
