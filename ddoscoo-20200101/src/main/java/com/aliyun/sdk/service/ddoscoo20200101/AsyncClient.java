@@ -332,6 +332,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePortAutoCcStatusResponse> describePortAutoCcStatus(DescribePortAutoCcStatusRequest request);
 
+    CompletableFuture<DescribePortCcAttackTopIPResponse> describePortCcAttackTopIP(DescribePortCcAttackTopIPRequest request);
+
     CompletableFuture<DescribePortConnsCountResponse> describePortConnsCount(DescribePortConnsCountRequest request);
 
     CompletableFuture<DescribePortConnsListResponse> describePortConnsList(DescribePortConnsListRequest request);
@@ -460,6 +462,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWebInstanceRelationsResponse> describeWebInstanceRelations(DescribeWebInstanceRelationsRequest request);
 
     CompletableFuture<DescribeWebPreciseAccessRuleResponse> describeWebPreciseAccessRule(DescribeWebPreciseAccessRuleRequest request);
+
+    CompletableFuture<DescribeWebReportTopIpResponse> describeWebReportTopIp(DescribeWebReportTopIpRequest request);
 
     CompletableFuture<DescribeWebRulesResponse> describeWebRules(DescribeWebRulesRequest request);
 
