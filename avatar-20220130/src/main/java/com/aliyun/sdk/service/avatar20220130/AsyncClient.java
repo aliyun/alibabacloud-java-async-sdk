@@ -24,6 +24,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ClientStartResponse> clientStart(ClientStartRequest request);
 
+    CompletableFuture<ClientUnbindDeviceResponse> clientUnbindDevice(ClientUnbindDeviceRequest request);
+
     CompletableFuture<CloseTimedResetOperateResponse> closeTimedResetOperate(CloseTimedResetOperateRequest request);
 
     CompletableFuture<ConfirmAvatar2dTrainResponse> confirmAvatar2dTrain(ConfirmAvatar2dTrainRequest request);
