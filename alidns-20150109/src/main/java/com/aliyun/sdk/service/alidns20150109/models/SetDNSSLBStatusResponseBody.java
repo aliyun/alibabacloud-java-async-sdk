@@ -62,7 +62,7 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether weighted round-robin is enabled for the subdomain.
+         * Indicates whether weighted round-robin is enabled for the subdomain name.
          */
         public Builder open(Boolean open) {
             this.open = open;
@@ -78,7 +78,7 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

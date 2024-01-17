@@ -106,7 +106,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * 检测失败原因编码
+         * The cause code of the detection failure.
          */
         public Builder detectFailedReasonCode(String detectFailedReasonCode) {
             this.detectFailedReasonCode = detectFailedReasonCode;
@@ -122,7 +122,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS server names assigned by Alibaba Cloud DNS.
+         * The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.
          */
         public Builder expectDnsServers(ExpectDnsServers expectDnsServers) {
             this.expectDnsServers = expectDnsServers;

@@ -139,7 +139,7 @@ public class DescribeGtmLogsRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * The timestamp that specifies the end of the time range to query.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -184,7 +184,7 @@ public class DescribeGtmLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on per page. Maximum value: **100**. Default value: **20**.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -86,7 +86,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Detailed information about the batch operation result.
+         * The detailed results of the batch operation.
          */
         public Builder batchResultDetails(BatchResultDetails batchResultDetails) {
             this.batchResultDetails = batchResultDetails;
@@ -94,7 +94,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -362,7 +362,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The new host record.
+             * The new hostname.
              */
             public Builder newRr(String newRr) {
                 this.newRr = newRr;
@@ -378,7 +378,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder operateDateStr(String operateDateStr) {
                 this.operateDateStr = operateDateStr;
@@ -386,7 +386,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of an MX-type DNS record.
+             * The priority of the mail exchanger (MX) record.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -418,7 +418,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The host record.
+             * The hostname.
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -434,7 +434,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.
+             * The execution result of the batch operation. Valid values: **true**: The operation succeeded. **false**: The operation failed.
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -442,7 +442,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The TTL of the DNS record.
+             * The time-to-live (TTL) of the DNS record.
              */
             public Builder ttl(String ttl) {
                 this.ttl = ttl;
@@ -458,7 +458,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the DNS record.
+             * The record value.
              */
             public Builder value(String value) {
                 this.value = value;

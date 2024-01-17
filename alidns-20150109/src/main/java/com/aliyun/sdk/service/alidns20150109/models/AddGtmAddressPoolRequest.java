@@ -227,7 +227,7 @@ public class AddGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The addresses in the address pool.
+         * The address pools.
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -236,7 +236,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * The number of consecutive failures.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -290,27 +290,27 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
+         * The extended information. The required parameters vary based on the value of ProtocolType.
          * <p>
          * 
-         * HTTP or HTTPS:
+         * When ProtocolType is set to HTTP or HTTPS:
          * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
-         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
-         * *   host: the host configuration.
-         * *   path: the health check URL.
+         * *   port: the port that you want to check
+         * *   failureRate: the failure rate
+         * *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.
+         * *   host: the host settings
+         * *   path: the URL path
          * 
-         * PING:
+         * When ProtocolType is set to PING:
          * 
-         * *   packetNum: the number of ping packets.
-         * *   packetLossRate: the loss rate of ping packets.
-         * *   failureRate: the failure rate.
+         * *   packetNum: the number of ping packets
+         * *   packetLossRate: the packet loss rate
+         * *   failureRate: the failure rate
          * 
-         * TCP:
+         * When ProtocolType is set to TCP:
          * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
+         * *   port: the port that you want to check
+         * *   failureRate: the failure rate
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -332,7 +332,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool that you want to create.
+         * The name of the address pool.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -341,12 +341,12 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check. Valid values:
+         * The health check protocol. Valid values:
          * <p>
          * 
          * *   HTTP
          * *   HTTPS
-         * *   PING
+         * *   Ping
          * *   TCP
          */
         public Builder protocolType(String protocolType) {
@@ -356,7 +356,7 @@ public class AddGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
+         * The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -435,7 +435,7 @@ public class AddGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * The weight of the address.
+             * The weight of the address pool.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -443,7 +443,7 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address. Valid values:
+             * The mode of the address pool. Valid values:
              * <p>
              * 
              * *   **SMART**: smart return
@@ -456,7 +456,7 @@ public class AddGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The address.
+             * The address in the address pool.
              */
             public Builder value(String value) {
                 this.value = value;

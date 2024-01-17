@@ -86,7 +86,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The DNS records returned.
+         * The returned DNS records.
          */
         public Builder domainRecords(DomainRecords domainRecords) {
             this.domainRecords = domainRecords;
@@ -94,7 +94,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DNS records.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -322,7 +322,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name to which the DNS record belongs.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -330,7 +330,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The line that is used by the DNS record.
+             * The resolution line.
              */
             public Builder line(String line) {
                 this.line = line;
@@ -346,7 +346,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the MX record.
+             * The priority of the mail exchanger (MX) record.
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -354,7 +354,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The RR value.
+             * The hostname.
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -370,7 +370,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the DNS record.
+             * The description.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -386,7 +386,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time-to-live (TTL) of the DNS record.
+             * The time-to-live (TTL) of the cached data. Unit: seconds.
              */
             public Builder TTL(Long TTL) {
                 this.TTL = TTL;

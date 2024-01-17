@@ -298,7 +298,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * The remark of the DNS record.
          */
         public Builder remark(String remark) {
             this.remark = remark;

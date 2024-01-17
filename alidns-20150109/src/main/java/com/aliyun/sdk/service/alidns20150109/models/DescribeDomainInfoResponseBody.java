@@ -27,6 +27,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("DomainId")
     private String domainId;
 
+    @NameInMap("DomainLoggingSwitchStatus")
+    private String domainLoggingSwitchStatus;
+
     @NameInMap("DomainName")
     private String domainName;
 
@@ -90,6 +93,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.dnsServers = builder.dnsServers;
         this.domainId = builder.domainId;
+        this.domainLoggingSwitchStatus = builder.domainLoggingSwitchStatus;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
@@ -152,6 +156,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     public String getDomainId() {
         return this.domainId;
+    }
+
+    /**
+     * @return domainLoggingSwitchStatus
+     */
+    public String getDomainLoggingSwitchStatus() {
+        return this.domainLoggingSwitchStatus;
     }
 
     /**
@@ -293,6 +304,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String createTime; 
         private DnsServers dnsServers; 
         private String domainId; 
+        private String domainLoggingSwitchStatus; 
         private String domainName; 
         private String groupId; 
         private String groupName; 
@@ -314,7 +326,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * Indicates whether the domain name is an Alibaba Cloud HiChina domain name.
+         * Indicates whether the domain name was registered in Alibaba Cloud.
          */
         public Builder aliDomain(Boolean aliDomain) {
             this.aliDomain = aliDomain;
@@ -322,7 +334,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The available time to live (TTL) values.
+         * The available time to live (TTL) values that can be configured for the domain name. Available TTL values are not returned by default. If you want to query such information, set NeedDetailAttributes to true.
          */
         public Builder availableTtls(AvailableTtls availableTtls) {
             this.availableTtls = availableTtls;
@@ -330,7 +342,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the domain name was added to Alibaba Cloud CDN.
+         * The time when the domain name was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -338,7 +350,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about DNS servers.
+         * The DNS servers that are used to resolve the domain name.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -350,6 +362,14 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * DomainLoggingSwitchStatus.
+         */
+        public Builder domainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
+            this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
             return this;
         }
 
@@ -386,7 +406,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether traffic scrubbing was started.
+         * Indicates whether traffic scrubbing was in progress.
          */
         public Builder inClean(Boolean inClean) {
             this.inClean = inClean;
@@ -402,7 +422,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of line.
+         * The type of the DNS request line.
          */
         public Builder lineType(String lineType) {
             this.lineType = lineType;
@@ -410,7 +430,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum TTL.
+         * The minimum TTL value.
          */
         public Builder minTtl(Long minTtl) {
             this.minTtl = minTtl;
@@ -426,7 +446,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The tree-based lines.
+         * The tree-structure DNS request lines.
          */
         public Builder recordLineTreeJson(String recordLineTreeJson) {
             this.recordLineTreeJson = recordLineTreeJson;
@@ -434,7 +454,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about lines.
+         * The DNS request lines.
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -442,7 +462,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the lines are regional lines.
+         * Indicates whether the DNS request lines are regional lines.
          */
         public Builder regionLines(Boolean regionLines) {
             this.regionLines = regionLines;
@@ -450,7 +470,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the domain name.
+         * The description.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -458,7 +478,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -474,7 +494,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether secondary DNS is allowed.
+         * Indicates whether secondary DNS is supported.
          */
         public Builder slaveDns(Boolean slaveDns) {
             this.slaveDns = slaveDns;
@@ -490,7 +510,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the Alibaba Cloud DNS instance.
+         * The version ID of Alibaba Cloud DNS.
          */
         public Builder versionCode(String versionCode) {
             this.versionCode = versionCode;
@@ -498,7 +518,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The edition of the Alibaba Cloud DNS instance.
+         * The edition of Alibaba Cloud DNS.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

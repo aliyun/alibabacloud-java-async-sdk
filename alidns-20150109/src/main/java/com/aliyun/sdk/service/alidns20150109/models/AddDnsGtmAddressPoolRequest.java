@@ -239,7 +239,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The number of consecutive health check failures.
+         * The number of consecutive failures.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -266,7 +266,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The city nodes to monitor.
+         * The nodes for monitoring.
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -297,51 +297,51 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The extended information. The required parameters vary based on the health check protocol.
+         * The extended information. The required parameters vary based on the value of ProtocolType.
          * <p>
          * 
-         * *   HTTP or HTTPS:
+         * *   When ProtocolType is set to HTTP or HTTPS:
          * 
-         *     *   port: the check port.
+         *     *   port: the port that you want to check
          * 
-         *     *   host: the host settings.
+         *     *   host: the host settings
          * 
-         *     *   path: the URL path.
+         *     *   path: the URL path
          * 
-         *     *   code: the return code greater than the specified value.
+         *     *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value.
          * 
-         *     *   failureRate: the failure rate.
+         *     *   failureRate: the failure rate
          * 
-         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when Health Check Protocol is set to HTTPS. Valid values:
+         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:
          * 
          *         *   true: enables SNI.
          *         *   other: disables SNI.
          * 
-         *     *   nodeType: The type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
          * 
-         * *   PING:
+         * *   When ProtocolType is set to PING:
          * 
-         *     *   failureRate: the failure rate.
+         *     *   failureRate: the failure rate
          * 
-         *     *   packetNum: the number of ping packets.
+         *     *   packetNum: the number of ping packets
          * 
-         *     *   packetLossRate: the loss rate of ping packets.
+         *     *   packetLossRate: the loss rate of ping packets
          * 
-         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
          * 
-         * *   TCP:
+         * *   When ProtocolType is set to TCP:
          * 
-         *     *   port: the check port.
+         *     *   port: the port that you want to check
          * 
-         *     *   failureRate: the failure rate.
+         *     *   failureRate: the failure rate
          * 
-         *     *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:
+         *     *   nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:
          * 
          *         *   IPV4
          *         *   IPV6
@@ -390,7 +390,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The period of health check timeout. Unit: milliseconds.
+         * The timeout period. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -402,9 +402,9 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * The type of the address pool. Valid values:
          * <p>
          * 
-         * *   IPV4: IPv4 address.
-         * *   IPV6: IPv6 address.
-         * *   DOMAIN: domain name.
+         * *   IPV4: IPv4 address
+         * *   IPV6: IPv6 address
+         * *   DOMAIN: domain name
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -505,16 +505,16 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The source region of the address, in JSON-formatted string.
+             * The information about the source region of the address. The value of this parameter is a JSON string. Valid values:
              * <p>
              * 
-             * *   LineCode: the line code of the source region of the address.
+             * *   LineCode: the line code of the source region for the address
              * 
              * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
              * 
-             *     *   NO_NEED: no need for rectification.
-             *     *   RECTIFIED: rectified.
-             *     *   AUTO: automatic rectification.
+             *     *   NO_NEED: no need for rectification
+             *     *   RECTIFIED: rectified
+             *     *   AUTO: automatic rectification
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -522,7 +522,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The weight of the address.
+             * The weight of the address pool.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -530,12 +530,12 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The response mode of address resolution. Valid values:
+             * The return mode of the addresses: Valid values:
              * <p>
              * 
-             * *   SMART: smart return.
-             * *   ONLINE: always online.
-             * *   OFFLINE: always offline.
+             * *   SMART: smart return
+             * *   ONLINE: always online
+             * *   OFFLINE: always offline
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -543,7 +543,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The additional information about the address.
+             * The remarks.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -596,7 +596,10 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city node to monitor.
+             * The city code.
+             * <p>
+             * 
+             * Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -604,7 +607,10 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The code of the Internet service provider (ISP) node to monitor.
+             * *   The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.
+             * <p>
+             * *   If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.
+             * *   If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

@@ -163,7 +163,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
+         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -172,7 +172,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -181,7 +181,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +199,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -217,7 +217,7 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format.
+         * The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);

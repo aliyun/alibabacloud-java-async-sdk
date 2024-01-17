@@ -129,7 +129,7 @@ public class DescribeBatchResultDetailRequest extends Request {
          * 
          * *   **DOMAIN_ADD**: adds domain names in batches.
          * *   **DOMAIN_DEL**: deletes domain names in batches.
-         * *   **RR_ADD**: adds DNS records in batches.
+         * *   **RR_ADD**: adds Domain Name System (DNS) records in batches.
          * *   **RR_DEL**: deletes DNS records in batches.
          */
         public Builder batchType(String batchType) {
@@ -139,7 +139,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -148,7 +148,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +157,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,7 +166,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * Status.
+         * The execution result. If you do not specify this parameter, all results are returned.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -175,7 +175,7 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The ID of the batch operation task.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

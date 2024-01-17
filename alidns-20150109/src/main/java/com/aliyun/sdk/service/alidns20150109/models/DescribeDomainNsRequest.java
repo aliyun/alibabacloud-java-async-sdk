@@ -69,7 +69,7 @@ public class DescribeDomainNsRequest extends Request {
         } 
 
         /**
-         * Indicates whether all the name servers were Alibaba Cloud DNS servers.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +78,7 @@ public class DescribeDomainNsRequest extends Request {
         }
 
         /**
-         * The domain name that you want to resolve.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

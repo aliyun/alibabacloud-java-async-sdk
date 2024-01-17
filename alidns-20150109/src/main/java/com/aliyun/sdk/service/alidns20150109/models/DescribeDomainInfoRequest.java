@@ -101,7 +101,7 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether detailed attributes are required. Default value: **false**, which indicates that detailed attributes are not required.
+         * Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.
          * <p>
          * 
          * If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.

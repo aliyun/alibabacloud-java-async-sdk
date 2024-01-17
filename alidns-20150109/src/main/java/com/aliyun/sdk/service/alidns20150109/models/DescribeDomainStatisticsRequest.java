@@ -121,7 +121,11 @@ public class DescribeDomainStatisticsRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * The type of the domain name. Valid values:
+         * <p>
+         * 
+         * *   PUBLIC (default): hosted public domain name
+         * *   CACHE: cached public domain name
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -130,10 +134,10 @@ public class DescribeDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * The default value is the day when you perform the operation.
+         * The default value is the day when you query the data.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -142,7 +146,7 @@ public class DescribeDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,10 +155,10 @@ public class DescribeDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * You can only query the DNS records of the last 90 days.
+         * You can only query the DNS records within the last 90 days.``
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

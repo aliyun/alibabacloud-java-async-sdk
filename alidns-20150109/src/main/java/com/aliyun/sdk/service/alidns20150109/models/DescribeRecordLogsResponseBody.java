@@ -86,7 +86,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the operation logs of the domain name.
+         * The operation logs.
          */
         public Builder recordLogs(RecordLogs recordLogs) {
             this.recordLogs = recordLogs;
@@ -110,7 +110,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * The time when you performed the operation.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -222,7 +222,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp representing the time of the operation.
+             * The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -238,7 +238,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned operation message.
+             * The operation message.
              */
             public Builder message(String message) {
                 this.message = message;

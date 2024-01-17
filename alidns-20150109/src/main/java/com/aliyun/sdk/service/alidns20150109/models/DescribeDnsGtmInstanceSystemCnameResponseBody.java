@@ -50,7 +50,7 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
         private String systemCname; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

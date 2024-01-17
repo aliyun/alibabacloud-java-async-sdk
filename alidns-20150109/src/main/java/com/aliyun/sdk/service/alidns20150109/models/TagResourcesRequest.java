@@ -99,7 +99,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -108,7 +108,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * The resource ID.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +126,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -180,7 +180,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +188,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The value of tag N to add to the resource. The tag value can be up to 20 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;

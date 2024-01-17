@@ -98,7 +98,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +114,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The list of query volume records.
+         * The DNS requests.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -130,7 +130,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of data records.The total number of data records.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +138,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -190,7 +190,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
             private String subDomain; 
 
             /**
-             * The number of queries.
+             * The number of DNS requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -198,7 +198,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The subdomain name.
+             * The subdomain.
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;

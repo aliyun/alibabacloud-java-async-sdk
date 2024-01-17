@@ -148,7 +148,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The language of the subdomain.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,7 +157,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Line.
+         * The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -169,7 +169,7 @@ public class SetDNSSLBStatusRequest extends Request {
          * Specifies whether to enable or disable weighted round-robin. Valid values:
          * <p>
          * 
-         * *   **true**: enables weighted round-robin. This is the default value.
+         * *   **true** (default): enables weighted round-robin.
          * *   **false**: disables weighted round-robin.
          */
         public Builder open(Boolean open) {
@@ -179,7 +179,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The subdomain for which you want to configure weighted round-robin. Do not set the value to a string such as aliyun.com. Instead, set the value to @.aliyun.com.
+         * The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -188,7 +188,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The type of the DNS record. Valid values: A and AAAA. Default value: A.
+         * The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -197,7 +197,7 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client that you use to configure weighted round-robin.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

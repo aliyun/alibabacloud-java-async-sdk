@@ -50,7 +50,7 @@ public class TransferDomainResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class TransferDomainResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

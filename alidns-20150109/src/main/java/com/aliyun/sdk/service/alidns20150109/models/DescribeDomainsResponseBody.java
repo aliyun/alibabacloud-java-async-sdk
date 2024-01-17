@@ -290,6 +290,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("DomainId")
         private String domainId;
 
+        @NameInMap("DomainLoggingSwitchStatus")
+        private String domainLoggingSwitchStatus;
+
         @NameInMap("DomainName")
         private String domainName;
 
@@ -341,6 +344,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             this.createTimestamp = builder.createTimestamp;
             this.dnsServers = builder.dnsServers;
             this.domainId = builder.domainId;
+            this.domainLoggingSwitchStatus = builder.domainLoggingSwitchStatus;
             this.domainName = builder.domainName;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
@@ -399,6 +403,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
          */
         public String getDomainId() {
             return this.domainId;
+        }
+
+        /**
+         * @return domainLoggingSwitchStatus
+         */
+        public String getDomainLoggingSwitchStatus() {
+            return this.domainLoggingSwitchStatus;
         }
 
         /**
@@ -512,6 +523,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private Long createTimestamp; 
             private DnsServers dnsServers; 
             private String domainId; 
+            private String domainLoggingSwitchStatus; 
             private String domainName; 
             private String groupId; 
             private String groupName; 
@@ -565,6 +577,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * DomainLoggingSwitchStatus.
+             */
+            public Builder domainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
+                this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
                 return this;
             }
 

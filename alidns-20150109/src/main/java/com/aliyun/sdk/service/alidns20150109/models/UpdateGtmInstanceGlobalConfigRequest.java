@@ -167,10 +167,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         } 
 
         /**
-         * The alert group of the GTM instance. Currently, only one alert group is supported.
+         * The alert group. Only one alert group is supported.
          * <p>
          * 
-         * >  This parameter is required for the first update, but is optional for later updates.
+         * >  This parameter is required only for the first modification.
          */
         public Builder alertGroup(String alertGroup) {
             this.putQueryParameter("AlertGroup", alertGroup);
@@ -179,7 +179,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The CNAME record of a domain name, which must be the primary domain name. When **CnameMode** is **CUSTOM**, this parameter is required for access.
+         * If you set **CnameMode** to **CUSTOM**, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.
          */
         public Builder cnameCustomDomainName(String cnameCustomDomainName) {
             this.putQueryParameter("CnameCustomDomainName", cnameCustomDomainName);
@@ -188,11 +188,11 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether the CNAME record is user-defined or automatically assigned by the system. Valid values:
+         * Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:
          * <p>
          * 
-         * *   **SYSTEM_ASSIGN**: Assigned by the system
-         * *   **CUSTOM**: User-defined
+         * *   **SYSTEM_ASSIGN**: system-assigned CNAME
+         * *   **CUSTOM**: custom CNAME
          */
         public Builder cnameMode(String cnameMode) {
             this.putQueryParameter("CnameMode", cnameMode);
@@ -201,7 +201,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance whose configuration you want to modify.
+         * The ID of the GTM instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,7 +213,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
          * The name of the GTM instance.
          * <p>
          * 
-         * >  This parameter is required for the first update, but is not required for later updates.
+         * >  This parameter is required only for the first modification.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -222,7 +222,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -231,14 +231,13 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The load balancing policy. Valid values:
+         * The balancing policy. Valid values:
          * <p>
          * 
-         * *   **ALL_RR**: Load balancing
+         * *   **ALL_RR**: load balancing
+         * *   **RATIO**: weighted round-robin
          * 
-         * *   **RATIO**: Weighted round robin
-         * 
-         * > This parameter is required for the first update, but is optional for later updates.
+         * >  This parameter is required only for the first modification.
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -247,7 +246,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The time when the modification takes effect.
+         * The global time-to-live (TTL).
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -259,7 +258,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
          * The primary domain name.
          * <p>
          * 
-         * >  This parameter is required for the first update, but is optional for later updates.
+         * >  This parameter is required only for the first modification.
          */
         public Builder userDomainName(String userDomainName) {
             this.putQueryParameter("UserDomainName", userDomainName);

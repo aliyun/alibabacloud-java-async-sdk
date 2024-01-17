@@ -192,7 +192,11 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   PUBLIC (default): hosted public domain name
+         * *   CACHE: cache-accelerated domain name
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -201,10 +205,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The end date of the query. Specify the start date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * The default value is the day when you perform the operation.
+         * The default value is the day when you query the data.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -222,7 +226,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -231,7 +235,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,7 +244,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Minimum value: **1**. Default value: **20**.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,8 +256,8 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
          * The search mode of the keyword. Valid values:
          * <p>
          * 
-         * *   **LIKE**: fuzzy match (default).
-         * *   **EXACT**: exact match.
+         * *   **LIKE** (default): fuzzy search
+         * *   **EXACT**: exact search
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -262,10 +266,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * You can only query DNS records of the last 90 days.
+         * You can only query the DNS records within the last 90 days.``
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -274,7 +278,7 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.
+         * The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);
