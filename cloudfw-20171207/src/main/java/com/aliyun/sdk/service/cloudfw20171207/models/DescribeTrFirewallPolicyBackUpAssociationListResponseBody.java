@@ -50,7 +50,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         private String requestId; 
 
         /**
-         * PolicyAssociationBackupConfigs.
+         * The route tables.
          */
         public Builder policyAssociationBackupConfigs(java.util.List < PolicyAssociationBackupConfigs> policyAssociationBackupConfigs) {
             this.policyAssociationBackupConfigs = policyAssociationBackupConfigs;
@@ -58,7 +58,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             private String originalRouteTableId; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -154,7 +154,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CandidateName.
+             * The name of the traffic redirection instance.
              */
             public Builder candidateName(String candidateName) {
                 this.candidateName = candidateName;
@@ -162,7 +162,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -170,7 +170,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * CurrentRouteTableId.
+             * The route table that is used after traffic redirection.
              */
             public Builder currentRouteTableId(String currentRouteTableId) {
                 this.currentRouteTableId = currentRouteTableId;
@@ -178,7 +178,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
             }
 
             /**
-             * OriginalRouteTableId.
+             * The ID of the route table.
              */
             public Builder originalRouteTableId(String originalRouteTableId) {
                 this.originalRouteTableId = originalRouteTableId;

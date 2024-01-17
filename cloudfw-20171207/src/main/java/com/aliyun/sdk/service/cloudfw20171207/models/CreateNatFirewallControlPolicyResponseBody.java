@@ -50,10 +50,10 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The UUID of the access control policy.
+         * The unique ID of the access control policy.
          * <p>
          * 
-         * > If you want to modify an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.
+         * >  To modify an access control policy, you must specify the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.
          */
         public Builder aclUuid(String aclUuid) {
             this.aclUuid = aclUuid;

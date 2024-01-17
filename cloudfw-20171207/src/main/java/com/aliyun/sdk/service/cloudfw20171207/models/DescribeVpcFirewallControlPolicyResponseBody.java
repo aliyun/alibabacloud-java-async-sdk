@@ -62,7 +62,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The information about the access control policies.
+         * The access control policies.
          */
         public Builder policys(java.util.List < Policys> policys) {
             this.policys = policys;
@@ -506,7 +506,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              * <p>
              * 
              * *   **accept**: allows the traffic.
-             * *   **drop**: blocks the traffic.
+             * *   **drop**: denies the traffic.
              * *   **log**: monitors the traffic.
              */
             public Builder aclAction(String aclAction) {
@@ -515,7 +515,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the access control policy.
+             * The UUID of the access control policy.
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -531,7 +531,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The application type in the access control policy. Valid values:
+             * The application types supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:
              * <p>
              * 
              * *   **HTTP**
@@ -555,7 +555,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationNameList.
+             * The application types supported by the access control policy.
              */
             public Builder applicationNameList(java.util.List < String > applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -563,7 +563,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the access control policy was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -595,7 +595,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the ports in the destination port address book of the access control policy.
+             * The ports in the destination port address book of the access control policy.
              */
             public Builder destPortGroupPorts(java.util.List < String > destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
@@ -628,7 +628,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the CIDR blocks in the destination address book of the access control policy.
+             * The CIDR blocks in the destination address book of the access control policy.
              */
             public Builder destinationGroupCidrs(java.util.List < String > destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
@@ -661,7 +661,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -669,7 +672,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HitLastTime.
+             * The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -693,7 +696,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the access control policy was modified. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -726,11 +729,11 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:
+             * Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
              * <p>
              * 
-             * *   **true**: The access control policy is enabled.
-             * *   **false**: The access control policy is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder release(String release) {
                 this.release = release;
@@ -738,7 +741,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * The days of a week or of a month on which the access control policy takes effect.
+             * <p>
+             * 
+             * *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
+             * *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
+             * 
+             * >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
+             * 
+             * *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
+             * 
+             * >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
              */
             public Builder repeatDays(java.util.List < Long > repeatDays) {
                 this.repeatDays = repeatDays;
@@ -746,7 +759,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatEndTime.
+             * The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.
              */
             public Builder repeatEndTime(String repeatEndTime) {
                 this.repeatEndTime = repeatEndTime;
@@ -754,7 +770,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatStartTime.
+             * The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
              */
             public Builder repeatStartTime(String repeatStartTime) {
                 this.repeatStartTime = repeatStartTime;
@@ -762,7 +781,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatType.
+             * The recurrence type for the access control policy to take effect. Valid values:
+             * <p>
+             * 
+             * *   **Permanent** (default): The policy always takes effect.
+             * *   **None**: The policy takes effect for only once.
+             * *   **Daily**: The policy takes effect on a daily basis.
+             * *   **Weekly**: The policy takes effect on a weekly basis.
+             * *   **Monthly**: The policy takes effect on a monthly basis.
              */
             public Builder repeatType(String repeatType) {
                 this.repeatType = repeatType;
@@ -782,7 +808,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the CIDR blocks in the source address book of the access control policy.
+             * The CIDR blocks in the source address book of the access control policy.
              */
             public Builder sourceGroupCidrs(java.util.List < String > sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
@@ -790,7 +816,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source address in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.
+             * The type of the source address book in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.
              */
             public Builder sourceGroupType(String sourceGroupType) {
                 this.sourceGroupType = sourceGroupType;
@@ -810,7 +836,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SpreadCnt.
+             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses × Number of destination addresses (number of CIDR blocks or domain names) × Number of applications × Number of port ranges.
              */
             public Builder spreadCnt(Long spreadCnt) {
                 this.spreadCnt = spreadCnt;
@@ -818,7 +844,10 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

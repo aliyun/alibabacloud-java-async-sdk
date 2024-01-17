@@ -520,10 +520,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
+         * The domain name resolution method of the access control policy. By default, the access control policy is enabled after the policy is created. Valid values:
          * <p>
          * 
-         * *   **0**: Fully qualified domain name (FQDN)-based resolution
+         * *   **0**: fully qualified domain name (FQDN)-based resolution
          * *   **1**: Domain Name System (DNS)-based dynamic resolution
          * *   **2**: FQDN and DNS-based dynamic resolution
          */
@@ -534,7 +534,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.
+         * <p>
+         * 
+         * >  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -579,7 +582,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The new priority of the access control policy.
+         * The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);
@@ -618,7 +621,17 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatDays.
+         * The days of a week or of a month on which the access control policy takes effect.
+         * <p>
+         * 
+         * *   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].
+         * *   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].
+         * 
+         * >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
+         * 
+         * *   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].
+         * 
+         * >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
          */
         public Builder repeatDays(java.util.List < Long > repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -627,7 +640,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatEndTime.
+         * The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.
+         * <p>
+         * 
+         * >  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
          */
         public Builder repeatEndTime(String repeatEndTime) {
             this.putQueryParameter("RepeatEndTime", repeatEndTime);
@@ -636,7 +652,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatStartTime.
+         * The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.
+         * <p>
+         * 
+         * >  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
          */
         public Builder repeatStartTime(String repeatStartTime) {
             this.putQueryParameter("RepeatStartTime", repeatStartTime);
@@ -645,7 +664,14 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * The recurrence type for the access control policy to take effect. Valid values:
+         * <p>
+         * 
+         * *   **Permanent** (default): The policy always takes effect.
+         * *   **None**: The policy takes effect for only once.
+         * *   **Daily**: The policy takes effect on a daily basis.
+         * *   **Weekly**: The policy takes effect on a weekly basis.
+         * *   **Monthly**: The policy takes effect on a monthly basis.
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -689,7 +715,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.
+         * <p>
+         * 
+         * >  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

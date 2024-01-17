@@ -54,7 +54,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchCopyVpcFirewallControlPolicyResponse> batchCopyVpcFirewallControlPolicy(BatchCopyVpcFirewallControlPolicyRequest request);
 
     /**
-      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
       *
      */
     CompletableFuture<CreateNatFirewallControlPolicyResponse> createNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request);
@@ -465,6 +465,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<PutEnableFwSwitchResponse> putEnableFwSwitch(PutEnableFwSwitchRequest request);
+
+    CompletableFuture<ReleasePostInstanceResponse> releasePostInstance(ReleasePostInstanceRequest request);
 
     /**
       * You can call the ResetVpcFirewallRuleHitCount operation to clear the count on hits of an access control policy that is created for a VPC firewall in a specific policy group.  

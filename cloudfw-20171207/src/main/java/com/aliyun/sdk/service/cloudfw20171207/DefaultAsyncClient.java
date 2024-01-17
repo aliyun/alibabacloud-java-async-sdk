@@ -126,7 +126,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
       *
      */
     @Override
@@ -1397,6 +1397,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutEnableFwSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ReleasePostInstanceResponse> releasePostInstance(ReleasePostInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleasePostInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleasePostInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleasePostInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

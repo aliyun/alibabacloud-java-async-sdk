@@ -110,7 +110,7 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * The instance ID of the virtual private cloud (VPC) firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -119,7 +119,11 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +132,11 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * ShouldRecover.
+         * Specifies whether to restore the traffic redirection configurations. Valid values:
+         * <p>
+         * 
+         * *   true: roll back
+         * *   false: withdraw
          */
         public Builder shouldRecover(String shouldRecover) {
             this.putQueryParameter("ShouldRecover", shouldRecover);
@@ -137,7 +145,7 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * The ID of the routing policy.
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -146,7 +154,11 @@ public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicySwitchStatus.
+         * The status of the routing policy. Valid values:
+         * <p>
+         * 
+         * *   open: enabled
+         * *   close: disabled
          */
         public Builder trFirewallRoutePolicySwitchStatus(String trFirewallRoutePolicySwitchStatus) {
             this.putQueryParameter("TrFirewallRoutePolicySwitchStatus", trFirewallRoutePolicySwitchStatus);

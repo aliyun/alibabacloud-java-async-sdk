@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTrFirewallsV2RouteListResponse} extends {@link TeaModel}
+ * {@link ReleasePostInstanceResponse} extends {@link TeaModel}
  *
- * <p>DescribeTrFirewallsV2RouteListResponse</p>
+ * <p>ReleasePostInstanceResponse</p>
  */
-public class DescribeTrFirewallsV2RouteListResponse extends Response {
+public class ReleasePostInstanceResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeTrFirewallsV2RouteListResponseBody body;
+    private ReleasePostInstanceResponseBody body;
 
-    private DescribeTrFirewallsV2RouteListResponse(BuilderImpl builder) {
+    private ReleasePostInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeTrFirewallsV2RouteListResponse create() {
+    public static ReleasePostInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
     /**
      * @return body
      */
-    public DescribeTrFirewallsV2RouteListResponseBody getBody() {
+    public ReleasePostInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeTrFirewallsV2RouteListResponse, Builder> {
+    public interface Builder extends Response.Builder<ReleasePostInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeTrFirewallsV2RouteListResponseBody body);
+        Builder body(ReleasePostInstanceResponseBody body);
 
         @Override
-        DescribeTrFirewallsV2RouteListResponse build();
+        ReleasePostInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeTrFirewallsV2RouteListResponse, Builder>
+            extends Response.BuilderImpl<ReleasePostInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeTrFirewallsV2RouteListResponseBody body; 
+        private ReleasePostInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeTrFirewallsV2RouteListResponse response) {
+        private BuilderImpl(ReleasePostInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class DescribeTrFirewallsV2RouteListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeTrFirewallsV2RouteListResponseBody body) {
+        public Builder body(ReleasePostInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeTrFirewallsV2RouteListResponse build() {
-            return new DescribeTrFirewallsV2RouteListResponse(this);
+        public ReleasePostInstanceResponse build() {
+            return new ReleasePostInstanceResponse(this);
         } 
 
     } 
