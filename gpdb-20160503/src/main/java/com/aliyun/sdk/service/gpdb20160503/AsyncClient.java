@@ -485,8 +485,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryCollectionDataResponse> queryCollectionData(QueryCollectionDataRequest request);
 
-    CompletableFuture<QueryContentResponse> queryContent(QueryContentRequest request);
-
     CompletableFuture<RebalanceDBInstanceResponse> rebalanceDBInstance(RebalanceDBInstanceRequest request);
 
     CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request);
