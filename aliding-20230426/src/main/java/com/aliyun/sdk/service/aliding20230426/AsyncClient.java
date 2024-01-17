@@ -108,6 +108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteWorkspaceMembersResponse> deleteWorkspaceMembers(DeleteWorkspaceMembersRequest request);
 
+    CompletableFuture<ExecuteBatchTaskResponse> executeBatchTask(ExecuteBatchTaskRequest request);
+
     CompletableFuture<ExecutePlatformTaskResponse> executePlatformTask(ExecutePlatformTaskRequest request);
 
     CompletableFuture<ExecuteTaskResponse> executeTask(ExecuteTaskRequest request);
@@ -115,6 +117,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetActivityListResponse> getActivityList(GetActivityListRequest request);
 
     CompletableFuture<GetAllSheetsResponse> getAllSheets(GetAllSheetsRequest request);
+
+    CompletableFuture<GetCorpAccomplishmentTasksResponse> getCorpAccomplishmentTasks(GetCorpAccomplishmentTasksRequest request);
+
+    CompletableFuture<GetCorpTasksResponse> getCorpTasks(GetCorpTasksRequest request);
 
     CompletableFuture<GetEventResponse> getEvent(GetEventRequest request);
 
@@ -146,6 +152,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetNodesResponse> getNodes(GetNodesRequest request);
 
+    CompletableFuture<GetNotifyMeResponse> getNotifyMe(GetNotifyMeRequest request);
+
     CompletableFuture<GetOpenUrlResponse> getOpenUrl(GetOpenUrlRequest request);
 
     CompletableFuture<GetOperationRecordsResponse> getOperationRecords(GetOperationRecordsRequest request);
@@ -158,11 +166,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetReportUnReadCountResponse> getReportUnReadCount(GetReportUnReadCountRequest request);
 
+    CompletableFuture<GetRunningTasksResponse> getRunningTasks(GetRunningTasksRequest request);
+
     CompletableFuture<GetSheetResponse> getSheet(GetSheetRequest request);
 
     CompletableFuture<GetSpaceDirectoriesResponse> getSpaceDirectories(GetSpaceDirectoriesRequest request);
 
     CompletableFuture<GetSubscribedCalendarResponse> getSubscribedCalendar(GetSubscribedCalendarRequest request);
+
+    CompletableFuture<GetTaskCopiesResponse> getTaskCopies(GetTaskCopiesRequest request);
 
     CompletableFuture<GetTemplateListByUserIdResponse> getTemplateListByUserId(GetTemplateListByUserIdRequest request);
 
@@ -180,6 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InviteUsersResponse> inviteUsers(InviteUsersRequest request);
 
+    CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request);
+
     CompletableFuture<ListCalendarsResponse> listCalendars(ListCalendarsRequest request);
 
     CompletableFuture<ListEventsResponse> listEvents(ListEventsRequest request);
@@ -195,6 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListReportResponse> listReport(ListReportRequest request);
 
     CompletableFuture<ListTableDataByFormInstanceIdTableIdResponse> listTableDataByFormInstanceIdTableId(ListTableDataByFormInstanceIdTableIdRequest request);
+
+    CompletableFuture<ListTeamsResponse> listTeams(ListTeamsRequest request);
 
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
@@ -238,6 +254,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReceiverListReportResponse> receiverListReport(ReceiverListReportRequest request);
 
+    CompletableFuture<RedirectTaskResponse> redirectTask(RedirectTaskRequest request);
+
     CompletableFuture<RemoveAttendeeResponse> removeAttendee(RemoveAttendeeRequest request);
 
     CompletableFuture<RemoveMeetingRoomsResponse> removeMeetingRooms(RemoveMeetingRoomsRequest request);
@@ -245,6 +263,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveContentResponse> saveContent(SaveContentRequest request);
 
     CompletableFuture<SaveFormDataResponse> saveFormData(SaveFormDataRequest request);
+
+    CompletableFuture<SaveFormRemarkResponse> saveFormRemark(SaveFormRemarkRequest request);
 
     CompletableFuture<SearchEmployeeFieldValuesResponse> searchEmployeeFieldValues(SearchEmployeeFieldValuesRequest request);
 
