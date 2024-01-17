@@ -1,0 +1,96 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aimiaobi20230801.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListBuildConfigsRequest} extends {@link RequestModel}
+ *
+ * <p>ListBuildConfigsRequest</p>
+ */
+public class ListBuildConfigsRequest extends Request {
+    @Query
+    @NameInMap("AgentKey")
+    @Validation(required = true)
+    private String agentKey;
+
+    @Body
+    @NameInMap("Type")
+    private String type;
+
+    private ListBuildConfigsRequest(Builder builder) {
+        super(builder);
+        this.agentKey = builder.agentKey;
+        this.type = builder.type;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListBuildConfigsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return agentKey
+     */
+    public String getAgentKey() {
+        return this.agentKey;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    public static final class Builder extends Request.Builder<ListBuildConfigsRequest, Builder> {
+        private String agentKey; 
+        private String type; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListBuildConfigsRequest request) {
+            super(request);
+            this.agentKey = request.agentKey;
+            this.type = request.type;
+        } 
+
+        /**
+         * AgentKey.
+         */
+        public Builder agentKey(String agentKey) {
+            this.putQueryParameter("AgentKey", agentKey);
+            this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
+            return this;
+        }
+
+        @Override
+        public ListBuildConfigsRequest build() {
+            return new ListBuildConfigsRequest(this);
+        } 
+
+    } 
+
+}
