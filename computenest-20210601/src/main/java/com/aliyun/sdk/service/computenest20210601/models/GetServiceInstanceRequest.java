@@ -13,17 +13,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetServiceInstanceRequest extends Request {
     @Query
+    @NameInMap("MarketInstanceId")
+    private String marketInstanceId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
     @Query
     @NameInMap("ServiceInstanceId")
-    @Validation(required = true)
     private String serviceInstanceId;
 
     private GetServiceInstanceRequest(Builder builder) {
         super(builder);
+        this.marketInstanceId = builder.marketInstanceId;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
     }
@@ -42,6 +46,13 @@ public class GetServiceInstanceRequest extends Request {
     }
 
     /**
+     * @return marketInstanceId
+     */
+    public String getMarketInstanceId() {
+        return this.marketInstanceId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -56,6 +67,7 @@ public class GetServiceInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetServiceInstanceRequest, Builder> {
+        private String marketInstanceId; 
         private String regionId; 
         private String serviceInstanceId; 
 
@@ -63,11 +75,21 @@ public class GetServiceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceInstanceRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.serviceInstanceId = response.serviceInstanceId;
+        private Builder(GetServiceInstanceRequest request) {
+            super(request);
+            this.marketInstanceId = request.marketInstanceId;
+            this.regionId = request.regionId;
+            this.serviceInstanceId = request.serviceInstanceId;
         } 
+
+        /**
+         * MarketInstanceId.
+         */
+        public Builder marketInstanceId(String marketInstanceId) {
+            this.putQueryParameter("MarketInstanceId", marketInstanceId);
+            this.marketInstanceId = marketInstanceId;
+            return this;
+        }
 
         /**
          * RegionId.

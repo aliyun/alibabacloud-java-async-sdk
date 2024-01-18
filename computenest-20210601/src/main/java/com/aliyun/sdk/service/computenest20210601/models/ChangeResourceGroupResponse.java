@@ -7,26 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceProvisionsResponse} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponse} extends {@link TeaModel}
  *
- * <p>GetServiceProvisionsResponse</p>
+ * <p>ChangeResourceGroupResponse</p>
  */
-public class GetServiceProvisionsResponse extends Response {
+public class ChangeResourceGroupResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    private Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
-    private GetServiceProvisionsResponseBody body;
+    private ChangeResourceGroupResponseBody body;
 
-    private GetServiceProvisionsResponse(BuilderImpl builder) {
+    private ChangeResourceGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetServiceProvisionsResponse create() {
+    public static ChangeResourceGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +48,47 @@ public class GetServiceProvisionsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public GetServiceProvisionsResponseBody getBody() {
+    public ChangeResourceGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetServiceProvisionsResponse, Builder> {
+    public interface Builder extends Response.Builder<ChangeResourceGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetServiceProvisionsResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ChangeResourceGroupResponseBody body);
 
         @Override
-        GetServiceProvisionsResponse build();
+        ChangeResourceGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetServiceProvisionsResponse, Builder>
+            extends Response.BuilderImpl<ChangeResourceGroupResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetServiceProvisionsResponseBody body; 
+        private Integer statusCode; 
+        private ChangeResourceGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetServiceProvisionsResponse response) {
+        private BuilderImpl(ChangeResourceGroupResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +102,26 @@ public class GetServiceProvisionsResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(GetServiceProvisionsResponseBody body) {
+        public Builder body(ChangeResourceGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetServiceProvisionsResponse build() {
-            return new GetServiceProvisionsResponse(this);
+        public ChangeResourceGroupResponse build() {
+            return new ChangeResourceGroupResponse(this);
         } 
 
     } 

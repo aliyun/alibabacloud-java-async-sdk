@@ -23,6 +23,7 @@ public class DeleteServiceInstancesRequest extends Request {
 
     @Query
     @NameInMap("ServiceInstanceId")
+    @Validation(required = true)
     private java.util.List < String > serviceInstanceId;
 
     private DeleteServiceInstancesRequest(Builder builder) {
@@ -75,11 +76,11 @@ public class DeleteServiceInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceInstancesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.regionId = response.regionId;
-            this.serviceInstanceId = response.serviceInstanceId;
+        private Builder(DeleteServiceInstancesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
+            this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**

@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceInstancesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -46,7 +46,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -79,7 +79,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < ServiceInstances> serviceInstances; 
@@ -88,7 +88,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -260,6 +260,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Version")
         private String version;
 
+        @NameInMap("VersionName")
+        private String versionName;
+
         private Service(Builder builder) {
             this.deployType = builder.deployType;
             this.publishTime = builder.publishTime;
@@ -270,6 +273,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
             this.version = builder.version;
+            this.versionName = builder.versionName;
         }
 
         public static Builder builder() {
@@ -343,6 +347,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionName
+         */
+        public String getVersionName() {
+            return this.versionName;
+        }
+
         public static final class Builder {
             private String deployType; 
             private String publishTime; 
@@ -353,6 +364,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String supplierName; 
             private String supplierUrl; 
             private String version; 
+            private String versionName; 
 
             /**
              * DeployType.
@@ -426,6 +438,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VersionName.
+             */
+            public Builder versionName(String versionName) {
+                this.versionName = versionName;
+                return this;
+            }
+
             public Service build() {
                 return new Service(this);
             } 
@@ -433,12 +453,85 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ServiceInstances extends TeaModel {
+        @NameInMap("BizStatus")
+        private String bizStatus;
+
         @NameInMap("CreateTime")
         private String createTime;
 
         @NameInMap("EnableInstanceOps")
         private Boolean enableInstanceOps;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("MarketInstanceId")
+        private String marketInstanceId;
+
+        @NameInMap("Name")
+        private String name;
 
         @NameInMap("OperatedServiceInstanceId")
         private String operatedServiceInstanceId;
@@ -455,8 +548,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Parameters")
         private String parameters;
 
+        @NameInMap("PayType")
+        private String payType;
+
         @NameInMap("Progress")
         private Long progress;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("Resources")
         private String resources;
@@ -467,11 +566,20 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("ServiceInstanceId")
         private String serviceInstanceId;
 
+        @NameInMap("ServiceType")
+        private String serviceType;
+
+        @NameInMap("Source")
+        private String source;
+
         @NameInMap("Status")
         private String status;
 
         @NameInMap("StatusDetail")
         private String statusDetail;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         @NameInMap("TemplateName")
         private String templateName;
@@ -480,19 +588,28 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private String updateTime;
 
         private ServiceInstances(Builder builder) {
+            this.bizStatus = builder.bizStatus;
             this.createTime = builder.createTime;
             this.enableInstanceOps = builder.enableInstanceOps;
+            this.endTime = builder.endTime;
+            this.marketInstanceId = builder.marketInstanceId;
+            this.name = builder.name;
             this.operatedServiceInstanceId = builder.operatedServiceInstanceId;
             this.operationEndTime = builder.operationEndTime;
             this.operationStartTime = builder.operationStartTime;
             this.outputs = builder.outputs;
             this.parameters = builder.parameters;
+            this.payType = builder.payType;
             this.progress = builder.progress;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resources = builder.resources;
             this.service = builder.service;
             this.serviceInstanceId = builder.serviceInstanceId;
+            this.serviceType = builder.serviceType;
+            this.source = builder.source;
             this.status = builder.status;
             this.statusDetail = builder.statusDetail;
+            this.tags = builder.tags;
             this.templateName = builder.templateName;
             this.updateTime = builder.updateTime;
         }
@@ -503,6 +620,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
 
         public static ServiceInstances create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizStatus
+         */
+        public String getBizStatus() {
+            return this.bizStatus;
         }
 
         /**
@@ -517,6 +641,27 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          */
         public Boolean getEnableInstanceOps() {
             return this.enableInstanceOps;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return marketInstanceId
+         */
+        public String getMarketInstanceId() {
+            return this.marketInstanceId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -555,10 +700,24 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return payType
+         */
+        public String getPayType() {
+            return this.payType;
+        }
+
+        /**
          * @return progress
          */
         public Long getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -583,6 +742,20 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -594,6 +767,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          */
         public String getStatusDetail() {
             return this.statusDetail;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -611,21 +791,38 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizStatus; 
             private String createTime; 
             private Boolean enableInstanceOps; 
+            private String endTime; 
+            private String marketInstanceId; 
+            private String name; 
             private String operatedServiceInstanceId; 
             private String operationEndTime; 
             private String operationStartTime; 
             private String outputs; 
             private String parameters; 
+            private String payType; 
             private Long progress; 
+            private String resourceGroupId; 
             private String resources; 
             private Service service; 
             private String serviceInstanceId; 
+            private String serviceType; 
+            private String source; 
             private String status; 
             private String statusDetail; 
+            private java.util.List < Tags> tags; 
             private String templateName; 
             private String updateTime; 
+
+            /**
+             * BizStatus.
+             */
+            public Builder bizStatus(String bizStatus) {
+                this.bizStatus = bizStatus;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -640,6 +837,30 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder enableInstanceOps(Boolean enableInstanceOps) {
                 this.enableInstanceOps = enableInstanceOps;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * MarketInstanceId.
+             */
+            public Builder marketInstanceId(String marketInstanceId) {
+                this.marketInstanceId = marketInstanceId;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -684,10 +905,26 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * PayType.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
              * Progress.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -716,6 +953,22 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -728,6 +981,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder statusDetail(String statusDetail) {
                 this.statusDetail = statusDetail;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceInstanceResponseBody</p>
  */
 public class CreateServiceInstanceResponseBody extends TeaModel {
+    @NameInMap("MarketInstanceId")
+    private String marketInstanceId;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -22,6 +25,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     private String status;
 
     private CreateServiceInstanceResponseBody(Builder builder) {
+        this.marketInstanceId = builder.marketInstanceId;
         this.requestId = builder.requestId;
         this.serviceInstanceId = builder.serviceInstanceId;
         this.status = builder.status;
@@ -33,6 +37,13 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
 
     public static CreateServiceInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return marketInstanceId
+     */
+    public String getMarketInstanceId() {
+        return this.marketInstanceId;
     }
 
     /**
@@ -57,9 +68,18 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String marketInstanceId; 
         private String requestId; 
         private String serviceInstanceId; 
         private String status; 
+
+        /**
+         * MarketInstanceId.
+         */
+        public Builder marketInstanceId(String marketInstanceId) {
+            this.marketInstanceId = marketInstanceId;
+            return this;
+        }
 
         /**
          * RequestId.

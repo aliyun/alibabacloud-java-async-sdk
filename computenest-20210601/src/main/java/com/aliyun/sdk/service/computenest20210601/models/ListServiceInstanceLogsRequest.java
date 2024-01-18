@@ -13,9 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceInstanceLogsRequest extends Request {
     @Query
+    @NameInMap("LogSource")
+    private String logSource;
+
+    @Query
+    @NameInMap("Logstore")
+    private String logstore;
+
+    @Query
     @NameInMap("MaxResults")
-    @Validation(required = true)
-    private String maxResults;
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -33,6 +40,8 @@ public class ListServiceInstanceLogsRequest extends Request {
 
     private ListServiceInstanceLogsRequest(Builder builder) {
         super(builder);
+        this.logSource = builder.logSource;
+        this.logstore = builder.logstore;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -53,9 +62,23 @@ public class ListServiceInstanceLogsRequest extends Request {
     }
 
     /**
+     * @return logSource
+     */
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    /**
+     * @return logstore
+     */
+    public String getLogstore() {
+        return this.logstore;
+    }
+
+    /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -81,7 +104,9 @@ public class ListServiceInstanceLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceInstanceLogsRequest, Builder> {
-        private String maxResults; 
+        private String logSource; 
+        private String logstore; 
+        private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
         private String serviceInstanceId; 
@@ -90,18 +115,38 @@ public class ListServiceInstanceLogsRequest extends Request {
             super();
         } 
 
-        private Builder(ListServiceInstanceLogsRequest response) {
-            super(response);
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.serviceInstanceId = response.serviceInstanceId;
+        private Builder(ListServiceInstanceLogsRequest request) {
+            super(request);
+            this.logSource = request.logSource;
+            this.logstore = request.logstore;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.serviceInstanceId = request.serviceInstanceId;
         } 
+
+        /**
+         * LogSource.
+         */
+        public Builder logSource(String logSource) {
+            this.putQueryParameter("LogSource", logSource);
+            this.logSource = logSource;
+            return this;
+        }
+
+        /**
+         * Logstore.
+         */
+        public Builder logstore(String logstore) {
+            this.putQueryParameter("Logstore", logstore);
+            this.logstore = logstore;
+            return this;
+        }
 
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;

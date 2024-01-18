@@ -18,7 +18,7 @@ public class ListServiceInstancesRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -30,8 +30,12 @@ public class ListServiceInstancesRequest extends Request {
     private String regionId;
 
     @Query
-    @NameInMap("RequestTag")
-    private java.util.List < RequestTag> requestTag;
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private ListServiceInstancesRequest(Builder builder) {
         super(builder);
@@ -39,7 +43,8 @@ public class ListServiceInstancesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.requestTag = builder.requestTag;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -65,7 +70,7 @@ public class ListServiceInstancesRequest extends Request {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -84,30 +89,39 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
-     * @return requestTag
+     * @return resourceGroupId
      */
-    public java.util.List < RequestTag> getRequestTag() {
-        return this.requestTag;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListServiceInstancesRequest, Builder> {
         private java.util.List < Filter> filter; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < RequestTag> requestTag; 
+        private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceInstancesRequest response) {
-            super(response);
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.requestTag = response.requestTag;
+        private Builder(ListServiceInstancesRequest request) {
+            super(request);
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -122,7 +136,7 @@ public class ListServiceInstancesRequest extends Request {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;
@@ -147,11 +161,20 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * RequestTag.
+         * ResourceGroupId.
          */
-        public Builder requestTag(java.util.List < RequestTag> requestTag) {
-            this.putQueryParameter("RequestTag", requestTag);
-            this.requestTag = requestTag;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -223,14 +246,14 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
     }
-    public static class RequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
         private String value;
 
-        private RequestTag(Builder builder) {
+        private Tag(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -239,7 +262,7 @@ public class ListServiceInstancesRequest extends Request {
             return new Builder();
         }
 
-        public static RequestTag create() {
+        public static Tag create() {
             return builder().build();
         }
 
@@ -277,8 +300,8 @@ public class ListServiceInstancesRequest extends Request {
                 return this;
             }
 
-            public RequestTag build() {
-                return new RequestTag(this);
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

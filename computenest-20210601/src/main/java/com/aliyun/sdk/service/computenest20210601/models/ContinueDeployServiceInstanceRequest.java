@@ -17,6 +17,14 @@ public class ContinueDeployServiceInstanceRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("Option")
+    private java.util.List < String > option;
+
+    @Query
     @NameInMap("Parameters")
     private String parameters;
 
@@ -33,6 +41,8 @@ public class ContinueDeployServiceInstanceRequest extends Request {
     private ContinueDeployServiceInstanceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
+        this.option = builder.option;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
@@ -59,6 +69,20 @@ public class ContinueDeployServiceInstanceRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return option
+     */
+    public java.util.List < String > getOption() {
+        return this.option;
+    }
+
+    /**
      * @return parameters
      */
     public String getParameters() {
@@ -81,6 +105,8 @@ public class ContinueDeployServiceInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ContinueDeployServiceInstanceRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
+        private java.util.List < String > option; 
         private String parameters; 
         private String regionId; 
         private String serviceInstanceId; 
@@ -89,12 +115,14 @@ public class ContinueDeployServiceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ContinueDeployServiceInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
-            this.serviceInstanceId = response.serviceInstanceId;
+        private Builder(ContinueDeployServiceInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.option = request.option;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
+            this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**
@@ -103,6 +131,24 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Option.
+         */
+        public Builder option(java.util.List < String > option) {
+            this.putQueryParameter("Option", option);
+            this.option = option;
             return this;
         }
 

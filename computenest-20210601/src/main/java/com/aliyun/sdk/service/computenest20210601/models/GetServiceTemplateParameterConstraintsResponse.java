@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateServiceInstanceResponse} extends {@link TeaModel}
+ * {@link GetServiceTemplateParameterConstraintsResponse} extends {@link TeaModel}
  *
- * <p>CreateServiceInstanceResponse</p>
+ * <p>GetServiceTemplateParameterConstraintsResponse</p>
  */
-public class CreateServiceInstanceResponse extends Response {
+public class GetServiceTemplateParameterConstraintsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class CreateServiceInstanceResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private CreateServiceInstanceResponseBody body;
+    private GetServiceTemplateParameterConstraintsResponseBody body;
 
-    private CreateServiceInstanceResponse(BuilderImpl builder) {
+    private GetServiceTemplateParameterConstraintsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateServiceInstanceResponse create() {
+    public static GetServiceTemplateParameterConstraintsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class CreateServiceInstanceResponse extends Response {
     /**
      * @return body
      */
-    public CreateServiceInstanceResponseBody getBody() {
+    public GetServiceTemplateParameterConstraintsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateServiceInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<GetServiceTemplateParameterConstraintsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateServiceInstanceResponseBody body);
+        Builder body(GetServiceTemplateParameterConstraintsResponseBody body);
 
         @Override
-        CreateServiceInstanceResponse build();
+        GetServiceTemplateParameterConstraintsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateServiceInstanceResponse, Builder>
+            extends Response.BuilderImpl<GetServiceTemplateParameterConstraintsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateServiceInstanceResponseBody body; 
+        private GetServiceTemplateParameterConstraintsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateServiceInstanceResponse response) {
+        private BuilderImpl(GetServiceTemplateParameterConstraintsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class CreateServiceInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateServiceInstanceResponseBody body) {
+        public Builder body(GetServiceTemplateParameterConstraintsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateServiceInstanceResponse build() {
-            return new CreateServiceInstanceResponse(this);
+        public GetServiceTemplateParameterConstraintsResponse build() {
+            return new GetServiceTemplateParameterConstraintsResponse(this);
         } 
 
     } 

@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceInstanceLogsResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +42,7 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -68,7 +68,7 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < ServiceInstancesLogs> serviceInstancesLogs; 
@@ -76,7 +76,7 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -115,19 +115,31 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         @NameInMap("Content")
         private String content;
 
-        @NameInMap("ServiceInstanceId")
-        private String serviceInstanceId;
+        @NameInMap("LogType")
+        private String logType;
+
+        @NameInMap("ResourceId")
+        private String resourceId;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
 
         @NameInMap("Source")
         private String source;
+
+        @NameInMap("Status")
+        private String status;
 
         @NameInMap("Timestamp")
         private String timestamp;
 
         private ServiceInstancesLogs(Builder builder) {
             this.content = builder.content;
-            this.serviceInstanceId = builder.serviceInstanceId;
+            this.logType = builder.logType;
+            this.resourceId = builder.resourceId;
+            this.resourceType = builder.resourceType;
             this.source = builder.source;
+            this.status = builder.status;
             this.timestamp = builder.timestamp;
         }
 
@@ -147,10 +159,24 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
         }
 
         /**
-         * @return serviceInstanceId
+         * @return logType
          */
-        public String getServiceInstanceId() {
-            return this.serviceInstanceId;
+        public String getLogType() {
+            return this.logType;
+        }
+
+        /**
+         * @return resourceId
+         */
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         /**
@@ -158,6 +184,13 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
          */
         public String getSource() {
             return this.source;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -169,8 +202,11 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
-            private String serviceInstanceId; 
+            private String logType; 
+            private String resourceId; 
+            private String resourceType; 
             private String source; 
+            private String status; 
             private String timestamp; 
 
             /**
@@ -182,10 +218,26 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInstanceId.
+             * LogType.
              */
-            public Builder serviceInstanceId(String serviceInstanceId) {
-                this.serviceInstanceId = serviceInstanceId;
+            public Builder logType(String logType) {
+                this.logType = logType;
+                return this;
+            }
+
+            /**
+             * ResourceId.
+             */
+            public Builder resourceId(String resourceId) {
+                this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
@@ -194,6 +246,14 @@ public class ListServiceInstanceLogsResponseBody extends TeaModel {
              */
             public Builder source(String source) {
                 this.source = source;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
