@@ -37,7 +37,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateDirectConnectionResponse> allocateDirectConnection(AllocateDirectConnectionRequest request);
 
     /**
-      * r-bp1zxszhcgatnx****
+      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
       *
      */
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
@@ -121,6 +121,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
+    /**
+      * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+      *
+     */
     CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
 
     /**
@@ -143,7 +147,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteShardingNodeResponse> deleteShardingNode(DeleteShardingNodeRequest request);
 
     /**
-      * Details about returned accounts of the instance.
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
      */
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
@@ -207,6 +211,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeCacheAnalysisReportListResponse> describeCacheAnalysisReportList(DescribeCacheAnalysisReportListRequest request);
 
+    CompletableFuture<DescribeClusterBackupListResponse> describeClusterBackupList(DescribeClusterBackupListRequest request);
+
     /**
       * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
       *
@@ -214,6 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterMemberInfoResponse> describeClusterMemberInfo(DescribeClusterMemberInfoRequest request);
 
     CompletableFuture<DescribeDBInstanceNetInfoResponse> describeDBInstanceNetInfo(DescribeDBInstanceNetInfoRequest request);
+
+    CompletableFuture<DescribeDBNodeDirectVipInfoResponse> describeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request);
 
     /**
       * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
@@ -235,8 +243,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeEncryptionKeyListResponse> describeEncryptionKeyList(DescribeEncryptionKeyListRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+      *
+     */
     CompletableFuture<DescribeEngineVersionResponse> describeEngineVersion(DescribeEngineVersionRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+      *
+     */
     CompletableFuture<DescribeGlobalDistributeCacheResponse> describeGlobalDistributeCache(DescribeGlobalDistributeCacheRequest request);
 
     CompletableFuture<DescribeGlobalSecurityIPGroupResponse> describeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request);
@@ -302,7 +320,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
       *
      */
     CompletableFuture<DescribeMonitorItemsResponse> describeMonitorItems(DescribeMonitorItemsRequest request);
@@ -346,7 +364,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
 
     /**
-      * The progress of the task. Unit: %.
+      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
       *
      */
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
@@ -361,18 +379,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableAdditionalBandwidthResponse> enableAdditionalBandwidth(EnableAdditionalBandwidthRequest request);
 
     /**
-      * The time when the minor version is upgraded. Valid values:
-      * *   **Immediately**: immediately deletes expired keys.
-      * *   **MaintainTime:**deletes expired key in the maintenance window.
-      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
+      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
       *
      */
     CompletableFuture<FlushExpireKeysResponse> flushExpireKeys(FlushExpireKeysRequest request);
 
-    /**
-      * The ID of the instance.
-      *
-     */
     CompletableFuture<FlushInstanceResponse> flushInstance(FlushInstanceRequest request);
 
     /**
@@ -383,13 +395,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlushInstanceForDBResponse> flushInstanceForDB(FlushInstanceForDBRequest request);
 
     /**
-      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+      * > 
+      * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * *   The ApsaraDB for Redis instance must be in the running state.
       *
      */
     CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request);
 
     /**
-      * The ID of the request.
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
       *
      */
     CompletableFuture<InitializeKvstorePermissionResponse> initializeKvstorePermission(InitializeKvstorePermissionRequest request);
@@ -492,10 +506,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceParameterResponse> modifyInstanceParameter(ModifyInstanceParameterRequest request);
 
     /**
-      * Modifies SSL encryption configurations. Valid values:
-      * *   **Disable**: The SSL encryption is disabled.
-      * *   **Enable**: The SSL encryption is enabled.
-      * *   **Update**: The SSL certificate is updated.
+      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
       *
      */
     CompletableFuture<ModifyInstanceSSLResponse> modifyInstanceSSL(ModifyInstanceSSLRequest request);
@@ -534,7 +546,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyResourceGroupResponse> modifyResourceGroup(ModifyResourceGroupRequest request);
 
     /**
-      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
       *
      */
     CompletableFuture<ModifySecurityGroupConfigurationResponse> modifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request);
@@ -552,7 +564,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseDirectConnectionResponse> releaseDirectConnection(ReleaseDirectConnectionRequest request);
 
     /**
-      * The ID of the request.
+      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
       *
      */
     CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request);
@@ -578,7 +590,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
     /**
-      * r-bp1zxszhcgatnx****
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
      */
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
@@ -628,13 +640,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
-      * 1
+      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+      * *   [Change the billing method to subscription](~~54542~~).
+      * *   [Change the billing method to pay-as-you-go](~~211549~~).
       *
      */
     CompletableFuture<TransformInstanceChargeTypeResponse> transformInstanceChargeType(TransformInstanceChargeTypeRequest request);
 
     /**
-      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
+      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
       *
      */
     CompletableFuture<TransformToPrePaidResponse> transformToPrePaid(TransformToPrePaidRequest request);

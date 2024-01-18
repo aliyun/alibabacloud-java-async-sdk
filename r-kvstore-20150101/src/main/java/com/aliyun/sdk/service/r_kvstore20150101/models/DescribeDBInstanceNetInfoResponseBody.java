@@ -62,7 +62,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the vSwitch.
+         * The network type. Valid values:
+         * <p>
+         * 
+         * *   **CLASSIC**: The instance runs in a classic network.
+         * *   **VPC**: The instance runs in a virtual private cloud (VPC).
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -70,11 +74,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
-         * 
-         * *   **CLASSIC**: The instance runs in a classic network.
-         * *   **VPC**: The instance runs in a virtual private cloud (VPC).
+         * The list of network information about the instance.
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -82,7 +82,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +114,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("IPType")
         private String IPType;
 
+        @NameInMap("IsSlaveProxy")
+        private Integer isSlaveProxy;
+
         @NameInMap("Port")
         private String port;
 
@@ -136,6 +139,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.IPAddress = builder.IPAddress;
             this.IPType = builder.IPType;
+            this.isSlaveProxy = builder.isSlaveProxy;
             this.port = builder.port;
             this.upgradeable = builder.upgradeable;
             this.VPCId = builder.VPCId;
@@ -194,6 +198,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return isSlaveProxy
+         */
+        public Integer getIsSlaveProxy() {
+            return this.isSlaveProxy;
+        }
+
+        /**
          * @return port
          */
         public String getPort() {
@@ -235,6 +246,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String expiredTime; 
             private String IPAddress; 
             private String IPType; 
+            private Integer isSlaveProxy; 
             private String port; 
             private String upgradeable; 
             private String VPCId; 
@@ -242,11 +254,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * Indicates whether the address is a private endpoint. Valid values:
-             * <p>
-             * 
-             * *   **0**: no.
-             * *   **1**: yes.
+             * The endpoint of the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -254,7 +262,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the instance.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **0**: the Internet.
+             * *   **1**: classic network.
+             * *   **2**: VPC.
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -262,7 +275,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeDBInstanceNetInfo**.
+             * Indicates whether the address is a private endpoint. Valid values:
+             * <p>
+             * 
+             * *   **0**: no.
+             * *   **1**: yes.
              */
             public Builder directConnection(Integer directConnection) {
                 this.directConnection = directConnection;
@@ -278,7 +295,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the instance in the classic network.
+             * The IP address.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -299,12 +316,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
-             * <p>
-             * 
-             * *   **0**: the Internet.
-             * *   **1**: classic network.
-             * *   **2**: VPC.
+             * IsSlaveProxy.
+             */
+            public Builder isSlaveProxy(Integer isSlaveProxy) {
+                this.isSlaveProxy = isSlaveProxy;
+                return this;
+            }
+
+            /**
+             * The service port of the ApsaraDB for Redis instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -312,7 +332,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The remaining validity period of the endpoint of the classic network. Unit: seconds.
+             * <p>
+             * 
+             * >  A value of **0** indicates that the endpoint never expires.
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -320,7 +343,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the network information about an ApsaraDB for Redis instance.
+             * The ID of the VPC where the instance is deployed.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -328,7 +351,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The list of network information about the instance.
+             * The ID of the instance.
              */
             public Builder VPCInstanceId(String VPCInstanceId) {
                 this.VPCInstanceId = VPCInstanceId;
@@ -336,7 +359,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

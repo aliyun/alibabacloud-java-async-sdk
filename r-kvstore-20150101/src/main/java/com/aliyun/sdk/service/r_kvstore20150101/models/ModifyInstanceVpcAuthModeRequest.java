@@ -223,7 +223,9 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
          * *   **Open**: disables password-free access.
          * *   **Close**: enables password-free access.
          * 
-         * > The default value is **Open**.
+         * **
+         * 
+         * **Description** Default value: **Open**.
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

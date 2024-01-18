@@ -135,7 +135,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthPrePaid.
+         * The billing methods of unexpired bandwith plans. Valid values:
+         * <p>
+         * - **0**: Pay-as-you-go
+         * - **1**: Subscription
          */
         public Builder bandwidthPrePaid(String bandwidthPrePaid) {
             this.bandwidthPrePaid = bandwidthPrePaid;

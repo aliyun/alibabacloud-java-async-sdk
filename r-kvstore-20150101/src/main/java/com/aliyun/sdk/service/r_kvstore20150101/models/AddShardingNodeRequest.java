@@ -280,7 +280,11 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * ForceTrans.
+         * Specifies whether to enable forced transmission during a configuration change. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
+         * *   **true**: The system skips the version check and directly performs the configuration change.
          */
         public Builder forceTrans(Boolean forceTrans) {
             this.putQueryParameter("ForceTrans", forceTrans);
@@ -346,9 +350,7 @@ public class AddShardingNodeRequest extends Request {
          * The number of data shards that you want to add. Default value: **1**.
          * <p>
          * 
-         * > 
-         * 
-         * *   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.
+         * >  The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -366,7 +368,7 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

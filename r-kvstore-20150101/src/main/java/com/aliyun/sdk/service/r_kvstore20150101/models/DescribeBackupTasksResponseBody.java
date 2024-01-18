@@ -74,7 +74,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The following parameters are internal parameters. Ignore the parameters.
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +218,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AuthAction.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -226,7 +226,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -234,7 +234,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -242,7 +242,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -250,7 +250,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -258,7 +258,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -266,7 +266,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * An internal parameter. Ignore this parameter.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

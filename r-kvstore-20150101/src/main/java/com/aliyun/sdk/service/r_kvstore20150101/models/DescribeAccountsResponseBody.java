@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about account permissions.
+         * Details about returned accounts of the instance.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountPrivilege; 
 
             /**
-             * The permissions of the account. Valid values:
+             * The permission of the account. Default value: RoleReadWrite. Valid values:
              * <p>
              * 
-             * *   **RoleReadOnly**: The account has read-only permissions.
-             * *   **RoleReadWrite**: The account has read and write permissions.
+             * *   **RoleReadOnly**: The account has the read-only permissions.
+             * *   **RoleReadWrite**: The account has the read and write permissions.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -244,7 +244,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The name of the account that you want to query.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -252,7 +252,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeAccounts**.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -260,30 +260,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The state of the account. Valid values:
+             * <p>
+             * 
+             * *   **Unavailable**: The account is unavailable.
+             * *   **Available**: The account is available.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
-                return this;
-            }
-
-            /**
-             * The description of the account.
-             */
-            public Builder accountType(String accountType) {
-                this.accountType = accountType;
-                return this;
-            }
-
-            /**
-             * The permission of the account. Default value: RoleReadWrite. Valid values:
-             * <p>
-             * 
-             * *   **RoleReadOnly**: The account has the read-only permissions.
-             * *   **RoleReadWrite**: The account has the read and write permissions.
-             */
-            public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
-                this.databasePrivileges = databasePrivileges;
                 return this;
             }
 
@@ -293,6 +277,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * 
              * *   **Normal**: standard account
              * *   **Super**: super account
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
+                return this;
+            }
+
+            /**
+             * Details about account permissions.
+             */
+            public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
+                this.databasePrivileges = databasePrivileges;
+                return this;
+            }
+
+            /**
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

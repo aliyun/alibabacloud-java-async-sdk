@@ -50,11 +50,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The network type of the security group. Valid values:
-         * <p>
-         * 
-         * *   **classic**: the classic network.
-         * *   **vpc**: the virtual private cloud (VPC).
+         * The list of security groups.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -62,7 +58,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,11 +122,11 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The network type of the ECS security group. Valid values:
+             * The network type of the security group. Valid values:
              * <p>
              * 
-             * *   **vpc**
-             * *   **classic**
+             * *   **classic**: the classic network.
+             * *   **vpc**: the virtual private cloud (VPC).
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -138,7 +134,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the security groups that are included in the whitelist of an ApsaraDB for Redis instance.
+             * The ID of the region where the instance is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -146,7 +142,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeSecurityGroupConfiguration**.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

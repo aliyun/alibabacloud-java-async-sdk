@@ -192,7 +192,11 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * ForceTrans.
+         * Specifies whether to enable forced transmission during a configuration change. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.
+         * *   **true**: The system skips the version check and directly performs the configuration change.
          */
         public Builder forceTrans(Boolean forceTrans) {
             this.putQueryParameter("ForceTrans", forceTrans);

@@ -178,7 +178,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * GrantAccountPrivilege
+         * The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,11 +187,11 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * The permissions of the account. Valid values:
+         * The permissions of the account. Default value: RoleReadWrite. Valid values:
          * <p>
          * 
-         * *   **RoleReadOnly**: The account has read-only permissions.
-         * *   **RoleReadWrite**: The account has read and write permissions.
+         * *   RoleReadOnly: The account has the read-only permissions.
+         * *   RoleReadWrite: The account has the read and write permissions.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -200,7 +200,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * Modifies the permissions of an account for an ApsaraDB for Redis instance.
+         * The ID of the instance to which the account belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

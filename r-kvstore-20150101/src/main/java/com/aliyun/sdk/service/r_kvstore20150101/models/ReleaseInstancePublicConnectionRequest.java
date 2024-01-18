@@ -172,7 +172,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ReleaseInstancePublicConnection**.
+         * The ID of the instance for which you want to release a public endpoint.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

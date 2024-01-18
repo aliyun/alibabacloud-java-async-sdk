@@ -50,7 +50,11 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unit of the metric.
+         * The returned metrics.
+         * <p>
+         * 
+         * > *   **memoryUsage**, **GetQps**, and **PutQps** are supported only by ApsaraDB for Redis instances that use Redis 4.0 or later. **GetQps** and **PutQps** require the latest minor version. You can upgrade the major version or minor version of the instance as needed. For more information, see [Upgrade the major version](~~101764~~) and [Upgrade the minor version](~~56450~~).
+         * > *   When you use instances of Redis 2.8, if the **hit_rate** metric is not displayed, you must upgrade the minor version of the instance. For more information, see [Upgrade the minor version](~~56450~~).
          */
         public Builder monitorItems(MonitorItems monitorItems) {
             this.monitorItems = monitorItems;
@@ -58,7 +62,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeMonitorItems**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * DescribeMonitorItems
+             * The metric.
              */
             public Builder monitorKey(String monitorKey) {
                 this.monitorKey = monitorKey;
@@ -118,7 +122,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the metrics of an ApsaraDB for Redis instance.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -50,7 +50,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private SecurityIpGroups securityIpGroups; 
 
         /**
-         * The name of the whitelist.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The whitelists of the instance.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -122,7 +122,10 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeSecurityIps**.
+             * The attribute of the whitelist. This parameter is empty by default.
+             * <p>
+             * 
+             * >  If the instance is authorized to use a service such as Database Autonomy Service (DAS), Data Management (DMS), or Data Transmission Service (DTS), this service automatically generates a **hidden** whitelist for the instance. This type of whitelists cannot be modified or deleted.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -130,7 +133,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security group.
+             * The name of the whitelist.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,7 +141,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

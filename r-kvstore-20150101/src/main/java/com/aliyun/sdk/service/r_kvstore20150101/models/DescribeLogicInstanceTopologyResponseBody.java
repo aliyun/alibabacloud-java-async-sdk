@@ -82,7 +82,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed proxy information, including information about proxy nodes.
+         * The information about proxy nodes.
          */
         public Builder redisProxyList(RedisProxyList redisProxyList) {
             this.redisProxyList = redisProxyList;
@@ -210,7 +210,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -221,8 +221,8 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
              * The node type. Valid values:
              * <p>
              * 
-             * *   **proxy**: proxy node
-             * *   **db**: data node
+             * *   **db**: a data node.
+             * *   **normal**: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -388,7 +388,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

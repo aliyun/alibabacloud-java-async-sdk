@@ -473,7 +473,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * ShowDiscountInfo.
+             * Indicates whether the discount information is displayed.
              */
             public Builder showDiscountInfo(Boolean showDiscountInfo) {
                 this.showDiscountInfo = showDiscountInfo;
@@ -749,7 +749,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The list price of the order.
+             * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -757,7 +757,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the promotion rule.
+             * The rule IDs.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;

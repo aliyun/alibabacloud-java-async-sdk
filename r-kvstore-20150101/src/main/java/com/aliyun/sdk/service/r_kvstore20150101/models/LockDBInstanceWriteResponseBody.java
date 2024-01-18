@@ -74,7 +74,7 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * DBInstanceName.
+         * The instance ID.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * LockReason.
+         * The reason why write operations on the instance are locked.
          */
         public Builder lockReason(String lockReason) {
             this.lockReason = lockReason;
@@ -90,7 +90,7 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class LockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

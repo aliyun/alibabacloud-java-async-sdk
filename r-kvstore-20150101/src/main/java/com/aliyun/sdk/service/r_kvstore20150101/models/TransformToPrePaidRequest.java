@@ -177,7 +177,11 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to enable auto-renewal. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -186,7 +190,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * r-bp1zxszhcgatnx****
+         * The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

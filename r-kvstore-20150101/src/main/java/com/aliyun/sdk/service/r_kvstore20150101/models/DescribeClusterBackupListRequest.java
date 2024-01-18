@@ -7,18 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeGlobalDistributeCacheRequest} extends {@link RequestModel}
+ * {@link DescribeClusterBackupListRequest} extends {@link RequestModel}
  *
- * <p>DescribeGlobalDistributeCacheRequest</p>
+ * <p>DescribeClusterBackupListRequest</p>
  */
-public class DescribeGlobalDistributeCacheRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+public class DescribeClusterBackupListRequest extends Request {
+    @Query
+    @NameInMap("ClusterBackupId")
+    private String clusterBackupId;
 
     @Query
-    @NameInMap("GlobalInstanceId")
-    private String globalInstanceId;
+    @NameInMap("EndTime")
+    @Validation(required = true)
+    private String endTime;
+
+    @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -30,11 +36,16 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -49,28 +60,31 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
     private String securityToken;
 
     @Query
-    @NameInMap("SubInstanceId")
-    private String subInstanceId;
+    @NameInMap("StartTime")
+    @Validation(required = true)
+    private String startTime;
 
-    private DescribeGlobalDistributeCacheRequest(Builder builder) {
+    private DescribeClusterBackupListRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.globalInstanceId = builder.globalInstanceId;
+        this.clusterBackupId = builder.clusterBackupId;
+        this.endTime = builder.endTime;
+        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
-        this.subInstanceId = builder.subInstanceId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeGlobalDistributeCacheRequest create() {
+    public static DescribeClusterBackupListRequest create() {
         return builder().build();
     }
 
@@ -80,17 +94,24 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return clusterBackupId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getClusterBackupId() {
+        return this.clusterBackupId;
     }
 
     /**
-     * @return globalInstanceId
+     * @return endTime
      */
-    public String getGlobalInstanceId() {
-        return this.globalInstanceId;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -110,15 +131,22 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -143,57 +171,70 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
     }
 
     /**
-     * @return subInstanceId
+     * @return startTime
      */
-    public String getSubInstanceId() {
-        return this.subInstanceId;
+    public String getStartTime() {
+        return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeGlobalDistributeCacheRequest, Builder> {
-        private String regionId; 
-        private String globalInstanceId; 
+    public static final class Builder extends Request.Builder<DescribeClusterBackupListRequest, Builder> {
+        private String clusterBackupId; 
+        private String endTime; 
+        private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
-        private String subInstanceId; 
+        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeGlobalDistributeCacheRequest request) {
+        private Builder(DescribeClusterBackupListRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.globalInstanceId = request.globalInstanceId;
+            this.clusterBackupId = request.clusterBackupId;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
-            this.subInstanceId = request.subInstanceId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
+         * ClusterBackupId.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder clusterBackupId(String clusterBackupId) {
+            this.putQueryParameter("ClusterBackupId", clusterBackupId);
+            this.clusterBackupId = clusterBackupId;
             return this;
         }
 
         /**
-         * The ID of the distributed instance.
+         * EndTime.
          */
-        public Builder globalInstanceId(String globalInstanceId) {
-            this.putQueryParameter("GlobalInstanceId", globalInstanceId);
-            this.globalInstanceId = globalInstanceId;
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -216,20 +257,29 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of entries to return each page.
+         * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -261,17 +311,17 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the child instance that is attached to the distributed instance.
+         * StartTime.
          */
-        public Builder subInstanceId(String subInstanceId) {
-            this.putQueryParameter("SubInstanceId", subInstanceId);
-            this.subInstanceId = subInstanceId;
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
         @Override
-        public DescribeGlobalDistributeCacheRequest build() {
-            return new DescribeGlobalDistributeCacheRequest(this);
+        public DescribeClusterBackupListRequest build() {
+            return new DescribeClusterBackupListRequest(this);
         } 
 
     } 

@@ -163,10 +163,12 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * The configuration parameters of the instance in the JSON format.
+         * The instance parameter settings that you want to modify. Specify this parameter in the JSON format. The new value of a parameter overwrites the original value.
          * <p>
          * 
-         * > For more information, see [Supported parameters](~~259681~~).
+         * **
+         * 
+         * **Description** For more information, see [Supported parameters](~~259681~~).
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

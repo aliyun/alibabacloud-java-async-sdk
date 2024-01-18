@@ -102,12 +102,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type of the child instance. For more information, see the following topics:
-         * <p>
-         * 
-         * *   [Standard DRAM-based instances](~~145228~~)
-         * *   [Cluster DRAM-based instances](~~150458~~)
-         * *   [Read/write splitting DRAM-based instances](~~150459~~)
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +110,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the child instance that is attached to the distributed instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +118,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -211,7 +206,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * GlobalInstanceId.
+             * The ID of the distributed instance.
              */
             public Builder globalInstanceId(String globalInstanceId) {
                 this.globalInstanceId = globalInstanceId;
@@ -219,7 +214,12 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The instance type of the child instance. For more information, see the following topics:
+             * <p>
+             * 
+             * *   [Standard DRAM-based instances](~~145228~~)
+             * *   [Cluster DRAM-based instances](~~150458~~)
+             * *   [Read/write splitting DRAM-based instances](~~150459~~)
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -227,7 +227,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The ID of the child instance.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -235,7 +235,26 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The state of the child instance. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The instance is normal.
+             * *   **Creating**: The instance is being created.
+             * *   **Changing**: The configurations of the instance are being changed.
+             * *   **Inactive**: The instance is disabled.
+             * *   **Flushing**: The instance is being released.
+             * *   **Released**: The instance is released.
+             * *   **Transforming**: The billing method of the instance is changing.
+             * *   **Unavailable**: The instance is suspended.
+             * *   **Error**: The instance failed to be created.
+             * *   **Migrating**: The instance is being migrated.
+             * *   **BackupRecovering**: The instance is being restored from a backup.
+             * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
+             * *   **NetworkModifying**: The network type of the instance is being changed.
+             * *   **SSLModifying**: The SSL certificate of the instance is being changed.
+             * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains available during the upgrade.
+             * 
+             * >  For more information about instance states, see [Instance states and impacts](~~200740~~).
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -243,7 +262,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -308,12 +327,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             private java.util.List < SubInstances> subInstances; 
 
             /**
-             * The state of the distributed instance. Valid values:
-             * <p>
-             * 
-             * *   **Normal**: The instance is normal.
-             * *   **Changing**: The configurations of the instance are being changed.
-             * *   **Creating**: The instance is being created.
+             * The ID of the distributed instance.
              */
             public Builder globalInstanceId(String globalInstanceId) {
                 this.globalInstanceId = globalInstanceId;
@@ -321,7 +335,12 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the distributed instance.
+             * The state of the distributed instance. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The instance is normal.
+             * *   **Changing**: The configurations of the instance are being changed.
+             * *   **Creating**: The instance is being created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -329,7 +348,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * Details of the child instances.
              */
             public Builder subInstances(java.util.List < SubInstances> subInstances) {
                 this.subInstances = subInstances;

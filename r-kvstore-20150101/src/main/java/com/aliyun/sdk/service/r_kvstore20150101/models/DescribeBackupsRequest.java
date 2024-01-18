@@ -21,6 +21,10 @@ public class DescribeBackupsRequest extends Request {
     private Integer backupId;
 
     @Query
+    @NameInMap("BackupJobId")
+    private Integer backupJobId;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -71,6 +75,7 @@ public class DescribeBackupsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
+        this.backupJobId = builder.backupJobId;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.needAof = builder.needAof;
@@ -109,6 +114,13 @@ public class DescribeBackupsRequest extends Request {
      */
     public Integer getBackupId() {
         return this.backupId;
+    }
+
+    /**
+     * @return backupJobId
+     */
+    public Integer getBackupJobId() {
+        return this.backupJobId;
     }
 
     /**
@@ -191,6 +203,7 @@ public class DescribeBackupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeBackupsRequest, Builder> {
         private String regionId; 
         private Integer backupId; 
+        private Integer backupJobId; 
         private String endTime; 
         private String instanceId; 
         private String needAof; 
@@ -211,6 +224,7 @@ public class DescribeBackupsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupId = request.backupId;
+            this.backupJobId = request.backupJobId;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.needAof = request.needAof;
@@ -239,6 +253,15 @@ public class DescribeBackupsRequest extends Request {
         public Builder backupId(Integer backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * BackupJobId.
+         */
+        public Builder backupJobId(Integer backupJobId) {
+            this.putQueryParameter("BackupJobId", backupJobId);
+            this.backupJobId = backupJobId;
             return this;
         }
 

@@ -134,10 +134,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The ID of the node.
-         * <p>
-         * 
-         * >  If a standard instance is queried, `(null)` is returned.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -145,7 +142,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -153,7 +150,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query.
+         * Details about the log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -161,7 +158,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of log entries returned on the current page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -169,7 +166,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The number of log entries returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -177,7 +174,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The keyword that is used to query operational logs.
+         * The maximum number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +182,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +190,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The beginning of the time range to query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -201,7 +198,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the database engine.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -277,7 +274,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The maximum number of entries returned on each page.
+             * The content of the log.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -285,7 +282,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+             * The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -293,7 +290,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +298,10 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of the node.
+             * <p>
+             * 
+             * >  If a standard instance is queried, `(null)` is returned.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

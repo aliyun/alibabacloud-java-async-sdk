@@ -305,7 +305,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+         * The shard type of the cluster instance. Valid values:
+         * <p>
+         * 
+         * *   **proxy**: proxy node
+         * *   **db**: data node
+         * *   **cs**: config server node
+         * 
+         * >  If you set this parameter, you must also set the **NodeId** parameter.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -323,7 +330,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeRunningLogRecords**.
+         * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -332,7 +339,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -341,14 +348,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The shard type of the cluster instance. Valid values:
+         * The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.
          * <p>
          * 
-         * *   **proxy**: proxy node
-         * *   **db**: data node
-         * *   **cs**: config server node
-         * 
-         * >  If you set this parameter, you must also set the **NodeId** parameter.
+         * > *   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.
+         * > *   If you set this parameter, you must also set the **CharacterType** parameter.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -357,12 +361,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.
+         * The method that is used to sort the returned log entries. Valid values:
          * <p>
          * 
-         * > 
-         * *   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.
-         * *   If you set this parameter, you must also set the **CharacterType** parameter.
+         * *   **asc**: ascending order
+         * *   **desc**: descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -389,7 +392,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -398,11 +401,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The role of the data shard. Default value: master. Valid values:
-         * <p>
-         * 
-         * *   **master**: master node
-         * *   **slave**: replica node
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -411,7 +410,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The content of the log.
+         * The keyword that is used to query operational logs.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -420,11 +419,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the returned log entries. Valid values:
-         * <p>
-         * 
-         * *   **asc**: ascending order
-         * *   **desc**: descending order
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -451,7 +446,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The role of the data shard. Default value: master. Valid values:
+         * <p>
+         * 
+         * *   **master**: master node
+         * *   **slave**: replica node
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -469,7 +468,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * Details about the log entries.
+         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

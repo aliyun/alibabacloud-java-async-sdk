@@ -138,7 +138,10 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The display language of the response. Default value: zh-CN. Valid values:
+         * <p>
+         * * **zh-C**N: Chinese
+         * * **en-US**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

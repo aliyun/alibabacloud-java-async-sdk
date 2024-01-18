@@ -45,6 +45,10 @@ public class CreateTairInstanceRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ClusterBackupId")
+    private String clusterBackupId;
+
+    @Query
     @NameInMap("CouponNo")
     private String couponNo;
 
@@ -187,6 +191,7 @@ public class CreateTairInstanceRequest extends Request {
         this.businessInfo = builder.businessInfo;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
+        this.clusterBackupId = builder.clusterBackupId;
         this.couponNo = builder.couponNo;
         this.dryRun = builder.dryRun;
         this.engineVersion = builder.engineVersion;
@@ -287,6 +292,13 @@ public class CreateTairInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return clusterBackupId
+     */
+    public String getClusterBackupId() {
+        return this.clusterBackupId;
     }
 
     /**
@@ -515,6 +527,7 @@ public class CreateTairInstanceRequest extends Request {
         private String businessInfo; 
         private String chargeType; 
         private String clientToken; 
+        private String clusterBackupId; 
         private String couponNo; 
         private Boolean dryRun; 
         private String engineVersion; 
@@ -561,6 +574,7 @@ public class CreateTairInstanceRequest extends Request {
             this.businessInfo = request.businessInfo;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
+            this.clusterBackupId = request.clusterBackupId;
             this.couponNo = request.couponNo;
             this.dryRun = request.dryRun;
             this.engineVersion = request.engineVersion;
@@ -681,6 +695,15 @@ public class CreateTairInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ClusterBackupId.
+         */
+        public Builder clusterBackupId(String clusterBackupId) {
+            this.putQueryParameter("ClusterBackupId", clusterBackupId);
+            this.clusterBackupId = clusterBackupId;
             return this;
         }
 

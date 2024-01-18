@@ -190,7 +190,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +217,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,14 +235,12 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The type of the node to query. Default value: 1. Valid values:
+         * The type of node to query. Default value: 1. Valid values:
          * <p>
          * 
          * *   **0**: proxy node
          * 
-         *     **
-         * 
-         *     **Note**This parameter is supported only for cluster and read/write splitting instances.
+         * > This parameter is supported only for cluster and read/write splitting instances.
          * 
          * *   **1**: data node
          */

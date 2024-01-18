@@ -163,7 +163,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,12 +208,12 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable TLS (SSL) encryption. Valid values:
+         * Modifies SSL encryption configurations. Valid values:
          * <p>
          * 
-         * *   **Disable**: disables SSL encryption.
-         * *   **Enable**: enables SSL encryption.
-         * *   **Update**: updates the SSL certificate.
+         * *   **Disable**: The SSL encryption is disabled.
+         * *   **Enable**: The SSL encryption is enabled.
+         * *   **Update**: The SSL certificate is updated.
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

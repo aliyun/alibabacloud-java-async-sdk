@@ -45,6 +45,10 @@ public class CreateInstanceRequest extends Request {
     private String chargeType;
 
     @Query
+    @NameInMap("ClusterBackupId")
+    private String clusterBackupId;
+
+    @Query
     @NameInMap("ConnectionStringPrefix")
     private String connectionStringPrefix;
 
@@ -198,6 +202,7 @@ public class CreateInstanceRequest extends Request {
         this.businessInfo = builder.businessInfo;
         this.capacity = builder.capacity;
         this.chargeType = builder.chargeType;
+        this.clusterBackupId = builder.clusterBackupId;
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.couponNo = builder.couponNo;
         this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
@@ -302,6 +307,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return clusterBackupId
+     */
+    public String getClusterBackupId() {
+        return this.clusterBackupId;
     }
 
     /**
@@ -558,6 +570,7 @@ public class CreateInstanceRequest extends Request {
         private String businessInfo; 
         private Long capacity; 
         private String chargeType; 
+        private String clusterBackupId; 
         private String connectionStringPrefix; 
         private String couponNo; 
         private String dedicatedHostGroupId; 
@@ -608,6 +621,7 @@ public class CreateInstanceRequest extends Request {
             this.businessInfo = request.businessInfo;
             this.capacity = request.capacity;
             this.chargeType = request.chargeType;
+            this.clusterBackupId = request.clusterBackupId;
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.couponNo = request.couponNo;
             this.dedicatedHostGroupId = request.dedicatedHostGroupId;
@@ -743,6 +757,15 @@ public class CreateInstanceRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClusterBackupId.
+         */
+        public Builder clusterBackupId(String clusterBackupId) {
+            this.putQueryParameter("ClusterBackupId", clusterBackupId);
+            this.clusterBackupId = clusterBackupId;
             return this;
         }
 
@@ -912,7 +935,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ParamGroupId.
+         * Parameter template ID.
          */
         public Builder paramGroupId(String paramGroupId) {
             this.putQueryParameter("ParamGroupId", paramGroupId);

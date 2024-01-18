@@ -218,7 +218,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBLatestMinorVersion.
+         * 该实例当前可升级至最新的小版本信息。
          */
         public Builder DBLatestMinorVersion(DBLatestMinorVersion DBLatestMinorVersion) {
             this.DBLatestMinorVersion = DBLatestMinorVersion;
@@ -234,13 +234,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance major version can be upgraded. Valid values:
+         * Indicates whether the major version can be upgraded for the instance. Valid values:
          * <p>
          * 
          * *   **true**: The major version can be upgraded.
          * *   **false**: The major version is the latest version and cannot be upgraded.
          * 
-         * > To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.
+         * >  To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.
          */
         public Builder enableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {
             this.enableUpgradeMajorVersion = enableUpgradeMajorVersion;
@@ -248,13 +248,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance minor version can be updated. Valid values:
+         * Indicates whether the minor version can be updated for the instance. Valid values:
          * <p>
          * 
          * *   **true**: The minor version can be updated.
          * *   **false**: The minor version is the latest version and cannot be updated.
          * 
-         * > To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
+         * >  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
          */
         public Builder enableUpgradeMinorVersion(Boolean enableUpgradeMinorVersion) {
             this.enableUpgradeMinorVersion = enableUpgradeMinorVersion;
@@ -270,7 +270,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsAutoUpgradeOpen.
+         * 是否打开了小版本升级。
          */
         public Builder isAutoUpgradeOpen(String isAutoUpgradeOpen) {
             this.isAutoUpgradeOpen = isAutoUpgradeOpen;
@@ -278,11 +278,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance uses the latest minor version. Valid values:
+         * Indicates whether the instance minor version is the latest version. Valid values:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
+         * *   **true**: The instance minor version is the latest version.
+         * *   **false**: The instance minor version is not the latest version.
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -290,7 +290,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance supports the new SSL encryption feature.
+         * 是否支持新版 ssl。
          */
         public Builder isNewSSLMode(String isNewSSLMode) {
             this.isNewSSLMode = isNewSSLMode;
@@ -298,7 +298,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the instance runs a Redis version.
+         * Indicates whether the instance supports the new SSL encryption feature.
          */
         public Builder isRedisCompatibleVersion(String isRedisCompatibleVersion) {
             this.isRedisCompatibleVersion = isRedisCompatibleVersion;
@@ -306,7 +306,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicate whether the instance has the SSL encryption feature enabled.
+         * 是否打开了小版本升级。
          */
         public Builder isSSLEnable(String isSSLEnable) {
             this.isSSLEnable = isSSLEnable;
@@ -330,7 +330,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyLatestMinorVersion.
+         * 该Proxy节点当前可升级至最新的小版本信息。
          */
         public Builder proxyLatestMinorVersion(ProxyLatestMinorVersion proxyLatestMinorVersion) {
             this.proxyLatestMinorVersion = proxyLatestMinorVersion;
@@ -341,7 +341,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
          * The minor version of proxy nodes.
          * <p>
          * 
-         * > This parameter is returned only for cluster and read/write splitting instances.
+         * >  This parameter is returned only for cluster and read/write splitting instances.
          */
         public Builder proxyMinorVersion(String proxyMinorVersion) {
             this.proxyMinorVersion = proxyMinorVersion;
@@ -352,7 +352,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
          * The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.
          * <p>
          * 
-         * > This parameter is returned only for cluster and read/write splitting instances.
+         * >  This parameter is returned only for cluster and read/write splitting instances.
          */
         public Builder proxyVersionRelease(String proxyVersionRelease) {
             this.proxyVersionRelease = proxyVersionRelease;
@@ -360,7 +360,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -448,7 +448,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String releaseVersion; 
 
             /**
-             * CreateTime.
+             * 实例的创建时间。
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -456,7 +456,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * 重要等级。
              */
             public Builder level(String level) {
                 this.level = level;
@@ -464,7 +464,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * 版本发布说明。
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -472,7 +472,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * 可升级的版本英文描述。
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -480,7 +480,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseVersion.
+             * EMR发行版。
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -574,7 +574,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String versionChangesLevel; 
 
             /**
-             * ReleaseInfo.
+             * 小版本信息。
              */
             public Builder releaseInfo(ReleaseInfo releaseInfo) {
                 this.releaseInfo = releaseInfo;
@@ -582,7 +582,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionChangesLevel.
+             * 版本升级的重要性（推荐升级程度），取值：
+             * <p>
+             * * 0：一般重要
+             * * 1：比较重要
+             * * 2：非常重要
              */
             public Builder versionChangesLevel(String versionChangesLevel) {
                 this.versionChangesLevel = versionChangesLevel;
@@ -647,7 +651,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private VersionRelease versionRelease; 
 
             /**
-             * Level.
+             * 版本变更的重要性，取值：
+             * <p>
+             * * **0**：一般重要
+             * * **1**：比较重要
+             * * **2**：非常重要
              */
             public Builder level(String level) {
                 this.level = level;
@@ -655,7 +663,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The minor version of the instance.
+             * 版本号。
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -663,7 +671,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionRelease.
+             * 从实例当前小版本到最新小版本的版本演进路线，与版本文档一致，可以直接至版本说明文档查看更详细的信息。
              */
             public Builder versionRelease(VersionRelease versionRelease) {
                 this.versionRelease = versionRelease;
@@ -752,7 +760,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String releaseVersion; 
 
             /**
-             * CreateTime.
+             * 版本的发布时间。
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -760,7 +768,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * 版本变更的重要性，取值：
+             * <p>
+             * * **0**：一般重要
+             * * **1**：比较重要
+             * * **2**：非常重要
              */
             public Builder level(String level) {
                 this.level = level;
@@ -768,7 +780,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * 版本的变更说明。
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -776,7 +788,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * 可升级的版本英文描述。
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -784,7 +796,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseVersion.
+             * EMR发行版。
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -878,7 +890,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private String versionChangesLevel; 
 
             /**
-             * ReleaseInfo.
+             * 小版本信息。
              */
             public Builder releaseInfo(VersionReleaseReleaseInfo releaseInfo) {
                 this.releaseInfo = releaseInfo;
@@ -886,7 +898,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionChangesLevel.
+             * 版本升级的重要性（推荐升级程度），取值：
+             * <p>
+             * * 0：一般重要
+             * * 1：比较重要
+             * * 2：非常重要
              */
             public Builder versionChangesLevel(String versionChangesLevel) {
                 this.versionChangesLevel = versionChangesLevel;
@@ -951,7 +967,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             private ProxyLatestMinorVersionVersionRelease versionRelease; 
 
             /**
-             * Level.
+             * 版本变更的重要性，取值：
+             * <p>
+             * * **0**：一般重要
+             * * **1**：比较重要
+             * * **2**：非常重要
              */
             public Builder level(String level) {
                 this.level = level;
@@ -959,7 +979,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The minor version of the instance.
+             * 版本号。
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -967,7 +987,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionRelease.
+             * 从实例当前小版本到最新小版本的版本演进路线，与版本文档一致，可以直接至版本说明文档查看更详细的信息。
              */
             public Builder versionRelease(ProxyLatestMinorVersionVersionRelease versionRelease) {
                 this.versionRelease = versionRelease;

@@ -86,11 +86,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The role of the node. Valid values:
-         * <p>
-         * 
-         * *   **master**: master node
-         * *   **slave**: replica node
+         * Details about each node in an ApsaraDB for Redis instance.
          */
         public Builder node(Node node) {
             this.node = node;
@@ -98,7 +94,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,11 +102,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the bandwidth of the node is increased. Valid values:
-         * <p>
-         * 
-         * *   **true**: The bandwidth of the node is not increased.
-         * *   **false**: The bandwidth of the node is increased.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +110,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is used only for internal maintenance of ApsaraDB for Redis instances.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,10 +118,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the node is a read replica. If the node is a read replica, **3** is returned.
-         * <p>
-         * 
-         * >  If the node is not a read replica, no value is returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +290,11 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of the returned page.
+             * The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.
+             * <p>
+             * 
+             * > *   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.
+             * > *   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -309,7 +302,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
+             * The minor version of the node.
              */
             public Builder currentMinorVersion(String currentMinorVersion) {
                 this.currentMinorVersion = currentMinorVersion;
@@ -317,7 +310,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CustinsId.
+             * The ID of the data shard.
              */
             public Builder custinsId(String custinsId) {
                 this.custinsId = custinsId;
@@ -325,15 +318,29 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
-             * <p>
-             * 
-             * *   **db**: data node.
-             * *   **proxy**: proxy node.
-             * *   **normal**: regular node. This value is returned when the instance runs in the standard architecture.
+             * The default bandwidth of the node. Unit: MB/s.
              */
             public Builder defaultBandWidth(Long defaultBandWidth) {
                 this.defaultBandWidth = defaultBandWidth;
+                return this;
+            }
+
+            /**
+             * The ID of the node.
+             */
+            public Builder insName(String insName) {
+                this.insName = insName;
+                return this;
+            }
+
+            /**
+             * Indicates whether the node is a read replica. If the node is a read replica, **3** is returned.
+             * <p>
+             * 
+             * >  If the node is not a read replica, no value is returned.
+             */
+            public Builder insType(Integer insType) {
+                this.insType = insType;
                 return this;
             }
 
@@ -346,29 +353,17 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
              * 
              * >  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
              */
-            public Builder insName(String insName) {
-                this.insName = insName;
-                return this;
-            }
-
-            /**
-             * Details about each node in an ApsaraDB for Redis instance.
-             */
-            public Builder insType(Integer insType) {
-                this.insType = insType;
-                return this;
-            }
-
-            /**
-             * The number of entries returned per page.
-             */
             public Builder isLatestVersion(Integer isLatestVersion) {
                 this.isLatestVersion = isLatestVersion;
                 return this;
             }
 
             /**
-             * DescribeRoleZoneInfo
+             * Indicates whether the bandwidth of the node is increased. Valid values:
+             * <p>
+             * 
+             * *   **true**: The bandwidth of the node is not increased.
+             * *   **false**: The bandwidth of the node is increased.
              */
             public Builder isOpenBandWidthService(Boolean isOpenBandWidthService) {
                 this.isOpenBandWidthService = isOpenBandWidthService;
@@ -376,7 +371,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * This parameter is used only for internal maintenance of ApsaraDB for Redis instances.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -384,7 +379,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **db**: data node.
+             * *   **proxy**: proxy node.
+             * *   **normal**: regular node. This value is returned when the instance runs in the standard architecture.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -392,7 +392,11 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * *   **master**: master node
+             * *   **slave**: replica node
              */
             public Builder role(String role) {
                 this.role = role;
@@ -400,7 +404,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Queries information about the type, minor version, and bandwidth of specific nodes in an ApsaraDB for Redis instance, and zones where the nodes are deployed.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

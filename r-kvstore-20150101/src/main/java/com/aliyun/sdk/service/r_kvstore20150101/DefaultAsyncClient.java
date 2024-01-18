@@ -128,7 +128,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
       *
      */
     @Override
@@ -344,6 +344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+      *
+     */
     @Override
     public CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request) {
         try {
@@ -402,7 +406,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Details about returned accounts of the instance.
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
      */
     @Override
@@ -586,6 +590,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<DescribeClusterBackupListResponse> describeClusterBackupList(DescribeClusterBackupListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClusterBackupList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClusterBackupListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClusterBackupListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
       *
@@ -613,6 +631,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDBInstanceNetInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDBNodeDirectVipInfoResponse> describeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDBNodeDirectVipInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDBNodeDirectVipInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDBNodeDirectVipInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -674,6 +706,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+      *
+     */
     @Override
     public CompletableFuture<DescribeEngineVersionResponse> describeEngineVersion(DescribeEngineVersionRequest request) {
         try {
@@ -688,6 +725,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+      *
+     */
     @Override
     public CompletableFuture<DescribeGlobalDistributeCacheResponse> describeGlobalDistributeCache(DescribeGlobalDistributeCacheRequest request) {
         try {
@@ -921,7 +963,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
       *
      */
     @Override
@@ -1097,7 +1139,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The progress of the task. Unit: %.
+      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
       *
      */
     @Override
@@ -1148,10 +1190,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The time when the minor version is upgraded. Valid values:
-      * *   **Immediately**: immediately deletes expired keys.
-      * *   **MaintainTime:**deletes expired key in the maintenance window.
-      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
+      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
       *
      */
     @Override
@@ -1168,10 +1208,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * The ID of the instance.
-      *
-     */
     @Override
     public CompletableFuture<FlushInstanceResponse> flushInstance(FlushInstanceRequest request) {
         try {
@@ -1206,7 +1242,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+      * > 
+      * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * *   The ApsaraDB for Redis instance must be in the running state.
       *
      */
     @Override
@@ -1224,7 +1262,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
       *
      */
     @Override
@@ -1579,10 +1617,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Modifies SSL encryption configurations. Valid values:
-      * *   **Disable**: The SSL encryption is disabled.
-      * *   **Enable**: The SSL encryption is enabled.
-      * *   **Update**: The SSL certificate is updated.
+      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
       *
      */
     @Override
@@ -1693,7 +1729,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
       *
      */
     @Override
@@ -1747,7 +1783,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
       *
      */
     @Override
@@ -1821,7 +1857,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
      */
     @Override
@@ -1967,7 +2003,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1
+      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+      * *   [Change the billing method to subscription](~~54542~~).
+      * *   [Change the billing method to pay-as-you-go](~~211549~~).
       *
      */
     @Override
@@ -1985,7 +2023,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
+      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
       *
      */
     @Override

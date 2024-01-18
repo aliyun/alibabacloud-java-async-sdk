@@ -147,7 +147,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The diaplay language of the **LocalName** parameter value. Valid values:
+         * The display language of the **LocalName** parameter value. Valid values:
          * <p>
          * 
          * *   **zh-CN**: Chinese

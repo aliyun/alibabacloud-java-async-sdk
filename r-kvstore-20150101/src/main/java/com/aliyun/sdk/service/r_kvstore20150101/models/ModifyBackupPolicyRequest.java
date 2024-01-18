@@ -195,10 +195,12 @@ public class ModifyBackupPolicyRequest extends Request {
          * Enables or disables the data flashback feature for the instance. Valid values:
          * <p>
          * 
-         * *   **1**: enables the data flashback feature. Before you can use data flashback, you must make sure that AOF persistence is enabled for the instance (`appendonly` set to `yes`).
+         * *   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.
          * *   **0** (default): disables the data flashback feature.
          * 
-         * > This parameter is available only for Tair DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
+         * **
+         * 
+         * **Description** This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);

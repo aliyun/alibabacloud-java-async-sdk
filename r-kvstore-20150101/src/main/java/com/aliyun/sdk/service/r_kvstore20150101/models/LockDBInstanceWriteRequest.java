@@ -163,7 +163,7 @@ public class LockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,7 @@ public class LockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * LockReason.
+         * The reason why write operations on the instance are locked.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);

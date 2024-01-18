@@ -178,7 +178,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.
+         * The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
+         * <p>
+         * 
+         * >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -187,7 +190,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -214,10 +217,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
-         * <p>
-         * 
-         * >  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.
+         * The service port number of the instance. Valid values: **1024** to **65535**.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
