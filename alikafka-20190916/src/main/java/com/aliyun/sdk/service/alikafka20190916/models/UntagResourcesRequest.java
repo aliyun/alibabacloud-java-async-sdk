@@ -156,7 +156,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of the tag that you want to attach to the specified resource.
+         * The tag key.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

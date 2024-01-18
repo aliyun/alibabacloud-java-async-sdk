@@ -315,7 +315,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags that you want to add to the topic.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -384,12 +384,11 @@ public class CreateTopicRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The tag key.
              * <p>
              * 
-             * *   Valid values of N: 1 to 20.
-             * *   If this parameter is left empty, the keys of all tags are matched.
-             * *   The tag key can be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * *   If you do not specify this parameter, the keys of all tags are matched.
+             * *   The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,12 +396,11 @@ public class CreateTopicRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              * <p>
              * 
-             * *   Valid values of N: 1 to 20.
-             * *   This parameter can be left empty.
-             * *   The tag value can be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * *   You can leave this parameter empty.
+             * *   The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.
              */
             public Builder value(String value) {
                 this.value = value;

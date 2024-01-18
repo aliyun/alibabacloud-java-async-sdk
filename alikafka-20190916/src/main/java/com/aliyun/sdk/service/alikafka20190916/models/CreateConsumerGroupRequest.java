@@ -209,12 +209,11 @@ public class CreateConsumerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The tag key.
              * <p>
              * 
-             * *   Valid values of N: 1 to 20.
              * *   You must specify this parameter.
-             * *   The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
+             * *   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -222,12 +221,11 @@ public class CreateConsumerGroupRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              * <p>
              * 
-             * *   Valid values of N: 1 to 20.
              * *   You can leave this parameter empty.
-             * *   The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * *   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

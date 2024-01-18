@@ -94,11 +94,11 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * The name of the instance. Valid values:
+         * The instance name. Valid values:
          * <p>
          * 
          * *   The name can contain only letters, digits, hyphens (-), and underscores (\_).
-         * *   The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name to 64 characters.
+         * *   The name must be 3 to 64 characters in length. A name that contains more than 64 characters is automatically truncated.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);

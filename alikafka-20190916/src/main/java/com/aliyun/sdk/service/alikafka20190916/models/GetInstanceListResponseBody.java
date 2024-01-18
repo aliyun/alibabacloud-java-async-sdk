@@ -725,7 +725,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size of the instance.
+             * The disk size of the instance. Unit: GB
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -733,7 +733,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type of the instance. Unit: GB Valid values:
+             * The disk type. Valid values:
              * <p>
              * 
              * *   **0**: ultra disk
@@ -777,7 +777,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. Unit: milliseconds.
+             * The time when the instance expires. Unit: milliseconds.
              */
             public Builder expiredTime(Long expiredTime) {
                 this.expiredTime = expiredTime;
@@ -876,7 +876,7 @@ public class GetInstanceListResponseBody extends TeaModel {
              * The security group to which the instance belongs.
              * <p>
              * 
-             * *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, the returned value is empty.
+             * *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
              * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
              */
             public Builder securityGroup(String securityGroup) {
@@ -1008,7 +1008,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the instance belongs.
+             * The ID of the virtual private cloud (VPC) in which the instance is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1016,7 +1016,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

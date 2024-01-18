@@ -157,7 +157,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags that you want to associate with the instances.
+         * The tags that you want to add.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -212,7 +212,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * *   You must specify this parameter.
+             * *   The tag key must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -220,7 +224,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * *   You can leave this parameter empty.
+             * *   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -74,7 +74,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -7,13 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceConfigResponseBody} extends {@link TeaModel}
+ * {@link UpdateTopicConfigResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceConfigResponseBody</p>
+ * <p>UpdateTopicConfigResponseBody</p>
  */
-public class UpdateInstanceConfigResponseBody extends TeaModel {
+public class UpdateTopicConfigResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private Long code;
+
+    @NameInMap("Data")
+    private String data;
 
     @NameInMap("Message")
     private String message;
@@ -24,8 +27,9 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private UpdateInstanceConfigResponseBody(Builder builder) {
+    private UpdateTopicConfigResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -35,15 +39,22 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceConfigResponseBody create() {
+    public static UpdateTopicConfigResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -68,21 +79,30 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private Long code; 
+        private String data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * Code.
          */
-        public Builder code(Integer code) {
+        public Builder code(Long code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The returned message.
+         * Data.
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +110,7 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,15 +118,15 @@ public class UpdateInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UpdateInstanceConfigResponseBody build() {
-            return new UpdateInstanceConfigResponseBody(this);
+        public UpdateTopicConfigResponseBody build() {
+            return new UpdateTopicConfigResponseBody(this);
         } 
 
     } 

@@ -86,6 +86,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyTopicRemarkResponse> modifyTopicRemark(ModifyTopicRemarkRequest request);
 
+    CompletableFuture<QueryMessageResponse> queryMessage(QueryMessageRequest request);
+
     /**
       * You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
       *
@@ -123,9 +125,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateInstanceConfigResponse> updateInstanceConfig(UpdateInstanceConfigRequest request);
 
+    CompletableFuture<UpdateTopicConfigResponse> updateTopicConfig(UpdateTopicConfigRequest request);
+
     /**
       * ## **Permissions**
-      * A RAM user must be granted the required permissions before the RAM user call the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
+      * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](~~185815~~).
       * |API|Action|Resource|
       * |---|---|---|
       * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
