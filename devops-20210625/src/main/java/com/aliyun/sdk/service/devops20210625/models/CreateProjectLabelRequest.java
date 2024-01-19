@@ -1,0 +1,191 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.devops20210625.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateProjectLabelRequest} extends {@link RequestModel}
+ *
+ * <p>CreateProjectLabelRequest</p>
+ */
+public class CreateProjectLabelRequest extends Request {
+    @Query
+    @NameInMap("accessToken")
+    private String accessToken;
+
+    @Body
+    @NameInMap("color")
+    @Validation(required = true)
+    private String color;
+
+    @Body
+    @NameInMap("description")
+    private String description;
+
+    @Body
+    @NameInMap("name")
+    @Validation(required = true)
+    private String name;
+
+    @Query
+    @NameInMap("organizationId")
+    @Validation(required = true)
+    private String organizationId;
+
+    @Query
+    @NameInMap("repositoryIdentity")
+    @Validation(required = true)
+    private String repositoryIdentity;
+
+    private CreateProjectLabelRequest(Builder builder) {
+        super(builder);
+        this.accessToken = builder.accessToken;
+        this.color = builder.color;
+        this.description = builder.description;
+        this.name = builder.name;
+        this.organizationId = builder.organizationId;
+        this.repositoryIdentity = builder.repositoryIdentity;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateProjectLabelRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessToken
+     */
+    public String getAccessToken() {
+        return this.accessToken;
+    }
+
+    /**
+     * @return color
+     */
+    public String getColor() {
+        return this.color;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return organizationId
+     */
+    public String getOrganizationId() {
+        return this.organizationId;
+    }
+
+    /**
+     * @return repositoryIdentity
+     */
+    public String getRepositoryIdentity() {
+        return this.repositoryIdentity;
+    }
+
+    public static final class Builder extends Request.Builder<CreateProjectLabelRequest, Builder> {
+        private String accessToken; 
+        private String color; 
+        private String description; 
+        private String name; 
+        private String organizationId; 
+        private String repositoryIdentity; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateProjectLabelRequest request) {
+            super(request);
+            this.accessToken = request.accessToken;
+            this.color = request.color;
+            this.description = request.description;
+            this.name = request.name;
+            this.organizationId = request.organizationId;
+            this.repositoryIdentity = request.repositoryIdentity;
+        } 
+
+        /**
+         * accessToken.
+         */
+        public Builder accessToken(String accessToken) {
+            this.putQueryParameter("accessToken", accessToken);
+            this.accessToken = accessToken;
+            return this;
+        }
+
+        /**
+         * color.
+         */
+        public Builder color(String color) {
+            this.putBodyParameter("color", color);
+            this.color = color;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * organizationId.
+         */
+        public Builder organizationId(String organizationId) {
+            this.putQueryParameter("organizationId", organizationId);
+            this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * repositoryIdentity.
+         */
+        public Builder repositoryIdentity(String repositoryIdentity) {
+            this.putQueryParameter("repositoryIdentity", repositoryIdentity);
+            this.repositoryIdentity = repositoryIdentity;
+            return this;
+        }
+
+        @Override
+        public CreateProjectLabelRequest build() {
+            return new CreateProjectLabelRequest(this);
+        } 
+
+    } 
+
+}

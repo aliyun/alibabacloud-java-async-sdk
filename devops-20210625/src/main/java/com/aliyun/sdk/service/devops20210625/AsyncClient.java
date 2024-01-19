@@ -54,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
+    CompletableFuture<CreateProjectLabelResponse> createProjectLabel(CreateProjectLabelRequest request);
+
     CompletableFuture<CreateProtectdBranchResponse> createProtectdBranch(CreateProtectdBranchRequest request);
 
     CompletableFuture<CreatePushRuleResponse> createPushRule(CreatePushRuleRequest request);
@@ -115,6 +117,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePipelineRelationsResponse> deletePipelineRelations(DeletePipelineRelationsRequest request);
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    CompletableFuture<DeleteProjectLabelResponse> deleteProjectLabel(DeleteProjectLabelRequest request);
 
     CompletableFuture<DeleteProtectedBranchResponse> deleteProtectedBranch(DeleteProtectedBranchRequest request);
 
@@ -232,6 +236,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<JoinPipelineGroupResponse> joinPipelineGroup(JoinPipelineGroupRequest request);
 
+    CompletableFuture<LinkMergeRequestLabelResponse> linkMergeRequestLabel(LinkMergeRequestLabelRequest request);
+
     CompletableFuture<ListApplicationMembersResponse> listApplicationMembers(ListApplicationMembersRequest request);
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
@@ -249,6 +255,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMergeRequestCommentsResponse> listMergeRequestComments(ListMergeRequestCommentsRequest request);
 
     CompletableFuture<ListMergeRequestFilesReadsResponse> listMergeRequestFilesReads(ListMergeRequestFilesReadsRequest request);
+
+    CompletableFuture<ListMergeRequestLabelsResponse> listMergeRequestLabels(ListMergeRequestLabelsRequest request);
 
     CompletableFuture<ListMergeRequestPatchSetsResponse> listMergeRequestPatchSets(ListMergeRequestPatchSetsRequest request);
 
@@ -271,6 +279,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPipelineRunsResponse> listPipelineRuns(ListPipelineRunsRequest request);
 
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
+
+    CompletableFuture<ListProjectLabelsResponse> listProjectLabels(ListProjectLabelsRequest request);
 
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
@@ -407,6 +417,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePipelineGroupResponse> updatePipelineGroup(UpdatePipelineGroupRequest request);
 
     CompletableFuture<UpdateProjectFieldResponse> updateProjectField(UpdateProjectFieldRequest request);
+
+    CompletableFuture<UpdateProjectLabelResponse> updateProjectLabel(UpdateProjectLabelRequest request);
 
     CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
 
