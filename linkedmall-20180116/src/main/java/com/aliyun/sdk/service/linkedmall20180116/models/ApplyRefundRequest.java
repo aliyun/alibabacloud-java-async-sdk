@@ -1,0 +1,414 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20180116.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ApplyRefundRequest} extends {@link RequestModel}
+ *
+ * <p>ApplyRefundRequest</p>
+ */
+public class ApplyRefundRequest extends Request {
+    @Query
+    @NameInMap("AccountType")
+    private String accountType;
+
+    @Query
+    @NameInMap("ApplyReasonTextId")
+    private Long applyReasonTextId;
+
+    @Query
+    @NameInMap("ApplyRefundCount")
+    private Integer applyRefundCount;
+
+    @Query
+    @NameInMap("ApplyRefundFee")
+    @Validation(required = true)
+    private Long applyRefundFee;
+
+    @Query
+    @NameInMap("BizClaimType")
+    @Validation(required = true)
+    private Integer bizClaimType;
+
+    @Query
+    @NameInMap("BizId")
+    @Validation(required = true)
+    private String bizId;
+
+    @Query
+    @NameInMap("BizUid")
+    @Validation(required = true)
+    private String bizUid;
+
+    @Query
+    @NameInMap("GoodsStatus")
+    private Integer goodsStatus;
+
+    @Body
+    @NameInMap("LeaveMessage")
+    private String leaveMessage;
+
+    @Body
+    @NameInMap("LeavePictureList")
+    private java.util.List < LeavePictureList> leavePictureList;
+
+    @Query
+    @NameInMap("SubLmOrderId")
+    @Validation(required = true)
+    private String subLmOrderId;
+
+    @Query
+    @NameInMap("ThirdPartyUserId")
+    private String thirdPartyUserId;
+
+    @Query
+    @NameInMap("UseAnonymousTbAccount")
+    private Boolean useAnonymousTbAccount;
+
+    private ApplyRefundRequest(Builder builder) {
+        super(builder);
+        this.accountType = builder.accountType;
+        this.applyReasonTextId = builder.applyReasonTextId;
+        this.applyRefundCount = builder.applyRefundCount;
+        this.applyRefundFee = builder.applyRefundFee;
+        this.bizClaimType = builder.bizClaimType;
+        this.bizId = builder.bizId;
+        this.bizUid = builder.bizUid;
+        this.goodsStatus = builder.goodsStatus;
+        this.leaveMessage = builder.leaveMessage;
+        this.leavePictureList = builder.leavePictureList;
+        this.subLmOrderId = builder.subLmOrderId;
+        this.thirdPartyUserId = builder.thirdPartyUserId;
+        this.useAnonymousTbAccount = builder.useAnonymousTbAccount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ApplyRefundRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
+     * @return applyReasonTextId
+     */
+    public Long getApplyReasonTextId() {
+        return this.applyReasonTextId;
+    }
+
+    /**
+     * @return applyRefundCount
+     */
+    public Integer getApplyRefundCount() {
+        return this.applyRefundCount;
+    }
+
+    /**
+     * @return applyRefundFee
+     */
+    public Long getApplyRefundFee() {
+        return this.applyRefundFee;
+    }
+
+    /**
+     * @return bizClaimType
+     */
+    public Integer getBizClaimType() {
+        return this.bizClaimType;
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
+     * @return bizUid
+     */
+    public String getBizUid() {
+        return this.bizUid;
+    }
+
+    /**
+     * @return goodsStatus
+     */
+    public Integer getGoodsStatus() {
+        return this.goodsStatus;
+    }
+
+    /**
+     * @return leaveMessage
+     */
+    public String getLeaveMessage() {
+        return this.leaveMessage;
+    }
+
+    /**
+     * @return leavePictureList
+     */
+    public java.util.List < LeavePictureList> getLeavePictureList() {
+        return this.leavePictureList;
+    }
+
+    /**
+     * @return subLmOrderId
+     */
+    public String getSubLmOrderId() {
+        return this.subLmOrderId;
+    }
+
+    /**
+     * @return thirdPartyUserId
+     */
+    public String getThirdPartyUserId() {
+        return this.thirdPartyUserId;
+    }
+
+    /**
+     * @return useAnonymousTbAccount
+     */
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
+    }
+
+    public static final class Builder extends Request.Builder<ApplyRefundRequest, Builder> {
+        private String accountType; 
+        private Long applyReasonTextId; 
+        private Integer applyRefundCount; 
+        private Long applyRefundFee; 
+        private Integer bizClaimType; 
+        private String bizId; 
+        private String bizUid; 
+        private Integer goodsStatus; 
+        private String leaveMessage; 
+        private java.util.List < LeavePictureList> leavePictureList; 
+        private String subLmOrderId; 
+        private String thirdPartyUserId; 
+        private Boolean useAnonymousTbAccount; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ApplyRefundRequest request) {
+            super(request);
+            this.accountType = request.accountType;
+            this.applyReasonTextId = request.applyReasonTextId;
+            this.applyRefundCount = request.applyRefundCount;
+            this.applyRefundFee = request.applyRefundFee;
+            this.bizClaimType = request.bizClaimType;
+            this.bizId = request.bizId;
+            this.bizUid = request.bizUid;
+            this.goodsStatus = request.goodsStatus;
+            this.leaveMessage = request.leaveMessage;
+            this.leavePictureList = request.leavePictureList;
+            this.subLmOrderId = request.subLmOrderId;
+            this.thirdPartyUserId = request.thirdPartyUserId;
+            this.useAnonymousTbAccount = request.useAnonymousTbAccount;
+        } 
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * ApplyReasonTextId.
+         */
+        public Builder applyReasonTextId(Long applyReasonTextId) {
+            this.putQueryParameter("ApplyReasonTextId", applyReasonTextId);
+            this.applyReasonTextId = applyReasonTextId;
+            return this;
+        }
+
+        /**
+         * ApplyRefundCount.
+         */
+        public Builder applyRefundCount(Integer applyRefundCount) {
+            this.putQueryParameter("ApplyRefundCount", applyRefundCount);
+            this.applyRefundCount = applyRefundCount;
+            return this;
+        }
+
+        /**
+         * ApplyRefundFee.
+         */
+        public Builder applyRefundFee(Long applyRefundFee) {
+            this.putQueryParameter("ApplyRefundFee", applyRefundFee);
+            this.applyRefundFee = applyRefundFee;
+            return this;
+        }
+
+        /**
+         * BizClaimType.
+         */
+        public Builder bizClaimType(Integer bizClaimType) {
+            this.putQueryParameter("BizClaimType", bizClaimType);
+            this.bizClaimType = bizClaimType;
+            return this;
+        }
+
+        /**
+         * BizId.
+         */
+        public Builder bizId(String bizId) {
+            this.putQueryParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * BizUid.
+         */
+        public Builder bizUid(String bizUid) {
+            this.putQueryParameter("BizUid", bizUid);
+            this.bizUid = bizUid;
+            return this;
+        }
+
+        /**
+         * GoodsStatus.
+         */
+        public Builder goodsStatus(Integer goodsStatus) {
+            this.putQueryParameter("GoodsStatus", goodsStatus);
+            this.goodsStatus = goodsStatus;
+            return this;
+        }
+
+        /**
+         * LeaveMessage.
+         */
+        public Builder leaveMessage(String leaveMessage) {
+            this.putBodyParameter("LeaveMessage", leaveMessage);
+            this.leaveMessage = leaveMessage;
+            return this;
+        }
+
+        /**
+         * LeavePictureList.
+         */
+        public Builder leavePictureList(java.util.List < LeavePictureList> leavePictureList) {
+            this.putBodyParameter("LeavePictureList", leavePictureList);
+            this.leavePictureList = leavePictureList;
+            return this;
+        }
+
+        /**
+         * SubLmOrderId.
+         */
+        public Builder subLmOrderId(String subLmOrderId) {
+            this.putQueryParameter("SubLmOrderId", subLmOrderId);
+            this.subLmOrderId = subLmOrderId;
+            return this;
+        }
+
+        /**
+         * ThirdPartyUserId.
+         */
+        public Builder thirdPartyUserId(String thirdPartyUserId) {
+            this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);
+            this.thirdPartyUserId = thirdPartyUserId;
+            return this;
+        }
+
+        /**
+         * UseAnonymousTbAccount.
+         */
+        public Builder useAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+            this.putQueryParameter("UseAnonymousTbAccount", useAnonymousTbAccount);
+            this.useAnonymousTbAccount = useAnonymousTbAccount;
+            return this;
+        }
+
+        @Override
+        public ApplyRefundRequest build() {
+            return new ApplyRefundRequest(this);
+        } 
+
+    } 
+
+    public static class LeavePictureList extends TeaModel {
+        @NameInMap("Desc")
+        private String desc;
+
+        @NameInMap("Picture")
+        private String picture;
+
+        private LeavePictureList(Builder builder) {
+            this.desc = builder.desc;
+            this.picture = builder.picture;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LeavePictureList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return picture
+         */
+        public String getPicture() {
+            return this.picture;
+        }
+
+        public static final class Builder {
+            private String desc; 
+            private String picture; 
+
+            /**
+             * Desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * Picture.
+             */
+            public Builder picture(String picture) {
+                this.picture = picture;
+                return this;
+            }
+
+            public LeavePictureList build() {
+                return new LeavePictureList(this);
+            } 
+
+        } 
+
+    }
+}

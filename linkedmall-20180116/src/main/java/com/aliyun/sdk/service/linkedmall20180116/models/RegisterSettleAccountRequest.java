@@ -1,0 +1,279 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20180116.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link RegisterSettleAccountRequest} extends {@link RequestModel}
+ *
+ * <p>RegisterSettleAccountRequest</p>
+ */
+public class RegisterSettleAccountRequest extends Request {
+    @Body
+    @NameInMap("AccountChannel")
+    private String accountChannel;
+
+    @Body
+    @NameInMap("AccountName")
+    private String accountName;
+
+    @Body
+    @NameInMap("AccountNo")
+    private String accountNo;
+
+    @Body
+    @NameInMap("AccountPayType")
+    private String accountPayType;
+
+    @Body
+    @NameInMap("AccountType")
+    private String accountType;
+
+    @Body
+    @NameInMap("BizId")
+    private String bizId;
+
+    @Body
+    @NameInMap("CountryOrAreaCode")
+    private String countryOrAreaCode;
+
+    @Body
+    @NameInMap("Currency")
+    private String currency;
+
+    @Body
+    @NameInMap("ExtInfo")
+    private String extInfo;
+
+    @Body
+    @NameInMap("IdempotentId")
+    private String idempotentId;
+
+    private RegisterSettleAccountRequest(Builder builder) {
+        super(builder);
+        this.accountChannel = builder.accountChannel;
+        this.accountName = builder.accountName;
+        this.accountNo = builder.accountNo;
+        this.accountPayType = builder.accountPayType;
+        this.accountType = builder.accountType;
+        this.bizId = builder.bizId;
+        this.countryOrAreaCode = builder.countryOrAreaCode;
+        this.currency = builder.currency;
+        this.extInfo = builder.extInfo;
+        this.idempotentId = builder.idempotentId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RegisterSettleAccountRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accountChannel
+     */
+    public String getAccountChannel() {
+        return this.accountChannel;
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    /**
+     * @return accountNo
+     */
+    public String getAccountNo() {
+        return this.accountNo;
+    }
+
+    /**
+     * @return accountPayType
+     */
+    public String getAccountPayType() {
+        return this.accountPayType;
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
+     * @return countryOrAreaCode
+     */
+    public String getCountryOrAreaCode() {
+        return this.countryOrAreaCode;
+    }
+
+    /**
+     * @return currency
+     */
+    public String getCurrency() {
+        return this.currency;
+    }
+
+    /**
+     * @return extInfo
+     */
+    public String getExtInfo() {
+        return this.extInfo;
+    }
+
+    /**
+     * @return idempotentId
+     */
+    public String getIdempotentId() {
+        return this.idempotentId;
+    }
+
+    public static final class Builder extends Request.Builder<RegisterSettleAccountRequest, Builder> {
+        private String accountChannel; 
+        private String accountName; 
+        private String accountNo; 
+        private String accountPayType; 
+        private String accountType; 
+        private String bizId; 
+        private String countryOrAreaCode; 
+        private String currency; 
+        private String extInfo; 
+        private String idempotentId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(RegisterSettleAccountRequest request) {
+            super(request);
+            this.accountChannel = request.accountChannel;
+            this.accountName = request.accountName;
+            this.accountNo = request.accountNo;
+            this.accountPayType = request.accountPayType;
+            this.accountType = request.accountType;
+            this.bizId = request.bizId;
+            this.countryOrAreaCode = request.countryOrAreaCode;
+            this.currency = request.currency;
+            this.extInfo = request.extInfo;
+            this.idempotentId = request.idempotentId;
+        } 
+
+        /**
+         * AccountChannel.
+         */
+        public Builder accountChannel(String accountChannel) {
+            this.putBodyParameter("AccountChannel", accountChannel);
+            this.accountChannel = accountChannel;
+            return this;
+        }
+
+        /**
+         * AccountName.
+         */
+        public Builder accountName(String accountName) {
+            this.putBodyParameter("AccountName", accountName);
+            this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * AccountNo.
+         */
+        public Builder accountNo(String accountNo) {
+            this.putBodyParameter("AccountNo", accountNo);
+            this.accountNo = accountNo;
+            return this;
+        }
+
+        /**
+         * AccountPayType.
+         */
+        public Builder accountPayType(String accountPayType) {
+            this.putBodyParameter("AccountPayType", accountPayType);
+            this.accountPayType = accountPayType;
+            return this;
+        }
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putBodyParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * BizId.
+         */
+        public Builder bizId(String bizId) {
+            this.putBodyParameter("BizId", bizId);
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * CountryOrAreaCode.
+         */
+        public Builder countryOrAreaCode(String countryOrAreaCode) {
+            this.putBodyParameter("CountryOrAreaCode", countryOrAreaCode);
+            this.countryOrAreaCode = countryOrAreaCode;
+            return this;
+        }
+
+        /**
+         * Currency.
+         */
+        public Builder currency(String currency) {
+            this.putBodyParameter("Currency", currency);
+            this.currency = currency;
+            return this;
+        }
+
+        /**
+         * ExtInfo.
+         */
+        public Builder extInfo(String extInfo) {
+            this.putBodyParameter("ExtInfo", extInfo);
+            this.extInfo = extInfo;
+            return this;
+        }
+
+        /**
+         * IdempotentId.
+         */
+        public Builder idempotentId(String idempotentId) {
+            this.putBodyParameter("IdempotentId", idempotentId);
+            this.idempotentId = idempotentId;
+            return this;
+        }
+
+        @Override
+        public RegisterSettleAccountRequest build() {
+            return new RegisterSettleAccountRequest(this);
+        } 
+
+    } 
+
+}

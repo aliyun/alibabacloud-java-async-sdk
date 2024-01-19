@@ -1,0 +1,275 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.linkedmall20180116.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link RemoveMessagesResponseBody} extends {@link TeaModel}
+ *
+ * <p>RemoveMessagesResponseBody</p>
+ */
+public class RemoveMessagesResponseBody extends TeaModel {
+    @NameInMap("ActionResult")
+    private ActionResult actionResult;
+
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("LogsId")
+    private String logsId;
+
+    @NameInMap("Message")
+    private String message;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("SubCode")
+    private String subCode;
+
+    @NameInMap("SubMessage")
+    private String subMessage;
+
+    @NameInMap("Success")
+    private Boolean success;
+
+    private RemoveMessagesResponseBody(Builder builder) {
+        this.actionResult = builder.actionResult;
+        this.code = builder.code;
+        this.logsId = builder.logsId;
+        this.message = builder.message;
+        this.requestId = builder.requestId;
+        this.subCode = builder.subCode;
+        this.subMessage = builder.subMessage;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static RemoveMessagesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return actionResult
+     */
+    public ActionResult getActionResult() {
+        return this.actionResult;
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return logsId
+     */
+    public String getLogsId() {
+        return this.logsId;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return subCode
+     */
+    public String getSubCode() {
+        return this.subCode;
+    }
+
+    /**
+     * @return subMessage
+     */
+    public String getSubMessage() {
+        return this.subMessage;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private ActionResult actionResult; 
+        private String code; 
+        private String logsId; 
+        private String message; 
+        private String requestId; 
+        private String subCode; 
+        private String subMessage; 
+        private Boolean success; 
+
+        /**
+         * ActionResult.
+         */
+        public Builder actionResult(ActionResult actionResult) {
+            this.actionResult = actionResult;
+            return this;
+        }
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * LogsId.
+         */
+        public Builder logsId(String logsId) {
+            this.logsId = logsId;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SubCode.
+         */
+        public Builder subCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+
+        /**
+         * SubMessage.
+         */
+        public Builder subMessage(String subMessage) {
+            this.subMessage = subMessage;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public RemoveMessagesResponseBody build() {
+            return new RemoveMessagesResponseBody(this);
+        } 
+
+    } 
+
+    public static class ActionResult extends TeaModel {
+        @NameInMap("ReturnCode")
+        private String returnCode;
+
+        @NameInMap("ReturnMessage")
+        private String returnMessage;
+
+        @NameInMap("ReturnValue")
+        private String returnValue;
+
+        private ActionResult(Builder builder) {
+            this.returnCode = builder.returnCode;
+            this.returnMessage = builder.returnMessage;
+            this.returnValue = builder.returnValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ActionResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return returnCode
+         */
+        public String getReturnCode() {
+            return this.returnCode;
+        }
+
+        /**
+         * @return returnMessage
+         */
+        public String getReturnMessage() {
+            return this.returnMessage;
+        }
+
+        /**
+         * @return returnValue
+         */
+        public String getReturnValue() {
+            return this.returnValue;
+        }
+
+        public static final class Builder {
+            private String returnCode; 
+            private String returnMessage; 
+            private String returnValue; 
+
+            /**
+             * ReturnCode.
+             */
+            public Builder returnCode(String returnCode) {
+                this.returnCode = returnCode;
+                return this;
+            }
+
+            /**
+             * ReturnMessage.
+             */
+            public Builder returnMessage(String returnMessage) {
+                this.returnMessage = returnMessage;
+                return this;
+            }
+
+            /**
+             * ReturnValue.
+             */
+            public Builder returnValue(String returnValue) {
+                this.returnValue = returnValue;
+                return this;
+            }
+
+            public ActionResult build() {
+                return new ActionResult(this);
+            } 
+
+        } 
+
+    }
+}
