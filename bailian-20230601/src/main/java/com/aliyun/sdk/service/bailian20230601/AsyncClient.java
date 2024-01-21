@@ -18,9 +18,9 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<AddEnterpriseTagResponse> addEnterpriseTag(AddEnterpriseTagRequest request);
-
     CompletableFuture<CancelFineTuneJobResponse> cancelFineTuneJob(CancelFineTuneJobRequest request);
+
+    CompletableFuture<CreateDocumentTagResponse> createDocumentTag(CreateDocumentTagRequest request);
 
     CompletableFuture<CreateFineTuneJobResponse> createFineTuneJob(CreateFineTuneJobRequest request);
 
@@ -30,58 +30,46 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
 
-    CompletableFuture<DelEnterpriseTagResponse> delEnterpriseTag(DelEnterpriseTagRequest request);
+    CompletableFuture<DeleteDocResponse> deleteDoc(DeleteDocRequest request);
 
-    CompletableFuture<DeleteEnterpriseDataResponse> deleteEnterpriseData(DeleteEnterpriseDataRequest request);
+    CompletableFuture<DeleteDocumentTagResponse> deleteDocumentTag(DeleteDocumentTagRequest request);
 
     CompletableFuture<DeleteFineTuneJobResponse> deleteFineTuneJob(DeleteFineTuneJobRequest request);
 
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
 
+    CompletableFuture<DescribeDocResponse> describeDoc(DescribeDocRequest request);
+
+    CompletableFuture<DescribeDocumentImportJobResponse> describeDocumentImportJob(DescribeDocumentImportJobRequest request);
+
     CompletableFuture<DescribeFineTuneJobResponse> describeFineTuneJob(DescribeFineTuneJobRequest request);
 
     CompletableFuture<DescribeServiceResponse> describeService(DescribeServiceRequest request);
 
-    CompletableFuture<GetEnterpriseDataByDataIdResponse> getEnterpriseDataByDataId(GetEnterpriseDataByDataIdRequest request);
-
-    CompletableFuture<GetEnterpriseDataChunkResponse> getEnterpriseDataChunk(GetEnterpriseDataChunkRequest request);
-
-    CompletableFuture<GetEnterpriseDataPageImageResponse> getEnterpriseDataPageImage(GetEnterpriseDataPageImageRequest request);
-
-    CompletableFuture<GetEnterpriseDataParseResultResponse> getEnterpriseDataParseResult(GetEnterpriseDataParseResultRequest request);
-
     CompletableFuture<GetFileStoreUploadPolicyResponse> getFileStoreUploadPolicy(GetFileStoreUploadPolicyRequest request);
-
-    CompletableFuture<GetImportTaskResultResponse> getImportTaskResult(GetImportTaskResultRequest request);
 
     CompletableFuture<GetPromptResponse> getPrompt(GetPromptRequest request);
 
     CompletableFuture<GetText2ImageJobResponse> getText2ImageJob(GetText2ImageJobRequest request);
 
-    CompletableFuture<ImportEnterpriseDocumentResponse> importEnterpriseDocument(ImportEnterpriseDocumentRequest request);
-
     CompletableFuture<ImportUserDocumentResponse> importUserDocument(ImportUserDocumentRequest request);
+
+    CompletableFuture<ListDocsResponse> listDocs(ListDocsRequest request);
+
+    CompletableFuture<ListDocumentTagsResponse> listDocumentTags(ListDocumentTagsRequest request);
 
     CompletableFuture<ListFineTuneJobsResponse> listFineTuneJobs(ListFineTuneJobsRequest request);
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
-    CompletableFuture<QueryEnterpriseDataListResponse> queryEnterpriseDataList(QueryEnterpriseDataListRequest request);
-
-    CompletableFuture<QueryEnterpriseDataTagResponse> queryEnterpriseDataTag(QueryEnterpriseDataTagRequest request);
-
-    CompletableFuture<QueryEnterpriseTagListResponse> queryEnterpriseTagList(QueryEnterpriseTagListRequest request);
-
     CompletableFuture<QueryUserDocumentResponse> queryUserDocument(QueryUserDocumentRequest request);
 
-    CompletableFuture<SearchEnterpriseDataResponse> searchEnterpriseData(SearchEnterpriseDataRequest request);
+    CompletableFuture<SubmitDocumentImportJobResponse> submitDocumentImportJob(SubmitDocumentImportJobRequest request);
 
     CompletableFuture<SubmitText2ImageJobResponse> submitText2ImageJob(SubmitText2ImageJobRequest request);
 
-    CompletableFuture<UpdateEnterpriseDataInfoResponse> updateEnterpriseDataInfo(UpdateEnterpriseDataInfoRequest request);
+    CompletableFuture<UpdateDocAttributeResponse> updateDocAttribute(UpdateDocAttributeRequest request);
 
-    CompletableFuture<UpdateEnterpriseDataTagResponse> updateEnterpriseDataTag(UpdateEnterpriseDataTagRequest request);
-
-    CompletableFuture<UpdateEnterpriseTagResponse> updateEnterpriseTag(UpdateEnterpriseTagRequest request);
+    CompletableFuture<UpdateDocumentTagResponse> updateDocumentTag(UpdateDocumentTagRequest request);
 
 }
