@@ -62,6 +62,10 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SecurityProtectionEnabled")
+    private Boolean securityProtectionEnabled;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -83,6 +87,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityProtectionEnabled = builder.securityProtectionEnabled;
         this.status = builder.status;
         this.tags = builder.tags;
     }
@@ -185,6 +190,13 @@ public class ListPublicIpAddressPoolsRequest extends Request {
     }
 
     /**
+     * @return securityProtectionEnabled
+     */
+    public Boolean getSecurityProtectionEnabled() {
+        return this.securityProtectionEnabled;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -211,6 +223,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean securityProtectionEnabled; 
         private String status; 
         private java.util.List < Tags> tags; 
 
@@ -232,6 +245,7 @@ public class ListPublicIpAddressPoolsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionEnabled = request.securityProtectionEnabled;
             this.status = request.status;
             this.tags = request.tags;
         } 
@@ -375,6 +389,15 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityProtectionEnabled.
+         */
+        public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
+            this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
+            this.securityProtectionEnabled = securityProtectionEnabled;
             return this;
         }
 

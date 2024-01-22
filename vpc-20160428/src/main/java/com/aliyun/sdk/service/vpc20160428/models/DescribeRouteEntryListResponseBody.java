@@ -401,6 +401,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("NextHops")
         private NextHops nextHops;
 
+        @NameInMap("Origin")
+        private String origin;
+
         @NameInMap("RouteEntryId")
         private String routeEntryId;
 
@@ -425,6 +428,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.ipVersion = builder.ipVersion;
             this.nextHops = builder.nextHops;
+            this.origin = builder.origin;
             this.routeEntryId = builder.routeEntryId;
             this.routeEntryName = builder.routeEntryName;
             this.routeTableId = builder.routeTableId;
@@ -477,6 +481,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return origin
+         */
+        public String getOrigin() {
+            return this.origin;
+        }
+
+        /**
          * @return routeEntryId
          */
         public String getRouteEntryId() {
@@ -524,6 +535,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String gmtModified; 
             private String ipVersion; 
             private NextHops nextHops; 
+            private String origin; 
             private String routeEntryId; 
             private String routeEntryName; 
             private String routeTableId; 
@@ -572,6 +584,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              */
             public Builder nextHops(NextHops nextHops) {
                 this.nextHops = nextHops;
+                return this;
+            }
+
+            /**
+             * Origin.
+             */
+            public Builder origin(String origin) {
+                this.origin = origin;
                 return this;
             }
 

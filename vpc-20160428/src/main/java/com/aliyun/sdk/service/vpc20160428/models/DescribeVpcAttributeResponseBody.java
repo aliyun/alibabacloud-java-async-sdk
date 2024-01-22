@@ -15,6 +15,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("AssociatedCens")
     private AssociatedCens associatedCens;
 
+    @NameInMap("AssociatedPropagationSources")
+    private AssociatedPropagationSources associatedPropagationSources;
+
     @NameInMap("CidrBlock")
     private String cidrBlock;
 
@@ -89,6 +92,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     private DescribeVpcAttributeResponseBody(Builder builder) {
         this.associatedCens = builder.associatedCens;
+        this.associatedPropagationSources = builder.associatedPropagationSources;
         this.cidrBlock = builder.cidrBlock;
         this.classicLinkEnabled = builder.classicLinkEnabled;
         this.cloudResources = builder.cloudResources;
@@ -128,6 +132,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
      */
     public AssociatedCens getAssociatedCens() {
         return this.associatedCens;
+    }
+
+    /**
+     * @return associatedPropagationSources
+     */
+    public AssociatedPropagationSources getAssociatedPropagationSources() {
+        return this.associatedPropagationSources;
     }
 
     /**
@@ -300,6 +311,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     public static final class Builder {
         private AssociatedCens associatedCens; 
+        private AssociatedPropagationSources associatedPropagationSources; 
         private String cidrBlock; 
         private Boolean classicLinkEnabled; 
         private CloudResources cloudResources; 
@@ -333,6 +345,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          */
         public Builder associatedCens(AssociatedCens associatedCens) {
             this.associatedCens = associatedCens;
+            return this;
+        }
+
+        /**
+         * AssociatedPropagationSources.
+         */
+        public Builder associatedPropagationSources(AssociatedPropagationSources associatedPropagationSources) {
+            this.associatedPropagationSources = associatedPropagationSources;
             return this;
         }
 
@@ -676,6 +696,172 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
             public AssociatedCens build() {
                 return new AssociatedCens(this);
+            } 
+
+        } 
+
+    }
+    public static class AssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
+        @NameInMap("RoutePropagated")
+        private Boolean routePropagated;
+
+        @NameInMap("SourceInstanceId")
+        private String sourceInstanceId;
+
+        @NameInMap("SourceOwnerId")
+        private Long sourceOwnerId;
+
+        @NameInMap("SourceType")
+        private String sourceType;
+
+        @NameInMap("Status")
+        private String status;
+
+        private AssociatedPropagationSourcesAssociatedPropagationSources(Builder builder) {
+            this.routePropagated = builder.routePropagated;
+            this.sourceInstanceId = builder.sourceInstanceId;
+            this.sourceOwnerId = builder.sourceOwnerId;
+            this.sourceType = builder.sourceType;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssociatedPropagationSourcesAssociatedPropagationSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return routePropagated
+         */
+        public Boolean getRoutePropagated() {
+            return this.routePropagated;
+        }
+
+        /**
+         * @return sourceInstanceId
+         */
+        public String getSourceInstanceId() {
+            return this.sourceInstanceId;
+        }
+
+        /**
+         * @return sourceOwnerId
+         */
+        public Long getSourceOwnerId() {
+            return this.sourceOwnerId;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private Boolean routePropagated; 
+            private String sourceInstanceId; 
+            private Long sourceOwnerId; 
+            private String sourceType; 
+            private String status; 
+
+            /**
+             * RoutePropagated.
+             */
+            public Builder routePropagated(Boolean routePropagated) {
+                this.routePropagated = routePropagated;
+                return this;
+            }
+
+            /**
+             * SourceInstanceId.
+             */
+            public Builder sourceInstanceId(String sourceInstanceId) {
+                this.sourceInstanceId = sourceInstanceId;
+                return this;
+            }
+
+            /**
+             * SourceOwnerId.
+             */
+            public Builder sourceOwnerId(Long sourceOwnerId) {
+                this.sourceOwnerId = sourceOwnerId;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * The status of the VPC. Valid values:
+             * <p>
+             * 
+             * *   **Available**
+             * *   **Pending**
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public AssociatedPropagationSourcesAssociatedPropagationSources build() {
+                return new AssociatedPropagationSourcesAssociatedPropagationSources(this);
+            } 
+
+        } 
+
+    }
+    public static class AssociatedPropagationSources extends TeaModel {
+        @NameInMap("AssociatedPropagationSources")
+        private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources;
+
+        private AssociatedPropagationSources(Builder builder) {
+            this.associatedPropagationSources = builder.associatedPropagationSources;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssociatedPropagationSources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return associatedPropagationSources
+         */
+        public java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> getAssociatedPropagationSources() {
+            return this.associatedPropagationSources;
+        }
+
+        public static final class Builder {
+            private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources; 
+
+            /**
+             * AssociatedPropagationSources.
+             */
+            public Builder associatedPropagationSources(java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
+                this.associatedPropagationSources = associatedPropagationSources;
+                return this;
+            }
+
+            public AssociatedPropagationSources build() {
+                return new AssociatedPropagationSources(this);
             } 
 
         } 

@@ -222,7 +222,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
          * The name of the IPv6 gateway.
          * <p>
          * 
-         * The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -276,7 +276,7 @@ public class DescribeIpv6GatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group to which the IPv6 gateway belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

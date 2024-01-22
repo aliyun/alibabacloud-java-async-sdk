@@ -207,6 +207,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("SecurityProtectionTypes")
+        private java.util.List < String > securityProtectionTypes;
+
         @NameInMap("ShareType")
         private String shareType;
 
@@ -239,6 +242,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.securityProtectionTypes = builder.securityProtectionTypes;
             this.shareType = builder.shareType;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -327,6 +331,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityProtectionTypes
+         */
+        public java.util.List < String > getSecurityProtectionTypes() {
+            return this.securityProtectionTypes;
+        }
+
+        /**
          * @return shareType
          */
         public String getShareType() {
@@ -386,6 +397,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private String publicIpAddressPoolId; 
             private String regionId; 
             private String resourceGroupId; 
+            private java.util.List < String > securityProtectionTypes; 
             private String shareType; 
             private String status; 
             private java.util.List < Tags> tags; 
@@ -496,6 +508,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityProtectionTypes.
+             */
+            public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+                this.securityProtectionTypes = securityProtectionTypes;
                 return this;
             }
 

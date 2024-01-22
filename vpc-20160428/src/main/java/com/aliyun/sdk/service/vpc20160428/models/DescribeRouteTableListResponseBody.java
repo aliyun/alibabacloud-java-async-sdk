@@ -334,6 +334,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("RoutePropagationEnable")
+        private Boolean routePropagationEnable;
+
         @NameInMap("RouteTableId")
         private String routeTableId;
 
@@ -368,6 +371,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             this.gatewayIds = builder.gatewayIds;
             this.ownerId = builder.ownerId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.routePropagationEnable = builder.routePropagationEnable;
             this.routeTableId = builder.routeTableId;
             this.routeTableName = builder.routeTableName;
             this.routeTableType = builder.routeTableType;
@@ -427,6 +431,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return routePropagationEnable
+         */
+        public Boolean getRoutePropagationEnable() {
+            return this.routePropagationEnable;
         }
 
         /**
@@ -499,6 +510,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private GatewayIds gatewayIds; 
             private Long ownerId; 
             private String resourceGroupId; 
+            private Boolean routePropagationEnable; 
             private String routeTableId; 
             private String routeTableName; 
             private String routeTableType; 
@@ -558,6 +570,14 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * RoutePropagationEnable.
+             */
+            public Builder routePropagationEnable(Boolean routePropagationEnable) {
+                this.routePropagationEnable = routePropagationEnable;
                 return this;
             }
 

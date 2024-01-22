@@ -62,6 +62,10 @@ public class CreatePublicIpAddressPoolRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("SecurityProtectionTypes")
+    private java.util.List < String > securityProtectionTypes;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -83,6 +87,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityProtectionTypes = builder.securityProtectionTypes;
         this.tag = builder.tag;
         this.zones = builder.zones;
     }
@@ -185,6 +190,13 @@ public class CreatePublicIpAddressPoolRequest extends Request {
     }
 
     /**
+     * @return securityProtectionTypes
+     */
+    public java.util.List < String > getSecurityProtectionTypes() {
+        return this.securityProtectionTypes;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -211,6 +223,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < String > securityProtectionTypes; 
         private java.util.List < Tag> tag; 
         private java.util.List < String > zones; 
 
@@ -232,6 +245,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityProtectionTypes = request.securityProtectionTypes;
             this.tag = request.tag;
             this.zones = request.zones;
         } 
@@ -377,6 +391,15 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityProtectionTypes.
+         */
+        public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
+            this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
+            this.securityProtectionTypes = securityProtectionTypes;
             return this;
         }
 

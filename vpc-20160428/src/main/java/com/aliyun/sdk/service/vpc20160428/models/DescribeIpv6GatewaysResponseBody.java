@@ -392,11 +392,12 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The state of the IPv6 gateway. Valid values:
+             * The status of the IPv6 gateway. Valid values:
              * <p>
              * 
-             * *   **Normal**: The IPv6 gateway runs as expected.
-             * *   **FinancialLocked:** The IPv6 gateway is locked due to overdue payments.
+             * *   **Normal**
+             * *   **FinancialLocked**
+             * *   **SecurityLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -463,7 +464,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -474,8 +475,8 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
              * The status of the IPv6 gateway. Valid values:
              * <p>
              * 
-             * *   **Pending**: The IPv6 gateway is being configured.
-             * *   **Available**: The IPv6 gateway is available.
+             * *   **Pending**
+             * *   **Available**
              */
             public Builder status(String status) {
                 this.status = status;

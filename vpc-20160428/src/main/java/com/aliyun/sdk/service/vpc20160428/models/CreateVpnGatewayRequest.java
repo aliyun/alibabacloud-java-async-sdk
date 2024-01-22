@@ -328,6 +328,8 @@ public class CreateVpnGatewayRequest extends Request {
          * 
          * *   **true**
          * *   **false** (default)
+         * 
+         * >  We recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill for creating the VPN gateway.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -480,11 +482,13 @@ public class CreateVpnGatewayRequest extends Request {
          * The ID of the resource group to which the VPN gateway belongs.
          * <p>
          * 
-         * - You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.
-         * - If you do not specify a resource group, the VPN gateway will belong to the default resource group after being created.
-         * - After the VPN gateway is created, if you create an SSL server, SSL client certificate, IPsec server, or IPsec-VPN connection under the VPN gateway (when the IPsec-VPN connection is bound to the VPN gateway), these resources directly belong to the resource group to which the VPN gateway belongs and cannot be modified.
+         * *   You can call the [ListResourceGroups](~~158855~~) operation to query resource group IDs.
          * 
-         *     If you change the resource group to which the VPN gateway belongs, the resource group to which the resource belongs will also be changed.
+         * *   If you do not specify a resource group ID, the VPN gateway belongs to the default resource group.
+         * 
+         * *   After the VPN gateway is created, the following resources also belong to the resource group and you cannot change the resource group: SSL servers, SSL client certificates, IPsec servers, and IPsec-VPN connections.
+         * 
+         *     If you move the VPN gateway to a new resource group, the preceding resources are also moved to the new resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
