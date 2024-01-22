@@ -311,7 +311,14 @@ public class ModifyDBProxyRequest extends Request {
         }
 
         /**
-         * PersistentConnectionStatus.
+         * Whether to enable connection keep. Valid values:
+         * <p>
+         * 
+         * - Enabled: enables connection keeping
+         * - Disabled: disables connection hold
+         * 
+         * > - This parameter is supported only for an ApsaraDB RDS for MySQL.
+         * > - When you modify the connection persistence state, the value of **ConfigDBProxyService** is modify.
          */
         public Builder persistentConnectionStatus(String persistentConnectionStatus) {
             this.putQueryParameter("PersistentConnectionStatus", persistentConnectionStatus);

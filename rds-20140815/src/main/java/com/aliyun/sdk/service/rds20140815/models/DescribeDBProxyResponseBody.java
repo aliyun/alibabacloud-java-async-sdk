@@ -303,7 +303,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         }
 
         /**
-         * DBProxyPersistentConnectionStatus.
+         * Connection Persistence State. 
+         * <p>
+         * 
+         * Valid values:
+         * - Enabled: Enabled
+         * - Disabled: Disabled
+         * - Unsupported: The instance does not support connection persistence
          */
         public Builder DBProxyPersistentConnectionStatus(String DBProxyPersistentConnectionStatus) {
             this.DBProxyPersistentConnectionStatus = DBProxyPersistentConnectionStatus;
@@ -516,7 +522,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String DBProxyVswitchId; 
 
             /**
-             * The endpoint of the proxy terminal.
+             * The database proxy endpoint.
              */
             public Builder DBProxyConnectString(String DBProxyConnectString) {
                 this.DBProxyConnectString = DBProxyConnectString;
@@ -524,7 +530,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the proxy endpoint.
+             * The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:
              * <p>
              * 
              * *   OuterString: Internet
@@ -536,7 +542,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the database proxy.
+             * The network type of the database proxy. Valid values:
              * <p>
              * 
              * *   0: Internet
@@ -549,7 +555,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The port number that is associated with the proxy endpoint.
+             * The port that is associated with the database proxy endpoint.
              */
             public Builder DBProxyConnectStringPort(String DBProxyConnectStringPort) {
                 this.DBProxyConnectStringPort = DBProxyConnectStringPort;
@@ -557,7 +563,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the proxy terminal to which the proxy endpoint belongs.
+             * The ID of the backend database proxy endpoint.
              */
             public Builder DBProxyEndpointId(String DBProxyEndpointId) {
                 this.DBProxyEndpointId = DBProxyEndpointId;
@@ -565,7 +571,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the proxy terminal to which the proxy endpoint belongs.
+             * The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.
              */
             public Builder DBProxyEndpointName(String DBProxyEndpointName) {
                 this.DBProxyEndpointName = DBProxyEndpointName;
@@ -573,7 +579,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC that is associated with the proxy endpoint.
+             * The VPC of the database proxy.
              */
             public Builder DBProxyVpcId(String DBProxyVpcId) {
                 this.DBProxyVpcId = DBProxyVpcId;
@@ -581,7 +587,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The proxy instance ID.
+             * The ID of the database proxy instance.
              */
             public Builder DBProxyVpcInstanceId(String DBProxyVpcInstanceId) {
                 this.DBProxyVpcInstanceId = DBProxyVpcInstanceId;
@@ -589,7 +595,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch of the proxy service.
+             * The vSwitch of the database proxy.
              */
             public Builder DBProxyVswitchId(String DBProxyVswitchId) {
                 this.DBProxyVswitchId = DBProxyVswitchId;
@@ -707,7 +713,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             private String dbProxyReadWriteMode; 
 
             /**
-             * The description of the proxy terminal.
+             * The description of the database proxy endpoint.
              */
             public Builder dbProxyEndpointAliases(String dbProxyEndpointAliases) {
                 this.dbProxyEndpointAliases = dbProxyEndpointAliases;
@@ -715,7 +721,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The proxy terminal ID.
+             * The ID of the database proxy endpoint.
              */
             public Builder dbProxyEndpointName(String dbProxyEndpointName) {
                 this.dbProxyEndpointName = dbProxyEndpointName;
@@ -723,11 +729,11 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The proxy terminal type. Valid values:
+             * The type of the database proxy endpoint. Valid values:
              * <p>
              * 
-             * *   Custom: custom proxy terminal
-             * *   RWSplit: default proxy terminal
+             * *   Custom: custom database proxy endpoint
+             * *   RWSplit: default database proxy endpoint
              */
             public Builder dbProxyEndpointType(String dbProxyEndpointType) {
                 this.dbProxyEndpointType = dbProxyEndpointType;
@@ -735,11 +741,11 @@ public class DescribeDBProxyResponseBody extends TeaModel {
             }
 
             /**
-             * The read and write attributes of the proxy terminal. Valid values:
+             * The read and write attributes of the database proxy endpoint.
              * <p>
              * 
-             * *   ReadOnly: The proxy terminal supports only read requests.
-             * *   ReadWrite: The proxy terminal supports read and write requests.
+             * *   ReadOnly
+             * *   ReadWrite
              */
             public Builder dbProxyReadWriteMode(String dbProxyReadWriteMode) {
                 this.dbProxyReadWriteMode = dbProxyReadWriteMode;

@@ -203,11 +203,8 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
          * *   **Immediate**: performs the upgrade immediately.
          * *   **SpecificTime**: performs the upgrade at a specified point in time.
          * 
-         * > 
-         * 
-         * *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
-         * 
-         * *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
+         * > *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.
+         * > *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);

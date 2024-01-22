@@ -74,7 +74,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         private String successCount; 
 
         /**
-         * The error code returned if the request failed.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,7 +82,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Error taskId.
+         * The ID of the failed task. This parameter is returned when a task fails.
          */
         public Builder errorTaskId(String errorTaskId) {
             this.errorTaskId = errorTaskId;

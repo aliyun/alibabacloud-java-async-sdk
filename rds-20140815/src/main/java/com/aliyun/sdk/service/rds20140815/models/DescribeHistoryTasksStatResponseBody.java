@@ -50,7 +50,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * The information about the task.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,14 +110,16 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The status of the migration task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
-             * *   **NoStart**: The task is not started.
-             * *   **Running**:The task is in progress.
-             * *   **Success**: The task is successful.
-             * *   **Failed**: The task failed.
-             * *   **Waiting**: The task is waiting for an incremental backup file to be imported.
+             * *   Scheduled
+             * *   Running
+             * *   Succeed
+             * *   Failed
+             * *   Cancelling
+             * *   Canceled
+             * *   Waiting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -125,7 +127,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks that meet these constraints without taking pagination into account.
+             * The total number of tasks.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

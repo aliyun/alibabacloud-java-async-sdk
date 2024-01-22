@@ -301,7 +301,14 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * RiskConfirmed.
+         * There are security risks associated with installing certain plug-ins on an instance of a minor version that is too low, and you can install it after confirming the risk. 
+         * <p>
+         * 
+         * Valid values:
+         * - true
+         * - false
+         * 
+         * > For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).
          */
         public Builder riskConfirmed(Boolean riskConfirmed) {
             this.putQueryParameter("RiskConfirmed", riskConfirmed);

@@ -50,7 +50,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The migration tasks.
+         * The event.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Event category.
+             * The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
              */
             public Builder eventCategory(String eventCategory) {
                 this.eventCategory = eventCategory;
@@ -118,7 +118,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks that meet these constraints without taking pagination into account.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

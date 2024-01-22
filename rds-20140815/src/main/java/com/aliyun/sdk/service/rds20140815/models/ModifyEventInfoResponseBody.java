@@ -86,7 +86,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         private String successEventId; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Error eventId.
+         * The error ID.
          */
         public Builder errorEventId(String errorEventId) {
             this.errorEventId = errorEventId;
@@ -102,7 +102,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of devices that were created.
+         * The number of successful records.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -118,7 +118,7 @@ public class ModifyEventInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success eventId.
+         * The ID of the successful event.
          */
         public Builder successEventId(String successEventId) {
             this.successEventId = successEventId;

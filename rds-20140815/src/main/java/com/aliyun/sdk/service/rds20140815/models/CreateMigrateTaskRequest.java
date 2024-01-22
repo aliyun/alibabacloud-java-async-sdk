@@ -214,8 +214,8 @@ public class CreateMigrateTaskRequest extends Request {
          * The consistency check method for the database. Valid values:
          * <p>
          * 
-         * *   **SyncExecuteDBCheck**: synchronous database check
-         * *   **AsyncExecuteDBCheck**: asynchronous database check
+         * *   **SyncExecuteDBCheck**: synchronous database check.
+         * *   **AsyncExecuteDBCheck**: asynchronous database check.
          * 
          * Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).
          * 
@@ -252,7 +252,7 @@ public class CreateMigrateTaskRequest extends Request {
          * *   **True**
          * *   **False**
          * 
-         * > Set the value to **True** for instances that run SQL Server 2008 R2.
+         * >  Set the value to **True** for instances that run SQL Server 2008 R2.
          */
         public Builder isOnlineDB(String isOnlineDB) {
             this.putQueryParameter("IsOnlineDB", isOnlineDB);
@@ -261,7 +261,7 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The ID of the migration task.
+         * The migration task ID.
          * <p>
          * 
          * *   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.
@@ -291,10 +291,8 @@ public class CreateMigrateTaskRequest extends Request {
         }
 
         /**
-         * The information about the backup file in the OSS bucket.
+         * The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):
          * <p>
-         * 
-         * The values consist of three parts that are separated by colons (:):
          * 
          * *   OSS endpoint: oss-ap-southeast-1.aliyuncs.com.
          * *   Name of the OSS bucket: rdsmssqlsingapore.

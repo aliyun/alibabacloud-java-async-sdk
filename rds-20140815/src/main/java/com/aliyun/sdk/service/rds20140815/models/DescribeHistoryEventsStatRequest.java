@@ -111,7 +111,7 @@ public class DescribeHistoryEventsStatRequest extends Request {
         } 
 
         /**
-         * Archive status.
+         * The status of the asset instance. Valid values: **starting**, **running**, **stopping**, and **stopped**.
          */
         public Builder archiveStatus(String archiveStatus) {
             this.putQueryParameter("ArchiveStatus", archiveStatus);
@@ -129,7 +129,7 @@ public class DescribeHistoryEventsStatRequest extends Request {
         }
 
         /**
-         * The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

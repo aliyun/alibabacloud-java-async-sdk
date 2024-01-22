@@ -94,7 +94,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +102,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -118,7 +118,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The time zone of the instance.
+         * The time zone.
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;

@@ -112,7 +112,7 @@ public class ModifyEventInfoRequest extends Request {
         } 
 
         /**
-         * Action params.
+         * The action parameter. Set this value in the JSON string format.
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -121,7 +121,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * Event action.
+         * The event handling action. Set this value to archive or undo.
          */
         public Builder eventAction(String eventAction) {
             this.putQueryParameter("EventAction", eventAction);
@@ -130,7 +130,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The event ID.
+         * The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);

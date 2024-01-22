@@ -154,7 +154,7 @@ public class ModifyTaskInfoRequest extends Request {
         } 
 
         /**
-         * Action params.
+         * The action parameter.
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -163,7 +163,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +199,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * Step name.
+         * The name of the execution step.
          */
         public Builder stepName(String stepName) {
             this.putQueryParameter("StepName", stepName);
@@ -208,7 +208,7 @@ public class ModifyTaskInfoRequest extends Request {
         }
 
         /**
-         * The name of the operation that generates the task. Valid values:
+         * The name of the operation that you can call to execute the task. Valid values:
          * <p>
          * 
          * *   ImportImage

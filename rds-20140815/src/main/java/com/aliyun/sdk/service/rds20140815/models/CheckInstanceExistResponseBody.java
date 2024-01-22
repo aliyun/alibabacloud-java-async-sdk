@@ -52,9 +52,8 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         /**
          * Indicates whether the instance exists. Valid values:
          * <p>
-         * 
-         * *   **true**: The instance exists.
-         * *   **false**: The instance does not exist.
+         * - **true**: The instance exists.
+         * - **false**: The instance does not exist.
          */
         public Builder isExistInstance(Boolean isExistInstance) {
             this.isExistInstance = isExistInstance;
