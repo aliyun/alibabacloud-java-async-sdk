@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckSummaryResponseBody</p>
  */
 public class GetCheckSummaryResponseBody extends TeaModel {
+    @NameInMap("OverallItemStatistic")
+    private OverallItemStatistic overallItemStatistic;
+
     @NameInMap("OverallStatistic")
     private OverallStatistic overallStatistic;
 
@@ -22,6 +25,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     private java.util.List < Summarys> summarys;
 
     private GetCheckSummaryResponseBody(Builder builder) {
+        this.overallItemStatistic = builder.overallItemStatistic;
         this.overallStatistic = builder.overallStatistic;
         this.requestId = builder.requestId;
         this.summarys = builder.summarys;
@@ -33,6 +37,13 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     public static GetCheckSummaryResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return overallItemStatistic
+     */
+    public OverallItemStatistic getOverallItemStatistic() {
+        return this.overallItemStatistic;
     }
 
     /**
@@ -57,9 +68,18 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private OverallItemStatistic overallItemStatistic; 
         private OverallStatistic overallStatistic; 
         private String requestId; 
         private java.util.List < Summarys> summarys; 
+
+        /**
+         * OverallItemStatistic.
+         */
+        public Builder overallItemStatistic(OverallItemStatistic overallItemStatistic) {
+            this.overallItemStatistic = overallItemStatistic;
+            return this;
+        }
 
         /**
          * overall risk statistics of check items.
@@ -91,6 +111,67 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     } 
 
+    public static class OverallItemStatistic extends TeaModel {
+        @NameInMap("ReleaseCount")
+        private Integer releaseCount;
+
+        @NameInMap("ResultCount")
+        private Integer resultCount;
+
+        private OverallItemStatistic(Builder builder) {
+            this.releaseCount = builder.releaseCount;
+            this.resultCount = builder.resultCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OverallItemStatistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return releaseCount
+         */
+        public Integer getReleaseCount() {
+            return this.releaseCount;
+        }
+
+        /**
+         * @return resultCount
+         */
+        public Integer getResultCount() {
+            return this.resultCount;
+        }
+
+        public static final class Builder {
+            private Integer releaseCount; 
+            private Integer resultCount; 
+
+            /**
+             * ReleaseCount.
+             */
+            public Builder releaseCount(Integer releaseCount) {
+                this.releaseCount = releaseCount;
+                return this;
+            }
+
+            /**
+             * ResultCount.
+             */
+            public Builder resultCount(Integer resultCount) {
+                this.resultCount = resultCount;
+                return this;
+            }
+
+            public OverallItemStatistic build() {
+                return new OverallItemStatistic(this);
+            } 
+
+        } 
+
+    }
     public static class OverallStatistic extends TeaModel {
         @NameInMap("NotCheckCount")
         private Integer notCheckCount;

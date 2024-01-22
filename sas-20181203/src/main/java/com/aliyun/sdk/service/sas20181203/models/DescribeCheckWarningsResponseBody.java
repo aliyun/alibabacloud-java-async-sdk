@@ -382,7 +382,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * LastHandleTime.
+             * The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.
              */
             public Builder lastHandleTime(Long lastHandleTime) {
                 this.lastHandleTime = lastHandleTime;

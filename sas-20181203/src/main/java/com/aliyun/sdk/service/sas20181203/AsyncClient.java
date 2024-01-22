@@ -434,6 +434,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFieldStatisticsResponse> describeFieldStatistics(DescribeFieldStatisticsRequest request);
 
+    CompletableFuture<DescribeFixUsedCountResponse> describeFixUsedCount(DescribeFixUsedCountRequest request);
+
     CompletableFuture<DescribeFrontVulPatchListResponse> describeFrontVulPatchList(DescribeFrontVulPatchListRequest request);
 
     CompletableFuture<DescribeGroupStructResponse> describeGroupStruct(DescribeGroupStructRequest request);

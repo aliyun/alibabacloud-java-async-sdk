@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckSummaryRequest extends Request {
     @Query
+    @NameInMap("IsItemStatistic")
+    private Boolean isItemStatistic;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -26,6 +30,7 @@ public class GetCheckSummaryRequest extends Request {
 
     private GetCheckSummaryRequest(Builder builder) {
         super(builder);
+        this.isItemStatistic = builder.isItemStatistic;
         this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.vendors = builder.vendors;
@@ -42,6 +47,13 @@ public class GetCheckSummaryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return isItemStatistic
+     */
+    public Boolean getIsItemStatistic() {
+        return this.isItemStatistic;
     }
 
     /**
@@ -66,6 +78,7 @@ public class GetCheckSummaryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCheckSummaryRequest, Builder> {
+        private Boolean isItemStatistic; 
         private String lang; 
         private String resourceDirectoryAccountId; 
         private java.util.List < String > vendors; 
@@ -76,10 +89,20 @@ public class GetCheckSummaryRequest extends Request {
 
         private Builder(GetCheckSummaryRequest request) {
             super(request);
+            this.isItemStatistic = request.isItemStatistic;
             this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.vendors = request.vendors;
         } 
+
+        /**
+         * IsItemStatistic.
+         */
+        public Builder isItemStatistic(Boolean isItemStatistic) {
+            this.putQueryParameter("IsItemStatistic", isItemStatistic);
+            this.isItemStatistic = isItemStatistic;
+            return this;
+        }
 
         /**
          * The language of the content within the request and response. Valid values:

@@ -70,7 +70,11 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +82,7 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         }
 
         /**
-         * The result data.
+         * The request result.
          */
         public Builder tracingJudge(java.util.Map < String, Integer > tracingJudge) {
             this.tracingJudge = tracingJudge;

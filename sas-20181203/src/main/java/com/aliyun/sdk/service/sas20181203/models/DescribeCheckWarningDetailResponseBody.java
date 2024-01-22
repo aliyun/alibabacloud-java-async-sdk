@@ -314,8 +314,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             /**
              * Display type. Value:
              * <p>
-             * - **grid**：Detection grid
-             * - **text**：text
+             * - **grid**: Detection grid
+             * - **text**: text
              */
             public Builder type(String type) {
                 this.type = type;
@@ -418,8 +418,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             /**
              * Display type. Value:
              * <p>
-             * - **grid**：Detection grid
-             * - **text**：text
+             * - **grid**: Detection grid
+             * - **text**: text
              */
             public Builder type(String type) {
                 this.type = type;

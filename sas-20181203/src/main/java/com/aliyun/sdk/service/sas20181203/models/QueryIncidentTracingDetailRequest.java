@@ -58,7 +58,7 @@ public class QueryIncidentTracingDetailRequest extends Request {
          * The ID of the event.
          * <p>
          * 
-         * >  You can call the [DescribeCloudSiemEvents](~~DescribeCloudSiemEvents~~) operation to query the IDs of events.
+         * >  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the IDs of events.
          */
         public Builder incidentId(String incidentId) {
             this.putBodyParameter("IncidentId", incidentId);

@@ -127,7 +127,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
          * The ID of the check item.
          * <p>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.
+         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
          */
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -139,7 +139,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
          * The ID of the alert that is triggered by the check item.
          * <p>
          * 
-         * >  To query the details about a specified check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
+         * >  To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.
          */
         public Builder checkWarningId(Long checkWarningId) {
             this.putQueryParameter("CheckWarningId", checkWarningId);
@@ -164,7 +164,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
          * The Alibaba Cloud account ID of the member in the resource directory.
          * <p>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of Alibaba Cloud accounts.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -182,10 +182,10 @@ public class DescribeCheckWarningDetailRequest extends Request {
         }
 
         /**
-         * The server UUID.
+         * The UUID of the server.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

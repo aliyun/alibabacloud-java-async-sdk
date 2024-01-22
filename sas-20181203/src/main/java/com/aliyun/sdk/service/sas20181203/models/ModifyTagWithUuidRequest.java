@@ -26,6 +26,10 @@ public class ModifyTagWithUuidRequest extends Request {
     private String tagList;
 
     @Query
+    @NameInMap("Target")
+    private String target;
+
+    @Query
     @NameInMap("UuidList")
     private String uuidList;
 
@@ -34,6 +38,7 @@ public class ModifyTagWithUuidRequest extends Request {
         this.machineTypes = builder.machineTypes;
         this.tagId = builder.tagId;
         this.tagList = builder.tagList;
+        this.target = builder.target;
         this.uuidList = builder.uuidList;
     }
 
@@ -72,6 +77,13 @@ public class ModifyTagWithUuidRequest extends Request {
     }
 
     /**
+     * @return target
+     */
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
      * @return uuidList
      */
     public String getUuidList() {
@@ -82,6 +94,7 @@ public class ModifyTagWithUuidRequest extends Request {
         private String machineTypes; 
         private String tagId; 
         private String tagList; 
+        private String target; 
         private String uuidList; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class ModifyTagWithUuidRequest extends Request {
             this.machineTypes = request.machineTypes;
             this.tagId = request.tagId;
             this.tagList = request.tagList;
+            this.target = request.target;
             this.uuidList = request.uuidList;
         } 
 
@@ -120,6 +134,15 @@ public class ModifyTagWithUuidRequest extends Request {
         public Builder tagList(String tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
+            return this;
+        }
+
+        /**
+         * Target.
+         */
+        public Builder target(String target) {
+            this.putQueryParameter("Target", target);
+            this.target = target;
             return this;
         }
 

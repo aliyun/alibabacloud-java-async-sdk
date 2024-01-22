@@ -21,6 +21,10 @@ public class ExportWarningRequest extends Request {
     private String exportType;
 
     @Query
+    @NameInMap("GroupId")
+    private Long groupId;
+
+    @Query
     @NameInMap("IsCleartextPwd")
     private Integer isCleartextPwd;
 
@@ -76,6 +80,7 @@ public class ExportWarningRequest extends Request {
         super(builder);
         this.dealed = builder.dealed;
         this.exportType = builder.exportType;
+        this.groupId = builder.groupId;
         this.isCleartextPwd = builder.isCleartextPwd;
         this.isSummaryExport = builder.isSummaryExport;
         this.lang = builder.lang;
@@ -116,6 +121,13 @@ public class ExportWarningRequest extends Request {
      */
     public String getExportType() {
         return this.exportType;
+    }
+
+    /**
+     * @return groupId
+     */
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -212,6 +224,7 @@ public class ExportWarningRequest extends Request {
     public static final class Builder extends Request.Builder<ExportWarningRequest, Builder> {
         private String dealed; 
         private String exportType; 
+        private Long groupId; 
         private Integer isCleartextPwd; 
         private Integer isSummaryExport; 
         private String lang; 
@@ -234,6 +247,7 @@ public class ExportWarningRequest extends Request {
             super(request);
             this.dealed = request.dealed;
             this.exportType = request.exportType;
+            this.groupId = request.groupId;
             this.isCleartextPwd = request.isCleartextPwd;
             this.isSummaryExport = request.isSummaryExport;
             this.lang = request.lang;
@@ -268,6 +282,17 @@ public class ExportWarningRequest extends Request {
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
             this.exportType = exportType;
+            return this;
+        }
+
+        /**
+         * The ID of the server group.
+         * <p>
+         * > You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.
+         */
+        public Builder groupId(Long groupId) {
+            this.putQueryParameter("GroupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 

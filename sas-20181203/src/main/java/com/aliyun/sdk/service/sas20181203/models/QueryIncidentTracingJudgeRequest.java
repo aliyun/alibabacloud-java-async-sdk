@@ -55,7 +55,10 @@ public class QueryIncidentTracingJudgeRequest extends Request {
         } 
 
         /**
-         * The event ID.
+         * The ID of the event that you want to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the event ID.
          */
         public Builder incidentId(String incidentId) {
             this.putBodyParameter("IncidentId", incidentId);

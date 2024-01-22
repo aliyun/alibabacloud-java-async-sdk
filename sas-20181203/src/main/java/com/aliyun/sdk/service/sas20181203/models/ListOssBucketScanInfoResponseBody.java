@@ -62,7 +62,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data that is returned.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
