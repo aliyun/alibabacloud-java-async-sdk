@@ -1,0 +1,166 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.airticketopen20230117.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ChangeDetailListOfOrderNumRequest} extends {@link RequestModel}
+ *
+ * <p>ChangeDetailListOfOrderNumRequest</p>
+ */
+public class ChangeDetailListOfOrderNumRequest extends Request {
+    @Query
+    @NameInMap("order_num")
+    @Validation(required = true)
+    private Long orderNum;
+
+    @Query
+    @NameInMap("page_index")
+    private Integer pageIndex;
+
+    @Query
+    @NameInMap("page_size")
+    private Integer pageSize;
+
+    @Header
+    @NameInMap("x-acs-airticket-access-token")
+    @Validation(required = true)
+    private String xAcsAirticketAccessToken;
+
+    @Header
+    @NameInMap("x-acs-airticket-language")
+    private String xAcsAirticketLanguage;
+
+    private ChangeDetailListOfOrderNumRequest(Builder builder) {
+        super(builder);
+        this.orderNum = builder.orderNum;
+        this.pageIndex = builder.pageIndex;
+        this.pageSize = builder.pageSize;
+        this.xAcsAirticketAccessToken = builder.xAcsAirticketAccessToken;
+        this.xAcsAirticketLanguage = builder.xAcsAirticketLanguage;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ChangeDetailListOfOrderNumRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return orderNum
+     */
+    public Long getOrderNum() {
+        return this.orderNum;
+    }
+
+    /**
+     * @return pageIndex
+     */
+    public Integer getPageIndex() {
+        return this.pageIndex;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return xAcsAirticketAccessToken
+     */
+    public String getXAcsAirticketAccessToken() {
+        return this.xAcsAirticketAccessToken;
+    }
+
+    /**
+     * @return xAcsAirticketLanguage
+     */
+    public String getXAcsAirticketLanguage() {
+        return this.xAcsAirticketLanguage;
+    }
+
+    public static final class Builder extends Request.Builder<ChangeDetailListOfOrderNumRequest, Builder> {
+        private Long orderNum; 
+        private Integer pageIndex; 
+        private Integer pageSize; 
+        private String xAcsAirticketAccessToken; 
+        private String xAcsAirticketLanguage; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ChangeDetailListOfOrderNumRequest request) {
+            super(request);
+            this.orderNum = request.orderNum;
+            this.pageIndex = request.pageIndex;
+            this.pageSize = request.pageSize;
+            this.xAcsAirticketAccessToken = request.xAcsAirticketAccessToken;
+            this.xAcsAirticketLanguage = request.xAcsAirticketLanguage;
+        } 
+
+        /**
+         * order_num.
+         */
+        public Builder orderNum(Long orderNum) {
+            this.putQueryParameter("order_num", orderNum);
+            this.orderNum = orderNum;
+            return this;
+        }
+
+        /**
+         * page_index.
+         */
+        public Builder pageIndex(Integer pageIndex) {
+            this.putQueryParameter("page_index", pageIndex);
+            this.pageIndex = pageIndex;
+            return this;
+        }
+
+        /**
+         * page_size.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("page_size", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * access_token
+         */
+        public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
+            this.putHeaderParameter("x-acs-airticket-access-token", xAcsAirticketAccessToken);
+            this.xAcsAirticketAccessToken = xAcsAirticketAccessToken;
+            return this;
+        }
+
+        /**
+         * x-acs-airticket-language.
+         */
+        public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
+            this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
+            this.xAcsAirticketLanguage = xAcsAirticketLanguage;
+            return this;
+        }
+
+        @Override
+        public ChangeDetailListOfOrderNumRequest build() {
+            return new ChangeDetailListOfOrderNumRequest(this);
+        } 
+
+    } 
+
+}
