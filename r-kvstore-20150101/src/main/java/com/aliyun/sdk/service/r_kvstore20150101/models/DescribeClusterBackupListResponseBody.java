@@ -15,6 +15,15 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     @NameInMap("ClusterBackups")
     private java.util.List < ClusterBackups> clusterBackups;
 
+    @NameInMap("FreeSize")
+    private Long freeSize;
+
+    @NameInMap("FullStorageSize")
+    private Long fullStorageSize;
+
+    @NameInMap("LogStorageSize")
+    private Long logStorageSize;
+
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -29,6 +38,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     private DescribeClusterBackupListResponseBody(Builder builder) {
         this.clusterBackups = builder.clusterBackups;
+        this.freeSize = builder.freeSize;
+        this.fullStorageSize = builder.fullStorageSize;
+        this.logStorageSize = builder.logStorageSize;
         this.maxResults = builder.maxResults;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -48,6 +60,27 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
      */
     public java.util.List < ClusterBackups> getClusterBackups() {
         return this.clusterBackups;
+    }
+
+    /**
+     * @return freeSize
+     */
+    public Long getFreeSize() {
+        return this.freeSize;
+    }
+
+    /**
+     * @return fullStorageSize
+     */
+    public Long getFullStorageSize() {
+        return this.fullStorageSize;
+    }
+
+    /**
+     * @return logStorageSize
+     */
+    public Long getLogStorageSize() {
+        return this.logStorageSize;
     }
 
     /**
@@ -80,6 +113,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < ClusterBackups> clusterBackups; 
+        private Long freeSize; 
+        private Long fullStorageSize; 
+        private Long logStorageSize; 
         private Integer maxResults; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -90,6 +126,30 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
          */
         public Builder clusterBackups(java.util.List < ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
+            return this;
+        }
+
+        /**
+         * FreeSize.
+         */
+        public Builder freeSize(Long freeSize) {
+            this.freeSize = freeSize;
+            return this;
+        }
+
+        /**
+         * FullStorageSize.
+         */
+        public Builder fullStorageSize(Long fullStorageSize) {
+            this.fullStorageSize = fullStorageSize;
+            return this;
+        }
+
+        /**
+         * LogStorageSize.
+         */
+        public Builder logStorageSize(Long logStorageSize) {
+            this.logStorageSize = logStorageSize;
             return this;
         }
 

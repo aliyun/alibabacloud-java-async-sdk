@@ -18,6 +18,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("Backups")
     private Backups backups;
 
+    @NameInMap("FreeSize")
+    private Long freeSize;
+
+    @NameInMap("FullStorageSize")
+    private Long fullStorageSize;
+
+    @NameInMap("LogStorageSize")
+    private Long logStorageSize;
+
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -33,6 +42,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     private DescribeBackupsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.backups = builder.backups;
+        this.freeSize = builder.freeSize;
+        this.fullStorageSize = builder.fullStorageSize;
+        this.logStorageSize = builder.logStorageSize;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -59,6 +71,27 @@ public class DescribeBackupsResponseBody extends TeaModel {
      */
     public Backups getBackups() {
         return this.backups;
+    }
+
+    /**
+     * @return freeSize
+     */
+    public Long getFreeSize() {
+        return this.freeSize;
+    }
+
+    /**
+     * @return fullStorageSize
+     */
+    public Long getFullStorageSize() {
+        return this.fullStorageSize;
+    }
+
+    /**
+     * @return logStorageSize
+     */
+    public Long getLogStorageSize() {
+        return this.logStorageSize;
     }
 
     /**
@@ -92,6 +125,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static final class Builder {
         private AccessDeniedDetail accessDeniedDetail; 
         private Backups backups; 
+        private Long freeSize; 
+        private Long fullStorageSize; 
+        private Long logStorageSize; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -110,6 +146,30 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         public Builder backups(Backups backups) {
             this.backups = backups;
+            return this;
+        }
+
+        /**
+         * FreeSize.
+         */
+        public Builder freeSize(Long freeSize) {
+            this.freeSize = freeSize;
+            return this;
+        }
+
+        /**
+         * FullStorageSize.
+         */
+        public Builder fullStorageSize(Long fullStorageSize) {
+            this.fullStorageSize = fullStorageSize;
+            return this;
+        }
+
+        /**
+         * LogStorageSize.
+         */
+        public Builder logStorageSize(Long logStorageSize) {
+            this.logStorageSize = logStorageSize;
             return this;
         }
 
