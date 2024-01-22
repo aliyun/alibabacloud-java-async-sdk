@@ -50,7 +50,7 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The collection frequency of monitoring data. The value is **1** or **300**. Unit: seconds.
+         * The collection frequency of monitoring data for the instance. Valid value: **5**. Unit: seconds.
          */
         public Builder granularity(String granularity) {
             this.granularity = granularity;
@@ -58,7 +58,7 @@ public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

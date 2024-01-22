@@ -262,7 +262,7 @@ public class ModifyAuditPolicyRequest extends Request {
          * The type of the audit log feature. Valid values:
          * <p>
          * 
-         * *   **Trail**: the free trial edition
+         * *   **Trial**: the free trial edition
          * *   **Standard**: the official edition
          * 
          * >  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.

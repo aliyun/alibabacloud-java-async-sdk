@@ -31,6 +31,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("LogicalOperator")
+    private String logicalOperator;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -55,6 +59,10 @@ public class DescribeRunningLogRecordsRequest extends Request {
     @NameInMap("PageSize")
     @Validation(maximum = 100, minimum = 30)
     private Integer pageSize;
+
+    @Query
+    @NameInMap("QueryKeywords")
+    private String queryKeywords;
 
     @Query
     @NameInMap("ResourceGroupId")
@@ -87,12 +95,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.logicalOperator = builder.logicalOperator;
         this.nodeId = builder.nodeId;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryKeywords = builder.queryKeywords;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -143,6 +153,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
     }
 
     /**
+     * @return logicalOperator
+     */
+    public String getLogicalOperator() {
+        return this.logicalOperator;
+    }
+
+    /**
      * @return nodeId
      */
     public String getNodeId() {
@@ -182,6 +199,13 @@ public class DescribeRunningLogRecordsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return queryKeywords
+     */
+    public String getQueryKeywords() {
+        return this.queryKeywords;
     }
 
     /**
@@ -231,12 +255,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String endTime; 
+        private String logicalOperator; 
         private String nodeId; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String queryKeywords; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -254,12 +280,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.logicalOperator = request.logicalOperator;
             this.nodeId = request.nodeId;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryKeywords = request.queryKeywords;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -307,6 +335,19 @@ public class DescribeRunningLogRecordsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The logical relationship among multiple keywords.
+         * <p>
+         * 
+         * *   **or**
+         * *   **and** (default value)
+         */
+        public Builder logicalOperator(String logicalOperator) {
+            this.putQueryParameter("LogicalOperator", logicalOperator);
+            this.logicalOperator = logicalOperator;
             return this;
         }
 
@@ -368,6 +409,15 @@ public class DescribeRunningLogRecordsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+         */
+        public Builder queryKeywords(String queryKeywords) {
+            this.putQueryParameter("QueryKeywords", queryKeywords);
+            this.queryKeywords = queryKeywords;
             return this;
         }
 

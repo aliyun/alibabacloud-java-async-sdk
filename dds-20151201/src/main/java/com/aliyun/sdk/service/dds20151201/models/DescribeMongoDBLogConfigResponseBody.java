@@ -170,7 +170,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
         private String userProjectName; 
 
         /**
-         * Indicates whether the audit log feature is enabled. Valid values:
+         * Indicates whether to enable the audit log feature.
          * <p>
          * 
          * *   **true**: The audit log feature is enabled.

@@ -31,6 +31,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("LogicalOperator")
+    private String logicalOperator;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -57,6 +61,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("QueryKeywords")
+    private String queryKeywords;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -79,12 +87,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.logicalOperator = builder.logicalOperator;
         this.nodeId = builder.nodeId;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryKeywords = builder.queryKeywords;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -133,6 +143,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
     }
 
     /**
+     * @return logicalOperator
+     */
+    public String getLogicalOperator() {
+        return this.logicalOperator;
+    }
+
+    /**
      * @return nodeId
      */
     public String getNodeId() {
@@ -175,6 +192,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
     }
 
     /**
+     * @return queryKeywords
+     */
+    public String getQueryKeywords() {
+        return this.queryKeywords;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -207,12 +231,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         private String DBInstanceId; 
         private String DBName; 
         private String endTime; 
+        private String logicalOperator; 
         private String nodeId; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String queryKeywords; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -228,12 +254,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.logicalOperator = request.logicalOperator;
             this.nodeId = request.nodeId;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryKeywords = request.queryKeywords;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -250,7 +278,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.
@@ -271,7 +299,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          * <p>
          * 
          * > 
@@ -283,6 +311,19 @@ public class DescribeSlowLogRecordsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The logical relationship among multiple keywords.
+         * <p>
+         * 
+         * *   **or**
+         * *   **and** (default value)
+         */
+        public Builder logicalOperator(String logicalOperator) {
+            this.putQueryParameter("LogicalOperator", logicalOperator);
+            this.logicalOperator = logicalOperator;
             return this;
         }
 
@@ -330,7 +371,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+         * The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -348,7 +389,16 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
+         */
+        public Builder queryKeywords(String queryKeywords) {
+            this.putQueryParameter("QueryKeywords", queryKeywords);
+            this.queryKeywords = queryKeywords;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instances you want to query belong.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -375,7 +425,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

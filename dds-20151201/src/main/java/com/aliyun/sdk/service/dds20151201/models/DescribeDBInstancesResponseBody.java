@@ -1017,7 +1017,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **eu-central-1c**: Frankfurt Zone C.
              * 
              * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * > *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * > *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -1136,7 +1136,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **eu-central-1c**: Frankfurt Zone C.
              * 
              * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * > *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * > *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;

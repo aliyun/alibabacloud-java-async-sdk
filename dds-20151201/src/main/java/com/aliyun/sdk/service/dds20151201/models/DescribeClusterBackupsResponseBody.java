@@ -110,7 +110,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

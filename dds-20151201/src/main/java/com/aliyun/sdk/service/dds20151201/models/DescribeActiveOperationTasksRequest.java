@@ -252,7 +252,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Specifies whether the task can be canceled.
+         * Specifies whether the task can be canceled. Valid values: -**0**: The task cannot be canceled. -**1**: The task can be canceled.
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -261,7 +261,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether the time can be changed. Valid values: -**0**: The time cannot be changed. **1**: The time can be changed.
+         * Specifies whether the time can be modified. Valid values: -**0**: The time cannot be modified. -**1**: The time can be modified.
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -270,7 +270,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The change type.
+         * The type of configuration change. Valid values: -**all** (default): All O\&M tasks are returned. -**S0**: O\&M tasks that are executed for exception fixing are returned. -**S1**: O\&M tasks that are executed for regular O\&M are returned.
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -315,7 +315,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -324,7 +324,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Valid values: **30, 50, and 100**. Default value: **30**.
+         * The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -342,7 +342,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The region of the instance.
+         * The region of the instance. If you set the Region parameter to all, all tasks created within your Alibaba Cloud account are queried. In this case, you must also set the TaskType parameter to all.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

@@ -214,7 +214,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
             private String createTime; 
 
             /**
-             * The category of the log entry. Valid values:
+             * The category of the log entry.
              */
             public Builder category(String category) {
                 this.category = category;

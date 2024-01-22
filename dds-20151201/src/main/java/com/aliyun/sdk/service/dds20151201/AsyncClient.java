@@ -400,10 +400,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceMaintainTimeResponse> modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request);
 
     /**
-      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a replica set or sharded cluster instance.
-      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
+      * *   A replica set or sharded cluster instance is used.
+      * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
       *
      */
     CompletableFuture<ModifyDBInstanceMonitorResponse> modifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request);
@@ -428,7 +428,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the running state.
       * *   The instance is a replica set instance.
-      * *   The engine version of the instance is \\<ph props="intl">3.4 or 4.0\\</ph>\\<ph props="china">3.4, 4.0, or 4.2\\</ph>.
+      * *   The engine version of the instance is 3.4 or 4.0.
       * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
       *
      */
@@ -492,7 +492,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNodeSpecBatchResponse> modifyNodeSpecBatch(ModifyNodeSpecBatchRequest request);
 
     /**
-      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *

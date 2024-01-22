@@ -194,7 +194,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The operation on the SSL feature. Valid values: Valid values:
+         * The operation on the SSL feature. Valid values:
          * <p>
          * 
          * *   **Open**: enables SSL encryption.

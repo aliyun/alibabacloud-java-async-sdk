@@ -35,6 +35,10 @@ public class DescribeAuditRecordsRequest extends Request {
     private String form;
 
     @Query
+    @NameInMap("LogicalOperator")
+    private String logicalOperator;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -86,6 +90,7 @@ public class DescribeAuditRecordsRequest extends Request {
         this.database = builder.database;
         this.endTime = builder.endTime;
         this.form = builder.form;
+        this.logicalOperator = builder.logicalOperator;
         this.nodeId = builder.nodeId;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
@@ -145,6 +150,13 @@ public class DescribeAuditRecordsRequest extends Request {
      */
     public String getForm() {
         return this.form;
+    }
+
+    /**
+     * @return logicalOperator
+     */
+    public String getLogicalOperator() {
+        return this.logicalOperator;
     }
 
     /**
@@ -230,6 +242,7 @@ public class DescribeAuditRecordsRequest extends Request {
         private String database; 
         private String endTime; 
         private String form; 
+        private String logicalOperator; 
         private String nodeId; 
         private String orderType; 
         private String ownerAccount; 
@@ -253,6 +266,7 @@ public class DescribeAuditRecordsRequest extends Request {
             this.database = request.database;
             this.endTime = request.endTime;
             this.form = request.form;
+            this.logicalOperator = request.logicalOperator;
             this.nodeId = request.nodeId;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
@@ -276,7 +290,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
@@ -297,7 +311,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
          * > The end time must be within 24 hours from the start time. Otherwise, the query fails.
@@ -309,11 +323,11 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The form of the audit log that the operation returns. Default value: File. Valid values:
+         * The form of the audit log that the operation returns. Valid values:
          * <p>
          * 
-         * *   **File** triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
-         * *   **Stream**: returns data streams.
+         * *   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.
+         * *   **Stream** (default): returns data streams.
          */
         public Builder form(String form) {
             this.putQueryParameter("Form", form);
@@ -322,10 +336,23 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.
+         * The logical relationship between multiple keywords. Valid values:
          * <p>
          * 
-         * > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * *   **or**
+         * *   **and** (default value)
+         */
+        public Builder logicalOperator(String logicalOperator) {
+            this.putQueryParameter("LogicalOperator", logicalOperator);
+            this.logicalOperator = logicalOperator;
+            return this;
+        }
+
+        /**
+         * The ID of the mongos node or shard node in the instance.
+         * <p>
+         * 
+         * > This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -365,7 +392,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Valid values: any non-zero positive integer. Default value: 1.
+         * The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -383,7 +410,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The keywords that are used for queries. Separate multiple keywords with spaces. The maximum number of keywords is 10.
+         * The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -410,7 +437,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -419,7 +446,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * The account of the database. If you do not specify this parameter, this operation returns records of all accounts.
+         * The user of the database. If you do not specify this parameter, this operation returns records of all users.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
