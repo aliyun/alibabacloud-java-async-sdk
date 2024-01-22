@@ -529,6 +529,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         private String appName;
 
+        @NameInMap("AppSource")
+        private String appSource;
+
         @NameInMap("AssociateEip")
         private Boolean associateEip;
 
@@ -673,9 +676,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Replicas")
         private Integer replicas;
 
-        @NameInMap("SaeVersion")
-        private String saeVersion;
-
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -715,6 +715,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appSource = builder.appSource;
             this.associateEip = builder.associateEip;
             this.batchWaitTime = builder.batchWaitTime;
             this.command = builder.command;
@@ -763,7 +764,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
-            this.saeVersion = builder.saeVersion;
             this.securityGroupId = builder.securityGroupId;
             this.slsConfigs = builder.slsConfigs;
             this.tags = builder.tags;
@@ -818,6 +818,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appSource
+         */
+        public String getAppSource() {
+            return this.appSource;
         }
 
         /**
@@ -1157,13 +1164,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * @return saeVersion
-         */
-        public String getSaeVersion() {
-            return this.saeVersion;
-        }
-
-        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -1246,6 +1246,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String appDescription; 
             private String appId; 
             private String appName; 
+            private String appSource; 
             private Boolean associateEip; 
             private Integer batchWaitTime; 
             private String command; 
@@ -1294,7 +1295,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
-            private String saeVersion; 
             private String securityGroupId; 
             private String slsConfigs; 
             private java.util.List < Tags> tags; 
@@ -1344,6 +1344,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppSource.
+             */
+            public Builder appSource(String appSource) {
+                this.appSource = appSource;
                 return this;
             }
 
@@ -1879,14 +1887,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
-                return this;
-            }
-
-            /**
-             * SaeVersion.
-             */
-            public Builder saeVersion(String saeVersion) {
-                this.saeVersion = saeVersion;
                 return this;
             }
 

@@ -17,6 +17,10 @@ public class ListApplicationsRequest extends Request {
     private String appName;
 
     @Query
+    @NameInMap("AppSource")
+    private String appSource;
+
+    @Query
     @NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -51,6 +55,7 @@ public class ListApplicationsRequest extends Request {
     private ListApplicationsRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
+        this.appSource = builder.appSource;
         this.currentPage = builder.currentPage;
         this.fieldType = builder.fieldType;
         this.fieldValue = builder.fieldValue;
@@ -79,6 +84,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
     }
 
     /**
@@ -139,6 +151,7 @@ public class ListApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private String appName; 
+        private String appSource; 
         private Integer currentPage; 
         private String fieldType; 
         private String fieldValue; 
@@ -155,6 +168,7 @@ public class ListApplicationsRequest extends Request {
         private Builder(ListApplicationsRequest request) {
             super(request);
             this.appName = request.appName;
+            this.appSource = request.appSource;
             this.currentPage = request.currentPage;
             this.fieldType = request.fieldType;
             this.fieldValue = request.fieldValue;
@@ -177,6 +191,15 @@ public class ListApplicationsRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
             return this;
         }
 

@@ -37,6 +37,9 @@ public class BuildPipeline extends TeaModel {
     @NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
+    @NameInMap("PackageConfig")
+    private PackageConfig packageConfig;
+
     @NameInMap("TriggerConfig")
     @Validation(required = true)
     private TriggerConfig triggerConfig;
@@ -49,6 +52,7 @@ public class BuildPipeline extends TeaModel {
         this.deployConfig = builder.deployConfig;
         this.enabled = builder.enabled;
         this.imageConfig = builder.imageConfig;
+        this.packageConfig = builder.packageConfig;
         this.triggerConfig = builder.triggerConfig;
     }
 
@@ -110,6 +114,13 @@ public class BuildPipeline extends TeaModel {
     }
 
     /**
+     * @return packageConfig
+     */
+    public PackageConfig getPackageConfig() {
+        return this.packageConfig;
+    }
+
+    /**
      * @return triggerConfig
      */
     public TriggerConfig getTriggerConfig() {
@@ -124,6 +135,7 @@ public class BuildPipeline extends TeaModel {
         private DeployConfig deployConfig; 
         private Boolean enabled; 
         private ImageConfig imageConfig; 
+        private PackageConfig packageConfig; 
         private TriggerConfig triggerConfig; 
 
         /**
@@ -183,6 +195,14 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * PackageConfig.
+         */
+        public Builder packageConfig(PackageConfig packageConfig) {
+            this.packageConfig = packageConfig;
+            return this;
+        }
+
+        /**
          * TriggerConfig.
          */
         public Builder triggerConfig(TriggerConfig triggerConfig) {
@@ -210,6 +230,15 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("RunCommand")
         private String runCommand;
 
+        @NameInMap("RuntimeType")
+        private String runtimeType;
+
+        @NameInMap("RuntimeVersion")
+        private String runtimeVersion;
+
+        @NameInMap("TomcatConfig")
+        private TomcatConfig tomcatConfig;
+
         @NameInMap("WorkingDir")
         private String workingDir;
 
@@ -218,6 +247,9 @@ public class BuildPipeline extends TeaModel {
             this.buildType = builder.buildType;
             this.dockerfilePath = builder.dockerfilePath;
             this.runCommand = builder.runCommand;
+            this.runtimeType = builder.runtimeType;
+            this.runtimeVersion = builder.runtimeVersion;
+            this.tomcatConfig = builder.tomcatConfig;
             this.workingDir = builder.workingDir;
         }
 
@@ -258,6 +290,27 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return runtimeType
+         */
+        public String getRuntimeType() {
+            return this.runtimeType;
+        }
+
+        /**
+         * @return runtimeVersion
+         */
+        public String getRuntimeVersion() {
+            return this.runtimeVersion;
+        }
+
+        /**
+         * @return tomcatConfig
+         */
+        public TomcatConfig getTomcatConfig() {
+            return this.tomcatConfig;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -269,6 +322,9 @@ public class BuildPipeline extends TeaModel {
             private String buildType; 
             private String dockerfilePath; 
             private String runCommand; 
+            private String runtimeType; 
+            private String runtimeVersion; 
+            private TomcatConfig tomcatConfig; 
             private String workingDir; 
 
             /**
@@ -300,6 +356,30 @@ public class BuildPipeline extends TeaModel {
              */
             public Builder runCommand(String runCommand) {
                 this.runCommand = runCommand;
+                return this;
+            }
+
+            /**
+             * RuntimeType.
+             */
+            public Builder runtimeType(String runtimeType) {
+                this.runtimeType = runtimeType;
+                return this;
+            }
+
+            /**
+             * RuntimeVersion.
+             */
+            public Builder runtimeVersion(String runtimeVersion) {
+                this.runtimeVersion = runtimeVersion;
+                return this;
+            }
+
+            /**
+             * TomcatConfig.
+             */
+            public Builder tomcatConfig(TomcatConfig tomcatConfig) {
+                this.tomcatConfig = tomcatConfig;
                 return this;
             }
 
@@ -485,15 +565,23 @@ public class BuildPipeline extends TeaModel {
 
     }
     public static class DeployConfig extends TeaModel {
+        @NameInMap("AlwaysAllocateCPU")
+        private Boolean alwaysAllocateCPU;
+
         @NameInMap("MaximumInstanceCount")
         private Integer maximumInstanceCount;
 
         @NameInMap("MinimumInstanceCount")
         private Integer minimumInstanceCount;
 
+        @NameInMap("UpdateApplicationInput")
+        private String updateApplicationInput;
+
         private DeployConfig(Builder builder) {
+            this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
             this.maximumInstanceCount = builder.maximumInstanceCount;
             this.minimumInstanceCount = builder.minimumInstanceCount;
+            this.updateApplicationInput = builder.updateApplicationInput;
         }
 
         public static Builder builder() {
@@ -502,6 +590,13 @@ public class BuildPipeline extends TeaModel {
 
         public static DeployConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return alwaysAllocateCPU
+         */
+        public Boolean getAlwaysAllocateCPU() {
+            return this.alwaysAllocateCPU;
         }
 
         /**
@@ -518,9 +613,26 @@ public class BuildPipeline extends TeaModel {
             return this.minimumInstanceCount;
         }
 
+        /**
+         * @return updateApplicationInput
+         */
+        public String getUpdateApplicationInput() {
+            return this.updateApplicationInput;
+        }
+
         public static final class Builder {
+            private Boolean alwaysAllocateCPU; 
             private Integer maximumInstanceCount; 
             private Integer minimumInstanceCount; 
+            private String updateApplicationInput; 
+
+            /**
+             * AlwaysAllocateCPU.
+             */
+            public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
+                this.alwaysAllocateCPU = alwaysAllocateCPU;
+                return this;
+            }
 
             /**
              * MaximumInstanceCount.
@@ -535,6 +647,14 @@ public class BuildPipeline extends TeaModel {
              */
             public Builder minimumInstanceCount(Integer minimumInstanceCount) {
                 this.minimumInstanceCount = minimumInstanceCount;
+                return this;
+            }
+
+            /**
+             * UpdateApplicationInput.
+             */
+            public Builder updateApplicationInput(String updateApplicationInput) {
+                this.updateApplicationInput = updateApplicationInput;
                 return this;
             }
 
@@ -621,6 +741,107 @@ public class BuildPipeline extends TeaModel {
 
             public ImageConfig build() {
                 return new ImageConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class PackageConfig extends TeaModel {
+        @NameInMap("PackageName")
+        private String packageName;
+
+        @NameInMap("PackageType")
+        private String packageType;
+
+        @NameInMap("PackageUrl")
+        private String packageUrl;
+
+        @NameInMap("PackageVersion")
+        private String packageVersion;
+
+        private PackageConfig(Builder builder) {
+            this.packageName = builder.packageName;
+            this.packageType = builder.packageType;
+            this.packageUrl = builder.packageUrl;
+            this.packageVersion = builder.packageVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PackageConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
+         * @return packageType
+         */
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        /**
+         * @return packageUrl
+         */
+        public String getPackageUrl() {
+            return this.packageUrl;
+        }
+
+        /**
+         * @return packageVersion
+         */
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        public static final class Builder {
+            private String packageName; 
+            private String packageType; 
+            private String packageUrl; 
+            private String packageVersion; 
+
+            /**
+             * PackageName.
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * PackageType.
+             */
+            public Builder packageType(String packageType) {
+                this.packageType = packageType;
+                return this;
+            }
+
+            /**
+             * PackageUrl.
+             */
+            public Builder packageUrl(String packageUrl) {
+                this.packageUrl = packageUrl;
+                return this;
+            }
+
+            /**
+             * PackageVersion.
+             */
+            public Builder packageVersion(String packageVersion) {
+                this.packageVersion = packageVersion;
+                return this;
+            }
+
+            public PackageConfig build() {
+                return new PackageConfig(this);
             } 
 
         } 

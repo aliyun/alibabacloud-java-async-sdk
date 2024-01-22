@@ -29,6 +29,10 @@ public class CreateApplicationRequest extends Request {
     @Validation(required = true)
     private String appName;
 
+    @Query
+    @NameInMap("AppSource")
+    private String appSource;
+
     @Body
     @NameInMap("AssociateEip")
     private Boolean associateEip;
@@ -250,6 +254,7 @@ public class CreateApplicationRequest extends Request {
         this.acrInstanceId = builder.acrInstanceId;
         this.appDescription = builder.appDescription;
         this.appName = builder.appName;
+        this.appSource = builder.appSource;
         this.associateEip = builder.associateEip;
         this.autoConfig = builder.autoConfig;
         this.command = builder.command;
@@ -344,6 +349,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
     }
 
     /**
@@ -722,6 +734,7 @@ public class CreateApplicationRequest extends Request {
         private String acrInstanceId; 
         private String appDescription; 
         private String appName; 
+        private String appSource; 
         private Boolean associateEip; 
         private Boolean autoConfig; 
         private String command; 
@@ -786,6 +799,7 @@ public class CreateApplicationRequest extends Request {
             this.acrInstanceId = request.acrInstanceId;
             this.appDescription = request.appDescription;
             this.appName = request.appName;
+            this.appSource = request.appSource;
             this.associateEip = request.associateEip;
             this.autoConfig = request.autoConfig;
             this.command = request.command;
@@ -874,6 +888,15 @@ public class CreateApplicationRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
             return this;
         }
 
