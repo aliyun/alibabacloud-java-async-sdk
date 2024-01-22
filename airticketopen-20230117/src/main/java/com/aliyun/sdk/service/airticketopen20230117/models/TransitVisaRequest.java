@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TransitVisaRequest</p>
  */
 public class TransitVisaRequest extends Request {
-    @Body
+    @Query
     @NameInMap("flight_segment_param_list")
     private java.util.List < FlightSegmentParamList> flightSegmentParamList;
 
@@ -87,7 +87,7 @@ public class TransitVisaRequest extends Request {
          */
         public Builder flightSegmentParamList(java.util.List < FlightSegmentParamList> flightSegmentParamList) {
             String flightSegmentParamListShrink = shrink(flightSegmentParamList, "flight_segment_param_list", "json");
-            this.putBodyParameter("flight_segment_param_list", flightSegmentParamListShrink);
+            this.putQueryParameter("flight_segment_param_list", flightSegmentParamListShrink);
             this.flightSegmentParamList = flightSegmentParamList;
             return this;
         }

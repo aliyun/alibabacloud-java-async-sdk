@@ -239,7 +239,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<LuggageDirectResponse> luggageDirect(LuggageDirectRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("LuggageDirect").setMethod(HttpMethod.GET).setPathRegex("/airticket/v1/flight-data/luggage-direct").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("LuggageDirect").setMethod(HttpMethod.GET).setPathRegex("/airticket/v1/flight-data/luggage-direct").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LuggageDirectResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -379,7 +379,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<TransitVisaResponse> transitVisa(TransitVisaRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransitVisa").setMethod(HttpMethod.GET).setPathRegex("/airticket/v1/flight-data/transit-visa").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransitVisa").setMethod(HttpMethod.GET).setPathRegex("/airticket/v1/flight-data/transit-visa").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransitVisaResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
