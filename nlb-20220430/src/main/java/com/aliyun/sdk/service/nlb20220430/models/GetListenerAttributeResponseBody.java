@@ -482,7 +482,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyProtocolV2Config.
+         * Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
          */
         public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
             this.proxyProtocolV2Config = proxyProtocolV2Config;
@@ -562,13 +562,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class ProxyProtocolV2Config extends TeaModel {
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        private String ppv2PrivateLinkEpIdEnabled;
+        private Boolean ppv2PrivateLinkEpIdEnabled;
 
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        private String ppv2PrivateLinkEpsIdEnabled;
+        private Boolean ppv2PrivateLinkEpsIdEnabled;
 
         @NameInMap("Ppv2VpcIdEnabled")
-        private String ppv2VpcIdEnabled;
+        private Boolean ppv2VpcIdEnabled;
 
         private ProxyProtocolV2Config(Builder builder) {
             this.ppv2PrivateLinkEpIdEnabled = builder.ppv2PrivateLinkEpIdEnabled;
@@ -587,49 +587,61 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * @return ppv2PrivateLinkEpIdEnabled
          */
-        public String getPpv2PrivateLinkEpIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpIdEnabled() {
             return this.ppv2PrivateLinkEpIdEnabled;
         }
 
         /**
          * @return ppv2PrivateLinkEpsIdEnabled
          */
-        public String getPpv2PrivateLinkEpsIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
             return this.ppv2PrivateLinkEpsIdEnabled;
         }
 
         /**
          * @return ppv2VpcIdEnabled
          */
-        public String getPpv2VpcIdEnabled() {
+        public Boolean getPpv2VpcIdEnabled() {
             return this.ppv2VpcIdEnabled;
         }
 
         public static final class Builder {
-            private String ppv2PrivateLinkEpIdEnabled; 
-            private String ppv2PrivateLinkEpsIdEnabled; 
-            private String ppv2VpcIdEnabled; 
+            private Boolean ppv2PrivateLinkEpIdEnabled; 
+            private Boolean ppv2PrivateLinkEpsIdEnabled; 
+            private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Ppv2PrivateLinkEpIdEnabled.
+             * Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+            public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
                 return this;
             }
 
             /**
-             * Ppv2PrivateLinkEpsIdEnabled.
+             * Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+            public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
                 return this;
             }
 
             /**
-             * Ppv2VpcIdEnabled.
+             * Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+            public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
                 return this;
             }
@@ -680,7 +692,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag that you want to remove. You can remove up to 20 tags in each call.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -688,7 +700,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

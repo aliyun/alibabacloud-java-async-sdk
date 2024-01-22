@@ -446,7 +446,7 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * ProxyProtocolV2Config.
+         * Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
          */
         public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
             String proxyProtocolV2ConfigShrink = shrink(proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
@@ -559,7 +559,11 @@ public class UpdateListenerAttributeRequest extends Request {
             private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Ppv2PrivateLinkEpIdEnabled.
+             * Specifies whether to use the Proxy protocol to pass the PrivateLinkEpId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
@@ -567,7 +571,11 @@ public class UpdateListenerAttributeRequest extends Request {
             }
 
             /**
-             * Ppv2PrivateLinkEpsIdEnabled.
+             * Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
@@ -575,7 +583,11 @@ public class UpdateListenerAttributeRequest extends Request {
             }
 
             /**
-             * Ppv2VpcIdEnabled.
+             * Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;

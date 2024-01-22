@@ -86,7 +86,7 @@ public class ListListenersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of listeners.
+         * A list of listeners.
          */
         public Builder listeners(java.util.List < Listeners> listeners) {
             this.listeners = listeners;
@@ -137,13 +137,13 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ProxyProtocolV2Config extends TeaModel {
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        private String ppv2PrivateLinkEpIdEnabled;
+        private Boolean ppv2PrivateLinkEpIdEnabled;
 
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        private String ppv2PrivateLinkEpsIdEnabled;
+        private Boolean ppv2PrivateLinkEpsIdEnabled;
 
         @NameInMap("Ppv2VpcIdEnabled")
-        private String ppv2VpcIdEnabled;
+        private Boolean ppv2VpcIdEnabled;
 
         private ProxyProtocolV2Config(Builder builder) {
             this.ppv2PrivateLinkEpIdEnabled = builder.ppv2PrivateLinkEpIdEnabled;
@@ -162,49 +162,61 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * @return ppv2PrivateLinkEpIdEnabled
          */
-        public String getPpv2PrivateLinkEpIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpIdEnabled() {
             return this.ppv2PrivateLinkEpIdEnabled;
         }
 
         /**
          * @return ppv2PrivateLinkEpsIdEnabled
          */
-        public String getPpv2PrivateLinkEpsIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
             return this.ppv2PrivateLinkEpsIdEnabled;
         }
 
         /**
          * @return ppv2VpcIdEnabled
          */
-        public String getPpv2VpcIdEnabled() {
+        public Boolean getPpv2VpcIdEnabled() {
             return this.ppv2VpcIdEnabled;
         }
 
         public static final class Builder {
-            private String ppv2PrivateLinkEpIdEnabled; 
-            private String ppv2PrivateLinkEpsIdEnabled; 
-            private String ppv2VpcIdEnabled; 
+            private Boolean ppv2PrivateLinkEpIdEnabled; 
+            private Boolean ppv2PrivateLinkEpsIdEnabled; 
+            private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Ppv2PrivateLinkEpIdEnabled.
+             * Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+            public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
                 return this;
             }
 
             /**
-             * Ppv2PrivateLinkEpsIdEnabled.
+             * Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+            public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
                 return this;
             }
 
             /**
-             * Ppv2VpcIdEnabled.
+             * Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
-            public Builder ppv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+            public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
                 return this;
             }
@@ -255,7 +267,7 @@ public class ListListenersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -263,10 +275,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag option.
-             * <p>
-             * 
-             * The value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -574,8 +583,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder alpnEnabled(Boolean alpnEnabled) {
                 this.alpnEnabled = alpnEnabled;
@@ -597,7 +606,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of CA certificates.
+             * A list of CA certificates.
              * <p>
              * 
              * >  This parameter takes effect only for listeners that use SSL over TCP.
@@ -611,8 +620,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether mutual authentication is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder caEnabled(Boolean caEnabled) {
                 this.caEnabled = caEnabled;
@@ -620,7 +629,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of server certificates.
+             * The server certificate.
              * <p>
              * 
              * >  This parameter takes effect only for listeners that use SSL over TCP.
@@ -639,7 +648,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The last port in the listening port range.
+             * The last port in the listener port range.
              */
             public Builder endPort(String endPort) {
                 this.endPort = endPort;
@@ -647,7 +656,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.
+             * The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.
              */
             public Builder idleTimeout(Integer idleTimeout) {
                 this.idleTimeout = idleTimeout;
@@ -666,7 +675,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the listener.
+             * The listener ID.
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -674,7 +683,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port.
+             * The information about the listener port of your server.
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -682,7 +691,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
+             * The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -693,14 +702,14 @@ public class ListListenersResponseBody extends TeaModel {
              * The status of the listener. Valid values:
              * <p>
              * 
-             * *   **Provisioning**
-             * *   **Running**
-             * *   **Configuring**
-             * *   **Stopping**
-             * *   **Stopped**
-             * *   **Starting**
-             * *   **Deleting**
-             * *   **Deleted**
+             * *   **Provisioning**: The listener is being created.
+             * *   **Running**: The listener is running.
+             * *   **Configuring**: The listener is being configured.
+             * *   **Stopping**: The listener is being stopped.
+             * *   **Stopped**: The listener is stopped.
+             * *   **Starting**: The listener is being started.
+             * *   **Deleting**: The listener is being deleted.
+             * *   **Deleted**: The listener is deleted.
              */
             public Builder listenerStatus(String listenerStatus) {
                 this.listenerStatus = listenerStatus;
@@ -708,7 +717,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the NLB instance.
+             * The CLB instance ID.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -716,10 +725,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the maximum segment size remains unchanged.
+             * The size of the largest TCP packet segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the Mss value of TCP packets remains unchanged.
              * <p>
              * 
-             * >  This parameter is supported only by listeners that use SSL over TCP.
+             * >  This parameter takes effect only for listeners that use SSL over TCP.
              */
             public Builder mss(Integer mss) {
                 this.mss = mss;
@@ -727,11 +736,11 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
+             * Indicates whether the Proxy protocol passes source client IP addresses to backend servers. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder proxyProtocolEnabled(Boolean proxyProtocolEnabled) {
                 this.proxyProtocolEnabled = proxyProtocolEnabled;
@@ -739,7 +748,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyProtocolV2Config.
+             * Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
              */
             public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
                 this.proxyProtocolV2Config = proxyProtocolV2Config;
@@ -747,7 +756,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the NLB instance is deployed.
+             * The region ID of the NLB instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -758,8 +767,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether fine-grained monitoring is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder secSensorEnabled(Boolean secSensorEnabled) {
                 this.secSensorEnabled = secSensorEnabled;
@@ -778,7 +787,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * The server group ID.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -786,7 +795,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The first port in the listening port range.
+             * The first port in the listener port range.
              */
             public Builder startPort(String startPort) {
                 this.startPort = startPort;
@@ -794,7 +803,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * A list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
