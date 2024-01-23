@@ -132,10 +132,26 @@ public class MergeMergeRequestResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
+        @NameInMap("bizId")
+        private String bizId;
+
+        @NameInMap("localId")
+        private Long localId;
+
+        @NameInMap("mergedRevision")
+        private String mergedRevision;
+
+        @NameInMap("projectId")
+        private Long projectId;
+
         @NameInMap("result")
         private Boolean result;
 
         private Result(Builder builder) {
+            this.bizId = builder.bizId;
+            this.localId = builder.localId;
+            this.mergedRevision = builder.mergedRevision;
+            this.projectId = builder.projectId;
             this.result = builder.result;
         }
 
@@ -148,6 +164,34 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         }
 
         /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        /**
+         * @return localId
+         */
+        public Long getLocalId() {
+            return this.localId;
+        }
+
+        /**
+         * @return mergedRevision
+         */
+        public String getMergedRevision() {
+            return this.mergedRevision;
+        }
+
+        /**
+         * @return projectId
+         */
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        /**
          * @return result
          */
         public Boolean getResult() {
@@ -155,7 +199,43 @@ public class MergeMergeRequestResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizId; 
+            private Long localId; 
+            private String mergedRevision; 
+            private Long projectId; 
             private Boolean result; 
+
+            /**
+             * bizId.
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
+
+            /**
+             * localId.
+             */
+            public Builder localId(Long localId) {
+                this.localId = localId;
+                return this;
+            }
+
+            /**
+             * mergedRevision.
+             */
+            public Builder mergedRevision(String mergedRevision) {
+                this.mergedRevision = mergedRevision;
+                return this;
+            }
+
+            /**
+             * projectId.
+             */
+            public Builder projectId(Long projectId) {
+                this.projectId = projectId;
+                return this;
+            }
 
             /**
              * result.

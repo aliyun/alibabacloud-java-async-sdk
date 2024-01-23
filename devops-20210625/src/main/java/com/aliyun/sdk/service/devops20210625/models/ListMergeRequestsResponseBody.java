@@ -292,6 +292,107 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Labels extends TeaModel {
+        @NameInMap("color")
+        private String color;
+
+        @NameInMap("description")
+        private String description;
+
+        @NameInMap("id")
+        private String id;
+
+        @NameInMap("name")
+        private String name;
+
+        private Labels(Builder builder) {
+            this.color = builder.color;
+            this.description = builder.description;
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String description; 
+            private String id; 
+            private String name; 
+
+            /**
+             * color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
     public static class Reviewers extends TeaModel {
         @NameInMap("avatarUrl")
         private String avatarUrl;
@@ -636,6 +737,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("iid")
         private Long iid;
 
+        @NameInMap("labels")
+        private java.util.List < Labels> labels;
+
         @NameInMap("localId")
         private Long localId;
 
@@ -707,6 +811,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             this.detailUrl = builder.detailUrl;
             this.id = builder.id;
             this.iid = builder.iid;
+            this.labels = builder.labels;
             this.localId = builder.localId;
             this.mrBizId = builder.mrBizId;
             this.nameWithNamespace = builder.nameWithNamespace;
@@ -785,6 +890,13 @@ public class ListMergeRequestsResponseBody extends TeaModel {
          */
         public Long getIid() {
             return this.iid;
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.List < Labels> getLabels() {
+            return this.labels;
         }
 
         /**
@@ -942,6 +1054,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             private String detailUrl; 
             private Long id; 
             private Long iid; 
+            private java.util.List < Labels> labels; 
             private Long localId; 
             private String mrBizId; 
             private String nameWithNamespace; 
@@ -1017,6 +1130,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
              */
             public Builder iid(Long iid) {
                 this.iid = iid;
+                return this;
+            }
+
+            /**
+             * labels.
+             */
+            public Builder labels(java.util.List < Labels> labels) {
+                this.labels = labels;
                 return this;
             }
 

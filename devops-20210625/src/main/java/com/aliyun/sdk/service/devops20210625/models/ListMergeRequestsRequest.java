@@ -29,6 +29,10 @@ public class ListMergeRequestsRequest extends Request {
     private String groupIds;
 
     @Query
+    @NameInMap("labelIds")
+    private String labelIds;
+
+    @Query
     @NameInMap("orderBy")
     private String orderBy;
 
@@ -71,6 +75,7 @@ public class ListMergeRequestsRequest extends Request {
         this.authorIds = builder.authorIds;
         this.filter = builder.filter;
         this.groupIds = builder.groupIds;
+        this.labelIds = builder.labelIds;
         this.orderBy = builder.orderBy;
         this.organizationId = builder.organizationId;
         this.page = builder.page;
@@ -121,6 +126,13 @@ public class ListMergeRequestsRequest extends Request {
      */
     public String getGroupIds() {
         return this.groupIds;
+    }
+
+    /**
+     * @return labelIds
+     */
+    public String getLabelIds() {
+        return this.labelIds;
     }
 
     /**
@@ -191,6 +203,7 @@ public class ListMergeRequestsRequest extends Request {
         private String authorIds; 
         private String filter; 
         private String groupIds; 
+        private String labelIds; 
         private String orderBy; 
         private String organizationId; 
         private Long page; 
@@ -211,6 +224,7 @@ public class ListMergeRequestsRequest extends Request {
             this.authorIds = request.authorIds;
             this.filter = request.filter;
             this.groupIds = request.groupIds;
+            this.labelIds = request.labelIds;
             this.orderBy = request.orderBy;
             this.organizationId = request.organizationId;
             this.page = request.page;
@@ -255,6 +269,15 @@ public class ListMergeRequestsRequest extends Request {
         public Builder groupIds(String groupIds) {
             this.putQueryParameter("groupIds", groupIds);
             this.groupIds = groupIds;
+            return this;
+        }
+
+        /**
+         * labelIds.
+         */
+        public Builder labelIds(String labelIds) {
+            this.putQueryParameter("labelIds", labelIds);
+            this.labelIds = labelIds;
             return this;
         }
 
