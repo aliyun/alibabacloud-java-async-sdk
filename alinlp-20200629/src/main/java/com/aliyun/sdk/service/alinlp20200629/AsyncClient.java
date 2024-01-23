@@ -136,6 +136,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PostMSConvSearchTokenGeneratedResponse> postMSConvSearchTokenGenerated(PostMSConvSearchTokenGeneratedRequest request);
 
+    CompletableFuture<PostMSDataProcessingCountResponse> postMSDataProcessingCount(PostMSDataProcessingCountRequest request);
+
     CompletableFuture<PostMSSearchEnhanceResponse> postMSSearchEnhance(PostMSSearchEnhanceRequest request);
 
     CompletableFuture<RequestTableQAResponse> requestTableQA(RequestTableQARequest request);
