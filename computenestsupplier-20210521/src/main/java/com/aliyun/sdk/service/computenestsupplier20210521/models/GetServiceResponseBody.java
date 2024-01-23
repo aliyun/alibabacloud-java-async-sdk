@@ -36,6 +36,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     private String createTime;
 
+    @NameInMap("CrossRegionConnectionStatus")
+    private String crossRegionConnectionStatus;
+
     @NameInMap("DefaultLicenseDays")
     private Long defaultLicenseDays;
 
@@ -47,6 +50,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("Duration")
     private Long duration;
+
+    @NameInMap("EntityAdditionalInfo")
+    private java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo;
 
     @NameInMap("EntitySource")
     private java.util.Map < String, String > entitySource;
@@ -174,6 +180,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("VirtualInternetService")
     private String virtualInternetService;
 
+    @NameInMap("VirtualInternetServiceId")
+    private String virtualInternetServiceId;
+
     private GetServiceResponseBody(Builder builder) {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
@@ -183,10 +192,12 @@ public class GetServiceResponseBody extends TeaModel {
         this.commodityEntities = builder.commodityEntities;
         this.commoditySpecifications = builder.commoditySpecifications;
         this.createTime = builder.createTime;
+        this.crossRegionConnectionStatus = builder.crossRegionConnectionStatus;
         this.defaultLicenseDays = builder.defaultLicenseDays;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
         this.duration = builder.duration;
+        this.entityAdditionalInfo = builder.entityAdditionalInfo;
         this.entitySource = builder.entitySource;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
@@ -229,6 +240,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.version = builder.version;
         this.versionName = builder.versionName;
         this.virtualInternetService = builder.virtualInternetService;
+        this.virtualInternetServiceId = builder.virtualInternetServiceId;
     }
 
     public static Builder builder() {
@@ -296,6 +308,13 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return crossRegionConnectionStatus
+     */
+    public String getCrossRegionConnectionStatus() {
+        return this.crossRegionConnectionStatus;
+    }
+
+    /**
      * @return defaultLicenseDays
      */
     public Long getDefaultLicenseDays() {
@@ -321,6 +340,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public Long getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return entityAdditionalInfo
+     */
+    public java.util.Map < String, EntityAdditionalInfoValue > getEntityAdditionalInfo() {
+        return this.entityAdditionalInfo;
     }
 
     /**
@@ -617,6 +643,13 @@ public class GetServiceResponseBody extends TeaModel {
         return this.virtualInternetService;
     }
 
+    /**
+     * @return virtualInternetServiceId
+     */
+    public String getVirtualInternetServiceId() {
+        return this.virtualInternetServiceId;
+    }
+
     public static final class Builder {
         private String alarmMetadata; 
         private String approvalType; 
@@ -626,10 +659,12 @@ public class GetServiceResponseBody extends TeaModel {
         private java.util.List < CommodityEntities> commodityEntities; 
         private java.util.List < CommoditySpecifications> commoditySpecifications; 
         private String createTime; 
+        private String crossRegionConnectionStatus; 
         private Long defaultLicenseDays; 
         private String deployMetadata; 
         private String deployType; 
         private Long duration; 
+        private java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo; 
         private java.util.Map < String, String > entitySource; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
@@ -672,6 +707,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String version; 
         private String versionName; 
         private String virtualInternetService; 
+        private String virtualInternetServiceId; 
 
         /**
          * AlarmMetadata.
@@ -738,6 +774,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * CrossRegionConnectionStatus.
+         */
+        public Builder crossRegionConnectionStatus(String crossRegionConnectionStatus) {
+            this.crossRegionConnectionStatus = crossRegionConnectionStatus;
+            return this;
+        }
+
+        /**
          * DefaultLicenseDays.
          */
         public Builder defaultLicenseDays(Long defaultLicenseDays) {
@@ -766,6 +810,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder duration(Long duration) {
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EntityAdditionalInfo.
+         */
+        public Builder entityAdditionalInfo(java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo) {
+            this.entityAdditionalInfo = entityAdditionalInfo;
             return this;
         }
 
@@ -1102,6 +1154,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder virtualInternetService(String virtualInternetService) {
             this.virtualInternetService = virtualInternetService;
+            return this;
+        }
+
+        /**
+         * VirtualInternetServiceId.
+         */
+        public Builder virtualInternetServiceId(String virtualInternetServiceId) {
+            this.virtualInternetServiceId = virtualInternetServiceId;
             return this;
         }
 
