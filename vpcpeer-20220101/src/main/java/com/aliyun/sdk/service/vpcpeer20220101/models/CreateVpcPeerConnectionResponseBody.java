@@ -50,7 +50,7 @@ public class CreateVpcPeerConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the VPC peering connection.
+         * The ID of the instance on which the VPC peering connection is created.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
