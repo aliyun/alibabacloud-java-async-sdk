@@ -138,7 +138,7 @@ public class ScaleInstanceRequest extends Request {
          * The infrequent access (IA) storage space of the instance. Unit: GB.
          * <p>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * > Ignore this parameter for pay-as-you-go instances.
          */
         public Builder coldStorageSize(Long coldStorageSize) {
             this.putBodyParameter("coldStorageSize", coldStorageSize);
@@ -150,12 +150,12 @@ public class ScaleInstanceRequest extends Request {
          * The specifications of the instance. Valid values:
          * <p>
          * 
-         * *   8-core 32 GB (number of compute Nodes: 1)
-         * *   16-core 64 GB (number of compute nodes: 1)
-         * *   32-core 128 GB (number of compute nodes: 2)
-         * *   64-core 256 GB (number of compute nodes: 4)
-         * *   96-core 384 GB (number of compute nodes: 6)
-         * *   128-core 512 GB (number of compute nodes: 8)
+         * *   8-core 32GB (number of compute nodes: 1)
+         * *   16-core 64GB (number of compute nodes: 1)
+         * *   32-core 128GB (number of compute nodes: 2)
+         * *   64-core 256GB (number of compute nodes: 4)
+         * *   96-core 384GB (number of compute nodes: 6)
+         * *   128-core 512GB (number of compute nodes: 8)
          * *   Others
          * 
          * > 
@@ -164,9 +164,9 @@ public class ScaleInstanceRequest extends Request {
          * 
          * *   If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.
          * 
-         * *   This parameter is invalid for shared instances.
+         * *   This parameter is invalid for Hologres Shared Cluster instances.
          * 
-         * *   The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
+         * *   The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.
          */
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -175,7 +175,10 @@ public class ScaleInstanceRequest extends Request {
         }
 
         /**
-         * gatewayCount.
+         * The number of gateways. Valid values: 2 to 50.
+         * <p>
+         * 
+         * > This parameter is required only for virtual warehouse instances.
          */
         public Builder gatewayCount(Long gatewayCount) {
             this.putBodyParameter("gatewayCount", gatewayCount);
@@ -206,7 +209,7 @@ public class ScaleInstanceRequest extends Request {
          * The standard storage space of the instance. Unit: GB.
          * <p>
          * 
-         * > This parameter is invalid for pay-as-you-go instances.
+         * > Ignore this parameter for pay-as-you-go instances.
          */
         public Builder storageSize(Long storageSize) {
             this.putBodyParameter("storageSize", storageSize);

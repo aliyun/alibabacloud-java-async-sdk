@@ -54,7 +54,7 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * The ID of the instance. This parameter is required.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

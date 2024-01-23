@@ -98,7 +98,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * The error code that is returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -106,7 +106,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -114,7 +114,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the instance.
+         * The information about the instance.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -366,7 +366,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the VPC to which the instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -374,7 +374,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of VPC to which the instance belongs.
+             * The ID of the instance that is deployed in the VPC.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -427,7 +427,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,7 +435,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -516,6 +516,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ReplicaRole")
+        private String replicaRole;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -554,6 +557,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.leaderInstanceId = builder.leaderInstanceId;
             this.memory = builder.memory;
             this.regionId = builder.regionId;
+            this.replicaRole = builder.replicaRole;
             this.resourceGroupId = builder.resourceGroupId;
             this.suspendReason = builder.suspendReason;
             this.tags = builder.tags;
@@ -724,6 +728,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicaRole
+         */
+        public String getReplicaRole() {
+            return this.replicaRole;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -781,6 +792,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String leaderInstanceId; 
             private Long memory; 
             private String regionId; 
+            private String replicaRole; 
             private String resourceGroupId; 
             private String suspendReason; 
             private java.util.List < Tags> tags; 
@@ -942,7 +954,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of compute nodes. In a typical configuration, a node has 16 vCPUs and 32 GB of memory.
+             * The number of compute nodes. In a typical configuration, a node has 16 CPU cores and 32 GB of memory.
              */
             public Builder computeNodeCount(Long computeNodeCount) {
                 this.computeNodeCount = computeNodeCount;
@@ -950,7 +962,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * The number of CPU cores.
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -958,7 +970,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * The time when the instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -998,7 +1010,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关节点数量。
+             * The number of gateway nodes.
              */
             public Builder gatewayCount(Long gatewayCount) {
                 this.gatewayCount = gatewayCount;
@@ -1006,9 +1018,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关cpu资源。
-             * <p>
-             * 单位：core。
+             * The number of CPU cores of the gateway. Unit: core.
              */
             public Builder gatewayCpu(Long gatewayCpu) {
                 this.gatewayCpu = gatewayCpu;
@@ -1016,9 +1026,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 网关内存资源。
-             * <p>
-             * 单位：GB。
+             * The size of memory resources of the gateway. Unit: GB.
              */
             public Builder gatewayMemory(Long gatewayMemory) {
                 this.gatewayMemory = gatewayMemory;
@@ -1187,10 +1195,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ReplicaRole.
+             */
+            public Builder replicaRole(String replicaRole) {
+                this.replicaRole = replicaRole;
                 return this;
             }
 
@@ -1204,6 +1220,51 @@ public class GetInstanceResponseBody extends TeaModel {
 
             /**
              * The reason for the suspension.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Indebet
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The instance has an overdue payment
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   Manual
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The instance is manually suspended
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   Overdue
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The instance has expired
+             * 
+             *     <!-- -->
+             * 
+             *     .
              */
             public Builder suspendReason(String suspendReason) {
                 this.suspendReason = suspendReason;
