@@ -127,7 +127,10 @@ public class DescribeSlaEventListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +139,7 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -145,7 +148,7 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Page.
+         * The page number.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -154,7 +157,7 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +166,11 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * Region.
+         * The type of the service Valid values:
+         * <p>
+         * 
+         * *   **cn**: Anti-DDoS Pro
+         * *   **cn-hongkong**: Anti-DDoS Premium
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -172,7 +179,10 @@ public class DescribeSlaEventListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

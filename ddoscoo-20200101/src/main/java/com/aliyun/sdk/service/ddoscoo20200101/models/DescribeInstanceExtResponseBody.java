@@ -62,7 +62,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * InstanceExtSpecs.
+         * The information about the instance.
          */
         public Builder instanceExtSpecs(java.util.List < InstanceExtSpecs> instanceExtSpecs) {
             this.instanceExtSpecs = instanceExtSpecs;
@@ -70,7 +70,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of queried instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,11 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             private String servicePartner; 
 
             /**
-             * FunctionVersion.
+             * The function plan. Valid values:
+             * <p>
+             * 
+             * *   **0**: Standard
+             * *   **1**: Enhanced
              */
             public Builder functionVersion(Long functionVersion) {
                 this.functionVersion = functionVersion;
@@ -174,7 +178,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -182,7 +186,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * NormalBandwidth.
+             * The clean bandwidth. Unit: Mbit/s.
              */
             public Builder normalBandwidth(Long normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -190,7 +194,14 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * ProductPlan.
+             * The type of the instance. Valid value:
+             * <p>
+             * 
+             * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
+             * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
+             * *   **2**: Anti-DDoS Premium instance of the CMA mitigation plan
+             * *   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan
+             * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
              */
             public Builder productPlan(Long productPlan) {
                 this.productPlan = productPlan;
@@ -198,7 +209,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePartner.
+             * The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.
              */
             public Builder servicePartner(String servicePartner) {
                 this.servicePartner = servicePartner;

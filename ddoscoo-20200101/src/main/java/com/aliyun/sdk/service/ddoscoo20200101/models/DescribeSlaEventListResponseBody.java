@@ -62,7 +62,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         }
 
         /**
-         * SlaEvent.
+         * The destination rate limit events.
          */
         public Builder slaEvent(java.util.List < SlaEvent> slaEvent) {
             this.slaEvent = slaEvent;
@@ -78,7 +78,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -154,7 +154,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -162,7 +162,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -170,7 +170,11 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the destination IP address belongs. Valid values:
+             * <p>
+             * 
+             * *   **cn**: a region in the Chinese mainland
+             * *   **cn-hongkong**: China (Hong Kong)
              */
             public Builder region(String region) {
                 this.region = region;
@@ -178,7 +182,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

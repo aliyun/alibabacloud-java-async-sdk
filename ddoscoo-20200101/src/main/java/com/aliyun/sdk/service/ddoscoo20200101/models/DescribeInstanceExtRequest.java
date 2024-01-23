@@ -82,7 +82,10 @@ public class DescribeInstanceExtRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +94,7 @@ public class DescribeInstanceExtRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page. For example, to query the returned results on the first page, set the value to **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +103,7 @@ public class DescribeInstanceExtRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

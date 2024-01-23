@@ -110,6 +110,9 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("RealServers")
         private java.util.List < String > realServers;
 
+        @NameInMap("Remark")
+        private String remark;
+
         private NetworkRules(Builder builder) {
             this.backendPort = builder.backendPort;
             this.frontendPort = builder.frontendPort;
@@ -117,6 +120,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             this.isAutoCreate = builder.isAutoCreate;
             this.protocol = builder.protocol;
             this.realServers = builder.realServers;
+            this.remark = builder.remark;
         }
 
         public static Builder builder() {
@@ -169,6 +173,13 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             return this.realServers;
         }
 
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
         public static final class Builder {
             private Integer backendPort; 
             private Integer frontendPort; 
@@ -176,6 +187,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private Boolean isAutoCreate; 
             private String protocol; 
             private java.util.List < String > realServers; 
+            private String remark; 
 
             /**
              * The port of the origin server.
@@ -230,6 +242,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
              */
             public Builder realServers(java.util.List < String > realServers) {
                 this.realServers = realServers;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
