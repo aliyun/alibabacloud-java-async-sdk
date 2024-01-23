@@ -93,10 +93,7 @@ public class GetDBTopologyRequest extends Request {
         }
 
         /**
-         * The ID of the logical database.
-         * <p>
-         * 
-         * > You can call the [ListLogicDatabases](~~141874~~) operation to query the ID of the logical database.
+         * The ID of the logical database. You can call the [ListLogicDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the ID of the logical database.
          */
         public Builder logicDbId(Long logicDbId) {
             this.putQueryParameter("LogicDbId", logicDbId);

@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddDesensitizationRuleResponse> addDesensitizationRule(AddDesensitizationRuleRequest request);
 
+    CompletableFuture<AddInstanceResponse> addInstance(AddInstanceRequest request);
+
     /**
       * You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
       * Usage notes:
@@ -581,6 +583,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDataCorrectExecSQLResponse> modifyDataCorrectExecSQL(ModifyDataCorrectExecSQLRequest request);
 
     CompletableFuture<ModifyDesensitizationStrategyResponse> modifyDesensitizationStrategy(ModifyDesensitizationStrategyRequest request);
+
+    CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request);
 
     CompletableFuture<MoveTaskFlowToScenarioResponse> moveTaskFlowToScenario(MoveTaskFlowToScenarioRequest request);
 
