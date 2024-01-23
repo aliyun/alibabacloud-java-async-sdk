@@ -374,6 +374,9 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @NameInMap("Material")
         private Material material;
 
@@ -387,6 +390,7 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         private String taskId;
 
         private Data(Builder builder) {
+            this.errorMessage = builder.errorMessage;
             this.material = builder.material;
             this.result = builder.result;
             this.status = builder.status;
@@ -399,6 +403,13 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -430,10 +441,19 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorMessage; 
             private Material material; 
             private Result result; 
             private String status; 
             private String taskId; 
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * Material.

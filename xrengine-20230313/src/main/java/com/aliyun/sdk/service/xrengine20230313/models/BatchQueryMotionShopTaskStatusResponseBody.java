@@ -213,6 +213,9 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @NameInMap("Result")
         private Result result;
 
@@ -223,6 +226,7 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
         private String taskId;
 
         private Tasks(Builder builder) {
+            this.errorMessage = builder.errorMessage;
             this.result = builder.result;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -234,6 +238,13 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
 
         public static Tasks create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -258,9 +269,18 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorMessage; 
             private Result result; 
             private String status; 
             private String taskId; 
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * Result.
