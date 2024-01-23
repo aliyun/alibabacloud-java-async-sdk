@@ -29,6 +29,10 @@ public class RecognizeHandwritingRequest extends Request {
     private Boolean outputTable;
 
     @Query
+    @NameInMap("Paragraph")
+    private Boolean paragraph;
+
+    @Query
     @NameInMap("Url")
     private String url;
 
@@ -42,6 +46,7 @@ public class RecognizeHandwritingRequest extends Request {
         this.needSortPage = builder.needSortPage;
         this.outputCharInfo = builder.outputCharInfo;
         this.outputTable = builder.outputTable;
+        this.paragraph = builder.paragraph;
         this.url = builder.url;
         this.body = builder.body;
     }
@@ -88,6 +93,13 @@ public class RecognizeHandwritingRequest extends Request {
     }
 
     /**
+     * @return paragraph
+     */
+    public Boolean getParagraph() {
+        return this.paragraph;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -106,6 +118,7 @@ public class RecognizeHandwritingRequest extends Request {
         private Boolean needSortPage; 
         private Boolean outputCharInfo; 
         private Boolean outputTable; 
+        private Boolean paragraph; 
         private String url; 
         private java.io.InputStream body; 
 
@@ -119,6 +132,7 @@ public class RecognizeHandwritingRequest extends Request {
             this.needSortPage = request.needSortPage;
             this.outputCharInfo = request.outputCharInfo;
             this.outputTable = request.outputTable;
+            this.paragraph = request.paragraph;
             this.url = request.url;
             this.body = request.body;
         } 
@@ -156,6 +170,15 @@ public class RecognizeHandwritingRequest extends Request {
         public Builder outputTable(Boolean outputTable) {
             this.putQueryParameter("OutputTable", outputTable);
             this.outputTable = outputTable;
+            return this;
+        }
+
+        /**
+         * Paragraph.
+         */
+        public Builder paragraph(Boolean paragraph) {
+            this.putQueryParameter("Paragraph", paragraph);
+            this.paragraph = paragraph;
             return this;
         }
 
