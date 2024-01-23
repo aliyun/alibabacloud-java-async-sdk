@@ -130,7 +130,7 @@ public class SavePtsSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景ID
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;

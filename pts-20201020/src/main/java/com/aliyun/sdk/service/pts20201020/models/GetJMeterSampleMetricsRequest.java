@@ -97,7 +97,7 @@ public class GetJMeterSampleMetricsRequest extends Request {
         } 
 
         /**
-         * 开始时间
+         * BeginTime.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -106,7 +106,7 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -115,7 +115,7 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * 报告ID
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -124,7 +124,7 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * 采样器索引，从0开始。-1返回全场景
+         * SamplerId.
          */
         public Builder samplerId(Integer samplerId) {
             this.putQueryParameter("SamplerId", samplerId);

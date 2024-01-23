@@ -7,62 +7,41 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEnvsRequest} extends {@link RequestModel}
+ * {@link GetPtsDebugSampleLogsRequest} extends {@link RequestModel}
  *
- * <p>ListEnvsRequest</p>
+ * <p>GetPtsDebugSampleLogsRequest</p>
  */
-public class ListEnvsRequest extends Request {
-    @Query
-    @NameInMap("EnvId")
-    private String envId;
-
-    @Query
-    @NameInMap("EnvName")
-    private String envName;
-
+public class GetPtsDebugSampleLogsRequest extends Request {
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 10000000, minimum = 1)
     private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 5)
     private Integer pageSize;
 
-    private ListEnvsRequest(Builder builder) {
+    @Query
+    @NameInMap("PlanId")
+    private String planId;
+
+    private GetPtsDebugSampleLogsRequest(Builder builder) {
         super(builder);
-        this.envId = builder.envId;
-        this.envName = builder.envName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.planId = builder.planId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListEnvsRequest create() {
+    public static GetPtsDebugSampleLogsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return envId
-     */
-    public String getEnvId() {
-        return this.envId;
-    }
-
-    /**
-     * @return envName
-     */
-    public String getEnvName() {
-        return this.envName;
     }
 
     /**
@@ -79,41 +58,28 @@ public class ListEnvsRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder<ListEnvsRequest, Builder> {
-        private String envId; 
-        private String envName; 
+    /**
+     * @return planId
+     */
+    public String getPlanId() {
+        return this.planId;
+    }
+
+    public static final class Builder extends Request.Builder<GetPtsDebugSampleLogsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String planId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEnvsRequest request) {
+        private Builder(GetPtsDebugSampleLogsRequest request) {
             super(request);
-            this.envId = request.envId;
-            this.envName = request.envName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.planId = request.planId;
         } 
-
-        /**
-         * EnvId.
-         */
-        public Builder envId(String envId) {
-            this.putQueryParameter("EnvId", envId);
-            this.envId = envId;
-            return this;
-        }
-
-        /**
-         * EnvName.
-         */
-        public Builder envName(String envName) {
-            this.putQueryParameter("EnvName", envName);
-            this.envName = envName;
-            return this;
-        }
 
         /**
          * PageNumber.
@@ -133,9 +99,18 @@ public class ListEnvsRequest extends Request {
             return this;
         }
 
+        /**
+         * PlanId.
+         */
+        public Builder planId(String planId) {
+            this.putQueryParameter("PlanId", planId);
+            this.planId = planId;
+            return this;
+        }
+
         @Override
-        public ListEnvsRequest build() {
-            return new ListEnvsRequest(this);
+        public GetPtsDebugSampleLogsRequest build() {
+            return new GetPtsDebugSampleLogsRequest(this);
         } 
 
     } 

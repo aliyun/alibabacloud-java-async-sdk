@@ -182,7 +182,7 @@ public class GetJMeterSamplingLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 采样器的采样结果
+         * SampleResults.
          */
         public Builder sampleResults(java.util.List < String > sampleResults) {
             this.sampleResults = sampleResults;

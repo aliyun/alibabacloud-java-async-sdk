@@ -55,7 +55,7 @@ public class RemoveEnvRequest extends Request {
         } 
 
         /**
-         * 要删除的环境ID
+         * EnvId.
          */
         public Builder envId(String envId) {
             this.putQueryParameter("EnvId", envId);

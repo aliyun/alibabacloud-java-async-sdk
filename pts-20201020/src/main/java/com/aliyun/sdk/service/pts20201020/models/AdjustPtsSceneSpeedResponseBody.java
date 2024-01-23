@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AdjustJMeterSceneSpeedResponseBody} extends {@link TeaModel}
+ * {@link AdjustPtsSceneSpeedResponseBody} extends {@link TeaModel}
  *
- * <p>AdjustJMeterSceneSpeedResponseBody</p>
+ * <p>AdjustPtsSceneSpeedResponseBody</p>
  */
-public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
+public class AdjustPtsSceneSpeedResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -21,20 +21,16 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportId")
-    private String reportId;
-
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private AdjustJMeterSceneSpeedResponseBody(Builder builder) {
+    private AdjustPtsSceneSpeedResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
-        this.reportId = builder.reportId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -43,7 +39,7 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AdjustJMeterSceneSpeedResponseBody create() {
+    public static AdjustPtsSceneSpeedResponseBody create() {
         return builder().build();
     }
 
@@ -69,13 +65,6 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
     }
 
     /**
-     * @return reportId
-     */
-    public String getReportId() {
-        return this.reportId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -93,7 +82,6 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private String reportId; 
         private String requestId; 
         private Boolean success; 
 
@@ -122,14 +110,6 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
-         */
-        public Builder reportId(String reportId) {
-            this.reportId = reportId;
-            return this;
-        }
-
-        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -145,8 +125,8 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
             return this;
         }
 
-        public AdjustJMeterSceneSpeedResponseBody build() {
-            return new AdjustJMeterSceneSpeedResponseBody(this);
+        public AdjustPtsSceneSpeedResponseBody build() {
+            return new AdjustPtsSceneSpeedResponseBody(this);
         } 
 
     } 

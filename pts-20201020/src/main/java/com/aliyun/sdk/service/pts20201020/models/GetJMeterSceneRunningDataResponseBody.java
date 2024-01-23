@@ -150,7 +150,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * 运行中的数据
+         * RunningData.
          */
         public Builder runningData(RunningData runningData) {
             this.runningData = runningData;
@@ -184,6 +184,12 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         private Integer concurrency;
 
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("HasError")
+        private Boolean hasError;
+
         @NameInMap("HasReport")
         private Boolean hasReport;
 
@@ -192,6 +198,9 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
 
         @NameInMap("IsDebugging")
         private Boolean isDebugging;
+
+        @NameInMap("ReportId")
+        private String reportId;
 
         @NameInMap("SampleStatList")
         private java.util.List < java.util.Map<String, ?>> sampleStatList;
@@ -219,9 +228,12 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             this.agentIdList = builder.agentIdList;
             this.allSampleStat = builder.allSampleStat;
             this.concurrency = builder.concurrency;
+            this.errorMessage = builder.errorMessage;
+            this.hasError = builder.hasError;
             this.hasReport = builder.hasReport;
             this.holdFor = builder.holdFor;
             this.isDebugging = builder.isDebugging;
+            this.reportId = builder.reportId;
             this.sampleStatList = builder.sampleStatList;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
@@ -268,6 +280,20 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return hasError
+         */
+        public Boolean getHasError() {
+            return this.hasError;
+        }
+
+        /**
          * @return hasReport
          */
         public Boolean getHasReport() {
@@ -286,6 +312,13 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
          */
         public Boolean getIsDebugging() {
             return this.isDebugging;
+        }
+
+        /**
+         * @return reportId
+         */
+        public String getReportId() {
+            return this.reportId;
         }
 
         /**
@@ -342,9 +375,12 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             private java.util.List < String > agentIdList; 
             private java.util.Map < String, ? > allSampleStat; 
             private Integer concurrency; 
+            private String errorMessage; 
+            private Boolean hasError; 
             private Boolean hasReport; 
             private Integer holdFor; 
             private Boolean isDebugging; 
+            private String reportId; 
             private java.util.List < java.util.Map<String, ?>> sampleStatList; 
             private String sceneId; 
             private String sceneName; 
@@ -354,7 +390,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             private Long vum; 
 
             /**
-             * 压测引擎数量
+             * AgentCount.
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -362,7 +398,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 压测引擎列表
+             * AgentIdList.
              */
             public Builder agentIdList(java.util.List < String > agentIdList) {
                 this.agentIdList = agentIdList;
@@ -370,7 +406,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 场景整体的采样状态
+             * AllSampleStat.
              */
             public Builder allSampleStat(java.util.Map < String, ? > allSampleStat) {
                 this.allSampleStat = allSampleStat;
@@ -378,7 +414,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 并发量
+             * Concurrency.
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -386,7 +422,23 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 是否生成了报告
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * HasError.
+             */
+            public Builder hasError(Boolean hasError) {
+                this.hasError = hasError;
+                return this;
+            }
+
+            /**
+             * HasReport.
              */
             public Builder hasReport(Boolean hasReport) {
                 this.hasReport = hasReport;
@@ -394,7 +446,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 压测计划持续时间，单位s
+             * HoldFor.
              */
             public Builder holdFor(Integer holdFor) {
                 this.holdFor = holdFor;
@@ -402,7 +454,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是调试
+             * IsDebugging.
              */
             public Builder isDebugging(Boolean isDebugging) {
                 this.isDebugging = isDebugging;
@@ -410,7 +462,15 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 每一个采样器的状态
+             * ReportId.
+             */
+            public Builder reportId(String reportId) {
+                this.reportId = reportId;
+                return this;
+            }
+
+            /**
+             * SampleStatList.
              */
             public Builder sampleStatList(java.util.List < java.util.Map<String, ?>> sampleStatList) {
                 this.sampleStatList = sampleStatList;
@@ -418,7 +478,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 场景id
+             * SceneId.
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -426,7 +486,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 场景名称
+             * SceneName.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -434,7 +494,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 当前所处阶段
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -442,7 +502,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 压测计划开始时间戳，单位ms
+             * StartTimeTS.
              */
             public Builder startTimeTS(Long startTimeTS) {
                 this.startTimeTS = startTimeTS;
@@ -450,7 +510,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -458,7 +518,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * 目前消耗的vum
+             * Vum.
              */
             public Builder vum(Long vum) {
                 this.vum = vum;

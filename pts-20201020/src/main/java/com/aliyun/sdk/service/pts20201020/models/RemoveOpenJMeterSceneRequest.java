@@ -55,7 +55,7 @@ public class RemoveOpenJMeterSceneRequest extends Request {
         } 
 
         /**
-         * 场景ID
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

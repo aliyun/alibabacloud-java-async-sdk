@@ -55,7 +55,7 @@ public class SavePtsSceneRequest extends Request {
         } 
 
         /**
-         * 场景详细信息
+         * Scene.
          */
         public Builder scene(Scene scene) {
             String sceneShrink = shrink(scene, "Scene", "json");
@@ -110,7 +110,7 @@ public class SavePtsSceneRequest extends Request {
             private java.util.List < String > ips; 
 
             /**
-             * 域名
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -118,7 +118,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 对应的IP
+             * Ips.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -195,7 +195,7 @@ public class SavePtsSceneRequest extends Request {
             private String successCode; 
 
             /**
-             * 超时时间，单位秒
+             * ConnectionTimeoutInSecond.
              */
             public Builder connectionTimeoutInSecond(Integer connectionTimeoutInSecond) {
                 this.connectionTimeoutInSecond = connectionTimeoutInSecond;
@@ -203,7 +203,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 域名绑定IP关系
+             * DomainBindingList.
              */
             public Builder domainBindingList(java.util.List < DomainBindingList> domainBindingList) {
                 this.domainBindingList = domainBindingList;
@@ -211,7 +211,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 日志采样率，[1,50]，且是10的倍数
+             * LogRate.
              */
             public Builder logRate(Integer logRate) {
                 this.logRate = logRate;
@@ -219,7 +219,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 新增成功状态码，多个用英文逗号隔开
+             * SuccessCode.
              */
             public Builder successCode(String successCode) {
                 this.successCode = successCode;
@@ -272,7 +272,7 @@ public class SavePtsSceneRequest extends Request {
             private String fileOssAddress; 
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -280,7 +280,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 文件的oss地址，必须是公网可访问的
+             * FileOssAddress.
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -333,7 +333,7 @@ public class SavePtsSceneRequest extends Request {
             private String paramValue; 
 
             /**
-             * 参数名
+             * ParamName.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -341,7 +341,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 全局参数值，不可参数化
+             * ParamValue.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -417,7 +417,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 起始RPS值
+             * RpsBegin.
              */
             public Builder rpsBegin(Integer rpsBegin) {
                 this.rpsBegin = rpsBegin;
@@ -425,7 +425,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 最大RPS值
+             * RpsLimit.
              */
             public Builder rpsLimit(Integer rpsLimit) {
                 this.rpsLimit = rpsLimit;
@@ -502,7 +502,7 @@ public class SavePtsSceneRequest extends Request {
             private Integer allRpsLimit; 
 
             /**
-             * 所有链路的起始并发总值，均分给每个链路，在并发模式下使用，若不设置该值，则relationLoadConfig必须填写
+             * AllConcurrencyBegin.
              */
             public Builder allConcurrencyBegin(Integer allConcurrencyBegin) {
                 this.allConcurrencyBegin = allConcurrencyBegin;
@@ -510,7 +510,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 所有链路的最大并发总值，均分给每个链路，在并发模式下使用，若不设置该值，则relationLoadConfig必须填写
+             * AllConcurrencyLimit.
              */
             public Builder allConcurrencyLimit(Integer allConcurrencyLimit) {
                 this.allConcurrencyLimit = allConcurrencyLimit;
@@ -518,7 +518,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 所有API的起始RPS总值，均分给每个API，在RPS模式下使用，若不设置该值，则apiLoadConfig必须填写
+             * AllRpsBegin.
              */
             public Builder allRpsBegin(Integer allRpsBegin) {
                 this.allRpsBegin = allRpsBegin;
@@ -526,7 +526,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 所有API的最大RPS总值，均分给每个API，在RPS模式下使用，若不设置该值，则apiLoadConfig必须填写
+             * AllRpsLimit.
              */
             public Builder allRpsLimit(Integer allRpsLimit) {
                 this.allRpsLimit = allRpsLimit;
@@ -593,7 +593,7 @@ public class SavePtsSceneRequest extends Request {
             private String relationId; 
 
             /**
-             * concurrencyBegin
+             * ConcurrencyBegin.
              */
             public Builder concurrencyBegin(Integer concurrencyBegin) {
                 this.concurrencyBegin = concurrencyBegin;
@@ -601,7 +601,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 最大并发
+             * ConcurrencyLimit.
              */
             public Builder concurrencyLimit(Integer concurrencyLimit) {
                 this.concurrencyLimit = concurrencyLimit;
@@ -609,7 +609,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路id
+             * RelationId.
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -690,7 +690,7 @@ public class SavePtsSceneRequest extends Request {
             private String vpcId; 
 
             /**
-             * regionId
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -698,7 +698,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 安全组的Id
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -706,7 +706,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 交换机的Id
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -866,7 +866,7 @@ public class SavePtsSceneRequest extends Request {
             private VpcLoadConfig vpcLoadConfig; 
 
             /**
-             * 指定机器数，并发必须大于250(RPS大于2000)才能使用，最大扩展机器数不能超过 最大并发/250(最大RPS/2000)
+             * AgentCount.
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -874,7 +874,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * API的起始、最大RPS值设置，在RPS模式下使用
+             * ApiLoadConfigList.
              */
             public Builder apiLoadConfigList(java.util.List < ApiLoadConfigList> apiLoadConfigList) {
                 this.apiLoadConfigList = apiLoadConfigList;
@@ -882,7 +882,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 是否自动递增，只有在并发模式下有效，即 testMode=concurrency_mode 时
+             * AutoStep.
              */
             public Builder autoStep(Boolean autoStep) {
                 this.autoStep = autoStep;
@@ -890,7 +890,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 场景施压量级配置信息
+             * Configuration.
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -898,7 +898,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 递增百分比，取值范围[10,100]，且是整十倍；只有在并发模式且是自动递增模式下有效，即 testMode=concurrency_mode 且 autoStep=true 时
+             * Increment.
              */
             public Builder increment(Integer increment) {
                 this.increment = increment;
@@ -906,7 +906,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 单量级持续时长，单位分钟，一定是小于施压时长 maxRunningTime
+             * KeepTime.
              */
             public Builder keepTime(Integer keepTime) {
                 this.keepTime = keepTime;
@@ -914,7 +914,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 施压时长，单位分钟，[1-1440]
+             * MaxRunningTime.
              */
             public Builder maxRunningTime(Integer maxRunningTime) {
                 this.maxRunningTime = maxRunningTime;
@@ -922,7 +922,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路的起始、最大并发值设置，在并发模式下使用
+             * RelationLoadConfigList.
              */
             public Builder relationLoadConfigList(java.util.List < RelationLoadConfigList> relationLoadConfigList) {
                 this.relationLoadConfigList = relationLoadConfigList;
@@ -930,7 +930,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 施压模式，并发模式(concurrency_mode) 和RPS模式(tps_mode)
+             * TestMode.
              */
             public Builder testMode(String testMode) {
                 this.testMode = testMode;
@@ -938,7 +938,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * VPC配置
+             * VpcLoadConfig.
              */
             public Builder vpcLoadConfig(VpcLoadConfig vpcLoadConfig) {
                 this.vpcLoadConfig = vpcLoadConfig;
@@ -991,7 +991,7 @@ public class SavePtsSceneRequest extends Request {
             private String contentType; 
 
             /**
-             * body 的实际内容 形式 {"key1":"value2","key2":"value2"}
+             * BodyValue.
              */
             public Builder bodyValue(String bodyValue) {
                 this.bodyValue = bodyValue;
@@ -999,7 +999,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * body 类型，默认 application/x-www-form-urlencoded
+             * ContentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -1076,7 +1076,7 @@ public class SavePtsSceneRequest extends Request {
             private String operator; 
 
             /**
-             * 检查对象 type=HEADER 时，表示header中的字段，type=EXPORTED_PARAM ，表示出参名
+             * CheckPoint.
              */
             public Builder checkPoint(String checkPoint) {
                 this.checkPoint = checkPoint;
@@ -1084,7 +1084,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 检查点类型 响应body(BODY_TEXT)，响应header(HEADER)， 响应状态码(STATUS_CODE) ，出参（EXPORTED_PARAM）
+             * CheckType.
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -1092,7 +1092,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 检查内容，即期望值
+             * ExpectValue.
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -1100,7 +1100,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 检查条件 CheckPointOperator 中
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1177,7 +1177,7 @@ public class SavePtsSceneRequest extends Request {
             private String exportValue; 
 
             /**
-             * 第几个匹配项，可以是数字 或 random（ BODY_TEXT情况下才需要count）
+             * Count.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1185,7 +1185,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 出参名
+             * ExportName.
              */
             public Builder exportName(String exportName) {
                 this.exportName = exportName;
@@ -1193,7 +1193,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 出参来源 请求体(BODY_TEXT)，请求体(BODY_JSON)，请求头(HEADER)，响应状态码(STATUS_CODE)
+             * ExportType.
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -1201,7 +1201,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 出参的解析表达式
+             * ExportValue.
              */
             public Builder exportValue(String exportValue) {
                 this.exportValue = exportValue;
@@ -1254,7 +1254,7 @@ public class SavePtsSceneRequest extends Request {
             private String headerValue; 
 
             /**
-             * header参数名
+             * HeaderName.
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -1262,7 +1262,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 参数对应的值
+             * HeaderValue.
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -1415,7 +1415,7 @@ public class SavePtsSceneRequest extends Request {
             private String url; 
 
             /**
-             * API的id
+             * API ID。
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1423,7 +1423,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * API名
+             * ApiName.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1431,7 +1431,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 请求body
+             * Body.
              */
             public Builder body(ApiListBody body) {
                 this.body = body;
@@ -1439,7 +1439,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 检查点
+             * CheckPointList.
              */
             public Builder checkPointList(java.util.List < CheckPointList> checkPointList) {
                 this.checkPointList = checkPointList;
@@ -1447,7 +1447,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 出参
+             * ExportList.
              */
             public Builder exportList(java.util.List < ExportList> exportList) {
                 this.exportList = exportList;
@@ -1455,7 +1455,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * headerList
+             * HeaderList.
              */
             public Builder headerList(java.util.List < HeaderList> headerList) {
                 this.headerList = headerList;
@@ -1463,7 +1463,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 请求方法
+             * Method.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1471,7 +1471,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 重定向次数，只能是0（允许重定向）或者10（不允许重定向）
+             * RedirectCountLimit.
              */
             public Builder redirectCountLimit(Integer redirectCountLimit) {
                 this.redirectCountLimit = redirectCountLimit;
@@ -1479,7 +1479,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * API超时时间，单位秒，默认5s，范围[1-60]
+             * TimeoutInSecond.
              */
             public Builder timeoutInSecond(Integer timeoutInSecond) {
                 this.timeoutInSecond = timeoutInSecond;
@@ -1487,7 +1487,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 压测URL
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1566,7 +1566,7 @@ public class SavePtsSceneRequest extends Request {
             private String fileParamName; 
 
             /**
-             * 是否作为基准文件
+             * BaseFile.
              */
             public Builder baseFile(Boolean baseFile) {
                 this.baseFile = baseFile;
@@ -1574,7 +1574,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 文件是否轮询一次
+             * CycleOnce.
              */
             public Builder cycleOnce(Boolean cycleOnce) {
                 this.cycleOnce = cycleOnce;
@@ -1582,7 +1582,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1590,7 +1590,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 文件使用的参数列名
+             * FileParamName.
              */
             public Builder fileParamName(String fileParamName) {
                 this.fileParamName = fileParamName;
@@ -1669,7 +1669,7 @@ public class SavePtsSceneRequest extends Request {
             private String relationName; 
 
             /**
-             * 链路下的API信息
+             * ApiList.
              */
             public Builder apiList(java.util.List < ApiList> apiList) {
                 this.apiList = apiList;
@@ -1677,7 +1677,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路中的文件参数配置信息
+             * FileParameterExplainList.
              */
             public Builder fileParameterExplainList(java.util.List < FileParameterExplainList> fileParameterExplainList) {
                 this.fileParameterExplainList = fileParameterExplainList;
@@ -1685,7 +1685,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路id
+             * RelationId.
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -1693,7 +1693,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路名
+             * RelationName.
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -1809,7 +1809,7 @@ public class SavePtsSceneRequest extends Request {
             private String sceneName; 
 
             /**
-             * 高级设置
+             * AdvanceSetting.
              */
             public Builder advanceSetting(AdvanceSetting advanceSetting) {
                 this.advanceSetting = advanceSetting;
@@ -1817,7 +1817,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 文件参数
+             * FileParameterList.
              */
             public Builder fileParameterList(java.util.List < FileParameterList> fileParameterList) {
                 this.fileParameterList = fileParameterList;
@@ -1825,7 +1825,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 全局自定义参数
+             * GlobalParameterList.
              */
             public Builder globalParameterList(java.util.List < GlobalParameterList> globalParameterList) {
                 this.globalParameterList = globalParameterList;
@@ -1833,7 +1833,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 施压配置
+             * LoadConfig.
              */
             public Builder loadConfig(LoadConfig loadConfig) {
                 this.loadConfig = loadConfig;
@@ -1841,7 +1841,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 链路配置
+             * RelationList.
              */
             public Builder relationList(java.util.List < RelationList> relationList) {
                 this.relationList = relationList;
@@ -1849,7 +1849,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 场景ID，不传为新建，传递为修改
+             * SceneId.
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -1857,7 +1857,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * 场景名
+             * SceneName.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;

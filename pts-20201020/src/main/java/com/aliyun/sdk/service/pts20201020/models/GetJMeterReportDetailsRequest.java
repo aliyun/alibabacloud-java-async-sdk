@@ -7,32 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AdjustJMeterSceneSpeedRequest} extends {@link RequestModel}
+ * {@link GetJMeterReportDetailsRequest} extends {@link RequestModel}
  *
- * <p>AdjustJMeterSceneSpeedRequest</p>
+ * <p>GetJMeterReportDetailsRequest</p>
  */
-public class AdjustJMeterSceneSpeedRequest extends Request {
+public class GetJMeterReportDetailsRequest extends Request {
     @Query
     @NameInMap("ReportId")
     @Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("Speed")
-    @Validation(required = true, minimum = 1)
-    private Integer speed;
-
-    private AdjustJMeterSceneSpeedRequest(Builder builder) {
+    private GetJMeterReportDetailsRequest(Builder builder) {
         super(builder);
         this.reportId = builder.reportId;
-        this.speed = builder.speed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AdjustJMeterSceneSpeedRequest create() {
+    public static GetJMeterReportDetailsRequest create() {
         return builder().build();
     }
 
@@ -48,25 +42,16 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         return this.reportId;
     }
 
-    /**
-     * @return speed
-     */
-    public Integer getSpeed() {
-        return this.speed;
-    }
-
-    public static final class Builder extends Request.Builder<AdjustJMeterSceneSpeedRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetJMeterReportDetailsRequest, Builder> {
         private String reportId; 
-        private Integer speed; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AdjustJMeterSceneSpeedRequest request) {
+        private Builder(GetJMeterReportDetailsRequest request) {
             super(request);
             this.reportId = request.reportId;
-            this.speed = request.speed;
         } 
 
         /**
@@ -78,18 +63,9 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
             return this;
         }
 
-        /**
-         * Speed.
-         */
-        public Builder speed(Integer speed) {
-            this.putQueryParameter("Speed", speed);
-            this.speed = speed;
-            return this;
-        }
-
         @Override
-        public AdjustJMeterSceneSpeedRequest build() {
-            return new AdjustJMeterSceneSpeedRequest(this);
+        public GetJMeterReportDetailsRequest build() {
+            return new GetJMeterReportDetailsRequest(this);
         } 
 
     } 

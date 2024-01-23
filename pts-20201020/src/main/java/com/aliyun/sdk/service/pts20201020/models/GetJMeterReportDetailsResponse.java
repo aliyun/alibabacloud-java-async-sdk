@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SaveOpenJMeterSceneResponse} extends {@link TeaModel}
+ * {@link GetJMeterReportDetailsResponse} extends {@link TeaModel}
  *
- * <p>SaveOpenJMeterSceneResponse</p>
+ * <p>GetJMeterReportDetailsResponse</p>
  */
-public class SaveOpenJMeterSceneResponse extends Response {
+public class GetJMeterReportDetailsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
@@ -22,16 +22,16 @@ public class SaveOpenJMeterSceneResponse extends Response {
 
     @NameInMap("body")
     @Validation(required = true)
-    private SaveOpenJMeterSceneResponseBody body;
+    private GetJMeterReportDetailsResponseBody body;
 
-    private SaveOpenJMeterSceneResponse(BuilderImpl builder) {
+    private GetJMeterReportDetailsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SaveOpenJMeterSceneResponse create() {
+    public static GetJMeterReportDetailsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +57,35 @@ public class SaveOpenJMeterSceneResponse extends Response {
     /**
      * @return body
      */
-    public SaveOpenJMeterSceneResponseBody getBody() {
+    public GetJMeterReportDetailsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SaveOpenJMeterSceneResponse, Builder> {
+    public interface Builder extends Response.Builder<GetJMeterReportDetailsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SaveOpenJMeterSceneResponseBody body);
+        Builder body(GetJMeterReportDetailsResponseBody body);
 
         @Override
-        SaveOpenJMeterSceneResponse build();
+        GetJMeterReportDetailsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SaveOpenJMeterSceneResponse, Builder>
+            extends Response.BuilderImpl<GetJMeterReportDetailsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SaveOpenJMeterSceneResponseBody body; 
+        private GetJMeterReportDetailsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SaveOpenJMeterSceneResponse response) {
+        private BuilderImpl(GetJMeterReportDetailsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +114,14 @@ public class SaveOpenJMeterSceneResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SaveOpenJMeterSceneResponseBody body) {
+        public Builder body(GetJMeterReportDetailsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SaveOpenJMeterSceneResponse build() {
-            return new SaveOpenJMeterSceneResponse(this);
+        public GetJMeterReportDetailsResponse build() {
+            return new GetJMeterReportDetailsResponse(this);
         } 
 
     } 

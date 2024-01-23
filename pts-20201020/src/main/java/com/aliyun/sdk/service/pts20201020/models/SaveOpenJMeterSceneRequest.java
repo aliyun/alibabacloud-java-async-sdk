@@ -55,7 +55,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
         /**
-         * 场景详情
+         * OpenJMeterScene.
          */
         public Builder openJMeterScene(OpenJMeterScene openJMeterScene) {
             String openJMeterSceneShrink = shrink(openJMeterScene, "OpenJMeterScene", "json");
@@ -253,7 +253,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private String tags; 
 
             /**
-             * 文件id
+             * FileId.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -261,7 +261,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -269,7 +269,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件公网可访问的oss地址
+             * FileOssAddress.
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -277,7 +277,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件大小，单位byte
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -285,7 +285,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件的MD5
+             * Md5.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -293,7 +293,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 是否切分，仅针对csv有效
+             * SplitCsv.
              */
             public Builder splitCsv(Boolean splitCsv) {
                 this.splitCsv = splitCsv;
@@ -301,7 +301,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件tag
+             * Tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -376,6 +376,67 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
     }
+    public static class RegionalCondition extends TeaModel {
+        @NameInMap("Amount")
+        private Integer amount;
+
+        @NameInMap("Region")
+        private String region;
+
+        private RegionalCondition(Builder builder) {
+            this.amount = builder.amount;
+            this.region = builder.region;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionalCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private String region; 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            public RegionalCondition build() {
+                return new RegionalCondition(this);
+            } 
+
+        } 
+
+    }
     public static class OpenJMeterScene extends TeaModel {
         @NameInMap("AgentCount")
         @Validation(required = true)
@@ -424,6 +485,9 @@ public class SaveOpenJMeterSceneRequest extends Request {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("RegionalCondition")
+        private java.util.List < RegionalCondition> regionalCondition;
+
         @NameInMap("SceneId")
         private String sceneId;
 
@@ -471,6 +535,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             this.mode = builder.mode;
             this.rampUp = builder.rampUp;
             this.regionId = builder.regionId;
+            this.regionalCondition = builder.regionalCondition;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
             this.securityGroupId = builder.securityGroupId;
@@ -590,6 +655,13 @@ public class SaveOpenJMeterSceneRequest extends Request {
         }
 
         /**
+         * @return regionalCondition
+         */
+        public java.util.List < RegionalCondition> getRegionalCondition() {
+            return this.regionalCondition;
+        }
+
+        /**
          * @return sceneId
          */
         public String getSceneId() {
@@ -674,6 +746,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private String mode; 
             private Integer rampUp; 
             private String regionId; 
+            private java.util.List < RegionalCondition> regionalCondition; 
             private String sceneId; 
             private String sceneName; 
             private String securityGroupId; 
@@ -686,7 +759,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private String vpcId; 
 
             /**
-             * 施压引擎数量
+             * AgentCount.
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -694,7 +767,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 最大并发
+             * Concurrency.
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -702,7 +775,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * constantThroughputTimerType
+             * ConstantThroughputTimerType.
              */
             public Builder constantThroughputTimerType(String constantThroughputTimerType) {
                 this.constantThroughputTimerType = constantThroughputTimerType;
@@ -710,7 +783,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * DNS配置
+             * DnsCacheConfig.
              */
             public Builder dnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
                 this.dnsCacheConfig = dnsCacheConfig;
@@ -718,7 +791,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 压测持续时间
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -726,7 +799,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 关联的环境id
+             * EnvironmentId.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -734,7 +807,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 文件列表
+             * FileList.
              */
             public Builder fileList(java.util.List < FileList> fileList) {
                 this.fileList = fileList;
@@ -742,7 +815,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 是否为VPC测试，默认为false表示公网测试，此值为true时VPC相关配置才生效
+             * IsVpcTest.
              */
             public Builder isVpcTest(Boolean isVpcTest) {
                 this.isVpcTest = isVpcTest;
@@ -750,7 +823,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Jmeter属性
+             * JMeterProperties.
              */
             public Builder jMeterProperties(java.util.List < JMeterProperties> jMeterProperties) {
                 this.jMeterProperties = jMeterProperties;
@@ -758,7 +831,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * jmeter插件的环境标签
+             * JmeterPluginLabel.
              */
             public Builder jmeterPluginLabel(String jmeterPluginLabel) {
                 this.jmeterPluginLabel = jmeterPluginLabel;
@@ -774,7 +847,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 压力模式
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -782,7 +855,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 预热时间
+             * RampUp.
              */
             public Builder rampUp(Integer rampUp) {
                 this.rampUp = rampUp;
@@ -790,7 +863,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * region的id，VPC压测时配置
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -798,7 +871,15 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 场景ID
+             * RegionalCondition.
+             */
+            public Builder regionalCondition(java.util.List < RegionalCondition> regionalCondition) {
+                this.regionalCondition = regionalCondition;
+                return this;
+            }
+
+            /**
+             * SceneId.
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -806,7 +887,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 场景名
+             * SceneName.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -814,7 +895,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 安全组id，VPC压测时配置
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -838,7 +919,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 预热阶段
+             * Steps.
              */
             public Builder steps(Integer steps) {
                 this.steps = steps;
@@ -846,7 +927,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * synchronizing timer 类型
+             * SyncTimerType.
              */
             public Builder syncTimerType(String syncTimerType) {
                 this.syncTimerType = syncTimerType;
@@ -854,7 +935,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 测试文件
+             * TestFile.
              */
             public Builder testFile(String testFile) {
                 this.testFile = testFile;
@@ -862,7 +943,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * 交换机id，VPC压测时配置
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -870,7 +951,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * vpc的id，VPC压测时配置
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

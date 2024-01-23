@@ -134,7 +134,7 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 引擎数量，想要获得第几台引擎的日志可以根据引擎数量传值
+         * AgentCount.
          */
         public Builder agentCount(Integer agentCount) {
             this.agentCount = agentCount;
@@ -150,7 +150,7 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 日志内容
+         * Logs.
          */
         public Builder logs(java.util.List < java.util.Map<String, ?>> logs) {
             this.logs = logs;

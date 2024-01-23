@@ -7,19 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListOpenJMeterScenesResponseBody} extends {@link TeaModel}
+ * {@link ListPtsReportsResponseBody} extends {@link TeaModel}
  *
- * <p>ListOpenJMeterScenesResponseBody</p>
+ * <p>ListPtsReportsResponseBody</p>
  */
-public class ListOpenJMeterScenesResponseBody extends TeaModel {
+public class ListPtsReportsResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
-
-    @NameInMap("JMeterScene")
-    private java.util.List < JMeterScene> jMeterScene;
 
     @NameInMap("Message")
     private String message;
@@ -30,6 +27,9 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @NameInMap("Reports")
+    private java.util.List < Reports> reports;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -39,13 +39,13 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     private Long totalCount;
 
-    private ListOpenJMeterScenesResponseBody(Builder builder) {
+    private ListPtsReportsResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
-        this.jMeterScene = builder.jMeterScene;
         this.message = builder.message;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.reports = builder.reports;
         this.requestId = builder.requestId;
         this.success = builder.success;
         this.totalCount = builder.totalCount;
@@ -55,7 +55,7 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListOpenJMeterScenesResponseBody create() {
+    public static ListPtsReportsResponseBody create() {
         return builder().build();
     }
 
@@ -71,13 +71,6 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
      */
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
-    }
-
-    /**
-     * @return jMeterScene
-     */
-    public java.util.List < JMeterScene> getJMeterScene() {
-        return this.jMeterScene;
     }
 
     /**
@@ -99,6 +92,13 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return reports
+     */
+    public java.util.List < Reports> getReports() {
+        return this.reports;
     }
 
     /**
@@ -125,10 +125,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < JMeterScene> jMeterScene; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private java.util.List < Reports> reports; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -146,14 +146,6 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * JMeterScene.
-         */
-        public Builder jMeterScene(java.util.List < JMeterScene> jMeterScene) {
-            this.jMeterScene = jMeterScene;
             return this;
         }
 
@@ -182,6 +174,14 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
+         * Reports.
+         */
+        public Builder reports(java.util.List < Reports> reports) {
+            this.reports = reports;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -205,108 +205,128 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListOpenJMeterScenesResponseBody build() {
-            return new ListOpenJMeterScenesResponseBody(this);
+        public ListPtsReportsResponseBody build() {
+            return new ListPtsReportsResponseBody(this);
         } 
 
     } 
 
-    public static class JMeterScene extends TeaModel {
-        @NameInMap("DurationStr")
-        private String durationStr;
+    public static class Reports extends TeaModel {
+        @NameInMap("ActualStartTime")
+        private Long actualStartTime;
 
-        @NameInMap("SceneId")
-        private String sceneId;
+        @NameInMap("Duration")
+        private String duration;
 
-        @NameInMap("SceneName")
-        private String sceneName;
+        @NameInMap("ReportId")
+        private String reportId;
 
-        @NameInMap("Status")
-        private String status;
+        @NameInMap("ReportName")
+        private String reportName;
 
-        private JMeterScene(Builder builder) {
-            this.durationStr = builder.durationStr;
-            this.sceneId = builder.sceneId;
-            this.sceneName = builder.sceneName;
-            this.status = builder.status;
+        @NameInMap("Vum")
+        private Long vum;
+
+        private Reports(Builder builder) {
+            this.actualStartTime = builder.actualStartTime;
+            this.duration = builder.duration;
+            this.reportId = builder.reportId;
+            this.reportName = builder.reportName;
+            this.vum = builder.vum;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static JMeterScene create() {
+        public static Reports create() {
             return builder().build();
         }
 
         /**
-         * @return durationStr
+         * @return actualStartTime
          */
-        public String getDurationStr() {
-            return this.durationStr;
+        public Long getActualStartTime() {
+            return this.actualStartTime;
         }
 
         /**
-         * @return sceneId
+         * @return duration
          */
-        public String getSceneId() {
-            return this.sceneId;
+        public String getDuration() {
+            return this.duration;
         }
 
         /**
-         * @return sceneName
+         * @return reportId
          */
-        public String getSceneName() {
-            return this.sceneName;
+        public String getReportId() {
+            return this.reportId;
         }
 
         /**
-         * @return status
+         * @return reportName
          */
-        public String getStatus() {
-            return this.status;
+        public String getReportName() {
+            return this.reportName;
+        }
+
+        /**
+         * @return vum
+         */
+        public Long getVum() {
+            return this.vum;
         }
 
         public static final class Builder {
-            private String durationStr; 
-            private String sceneId; 
-            private String sceneName; 
-            private String status; 
+            private Long actualStartTime; 
+            private String duration; 
+            private String reportId; 
+            private String reportName; 
+            private Long vum; 
 
             /**
-             * DurationStr.
+             * ActualStartTime.
              */
-            public Builder durationStr(String durationStr) {
-                this.durationStr = durationStr;
+            public Builder actualStartTime(Long actualStartTime) {
+                this.actualStartTime = actualStartTime;
                 return this;
             }
 
             /**
-             * SceneId.
+             * Duration.
              */
-            public Builder sceneId(String sceneId) {
-                this.sceneId = sceneId;
+            public Builder duration(String duration) {
+                this.duration = duration;
                 return this;
             }
 
             /**
-             * SceneName.
+             * ReportId.
              */
-            public Builder sceneName(String sceneName) {
-                this.sceneName = sceneName;
+            public Builder reportId(String reportId) {
+                this.reportId = reportId;
                 return this;
             }
 
             /**
-             * Status.
+             * ReportName.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder reportName(String reportName) {
+                this.reportName = reportName;
                 return this;
             }
 
-            public JMeterScene build() {
-                return new JMeterScene(this);
+            /**
+             * Vum.
+             */
+            public Builder vum(Long vum) {
+                this.vum = vum;
+                return this;
+            }
+
+            public Reports build() {
+                return new Reports(this);
             } 
 
         } 

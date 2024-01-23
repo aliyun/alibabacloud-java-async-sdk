@@ -142,7 +142,7 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * 环境列表
+         * Envs.
          */
         public Builder envs(java.util.List < Envs> envs) {
             this.envs = envs;
@@ -286,7 +286,7 @@ public class ListEnvsResponseBody extends TeaModel {
             private String md5; 
 
             /**
-             * 文件ID
+             * FileId.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -294,7 +294,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件名
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -302,7 +302,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件的oss地址
+             * FileOssAddress.
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -310,7 +310,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件大小，单位为Byte
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -318,7 +318,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * jar包的md5值
+             * Md5.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -383,7 +383,7 @@ public class ListEnvsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +391,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 属性名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +399,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 属性值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -548,7 +548,7 @@ public class ListEnvsResponseBody extends TeaModel {
             private Long usedCapacity; 
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -556,7 +556,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 环境ID
+             * EnvId.
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -564,7 +564,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 环境名
+             * EnvName.
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -572,7 +572,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 依赖的jmeter版本
+             * EnvVersion.
              */
             public Builder envVersion(String envVersion) {
                 this.envVersion = envVersion;
@@ -580,7 +580,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 包含的jar包
+             * Files.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -588,7 +588,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * ModifiedTime.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -596,7 +596,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * jmeter属性
+             * Properties.
              */
             public Builder properties(java.util.List < Properties> properties) {
                 this.properties = properties;
@@ -604,7 +604,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的场景
+             * RelatedScenes.
              */
             public Builder relatedScenes(java.util.List < String > relatedScenes) {
                 this.relatedScenes = relatedScenes;
@@ -612,7 +612,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的场景id
+             * RunningScenes.
              */
             public Builder runningScenes(java.util.List < String > runningScenes) {
                 this.runningScenes = runningScenes;
@@ -620,7 +620,7 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * 环境的文件总大小
+             * UsedCapacity.
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;

@@ -225,7 +225,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         } 
 
         /**
-         * 压测引擎编号
+         * AgentId.
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -234,7 +234,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * BeginTime.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -243,7 +243,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +252,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 关键字
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -261,7 +261,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 最大响应时间，单位ms
+         * MaxRT.
          */
         public Builder maxRT(Integer maxRT) {
             this.putQueryParameter("MaxRT", maxRT);
@@ -270,7 +270,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 最小响应时间，单位ms
+         * MinRT.
          */
         public Builder minRT(Integer minRT) {
             this.putQueryParameter("MinRT", minRT);
@@ -297,7 +297,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 报告ID
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -315,7 +315,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 第几个采样器，从0开始
+         * SamplerId.
          */
         public Builder samplerId(Integer samplerId) {
             this.putQueryParameter("SamplerId", samplerId);
@@ -324,7 +324,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 采样结果是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.putQueryParameter("Success", success);
@@ -333,7 +333,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * 线程
+         * Thread.
          */
         public Builder thread(String thread) {
             this.putQueryParameter("Thread", thread);

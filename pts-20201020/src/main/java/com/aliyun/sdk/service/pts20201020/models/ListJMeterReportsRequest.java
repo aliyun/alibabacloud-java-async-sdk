@@ -142,7 +142,7 @@ public class ListJMeterReportsRequest extends Request {
         } 
 
         /**
-         * 报告的起始时间，单位为ms
+         * BeginTime.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -151,7 +151,7 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * 报告的结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +160,7 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * 报告关键字
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -187,7 +187,7 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * 报告ID
+         * ReportId.
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -196,7 +196,7 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * 要查看的报告的场景id
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

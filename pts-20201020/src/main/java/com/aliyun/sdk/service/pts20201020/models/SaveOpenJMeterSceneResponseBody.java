@@ -130,7 +130,7 @@ public class SaveOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * 场景id
+         * SceneId.
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;

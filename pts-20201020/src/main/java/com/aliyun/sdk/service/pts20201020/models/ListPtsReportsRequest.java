@@ -7,81 +7,65 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetJMeterLogsRequest} extends {@link RequestModel}
+ * {@link ListPtsReportsRequest} extends {@link RequestModel}
  *
- * <p>GetJMeterLogsRequest</p>
+ * <p>ListPtsReportsRequest</p>
  */
-public class GetJMeterLogsRequest extends Request {
-    @Query
-    @NameInMap("AgentIndex")
-    private Integer agentIndex;
-
-    @Query
+public class ListPtsReportsRequest extends Request {
+    @Body
     @NameInMap("BeginTime")
+    @Validation()
     private Long beginTime;
 
-    @Query
+    @Body
     @NameInMap("EndTime")
+    @Validation()
     private Long endTime;
 
-    @Query
+    @Body
     @NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Level")
-    private String level;
-
-    @Query
+    @Body
     @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 10000000, minimum = 1)
+    @Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageNumber;
 
-    @Query
+    @Body
     @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
-    @Query
+    @Body
     @NameInMap("ReportId")
-    @Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("Thread")
-    private String thread;
+    @Body
+    @NameInMap("SceneId")
+    private String sceneId;
 
-    private GetJMeterLogsRequest(Builder builder) {
+    private ListPtsReportsRequest(Builder builder) {
         super(builder);
-        this.agentIndex = builder.agentIndex;
         this.beginTime = builder.beginTime;
         this.endTime = builder.endTime;
         this.keyword = builder.keyword;
-        this.level = builder.level;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.reportId = builder.reportId;
-        this.thread = builder.thread;
+        this.sceneId = builder.sceneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetJMeterLogsRequest create() {
+    public static ListPtsReportsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return agentIndex
-     */
-    public Integer getAgentIndex() {
-        return this.agentIndex;
     }
 
     /**
@@ -106,13 +90,6 @@ public class GetJMeterLogsRequest extends Request {
     }
 
     /**
-     * @return level
-     */
-    public String getLevel() {
-        return this.level;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -134,54 +111,41 @@ public class GetJMeterLogsRequest extends Request {
     }
 
     /**
-     * @return thread
+     * @return sceneId
      */
-    public String getThread() {
-        return this.thread;
+    public String getSceneId() {
+        return this.sceneId;
     }
 
-    public static final class Builder extends Request.Builder<GetJMeterLogsRequest, Builder> {
-        private Integer agentIndex; 
+    public static final class Builder extends Request.Builder<ListPtsReportsRequest, Builder> {
         private Long beginTime; 
         private Long endTime; 
         private String keyword; 
-        private String level; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String reportId; 
-        private String thread; 
+        private String sceneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetJMeterLogsRequest request) {
+        private Builder(ListPtsReportsRequest request) {
             super(request);
-            this.agentIndex = request.agentIndex;
             this.beginTime = request.beginTime;
             this.endTime = request.endTime;
             this.keyword = request.keyword;
-            this.level = request.level;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.reportId = request.reportId;
-            this.thread = request.thread;
+            this.sceneId = request.sceneId;
         } 
-
-        /**
-         * AgentIndex.
-         */
-        public Builder agentIndex(Integer agentIndex) {
-            this.putQueryParameter("AgentIndex", agentIndex);
-            this.agentIndex = agentIndex;
-            return this;
-        }
 
         /**
          * BeginTime.
          */
         public Builder beginTime(Long beginTime) {
-            this.putQueryParameter("BeginTime", beginTime);
+            this.putBodyParameter("BeginTime", beginTime);
             this.beginTime = beginTime;
             return this;
         }
@@ -190,7 +154,7 @@ public class GetJMeterLogsRequest extends Request {
          * EndTime.
          */
         public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
+            this.putBodyParameter("EndTime", endTime);
             this.endTime = endTime;
             return this;
         }
@@ -199,17 +163,8 @@ public class GetJMeterLogsRequest extends Request {
          * Keyword.
          */
         public Builder keyword(String keyword) {
-            this.putQueryParameter("Keyword", keyword);
+            this.putBodyParameter("Keyword", keyword);
             this.keyword = keyword;
-            return this;
-        }
-
-        /**
-         * Level.
-         */
-        public Builder level(String level) {
-            this.putQueryParameter("Level", level);
-            this.level = level;
             return this;
         }
 
@@ -217,7 +172,7 @@ public class GetJMeterLogsRequest extends Request {
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
+            this.putBodyParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
@@ -226,7 +181,7 @@ public class GetJMeterLogsRequest extends Request {
          * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
+            this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
@@ -235,23 +190,23 @@ public class GetJMeterLogsRequest extends Request {
          * ReportId.
          */
         public Builder reportId(String reportId) {
-            this.putQueryParameter("ReportId", reportId);
+            this.putBodyParameter("ReportId", reportId);
             this.reportId = reportId;
             return this;
         }
 
         /**
-         * Thread.
+         * SceneId.
          */
-        public Builder thread(String thread) {
-            this.putQueryParameter("Thread", thread);
-            this.thread = thread;
+        public Builder sceneId(String sceneId) {
+            this.putBodyParameter("SceneId", sceneId);
+            this.sceneId = sceneId;
             return this;
         }
 
         @Override
-        public GetJMeterLogsRequest build() {
-            return new GetJMeterLogsRequest(this);
+        public ListPtsReportsRequest build() {
+            return new ListPtsReportsRequest(this);
         } 
 
     } 
