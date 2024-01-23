@@ -31,6 +31,10 @@ public class AssociateResourceShareRequest extends Request {
     private java.util.List < Resources> resources;
 
     @Query
+    @NameInMap("TargetProperties")
+    private java.util.List < TargetProperties> targetProperties;
+
+    @Query
     @NameInMap("Targets")
     private java.util.List < String > targets;
 
@@ -40,6 +44,7 @@ public class AssociateResourceShareRequest extends Request {
         this.permissionNames = builder.permissionNames;
         this.resourceShareId = builder.resourceShareId;
         this.resources = builder.resources;
+        this.targetProperties = builder.targetProperties;
         this.targets = builder.targets;
     }
 
@@ -85,6 +90,13 @@ public class AssociateResourceShareRequest extends Request {
     }
 
     /**
+     * @return targetProperties
+     */
+    public java.util.List < TargetProperties> getTargetProperties() {
+        return this.targetProperties;
+    }
+
+    /**
      * @return targets
      */
     public java.util.List < String > getTargets() {
@@ -96,6 +108,7 @@ public class AssociateResourceShareRequest extends Request {
         private java.util.List < String > permissionNames; 
         private String resourceShareId; 
         private java.util.List < Resources> resources; 
+        private java.util.List < TargetProperties> targetProperties; 
         private java.util.List < String > targets; 
 
         private Builder() {
@@ -108,6 +121,7 @@ public class AssociateResourceShareRequest extends Request {
             this.permissionNames = request.permissionNames;
             this.resourceShareId = request.resourceShareId;
             this.resources = request.resources;
+            this.targetProperties = request.targetProperties;
             this.targets = request.targets;
         } 
 
@@ -144,6 +158,15 @@ public class AssociateResourceShareRequest extends Request {
         public Builder resources(java.util.List < Resources> resources) {
             this.putQueryParameter("Resources", resources);
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * TargetProperties.
+         */
+        public Builder targetProperties(java.util.List < TargetProperties> targetProperties) {
+            this.putQueryParameter("TargetProperties", targetProperties);
+            this.targetProperties = targetProperties;
             return this;
         }
 
@@ -231,6 +254,67 @@ public class AssociateResourceShareRequest extends Request {
 
             public Resources build() {
                 return new Resources(this);
+            } 
+
+        } 
+
+    }
+    public static class TargetProperties extends TeaModel {
+        @NameInMap("Property")
+        private String property;
+
+        @NameInMap("TargetId")
+        private String targetId;
+
+        private TargetProperties(Builder builder) {
+            this.property = builder.property;
+            this.targetId = builder.targetId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return property
+         */
+        public String getProperty() {
+            return this.property;
+        }
+
+        /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public static final class Builder {
+            private String property; 
+            private String targetId; 
+
+            /**
+             * Property.
+             */
+            public Builder property(String property) {
+                this.property = property;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            public TargetProperties build() {
+                return new TargetProperties(this);
             } 
 
         } 
