@@ -17,6 +17,14 @@ public class PushTemplateRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("ActivityContentState")
+    private Object activityContentState;
+
+    @Body
+    @NameInMap("ActivityEvent")
+    private String activityEvent;
+
+    @Body
     @NameInMap("AppId")
     @Validation(required = true)
     private String appId;
@@ -33,6 +41,10 @@ public class PushTemplateRequest extends Request {
     @NameInMap("DeliveryType")
     @Validation(required = true, maximum = 10)
     private Long deliveryType;
+
+    @Body
+    @NameInMap("DismissalDate")
+    private Long dismissalDate;
 
     @Body
     @NameInMap("ExpiredSeconds")
@@ -115,10 +127,13 @@ public class PushTemplateRequest extends Request {
     private PushTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.activityContentState = builder.activityContentState;
+        this.activityEvent = builder.activityEvent;
         this.appId = builder.appId;
         this.channelId = builder.channelId;
         this.classification = builder.classification;
         this.deliveryType = builder.deliveryType;
+        this.dismissalDate = builder.dismissalDate;
         this.expiredSeconds = builder.expiredSeconds;
         this.extendedParams = builder.extendedParams;
         this.miChannelId = builder.miChannelId;
@@ -160,6 +175,20 @@ public class PushTemplateRequest extends Request {
     }
 
     /**
+     * @return activityContentState
+     */
+    public Object getActivityContentState() {
+        return this.activityContentState;
+    }
+
+    /**
+     * @return activityEvent
+     */
+    public String getActivityEvent() {
+        return this.activityEvent;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -185,6 +214,13 @@ public class PushTemplateRequest extends Request {
      */
     public Long getDeliveryType() {
         return this.deliveryType;
+    }
+
+    /**
+     * @return dismissalDate
+     */
+    public Long getDismissalDate() {
+        return this.dismissalDate;
     }
 
     /**
@@ -315,10 +351,13 @@ public class PushTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushTemplateRequest, Builder> {
         private String regionId; 
+        private Object activityContentState; 
+        private String activityEvent; 
         private String appId; 
         private String channelId; 
         private String classification; 
         private Long deliveryType; 
+        private Long dismissalDate; 
         private Long expiredSeconds; 
         private String extendedParams; 
         private String miChannelId; 
@@ -345,10 +384,13 @@ public class PushTemplateRequest extends Request {
         private Builder(PushTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.activityContentState = request.activityContentState;
+            this.activityEvent = request.activityEvent;
             this.appId = request.appId;
             this.channelId = request.channelId;
             this.classification = request.classification;
             this.deliveryType = request.deliveryType;
+            this.dismissalDate = request.dismissalDate;
             this.expiredSeconds = request.expiredSeconds;
             this.extendedParams = request.extendedParams;
             this.miChannelId = request.miChannelId;
@@ -375,6 +417,24 @@ public class PushTemplateRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ActivityContentState.
+         */
+        public Builder activityContentState(Object activityContentState) {
+            this.putBodyParameter("ActivityContentState", activityContentState);
+            this.activityContentState = activityContentState;
+            return this;
+        }
+
+        /**
+         * ActivityEvent.
+         */
+        public Builder activityEvent(String activityEvent) {
+            this.putBodyParameter("ActivityEvent", activityEvent);
+            this.activityEvent = activityEvent;
             return this;
         }
 
@@ -411,6 +471,15 @@ public class PushTemplateRequest extends Request {
         public Builder deliveryType(Long deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
             this.deliveryType = deliveryType;
+            return this;
+        }
+
+        /**
+         * DismissalDate.
+         */
+        public Builder dismissalDate(Long dismissalDate) {
+            this.putBodyParameter("DismissalDate", dismissalDate);
+            this.dismissalDate = dismissalDate;
             return this;
         }
 
