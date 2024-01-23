@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExportRecordRequest extends Request {
     @Query
+    @NameInMap("ExportFileType")
+    private String exportFileType;
+
+    @Query
     @NameInMap("ExportType")
     @Validation(required = true)
     private String exportType;
@@ -27,6 +31,7 @@ public class ExportRecordRequest extends Request {
 
     private ExportRecordRequest(Builder builder) {
         super(builder);
+        this.exportFileType = builder.exportFileType;
         this.exportType = builder.exportType;
         this.lang = builder.lang;
         this.params = builder.params;
@@ -43,6 +48,13 @@ public class ExportRecordRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return exportFileType
+     */
+    public String getExportFileType() {
+        return this.exportFileType;
     }
 
     /**
@@ -67,6 +79,7 @@ public class ExportRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportRecordRequest, Builder> {
+        private String exportFileType; 
         private String exportType; 
         private String lang; 
         private String params; 
@@ -77,10 +90,20 @@ public class ExportRecordRequest extends Request {
 
         private Builder(ExportRecordRequest request) {
             super(request);
+            this.exportFileType = request.exportFileType;
             this.exportType = request.exportType;
             this.lang = request.lang;
             this.params = request.params;
         } 
+
+        /**
+         * ExportFileType.
+         */
+        public Builder exportFileType(String exportFileType) {
+            this.putQueryParameter("ExportFileType", exportFileType);
+            this.exportFileType = exportFileType;
+            return this;
+        }
 
         /**
          * The type of the check result list to export. Valid values:
