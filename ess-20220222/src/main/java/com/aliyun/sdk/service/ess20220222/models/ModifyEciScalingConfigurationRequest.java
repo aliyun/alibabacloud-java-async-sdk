@@ -2522,6 +2522,48 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         @NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
+        @NameInMap("LifecyclePostStartHandlerExecs")
+        private java.util.List < String > lifecyclePostStartHandlerExecs;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetHost")
+        private String lifecyclePostStartHandlerHttpGetHost;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetPath")
+        private String lifecyclePostStartHandlerHttpGetPath;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetPort")
+        private Integer lifecyclePostStartHandlerHttpGetPort;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
+        private String lifecyclePostStartHandlerHttpGetScheme;
+
+        @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
+        private String lifecyclePostStartHandlerTcpSocketHost;
+
+        @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
+        private Integer lifecyclePostStartHandlerTcpSocketPort;
+
+        @NameInMap("LifecyclePreStopHandlerExecs")
+        private java.util.List < String > lifecyclePreStopHandlerExecs;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetHost")
+        private String lifecyclePreStopHandlerHttpGetHost;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetPath")
+        private String lifecyclePreStopHandlerHttpGetPath;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetPort")
+        private Integer lifecyclePreStopHandlerHttpGetPort;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetScheme")
+        private String lifecyclePreStopHandlerHttpGetScheme;
+
+        @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
+        private String lifecyclePreStopHandlerTcpSocketHost;
+
+        @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
+        private Integer lifecyclePreStopHandlerTcpSocketPort;
+
         @NameInMap("Memory")
         private Float memory;
 
@@ -2557,6 +2599,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.gpu = builder.gpu;
             this.image = builder.image;
             this.imagePullPolicy = builder.imagePullPolicy;
+            this.lifecyclePostStartHandlerExecs = builder.lifecyclePostStartHandlerExecs;
+            this.lifecyclePostStartHandlerHttpGetHost = builder.lifecyclePostStartHandlerHttpGetHost;
+            this.lifecyclePostStartHandlerHttpGetPath = builder.lifecyclePostStartHandlerHttpGetPath;
+            this.lifecyclePostStartHandlerHttpGetPort = builder.lifecyclePostStartHandlerHttpGetPort;
+            this.lifecyclePostStartHandlerHttpGetScheme = builder.lifecyclePostStartHandlerHttpGetScheme;
+            this.lifecyclePostStartHandlerTcpSocketHost = builder.lifecyclePostStartHandlerTcpSocketHost;
+            this.lifecyclePostStartHandlerTcpSocketPort = builder.lifecyclePostStartHandlerTcpSocketPort;
+            this.lifecyclePreStopHandlerExecs = builder.lifecyclePreStopHandlerExecs;
+            this.lifecyclePreStopHandlerHttpGetHost = builder.lifecyclePreStopHandlerHttpGetHost;
+            this.lifecyclePreStopHandlerHttpGetPath = builder.lifecyclePreStopHandlerHttpGetPath;
+            this.lifecyclePreStopHandlerHttpGetPort = builder.lifecyclePreStopHandlerHttpGetPort;
+            this.lifecyclePreStopHandlerHttpGetScheme = builder.lifecyclePreStopHandlerHttpGetScheme;
+            this.lifecyclePreStopHandlerTcpSocketHost = builder.lifecyclePreStopHandlerTcpSocketHost;
+            this.lifecyclePreStopHandlerTcpSocketPort = builder.lifecyclePreStopHandlerTcpSocketPort;
             this.memory = builder.memory;
             this.name = builder.name;
             this.ports = builder.ports;
@@ -2646,6 +2702,104 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
+         * @return lifecyclePostStartHandlerExecs
+         */
+        public java.util.List < String > getLifecyclePostStartHandlerExecs() {
+            return this.lifecyclePostStartHandlerExecs;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetHost
+         */
+        public String getLifecyclePostStartHandlerHttpGetHost() {
+            return this.lifecyclePostStartHandlerHttpGetHost;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetPath
+         */
+        public String getLifecyclePostStartHandlerHttpGetPath() {
+            return this.lifecyclePostStartHandlerHttpGetPath;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetPort
+         */
+        public Integer getLifecyclePostStartHandlerHttpGetPort() {
+            return this.lifecyclePostStartHandlerHttpGetPort;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerHttpGetScheme
+         */
+        public String getLifecyclePostStartHandlerHttpGetScheme() {
+            return this.lifecyclePostStartHandlerHttpGetScheme;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerTcpSocketHost
+         */
+        public String getLifecyclePostStartHandlerTcpSocketHost() {
+            return this.lifecyclePostStartHandlerTcpSocketHost;
+        }
+
+        /**
+         * @return lifecyclePostStartHandlerTcpSocketPort
+         */
+        public Integer getLifecyclePostStartHandlerTcpSocketPort() {
+            return this.lifecyclePostStartHandlerTcpSocketPort;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerExecs
+         */
+        public java.util.List < String > getLifecyclePreStopHandlerExecs() {
+            return this.lifecyclePreStopHandlerExecs;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetHost
+         */
+        public String getLifecyclePreStopHandlerHttpGetHost() {
+            return this.lifecyclePreStopHandlerHttpGetHost;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetPath
+         */
+        public String getLifecyclePreStopHandlerHttpGetPath() {
+            return this.lifecyclePreStopHandlerHttpGetPath;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetPort
+         */
+        public Integer getLifecyclePreStopHandlerHttpGetPort() {
+            return this.lifecyclePreStopHandlerHttpGetPort;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerHttpGetScheme
+         */
+        public String getLifecyclePreStopHandlerHttpGetScheme() {
+            return this.lifecyclePreStopHandlerHttpGetScheme;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerTcpSocketHost
+         */
+        public String getLifecyclePreStopHandlerTcpSocketHost() {
+            return this.lifecyclePreStopHandlerTcpSocketHost;
+        }
+
+        /**
+         * @return lifecyclePreStopHandlerTcpSocketPort
+         */
+        public Integer getLifecyclePreStopHandlerTcpSocketPort() {
+            return this.lifecyclePreStopHandlerTcpSocketPort;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -2712,6 +2866,20 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
+            private java.util.List < String > lifecyclePostStartHandlerExecs; 
+            private String lifecyclePostStartHandlerHttpGetHost; 
+            private String lifecyclePostStartHandlerHttpGetPath; 
+            private Integer lifecyclePostStartHandlerHttpGetPort; 
+            private String lifecyclePostStartHandlerHttpGetScheme; 
+            private String lifecyclePostStartHandlerTcpSocketHost; 
+            private Integer lifecyclePostStartHandlerTcpSocketPort; 
+            private java.util.List < String > lifecyclePreStopHandlerExecs; 
+            private String lifecyclePreStopHandlerHttpGetHost; 
+            private String lifecyclePreStopHandlerHttpGetPath; 
+            private Integer lifecyclePreStopHandlerHttpGetPort; 
+            private String lifecyclePreStopHandlerHttpGetScheme; 
+            private String lifecyclePreStopHandlerTcpSocketHost; 
+            private Integer lifecyclePreStopHandlerTcpSocketPort; 
             private Float memory; 
             private String name; 
             private java.util.List < Ports> ports; 
@@ -2803,6 +2971,118 @@ public class ModifyEciScalingConfigurationRequest extends Request {
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerExecs.
+             */
+            public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
+                this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerHttpGetHost.
+             */
+            public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
+                this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerHttpGetPath.
+             */
+            public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
+                this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerHttpGetPort.
+             */
+            public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
+                this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerHttpGetScheme.
+             */
+            public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
+                this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerTcpSocketHost.
+             */
+            public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
+                this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
+                return this;
+            }
+
+            /**
+             * LifecyclePostStartHandlerTcpSocketPort.
+             */
+            public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
+                this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerExecs.
+             */
+            public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
+                this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerHttpGetHost.
+             */
+            public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
+                this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerHttpGetPath.
+             */
+            public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
+                this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerHttpGetPort.
+             */
+            public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
+                this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerHttpGetScheme.
+             */
+            public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
+                this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerTcpSocketHost.
+             */
+            public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
+                this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
+                return this;
+            }
+
+            /**
+             * LifecyclePreStopHandlerTcpSocketPort.
+             */
+            public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
+                this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
                 return this;
             }
 
