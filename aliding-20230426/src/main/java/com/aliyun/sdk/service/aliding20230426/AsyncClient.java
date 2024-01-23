@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOrgHonorTemplateResponse> createOrgHonorTemplate(CreateOrgHonorTemplateRequest request);
 
+    CompletableFuture<CreatePersonalTodoTaskResponse> createPersonalTodoTask(CreatePersonalTodoTaskRequest request);
+
     CompletableFuture<CreateReportResponse> createReport(CreateReportRequest request);
 
     CompletableFuture<CreateScenegroupResponse> createScenegroup(CreateScenegroupRequest request);
