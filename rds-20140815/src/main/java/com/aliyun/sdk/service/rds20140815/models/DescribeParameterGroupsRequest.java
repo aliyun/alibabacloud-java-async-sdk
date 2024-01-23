@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeParameterGroupsRequest extends Request {
     @Query
+    @NameInMap("EnableDetail")
+    private Boolean enableDetail;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
@@ -35,6 +39,7 @@ public class DescribeParameterGroupsRequest extends Request {
 
     private DescribeParameterGroupsRequest(Builder builder) {
         super(builder);
+        this.enableDetail = builder.enableDetail;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -53,6 +58,13 @@ public class DescribeParameterGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableDetail
+     */
+    public Boolean getEnableDetail() {
+        return this.enableDetail;
     }
 
     /**
@@ -91,6 +103,7 @@ public class DescribeParameterGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeParameterGroupsRequest, Builder> {
+        private Boolean enableDetail; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
@@ -103,12 +116,22 @@ public class DescribeParameterGroupsRequest extends Request {
 
         private Builder(DescribeParameterGroupsRequest request) {
             super(request);
+            this.enableDetail = request.enableDetail;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * EnableDetail.
+         */
+        public Builder enableDetail(Boolean enableDetail) {
+            this.putQueryParameter("EnableDetail", enableDetail);
+            this.enableDetail = enableDetail;
+            return this;
+        }
 
         /**
          * OwnerId.

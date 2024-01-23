@@ -126,7 +126,7 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The public endpoint. You can call the DescribeDBInstanceNetInfo to query the public endpoint.
+         * The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
