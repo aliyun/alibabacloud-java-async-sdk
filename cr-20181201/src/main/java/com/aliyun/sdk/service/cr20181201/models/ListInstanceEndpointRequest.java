@@ -26,11 +26,16 @@ public class ListInstanceEndpointRequest extends Request {
     @NameInMap("ModuleName")
     private String moduleName;
 
+    @Query
+    @NameInMap("Summary")
+    private Boolean summary;
+
     private ListInstanceEndpointRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
+        this.summary = builder.summary;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ListInstanceEndpointRequest extends Request {
         return this.moduleName;
     }
 
+    /**
+     * @return summary
+     */
+    public Boolean getSummary() {
+        return this.summary;
+    }
+
     public static final class Builder extends Request.Builder<ListInstanceEndpointRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String moduleName; 
+        private Boolean summary; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class ListInstanceEndpointRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.moduleName = request.moduleName;
+            this.summary = request.summary;
         } 
 
         /**
@@ -111,6 +125,15 @@ public class ListInstanceEndpointRequest extends Request {
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);
             this.moduleName = moduleName;
+            return this;
+        }
+
+        /**
+         * Summary.
+         */
+        public Builder summary(Boolean summary) {
+            this.putQueryParameter("Summary", summary);
+            this.summary = summary;
             return this;
         }
 

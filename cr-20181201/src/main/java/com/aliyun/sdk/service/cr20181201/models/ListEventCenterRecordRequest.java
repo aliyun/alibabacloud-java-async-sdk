@@ -34,6 +34,14 @@ public class ListEventCenterRecordRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RepoName")
+    private String repoName;
+
+    @Query
+    @NameInMap("RepoNamespaceName")
+    private String repoNamespaceName;
+
+    @Query
     @NameInMap("RuleId")
     private String ruleId;
 
@@ -44,6 +52,8 @@ public class ListEventCenterRecordRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.repoName = builder.repoName;
+        this.repoNamespaceName = builder.repoNamespaceName;
         this.ruleId = builder.ruleId;
     }
 
@@ -96,6 +106,20 @@ public class ListEventCenterRecordRequest extends Request {
     }
 
     /**
+     * @return repoName
+     */
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    /**
+     * @return repoNamespaceName
+     */
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
+    }
+
+    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -108,6 +132,8 @@ public class ListEventCenterRecordRequest extends Request {
         private String instanceId; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String repoName; 
+        private String repoNamespaceName; 
         private String ruleId; 
 
         private Builder() {
@@ -121,6 +147,8 @@ public class ListEventCenterRecordRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.repoName = request.repoName;
+            this.repoNamespaceName = request.repoNamespaceName;
             this.ruleId = request.ruleId;
         } 
 
@@ -173,6 +201,24 @@ public class ListEventCenterRecordRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RepoName.
+         */
+        public Builder repoName(String repoName) {
+            this.putQueryParameter("RepoName", repoName);
+            this.repoName = repoName;
+            return this;
+        }
+
+        /**
+         * RepoNamespaceName.
+         */
+        public Builder repoNamespaceName(String repoNamespaceName) {
+            this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
+            this.repoNamespaceName = repoNamespaceName;
             return this;
         }
 
