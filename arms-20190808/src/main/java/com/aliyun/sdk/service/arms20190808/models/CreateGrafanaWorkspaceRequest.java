@@ -37,7 +37,6 @@ public class CreateGrafanaWorkspaceRequest extends Request {
 
     @Query
     @NameInMap("Password")
-    @Validation(required = true)
     private String password;
 
     @Query

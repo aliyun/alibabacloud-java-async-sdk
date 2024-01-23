@@ -98,7 +98,7 @@ public class InitEnvironmentRequest extends Request {
         } 
 
         /**
-         * Locale, the default is Chinese zh.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -107,7 +107,7 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -116,7 +116,11 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * ManagedType.
+         * type of managed:
+         * <p>
+         * - none: not managed. default value of prometheus for ACK.
+         * - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
+         * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);

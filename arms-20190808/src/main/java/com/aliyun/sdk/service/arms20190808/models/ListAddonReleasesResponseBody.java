@@ -307,6 +307,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @NameInMap("Language")
         private String language;
 
+        @NameInMap("Managed")
+        private Boolean managed;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -342,6 +345,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             this.haveConfig = builder.haveConfig;
             this.installUserId = builder.installUserId;
             this.language = builder.language;
+            this.managed = builder.managed;
             this.regionId = builder.regionId;
             this.releaseId = builder.releaseId;
             this.releaseName = builder.releaseName;
@@ -431,6 +435,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return managed
+         */
+        public Boolean getManaged() {
+            return this.managed;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -497,6 +508,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private Boolean haveConfig; 
             private String installUserId; 
             private String language; 
+            private Boolean managed; 
             private String regionId; 
             private String releaseId; 
             private String releaseName; 
@@ -583,6 +595,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * Managed.
+             */
+            public Builder managed(Boolean managed) {
+                this.managed = managed;
                 return this;
             }
 

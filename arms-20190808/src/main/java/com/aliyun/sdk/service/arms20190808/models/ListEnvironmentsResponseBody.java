@@ -444,6 +444,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         @NameInMap("LatestReleaseCreateTime")
         private String latestReleaseCreateTime;
 
+        @NameInMap("ManagedType")
+        private String managedType;
+
         @NameInMap("PrometheusId")
         private Long prometheusId;
 
@@ -481,6 +484,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             this.grafanaFolderTitle = builder.grafanaFolderTitle;
             this.grafanaFolderUid = builder.grafanaFolderUid;
             this.latestReleaseCreateTime = builder.latestReleaseCreateTime;
+            this.managedType = builder.managedType;
             this.prometheusId = builder.prometheusId;
             this.prometheusInstanceId = builder.prometheusInstanceId;
             this.regionId = builder.regionId;
@@ -604,6 +608,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedType
+         */
+        public String getManagedType() {
+            return this.managedType;
+        }
+
+        /**
          * @return prometheusId
          */
         public Long getPrometheusId() {
@@ -668,6 +679,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String grafanaFolderTitle; 
             private String grafanaFolderUid; 
             private String latestReleaseCreateTime; 
+            private String managedType; 
             private Long prometheusId; 
             private String prometheusInstanceId; 
             private String regionId; 
@@ -793,6 +805,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
+                return this;
+            }
+
+            /**
+             * ManagedType.
+             */
+            public Builder managedType(String managedType) {
+                this.managedType = managedType;
                 return this;
             }
 

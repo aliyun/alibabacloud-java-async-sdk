@@ -157,6 +157,9 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         private String latestVersion;
 
+        @NameInMap("Managed")
+        private Boolean managed;
+
         @NameInMap("Name")
         private String name;
 
@@ -174,6 +177,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             this.icon = builder.icon;
             this.language = builder.language;
             this.latestVersion = builder.latestVersion;
+            this.managed = builder.managed;
             this.name = builder.name;
             this.status = builder.status;
             this.version = builder.version;
@@ -237,6 +241,13 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
+         * @return managed
+         */
+        public Boolean getManaged() {
+            return this.managed;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -265,6 +276,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String icon; 
             private String language; 
             private String latestVersion; 
+            private Boolean managed; 
             private String name; 
             private String status; 
             private String version; 
@@ -322,6 +334,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
+                return this;
+            }
+
+            /**
+             * Managed.
+             */
+            public Builder managed(Boolean managed) {
+                this.managed = managed;
                 return this;
             }
 

@@ -180,9 +180,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
-         * <p>
-         * For Cloud type environments, the current field value is RegionId.
+         * The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -228,11 +226,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * type of managed：
+         * type of managed: 
          * <p>
-         * - none： not managed. default value of prometheus for ACK.
-         * - agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.
-         * - agent-exproter： maanged agent and exporter. default of prometheus for Cloud.
+         * - none: not managed. default value of prometheus for ACK.
+         * - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
+         * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
@@ -259,7 +257,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance.
+         * The tags of the instance. You can specify this parameter to manage tags for the instance.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
