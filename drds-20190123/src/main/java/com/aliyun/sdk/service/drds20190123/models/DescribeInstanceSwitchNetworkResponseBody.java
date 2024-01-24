@@ -62,7 +62,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         private VpcInfos vpcInfos; 
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +78,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * VpcInfos.
+         * Indicates the information about the virtual private cloud (VPC) in which the instance is deployed.
          */
         public Builder vpcInfos(VpcInfos vpcInfos) {
             this.vpcInfos = vpcInfos;
@@ -166,7 +166,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             private String vswitchName; 
 
             /**
-             * AzoneId.
+             * Indicates the ID of the zone in which the instance is deployed.
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -174,7 +174,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DrdsSupported.
+             * Indicates whether you can change the network type of the instance.
              */
             public Builder drdsSupported(Boolean drdsSupported) {
                 this.drdsSupported = drdsSupported;
@@ -182,7 +182,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * Indicates the ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -190,7 +190,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * Indicates the ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -198,7 +198,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchName.
+             * Indicates the name of the vSwitch.
              */
             public Builder vswitchName(String vswitchName) {
                 this.vswitchName = vswitchName;
@@ -316,7 +316,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             private VswitchInfos vswitchInfos; 
 
             /**
-             * RegionId.
+             * Indicates the ID of the region in which the instance is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -324,7 +324,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * Indicates the ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -332,7 +332,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * Indicates the name of the VPC.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -340,7 +340,7 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchInfos.
+             * Indicates information about the vSwitch to which the instance is connected.
              */
             public Builder vswitchInfos(VswitchInfos vswitchInfos) {
                 this.vswitchInfos = vswitchInfos;

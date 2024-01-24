@@ -144,20 +144,20 @@ public class SubmitHotExpandTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitHotExpandTaskRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.extendedMapping = response.extendedMapping;
-            this.instanceDbMapping = response.instanceDbMapping;
-            this.mapping = response.mapping;
-            this.supperAccountMapping = response.supperAccountMapping;
-            this.taskDesc = response.taskDesc;
-            this.taskName = response.taskName;
+        private Builder(SubmitHotExpandTaskRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.extendedMapping = request.extendedMapping;
+            this.instanceDbMapping = request.instanceDbMapping;
+            this.mapping = request.mapping;
+            this.supperAccountMapping = request.supperAccountMapping;
+            this.taskDesc = request.taskDesc;
+            this.taskName = request.taskName;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -166,7 +166,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -175,7 +175,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * ExtendedMapping.
+         * The information about the database on which you want to perform hot-spot scale-out.
          */
         public Builder extendedMapping(java.util.List < ExtendedMapping> extendedMapping) {
             this.putQueryParameter("ExtendedMapping", extendedMapping);
@@ -184,7 +184,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * InstanceDbMapping.
+         * The information about the instance to which the hot-spot database belongs.
          */
         public Builder instanceDbMapping(java.util.List < InstanceDbMapping> instanceDbMapping) {
             this.putQueryParameter("InstanceDbMapping", instanceDbMapping);
@@ -193,7 +193,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * Mapping.
+         * The information about the hot-spot database.
          */
         public Builder mapping(java.util.List < Mapping> mapping) {
             this.putQueryParameter("Mapping", mapping);
@@ -202,7 +202,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * SupperAccountMapping.
+         * The information about the privileged account.
          */
         public Builder supperAccountMapping(java.util.List < SupperAccountMapping> supperAccountMapping) {
             this.putQueryParameter("SupperAccountMapping", supperAccountMapping);
@@ -211,7 +211,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * TaskDesc.
+         * The description of the task.
          */
         public Builder taskDesc(String taskDesc) {
             this.putQueryParameter("TaskDesc", taskDesc);
@@ -220,7 +220,7 @@ public class SubmitHotExpandTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -274,7 +274,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String srcInstanceId; 
 
             /**
-             * SrcDb.
+             * The name of the source physical database.
              */
             public Builder srcDb(String srcDb) {
                 this.srcDb = srcDb;
@@ -282,7 +282,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * SrcInstanceId.
+             * The ID of the ApsaraDB RDS instance to which the source physical database belongs.
              */
             public Builder srcInstanceId(String srcInstanceId) {
                 this.srcInstanceId = srcInstanceId;
@@ -336,7 +336,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String instanceName; 
 
             /**
-             * DbList.
+             * The name of the hot-spot database.
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -344,7 +344,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * InstanceName.
+             * The name of the ApsaraDB RDS instance to which the hot-spot database belongs.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -457,7 +457,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String tbShardColumn; 
 
             /**
-             * DbShardColumn.
+             * The shard key used to split the database to which the associated table belongs.
              */
             public Builder dbShardColumn(String dbShardColumn) {
                 this.dbShardColumn = dbShardColumn;
@@ -465,7 +465,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * HotDbName.
+             * The name of the hot-spot database.
              */
             public Builder hotDbName(String hotDbName) {
                 this.hotDbName = hotDbName;
@@ -473,7 +473,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * HotTableName.
+             * The name of the hot-spot table. The name must be prefixed with the name of a logical table.
              */
             public Builder hotTableName(String hotTableName) {
                 this.hotTableName = hotTableName;
@@ -481,7 +481,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * LogicTable.
+             * The name of the logical table on which you want to perform hot-spot scale-out.
              */
             public Builder logicTable(String logicTable) {
                 this.logicTable = logicTable;
@@ -489,7 +489,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * ShardDbValue.
+             * The value of the shard key used to split a database.
              */
             public Builder shardDbValue(String shardDbValue) {
                 this.shardDbValue = shardDbValue;
@@ -497,7 +497,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * ShardTbValue.
+             * The value of the shard key used to split a table.
              */
             public Builder shardTbValue(String shardTbValue) {
                 this.shardTbValue = shardTbValue;
@@ -505,7 +505,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * TbShardColumn.
+             * The shard key used to split an associated table.
              */
             public Builder tbShardColumn(String tbShardColumn) {
                 this.tbShardColumn = tbShardColumn;
@@ -570,7 +570,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             private String supperPassword; 
 
             /**
-             * InstanceName.
+             * The ID of the ApsaraDB RDS instance that has the privileged account.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -578,7 +578,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * SupperAccount.
+             * The name of the privileged account of the ApsaraDB RDS instance.
              */
             public Builder supperAccount(String supperAccount) {
                 this.supperAccount = supperAccount;
@@ -586,7 +586,7 @@ public class SubmitHotExpandTaskRequest extends Request {
             }
 
             /**
-             * SupperPassword.
+             * The password of the privileged account of the ApsaraDB RDS instance.
              */
             public Builder supperPassword(String supperPassword) {
                 this.supperPassword = supperPassword;

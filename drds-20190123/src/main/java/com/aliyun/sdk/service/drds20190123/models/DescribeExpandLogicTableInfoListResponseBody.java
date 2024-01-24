@@ -62,7 +62,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates the result that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +142,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * ShardDbKey.
+             * Indicates the database sharding key.
              */
             public Builder shardDbKey(String shardDbKey) {
                 this.shardDbKey = shardDbKey;
@@ -150,7 +150,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * ShardTbKey.
+             * Indicates the table sharding key.
              */
             public Builder shardTbKey(String shardTbKey) {
                 this.shardTbKey = shardTbKey;
@@ -158,7 +158,7 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * Indicates the name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

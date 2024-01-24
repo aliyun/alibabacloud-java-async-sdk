@@ -117,18 +117,18 @@ public class DescribeTablesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTablesRequest response) {
-            super(response);
-            this.currentPage = response.currentPage;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.pageSize = response.pageSize;
-            this.query = response.query;
-            this.regionId = response.regionId;
+        private Builder(DescribeTablesRequest request) {
+            super(request);
+            this.currentPage = request.currentPage;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -137,7 +137,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the database whose tables you want to query.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -146,7 +146,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -155,7 +155,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of tables returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +164,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * Query.
+         * The query condition. The value of this parameter is the ID of the PolarDB-X 1.0 instance.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -173,7 +173,7 @@ public class DescribeTablesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

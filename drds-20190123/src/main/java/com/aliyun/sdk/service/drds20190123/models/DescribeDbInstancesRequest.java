@@ -30,6 +30,10 @@ public class DescribeDbInstancesRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Search")
     private String search;
 
@@ -39,6 +43,7 @@ public class DescribeDbInstancesRequest extends Request {
         this.drdsInstanceId = builder.drdsInstanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.search = builder.search;
     }
 
@@ -84,6 +89,13 @@ public class DescribeDbInstancesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return search
      */
     public String getSearch() {
@@ -95,23 +107,25 @@ public class DescribeDbInstancesRequest extends Request {
         private String drdsInstanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private String search; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDbInstancesRequest response) {
-            super(response);
-            this.dbInstType = response.dbInstType;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.search = response.search;
+        private Builder(DescribeDbInstancesRequest request) {
+            super(request);
+            this.dbInstType = request.dbInstType;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.search = request.search;
         } 
 
         /**
-         * DbInstType.
+         * Storage layer type. Valid values: **POLARDB** or **RDS**.
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -120,7 +134,7 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -129,7 +143,7 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +152,7 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +161,16 @@ public class DescribeDbInstancesRequest extends Request {
         }
 
         /**
-         * Search.
+         * The ID of the region.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the storage or cluster.
          */
         public Builder search(String search) {
             this.putQueryParameter("Search", search);

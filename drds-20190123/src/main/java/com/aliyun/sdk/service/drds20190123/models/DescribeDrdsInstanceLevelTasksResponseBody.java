@@ -62,7 +62,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         private Tasks tasks; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +78,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The list of returned unfinished tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -238,7 +238,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             private Integer taskType; 
 
             /**
-             * AllowCancel.
+             * Indicates whether the task can be canceled.
              */
             public Builder allowCancel(Boolean allowCancel) {
                 this.allowCancel = allowCancel;
@@ -246,7 +246,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMsg.
+             * The error message returned for the task.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -254,7 +254,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The timestamp when the task is created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -262,7 +262,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the task. Valid values: 0 to 100.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -270,7 +270,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProgressDescription.
+             * The description of the task progress.
              */
             public Builder progressDescription(String progressDescription) {
                 this.progressDescription = progressDescription;
@@ -278,7 +278,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ShowProgress.
+             * Indicates whether the progress of the task is displayed.
              */
             public Builder showProgress(Boolean showProgress) {
                 this.showProgress = showProgress;
@@ -286,7 +286,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task.
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -294,7 +294,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -302,7 +302,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskPhase.
+             * The phase of the task.
              */
             public Builder taskPhase(String taskPhase) {
                 this.taskPhase = taskPhase;
@@ -310,7 +310,13 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The state of the task. Valid values:
+             * <p>
+             * 
+             * *   0: The task is being executed.
+             * *   1: The task is executed.
+             * *   2: The task failed to be executed.
+             * *   3: The task is canceled.
              */
             public Builder taskStatus(Integer taskStatus) {
                 this.taskStatus = taskStatus;
@@ -318,7 +324,7 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task.
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;

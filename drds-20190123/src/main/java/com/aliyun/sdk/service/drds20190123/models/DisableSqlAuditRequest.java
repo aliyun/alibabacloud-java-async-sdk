@@ -63,14 +63,14 @@ public class DisableSqlAuditRequest extends Request {
             super();
         } 
 
-        private Builder(DisableSqlAuditRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DisableSqlAuditRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbName.
+         * The name of the database for which you want to disable the SQL audit feature.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -79,7 +79,7 @@ public class DisableSqlAuditRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

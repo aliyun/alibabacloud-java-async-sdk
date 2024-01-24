@@ -62,7 +62,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data object returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +142,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * CreateTime.
+             * The time when the table was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -150,7 +150,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalTableName.
+             * The original name of the table.
              */
             public Builder originalTableName(String originalTableName) {
                 this.originalTableName = originalTableName;
@@ -158,7 +158,7 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -62,7 +62,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * PreCheckResult.
+         * Indicates the result of the precheck task.
          */
         public Builder preCheckResult(PreCheckResult preCheckResult) {
             this.preCheckResult = preCheckResult;
@@ -70,7 +70,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,7 +154,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * ErrorMsgCode.
+             * Indicates the error code that is returned by a subtask.
              */
             public Builder errorMsgCode(String errorMsgCode) {
                 this.errorMsgCode = errorMsgCode;
@@ -162,7 +162,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsgParams.
+             * Indicates an error message.
              */
             public Builder errorMsgParams(java.util.List < String > errorMsgParams) {
                 this.errorMsgParams = errorMsgParams;
@@ -170,7 +170,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * PreCheckItemName.
+             * Indicates the name of the subtask.
              */
             public Builder preCheckItemName(String preCheckItemName) {
                 this.preCheckItemName = preCheckItemName;
@@ -178,7 +178,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates the state of the subtask.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -243,7 +243,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             private java.util.List < SubCheckItems> subCheckItems; 
 
             /**
-             * PreCheckName.
+             * Indicates the name of the precheck task.
              */
             public Builder preCheckName(String preCheckName) {
                 this.preCheckName = preCheckName;
@@ -251,7 +251,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates the state of the precheck task.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -259,7 +259,7 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * SubCheckItems.
+             * Indicates the details about the subtasks of the precheck task.
              */
             public Builder subCheckItems(java.util.List < SubCheckItems> subCheckItems) {
                 this.subCheckItems = subCheckItems;

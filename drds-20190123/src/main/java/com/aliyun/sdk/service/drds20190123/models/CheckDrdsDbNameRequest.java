@@ -63,14 +63,14 @@ public class CheckDrdsDbNameRequest extends Request {
             super();
         } 
 
-        private Builder(CheckDrdsDbNameRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(CheckDrdsDbNameRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbName.
+         * DRDS database name
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -79,7 +79,7 @@ public class CheckDrdsDbNameRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * DRDS instance ID
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -50,7 +50,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The result set of the query.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Date.
+             * The point in time when the value of the metric was collected. The value is in the UNIX timestamp format. The timestamp is displayed in UTC. Unit: ms.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -118,7 +118,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,7 +195,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * Key.
+             * The name of the metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -203,7 +203,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * The number of nodes.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -211,7 +211,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric value.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -219,7 +219,7 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The details of the monitoring data of the metric.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

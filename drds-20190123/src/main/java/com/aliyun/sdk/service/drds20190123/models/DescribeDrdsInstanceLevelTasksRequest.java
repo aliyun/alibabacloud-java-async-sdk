@@ -49,13 +49,13 @@ public class DescribeDrdsInstanceLevelTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsInstanceLevelTasksRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeDrdsInstanceLevelTasksRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance of which the unfinished tasks you want to query.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -50,7 +50,7 @@ public class UpgradeHiStoreInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the request was successful. A value of true indicates that the request was successful. An error message was returned if the request failed.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class UpgradeHiStoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

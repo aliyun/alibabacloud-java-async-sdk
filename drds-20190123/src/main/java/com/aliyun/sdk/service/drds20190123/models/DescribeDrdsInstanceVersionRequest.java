@@ -62,14 +62,14 @@ public class DescribeDrdsInstanceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsInstanceVersionRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(DescribeDrdsInstanceVersionRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance whose version you want to query.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -78,7 +78,7 @@ public class DescribeDrdsInstanceVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

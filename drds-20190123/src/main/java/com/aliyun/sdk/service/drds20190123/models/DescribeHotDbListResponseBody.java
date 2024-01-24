@@ -74,7 +74,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The result that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -90,7 +90,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -199,7 +199,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -293,7 +293,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             private String randomCode; 
 
             /**
-             * List.
+             * The information about the databases on which hot-spot scale-out is performed.
              */
             public Builder list(List list) {
                 this.list = list;
@@ -301,7 +301,7 @@ public class DescribeHotDbListResponseBody extends TeaModel {
             }
 
             /**
-             * RandomCode.
+             * The random number.
              */
             public Builder randomCode(String randomCode) {
                 this.randomCode = randomCode;

@@ -88,16 +88,16 @@ public class PutStartBackupRequest extends Request {
             super();
         } 
 
-        private Builder(PutStartBackupRequest response) {
-            super(response);
-            this.backupDbNames = response.backupDbNames;
-            this.backupLevel = response.backupLevel;
-            this.backupMode = response.backupMode;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(PutStartBackupRequest request) {
+            super(request);
+            this.backupDbNames = request.backupDbNames;
+            this.backupLevel = request.backupLevel;
+            this.backupMode = request.backupMode;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * BackupDbNames.
+         * If you need to back up data at the database level, you must specify the list of databases to be backed up, and separate multiple databases with commas (,).
          */
         public Builder backupDbNames(String backupDbNames) {
             this.putQueryParameter("BackupDbNames", backupDbNames);
@@ -106,7 +106,11 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * BackupLevel.
+         * The backup level. Valid values:
+         * <p>
+         * 
+         * *   instance: instance
+         * *   db: The database type.
          */
         public Builder backupLevel(String backupLevel) {
             this.putQueryParameter("BackupLevel", backupLevel);
@@ -115,7 +119,11 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. For more information, see [backup mode](~~108631~~) and the valid values are as follows:
+         * <p>
+         * 
+         * *   phy: fast backup
+         * *   logic: Consistent backup
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -124,7 +132,7 @@ public class PutStartBackupRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -36,6 +36,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateInstanceInternetAddressResponse> createInstanceInternetAddress(CreateInstanceInternetAddressRequest request);
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+      *
+     */
     CompletableFuture<CreateOrderForRdsResponse> createOrderForRds(CreateOrderForRdsRequest request);
 
     CompletableFuture<CreateShardTaskResponse> createShardTask(CreateShardTaskRequest request);
@@ -108,6 +112,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceSwitchAzoneResponse> describeInstanceSwitchAzone(DescribeInstanceSwitchAzoneRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<DescribeInstanceSwitchNetworkResponse> describeInstanceSwitchNetwork(DescribeInstanceSwitchNetworkRequest request);
 
     CompletableFuture<DescribePreCheckResultResponse> describePreCheckResult(DescribePreCheckResultRequest request);
@@ -176,6 +184,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveDrdsDbFailedRecordResponse> removeDrdsDbFailedRecord(RemoveDrdsDbFailedRecordRequest request);
 
+    /**
+      * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+      * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+      *
+     */
     CompletableFuture<RemoveDrdsInstanceResponse> removeDrdsInstance(RemoveDrdsInstanceRequest request);
 
     CompletableFuture<RemoveInstanceAccountResponse> removeInstanceAccount(RemoveInstanceAccountRequest request);

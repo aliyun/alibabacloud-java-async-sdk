@@ -50,7 +50,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the database creation failure records were removed from the DRDS instance.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -77,15 +77,15 @@ public class DescribeDrdsDBClusterRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsDBClusterRequest response) {
-            super(response);
-            this.dbInstanceId = response.dbInstanceId;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeDrdsDBClusterRequest request) {
+            super(request);
+            this.dbInstanceId = request.dbInstanceId;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbInstanceId.
+         * The ID of the PolarDB cluster.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -94,7 +94,7 @@ public class DescribeDrdsDBClusterRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the DRDS database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -103,7 +103,7 @@ public class DescribeDrdsDBClusterRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -62,7 +62,7 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DbNames.
+         * The details about a database.
          */
         public Builder dbNames(DbNames dbNames) {
             this.dbNames = dbNames;
@@ -70,7 +70,7 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of request.
          */
         public Builder success(Boolean success) {
             this.success = success;

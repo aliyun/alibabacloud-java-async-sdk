@@ -62,7 +62,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * BackupPolicyDO.
+         * The information about the backup policy.
          */
         public Builder backupPolicyDO(BackupPolicyDO backupPolicyDO) {
             this.backupPolicyDO = backupPolicyDO;
@@ -70,7 +70,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             private String preferredBackupTime; 
 
             /**
-             * BackupAppName.
+             * No value is returned.
              */
             public Builder backupAppName(String backupAppName) {
                 this.backupAppName = backupAppName;
@@ -330,7 +330,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDbName.
+             * No value is returned.
              */
             public Builder backupDbName(String backupDbName) {
                 this.backupDbName = backupDbName;
@@ -338,7 +338,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLevel.
+             * No value is returned.
              */
             public Builder backupLevel(String backupLevel) {
                 this.backupLevel = backupLevel;
@@ -346,7 +346,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLog.
+             * No value is returned.
              */
             public Builder backupLog(String backupLog) {
                 this.backupLog = backupLog;
@@ -354,7 +354,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * No value is returned.
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -362,7 +362,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPolicyMode.
+             * No value is returned.
              */
             public Builder backupPolicyMode(String backupPolicyMode) {
                 this.backupPolicyMode = backupPolicyMode;
@@ -370,7 +370,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupRetentionPeriod.
+             * No value is returned.
              */
             public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -378,7 +378,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * No value is returned.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -386,7 +386,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * DataBackupRetentionPeriod.
+             * No value is returned.
              */
             public Builder dataBackupRetentionPeriod(Long dataBackupRetentionPeriod) {
                 this.dataBackupRetentionPeriod = dataBackupRetentionPeriod;
@@ -394,7 +394,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * No value is returned.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -402,7 +402,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * No value is returned.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -410,7 +410,11 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * HighSpaceUsageProtection.
+             * Indicates whether the feature is enabled to forcibly delete binary log files if the used storage space of the instance exceeds 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values:
+             * <p>
+             * 
+             * *   1: The feature is enabled.
+             * *   0: The feature is disabled.
              */
             public Builder highSpaceUsageProtection(Long highSpaceUsageProtection) {
                 this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -418,7 +422,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionHours.
+             * The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: **18**. The value **0** indicates that log backup files are not retained.
              */
             public Builder localLogRetentionHours(Long localLogRetentionHours) {
                 this.localLogRetentionHours = localLogRetentionHours;
@@ -426,7 +430,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionSpace.
+             * The maximum storage usage that is allowed for local log files. Valid values: 0 to 50. Default value: 30.
              */
             public Builder localLogRetentionSpace(Long localLogRetentionSpace) {
                 this.localLogRetentionSpace = localLogRetentionSpace;
@@ -434,7 +438,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * LogBackupRetentionPeriod.
+             * No value is returned.
              */
             public Builder logBackupRetentionPeriod(Long logBackupRetentionPeriod) {
                 this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -442,7 +446,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * NextBackupActuallyTime.
+             * No value is returned.
              */
             public Builder nextBackupActuallyTime(String nextBackupActuallyTime) {
                 this.nextBackupActuallyTime = nextBackupActuallyTime;
@@ -450,7 +454,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupPeriod.
+             * No value is returned.
              */
             public Builder preferredBackupPeriod(String preferredBackupPeriod) {
                 this.preferredBackupPeriod = preferredBackupPeriod;
@@ -458,7 +462,7 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupTime.
+             * No value is returned.
              */
             public Builder preferredBackupTime(String preferredBackupTime) {
                 this.preferredBackupTime = preferredBackupTime;

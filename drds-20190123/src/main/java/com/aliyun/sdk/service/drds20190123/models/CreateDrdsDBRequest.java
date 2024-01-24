@@ -179,23 +179,26 @@ public class CreateDrdsDBRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDrdsDBRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.dbInstType = response.dbInstType;
-            this.dbInstanceIsCreating = response.dbInstanceIsCreating;
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.encode = response.encode;
-            this.instDbName = response.instDbName;
-            this.password = response.password;
-            this.rdsInstance = response.rdsInstance;
-            this.rdsSuperAccount = response.rdsSuperAccount;
-            this.type = response.type;
+        private Builder(CreateDrdsDBRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.dbInstType = request.dbInstType;
+            this.dbInstanceIsCreating = request.dbInstanceIsCreating;
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.encode = request.encode;
+            this.instDbName = request.instDbName;
+            this.password = request.password;
+            this.rdsInstance = request.rdsInstance;
+            this.rdsSuperAccount = request.rdsSuperAccount;
+            this.type = request.type;
         } 
 
         /**
-         * AccountName.
+         * The name of the account that has permissions to access all databases on the ApsaraDB RDS for MySQL instance.
+         * <p>
+         * 
+         * This parameter is required only when the Type parameter is set to VERTICAL.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -204,7 +207,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * DbInstType.
+         * The type of the storage instances that are used by the PolarDB-X 1.0 database. Set the value to RDS.
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -213,7 +216,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * DbInstanceIsCreating.
+         * Specifies whether the required ApsaraDB RDS for MySQL instance is being created.
          */
         public Builder dbInstanceIsCreating(Boolean dbInstanceIsCreating) {
             this.putQueryParameter("DbInstanceIsCreating", dbInstanceIsCreating);
@@ -222,7 +225,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the PolarDB-X 1.0 database you want to create.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -231,7 +234,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance on which you want to create the database.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -240,7 +243,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * Encode.
+         * The encoding method that is used by the database.
          */
         public Builder encode(String encode) {
             this.putQueryParameter("Encode", encode);
@@ -258,7 +261,7 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password that is used to log on to the database.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -285,7 +288,11 @@ public class CreateDrdsDBRequest extends Request {
         }
 
         /**
-         * Type.
+         * The partitioning mode of the database. Valid values:
+         * <p>
+         * 
+         * *   **HORIZONTAL**: The database is horizontally partitioned (sharded).
+         * *   **VERTICAL**: The database is vertically partitioned.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -339,7 +346,7 @@ public class CreateDrdsDBRequest extends Request {
             private java.util.List < String > shardDbName; 
 
             /**
-             * DbInstanceId.
+             * The ID of the ApsaraDB RDS for MySQL instance on which the databases need to be vertically partitioned. This parameter is required only when the Type parameter is set to VERTICAL.
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -412,7 +419,7 @@ public class CreateDrdsDBRequest extends Request {
             private String password; 
 
             /**
-             * AccountName.
+             * The account name of the super administrator that is used to connect to the ApsaraDB RDS for MySQL instance.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -420,7 +427,7 @@ public class CreateDrdsDBRequest extends Request {
             }
 
             /**
-             * DbInstanceId.
+             * The ID of ApsaraDB RDS instance.
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -428,7 +435,7 @@ public class CreateDrdsDBRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password of the super administrator account that is used to connect to the ApsaraDB RDS instance.
              */
             public Builder password(String password) {
                 this.password = password;

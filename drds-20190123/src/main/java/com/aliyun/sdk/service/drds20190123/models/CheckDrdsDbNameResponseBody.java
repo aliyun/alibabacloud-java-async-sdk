@@ -62,7 +62,7 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the DRDS database name is valid. Valid values: true: The database name is valid. false: the database name is invalid.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class CheckDrdsDbNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

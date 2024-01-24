@@ -62,7 +62,7 @@ public class EnableSqlAuditResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class EnableSqlAuditResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indices whether the SQL audit feature is enabled.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class EnableSqlAuditResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

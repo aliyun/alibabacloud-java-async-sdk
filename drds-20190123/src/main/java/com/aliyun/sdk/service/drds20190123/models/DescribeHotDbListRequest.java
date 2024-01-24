@@ -63,14 +63,14 @@ public class DescribeHotDbListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHotDbListRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeHotDbListRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -79,7 +79,7 @@ public class DescribeHotDbListRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

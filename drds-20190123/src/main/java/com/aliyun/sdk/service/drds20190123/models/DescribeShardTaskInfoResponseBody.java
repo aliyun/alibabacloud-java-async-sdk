@@ -62,7 +62,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates the data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -166,7 +166,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Expired.
+             * Indicates the number of remaining days before the tasks expire.
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -174,7 +174,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * Indicates the progress of the tasks.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -182,7 +182,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time when the tasks are performed.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -190,7 +190,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * Indicates the number of tasks.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -198,7 +198,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tps.
+             * Indicates the number of transactions processed by the database per second.
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -287,7 +287,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Expired.
+             * Indicates the number of remaining days before the tasks expire.
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -295,7 +295,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * Indicates the progress of the tasks.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -303,7 +303,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time when the tasks are performed.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -311,7 +311,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * Indicates the number of tasks.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -319,7 +319,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tps.
+             * Indicates the number of transactions processed by the database per second.
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -408,7 +408,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Expired.
+             * Indicates the number of remaining days before the tasks expire.
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -416,7 +416,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * Indicates the progress of the tasks.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -424,7 +424,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time when the tasks are performed.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -432,7 +432,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * Indicates the number of tasks.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -440,7 +440,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tps.
+             * Indicates the number of transactions processed by the database per second.
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -505,7 +505,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Delay.
+             * Indicates the latency of the incremental data synchronization.
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -513,7 +513,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time when the incremental data synchronization is performed.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -521,7 +521,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tps.
+             * Indicates the number of transactions processed by the database per second.
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -610,7 +610,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private Integer tps; 
 
             /**
-             * Expired.
+             * Indicates the number of remaining days before the tasks expire.
              */
             public Builder expired(Integer expired) {
                 this.expired = expired;
@@ -618,7 +618,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * Indicates the progress of the tasks.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -626,7 +626,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time when the tasks are performed.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -634,7 +634,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * Indicates the number of tasks.
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -642,7 +642,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Tps.
+             * Indicates the number of transactions processed by the database per second.
              */
             public Builder tps(Integer tps) {
                 this.tps = tps;
@@ -803,7 +803,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             private String targetTableName; 
 
             /**
-             * Expired.
+             * Indicates the number of remaining days before the tasks to shard tables or convert tables expire.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -811,7 +811,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Full.
+             * Indicates information about full migration tasks.
              */
             public Builder full(Full full) {
                 this.full = full;
@@ -819,7 +819,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FullCheck.
+             * Indicates information about full check tasks.
              */
             public Builder fullCheck(FullCheck fullCheck) {
                 this.fullCheck = fullCheck;
@@ -827,7 +827,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FullRevise.
+             * Indicates information about full correction tasks.
              */
             public Builder fullRevise(FullRevise fullRevise) {
                 this.fullRevise = fullRevise;
@@ -835,7 +835,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Increment.
+             * Indicates information about incremental data synchronization.
              */
             public Builder increment(Increment increment) {
                 this.increment = increment;
@@ -843,7 +843,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * Indicates the incremental data synchronization progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -851,7 +851,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Review.
+             * Indicates check tasks.
              */
             public Builder review(Review review) {
                 this.review = review;
@@ -859,7 +859,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableName.
+             * Indicates the name of the table that you convert or shard.
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -867,7 +867,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Stage.
+             * Indicates the current stage of the task.
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -875,7 +875,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates the state of the tasks to shard tables or convert tables.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -883,7 +883,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TargetTableName.
+             * Indicates the name of the table after you convert or shard the table.
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;

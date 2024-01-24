@@ -62,7 +62,7 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates the details of the result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +171,7 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * DrdsInstanceIdList.
+             * Indicates the ID of the instance.
              */
             public Builder drdsInstanceIdList(DrdsInstanceIdList drdsInstanceIdList) {
                 this.drdsInstanceIdList = drdsInstanceIdList;
@@ -179,7 +179,7 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * Indicates the ID of the order.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

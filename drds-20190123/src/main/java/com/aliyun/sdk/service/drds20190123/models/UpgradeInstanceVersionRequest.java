@@ -75,15 +75,15 @@ public class UpgradeInstanceVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeInstanceVersionRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.rpm = response.rpm;
+        private Builder(UpgradeInstanceVersionRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.rpm = request.rpm;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance that you want to upgrade.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -92,7 +92,7 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class UpgradeInstanceVersionRequest extends Request {
         }
 
         /**
-         * Rpm.
+         * The version number of the PolarDB-X 1.0 instance. You can leave this parameter unspecified.
          */
         public Builder rpm(String rpm) {
             this.putQueryParameter("Rpm", rpm);

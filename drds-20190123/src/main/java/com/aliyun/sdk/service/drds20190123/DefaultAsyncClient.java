@@ -207,6 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and pricing of PolarDB-X 1.0. For more information, visit the [pricing page](https://www.aliyun.com/price/product#/rds/detail).
+      *
+     */
     @Override
     public CompletableFuture<CreateOrderForRdsResponse> createOrderForRds(CreateOrderForRdsRequest request) {
         try {
@@ -711,6 +715,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ****
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceSwitchNetworkResponse> describeInstanceSwitchNetwork(DescribeInstanceSwitchNetworkRequest request) {
         try {
@@ -1187,6 +1195,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > *   You can call this operation to release an instance that is charged based on only the pay-as-you-go billing method.
+      * >*   If the specifications of the instance are being changed, or one or more databases exist in the instance, you cannot call this operation to release the instance.
+      *
+     */
     @Override
     public CompletableFuture<RemoveDrdsInstanceResponse> removeDrdsInstance(RemoveDrdsInstanceRequest request) {
         try {

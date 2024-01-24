@@ -62,7 +62,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned data set.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             private Boolean extraWriteEnabled; 
 
             /**
-             * DbName.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -198,7 +198,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Detailed.
+             * Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.
              */
             public Builder detailed(String detailed) {
                 this.detailed = detailed;
@@ -206,7 +206,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -214,7 +214,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraAliUid.
+             * The UID of the external delivery.
+             * <p>
+             * 
+             * > This parameter is returned only if external log delivery is enabled.
              */
             public Builder extraAliUid(Long extraAliUid) {
                 this.extraAliUid = extraAliUid;
@@ -222,7 +225,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraSlsLogStore.
+             * The Log Service Logstore from which logs are delivered.
+             * <p>
+             * 
+             * > This parameter is returned only if external log delivery is enabled.
              */
             public Builder extraSlsLogStore(String extraSlsLogStore) {
                 this.extraSlsLogStore = extraSlsLogStore;
@@ -230,7 +236,10 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraSlsProject.
+             * The Log Service project from which logs are delivered.
+             * <p>
+             * 
+             * > This parameter is returned only if external log delivery is enabled.
              */
             public Builder extraSlsProject(String extraSlsProject) {
                 this.extraSlsProject = extraSlsProject;
@@ -238,7 +247,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraWriteEnabled.
+             * Indicates whether external log delivery is enabled. Valid values: true and false.
              */
             public Builder extraWriteEnabled(Boolean extraWriteEnabled) {
                 this.extraWriteEnabled = extraWriteEnabled;
@@ -279,7 +288,7 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             private java.util.List < DataData> data; 
 
             /**
-             * Data.
+             * The returned data set.
              */
             public Builder data(java.util.List < DataData> data) {
                 this.data = data;

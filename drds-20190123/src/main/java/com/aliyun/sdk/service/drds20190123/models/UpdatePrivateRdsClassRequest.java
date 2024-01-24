@@ -115,18 +115,21 @@ public class UpdatePrivateRdsClassRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePrivateRdsClassRequest response) {
-            super(response);
-            this.autoUseCoupon = response.autoUseCoupon;
-            this.DBInstanceId = response.DBInstanceId;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.prePayDuration = response.prePayDuration;
-            this.rdsClass = response.rdsClass;
-            this.storage = response.storage;
+        private Builder(UpdatePrivateRdsClassRequest request) {
+            super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
+            this.DBInstanceId = request.DBInstanceId;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.prePayDuration = request.prePayDuration;
+            this.rdsClass = request.rdsClass;
+            this.storage = request.storage;
         } 
 
         /**
-         * AutoUseCoupon.
+         * Specifies whether to use vouchers to offset the purchase fees. Valid values: **true** and **false**. Default value: false.
+         * <p>
+         * 
+         * > If you downgrade the specifications of an instance after you use the vouchers, the vouchers used for the purchase cannot be refunded.
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -135,7 +138,10 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the custom ApsaraDB RDS instance at the storage layer.
+         * <p>
+         * 
+         * > You can call the [DescribeDrdsRdsInstances](~~xxxx~~) operation to query the details of all ApsaraDB RDS instances at the storage layer of a PolarDB-X 1.0 instance, including the IDs of the ApsaraDB RDS instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -144,7 +150,10 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
+         * <p>
+         * 
+         * > You can call the [DescribeDrdsInstances](~~139284~~) operation to query the details of all PolarDB-X 1.0 instances within an Alibaba Cloud account, including the IDs of the instances.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -153,7 +162,7 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * PrePayDuration.
+         * This parameter is discontinued.
          */
         public Builder prePayDuration(Integer prePayDuration) {
             this.putQueryParameter("PrePayDuration", prePayDuration);
@@ -162,7 +171,10 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * RdsClass.
+         * The new instance type of the custom ApsaraDB RDS instance at the storage layer.
+         * <p>
+         * 
+         * > You can call the [DescribeAvailableClasses](~~196546~~) operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.
          */
         public Builder rdsClass(String rdsClass) {
             this.putQueryParameter("RdsClass", rdsClass);
@@ -171,7 +183,10 @@ public class UpdatePrivateRdsClassRequest extends Request {
         }
 
         /**
-         * Storage.
+         * The new storage capacity of the custom ApsaraDB RDS instance at the storage layer.
+         * <p>
+         * 
+         * > You can call the [DescribeAvailableClasses](~~196546~~) operation to view the specifications that are supported for a custom ApsaraDB RDS instance. The specifications include the instance type and the storage capacity.
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);

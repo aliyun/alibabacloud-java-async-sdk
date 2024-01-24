@@ -50,7 +50,7 @@ public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The result returned by the current API.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

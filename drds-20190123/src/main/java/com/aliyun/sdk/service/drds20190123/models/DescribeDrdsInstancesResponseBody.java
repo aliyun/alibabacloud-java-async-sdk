@@ -86,7 +86,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Instances.
+         * The list of returned instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of instances returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of instances returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -174,7 +174,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     }
     public static class Vip extends TeaModel {
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("Port")
         private String port;
@@ -188,12 +188,16 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         @NameInMap("VswitchId")
         private String vswitchId;
 
+        @NameInMap("dns")
+        private String dns;
+
         private Vip(Builder builder) {
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.port = builder.port;
             this.type = builder.type;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
+            this.dns = builder.dns;
         }
 
         public static Builder builder() {
@@ -205,10 +209,10 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -239,23 +243,31 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.vswitchId;
         }
 
+        /**
+         * @return dns
+         */
+        public String getDns() {
+            return this.dns;
+        }
+
         public static final class Builder {
-            private String IP; 
+            private String ip; 
             private String port; 
             private String type; 
             private String vpcId; 
             private String vswitchId; 
+            private String dns; 
 
             /**
-             * IP.
+             * The virtual IP address.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * Port.
+             * The ports that are opened on the VIP.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -263,7 +275,11 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the VIP. Valid values:
+             * <p>
+             * 
+             * *   intranet: a private IP address
+             * *   internet: a public IP address
              */
             public Builder type(String type) {
                 this.type = type;
@@ -271,7 +287,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -279,10 +295,18 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
+                return this;
+            }
+
+            /**
+             * The domain name that is mapped to the VIP.
+             */
+            public Builder dns(String dns) {
+                this.dns = dns;
                 return this;
             }
 
@@ -410,6 +434,9 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         private String zoneId;
 
+        @NameInMap("series")
+        private String series;
+
         private Instance(Builder builder) {
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
@@ -436,6 +463,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             this.vpcCloudInstanceId = builder.vpcCloudInstanceId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
+            this.series = builder.series;
         }
 
         public static Builder builder() {
@@ -621,6 +649,13 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return series
+         */
+        public String getSeries() {
+            return this.series;
+        }
+
         public static final class Builder {
             private String commodityCode; 
             private Long createTime; 
@@ -647,9 +682,10 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             private String vpcCloudInstanceId; 
             private String vpcId; 
             private String zoneId; 
+            private String series; 
 
             /**
-             * CommodityCode.
+             * The commodity code of the service.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -657,7 +693,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp that indicates when the instance is created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -665,7 +701,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -673,7 +709,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DrdsInstanceId.
+             * The ID of the instance.
              */
             public Builder drdsInstanceId(String drdsInstanceId) {
                 this.drdsInstanceId = drdsInstanceId;
@@ -681,7 +717,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The timestamp that indicates when the instance expires.
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -689,7 +725,12 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstRole.
+             * The role of the instance. Valid values:
+             * <p>
+             * 
+             * *   MASTER: The instance is a primary instance.
+             * *   SLAVE: The instance is a read-only instance to analyze complex queries.
+             * *   SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.
              */
             public Builder instRole(String instRole) {
                 this.instRole = instRole;
@@ -697,7 +738,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSeries.
+             * The instance series.
              */
             public Builder instanceSeries(String instanceSeries) {
                 this.instanceSeries = instanceSeries;
@@ -705,7 +746,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specification of the instance.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -713,7 +754,12 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The tag of the instance. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**: The instance is a standard instance.
+             * *   **HA**: The instance is a high-availability (HA) instance.
+             * *   **VPC**: The instance is a VPC-based instance.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -721,7 +767,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * The machine type of the instance. Valid value: ecs.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -729,7 +775,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MasterInstanceId.
+             * The ID of the primary instance.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -737,7 +783,11 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **CLASSIC**
+             * *   **VPC**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -745,7 +795,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderInstanceId.
+             * The ID of the purchased instance.
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;
@@ -753,7 +803,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersion.
+             * The version of the service.
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -761,7 +811,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyDBInstanceIds.
+             * The IDs of read-only instances that are associated with the instance.
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -769,7 +819,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -777,7 +827,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -785,7 +835,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -793,7 +843,11 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PUBLIC**: The returned instance is a shared instance.
+             * *   **PRIVATE**: The returned instance is a dedicated instance.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -801,7 +855,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the instance.
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -809,7 +863,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionAction.
+             * Indicates whether the version of the instance can be upgraded.
              */
             public Builder versionAction(String versionAction) {
                 this.versionAction = versionAction;
@@ -817,7 +871,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Vips.
+             * The list of returned virtual IP addresses (VIPs).
              */
             public Builder vips(Vips vips) {
                 this.vips = vips;
@@ -825,7 +879,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcCloudInstanceId.
+             * The ID of the instance that is deployed in the VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -833,7 +887,7 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -841,10 +895,23 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone in which the resource is located.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * The edition of the instance. Valid values:
+             * <p>
+             * 
+             * *   **starter**: Starter Edition
+             * *   **enterprise**: Enterprise Edition
+             * *   **standard**: Standard Edition
+             */
+            public Builder series(String series) {
+                this.series = series;
                 return this;
             }
 

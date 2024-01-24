@@ -62,7 +62,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * BackupSets.
+         * The list of backup sets.
          */
         public Builder backupSets(BackupSets backupSets) {
             this.backupSets = backupSets;
@@ -70,7 +70,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -279,7 +279,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * BackupConsitentTime.
+             * Backup Recovery duration.
              */
             public Builder backupConsitentTime(String backupConsitentTime) {
                 this.backupConsitentTime = backupConsitentTime;
@@ -287,7 +287,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDbs.
+             * The list of backup databases.
              */
             public Builder backupDbs(BackupDbs backupDbs) {
                 this.backupDbs = backupDbs;
@@ -295,7 +295,10 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEndTime.
+             * The end of the backup time which is in timestamp format (measured in millisecond).
+             * <p>
+             * 
+             * >  0 indicates not finished.
              */
             public Builder backupEndTime(Long backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -303,7 +306,11 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLevel.
+             * The level of the backup. Valid values:
+             * <p>
+             * 
+             * *   db: The database level.
+             * *   instance: the instance level.
              */
             public Builder backupLevel(String backupLevel) {
                 this.backupLevel = backupLevel;
@@ -311,7 +318,11 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup method. Valid values:
+             * <p>
+             * 
+             * *   logic: the logical backup.
+             * *   phy: fast backup
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -319,7 +330,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The beginning of the backup time which is in timestamp format (measured in millisecond).
              */
             public Builder backupStartTime(Long backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -327,7 +338,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupTotalSize.
+             * The size of the backup set. Unit: MB.
              */
             public Builder backupTotalSize(String backupTotalSize) {
                 this.backupTotalSize = backupTotalSize;
@@ -335,7 +346,11 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The type of the backup. Valid values:
+             * <p>
+             * 
+             * *   manual: indicates a manual backup.
+             * *   auto: indicates an automatic backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -343,7 +358,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRecovery.
+             * Indicates whether the backup set can be restored. Valid values:
              */
             public Builder enableRecovery(Boolean enableRecovery) {
                 this.enableRecovery = enableRecovery;
@@ -351,7 +366,7 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data backup file you want to use.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -359,7 +374,13 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the backup instance. Valid values:
+             * <p>
+             * 
+             * *   \-1: Failed
+             * *   0: Not started
+             * *   1: The storage instance is running.
+             * *   2: Success
              */
             public Builder status(Long status) {
                 this.status = status;

@@ -102,17 +102,17 @@ public class EnableSqlAuditRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSqlAuditRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.isRecall = response.isRecall;
-            this.recallEndTimestamp = response.recallEndTimestamp;
-            this.recallStartTimestamp = response.recallStartTimestamp;
+        private Builder(EnableSqlAuditRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.isRecall = request.isRecall;
+            this.recallEndTimestamp = request.recallEndTimestamp;
+            this.recallStartTimestamp = request.recallStartTimestamp;
         } 
 
         /**
-         * DbName.
+         * The name of the database for which you want to enable the SQL audit feature.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -121,7 +121,7 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -130,7 +130,7 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * IsRecall.
+         * Specifies whether to backtrack historical SQL statements for auditing.
          */
         public Builder isRecall(Boolean isRecall) {
             this.putQueryParameter("IsRecall", isRecall);
@@ -139,7 +139,10 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * RecallEndTimestamp.
+         * The timestamp that indicates when the backtracking ends. Unit: milliseconds.
+         * <p>
+         * 
+         * > The end time of the backtracking must be later than the start time of the backtracking.
          */
         public Builder recallEndTimestamp(String recallEndTimestamp) {
             this.putQueryParameter("RecallEndTimestamp", recallEndTimestamp);
@@ -148,7 +151,7 @@ public class EnableSqlAuditRequest extends Request {
         }
 
         /**
-         * RecallStartTimestamp.
+         * The timestamp that indicates when the backtracking starts. Unit: milliseconds.
          */
         public Builder recallStartTimestamp(String recallStartTimestamp) {
             this.putQueryParameter("RecallStartTimestamp", recallStartTimestamp);

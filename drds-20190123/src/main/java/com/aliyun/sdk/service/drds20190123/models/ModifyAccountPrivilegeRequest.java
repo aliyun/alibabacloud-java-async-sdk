@@ -89,16 +89,16 @@ public class ModifyAccountPrivilegeRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAccountPrivilegeRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.dbPrivilege = response.dbPrivilege;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
+        private Builder(ModifyAccountPrivilegeRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.dbPrivilege = request.dbPrivilege;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccountName.
+         * The username of the account that you want to modify.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -116,7 +116,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -125,7 +125,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the PolarDB-X 1.0 instance is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +179,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
             private String privilege; 
 
             /**
-             * DbName.
+             * The name of the database that you want to manage by using the account to modify.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -187,7 +187,7 @@ public class ModifyAccountPrivilegeRequest extends Request {
             }
 
             /**
-             * Privilege.
+             * The permissions that you want to grant to the account.
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;

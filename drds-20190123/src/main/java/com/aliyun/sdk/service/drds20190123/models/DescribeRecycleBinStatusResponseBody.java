@@ -62,7 +62,7 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,11 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the table recycle bin. Valid values:
+         * <p>
+         * 
+         * *   disable: The table recycle bin is enabled.
+         * *   enable: The table recycle bin is disabled.
          */
         public Builder status(String status) {
             this.status = status;
@@ -78,7 +82,7 @@ public class DescribeRecycleBinStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The result of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;

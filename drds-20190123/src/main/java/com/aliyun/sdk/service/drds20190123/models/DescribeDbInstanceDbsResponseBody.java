@@ -74,7 +74,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * Databases.
+         * Indicates the information about the storage-layer databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -82,7 +82,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -98,7 +98,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Indicates the total number of storage-layer databases.
          */
         public Builder total(String total) {
             this.total = total;
@@ -162,7 +162,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * DbName.
+             * Indicates the name of a storage-layer database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -170,7 +170,7 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * Indicates the description of the storage-layer database.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -178,7 +178,12 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates the state of the storage-layer database. Valid values:
+             * <p>
+             * 
+             * *   **0**: The database is being created.
+             * *   **1**: The database is available.
+             * *   **3**: The database is being deleted.
              */
             public Builder status(Integer status) {
                 this.status = status;

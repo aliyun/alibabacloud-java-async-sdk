@@ -62,7 +62,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreOrderDO.
+         * The returned data object.
          */
         public Builder restoreOrderDO(RestoreOrderDO restoreOrderDO) {
             this.restoreOrderDO = restoreOrderDO;
@@ -78,7 +78,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -105,7 +105,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         private String regionId;
 
         @NameInMap("VSwtichId")
-        private String VSwtichId;
+        private String vSwtichId;
 
         @NameInMap("VpcId")
         private String vpcId;
@@ -115,7 +115,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             this.instSpec = builder.instSpec;
             this.network = builder.network;
             this.regionId = builder.regionId;
-            this.VSwtichId = builder.VSwtichId;
+            this.vSwtichId = builder.vSwtichId;
             this.vpcId = builder.vpcId;
         }
 
@@ -156,10 +156,10 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
         }
 
         /**
-         * @return VSwtichId
+         * @return vSwtichId
          */
         public String getVSwtichId() {
-            return this.VSwtichId;
+            return this.vSwtichId;
         }
 
         /**
@@ -174,11 +174,11 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String instSpec; 
             private String network; 
             private String regionId; 
-            private String VSwtichId; 
+            private String vSwtichId; 
             private String vpcId; 
 
             /**
-             * AzoneId.
+             * The ID of the zone for which to query resources.
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -186,7 +186,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstSpec.
+             * The instance type of the instance.
              */
             public Builder instSpec(String instSpec) {
                 this.instSpec = instSpec;
@@ -194,7 +194,11 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **Classic **: Classic Network
+             * *   **vpc**: VPC
              */
             public Builder network(String network) {
                 this.network = network;
@@ -202,7 +206,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -210,15 +214,15 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * VSwtichId.
+             * The ID of the vSwitch in the VPC.
              */
-            public Builder VSwtichId(String VSwtichId) {
-                this.VSwtichId = VSwtichId;
+            public Builder vSwtichId(String vSwtichId) {
+                this.vSwtichId = vSwtichId;
                 return this;
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC network.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -384,7 +388,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AzoneId.
+             * The zone ID of the node.
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -392,7 +396,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceStorage.
+             * The capacity of disk.
              */
             public Builder dbInstanceStorage(String dbInstanceStorage) {
                 this.dbInstanceStorage = dbInstanceStorage;
@@ -400,7 +404,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The storage engine of PolarDB.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -408,7 +412,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The type of the instance.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -416,7 +420,11 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network type. Valid values:
+             * <p>
+             * 
+             * *   **Classic**: Classic Network
+             * *   **vpc**: VPC
              */
             public Builder network(String network) {
                 this.network = network;
@@ -424,7 +432,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of streams that were returned.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -432,7 +440,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -440,7 +448,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the operating system.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -606,7 +614,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AzoneId.
+             * The zone ID of the node.
              */
             public Builder azoneId(String azoneId) {
                 this.azoneId = azoneId;
@@ -614,7 +622,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceStorage.
+             * The capacity of disk.
              */
             public Builder dbInstanceStorage(String dbInstanceStorage) {
                 this.dbInstanceStorage = dbInstanceStorage;
@@ -622,7 +630,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The storage engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -630,7 +638,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The instance type of the instance.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -638,7 +646,9 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network type. Valid values: - **Classic **: Classic Network
+             * <p>
+             * - **vpc**: VPC
              */
             public Builder network(String network) {
                 this.network = network;
@@ -646,7 +656,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of streams that were returned.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -654,7 +664,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -662,7 +672,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the operating system.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -768,7 +778,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             private RestoreOrderDORdsOrderDOList rdsOrderDOList; 
 
             /**
-             * DrdsOrderDOList.
+             * The information of the restored order.
              */
             public Builder drdsOrderDOList(RestoreOrderDODrdsOrderDOList drdsOrderDOList) {
                 this.drdsOrderDOList = drdsOrderDOList;
@@ -776,7 +786,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PolarOrderDOList.
+             * The ID of the restored apsaradb for PolarDB cluster.
              */
             public Builder polarOrderDOList(RestoreOrderDOPolarOrderDOList polarOrderDOList) {
                 this.polarOrderDOList = polarOrderDOList;
@@ -784,7 +794,7 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RdsOrderDOList.
+             * The information of the restored RDS order.
              */
             public Builder rdsOrderDOList(RestoreOrderDORdsOrderDOList rdsOrderDOList) {
                 this.rdsOrderDOList = rdsOrderDOList;

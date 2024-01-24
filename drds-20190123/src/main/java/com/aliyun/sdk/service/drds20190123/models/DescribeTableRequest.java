@@ -90,16 +90,16 @@ public class DescribeTableRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTableRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.tableName = response.tableName;
+        private Builder(DescribeTableRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.tableName = request.tableName;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -108,7 +108,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -117,7 +117,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the PolarDB-X 1.0 instance is created.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +126,7 @@ public class DescribeTableRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

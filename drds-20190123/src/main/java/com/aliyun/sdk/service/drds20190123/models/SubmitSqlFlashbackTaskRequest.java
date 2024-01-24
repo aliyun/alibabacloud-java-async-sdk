@@ -170,22 +170,22 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitSqlFlashbackTaskRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.endTime = response.endTime;
-            this.recallRestoreType = response.recallRestoreType;
-            this.recallType = response.recallType;
-            this.sqlPk = response.sqlPk;
-            this.sqlType = response.sqlType;
-            this.startTime = response.startTime;
-            this.tableName = response.tableName;
-            this.traceId = response.traceId;
+        private Builder(SubmitSqlFlashbackTaskRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.endTime = request.endTime;
+            this.recallRestoreType = request.recallRestoreType;
+            this.recallType = request.recallType;
+            this.sqlPk = request.sqlPk;
+            this.sqlType = request.sqlType;
+            this.startTime = request.startTime;
+            this.tableName = request.tableName;
+            this.traceId = request.traceId;
         } 
 
         /**
-         * DbName.
+         * The name of the DRDS database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -194,7 +194,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of a DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -203,7 +203,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the SQL flashback task ends.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +212,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * RecallRestoreType.
+         * The restoration type. Valid values:
+         * <p>
+         * 
+         * *   1: Image restoration
+         * *   0: reverse recovery
          */
         public Builder recallRestoreType(Integer recallRestoreType) {
             this.putQueryParameter("RecallRestoreType", recallRestoreType);
@@ -221,7 +225,11 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * RecallType.
+         * Exact match or fuzzy match. Valid values:
+         * <p>
+         * 
+         * *   0: the exact match.
+         * *   1: the fuzzy match.
          */
         public Builder recallType(Integer recallType) {
             this.putQueryParameter("RecallType", recallType);
@@ -230,7 +238,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * SqlPk.
+         * The primary key of flashback SQL.
          */
         public Builder sqlPk(String sqlPk) {
             this.putQueryParameter("SqlPk", sqlPk);
@@ -239,7 +247,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * The type of the SQL statement. Valid values: INSERT, UPDATE, and DELETE. Separate multiple types with commas (,).
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -248,7 +256,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the flashback SQL statement.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -257,7 +265,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table where the flashback SQL operation was performed.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -266,7 +274,7 @@ public class SubmitSqlFlashbackTaskRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * The Trace ID of the flashback SQL.
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

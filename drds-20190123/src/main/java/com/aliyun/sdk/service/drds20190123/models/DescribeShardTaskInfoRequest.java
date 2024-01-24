@@ -104,17 +104,17 @@ public class DescribeShardTaskInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeShardTaskInfoRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.sourceTableName = response.sourceTableName;
-            this.targetTableName = response.targetTableName;
+        private Builder(DescribeShardTaskInfoRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.sourceTableName = request.sourceTableName;
+            this.targetTableName = request.targetTableName;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -123,7 +123,7 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -132,7 +132,7 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +141,7 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * SourceTableName.
+         * The name of the table that you want to convert or shard.
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);
@@ -150,7 +150,7 @@ public class DescribeShardTaskInfoRequest extends Request {
         }
 
         /**
-         * TargetTableName.
+         * The name of the table that is generated after you convert or shard the table.
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);

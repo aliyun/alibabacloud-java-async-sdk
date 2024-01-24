@@ -62,7 +62,7 @@ public class RestartDrdsInstanceResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class RestartDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the database creation failure records were removed from the PolarDB-X instance.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -78,7 +78,7 @@ public class RestartDrdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

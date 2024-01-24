@@ -62,7 +62,7 @@ public class DisableSqlAuditResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DisableSqlAuditResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The return result.
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class DisableSqlAuditResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

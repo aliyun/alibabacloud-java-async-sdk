@@ -50,7 +50,7 @@ public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DbInstances.
+         * The privileged accounts.
          */
         public Builder dbInstances(DbInstances dbInstances) {
             this.dbInstances = dbInstances;
@@ -58,7 +58,7 @@ public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

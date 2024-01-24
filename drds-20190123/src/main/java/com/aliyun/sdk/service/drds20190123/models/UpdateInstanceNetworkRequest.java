@@ -89,16 +89,16 @@ public class UpdateInstanceNetworkRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateInstanceNetworkRequest response) {
-            super(response);
-            this.classicExpiredDays = response.classicExpiredDays;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.retainClassic = response.retainClassic;
-            this.srcInstanceNetworkType = response.srcInstanceNetworkType;
+        private Builder(UpdateInstanceNetworkRequest request) {
+            super(request);
+            this.classicExpiredDays = request.classicExpiredDays;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.retainClassic = request.retainClassic;
+            this.srcInstanceNetworkType = request.srcInstanceNetworkType;
         } 
 
         /**
-         * ClassicExpiredDays.
+         * Specifies the retention period of the classic network endpoint. Unit: days.
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -107,7 +107,7 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -116,7 +116,7 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * RetainClassic.
+         * Specifies whether to retain the classic network endpoint.
          */
         public Builder retainClassic(Boolean retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -125,7 +125,11 @@ public class UpdateInstanceNetworkRequest extends Request {
         }
 
         /**
-         * SrcInstanceNetworkType.
+         * The network type of the PolarDB-X 1.0 instance. Valid values:
+         * <p>
+         * 
+         * *   vpc: Virtual Private Cloud (VPC)
+         * *   classic: classic network
          */
         public Builder srcInstanceNetworkType(String srcInstanceNetworkType) {
             this.putQueryParameter("SrcInstanceNetworkType", srcInstanceNetworkType);

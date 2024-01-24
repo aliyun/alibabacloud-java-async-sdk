@@ -63,14 +63,14 @@ public class ModifyDrdsInstanceDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDrdsInstanceDescriptionRequest response) {
-            super(response);
-            this.description = response.description;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(ModifyDrdsInstanceDescriptionRequest request) {
+            super(request);
+            this.description = request.description;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * Description.
+         * The description of the DRDS instance.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -79,7 +79,7 @@ public class ModifyDrdsInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

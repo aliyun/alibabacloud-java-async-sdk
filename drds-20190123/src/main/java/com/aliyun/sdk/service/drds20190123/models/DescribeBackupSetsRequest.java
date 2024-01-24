@@ -77,15 +77,15 @@ public class DescribeBackupSetsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupSetsRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(DescribeBackupSetsRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -94,7 +94,10 @@ public class DescribeBackupSetsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the query time which is in timestamp format (measured in millisecond) .
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -103,7 +106,7 @@ public class DescribeBackupSetsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the query time which is in timestamp format (measured in millisecond).
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

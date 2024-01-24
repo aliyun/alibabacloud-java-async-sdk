@@ -62,7 +62,7 @@ public class StartRestoreResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class StartRestoreResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether SQL audit was disabled for the DRDS database.
          */
         public Builder result(String result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class StartRestoreResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

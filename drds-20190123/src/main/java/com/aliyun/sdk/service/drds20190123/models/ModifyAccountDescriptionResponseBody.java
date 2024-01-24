@@ -50,7 +50,7 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was sent successfully or not.
          */
         public Builder success(Boolean success) {
             this.success = success;

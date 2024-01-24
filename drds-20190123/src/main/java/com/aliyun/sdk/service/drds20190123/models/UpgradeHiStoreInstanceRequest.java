@@ -76,15 +76,15 @@ public class UpgradeHiStoreInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeHiStoreInstanceRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.historeInstanceId = response.historeInstanceId;
-            this.regionId = response.regionId;
+        private Builder(UpgradeHiStoreInstanceRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.historeInstanceId = request.historeInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -93,7 +93,7 @@ public class UpgradeHiStoreInstanceRequest extends Request {
         }
 
         /**
-         * HistoreInstanceId.
+         * The ID of the column-oriented storage instance.
          */
         public Builder historeInstanceId(String historeInstanceId) {
             this.putQueryParameter("HistoreInstanceId", historeInstanceId);
@@ -102,7 +102,7 @@ public class UpgradeHiStoreInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

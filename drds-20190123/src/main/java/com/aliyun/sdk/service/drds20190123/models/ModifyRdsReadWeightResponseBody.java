@@ -50,7 +50,7 @@ public class ModifyRdsReadWeightResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyRdsReadWeightResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

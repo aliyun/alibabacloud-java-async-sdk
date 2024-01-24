@@ -118,18 +118,18 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsInstanceDbMonitorRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDrdsInstanceDbMonitorRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -138,7 +138,7 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the Distributed Relational Database Service (DRDS) instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -147,7 +147,7 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +156,10 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).
+         * <p>
+         * 
+         * >  For more information about the details of performance monitoring metrics, see [Database monitoring](~~186704~~).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -165,7 +168,7 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +177,7 @@ public class DescribeDrdsInstanceDbMonitorRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

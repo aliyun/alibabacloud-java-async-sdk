@@ -88,16 +88,16 @@ public class SetBackupLocalRequest extends Request {
             super();
         } 
 
-        private Builder(SetBackupLocalRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.highSpaceUsageProtection = response.highSpaceUsageProtection;
-            this.localLogRetentionHours = response.localLogRetentionHours;
-            this.localLogRetentionSpace = response.localLogRetentionSpace;
+        private Builder(SetBackupLocalRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.highSpaceUsageProtection = request.highSpaceUsageProtection;
+            this.localLogRetentionHours = request.localLogRetentionHours;
+            this.localLogRetentionSpace = request.localLogRetentionSpace;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -106,7 +106,7 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * HighSpaceUsageProtection.
+         * Specifies whether to enable the feature to forcibly delete binary log files if the used storage space reaches 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values: 1 and 0. A value of 1 specifies to enable this feature. A value of 0 specifies not to enable this feature.
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.putQueryParameter("HighSpaceUsageProtection", highSpaceUsageProtection);
@@ -115,7 +115,7 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * LocalLogRetentionHours.
+         * The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: 18. A value of 0 indicates that log backup files are not retained.
          */
         public Builder localLogRetentionHours(String localLogRetentionHours) {
             this.putQueryParameter("LocalLogRetentionHours", localLogRetentionHours);
@@ -124,7 +124,7 @@ public class SetBackupLocalRequest extends Request {
         }
 
         /**
-         * LocalLogRetentionSpace.
+         * The maximum storage space usage that is allowed for log files on the instance. Valid values: 0 to 50. Default value: 30.
          */
         public Builder localLogRetentionSpace(String localLogRetentionSpace) {
             this.putQueryParameter("LocalLogRetentionSpace", localLogRetentionSpace);

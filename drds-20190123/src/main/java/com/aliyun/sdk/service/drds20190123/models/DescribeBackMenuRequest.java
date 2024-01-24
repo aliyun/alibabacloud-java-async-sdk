@@ -49,13 +49,13 @@ public class DescribeBackMenuRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackMenuRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(DescribeBackMenuRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

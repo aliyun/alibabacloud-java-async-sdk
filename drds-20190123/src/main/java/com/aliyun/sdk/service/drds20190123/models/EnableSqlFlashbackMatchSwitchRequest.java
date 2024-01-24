@@ -63,14 +63,14 @@ public class EnableSqlFlashbackMatchSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSqlFlashbackMatchSwitchRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(EnableSqlFlashbackMatchSwitchRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DbName.
+         * The name of the database you want to back up.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -79,7 +79,7 @@ public class EnableSqlFlashbackMatchSwitchRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the ApsaraDB RDS for PostgreSQL instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

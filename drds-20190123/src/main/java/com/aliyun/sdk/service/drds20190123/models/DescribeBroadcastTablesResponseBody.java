@@ -110,7 +110,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * IsShard.
+         * Indicates whether the database is sharded.
          */
         public Builder isShard(Boolean isShard) {
             this.isShard = isShard;
@@ -118,7 +118,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * Indicates information about broadcast tables.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -126,7 +126,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * Indicates the page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Indicates the number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Indicates the total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -258,7 +258,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * Broadcast.
+             * Indicates whether a table is a broadcast table.
              */
             public Builder broadcast(Boolean broadcast) {
                 this.broadcast = broadcast;
@@ -266,7 +266,11 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * BroadcastType.
+             * Indicates the type of the broadcast table. Valid values:
+             * <p>
+             * 
+             * *   **1**: multi-write mode
+             * *   **2**: synchronous mode
              */
             public Builder broadcastType(String broadcastType) {
                 this.broadcastType = broadcastType;
@@ -274,7 +278,11 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * Indicates the storage type of the database. Valid values:
+             * <p>
+             * 
+             * *   **0**: RDS
+             * *   **4**: PolarDB
              */
             public Builder dbInstType(Integer dbInstType) {
                 this.dbInstType = dbInstType;
@@ -282,7 +290,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsShard.
+             * Indicates whether the broadcast table was sharded.
              */
             public Builder isShard(Boolean isShard) {
                 this.isShard = isShard;
@@ -290,7 +298,12 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates the activation state of the broadcast table. Valid values:
+             * <p>
+             * 
+             * *   **1**: The broadcast table is activated.
+             * *   **2**: The broadcast table is being activated.
+             * *   **3**: An exception occurs when the broadcast table is being activated.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -298,7 +311,7 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * Indicates the name of the table.
              */
             public Builder table(String table) {
                 this.table = table;

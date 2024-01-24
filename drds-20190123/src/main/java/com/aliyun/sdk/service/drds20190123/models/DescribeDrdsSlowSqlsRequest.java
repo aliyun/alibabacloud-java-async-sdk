@@ -131,19 +131,19 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDrdsSlowSqlsRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.endTime = response.endTime;
-            this.exeTime = response.exeTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeDrdsSlowSqlsRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.endTime = request.endTime;
+            this.exeTime = request.exeTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DbName.
+         * The name of the database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -152,7 +152,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -161,7 +161,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The start time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +170,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * ExeTime.
+         * The SQL execution time. Unit: ms.
          */
         public Builder exeTime(Long exeTime) {
             this.putQueryParameter("ExeTime", exeTime);
@@ -179,7 +179,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +188,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +197,7 @@ public class DescribeDrdsSlowSqlsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end time of the SQL query. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

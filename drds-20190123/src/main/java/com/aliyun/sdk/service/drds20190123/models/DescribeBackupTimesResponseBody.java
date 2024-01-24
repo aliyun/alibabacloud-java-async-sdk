@@ -62,7 +62,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreTime.
+         * Indicates the information about the time range within which the data of the instance can be restored to a point in time.
          */
         public Builder restoreTime(RestoreTime restoreTime) {
             this.restoreTime = restoreTime;
@@ -78,7 +78,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * EndTime.
+             * Indicates the end time. The time is in the UNIX timestamp format. The time is in UTC. Unit: ms.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -138,7 +138,7 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * Indicates the start time. The time is in the UNIX timestamp format. The time must be in UTC. Unit: ms.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

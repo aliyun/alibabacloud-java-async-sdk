@@ -118,18 +118,18 @@ public class CreateShardTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateShardTaskRequest response) {
-            super(response);
-            this.dbName = response.dbName;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.regionId = response.regionId;
-            this.sourceTableName = response.sourceTableName;
-            this.targetTableName = response.targetTableName;
-            this.taskType = response.taskType;
+        private Builder(CreateShardTaskRequest request) {
+            super(request);
+            this.dbName = request.dbName;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.regionId = request.regionId;
+            this.sourceTableName = request.sourceTableName;
+            this.targetTableName = request.targetTableName;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * DbName.
+         * The name of the DRDS database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -138,7 +138,7 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the DRDS instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -147,7 +147,7 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the resource group resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +156,7 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * SourceTableName.
+         * The name of the source table.
          */
         public Builder sourceTableName(String sourceTableName) {
             this.putQueryParameter("SourceTableName", sourceTableName);
@@ -165,7 +165,7 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * TargetTableName.
+         * The name of the destination table.
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);
@@ -174,7 +174,7 @@ public class CreateShardTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:`  SHARD_TO_SINGLE `,`  SINGLE_TO_SHARD `,`  SHARD_TO_SHARD `.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -62,7 +62,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DbInstance.
+         * The detailed information about the returned custom ApsaraDB RDS for MySQL instance.
          */
         public Builder dbInstance(DbInstance dbInstance) {
             this.dbInstance = dbInstance;
@@ -70,7 +70,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +286,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             private Integer versionAction; 
 
             /**
-             * ConnectUrl.
+             * The URL used to connect to the read-only instance.
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -294,7 +294,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the read-only instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -302,7 +302,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The state of the read-only instance.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -310,7 +310,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * The role of the read-only instance.
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -318,7 +318,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DmInstanceId.
+             * The ID of the resource.
              */
             public Builder dmInstanceId(String dmInstanceId) {
                 this.dmInstanceId = dmInstanceId;
@@ -326,7 +326,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the database that is run on the read-only instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -334,7 +334,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The engine version of the database that is run on the read-only instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -342,7 +342,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The timestamp that indicates when the read-only instance expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -350,7 +350,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the read-only instance.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -358,7 +358,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the read-only instance.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -366,7 +366,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port used to connect to the read-only instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -374,7 +374,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RdsInstType.
+             * The type of the ApsaraDB RDS for MySQL instance.
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -382,7 +382,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWeight.
+             * The read ratio of the read-only instance.
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -390,7 +390,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDays.
+             * The number of remaining days before the read-only instance expires.
              */
             public Builder remainDays(String remainDays) {
                 this.remainDays = remainDays;
@@ -398,7 +398,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionAction.
+             * This parameter is unavailable for read-only instances.
              */
             public Builder versionAction(Integer versionAction) {
                 this.versionAction = versionAction;
@@ -648,7 +648,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             private String remainDays; 
 
             /**
-             * ConnectUrl.
+             * The URL used to connect to the custom ApsaraDB RDS for MySQL instance.
              */
             public Builder connectUrl(String connectUrl) {
                 this.connectUrl = connectUrl;
@@ -656,7 +656,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the ApsaraDB RDS for MySQL instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -664,7 +664,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceStatus.
+             * The state of the instance.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -672,7 +672,11 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstType.
+             * The role of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Primary**: The instance is a primary instance.
+             * *   **ReadOnly**: The instance is a read-only instance.
              */
             public Builder dbInstType(String dbInstType) {
                 this.dbInstType = dbInstType;
@@ -680,7 +684,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DmInstanceId.
+             * The ID of the resource.
              */
             public Builder dmInstanceId(String dmInstanceId) {
                 this.dmInstanceId = dmInstanceId;
@@ -688,7 +692,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the database that is run on the instance. Valid value: **MySQL**.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -696,7 +700,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The engine version of the database that is run on the instance. Valid values: **5.7**.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -704,7 +708,10 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the custom ApsaraDB RDS for MySQL instance expires. The value of this parameter is a UNIX timestamp. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only when the custom ApsaraDB RDS for MySQL instance is a subscription instance.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -712,7 +719,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The type of the network. Valid values: **VPC**.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -720,7 +727,11 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the custom ApsaraDB RDS for MySQL instance. Valid values:
+             * <p>
+             * 
+             * *   **Prepaid**: subscription
+             * *   **Postaid**: pay-as-you-go
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -728,7 +739,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port used to connect to the custom ApsaraDB RDS for MySQL instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -736,7 +747,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RdsInstType.
+             * The type of the instance.
              */
             public Builder rdsInstType(String rdsInstType) {
                 this.rdsInstType = rdsInstType;
@@ -744,7 +755,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyInstances.
+             * The list of read-only ApsaraDB RDS for MySQL instances.
              */
             public Builder readOnlyInstances(ReadOnlyInstances readOnlyInstances) {
                 this.readOnlyInstances = readOnlyInstances;
@@ -752,7 +763,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWeight.
+             * The read ratio of the instance.
              */
             public Builder readWeight(Integer readWeight) {
                 this.readWeight = readWeight;
@@ -760,7 +771,7 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDays.
+             * The number of remaining days before the instance expires.
              */
             public Builder remainDays(String remainDays) {
                 this.remainDays = remainDays;

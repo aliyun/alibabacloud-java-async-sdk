@@ -76,15 +76,15 @@ public class DescribeRdsSuperAccountInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRdsSuperAccountInstancesRequest response) {
-            super(response);
-            this.dbInstType = response.dbInstType;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.rdsInstance = response.rdsInstance;
+        private Builder(DescribeRdsSuperAccountInstancesRequest request) {
+            super(request);
+            this.dbInstType = request.dbInstType;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.rdsInstance = request.rdsInstance;
         } 
 
         /**
-         * DbInstType.
+         * The type of the ApsaraDB RDS for MySQL instances. Default value: **RDS**.
          */
         public Builder dbInstType(String dbInstType) {
             this.putQueryParameter("DbInstType", dbInstType);
@@ -93,7 +93,7 @@ public class DescribeRdsSuperAccountInstancesRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

@@ -91,16 +91,16 @@ public class CreateInstanceAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.dbPrivilege = response.dbPrivilege;
-            this.drdsInstanceId = response.drdsInstanceId;
-            this.password = response.password;
+        private Builder(CreateInstanceAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.dbPrivilege = request.dbPrivilege;
+            this.drdsInstanceId = request.drdsInstanceId;
+            this.password = request.password;
         } 
 
         /**
-         * AccountName.
+         * The username of the account you want to create.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -118,7 +118,7 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * DrdsInstanceId.
+         * The ID of the PolarDB-X 1.0 instance for which you want to create the account.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);
@@ -127,7 +127,7 @@ public class CreateInstanceAccountRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the account you want to create.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -181,7 +181,7 @@ public class CreateInstanceAccountRequest extends Request {
             private String privilege; 
 
             /**
-             * DbName.
+             * The name of the database that you want to manage by using the account to create.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -189,7 +189,7 @@ public class CreateInstanceAccountRequest extends Request {
             }
 
             /**
-             * Privilege.
+             * The permissions that you want to grant to the account to manage the database.
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;

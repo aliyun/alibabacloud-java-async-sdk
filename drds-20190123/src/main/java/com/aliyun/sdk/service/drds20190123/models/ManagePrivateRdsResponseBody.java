@@ -62,7 +62,7 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The parameter result set returned for the operation that is called for the custom ApsaraDB RDS instance.
          */
         public Builder data(String data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ManagePrivateRdsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

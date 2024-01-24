@@ -49,13 +49,13 @@ public class RemoveDrdsInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveDrdsInstanceRequest response) {
-            super(response);
-            this.drdsInstanceId = response.drdsInstanceId;
+        private Builder(RemoveDrdsInstanceRequest request) {
+            super(request);
+            this.drdsInstanceId = request.drdsInstanceId;
         } 
 
         /**
-         * DrdsInstanceId.
+         * The ID of the instance.
          */
         public Builder drdsInstanceId(String drdsInstanceId) {
             this.putQueryParameter("DrdsInstanceId", drdsInstanceId);

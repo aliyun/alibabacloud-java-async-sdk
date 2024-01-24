@@ -62,7 +62,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * Indicates the ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SqlFlashbackTasks.
+         * Indicates the information about flashback tasks.
          */
         public Builder sqlFlashbackTasks(SqlFlashbackTasks sqlFlashbackTasks) {
             this.sqlFlashbackTasks = sqlFlashbackTasks;
@@ -78,7 +78,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             private String traceId; 
 
             /**
-             * DbName.
+             * Indicates the name of the database on which a flashback task is performed.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -330,7 +330,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * Indicates the download URL.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -338,7 +338,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * Indicates the time when the download URL expires.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -346,7 +346,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * Indicates the point in time when the instance was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -354,7 +354,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * Indicates the point in time when the flashback task is performed.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -362,7 +362,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * Indicates the ID of the primary key that corresponds to a table used in the flashback task.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +370,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstId.
+             * Indicates the ID of the instance.
              */
             public Builder instId(String instId) {
                 this.instId = instId;
@@ -378,7 +378,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RecallProgress.
+             * Indicates the progress of the reverse call.
              */
             public Builder recallProgress(Integer recallProgress) {
                 this.recallProgress = recallProgress;
@@ -386,7 +386,11 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RecallRestoreType.
+             * Indicates the type of the flashback task. Valid values:
+             * <p>
+             * 
+             * *   **1**: image restoration
+             * *   **2**: reverse restoration
              */
             public Builder recallRestoreType(Integer recallRestoreType) {
                 this.recallRestoreType = recallRestoreType;
@@ -394,7 +398,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RecallStatus.
+             * Indicates the status of the data recall task.
              */
             public Builder recallStatus(Integer recallStatus) {
                 this.recallStatus = recallStatus;
@@ -402,7 +406,11 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RecallType.
+             * Indicates the type of the reverse call. Valid values:
+             * <p>
+             * 
+             * *   **0**: exact search
+             * *   **1**: fuzzy search
              */
             public Builder recallType(Integer recallType) {
                 this.recallType = recallType;
@@ -410,7 +418,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SearchEndTime.
+             * Indicates the start time of the reverse call.
              */
             public Builder searchEndTime(Long searchEndTime) {
                 this.searchEndTime = searchEndTime;
@@ -418,7 +426,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SearchStartTime.
+             * Indicates the end time of the reverse call.
              */
             public Builder searchStartTime(Long searchStartTime) {
                 this.searchStartTime = searchStartTime;
@@ -426,7 +434,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlCounter.
+             * Indicates the number of data rows that are flashed back.
              */
             public Builder sqlCounter(Long sqlCounter) {
                 this.sqlCounter = sqlCounter;
@@ -434,7 +442,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlPk.
+             * Indicates the primary key specified in the SQL statements.
              */
             public Builder sqlPk(String sqlPk) {
                 this.sqlPk = sqlPk;
@@ -442,7 +450,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * Indicates the types of the SQL statements.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -450,7 +458,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * Indicates the name of the table that contains the data that are flashed back.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -458,7 +466,7 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * Indicates the ID of the trace of the SQL query.
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
