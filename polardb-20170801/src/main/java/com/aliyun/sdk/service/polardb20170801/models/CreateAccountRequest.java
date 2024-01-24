@@ -28,6 +28,7 @@ public class CreateAccountRequest extends Request {
 
     @Query
     @NameInMap("AccountPrivilege")
+    @Validation(maxLength = 900)
     private String accountPrivilege;
 
     @Query
@@ -45,6 +46,7 @@ public class CreateAccountRequest extends Request {
 
     @Query
     @NameInMap("DBName")
+    @Validation(maxLength = 6400)
     private String DBName;
 
     @Query

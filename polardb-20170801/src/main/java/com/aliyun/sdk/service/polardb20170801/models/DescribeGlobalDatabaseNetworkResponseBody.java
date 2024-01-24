@@ -605,6 +605,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         @NameInMap("Role")
         private String role;
 
+        @NameInMap("ServerlessType")
+        private String serverlessType;
+
         @NameInMap("StorageUsed")
         private String storageUsed;
 
@@ -622,6 +625,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.replicaLag = builder.replicaLag;
             this.role = builder.role;
+            this.serverlessType = builder.serverlessType;
             this.storageUsed = builder.storageUsed;
         }
 
@@ -725,6 +729,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverlessType
+         */
+        public String getServerlessType() {
+            return this.serverlessType;
+        }
+
+        /**
          * @return storageUsed
          */
         public String getStorageUsed() {
@@ -745,6 +756,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String regionId; 
             private String replicaLag; 
             private String role; 
+            private String serverlessType; 
             private String storageUsed; 
 
             /**
@@ -867,6 +879,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              */
             public Builder role(String role) {
                 this.role = role;
+                return this;
+            }
+
+            /**
+             * ServerlessType.
+             */
+            public Builder serverlessType(String serverlessType) {
+                this.serverlessType = serverlessType;
                 return this;
             }
 

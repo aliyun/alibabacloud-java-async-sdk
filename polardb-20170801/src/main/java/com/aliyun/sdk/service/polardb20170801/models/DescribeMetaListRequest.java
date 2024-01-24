@@ -316,7 +316,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * RegionCode.
+         * The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](~~2319132~~) operation to query the region ID of the instance.
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);

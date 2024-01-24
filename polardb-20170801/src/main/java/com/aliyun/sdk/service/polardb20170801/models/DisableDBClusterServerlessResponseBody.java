@@ -50,7 +50,7 @@ public class DisableDBClusterServerlessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The ID of the serverless cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -58,7 +58,7 @@ public class DisableDBClusterServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

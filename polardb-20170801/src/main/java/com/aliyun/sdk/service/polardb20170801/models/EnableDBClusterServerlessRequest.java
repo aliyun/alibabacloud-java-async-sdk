@@ -195,7 +195,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -240,7 +240,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMax.
+         * The maximum number of stable AP read-only nodes. Valid values: 0 to 7.
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
@@ -249,7 +249,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMin.
+         * The minimum number of stable AP read-only nodes. Valid values: 0 to 7.
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);
@@ -258,7 +258,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -267,7 +267,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -276,7 +276,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMax.
+         * The maximum number of read-only nodes for scaling. Valid values: 0 to 7.
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -285,7 +285,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMin.
+         * The minimum number of read-only nodes for scaling. Valid values: 0 to 7.
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);

@@ -86,7 +86,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private java.util.List < VSwitchs> vSwitchs; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchs.
+         * The details of the vSwitch.
          */
         public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
@@ -242,7 +242,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * AvailableIpAddressCount.
+             * The number of available IP addresses in the vSwitch.
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -250,7 +250,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -258,7 +258,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The descriptions of the vSwitch.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +266,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the vSwitch is the default vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -274,7 +278,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * The zone to which the NAT gateway belongs.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -282,7 +286,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **Pending**: The vSwitch is being configured.
+             * *   **Available**: The vSwitch is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +298,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -298,7 +306,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

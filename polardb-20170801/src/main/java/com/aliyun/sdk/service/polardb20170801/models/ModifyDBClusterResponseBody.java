@@ -62,7 +62,7 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;

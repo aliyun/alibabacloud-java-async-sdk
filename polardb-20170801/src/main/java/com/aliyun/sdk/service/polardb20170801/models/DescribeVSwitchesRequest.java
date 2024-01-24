@@ -208,7 +208,10 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * DedicatedHostGroupId.
+         * The dedicated cluster ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -235,7 +238,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,7 +247,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page. Maximum value: 50. Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +256,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the vSwitch belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +265,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the vSwitch belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -298,7 +301,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private type (VPC) to which the vSwitch belongs.
+         * <p>
+         * 
+         * >  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -307,7 +313,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone to which the vSwitch belongs.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
