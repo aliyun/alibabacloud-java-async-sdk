@@ -109,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelRecycleBinJobResponse> cancelRecycleBinJob(CancelRecycleBinJobRequest request);
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     CompletableFuture<CreateAccessGroupResponse> createAccessGroup(CreateAccessGroupRequest request);
 
     CompletableFuture<CreateAccessRuleResponse> createAccessRule(CreateAccessRuleRequest request);
