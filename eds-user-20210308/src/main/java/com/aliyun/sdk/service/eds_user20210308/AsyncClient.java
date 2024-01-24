@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMfaDevicesResponse> describeMfaDevices(DescribeMfaDevicesRequest request);
 
+    CompletableFuture<DescribeOrgsResponse> describeOrgs(DescribeOrgsRequest request);
+
     CompletableFuture<DescribeUsersResponse> describeUsers(DescribeUsersRequest request);
 
     CompletableFuture<FilterUsersResponse> filterUsers(FilterUsersRequest request);

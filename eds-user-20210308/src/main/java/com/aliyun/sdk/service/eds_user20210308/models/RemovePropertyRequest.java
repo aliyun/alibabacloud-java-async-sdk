@@ -55,7 +55,7 @@ public class RemovePropertyRequest extends Request {
         } 
 
         /**
-         * PropertyId.
+         * The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
